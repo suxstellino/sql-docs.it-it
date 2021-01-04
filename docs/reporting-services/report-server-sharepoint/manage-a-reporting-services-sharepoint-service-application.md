@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5de7b0a5b155c519a7a7d24331fb9ad2dc571e3e
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: cbc258c5da9252a4463caf4b9b096c5a899d9e0a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83765072"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409687"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Gestire un'applicazione di servizio SharePoint di Reporting Services
 
@@ -93,7 +93,7 @@ ms.locfileid: "83765072"
 |Impostazione|Commenti|  
 |-------------|--------------|  
 |Abilita download Generatore report|Il valore predefinito è TRUE.<br /><br /> Consente di specificare se i client sono in grado di visualizzare il pulsante per il download dell'applicazione Generatore report.|  
-|URL di avvio del Generatore report|Consente di specificare un URL personalizzato se per il server di report non viene utilizzato l'URL predefinito di Generatore report. Questa impostazione è facoltativa. Se non si specifica un valore, verrà utilizzato l'URL predefinito, che consente di avviare Generatore report. Per avviare Generatore report 3.0 come applicazione ClickOnce, immettere il valore seguente: https://\<nomecomputer>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
+|URL di avvio del Generatore report|Consente di specificare un URL personalizzato se per il server di report non viene utilizzato l'URL predefinito di Generatore report. Questa impostazione è facoltativa. Se non si specifica un valore, verrà utilizzato l'URL predefinito, che consente di avviare Generatore report. Per avviare Generatore report 3.0 come applicazione ClickOnce, immettere il valore seguente: https://\<computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
 |Abilita stampa client|Il valore predefinito è TRUE.<br /><br /> Consente di specificare se gli utenti possono scaricare il controllo lato client, che fornisce opzioni di stampa.|  
 |Modifica timeout sessione|Il valore predefinito è 7200 secondi.|  
 |Modifica limite cache di sessione|Il valore predefinito è 5.|  
@@ -147,7 +147,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  Selezionare questa opzione per specificare un account.  
   
  **Account**  
- Immettere un account utente di dominio di Windows. Usare questo formato: *\<domini>\\<account utente\>* .  
+ Immettere un account utente di dominio di Windows. Usare questo formato: *\<domain>\\<account utente\>* .  
   
  **Password**  
  Digitare la password.  

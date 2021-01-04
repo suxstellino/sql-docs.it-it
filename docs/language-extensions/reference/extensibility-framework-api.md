@@ -8,13 +8,13 @@ ms.date: 10/09/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3cc4e75f044476579859443b6a7407d01c3e92ea
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 244a8ce680704b0b25f9d0499e1a7802661d56cd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956862"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471692"
 ---
 # <a name="extensibility-framework-api-for-sql-server"></a>API del framework di estendibilità per SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -389,13 +389,13 @@ SQLRETURN GetResults(
     SQLUSMALLINT    TaskId,
     SQLULEN*        RowsNumber,
     SQLPOINTER**    Data,
-    SQLINTEGER***   StrLen_or_Ind
+    SQLINTEGER**_   StrLen_or_Ind
 );
 ```
 
 ### <a name="arguments"></a>Argomenti
 
-*SessionId*  
+_SessionId*  
 \[Input\] GUID che identifica in modo univoco questa sessione di script.
 
 *TaskId*  
@@ -453,12 +453,12 @@ SQLRETURN GetOutputParam(
 Consente di recuperare la versione dell'interfaccia.
 Questa funzione restituisce un numero intero che rappresenta la versione dell'interfaccia dell'estensione. Valori supportati:
 1. La versione 1 corrisponde alla versione iniziale dell'API, supportata in SQL Server 2019 RTM.
-1. Nella versione 2 è stato aggiunto il supporto per le API InstallExternalLibrary e UninstallExternalLibrary e il supporto di SQL Server 2019 CU3.                            
+1. Nella versione 2 è stato aggiunto il supporto per le API InstallExternalLibrary e UninstallExternalLibrary e il supporto di SQL Server 2019 CU3.                            
 
 ### <a name="syntax"></a>Sintassi
 
 ```cpp
-SQLUSMALLINT GetInterfaceVersion();
+SQLUSMALLINT GetInterfaceVersion();
 ```
 
 ## <a name="cleanupsession"></a>CleanupSession

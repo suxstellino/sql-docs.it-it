@@ -23,13 +23,13 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 10/27/2020
-ms.openlocfilehash: 3dec5e211db8ae21d7b5425c4d66c727bf1b4efd
-ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
+ms.date: 12/17/2020
+ms.openlocfilehash: e1af0f83181e6fbd479d2727b7da893b8bc20b59
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734649"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97639198"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Scaricare SQL Server Management Studio (SSMS)
 
@@ -43,19 +43,19 @@ SQL Server Management Studio (SSMS) è un ambiente integrato per la gestione di 
 
 :::image type="icon" source="media/download-icon.png" border="false"::: **[Scaricare SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)**
 
-SSMS 18.7.1 è la versione disponibile a livello generale più recente di SSMS. Se è installata una versione di SSMS 18 con disponibilità generale precedente, l'installazione di SSMS 18.7.1 esegue l'aggiornamento alla versione 18.7.1.
+SSMS 18.8 è la versione con disponibilità generale più recente di SSMS. Se è installata una versione di SSMS 18 con disponibilità generale precedente, l'installazione di SSMS 18.8 esegue l'aggiornamento alla versione 18.8.
 
 [!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
 
-- Numero di versione: 18.7.1
-- Numero di build: 15.0.18358.0
-- Data di rilascio: 27 ottobre 2020
+- Numero di versione: 18.8
+- Numero di build: 15.0.18369.0
+- Data di rilascio: 17 dicembre 2020
 
 Per commenti, suggerimenti o per segnalare problemi, il canale migliore per contattare il team SSMS è la pagina dei [commenti e suggerimenti degli utenti per SQL Server](https://aka.ms/sqlfeedback).
 
-L'installazione di SSMS 18.x non aggiorna o sostituisce SSMS 17.x o le versioni precedenti. SSMS 18.x viene installato side-by-side con le versioni precedenti, in modo che entrambe le versioni siano disponibili per l'uso. Se tuttavia è stata installata una versione di *anteprima* di SSMS 18.x, è necessario disinstallarla prima di installare SSMS 18.7.1. Per verificare se è presente la versione di anteprima, passare alla finestra **Guida > Informazioni su** .
+L'installazione di SSMS 18.x non aggiorna o sostituisce SSMS 17.x o le versioni precedenti. SSMS 18.x viene installato side-by-side con le versioni precedenti, in modo che entrambe le versioni siano disponibili per l'uso. Se tuttavia è stata installata una versione di *anteprima* di SSMS 18.x, è necessario disinstallarla prima di installare SSMS 18.8. Per verificare se è presente la versione di anteprima, passare alla finestra **Guida > Informazioni su**.
 
-Se un computer contiene installazioni affiancate di SQL Server Management Studio, assicurarsi di avviare la versione corretta per le specifiche esigenze. La versione più recente è denominata **Microsoft SQL Server Management Studio 18** .
+Se un computer contiene installazioni affiancate di SQL Server Management Studio, assicurarsi di avviare la versione corretta per le specifiche esigenze. La versione più recente è denominata **Microsoft SQL Server Management Studio 18**.
 
 > [!Note]
 > Se si accede a questa pagina da una versione non in lingua inglese e si vuole visualizzare il contenuto più aggiornato, visitare la [versione in inglese del sito](https://aka.ms/downloadssmsusenglish). È possibile scaricare una versione del sito diversa da quella in lingua inglese selezionando [available languages](#available-languages) (lingue disponibili).
@@ -64,8 +64,8 @@ Se un computer contiene installazioni affiancate di SQL Server Management Studio
 
 Questa versione di SSMS può essere installata nelle lingue seguenti:
 
-SQL Server Management Studio 18.7.1:  
-[Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x40a)
+SQL Server Management Studio 18.8:  
+[Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x40a)
 
 > [!NOTE]
 > Il modulo SQL Server PowerShell è ora un'installazione separata tramite PowerShell Gallery. Per altre informazioni, vedere [Scaricare il modulo SQL Server PowerShell](download-sql-server-ps-module.md).
@@ -74,7 +74,7 @@ SQL Server Management Studio 18.7.1:
 
 Per informazioni dettagliate e altre informazioni sulle novità di questa versione, vedere [Note sulla versione di SSMS](release-notes-ssms.md).
 
-Sono presenti alcuni [problemi noti](release-notes-ssms.md#known-issues-1871) in questa versione.
+Sono presenti alcuni [problemi noti](release-notes-ssms.md#known-issues-188) in questa versione.
 
 ## <a name="previous-versions"></a>Versioni precedenti
 
@@ -105,6 +105,14 @@ Se si vuole installare SSMS in background senza richieste dell'interfaccia utent
     È anche possibile passare */Passive* invece di */Quiet* per visualizzare l'interfaccia utente del programma di installazione.
 
 3. Se l'operazione ha esito positivo, SSMS viene installato in %systemdrive%\SSMSto\Common7\IDE\Ssms.exe in base all'esempio. Se si verificano errori, è possibile verificare il codice di errore restituito nel file di log in %TEMP%\SSMSSetup.
+
+## <a name="installation-with-azure-data-studio"></a>Installazione con Azure Data Studio
+
+- A partire da SSMS 18.7, SSMS installa una versione di sistema di Azure Data Studio per impostazione predefinita.  Se nella workstation è già presente una versione di sistema di Azure Data Studio (versione stabile o build Insider) uguale o successiva rispetto alla versione inclusa di Azure Data Studio, SSMS ignorerà l'installazione di Azure Data Studio. La versione di Azure Data Studio è disponibile nelle note sulla versione.
+- Il programma di installazione del sistema di Azure Data Studio richiede gli stessi diritti di sicurezza del programma di installazione di SSMS.
+- L'installazione di Azure Data Studio viene completata con le opzioni di installazione predefinite di Azure Data Studio. È necessario creare una cartella del menu Start e aggiungere Azure Data Studio al percorso. Non viene creato un collegamento sul desktop e Azure Data Studio non viene registrato come editor predefinito per nessun tipo di file.
+- La localizzazione di Azure Data Studio viene eseguita usando le estensioni dei language pack. Per localizzare Azure Data Studio, scaricare il language pack corrispondente dal [marketplace delle estensioni](../azure-data-studio/extensions/add-extensions.md).
+- A questo punto, l'installazione di Azure Data Studio può essere ignorata avviando il programma di installazione di SSMS con il flag della riga di comando `DoNotInstallAzureDataStudio=1`.
 
 ## <a name="uninstall"></a>Disinstallare
 

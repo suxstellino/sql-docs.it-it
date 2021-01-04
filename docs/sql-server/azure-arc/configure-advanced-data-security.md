@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 2bd589ebacd9ea35e15881eaaeb022d4f2302986
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: e0c68752d21de5945c06433af8c08f6208322f7c
+ms.sourcegitcommit: 18e2f0706e03d0b2b6324845244fbafaa077a8dd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988027"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97103171"
 ---
 # <a name="configure-advanced-data-security-for-azure-arc-enabled-sql-server-instance"></a>Configurare la sicurezza dei dati avanzata per l'istanza di SQL Server abilitato per Azure Arc
 
@@ -50,17 +50,17 @@ Il passaggio successivo è necessario solo se l'agente MMA non è ancora stato c
 
 1. Per informazioni dettagliate, vedere [Gestione delle estensioni con Azure Arc](/azure/azure-arc/servers/manage-vm-extensions).
 
-## <a name="enable-advanced-data-security"></a>Abilitare la sicurezza dei dati avanzata
+## <a name="enable-azure-defender"></a>Abilitare Azure Defender
 
-La fase successiva è l'abilitazione della sicurezza dei dati avanzata per l'istanza di SQL Server.
+È poi necessario abilitare Azure Defender per l'istanza di SQL Server.
 
 1. Passare a Centro sicurezza e aprire la pagina **Prezzi e impostazioni** sulla barra laterale.
 
 1. Selezionare l'area di lavoro configurata per l'estensione MMA nel passaggio precedente
 
-1. Selezionare **Standard**. Verificare che sia abilitata l'opzione **Server SQL nel computer (anteprima)** .
+1. Selezionare **Azure Defender - On**. Verificare che l'opzione **SQL servers on machines** (Server SQL nelle macchine virtuali) sia abilitata.
 
-   ![Aggiornare l'area di lavoro](media/configure-advanced-data-security/upgrade-log-analytics-workspace.png)
+   ![Aggiornare l'area di lavoro](media/configure-advanced-data-security/enable-azure-defender.png)
 
  > [!NOTE]
    > La prima analisi per generare la valutazione della vulnerabilità avverrà entro 24 ore dall'abilitazione della sicurezza dei dati avanzata. Successivamente le analisi automatiche verranno eseguite ogni settimana la domenica.

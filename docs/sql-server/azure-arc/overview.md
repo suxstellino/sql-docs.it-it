@@ -5,16 +5,16 @@ description: Gestire le istanze di SQL Server con SQL Server con abilitazione di
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray
-ms.date: 10/07/2020
+ms.date: 12/08/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: references_regions
-ms.openlocfilehash: 59a3dab4136749f85e1f752ee823f8815080fd76
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: c1ba7f7552b5050e3c1fa7bc765acfa431f3df30
+ms.sourcegitcommit: 18e2f0706e03d0b2b6324845244fbafaa077a8dd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987987"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97103146"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>SQL Server con abilitazione di Azure Arc (anteprima)
 
@@ -43,8 +43,9 @@ SQL Server con abilitazione di Azure Arc supporta SQL Server 2012 o versione suc
 
 ### <a name="required-permissions"></a>Autorizzazioni necessarie
 
-Per connettere le istanze di SQL Server e l'hosting ad Azure Arc, è necessario avere un account con privilegi per eseguire le azioni seguenti:
-   * Microsoft.AzureData/*
+Per connettere le istanze di SQL Server e il computer di hosting ad Azure Arc, è necessario avere un account con privilegi per eseguire le azioni seguenti:
+   * Microsoft.AzureArcData/sqlServerInstances/read
+   * Microsoft.AzureArcData/sqlServerInstances/write
    * Microsoft.HybridCompute/machines/read
    * Microsoft.HybridCompute/machines/write
    * Microsoft.GuestConfiguration/guestConfigurationAssignments/read
@@ -58,6 +59,10 @@ Prima di configurare le istanze di SQL Server e i computer con Azure Arc, esamin
 ### <a name="networking-configuration-and-resource-providers"></a>Configurazione di rete e provider di risorse
 
 Verificare [la configurazione di rete, il protocollo TLS (Transport Layer Security) e i provider di risorse](/azure/azure-arc/servers/agent-overview#prerequisites) richiesti per l'agente Connected Machine.
+
+Il provider di risorse `Microsoft.AzureArcData` è necessario per connettere le istanze di SQL Server ad Azure Arc. Vedere le istruzioni per la registrazione del provider di risorse nella sezione [Prerequisiti](connect.md#prerequisites).
+
+Se sono già disponibili istanze di SQL Server connesse ad Azure Arc, seguire questa procedura per eseguire la migrazione delle risorse esistenti **SQL Server - Azure Arc** al nuovo spazio dei nomi.
 
 ### <a name="supported-azure-regions"></a>Aree di Azure supportate
 
