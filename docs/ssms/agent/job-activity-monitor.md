@@ -14,13 +14,13 @@ ms.assetid: 11f2182c-5f71-46f8-8d2b-74f0fc48f2d6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 813740790db9a7f9bb15f8e5d2a003b73ba5a88f
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 96a19ea760409d354390c171965f494f59cdff42
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037949"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477032"
 ---
 # <a name="job-activity-monitor"></a>Monitoraggio attività processi
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,19 +37,19 @@ Nome del processo.
 **Enabled**  
 Indica se il processo è abilitato (**sì**) o non abilitato (**no**).  
   
-**Stato***  
+**Stato** _  
 Stato corrente del processo.  
   
-**Risultati ultima esecuzione**  
+_ *Risultati ultima esecuzione**  
 Stato del processo all'ultima esecuzione.  
   
 **Ultima esecuzione**  
 Data e ora dell'ultima esecuzione del processo utilizzando la data e l'ora locali del server.  
   
-**Prossima esecuzione***  
+**Prossima esecuzione** _  
 Data e ora pianificate per la successiva esecuzione del processo utilizzando la data e l'ora locali del server.  
   
-**Categoria**  
+_ *Categoria**  
 Categoria assegnata al processo.  
   
 **Eseguibile**  
@@ -62,7 +62,7 @@ Categoria assegnata al processo.
   
 #### <a name="to-open-the-job-activity-monitor"></a>Per aprire Monitoraggio attività processi  
   
--   In **Esplora oggetti**espandere il server, espandere **SQL Server Agent**, fare clic con il pulsante destro del mouse su **Monitoraggio attività processi**e scegliere **Visualizza attività processi**.  
+-   In **Esplora oggetti** espandere il server, espandere **SQL Server Agent**, fare clic con il pulsante destro del mouse su **Monitoraggio attività processi** e scegliere **Visualizza attività processi**.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Monitoraggio delle attività del processo](../../ssms/agent/monitor-job-activity.md)  
