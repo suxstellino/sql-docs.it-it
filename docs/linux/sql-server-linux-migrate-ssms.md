@@ -8,18 +8,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
-ms.openlocfilehash: f0e1d76ae7977eac4d761c76a27e10619f300ca1
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: f33a5a6890d12628faf3144a0ca6e8471a15c73d
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115691"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559283"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>Esportare e importare un database in Linux con SSMS o SqlPackage.exe in Windows
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-Questo articolo illustra come usare [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) e [SqlPackage.exe](../tools/sqlpackage.md) per esportare e importare un database in SQL Server in Linux. Poiché SSMS e SqlPackage.exe sono applicazioni Windows, usare questa tecnica se si ha un computer Windows in grado di connettersi a un'istanza di SQL Server in Linux remota.
+Questo articolo illustra come usare [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) e [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md) per esportare e importare un database in SQL Server in Linux. Poiché SSMS e SqlPackage.exe sono applicazioni Windows, usare questa tecnica se si ha un computer Windows in grado di connettersi a un'istanza di SQL Server in Linux remota.
 
 È consigliabile installare e usare sempre la versione più recente di SQL Server Management Studio (SSMS) come descritto in [Usare SSMS in Windows per connettersi a SQL Server in Linux](sql-server-linux-manage-ssms.md)
 
@@ -64,7 +64,7 @@ Il file BACPAC verrà importato per creare un nuovo database nel server di desti
 
 ## <a name="sqlpackage-command-line-option"></a><a id="sqlpackage"></a> Opzione della riga di comando SqlPackage
 
-Per esportare e importare file BACPAC è anche possibile usare lo strumento da riga di comando di SQL Server Data Tools (SSDT), [SqlPackage.exe](../tools/sqlpackage.md).
+Per esportare e importare file BACPAC è anche possibile usare lo strumento da riga di comando di SQL Server Data Tools (SSDT), [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md).
 
 Il comando di esempio seguente esporta un file BACPAC:
 
@@ -80,4 +80,4 @@ SqlPackage.exe /a:Import /tsn:tcp:<your_server> /tdn:<your_database> /tu:<userna
 ```
 
 ## <a name="see-also"></a>Vedere anche
-Per altre informazioni sull'uso di SSMS, vedere [Usare SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md). Per altre informazioni su SqlPackage.exe, vedere la [documentazione di riferimento di SqlPackage](../tools/sqlpackage.md).
+Per altre informazioni sull'uso di SSMS, vedere [Usare SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md). Per altre informazioni su SqlPackage.exe, vedere la [documentazione di riferimento di SqlPackage](../tools/sqlpackage/sqlpackage.md).

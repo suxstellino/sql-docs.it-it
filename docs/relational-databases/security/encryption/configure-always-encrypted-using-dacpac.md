@@ -13,17 +13,17 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c18b6842139e5a4f5f0261761fa93cc42d3a506c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 506abf476e04ab1a40059d04031949fa80b31acf
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97405671"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559323"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>Configurare la crittografia delle colonne usando Always Encrypted con un pacchetto di applicazione livello dati 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-Un [pacchetto di applicazione livello dati (DAC)](../../data-tier-applications/data-tier-applications.md), noto anche come DACPAC, è un'unità portabile della distribuzione di database SQL Server che definisce tutti gli oggetti SQL Server, incluse le tabelle e le colonne delle tabelle. Quando si pubblica un pacchetto DACPAC in un database (ovvero, quando si aggiorna un database usando un pacchetto DACPAC), lo schema del database di destinazione viene aggiornato in modo da corrispondere allo schema del pacchetto DACPAC. È possibile pubblicare un pacchetto DACPAC seguendo la [procedura guidata Aggiorna applicazione di livello dati](../../data-tier-applications/upgrade-a-data-tier-application.md#UsingDACUpgradeWizard) in SQL Server Management Studio, [PowerShell](../../data-tier-applications/upgrade-a-data-tier-application.md#UpgradeDACPowerShell) o [SqlPackage](../../../tools/sqlpackage.md#publish-parameters-properties-and-sqlcmd-variables).
+Un [pacchetto di applicazione livello dati (DAC)](../../data-tier-applications/data-tier-applications.md), noto anche come DACPAC, è un'unità portabile della distribuzione di database SQL Server che definisce tutti gli oggetti SQL Server, incluse le tabelle e le colonne delle tabelle. Quando si pubblica un pacchetto DACPAC in un database (ovvero, quando si aggiorna un database usando un pacchetto DACPAC), lo schema del database di destinazione viene aggiornato in modo da corrispondere allo schema del pacchetto DACPAC. È possibile pubblicare un pacchetto DACPAC seguendo la [procedura guidata Aggiorna applicazione di livello dati](../../data-tier-applications/upgrade-a-data-tier-application.md#UsingDACUpgradeWizard) in SQL Server Management Studio, [PowerShell](../../data-tier-applications/upgrade-a-data-tier-application.md#UpgradeDACPowerShell) o [SqlPackage](../../../tools/sqlpackage/sqlpackage-publish.md).
 
 In questo articolo vengono illustrate alcune considerazioni speciali per l'aggiornamento di un database quando il pacchetto DACPAC o/e il database di destinazione contiene colonne protette con [Always Encrypted](always-encrypted-database-engine.md). Se lo schema di crittografia per una colonna nel pacchetto DACPAC differisce dallo schema di crittografia per una colonna esistente nel database di destinazione, la pubblicazione di DACPAC comporta la crittografia, la decrittografia o la nuova crittografia dei dati archiviati nella colonna. Vedere la tabella seguente per i dettagli.
 

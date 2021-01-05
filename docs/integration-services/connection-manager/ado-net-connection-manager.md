@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7009bdcb9ef2d740a200d8edad74e7559882d7c5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 8c2efe0145643f3f9e969c298e76115967477019
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726723"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637577"
 ---
 # <a name="adonet-connection-manager"></a>Gestione connessione ADO.NET
 
@@ -110,7 +110,7 @@ Per usare l'autenticazione identità gestita per Istanza gestita di SQL di Azure
     
 1. [Effettuare il provisioning di un amministratore di Azure Active Directory](/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) per l'istanza gestita nel portale di Azure, se non è già stato fatto. L'amministratore di Azure AD può essere un utente di Azure AD o gruppo di Azure AD. Se si concede al gruppo con identità gestita un ruolo di amministratore, ignorare i passaggi 2-4. L'amministratore avrà accesso completo al database.
 
-1. [Creare account di accesso](../../t-sql/statements/create-login-transact-sql.md?view=azuresqldb-mi-current) per l'identità gestita data factory. In SQL Server Management Studio (SSMS) connettersi all'istanza gestita con un account SQL Server di tipo **sysadmin**. Eseguire il codice T-SQL seguente nel database **master**:
+1. [Creare account di accesso](../../t-sql/statements/create-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true) per l'identità gestita data factory. In SQL Server Management Studio (SSMS) connettersi all'istanza gestita con un account SQL Server di tipo **sysadmin**. Eseguire il codice T-SQL seguente nel database **master**:
 
     ```sql
     CREATE LOGIN [your data factory name] FROM EXTERNAL PROVIDER;
@@ -122,7 +122,7 @@ Per usare l'autenticazione identità gestita per Istanza gestita di SQL di Azure
     CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. Concedere le autorizzazioni necessarie per l'identità gestita data factory, come si fa normalmente per gli utenti SQL e altri utenti. Eseguire il codice seguente. Per altre opzioni, vedere [questo documento](../../t-sql/statements/alter-role-transact-sql.md?view=azuresqldb-mi-current).
+1. Concedere le autorizzazioni necessarie per l'identità gestita data factory, come si fa normalmente per gli utenti SQL e altri utenti. Eseguire il codice seguente. Per altre opzioni, vedere [questo documento](../../t-sql/statements/alter-role-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true).
 
     ```sql
     ALTER ROLE [role name e.g., db_owner] ADD MEMBER [your data factory name];

@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - certificates [SQL Server], database mirroring
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 464c9096-10d6-4c5e-8bb1-19acba27ad9e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2837bcba7069f3259b23446137aa6162b2443189
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 163b7af8795b663645133307317e39646deee6e5
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754685"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637504"
 ---
 # <a name="database-mirroring---use-certificates-for-outbound-connections"></a>Mirroring del database: utilizzo di certificati per le connessioni in uscita
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "85754685"
   
      Per altre informazioni, vedere [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md).  
   
-     Per visualizzare i certificati nel database**master**, usare le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti:  
+     Per visualizzare i certificati nel database **master**, usare le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti:  
   
     ```  
     USE master;  
