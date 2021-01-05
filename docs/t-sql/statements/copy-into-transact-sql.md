@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: 9b480c90337017c77a0d05afe5861e85c89637d3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 43a5cc755eb07fe80a0d33d6b5b892e2a65ab21e
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460784"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97638822"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -131,7 +131,7 @@ Posizione di gestione temporanea dei file contenenti i dati. Attualmente sono su
 >Il tipo di file "Delimited Text" in Polybase viene sostituito dal formato di file "CSV", in cui è possibile configurare il delimitatore virgola predefinito tramite il parametro FIELDTERMINATOR. 
 
 *FILE_FORMAT = external_file_format_name*</br>
-*FILE_FORMAT* si applica solo ai file Parquet e ORC e specifica il nome dell'oggetto formato di file esterno che archivia il tipo di file e il metodo di compressione per i dati esterni. Per creare un formato di file esterno, usare [CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md?view=azure-sqldw-latest).
+*FILE_FORMAT* si applica solo ai file Parquet e ORC e specifica il nome dell'oggetto formato di file esterno che archivia il tipo di file e il metodo di compressione per i dati esterni. Per creare un formato di file esterno, usare [CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md).
 
 *CREDENTIAL (IDENTITY = ‘’, SECRET = ‘’)*</br>
 *CREDENTIAL* specifica il meccanismo di autenticazione per accedere all'account di archiviazione esterno. I metodi di autenticazione sono i seguenti:
@@ -256,7 +256,7 @@ I caratteri ASCII e multibyte estesi non sono supportati con UTF-8 per ROW TERMI
 *FIRSTROW* si applica al formato CSV e specifica il numero della riga che viene letta per prima in tutti i file con il comando COPY. I valori iniziano da 1, che è il valore predefinito. Se il valore è impostato su due, la prima riga di ogni file (riga di intestazione) viene ignorata quando i dati vengono caricati. Le righe vengono ignorate in base alla presenza di caratteri di terminazione della riga.
 
 *DATEFORMAT = { ‘mdy’ \| ‘dmy’ \| ‘ymd’ \| ‘ydm’ \| ‘myd’ \| ‘dym’ }*</br>
-DATEFORMAT si applica solo al formato CSV e specifica il formato di data per il mapping della data ai formati di data di SQL Server. Per una panoramica di tutte le funzioni e i tipi di dati di data e ora Transact-SQL, vedere [Funzioni e tipi di dati di data e ora (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md?view=sql-server-ver15). DATEFORMAT all'interno del comando COPY ha la precedenza su [DATEFORMAT configurato a livello di sessione](set-dateformat-transact-sql.md?view=sql-server-ver15).
+DATEFORMAT si applica solo al formato CSV e specifica il formato di data per il mapping della data ai formati di data di SQL Server. Per una panoramica di tutte le funzioni e i tipi di dati di data e ora Transact-SQL, vedere [Funzioni e tipi di dati di data e ora (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md). DATEFORMAT all'interno del comando COPY ha la precedenza su [DATEFORMAT configurato a livello di sessione](set-dateformat-transact-sql.md).
 
 *ENCODING = ‘UTF8’ | ‘UTF16’*</br>
 *ENCODING* si applica solo al formato CSV. L'impostazione predefinita è UTF8. Specifica lo standard di codifica dei dati per i file caricati tramite il comando COPY. 
@@ -275,8 +275,8 @@ IDENTITY_INSERT specifica se il valore o i valori Identity presenti nel file di 
 
 L'utente che esegue il comando Copy deve avere le autorizzazioni seguenti: 
 
-- [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
-- [INSERT ](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
+- [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md#remarks)
+- [INSERT ](grant-database-permissions-transact-sql.md#remarks)
 
 Sono necessarie le autorizzazioni INSERT e ADMINISTER BULK OPERATIONS. In [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], sono necessarie le autorizzazioni INSERT e ADMINISTER DATABASE BULK OPERATIONS.
 

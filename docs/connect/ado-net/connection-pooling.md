@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 41b139d2f22a9cb3137879d96224b02eafc24bab
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: 783fad79522c52685349defca93360c4ea8c80c9
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96761499"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771644"
 ---
 # <a name="connection-pooling"></a>Pool di connessioni
 
