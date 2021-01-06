@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring database mirroring [SQL Server]
@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a34829894a9d4a402749ffd167b8adbfc7951ba6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c323c5915752e68505e7e1e512843ae03c8197e4
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85651031"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643490"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Utilizzare valori di soglia avvisi e avvisi sulle metriche delle prestazioni di mirroring (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  In questo argomento sono incluse informazioni sugli eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per cui è possibile configurare e gestire valori soglia degli avvisi per il mirroring del database. È possibile usare Monitoraggio mirroring del database o le stored procedure **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**e **sp_dbmmonitordropalert** . Nell'argomento sono inoltre incluse informazioni relative alle configurazione degli avvisi per gli eventi di mirroring del database.  
+  In questo argomento sono incluse informazioni sugli eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per cui è possibile configurare e gestire valori soglia degli avvisi per il mirroring del database. È possibile usare Monitoraggio mirroring del database o le stored procedure **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert** e **sp_dbmmonitordropalert** . Nell'argomento sono inoltre incluse informazioni relative alle configurazione degli avvisi per gli eventi di mirroring del database.  
   
  Dopo aver stabilito il monitoraggio per un database con mirroring, un amministratore di sistema può configurare soglie di avviso su alcune metriche chiave delle prestazioni. Un amministratore può inoltre configurare avvisi su questi e altri eventi di mirroring del database.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "85651031"
 |Misurazione delle prestazioni|Valore soglia avvisi|Etichetta di Monitoraggio mirroring del database|  
 |------------------------|-----------------------|--------------------------------------|  
 |Log non inviato|Specifica la quantità di log non inviati, espressa in kilobyte (KB), che può accumularsi prima che venga generato un avviso nell'istanza del server principale. Questo avviso consente di quantificare il rischio potenziale di perdita dei dati in termini di KB ed è particolarmente rilevante per la modalità a prestazioni elevate. L'avviso risulta tuttavia utile anche per la modalità a sicurezza elevata quando il mirroring viene sospeso in seguito alla disconnessione dei partner.|**Avvisa se il log non inviato supera la soglia**|  
-|Log non ripristinato|Specifica la quantità di log non ripristinati, espressa in kilobyte (KB), che può accumularsi prima che venga generato un avviso nell'istanza del server mirror. Questo avviso consente di misurare il tempo di failover. Il*tempo di failover* corrisponde essenzialmente al tempo necessario al server mirror precedente per eseguire il rollforward di tutti i log rimanenti nella propria coda di rollforward, più un breve tempo aggiuntivo.<br /><br /> Nota: per un failover automatico, il tempo necessario al sistema per rilevare l'errore è indipendente dal tempo di failover.<br /><br /> Per altre informazioni, vedere [Stimare l'interruzione del servizio durante il cambio di ruolo &#40;mirroring del database&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).|**Avvisa se il log non ripristinato supera la soglia**|  
+|Log non ripristinato|Specifica la quantità di log non ripristinati, espressa in kilobyte (KB), che può accumularsi prima che venga generato un avviso nell'istanza del server mirror. Questo avviso consente di misurare il tempo di failover. Il *tempo di failover* corrisponde essenzialmente al tempo necessario al server mirror precedente per eseguire il rollforward di tutti i log rimanenti nella propria coda di rollforward, più un breve tempo aggiuntivo.<br /><br /> Nota: per un failover automatico, il tempo necessario al sistema per rilevare l'errore è indipendente dal tempo di failover.<br /><br /> Per altre informazioni, vedere [Stimare l'interruzione del servizio durante il cambio di ruolo &#40;mirroring del database&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).|**Avvisa se il log non ripristinato supera la soglia**|  
 |Transazione non inviata meno recente|Specifica la quantità di transazioni, espressa in minuti, che può accumularsi nella coda di invio prima che venga generato un avviso nell'istanza del server principale. Questo avviso consente di quantificare il rischio potenziale di perdita dei dati in termini di tempo ed è particolarmente rilevante per la modalità a prestazioni elevate. L'avviso risulta tuttavia utile anche per la modalità a sicurezza elevata quando il mirroring viene sospeso in seguito alla disconnessione dei partner.|**Avvisa se il tempo di memorizzazione della transazione non inviata meno recente è superiore alla soglia**|  
 |Overhead commit mirror|Specifica il ritardo medio per transazione, espresso in millisecondi, che è consentito prima che venga generato un avviso nell'istanza del server principale. Questo ritardo rappresenta la quantità di overhead generato mentre l'istanza del server principale è in attesa che l'istanza del server mirror scriva il record di log della transazione nella coda di rollforward. Questo valore è rilevante solo nella modalità a sicurezza elevata.|**Avvisa se l'overhead di commit del mirror supera la soglia**|  
   

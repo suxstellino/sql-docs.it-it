@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: df9c6895c827a021947937ba84aebd0dd9313915
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: d9e40c9c50486f7967b60d51910273c382606713
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88713689"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643445"
 ---
 # <a name="import-a-trace-template-sql-server-profiler"></a>Importare un modello di traccia (SQL Server Profiler)
 
@@ -27,7 +27,7 @@ In questo argomento viene descritto come importare un file modello di traccia, c
   
 ### <a name="to-import-a-trace-template"></a>Per importare un modello di traccia  
   
-1.  Scegliere **Modelli** dal menu **File**e quindi fare clic su **Importa modello**.  
+1.  Scegliere **Modelli** dal menu **File** e quindi fare clic su **Importa modello**.  
   
 2.  Nella finestra di dialogo **Apri file** selezionare il file modello di traccia, con estensione tdf, da importare e quindi fare clic su **Apri**.  
   
@@ -35,7 +35,7 @@ In questo argomento viene descritto come importare un file modello di traccia, c
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare un modello di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [Modificare modello di traccia &#40;SQL Server Profiler&#41;](./modify-trace-templates.md?view=sql-server-ver15)   
+ [Modificare modello di traccia &#40;SQL Server Profiler&#41;](./modify-trace-templates.md)   
  [Derivare un modello da una traccia in esecuzione &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [Derivare un modello da un file di traccia o da una tabella di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [Esportare un modello di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   

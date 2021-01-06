@@ -1,6 +1,6 @@
 ---
 title: Opzioni di configurazione della memoria del server | Microsoft Docs
-ms.custom: contperfq4
+ms.custom: contperf-fy20q4
 ms.date: 08/14/2019
 ms.prod: sql
 ms.prod_service: high-availability
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 8620da6349efe012e9e0d75d6ddf5efada437832
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 71cab9c11aaa4f3dc569761fdfef407601162b1c
+ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442806"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878910"
 ---
 # <a name="server-memory-configuration-options"></a>Opzioni di configurazione della memoria del server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +77,7 @@ Per impostare una quantità di memoria fissa:
   
 2.  Fare clic sul nodo **Memoria** .  
   
-3.  In **Opzioni per la memoria del server**immettere la quantità da usare per **Memoria minima per il server** e **Memoria massima per il server**.  
+3.  In **Opzioni per la memoria del server** immettere la quantità da usare per **Memoria minima per il server** e **Memoria massima per il server**.  
   
      Usare le impostazioni predefinite per consentire a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di modificare i requisiti di memoria in base alle risorse di sistema disponibili. È consigliabile impostare il valore **max server memory** come [descritto in dettaglio in precedenza](#max_server_memory). 
 
@@ -104,9 +104,9 @@ Per abilitare l'opzione Blocco di pagine in memoria:
   
      Viene visualizzata la finestra di dialogo **Criteri gruppo** .  
   
-2.  Nella console **Criteri di gruppo** espandere **Configurazione computer**e quindi espandere **Impostazioni di Windows**.  
+2.  Nella console **Criteri di gruppo** espandere **Configurazione computer** e quindi espandere **Impostazioni di Windows**.  
   
-3.  Espandere **Impostazioni sicurezza**e quindi espandere **Criteri locali**.  
+3.  Espandere **Impostazioni sicurezza** e quindi espandere **Criteri locali**.  
   
 4.  Selezionare la cartella **Assegnazione diritti utente** .  
   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: markingmyname
 ms.author: maghan
-ms.custom: contperfq4
-ms.openlocfilehash: 846d393640e02365348f5ffd7057c0142163f5d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.custom: contperf-fy20q4
+ms.openlocfilehash: aabe0f1c418440053998ce1a1b388e82d74b06c9
+ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763978"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878864"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Visualizzare o modificare le proprietà del server (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -135,9 +135,9 @@ GO
   
 ### <a name="to-view-or-change-server-properties"></a>Per visualizzare o modificare le proprietà del server  
   
-1.  Fare clic sul menu **Start** , scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Strumenti di configurazione**e quindi **Gestione configurazione SQL Server**.  
+1.  Fare clic sul menu **Start** , scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Strumenti di configurazione** e quindi **Gestione configurazione SQL Server**.  
   
-2.  In **Gestione configurazione SQL Server**fare clic su **Servizi di SQL Server**.  
+2.  In **Gestione configurazione SQL Server** fare clic su **Servizi di SQL Server**.  
   
 3.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server (\<**_instancename_**>)** e quindi scegliere **Proprietà**.  
   

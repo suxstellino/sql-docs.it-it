@@ -1,7 +1,7 @@
 ---
 title: Connettersi a SQL Server se gli amministratori di sistema sono bloccati | Microsoft Docs
 description: Informazioni su come riottenere l'accesso a SQL Server come amministratore di sistema in caso di blocco per errore.
-ms.custom: contperfq4
+ms.custom: contperf-fy20q4
 ms.date: 05/20/2020
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 801602c78193f9fc3fa9cdab40b98c3dc3dd42e0
-ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
+ms.openlocfilehash: 3b4cf5946fba4eb3c79150b29ef44bd232f9c155
+ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88512317"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878948"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Connettersi a SQL Server se gli amministratori di sistema sono bloccati 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -83,7 +83,7 @@ Eseguire queste istruzioni mentre si è connessi a Windows come membro del grupp
     > [!NOTE]  
     >  In alcune versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è presente alcuna scheda **Parametri di avvio** . In questo caso, nella scheda **Avanzate** fare doppio clic su **Parametri di avvio**. I parametri vengono visualizzati in una finestra molto piccola. Fare attenzione a non modificare nessuno dei parametri esistenti. Al termine, aggiungere un nuovo parametro `;-m` (ovvero un punto e virgola seguito da un trattino e una lettera m minuscola) e quindi fare clic su **OK**. .  
   
-4.  Fare clic su **OK**e, dopo il messaggio di riavvio, fare clic con il pulsante destro del mouse sul nome del server e quindi scegliere **Riavvia**.  
+4.  Fare clic su **OK** e, dopo il messaggio di riavvio, fare clic con il pulsante destro del mouse sul nome del server e quindi scegliere **Riavvia**.  
   
 5.  Dopo il riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il server sarà in modalità utente singolo. Accertarsi che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non sia in esecuzione, altrimenti l'unica connessione presente non sarà più disponibile a causa del relativo utilizzo da parte di questo servizio.  
   
@@ -94,7 +94,7 @@ Eseguire queste istruzioni mentre si è connessi a Windows come membro del grupp
   
      In alcune configurazioni, tramite SSMS si tenterà di stabilire diverse connessioni. Non sarà possibile stabilire più connessioni poiché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in modalità utente singolo. In base allo specifico scenario, eseguire una delle azioni seguenti.  
   
-    1.  Effettuare la connessione con Esplora oggetti mediante l'autenticazione di Windows, che include le credenziali di amministratore. Espandere **Sicurezza**, **Account di accesso**e fare doppio clic sul proprio account di accesso. Nella pagina **Ruoli server** selezionare **sysadmin**quindi fare clic su **OK**.  
+    1.  Effettuare la connessione con Esplora oggetti mediante l'autenticazione di Windows, che include le credenziali di amministratore. Espandere **Sicurezza**, **Account di accesso** e fare doppio clic sul proprio account di accesso. Nella pagina **Ruoli server** selezionare **sysadmin** quindi fare clic su **OK**.  
   
     2.  Anziché effettuare la connessione con Esplora oggetti, utilizzare una finestra Query tramite l'autenticazione di Windows (in cui sono incluse le credenziali di amministratore) (si tratta dell'unica modalità di connessione possibile se non è stato utilizzato Esplora oggetti). Eseguire codice come il seguente per aggiungere un nuovo account di accesso con autenticazione di Windows che fa parte del ruolo predefinito del server **sysadmin**. Nell'esempio seguente viene aggiunto un utente di dominio denominato `CONTOSO\PatK`.  
   

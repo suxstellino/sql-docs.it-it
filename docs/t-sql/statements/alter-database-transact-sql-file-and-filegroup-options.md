@@ -44,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: ec951a21f6d228fad6104faadb767e379e4efcec
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 271c2362f4b4313fe50a1de680937111e56f6711
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97490021"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643903"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Opzioni per file e filegroup ALTER DATABASE (Transact-SQL)
 
@@ -66,7 +66,7 @@ Per altre informazioni sulle convenzioni di sintassi, vedere [Convenzioni della 
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Istanza gestita di SQL](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)
+        [Istanza gestita di SQL](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1043,7 +1043,7 @@ GO
 
 ## <a name="see-also"></a>Vedere anche
 
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-mi-current)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)

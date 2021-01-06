@@ -11,12 +11,12 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
-ms.openlocfilehash: a7a2170c14502be9ffcae478839657abc39974ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59c377d5055e8eb3858e1005c50d9c4dfb8334ab
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438673"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771552"
 ---
 # <a name="tutorial-develop-a-net-application-using-always-encrypted-with-secure-enclaves"></a>Esercitazione: Sviluppare un'applicazione .NET usando Always Encrypted con enclave sicuri
 
@@ -47,7 +47,7 @@ Se si archivia la chiave master della colonna in Azure Key Vault, è anche neces
 
 3. Assicurarsi che il progetto sia destinato almeno a .NET Framework 4.6 o .NET Core 2.1. Fare clic con il pulsante destro del mouse sul progetto in Esplora soluzioni, scegliere Proprietà e impostare Framework di destinazione.
 
-4. Installare il pacchetto NuGet seguente passando a**Strumenti** (menu principale) > **Gestione pacchetti NuGet** > **Console di Gestione pacchetti**. Eseguire il codice seguente nella Console di Gestione pacchetti.
+4. Installare il pacchetto NuGet seguente passando a **Strumenti** (menu principale) > **Gestione pacchetti NuGet** > **Console di Gestione pacchetti**. Eseguire il codice seguente nella Console di Gestione pacchetti.
 
    ```powershell
    Install-Package Microsoft.Data.SqlClient -Version 1.1.0
@@ -129,7 +129,7 @@ L'applicazione si connetterà al database **ContosoHR** creato in [Esercitazione
 
 2. Compilare ed eseguire l'applicazione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Uso di Always Encrypted con il provider di dati Microsoft .NET per SQL Server](sqlclient-support-always-encrypted.md)
 - [Esempio che illustra l'uso del provider Azure Key Vault con Always Encrypted](azure-key-vault-example.md)

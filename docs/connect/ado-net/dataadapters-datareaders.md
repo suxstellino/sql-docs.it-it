@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: e71f6218c9fecd956a7c287581caa72a1a787462
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: 3a252ca44683c062e531081f0b625a5e2359d236
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96772232"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771390"
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapter e DataReader
 
@@ -62,4 +62,5 @@ Viene descritto il miglioramento delle prestazioni delle applicazioni mediante l
 
 - [Connessione a un'origine dati](connecting-to-data-source.md)
 - [Comandi e parametri](commands-parameters.md)
+- [Transazioni e concorrenza](transactions-and-concurrency.md)
 - [Microsoft ADO.NET per SQL Server](microsoft-ado-net-sql-server.md)

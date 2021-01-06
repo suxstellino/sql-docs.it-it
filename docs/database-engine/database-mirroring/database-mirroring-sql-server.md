@@ -6,7 +6,7 @@ ms.date: 05/16/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - partners [SQL Server]
@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c1b95d55a979738f787e4814a9f40f929c521868
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 906dc46e076ce49242ecb0aa416d13cbb770147e
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754733"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644434"
 ---
 # <a name="database-mirroring-sql-server"></a>Mirroring del database (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "85754733"
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In alternativa, usare [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
- Il*mirroring del database* è una soluzione per aumentare la disponibilità di un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il mirroring viene implementato a livello di singolo database e funziona solo con database che utilizzano il modello di recupero con registrazione completa.  
+ Il *mirroring del database* è una soluzione per aumentare la disponibilità di un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il mirroring viene implementato a livello di singolo database e funziona solo con database che utilizzano il modello di recupero con registrazione completa.  
   
 > [!IMPORTANT]  
 >  Per informazioni sul supporto per il mirroring del database, nonché su restrizioni, prerequisiti e consigli per la configurazione dei server partner e per la distribuzione del mirroring del database, vedere [Prerequisiti, restrizioni e indicazioni per il mirroring del database](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md).  
@@ -121,7 +121,7 @@ ms.locfileid: "85754733"
   
  Un'istanza del server gestisce il database per i client (il *server principale*). L'altra istanza agisce come server warm standby o hot standby (il *server mirror*), a seconda della configurazione e dello stato della sessione di mirroring. Quando viene sincronizzata una sessione di mirroring del database, il mirroring del database rende disponibile un server di hot standby che supporta il failover rapido senza perdita di dati da transazioni di cui è stato eseguito il commit. Quando la sessione non è sincronizzata, il server mirror è in genere disponibile come server warm standby e ciò può causare perdite di dati.  
   
- Il server principale e il server mirror comunicano e cooperano come *partner* in una *sessione di mirroring del database*. I due partner svolgono ruoli complementari nella sessione: il *ruolo principale* e il *ruolo mirror*. In ogni momento, un partner svolge il ruolo principale, l'altro il ruolo mirror. Ogni partner è definito *proprietario* del suo ruolo corrente. Il partner proprietario del ruolo principale è definito *server principale*e la sua copia del database è il database principale corrente. Il partner proprietario del ruolo mirror è definito *server mirror*e la sua copia del database è il database mirror corrente. Quando il mirroring del database è distribuito in un ambiente di produzione, il database principale è il *database di produzione*.  
+ Il server principale e il server mirror comunicano e cooperano come *partner* in una *sessione di mirroring del database*. I due partner svolgono ruoli complementari nella sessione: il *ruolo principale* e il *ruolo mirror*. In ogni momento, un partner svolge il ruolo principale, l'altro il ruolo mirror. Ogni partner è definito *proprietario* del suo ruolo corrente. Il partner proprietario del ruolo principale è definito *server principale* e la sua copia del database è il database principale corrente. Il partner proprietario del ruolo mirror è definito *server mirror* e la sua copia del database è il database mirror corrente. Quando il mirroring del database è distribuito in un ambiente di produzione, il database principale è il *database di produzione*.  
   
  Il mirroring del database include il *rollforward* sul database mirror di tutte le operazioni di inserimento, aggiornamento ed eliminazione eseguite sul database principale il più rapidamente possibile. Il rollforward viene eseguito inviando un flusso di record del log delle transazioni attivi al server mirror, il quale applica i record del log al database mirror, in sequenza, il più rapidamente possibile. Diversamente dalla replica, che opera a livello logico, il mirroring del database opera a livello dei record del log fisico. A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], il server principale comprime il flusso di record del log delle transazioni prima di inviarlo al server mirror. Questa compressione del log si verifica in tutte le sessioni di mirroring.  
   

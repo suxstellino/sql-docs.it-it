@@ -5,17 +5,17 @@ ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 15ae1302fcff002816e8e8e7a5e37b6fbe8bd503
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.openlocfilehash: fa6d63d665a2a81d0a112a1685b3ead1969479d1
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235454"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643739"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Monitorare le prestazioni di gruppi di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "93235454"
 Nei gruppi di disponibilità Always On, i valori RTO e RPO vengono calcolati e visualizzati per i database ospitati nelle repliche secondarie. Nel dashboard della replica primaria i valori RTO e RPO sono raggruppati in base alla replica secondaria. 
 
 Per visualizzare i valori RTO e RPO all'interno del dashboard, eseguire le operazioni seguenti:
-1. In SQL Server Management Studio espandere il nodo **Disponibilità elevata Always On** , fare clic con il pulsante destro del mouse sul nome del gruppo di disponibilità e scegliere **Mostra dashboard**. 
+1. In SQL Server Management Studio espandere il nodo **Disponibilità elevata Always On**, fare clic con il pulsante destro del mouse sul nome del gruppo di disponibilità e scegliere **Mostra dashboard**. 
 1. Selezionare **Aggiungi/Rimuovi colonne** nella scheda **Raggruppa per**. Controllare sia **Tempo di recupero stimato (secondi)** [RTO] sia **Perdita di dati stimata (tempo)** [RPO]. 
 
    ![Screenshot che mostra il dashboard RTO RPO.](media/rto-rpo-dashboard.png)
@@ -96,7 +96,7 @@ Per visualizzare i valori RTO e RPO all'interno del dashboard, eseguire le opera
 Il calcolo del tempo di recupero determina il tempo necessario per recuperare il *database secondario* dopo che si verifica un failover.  Il tempo di failover è solitamente breve e costante. Il tempo per il rilevamento dipende dalle impostazioni a livello di cluster e non dalle singole repliche di disponibilità. 
 
 
-Per un database secondario (DB_sec), il calcolo e la visualizzazione del valore RTO prende in considerazione i valori di **redo_queue_size** e **redo_rate** :
+Per un database secondario (DB_sec), il calcolo e la visualizzazione del valore RTO prende in considerazione i valori di **redo_queue_size** e **redo_rate**:
 
 ![Calcolo del valore RTO](media/calculate-rto.png)
 
@@ -116,9 +116,9 @@ Per il database primario, **last_commit_time** corrisponde all'ora in cui è sta
 
 ### <a name="performance-counters-used-in-rtorpo-formulas"></a>Contatori delle prestazioni utilizzati nelle formule RTO/RPO
 
-- **redo_queue_size** (KB) [ *usato per l'RTO* ]: le dimensioni della coda di rollforward sono le dimensioni dei log delle transazioni tra **last_received_lsn** e **last_redone_lsn**. **last_received_lsn** è l'ID del blocco di log che identifica il punto fino a cui tutti i blocchi di log sono stati ricevuti dalla replica secondaria che ospita questo database secondario. **Last_redone_lsn** è il numero di sequenza del file di log dell'ultimo record di log di cui è stato eseguito il rollforward nel database secondario. Sulla base di questi due valori, è possibile trovare gli ID del blocco di log iniziale ( **last_received_lsn** ) e del blocco di log finale ( **last_redone_lsn** ). Lo spazio tra questi due blocchi di log quindi può rappresentare il numero di blocchi di log delle transazioni di cui non è ancora stato eseguito il rollforward. Il valore viene misurato in kilobyte (KB).
--  **redo_rate** (KB/sec) [ *usato per l'RTO* ]: valore cumulativo che rappresenta, dopo un dato periodo di tempo, la quantità, espressa in KB, del log della transazione che è stata sottoposta a rollforward nel database secondario in kilobyte (KB)/secondo. 
-- **last_commit_time** (Datetime) [ *usato per l'RPO* ]: Per il database primario, **last_commit_time** corrisponde all'ora in cui è stato eseguito il commit della transazione più recente. Per il database secondario, **last_commit_time** corrisponde all'ora in cui è stato eseguito il commit della transazione più recente nel database primario che è stata finalizzata correttamente anche nel database secondario. Poiché questo valore del database secondario deve essere sincronizzato con lo stesso valore del database primario, eventuali differenze tra questi due valori rappresentano la stima della perdita dei dati (RPO).  
+- **redo_queue_size** (KB) [*usato per l'RTO*]: le dimensioni della coda di rollforward sono le dimensioni dei log delle transazioni tra **last_received_lsn** e **last_redone_lsn**. **last_received_lsn** è l'ID del blocco di log che identifica il punto fino a cui tutti i blocchi di log sono stati ricevuti dalla replica secondaria che ospita questo database secondario. **Last_redone_lsn** è il numero di sequenza del file di log dell'ultimo record di log di cui è stato eseguito il rollforward nel database secondario. Sulla base di questi due valori, è possibile trovare gli ID del blocco di log iniziale (**last_received_lsn**) e del blocco di log finale (**last_redone_lsn**). Lo spazio tra questi due blocchi di log quindi può rappresentare il numero di blocchi di log delle transazioni di cui non è ancora stato eseguito il rollforward. Il valore viene misurato in kilobyte (KB).
+-  **redo_rate** (KB/sec) [*usato per l'RTO*]: valore cumulativo che rappresenta, dopo un dato periodo di tempo, la quantità, espressa in KB, del log della transazione che è stata sottoposta a rollforward nel database secondario in kilobyte (KB)/secondo. 
+- **last_commit_time** (Datetime) [*usato per l'RPO*]: Per il database primario, **last_commit_time** corrisponde all'ora in cui è stato eseguito il commit della transazione più recente. Per il database secondario, **last_commit_time** corrisponde all'ora in cui è stato eseguito il commit della transazione più recente nel database primario che è stata finalizzata correttamente anche nel database secondario. Poiché questo valore del database secondario deve essere sincronizzato con lo stesso valore del database primario, eventuali differenze tra questi due valori rappresentano la stima della perdita dei dati (RPO).  
  
 ## <a name="estimate-rto-and-rpo-using-dmvs"></a>Stimare i valori RTO e RPO mediante DMV
 
@@ -206,7 +206,7 @@ Per il database primario, **last_commit_time** corrisponde all'ora in cui è sta
   ```sql
    exec proc_calculate_RTO @secondary_database_name = N'DB_sec'
   ```
-3. L'output visualizza il valore RTO del database di replica secondaria di destinazione. Salvare i valori *group_id* , *replica_id* e *group_database_id* da usare con la stored procedure per la stima del valore RPO. 
+3. L'output visualizza il valore RTO del database di replica secondaria di destinazione. Salvare i valori *group_id*, *replica_id* e *group_database_id* da usare con la stored procedure per la stima del valore RPO. 
    
    Output di esempio:
 <br>Il valore RTO di DB_sec del database è 0
@@ -299,7 +299,7 @@ Per il database primario, **last_commit_time** corrisponde all'ora in cui è sta
       end
  ```
 
-2. Eseguire **proc_calculate_RPO** con i valori *group_id* , *replica_id* e *group_database_id* del database secondario di destinazione. 
+2. Eseguire **proc_calculate_RPO** con i valori *group_id*, *replica_id* e *group_database_id* del database secondario di destinazione. 
 
  ```sql
    exec proc_calculate_RPO @group_id= 'F176DD65-C3EE-4240-BA23-EA615F965C9B',
@@ -338,97 +338,97 @@ Per creare i criteri, seguire le istruzioni riportate di seguito in tutte le ist
   
 4.  Creare una [condizione della gestione basata su criteri](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) usando le specifiche seguenti:  
   
-    -   **Nome** : `RTO`  
+    -   **Nome**: `RTO`  
   
-    -   **Facet** : **Stato replica di database**  
+    -   **Facet**: **Stato replica di database**  
   
-    -   **Campo** : `Add(@EstimatedRecoveryTime, 60)`  
+    -   **Campo**: `Add(@EstimatedRecoveryTime, 60)`  
   
-    -   **Operatore** : **<=**  
+    -   **Operatore**: **<=**  
   
-    -   **Valore** : `600`  
+    -   **Valore**: `600`  
   
      Questa condizione ha esito negativo quando il tempo di failover potenziale supera i 10 minuti, incluso l'overhead di 60 secondi per il rilevamento degli errori e il failover.  
   
 5.  Creare una seconda [condizione della gestione basata su criteri](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) usando le specifiche seguenti:  
   
-    -   **Nome** : `RPO`  
+    -   **Nome**: `RPO`  
   
-    -   **Facet** : **Stato replica di database**  
+    -   **Facet**: **Stato replica di database**  
   
-    -   **Campo** : `@EstimatedDataLoss`  
+    -   **Campo**: `@EstimatedDataLoss`  
   
-    -   **Operatore** : **<=**  
+    -   **Operatore**: **<=**  
   
-    -   **Valore** : `3600`  
+    -   **Valore**: `3600`  
   
      Questa condizione ha esito negativo quando la possibile perdita dei dati supera 1 ora.  
   
 6.  Creare una terza [condizione della gestione basata su criteri](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) usando le specifiche seguenti:  
   
-    -   **Nome** : `IsPrimaryReplica`  
+    -   **Nome**: `IsPrimaryReplica`  
   
-    -   **Facet** : **Gruppo di disponibilità**  
+    -   **Facet**: **Gruppo di disponibilità**  
   
-    -   **Campo** : `@LocalReplicaRole`  
+    -   **Campo**: `@LocalReplicaRole`  
   
-    -   **Operatore** : **=**  
+    -   **Operatore**: **=**  
   
-    -   **Valore** : `Primary`  
+    -   **Valore**: `Primary`  
   
      Questa condizione controlla se la replica di disponibilità locale per un determinato gruppo di disponibilità è la replica primaria.  
   
 7.  Creare un [criterio della gestione basata su criteri ](~/relational-databases/policy-based-management/create-a-policy-based-management-policy.md) usando le specifiche seguenti:  
   
-    -   Pagina **Generale** :  
+    -   Pagina **Generale**:  
   
-        -   **Nome** : `CustomSecondaryDatabaseRTO`  
+        -   **Nome**: `CustomSecondaryDatabaseRTO`  
   
-        -   **Condizioni di controllo** : `RTO`  
+        -   **Condizioni di controllo**: `RTO`  
   
-        -   **In base alle destinazioni** : **Every DatabaseReplicaState** in **IsPrimaryReplica AvailabilityGroup**  
+        -   **In base alle destinazioni**: **Every DatabaseReplicaState** in **IsPrimaryReplica AvailabilityGroup**  
   
              Questa impostazione controlla che i criteri vengano valutati solo nei gruppi di disponibilità per cui la replica di disponibilità locale è la replica primaria.  
   
-        -   **Modalità di valutazione** : **Su pianificazione**  
+        -   **Modalità di valutazione**: **Su pianificazione**  
   
-        -   **Pianificazione** : **CollectorSchedule_Every_5min**  
+        -   **Pianificazione**: **CollectorSchedule_Every_5min**  
   
-        -   **Abilitata** : **selezionato**  
+        -   **Abilitata**: **selezionato**  
   
-    -   Pagina **Descrizione** :  
+    -   Pagina **Descrizione**:  
   
-        -   **Categoria** : **Avvisi del database di disponibilità**  
+        -   **Categoria**: **Avvisi del database di disponibilità**  
   
              Questa impostazione abilita i risultati della valutazione dei criteri che devono essere visualizzati nel dashboard Always On.  
   
-        -   **Descrizione** : **la replica corrente è un obiettivo RTO che supera i 10 minuti, presupponendo un overhead di 1 minuto per l'individuazione e il failover. Esaminare immediatamente i problemi relativi alle prestazioni nella rispettiva istanza del server.**  
+        -   **Descrizione**: **la replica corrente è un obiettivo RTO che supera i 10 minuti, presupponendo un overhead di 1 minuto per l'individuazione e il failover. Esaminare immediatamente i problemi relativi alle prestazioni nella rispettiva istanza del server.**  
   
-        -   **Testo da visualizzare** : **RTO superato!**  
+        -   **Testo da visualizzare**: **RTO superato!**  
   
 8.  Creare un secondo [criterio della gestione basata su criteri ](~/relational-databases/policy-based-management/create-a-policy-based-management-policy.md) usando le specifiche seguenti:  
   
-    -   Pagina **Generale** :  
+    -   Pagina **Generale**:  
   
-        -   **Nome** : `CustomAvailabilityDatabaseRPO`  
+        -   **Nome**: `CustomAvailabilityDatabaseRPO`  
   
-        -   **Condizioni di controllo** : `RPO`  
+        -   **Condizioni di controllo**: `RPO`  
   
-        -   **In base alle destinazioni** : **Every DatabaseReplicaState** in **IsPrimaryReplica AvailabilityGroup**  
+        -   **In base alle destinazioni**: **Every DatabaseReplicaState** in **IsPrimaryReplica AvailabilityGroup**  
   
-        -   **Modalità di valutazione** : **Su pianificazione**  
+        -   **Modalità di valutazione**: **Su pianificazione**  
   
-        -   **Pianificazione** : **CollectorSchedule_Every_30min**  
+        -   **Pianificazione**: **CollectorSchedule_Every_30min**  
   
-        -   **Abilitata** : **selezionato**  
+        -   **Abilitata**: **selezionato**  
   
-    -   Pagina **Descrizione** :  
+    -   Pagina **Descrizione**:  
   
-        -   **Categoria** : **Avvisi del database di disponibilità**  
+        -   **Categoria**: **Avvisi del database di disponibilità**  
   
-        -   **Descrizione** : **il database di disponibilità ha superato l'obiettivo RPO di 1 ora. Esaminare immediatamente i problemi relativi alle prestazioni nelle repliche di disponibilità.**  
+        -   **Descrizione**: **il database di disponibilità ha superato l'obiettivo RPO di 1 ora. Esaminare immediatamente i problemi relativi alle prestazioni nelle repliche di disponibilità.**  
   
-        -   **Testo da visualizzare** : **RPO superato!**  
+        -   **Testo da visualizzare**: **RPO superato!**  
   
  Al termine, vengono creati due nuovi processi di SQL Server Agent, uno per ogni pianificazione di valutazione dei criteri. I nomi di questi processi devono iniziare con **syspolicy_check_schedule**.  
   

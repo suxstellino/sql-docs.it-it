@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: a30a3d3184c411fc0b54c0e26330a8fb138ffdae
-ms.sourcegitcommit: 2add15a99df7b85d271adb261523689984dfd134
+ms.openlocfilehash: 2a00ef1ec1f2f5d8ee892289021f42cb139b5a12
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97051301"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771322"
 ---
 # <a name="transactions-and-concurrency"></a>Transazioni e concorrenza
 
@@ -35,16 +35,16 @@ Per le transazioni che implicano l'uso di gestori di risorse diversi, ad esempio
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
- [Transazioni locali](local-transactions.md)  
- Viene illustrato come eseguire transazioni su un database.  
+[Transazioni locali](local-transactions.md)  
+Viene illustrato come eseguire transazioni su un database.  
   
- [Transazioni distribuite](distributed-transactions.md)  
- Viene descritto come eseguire transazioni distribuite in ADO.NET.  
+[Transazioni distribuite](distributed-transactions.md)  
+Viene descritto come eseguire transazioni distribuite in ADO.NET.  
   
- [Integrazione di System.Transactions con SQL Server](system-transactions-integration-with-sql-server.md)  
- Viene descritta l'integrazione di <xref:System.Transactions> con SQL Server per l'utilizzo di transazioni distribuite.  
+[Integrazione di System.Transactions con SQL Server](system-transactions-integration-with-sql-server.md)  
+Viene descritta l'integrazione di <xref:System.Transactions> con SQL Server per l'utilizzo di transazioni distribuite.  
   
- [Concorrenza ottimistica](optimistic-concurrency.md) Descrizione della concorrenza ottimistica e pessimistica e di come è possibile verificare le violazioni della concorrenza.  
+[Concorrenza ottimistica](optimistic-concurrency.md) Descrizione della concorrenza ottimistica e pessimistica e di come è possibile verificare le violazioni della concorrenza.  
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -52,4 +52,5 @@ Per le transazioni che implicano l'uso di gestori di risorse diversi, ad esempio
 - [Connessione a un'origine dati](connecting-to-data-source.md)
 - [Comandi e parametri](commands-parameters.md)
 - [DataAdapter e DataReader](dataadapters-datareaders.md)
+- [Oggetti DbProviderFactory](dbproviderfactories.md)
 - [Microsoft ADO.NET per SQL Server](microsoft-ado-net-sql-server.md)

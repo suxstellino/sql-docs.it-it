@@ -41,14 +41,14 @@ ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: seo-lt-2019, contperfq1
+ms.custom: seo-lt-2019, contperf-fy21q1
 ms.date: 08/28/2020
-ms.openlocfilehash: 7450a77549d05dab5a024b39be6d2b4aef6c09de
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.openlocfilehash: 87fd12a17b86a47e6fec1b235ae9e9a21fde6e45
+ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364844"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878958"
 ---
 # <a name="sql-server-management-studio-ssms-query-editor"></a>Editor di query SQL di Server Management Studio (SSMS)
 
@@ -70,7 +70,7 @@ L'editor di query può essere usato per creare ed eseguire script contenenti ist
 
 Quando l'editor di query è aperto, la barra degli strumenti Editor SQL visualizza i pulsanti seguenti.
 
-È anche possibile aggiungere la barra degli strumenti Editor SQL selezionando il menu **Visualizza** , **Barre degli strumenti** , quindi **Editor SQL**. Se la barra degli strumenti Editor SQL viene aggiunta quando non sono aperte finestre dell'editor di query, non è disponibile nessun pulsante.
+È anche possibile aggiungere la barra degli strumenti Editor SQL selezionando il menu **Visualizza** , **Barre degli strumenti**, quindi **Editor SQL**. Se la barra degli strumenti Editor SQL viene aggiunta quando non sono aperte finestre dell'editor di query, non è disponibile nessun pulsante.
 
 ![Barra degli strumenti dell'editor](media/database-engine-query-editor-sql-server-management-studio/editor-toolbar.png)
 
@@ -158,7 +158,7 @@ Restituisce i risultati della query sotto forma di una o più griglie nella fine
 
 ### <a name="results-to-file-using-the-editor-toolbar"></a>Risultati in un file - Barra degli strumenti dell'editor
 
-All'esecuzione della query viene visualizzata la finestra di dialogo **Salva risultati** . In **Salva in** selezionare la cartella in cui si desidera salvare il file. Digitare il nome del file in **Nome file** , quindi selezionare **Salva** per salvare i risultati della query come file **Report** con estensione RPT. Per visualizzare le opzioni avanzate, fare clic sulla freccia giù del pulsante **Salva** e quindi selezionare **Salva con codifica**.
+All'esecuzione della query viene visualizzata la finestra di dialogo **Salva risultati** . In **Salva in** selezionare la cartella in cui si desidera salvare il file. Digitare il nome del file in **Nome file**, quindi selezionare **Salva** per salvare i risultati della query come file **Report** con estensione RPT. Per visualizzare le opzioni avanzate, fare clic sulla freccia giù del pulsante **Salva** e quindi selezionare **Salva con codifica**.
 
 È anche possibile restituire i risultati in un file premendo CTRL+MAIUSC+F o usando [menu di scelta rapida](#results-using-the-context-menu).
 
@@ -188,7 +188,7 @@ Consente di aprire una finestra di dialogo in cui è possibile specificare valor
 
 ## <a name="context-menu"></a>Menu di scelta rapida
 
-È possibile accedere al menu di scelta rapida *facendo clic con il pulsante destro del mouse* in qualsiasi punto dell'editor di query. Le opzioni del menu di scelta rapida sono simili a quelle della barra degli strumenti dell'editor SQL. Il menu di scelta rapida visualizza le stesse opzioni della barra, ad esempio **Connetti** ed **Esegui** , ma anche altre opzioni come **Inserisci frammento** e **Racchiudi tra**.
+È possibile accedere al menu di scelta rapida *facendo clic con il pulsante destro del mouse* in qualsiasi punto dell'editor di query. Le opzioni del menu di scelta rapida sono simili a quelle della barra degli strumenti dell'editor SQL. Il menu di scelta rapida visualizza le stesse opzioni della barra, ad esempio **Connetti** ed **Esegui**, ma anche altre opzioni come **Inserisci frammento** e **Racchiudi tra**.
 
 ![Opzioni](media/database-engine-query-editor-sql-server-management-studio/context-menu.png)
 
@@ -206,13 +206,13 @@ Un frammento di inclusione è un modello che può essere usato come punto di par
 
 Nel menu di scelta rapida di SSMS sono disponibili più opzioni **Connessione** rispetto a quelle della barra degli strumenti.
 
-- **Connetti** : apre la finestra di dialogo Connetti al server. Utilizzare questa finestra di dialogo per stabilire una connessione a un server.
+- **Connetti**: apre la finestra di dialogo Connetti al server. Utilizzare questa finestra di dialogo per stabilire una connessione a un server.
 
-- **Disconnetti** : disconnette l'editor di query corrente dal server.
+- **Disconnetti**: disconnette l'editor di query corrente dal server.
 
-- **Disconnetti tutte le query** : disconnette tutte le connessioni a query.
+- **Disconnetti tutte le query**: disconnette tutte le connessioni a query.
 
-- **Cambia connessione** : apre la finestra di dialogo Connetti al server. Utilizzare questa finestra di dialogo per stabilire una connessione a un server diverso.
+- **Cambia connessione**: apre la finestra di dialogo Connetti al server. Utilizzare questa finestra di dialogo per stabilire una connessione a un server diverso.
 
 ### <a name="open-server-in-object-explorer-using-the-context-menu"></a>Apri server in Esplora oggetti - Menu di scelta rapida
 
@@ -260,11 +260,11 @@ Include una finestra **Statistiche client** contenente statistiche relative alla
 
 È possibile scegliere l'opzione *Risultati* desiderata nel menu di scelta rapida.
 
-- **Risultati in formato testo** : restituisce i risultati della query in formato testo nella finestra **Risultati**.
+- **Risultati in formato testo**: restituisce i risultati della query in formato testo nella finestra **Risultati**.
 
-- **Risultati in formato griglia** : restituisce i risultati della query come una o più griglie nella finestra **Risultati**.
+- **Risultati in formato griglia**: restituisce i risultati della query come una o più griglie nella finestra **Risultati**.
 
-- **Risultati in un file** : all'esecuzione della query viene visualizzata la finestra di dialogo **Salva risultati**. In **Salva in** selezionare la cartella in cui si desidera salvare il file. In **Nome file** digitare il nome del file e quindi selezionare **Salva** per salvare i risultati della query come file **Report** con estensione RPT. Per visualizzare le opzioni avanzate, fare clic sulla freccia giù del pulsante **Salva** e quindi selezionare **Salva con codifica**.
+- **Risultati in un file**: all'esecuzione della query viene visualizzata la finestra di dialogo **Salva risultati**. In **Salva in** selezionare la cartella in cui si desidera salvare il file. In **Nome file** digitare il nome del file e quindi selezionare **Salva** per salvare i risultati della query come file **Report** con estensione RPT. Per visualizzare le opzioni avanzate, fare clic sulla freccia giù del pulsante **Salva** e quindi selezionare **Salva con codifica**.
 
 ### <a name="properties-window-using-the-context-menu"></a>Finestra Proprietà - Menu di scelta rapida
 

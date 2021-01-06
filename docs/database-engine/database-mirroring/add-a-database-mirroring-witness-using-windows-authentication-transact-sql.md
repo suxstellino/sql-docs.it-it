@@ -6,7 +6,7 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - witness [SQL Server], establishing
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d62bfb55e8024e70f94f23eb1f9273fb91f3caa1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 01e95d971af1a9eeea18bbf699cb19014065fb18
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763942"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643637"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Aggiungere un server di controllo del mirroring del database tramite l'autenticazione di Windows (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "85763942"
   
      La sintassi per un indirizzo di rete del server presenta la seguente struttura:  
   
-     TCP<b>://</b> _\<system-address>_ <b>:</b> _\<port>_  
+     TCP <b>://</b> _\<system-address>_ <b>:</b> _\<port>_  
   
      dove \<*system-address>* è una stringa che identifica in maniera univoca il computer di destinazione e \<*port>* è il numero di porta usato dall'endpoint del mirroring dell'istanza del server partner. Per altre informazioni, vedere [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   

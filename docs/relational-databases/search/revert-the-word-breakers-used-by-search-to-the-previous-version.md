@@ -12,12 +12,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f85253912eac3091423972770ac808492c1b65e2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 4a2624566444f5cc3b9531d5b6767937dabb2da6
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97479472"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643994"
 ---
 # <a name="revert-word-breakers-used-by-search-to-previous-version-sql-server-search"></a>Ripristinare i word breaker usati dalla ricerca alla versione precedente (ricerca di SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -381,4 +381,4 @@ ms.locfileid: "97479472"
   
 ## <a name="see-also"></a>Vedere anche  
  [Modifica del word breaker utilizzato per le lingue Inglese (Stati Uniti) e Inglese (Regno Unito)](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
- [Differenze di comportamento nella ricerca full-text](./full-text-search.md?view=sql-server-ver15)
+ [Differenze di comportamento nella ricerca full-text](./full-text-search.md)

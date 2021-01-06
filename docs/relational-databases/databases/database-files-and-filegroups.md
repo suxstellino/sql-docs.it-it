@@ -1,7 +1,7 @@
 ---
 title: Filegroup e file di database | Microsoft Docs
 description: Informazioni sui file di database e su come creare filegroup in SQL Server ai fini dell'allocazione e dell'amministrazione. Visualizzare esempi, regole e consigli.
-ms.custom: contperfq4
+ms.custom: contperf-fy20q4
 ms.date: 05/29/2020
 ms.prod: sql
 ms.prod_service: database-engine
@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b9a4fc2995b0442f46794ad8ad226b48bfa4726b
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: f14eaec691218c4f7a9cad82dabb2f31f36b6245
+ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92497001"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878750"
 ---
 # <a name="database-files-and-filegroups"></a>Filegroup e file di database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "92497001"
 |Secondari|File di dati facoltativi definiti dall'utente. I dati possono essere distribuiti in più dischi, inserendo ogni file in un'unità disco distinta. L'estensione consigliata per i file di dati secondari è ndf.|  
 |Log delle transazioni|Il log contiene le informazioni usate per recuperare il database. È necessario che sia disponibile almeno un file di log per ogni database. L'estensione consigliata per i file di log è ldf.|  
   
- Ad esempio, un database semplice, denominato **Sales** , ha un file primario che include tutti i dati e gli oggetti e un file di log che contiene le informazioni del log delle transazioni. Si può creare un database più complesso, denominato **Orders** , con un file primario e cinque file secondari. I dati e gli oggetti all'interno del database vengono suddivisi nei sei file e i quattro file di log includono le informazioni del log delle transazioni.  
+ Ad esempio, un database semplice, denominato **Sales**, ha un file primario che include tutti i dati e gli oggetti e un file di log che contiene le informazioni del log delle transazioni. Si può creare un database più complesso, denominato **Orders**, con un file primario e cinque file secondari. I dati e gli oggetti all'interno del database vengono suddivisi nei sei file e i quattro file di log includono le informazioni del log delle transazioni.  
   
  Per impostazione predefinita, i dati e i log delle transazioni vengono archiviati nella stessa unità e nello stesso percorso per gestire i sistemi a disco singolo. Questa scelta può non essere la soluzione ottimale per gli ambienti di produzione. È consigliabile archiviare i dati e i file di log in dischi separati.  
 

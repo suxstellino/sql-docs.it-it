@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring [SQL Server], database mirroring
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f8479b88d100f9687469ad615d0b92c50aedb6ad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9b77b54ba48dc2c3820d055227411f61983b1a7c
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771824"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644288"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Monitoraggio del mirroring del database (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "85771824"
   
  È possibile monitorare un database con mirroring durante una sessione di mirroring per verificare se i dati fluiscono correttamente. Per impostare e gestire il monitoraggio per uno o più database con mirroring in un'istanza del server, è possibile usare Monitoraggio mirroring del database oppure le stored procedure di sistema **sp_dbmmonitor** .  
   
- Un processo di **Monitoraggio mirroring del database**agisce in background in modo indipendente da Monitoraggio mirroring del database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent chiama a intervalli regolari (per impostazione predefinita ogni minuto) il processo di **Monitoraggio mirroring del database** , il quale chiama a sua volta una stored procedure che aggiorna lo stato di mirroring. Se si utilizza [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per avviare una sessione di mirroring, il **Processo di Monitoraggio mirroring del database** viene creato automaticamente. Se, invece, si usa solo ALTER DATABASE *<nome_database>* SET PARTNER per avviare il mirroring, è necessario creare il processo eseguendo una stored procedure.  
+ Un processo di **Monitoraggio mirroring del database** agisce in background in modo indipendente da Monitoraggio mirroring del database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent chiama a intervalli regolari (per impostazione predefinita ogni minuto) il processo di **Monitoraggio mirroring del database** , il quale chiama a sua volta una stored procedure che aggiorna lo stato di mirroring. Se si utilizza [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per avviare una sessione di mirroring, il **Processo di Monitoraggio mirroring del database** viene creato automaticamente. Se, invece, si usa solo ALTER DATABASE *<nome_database>* SET PARTNER per avviare il mirroring, è necessario creare il processo eseguendo una stored procedure.  
   
  **Contenuto dell'argomento**  
   
@@ -102,7 +102,7 @@ ms.locfileid: "85771824"
   
  La tabella dello stato può essere aggiornata in modo automatico o manuale da un amministratore di sistema, con un intervallo di aggiornamento minimo di 15 secondi. Il valore minimo di 15 secondi impedisce l'overload delle istanze del server con richieste di stato.  
   
- La tabella dello stato viene aggiornata automaticamente sia da Monitoraggio mirroring del database sia dal processo di Monitoraggio di mirroring del database, se in esecuzione. Il**Processo di Monitoraggio mirroring del database** aggiorna la tabella una volta ogni minuto per impostazione predefinita. Un amministratore di sistema può specificare un periodo di aggiornamento compreso tra 1 e 120 minuti. Monitoraggio mirroring del database, invece, aggiorna automaticamente la tabella ogni 30 secondi. Per questi aggiornamenti, il **Processo di Monitoraggio mirroring del database** e Monitoraggio mirroring del database chiamano **sp_dbmmonitorupdate**.  
+ La tabella dello stato viene aggiornata automaticamente sia da Monitoraggio mirroring del database sia dal processo di Monitoraggio di mirroring del database, se in esecuzione. Il **Processo di Monitoraggio mirroring del database** aggiorna la tabella una volta ogni minuto per impostazione predefinita. Un amministratore di sistema può specificare un periodo di aggiornamento compreso tra 1 e 120 minuti. Monitoraggio mirroring del database, invece, aggiorna automaticamente la tabella ogni 30 secondi. Per questi aggiornamenti, il **Processo di Monitoraggio mirroring del database** e Monitoraggio mirroring del database chiamano **sp_dbmmonitorupdate**.  
   
  Alla prima esecuzione di **sp_dbmmonitorupdate** , vengono creati la tabella di **stato di mirroring del database** e il ruolo predefinito del database **dbm_monitor** nel database **msdb** . **sp_dbmmonitorupdate** di solito aggiorna lo stato del mirroring inserendo una nuova riga nella tabella di stato per ogni database con mirroring sull'istanza del server. Per altre informazioni, vedere "Tabella dello stato di mirroring del database" più avanti in questo argomento. Questa stored procedure restituisce inoltre le misurazioni delle prestazioni nelle nuove righe e tronca le righe antecedenti il periodo di memorizzazione corrente (il valore predefinito è 7 giorni). Per altre informazioni, vedere [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md).  
   
@@ -110,7 +110,7 @@ ms.locfileid: "85771824"
 >  A meno che Monitoraggio mirroring del database non sia attualmente in uso da parte di un membro del ruolo predefinito del server **sysadmin** , la tabella dello stato viene automaticamente aggiornata solo se il **Processo di Monitoraggio mirroring del database** esiste e se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è in esecuzione.  
   
 #### <a name="database-mirroring-monitor-job"></a>Monitoraggio mirroring del database  
- **Processo di Monitoraggio mirroring del database**funziona in modo indipendente da **Monitoraggio mirroring del database** e viene creato automaticamente solo se si utilizza [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per avviare una sessione di mirroring. Se per avviare il mirroring vengono sempre usati i comandi ALTER DATABASE *nome_database* SET PARTNER, il processo esiste solo se l'amministratore di sistema esegue la stored procedure **sp_dbmmonitoraddmonitoring** .  
+ **Processo di Monitoraggio mirroring del database** funziona in modo indipendente da **Monitoraggio mirroring del database** e viene creato automaticamente solo se si utilizza [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per avviare una sessione di mirroring. Se per avviare il mirroring vengono sempre usati i comandi ALTER DATABASE *nome_database* SET PARTNER, il processo esiste solo se l'amministratore di sistema esegue la stored procedure **sp_dbmmonitoraddmonitoring** .  
   
  Dopo la creazione di **Processo di monitoraggio mirroring del database** , supponendo che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sia in esecuzione, il processo viene chiamato una volta al minuto, per impostazione predefinita. Il processo chiama quindi la stored procedure di sistema **sp_dbmmonitorupdate** .  
   
@@ -137,7 +137,7 @@ ms.locfileid: "85771824"
  I membri del ruolo predefinito del database **dbm_monitor** dipendono dal **Processo di Monitoraggio mirroring del database** per l'aggiornamento della tabella dello stato a intervalli regolari. Se il processo non esiste o se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è stato arrestato, lo stato non è più aggiornato e potrebbe non riflettere più la configurazione della sessione di mirroring. Dopo un failover, ad esempio, può sembrare che i partner condividano lo stesso ruolo, principale o mirror, oppure il server principale corrente può essere indicato come mirror e, viceversa, il server mirror corrente come principale.  
   
 #### <a name="dropping-the-database-mirroring-monitor-job"></a>Eliminazione di Processo di Monitoraggio mirroring del database  
- **Processo di Monitoraggio mirroring del database**rimane presente finché non viene eliminato. Il processo di monitoraggio deve essere gestito dall'amministratore di sistema. Per eliminare il **Processo di Monitoraggio mirroring del database**, usare **sp_dbmmonitordropmonitoring**. Per altre informazioni, vedere [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md).  
+ **Processo di Monitoraggio mirroring del database** rimane presente finché non viene eliminato. Il processo di monitoraggio deve essere gestito dall'amministratore di sistema. Per eliminare il **Processo di Monitoraggio mirroring del database**, usare **sp_dbmmonitordropmonitoring**. Per altre informazioni, vedere [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md).  
   
 ###  <a name="status-displayed-by-the-database-mirroring-monitor"></a><a name="perf_metrics_of_dbm_monitor"></a> Stato visualizzato da Monitoraggio mirroring del database  
  Nella pagina **Stato** di Monitoraggio mirroring del database vengono descritti i partner e lo stato della sessione di mirroring. Lo stato include la metrica relativa alle prestazioni, ad esempio lo stato del log delle transazioni, e altre informazioni utili per consentire la valutazione effettiva del tempo necessario per completare un failover, nonché della potenziale perdita di dati, se la sessione non è sincronizzata. In questa pagina, inoltre, vengono visualizzati lo **stato** e informazioni generali relative alla sessione di mirroring.  
@@ -295,11 +295,11 @@ ms.locfileid: "85771824"
   
  Per il mirroring del database sono disponibili gli eventi seguenti:  
   
--   Classe di evento**Database Mirroring State Change**  
+-   Classe di evento **Database Mirroring State Change**  
   
      Indica quando lo stato di mirroring di un database con mirroring cambia. Per altre informazioni, vedere [Database Mirroring State Change Event Class](../../relational-databases/event-classes/database-mirroring-state-change-event-class.md).  
   
--   Classe di evento**Audit Database Mirroring Login**  
+-   Classe di evento **Audit Database Mirroring Login**  
   
      Segnala i messaggi di controllo correlati alla sicurezza di trasporto per il mirroring del database. Per altre informazioni, vedere [Audit Database Mirroring Login Event Class](../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).  
   

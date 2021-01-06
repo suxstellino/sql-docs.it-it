@@ -6,7 +6,7 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - witness [SQL Server], establishing
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4cf7d77550f96c72867ecc8133df3cb4f64b7300
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 397a7b11c5188a94186f1618ced09cf2043bec5a
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763925"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643632"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>Aggiunta o sostituzione di un server di controllo del mirroring del database (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,15 +32,15 @@ ms.locfileid: "85763925"
   
 1.  Dopo aver attivato la connessione all'istanza del server principale, in Esplora oggetti fare clic sul nome del server per espandere l'albero.  
   
-2.  Espandere **Database**e selezionare il database principale della sessione in cui si intende aggiungere o sostituire un server di controllo del mirroring.  
+2.  Espandere **Database** e selezionare il database principale della sessione in cui si intende aggiungere o sostituire un server di controllo del mirroring.  
   
-3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**e quindi fare clic su **Server mirror**. Viene visualizzata la pagina **Mirroring** della finestra di dialogo **Proprietà database** .  
+3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività** e quindi fare clic su **Server mirror**. Viene visualizzata la pagina **Mirroring** della finestra di dialogo **Proprietà database** .  
   
 4.  Fare clic su **Configura sicurezza**.  
   
 5.  Se viene visualizzata la schermata iniziale di **Configurazione guidata sicurezza mirroring del database** , fare clic su **Avanti**.  
   
-6.  Nella finestra di dialogo **Aggiunta server di controllo del mirroring** fare clic su **Sì**e quindi su **Avanti**.  
+6.  Nella finestra di dialogo **Aggiunta server di controllo del mirroring** fare clic su **Sì** e quindi su **Avanti**.  
   
 7.  Nella finestra di dialogo **Selezione dei server da configurare** viene automaticamente selezionata la casella di controllo **Istanza server di controllo del mirroring** . Fare clic su **Avanti**.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "85763925"
   
     -   Se le istanze del server utilizzano tutte lo stesso account di servizio, lasciare i campi vuoti.  
   
-    -   Se l'istanza del server di controllo del mirroring usa un account di servizio diverso da uno degli altri partner, immettere il nome dell'account nei campi **Server principale**, **Server mirror**e **Server di controllo del mirroring** :  
+    -   Se l'istanza del server di controllo del mirroring usa un account di servizio diverso da uno degli altri partner, immettere il nome dell'account nei campi **Server principale**, **Server mirror** e **Server di controllo del mirroring** :  
   
          *NOMEDOMINIO* **\\** *nomeutente*  
   

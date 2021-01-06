@@ -36,12 +36,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016'
-ms.openlocfilehash: 73ebe8f968cb3cf91c909ca404c5475f983e2ca6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 705cd4be70b642a6436bdecf58ae8c18adaff281
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97438817"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644023"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>Funzionalità del motore di database sospese in SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -69,13 +69,13 @@ Per le opzioni di configurazione correnti, vedere [ALTER DATABASE SCOPED CONFIGU
 
 - Il sottosistema ActiveX non è più disponibile. Usare la linea di comando o gli script di PowerShell.
 
-- Parametri di avvio **-h** e **-g**. Per altre informazioni, vedere [Opzioni di avvio del servizio del motore di database](/previous-versions/sql/2014/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014).
+- Parametri di avvio **-h** e **-g**. Per altre informazioni, vedere [Opzioni di avvio del servizio del motore di database](/previous-versions/sql/2014/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014&preserve-view=true).
 
 - La crittografia SSL (Secure Sockets Layer) non è più disponibile. Usare in alternativa Transport Layer Security (TLS). Per altre informazioni, vedere [Abilitazione di connessioni crittografate al Motore di database](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).
 
 ## <a name="previous-versions"></a>Versioni precedenti
 
-- [Funzionalità del Motore di database non più utilizzate in SQL Server 2014](/previous-versions/sql/2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
+- [Funzionalità del Motore di database non più utilizzate in SQL Server 2014](/previous-versions/sql/2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014&preserve-view=true)
 
 ### <a name="see-also"></a>Vedere anche
 

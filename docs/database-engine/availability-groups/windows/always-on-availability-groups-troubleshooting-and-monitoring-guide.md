@@ -5,17 +5,17 @@ ms.custom: seo-lt-2019
 ms.date: 05/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: reference
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e3ca428410760ac224cccf513aa8e8ed2a3060e4
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 5594a39b6ab4f8c9c6bd2edaadbe64e99c983229
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726548"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643694"
 ---
 # <a name="monitor-and-troubleshoot-availability-groups"></a>Monitoraggio e risoluzione dei problemi dei gruppi di disponibilità
  Questa guida consente di iniziare rapidamente a monitorare i gruppi di disponibilità Always On e a risolvere alcuni problemi più comuni dei gruppi di disponibilità. Riporta contenuto originale nonché una pagina di destinazione con informazioni utili pubblicate anche altrove. Sebbene in questa guida non sia possibile trattare in modo approfondito tutti i problemi che possono verificarsi nell'ambito dei gruppi di disponibilità, l'utente troverà un'indicazione della direzione da seguire per l'analisi della causa principale e la risoluzione dei problemi. 

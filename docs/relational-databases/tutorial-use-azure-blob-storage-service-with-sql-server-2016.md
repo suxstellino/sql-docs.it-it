@@ -15,12 +15,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5b565d7d62b1e189ec9d187c6a585449713f0df0
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.openlocfilehash: 31407e6d056ce8ec847f52346b8aa3ddf8e621f3
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384621"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644187"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Esercitazione: Uso del servizio di archiviazione BLOB di Azure con SQL Server 2016
 
@@ -181,7 +181,7 @@ Per creare credenziali di SQL Server, seguire questa procedura:
 In questa sezione si esegue un backup del database AdventureWorks2016 presente nell'istanza di SQL Server 2016 nel contenitore di Azure creato nella [sezione 1](#1---create-stored-access-policy-and-shared-access-storage).
   
 > [!NOTE]  
-> Se si vuole eseguire il backup di un database di SQL Server 2012 SP1 CU2 o versione successiva o di un database di SQL Server 2014 nel contenitore di Azure, è possibile usare la sintassi deprecata illustrata [qui](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014) per eseguire il backup nell'URL usando la sintassi con credenziali.  
+> Se si vuole eseguire il backup di un database di SQL Server 2012 SP1 CU2 o versione successiva o di un database di SQL Server 2014 nel contenitore di Azure, è possibile usare la sintassi deprecata illustrata [qui](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014&preserve-view=true) per eseguire il backup nell'URL usando la sintassi con credenziali.  
   
 Per eseguire il backup di un database nell'archiviazione BLOB, seguire questi passaggi:  
   

@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: a8c04c84468a61987f27f9bdd0a53d51869111d5
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: e93bf18fe2effb89f5718af4737525872ca4f73b
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88713719"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643403"
 ---
 # <a name="derive-a-template-from-a-running-trace-sql-server-profiler"></a>Ottenere un modello da una traccia in esecuzione (SQL Server Profiler)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "88713719"
   
 1.  Se necessario, passare alla finestra contenente la traccia.  
   
-2.  Scegliere **Salva con nome** dal menu **File**e selezionare **Modello di traccia**.  
+2.  Scegliere **Salva con nome** dal menu **File** e selezionare **Modello di traccia**.  
   
 3.  Digitare un nome o selezionarne uno nell'elenco. Fare clic su **OK**.  
   
@@ -37,6 +37,6 @@ ms.locfileid: "88713719"
 ## <a name="see-also"></a>Vedere anche  
  [Modelli e autorizzazioni di SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Creare un modello di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [Modificare modello di traccia &#40;SQL Server Profiler&#41;](./modify-trace-templates.md?view=sql-server-ver15)   
+ [Modificare modello di traccia &#40;SQL Server Profiler&#41;](./modify-trace-templates.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

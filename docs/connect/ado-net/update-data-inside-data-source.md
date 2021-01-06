@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 41b81d0adedf48f0e33efe6c60d83dd4ed7b597a
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: aca7b1adb8ce91a12832bccfd6cbd27b07229d22
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96428246"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771483"
 ---
 # <a name="updating-data-in-a-data-source"></a>Aggiornamento di dati in un'origine dati
 
@@ -43,4 +43,6 @@ Nell'esempio di codice seguente viene eseguita la stored procedure creata dal co
 ## <a name="see-also"></a>Vedere anche
 
 - [Uso di comandi per modificare i dati](use-commands-to-modify-data.md)
+- [Aggiornare origini dati con DataAdapter](update-data-sources-with-dataadapters.md)
 - [Comandi e parametri](commands-parameters.md)
+- [Microsoft ADO.NET per SQL Server](microsoft-ado-net-sql-server.md)

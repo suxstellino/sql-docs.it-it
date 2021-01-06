@@ -6,19 +6,19 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], sessions
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5dc5aae2308f0f2cada44175ebcef691894720f4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ece2afa5381b2692c3cb3b99358fc02891e75e97
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754700"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644312"
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>Stabilire una sessione di mirroring del database tramite autenticazione di Windows
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,16 +43,16 @@ ms.locfileid: "85754700"
   
 1.  Dopo aver attivato la connessione all'istanza del server principale, in Esplora oggetti fare clic sul nome del server per espandere l'albero.  
   
-2.  Espandere **Database**e selezionare il database per il mirroring.  
+2.  Espandere **Database** e selezionare il database per il mirroring.  
   
-3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**e quindi fare clic su **Server mirror**. Viene visualizzata la pagina **Mirroring** della finestra di dialogo **Proprietà database** .  
+3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività** e quindi fare clic su **Server mirror**. Viene visualizzata la pagina **Mirroring** della finestra di dialogo **Proprietà database** .  
   
 4.  Per iniziare la configurazione del mirroring, fare clic su **Configura sicurezza** . Verrà avviata la Configurazione guidata sicurezza mirroring del database.  
   
     > [!NOTE]  
     >  Durante una sessione di mirroring del database, è possibile usare questa procedura guidata solo per aggiungere o modificare l'istanza del server di controllo del mirroring.  
   
-5.  La Configurazione guidata sicurezza mirroring del database crea automaticamente l'endpoint di mirroring del database (se non è presente) in ogni istanza del server e immette gli indirizzi di rete del server in ciascun campo corrispondente al ruolo dell'istanza del server (**Server principale**, **Server mirror**o **Server di controllo del mirroring**).  
+5.  La Configurazione guidata sicurezza mirroring del database crea automaticamente l'endpoint di mirroring del database (se non è presente) in ogni istanza del server e immette gli indirizzi di rete del server in ciascun campo corrispondente al ruolo dell'istanza del server (**Server principale**, **Server mirror** o **Server di controllo del mirroring**).  
   
     > [!IMPORTANT]  
     >  Quando si crea un endpoint, la Configurazione guidata sicurezza mirroring del database usano sempre l'autenticazione di Windows. Prima di poter usare la procedura guidata con l'autenticazione basata sui certificati, l'endpoint del mirroring deve già essere configurato per l'utilizzo dei certificati in ogni istanza del server. Inoltre, tutti i campi della finestra di dialogo **Account di servizio** della procedura guidata devono rimanere vuoti. Per informazioni sulla creazione di un endpoint del mirroring del database per l'uso dei certificati, vedere [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md).  
