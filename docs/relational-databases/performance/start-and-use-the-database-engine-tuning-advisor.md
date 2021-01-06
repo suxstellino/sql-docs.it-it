@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: c8cd352c5347cbc48979af4e03775c9d7da8f3d1
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: 9bf93bf9b59df77efe905a6c0debb722c63c3bbb
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96504965"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643050"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Avvio e utilizzo di Ottimizzazione guidata motore di database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "96504965"
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>Per avviare Ottimizzazione guidata motore di database dall'Editor di query di SQL Server Management Studio  
   
-1.  Aprire un file script [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [Editor di query e di testo &#40;SQL Server Management Studio&#41;](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15).  
+1.  Aprire un file script [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [Editor di query e di testo &#40;SQL Server Management Studio&#41;](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md).  
   
 2.  Selezionare una query nello script [!INCLUDE[tsql](../../includes/tsql-md.md)] o selezionare l'intero script, fare clic con il pulsante destro del mouse sulla selezione e scegliere **Analizza query in Ottimizzazione guidata motore di database**. Viene aperta l'interfaccia utente grafica di Ottimizzazione guidata motore di database e lo script viene importato come file XML del carico di lavoro. Per ottimizzare le query [!INCLUDE[tsql](../../includes/tsql-md.md)] selezionate come carico di lavoro è possibile specificare un nome di sessione e le opzioni di ottimizzazione.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "96504965"
   
 ###  <a name="to-create-transact-sql-script-workloads"></a><a name="SSMS"></a> Per creare carichi di lavoro di script Transact-SQL  
   
-1.  Avviare l'editor di query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [Editor di query e di testo &#40;SQL Server Management Studio&#41;](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15).  
+1.  Avviare l'editor di query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [Editor di query e di testo &#40;SQL Server Management Studio&#41;](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md).  
   
 2.  Digitare lo script [!INCLUDE[tsql](../../includes/tsql-md.md)] nell'editor di query. Lo script deve includere un set di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguite sui database che si desidera ottimizzare.  
   

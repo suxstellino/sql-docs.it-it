@@ -12,12 +12,12 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14c56abe049649930840ec331a2439a1fa80d94c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f0772c115a05cc357960512187a8db48153f32aa
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97476872"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642320"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Barra di stato (editor di query del Motore di database)
 
@@ -95,5 +95,5 @@ L'impostazione di un colore della barra di stato personalizzato per un nodo serv
 -   Immettere le altre informazioni di connessione, quindi fare clic sul pulsante **Connetti** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor di query e di testo &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)  
+ [Editor di query e di testo &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md)  
   

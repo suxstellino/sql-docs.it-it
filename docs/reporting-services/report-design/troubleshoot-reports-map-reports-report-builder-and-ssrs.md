@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a3dc21f30222704622f86732c11bd5f1db7b46d1
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 6411d6f3810153614de0e60e9b20555e061836e3
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112027"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641600"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Risoluzione dei problemi dei report: Report mappa (Generatore report e SSRS)
   È possibile che si verifichino problemi con le mappe in un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] quando si aggiunge una mappa o un livello mappa al report, quando si personalizza una mappa o un livello mappa esistente nel report, quando si visualizza in anteprima una mappa di un report o quando si pubblica un report con una mappa. Utilizzare le informazioni presenti in questo argomento per risolvere questi problemi.  
@@ -44,7 +44,7 @@ ms.locfileid: "87112027"
   
 1.  Caricare o pubblicare i file ESRI con estensione shp e dbf nel server di report.  
   
-2.  Nel report, nel riquadro Mappa della visualizzazione della struttura, selezionare il livello che dispone dei dati incorporati e aprire le proprietà **Dati livello** . In **Usa dati spaziali da**selezionare **Collegamento a file di forma ESRI**, quindi passare alla cartella sul server di report che contiene i file di forma ESRI, selezionarla e fare clic su OK.  
+2.  Nel report, nel riquadro Mappa della visualizzazione della struttura, selezionare il livello che dispone dei dati incorporati e aprire le proprietà **Dati livello** . In **Usa dati spaziali da** selezionare **Collegamento a file di forma ESRI**, quindi passare alla cartella sul server di report che contiene i file di forma ESRI, selezionarla e fare clic su OK.  
   
 3.  Salvare il report. I dati incorporati per il livello modificato sono stati rimossi dalla definizione del report.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "87112027"
   
 -   **Trasparenza.** La trasparenza può essere specificata in modo indipendente per ogni livello mappa. I valori predefiniti per la trasparenza sono diversi in base alla modalità di aggiunta di un livello. Una trasparenza pari allo 0% significa che il livello è opaco e che nessun altro dato del livello sarà visibile attraverso di esso. Affinché gli altri dati siano visibili attraverso un livello esistente, regolare il valore su una percentuale superiore che consente di ottenere l'effetto desiderato.  
   
--   **Visibilità.** La visibilità per un livello può essere **Visible**, **Hidden**o **ZoomBased**, in base al livello di zoom del viewport mappa. È possibile specificare anche l'intervallo massimo e minimo per il livello di zoom. La visibilità può essere basata su un'espressione che restituisce uno di questi valori.  
+-   **Visibilità.** La visibilità per un livello può essere **Visible**, **Hidden** o **ZoomBased**, in base al livello di zoom del viewport mappa. È possibile specificare anche l'intervallo massimo e minimo per il livello di zoom. La visibilità può essere basata su un'espressione che restituisce uno di questi valori.  
   
     > [!TIP]  
     >  È possibile attivare o disattivare la visibilità per ogni livello nel riquadro Mappa. Quando si progetta ogni livello, nascondere tutti gli altri per determinare se il problema concerne un singolo livello oppure riguarda la trasparenza tra i livelli.  
@@ -207,6 +207,6 @@ ms.locfileid: "87112027"
   
 ## <a name="see-also"></a>Vedere anche  
  [Mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Risoluzione dei problemi relativi a Generatore report](/previous-versions/sql/2014/reporting-services/troubleshoot-report-builder?view=sql-server-2014)  
+ [Risoluzione dei problemi relativi a Generatore report](/previous-versions/sql/2014/reporting-services/troubleshoot-report-builder?view=sql-server-2014&preserve-view=true)  
   
   

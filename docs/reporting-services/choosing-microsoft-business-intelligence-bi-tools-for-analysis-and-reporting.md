@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 07/22/2020
-ms.openlocfilehash: d6880689d05328b09c4f50b87ef8182c1c927afa
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: fa6dab95ec14a40c553f3f47dcde1dee480eb1cc
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891211"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642336"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Analisi dei dati e creazione di report con gli strumenti di business intelligence (BI) di Microsoft
 
@@ -33,7 +33,7 @@ Nella tabella seguente viene indicato il mapping dei carichi di lavoro per l'ana
 |**Business Intelligence in modalità self-service**|Analisti/utenti finali||||||  
 |Individuare facilmente e accedere ai dati pubblici e aziendali||[Excel 2016](https://support.office.com/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73?ui=en-US&rs=en-US&ad=US)|||[Azure Data Catalog](https://azure.microsoft.com/services/data-catalog/)||  
 |Creare modelli di dati potenti||[Power Pivot](https://support.office.com/article/Power-Pivot-Overview-and-Learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop)||  
-|Eseguire analisi predittive self-service||||||[Componenti aggiuntivi Data mining per Excel](/previous-versions/sql/2014/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014) |  
+|Eseguire analisi predittive self-service||||||[Componenti aggiuntivi Data mining per Excel](/previous-versions/sql/2014/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014&preserve-view=true) |  
 |Visualizzare ed esplorare i dati||[Power View](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [Mappe 3D](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop)||  
 |Porre domande tramite query in linguaggio naturale|||||[DOMANDE E RISPOSTE](/power-bi/consumer/end-user-q-and-a)|
 |Accedere ai report tramite i dispositivi mobili||||[HTML 5 (supporta la visualizzazione di file <10 MB)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> | [HTML 5 (supporta la visualizzazione di file <250 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [App Power BI per dispositivi mobili su dispositivi iOS](/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [App Power BI per dispositivi mobili su dispositivi Android](/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br /> [App Power BI per dispositivi mobili per Windows 10](/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)|  
@@ -45,6 +45,6 @@ Nella tabella seguente viene indicato il mapping dei carichi di lavoro per l'ana
 |Creare report operativi||||||*[Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |Creare report personalizzati e incorporati|||||[Power BI Embedded](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |**Analisi avanzata**|Data scientist||||||  
-|Eseguire analisi predittive self-service||||||[Componenti aggiuntivi Data mining per Excel](/previous-versions/sql/2014/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014) |  
+|Eseguire analisi predittive self-service||||||[Componenti aggiuntivi Data mining per Excel](/previous-versions/sql/2014/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014&preserve-view=true) |  
 |Utilizzare algoritmi di data mining||||||[Data mining in Analysis Services](/analysis-services/data-mining/data-mining-ssas)<br/><br/>[SQL Server R Services](../machine-learning/r/sql-server-r-services.md?viewFallbackFrom=sql-server-ver15)|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |

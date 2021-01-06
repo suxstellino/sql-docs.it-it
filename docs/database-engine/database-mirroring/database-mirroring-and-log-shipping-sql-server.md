@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fd18ca39f11525f3fd91f759ff34f4ce6ebd0dbb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4f15bfe798c4fdec07be55f9dbb871c2980bc777
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789696"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642070"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Mirroring del database e log shipping (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "85789696"
   
  Durante una sessione di log shipping, i processi di backup nel database primario comportano la creazione di backup del log in una cartella di backup. Da questa cartella i backup vengono copiati tramite i processi di copia dei server secondari. Ai fini della corretta esecuzione, è necessario che i processi di backup e di copia possano accedere alla cartella di backup per il log shipping. Per ottimizzare la disponibilità del server primario, è consigliabile definire la cartella di backup in un percorso di backup condiviso in un computer host distinto. Assicurarsi che tutti i server per il log shipping, incluso il server mirror/primario, possano accedere al percorso di backup condiviso, noto come *condivisione di backup*.  
   
- Per consentire il proseguimento del log shipping in seguito a un errore di mirroring del database, è inoltre necessario configurare il server mirror come server primario utilizzando la stessa configurazione del database primario nel database principale. Il database mirror è in stato di ripristino, che impedisce ai processi di backup di eseguire il backup del log nel database mirror. Questo comportamento garantisce che il database mirror/primario non interferisca con il database principale/primario i cui backup del log vengono copiati dai server secondari. Per evitare avvisi non corretti, in seguito all'esecuzione del processo di backup nel database mirror/primario, il log del processo di backup registra un messaggio nella tabella**log_shipping_monitor_history_detail** e il processo agente restituisce uno stato con esito positivo.  
+ Per consentire il proseguimento del log shipping in seguito a un errore di mirroring del database, è inoltre necessario configurare il server mirror come server primario utilizzando la stessa configurazione del database primario nel database principale. Il database mirror è in stato di ripristino, che impedisce ai processi di backup di eseguire il backup del log nel database mirror. Questo comportamento garantisce che il database mirror/primario non interferisca con il database principale/primario i cui backup del log vengono copiati dai server secondari. Per evitare avvisi non corretti, in seguito all'esecuzione del processo di backup nel database mirror/primario, il log del processo di backup registra un messaggio nella tabella **log_shipping_monitor_history_detail** e il processo agente restituisce uno stato con esito positivo.  
   
  Il database mirror/primario è inattivo durante la sessione di log shipping. Se, tuttavia, il mirroring ha esito negativo, il database mirror precedente viene portato online come database principale. A questo punto, il database viene inoltre attivato come database primario per il log shipping. I processi di backup per il log shipping precedentemente non disponibili per distribuire il log nel database avviano la distribuzione. Al contrario, un failover fa sì che il database principale/primario precedente venga impostato come nuovo database mirror/primario e sia in stato di ripristino e che i processi di backup nel database non eseguano più il backup del log.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "85789696"
  Quando si utilizza un server di monitoraggio log shipping locale, non è necessaria alcuna considerazione specifica ai fini di questo scenario. Per informazioni sull'utilizzo di un'istanza di monitoraggio remota con questo scenario, vedere "Impatto del mirroring del database su un'istanza di monitoraggio remota" più avanti in questo argomento.  
   
 ## <a name="failing-over-from-the-principal-to-the-mirror-database"></a>Failover dal database principale al database mirror  
- Nella figura seguente viene illustrata la combinazione del log shipping e del mirroring del database quando il mirroring viene eseguito in modalità a sicurezza elevata con failover automatico. Inizialmente il **Server_A** rappresenta sia il server principale per il mirroring, sia il server primario per il log shipping. Il**Server_B** rappresenta il server mirror ed è inoltre configurato come server primario, attualmente non attivo. I**Server_C** e **Server_D** rappresentano i server secondari per il log shipping. Per ottimizzare la disponibilità della sessione di log shipping, il percorso di backup è incluso in una directory condivisa di un computer host distinto.  
+ Nella figura seguente viene illustrata la combinazione del log shipping e del mirroring del database quando il mirroring viene eseguito in modalità a sicurezza elevata con failover automatico. Inizialmente il **Server_A** rappresenta sia il server principale per il mirroring, sia il server primario per il log shipping. Il **Server_B** rappresenta il server mirror ed è inoltre configurato come server primario, attualmente non attivo. I **Server_C** e **Server_D** rappresentano i server secondari per il log shipping. Per ottimizzare la disponibilità della sessione di log shipping, il percorso di backup è incluso in una directory condivisa di un computer host distinto.  
   
  ![Log shipping e mirroring del database](../../database-engine/database-mirroring/media/logshipping-and-dbm-automatic-failover.gif "Log shipping e mirroring del database")  
   

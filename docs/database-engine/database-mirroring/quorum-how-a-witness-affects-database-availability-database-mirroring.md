@@ -6,7 +6,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - quorum [SQL Server], database mirroring
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c28e70d2f66dffc00ff2ac9138f97dc8d0e08991
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f30f336ade4b3ab911d6ed365ddfa637230ea02e
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789657"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641342"
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database (mirroring del database)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -99,9 +99,9 @@ ms.locfileid: "85789657"
   
  ![Collaborazione tra il server di controllo del mirroring e i partner](../../database-engine/database-mirroring/media/dbm-quorum-scenarios.gif "Collaborazione tra il server di controllo del mirroring e i partner")  
   
- Lo scenario 1 viene illustra come, dopo un errore del server principale originale (**Partner_A**), il server di controllo del mirroring e il server mirror stabiliscono che il server principale **Partner_A**non è più disponibile e formano il quorum. Il server mirror **Partner_B** assume quindi il ruolo di server principale. Viene eseguito il failover automatico e **Partner_B**attiva la modalità online per la propria copia del database. **Partner_B** diventa quindi inattivo e il database risulta offline. Il server principale precedente, ovvero **Partner_A**, successivamente si riconnette al server di controllo del mirroring riottenendo il quorum. Comunicando con il server di controllo del mirroring, **Partner_A** rileva tuttavia che non potrà attivare la modalità online per la propria copia del database perché **Partner_B** è l'attuale proprietario del ruolo di server principale. Quando **Partner_B** parteciperà di nuovo alla sessione, riattiverà la modalità online per il database.  
+ Lo scenario 1 viene illustra come, dopo un errore del server principale originale (**Partner_A**), il server di controllo del mirroring e il server mirror stabiliscono che il server principale **Partner_A** non è più disponibile e formano il quorum. Il server mirror **Partner_B** assume quindi il ruolo di server principale. Viene eseguito il failover automatico e **Partner_B** attiva la modalità online per la propria copia del database. **Partner_B** diventa quindi inattivo e il database risulta offline. Il server principale precedente, ovvero **Partner_A**, successivamente si riconnette al server di controllo del mirroring riottenendo il quorum. Comunicando con il server di controllo del mirroring, **Partner_A** rileva tuttavia che non potrà attivare la modalità online per la propria copia del database perché **Partner_B** è l'attuale proprietario del ruolo di server principale. Quando **Partner_B** parteciperà di nuovo alla sessione, riattiverà la modalità online per il database.  
   
- Nello scenario 2 il server di controllo del mirroring perde il quorum, mentre i partner **Partner_A** e **Partner_B**mantengono il quorum l'uno nei confronti dell'altro e il database rimane online. Il quorum viene quindi perso anche dai partner e il database risulta offline. Il server principale, ovvero **Partner_A**, successivamente si riconnette al server di controllo del mirroring riottenendo il quorum. Il server di controllo del mirroring conferma che il ruolo di server principale appartiene ancora a **Partner_A** e **Partner_A** riattiva la modalità online per il database.  
+ Nello scenario 2 il server di controllo del mirroring perde il quorum, mentre i partner **Partner_A** e **Partner_B** mantengono il quorum l'uno nei confronti dell'altro e il database rimane online. Il quorum viene quindi perso anche dai partner e il database risulta offline. Il server principale, ovvero **Partner_A**, successivamente si riconnette al server di controllo del mirroring riottenendo il quorum. Il server di controllo del mirroring conferma che il ruolo di server principale appartiene ancora a **Partner_A** e **Partner_A** riattiva la modalità online per il database.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modalità di funzionamento del mirroring del database](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   

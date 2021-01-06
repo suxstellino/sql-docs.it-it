@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 02af487c0d7301ce7d5d71ff046b90fb25efc8ab
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 3a1f608eba9a91510258c15ccaf109e43806ef1c
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88713709"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641926"
 ---
 # <a name="derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler"></a>Derivare un modello da un file di traccia o da una tabella di traccia (SQL Server Profiler)
 
@@ -28,7 +28,7 @@ ms.locfileid: "88713709"
   
 1.  Aprire il file o la tabella di traccia su cui si desidera basare il modello. Per altre informazioni, vedere [Aprire un file di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) o Ottimizzazione guidata [Aprire una tabella di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md).  
   
-2.  Scegliere **Salva con nome** dal menu **File**e selezionare **Modello di traccia**.  
+2.  Scegliere **Salva con nome** dal menu **File** e selezionare **Modello di traccia**.  
   
 3.  Digitare un nome o selezionarne uno nell'elenco. Fare clic su **OK**.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "88713709"
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare un modello di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [Modificare modello di traccia &#40;SQL Server Profiler&#41;](./modify-trace-templates.md?view=sql-server-ver15)   
+ [Modificare modello di traccia &#40;SQL Server Profiler&#41;](./modify-trace-templates.md)   
  [Derivare un modello da una traccia in esecuzione &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

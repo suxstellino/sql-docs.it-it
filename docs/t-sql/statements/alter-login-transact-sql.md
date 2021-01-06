@@ -25,12 +25,12 @@ ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b9c6b440766763d00b62e3889a3091ad4af4ae6
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 62fcae210d2fdcef552f7a3f8ae0053a16e8c5c6
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489881"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642223"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -47,13 +47,13 @@ Modifica le proprietà di un account di accesso di [!INCLUDE[ssNoVersion](../../
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Database SQL](alter-login-transact-sql.md?view=azuresqldb-current)
+        [Database SQL](alter-login-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Istanza gestita di SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Istanza gestita di SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
         [Piattaforma di strumenti<br />analitici (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
@@ -284,10 +284,10 @@ GO
         **_\* Database SQL \*_**
     :::column-end:::
     :::column:::
-        [Istanza gestita di SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Istanza gestita di SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
         [Piattaforma di strumenti<br />analitici (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
@@ -453,13 +453,13 @@ GO
         [SQL Server](alter-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Database SQL](alter-login-transact-sql.md?view=azuresqldb-current)
+        [Database SQL](alter-login-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Istanza gestita di SQL \*_**
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
         [Piattaforma di strumenti<br />analitici (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
@@ -718,10 +718,10 @@ ALTER LOGIN [joe@contoso.com] DISABLE
         [SQL Server](alter-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Database SQL](alter-login-transact-sql.md?view=azuresqldb-current)
+        [Database SQL](alter-login-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Istanza gestita di SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Istanza gestita di SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -887,13 +887,13 @@ GO
         [SQL Server](alter-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Database SQL](alter-login-transact-sql.md?view=azuresqldb-current)
+        [Database SQL](alter-login-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Istanza gestita di SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Istanza gestita di SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Piattaforma di strumenti<br />analitici (PDW) \*_**

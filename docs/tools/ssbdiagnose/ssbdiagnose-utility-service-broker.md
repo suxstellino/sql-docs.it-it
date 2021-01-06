@@ -26,12 +26,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 2457f180cef24b13568a6718128efa78635c3e41
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 8590f3677d27c367782999877cb6892251785278
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714259"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641294"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilità ssbdiagnose (Service Broker)
 
@@ -121,7 +121,7 @@ ssbdiagnose
  Specifica che i messaggi o gli errori con il valore *error_id* specificato non devono essere inclusi nei report. È possibile specificare **-IGNORE** più volte per eliminare più ID messaggio.  
   
  **\<baseconnectionoptions>**  
- Specifica le informazioni di connessione di base usate da **ssbdiagnose** quando le opzioni di connessione non sono incluse in una clausola specifica. Le informazioni di connessione indicate in una clausola specifica prevalgono sulle informazioni specificate in **baseconnectionoption** . Questa situazione viene gestita separatamente per ciascun parametro. Ad esempio, se vengono specificati **-S** e **-d** in **baseconnetionoptions**e solo **-d** è specificato in **toconnetionoptions**, **ssbdiagnose** userà -S di **baseconnetionoptions** e -d di **toconnetionoptions**.  
+ Specifica le informazioni di connessione di base usate da **ssbdiagnose** quando le opzioni di connessione non sono incluse in una clausola specifica. Le informazioni di connessione indicate in una clausola specifica prevalgono sulle informazioni specificate in **baseconnectionoption** . Questa situazione viene gestita separatamente per ciascun parametro. Ad esempio, se vengono specificati **-S** e **-d** in **baseconnetionoptions** e solo **-d** è specificato in **toconnetionoptions**, **ssbdiagnose** userà -S di **baseconnetionoptions** e -d di **toconnetionoptions**.  
   
  **CONFIGURATION**  
  Richiede un report degli errori di configurazione tra una coppia di servizi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] o per un singolo servizio.  
@@ -204,7 +204,7 @@ WHERE database_id = DB_ID();
  Gli ID conversazione vengono indicati nella colonna **conversation_id** della vista del catalogo **sys.conversation_endpoints** .  
   
  **-TIMEOUT** _timeout_interval_  
- Specifica il numero di secondi per l'esecuzione un report **RUNTIME** . Se l'opzione **-TIMEOUT** non viene specificata, il report di runtime viene eseguito per un periodo di tempo illimitato. **- TIMEOUT** viene usata solo nei report **RUNTIME** e non nei report **CONFIGURATION** . Usare CTRL + C per uscire da **ssbdiagnose** se **-TIMEOUT** non è stata specificata oppure per terminare un report di runtime prima che scada l'intervallo di time **-** out. Il valore*timeout_interval* deve essere un numero compreso tra 1 e 2,147,483,647.  
+ Specifica il numero di secondi per l'esecuzione un report **RUNTIME** . Se l'opzione **-TIMEOUT** non viene specificata, il report di runtime viene eseguito per un periodo di tempo illimitato. **- TIMEOUT** viene usata solo nei report **RUNTIME** e non nei report **CONFIGURATION** . Usare CTRL + C per uscire da **ssbdiagnose** se **-TIMEOUT** non è stata specificata oppure per terminare un report di runtime prima che scada l'intervallo di time **-** out. Il valore *timeout_interval* deve essere un numero compreso tra 1 e 2,147,483,647.  
   
  **\<runtimeconnectionoptions>**  
  Specifica le informazioni di connessione per i database che contengono i servizi associati agli elementi di conversazione monitorati. Se tutti i servizi si trovano nello stesso database, è necessario specificare solo una clausola **CONNECT TO** , mentre se i servizi si trovano in database separati è necessario specificare una clausola **CONNECT TO** per ogni database. Se **runtimeconnectionoptions** non viene specificato, **ssbdiagnose** usa le informazioni di connessione di **baseconnectionoptions**.  
@@ -272,7 +272,7 @@ WHERE database_id = DB_ID();
 -   Ottenere un report di qualsiasi errore che si verifica in un set di elementi di conversazione di [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
   
 ## <a name="configuration-reporting"></a>Report di configurazione  
- Per analizzare correttamente la configurazione usata da una conversazione, eseguire un report di configurazione di **ssbdiagnose** che usa le stesse opzioni della conversazione. Se per **ssbdiagnose** si specifica un livello di opzioni inferiore rispetto a quello usato dalla conversazione, **ssbdiagnose** potrebbe non segnalare le condizioni necessarie alla conversazione, mentre se si specifica un livello di opzioni superiore **ssbdiagnose**potrebbe segnalare elementi non richiesti dalla conversazione. Una conversazione tra due servizi nello stesso database, ad esempio, può essere eseguita utilizzando l'opzione ENCPRYPTION OFF. Se si esegue **ssbdiagnose** per convalidare la configurazione tra i due servizi, ma si usa l'impostazione ENCRYPTION ON predefinita, **ssbdiagnose** segnala che nel database manca una chiave master, che non è richiesta per la conversazione.  
+ Per analizzare correttamente la configurazione usata da una conversazione, eseguire un report di configurazione di **ssbdiagnose** che usa le stesse opzioni della conversazione. Se per **ssbdiagnose** si specifica un livello di opzioni inferiore rispetto a quello usato dalla conversazione, **ssbdiagnose** potrebbe non segnalare le condizioni necessarie alla conversazione, mentre se si specifica un livello di opzioni superiore **ssbdiagnose** potrebbe segnalare elementi non richiesti dalla conversazione. Una conversazione tra due servizi nello stesso database, ad esempio, può essere eseguita utilizzando l'opzione ENCPRYPTION OFF. Se si esegue **ssbdiagnose** per convalidare la configurazione tra i due servizi, ma si usa l'impostazione ENCRYPTION ON predefinita, **ssbdiagnose** segnala che nel database manca una chiave master, che non è richiesta per la conversazione.  
   
  Il report di configurazione di **ssbdiagnose** analizza solo un servizio oppure una singola coppia di servizi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] ogni volta che viene eseguito. Per eseguire report su più coppie di servizi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] , compilare un file di comando con estensione cmd che chiama l'utilità **ssbdiagnose** .  
   
@@ -310,7 +310,7 @@ WHERE database_id = DB_ID();
  Segnala un problema che impedisce a **ssbdiagnose** di completare un'analisi di configurazione o di monitorare le conversazioni.  
   
 ## <a name="sqlcmd-environment-variables"></a>Variabili di ambiente sqlcmd  
- L'utilità **ssbdiagnose** supporta le variabili di ambiente SQLCMDSERVER, SQLCMDUSER, SQLCMDPASSWORD e SQLCMDLOGINTIMOUT usate anche dall'utilità **sqlcmd** . Per impostare le variabili di ambiente, è possibile usare il comando SET del prompt dei comandi o il comando **setvar** negli script [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguiti tramite **sqlcmd**. Per altre informazioni sull'uso di **setvar** in **sqlcmd**, vedere [Utilizzo di sqlcmd con variabili di scripting](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md?view=sql-server-ver15).  
+ L'utilità **ssbdiagnose** supporta le variabili di ambiente SQLCMDSERVER, SQLCMDUSER, SQLCMDPASSWORD e SQLCMDLOGINTIMOUT usate anche dall'utilità **sqlcmd** . Per impostare le variabili di ambiente, è possibile usare il comando SET del prompt dei comandi o il comando **setvar** negli script [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguiti tramite **sqlcmd**. Per altre informazioni sull'uso di **setvar** in **sqlcmd**, vedere [Utilizzo di sqlcmd con variabili di scripting](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
  In ogni clausola **connectionoptions** l'account di accesso specificato mediante **-E** o **-U** deve essere un membro del ruolo predefinito del server **sysadmin** nell'istanza specificata in **-S**.  

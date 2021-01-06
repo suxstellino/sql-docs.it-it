@@ -11,12 +11,12 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
-ms.openlocfilehash: 40ce4c62a28f404ceb3295f9644a8aefb4c789f8
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: e99362bd36d99aeeb2b44d3947454f198d29be7c
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489791"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642446"
 ---
 # <a name="download-sql-server-extended-features-and-tools"></a>Scaricare le funzionalità estese e gli strumenti di SQL Server
 
@@ -112,8 +112,8 @@ Questo articolo offre una breve spiegazione dei diversi download e pacchetti aut
 ## <a name="see-also"></a>Vedere anche
 
 - [Documentazione di SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)
-- [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15)
-- [Altri aggiornamenti e Service Pack](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md?view=sql-server-ver15)
+- [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
+- [Altri aggiornamenti e Service Pack](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 - [Scaricare la versione più recente di SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
