@@ -2,7 +2,7 @@
 description: sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 title: sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 01/05/2021
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,19 +21,19 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current
-ms.openlocfilehash: 8aafaca36fb5ef1d96ddbd9f369a3ba4f06a596d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 32082b09a5e583e68f2f06794d80d1d3f21b4e76
+ms.sourcegitcommit: 11ca2305a8d7e420daf772eb97861706c9e08e31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484583"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97928440"
 ---
 # <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
-Restituisce lo snapshot con intervallo di 20 secondi per gli ultimi 32 minuti (128 RECS in totale) delle statistiche dei pool di risorse per un database SQL di Azure.  
-  
+Ogni riga rappresenta uno snapshot periodico delle statistiche del pool di risorse nel database SQL di Azure. Quando il motore di database viene avviato, viene eseguita una snapshot e, a intervalli di pochi secondi, successivamente. L'intervallo tra l'oggetto corrente e lo snapshot precedente può variare e viene fornito nella `duration_ms` colonna. Vengono restituiti gli snapshot più recenti disponibili, fino a 128 snapshot per ogni pool di risorse.
+
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|INT|ID del pool di risorse. Non ammette i valori Null.
@@ -111,7 +111,7 @@ Gli utenti possono accedere a questa vista a gestione dinamica per monitorare il
 > [!IMPORTANT]
 > La maggior parte dei dati esposti da questa DMV è destinata al consumo interno ed è soggetta a modifiche.
 
-## <a name="examples"></a>Esempio
+## <a name="examples"></a>Esempi
 
 Nell'esempio seguente vengono restituiti i dati di frequenza massima dei log e il consumo a ogni snapshot da parte del pool di utenti  
 
