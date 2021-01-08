@@ -1,8 +1,6 @@
 ---
+title: sys.database_query_store_options (Transact-SQL)
 description: sys.database_query_store_options (Transact-SQL)
-title: sys.database_query_store_options (Transact-SQL) | Microsoft Docs
-ms.custom: ''
-ms.date: 05/27/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,18 +16,20 @@ dev_langs:
 helpviewer_keywords:
 - database_query_store_options catalog view
 - sys.database_query_store_options catalog view
-ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: markingmyname
 ms.author: maghan
+ms.custom: ''
+ms.date: 05/27/2020
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c6b346496eb08e9121abac463b3e87f6e27362e2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f8fce0932d546470206bbc7752429090c0212158
+ms.sourcegitcommit: d681796e8c012eca2d9629d3b816749e9f50f868
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484783"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98005414"
 ---
 # <a name="sysdatabase_query_store_options-transact-sql"></a>sys.database_query_store_options (Transact-SQL)
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Restituisce le opzioni di Query Store per il database.  
