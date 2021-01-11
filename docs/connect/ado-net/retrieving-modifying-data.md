@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: c3cf3766ffc6c8acf6025b58aa0adbaafafa2188
-ms.sourcegitcommit: 2add15a99df7b85d271adb261523689984dfd134
+ms.openlocfilehash: 4275b7de0f31d03aa36ef31d8801fcdc0e9ec853
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97038959"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771546"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Recupero e modifica di dati in ADO.NET
 
@@ -42,9 +42,35 @@ Sono inclusi argomenti in cui viene descritto come creare comandi e compilatori 
 [DataAdapter e DataReader](dataadapters-datareaders.md)  
 Sono inclusi argomenti in cui vengono descritti DataReaders, DataAdapters, i parametri, la gestione di eventi DataAdapter e l'esecuzione di operazioni batch.
 
-[Transazioni e concorrenza](transactions-and-concurrency.md) Sono inclusi argomenti che descrivono come eseguire transazioni locali, transazioni distribuite e usare la concorrenza ottimistica.
+[Transazioni e concorrenza](transactions-and-concurrency.md)  
+Sono inclusi argomenti in cui viene descritto come eseguire transazioni locali e transazioni distribuite e come usare concorrenza ottimistica.
 
-[Recupero di informazioni dello schema del database](retrieving-database-schema-information.md) Descrizione di come ottenere i database o i cataloghi disponibili, le tabelle e le viste in un database, i vincoli esistenti per le tabelle e altre informazioni sullo schema da un'origine dati.
+[Recupero di informazioni dello schema del database](retrieving-database-schema-information.md)  
+Viene descritto come ottenere da un'origine dati database o cataloghi disponibili, tabelle e visualizzazioni in un database, vincoli esistenti per tabelle e altre informazioni relative allo schema.
+
+[Oggetti DbProviderFactory](dbproviderfactories.md)  
+Viene descritto il modello a livello di factory del provider e viene illustrato come usare le classi base nello spazio dei nomi `System.Data.Common`.  
+
+[Recuperare i valori Identity o di numerazione automatica](retrieve-identity-or-autonumber-values.md)  
+Vengono forniti esempi di mapping dei valori generati per una colonna **identity** di una tabella di SQL Server a una colonna di una riga inserita in una tabella. Viene descritta l'unione di valori Identity in un oggetto `DataTable`.  
+  
+[Recuperare i dati binari](retrieve-binary-data.md)  
+Viene descritto come recuperare dati binari o strutture di dati di grandi dimensioni usando `CommandBehavior`.`SequentialAccess` per modificare il comportamento predefinito di un oggetto `DataReader`.  
+  
+[Modificare i dati con stored procedure](modify-data-with-stored-procedures.md)  
+Viene descritto come usare i parametri di input e di output della stored procedure per inserire una riga in un database, restituendo un nuovo valore Identity.  
+
+[Traccia dei dati in SqlClient](data-tracing.md)  
+Viene descritto il modo in cui il provider di dati Microsoft SqlClient per SQL Server offre funzionalità di traccia dei dati incorporate.  
+  
+[Contatori delle prestazioni in SqlClient](performance-counters.md)  
+Vengono descritti i contatori delle prestazioni disponibili per il provider di dati Microsoft SqlClient per SQL Server.  
+  
+[Programmazione asincrona](asynchronous-programming.md)  
+Viene descritto il supporto del provider di dati Microsoft SqlClient per SQL Server per la programmazione asincrona.  
+  
+[Supporto dello streaming in SqlClient](sqlclient-streaming-support.md)  
+Viene descritto come scrivere applicazioni che trasmettono i dati da SQL Server senza doverli caricare completamente in memoria.  
 
 ## <a name="see-also"></a>Vedere anche
 

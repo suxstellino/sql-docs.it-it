@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: c632d83b092f5f68ce5bbca32d4315821252603c
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: e6c50bf7255dc77edfd0b93e03dedeec83ed4c4d
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96772240"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771503"
 ---
 # <a name="populate-a-dataset-from-a-dataadapter"></a>Popolare un DataSet da un DataAdapter
 
@@ -52,13 +52,13 @@ Nell'esempio di codice seguente viene creata un'istanza di un tipo <xref:Microso
 
 Se l'oggetto `DataAdapter` rileva più set di risultati, vengono create più tabelle nel `DataSet`. Alle tabelle viene assegnato il nome predefinito incrementale Table *N*, che inizia con "Table" per Table0. Se il nome di una tabella viene passato come argomento al metodo `Fill` , alle tabelle viene assegnato il nome predefinito incrementale TableName *N*, che inizia con "TableName" per TableName0.  
   
-## <a name="populating-a-dataset-from-multiple-dataadapters"></a>Popolamento di un oggetto DataSet da più DataAdapter  
+## <a name="populate-a-dataset-from-multiple-dataadapters"></a>Popolare un oggetto DataSet da più DataAdapter  
 
- È possibile usare qualsiasi numero di oggetti `DataAdapter` con `DataSet`. Ogni oggetto `DataAdapter` può essere usato per compilare uno o più oggetti `DataTable` e risolvere gli aggiornamenti fino all'origine dati pertinente. Gli oggetti`DataRelation` e `Constraint` possono essere aggiunti all'oggetto `DataSet` localmente, consentendo di creare relazioni tra dati provenienti da origini dati diverse. Un `DataSet` , ad esempio, può contenere dati di un database Microsoft SQL Server, un database IBM DB2 esposto tramite OLE DB e un'origine dati che crea flussi XML. Uno o più oggetti `DataAdapter` possono gestire le comunicazioni con ciascuna origine dati.  
+È possibile usare qualsiasi numero di oggetti `DataAdapter` con `DataSet`. Ogni oggetto `DataAdapter` può essere usato per compilare uno o più oggetti `DataTable` e risolvere gli aggiornamenti fino all'origine dati pertinente. Gli oggetti`DataRelation` e `Constraint` possono essere aggiunti all'oggetto `DataSet` localmente, consentendo di creare relazioni tra dati provenienti da origini dati diverse. Un `DataSet` , ad esempio, può contenere dati di un database Microsoft SQL Server, un database IBM DB2 esposto tramite OLE DB e un'origine dati che crea flussi XML. Uno o più oggetti `DataAdapter` possono gestire le comunicazioni con ciascuna origine dati.  
   
 ### <a name="example"></a>Esempio  
 
- Nell'esempio di codice seguente vengono compilati un elenco di clienti dal database `Northwind` in Microsoft SQL Server e un elenco di ordini dal database `Northwind` archiviato in Microsoft Access 2000. Viene creata una relazione tra le tabelle compilate tramite `DataRelation`e viene quindi visualizzato l'elenco di clienti con i relativi ordini.
+Nell'esempio di codice seguente vengono compilati un elenco di clienti dal database `Northwind` in Microsoft SQL Server e un elenco di ordini dal database `Northwind` archiviato in Microsoft Access. Viene creata una relazione tra le tabelle compilate tramite `DataRelation`e viene quindi visualizzato l'elenco di clienti con i relativi ordini.
 
 [!code-csharp[SqlDataAdapter_FillDataSet#2](~/../sqlclient/doc/samples/SqlDataAdapter_FillDataSet.cs#2)]
 

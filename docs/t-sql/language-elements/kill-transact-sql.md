@@ -35,12 +35,12 @@ ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a42d01bead1a5d3882dcce0df67cda7785724b5e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 13afe3aa357bfd968874ae1f89bf0720c39fe49c
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466152"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644457"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +56,8 @@ KILL termina una connessione normale, operazione che arresta internamente le tra
 ```syntaxsql  
 -- Syntax for SQL Server  
   
-KILL { session ID | UOW } [ WITH STATUSONLY ]   
+KILL { session ID [ WITH STATUSONLY ] | UOW [ WITH STATUSONLY | COMMIT | ROLLBACK ] }    
+
 ```  
   
 ```syntaxsql  
@@ -69,26 +70,37 @@ KILL 'session_id'
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argomenti
-_session ID_  
-ID di sessione del processo da terminare. _session ID_ è un valore intero univoco (**int**) assegnato a ogni connessione utente al momento dell'attivazione. Il valore dell'ID di sessione rimane associato alla connessione per tutta la durata della connessione. Al termine della connessione, il valore intero viene rilasciato ed è possibile riassegnarlo a una nuova connessione.  
+
+_ID sessione_   
+ID di sessione del processo da terminare. `session_id` è un valore intero univoco (**int**) assegnato a ogni connessione utente al momento dell'attivazione. Il valore dell'ID di sessione rimane associato alla connessione per tutta la durata della connessione. Al termine della connessione, il valore intero viene rilasciato ed è possibile riassegnarlo a una nuova connessione.  
+
 La query seguente consente di identificare il `session_id` che si intende eliminare:  
+
  ```sql  
  SELECT conn.session_id, host_name, program_name,
      nt_domain, login_name, connect_time, last_request_end_time 
 FROM sys.dm_exec_sessions AS sess
 JOIN sys.dm_exec_connections AS conn
     ON sess.session_id = conn.session_id;
+
 ```  
+
+
+_UOW_   
+Identifica l'ID dell'unità di lavoro delle transazioni distribuite. _UOW_ è un GUID che è possibile ottenere dalla colonna request_owner_guid della vista a gestione dinamica `sys.dm_tran_locks`. È anche possibile ottenere il valore _UOW_ dal log degli errori o tramite il monitoraggio MS DTC. Per ulteriori informazioni sul monitoraggio di transazioni distribuite, vedere la documentazione di MS DTC.  
   
-_UOW_  
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
-  
-Identifica l'ID dell'unità di lavoro delle transazioni distribuite. _UOW_ è un GUID che è possibile ottenere dalla colonna request_owner_guid della vista a gestione dinamica sys.dmtran_locks. È anche possibile ottenere il valore _UOW_ dal log degli errori o tramite il monitoraggio MS DTC. Per ulteriori informazioni sul monitoraggio di transazioni distribuite, vedere la documentazione di MS DTC.  
-  
-Usare KILL _UOW_ per arrestare le transazioni distribuite orfane. Queste transazioni non sono associate a un ID di sessione effettivo, ma sono invece associate in modo artificiale all'ID di sessione -2. Questo ID di sessione consente di semplificare l'identificazione delle transazioni orfane tramite l'esecuzione di una query sulla colonna dell'ID di sessione nelle viste a gestione dinamica sys.dm_tran_locks, sys.dm_exec_sessions o sys.dm_exec_requests.  
-  
-WITH STATUSONLY  
-Genera un report di stato su un valore _session ID_ o _UOW_ specificato di cui è in corso il rollback a causa di un'istruzione KILL precedente. KILL WITH STATUSONLY non termina né esegue il rollback di _session ID_ o _UOW_. Il comando visualizza esclusivamente lo stato corrente del rollback.  
+Usare l’istruzione KILL \<UOW> per arrestare le transazioni distribuite non risolte. Queste transazioni non sono associate a un ID di sessione effettivo, ma sono invece associate in modo artificiale all'ID di sessione -2. Questo ID di sessione semplifica l'identificazione delle transazioni non risolte tramite l'esecuzione di una query sulla colonna dell'ID di sessione nella vista a gestione dinamica `sys.dm_tran_locks`, ` sys.dm_exec_sessions` o `sys.dm_exec_requests`.  
+
+_WITH STATUSONLY_   
+Viene utilizzata per generare un report di stato per un valore di _UOW_ o `session_id` specificato sottoposto a rollback a causa di un’istruzione KILL precedente. L’istruzione KILL WITH STATUSONLY non termina o esegue il rollback dell’unità di lavoro o dell’ID di sessione. Il comando visualizza esclusivamente lo stato corrente del rollback.
+
+_WITH COMMIT_   
+Viene utilizzata per terminare una transazione distribuita non risolta con commit. Applicabile solo alle transazioni distribuite, per usare questa opzione è necessario specificare un valore per _UOW_.  Per altre informazioni, vedere [Transazioni distribuite](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md#manage-unresolved-transactions).
+
+_WITH ROLLBACK_   
+Viene utilizzata per terminare una transazione distribuita non risolta con rollback. Applicabile solo alle transazioni distribuite, per usare questa opzione è necessario specificare un valore per _UOW_.  Per altre informazioni, vedere [Transazioni distribuite](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md#manage-unresolved-transactions).
+
+
   
 ## <a name="remarks"></a>Osservazioni  
 L'istruzione KILL viene normalmente usata per terminare un processo che blocca altri processi importanti con blocchi. Può essere usata anche per arrestare un processo che sta eseguendo una query che usa risorse di sistema necessarie. I processi di sistema e i processi che eseguono una stored procedure estesa non possono essere terminati.  

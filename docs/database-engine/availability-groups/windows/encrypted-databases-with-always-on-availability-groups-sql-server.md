@@ -5,7 +5,7 @@ ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 helpviewer_keywords:
 - Transparent Data Encryption, AlwaysOn Availability Groups
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 09eb6ebc-3051-4fff-86a5-93524507b1fc
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 2569f44e4642df714c8108b6540b81d013d30b82
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+ms.openlocfilehash: 8001dbf4a5799d275bced4f565ee00a7a70d6c61
+ms.sourcegitcommit: 44eebb659f9b226c08aea6c31a909b22ad4fec60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94584301"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97860589"
 ---
 # <a name="add-an-encrypted-database-to-an-always-on-availability-group"></a>Aggiungere un database crittografato a un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -33,15 +33,13 @@ ms.locfileid: "94584301"
   
      Affinché un database decrittografato sia idoneo a essere aggiunto a un gruppo di disponibilità usando la procedura guidata:  
   
-    1.  Creare un backup del log del database primario.  
+    1.  Creare un backup del log completo del database primario. 
   
-    2.  Creare un backup del log completo del database primario.  
+    2.  Creare un backup del log del database primario.  
   
     3.  Ripristinare il backup del database nell'istanza del server in cui è ospitata la replica secondaria.  
-  
-    4.  Creare un nuovo backup del log dal database primario.  
-  
-    5.  Ripristinare questo backup del log sul database secondario.  
+    
+    4.  Ripristinare il backup del log sul database secondario.  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   

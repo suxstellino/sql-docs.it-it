@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: fb290f9a795c9f64bcb2ee95c66210790a80a71d
-ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
+ms.openlocfilehash: 8f1e0ac5fc52576f0e47ccb8be4b8e90899c6e68
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96563117"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771459"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Stringhe di connessione e file di configurazione
 
@@ -27,7 +27,7 @@ ms.locfileid: "96563117"
 
 Se le stringhe di connessione vengono incorporate nel codice dell'applicazione, è possibile che si verifichino vulnerabilità della sicurezza e problemi di manutenzione. Le stringhe di connessione non crittografate compilate nel codice sorgente di un'applicazione possono essere visualizzate tramite lo strumento [Ildasm.exe (Disassembler IL)](/dotnet/framework/tools/ildasm-exe-il-disassembler). Inoltre, se la stringa di connessione viene modificata, è necessario ricompilare l'applicazione. Per questi motivi, si consiglia di archiviare le stringhe di connessione in un file di configurazione dell'applicazione.
 
-## <a name="working-with-application-configuration-files"></a>Utilizzo dei file di configurazione delle applicazioni
+## <a name="work-with-application-configuration-files"></a>Usare i file di configurazione dell'applicazione
 
 I file di configurazione delle applicazioni contengono impostazioni specifiche di una determinata applicazione. Ad esempio, un'applicazione ASP.NET può includere uno o più file **web.config**, mentre un'applicazione Windows può includere un file **app.config** facoltativo. I file di configurazione condividono elementi comuni, anche se il nome e il percorso variano a seconda dell'host dell'applicazione.
 
@@ -52,7 +52,7 @@ Nel frammento di file di configurazione seguente sono illustrati lo schema e la 
 > [!NOTE]
 > È possibile salvare parte di una stringa di connessione in un file di configurazione e usare la classe <xref:System.Data.Common.DbConnectionStringBuilder> per completarlo in fase di esecuzione. Questa funzione è utile nelle situazioni in cui non si conoscono in anticipo gli elementi della stringa di connessione o quando non si desidera salvare informazioni sensibili in un file di configurazione. Per altre informazioni, vedere [Compilatori di stringhe di connessione](connection-string-builders.md).
 
-### <a name="using-external-configuration-files"></a>Uso di file di configurazione esterni
+### <a name="use-external-configuration-files"></a>Usare i file di configurazione esterni
 
 I file di configurazione esterni sono file distinti che contengono un frammento di un file di configurazione costituito da un'unica sezione. Al file di configurazione esterno viene quindi fatto riferimento dal file di configurazione principale. L'archiviazione della sezione **connectionStrings** in un file fisicamente distinto risulta utile nelle situazioni in cui le stringhe di connessione potrebbero essere modificate dopo la distribuzione dell'applicazione. Ad esempio, il comportamento ASP.NET standard prevede il riavvio di un dominio di applicazione quando i file di configurazione vengono modificati, con la conseguenza che le informazioni sullo stato vanno perse. Tuttavia, la modifica di un file di configurazione esterno non provoca un riavvio dell'applicazione. Oltre che in ASP.NET, i file di configurazione esterni possono essere usati anche nelle applicazioni Windows. È possibile inoltre usare la sicurezza e le autorizzazioni di accesso ai file per limitare l'accesso ai file di configurazione esterni. L'uso di file di configurazione esterni in fase di esecuzione è trasparente e non richiede codice speciale.
 
@@ -82,7 +82,7 @@ In .NET Framework 2.0 sono state introdotte nuove classi nello spazio dei nomi <
 > [!NOTE]
 > Il file **machine.config** include anche una sezione **connectionStrings** contenente le stringhe di connessione usate da Visual Studio. Se le stringhe di connessione vengono recuperate in base al nome del provider dal file **app.config** in un'applicazione Windows, vengono caricate dapprima le stringhe di connessione presenti in **machine.config** e quindi le voci di **app.config**. L'aggiunta di **clear** immediatamente dopo l'elemento **connectionStrings** consente di rimuovere tutti i riferimenti ereditati dalla struttura dati in memoria, in modo che vengano considerate solo le stringhe di connessione definite nel file **app.config** locale.
 
-### <a name="working-with-the-configuration-classes"></a>Utilizzo delle classi di configurazione
+### <a name="work-with-the-configuration-files"></a>Usare i file di configurazione
 
 A partire da .NET Framework 2.0, quando si usano i file di configurazione nel computer locale, viene usato <xref:System.Configuration.ConfigurationManager> al posto dell'oggetto <xref:System.Configuration.ConfigurationSettings> deprecato. Per i file di configurazione di ASP.NET, viene usato <xref:System.Web.Configuration.WebConfigurationManager>, progettato per essere usato con i file di configurazione in un server Web, che consente l'accesso a livello di codice alle sezioni del file di configurazione come **system.web**.
 
@@ -118,7 +118,7 @@ In questo esempio viene illustrato come recuperare una stringa di connessione sp
 
 [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](~/../SqlClient/doc/samples/ConnectionStringSettings_RetrieveFromConfigByProvider.cs#1)]
 
-## <a name="encrypting-configuration-file-sections-using-protected-configuration"></a>Crittografia di sezioni dei file di configurazione tramite configurazione protetta
+## <a name="encrypt-configuration-file-sections-using-protected-configuration"></a>Crittografare le sezioni del file di configurazione tramite la configurazione protetta
 
 In ASP.NET 2.0 è stata introdotta una nuova funzionalità, denominata *configurazione protetta*, che consente di crittografare le informazioni riservate in un file di configurazione. Sebbene sia stata progettata principalmente per ASP.NET, questa funzionalità può essere usata anche per crittografare sezioni dei file di configurazione nelle applicazioni Windows. Per una descrizione dettagliata delle funzionalità della configurazione protetta, vedere [Crittografia delle informazioni di configurazione utilizzando la configurazione protetta](/previous-versions/aspnet/53tyfkaw(v=vs.100)).
 
@@ -160,14 +160,14 @@ I provider di configurazione protetta sono registrati nella sezione **configProt
 
 Entrambi i provider offrono una crittografia avanzata per i dati. Se tuttavia si prevede di usare lo stesso file di configurazione crittografato in più server, ad esempio una Web farm, solo <xref:System.Configuration.RsaProtectedConfigurationProvider> consente di esportare le chiavi di crittografia usate per crittografare i dati e importarle in un altro server. Per altre informazioni, vedere [Importazione ed esportazione di contenitori di chiavi RSA della configurazione protetta](/previous-versions/aspnet/yxw286t2(v=vs.100)).
 
-### <a name="using-the-configuration-classes"></a>Utilizzo delle classi di configurazione
+### <a name="use-the-configuration-classes"></a>Usare le classi di configurazione
 
 Lo spazio dei nomi <xref:System.Configuration> fornisce classi per specificare le impostazioni di configurazione a livello di codice. La classe <xref:System.Configuration.ConfigurationManager> fornisce accesso a file di configurazione del computer, dell'applicazione e dell'utente. Se si crea un'applicazione ASP.NET, è possibile usare la classe <xref:System.Web.Configuration.WebConfigurationManager>, che fornisce la stessa funzionalità consentendo anche di accedere a impostazioni che sono univoche per le applicazioni ASP.NET, ad esempio quelle disponibili in **\<system.web>** .
 
 > [!NOTE]
 > Lo spazio dei nomi <xref:System.Security.Cryptography> contiene classi che forniscono opzioni aggiuntive per la crittografia e la decrittografia dei dati. Usare queste classi se si richiedono servizi di crittografia che non sono disponibili tramite configurazione protetta. In alcuni casi si tratta di wrapper presenti nelle CryptoAPI di Microsoft non gestite, in altri semplicemente di implementazioni gestite. Per altre informazioni, vedere [Servizi di crittografia](/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90)).
 
-### <a name="appconfig-example"></a>Esempio di App.config
+### <a name="appconfig-example"></a>Esempio di app.config
 
 In questo esempio viene illustrato come attivare e disattivare la crittografia della sezione **connectionStrings** in un file **app.config** per un'applicazione Windows. La procedura assume il nome dell'applicazione come argomento, ad esempio "MyApplication.exe". Il file **app.config** verrà quindi crittografato e copiato nella cartella che contiene il file eseguibile con il nome "MyApplication.exe.config".
 
@@ -194,5 +194,6 @@ Per altre informazioni sulla protezione di applicazioni ASP.NET, vedere [Securin
 - [Generatori di stringhe di connessione](connection-string-builders.md)
 - [Protezione delle informazioni di connessione](protecting-connection-information.md)
 - [Uso delle classi di configurazione](/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [Configurazione di applicazioni](/dotnet/framework/configure-apps/index)
-- [Amministrazione di siti Web ASP.NET](/previous-versions/aspnet/6hy1xzbw(v=vs.100))
+- [Configurazione di app](/dotnet/framework/configure-apps/index)
+- [Amministrazione sito Web ASP.NET](/previous-versions/aspnet/6hy1xzbw(v=vs.100))
+- [Microsoft ADO.NET per SQL Server](microsoft-ado-net-sql-server.md)

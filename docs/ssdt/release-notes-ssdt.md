@@ -12,12 +12,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current'
-ms.openlocfilehash: c59e142ec924a573e127d9caa0cd7d6ac9bf9e8f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a380eabba4a20a65fd291b938d270a440f66d754
+ms.sourcegitcommit: 44eebb659f9b226c08aea6c31a909b22ad4fec60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440496"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97860601"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Note sulla versione per SQL Server Data Tools (SSDT)
 
@@ -44,6 +44,35 @@ GeneMi , 2019/03/22.
 
 P.S.  there's no need to keep this large HTML comment indefinitely.
 -->
+
+## <a name="1597nbsp-ssdt-for-vs-2017"></a>15.9.7,&nbsp; SSDT per VS 2017
+
+_Data di rilascio:_ &nbsp; 5 gennaio 2021  
+_Numero di build:_ &nbsp; 14.0.16228.0  
+_SSDT per Visual Studio 2017._
+
+### <a name="whats-new"></a>Novità
+
+| Nuovo elemento | Dettagli |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | Creazione di SSISDB resa facoltativa nella creazione guidata IR. |
+| Integration Services (SSIS) | Correzione di un problema per cui gli elementi ComboBox della sottoscrizione di Azure sono duplicati nella creazione guidata del runtime di integrazione e nel progetto abilitato per Azure quando sottoscrizioni diverse hanno lo stesso nome. |
+| Integration Services (SSIS) | Correzione di un problema che in alcune situazioni rendeva impossibile l'abilitazione del pulsante Connetti nella creazione guidata del runtime di integrazione. |
+| Integration Services (SSIS) | Correzione di un problema per cui gli elementi ComboBox della sottoscrizione di Azure sono duplicati nella creazione guidata del runtime di integrazione e nel progetto abilitato per Azure quando sottoscrizioni diverse hanno lo stesso nome. |
+| Integration Services (SSIS) | Correzione di un problema per cui il codice generato automaticamente in bufferwrapper.cs del componente script inserisce virgolette doppie aggiuntive se le impostazioni locali correnti sono Germania. |
+| Integration Services (SSIS) | Correzione di un problema per cui il pulsante Scarica WSDL non viene visualizzato quando la versione del server di destinazione è SQL Server 2012, 2014, 2016. |
+| Integration Services (SSIS) | Correzione di un problema per cui la compilazione di progetti di grandi dimensioni potrebbe non riuscire a causa di un'eccezione di memoria insufficiente. |
+| Integration Services (SSIS) | Correzione di un problema per cui il pacchetto non viene sottoposto a downgrade alla versione corrente del server di destinazione del progetto quando viene salvato come copia nel file system o in MSDB nel modello di distribuzione del pacchetto. |
+| Integration Services (SSIS) | Correzione di un problema per cui la destinazione di elaborazione della dimensione non funziona a causa di un errore di interfaccia non supportata. |
+| Integration Services (SSIS) | Correzione di alcuni problemi relativi all'accessibilità e ai valori DPI alti. |
+
+### <a name="known-issues"></a>Problemi noti
+
+| Problema noto | Dettagli |
+| :---------- | :------ |
+| L'attività di esecuzione pacchetti SSIS non supporta il debug quando ExecuteOutOfProcess è impostato su True. | Questo problema è limitato al debug. Il salvataggio, la distribuzione e l'esecuzione tramite DTExec.exe o il catalogo SSIS non sono interessati. |
+| &nbsp; | &nbsp; |
+
 
 ## <a name="1596nbsp-ssdt-for-vs-2017"></a>15.9.6,&nbsp; SSDT per VS 2017
 

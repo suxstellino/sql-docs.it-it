@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: f61b867b70825595a012b2167d2c63b13409a8e2
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+ms.openlocfilehash: 42b1f8704be721c0b52b3c42946c9abbf7efd7db
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96442815"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771629"
 ---
 # <a name="connection-string-syntax"></a>Sintassi della stringa di connessione
 
@@ -84,17 +84,17 @@ Per connettersi a un'istanza denominata di SQL Server, usare la sintassi *nome s
 
 È anche possibile impostare la proprietà <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> di `SqlConnectionStringBuilder` sul nome dell'istanza quando si compila una stringa di connessione. La proprietà <xref:Microsoft.Data.SqlClient.SqlConnection.DataSource%2A> di un oggetto <xref:Microsoft.Data.SqlClient.SqlConnection> è di sola lettura.
 
-### <a name="type-system-version-changes"></a>Modifiche alla versione del sistema di tipi
+### <a name="type-system-version-changes"></a>Modifiche della parola chiave Type System Version
 
 La parola chiave `Type System Version` in <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> specifica la rappresentazione lato client dei tipi di SQL Server. Per altre informazioni sulla parola chiave <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>, vedere `Type System Version`.
 
-## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>Connessione e collegamento alle istanze utente di SQL Server Express
+## <a name="connect-and-attach-to-sql-server-express-user-instances"></a>Connettersi e collegarsi alle istanze utente di SQL Server Express
 
 Le istanze utente sono una funzionalità di SQL Server Express. consentono a un utente che usa un account di Windows locale con privilegi minimi di collegarsi ed eseguire un database SQL Server senza la necessità di privilegi amministrativi. Un'istanza utente viene eseguita con le credenziali di Windows dell'utente, non come un servizio.
 
 Per altre informazioni sull'utilizzo delle istanze utente, vedere [Istanze utente di SQL Server Express](./sql/sql-server-express-user-instances.md).
 
-## <a name="using-trustservercertificate"></a>Uso di TrustServerCertificate
+## <a name="use-trustservercertificate"></a>Usare TrustServerCertificate
 
 La parola chiave `TrustServerCertificate` è valida solo quando ci si connette a un'istanza di SQL Server con un certificato valido. Quando `TrustServerCertificate` è impostato su `true`, l'utente richiede che nel livello trasporto venga utilizzato TLS/SSL per crittografare il canale e ignorare il passaggio alla catena di certificati per convalidare l'attendibilità.
 
@@ -105,7 +105,7 @@ La parola chiave `TrustServerCertificate` è valida solo quando ci si connette a
 > [!NOTE]
 > Se `TrustServerCertificate` è impostata su `true` e la crittografia è attivata, il livello di crittografia specificato nel server verrà usato anche se `Encrypt` è impostato su `false` nella stringa di connessione. In caso contrario, la connessione non riuscirà.
 
-### <a name="enabling-encryption"></a>Abilitazione della crittografia
+### <a name="enable-encryption"></a>Abilitare la crittografia
 
 Per attivare la crittografia quando non è stato eseguito il provisioning di un certificato nel server, è necessario che le opzioni **Forza crittografia protocollo** e **Considera attendibile certificato server** siano impostate in Gestione configurazione SQL Server. In questo caso, la crittografia utilizzerà un certificato server autofirmato senza convalida se nel server non è stato eseguito il provisioning di alcun certificato verificabile.
 
@@ -129,3 +129,4 @@ Per altre informazioni, vedere [Uso della crittografia senza convalida](/sql/rel
 
 - [Stringhe di connessione](connection-strings.md)
 - [Connessione a un'origine dati](connecting-to-data-source.md)
+- [Microsoft ADO.NET per SQL Server](microsoft-ado-net-sql-server.md)

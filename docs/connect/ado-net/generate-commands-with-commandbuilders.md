@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 091f7c2736c240951beb0f434fdcd2efb39a9b59
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: d738650db9dbb7b0b2ed3f9411945173f73f748f
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96428251"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771318"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>Generazione dei comandi con CommandBuilders
 
@@ -39,9 +39,9 @@ Come requisito minimo, è necessario impostare la proprietà `SelectCommand` aff
 
 Quando è associato a un `DataAdapter`, <xref:System.Data.Common.DbCommandBuilder> genera automaticamente le proprietà `InsertCommand`, `UpdateCommand` e `DeleteCommand` del `DataAdapter`, se queste sono riferimenti Null. Se esiste già un oggetto `Command` per una proprietà, viene usato l'oggetto `Command` esistente.
 
-Le visualizzazioni di database create dall'unione di due o più tabelle non vengono considerate un'unica tabella di database. In questa istanza, non è possibile usare <xref:System.Data.Common.DbCommandBuilder> per generare i comandi automaticamente. È necessario specificarli in modo esplicito.
+Le visualizzazioni di database create dall'unione di due o più tabelle non vengono considerate un'unica tabella di database. In questa istanza, non è possibile usare <xref:System.Data.Common.DbCommandBuilder> per generare i comandi automaticamente. È necessario specificarli in modo esplicito. Per informazioni sull'impostazione esplicita dei comandi per applicare gli aggiornamenti a `DataSet` nell'origine dati, vedere [Aggiornare origini dati con DataAdapter](update-data-sources-with-dataadapters.md).
 
-È possibile eseguire il mapping dei parametri di output alla riga aggiornata di un `DataSet`. Un'attività comune sarebbe il recupero del valore di un campo identità generato automaticamente o del timestamp da un'origine dati. Per impostazione predefinita, <xref:System.Data.Common.DbCommandBuilder> non esegue il mapping dei parametri di output sulle colonne in una riga aggiornata. In questo caso, è necessario specificare il comando in modo esplicito.
+È possibile eseguire il mapping dei parametri di output alla riga aggiornata di un `DataSet`. Un'attività comune sarebbe il recupero del valore di un campo identità generato automaticamente o del timestamp da un'origine dati. Per impostazione predefinita, <xref:System.Data.Common.DbCommandBuilder> non esegue il mapping dei parametri di output sulle colonne in una riga aggiornata. In questo caso, è necessario specificare il comando in modo esplicito. Per un esempio di mapping di un campo identità generato automaticamente su una colonna di una riga inserita, vedere [Recuperare l’identità o valori numerati automaticamente](retrieve-identity-or-autonumber-values.md).
 
 ## <a name="rules-for-automatically-generated-commands"></a>Regole per i comandi generati automaticamente
 
@@ -74,13 +74,13 @@ La logica per la generazione automatica dei comandi genera un'istruzione INSERT,
 
 La logica per la generazione automatica dei comandi potrebbe non essere eseguita correttamente se i nomi delle colonne o delle tabelle contengono caratteri speciali quali spazi, punti, virgolette o altri caratteri non alfanumerici, anche se racchiusi tra parentesi. A seconda del provider, l'impostazione dei parametri QuoteSuffix e QuotePrefix può consentire alla logica di generazione di elaborare gli spazi, ma non i caratteri speciali di escape. Sono supportati i nomi di tabella completi nel formato *catalog.schema.table*.
 
-## <a name="using-the-commandbuilder-to-automatically-generate-an-sql-statement"></a>Utilizzo di CommandBuilder per generare automaticamente un'istruzione SQL
+## <a name="use-the-commandbuilder-to-automatically-generate-an-sql-statement"></a>Usare CommandBuilder per generare automaticamente un'istruzione SQL
 
 Per generare automaticamente le istruzioni SQL per un oggetto `DataAdapter`, impostare innanzitutto la proprietà `SelectCommand` di `DataAdapter`. Creare quindi un oggetto `CommandBuilder` e specificare come argomento l'oggetto `DataAdapter` per il quale l'oggetto `CommandBuilder` genererà automaticamente le istruzioni SQL.
 
 [!code-csharp[SqlCommandBuilder_Create#1](~/../sqlclient/doc/samples/SqlCommandBuilder_Create.cs#1)]
 
-## <a name="modifying-the-selectcommand"></a>Modifica di SelectCommand
+## <a name="modify-the-selectcommand"></a>Modificare SelectCommand
 
 Se si modifica `CommandText` di `SelectCommand` dopo la generazione automatica di un comando INSERT, UPDATE o DELETE, è possibile che venga generata un'eccezione. Se l'oggetto `SelectCommand.CommandText` modificato contiene informazioni sullo schema che non sono coerenti con l'oggetto `SelectCommand.CommandText` usato durante la generazione automatica del comando di inserimento, aggiornamento o eliminazione, nelle future chiamate al metodo `DataAdapter.Update` potrebbe essere eseguito un tentativo di accesso a colonne che non esistono più nella tabella corrente a cui `SelectCommand` fa riferimento e verrà generata un'eccezione.
 
@@ -100,3 +100,4 @@ Nell'esempio seguente viene ricreata la tabella nel set di dati. Il metodo **Ref
 
 - [Comandi e parametri](commands-parameters.md)
 - [Esecuzione di un comando](execute-command.md)
+- [Microsoft ADO.NET per SQL Server](microsoft-ado-net-sql-server.md)

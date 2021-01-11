@@ -2,7 +2,7 @@
 title: Connessione a un database SQL di Azure
 description: Questo articolo illustra i problemi relativi all'uso di Microsoft JDBC Driver per SQL Server per connettersi a un database SQL di Azure.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 12/18/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bda9c33588c8248d0aff62f555ec46451d0e9e78
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 03768a309ac10fc16fd1a743660df6fe74b088e7
+ms.sourcegitcommit: bc8474fa200ef0de7498dbb103bc76e3e3a4def4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725492"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97709670"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Connessione a un database SQL di Azure
 
@@ -43,7 +43,13 @@ Durante la connessione a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], �
 
 - Inattività nel gateway Azure SQL, in cui potrebbero verificarsi messaggi TCP **keepalive** (rendendo la connessione non inattiva da una prospettiva TCP), ma in cui non è stata rilevata una query attiva da 30 minuti. In questo scenario il gateway determinerà che la connessione TDS è inattiva da 30 minuti e la terminerà.  
   
-Per evitare l'eliminazione di connessioni inattive da un componente di rete, è consigliabile impostare le seguenti impostazioni del Registro di sistema, o le relative equivalenti non Windows, nel sistema operativo in cui viene caricato il driver:  
+Per risolvere il secondo punto ed evitare che il gateway interrompa le connessioni inattive, è possibile:
+
+* Usare i [criteri di connessione](/azure/azure-sql/database/connectivity-architecture#connection-policy) di **reindirizzamento** quando si configura l'origine dati di Azure SQL.
+
+* Mantenere attive le connessioni con attività leggere. Questo metodo non è consigliabile e deve essere usato solo in mancanza di altre opzioni possibili.
+
+Per risolvere il secondo punto ed evitare che un componente di rete elimini le connessioni inattive, è consigliabile configurare le impostazioni del Registro di sistema indicate di seguito, o le relative equivalenti non Windows, nel sistema operativo in cui viene caricato il driver:  
   
 |Impostazione del Registro di sistema|Valore consigliato|  
 |----------------------|-----------------------|  
@@ -53,7 +59,13 @@ Per evitare l'eliminazione di connessioni inattive da un componente di rete, è 
   
 Riavviare il computer per attivare le impostazioni del Registro di sistema.  
 
-A tale scopo, durante l'esecuzione di Azure creare un'attività di avvio per aggiungere le chiavi del Registro di sistema.  Ad esempio, aggiungere l'attività di avvio al file di definizione del servizio:  
+I valori KeepAliveTime e KeepAliveInterval sono espressi in millisecondi. Queste impostazioni avranno l'effetto di disconnettere una connessione che non risponde entro un periodo da 10 a 40 secondi. Dopo l'invio di un pacchetto keep-alive, se non si riceve risposta, l'invio verrà ritentato ogni secondo fino a 10 volte. Se in questo periodo di tempo non si riceve risposta, il socket sul lato client viene disconnesso. A seconda dell'ambiente, potrebbe essere necessario aumentare il valore di KeepAliveInterval per gestire le interferenze note, come le migrazioni di macchine virtuali, che potrebbero causare la mancata risposta da parte di un server per più di 10 secondi.
+
+> [!NOTE]
+> TcpMaxDataRetransmissions non è controllabile in Windows Vista o Windows 2008 e versioni successive.
+
+Per eseguire questa configurazione durante l'esecuzione in Azure, creare un'attività di avvio per aggiungere le chiavi del Registro di sistema.  Ad esempio, aggiungere l'attività di avvio al file di definizione del servizio:  
+
 
 ```xml
 <Startup>  
@@ -62,7 +74,7 @@ A tale scopo, durante l'esecuzione di Azure creare un'attività di avvio per agg
 </Startup>  
 ```
 
-Successivamente, aggiungere il file AddKeepAlive.cmd al progetto in uso. Impostare l'impostazione "Copia nella directory di output" su Copia sempre. Di seguito è riportato un esempio di file AddKeepAlive.cmd:  
+Successivamente, aggiungere il file AddKeepAlive.cmd al progetto in uso. Impostare l'impostazione "Copia nella directory di output" su Copia sempre. Lo script seguente è un esempio di file AddKeepAlive.cmd:  
 
 ```bat
 if exist keepalive.txt goto done  

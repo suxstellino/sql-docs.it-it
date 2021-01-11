@@ -5,17 +5,17 @@ ms.custom: seodec18
 ms.date: 01/28/2020
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: df4daf119464ccf90c751f97daeea0379d8e8a21
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: b6335c43c179dfcdb94ecae98b829f3ff8bb50aa
+ms.sourcegitcommit: e5664d20ed507a6f1b5e8ae7429a172a427b066c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96506346"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97697105"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Configurare un gruppo di disponibilità distribuito Always On  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -155,6 +155,10 @@ GO
 ## <a name="create-distributed-availability-group-on-first-cluster"></a>Creare un gruppo di disponibilità distribuito nel primo cluster  
  Creare un gruppo di disponibilità distribuito nel primo WSFC (in questo esempio denominato `distributedag` ). Usare il comando **CREATE AVAILABILITY GROUP** con l'opzione **DISTRIBUTED** . Il parametro **AVAILABILITY GROUP ON** specifica i gruppi di disponibilità membri, `ag1` e `ag2`.  
   
+# <a name="automatic-seeding"></a>[Seeding automatico](#tab/automatic)
+
+Per creare il gruppo di disponibilità distribuito usando il seeding automatico, usare il seguente codice Transact-SQL: 
+
 ```sql  
 CREATE AVAILABILITY GROUP [distributedag]  
    WITH (DISTRIBUTED)   
@@ -176,6 +180,35 @@ CREATE AVAILABILITY GROUP [distributedag]
 GO   
 ```  
   
+
+# <a name="manual-seeding"></a>[Seeding manuale](#tab/manual)
+
+Per creare il gruppo di disponibilità distribuito usando il seeding manuale, usare il seguente codice Transact-SQL: 
+
+```sql
+CREATE AVAILABILITY GROUP [distributedag]  
+   WITH (DISTRIBUTED)   
+   AVAILABILITY GROUP ON  
+      'ag1' WITH    
+      (   
+         LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',    
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
+         FAILOVER_MODE = MANUAL,   
+         SEEDING_MODE = MANUAL   
+      ),   
+      'ag2' WITH    
+      (   
+         LISTENER_URL = 'tcp://ag2-listener.contoso.com:5022',   
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
+         FAILOVER_MODE = MANUAL,   
+         SEEDING_MODE = MANUAL   
+      );    
+GO   
+
+```
+
+---
+
 > [!NOTE]  
 >  Il parametro **LISTENER_URL** specifica il listener per ogni gruppo di disponibilità insieme all'endpoint del mirroring del database del gruppo di disponibilità. Questo esempio riguarda la porta `5022` (non la porta `60173` usata per creare il listener). Se si usa un bilanciamento del carico, ad esempio in Azure, [aggiungere una regola per il bilanciamento del carico per la porta del gruppo di disponibilità distribuito](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Aggiungere la regola per la porta del listener, oltre che alla porta dell'istanza di SQL Server. 
 
@@ -196,6 +229,10 @@ ALTER AVAILABILITY GROUP [distributedag]
 ## <a name="join-distributed-availability-group-on-second-cluster"></a>Aggiungere un gruppo di disponibilità distribuito nel secondo cluster  
  Creare quindi un join del gruppo di disponibilità distribuito nel secondo WSFC.  
   
+# <a name="automatic-seeding"></a>[Seeding automatico](#tab/automatic)
+
+Per creare un join con il gruppo di disponibilità distribuito usando il seeding automatico, usare il seguente codice Transact-SQL: 
+
 ```sql  
 ALTER AVAILABILITY GROUP [distributedag]   
    JOIN   
@@ -216,6 +253,61 @@ ALTER AVAILABILITY GROUP [distributedag]
       );    
 GO  
 ```  
+
+
+
+# <a name="manual-seeding"></a>[Seeding manuale](#tab/manual)
+
+Per creare un join con il gruppo di disponibilità distribuito usando il seeding manuale, usare il seguente codice Transact-SQL: 
+
+```sql
+ALTER AVAILABILITY GROUP [distributedag]   
+   JOIN   
+   AVAILABILITY GROUP ON  
+      'ag1' WITH    
+      (   
+         LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',    
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
+         FAILOVER_MODE = MANUAL,   
+         SEEDING_MODE = MANUAL   
+      ),   
+      'ag2' WITH    
+      (   
+         LISTENER_URL = 'tcp://ag2-listener.contoso.com:5022',   
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
+         FAILOVER_MODE = MANUAL,   
+         SEEDING_MODE = MANUAL  
+      );    
+GO  
+```
+
+Se il seeding manuale viene usato per creare il database nel server d'inoltro, eseguire un backup completo e un backup del log delle transazioni dal database primario globale e ripristinarli nel server d'inoltro con l'opzione NONRECOVERY. Esempio:
+
+Per eseguire il backup nel database primario globale: 
+
+```sql
+BACKUP DATABASE [db1] 
+TO DISK = '<full backup location>' WITH FORMAT
+BACKUP LOG [db1] 
+TO DISK = '<log backup location>' WITH FORMAT
+```
+
+Per eseguire il ripristino nel server d'inoltro: 
+
+```sql
+RESTORE DATABASE [db1] 
+FROM DISK = '<full backup location>' WITH NORECOVERY
+RESTORE LOG [db1] FROM DISK = '<log backup location>' WITH NORECOVERY
+```
+
+Successivamente, eseguire il comando seguente nel server d'inoltro
+
+```sql
+ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [distributedag]
+```
+
+---
+
 
 ## <a name="join-the-database-on-the-secondary-of-the-second-availability-group"></a><a name="failover"></a> Aggiungere il database nella replica secondaria del secondo gruppo di disponibilità
 Quando il database nella replica secondaria del secondo gruppo di disponibilità è in uno stato di ripristino, è necessario aggiungerlo manualmente al gruppo di disponibilità.

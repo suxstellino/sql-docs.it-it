@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: d72660a55fa047864148c90ae4087782302adc22
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: 90985f155392a78da408ffbda3e1d2c0b12d4648
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96772224"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771603"
 ---
 # <a name="dataadapter-parameters"></a>Parametri DataAdapter
 
@@ -75,5 +75,6 @@ Nell'esempio seguente viene illustrato come creare un oggetto <xref:Microsoft.Da
 - [DataAdapter e DataReader](dataadapters-datareaders.md)
 - [Comandi e parametri](commands-parameters.md)
 - [Aggiornare origini dati con DataAdapter](update-data-sources-with-dataadapters.md)
+- [Modificare i dati con stored procedure](modify-data-with-stored-procedures.md)
 - [Mapping dei tipi di dati in ADO.NET](data-type-mappings-ado-net.md)
 - [Microsoft ADO.NET per SQL Server](microsoft-ado-net-sql-server.md)

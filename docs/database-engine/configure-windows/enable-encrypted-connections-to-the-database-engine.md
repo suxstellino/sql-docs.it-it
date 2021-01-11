@@ -1,6 +1,6 @@
 ---
 title: Abilitare le connessioni crittografate | Microsoft Docs
-ms.custom: contperfq4
+ms.custom: contperf-fy20q4
 ms.date: 08/29/2019
 ms.prod: sql
 ms.prod_service: security
@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d147177be88db5bba50955711a8585ff11d872d9
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: b18a3131329e0485221a0ae2cdaafd0726a4f31c
+ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670969"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878965"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Abilitare connessioni crittografate al motore di database
 
@@ -71,7 +71,7 @@ L'abilitazione della crittografia TLS contribuisce alla sicurezza del traffico d
  Il client deve essere in grado di verificare la proprietà del certificato utilizzato dal server. Se il client dispone del certificato chiave pubblica dell'autorità di certificazione che ha firmato il certificato del server, non sono necessarie ulteriori operazioni di configurazione. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sono inclusi i certificati chiave pubblica di numerose autorità di certificazione. Se il certificato del server è stato firmato da un'autorità di certificazione pubblica o privata per la quale il client non dispone del certificato chiave pubblica, è necessario installare il certificato chiave pubblica dell'autorità di certificazione che ha firmato il certificato del server.  
   
 > [!NOTE]  
-> Per utilizzare la crittografia in un cluster di failover, è necessario installare il certificato server con il nome DNS completo del server virtuale in tutti i nodi del cluster di failover. Ad esempio, con un cluster costituito da due nodi, denominati rispettivamente ***test1.\*\<your company>\*.com*** e ***test2.\*\<your company>\*.com***, e un server virtuale denominato ***virtsql***, è necessario installare un certificato per ***virtsql.\*\<your company>\*.com*** in entrambi i nodi. È possibile impostare il valore dell'opzione **ForceEncryption** nella casella della proprietà **Protocolli per virtsql** di **Configurazione di rete SQL Server** su **Sì**.
+> Per utilizzare la crittografia in un cluster di failover, è necessario installare il certificato server con il nome DNS completo del server virtuale in tutti i nodi del cluster di failover. Ad esempio, con un cluster costituito da due nodi, denominati rispettivamente **_test1.\_\<your company>\*.com*** e **_test2.\_\<your company>\*.com***, e un server virtuale denominato *_virtsql_*_, è necessario installare un certificato per _ *_virtsql.\_\<your company>\*.com*** in entrambi i nodi. È possibile impostare il valore dell'opzione **ForceEncryption** nella casella della proprietà **Protocolli per virtsql** di **Configurazione di rete SQL Server** su **Sì**.
 
 > [!NOTE]
 > Se si creano connessioni crittografate per un indicizzatore di Ricerca di Azure a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in una macchina virtuale di Azure, vedere [Configurare una connessione da un indicizzatore di Ricerca di Azure a SQL Server in una VM Azure](/azure/search/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers). 
@@ -110,19 +110,19 @@ Se si usa [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ss
   
 3. Nella finestra di dialogo **Aggiungi/Rimuovi snap-in** fare clic su **Aggiungi**.  
   
-4. Nella finestra di dialogo **Aggiungi snap-in autonomo** fare clic su **Certificati**e quindi su **Aggiungi**.  
+4. Nella finestra di dialogo **Aggiungi snap-in autonomo** fare clic su **Certificati** e quindi su **Aggiungi**.  
   
-5. Nella finestra di dialogo **Snap-in certificati** fare clic su **Account del computer**e quindi su **Fine**.  
+5. Nella finestra di dialogo **Snap-in certificati** fare clic su **Account del computer** e quindi su **Fine**.  
   
 6. Nella finestra di dialogo **Aggiungi snap-in autonomo** fare clic su **Chiudi**.  
   
 7. Nella finestra di dialogo **Aggiungi/Rimuovi snap-in** fare clic su **OK**.  
   
-8. Nello snap-in **Certificati** espandere **Certificati**e **Personale**, fare clic con il pulsante destro del mouse su **Certificati**, scegliere **Tutte le attività**e quindi fare clic su **Importa**.  
+8. Nello snap-in **Certificati** espandere **Certificati** e **Personale**, fare clic con il pulsante destro del mouse su **Certificati**, scegliere **Tutte le attività** e quindi fare clic su **Importa**.  
 
-9. Fare clic con il pulsante destro del mouse sul certificato importato, scegliere **Tutte le attività**e quindi fare clic su **Gestisci chiavi private**. Nella finestra di dialogo **Sicurezza** aggiungere l'autorizzazione di lettura per l'account utente usato dall'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+9. Fare clic con il pulsante destro del mouse sul certificato importato, scegliere **Tutte le attività** e quindi fare clic su **Gestisci chiavi private**. Nella finestra di dialogo **Sicurezza** aggiungere l'autorizzazione di lettura per l'account utente usato dall'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-10. Completare l' **Importazione guidata certificati**per aggiungere un certificato al computer e chiudere la console MMC. Per ulteriori informazioni sull'aggiunta di un certificato a un computer, vedere la documentazione di Windows.  
+10. Completare l' **Importazione guidata certificati** per aggiungere un certificato al computer e chiudere la console MMC. Per ulteriori informazioni sull'aggiunta di un certificato a un computer, vedere la documentazione di Windows.  
 
 > [!IMPORTANT]
 > Per gli ambienti di produzione, è consigliabile usare un certificato attendibile emesso da un'autorità di certificazione.    
@@ -136,9 +136,9 @@ Se si usa [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ss
 
 ## <a name="export-server-certificate"></a>Esportare il certificato del server  
   
-1. Nello snap-in **Certificati** individuare il certificato nella cartella **Certificati** / **Personale** , fare clic con il pulsante destro del mouse su **Certificato**, scegliere **Tutte le attività**e quindi fare clic su **Esporta**.  
+1. Nello snap-in **Certificati** individuare il certificato nella cartella **Certificati** / **Personale** , fare clic con il pulsante destro del mouse su **Certificato**, scegliere **Tutte le attività** e quindi fare clic su **Esporta**.  
   
-2. Completare l' **Esportazione guidata certificati**e archiviare il file di certificato in una posizione appropriata.  
+2. Completare l' **Esportazione guidata certificati** e archiviare il file di certificato in una posizione appropriata.  
   
 ## <a name="configure-server"></a>Configurare il server
 
@@ -151,7 +151,7 @@ Configurare il server per imporre le connessioni crittografate.
   
 2. Nella finestra di dialogo **Protocolli per** _\<instance name>_ **Proprietà**, nella scheda **Certificato**, selezionare il certificato desiderato nell'elenco a discesa della casella **Certificato** e quindi fare clic su **OK**.  
   
-3. Nella casella **ForceEncryption** della scheda **Flag** selezionare **Sì**e quindi fare clic su **OK** per chiudere la finestra di dialogo.  
+3. Nella casella **ForceEncryption** della scheda **Flag** selezionare **Sì** e quindi fare clic su **OK** per chiudere la finestra di dialogo.  
   
 4. Riavviare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
@@ -174,7 +174,7 @@ Configurare il client in modo che richieda connessioni crittografate.
   
 Per crittografare una connessione da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
 
-1. Nella barra degli strumenti di Esplora oggetti fare clic su **Connetti**e quindi su **Motore di database**.  
+1. Nella barra degli strumenti di Esplora oggetti fare clic su **Connetti** e quindi su **Motore di database**.  
   
 2. Nella finestra di dialogo **Connetti al server** completare le informazioni di connessione e quindi fare clic su **Opzioni**.  
   

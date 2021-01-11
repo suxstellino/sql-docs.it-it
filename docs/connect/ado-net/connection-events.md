@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 67b805e4ec95047b843e6b72ba10dc8fee4688d5
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 8151915dc6c16c6225fec9ab90cb5a88e86b992f
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419822"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771445"
 ---
 # <a name="connection-events"></a>Eventi di connessione
 
@@ -32,7 +32,7 @@ Il provider di dati Microsoft SqlClient per SQL Server presenta oggetti relativi
 |**InfoMessage**|Si verifica quando un messaggio informativo viene restituito da un'origine dati. I messaggi informativi sono i messaggi di un'origine dati per cui non viene generata un'eccezione.|  
 |**StateChange**|Si verifica quando viene modificato lo stato della **Connessione**.|  
 
-## <a name="working-with-the-infomessage-event"></a>Utilizzo dell'evento InfoMessage
+## <a name="work-with-the-infomessage-event"></a>Usare l'evento InfoMessage
 
 È possibile recuperare avvisi e messaggi informativi da un'origine dati SQL Server usando l'evento <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> dell'oggetto <xref:Microsoft.Data.SqlClient.SqlConnection>. Gli errori restituiti da un'origine dati con un livello di gravità compreso tra 11 e 16 generano un'eccezione. Tuttavia, l'evento <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> consente di ottenere dall'origine dati i messaggi che non sono associati a un errore. Nel caso di Microsoft SQL Server i messaggi di errore con una gravità uguale o minore di 10 sono considerati informativi e vengono acquisiti usando l'evento <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage>. Per altre informazioni, vedere l'articolo [Gravità degli errori del motore di database](/sql/relational-databases/errors-events/database-engine-error-severities).
 
@@ -44,7 +44,7 @@ Nell'esempio di codice seguente viene illustrato come aggiungere un gestore even
 
 [!code-csharp[SqlConnection_._InfoMessage#1](~/../sqlclient/doc/samples/SqlConnection_InfoMessage_StateChange.cs#1)]
 
-## <a name="handling-errors-as-infomessages"></a>Gestione di errori come InfoMessage
+## <a name="handle-errors-as-infomessages"></a>Gestire gli errori come InfoMessages
 
 In genere, l'evento <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> verrà generato solo per messaggi informativi e per messaggi di avviso inviati dal server. Tuttavia, quando si verifica un errore, l'esecuzione del metodo **ExecuteNonQuery** o **ExecuteReader** che ha avviato l'operazione del server viene interrotta e viene generata un'eccezione.
 
@@ -53,7 +53,7 @@ Per continuare a elaborare le restanti istruzioni di un comando indipendentement
 > [!NOTE]
 > Un errore con un livello di gravità pari a 17 o superiore che provoca l'interruzione dell'elaborazione del comando da parte del server deve essere gestito come un'eccezione. In questo caso viene generata un'eccezione indipendentemente da come viene gestito l'errore nell'evento <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage>.
 
-## <a name="working-with-the-statechange-event"></a>Utilizzo dell'evento StateChange
+## <a name="work-with-the-statechange-event"></a>Usare l'evento StateChange
 
 L'evento **StateChange** si verifica quando viene modificato lo stato di una **Connessione**. L'evento **StateChange** riceve il tipo <xref:System.Data.StateChangeEventArgs> che consente di determinare la modifica dello stato della **Connessione** usando le proprietà **OriginalState** e **CurrentState**. La proprietà **OriginalState** è un'enumerazione <xref:System.Data.ConnectionState> che indica lo stato della **Connessione** prima della modifica. **CurrentState** è un'enumerazione <xref:System.Data.ConnectionState> che indica lo stato della **Connessione** dopo la modifica.
 
@@ -64,3 +64,4 @@ Nell'esempio di codice seguente viene usato l'evento **StateChange** per scriver
 ## <a name="see-also"></a>Vedere anche
 
 - [Connessione a un'origine dati](connecting-to-data-source.md)
+- [Microsoft ADO.NET per SQL Server](microsoft-ado-net-sql-server.md)

@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: bdb4294fda1f26ec346f786ec29061f8d4f9ee27
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 38c1ad34fb4819460c08f00da4c1dbd31749b7cb
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419792"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771434"
 ---
 # <a name="connection-string-builders"></a>Generatori di stringhe di connessione
 
@@ -44,7 +44,7 @@ data source=(local);Integrated Security=True;
 initial catalog="AdventureWorks;NewValue=Bad"
 ```
 
-## <a name="building-connection-strings-from-configuration-files"></a>Compilazione di stringhe di connessione da file di configurazione
+## <a name="build-connection-strings-from-configuration-files"></a>Creare stringhe di connessione da file di configurazione
 
 Se determinati elementi di una stringa di connessione sono noti in anticipo, possono essere archiviati in un file di configurazione e recuperati in fase di esecuzione per costruire una stringa di connessione completa. Ad esempio, è possibile che il nome del database sia noto in anticipo, ma non il nome del server. Oppure è possibile che si desideri che un utente specifichi un nome utente e una password in fase di esecuzione senza avere la possibilità di inserire altri valori nella stringa di connessione.
 
@@ -74,3 +74,4 @@ In questo esempio vengono illustrati il recupero di una stringa di connessione d
 ## <a name="see-also"></a>Vedere anche
 
 - [Stringhe di connessione](connection-strings.md)
+- [Microsoft ADO.NET per SQL Server](microsoft-ado-net-sql-server.md)

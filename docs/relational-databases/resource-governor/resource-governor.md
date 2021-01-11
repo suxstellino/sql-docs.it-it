@@ -2,7 +2,7 @@
 title: Resource Governor | Microsoft Docs
 description: Informazioni sulla funzionalità di SQL Server Resource Governor che limita la quantità di CPU, I/O fisico e memoria che può essere usata dalle richieste in ingresso dell'applicazione.
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/21/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -13,17 +13,20 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 29d63602d4e3553ee2e5f1cb9053e445265fd301
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: 6b5f22541039f781e49615b5e8916d138a5c375b
+ms.sourcegitcommit: bb54e4c9dd8c97365b7a96dfcd557b8b86d06978
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96506551"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97736889"
 ---
 # <a name="resource-governor"></a>Resource Governor
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   La funzionalità Resource Governor di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permette di gestire il carico di lavoro e l'uso delle risorse di sistema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Resource Governor consente di specificare limiti per la quantità di CPU, I/O fisico e memoria che può essere usata dalle richieste in ingresso dell'applicazione.  
   
+> [!NOTE]
+> Sebbene il [database SQL di Azure sfrutti Resource Governor](https://azure.microsoft.com/blog/resource-governance-in-azure-sql-database/) (tra le altre tecniche) per gestire le risorse, la configurazione utente dei pool di risorse e dei gruppi di carico di lavoro personalizzati nel database SQL di Azure non è supportata. Azure Synapse Analytics presenta un'implementazione diversa di un comportamento di Resource Governor simile tramite la [funzionalità di classificazione del carico di lavoro](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-workload-classification).
+
 ## <a name="benefits-of-resource-governor"></a>Vantaggi di Resource Governor  
  Resource Governor consente di gestire i carichi di lavoro e le risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificando limiti relativi all'utilizzo delle risorse da parte delle richieste in entrata. Nel contesto di Resource Governor il carico di lavoro è un set di richieste o query con dimensioni simili che può o deve essere considerato come singola entità. Sebbene non si tratti di un requisito obbligatorio, utilizzando in modo uniforme le risorse di un carico di lavoro è possibile sfruttare al massimo i vantaggi offerti da Resource Governor. I limiti delle risorse possono essere riconfigurati in tempo reale con un minimo impatto sui carichi di lavoro in esecuzione.  
   
@@ -61,8 +64,8 @@ ms.locfileid: "96506551"
   
 -   **Classificazione.** Il processo di classificazione consente di assegnare sessioni in ingresso a un gruppo di carico di lavoro in base alle caratteristiche della sessione. È possibile personalizzare la logica di classificazione scrivendo una funzione definita dall'utente, chiamata funzione di classificazione. Resource Governor supporta anche una funzione di classificazione definita dall'utente per l'implementazione delle regole di classificazione. Per altre informazioni, vedere [Funzione di classificazione di Resource Governor](../../relational-databases/resource-governor/resource-governor-classifier-function.md).  
   
-> [!NOTE]  
->  Resource Governor non impone controlli su una connessione amministrativa dedicata (DAC, Dedicated Administrator Connection). Non è necessario classificare le query DAC in esecuzione nel gruppo del carico di lavoro interno e nel pool di risorse.  
+> [!NOTE]
+> Resource Governor non impone controlli su una connessione amministrativa dedicata (DAC, Dedicated Administrator Connection). Non è necessario classificare le query DAC in esecuzione nel gruppo del carico di lavoro interno e nel pool di risorse.  
   
  Nel contesto di Resource Governor è possibile considerare i concetti precedenti come componenti. Nella seguente illustrazione vengono mostrati questi componenti e le relazioni tra di essi nell'ambiente del motore di database. Da una prospettiva di elaborazione, il flusso semplificato è il seguente:  
   

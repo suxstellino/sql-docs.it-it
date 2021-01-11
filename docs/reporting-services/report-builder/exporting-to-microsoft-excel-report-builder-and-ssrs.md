@@ -1,7 +1,7 @@
 ---
 title: Esportazione in Microsoft Excel (Generatore report) | Microsoft Docs
 description: In Generatore report l'estensione per il rendering di Excel esegue il rendering di un report impaginato nel formato Office Open XML da usare con Microsoft Excel.
-ms.date: 01/09/2017
+ms.date: 12/23/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-builder
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 865caa0938aa89feacbb5e330eb38f292039446c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4e8b43d3e9e772b06961602bf2d8bd69aa51216e
+ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80342896"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878854"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Esportazione in Microsoft Excel (Generatore report e SSRS)
   L'estensione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per il rendering di Excel consente di eseguire il rendering di un report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] impaginato nel formato [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (con estensione xlsx). Con l'estensione per il rendering di Excel, la larghezza delle colonne in Excel si riflette con più accuratezza nella larghezza delle colonne nei report.  
@@ -47,7 +47,7 @@ ms.locfileid: "80342896"
   
 -   Se l'elemento del report con cui si controlla l'attivazione o la disattivazione di un altro elemento non è disponibile nella riga o nella colonna precedente o successiva dell'elemento che viene attivato/disattivato, anche la struttura viene disabilitata.  
   
- Per altre informazioni sulle limitazioni di Excel, vedere [Specifiche e limiti di Excel](https://support.office.com/article/Excel-specifications-and-limits-CA36E2DC-1F09-4620-B726-67C00B05040F).  
+ Per altre informazioni sulle limitazioni di Excel, vedere [Specifiche e limiti di Excel](https://support.microsoft.com/en-us/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3).  
   
 ### <a name="sizes-of-excel-2003-xls-files"></a>Dimensioni dei file di Excel 2003 (con estensione xls)  
   
@@ -194,11 +194,11 @@ ms.locfileid: "80342896"
  Se non viene trovata alcuna corrispondenza, vengono usate le dimensioni di pagina predefinite per la stampante. Se la larghezza della pagina è inferiore all'altezza, l'orientamento verrà impostato su Verticale. In caso contrario, verrà impostato su Orizzontale.  
   
 ##  <a name="worksheet-tab-names"></a><a name="WorksheetTabNames"></a> Nomi delle schede dei fogli di lavoro  
- Quando si esporta un report in Excel, le pagine del report create dalle interruzioni di pagina vengono esportate in fogli di lavoro differenti. Se è stato specificato un nome della pagina iniziale per il report, ogni foglio di lavoro della cartella di lavoro di Excel avrà questo nome per impostazione predefinita. Il nome viene visualizzato sulla scheda del foglio di lavoro. Tuttavia, poiché ogni foglio di lavoro in una cartella di lavoro deve avere un nome univoco, al nome della pagina iniziale di ogni foglio di lavoro aggiuntivo viene aggiunto un numero intero a partire da 1 e aumentato di 1. Se ad esempio il nome della pagina iniziale è **Report di vendite per anno fiscale**, il secondo foglio di lavoro verrebbe denominato **Report di vendite per anno fiscale 1**mentre il terzo **Report di vendite per anno fiscale 2**e così via.  
+ Quando si esporta un report in Excel, le pagine del report create dalle interruzioni di pagina vengono esportate in fogli di lavoro differenti. Se è stato specificato un nome della pagina iniziale per il report, ogni foglio di lavoro della cartella di lavoro di Excel avrà questo nome per impostazione predefinita. Il nome viene visualizzato sulla scheda del foglio di lavoro. Tuttavia, poiché ogni foglio di lavoro in una cartella di lavoro deve avere un nome univoco, al nome della pagina iniziale di ogni foglio di lavoro aggiuntivo viene aggiunto un numero intero a partire da 1 e aumentato di 1. Se ad esempio il nome della pagina iniziale è **Report di vendite per anno fiscale**, il secondo foglio di lavoro verrebbe denominato **Report di vendite per anno fiscale 1** mentre il terzo **Report di vendite per anno fiscale 2** e così via.  
   
- Se per tutte le pagine del report create dalle interruzioni di pagina vengono specificati nomi di pagina nuovi, ogni foglio di lavoro avrà il nome della pagina associato. Tuttavia, questi nomi di pagina non sarebbero univoci. In tal caso, i fogli di lavoro sono denominati con la stessa modalità dei nomi di pagina iniziali. Se ad esempio il nome della pagina di due gruppi è **Vendite di NW**, una scheda del foglio di lavoro avrà il nome **Vendite di NW**mentre l'altra avrà **Vendite di NW 1**.  
+ Se per tutte le pagine del report create dalle interruzioni di pagina vengono specificati nomi di pagina nuovi, ogni foglio di lavoro avrà il nome della pagina associato. Tuttavia, questi nomi di pagina non sarebbero univoci. In tal caso, i fogli di lavoro sono denominati con la stessa modalità dei nomi di pagina iniziali. Se ad esempio il nome della pagina di due gruppi è **Vendite di NW**, una scheda del foglio di lavoro avrà il nome **Vendite di NW** mentre l'altra avrà **Vendite di NW 1**.  
   
- Se per il report non viene specificato né un nome di pagina iniziale, né nomi di pagina correlati alle interruzioni di pagina, le schede del foglio di lavoro avranno i nomi predefiniti **Foglio1**, **Foglio2**e così via.  
+ Se per il report non viene specificato né un nome di pagina iniziale, né nomi di pagina correlati alle interruzioni di pagina, le schede del foglio di lavoro avranno i nomi predefiniti **Foglio1**, **Foglio2** e così via.  
   
  Reporting Services fornisce proprietà per impostare report, aree dati, gruppi e rettangoli per facilitare la creazione di report esportabili in Excel in una modalità desiderata. Per altre informazioni, vedere [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
@@ -249,7 +249,7 @@ ms.locfileid: "80342896"
   
  Il rendering della struttura della mappa documento viene eseguito come struttura di Excel comprimibile. Tale struttura corrisponde alla struttura annidata della mappa documento. Lo stato di espansione o compressione della struttura inizia a partire dal secondo livello.  
   
- Il nodo radice della mappa corrisponde al nome del report, ovvero \<*nomereport*>.rdl, e non è interattivo. Il tipo di carattere dei collegamenti alla mappa documento è Arial, 10pt.  
+ Il nodo radice della mappa corrisponde al nome del report, ovvero \<*reportname*>.rdl, e non è interattivo. Il tipo di carattere dei collegamenti alla mappa documento è Arial, 10pt.  
   
 ### <a name="drillthrough-links"></a>Collegamenti drill-through  
  Il rendering dei collegamenti drill-through visualizzati nelle caselle di testo viene eseguito come collegamenti ipertestuali di Excel nella cella in cui viene eseguito il rendering del testo. Il rendering dei collegamenti drill-through per immagini e grafici viene eseguito come collegamenti ipertestuali di Excel nell'immagine durante il rendering stesso. Quando si fa clic su un collegamento drill-through, viene aperto il browser predefinito del client e si passa alla visualizzazione HTML della destinazione.  

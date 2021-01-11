@@ -18,12 +18,12 @@ ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 70df27b530fe6afb40f296afdc012ac2c40500a9
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 75c0f38e67fd4d02791c5d2b953f4354a5945dc2
+ms.sourcegitcommit: e5664d20ed507a6f1b5e8ae7429a172a427b066c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468942"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97697144"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Replica di tabelle e indici partizionati
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "97468942"
 |Funzione di partizione|CREATE PARTITION FUNCTION|  
 |Schema di partizione|CREATE PARTITION SCHEME|  
   
- Il primo set di proprietà correlato al partizionamento è costituito dalle opzioni dello schema dell'articolo che determinano se gli oggetti di partizionamento devono essere copiati nel Sottoscrittore. È possibile impostare tali opzioni nei modi seguenti:  
+ Le proprietà di partizionamento sono le opzioni dello schema dell’articolo che determinato se gli oggetti di partizionamento devono essere copiati nel Sottoscrittore. È possibile impostare tali opzioni nei modi seguenti:  
   
 -   Nella pagina **Proprietà articolo** della Creazione guidata nuova pubblicazione o nella finestra di dialogo Proprietà pubblicazione. Per copiare gli oggetti elencati nella tabella precedente, specificare un valore **true** per le proprietà **Copia schemi di partizione delle tabelle** e **Copia schemi di partizione dell'indice**. Per informazioni su come accedere alla pagina **Proprietà articolo**, vedere [Visualizzare e modificare le proprietà della pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
@@ -61,15 +61,40 @@ ms.locfileid: "97468942"
   
 -   Se il Sottoscrittore ha una definizione diversa per la tabella partizionata rispetto al server di pubblicazione, l'esecuzione dell'agente di distribuzione verrà interrotta quando questo tenta di applicare le modifiche nel Sottoscrittore.  
   
- Nonostante questi possibili problemi, il cambio della partizione può essere abilitato per la replica transazionale. Prima di abilitare il cambio della partizione, assicurarsi che tutte le tabelle interessate siano presenti nel server di pubblicazione e nel Sottoscrittore e verificare che le definizioni di tabella e di partizione siano identiche.  
+Nonostante questi possibili problemi, il cambio della partizione può essere abilitato per la replica transazionale. Prima di abilitare il cambio della partizione, assicurarsi che tutte le tabelle interessate siano presenti nel server di pubblicazione e nel Sottoscrittore e verificare che le definizioni di tabella e di partizione siano identiche.  
   
- Quando lo schema di partizione delle partizioni è lo stesso nei server di pubblicazione e nei Sottoscrittori, è possibile abilitare *allow_partition_switch* insieme a *replication_partition_switch* tramite cui verrà eseguita la replica solo dell'istruzione switch della partizione al Sottoscrittore. È inoltre possibile abilitare *allow_partition_switch* senza la replica della DDL. Questa operazione risulta utile nel caso in cui si desideri eseguire il roll out dei mesi precedenti della partizione ma mantenendo la partizione replicata per un altro anno per scopi di backup nel Sottoscrittore.  
+Quando lo schema di partizione delle partizioni è lo stesso nei server di pubblicazione e nei Sottoscrittori, è possibile abilitare *allow_partition_switch* insieme a *replication_partition_switch*, che replicherà solo l'istruzione switch della partizione al Sottoscrittore. È inoltre possibile abilitare *allow_partition_switch* senza la replica della DDL. Questa operazione risulta utile nel caso in cui si desideri eseguire il roll out dei mesi precedenti della partizione ma mantenendo la partizione replicata per un altro anno per scopi di backup nel Sottoscrittore.  
   
- Se si abilita il cambio della partizione usando la versione corrente in SQL Server 2008 R2, successivamente potrebbero essere necessarie anche operazioni di divisione e merge. Prima di eseguire un'operazione di divisione o di unione su una tabella replicata assicurarsi che la partizione in questione non abbia comandi replicati in sospeso. È anche necessario assicurarsi che nessuna operazione DML venga eseguita sulla partizione durante le operazioni di divisione e unione. Se sono presenti transazioni non elaborate dalla lettura log o se le operazioni DML vengono eseguite in una partizione di una tabella replicata durante l'esecuzione di un'operazione di divisione o di merge che coinvolge tale partizione, si potrebbe verificare un errore di elaborazione nell'agente di lettura log. Per correggere l'errore è necessaria una reinizializzazione della sottoscrizione.  
-  
-> [!WARNING]  
->  Non è necessario abilitare il cambio della partizione per pubblicazioni peer-to-peer, a causa della colonna nascosta utilizzata per rilevare e risolvere conflitti.  
-  
+Se si abilita il cambio della partizione usando la versione corrente in SQL Server 2008 R2, successivamente potrebbero essere necessarie anche operazioni di divisione e merge. Prima di eseguire un'operazione di divisione o di merge su una tabella abilitata per il CDC o replicata, assicurarsi che la partizione in questione non abbia comandi replicati in sospeso. È anche necessario assicurarsi che nessuna operazione DML venga eseguita sulla partizione durante le operazioni di divisione e unione. Se sono presenti transazioni non elaborate dalla lettura log o dal processo di acquisizione CDC o se le operazioni DML vengono eseguite in una partizione di una tabella abilitata per il CDC o replicata durante l'esecuzione di un'operazione di divisione o di merge che coinvolge tale partizione, è possibile che si verifichi un errore di elaborazione (Error 608 - No catalog entry found for partition ID (Errore 608. Nessuna voce di catalogo trovata per l’ID partizione)) nell'agente di lettura log o nel processo di acquisizione CDC. Per correggere l'errore potrebbe essere necessario reinizializzare la sottoscrizione o disabilitare la funzionalità CDC sulla tabella o sul database. 
+
+### <a name="unsupported-scenarios"></a>Scenari non supportati
+
+Gli scenari seguenti non sono supportati quando si usa la replica con cambio della partizione: 
+
+**Replica peer-to-peer**   
+La replica peer-to-peer non è supportata con il cambio della partizione. 
+
+**Uso di variabili con cambio della partizione**   
+
+L'uso di variabili con il cambio della partizione nelle tabelle pubblicate con replica transazionale o con Change Data Capture (CDC) non è supportato per l'istruzione `ALTER TABLE ... SWITCH TO ... PARTITION ...`.
+
+Il codice di cambio della partizione seguente, ad esempio, non funzionerà con la funzionalità CDC abilitata nel database o con la TableA che partecipa a una pubblicazione transazionale: 
+
+```sql
+DECLARE @SomeVariable INT = $PARTITION.pf_test(10);
+ALTER TABLE dbo.TableA
+SWITCH TO dbo.TableB 
+PARTITION @SomeVariable;
+```
+
+Occorre cambiare invece la partizione usando direttamente la funzione di partizione, come nell'esempio seguente: 
+
+```sql
+ALTER TABLE NonPartitionedTable 
+SWITCH TO PartitionedTable PARTITION $PARTITION.pf_test(10);
+```
+
+
 ### <a name="enabling-partition-switching"></a>Abilitazione del cambio della partizione  
  Le proprietà seguenti per le pubblicazioni transazionali consentono agli utenti di controllare il comportamento del cambio della partizione in un ambiente replicato:  
   

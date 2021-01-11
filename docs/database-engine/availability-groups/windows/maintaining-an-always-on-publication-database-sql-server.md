@@ -5,7 +5,7 @@ ms.custom: seodec18
 ms.date: 05/18/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 864fca7c1d2983bec6296f1e82304cff31f658cb
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+ms.openlocfilehash: f07f8eaa1dc5657c2dfdb296bc9efffec9b308b2
+ms.sourcegitcommit: e5664d20ed507a6f1b5e8ae7429a172a427b066c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94584210"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97697130"
 ---
 # <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>Gestire un server di pubblicazione replicato come parte di un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -99,6 +99,27 @@ ms.locfileid: "94584210"
     ```  
   
      A questo punto la copia del database pubblicato può essere mantenuta o eliminata.  
+
+## <a name="remove-original-publisher"></a>Rimuovere un server di pubblicazione originale
+
+È possibile che in alcune istanze (sostituzione del server precedente, aggiornamento del sistema operativo e così via) si voglia rimuovere un server di pubblicazione originale da un gruppo di disponibilità Always On. Per rimuovere il server di pubblicazione dal gruppo di disponibilità, attenersi alla procedura descritta in questa sezione. 
+
+Si supponga di avere i server N1, N2 e D1, dove N1 e N2 sono la replica primaria e secondaria del gruppo di disponibilità AG1, N1 è il server di pubblicazione originale di una pubblicazione transazionale e D1 è il server di distribuzione. Si vuole sostituire il server di pubblicazione originale N1 con il nuovo server di pubblicazione N3. 
+
+Per rimuovere il server di pubblicazione, attenersi alla procedura descritta di seguito: 
+
+1. Installare e configurare SQL Server nel nodo N3. La versione di SQL Server deve essere identica a quella del server di pubblicazione originale. 
+1. Sul server di distribuzione D1 aggiungere N3 come server di pubblicazione usando [sp_adddistpublisher](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md). 
+1. Configurare N3 come server di pubblicazione con D1 come server di distribuzione. 
+1. Aggiungere N3 come replica al gruppo di disponibilità AG1. 
+1. Nella replica N3 verificare che i sottoscrittori push per la pubblicazione siano visualizzati come server collegati. Usare [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) o SQL Server Management Studio. 
+1. Dopo avere eseguito la sincronizzazione di N3, eseguire il failover del gruppo di disponibilità a N3 come primario. 
+1. Rimuovere N1 dal gruppo di disponibilità AG1. 
+
+Tenere in considerazione quanto segue:
+- Non rimuovere il server remoto del server di pubblicazione originale (N1 in questo caso) o i metadati ad esso associato dal server di distribuzione, anche se non è più possibile accedere al server. I metadati del server per il server di pubblicazione originale sono necessari nel server di distribuzione per fornire i risultati alle query sui metadati di pubblicazione e senza di questi la replica ha esito negativo. 
+- Per SQL Server 2014, dopo la rimozione del server di pubblicazione originale, non sarà possibile usare il nome del server di pubblicazione originale per amministrare la replica in Monitoraggio replica. Se si tenta di registrare una o più repliche nuove come server di pubblicazione in Monitoraggio replica, le informazioni non vengono visualizzate poiché non vi sono metadati associati. Per l'amministrazione della replica in questo scenario, è necessario fare clic con il pulsante destro del mouse su singole pubblicazioni e sottoscrizioni in SQL Server Management Studio (SSMS).
+- Per SQL Server 2016 SP2-CU3, SQL Server 2017 CU6 e versioni successive, registrare il listener del server di pubblicazione del gruppo di disponibilità in Monitoraggio replica per amministrare la replica usando SQL Server Management Studio versione 17.7 e successive. 
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   

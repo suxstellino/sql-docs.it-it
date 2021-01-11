@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 0be62b3c2a63f7b25889e25f88969aa5aaa9b50e
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: 6f2feb876d0f232f4d7951de8ee1cc84587e6486
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96772235"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771361"
 ---
 # <a name="update-data-sources-with-dataadapters"></a>Aggiornare origini dati con DataAdapter
 
@@ -75,7 +75,7 @@ Gli esempi seguenti illustrano come aggiornare le righe modificate impostando in
 
 ## <a name="autoincrement-columns"></a>colonne AutoIncrement
 
-Se nelle tabelle dell'origine dati sono presenti colonne con incremento automatico, è possibile riempire le colonne nel `DataSet` restituendo il valore dell'incremento automatico come un parametro di output di una stored procedure ed eseguendone il mapping su una colonna della tabella, restituendo il valore dell'incremento automatico nella prima riga di un set di risultati restituito da una stored procedure o un'istruzione SQL oppure usando l'evento `RowUpdated` di `DataAdapter` per eseguire un'ulteriore istruzione SELECT.
+Se nelle tabelle dell'origine dati sono presenti colonne con incremento automatico, è possibile riempire le colonne nel `DataSet` restituendo il valore dell'incremento automatico come un parametro di output di una stored procedure ed eseguendone il mapping su una colonna della tabella, restituendo il valore dell'incremento automatico nella prima riga di un set di risultati restituito da una stored procedure o un'istruzione SQL oppure usando l'evento `RowUpdated` di `DataAdapter` per eseguire un'ulteriore istruzione SELECT. Per altre informazioni e un esempio, vedere [Recuperare i valori Identity o di numerazione automatica](retrieve-identity-or-autonumber-values.md).
 
 ## <a name="ordering-of-inserts-updates-and-deletes"></a>Ordinamento di inserimenti, aggiornamenti ed eliminazioni
 
@@ -172,4 +172,5 @@ GO
 ## <a name="see-also"></a>Vedere anche
 
 - [DataAdapter e DataReader](dataadapters-datareaders.md)
+- [Recuperare i valori Identity o di numerazione automatica](retrieve-identity-or-autonumber-values.md)
 - [Microsoft ADO.NET per SQL Server](microsoft-ado-net-sql-server.md)

@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: a24241d3ef66739a85422397426278738987bf15
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 14442892bc59fc733c6a67153832b95c3f368b95
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96428283"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771458"
 ---
 # <a name="configuring-parameters"></a>Configurazione dei parametri
 
@@ -31,7 +31,7 @@ I comandi con parametri possono anche migliorare le prestazioni di esecuzione de
 
 Per creare un oggetto <xref:System.Data.Common.DbParameter> , è possibile usare il relativo costruttore o aggiungerlo all'oggetto <xref:System.Data.Common.DbCommand.DbParameterCollection%2A> chiamando il metodo `Add` della raccolta <xref:System.Data.Common.DbParameterCollection> . Il metodo `Add` accetta come input argomenti del costruttore o un oggetto parametro esistente, a seconda del provider di dati.
 
-## <a name="supplying-the-parameterdirection-property"></a>Proprietà ParameterDirection
+## <a name="supply-the-parameterdirection-property"></a>Specificare la proprietà ParameterDirection
 
 Quando si aggiungono parametri, è necessario fornire una proprietà <xref:System.Data.ParameterDirection> per i parametri diversi da quelli di input. La tabella seguente illustra i valori `ParameterDirection` che è possibile usare con l'enumerazione <xref:System.Data.ParameterDirection> .
 
@@ -42,11 +42,11 @@ Quando si aggiungono parametri, è necessario fornire una proprietà <xref:Syste
 |<xref:System.Data.ParameterDirection.Output>|Il parametro è un parametro di output.|
 |<xref:System.Data.ParameterDirection.ReturnValue>|Il parametro rappresenta un valore restituito da un'operazione quale una stored procedure, una funzione predefinita o una funzione definita dall'utente.|
 
-## <a name="working-with-parameter-placeholders"></a>Uso dei segnaposto dei parametri
+## <a name="work-with-parameter-placeholders"></a>Usare i segnaposto dei parametri
 
 La sintassi per i segnaposto dei parametri varia in base all'origine dati. Il provider di dati Microsoft SqlClient per SQL Server gestisce la denominazione e la specifica dei parametri e dei segnaposto dei parametri in modo diverso. Il provider di dati usa parametri denominati nel formato `@`*parametername*.
 
-## <a name="specifying-parameter-data-types"></a>Specifica dei tipi di dati per i parametri
+## <a name="specify-parameter-data-types"></a>Specificare i tipi di dati per i parametri
 
 Il tipo di dati di un parametro è specifico per il provider di dati Microsoft SqlClient per SQL Server. Se si specifica il tipo, il valore di `Parameter` viene convertito nel tipo per il provider di dati Microsoft SqlClient per SQL Server prima che sia passato all'origine dati. È inoltre possibile specificare il tipo di un oggetto `Parameter` in modo generico impostando la proprietà `DbType` dell'oggetto `Parameter` su un determinato oggetto <xref:System.Data.DbType>.
 
@@ -89,7 +89,7 @@ Il tipo per il provider di dati Microsoft SqlClient per SQL Server di un oggetto
 > [!NOTE]
 > Quando si invia un valore di parametro Null al server, è necessario specificare <xref:System.DBNull> anziché `null` (`Nothing` in Visual Basic). Il valore null nel sistema è un oggetto vuoto senza un valore. <xref:System.DBNull> viene usato per rappresentare i valori null.
 
-## <a name="deriving-parameter-information"></a>Derivare informazioni sui parametri
+## <a name="derive-parameter-information"></a>Derivare le informazioni sui parametri
 
 I parametri possono anche essere derivati da una stored procedure usando la classe `DbCommandBuilder` . La classe `SqlCommandBuilder` offre un metodo statico, `DeriveParameters`, che popola automaticamente la raccolta di parametri di un oggetto comando che usa le informazioni sui parametri di una stored procedure. Si noti che `DeriveParameters` sovrascrive qualsiasi informazione esistente sui parametri per il comando.
 
@@ -123,4 +123,6 @@ In questo esempio viene illustrato come chiamare una stored procedure di SQL Ser
 ## <a name="see-also"></a>Vedere anche
 
 - [Comandi e parametri](commands-parameters.md)
+- [DataAdapter e DataReader](dataadapters-datareaders.md)
 - [Mapping dei tipi di dati in ADO.NET](data-type-mappings-ado-net.md)
+- [Microsoft ADO.NET per SQL Server](microsoft-ado-net-sql-server.md)

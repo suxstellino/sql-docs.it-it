@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
-ms.openlocfilehash: 554c3a08cc29cfbc6addef598698c40df31f9990
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9029dd87712ee7128504a9b495b699c9c58e000d
+ms.sourcegitcommit: 5b2c47ce88f7e56552fd415c32b319009d043b56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471232"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97804344"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>Installare un runtime personalizzato di R per SQL Server
 
@@ -62,9 +62,9 @@ Le estensioni del linguaggio usano il framework di estendibilità per l'esecuzio
 
     - **Machine Learning Services ed estensioni del linguaggio**
 
-       Selezionare **Machine Learning Services ed estensioni del linguaggio**. Non è necessario selezionare R.
+        Selezionare **Machine Learning Services ed estensioni del linguaggio**. Non è necessario selezionare R.
 
-    ![Funzionalità di installazione di SQL Server 2019 CU3 o versioni successive](../install/media/sql-feature-selection.png)
+        :::image type="content" source="media/2019-setup-language-extensions.png" alt-text="Installazione delle estensioni del linguaggio di SQL Server 2019.":::
 
 1. Nella pagina **Inizio installazione** verificare che le opzioni selezionate siano incluse e selezionare **Installa**.
 

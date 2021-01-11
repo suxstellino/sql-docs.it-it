@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: cb77d01ede16a6fa68aac6dcb49612ad8fd9a191
-ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
+ms.openlocfilehash: b3d92f49fb4eae6184a673ffc25ff6bbdf521626
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96563086"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771593"
 ---
 # <a name="establishing-connection"></a>Istituzione di una connessione
 
@@ -27,7 +27,7 @@ ms.locfileid: "96563086"
 
 Per eseguire la connessione a Microsoft SQL Server, utilizzare l'oggetto <xref:Microsoft.Data.SqlClient.SqlConnection> del provider di dati Microsoft SqlClient per SQL Server. Per informazioni sulla sicurezza dell'archiviazione e del recupero delle stringhe di connessione, vedere [Protezione delle informazioni di connessione](protecting-connection-information.md).
 
-## <a name="closing-connections"></a>Disconnessione
+## <a name="closing-connections"></a>Chiusura di connessioni
 
 Al termine dell'utilizzo, chiudere sempre la connessione in modo che possa essere restituita al pool. Il blocco `Using` in Visual Basic o C# elimina automaticamente la connessione quando il codice esce dal blocco, anche in caso di eccezione non gestita. Per altre informazioni vedere [Istruzione using](/dotnet/csharp/language-reference/keywords/using-statement) e [Istruzione Using](/dotnet/visual-basic/language-reference/statements/using-statement).
 
@@ -57,3 +57,4 @@ L'identità di sicurezza delle applicazioni ASP.NET può essere impostata su div
 
 - [Connessione a un'origine dati](connecting-to-data-source.md)
 - [Stringhe di connessione](connection-strings.md)
+- [Microsoft ADO.NET per SQL Server](microsoft-ado-net-sql-server.md)

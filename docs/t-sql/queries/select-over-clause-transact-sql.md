@@ -25,12 +25,12 @@ ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c07ce738ea3364cba27cd2872894ff4701f41dfe
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5dd2c6c6f33f9a115196d9a2afc3ca700b3a4631
+ms.sourcegitcommit: a81823f20262227454c0b5ce9c8ac607aaf537e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97476682"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97684199"
 ---
 # <a name="select---over-clause-transact-sql"></a>Clausola SELECT - OVER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -110,15 +110,95 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argomenti
- PARTITION BY  
+
+Nella clausola `OVER` delle funzioni finestra possono essere presenti gli argomenti seguenti:
+- [PARTITION BY](#partition-by), che suddivide il set dei risultati della query in partizioni.
+- [ORDER BY](#order-by), che definisce l'ordine logico delle righe all'interno di ogni partizione del set di risultati. 
+- [ROWS/RANGE](#rows-or-range), che limita le righe all'interno della partizione specificando i punti iniziali e finali. Richiede l’uso dell’argomento `ORDER BY`e il valore predefinito è dall'inizio della partizione fino all'elemento corrente se viene specificato l'argomento `ORDER BY`.
+
+Se non si specifica alcun argomento, le funzioni finestra vengono applicate all'intero set di risultati.
+```sql
+select 
+      object_id
+    , [min] = min(object_id) over()
+    , [max] = max(object_id) over()
+from sys.objects
+```
+ 
+|object_id | min | max |
+|---|---|---|
+| 3 | 3 | 2139154666 |
+| 5 | 3 | 2139154666 |
+| ... | ... | ... |
+| 2123154609 |  3 | 2139154666 |
+| 2139154666 |  3 | 2139154666 |
+
+### <a name="partition-by"></a>PARTITION BY  
  Suddivide il set di risultati della query in partizioni. La funzione finestra viene applicata a ogni singola partizione e il calcolo viene riavviato per ogni partizione.  
+
+```sqlsyntax
+PARTITION BY *value_expression* 
+```
+ 
+ Se PARTITION BY non viene specificato, la funzione considera tutte le righe del set di risultati della query come un’unica partizione.
+Se non si specifica la clausola `ORDER BY`, la funzione viene applicata a tutte le righe della partizione.
   
- *value_expression*  
- Specifica la colonna in base alla quale viene partizionato il set di righe. *value_expression* può fare riferimento solo alle colonne rese disponibili dalla clausola FROM. *value_expression* non può fare riferimento a espressioni o alias nell'elenco di selezione. *value_expression* può essere un'espressione di colonna, una sottoquery scalare, una funzione scalare o una variabile definita dall'utente.  
+#### <a name="partition-by-value_expression"></a>PARTITION BY *value_expression*  
+ Specifica la colonna in base alla quale viene partizionato il set di righe. *value_expression* può fare riferimento solo alle colonne rese disponibili dalla clausola FROM. *value_expression* non può fare riferimento a espressioni o alias nell'elenco di selezione. *value_expression* può essere un'espressione di colonna, una sottoquery scalare, una funzione scalare o una variabile definita dall'utente. 
+ 
+ ```sql
+ select 
+      object_id, type
+    , [min] = min(object_id) over(partition by type)
+    , [max] = max(object_id) over(partition by type)
+from sys.objects
+```
+
+|object_id | tipo | min | max |
+|---|---|---|---|
+| 68195293  | PK    | 68195293  | 711673583 |
+| 631673298 | PK    | 68195293  | 711673583 |
+| 711673583 | PK    | 68195293  | 711673583 |
+| ... | ... | ... |
+| 3 | S | 3 | 98 |
+| 5 | S |   3   | 98 |
+| ... | ... | ... |
+| 98    | S |   3   | 98 |
+| ... | ... | ... |
   
- \<ORDER BY clause>  
- Definisce l'ordine logico delle righe all'interno di ogni partizione del set di risultati. In altre parole, specifica l'ordine logico in cui viene eseguito il calcolo della funzione finestra.  
-  
+### <a name="order-by"></a>ORDER BY  
+
+```sqlsyntax
+ORDER BY *order_by_expression* [COLLATE *collation_name*] [ASC|DESC]  
+```
+
+ Definisce l'ordine logico delle righe all'interno di ogni partizione del set di risultati. In altre parole, specifica l'ordine logico in cui viene eseguito il calcolo della funzione finestra. 
+ - Se non viene specificato, l'ordine predefinito è `ASC` e la funzione finestra utilizza tutte le righe della partizione.
+ - Se viene specificato, e non viene specificato in ROWS/RANGE, il valore predefinito `RANGE UNBOUNDED PRECEDING AND CURRENT ROW` viene usato come impostazione predefinita per la cornice della finestra dalle funzioni che possono accettare specifiche facoltative di ROWS/RANGE, ad esempio `min` o `max`. 
+ 
+```sql
+select 
+      object_id, type
+    , [min] = min(object_id) over(partition by type order by object_id)
+    , [max] = max(object_id) over(partition by type order by object_id)
+from sys.objects
+```
+
+|object_id | tipo | min | max |
+|---|---|---|---|
+| 68195293  | PK    | 68195293  | 68195293 |
+| 631673298 | PK    | 68195293  | 631673298 |
+| 711673583 | PK    | 68195293  | 711673583 |
+| ... | ... | ... |
+| 3 | S | 3 | 3 |
+| 5 | S |   3 | 5 |
+| 6 | S |   3 | 6 |
+| ... | ... | ... |
+| 97    | S |   3 | 97 |
+| 98    | S |   3 | 98 |
+| ... | ... | ... |
+
+
  *order_by_expression*  
  Specifica una colonna o un'espressione in base alla quale eseguire l'ordinamento. *order_by_expression* può fare riferimento solo alle colonne rese disponibili dalla clausola FROM. Non è possibile specificare un numero intero per rappresentare un alias o un nome di colonna.  
   
@@ -128,17 +208,40 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  **ASC** | DESC  
  Specifica che i valori nella colonna specificata devono essere ordinati in ordine crescente o decrescente. ASC è l'ordinamento predefinito. I valori Null vengono considerati i valori in assoluto più piccoli.  
   
- ROWS | RANGE  
+### <a name="rows-or-range"></a>ROWS o RANGE  
 **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive. 
   
  Limita ulteriormente le righe all'interno della partizione specificando i punti iniziali e finali. A tale scopo, è necessario specificare un intervallo di righe rispetto alla riga corrente in base all'associazione logica o all'associazione fisica. L'associazione fisica viene eseguita mediante la clausola ROWS.  
   
  La clausola ROWS limita le righe all'interno di una partizione specificando un numero fisso di righe precedenti o successive alla riga corrente. In alternativa, la clausola RANGE limita logicamente le righe all'interno di una partizione specificando un intervallo di valori rispetto al valore nella riga corrente. Le righe precedenti e successive vengono definite in base all'ordinamento nella clausola ORDER BY. La cornice di finestra "RANGE ... CURRENT ROW ..." include tutte le righe che contengono gli stessi valori nell'espressione ORDER BY della riga corrente. Ad esempio, ROWS BETWEEN 2 PRECEDING AND CURRENT ROW significa che la finestra di righe a cui viene applicata la funzione è di tre righe, a partire dalle 2 righe precedenti fino alla riga corrente inclusa.  
+ 
+```sql
+select
+      object_id
+    , [preceding]   = count(*) over(order by object_id ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW )
+    , [central] = count(*) over(order by object_id ROWS BETWEEN 2 PRECEDING AND 2 FOLLOWING )
+    , [following]   = count(*) over(order by object_id ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)
+from sys.objects
+order by object_id asc
+```
+
+|object_id | preceding | central | following |
+|---|---|---|---|
+| 3 | 1 | 3 | 156 |
+| 5 | 2 | 4 | 155 |
+| 6 | 3 | 5 | 154 |
+| 7 | 4 | 5 | 153 |
+| 8 | 5 | 5 | 152 |
+| ...   | ...   | ...   | ... |
+| 2112726579    | 153   | 5 | 4 |
+| 2119678599    | 154   | 5 | 3 |
+| 2123154609    | 155   | 4 | 2 |
+| 2139154666    | 156   | 3 | 1 | 
   
 > [!NOTE]  
 >  ROWS o RANGE richiede che venga specificata la clausola ORDER BY. Se ORDER BY contiene più espressioni di ordinamento, CURRENT ROW FOR RANGE considera tutte le colonne nell'elenco ORDER BY per la determinazione della riga corrente.  
   
- UNBOUNDED PRECEDING  
+#### <a name="unbounded-preceding"></a>UNBOUNDED PRECEDING  
 **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
  Specifica che la finestra inizia in corrispondenza della prima riga della partizione. UNBOUNDED PRECEDING può essere specificato solo come punto iniziale della finestra.  
@@ -146,17 +249,20 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  \<unsigned value specification> PRECEDING  
  Specificato con \<unsigned value specification> per indicare il numero di righe o valori che deve precedere la riga corrente. Questa specifica non è consentita per RANGE.  
   
- CURRENT ROW  
+#### <a name="current-row"></a>CURRENT ROW  
 **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive. 
   
  Specifica che la finestra inizia o termina in corrispondenza della riga corrente quando viene utilizzato con ROWS o in corrispondenza del valore corrente quando viene utilizzato con RANGE. CURRENT ROW può essere specificato sia come punto iniziale che come punto finale.  
   
- BETWEEN \<window frame bound > AND \<window frame bound >  
+#### <a name="between-and"></a>BETWEEN AND  
 **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive. 
   
+```sqlsyntax
+BETWEEN <window frame bound > AND <window frame bound >  
+```
  Utilizzato con ROWS o RANGE per specificare i punti limite inferiore (punto iniziale) e superiore (punto finale) della finestra. Il valore \<window frame bound> definisce il punto limite iniziale e il valore \<window frame bound> definisce il punto limite finale. Il limite superiore non può essere minore del limite inferiore.  
   
- UNBOUNDED FOLLOWING  
+#### <a name="unbounded-following"></a>UNBOUNDED FOLLOWING  
 **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive. 
   
  Specifica che la finestra termina in corrispondenza dell'ultima riga della partizione. UNBOUNDED FOLLOWING può essere specificato solo come punto finale della finestra. Ad esempio, RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING definisce una finestra che inizia in corrispondenza della riga corrente e termina in corrispondenza dell'ultima riga della partizione.  

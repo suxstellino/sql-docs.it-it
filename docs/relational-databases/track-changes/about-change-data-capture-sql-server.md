@@ -15,22 +15,21 @@ helpviewer_keywords:
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55bb82e19a97a91dbe00b44b195e74a250ddf1dc
-ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
+ms.openlocfilehash: f90e59f3e54b69a98e7ca058da971677faaafd0d
+ms.sourcegitcommit: e5664d20ed507a6f1b5e8ae7429a172a427b066c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96900966"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97697113"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Informazioni su Change Data Capture (SQL Server)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-> [!NOTE]
-> CDC è ora supportato per SQL Server 2017 in Linux a partire da CU18 e SQL Server 2019 in Linux.
 
-  Change Data Capture consente di registrare le attività di inserimento, aggiornamento ed eliminazione applicate a una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , rendendo disponibili i dettagli delle modifiche in un formato relazionale facilmente utilizzabile. Le informazioni sulla colonna e i metadati necessari per applicare le modifiche a un ambiente di destinazione vengono acquisiti per le righe modificate e archiviati in tabelle delle modifiche che riflettono la struttura della colonna delle tabelle di origine con rilevamento. Per consentire ai consumer di accedere in modo sistematico ai dati delle modifiche, sono disponibili funzioni con valori di tabella.  
+
+  La funzionalità Change Data Capture registra le attività di inserimento, aggiornamento ed eliminazione che si applicano a una tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rendendo disponibili i dettagli delle modifiche in un formato relazionale facilmente utilizzabile. Le informazioni sulla colonna e i metadati necessari per applicare le modifiche a un ambiente di destinazione vengono acquisiti per le righe modificate e archiviati in tabelle delle modifiche che riflettono la struttura della colonna delle tabelle di origine con rilevamento. Per consentire ai consumer di accedere in modo sistematico ai dati delle modifiche, sono disponibili funzioni con valori di tabella.  
   
- Un buon esempio di consumer di dati cui questa tecnologia è destinata è un'applicazione ETL di estrazione, trasformazione e caricamento. Un'applicazione di questo tipo carica incrementalmente dati delle modifiche dalle tabelle di origine di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un data warehouse oppure in un data mart. Anche se la rappresentazione delle tabelle di origine all'interno del data warehouse deve riflettere le modifiche in tali tabelle, una tecnologia end-to-end che aggiorna una replica dell'origine non è appropriata. È necessario invece un flusso affidabile di dati delle modifiche strutturato in modo che i consumer possano applicarlo a rappresentazioni di destinazione dei dati diverse. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Change Data Capture fornisce questa tecnologia.  
+ Un ottimo esempio di consumer di dati a cui è rivolta questa tecnologia è un'applicazione di estrazione, trasformazione e caricamento (ETL). Un'applicazione di questo tipo carica incrementalmente dati delle modifiche dalle tabelle di origine di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un data warehouse oppure in un data mart. Anche se la rappresentazione delle tabelle di origine all'interno del data warehouse deve riflettere le modifiche in tali tabelle, una tecnologia end-to-end che aggiorna una replica dell'origine non è appropriata. È necessario invece un flusso affidabile di dati delle modifiche strutturato in modo che i consumer possano applicarlo a rappresentazioni di destinazione dei dati diverse. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Change Data Capture fornisce questa tecnologia.  
   
 ## <a name="change-data-capture-data-flow"></a>Flusso di dati di Change Data Capture  
  Nella figura seguente viene illustrato il flusso di dati principale per Change Data Capture.  
@@ -54,11 +53,11 @@ ms.locfileid: "96900966"
 ## <a name="change-data-capture-validity-interval-for-a-database"></a>Intervallo di validità di Change Data Capture per un database  
  L'intervallo di validità di Change Data Capture per un database è rappresentato dal periodo di tempo durante il quale i dati delle modifiche sono disponibili per le istanze di acquisizione. L'intervallo di validità ha inizio nel momento in cui viene creata la prima istanza di acquisizione e si estende fino al momento corrente.  
   
- Se non vengono eliminati in modo periodico e sistematico, i dati inseriti nelle tabelle delle modifiche aumenteranno notevolmente e non sarà più possibile gestirli. Il processo di pulizia di Change Data Capture è responsabile dell'applicazione dei criteri di pulizia basati sulla memorizzazione. Tale processo sposta innanzitutto l'endpoint inferiore dell'intervallo di validità in modo da soddisfare la restrizione relative al tempo e successivamente rimuove le voci della tabella delle modifiche scadute. Per impostazione predefinita, i dati vengono mantenuti per tre giorni.  
+ Se non vengono eliminati in modo periodico e sistematico, i dati inseriti nelle tabelle delle modifiche aumenteranno notevolmente e non sarà più possibile gestirli. Il processo di pulizia di Change Data Capture è responsabile dell'applicazione dei criteri di pulizia basati sulla memorizzazione. Tale processo sposta innanzitutto l'endpoint inferiore dell'intervallo di validità in modo da soddisfare la restrizione relative al tempo e successivamente rimuove le voci della tabella delle modifiche scadute. Per impostazione predefinita, i dati vengono conservati per tre giorni.  
   
  Considerato che il processo di acquisizione esegue il commit di ogni nuovo batch di dati delle modifiche, a livello dell'endpoint superiore le nuove voci vengono aggiunte a **cdc.lsn_time_mapping** per ogni transazione cui sono associate voci della tabella delle modifiche. Nella tabella di mapping vengono mantenuti sia un numero di sequenza del file di log (LSN) del commit che l'ora in cui è stato eseguito il commit della transazione (colonne start_lsn e tran_end_time, rispettivamente). Il valore LSN massimo presente in **cdc.lsn_time_mapping** rappresenta il limite superiore della finestra di validità del database. L'ora corrispondente in cui viene eseguito il commit viene utilizzata come base per il calcolo del nuovo limite inferiore da parte del criterio di pulizia basato sulla memorizzazione.  
   
- Poiché il processo di acquisizione estrae dati delle modifiche dal log delle transazioni, è presente una latenza predefinita tra il momento in cui viene eseguito il commit di una modifica in una tabella di origine e quello in cui la modifica viene visualizzata nella tabella delle modifiche associate. Mentre tale latenza è in genere bassa, è tuttavia importante tenere presente che i dati delle modifiche non sono disponibili fino a quando il processo di acquisizione non ha elaborato le voci di log correlate.  
+ Poiché il processo di acquisizione estrae i dati delle modifiche dal log delle transazioni, è presente una latenza predefinita tra il momento in cui viene eseguito il commit di una modifica in una tabella di origine e quello in cui la modifica viene visualizzata nella tabella delle modifiche associate. Mentre tale latenza è in genere bassa, è tuttavia importante tenere presente che i dati delle modifiche non sono disponibili fino a quando il processo di acquisizione non ha elaborato le voci di log correlate.  
   
 ## <a name="change-data-capture-validity-interval-for-a-capture-instance"></a>Intervallo di validità di Change Data Capture per un'istanza di acquisizione  
  Sebbene l'intervallo di validità per il database e quello per l'istanza di acquisizione singola in genere coincidano, questa situazione non si verifica sempre. L'intervallo di validità dell'istanza di acquisizione viene avviato quando il processo di acquisizione riconosce l'istanza e avvia la registrazione delle modifiche associate nella relativa tabella. Di conseguenza, se le istanze di acquisizione vengono create in momenti diversi, a ciascuna sarà associato inizialmente un endpoint inferiore diverso. La colonna start_lsn del set di risultati restituito da [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) visualizza l'endpoint basso corrente per ogni istanza di acquisizione definita. Quando il processo di pulizia elimina le voci della tabella delle modifiche, modifica anche i valori di start_lsn affinché tutte le istanze di acquisizione riflettano il nuovo limite inferiore per i dati delle modifiche disponibili. Vengono modificate solo le istanze di acquisizione per cui i valori di start_lsn sono attualmente minori rispetto al nuovo limite inferiore. Con il tempo, se non viene creata alcuna nuova istanza di acquisizione, gli intervalli di validità per tutte le istanze singole tenderanno a coincidere con l'intervallo di validità per il database.  
@@ -72,7 +71,7 @@ ms.locfileid: "96900966"
   
  Per adattare una tabella delle modifiche con struttura della colonna fissa, il processo di acquisizione responsabile del popolamento della tabella delle modifiche ignorerà qualsiasi nuova colonna non identificata per l'acquisizione al momento dell'abilitazione di Change Data Capture per la tabella di origine. Se una colonna con rilevamento viene eliminata, per tale colonna verranno specificati valori Null nelle voci di modifica successive. Tuttavia, se una colonna esistente subisce una modifica relativa al tipo di dati, la modifica viene propagata alla tabella delle modifiche per garantire che il meccanismo di acquisizione non provochi una perdita di dati nelle colonne con rilevamento. Il processo di acquisizione invia inoltre tutte le modifiche rilevate nella struttura della colonna di tabelle con rilevamento alla tabella cdc.ddl_history. Gli utenti che vogliono ricevere un avviso relativo alle modifiche eventualmente apportate ad applicazioni a valle possono usare la stored procedure [sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md).  
   
- Quando alla tabella di origine associata vengono applicate modifiche DDL, l'istanza di acquisizione corrente continuerà in genere a mantenere la propria forma. È tuttavia possibile creare una seconda istanza di acquisizione per la tabella che rifletta la nuova struttura della colonna. In questo modo il processo di acquisizione è in grado di trasferire le modifiche apportate alla stessa tabella di origine in due tabelle delle modifiche distinte con strutture della colonna diverse. Di conseguenza, mentre una tabella delle modifiche può continuare a essere utilizzata da programmi operativi correnti, la seconda può risultare utile in un ambiente di sviluppo in cui devono essere incorporati i nuovi dati della colonna. Se si consente al meccanismo di acquisizione di popolare entrambe le tabelle delle modifiche contemporaneamente, una transizione da una tabella all'altra può essere eseguita senza perdita di dati delle modifiche. Questa situazione può verificarsi tutte le volte che due cronologie di Change Data Capture si sovrappongono. Quando la transizione viene effettuata, l'istanza di acquisizione obsoleta può essere rimossa.  
+ Quando alla tabella di origine associata vengono applicate modifiche DDL, l'istanza di acquisizione corrente continuerà in genere a mantenere la propria forma. È tuttavia possibile creare una seconda istanza di acquisizione per la tabella che rifletta la nuova struttura della colonna. In questo modo il processo di acquisizione è in grado di trasferire le modifiche apportate alla stessa tabella di origine in due tabelle delle modifiche distinte con strutture della colonna diverse. Di conseguenza, mentre una tabella delle modifiche può continuare a essere utilizzata da programmi operativi correnti, la seconda può risultare utile in un ambiente di sviluppo in cui devono essere incorporati i nuovi dati della colonna. Se si consente al meccanismo di acquisizione di popolare entrambe le tabelle delle modifiche contemporaneamente, una transizione da una tabella all'altra può essere eseguita senza perdita di dati delle modifiche. Questa situazione può verificarsi tutte le volte che due cronologie di Change Data Capture si sovrappongono. Quando viene interessata la transizione, l'istanza di acquisizione obsoleta può essere rimossa.  
   
 > [!NOTE]  
 >  Il numero massimo di istanze di acquisizione che possono essere associate contemporaneamente a un'unica tabella di origine è due.  
@@ -138,9 +137,20 @@ CREATE TABLE T1(
      C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)
 ```
 
-## <a name="columnstore-indexes"></a>Indici columnstore
+## <a name="limitations"></a>Limitazioni
 
+Change Data Capture presenta le limitazioni seguenti: 
+
+**Linux**   
+CDC è ora supportato per SQL Server 2017 in Linux a partire da CU18 e SQL Server 2019 in Linux.
+
+**Indici columnstore**   
 Change Data Capture non può essere abilitato per le tabelle con un indice columnstore cluster. A partire da SQL Server 2016, può essere abilitato per le tabelle con un indice columnstore non cluster.
+
+**Cambio della partizione con variabili**   
+L'uso di variabili con il cambio della partizione nei database o nelle tabelle con Change Data Capture (CDC) non è supportato per l'istruzione `ALTER TABLE ... SWITCH TO ... PARTITION ...`. Per altre informazioni, vedere [Limitazioni del cambio della partizione](../replication/publish/replicate-partitioned-tables-and-indexes.md#replication-support-for-partition-switching). 
+
+
 
 ## <a name="see-also"></a>Vedere anche  
  [Tenere traccia delle modifiche ai dati &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   

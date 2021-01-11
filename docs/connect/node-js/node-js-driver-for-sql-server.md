@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cf8d7e1455e437549dc86c691b55559fce486827
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: ee679df659d35817f97fb9f11471bde1c5ffdebf
+ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91808767"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878454"
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Driver Node.js per SQL Server
 
 ![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[Download del driver SQL Node.js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Il modulo tedious è un'implementazione JavaScript del protocollo TDS, supportato da tutte le versioni moderne di SQL Server. Il driver è un progetto open source, disponibile in GitHub.  
+Il modulo `tedious` è un'implementazione JavaScript del protocollo TDS, supportato da tutte le versioni moderne di SQL Server. Il driver è un progetto open source, disponibile in GitHub.  
   
 È possibile connettersi a un database SQL usando Node.js in Windows, Linux o macOS.  
   
@@ -38,7 +38,7 @@ Il modulo tedious è un'implementazione JavaScript del protocollo TDS, supportat
 
 ## <a name="support"></a>Supporto
 
-Tedious per Node.js è un software supportato dalla community. Microsoft offre il proprio contributo per la community open source di tedious ed è un partecipante attivo nel repository all'indirizzo [https://github.com/tediousjs/tedious](https://github.com/tediousjs/tedious). Per questo software non è tuttavia disponibile il supporto tecnico Microsoft.
+`Tedious` per Node.js è un software supportato dalla community. Microsoft offre il proprio contribuito per la community open source di `tedious` ed è un partecipante attivo nel repository all'indirizzo [https://github.com/tediousjs/tedious](https://github.com/tediousjs/tedious). Per questo software non è tuttavia disponibile il supporto tecnico Microsoft.
 
 Per ottenere assistenza, registrare un [problema nel repository GitHub di tedious](https://github.com/tediousjs/tedious/issues) oppure usare altre risorse della community di Node.js.
 

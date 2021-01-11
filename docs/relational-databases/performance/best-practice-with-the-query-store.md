@@ -2,7 +2,7 @@
 title: Procedure consigliate per Query Store | Microsoft Docs
 description: Informazioni sulle procedure consigliate per l'uso di SQL Server Query Store con il carico di lavoro, ad esempio l'uso delle versioni più recenti di SQL Server Management Studio e Informazioni dettagliate prestazioni query.
 ms.custom: ''
-ms.date: 09/02/2020
+ms.date: 12/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.technology: performance
@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d71da2a6d0bcc0cb43529331116acdbb4a6d8136
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a973fd5ec66f101c162e35baec0269f7b6d3d601
+ms.sourcegitcommit: d8a9ad86401bff422d506078c6200494c795e7c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97418672"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97765210"
 ---
 # <a name="best-practices-with-query-store"></a>Procedure consigliate per Query Store
 
@@ -124,7 +124,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));
 ```
 
-**Modalità di pulizia basata sulle dimensioni**: specifica se viene eseguita la pulizia automatica dei dati quando le dimensioni dei dati di Query Store si avvicinano al limite. Attivare la pulizia basata sulle dimensioni per assicurarsi che Query Store venga sempre eseguito in modalità lettura/scrittura e possa raccoglie i dati più recenti.
+**Modalità di pulizia basata sulle dimensioni**: specifica se viene eseguita la pulizia automatica dei dati quando le dimensioni dei dati di Query Store si avvicinano al limite. Attivare la pulizia basata sulle dimensioni per assicurarsi che Query Store venga sempre eseguito in modalità lettura/scrittura e possa raccoglie i dati più recenti.  Si noti che non esiste alcuna garanzia in presenza di carichi di lavoro gravosi che la pulizia di Query Store manterrà costantemente le dimensioni dei dati al di sotto del limite. È possibile che la pulizia automatica dei dati superi tale limite ed attivi (temporaneamente) la modalità di sola lettura.
 
 ```sql
 ALTER DATABASE [QueryStoreDB]
