@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fd783c5ff6578f320e4d9d093f33ea5a10762eaf
-ms.sourcegitcommit: f87f2f0f1edc91fe400040d8e3a5810347aa8d70
+ms.openlocfilehash: 21225de8f03fc6fd5cc028ae31df37c4b90dadc3
+ms.sourcegitcommit: 4419e99d77ee2c73f9da1559c7944f7702f2de30
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96857648"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97743658"
 ---
 # <a name="database-engine-errors"></a>Errori del motore di database
 
@@ -918,7 +918,7 @@ ORDER BY message_id
 |    1779    |    16    |    No    |    È già stata definita una chiave primaria per la tabella '%.*ls'.    |
 |    1781    |    16    |    No    |    Alla colonna è già associato un valore predefinito.    |
 |    1784    |    16    |    No    |    Impossibile creare la chiave esterna '%.*ls' perché la colonna di riferimento '%.* ls.%.*ls' è una colonna calcolata non persistente.    |
-|    1785    |    16    |    No    |    L'introduzione del vincolo FOREIGN KEY '%.*ls' nella tabella '%.* ls' può determinare la creazione di cicli o più percorsi di propagazione. Specificare ON DELETE NO ACTION o ON UPDATE NO ACTION oppure modificare gli altri vincoli FOREIGN KEY.    |
+|    [1785](mssqlserver-1785-database-engine-error.md)    |    16    |    No    |    L'introduzione del vincolo FOREIGN KEY '%.*ls' nella tabella '%.* ls' può determinare la creazione di cicli o più percorsi di propagazione. Specificare ON DELETE NO ACTION o ON UPDATE NO ACTION oppure modificare gli altri vincoli FOREIGN KEY.    |
 |    1786    |    16    |    No    |    La colonna '%.*ls.%.* ls' o la colonna di riferimento '%.*ls.%.* ls' nella chiave esterna '%.*ls' è di tipo timestamp. Impossibile utilizzare questo tipo di dati con vincoli di integrità referenziale di propagazione.    |
 |    1787    |    16    |    No    |    Impossibile definire un vincolo di chiave esterna '%.*ls' con istruzioni DELETE o UPDATE propagate sulla tabella '%.* ls'. Per la tabella è definito un trigger INSTEAD OF DELETE o UPDATE.    |
 |    1788    |    16    |    No    |    Impossibile creare la chiave esterna di propagazione '%.*ls', in cui la colonna di riferimento '%.* ls.%.*ls' è una colonna Identity.    |
@@ -1848,8 +1848,8 @@ ORDER BY message_id
 |    3985    |    16    |    No    |    Errore durante la modifica del contesto della transazione. Questo problema è in genere dovuto a memoria di sistema insufficiente. Provare a liberare memoria.    |
 |    3986    |    19    |    No    |    Timestamp di transazione esauriti. Riavviare il server.    |
 |    3987    |    10    |    No    |    In questo database è sempre abilitato l'isolamento dello snapshot.    |
-|    3988    |    16    |    No    |    Non sono consentite nuove transazioni perché nella sessione sono presenti altri thread in esecuzione.    |
-|    3989    |    16    |    No    |    Impossibile avviare la nuova richiesta perché deve disporre di un descrittore di transazione valido.    |
+|    [3988](mssqlserver-3988-database-engine-error.md)    |    16    |    No    |    Non sono consentite nuove transazioni perché nella sessione sono presenti altri thread in esecuzione.    |
+|    [3989](mssqlserver-3989-database-engine-error.md)   |    16    |    No    |    Impossibile avviare la nuova richiesta perché deve disporre di un descrittore di transazione valido.    |
 |    3990    |    16    |    No    |    Commit della transazione non consentito all'interno di una routine, un'aggregazione o un trigger definito dall'utente perché la transazione non è stata avviata in tale livello CLR. Modificare la logica dell'applicazione per imporre livelli rigidi di nidificazione delle transazioni.    |
 |    3991    |    16    |    No    |    La transazione del contesto attiva prima dell'avvio della routine, dell'aggregazione o del trigger definito dall'utente "%.*ls" è stata terminata all'interno di questo ambito, ma ciò non è consentito. Modificare la logica dell'applicazione per imporre livelli rigidi di nidificazione delle transazioni.    |
 |    3992    |    16    |    No    |    Il conteggio di transazioni è cambiato da %d a %d all'interno della routine, dell'aggregazione o del trigger definito dall'utente "%.*ls". Ciò non è consentito e verrà eseguito il rollback della transazione utente. Modificare la logica dell'applicazione per imporre livelli rigidi di nidificazione delle transazioni.    |
@@ -2909,7 +2909,7 @@ ORDER BY message_id
 |    6519    |    16    |    No    |    Tipo '%.*ls' non ancora supportato per le operazioni CLR.    |
 |    6520    |    16    |    No    |    Errore di .NET Framework durante l'esecuzione dell'istruzione.    |
 |    6521    |    16    |    No    |    Errore di .NET Framework durante l'esecuzione dell'istruzione: %.*ls.    |
-|    6522    |    16    |    No    |    Errore di .NET Framework durante l'esecuzione dell'aggregazione o routine definita dall'utente "%.*ls": %ls.    |
+|    [6522](mssqlserver-6522-database-engine-error.md)    |    16    |    No    |    Errore di .NET Framework durante l'esecuzione dell'aggregazione o routine definita dall'utente "%.*ls": %ls.    |
 |    6523    |    16    |    No    |    Il metodo, la proprietà o il campo '%ls' della classe '%ls' nell'assembly '%.*ls' è statico.    |
 |    6524    |    16    |    No    |    Impossibile utilizzare la colonna calcolata nella tabella dei risultati di una funzione di flusso definita dall'utente (colonna '%.*ls').    |
 |    6525    |    16    |    No    |    Impossibile utilizzare il vincolo '%s' nella tabella dei risultati di una funzione di flusso definita dall'utente.    |
@@ -2989,7 +2989,7 @@ ORDER BY message_id
 |    6599    |    16    |    No    |    Trovata classe di serializzazione nativa vuota '%.*ls'. Le classi di serializzazione nativa vuote non sono consentite.    |
 |    6600    |    16    |    No    |    Errore XML: %.*ls    |
 |    6601    |    10    |    No    |    Si è verificato l'errore di analisi XML 0x%x nella riga numero %d, accanto al testo XML "%.*ls".    |
-|    6602    |    16    |    No    |    Descrizione dell'errore: '%.*ls'.    |
+|    [6602](mssqlserver-6602-database-engine-error.md)    |    16    |    No    |    Descrizione dell'errore: '%.*ls'.    |
 |    6603    |    16    |    No    |    Errore di analisi XML: %.*ls    |
 |    6605    |    16    |    No    |    %.*ls: impossibile ottenere un'interfaccia IPersistStream sul testo XML.    |
 |    6607    |    16    |    No    |    %.*ls: il valore specificato per il parametro numero %d non è valido.    |
@@ -6281,7 +6281,7 @@ ORDER BY message_id
 |    15397    |    16    |    No    |    Password di protezione non impostata per %S_MSG. Impossibile utilizzare una password di decrittografia per questa operazione.    |
 |    15398    |    11    |    No    |    È possibile modificare l'impostazione di avvio solo per gli oggetti del database master il cui proprietario è dbo.    |
 |    15399    |    11    |    No    |    Impossibile modificare l'opzione di avvio. Questo tipo di modifica è limitata agli oggetti privi di parametri.    |
-|    15401    |    11    |    No    |    Impossibile trovare l'utente o il gruppo di Windows NT '%s'. Controllare di nuovo il nome.    |
+|    [15401](mssqlserver-15401-database-engine-error.md)    |    11    |    No    |    Impossibile trovare l'utente o il gruppo di Windows NT '%s'. Controllare di nuovo il nome.    |
 |    15402    |    11    |    No    |    '%s' non è un ruolo predefinito del server.    |
 |    15403    |    16    |    No    |    L'entità server "%.*ls" non esiste, non ha accesso al server oppure l'utente non dispone dell'autorizzazione.    |
 |    [15404](mssqlserver-15404-database-engine-error.md)    |    16    |    No    |    Impossibile ottenere informazioni relative al gruppo/utente di Windows NT '%ls', codice di errore %#lx.    |
@@ -6698,7 +6698,7 @@ ORDER BY message_id
 |    [17887](mssqlserver-17887-database-engine-error.md)    |    10    |    Sì    |    Listener completamento I/O (0x%lx) È possibile che il thread di lavoro 0x%p non ceda la precedenza del nodo %ld. Utilizzo CPU (circa): kernel %I64d ms, utente %I64d ms, intervallo: %I64d.    |
 |    17888    |    10    |    Sì    |    È possibile che sia stato generato un deadlock per tutte le utilità di pianificazione nel nodo %d a causa del numero elevato di thread di lavoro in attesa su %ls. Utilizzo processo %d%%.    |
 |    17889    |    16    |    Sì    |    Una nuova connessione è stata rifiutata perché è stato raggiunto il numero massimo di connessioni per l'ID di sessione %d. Chiudere una connessione esistente su tale sessione e riprovare.%.*ls    |
-|    17890    |    10    |    Sì    |    È stato eseguito il page out di una parte significativa della memoria del processo di SQL Server. Potrebbe verificarsi un calo di prestazioni. Durata: %d secondi. Working set (KB): %I64d, commit completato (KB): %I64d, utilizzo memoria: %d%%.    |
+|    [17890](mssqlserver-17890-database-engine-error.md)    |    10    |    Sì    |    È stato eseguito il page out di una parte significativa della memoria del processo di SQL Server. Potrebbe verificarsi un calo di prestazioni. Durata: %d secondi. Working set (KB): %I64d, commit completato (KB): %I64d, utilizzo memoria: %d%%.    |
 |    17891    |    10    |    Sì    |    Il thread di lavoro 0x%lx del monitoraggio risorse (0x%p) non cede il controllo nel nodo %ld. Memoria liberata: %I64d KB. Utilizzo CPU (circa): kernel %I64d ms, utente %I64d ms, intervallo: %I64d.    |
 |    [17892](mssqlserver-17892-database-engine-error.md)    |    14    |    Sì    |    Accesso non riuscito per l'account di accesso '%.*ls' a causa dell'esecuzione di un trigger.%.* ls    |
 |    17894    |    10    |    Sì    |    Lo strumento di recapito (0x%lx) del pool '%.*ls' thread di lavoro 0x%p non cede il controllo sul nodo %ld. Utilizzo CPU (circa): kernel %I64d ms, utente %I64d ms, intervallo: %I64d.    |
@@ -6823,8 +6823,8 @@ ORDER BY message_id
 |    18469    |    10    |    No    |    [CLIENT: %.*hs]    |
 |    18470    |    14    |    Sì    |    Accesso non riuscito per l'utente '%.*ls'. Motivo: l'account è disabilitato.%.* ls    |
 |    18471    |    14    |    No    |    Accesso non riuscito per l'utente "%.*ls". Impossibile modificare la password. L'utente non dispone dell'autorizzazione per modificare la password. %.* ls    |
-|    18482    |    16    |    Sì    |    Impossibile connettersi al server '%.*ls' perché '%.* ls' non è definito come server remoto. Verificare che il nome specificato per il server sia corretto. %.*ls.    |
-|    18483    |    16    |    Sì    |    Impossibile connettersi al server '%.*ls' perché '%.* ls' non è definito come account di accesso remoto nel server. Verificare che il nome account di accesso specificato sia corretto. %.*ls.    |
+|    [18482](mssqlserver-18482-database-engine-error.md)    |    16    |    Sì    |    Impossibile connettersi al server '%.*ls' perché '%.* ls' non è definito come server remoto. Verificare che il nome specificato per il server sia corretto. %.*ls.    |
+|    [18483](mssqlserver-18483-database-engine-error.md)    |    16    |    Sì    |    Impossibile connettersi al server '%.*ls' perché '%.* ls' non è definito come account di accesso remoto nel server. Verificare che il nome account di accesso specificato sia corretto. %.*ls.    |
 |    18485    |    16    |    Sì    |    Impossibile connettersi al server '%.*ls' perché non è configurato per accettare accessi remoti. Utilizzare l'opzione per la configurazione degli accessi remoti per consentire gli accessi remoti.%.* ls    |
 |    18486    |    14    |    Sì    |    Accesso non riuscito per l'utente '%.*ls' perché al momento l'account è bloccato. L'account può essere sbloccato dall'amministratore di sistema. %.* ls    |
 |    18487    |    14    |    Sì    |    Accesso non riuscito per l'utente '%.*ls'. Motivo: la password dell'account è scaduta.%.* ls    |
