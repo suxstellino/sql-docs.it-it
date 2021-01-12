@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data collector view
 - syscollector_execution_log view
 ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 145d22131701c3b7342cb83e1e95735dc7726408
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: f6c9cc330c87debc0a80a9d282ea8c40c904c59c
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550355"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094248"
 ---
 # <a name="syscollector_execution_log-transact-sql"></a>syscollector_execution_log (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "89550355"
 |finish_time|**datetime**|Ora in cui è stata completata l'esecuzione per i pacchetti e i set di raccolta completati. Ammette i valori Null.|  
 |runtime_execution_mode|**smallint**|Indica se l'attività del set di raccolta era raccogliere o caricare dati. Ammette i valori Null.<br /><br /> I valori possibili sono:<br /><br /> 0 = raccolta<br /><br /> 1 = Caricamento|  
 |status|**smallint**|Indica lo stato corrente del set di raccolta o del pacchetto. Non ammette i valori Null.<br /><br /> I valori possibili sono:<br /><br /> 0 = in fase di esecuzione<br /><br /> 1 = completato<br /><br /> 2 = non riuscita|  
-|operator|**nvarchar(128)**|Identifica chi ha avviato il pacchetto o il set di raccolta. Non ammette i valori Null.|  
+|Operatore|**nvarchar(128)**|Identifica chi ha avviato il pacchetto o il set di raccolta. Non ammette i valori Null.|  
 |package_id|**uniqueidentifier**|Identifica il set di raccolta o il pacchetto che ha generato questo log. Ammette i valori Null.|  
 |package_name|**nvarchar(4000)**|Nome del pacchetto che ha generato il log. Ammette i valori Null.|  
 |package_execution_id|**uniqueidentifier**|Fornisce un collegamento alla tabella di log [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Ammette i valori Null.|  

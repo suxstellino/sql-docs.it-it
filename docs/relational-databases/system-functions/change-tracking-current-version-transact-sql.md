@@ -17,15 +17,15 @@ helpviewer_keywords:
 - change tracking [SQL Server], CHANGE_TRACKING_CURRENT_VERSION
 - CHANGE_TRACKING_CURRENT_VERSION
 ms.assetid: 3027c4f7-6b4d-4089-a369-5926e8a8da1c
-author: rothja
-ms.author: jroth
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 874cf3c72400cc4885ec2515e005bb01ea42d473
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 23dfe50fa73e0221ba272070675fa1905e85a118
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440632"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095054"
 ---
 # <a name="change_tracking_current_version-transact-sql"></a>CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,7 @@ CHANGE_TRACKING_CURRENT_VERSION ( )
 ## <a name="remarks"></a>Osservazioni  
  Restituisce NULL quando il rilevamento delle modifiche non è abilitato per il database.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene dichiarata la variabile locale `@next_baseline` per memorizzare la versione corrente delle modifiche registrate. La funzione `CHANGE_TRACKING_CURRENT_VERSION()` viene quindi utilizzata per ottenere il valore per la variabile.  
   
 ```sql  

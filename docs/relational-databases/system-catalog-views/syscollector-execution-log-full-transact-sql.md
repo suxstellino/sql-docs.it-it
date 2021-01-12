@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data collector view
 - syscollector_execution_log_full view
 ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b60d6f7efb33398789795753f8921ad9d5c55d1f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: ddb6f45318528fd88b112453f3f6f6b0aa456b3d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546746"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094242"
 ---
 # <a name="syscollector_execution_log_full-transact-sql"></a>syscollector_execution_log_full (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "89546746"
 |finish_time|**datetime**|Ora in cui è stata completata l'esecuzione per i pacchetti e i set di raccolta completati. Ammette i valori Null.|  
 |duration|**int**|Tempo di esecuzione del pacchetto o del set di raccolta, espresso in secondi. Ammette i valori Null.|  
 |failure_message|**nvarchar(2048)**|Se l'esecuzione di un set di raccolta o di un pacchetto non è riuscita, il messaggio di errore più recente per il componente. Ammette i valori Null. Per ottenere informazioni più dettagliate sull'errore, utilizzare la [fn_syscollector_get_execution_details &#40;funzione&#41;Transact-SQL ](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) .|  
-|operator|**nvarchar(128)**|Identifica chi ha avviato il pacchetto o il set di raccolta. Ammette i valori Null.|  
+|Operatore|**nvarchar(128)**|Identifica chi ha avviato il pacchetto o il set di raccolta. Ammette i valori Null.|  
 |package_execution_id|**uniqueidentifier**|Fornisce un collegamento alla tabella di log [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Ammette i valori Null.|  
 |collection_set_id|**int**|Fornisce un collegamento alla tabella di configurazione della raccolta dati in msdb. Ammette i valori Null.|  
   

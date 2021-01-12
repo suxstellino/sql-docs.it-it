@@ -1,5 +1,6 @@
 ---
 title: backupmediafamily (Transact-SQL) | Microsoft Docs
+description: Riferimento per backupmediafamily, che contiene una riga per ogni gruppo di supporti.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -15,20 +16,20 @@ dev_langs:
 helpviewer_keywords:
 - backupmediafamily system table
 - backup media [SQL Server], backupmediafamily system table
-ms.assetid: ee16de24-3d95-4b2e-a094-78df2514d18a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c2499bbc91fb09f943e5a093851bd5aef810b5b9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6adacacdb3e075e3eb058005d3b11fc8fc219cbe
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547211"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096289"
 ---
 # <a name="backupmediafamily-transact-sql"></a>backupmediafamily (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Include una riga per ogni gruppo di supporti. Se un gruppo di supporti risiede in un set di supporti con mirroring, il gruppo includerà una riga distinta per ciascun mirror del set di supporti. Questa tabella è archiviata nel database **msdb** .  
+Include una riga per ogni gruppo di supporti. Se un gruppo di supporti risiede in un set di supporti con mirroring, il gruppo includerà una riga distinta per ciascun mirror del set di supporti. Questa tabella è archiviata nel database **msdb** .  
     
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -36,9 +37,9 @@ ms.locfileid: "89547211"
 |**family_sequence_number**|**tinyint**|Posizione del gruppo di supporti nel set di supporti.|  
 |**media_family_id**|**uniqueidentifier**|Numero di identificazione univoco del gruppo di supporti. Può essere NULL.|  
 |**media_count**|**int**|Numero di supporti nel gruppo. Può essere NULL.|  
-|**logical_device_name**|**nvarchar(128)**|Nome del dispositivo di backup in **sys. backup_devices. Name**. Se si tratta di un dispositivo di backup temporaneo (in contrapposizione a un dispositivo di backup permanente presente in **sys. backup_devices**), il valore di **logical_device_name** è null.|  
+|**logical_device_name**|**nvarchar(128)**|Nome del dispositivo di backup in **sys.backup_devices. Name**. Se si tratta di un dispositivo di backup temporaneo (in contrapposizione a un dispositivo di backup permanente presente in **sys.backup_devices**), il valore di **logical_device_name** è null.|  
 |**physical_device_name**|**nvarchar(260)**|Nome fisico del dispositivo di backup. Può essere NULL. Questo campo è condiviso tra il processo di backup e ripristino. Può contenere il percorso di destinazione del backup originale o il percorso di origine del ripristino originale. A seconda del fatto che il backup o il ripristino si sia verificato per primo in un server per un database. Si noti che i ripristini consecutivi dallo stesso file di backup non aggiorneranno il percorso indipendentemente dalla posizione in fase di ripristino. Per questo motivo, non è possibile usare **physical_device_name** campo per visualizzare il percorso di ripristino usato.|  
-|**device_type**|**tinyint**|Tipo di dispositivo di backup:<br /><br /> 2 = Disco<br /><br /> 5 = Nastro<br /><br /> 7 = Dispositivo virtuale<br /><br /> 9 = archiviazione di Azure<br /><br /> 105 = Dispositivo di backup permanente<br /><br /> Può essere NULL.<br /><br /> Tutti i nomi e i numeri di dispositivo permanenti sono disponibili in **sys. backup_devices**.|  
+|**device_type**|**tinyint**|Tipo di dispositivo di backup:<br /><br /> 2 = Disco<br /><br /> 5 = Nastro<br /><br /> 7 = Dispositivo virtuale<br /><br /> 9 = archiviazione di Azure<br /><br /> 105 = Dispositivo di backup permanente<br /><br /> Può essere NULL.<br /><br /> Tutti i nomi e i numeri di dispositivo permanenti sono disponibili in **sys.backup_devices**.|  
 |**physical_block_size**|**int**|Dimensioni fisiche del blocco utilizzate per la scrittura del gruppo di supporti. Può essere NULL.|  
 |**mirror**|**tinyint**|Numero di mirroring (0-3).|  
   

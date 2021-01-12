@@ -1,6 +1,6 @@
 ---
 description: sys.dm_xe_object_columns (Transact-SQL)
-title: sys. dm_xe_object_columns (Transact-SQL) | Microsoft Docs
+title: sys.dm_xe_object_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_xe_object_columns dynamic management view
 - extended events [SQL Server], views
 ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0e381833a5869f20364b7797bb86a1c4e06fed81
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: c5da079cfecbf1ddaa622f05ce71e5c04d63f4f0
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546359"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095061"
 ---
 # <a name="sysdm_xe_object_columns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "89546359"
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(256)**|Nome della colonna. il nome è univoco all'interno dell'oggetto. Non ammette i valori Null.|  
 |column_id|**int**|Identificatore della colonna. column_id è univoco all'interno dell'oggetto se utilizzato con column_type. Non ammette i valori Null.|  
-|object_name|**nvarchar(256)**|Nome dell'oggetto a cui appartiene la colonna. Esiste una relazione molti-a-uno con sys. dm_xe_objects. ID. Non ammette valori null.|  
+|object_name|**nvarchar(256)**|Nome dell'oggetto a cui appartiene la colonna. Esiste una relazione molti-a-uno con sys.dm_xe_objects. ID. Non ammette valori null.|  
 |object_package_guid|**uniqueidentifier**|GUID del pacchetto che contiene l'oggetto. Non ammette i valori Null.|  
 |type_name|**nvarchar(256)**|Nome del tipo per questa colonna. Non ammette i valori Null.|  
 |type_package_guid|**uniqueidentifier**|GUID del pacchetto che contiene il tipo di dati della colonna. Non ammette i valori Null.|  
@@ -54,7 +54,7 @@ ms.locfileid: "89546359"
   
 ### <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|Da|To|Relazione|  
+|Da|A|Relationship|  
 |----------|--------|------------------|  
 |sys.dm_xe_object_columns.object_name, sys.dm_xe_object_columns.object_package_guid|sys.dm_xe_objects.name,<br /><br /> sys.dm_xe_objects.package_guid|Molti-a-uno|  
 |sys.dm_xe_object_columns.type_name<br /><br /> sys.dm_xe_object_columns.type_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|Molti-a-uno|  

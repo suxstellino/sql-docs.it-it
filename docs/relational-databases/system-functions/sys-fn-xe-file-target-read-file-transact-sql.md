@@ -20,15 +20,15 @@ helpviewer_keywords:
 - fn_xe_file_target_read_file function
 - sys.fn_xe_file_target_read_file function
 ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
-author: rothja
-ms.author: jroth
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5a79b5e3f9ded81069364ec144a8e88fede811d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8af7ee0bc6c899026e51110264f2b28c2f579dd7
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474722"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096350"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,16 +49,16 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="arguments"></a>Argomenti  
  *path*  
- Percorso dei file da leggere. il *percorso* può contenere caratteri jolly e includere il nome di un file. *path* è di **tipo nvarchar (260)**. Non è prevista alcuna impostazione predefinita. Nel contesto del database SQL di Azure, questo valore è un URL HTTP di un file in archiviazione di Azure.
+ Percorso dei file da leggere. il *percorso* può contenere caratteri jolly e includere il nome di un file. *path* è di **tipo nvarchar (260)**. Non prevede alcun valore predefinito. Nel contesto del database SQL di Azure, questo valore è un URL HTTP di un file in archiviazione di Azure.
   
  *mdpath*  
- Percorso del file di metadati che corrisponde al file o ai file specificati dall'argomento *path* . *mdpath* è di **tipo nvarchar (260)**. Non è prevista alcuna impostazione predefinita. A partire da SQL Server 2016, questo parametro può essere specificato come null.
+ Percorso del file di metadati che corrisponde al file o ai file specificati dall'argomento *path* . *mdpath* è di **tipo nvarchar (260)**. Non prevede alcun valore predefinito. A partire da SQL Server 2016, questo parametro può essere specificato come null.
   
 > [!NOTE]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] non richiede il parametro *mdpath* . È tuttavia disponibile per la compatibilità con i file di log generati in versioni precedenti di SQL Server.  
   
  *initial_file_name*  
- Primo file da leggere dal *percorso*. *initial_file_name* è di **tipo nvarchar (260)**. Non è prevista alcuna impostazione predefinita. Se viene specificato **null** come argomento, vengono letti tutti i file trovati nel *percorso* .  
+ Primo file da leggere dal *percorso*. *initial_file_name* è di **tipo nvarchar (260)**. Non prevede alcun valore predefinito. Se viene specificato **null** come argomento, vengono letti tutti i file trovati nel *percorso* .  
   
 > [!NOTE]  
 >  *initial_file_name* e *initial_offset* sono argomenti abbinati. Se si specifica un valore per uno dei due argomenti, è necessario specificare un valore anche per l'altro.  
@@ -79,7 +79,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |timestamp_utc|**datetime2**|**SI APPLICA A**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Data e ora (fuso orario UTC) dell'evento. Non ammette i valori Null.|  
 
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  La lettura di set di risultati di grandi dimensioni tramite l'esecuzione di **sys.fn_xe_file_target_read_file** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] può causare un errore. Usare i **Risultati in modalità file** (**CTRL + MAIUSC + F**) per esportare set di risultati di grandi dimensioni in un file e leggere il file con un altro strumento.  
   
 ## <a name="permissions"></a>Autorizzazioni  

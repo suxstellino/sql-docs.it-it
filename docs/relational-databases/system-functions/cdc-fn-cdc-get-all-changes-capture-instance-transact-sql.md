@@ -15,21 +15,21 @@ helpviewer_keywords:
 - change data capture [SQL Server], querying metadata
 - cdc.fn_cdc_get_all_changes_<capture_instance>
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: aa461859dcc7d2adc359139e4740ea9272161bf8
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 8bb04e74ab2dd613173bf194fe4ca5412d79ac7e
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989942"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095033"
 ---
 # <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una riga per ciascuna modifica applicata alla tabella di origine all'interno dell'intervallo del numero di sequenza del file di log (LSN) specificato. Se a una riga di origine vengono applicate più modifiche durante l'intervallo, ogni modifica è riportata nel set di risultati restituito. Oltre alla restituzione dei dati delle modifiche, quattro colonne di metadati forniscono le informazioni necessarie per applicare le modifiche a un'altra origine dati. Al contenuto delle colonne dei metadati e alle righe restituite nel set di risultati vengono applicate le opzioni di filtro di riga. Quando è specificata l'opzione di filtro di riga 'all', per l'identificazione di ogni modifica è disponibile esattamente una riga. Quando è specificata l'opzione 'all update old', le operazioni di aggiornamento sono rappresentate su due righe: una contiene i valori delle colonne acquisite prima dell'aggiornamento e l'altra contiene i valori delle colonne acquisite dopo l'aggiornamento.  
   
- Questa funzione di enumerazione viene creata nel momento in cui una tabella di origine è abilitata per Change Data Capture. Il nome della funzione è derivato e utilizza il formato **CDC. fn_cdc_get_all_changes_**_capture_instance_ dove *capture_instance* è il valore specificato per l'istanza di acquisizione quando la tabella di origine è abilitata per la Change Data Capture.  
+ Questa funzione di enumerazione viene creata nel momento in cui una tabella di origine è abilitata per Change Data Capture. Il nome della funzione è derivato e utilizza il formato **cdc.fn_cdc_get_all_changes_**_capture_instance_ dove *capture_instance* è il valore specificato per l'istanza di acquisizione quando la tabella di origine è abilitata per la Change Data Capture.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -80,10 +80,10 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o **db_owner** ruolo predefinito del database. Per tutti gli altri utenti, è richiesta l'autorizzazione SELECT su tutte le colonne acquisite nella tabella di origine e, se è stato definito un ruolo di controllo per l'istanza di acquisizione, l'appartenenza a tale ruolo del database. Quando il chiamante non dispone dell'autorizzazione per visualizzare i dati di origine, la funzione restituisce l'errore 229 ("autorizzazione SELECT negata per l'oggetto ' fn_cdc_get_all_changes_.. .', database ' \<DatabaseName> ', schema ' CDC '").  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Se l'intervallo LSN specificato è esterno alla cronologia di rilevamento delle modifiche per l'istanza di acquisizione, la funzione restituisce l'errore 208 ("Numero di argomenti insufficienti per la procedura o la funzione cdc.fn_cdc_get_all_changes").  
   
- Alle colonne con tipo di dati **Image**, **Text**e **ntext** viene sempre assegnato un valore null quando **_ _ $ operation** = 1 o **_ _ $ operation** = 3. Alle colonne con tipo di dati **varbinary (max)**, **varchar (max)** o **nvarchar (max)** viene assegnato un valore null quando **_ _ $ operation** = 3 a meno che la colonna non sia stata modificata durante l'aggiornamento. Quando **_ _ $ operation** = 1, a queste colonne viene assegnato il relativo valore al momento dell'eliminazione. Le colonne calcolate incluse in un'istanza di acquisizione hanno sempre un valore NULL.  
+ Alle colonne con tipo di dati **Image**, **Text** e **ntext** viene sempre assegnato un valore null quando **_ _ $ operation** = 1 o **_ _ $ operation** = 3. Alle colonne con tipo di dati **varbinary (max)**, **varchar (max)** o **nvarchar (max)** viene assegnato un valore null quando **_ _ $ operation** = 3 a meno che la colonna non sia stata modificata durante l'aggiornamento. Quando **_ _ $ operation** = 1, a queste colonne viene assegnato il relativo valore al momento dell'eliminazione. Le colonne calcolate incluse in un'istanza di acquisizione hanno sempre un valore NULL.  
   
 ## <a name="examples"></a>Esempi  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Sono disponibili diversi modelli che illustrano come usare le funzioni di query Change Data Capture. Questi modelli sono disponibili nel menu **Visualizza** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Per altre informazioni, vedere [Esplora modelli](../../ssms/template/template-explorer.md).  
@@ -106,11 +106,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [CDC. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [sys. fn_cdc_map_time_to_lsn &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
- [sys. sp_cdc_get_ddl_history &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)   
- [sys. sp_cdc_get_captured_columns &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
- [sys. sp_cdc_help_change_data_capture &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
+ [sys.fn_cdc_map_time_to_lsn &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
+ [sys.sp_cdc_get_ddl_history &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)   
+ [sys.sp_cdc_get_captured_columns &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [Informazioni su Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

@@ -11,15 +11,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 1016db6e-9950-4ae2-a004-bd4171e27359
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6edde5c73a094449d5e91b8f26de3afd455dd63
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 6558dda3bf0cb87f3cdfc14b3beda0fc2c329557
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482912"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094622"
 ---
 # <a name="sysexternal_data_sources-transact-sql"></a>sys.external_data_sources (Transact-SQL)
 
@@ -35,7 +35,7 @@ ms.locfileid: "97482912"
 |name|**sysname**|Nome dell'origine dati esterna.||  
 |location|**nvarchar(4000)**|Stringa di connessione, che include il protocollo, l'indirizzo IP e la porta per l'origine dati esterna.||  
 |type_desc|**nvarchar(255)**|Tipo di origine dati visualizzato sotto forma di stringa.|HADOOP, RDBMS, SHARD_MAP_MANAGER, RemoteDataArchiveTypeExtDataSource|  
-|tipo|**tinyint**|Tipo di origine dati visualizzato sotto forma di numero.|0-HADOOP<br /><br /> 1-RDBMS<br /><br /> 2-SHARD_MAP_MANAGER<br /><br /> 3-RemoteDataArchiveTypeExtDataSource|  
+|type|**tinyint**|Tipo di origine dati visualizzato sotto forma di numero.|0-HADOOP<br /><br /> 1-RDBMS<br /><br /> 2-SHARD_MAP_MANAGER<br /><br /> 3-RemoteDataArchiveTypeExtDataSource|  
 |resource_manager_location|**nvarchar(4000)**|Per il tipo HADOOP, l'indirizzo IP e la posizione della porta di Hadoop Resource Manager. Viene usato per l'invio di un processo in un'origine dati Hadoop.<br /><br /> NULL per altri tipi di origini dati esterne.||  
 |credential_id|**int**|ID oggetto della credenziale con ambito database utilizzata per la connessione all'origine dati esterna.||  
 |database_name|**sysname**|Per il tipo RDBMS, il nome del database remoto. Per Type, SHARD_MAP_MANAGER, il nome del database di gestione delle mappe partizioni. NULL per altri tipi di origini dati esterne.||  

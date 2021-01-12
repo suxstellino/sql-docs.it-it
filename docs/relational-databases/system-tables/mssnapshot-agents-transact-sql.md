@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsnapshot_agents system table
 ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c5b83521f64253aaa5d4eb6dfd6d5e49eb5d71b4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: bcd51354cab293afcdce2845fef5bd6e51e1c70f
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89524068"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096185"
 ---
 # <a name="mssnapshot_agents-transact-sql"></a>MSsnapshot_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "89524068"
 |**profile_id**|**int**|ID configurazione dal [MSagent_profiles &#40;tabella&#41;Transact-SQL ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) .|  
 |**dynamic_filter_login**|**sysname**|Valore utilizzato per la valutazione della [SUSER_SNAME &#40;funzione&#41;Transact-SQL ](../../t-sql/functions/suser-sname-transact-sql.md) nei filtri con parametri che definiscono una partizione. Questa colonna viene utilizzata per uno snapshot partizionato.|  
 |**dynamic_filter_hostname**|**sysname**|Valore utilizzato per la valutazione della [HOST_NAME &#40;funzione&#41;Transact-SQL ](../../t-sql/functions/host-name-transact-sql.md) nei filtri con parametri che definiscono una partizione. Questa colonna viene utilizzata per uno snapshot partizionato.|  
-|**publisher_security_mode**|**smallint**|Modalità di sicurezza utilizzata dall'agente per la connessione al server di pubblicazione. I possibili valori sono i seguenti:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione 0<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticazione di Windows.|  
+|**publisher_security_mode**|**smallint**|Modalità di sicurezza utilizzata dall'agente per la connessione al server di pubblicazione. I possibili valori sono i seguenti:<br /><br />   =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione 0<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticazione di Windows.|  
 |**publisher_login**|**sysname**|Account di accesso utilizzato per la connessione al server di pubblicazione.|  
 |**publisher_password**|**nvarchar (524)**|Valore crittografato della password utilizzata per la connessione al server di pubblicazione.|  
 |**job_step_uid**|**uniqueidentifier**|ID univoco del passaggio di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in cui viene avviato l'agente.|  

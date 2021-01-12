@@ -1,6 +1,6 @@
 ---
 description: sys.dm_xtp_system_memory_consumers (Transact-SQL)
-title: sys. dm_xtp_system_memory_consumers (Transact-SQL) | Microsoft Docs
+title: sys.dm_xtp_system_memory_consumers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_system_memory_consumers dynamic management view
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e998b531c867d78bbf27bff516aaecda6f7f9f88
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 20edce0accbe4549b5c109b8d6958fd742cd4ede
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543789"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096399"
 ---
 # <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ select * from sys.dm_xtp_system_memory_consumers
   
  Per altre informazioni, vedere [OLTP in memoria &#40;ottimizzazione in memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nome della colonna|Type|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|ID interno del consumer di memoria.|  
 |memory_consumer_type|**int**|Intero che rappresenta il tipo di consumer di memoria con uno dei valori seguenti:<br /><br /> 0: non deve essere visualizzato. Aggrega l'utilizzo della memoria due o più consumer.<br /><br /> 1-LOOKASIDE: tiene traccia dell'utilizzo di memoria per un LOOKASIDE di sistema.<br /><br /> 2-VARHEAP: tiene traccia dell'utilizzo di memoria per un heap a lunghezza variabile.<br /><br /> 4: pool di pagine IO: tiene traccia dell'utilizzo di memoria per un pool di pagine di sistema usato per operazioni di i/o.|  

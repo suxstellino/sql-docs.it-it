@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - dm_db_column_store_row_group_physical_stats
 - sys.dm_db_column_store_row_group_physical_stats dynamic management view
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ddbed928d4d7ef379b7d4c164ffcc150f035b8d4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0c1b5bd85e22c4876004b000c5cc41f9f120d681
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475042"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095194"
 ---
 # <a name="sysdm_db_column_store_row_group_physical_stats-transact-sql"></a>sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
 
@@ -45,7 +45,7 @@ Viene estesa la vista del catalogo [sys.column_store_row_groups &#40;&#41;Transa
 |**row_group_id**|**int**|ID di questo gruppo di righe. Per le tabelle partizionate, il valore è univoco all'interno della partizione.<br /><br /> -1 per una coda in memoria.|  
 |**delta_store_hobt_id**|**bigint**|Hobt_id per un gruppo di righe nell'archivio Delta.<br /><br /> NULL se il gruppo di righe non è presente nell'archivio Delta.<br /><br /> NULL per la parte finale di una tabella in memoria.|  
 |**state**|**tinyint**|Numero ID associato *state_description*.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED<br /><br /> 4 = RIMOZIONE DEFINITIVA<br /><br /> COMPRESSO è l'unico stato che si applica alle tabelle in memoria.|  
-|**state_desc**|**nvarchar(60)**|Descrizione dello stato del gruppo di righe:<br /><br /> 0-invisibile: gruppo di righe in fase di compilazione. Ad esempio: <br />Un gruppo di righe nel columnstore è invisibile mentre i dati vengono compressi. Al termine della compressione, un'opzione di metadati modifica lo stato del gruppo di righe columnstore da invisibile a compresso e lo stato del gruppo di righe deltastore da chiuso a contrassegnato per la rimozione definitiva.<br /><br /> 1: apre un gruppo di righe deltastore che accetta nuove righe. Un gruppo di righe aperto presenta ancora il formato rowstore e non è stato compresso nel formato columnstore.<br /><br /> 2-CLOSED: un gruppo di righe nell'archivio Delta che contiene il numero massimo di righe ed è in attesa del processo del motore di Tuple per comprimerlo nel columnstore.<br /><br /> 3-compresso: un gruppo di righe compresso con la compressione columnstore e archiviato nel columnstore.<br /><br /> 4-TOMBSTONE: gruppo di righe precedentemente presente in deltastore e non più utilizzato.|  
+|**state_desc**|**nvarchar(60)**|Descrizione dello stato del gruppo di righe:<br /><br /> 0-invisibile: gruppo di righe in fase di compilazione. Esempio: <br />Un gruppo di righe nel columnstore è invisibile mentre i dati vengono compressi. Al termine della compressione, un'opzione di metadati modifica lo stato del gruppo di righe columnstore da invisibile a compresso e lo stato del gruppo di righe deltastore da chiuso a contrassegnato per la rimozione definitiva.<br /><br /> 1: apre un gruppo di righe deltastore che accetta nuove righe. Un gruppo di righe aperto presenta ancora il formato rowstore e non è stato compresso nel formato columnstore.<br /><br /> 2-CLOSED: un gruppo di righe nell'archivio Delta che contiene il numero massimo di righe ed è in attesa del processo del motore di Tuple per comprimerlo nel columnstore.<br /><br /> 3-compresso: un gruppo di righe compresso con la compressione columnstore e archiviato nel columnstore.<br /><br /> 4-TOMBSTONE: gruppo di righe precedentemente presente in deltastore e non più utilizzato.|  
 |**total_rows**|**bigint**|Numero di righe archiviate fisicamente nel gruppo di righe. Per gruppi di righe compressi. Include le righe contrassegnate come eliminate.|  
 |**deleted_rows**|**bigint**|Numero di righe archiviate fisicamente in un gruppo di righe compresso contrassegnate per l'eliminazione.<br /><br /> 0 per i gruppi di righe presenti nell'archivio differenziale.|  
 |**size_in_bytes**|**bigint**|Dimensioni combinate, in byte, di tutte le pagine di questo gruppo di righe. Questa dimensione non include le dimensioni necessarie per archiviare i metadati o i dizionari condivisi.|  

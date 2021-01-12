@@ -22,14 +22,14 @@ helpviewer_keywords:
 - compatibility [SQL Server], system tables
 - user IDs [SQL Server]
 ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 3eb92654dfb25a0e66d2e071040e487e6a404366
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 7ba0c3b5c023d1d2b6a3d025de7f96f49a4b3c1a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482042"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095300"
 ---
 # <a name="system-compatibility-views-transact-sql"></a>Viste di compatibilità del sistema (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,16 +46,16 @@ ms.locfileid: "88482042"
 |**UserType**|**syscolumns**|**sys.columns**|  
 |**memberuid**|**sysmembers**|**sys.database_role_members**|  
 |**groupuid**|**sysmembers**|**sys.database_role_members**|  
-|**uid**|**sysobjects**|**sys.objects**|  
-|**uid**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
+|**UID**|**sysobjects**|**sys.objects**|  
+|**UID**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
 |**concedente**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
 |**xusertype**|**systypes**|**sys.types**|  
-|**uid**|**systypes**|**sys.types**|  
-|**uid**|**sysusers**|**sys.database_principals**|  
+|**UID**|**systypes**|**sys.types**|  
+|**UID**|**sysusers**|**sys.database_principals**|  
 |**altuid**|**sysusers**|**sys.database_principals**|  
 |**gid**|**sysusers**|**sys.database_principals**|  
-|**uid**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
-|**uid**|**sysprocesses**|**sys.dm_exec_requests**|  
+|**UID**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
+|**UID**|**sysprocesses**|**sys.dm_exec_requests**|  
   
  Quando si fa riferimento a un database utente, le tabelle di sistema che sono state annunciate come deprecate in SQL Server 2000 (ad esempio **syslanguages** o **syscacheobjects**) vengono ora associate alla vista di compatibilità back nello schema **sys** . Poiché le tabelle di sistema di SQL Server 2000 sono state deprecate per più versioni, tale modifica non viene considerata una modifica di rilievo.  
   

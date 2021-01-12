@@ -1,6 +1,6 @@
 ---
 description: sys.spatial_index_tessellations (Transact-SQL)
-title: sys. spatial_index_tessellations (Transact-SQL) | Microsoft Docs
+title: sys.spatial_index_tessellations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.spatial_index_tessellations catalog view
 ms.assetid: 8b17a9a4-b57f-4220-8138-fc73581b1670
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 783c73ba514e348cd515929ae988c4097225ec5b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: ddf7b9cd75999da6cc48f6e7a83bab7a733f822b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539494"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095419"
 ---
 # <a name="sysspatial_index_tessellations-transact-sql"></a>sys.spatial_index_tessellations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "89539494"
 
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|object_id|**int**|ID dell'oggetto in cui è definito l'indice. Ogni coppia (object_id, index_id) ha una voce corrispondente in [sys. spatial_indexes](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md).|  
+|object_id|**int**|ID dell'oggetto in cui è definito l'indice. Ogni coppia (object_id, index_id) ha una voce corrispondente in [sys.spatial_indexes](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md).|  
 |index_id|**int**|ID dell'indice spaziale in cui è definita la colonna indicizzata.|  
 |tessellation_scheme|**sysname**|Nome dello schema a mosaico, uno di: GEOMETRY_GRID, GEOGRAPHY_GRID|  
 |bounding_box_xmin|**float(53)**|Coordinata x dell'angolo inferiore sinistro del rettangolo di delimitazione, uno di: NULL = non applicabile per uno schema a mosaico specificato (ad esempio GEOGRAPHY_GRID) *n* = Se tessellation_scheme è GEOMETRY_GRID, il valore della coordinata x-min.                     **Nota:** Le coordinate definite dai parametri del rettangolo di delimitazione vengono interpretate per ogni oggetto in base al relativo [identificatore SRID](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).|  

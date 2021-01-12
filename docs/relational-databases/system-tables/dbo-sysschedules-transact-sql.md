@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysschedules system table
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9c0bb164d77ba4c505207e56897ecc17f8644821
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 31c49370b1e2ed2b5685bf46b0918fd0173f7119
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545809"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096236"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "89545809"
 |**freq_subday_type**|**int**|Unità per la **freq_subday_interval**. Di seguito sono riportati i valori possibili e le relative descrizioni.<br /><br /> <br /><br /> **1** : all'ora specificata<br /><br /> **2** : secondi<br /><br /> **4** : minuti<br /><br /> **8** : ore|  
 |**freq_subday_interval**|**int**|Numero di periodi di **freq_subday_type** tra le esecuzioni del processo.|  
 |**freq_relative_interval**|**int**|Quando **freq_interval** si verifica ogni mese, se **freq_type** è **32** (mensile relativo). I possibili valori sono i seguenti:<br /><br /> **0**  =  **freq_relative_interval** non è usato<br /><br /> **1** = prima<br /><br /> **2** = secondo<br /><br /> **4** = terzo<br /><br /> **8** = quarto<br /><br /> **16** = Ultima|  
-|**freq_recurrence_**<br /><br /> **Factor**|**int**|Numero di settimane o mesi tra le esecuzioni pianificate di un processo. **freq_recurrence_factor** viene utilizzato solo se **freq_type** è **8**, **16**o **32**. Se questa colonna contiene **0**, **freq_recurrence_factor** non è utilizzata.|  
+|**freq_recurrence_**<br /><br /> **Factor**|**int**|Numero di settimane o mesi tra le esecuzioni pianificate di un processo. **freq_recurrence_factor** viene utilizzato solo se **freq_type** è **8**, **16** o **32**. Se questa colonna contiene **0**, **freq_recurrence_factor** non è utilizzata.|  
 |**active_start_date**|**int**|Data dalla quale è possibile avviare l'esecuzione del processo. La data è nel formato AAAAMMGG. NULL indica la data odierna.|  
 |**active_end_date**|**int**|Data dalla quale è possibile arrestare l'esecuzione del processo. La data è nel formato AAAAMMGG.|  
 |**active_start_time**|**int**|Tempo che intercorre tra **active_start_date** e **active_end_date** avvio dell'esecuzione del processo. L'ora è nel formato HHMMSS, a 24 ore.|  

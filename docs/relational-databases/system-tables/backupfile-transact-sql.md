@@ -17,14 +17,14 @@ helpviewer_keywords:
 - file backups [SQL Server], backupfile system table
 - backupfile system table
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e59789c2d4de9174a43b34881e7b45a914cfd2c3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8c9086ca4c3c97b9a10cd9d460eaf69408373551
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89525503"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096309"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "89525503"
 |**first_media_number**|**smallint**|Numero del primo supporto che include il file di backup. Può essere NULL.|  
 |**filegroup_name**|**nvarchar(128)**|Nome del filegroup che include un file di database di backup. Può essere NULL.|  
 |**page_size**|**int**|Dimensioni della pagina in byte.|  
-|**file_number**|**numerico (10, 0)**|Numero di identificazione del file univoco all'interno di un database (corrisponde a **sys. database_files**.** file_id**).|  
+|**file_number**|**numerico (10, 0)**|Numero di identificazione del file univoco all'interno di un database (corrisponde a **sys.database_files**.**file_id**).|  
 |**backed_up_page_count**|**numerico (10, 0)**|Numero di pagine di cui è stato eseguito il backup. Può essere NULL.|  
 |**file_type**|**char(1)**|File di cui è stato eseguito il backup. I valori possibili sono:<br /><br /> D = file di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> L = file di log [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> F = catalogo full-text.<br /><br /> Può essere NULL.|  
 |**source_file_block_size**|**numerico (10, 0)**|Dispositivo in cui si trova il file di dati o di log originale quando viene eseguito il backup. Può essere NULL.|  

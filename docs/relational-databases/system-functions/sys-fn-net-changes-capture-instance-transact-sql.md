@@ -19,14 +19,14 @@ helpviewer_keywords:
 - fn_net_changes_<capture_instance>
 - sys.fn_net_changes_<capture_instance>
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 59d8214083046510d9c4d71724d1aab1c96b1e1d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: eb0c58b3544afd5fa529db0c95af7c2f6ba3e6d3
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427763"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096348"
 ---
 # <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
  *end_time*  
  Valore **DateTime** che rappresenta l'endpoint superiore dell'intervallo delle voci della tabella delle modifiche da includere nel set di risultati.  
   
- Questo parametro può assumere uno dei due significati, a seconda del valore scelto per @closed_high_end_point quando viene chiamato sys. sp_cdc_generate_wrapper_function per generare lo script per la creazione della funzione wrapper:  
+ Questo parametro può assumere uno dei due significati, a seconda del valore scelto per @closed_high_end_point quando viene chiamato sys.sp_cdc_generate_wrapper_function per generare lo script per la creazione della funzione wrapper:  
   
 -   @closed_high_end_point = 1  
   
@@ -96,12 +96,12 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 |Nome colonna|Tipo di colonna|Descrizione|  
 |-----------------|-----------------|-----------------|  
-|\<columns from @column_list>|**variabile**|Le colonne identificate nell'argomento **column_list** per la sp_cdc_generate_wrapper_function quando viene chiamata per generare lo script per creare il wrapper. Se *column_list* è null, tutte le colonne di origine rilevate verranno visualizzate nel set di risultati.|  
-|__CDC_OPERATION|**nvarchar(2)**|Codice operativo che indica che l'operazione è necessaria per applicare la riga all'ambiente di destinazione. L'operazione può variare in base al valore dell'argomento *row_filter_option* fornito nella chiamata seguente:<br /><br /> *row_filter_option* =' all',' all with mask '<br /><br /> 'D' - operazione di eliminazione<br /><br /> 'I' - operazione di inserimento<br /><br /> 'UN' - operazione di aggiornamento<br /><br /> *row_filter_option* =' all with merge '<br /><br /> 'D' - operazione di eliminazione<br /><br /> 'M' - operazione di inserimento oppure di aggiornamento|  
+|\<columns from @column_list>|**varia**|Le colonne identificate nell'argomento **column_list** per la sp_cdc_generate_wrapper_function quando viene chiamata per generare lo script per creare il wrapper. Se *column_list* è null, tutte le colonne di origine rilevate verranno visualizzate nel set di risultati.|  
+|__CDC_OPERATION|**nvarchar (2)**|Codice operativo che indica che l'operazione è necessaria per applicare la riga all'ambiente di destinazione. L'operazione può variare in base al valore dell'argomento *row_filter_option* fornito nella chiamata seguente:<br /><br /> *row_filter_option* =' all',' all with mask '<br /><br /> 'D' - operazione di eliminazione<br /><br /> 'I' - operazione di inserimento<br /><br /> 'UN' - operazione di aggiornamento<br /><br /> *row_filter_option* =' all with merge '<br /><br /> 'D' - operazione di eliminazione<br /><br /> 'M' - operazione di inserimento oppure di aggiornamento|  
 |\<columns from @update_flag_list>|**bit**|Flag di bit denominato aggiungendo _uflag al nome della colonna. Il flag accetta un valore non null solo quando *row_filter_option* **=' all with mask '** e \_ _CDC_OPERATION **=' un'**. È impostato su 1 se la colonna corrispondente è stata modificata all'interno della finestra di query. Altrimenti, è impostato su 0.|  
   
 ## <a name="remarks"></a>Osservazioni  
- Il fn_net_changes_<capture_instance funzione> funge da wrapper per la funzione di query CDC. fn_cdc_get_net_changes_<capture_instance>. La stored procedure sys.sp_cdc_generate_wrapper viene utilizzata per creare lo script per il wrapper.  
+ Il fn_net_changes_<capture_instance funzione> funge da wrapper per la funzione di query CDC.fn_cdc_get_net_changes_<capture_instance>. La stored procedure sys.sp_cdc_generate_wrapper viene utilizzata per creare lo script per il wrapper.  
   
  Le funzioni wrapper non vengono create automaticamente. Per creare le funzioni wrapper, è necessario eseguire due operazioni:  
   
@@ -120,7 +120,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
  Il modello di configurazione Change Data Capture ' Instantiate CDC wrapper funzioni con valori for schema ' Mostra come utilizzare il stored procedure sp_cdc_generate_wrapper_function per ottenere gli script di creazione per tutte le funzioni wrapper per le funzioni di query definite di uno schema. Il modello crea quindi tali script. Per ulteriori informazioni sui modelli, vedere [Esplora modelli](../../ssms/template/template-explorer.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. sp_cdc_generate_wrapper_function &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
+ [sys.sp_cdc_generate_wrapper_function &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
  [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
   
   

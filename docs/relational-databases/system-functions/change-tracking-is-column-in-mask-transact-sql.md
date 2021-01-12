@@ -17,15 +17,15 @@ helpviewer_keywords:
 - change tracking [SQL Server], CHANGE_TRACKING_IS_COLUMN_IN_MASK
 - CHANGE_TRACKING_IS_COLUMN_IN_MASK
 ms.assetid: 649b370b-da54-4915-919d-1b597a39d505
-author: rothja
-ms.author: jroth
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e1961dec1f32006d7a4b3d91b7b8763f34ce3514
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a9d5ee6c44e0b0ca9544ee4a32b7cbd455497fe6
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440617"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095011"
 ---
 # <a name="change_tracking_is_column_in_mask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,10 +59,10 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 |0|La colonna specificata non è presente nell'elenco *change_columns* .|  
 |1|La colonna specificata si trova nell'elenco *change_columns* .|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  CHANGE_TRACKING_IS_COLUMN_IN_MASK non esegue alcun controllo per convalidare il valore *column_id* o che è stato ottenuto il parametro *change_columns* dalla tabella da cui è stato ottenuto il *column_id* .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene determinato se è stata aggiornata la colonna `Salary` della tabella `Employees`. La `COLUMNPROPERTY` funzione restituisce l'ID della colonna `Salary` . La variabile locale `@change_columns` deve essere impostata sui risultati di una query utilizzando CHANGETABLE come origine dati.  
   
 ```sql  

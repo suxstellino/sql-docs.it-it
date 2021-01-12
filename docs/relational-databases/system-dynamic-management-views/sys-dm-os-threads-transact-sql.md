@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_threads dynamic management view
 ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 96a25a69c14919c4e0108537af105108a813c3fd
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c0163e4176202f4bfe8b55ecca0fe4812ec5d26b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472872"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096500"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,8 +52,8 @@ ms.locfileid: "97472872"
 |stack_bytes_used|**int**|Numero di byte attivamente utilizzati nel thread.|  
 |affinity|**bigint**|Maschera della CPU nella quale il thread è in esecuzione. Dipende dal valore configurato dall'istruzione **ALTER Server Configuration set process Affinity** . Potrebbe essere diverso dall'utilità di pianificazione in caso di affinità soft.|  
 |Priorità|**int**|Valore di priorità del thread.|  
-|Impostazioni locali|**int**|Identificatore delle impostazioni locali (LCID) nella cache per il thread.|  
-|token|**varbinary (8)**|Handle del token di rappresentazione nella cache per il thread.|  
+|Locale|**int**|Identificatore delle impostazioni locali (LCID) nella cache per il thread.|  
+|Token|**varbinary (8)**|Handle del token di rappresentazione nella cache per il thread.|  
 |is_impersonating|**int**|Indica se il thread utilizza la rappresentazione Win32.<br /><br /> 1 = Il thread utilizza credenziali di sicurezza diverse da quelle predefinite del processo. Ciò indica che il thread rappresenta un'entità diversa da quella che ha creato il processo.|  
 |is_waiting_on_loader_lock|**int**|Stato del sistema operativo indicante se il thread è in attesa di un blocco del caricatore.|  
 |fiber_data|**varbinary (8)**|Fiber Win32 corrente in esecuzione nel thread. È applicabile solo in caso di configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per il lightweight pooling.|  
@@ -75,7 +75,7 @@ Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in 
 
 Poiché il motore SQL funziona in Linux, alcune di queste informazioni non corrispondono ai dati di diagnostica di Linux. Ad esempio, non `os_thread_id` corrisponde al risultato di strumenti quali `ps` `top` o procfs (/proc/ `pid` ).  A causa del livello di astrazione della piattaforma (SQLPAL), un livello tra SQL Server componenti e il sistema operativo.
 
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  All'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vengono avviati dei thread a cui vengono associati thread di lavoro. Componenti esterni, ad esempio una stored procedure estesa, possono tuttavia avviare thread nel processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non dispone di controllo su questi thread. sys.dm_os_threads possibile fornire informazioni sui thread non autorizzati che utilizzano risorse nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo.  
   
  La query seguente consente di individuare i thread di lavoro che eseguono thread non avviati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], con il tempo utilizzato per l'esecuzione.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - dm_database_copies
 - sys.dm_database_copies
 ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: f0ae8e1f4ec9fdf83ce3f143c175fd08b153a960
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ef0c92766cfb03f56dfc08a476cb7e81dbf4743d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475062"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095184"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies (Database di SQL Azure)
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
@@ -59,7 +59,7 @@ Per restituire informazioni sui collegamenti di replica geografica, usare le vis
 ## <a name="permissions"></a>Autorizzazioni  
  Questa vista è disponibile solo nel database **Master** per l'account di accesso dell'entità di livello server.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  È possibile utilizzare la vista **sys.dm_database_copies** nel database **Master** del server di origine o di destinazione [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Quando la copia del database viene completata correttamente e il nuovo database diventa ONLINE, la riga nella vista **sys.dm_database_copies** viene rimossa automaticamente.  
   
   

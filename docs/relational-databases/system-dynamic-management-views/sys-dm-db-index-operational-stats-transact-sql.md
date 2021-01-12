@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_index_operational_stats dynamic management function
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b1f177d09dd741eadc967a2b32a87a905e04dfb6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a6eb4083361d07fee44557d20dd4be4625cbdb12
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475072"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095181"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -133,7 +133,7 @@ sys.dm_db_index_operational_stats (
 |**page_compression_attempt_count**|**bigint**|Numero di pagine valutate per la compressione di tipo PAGE per partizioni specifiche di una tabella, un indice o una vista indicizzata. Sono incluse le pagine che non sono state compresse perché la compressione non avrebbe comportato risparmi significativi. Sempre 0 per un indice columnstore.|    
 |**page_compression_success_count**|**bigint**|Numero di pagine di dati valutate compresse utilizzando la compressione di tipo PAGE per partizioni specifiche di una tabella, un indice o una vista indicizzata. Sempre 0 per un indice columnstore.|    
     
-## <a name="remarks"></a>Commenti    
+## <a name="remarks"></a>Osservazioni    
  Questo oggetto a gestione dinamica non accetta parametri correlati da `CROSS APPLY` e `OUTER APPLY` .    
     
  È possibile utilizzare **sys.dm_db_index_operational_stats** per tenere traccia della quantità di tempo che gli utenti devono attendere per leggere o scrivere in una tabella, un indice o una partizione e per identificare tabelle e indici in cui viene rilevata una significativa attività di I/O o aree critiche.    

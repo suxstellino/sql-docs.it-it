@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_monitor_history_detail system table
 ms.assetid: 7080c888-323b-4206-a1ab-e6c51f9e2579
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 515a2b38f10beca9c4797ce02d48387bfa662707
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 3cd8f1b5c42d62ed508527b46d4a3705ad63dd09
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544547"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094838"
 ---
 # <a name="log_shipping_monitor_history_detail-transact-sql"></a>log_shipping_monitor_history_detail (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "89544547"
 |**message**|**nvarchar(max)**|Testo del messaggio.|  
   
 ## <a name="remarks"></a>Osservazioni  
- Questa tabella contiene i dettagli della cronologia per gli agenti per il log shipping. Per identificare una sessione di Agent, utilizzare le colonne **agent_id**, **agent_type**e **session_id**. Per visualizzare i dettagli della cronologia per la sessione dell'agente, Ordina per **log_time**.  
+ Questa tabella contiene i dettagli della cronologia per gli agenti per il log shipping. Per identificare una sessione di Agent, utilizzare le colonne **agent_id**, **agent_type** e **session_id**. Per visualizzare i dettagli della cronologia per la sessione dell'agente, Ordina per **log_time**.  
   
  Oltre a essere archiviate sul server di monitoraggio remoto, le informazioni relative al server primario vengono archiviate nel server primario nella tabella **log_shipping_monitor_history_detail** e le informazioni relative a un server secondario vengono inoltre archiviate nel server secondario nella tabella **log_shipping_monitor_history_detail** .  
   

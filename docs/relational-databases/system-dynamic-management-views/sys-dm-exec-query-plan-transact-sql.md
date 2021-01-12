@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_query_plan (Transact-SQL)
-title: sys. dm_exec_query_plan (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_query_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_plan dynamic management function
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 741cfebb7eb50e37512a5778691ab61700f9d98e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 18d6e4e8e3c6fe097676d1bf65f337610127566a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548548"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094117"
 ---
 # <a name="sysdm_exec_query_plan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,9 +53,9 @@ Il *plan_handle* può essere ottenuto dagli oggetti a gestione dinamica seguenti
   
 -   [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
--   [sys. dm_exec_procedure_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+-   [sys.dm_exec_procedure_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
--   [sys. dm_exec_trigger_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
+-   [sys.dm_exec_trigger_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
@@ -74,21 +74,21 @@ Il *plan_handle* può essere ottenuto dagli oggetti a gestione dinamica seguenti
   
 -   Alcune istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] non vengono memorizzate nella cache, ad esempio le istruzioni per operazioni bulk o le istruzioni che contengono valori letterali stringa con dimensioni maggiori di 8 KB. Non è possibile recuperare Showplan XML per tali istruzioni tramite **sys.dm_exec_query_plan** a meno che il batch non sia in esecuzione, perché non esistono nella cache.  
   
--   Se un [!INCLUDE[tsql](../../includes/tsql-md.md)] batch o stored procedure contiene una chiamata a una funzione definita dall'utente o una chiamata a SQL dinamico, ad esempio tramite exec (*String*), lo Showplan XML compilato per la funzione definita dall'utente non viene incluso nella tabella restituita da **sys. dm_exec_query_plan** per il batch o stored procedure. È invece necessario eseguire una chiamata separata a **sys. dm_exec_query_plan** per l'handle di piano corrispondente alla funzione definita dall'utente.  
+-   Se un [!INCLUDE[tsql](../../includes/tsql-md.md)] batch o stored procedure contiene una chiamata a una funzione definita dall'utente o una chiamata a SQL dinamico, ad esempio tramite exec (*String*), lo Showplan XML compilato per la funzione definita dall'utente non viene incluso nella tabella restituita da **sys.dm_exec_query_plan** per il batch o stored procedure. È invece necessario eseguire una chiamata separata a **sys.dm_exec_query_plan** per l'handle di piano corrispondente alla funzione definita dall'utente.  
   
  Quando una query ad hoc utilizza la parametrizzazione semplice o forzata, la colonna **query_plan** conterrà solo il testo dell'istruzione e non il piano di query effettivo. Per restituire il piano di query, chiamare **sys.dm_exec_query_plan** per l'handle del piano della query con parametri preparata. È possibile determinare se è stata eseguita la parametrizzazione della query facendo riferimento alla colonna **sql** della vista [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) o alla colonna di testo della DMV [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
   
 > [!NOTE] 
-> A causa di una limitazione del numero di livelli annidati consentiti nel tipo di dati **XML** , **sys. dm_exec_query_plan** non può restituire piani di query che soddisfano o superano 128 livelli di elementi annidati. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa condizione impediva il completamento del piano di query e generava l'errore 6335. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e versioni successive, la colonna **QUERY_PLAN** restituisce null.   
-> È possibile utilizzare la funzione a gestione dinamica [sys. dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) per restituire l'output del piano di query in formato testo.  
+> A causa di una limitazione del numero di livelli annidati consentiti nel tipo di dati **XML** , **sys.dm_exec_query_plan** non può restituire piani di query che soddisfino o superino 128 livelli di elementi annidati. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa condizione impediva il completamento del piano di query e generava l'errore 6335. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e versioni successive, la colonna **QUERY_PLAN** restituisce null.   
+> È possibile utilizzare la sys.dm_exec_text_query_plan &#40;funzione a gestione dinamica [&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) per restituire l'output del piano di query in formato testo.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Per eseguire **sys. dm_exec_query_plan**, un utente deve essere un membro del ruolo predefinito del server **sysadmin** o disporre dell' `VIEW SERVER STATE` autorizzazione per il server.  
+ Per eseguire **sys.dm_exec_query_plan**, un utente deve essere un membro del ruolo predefinito del server **sysadmin** o disporre dell' `VIEW SERVER STATE` autorizzazione per il server.  
   
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti viene illustrato l'utilizzo della vista a gestione dinamica **sys.dm_exec_query_plan**.  
   
- Per visualizzare i Showplan XML, eseguire le query seguenti nell'editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e quindi fare clic su **ShowPlanXML** nella colonna **query_plan** della tabella restituita da **sys.dm_exec_query_plan**. Il piano Showplan XML verrà visualizzato nel riquadro di riepilogo di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per salvare lo Showplan XML in un file, fare clic con il pulsante destro del mouse su **ShowplanXml** nella colonna **query_plan** , fare clic su **Salva risultati**con nome, denominare il file nel formato \<*file_name*> . sqlplan, ad esempio ShowplanXML. sqlplan.  
+ Per visualizzare i Showplan XML, eseguire le query seguenti nell'editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e quindi fare clic su **ShowPlanXML** nella colonna **query_plan** della tabella restituita da **sys.dm_exec_query_plan**. Il piano Showplan XML verrà visualizzato nel riquadro di riepilogo di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per salvare lo Showplan XML in un file, fare clic con il pulsante destro del mouse su **ShowplanXml** nella colonna **query_plan** , fare clic su **Salva risultati** con nome, denominare il file nel formato \<*file_name*> . sqlplan, ad esempio ShowplanXML. sqlplan.  
   
 ### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>R. Recupero del piano di query memorizzato nella cache per un query o un batch Transact-SQL con esecuzione prolungata  
  I piani delle query per vari tipi di batch [!INCLUDE[tsql](../../includes/tsql-md.md)], come batch ad hoc, stored procedure e funzioni definite dall'utente, vengono memorizzati nella cache in un'area della memoria denominata cache dei piani. Ogni piano della query memorizzato nella cache è identificato da un ID univoco denominato handle del piano. È possibile specificare l'handle del piano con la vista a gestione dinamica **sys.dm_exec_query_plan** per recuperare il piano di esecuzione per una query o un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] specifico.  
@@ -117,7 +117,7 @@ WHERE session_id = 54;
 GO  
 ```  
   
- La tabella restituita da **sys. dm_exec_requests** indica che l'handle del piano per la query o il batch con esecuzione prolungata è `0x06000100A27E7C1FA821B10600` , che è possibile specificare come argomento *plan_handle* con `sys.dm_exec_query_plan` per recuperare il piano di esecuzione in formato XML, come indicato di seguito. Il piano di esecuzione in formato XML per la query o il batch con esecuzione prolungata è contenuto nella colonna **query_plan** della tabella restituita da `sys.dm_exec_query_plan`.  
+ La tabella restituita da **sys.dm_exec_requests** indica che l'handle del piano per la query o il batch con esecuzione prolungata è `0x06000100A27E7C1FA821B10600` , che è possibile specificare come argomento *plan_handle* con `sys.dm_exec_query_plan` per recuperare il piano di esecuzione in formato XML, come indicato di seguito. Il piano di esecuzione in formato XML per la query o il batch con esecuzione prolungata è contenuto nella colonna **query_plan** della tabella restituita da `sys.dm_exec_query_plan`.  
   
 ```sql  
 USE master;  
@@ -166,10 +166,10 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
- [sys. dm_exec_query_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
+ [sys.dm_exec_query_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [Guida di riferimento a operatori Showplan logici e fisici](../../relational-databases/showplan-logical-and-physical-operators-reference.md)   
- [sys. dm_exec_text_query_plan &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
+ [sys.dm_exec_text_query_plan &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
   
   

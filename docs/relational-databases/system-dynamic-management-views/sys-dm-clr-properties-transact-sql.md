@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_properties dynamic management view
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81f9cde748697d9c69bdcfd67b3e2a4db7907ab7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 34dfbfbecf82df79520fc5a530bcb8c18c544c77
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466892"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095277"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "97466892"
   
  Lo **stato di CLR arrestato** viene visualizzato solo quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in corso l'arresto.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Le proprietà e i valori di questa visualizzazione potrebbero cambiare in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a causa dei miglioramenti della funzionalità di integrazione con CLR.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -77,7 +77,7 @@ ms.locfileid: "97466892"
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in pool elastici, il `Server admin` o un `Azure Active Directory admin` account è obbligatorio. Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.   
 
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  L'esempio seguente recupera informazioni relative al CLR hosted:  
   
 ```  

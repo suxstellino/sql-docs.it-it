@@ -20,14 +20,14 @@ helpviewer_keywords:
 - sys.fn_translate_permissions function
 - fn_translate_permissions function
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 1069d5b76d6ee404ddd2e671eb6a7b63396424ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: e4d00e0b945012cb8a1b583921328009d12a34ad
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481764"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094943"
 ---
 # <a name="sysfn_translate_permissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ sys.fn_translate_permissions ( level , perms )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *livello*  
+ *level*  
  Tipo di entità a protezione diretta a cui viene applicata l'autorizzazione. *Level* è di **tipo nvarchar (60)**.  
   
  *perms*  
@@ -54,7 +54,7 @@ sys.fn_translate_permissions ( level , perms )
  **tabella**  
   
 ## <a name="remarks"></a>Osservazioni  
- Il valore restituito nella colonna **autorizzazioni** di una traccia SQL è una rappresentazione Integer di una maschera di maschera utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per calcolare le autorizzazioni valide. Tutti i 25 tipi di entità a protezione diretta dispongono di un proprio set di autorizzazioni con valori numerici corrispondenti. **sys. fn_translate_permissions** converte questa maschera di maschera in una tabella di nomi di autorizzazioni.  
+ Il valore restituito nella colonna **autorizzazioni** di una traccia SQL è una rappresentazione Integer di una maschera di maschera utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per calcolare le autorizzazioni valide. Tutti i 25 tipi di entità a protezione diretta dispongono di un proprio set di autorizzazioni con valori numerici corrispondenti. **sys.fn_translate_permissions** converte questa maschera di maschera in una tabella di nomi di autorizzazioni.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
