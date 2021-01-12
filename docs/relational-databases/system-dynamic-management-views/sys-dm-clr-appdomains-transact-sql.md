@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_appdomains dynamic management dynamic management view
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7f1357535d22306f09f8378e8e71aef6801975ae
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: ae934fc3b9d8f7664e2542450ee1456298548c85
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834101"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097771"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "91834101"
 |State|Descrizione|  
 |-----------|-----------------|  
 |E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha richiesto che CLR scarichi l' **AppDomain**, in genere perché l'assembly che contiene gli oggetti di database gestiti è stato modificato o eliminato.|  
-|E_APPDOMAIN_UNLOADED|CLR ha scaricato l' **AppDomain**. Questo è in genere il risultato di una procedura di escalation dovuta a **ThreadAbort**, **OutOfMemory**o a un'eccezione non gestita nel codice utente.|  
+|E_APPDOMAIN_UNLOADED|CLR ha scaricato l' **AppDomain**. Questo è in genere il risultato di una procedura di escalation dovuta a **ThreadAbort**, **OutOfMemory** o a un'eccezione non gestita nel codice utente.|  
 |E_APPDOMAIN_ENQUEUE_DESTROY|**AppDomain** è stato scaricato in CLR e impostato per essere eliminato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |E_APPDOMAIN_DESTROY|È in corso l'eliminazione del **AppDomain** da parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |E_APPDOMAIN_ZOMBIE|**AppDomain** eliminato da. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tuttavia, non tutti i riferimenti a **AppDomain** sono stati eliminati.|  

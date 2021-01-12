@@ -1,6 +1,6 @@
 ---
 description: sys.extended_procedures (Transact-SQL)
-title: sys. extended_procedures (Transact-SQL) | Microsoft Docs
+title: sys.extended_procedures (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,19 +18,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.extended_procedures catalog view
 ms.assetid: 310e0f87-0044-4fdf-bd12-51a723a74ce6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1edc9a52c610c3a72660fb899d6f74470c1c00c4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 39bc02ba64b2f88b35b335b23125e0ad636d17fa
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551446"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096801"
 ---
 # <a name="sysextended_procedures-transact-sql"></a>sys.extended_procedures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Contiene una riga per ogni oggetto che è un stored procedure esteso, con **sys. Objects. Type** = X. Poiché le stored procedure estese sono installate nel database **Master** , sono visibili solo da quel contesto di database. Se si seleziona dalla vista **sys. extended_procedures** in un altro contesto di database, viene restituito un set di risultati vuoto.  
+  Contiene una riga per ogni oggetto che è un stored procedure esteso, con **sys. Objects. Type** = X. Poiché le stored procedure estese sono installate nel database **Master** , sono visibili solo da quel contesto di database. Se si seleziona dalla vista **sys.extended_procedures** in un altro contesto di database, viene restituito un set di risultati vuoto.  
 
   
 |Nome colonna|Tipo di dati|Descrizione|  

@@ -17,16 +17,16 @@ helpviewer_keywords:
 - dm_db_objects_impacted_on_version_change
 - sys.dm_db_objects_impacted_on_version_change
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 2996d419ae22b58c065eb2b6dbcdae6786703420
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f7830e874026b9d5af250fde294c8c72294d013d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466852"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097701"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Database di SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -61,12 +61,12 @@ class  class_desc        major_id    minor_id    dependency
 1      OBJECT_OR_COLUMN  101575400   NULL        geometry     
 ```  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
   
 ### <a name="how-to-update-impacted-objects"></a>Come aggiornare gli oggetti interessati  
  Nei passaggi ordinati seguenti viene descritta l'azione correttiva da intraprendere dopo l'aggiornamento dalla versione del servizio di giugno.  
   
-|Ordine|Oggetto interessato|Azione correttiva|  
+|JSON|Oggetto interessato|Azione correttiva|  
 |-----------|---------------------|-----------------------|  
 |1|**Indici**|Ricompilare gli indici identificati da **sys.dm_db_objects_impacted_on_version_change** ad esempio:  `ALTER INDEX ALL ON <table> REBUILD`<br />oppure<br />`ALTER TABLE <table> REBUILD`|  
 |2|**Object**|Tutti i vincoli identificati dalla vista **sys.dm_db_objects_impacted_on_version_change** devono essere riconvalidati dopo la rielaborazione dei dati geometry e geography nella tabella sottostante. Per i convalidi, riconvalidare utilizzando ALTER TABLE. <br />Ad esempio: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />o<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  

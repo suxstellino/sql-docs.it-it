@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_cursors (Transact-SQL)
-title: sys. dm_exec_cursors (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_cursors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_cursors dynamic management function
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 351f97ed08d1a6a79f8611d19842dc93138277ce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 8ab1ed9e722f2363c0568932e7eb337bc09dbe41
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543935"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099004"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,8 +53,8 @@ dm_exec_cursors (session_id | 0 )
 |**nome**|**nvarchar(256)**|Nome del cursore definito dall'utente.|  
 |**properties**|**nvarchar(256)**|Specifica le proprietà del cursore. I valori delle proprietà seguenti vengono concatenati per comporre il valore di questa colonna:<br />Interfaccia di dichiarazione<br />Tipo di cursore <br />Concorrenza dei cursori<br />Scopo del cursore<br />Livello di nidificazione del cursore<br /><br /> Il valore restituito in questa colonna, ad esempio, potrebbe essere "TSQL &#124; Dynamic &#124; ottimistica &#124; globale (0)".|  
 |**sql_handle**|**varbinary(64)**|Handle per il testo del batch che ha dichiarato il cursore.|  
-|**statement_start_offset**|**int**|Numero di caratteri nella stored procedure o nel batch attualmente in esecuzione in cui inizia l'istruzione in esecuzione. Può essere utilizzato in combinazione con il **sql_handle**, **statement_end_offset**e la funzione a gestione dinamica [sys. dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) per recuperare l'istruzione attualmente in esecuzione per la richiesta.|  
-|**statement_end_offset**|**int**|Numero di caratteri nella stored procedure o nel batch attualmente in esecuzione in cui termina l'istruzione in esecuzione. Può essere utilizzato in combinazione con il **sql_handle**, **statement_start_offset**e la funzione a gestione dinamica **sys. dm_exec_sql_text** per recuperare l'istruzione attualmente in esecuzione per la richiesta.|  
+|**statement_start_offset**|**int**|Numero di caratteri nella stored procedure o nel batch attualmente in esecuzione in cui inizia l'istruzione in esecuzione. Può essere utilizzato insieme all' **sql_handle**, **statement_end_offset** e [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) funzione a gestione dinamica per recuperare l'istruzione attualmente in esecuzione per la richiesta.|  
+|**statement_end_offset**|**int**|Numero di caratteri nella stored procedure o nel batch attualmente in esecuzione in cui termina l'istruzione in esecuzione. Può essere utilizzato insieme all' **sql_handle**, **statement_start_offset** e **sys.dm_exec_sql_text** funzione a gestione dinamica per recuperare l'istruzione attualmente in esecuzione per la richiesta.|  
 |**plan_generation_num**|**bigint**|Numero di sequenza utilizzabile per distinguere le istanze dei piani dopo la ricompilazione.|  
 |**creation_time**|**datetime**|Timestamp relativo alla creazione del cursore.|  
 |**is_open**|**bit**|Specifica se il cursore è aperto.|  
@@ -85,7 +85,7 @@ dm_exec_cursors (session_id | 0 )
 |Type|Descrizione|  
 |----------|-----------------|  
 |Keyset|Il cursore è stato dichiarato come Keyset.|  
-|Dinamico|Il cursore è stato dichiarato come Dynamic.|  
+|Dynamic|Il cursore è stato dichiarato come Dynamic.|  
 |Snapshot|Il cursore è stato dichiarato come Snapshot o Static.|  
 |Fast_Forward|Il cursore è stato dichiarato come Fast Forward.|  
   

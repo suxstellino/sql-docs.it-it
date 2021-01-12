@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysreplicationalerts system table
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cce33fa91f6ea11cda33e622edd39ec764b2c2ce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 2f44fb1f1b07b53705b45825955918c3026a2485
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537815"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097329"
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "89537815"
 |**alert_id**|**int**|ID dell'avviso.|  
 |**Stato**|**int**|Valore definito dall'utente:<br /><br /> **0** = non servizio.<br /><br /> **1** = servito.|  
 |**agent_type**|**int**|Tipo di agente:<br /><br /> **1** = agente di snapshot.<br /><br /> **2** = agente di lettura log.<br /><br /> **3** = agente di distribuzione.<br /><br /> **4** = agente di merge.|  
-|**agent_id**|**int**|ID dell'agente dalle tabelle **MSsnapshot_agents**, **MSlogreader_agents**, **MSdistribution_agents**o **MSmerge_agents**.|  
+|**agent_id**|**int**|ID dell'agente dalle tabelle **MSsnapshot_agents**, **MSlogreader_agents**, **MSdistribution_agents** o **MSmerge_agents**.|  
 |**error_id**|**int**|ID dell'errore archiviato in **MSrepl_errors**.|  
 |**alert_error_code**|**int**|ID di messaggio dell'avviso generato durante la registrazione del record.|  
 |**time**|**datetime**|Ora di inserimento del record.|  

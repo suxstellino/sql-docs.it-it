@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSdistpublishers system table
 ms.assetid: 31844099-4b33-4dc9-84b4-bac70aa82598
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: aa3f8872775f9d82a23d9ba2eb33a892696ca792
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 296bedcc14194dbba3a8f91cb8ebbc6553b6481c
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550993"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098203"
 ---
 # <a name="msdistpublishers-transact-sql"></a>MSdistpublishers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "89550993"
 |**nome**|**sysname**|Nome del server di pubblicazione remoto supportato dal server di distribuzione locale.|  
 |**distribution_db**|**sysname**|Nome del database di distribuzione.|  
 |**working_directory**|**nvarchar(255)**|Nome della directory di lavoro utilizzata per archiviare i file dei dati e di schema per la pubblicazione|  
-|**security_mode**|**int**|Modalità di sicurezza implementata nel server di distribuzione.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione 0.<br /><br /> **1** = autenticazione di Windows.|  
+|**security_mode**|**int**|Modalità di sicurezza implementata nel server di distribuzione.<br /><br />   =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione 0.<br /><br /> **1** = autenticazione di Windows.|  
 |**accesso**|**sysname**|ID dell'account di accesso per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**password**|**nvarchar (524)**|Password (crittografata) per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**active**|**bit**|Indica se il server di distribuzione locale viene utilizzato dal server di pubblicazione remoto.|  
 |**trusted**|**bit**|Indica se il server di pubblicazione remoto utilizza la stessa password del server di distribuzione locale:<br /><br /> **0** = per la connessione al server di distribuzione è necessaria una password nel server di pubblicazione remoto.<br /><br /> **1** = non è necessaria alcuna password.|  
-|**third_party**|**bit**|Indica se il server di pubblicazione è un computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installazione.** 1** = origine dati eterogenea.|  
-|**publisher_type**|**sysname**|Tipo di server di pubblicazione:<br /><br /> **MSSQLSERVER**  =  MSSQLSERVER [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Pubblicazione.<br /><br /> **Oracle** = server di pubblicazione Oracle standard.<br /><br /> **Oracle Gateway** = server di pubblicazione Oracle Gateway.|  
+|**third_party**|**bit**|Indica se il server di pubblicazione è un computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installazione.**1** = origine dati eterogenea.|  
+|**publisher_type**|**sysname**|Tipo di server di pubblicazione:<br /><br />   =  MSSQLSERVER [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Pubblicazione.<br /><br /> **Oracle** = server di pubblicazione Oracle standard.<br /><br /> **Oracle Gateway** = server di pubblicazione Oracle Gateway.|  
 |**storage_connection_string**|**nvarchar (779)**|Valore della stringa di connessione di archiviazione del database SQL di Azure.|  
 
   

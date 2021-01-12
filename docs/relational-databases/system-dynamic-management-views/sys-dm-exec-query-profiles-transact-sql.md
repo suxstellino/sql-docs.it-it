@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_profiles dynamic management view
 ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2f2148762f6f3a3b644d4c77d89cfc7879ba2f4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 80c59436a83795f4111dfae2997b8678b94e617e
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484743"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096598"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -93,7 +93,7 @@ A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, l' *infrastr
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e istanza gestita SQL `VIEW DATABASE STATE` di Azure sono necessarie l'autorizzazione e l'appartenenza al `db_owner` ruolo del database.   
 Nei [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] sugli obiettivi del servizio Basic, S0 e S1 del database SQL e per i database in pool elastici, il `Server admin` o un `Azure Active Directory admin` account è obbligatorio. Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.   
    
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Passaggio 1: accedere a una sessione in cui si prevede di eseguire la query con cui si eseguirà l'analisi `sys.dm_exec_query_profiles` . Per configurare la query per l'utilizzo della profilatura `SET STATISTICS PROFILE ON` . Eseguire la query in questa stessa sessione.  
   
 ```sql  

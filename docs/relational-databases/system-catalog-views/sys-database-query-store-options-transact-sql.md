@@ -14,19 +14,18 @@ f1_keywords:
 dev_langs:
 - TSQL
 helpviewer_keywords:
-- database_query_store_options catalog view
 - sys.database_query_store_options catalog view
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: ''
-ms.date: 05/27/2020
+ms.date: 1/8/2021
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f8fce0932d546470206bbc7752429090c0212158
-ms.sourcegitcommit: d681796e8c012eca2d9629d3b816749e9f50f868
+ms.openlocfilehash: 273e5c4446853c3f44d0c99535880c9c9da2aa5f
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98005414"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098065"
 ---
 # <a name="sysdatabase_query_store_options-transact-sql"></a>sys.database_query_store_options (Transact-SQL)
 
@@ -49,12 +48,17 @@ ms.locfileid: "98005414"
 |**max_storage_size_mb**|**bigint**|Dimensioni massime del disco per il Query Store in megabyte (MB). Il valore predefinito è **100** MB fino a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e **1 GB** a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] .<br />Per l' [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] edizione Premium, il valore predefinito è 1 GB e per l' [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] edizione Basic, il valore predefinito è 10 MB.<br /><br /> Modificare utilizzando l' `ALTER DATABASE <database> SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <size>)` istruzione.|  
 |**stale_query_threshold_days**|**bigint**|Numero di giorni per cui le informazioni per una query vengono mantenute nella Query Store. Il valore predefinito è **30**. Impostare su 0 per disabilitare i criteri di conservazione.<br />Per l'edizione [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic, l'impostazione predefinita è 7 giorni.<br /><br /> Modificare utilizzando l' `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` istruzione.|  
 |**max_plans_per_query**|**bigint**|Limita il numero massimo di piani archiviati. Il valore predefinito è **200**. Se viene raggiunto il valore massimo, Query Store interrompe l'acquisizione dei nuovi piani per la query. Impostando su 0 viene rimossa la limitazione per quanto riguarda il numero di piani acquisiti.<br /><br /> Modificare utilizzando l' `ALTER DATABASE<database> SET QUERY_STORE (MAX_PLANS_PER_QUERY = <n>)` istruzione.|  
-|**query_capture_mode**|**smallint**|Modalità di acquisizione query attualmente attiva:<br /><br /> **1** = tutte le query vengono acquisite. Si tratta del valore di configurazione predefinito per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive).<br /><br /> 2 = Acquisisci automaticamente le query pertinenti in base al numero di esecuzioni e al consumo di risorse. Si tratta del valore di configurazione predefinito di [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].<br /><br /> 3 = NONE: interrompe l'acquisizione di nuove query. Query Store continuerà a raccogliere le statistiche di compilazione e runtime per le query che sono già state acquisite. Usare questa configurazione con cautela poiché è possibile che l'acquisizione di query importanti non venga eseguita.|  
-|**query_capture_mode_desc**|**nvarchar(60)**|Descrizione testuale della modalità di acquisizione effettiva di Query Store:<br /><br /> ALL (impostazione predefinita per [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] )<br /><br /> **Auto** (impostazione predefinita per [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] )<br /><br /> NONE|  
+|**query_capture_mode**|**smallint**|Modalità di acquisizione query attualmente attiva:<br /><br /> **1** = tutte le query vengono acquisite. Si tratta del valore di configurazione predefinito per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive).<br /><br /> 2 = Acquisisci automaticamente le query pertinenti in base al numero di esecuzioni e al consumo di risorse. Si tratta del valore di configurazione predefinito di [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].<br /><br /> 3 = NONE: interrompe l'acquisizione di nuove query. Query Store continuerà a raccogliere le statistiche di compilazione e runtime per le query che sono già state acquisite. Usare questa configurazione con cautela poiché è possibile che l'acquisizione di query importanti non venga eseguita. <br /><br /> 4 = personalizzato: consente di controllare ulteriormente i criteri di acquisizione delle query usando le [opzioni QUERY_CAPTURE_POLICY](../../t-sql/statements/alter-database-transact-sql-set-options.md#SettingOptions).<br /> **Si applica a**: [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] e versioni successive.|  
+|**query_capture_mode_desc**|**nvarchar(60)**|Descrizione testuale della modalità di acquisizione effettiva di Query Store:<br /><br /> ALL (impostazione predefinita per [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] )<br /><br /> **Auto** (impostazione predefinita per [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] )<br /><br /> NONE <br /><br /> CUSTOM|  
+|**capture_policy_execution_count**|**int**|Opzione criteri personalizzati modalità di acquisizione query. Definisce il numero di esecuzioni di una query nel periodo di valutazione. Il valore predefinito è 30.<br />**Si applica a**: [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] e versioni successive.| 
+|**capture_policy_total_compile_cpu_time_ms**|**bigint**|Opzione criteri personalizzati modalità di acquisizione query. Definisce il tempo CPU di compilazione trascorso totale usato da una query nel periodo di valutazione. Il valore predefinito è 1000.<br /> **Si applica a**: [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] e versioni successive.|
+|**capture_policy_total_execution_cpu_time_ms**|**bigint**|Opzione criteri personalizzati modalità di acquisizione query. Definisce il tempo CPU di esecuzione trascorso totale usato da una query nel periodo di valutazione. Il valore predefinito è 100.<br /> **Si applica a**: [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] e versioni successive.|
+|**capture_policy_stale_threshold_hours**|**int**|Opzione criteri personalizzati modalità di acquisizione query. Definisce l'intervallo di valutazione per determinare se una query deve essere acquisita. Il valore predefinito è 24 ore.<br /> **Si applica a**: [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] e versioni successive.|
 |**size_based_cleanup_mode**|**smallint**|Determina se la pulizia viene attivata automaticamente quando la quantità totale dei dati ha quasi raggiunto le dimensioni massime:<br /><br /> 0 = la pulizia non basata sulle dimensioni non verrà attivata automaticamente.<br /><br /> **1** = la pulizia basata sulle dimensioni automatiche verrà attivata automaticamente quando le dimensioni su disco raggiungono il **90%** del *max_storage_size_mb*. Si tratta del valore di configurazione predefinito.<br /><br />La pulizia basata sulle dimensioni rimuove per prime le query meno recenti e meno dispendiose. Si interrompe quando viene raggiunto approssimativamente il **80%** del *max_storage_size_mb* .|  
 |**size_based_cleanup_mode_desc**|**nvarchar(60)**|Descrizione testuale della modalità di pulizia effettiva basata sulle dimensioni di Query Store:<br /><br /> OFF <br /> **Automatico** (impostazione predefinita)|  
 |**wait_stats_capture_mode**|**smallint**|Controlla se Query Store esegue l'acquisizione delle statistiche di attesa: <br /><br /> 0 = OFF <br /> **1** = on<br /> **Si applica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e versioni successive.|
-|**wait_stats_capture_mode_desc**|**nvarchar(60)**|Descrizione testuale della modalità di acquisizione delle statistiche di attesa effettiva: <br /><br /> OFF <br /> **On** (impostazione predefinita)<br /> **Si applica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e versioni successive.| 
+|**wait_stats_capture_mode_desc**|**nvarchar(60)**|Descrizione testuale della modalità di acquisizione delle statistiche di attesa effettiva: <br /><br /> OFF <br /> **On** (impostazione predefinita)<br /> **Si applica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e versioni successive.|
+|**actual_state_additional_info**|**nvarchar (8000)**|Attualmente non usato. Potrebbe essere implementato in futuro.|
   
 ## <a name="permissions"></a>Autorizzazioni  
  È necessaria l'autorizzazione `VIEW DATABASE STATE`.  
@@ -71,5 +75,3 @@ ms.locfileid: "98005414"
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.fn_stmt_sql_handle_from_sql_stmt &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
  [Stored procedure di Query Store &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
-  
-  

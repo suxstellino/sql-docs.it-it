@@ -16,15 +16,15 @@ helpviewer_keywords:
 - firewall_rules
 - sys.firewall_rules
 ms.assetid: 140d2cd8-9aa1-4cc5-870d-e1dbc873b3fe
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: b7e08498a9f3867c03c2198957af0ac35f9a0a01
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 351ca530c49051b61b6f44b8dc2fbff83623cf8f
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477432"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097991"
 ---
 # <a name="sysfirewall_rules-azure-sql-database"></a>sys.firewall_rules (Database SQL di Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "97477432"
 |create_date|**DATETIME**|Data e ora UTC in cui è stata creata l'impostazione del firewall a livello di server.<br /><br /> Nota: UTC è un acronimo di Coordinated Universal Time.|  
 |modify_date|**DATETIME**|Data e ora UTC in cui è stata modificata per l'ultima volta l'impostazione del firewall a livello di server.|  
   
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
  Per restituire informazioni sulle impostazioni del firewall a livello di database associate alla database SQL di Microsoft Azure, usare [sys.database_firewall_rules &#40;&#41;del database SQL di Azure ](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md).  
   

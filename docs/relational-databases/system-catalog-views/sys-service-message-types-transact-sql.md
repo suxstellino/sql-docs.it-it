@@ -1,6 +1,6 @@
 ---
 description: sys.service_message_types (Transact-SQL)
-title: sys. service_message_types (Transact-SQL) | Microsoft Docs
+title: sys.service_message_types (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.service_message_types catalog view
 ms.assetid: 6a38709a-60fe-46f6-89da-718f74f15600
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3eaaa45f6f34e690b7b8abc3fc0366b54748b16c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: ab7a81f1f288ad533fa6a32ccec6e1de8dbad9d7
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550414"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097872"
 ---
 # <a name="sysservice_message_types-transact-sql"></a>sys.service_message_types (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

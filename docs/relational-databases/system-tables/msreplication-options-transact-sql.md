@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_options system table
 ms.assetid: 23cf10d7-8bc1-4368-b5eb-e5576421e776
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 096eb8379363e3a193ecea12593638e033c3b1ec
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 263436f5bd3ff691191d74b29c7bced426ba4599
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538237"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098144"
 ---
 # <a name="msreplication_options-transact-sql"></a>MSreplication_options (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "89538237"
 |**value**|**bit**|Solo per uso interno.|  
 |**major_version**|**int**|Solo per uso interno.|  
 |**minor_version**|**int**|Solo per uso interno.|  
-|**Revisione**|**int**|Solo per uso interno.|  
+|**revision**|**int**|Solo per uso interno.|  
 |**install_failures**|**int**|Solo per uso interno.|  
   
 ## <a name="see-also"></a>Vedere anche  

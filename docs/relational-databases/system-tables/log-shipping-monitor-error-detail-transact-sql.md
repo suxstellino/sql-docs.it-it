@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_monitor_error_detail system table
 ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0f606f93697308a690451583267a5d77383fa723
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 131ee9bfe37dce356c6e1e4e604e8e8f0c3df2c1
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547185"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097466"
 ---
 # <a name="log_shipping_monitor_error_detail-transact-sql"></a>log_shipping_monitor_error_detail (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "89547185"
   
  Oltre a essere archiviate sul server di monitoraggio remoto, le informazioni relative al server primario vengono archiviate nel server primario nella tabella **log_shipping_monitor_error_detail** e le informazioni relative a un server secondario vengono inoltre archiviate nel server secondario nella tabella **log_shipping_monitor_error_detail** .  
   
- Per identificare una sessione di Agent, utilizzare le colonne **agent_id**, **agent_type**e **session_id**. Ordina per **log_time** per visualizzare gli errori nell'ordine in cui sono stati registrati.  
+ Per identificare una sessione di Agent, utilizzare le colonne **agent_id**, **agent_type** e **session_id**. Ordina per **log_time** per visualizzare gli errori nell'ordine in cui sono stati registrati.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

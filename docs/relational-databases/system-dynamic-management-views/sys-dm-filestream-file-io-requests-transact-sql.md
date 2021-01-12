@@ -1,6 +1,6 @@
 ---
 description: sys.dm_filestream_file_io_requests (Transact-SQL)
-title: sys. dm_filestream_file_io_requests (Transact-SQL) | Microsoft Docs
+title: sys.dm_filestream_file_io_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_file_io_requests catalog view
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9f4f675f0022b3afeeaccbdc6e907b5ce1c17ca7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 69b34fd2a8ec5adf393994399011cf1b2df6ea03
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543893"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097663"
 ---
 # <a name="sysdm_filestream_file_io_requests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "89543893"
 |**request_id**|**int**|Viene mostrato l'ID univoco della richiesta assegnato dal driver a questa richiesta. Non ammette i valori Null.|  
 |**irp_id**|**int**|Viene mostrato l'ID IRP univoco. È utile per identificare tutte le richieste di I/O correlate all'IRP specificato. Non ammette i valori Null.|  
 |**handle_id**|**int**|Viene indicato l'ID handle dello spazio dei nomi. Si tratta dell'identificatore specifico dell'NSO ed è univoco in tutta l'istanza. Non ammette i valori Null.|  
-|**client_thread_id**|**varbinary (8)**|Mostra l'ID del thread dell'applicazione client che ha origine la richiesta.<br /><br /> ** \* \* Questo \* avviso \* ** è significativo solo se l'applicazione client è in esecuzione nello stesso computer del SQL Server. Quando l'applicazione client è in esecuzione in modalità remota, il **client_thread_id** Mostra l'ID del thread di un processo di sistema che funziona per conto del client remoto.<br /><br /> Ammette i valori Null.|  
+|**client_thread_id**|**varbinary (8)**|Mostra l'ID del thread dell'applicazione client che ha origine la richiesta.<br /><br /> **\* \* Questo \* avviso \*** è significativo solo se l'applicazione client è in esecuzione nello stesso computer del SQL Server. Quando l'applicazione client è in esecuzione in modalità remota, il **client_thread_id** Mostra l'ID del thread di un processo di sistema che funziona per conto del client remoto.<br /><br /> Ammette i valori Null.|  
 |**client_process_id**|**varbinary (8)**|Viene mostrato l'ID processo dell'applicazione client se quest'ultima è in esecuzione nello stesso computer in cui è installato SQL Server. Per un client remoto, viene mostrato l'ID processo di sistema in funzione a nome dell'applicazione client. Ammette i valori Null.|  
 |**handle_context_address**|**varbinary (8)**|Mostra l'indirizzo della struttura NSO interna associata all'handle del client. Ammette i valori Null.|  
 |**filestream_transaction_id**|**varbinary(128)**|Vengono mostrati l'ID della transazione associata all'handle specifico e tutte le richieste associate a questo handle. Si tratta del valore restituito dalla funzione **GET_FILESTREAM_TRANSACTION_CONTEXT** . Ammette i valori Null.|  

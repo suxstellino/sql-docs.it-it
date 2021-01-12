@@ -19,14 +19,14 @@ helpviewer_keywords:
 - syscacheobjects system table
 - sys.syscacheobjects compatibility view
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 25160eb8e7a25e2a4ec6d2f8b318fc78e7af61ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 4b33b97a5b3753d63e1df4759d26970cf6359ee2
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88399677"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097809"
 ---
 # <a name="syssyscacheobjects-transact-sql"></a>sys.syscacheobjects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88399677"
 |**objid**|**int**|Una delle chiavi principali utilizzate per la ricerca di un oggetto nella cache. Si tratta dell'ID oggetto archiviato in **sysobjects** per gli oggetti di database (procedure, viste, trigger e così via). Per gli oggetti della cache come SQL ad hoc o preparata, **objid** è un valore generato internamente.|  
 |**dbid**|**smallint**|ID del database in cui è stato compilato l'oggetto della cache.|  
 |**dbidexec**|**smallint**|ID del database da cui viene eseguita la query.<br /><br /> Per la maggior parte degli oggetti, **dbidexec** ha lo stesso valore di **dbid**.<br /><br /> Per le viste di sistema, **dbidexec** è l'ID del database da cui viene eseguita la query.<br /><br /> Per le query ad hoc, **dbidexec** è 0. Questo significa che **dbidexec** ha lo stesso valore di **dbid**.|  
-|**uid**|**smallint**|Indica il creatore dei piani per le query ad hoc e dei piani preparati.<br /><br /> -2 = Il batch inviato non dipende dalla risoluzione implicita del nome e può essere condiviso da diversi utenti. Questo è il metodo preferito. Qualsiasi altro valore rappresenta l'ID dell'utente che invia la query al database.<br /><br /> Causa un errore di overflow o restituisce NULL se il numero di utenti e ruoli è maggiore di 32.767.|  
+|**UID**|**smallint**|Indica il creatore dei piani per le query ad hoc e dei piani preparati.<br /><br /> -2 = Il batch inviato non dipende dalla risoluzione implicita del nome e può essere condiviso da diversi utenti. Questo è il metodo preferito. Qualsiasi altro valore rappresenta l'ID dell'utente che invia la query al database.<br /><br /> Causa un errore di overflow o restituisce NULL se il numero di utenti e ruoli è maggiore di 32.767.|  
 |**refcounts**|**int**|Numero degli altri oggetti della cache che fanno riferimento a questo oggetto della cache. Il valore di base è 1.|  
 |**usecounts**|**int**|Numero di utilizzi dell'oggetto della cache dall'inizio.|  
 |**pagesused**|**int**|Numero di pagine utilizzate dall'oggetto della cache.|  
@@ -58,7 +58,7 @@ ms.locfileid: "88399677"
 |**lastreads**|**bigint**|Disponibile solo per compatibilità con le versioni precedenti. Restituisce sempre 0.|  
 |**lastwrites**|**bigint**|Disponibile solo per compatibilità con le versioni precedenti. Restituisce sempre 0.|  
 |**sqlbytes**|**int**|Lunghezza in byte della definizione della procedura o del batch inviato.|  
-|**SQL**|**nvarchar (3900)**|Definizione del modulo o primi 3900 caratteri del batch inviato.|  
+|**sql**|**nvarchar (3900)**|Definizione del modulo o primi 3900 caratteri del batch inviato.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste della compatibilità &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  

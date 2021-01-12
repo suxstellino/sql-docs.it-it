@@ -11,14 +11,14 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: c40bc75a-73f3-4d3f-82e1-4c023dfe958f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0254566d2d388bdad78ed92b84f9e7f2d63865a8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: ad3a1c13b6457e24ed8499579f9db4e69b7d3250
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550541"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096850"
 ---
 # <a name="spatial-data-catalog-views"></a>Viste del catalogo dati spaziali
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89550541"
  [sys.spatial_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)  
  Rappresenta le principali informazioni per gli indici spaziali.  
   
- [sys. spatial_reference_systems &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md)  
+ [sys.spatial_reference_systems &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md)  
  Consente di elencare i sistemi di riferimento spaziale (SRID) supportati.  
   
   

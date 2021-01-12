@@ -1,6 +1,6 @@
 ---
 description: sys.dm_hadr_cluster (Transact-SQL)
-title: sys. dm_hadr_cluster (Transact-SQL) | Microsoft Docs
+title: sys.dm_hadr_cluster (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2019
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 - sys.dm_hadr_cluster catalog view
 - Availability Groups [SQL Server], WSFC clusters
 ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b8bc19f3e73c00c2148cba2fb0381d73a36d6eb2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: aa289a58047e1108e94a6b70f86eb366807f5af1
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89533062"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097661"
 ---
 # <a name="sysdm_hadr_cluster-transact-sql"></a>sys.dm_hadr_cluster (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Se il nodo WSFC (Windows Server Failover Clustering) che ospita un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abilitata per [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] dispone del quorum WSFC, **sys. dm_hadr_cluster** restituisce una riga che espone il nome del cluster e informazioni sul quorum. Se il nodo WSFC non dispone di quorum, non viene restituita alcuna riga.  
+  Se il nodo WSFC (Windows Server Failover Clustering) che ospita un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abilitata per [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] dispone del quorum WSFC, **sys.dm_hadr_cluster** restituisce una riga che espone il nome del cluster e informazioni sul quorum. Se il nodo WSFC non dispone di quorum, non viene restituita alcuna riga.  
  > [!TIP]
  > A partire [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] da, questa vista a gestione dinamica supporta always on istanze del cluster di failover oltre ai gruppi di disponibilità always on.
 
