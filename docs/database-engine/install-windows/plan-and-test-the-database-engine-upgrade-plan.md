@@ -11,12 +11,12 @@ ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 5e98874d2e5d1673a4f666de81b82e92b20bfa9f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 73c70e347de00a18f4c4ec5ce3228d6d000d16f0
+ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97463622"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975475"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>Pianificare e testare il piano di aggiornamento del motore di database
 
@@ -27,8 +27,9 @@ ms.locfileid: "97463622"
 ## <a name="release-notes-and-known-upgrade-issues"></a>Note sulla versione e problemi di aggiornamento noti  
  Prima di aggiornare il [!INCLUDE[ssDE](../../includes/ssde-md.md)], vedere:
 
+- [Note sulla versione di SQL Server 2019](../../sql-server/sql-server-version-15-release-notes.md)
 - [Note sulla versione di SQL Server 2017](../../sql-server/sql-server-2017-release-notes.md) 
-- [Note sulla versione di SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md) 
+- [Note sulla versione di SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md)
 - Articolo [Compatibilità con le versioni precedenti del motore di database di SQL Server](../discontinued-database-engine-functionality-in-sql-server.md).  
   
 ## <a name="pre-upgrade-planning-checklist"></a>Elenco di controllo per la pianificazione pre-aggiornamento  

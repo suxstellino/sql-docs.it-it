@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: bf329c6537df49ace1ae78bba64e146641e1e664
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 87c3b10b95a37c74ea1595dca15341aeffe5c261
+ms.sourcegitcommit: 4a813a0741502c56c0cd5ecaafafad2e857a9d7f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195042"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98031102"
 ---
 # <a name="database-properties-options-page"></a>Proprietà database (pagina Opzioni)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -165,7 +165,7 @@ Abilita questa funzionalità.
  Se **False**, le statistiche di correlazione non vengono mantenute.  
  
  **Durabilità ritardata**  
- Abilita questa funzionalità.  
+ Abilita questa funzionalità. Per altre informazioni, vedere [Controllo della durabilità delle transazioni](../logs/control-transaction-durability.md).
  
  **È abilitato per lo snapshot Read Committed**  
  Abilita questa funzionalità.  
@@ -202,7 +202,7 @@ Abilita questa funzionalità.
   
 ## <a name="recovery"></a>Ripristino  
  **Verifica pagina**  
- Indica l'opzione utilizzata per individuare e segnalare le transazioni di I/O incomplete causate da errori di I/O su disco. I valori possibili sono **None**, **TornPageDetection**e **Checksum**. Per altre informazioni, vedere [Gestione della tabella suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md).  
+ Indica l'opzione utilizzata per individuare e segnalare le transazioni di I/O incomplete causate da errori di I/O su disco. I valori possibili sono **None**, **TornPageDetection** e **Checksum**. Per altre informazioni, vedere [Gestione della tabella suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md).  
   
  **Tempo di recupero di riferimento (secondi)**  
  Specifica il limite massimo di tempo, in secondi, necessario per recuperare il database specificato in caso di un arresto anomalo del sistema. Per altre informazioni, vedere [Checkpoint di database &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  

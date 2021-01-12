@@ -11,12 +11,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 0fd911cd7ce60068c0d28ecd5a386a344c5ebea7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c36d6718455f85314f98219b860a801984804d9d
+ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481462"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975461"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Scegliere un metodo di aggiornamento del motore di database
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
@@ -38,7 +38,7 @@ Sono disponibili diversi approcci da considerare quando si intende eseguire l'ag
 >   - [Selezione di un'opzione di SQL Server in Azure](/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview).  
   
 ## <a name="upgrade-in-place"></a>Aggiornamento sul posto  
- Con questo approccio, il programma di installazione di SQL Server aggiorna l'installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esistente sostituendo i bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esistenti con i bit nuovi di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] e quindi aggiorna tutti i database utente e di sistema.  Il metodo di aggiornamento sul posto è più semplice, implica tempo di inattività, richiede più tempo per il fallback, se necessario, e non è supportato in tutti gli scenari. Per altre informazioni sugli scenari di aggiornamento sul posto supportati e non supportati, vedere [Aggiornamenti di versione ed edizione supportati](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md).  
+ Con questo approccio, il programma di installazione di SQL Server aggiorna l'installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esistente sostituendo i bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esistenti con i bit nuovi di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] e quindi aggiorna tutti i database utente e di sistema.  Il metodo di aggiornamento sul posto è più semplice, implica tempo di inattività, richiede più tempo per il fallback, se necessario, e non è supportato in tutti gli scenari. Per altre informazioni sugli scenari di aggiornamento sul posto supportati e non supportati, vedere [Aggiornamenti di versione ed edizione supportati](../../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md).  
   
  Questo approccio viene spesso usato negli scenari seguenti:  
   
