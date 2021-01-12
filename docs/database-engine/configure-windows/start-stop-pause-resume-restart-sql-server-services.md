@@ -41,12 +41,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: e971592b20dd2321e4265752cb8b01c38387b639
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 697cf043c4582796015b061c857145c214d105fb
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670754"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091770"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Avviare, arrestare, sospendere, riprendere, riavviare i servizi SQL Server
 
@@ -110,7 +110,7 @@ L'arresto del motore di database con il comando **SHUTDOWN** Transact-SQL richie
 
 ### <a name="starting-sql-server-configuration-manager"></a>Avvio di Gestione configurazione SQL Server
 
-Fare clic sul menu **Start** , scegliere **Tutti i programmi**, **Microsoft SQL Server**, **Strumenti di configurazione**e quindi fare clic su **Gestione configurazione SQL Server**.
+Fare clic sul menu **Start** , scegliere **Tutti i programmi**, **Microsoft SQL Server**, **Strumenti di configurazione** e quindi fare clic su **Gestione configurazione SQL Server**.
 
 Poiché Gestione configurazione SQL Server è uno snap-in per il programma Microsoft Management Console e non un programma autonomo, Gestione configurazione SQL Server non viene visualizzato come applicazione nelle versioni più recenti di Windows. Ecco i percorsi per le ultime quattro versioni, con Windows installato nell'unità C.  
 
@@ -130,7 +130,7 @@ Poiché Gestione configurazione SQL Server è uno snap-in per il programma Micro
 
 3. Nel riquadro sinistro di Gestione configurazione SQL Server fare clic su **Servizi di SQL Server**.
 
-4. Nel riquadro dei risultati fare clic con il pulsante destro del mouse su **SQL Server (MSSQLServer)** o su un'istanza denominata, quindi fare clic su **Avvia**, **Arresta**, **Sospendi**, **Riprendi**o **Riavvia**.
+4. Nel riquadro dei risultati fare clic con il pulsante destro del mouse su **SQL Server (MSSQLServer)** o su un'istanza denominata, quindi fare clic su **Avvia**, **Arresta**, **Sospendi**, **Riprendi** o **Riavvia**.
 
 5. Fare clic su **OK** per chiudere lo strumento Gestione configurazione SQL Server.
 
@@ -342,7 +342,7 @@ Per altre informazioni sull'istruzione **SHUTDOWN**, vedere [SHUTDOWN &#40;Trans
   
 ##  <a name="using-service-controller-class"></a><a name="ServiceController"></a> Uso della classe ServiceController
 
-È possibile usare la classe ServiceController per controllare il servizio SQL Server o qualsiasi altro servizio Windows. Per un esempio di esecuzione di questa operazione, vedere [Classe ServiceController](/dotnet/api/system.serviceprocess.servicecontroller?view=netframework-4.8).
+È possibile usare la classe ServiceController per controllare il servizio SQL Server o qualsiasi altro servizio Windows. Per un esempio di esecuzione di questa operazione, vedere [Classe ServiceController](/dotnet/api/system.serviceprocess.servicecontroller).
 
 ## <a name="manage-the-sql-server-service-on-linux"></a>Gestire il servizio SQL Server in Linux
 

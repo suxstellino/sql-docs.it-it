@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28eab9dae04e0268c6dd7827aab8be71220e4218
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 7ba062db14f9cb3d2ba262350c1ff5b93a079884
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643740"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091821"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Configurare eventi estesi per i gruppi di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -375,4 +375,4 @@ GO
 ```  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- [Visualizzare i dati della sessione eventi](https://msdn.microsoft.com/library/hh710068(v=sql.110).aspx)   
+ [Visualizzare i dati della sessione eventi](/previous-versions/sql/sql-server-2012/hh710068(v=sql.110))

@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 63e40e66003737798c444f220058feceab69411a
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+ms.openlocfilehash: b22910f0a794925d07358fa73f3bd6d7a7c6e15a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92678926"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091661"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Feature Pack di Integration Services (SSIS) per Azure
 
@@ -28,7 +28,7 @@ ms.locfileid: "92678926"
 
 Il Feature Pack di SQL Server Integration Services (SSIS) per Azure è un'estensione che fornisce i componenti elencati in questa pagina per consentire a SSIS di connettersi ai servizi Azure, trasferire i dati tra Azure e le origini dati locali ed elaborare i dati archiviati in Azure.
 
-[![Scaricare il Feature Pack di SSIS per Azure](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=100430) **Scarica**
+[![Scaricare il Feature Pack di SSIS per Azure](/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=100430) **Scarica**
 
 - Per SQL Server 2019 - [Microsoft SQL Server 2019 Integration Services Feature Pack per Azure](https://www.microsoft.com/download/details.aspx?id=100430)
 - Per SQL Server 2017 - [Microsoft SQL Server 2017 Integration Services Feature Pack per Azure](https://www.microsoft.com/download/details.aspx?id=54798)
@@ -112,17 +112,17 @@ Sono state sottoposte a test le build di Java seguenti.
 
 1. Scaricare ed estrarre il pacchetto di installazione con estensione zip.
 2. Dal prompt dei comandi, eseguire `sysdm.cpl`.
-3. Nella scheda **Avanzate** selezionare **Variabili di ambiente** .
-4. Nella sezione **Variabili di sistema** selezionare **Nuova** .
-5. Immettere `JAVA_HOME` in **Nome variabile** .
-6. Selezionare **Sfoglia directory** , passare alla cartella estratta e selezionare la sottocartella `jre`.
+3. Nella scheda **Avanzate** selezionare **Variabili di ambiente**.
+4. Nella sezione **Variabili di sistema** selezionare **Nuova**.
+5. Immettere `JAVA_HOME` in **Nome variabile**.
+6. Selezionare **Sfoglia directory**, passare alla cartella estratta e selezionare la sottocartella `jre`.
    Selezionare quindi **OK** e **Valore variabile** verrà popolato automaticamente.
-7. Selezionare **OK** per chiudere la finestra di dialogo **Nuova variabile di sistema** .
-8. Selezionare **OK** per chiudere la finestra di dialogo **Variabili di ambiente** .
-9. Selezionare **OK** per chiudere la finestra di dialogo **Proprietà del sistema** .
+7. Selezionare **OK** per chiudere la finestra di dialogo **Nuova variabile di sistema**.
+8. Selezionare **OK** per chiudere la finestra di dialogo **Variabili di ambiente**.
+9. Selezionare **OK** per chiudere la finestra di dialogo **Proprietà del sistema**.
 
 > [!TIP]
-> Se si usa il formato Parquet e si verifica l'errore "An error occurred when invoking java, message: **java.lang.OutOfMemoryError:Java heap space** " (Errore durante la chiamata di Java, messaggio: java.lang.OutOfMemoryError: spazio dell'heap di Java), è possibile aggiungere una variabile di ambiente *`_JAVA_OPTIONS`* per modificare le dimensioni dell'heap min/max per JVM.
+> Se si usa il formato Parquet e si verifica l'errore "An error occurred when invoking java, message: **java.lang.OutOfMemoryError:Java heap space**" (Errore durante la chiamata di Java, messaggio: java.lang.OutOfMemoryError: spazio dell'heap di Java), è possibile aggiungere una variabile di ambiente *`_JAVA_OPTIONS`* per modificare le dimensioni dell'heap min/max per JVM.
 >
 >![heap JVM](media/azure-feature-pack-jvm-heap-size.png)
 >
@@ -149,7 +149,7 @@ powershell.exe -file install_openjdk.ps1
 ~~~
 
 > [!TIP]
-> Se si usa il formato Parquet e si verifica l'errore "An error occurred when invoking java, message: **java.lang.OutOfMemoryError:Java heap space** " (Errore durante la chiamata di Java, messaggio: java.lang.OutOfMemoryError: spazio dell'heap di Java), è possibile aggiungere comando in *`main.cmd`* per modificare le dimensioni dell'heap min/max per JVM. Esempio:
+> Se si usa il formato Parquet e si verifica l'errore "An error occurred when invoking java, message: **java.lang.OutOfMemoryError:Java heap space**" (Errore durante la chiamata di Java, messaggio: java.lang.OutOfMemoryError: spazio dell'heap di Java), è possibile aggiungere comando in *`main.cmd`* per modificare le dimensioni dell'heap min/max per JVM. Esempio:
 > ~~~
 > setx /M _JAVA_OPTIONS "-Xms256m -Xmx16g"
 > ~~~

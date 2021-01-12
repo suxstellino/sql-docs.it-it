@@ -13,12 +13,12 @@ f1_keywords:
 - sql14.dts.designer.afpextfiledest.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 253bd5f8accf3e2fd9fc28dcaa535bea6f736316
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: d331004e82b155a1c101a31253a82e029ec4a31b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96127166"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091651"
 ---
 # <a name="flexible-file-destination"></a>Destinazione di File flessibili
 
@@ -53,7 +53,7 @@ Le seguenti proprietà sono disponibili nell'**Editor avanzato**.
 - **escapeChar:** carattere speciale usato per eseguire l'escape di un delimitatore di colonna nel contenuto del file di input. Non è possibile specificare sia escapeChar sia quoteChar per una tabella. È consentito un solo carattere. Nessun valore predefinito.
 - **quoteChar:** carattere usato per inserire un valore stringa tra virgolette. I delimitatori di riga e colonna all'interno delle virgolette sono considerati come parte del valore della stringa. Questa proprietà è applicabile ai set di dati di input e di output. Non è possibile specificare sia escapeChar sia quoteChar per una tabella. È consentito un solo carattere. Nessun valore predefinito.
 - **nullValue:** uno o più caratteri usati per rappresentare un valore null. Il valore **predefinito** è \N.
-- **encodingName:** specifica il nome della codifica. Vedere la proprietà [Encoding.EncodingName](/dotnet/api/system.text.encoding?view=netframework-4.8).
+- **encodingName:** specifica il nome della codifica. Vedere la proprietà [Encoding.EncodingName](/dotnet/api/system.text.encoding).
 - **skipLineCount:**  indica il numero di righe non vuote da ignorare durante la lettura dei dati dai file di input. Se vengono specificati sia skipLineCount che firstRowAsHeader, le righe vengono ignorate e quindi le informazioni dell'intestazione vengono lette dal file di input.
 - **treatEmptyAsNull:** specifica se considerare una stringa null o vuota come valore null durante la lettura dei dati da un file di input. Il valore **predefinito** è True.
 

@@ -9,12 +9,12 @@ ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.custom: ''
 ms.date: 10/14/2020
-ms.openlocfilehash: 453ec8226b018b1d5d756ba96ac174823657c5dd
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: d73e4b95059dab183f9a0af4896c5a6f86b7e564
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92060885"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091758"
 ---
 # <a name="create-sql-server-on-azure-virtual-machines-using-azure-data-studio"></a>Creare SQL Server in Macchine virtuali di Azure usando Azure Data Studio
 
@@ -47,7 +47,7 @@ Immettere quindi tutti i parametri necessari nella procedura guidata della macch
 
 3. Immettere un nome univoco per la macchina virtuale e le credenziali con nome utente e password.
 
-4. Selezionare l'immagine, lo SKU e la versione preferiti e quindi selezionare la dimensione preferita per la macchina virtuale. È possibile leggere altre informazioni sulle [dimensioni disponibili per la macchina virtuale](https://docs.microsoft.com/azure/virtual-machines/sizes) per facilitare la selezione. Fare quindi clic su **Avanti**.
+4. Selezionare l'immagine, lo SKU e la versione preferiti e quindi selezionare la dimensione preferita per la macchina virtuale. È possibile leggere altre informazioni sulle [dimensioni disponibili per la macchina virtuale](/azure/virtual-machines/sizes) per facilitare la selezione. Fare quindi clic su **Avanti**.
 
 5. Selezionare una rete virtuale esistente dall'elenco a discesa oppure selezionare la casella di controllo **Nuova rete virtuale** per immettere il nome di una nuova rete virtuale.
 
@@ -75,6 +75,6 @@ L'ultimo passaggio consiste nel selezionare **Esegui tutte le celle** per esegui
 Per altre informazioni su come eseguire la migrazione dei dati nella nuova macchina virtuale SQL, vedere l'articolo seguente.
 
 > [!div class="nextstepaction"]
-> [Eseguire la migrazione di un database in una VM di SQL Server](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/migrate-to-vm-from-sql-server)
+> [Eseguire la migrazione di un database in una VM di SQL Server](/azure/azure-sql/virtual-machines/windows/migrate-to-vm-from-sql-server)
 
-Per altre informazioni sull'uso di SQL Server in Azure, vedere [SQL Server in macchine virtuali di Azure](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview) e le [domande frequenti](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/frequently-asked-questions-faq).
+Per altre informazioni sull'uso di SQL Server in Azure, vedere [SQL Server in macchine virtuali di Azure](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview) e le [domande frequenti](/azure/azure-sql/virtual-machines/windows/frequently-asked-questions-faq).

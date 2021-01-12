@@ -16,12 +16,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: cawrites
 ms.author: chadam
 manager: erikre
-ms.openlocfilehash: e8c0a889b764f81aaf8ac34cf566b52bf1e86c83
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 6e6b362f9e121f10515753d46ee098387348f272
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643276"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091738"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Configurare un listener per un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -310,7 +310,7 @@ Start-Clustergroup yourListenerGroupName
   
     -   **Utilizzo di Windows PowerShell per i cluster di failover:**  
   
-        1.  Usare [Add-ClusterResource](https://technet.microsoft.com/library/ee460983.aspx) per creare un nome di rete e le risorse dell'indirizzo IP.  
+        1.  Usare [Add-ClusterResource](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee460983(v=technet.10)) per creare un nome di rete e le risorse dell'indirizzo IP.  
   
         2.  Usare [Start-ClusterResource](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461056(v=technet.10)) per avviare la risorsa del nome di rete.  
   
@@ -328,4 +328,4 @@ Start-Clustergroup yourListenerGroupName
 
 Dopo aver creato il listener, configurare l'applicazione per [connettersi al listener](listeners-client-connectivity-application-failover.md). È anche possibile esaminare diverse [strategie di monitoraggio dei gruppi di disponibilità](monitoring-of-availability-groups-sql-server.md) per garantire l'integrità del gruppo di disponibilità.
 
-È anche possibile [visualizzare le proprietà di un listener](view-availability-group-listener-properties-sql-server.md) o [rimuovere il listener](remove-an-availability-group-listener-sql-server.md), se necessario. 
+È anche possibile [visualizzare le proprietà di un listener](view-availability-group-listener-properties-sql-server.md) o [rimuovere il listener](remove-an-availability-group-listener-sql-server.md), se necessario.
