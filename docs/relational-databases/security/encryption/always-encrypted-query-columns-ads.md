@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ac5e42497a0167a0e935c116a1efd9cc466300c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0a61514ff76bbae9e403683529d017f6fcb1c079
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477612"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101879"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>Eseguire query sulle colonne usando Always Encrypted con Azure Data Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-Questo articolo descrive come eseguire query sulle colonne crittografate con [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) usando [Azure Data Studio](../../../azure-data-studio/what-is.md). Con Azure Data Studio è possibile:
+Questo articolo descrive come eseguire query sulle colonne crittografate con [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) usando [Azure Data Studio](../../../azure-data-studio/what-is-azure-data-studio.md). Con Azure Data Studio è possibile:
 - Recuperare i valori del testo crittografato archiviati nelle colonne crittografate. 
 - Recuperare i valori del testo non crittografato archiviati nelle colonne crittografate.  
 - Inviare i valori del testo non crittografato destinati alle colonne crittografate (ad esempio, nelle istruzioni `INSERT` o `UPDATE` e come parametri di ricerca delle clausole `WHERE` nelle istruzioni `SELECT`). 

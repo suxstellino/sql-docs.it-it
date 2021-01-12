@@ -19,15 +19,15 @@ helpviewer_keywords:
 - assignment operators, +=
 - augmented operators, +=
 ms.assetid: 9ea52519-80d1-473f-b988-0572f0e2c92f
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1f30ab28df95569466864bc9ad2fdbfab4e5123
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 1c140365e95935719653805c1ce3e7a631fdbacf
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481892"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101071"
 ---
 # <a name="-addition-assignment-transact-sql"></a>+= (assegnazione di addizione) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +51,7 @@ expression += expression
 ## <a name="result-types"></a>Tipi restituiti  
  Restituisce il tipo di dati dell'argomento con la priorità più alta. Per altre informazioni, vedere [Precedenza dei tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Per altre informazioni, vedere [+ &#40;addizione&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-transact-sql.md).  
   
 ## <a name="see-also"></a>Vedere anche  

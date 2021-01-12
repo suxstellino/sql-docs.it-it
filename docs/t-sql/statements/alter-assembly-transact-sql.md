@@ -22,14 +22,14 @@ helpviewer_keywords:
 - adding files
 - ALTER ASSEMBLY statement
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 781d61c5cde33ae51b7ecb94d56a8c3cadff1595
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: dda1de9a2eb4628765333651c7d074b0c38551db
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300221"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100911"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -104,7 +104,7 @@ ALTER ASSEMBLY assembly_name
   
 -   Vincoli CHECK che direttamente o indirettamente fanno riferimento a metodi nell'assembly.  
   
--   Se esistono colonne di un tipo CLR definito dall'utente che dipendono dall'assembly e il tipo implementa un formato di serializzazione **UserDefined** (non **Native** ).  
+-   Se esistono colonne di un tipo CLR definito dall'utente che dipendono dall'assembly e il tipo implementa un formato di serializzazione **UserDefined** (non **Native**).  
   
 -   Colonne di tipo CLR definito dall'utente che fanno riferimento a viste create tramite WITH SCHEMABINDING.  
   
@@ -112,18 +112,18 @@ ALTER ASSEMBLY assembly_name
   
  Solo i membri dei ruoli predefiniti del database **db_owner** e **db_ddlowner** possono specificare questa opzione.  
   
- Per specificare questa opzione, è necessaria l'autorizzazione **ALTER ANY SCHEMA** .  
+ Per specificare questa opzione, è necessaria l'autorizzazione **ALTER ANY SCHEMA**.  
   
  Per altre informazioni, vedere [Implementazione di assembly](../../relational-databases/clr-integration/assemblies-implementing.md).  
   
- [ DROP FILE { *file_name* [ **,** _...n_ ] | ALL } ]  
+ [ DROP FILE { *file_name*[ **,** _...n_] | ALL } ]  
  Rimuove il nome file associato all'assembly oppure tutti i file associati all'assembly dal database. Se specificata assieme all'opzione ADD FILE (descritto di seguito), l'opzione DROP FILE viene eseguita per prima. Ciò consente di sostituire un file con lo stesso nome.  
   
 > [!NOTE]  
 >  Questa opzione non è disponibile in un database indipendente o nel database SQL di Azure.  
   
- [ ADD FILE FROM { *client_file_specifier* [ AS *file_name* ] | *file_bits* AS *file_name* }  
- Carica un file da associare all'assembly, ad esempio codice sorgente, file di debug o altre informazioni correlate, nel server e da visualizzare nella vista del catalogo **sys.assembly_files** . *client_file_specifier* specifica il percorso dal quale caricare il file. In alternativa è possibile usare *file_bits* per specificare l'elenco di valori binari che compongono il file. *file_name* specifica il nome in base al quale il file deve essere archiviato nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specificare *file_name* se *file_bits* è specificato. È invece facoltativo se è specificato *client_file_specifier* . Se *file_name* non viene specificato, la parte file_name di *client_file_specifier* viene usata come *file_name* .  
+ [ ADD FILE FROM { *client_file_specifier* [ AS *file_name*] | *file_bits* AS *file_name*}  
+ Carica un file da associare all'assembly, ad esempio codice sorgente, file di debug o altre informazioni correlate, nel server e da visualizzare nella vista del catalogo **sys.assembly_files**. *client_file_specifier* specifica il percorso dal quale caricare il file. In alternativa è possibile usare *file_bits* per specificare l'elenco di valori binari che compongono il file. *file_name* specifica il nome in base al quale il file deve essere archiviato nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specificare *file_name* se *file_bits* è specificato. È invece facoltativo se è specificato *client_file_specifier*. Se *file_name* non viene specificato, la parte file_name di *client_file_specifier* viene usata come *file_name*.  
   
 > [!NOTE]  
 >  Questa opzione non è disponibile in un database indipendente o nel database SQL di Azure.  
@@ -181,7 +181,7 @@ ALTER ASSEMBLY assembly_name
   
 -   Per modificare il set di autorizzazioni di un assembly e impostarlo su UNSAFE, è necessaria l'autorizzazione **UNSAFE ASSEMBLY** nel server.  
   
--   Per specificare WITH UNCHECKED DATA, è necessaria l'autorizzazione **ALTER ANY SCHEMA** .  
+-   Per specificare WITH UNCHECKED DATA, è necessaria l'autorizzazione **ALTER ANY SCHEMA**.  
 
 
 ### <a name="permissions-with-clr-strict-security"></a>Autorizzazioni con CLR strict security    
