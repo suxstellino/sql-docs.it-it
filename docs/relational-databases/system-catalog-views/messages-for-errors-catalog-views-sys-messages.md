@@ -20,14 +20,14 @@ helpviewer_keywords:
 - sys.messages catalog view
 - error numbers [SQL Server]
 ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 30cfb208d709f19743216369b23e6b7bef9dfc38
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 590ad007eebcf37765752272ef775e0d3d2443f0
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810397"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98092557"
 ---
 # <a name="messages-for-errors-catalog-views---sysmessages"></a>Viste del catalogo per i messaggi (di errore) - Sys.messages
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "91810397"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**message_id**|**int**|ID del messaggio. Questo valore è univoco nel server. I messaggi con ID minore di 50000 sono messaggi di sistema.|  
-|**language_id**|**smallint**|ID lingua per cui viene usato il testo in **testo** , come definito in **syslanguages**. Questa operazione è univoca per un **message_id**specificato.|  
+|**language_id**|**smallint**|ID lingua per cui viene usato il testo in **testo** , come definito in **syslanguages**. Questa operazione è univoca per un **message_id** specificato.|  
 |**severity**|**tinyint**|Livello di gravità del messaggio, compreso tra 1 e 25. Questo è lo stesso per tutte le lingue dei messaggi all'interno di un **message_id**.|  
 |**is_event_logged**|**bit**|1 = Il messaggio viene registrato nell'evento se viene generato un errore. Questo è lo stesso per tutte le lingue dei messaggi all'interno di un **message_id**.|  
 |**text**|**nvarchar(2048)**|Testo del messaggio utilizzato quando è attiva la **language_id** corrispondente.|  

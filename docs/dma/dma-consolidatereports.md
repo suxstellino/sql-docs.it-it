@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 03ea9cc4d6b7842739f4431fea2e9a418e0f3f9e
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: 4d1bcf2cdc9997ea33be87184c38447b7cd62973
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523918"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091607"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Valutare un'azienda e consolidare i report di valutazione con DMA
 
@@ -34,7 +34,7 @@ Le istruzioni dettagliate riportate di seguito consentono di usare la Data Migra
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) versione 4.5 o successiva.
   - [SSMS](../ssms/download-sql-server-management-studio-ssms.md) 17,0 o versione successiva.
   - [Power bi desktop](/power-bi/fundamentals/desktop-get-the-desktop).
-  - [Moduli di Azure PowerShell](/powershell/azure/install-az-ps?view=azps-1.0.0)
+  - [Moduli di Azure PowerShell](/powershell/azure/install-az-ps)
 - Scaricare ed estrarre:
   - Il [modello di report DMA Power bi](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/4/PowerBI-Reports.zip).
   - [Script LoadWarehouse](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/3/LoadWarehouse1.zip).
@@ -80,7 +80,7 @@ Questo inventario può trovarsi in uno dei due formati seguenti:
 >
 > Per le istanze predefinite, impostare il nome dell'istanza su MSSQLServer.
 
-Quando si usa un file CSV per importare i dati, verificare che siano presenti solo due colonne di **nome dell'istanza** di dati e il **nome del database**e che nelle colonne non siano presenti righe di intestazione.
+Quando si usa un file CSV per importare i dati, verificare che siano presenti solo due colonne di **nome dell'istanza** di dati e il **nome del database** e che nelle colonne non siano presenti righe di intestazione.
 
  ![contenuto del file CSV](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
 
@@ -131,7 +131,7 @@ I parametri associati alla funzione dmaDataCollector sono descritti nella tabell
 |**databaseName** | Database che ospita la tabella di inventario. |
 |**useInstancesOnly** | Flag di bit per specificare se utilizzare o meno un elenco di istanze per la valutazione.  Se impostato su 0, la tabella DatabaseInventory verrà utilizzata per compilare l'elenco di destinazione della valutazione. |
 |**AssessmentName** | Nome della valutazione DMA. |
-|**TargetPlatform** | Tipo di destinazione della valutazione che si desidera eseguire.  I valori possibili sono **AzureSQLDatabase**, **ManagedSqlServer**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**,  **SqlServerWindows2019**e **SqlServerLinux2019**.  |
+|**TargetPlatform** | Tipo di destinazione della valutazione che si desidera eseguire.  I valori possibili sono **AzureSQLDatabase**, **ManagedSqlServer**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**,  **SqlServerWindows2019** e **SqlServerLinux2019**.  |
 |**AuthenticationMethod** | Metodo di autenticazione per la connessione alle destinazioni SQL Server che si desidera valutare. I valori possibili sono **SQLAuth** e **WindowsAuth**. |
 |**OutputLocation** | Directory in cui archiviare il file di output di valutazione JSON. A seconda del numero di database da valutare e del numero di oggetti all'interno dei database, le valutazioni possono richiedere un tempo eccezionalmente lungo. Il file verrà scritto al termine di tutte le valutazioni. |
 

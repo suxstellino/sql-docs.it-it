@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - PathName FILESTREAM [SQL Server]
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: fc5b4b67074c85aef7d5d6d0f7c889a02cbb047d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 85058a3d551a385e4d2de8aed2ea9f56dc3b19c7
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489729"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093901"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,8 +45,8 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  La richiesta del percorso per una colonna con qualsiasi altro tipo di dati o per un columnthat **varbinary (max)** non dispone dell'attributo di archiviazione FILESTREAM provocherà un errore in fase di compilazione della query.  
   
- *\@opzione*  
- [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) integer che definisce il modo in cui deve essere formattato il componente server del percorso. l' * \@ opzione* può essere uno dei valori seguenti. Il valore predefinito è 0.  
+ *\@Opzione*  
+ [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) integer che definisce il modo in cui deve essere formattato il componente server del percorso. l' *\@ opzione* può essere uno dei valori seguenti. Il valore predefinito è 0.  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  

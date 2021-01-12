@@ -17,14 +17,14 @@ helpviewer_keywords:
 - system catalogs [SQL Server], example queries
 - catalog views [SQL Server], frequently asked questions
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 346ae709b81c1d5f3892a7e7b5acfd98c3ff7d3b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: a67ede3c053d3b9458e1b880a268e923226f68d1
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539781"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093278"
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>Domande frequenti sull'esecuzione di query sul catalogo di sistema di SQL Server
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -780,7 +780,7 @@ GO
 ###  <a name="how-do-i-find-the-views-transact-sql-functions-and-transact-sql-stored-procedures-that-depend-on-a-specified-clr-user-defined-type-or-alias-type"></a><a name="_FAQ26"></a> Ricerca per categorie trovare le viste, le funzioni Transact-SQL e le stored procedure Transact-SQL che dipendono da un tipo CLR definito dall'utente o un tipo alias specificato?  
  Prima di eseguire la query seguente, sostituire `<database_name>` con un nome valido e `<schema_name.data_type_name>` con un tipo CLR definito dall'utente valido e qualificato a livello di schema o un nome di tipo alias.  
   
- I parametri definiti in una funzione o una procedura vengono associati a schema in modo implicito. Pertanto, i parametri che dipendono da un tipo CLR definito dall'utente o un tipo di alias possono essere visualizzati utilizzando la vista del catalogo [sys. sql_dependencies](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md) . Le procedure e i trigger non sono associati a schema. Questo significa che le dipendenze tra qualsiasi espressione definita nel corpo della procedura o del trigger e un tipo CLR definito dall'utente o un tipo alias non vengono mantenute. Le viste associate a schema e le funzioni definite dall'utente associate a schemi che dispongono di espressioni che dipendono da un tipo CLR definito dall'utente o da un tipo di alias vengono mantenute nella vista del catalogo **sys. sql_dependencies** . Le dipendenze tra i tipi e le funzioni o le procedure CLR non vengono mantenute.  
+ I parametri definiti in una funzione o una procedura vengono associati a schema in modo implicito. Pertanto, i parametri che dipendono da un tipo CLR definito dall'utente o un tipo di alias possono essere visualizzati utilizzando la vista del catalogo [sys.sql_dependencies](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md) . Le procedure e i trigger non sono associati a schema. Questo significa che le dipendenze tra qualsiasi espressione definita nel corpo della procedura o del trigger e un tipo CLR definito dall'utente o un tipo alias non vengono mantenute. Le viste associate a schema e le funzioni definite dall'utente associate a schemi che dispongono di espressioni che dipendono da un tipo CLR definito dall'utente o da un tipo di alias vengono mantenute nella vista del catalogo **sys.sql_dependencies** . Le dipendenze tra i tipi e le funzioni o le procedure CLR non vengono mantenute.  
   
  La query seguente restituisce tutte le dipendenze associate a schema nelle viste, nelle funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e nelle stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] per un tipo CLR definito dall'utente o un tipo alias specificato.  
   

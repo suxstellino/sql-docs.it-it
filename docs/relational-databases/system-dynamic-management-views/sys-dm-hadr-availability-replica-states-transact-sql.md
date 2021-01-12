@@ -1,6 +1,6 @@
 ---
 description: sys.dm_hadr_availability_replica_states (Transact-SQL)
-title: sys. dm_hadr_availability_replica_states (Transact-SQL) | Microsoft Docs
+title: sys.dm_hadr_availability_replica_states (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/16/2017
 ms.prod: sql
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_availability_replica_states dynamic management view
 ms.assetid: d2e678bb-51e8-4a61-b223-5c0b8d08b8b1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 347d05c0bfc37b1c14fddb728df5508e062cb13d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 549c37fdcc04d16eb2163fc7cca7e2ffddf9ce3e
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546561"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98092783"
 ---
 # <a name="sysdm_hadr_availability_replica_states-transact-sql"></a>sys.dm_hadr_availability_replica_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "89546561"
   Restituisce una riga per ogni replica locale e una riga per ogni replica remota nello stesso gruppo di disponibilità Always On di una replica locale. Ogni riga contiene informazioni sullo stato di una determinata replica.  
   
 > [!IMPORTANT]  
->  Per ottenere informazioni su ogni replica in un determinato gruppo di disponibilità, eseguire una query su **sys. dm_hadr_availability_replica_states** sull'istanza del server che ospita la replica primaria. Se si eseguono query su questa DMV in un'istanza del server che ospita una replica secondaria di un gruppo di disponibilità, questa vista restituisce solo informazioni locali per il gruppo di disponibilità.  
+>  Per ottenere informazioni su ogni replica in un determinato gruppo di disponibilità, eseguire una query **sys.dm_hadr_availability_replica_states** sull'istanza del server che ospita la replica primaria. Se si eseguono query su questa DMV in un'istanza del server che ospita una replica secondaria di un gruppo di disponibilità, questa vista restituisce solo informazioni locali per il gruppo di disponibilità.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -43,8 +43,8 @@ ms.locfileid: "89546561"
 |**ruolo**|**tinyint**|[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]Ruolo corrente di una replica locale o di una replica remota connessa, uno dei seguenti:<br /><br /> 0 = Risoluzione<br /><br /> 1 = Primaria<br /><br /> 2 = Secondaria<br /><br /> Per informazioni sui ruoli di [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], vedere [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
 |**role_desc**|**nvarchar(60)**|Descrizione del **ruolo**, uno di:<br /><br /> RESOLVING<br /><br /> PRIMARY<br /><br /> SECONDARY|  
 |**operational_state**|**tinyint**|Stato operativo corrente della replica, uno dei seguenti:<br /><br /> 0 = Failover in sospeso<br /><br /> 1 = in sospeso<br /><br /> 2 = online<br /><br /> 3 = offline<br /><br /> 4 = non riuscita<br /><br /> 5 = Non completato, nessun quorum<br /><br /> Null = La replica non è locale.<br /><br /> Per ulteriori informazioni, vedere [ruoli e stati operativi](#RolesAndOperationalStates), più avanti in questo argomento.|  
-|**\_Descrizione dello stato operativo \_**|**nvarchar(60)**|Descrizione dello ** \_ stato operativo**, uno dei seguenti:<br /><br /> PENDING_FAILOVER<br /><br /> PENDING<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> FAILED<br /><br /> FAILED_NO_QUORUM<br /><br /> NULL|  
-|**\_integrità ripristino**|**tinyint**|Rollup della colonna ** \_ stato database** della vista a gestione dinamica [sys. dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) . Di seguito sono riportati i valori possibili e le relative descrizioni.<br /><br /> 0: in corso.  Almeno un database Unito in join ha uno stato del database diverso da ONLINE (** \_ lo stato del database** non è 0).<br /><br /> 1: online. Tutti i database Uniti in join hanno uno stato di database ONLINE (**database_state** è 0).<br /><br /> NULL: **is_local** = 0|  
+|**\_Descrizione dello stato operativo \_**|**nvarchar(60)**|Descrizione dello **\_ stato operativo**, uno dei seguenti:<br /><br /> PENDING_FAILOVER<br /><br /> PENDING<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> FAILED<br /><br /> FAILED_NO_QUORUM<br /><br /> NULL|  
+|**\_integrità ripristino**|**tinyint**|Rollup della colonna **\_ stato database** della vista a gestione dinamica [sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) . Di seguito sono riportati i valori possibili e le relative descrizioni.<br /><br /> 0: in corso.  Almeno un database Unito in join ha uno stato del database diverso da ONLINE (**\_ lo stato del database** non è 0).<br /><br /> 1: online. Tutti i database Uniti in join hanno uno stato di database ONLINE (**database_state** è 0).<br /><br /> NULL: **is_local** = 0|  
 |**recovery_health_desc**|**nvarchar(60)**|Descrizione di **recovery_health**, uno di:<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
 |**stato di sincronizzazione \_**|**tinyint**|Riflette un rollup dello stato di sincronizzazione del database (**synchronization_state**) di tutti i database di disponibilità Uniti (noti anche come *repliche*) e della modalità di disponibilità della replica (modalità con commit sincrono o asincrono). Il rollup rifletterà lo stato accumulato meno integro dei database sulla replica. Di seguito sono riportati i valori possibili e le relative descrizioni.<br /><br /> 0: non integro.   Almeno un database di cui è stato creato un join si trova nello stato NOT SYNCHRONIZING.<br /><br /> 1: parzialmente integro. Alcune repliche non sono nello stato di sincronizzazione di destinazione: le repliche con commit sincrono devono trovarsi nello stato Sincronizzato, mentre le repliche con commit asincrono devono trovarsi nello stato Sincronizzazione in corso.<br /><br /> 2: integro. Tutte le repliche sono nello stato di sincronizzazione di destinazione: le repliche con commit sincrono si trovano nello stato Sincronizzato, mentre le repliche con commit asincrono si trovano nello stato Sincronizzazione in corso.|  
 |**synchronization_health_desc**|**nvarchar(60)**|Descrizione di **synchronization_health**, uno di:<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  

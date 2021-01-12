@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - FileTableRootPath function
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 713b0612ecbe67669955290a3abbb47732fe82b8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: f08273adcf261ecfdafaa70793d50b31360f7e40
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88397197"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093868"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,8 +41,8 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
  *FileTable_name*  
  Nome dell'oggetto FileTable. *FileTable_name* è di tipo **nvarchar**. Questo parametro è facoltativo. Il valore predefinito corrisponde al database corrente. È inoltre facoltativo specificare *schema_name* . È possibile passare NULL per *FileTable_name* per usare il valore del parametro predefinito  
   
- *\@opzione*  
- Espressione Integer che definisce la formattazione del componente server del percorso. l' * \@ opzione* può avere uno dei valori seguenti:  
+ *\@Opzione*  
+ Espressione Integer che definisce la formattazione del componente server del percorso. l' *\@ opzione* può avere uno dei valori seguenti:  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  

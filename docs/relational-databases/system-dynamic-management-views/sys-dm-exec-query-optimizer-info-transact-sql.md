@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_optimizer_info dynamic management view
 ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84aba37ec81645b1f369a527f5cee57bc807a7c1
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: d0e5a367c8c336cde314cbceef14b523bac8aca1
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477312"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98092897"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "97477312"
   
 |Nome|Tipo di dati|Descrizione|  
 |----------|---------------|-----------------|  
-|**counter**|**nvarchar(4000)**|Nome dell'evento statistiche di Query Optimizer.|  
+|**Counter**|**nvarchar(4000)**|Nome dell'evento statistiche di Query Optimizer.|  
 |**occurrence**|**bigint**|Numero di occorrenze dell'evento di ottimizzazione per il contatore corrente.|  
 |**value**|**float**|Valore medio della proprietà per occorrenza dell'evento.|  
 |**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
@@ -48,7 +48,7 @@ ms.locfileid: "97477312"
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in pool elastici, il `Server admin` o un `Azure Active Directory admin` account è obbligatorio. Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.   
     
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sys.dm_exec_query_optimizer_info** contiene le proprietà (contatori) seguenti. Tutti i valori di occorrenza sono cumulativi e vengono impostati su 0 al riavvio del sistema. Tutti i valori dei campi valori vengono impostati su NULL al riavvio del sistema. Tutti i valori delle colonne valori che specificano una media utilizzano il valore di occorrenza della stessa riga del denominatore nel calcolo della media. Tutte le ottimizzazioni delle query vengono misurate quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determina le modifiche apportate **dm_exec_query_optimizer_info**, incluse le query generate dall'utente e dal sistema. L'esecuzione di un piano già memorizzato nella cache non comporta la modifica dei valori in **dm_exec_query_optimizer_info**, ma solo le ottimizzazioni sono significative.  
   
 |Contatore|Occorrenza|Valore|  

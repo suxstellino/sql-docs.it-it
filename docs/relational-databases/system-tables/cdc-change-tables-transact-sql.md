@@ -1,6 +1,6 @@
 ---
 description: cdc.change_tables (Transact-SQL)
-title: CDC. change_tables (Transact-SQL) | Microsoft Docs
+title: cdc.change_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - cdc.change_tables
 ms.assetid: 3525a5f5-8d8b-46a8-b334-4b7cd9fb7c21
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0205d5ca01ab1d969af8803bfa0e7f11daaafb08
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 28da42d6fbf03a01dc1c0719bd62a6270cb6525e
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538392"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091509"
 ---
 # <a name="cdcchange_tables-transact-sql"></a>cdc.change_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Restituisce una riga per ogni tabella delle modifiche del database. Una tabella delle modiche viene creata quando l'acquisizione dei dati delle modifiche è abilitata in una tabella di origine. È consigliabile non eseguire una query direttamente sulle tabelle di sistema. Eseguire invece il stored procedure [sys. sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) .  
+  Restituisce una riga per ogni tabella delle modifiche del database. Una tabella delle modiche viene creata quando l'acquisizione dei dati delle modifiche è abilitata in una tabella di origine. È consigliabile non eseguire una query direttamente sulle tabelle di sistema. Eseguire invece il [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) stored procedure.  
 
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  

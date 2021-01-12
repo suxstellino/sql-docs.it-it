@@ -9,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 590ca4149bc93fd2c22d04f22c3c47b7389245a2
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 004550d95ca69bae45c518b8054886e635e829df
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489608"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091784"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Novità del sistema di piattaforma di analisi, un MPP con scalabilità orizzontale data warehouse
 Vedere Novità degli aggiornamenti più recenti degli appliance per piattaforma di strumenti analitici Microsoft (APS). APS è un'appliance locale con scalabilità orizzontale che ospita MPP SQL Server data warehouse parallele. 
@@ -142,7 +142,7 @@ La lettura, l'importazione e l'esportazione di tipi di dati di data tramite la p
 Data di rilascio-2018 luglio
 
 ### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>I comandi DBCC non utilizzano gli slot di concorrenza (modifica del comportamento)
-APS supporta un subset dei [comandi DBCC](../t-sql/database-console-commands/dbcc-transact-sql.md) T-SQL, ad esempio [DBCC DROPCLEANBUFFERS](../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md). In precedenza, questi comandi avrebbero utilizzato uno [slot di concorrenza](./workload-management.md?view=aps-pdw-2016-au7#concurrency-slots) riducendo il numero di carichi/query utente che poteva essere eseguito. I `DBCC` comandi vengono ora eseguiti in una coda locale che non utilizzano uno slot di concorrenza utente per migliorare le prestazioni complessive dell'esecuzione delle query.
+APS supporta un subset dei [comandi DBCC](../t-sql/database-console-commands/dbcc-transact-sql.md) T-SQL, ad esempio [DBCC DROPCLEANBUFFERS](../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md). In precedenza, questi comandi avrebbero utilizzato uno [slot di concorrenza](./workload-management.md?view=aps-pdw-2016-au7&preserve-view=true&#concurrency-slots) riducendo il numero di carichi/query utente che poteva essere eseguito. I `DBCC` comandi vengono ora eseguiti in una coda locale che non utilizzano uno slot di concorrenza utente per migliorare le prestazioni complessive dell'esecuzione delle query.
 
 ### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>Sostituisce alcune chiamate di metadati con oggetti catalogo
 L'utilizzo di oggetti del catalogo per le chiamate ai metadati anziché l'utilizzo di SMO ha mostrato un miglioramento delle prestazioni in APS. A partire da CU 7.1, alcune di queste chiamate di metadati utilizzano ora gli oggetti catalogo per impostazione predefinita. Questo comportamento può essere disattivato dal [commutatore di funzionalità](appliance-feature-switch.md) se i clienti che usano query di metadati si verificano in caso di problemi.
@@ -275,7 +275,7 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [Utilità bcp]:/sql/tools/bcp-utility
 [UNIQUEIDENTIFIER]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
 [NUMERIC]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
-[RIGHE o intervallo]:/sql/t-sql/queries/select-over-clause-transact-sql
+[ROWS o RANGE]:/sql/t-sql/queries/select-over-clause-transact-sql
 [FIRST_VALUE]:/sql/t-sql/functions/first-value-transact-sql
 [LAST_VALUE]:/sql/t-sql/functions/last-value-transact-sql
 [CUME_DIST]:/sql/t-sql/functions/cume-dist-transact-sql

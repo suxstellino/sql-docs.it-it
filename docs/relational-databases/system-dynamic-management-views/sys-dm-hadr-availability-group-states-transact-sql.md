@@ -1,6 +1,6 @@
 ---
 description: sys.dm_hadr_availability_group_states (Transact-SQL)
-title: sys. dm_hadr_availability_group_states (Transact-SQL) | Microsoft Docs
+title: sys.dm_hadr_availability_group_states (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_availability_group_states dynamic management view
 ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0ca065be60cbe6514d1da606501ff90f72ac1c69
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: c5cdbf3f295fc8781e25a6df3ae78d63c22a3b6a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543906"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98092824"
 ---
 # <a name="sysdm_hadr_availability_group_states-transact-sql"></a>sys.dm_hadr_availability_group_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "89543906"
   Restituisce una riga per ogni gruppo di disponibilità Always On che dispone di una replica di disponibilità nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni riga visualizza gli stati che definiscono l'integrità di un determinato gruppo di disponibilità.  
   
 > [!NOTE]  
->  Per ottenere l'elenco completo di, eseguire una query sulla vista del catalogo [sys. availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) .  
+>  Per ottenere l'elenco completo di, eseguire una query sulla vista del catalogo [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) .  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -43,7 +43,7 @@ ms.locfileid: "89543906"
 |**primary_recovery_health_desc**|**nvarchar(60)**|Descrizione di **primary_replica_health**, uno di:<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
 |**secondary_recovery_health**|**tinyint**|Indica lo stato di ripristino di una replica secondaria, uno dei seguenti:<br /><br /> 0 = in corso<br /><br /> 1 = Online<br /><br /> NULL<br /><br /> Nella replica primaria la colonna **secondary_recovery_health** è null.|  
 |**secondary_recovery_health_desc**|**nvarchar(60)**|Descrizione di **secondary_recovery_health**, uno di:<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
-|**synchronization_health**|**tinyint**|Riflette un rollup del **synchronization_health** di tutte le repliche di disponibilità nel gruppo di disponibilità. Di seguito sono riportati i valori possibili e le relative descrizioni.<br /><br /> 0: non integro. Nessuna delle repliche di disponibilità dispone di un **synchronization_health** integro (2 = integro).<br /><br /> 1: parzialmente integro. Il valore relativo all'integrità di sincronizzazione di alcune repliche di disponibilità, ma non di tutte, è integro.<br /><br /> 2: integro. Il valore relativo all'integrità di sincronizzazione di ogni replica di disponibilità è integro.<br /><br /> Per informazioni sull'integrità della sincronizzazione della replica, vedere la **synchronization_health** colonna in [sys. dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md).|  
+|**synchronization_health**|**tinyint**|Riflette un rollup del **synchronization_health** di tutte le repliche di disponibilità nel gruppo di disponibilità. Di seguito sono riportati i valori possibili e le relative descrizioni.<br /><br /> 0: non integro. Nessuna delle repliche di disponibilità dispone di un **synchronization_health** integro (2 = integro).<br /><br /> 1: parzialmente integro. Il valore relativo all'integrità di sincronizzazione di alcune repliche di disponibilità, ma non di tutte, è integro.<br /><br /> 2: integro. Il valore relativo all'integrità di sincronizzazione di ogni replica di disponibilità è integro.<br /><br /> Per informazioni sull'integrità della sincronizzazione della replica, vedere la colonna **synchronization_health** in [sys.dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md).|  
 |**synchronization_health_desc**|**nvarchar(60)**|Descrizione di **synchronization_health**, uno di:<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
   
 ## <a name="security"></a>Sicurezza  
