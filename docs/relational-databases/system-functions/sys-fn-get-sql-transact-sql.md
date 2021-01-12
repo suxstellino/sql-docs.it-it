@@ -22,14 +22,14 @@ helpviewer_keywords:
 - valid SQL handles [SQL Server]
 - SQL handles
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 6f5e3f4af1cd1bae33f0a340333cb6afd3268158
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 4b3e28e4c66d45f28c6239431e8e6d5440d5d4a0
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427803"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093821"
 ---
 # <a name="sysfn_get_sql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88427803"
   Restituisce il testo dell'istruzione SQL per l'handle SQL specificato.  
   
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa a partire da una delle prossime versioni di Microsoft SQL Server. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Utilizzare sys.dm_exec_sql_text. Per ulteriori informazioni, vedere [sys. dm_exec_sql_text &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
+>  Questa funzionalità verrà rimossa a partire da una delle prossime versioni di Microsoft SQL Server. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Utilizzare sys.dm_exec_sql_text. Per ulteriori informazioni, vedere [sys.dm_exec_sql_text &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
   
  
   
@@ -65,9 +65,9 @@ sys.fn_get_sql ( SqlHandle )
 |testo|**text**|Testo dell'istruzione SQL. Per gli oggetti crittografati viene restituito NULL.|  
   
 ## <a name="remarks"></a>Osservazioni  
- È possibile ottenere un handle SQL valido dalla colonna sql_handle della vista a gestione dinamica [sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) .  
+ È possibile ottenere un handle SQL valido dalla colonna sql_handle della vista a gestione dinamica [sys.dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) .  
   
- Se si passa un handle che non è più presente nella cache, fn_get_sq**l** restituisce un set di risultati vuoto. Se si passa un handle non valido, il batch viene arrestato e viene visualizzato un messaggio di errore.  
+ Se si passa un handle che non è più presente nella cache, fn_get_sq **l** restituisce un set di risultati vuoto. Se si passa un handle non valido, il batch viene arrestato e viene visualizzato un messaggio di errore.  
   
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]Non è in grado di memorizzare nella cache alcune [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni, ad esempio istruzioni per la copia bulk e istruzioni con valori letterali stringa di dimensioni maggiori di 8 KB. Gli handle relativi a tali istruzioni non possono essere recuperati tramite fn_get_sql.  
   

@@ -19,14 +19,14 @@ helpviewer_keywords:
 - fn_validate_plan_guide function
 - sys.fn_validate_plan_guide function
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: b19a3cd2f2ee449780127682555f1ae77fabd5d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 7c9290f1d638f1eb2cf55c19d70d4e32a773bafe
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88396897"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093792"
 ---
 # <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
   
 ## <a name="arguments"></a>Argomenti  
  *plan_guide_id*  
- ID della Guida di piano come riportato nella vista del catalogo [sys. plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) . *plan_guide_id* è di **tipo int** e non prevede alcun valore predefinito.  
+ ID della Guida di piano come riportato nella vista del catalogo [sys.plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) . *plan_guide_id* è di **tipo int** e non prevede alcun valore predefinito.  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
