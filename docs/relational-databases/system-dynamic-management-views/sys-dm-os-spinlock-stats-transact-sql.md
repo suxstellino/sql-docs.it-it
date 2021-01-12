@@ -21,14 +21,14 @@ helpviewer_keywords:
 - sys.dm_os_spinlock_stats dynamic management view
 author: bluefooted
 ms.author: pamela
-ms.reviewer: maghan
+ms.reviewer: wiassaf
 manager: amitban
-ms.openlocfilehash: 05e8698484f9445de7a5fb3265d1e0e294dc65d7
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+ms.openlocfilehash: 396c52a6d687c554b277e6f26c290978f035ae01
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97332075"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099771"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
 
@@ -51,7 +51,7 @@ Restituisce informazioni su tutte le attese di SpinLock organizzate in base al t
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in pool elastici, il `Server admin` o un `Azure Active Directory admin` account è obbligatorio. Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.    
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  
  sys.dm_os_spinlock_stats può essere utilizzato per identificare l'origine della contesa di SpinLock. In alcune situazioni, potrebbe essere possibile risolvere o ridurre la contesa di SpinLock. Si possono tuttavia presentare situazioni in cui è necessario contattare il Servizio Supporto Tecnico Clienti [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
@@ -72,7 +72,7 @@ GO
    
  La tabella seguente contiene brevi descrizioni di alcuni dei tipi più comuni di SpinLock.  
   
-|Tipo SpinLock|Description|  
+|Tipo SpinLock|Descrizione|  
 |-----------------|-----------------|  
 |ABR|Solo per uso interno.|
 |ADB_CACHE|Solo per uso interno.|

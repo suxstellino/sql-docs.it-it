@@ -1,6 +1,6 @@
 ---
 description: sys.database_audit_specification_details (Transact-SQL)
-title: sys. database_audit_specification_details (Transact-SQL) | Microsoft Docs
+title: sys.database_audit_specification_details (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -18,19 +18,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_audit_specification_details catalog view
 ms.assetid: 03fc60a9-1696-4109-b15e-a50046310859
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c8bc8e09e9f48a7fc37b1ba0f1d308f3e17fde46
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 80eb02546225f3378c2ca8f139f3282e4651ea24
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542622"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102831"
 ---
 # <a name="sysdatabase_audit_specification_details-transact-sql"></a>sys.database_audit_specification_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Contiene informazioni sulle specifiche del controllo del database in un controllo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza del server per tutti i database. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Per un elenco di tutti i audit_action_id e dei relativi nomi, eseguire una query su [sys. dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
+  Contiene informazioni sulle specifiche del controllo del database in un controllo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza del server per tutti i database. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Per un elenco di tutti i audit_action_id e dei relativi nomi, eseguire una query [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -43,7 +43,7 @@ ms.locfileid: "89542622"
 |**minor_id**|**Int**|ID secondario dell'oggetto controllato, interpretato in base alla classe, ad esempio ID della colonna di un'azione di controllo di una tabella.|  
 |**audited_principal_id**|**int**|Entità controllata.|  
 |**audited_result**|**Nvarchar (60)**|Risultati dell'azione di controllo:<br /><br /> - SUCCESS AND FAILURE - SUCCESS<br /><br /> - FAILURE|  
-|**is_group**|**Po'**|Indica se l'oggetto è un gruppo:<br /><br /> 0: L'oggetto non è un gruppo<br /><br /> 1: L'oggetto è un gruppo|  
+|**is_group**|**bit**|Indica se l'oggetto è un gruppo:<br /><br /> 0: L'oggetto non è un gruppo<br /><br /> 1: L'oggetto è un gruppo|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Le entità con autorizzazioni **ALTER ANY database audit** o **View definition** , il ruolo **dbo** e i membri del ruolo predefinito del database **db_owners** possono accedere a questa vista del catalogo. Inoltre, all'entità non deve essere negata l'autorizzazione **View definition** .  

@@ -1,6 +1,6 @@
 ---
 description: sys.server_assembly_modules (Transact-SQL)
-title: sys. server_assembly_modules (Transact-SQL) | Microsoft Docs
+title: sys.server_assembly_modules (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_assembly_modules catalog view
 ms.assetid: af799e38-2d16-49b2-bcf5-6f9199af899e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 412cd0ef0ed2fa42ce6c1add66ce26b3a863f413
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 9449fe5719934222532a251426436415a26cd233
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550428"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100161"
 ---
 # <a name="sysserver_assembly_modules-transact-sql"></a>sys.server_assembly_modules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Contiene una riga per ogni modulo in assembly per i trigger a livello di server di tipo TA. Questa vista esegue il mapping tra trigger di assembly e l'implementazione CLR sottostante. È possibile unire in join questa relazione a **sys. server_triggers**. L'assembly deve essere caricato nel database **Master** . La tuple (object_id) è la chiave della relazione.  
+  Contiene una riga per ogni modulo in assembly per i trigger a livello di server di tipo TA. Questa vista esegue il mapping tra trigger di assembly e l'implementazione CLR sottostante. È possibile unire in join questa relazione con **sys.server_triggers**. L'assembly deve essere caricato nel database **Master** . La tuple (object_id) è la chiave della relazione.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  

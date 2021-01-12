@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_latch_stats dynamic management view
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: abb813e008fdf00e7094ce59000f07be8da6bf25
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 21995f49ff6b94d25b7f17b81d4076ba3ad99556
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97322055"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101507"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ Restituisce informazioni relative a tutte le attese di latch organizzate per cla
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in pool elastici, il `Server admin` o un `Azure Active Directory admin` account è obbligatorio. Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.   
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  È possibile utilizzare la vista sys.dm_os_latch_stats per identificare l'origine della contesa di latch mediante l'analisi dei numeri di attesa relativi e dei tempi di attesa per le varie classi di latch. In alcune situazioni è possibile risolvere o ridurre la contesa di latch. Si possono tuttavia presentare situazioni in cui è necessario contattare il Servizio Supporto Tecnico Clienti [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 È possibile ripristinare il contenuto di sys.dm_os_latch_stats utilizzando `DBCC SQLPERF` come illustrato di seguito:  
@@ -73,7 +73,7 @@ GO
   
  Nella tabella seguente è riportata una breve descrizione delle varie classi di latch.  
   
-|Classe di latch|Description|  
+|Classe di latch|Descrizione|  
 |-----------------|-----------------|  
 |ALLOC_CREATE_RINGBUF|Utilizzato internamente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per inizializzare la sincronizzazione della creazione di un buffer circolare per le allocazioni.|  
 |ALLOC_CREATE_FREESPACE_CACHE|Utilizzato per inizializzare la sincronizzazione delle cache dello spazio disponibile interno per gli heap.|  

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_xtp_merge_requests (Transact-SQL)
-title: sys. dm_db_xtp_merge_requests (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_xtp_merge_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/01/2017
 ms.prod: sql
@@ -8,23 +8,23 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: c1224e88-af74-4c99-ae32-d5d2c552a1f5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0b7625c78365a2840413177fe8823ecc4b3b1286
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 7a7f8f4a38bffb8abc6be1380a2225077130f143
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542200"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099857"
 ---
 # <a name="sysdm_db_xtp_merge_requests-transact-sql"></a>sys.dm_db_xtp_merge_requests (Transact-SQL)
 
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-Traccia le richieste di unione del database. È possibile che la richiesta merge sia stata generata da SQL Server o che la richiesta sia stata eseguita da un utente con [sys. sp_xtp_merge_checkpoint_files (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql.md).
+Traccia le richieste di unione del database. È possibile che la richiesta merge sia stata generata da SQL Server o che la richiesta sia stata eseguita da un utente con [sys.sp_xtp_merge_checkpoint_files (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql.md).
 
 > [!NOTE]
-> Questa vista a gestione dinamica (DMV), sys. dm_db_xtp_merge_requests, esiste fino al Microsoft SQL Server 2014.
+> Questa vista a gestione dinamica (DMV), sys.dm_db_xtp_merge_requests, esiste fino Microsoft SQL Server 2014.
 > Tuttavia, a partire da SQL Server 2016 questa DMV non è più applicabile.
 
 ## <a name="columns-in-the-report"></a>Colonne del report

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_primary_databases system table
 ms.assetid: 56888756-a798-42be-9b5e-0f9aa05a2cc6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ae5bde1d9d9abde1d1bbf6ddabc0b29e378414e0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8dd97d1baa37b71fec2e1ceb113e4b0a3614a2e4
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540934"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102148"
 ---
 # <a name="log_shipping_primary_databases-transact-sql"></a>log_shipping_primary_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "89540934"
 |**monitor_server_security_mode**|**bit**|Modalità di sicurezza utilizzata per connettersi al server di monitoraggio.<br /><br /> 1 = Autenticazione di Windows.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione di.|  
 |**last_backup_file**|**nvarchar (500)**|Percorso assoluto del backup del log delle transazioni più recente.|  
 |**last_backup_date**|**datetime**|Data e ora dell'ultima operazione di backup dei log.|  
-|**user_specified_monitor**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **sp_help_log_shipping_primary_database** e **sp_help_log_shipping_secondary_primary** utilizzare questa colonna per controllare la visualizzazione delle impostazioni di monitoraggio in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .<br /><br /> 0 = quando si richiama una di queste due stored procedure, l'utente non ha specificato un valore esplicito per il parametro ** \@ monitor_server** .<br /><br /> 1 = È stato specificato un valore esplicito.|  
+|**user_specified_monitor**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **sp_help_log_shipping_primary_database** e **sp_help_log_shipping_secondary_primary** utilizzare questa colonna per controllare la visualizzazione delle impostazioni di monitoraggio in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .<br /><br /> 0 = quando si richiama una di queste due stored procedure, l'utente non ha specificato un valore esplicito per il parametro **\@ monitor_server** .<br /><br /> 1 = È stato specificato un valore esplicito.|  
 |**backup_compression**|**tinyint**|Indica se la configurazione per il log shipping esegue l'override del comportamento della compressione dei backup a livello del server.<br /><br /> 0 = disabilitati. I backup del log non vengono mai compressi, indipendentemente dalle impostazioni di compressione dei backup configurate dal server.<br /><br /> 1 = abilitati. I backup del log vengono sempre compressi, indipendentemente dalle impostazioni di compressione dei backup configurate dal server.<br /><br /> 2 = usa la configurazione del server per l'opzione di configurazione server per la [visualizzazione o configurare l'opzione di configurazione del server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) . Si tratta del valore predefinito.<br /><br /> La compressione dei backup è supportata solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition.|  
   
 ## <a name="see-also"></a>Vedere anche  

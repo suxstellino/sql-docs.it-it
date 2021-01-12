@@ -1,6 +1,6 @@
 ---
 description: sys.endpoint_webmethods (Transact-SQL)
-title: sys. endpoint_webmethods (Transact-SQL) | Microsoft Docs
+title: sys.endpoint_webmethods (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,14 +20,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.endpoint_webmethods catalog view
 ms.assetid: 7dad0cf6-eafa-47cf-98cc-75ba8d3c7959
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: dedd1e20af6eed937efa67d655476efc521f9621
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 1c57d8319df8feb793587dc07d6d55248a0fca12
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542555"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100621"
 ---
 # <a name="sysendpoint_webmethods-transact-sql"></a>sys.endpoint_webmethods (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

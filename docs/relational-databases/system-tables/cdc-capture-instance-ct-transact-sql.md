@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - cdc.<capture_instance>_CT
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5d0a2dae85606a5e1cb0ffd5f86776e7aae25680
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 7fa737644611f24d9d0858fd04066d3ba0571ee3
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809783"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102728"
 ---
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC. &lt; capture_instance &gt; _CT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Tabella delle modiche creata quando Change Data Capture è abilitato in una tabella di origine. La tabella restituisce una riga per ogni operazione di inserimento ed eliminazione eseguita nella tabella di origine e due righe per ogni operazione di aggiornamento eseguita nella tabella di origine. Se non viene specificato al momento dell'abilitazione della tabella di origine, il nome della tabella delle modifiche viene derivato. Il formato del nome è CDC. *capture_instance*_CT dove *capture_instance* è il nome dello schema della tabella di origine e il nome della tabella di origine nel formato *schema_table*. Se, ad esempio, la tabella **Person. Address** nel database di esempio **AdventureWorks** è abilitata per Change Data Capture, il nome della tabella delle modifiche derivata sarà **CDC. Person_Address_CT**.  
+  Tabella delle modiche creata quando Change Data Capture è abilitato in una tabella di origine. La tabella restituisce una riga per ogni operazione di inserimento ed eliminazione eseguita nella tabella di origine e due righe per ogni operazione di aggiornamento eseguita nella tabella di origine. Se non viene specificato al momento dell'abilitazione della tabella di origine, il nome della tabella delle modifiche viene derivato. Il formato del nome è CDC. *capture_instance* _CT dove *capture_instance* è il nome dello schema della tabella di origine e il nome della tabella di origine nel formato *schema_table*. Se, ad esempio, la tabella **Person. Address** nel database di esempio **AdventureWorks** è abilitata per Change Data Capture, il nome della tabella delle modifiche derivata sarà **CDC.Person_Address_CT**.  
   
  Si consiglia di **non eseguire una query direttamente sulle tabelle di sistema**. Eseguire invece il [cdc.fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) e CDC.fn_cdc_get_net_changes_<capture_instance le funzioni [di>.](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
   
@@ -58,7 +58,7 @@ La colonna colonna `__$command_id` was è stata introdotta in un aggiornamento c
  Tuttavia, i valori in queste colonne sono uguali ai valori della colonna di origine.  
   
 ### <a name="large-object-data-types"></a>Tipi di dati per oggetti di grandi dimensioni:  
- Alle colonne con tipo di dati **Image**, **Text**e **ntext** viene sempre assegnato un valore **null** quando _ _ $ operation = 1 o \_ \_ $Operation = 3. Alle colonne con tipo di dati **varbinary (max)**, **varchar (max)** o **nvarchar (max)** viene assegnato un valore **null** quando \_ \_ $Operation = 3 a meno che la colonna non sia stata modificata durante l'aggiornamento. Quando \_ \_ $Operation = 1, a queste colonne viene assegnato il relativo valore al momento dell'eliminazione. Le colonne calcolate incluse in un'istanza di acquisizione hanno sempre un valore **null**.  
+ Alle colonne con tipo di dati **Image**, **Text** e **ntext** viene sempre assegnato un valore **null** quando _ _ $ operation = 1 o \_ \_ $Operation = 3. Alle colonne con tipo di dati **varbinary (max)**, **varchar (max)** o **nvarchar (max)** viene assegnato un valore **null** quando \_ \_ $Operation = 3 a meno che la colonna non sia stata modificata durante l'aggiornamento. Quando \_ \_ $Operation = 1, a queste colonne viene assegnato il relativo valore al momento dell'eliminazione. Le colonne calcolate incluse in un'istanza di acquisizione hanno sempre un valore **null**.  
   
  Per impostazione predefinita, la dimensione massima che può essere aggiunta a una colonna acquista in una singola istruzione INSERT, UPDATE, WRITETEXT o UPDATETEXT è pari a 65.536 byte o 64 KB Per aumentare questa dimensione per supportare dati LOB di dimensioni maggiori, usare l' [opzione di configurazione del server Configure max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) per specificare una dimensione massima maggiore. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - dm_operation_status dynamic management view
 - sys.dm_operation_status dynamic management view
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: = azuresqldb-current || = azure-sqldw-latest
-ms.openlocfilehash: 7146d3455d4d9a36304cc0a1cc69ba3c4c841479
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 21028fd5cdabf435d7672074907b20ebeaaad3c4
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477222"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101549"
 ---
 # <a name="sysdm_operation_status"></a>sys.dm_operation_status
 
@@ -54,7 +54,7 @@ ms.locfileid: "97477222"
 ## <a name="permissions"></a>Autorizzazioni  
  Questa vista è disponibile solo nel database **Master** per l'account di accesso dell'entità di livello server.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Per utilizzare questa vista, è necessario essere connessi al database **Master** . Utilizzare la `sys.dm_operation_status` vista nel database **Master** del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Server per tenere traccia dello stato delle operazioni seguenti eseguite su un [!INCLUDE[ssSDS](../../includes/sssds-md.md)] :  
   
 -   Creazione del database  

@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_buffer_descriptors dynamic management view
 ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23f4db8f365aabc51ced7fc0d2ebfb9c5f94a788
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 1c56a25586be861aca825119f38bff390eeba90a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482762"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099764"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,10 +58,10 @@ ms.locfileid: "97482762"
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in pool elastici, il `Server admin` o un `Azure Active Directory admin` account è obbligatorio. Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.   
    
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  sys.dm_os_buffer_descriptors restituisce le pagine utilizzate dal database Resource. sys.dm_os_buffer_descriptors non restituisce informazioni sulle pagine libere o rubate oppure sulle pagine che contengono errori durante la lettura.  
   
-|Da|A|On|Relazione|  
+|Da|A|Attivato|Relationship|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|molti-a-uno|  
 |sys.dm_os_buffer_descriptors|\<userdb>.sys.allocation_units|allocation_unit_id|molti-a-uno|  

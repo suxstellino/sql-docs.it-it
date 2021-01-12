@@ -17,16 +17,16 @@ helpviewer_keywords:
 - sys.database_connection_stats
 - database_connection_stats
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: e303099001b1708b6227547fdd68e94dba5c5eee
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b5d01ec490009c2c3b26dd888bd6050b0638e952
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97459898"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102821"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Database di SQL Azure)
 
@@ -37,7 +37,7 @@ ms.locfileid: "97459898"
 |Statistiche|Type|Descrizione|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|Nome del database.|  
-|**start_time**|**datetime2**|Data e ora UTC dell'inizio dell'intervallo di aggregazione. L'ora è sempre un multiplo di 5 minuti. Ad esempio:<br /><br /> 28/09/2011 16:00:00<br />'29-09-2011 16:05:00'<br />'28-09-2011 16:10:00'|  
+|**start_time**|**datetime2**|Data e ora UTC dell'inizio dell'intervallo di aggregazione. L'ora è sempre un multiplo di 5 minuti. Esempio:<br /><br /> 28/09/2011 16:00:00<br />'29-09-2011 16:05:00'<br />'28-09-2011 16:10:00'|  
 |**end_time**|**datetime2**|Data e ora UTC della fine dell'intervallo di aggregazione. **End_time** è sempre esattamente 5 minuti dopo rispetto al **start_time** corrispondente nella stessa riga.|  
 |**success_count**|**int**|Numero di connessioni riuscite.|  
 |**total_failure_count**|**int**|Numero totale di connessioni non riuscite. Si tratta della somma di **connection_failure_count**, **terminated_connection_count** e **throttled_connection_count** e non include gli eventi deadlock.|  
@@ -45,7 +45,7 @@ ms.locfileid: "97459898"
 |**terminated_connection_count**|**int**|**_Applicabile solo per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11._**<br /><br /> Numero di connessioni chiuse.|  
 |**throttled_connection_count**|**int**|**_Applicabile solo per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11._**<br /><br /> Numero di connessioni limitate.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
   
 ### <a name="event-aggregation"></a>Aggregazione evento
 

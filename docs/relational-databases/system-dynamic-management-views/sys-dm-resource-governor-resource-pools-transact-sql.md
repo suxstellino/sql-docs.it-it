@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_resource_governor_resource_pools dynamic management view
 ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d99aec61bb33b989a162d63c51f10465a3c9bf0
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 2ac359e1b73d963e7c2d7f880be7443118f8bd2c
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472792"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101461"
 ---
 # <a name="sysdm_resource_governor_resource_pools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "97472792"
 |io_issue_delay_total_ms|**bigint**|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.<br /><br /> Il tempo totale espresso in millisecondi tra la generazione pianificata e quella effettiva degli I/O. Ammette i valori Null. Null se il pool di risorse non è governato per l'I/O. Vale a dire che l'impostazione MIN_IOPS_PER_VOLUME del pool di risorse e l'impostazione MAX_IOPS_PER_VOLUME sono 0.|  
 |pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  I gruppi del carico di lavoro e i pool di risorse di Resource Governor presentano un mapping molti-a-uno. Di conseguenza, molte delle statistiche dei pool di risorse derivano da quelle del gruppo del carico di lavoro.  
   
  Questa vista a gestione dinamica mostra la configurazione in memoria. Per visualizzare i metadati di configurazione archiviati, utilizzare la vista del catalogo sys.resource_governor_resource_pools.  

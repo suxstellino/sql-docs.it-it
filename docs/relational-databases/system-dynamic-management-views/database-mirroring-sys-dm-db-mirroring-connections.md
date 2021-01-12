@@ -1,6 +1,6 @@
 ---
-description: Mirroring del database-sys. dm_db_mirroring_connections
-title: sys. dm_db_mirroring_connections (Transact-SQL) | Microsoft Docs
+description: Mirroring del database-sys.dm_db_mirroring_connections
+title: sys.dm_db_mirroring_connections (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_mirroring_connections dynamic management view
 ms.assetid: e4df91b6-0240-45d0-ae22-cb2c0d52e0b3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1a9f7b7d1cb6f3c3f9af3dcb9f64b42fa48af78c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: e0cd194ef04063bcd1500d4c3be59c352e905114
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551324"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101707"
 ---
-# <a name="database-mirroring---sysdm_db_mirroring_connections"></a>Mirroring del database-sys. dm_db_mirroring_connections
+# <a name="database-mirroring---sysdm_db_mirroring_connections"></a>Mirroring del database-sys.dm_db_mirroring_connections
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una riga per ogni connessione stabilita per il mirroring del database.  
@@ -69,7 +69,7 @@ ms.locfileid: "89551324"
   
 ## <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|Da|To|Relazione|  
+|Da|A|Relationship|  
 |----------|--------|------------------|  
 |**dm_db_mirroring_connections.connection_id**|**dm_exec_connections.connection_id**|Uno-a-uno|  
   

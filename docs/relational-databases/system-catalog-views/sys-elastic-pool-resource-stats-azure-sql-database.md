@@ -15,16 +15,16 @@ helpviewer_keywords:
 - elastic_pool_resource_stats_TSQL
 - elastic_pool_resource_stats
 ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: dbe893e86824ad727b7eaca96b4e01e4ded971d5
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 1b97fe07119f28211186e2efa3986308af477947
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97405027"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102775"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Database SQL di Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "97405027"
 |**elastic_pool_storage_limit_mb**|**bigint**|Impostazione del limite massimo di archiviazione del pool elastico corrente per questo pool elastico espresso in megabyte durante l'intervallo.|
 |**avg_allocated_storage_percent**|**Decimal (5, 2)**|Percentuale di spazio dati allocato da tutti i database nel pool elastico.  Questo è il rapporto tra lo spazio dati allocato e le dimensioni massime dei dati per il pool elastico.  Per ulteriori informazioni, vedere la pagina relativa [alla gestione dello spazio file nel database SQL](/azure/sql-database/sql-database-file-space-management)|  
   
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
  Questa vista è presente nel database master del server di database SQL. Per eseguire una query **sys.elastic_pool_resource_stats**, è necessario essere connessi al database master.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "97405027"
 
  È richiesta l'appartenenza al ruolo **dbmanager** .  
   
-## <a name="examples"></a>Esempio
+## <a name="examples"></a>Esempi
 
  Nell'esempio seguente vengono restituiti i dati di utilizzo delle risorse ordinati in base all'ora più recente per tutti i pool di database elastici nel server di database SQL corrente.  
   

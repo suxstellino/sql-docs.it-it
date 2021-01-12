@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.fn_check_object_signatures function
 ms.assetid: 47509566-d3d7-46a9-89c1-91b4895d56b9
-author: rothja
-ms.author: jroth
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 652f7d896d68097d081d209fd6617a8a3b389eb9
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 4efb55bdeb3455c2c98278e8b90021c5cf194146
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472772"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099677"
 ---
 # <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -68,7 +68,7 @@ fn_ check_object_signatures (
 |is_signed|**int**|Restituisce 0 quando l'oggetto non viene firmato con l'identificazione digitale fornita. Restituisce 1 quando l'oggetto viene firmato con l'identificazione digitale fornita.|  
 |is_signature_valid|**int**|Quando il valore is_signed è 1, restituisce 0 se la firma non è valida e 1 se è valida.<br /><br /> Quando il valore is_signed è 0, restituisce sempre 0.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Usare **fn_check_object_signatures** per verificare che gli utenti malintenzionati non abbiano alterato gli oggetti.  
   
 ## <a name="permissions"></a>Autorizzazioni  

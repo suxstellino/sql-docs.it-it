@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_uncontained_entities (Transact-SQL)
-title: sys. dm_db_uncontained_entities (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_uncontained_entities (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_uncontained_entities dynamic management view
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 01f3c79cf6097f3e916d7faa5e77e508b75015e8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 54b087c98071ea550fcdff630a93d8049188ea91
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539427"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099901"
 ---
 # <a name="sysdm_db_uncontained_entities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "89539427"
 |**Nome colonna**|**Tipo**|**Descrizione**|  
 |*class*|**int**|1 = Oggetto o colonna (include moduli, XP, viste, sinonimi e tabelle).<br /><br /> 4 = Entità di database<br /><br /> 5 = Assembly<br /><br /> 6 = Tipo<br /><br /> 7 = Indice (indice full-text)<br /><br /> 12 = Trigger DDL database<br /><br /> 19 = Route<br /><br /> 30 = Specifica del controllo|  
 |*class_desc*|**nvarchar(120)**|Descrizione della classe dell'entità. Uno dei seguenti elementi per trovare la corrispondenza con la classe:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
-|*major_id*|**int**|ID dell'entità.<br /><br /> Se *Class* = 1, object_id<br /><br /> Se *Class* = 4, sys. database_principals. principal_id.<br /><br /> Se *Class* = 5, quindi sys. assemblies. assembly_id.<br /><br /> Se *Class* = 6, quindi sys. types. user_type_id.<br /><br /> Se *Class* = 7, sys. indexes. index_id.<br /><br /> Se *Class* = 12, sys. Triggers. object_id.<br /><br /> Se *Class* = 19, sys. routes. Route_ID.<br /><br /> Se *Class* = 30, sys. database_audit_specifications. database_specification_id.|  
+|*major_id*|**int**|ID dell'entità.<br /><br /> Se *Class* = 1, object_id<br /><br /> Se *Class* = 4, sys. database_principals. principal_id.<br /><br /> Se *Class* = 5, sys.Assemblies.assembly_id.<br /><br /> Se *Class* = 6, sys.Types.user_type_id.<br /><br /> Se *Class* = 7, sys.indexes.index_id.<br /><br /> Se *Class* = 12, sys.Triggers.object_id.<br /><br /> Se *Class* = 19, quindi sys.routes.Route_ID.<br /><br /> Se *Class* = 30, sys. database_audit_specifications database_audit_specifications.database_specification_id.|  
 |*statement_line_number*|**int**|Se la classe è un modulo, restituisce il numero di riga in cui si trova l'utilizzo non contenuto.  In caso contrario, il valore è Null.|  
 |*statement_ offset_begin*|**int**|Se la classe è un modulo, indica la posizione iniziale dell'utilizzo non contenuto partendo da 0. Il valore viene espresso in byte. In caso contrario, il valore restituito è Null.|  
 |*statement_ offset_end*|**int**|Se la classe è un modulo, indica la posizione finale dell'utilizzo non contenuto partendo da 0. Il valore viene espresso in byte. Il valore -1 indica la fine del modulo. In caso contrario, il valore restituito è Null.|  
@@ -47,7 +47,7 @@ ms.locfileid: "89539427"
 |*feature_type_name*|**nvarchar(256)**|Restituisce il tipo di funzionalità.|  
   
 ## <a name="remarks"></a>Osservazioni  
- sys. dm_db_uncontained_entities Mostra le entità che potenzialmente possono superare il limite del database. Restituirà le entità utente che possono utilizzare gli oggetti al di fuori del database.  
+ sys.dm_db_uncontained_entities Mostra le entità che potenzialmente possono superare il limite del database. Restituirà le entità utente che possono utilizzare gli oggetti al di fuori del database.  
   
  I tipi di funzionalità seguenti vengono segnalati.  
   

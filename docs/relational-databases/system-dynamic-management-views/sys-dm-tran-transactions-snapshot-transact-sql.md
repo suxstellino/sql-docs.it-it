@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_transactions_snapshot dynamic management view
 ms.assetid: 03f64883-07ad-4092-8be0-31973348c647
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88742aeee209d0959fd5fb036f1f4631849fa4dd
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8c6596b92ecd000b0742886ab6565caf2521f701
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97411104"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101427"
 ---
 # <a name="sysdm_tran_transactions_snapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,7 +72,7 @@ transaction_sequence_num snapshot_id snapshot_sequence_num
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in pool elastici, il `Server admin` o un `Azure Active Directory admin` account è obbligatorio. Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.   
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Quando una transazione snapshot viene avviata, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] registra tutte le transazioni attive in quel momento. **sys.dm_tran_transactions_snapshot** segnala queste informazioni per tutte le transazioni snapshot attualmente attive.  
   
  Ogni transazione viene identificata da un numero di sequenza della transazione assegnato all'inizio della transazione. Le transazioni hanno inizio quando viene eseguita un'istruzione BEGIN TRANSACTION o BEGIN WORK. Tuttavia, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] assegna il numero di sequenza della transazione con l'esecuzione della prima istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che accede ai dati dopo l'istruzione BEGIN TRANSACTION o BEGIN WORK. I numeri di sequenza delle transazioni vengono aumentati di un'unità.  

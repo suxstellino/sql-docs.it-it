@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.configurations catalog view
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d470cda4e0c5cf54bcce0827fff4e5f9b9d1acb7
-ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 10956e1c3738c64829ec18d92a05b9f427b1833d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96901058"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100681"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "96901058"
 |**is_dynamic**|**bit**|1 = La variabile viene applicata quando viene eseguita l'istruzione RECONFIGURE.|  
 |**is_advanced**|**bit**|1 = la variabile viene visualizzata solo quando è impostato il **advancedoption di visualizzazione** .|  
   
- ## <a name="remarks"></a>Commenti
+ ## <a name="remarks"></a>Osservazioni
   Per un elenco di tutte le opzioni di configurazione del server, vedere [Opzioni di configurazione del server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 > [!NOTE]  
@@ -63,7 +63,7 @@ select * from sys.configurations where value != value_in_use
 
 Se il valore è uguale alla modifica per l'opzione di configurazione eseguita, ma la **value_in_use** non è la stessa, il comando RECONFIGURE non è stato eseguito o ha avuto esito negativo oppure è necessario riavviare il motore Server.
 
-Sono disponibili opzioni di configurazione in cui il valore e value_in_use potrebbero non essere uguali e si tratta di un comportamento previsto. Ad esempio:
+Sono disponibili opzioni di configurazione in cui il valore e value_in_use potrebbero non essere uguali e si tratta di un comportamento previsto. Esempio:
 
 "max server memory (MB)": il valore configurato predefinito 0 viene visualizzato come **value_in_use** = 2147483647<br>
 

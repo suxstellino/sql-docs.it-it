@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_locks dynamic management view
 ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba977b0b2f33e9c45a94c92aeb4d6fb9fba5cd0c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e3dad8a8c42e2189a29b2e75743653aca5055eae
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474842"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101468"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "97474842"
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in pool elastici, il `Server admin` o un `Azure Active Directory admin` account è obbligatorio. Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.   
  
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Uno stato di richiesta concessa indica che un blocco è stato concesso per una risorsa al richiedente. Una richiesta in attesa indica che la richiesta non è stata ancora concessa. La colonna **request_status** restituisce i tipi di richieste in attesa seguenti:  
   
 -   Uno stato di richiesta di conversione indica che il richiedente ha già ottenuto una richiesta per la risorsa ed è attualmente in attesa di un aggiornamento alla richiesta iniziale.  

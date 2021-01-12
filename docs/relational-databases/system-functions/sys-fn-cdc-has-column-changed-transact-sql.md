@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.fn_cdc_has_column_changed
 - fn_cdc_has_column_changed
 ms.assetid: 2b9e6278-050d-4ffc-8d1a-09606180facc
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: b89b4a42df7e0f1481d55fb7d011e947d3e12cf3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 8e835647f387b4980a50a0f49e5c6bd967fe553f
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88322017"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099678"
 ---
 # <a name="sysfn_cdc_has_column_changed-transact-sql"></a>sys.fn_cdc_has_column_changed (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +58,7 @@ sys.fn_cdc_has_column_changed ( 'capture_instance','column_name' , update_mask )
 ## <a name="remarks"></a>Osservazioni  
  È possibile utilizzare questa funzione per estrarre informazioni da una maschera di aggiornamento restituita in una query sui dati delle modifiche. La maschera di aggiornamento è molto utile in fase di post-elaborazione, quando è necessario sapere se una particolare colonna della riga della modifica associata è stata modificata. Per altre informazioni, vedere [Informazioni su Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md).  
   
- Quando queste informazioni vengono restituite come parte di una query sui dati delle modifiche, è consigliabile usare le funzioni [sys. fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md) e [sys. fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) invece di questa funzione. Utilizzare la funzione fn_cdc_get_column_ordinal prima di eseguire una query sui dati delle modifiche in modo che il numero ordinale di colonna desiderato venga calcolato solo una volta. Utilizzare fn_cdc_is_bit_set all'interno della query per estrarre informazioni dalla maschera di aggiornamento per ogni riga restituita.  
+ Quando queste informazioni vengono restituite come parte di una query sui dati delle modifiche, è consigliabile usare le funzioni [sys.fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md) e [sys.fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) anziché questa funzione. Utilizzare la funzione fn_cdc_get_column_ordinal prima di eseguire una query sui dati delle modifiche in modo che il numero ordinale di colonna desiderato venga calcolato solo una volta. Utilizzare fn_cdc_is_bit_set all'interno della query per estrarre informazioni dalla maschera di aggiornamento per ogni riga restituita.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server sysadmin o al ruolo predefinito del database db_owner. Per tutti gli altri utenti, è richiesta l'autorizzazione SELECT su tutte le colonne acquisite nella tabella di origine e, se è stato definito un ruolo di controllo per l'istanza di acquisizione, l'appartenenza a tale ruolo del database.  

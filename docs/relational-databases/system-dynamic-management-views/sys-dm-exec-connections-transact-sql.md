@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_connections dynamic management view
 ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3144fc924a7e270e56006cf8a9b595fc9c1b385b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 89d36c36c0d1e32bd8da68db6847dde61dc6a7a7
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97428159"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101622"
 ---
 # <a name="sysdm_exec_connections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,13 +72,13 @@ Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in 
   
 ## <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-| Primo elemento | Secondo elemento | Relazione |
+| Primo elemento | Secondo elemento | Relationship |
 | --------------| -------------- | ------------ |  
 |dm_exec_sessions.session_id|dm_exec_connections.session_id|Uno-a-uno|  
 |dm_exec_requests.connection_id|dm_exec_connections.connection_id|Molti-a-uno|  
 |dm_broker_connections.connection_id|dm_exec_connections.connection_id|Uno-a-uno|  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Query tipica per raccogliere informazioni su una connessione query personalizzata.  
   
 ```sql  

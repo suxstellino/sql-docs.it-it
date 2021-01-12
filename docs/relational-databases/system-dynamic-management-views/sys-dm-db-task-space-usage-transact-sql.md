@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_task_space_usage dynamic management view
 ms.assetid: fb0c87e5-43b9-466a-a8df-11b3851dc6d0
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b530cbf88ae1a22181742f19e5880b390bdf475a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0190a71c439265abea7114b4999781af2ccbc825
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461602"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101721"
 ---
 # <a name="sysdm_db_task_space_usage-transact-sql"></a>sys.dm_db_task_space_usage (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "97461602"
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in pool elastici, il `Server admin` o un `Azure Active Directory admin` account è obbligatorio. Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.   
 
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Le pagine IAM non sono incluse nei conteggi di pagine restituiti da questa vista.  
   
  I contatori di pagine vengono inizializzati a zero (0) all'inizio di una richiesta. Questi valori vengono aggregati a livello di sessione quando la richiesta viene completata. Per altre informazioni, vedere [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md).  
@@ -92,7 +92,7 @@ Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in 
   
 ## <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|Da|A|Relazione|  
+|Da|A|Relationship|  
 |----------|--------|------------------|  
 |dm_db_task_space_usage.request_id|dm_exec_requests.request_id|Uno-a-uno|  
 |dm_db_task_space_usage.session_id|dm_exec_requests.session_id|Uno-a-uno|  

@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_clerks dynamic management view
 ms.assetid: 1d556c67-5c12-46d5-aa8c-7ec1bb858df7
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 256d01bcd3b33e96adb576a59ad917df4b04585b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8f6942f95ff8d0f229d52921a692ae7ec74c18f2
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477272"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101550"
 ---
 # <a name="sysdm_os_memory_clerks-transact-sql"></a>sys.dm_os_memory_clerks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "97477272"
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in pool elastici, il `Server admin` o un `Azure Active Directory admin` account è obbligatorio. Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.   
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Il gestore della memoria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è strutturato in una gerarchia a tre livelli. I nodi di memoria occupano la parte inferiore della gerarchia. Il livello intermedio è occupato da clerk di memoria, cache in memoria e pool di memoria. Il primo livello è costituito dagli oggetti memoria. Questi oggetti vengono in genere utilizzati per allocare memoria in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  I nodi di memoria rendono disponibili l'interfaccia e l'implementazione per gli allocatori di livello inferiore. All'interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], solo i clerk di memoria hanno accesso ai nodi di memoria. I clerk di memoria accedono alle interfacce dei nodi di memoria per allocare memoria. I nodi di memoria tengono inoltre traccia della memoria allocata tramite l'utilizzo del clerk per la diagnostica. Ogni componente che alloca una quantità significativa di memoria deve creare un proprio clerk di memoria e allocare tutta la relativa memoria tramite l'utilizzo delle interfacce del clerk. I componenti creano spesso i clerk corrispondenti all'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

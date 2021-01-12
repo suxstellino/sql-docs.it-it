@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_input_buffer dynamic management function
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68673cb11ce5a003b2c9317939942b1d602095be
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e6b15da477c8fb5a4eb8cdc7ef302ebd8a41fae6
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477262"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099739"
 ---
 # <a name="sysdm_exec_input_buffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact-SQL)
 
@@ -70,7 +70,7 @@ In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , se l'utente è il proprietari
 > [!IMPORTANT]
 > L'esecuzione di questa DMV all'esterno dei SQL Server Management Studio nel database SQL di Azure senza autorizzazioni del proprietario, ad esempio in un trigger, stored procedure o funzione, genera un errore di autorizzazione nel database master.
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 Questa funzione a gestione dinamica può essere usata in combinazione con sys.dm_exec_sessions o sys.dm_exec_requests eseguendo **Cross Apply**.
 

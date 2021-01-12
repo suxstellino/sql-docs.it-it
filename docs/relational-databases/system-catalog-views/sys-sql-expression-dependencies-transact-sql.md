@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_expression_dependencies catalog view
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2a9810d1c1fbda616b6dec588375529f4cbbb15c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: fb846962b3790d171cd2eea7ee5cdcfebba3f89b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477412"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101790"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "97477412"
 |is_caller_dependent|**bit**|Indica che l'associazione di schemi per l'entità con riferimenti si verifica in fase di esecuzione; pertanto, la risoluzione dell'ID dell'entità dipende dallo schema del chiamante. Questo avviene quando l'entità con riferimenti è una stored procedure, una stored procedure estesa o una funzione definita dall'utente non associata a schema chiamata all'interno di un'istruzione EXECUTE.<br /><br /> 1 = L'entità con riferimenti è dipendente dal chiamante e viene risolta in fase di esecuzione. In questo caso, il valore di referenced_id è NULL.<br /><br /> 0 = L'ID dell'entità a cui viene fatto riferimento non è dipendente dal chiamante.<br /><br /> Il valore è sempre 0 per i riferimenti associati a schemi e tra database e tra server che indicano in modo esplicito un nome schema. Ad esempio, un riferimento a un'entità nel formato `EXEC MyDatabase.MySchema.MyProc` non è dipendente dal chiamante. Tuttavia, un riferimento nel formato `EXEC MyDatabase..MyProc` è dipendente dal chiamante.|  
 |is_ambiguous|**bit**|Indica che il riferimento è ambiguo e può essere risolto in fase di esecuzione in una funzione definita dall'utente, in un tipo definito dall'utente (UDT) o in un riferimento XQuery a una colonna di tipo **XML**.<br /><br /> Ad esempio, si supponga che l'istruzione `SELECT Sales.GetOrder() FROM Sales.MySales` sia stata definita in una stored procedure. Durante l'esecuzione della stored procedure non è possibile sapere se `Sales.GetOrder()` è una funzione definita dall'utente nello schema `Sales` o una colonna `Sales` di tipo definito dall'utente con un metodo `GetOrder()`.<br /><br /> 1 = Il riferimento è ambiguo.<br /><br /> 0 = Il riferimento non è ambiguo o l'entità può essere associata correttamente quando la vista viene chiamata.<br /><br /> Il valore è sempre 0 per i riferimenti associati a schema.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Nella tabella seguente sono elencati i tipi di entità per i quali vengono create e gestite le informazioni sulle dipendenze. Le informazioni sulle dipendenze non vengono create né gestite per regole, impostazioni predefinite, tabelle temporanee, stored procedure temporanee o oggetti di sistema.  
 
 > [!NOTE]
@@ -74,7 +74,7 @@ ms.locfileid: "97477412"
 |Tipo di entità|Entità di riferimento|Entità con riferimenti|  
 |-----------------|------------------------|-----------------------|  
 |Tabella|Sì*|Sì|  
-|Visualizzazione|Sì|Sì|  
+|Visualizza|Sì|Sì|  
 |Indice filtrato|Sì**|No|  
 |Statistiche filtrate|Sì**|No|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure * * _|Sì|Sì|  

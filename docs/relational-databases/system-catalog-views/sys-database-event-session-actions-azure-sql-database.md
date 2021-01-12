@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 ms.assetid: 32494df1-7ab7-4b88-a858-6b1021d67433
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b26e61b0c9397f02fc5a7dcf06b8e6524e0836df
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: d6b142c7a0a6d63fb6e0c2dcc59a5f2f701c2cfd
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484793"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102809"
 ---
 # <a name="sysdatabase_event_session_actions-azure-sql-database"></a>sys.database_event_session_actions (database SQL di Azure)
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
@@ -39,10 +39,10 @@ ms.locfileid: "97484793"
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE per il server.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Questa vista ha le cardinalità della relazione seguenti.  
   
-| Da | A | Relazione |
+| Da | A | Relationship |
 | ---- | -- | ------------ |
 |sys.database_event_session_actions sys.database_event_session_actions.event_session_id|sys.sys. database_event_sessions. event_session_id|Molti-a-uno|  
 |sys.database_event_session_actions sys.database_event_session_actions.event_id<br /><br /> sys.database_event_session_actions sys.database_event_session_actions.event_session_id|sys.database_event_session_events sys.database_event_session_events.event_session_id<br /><br /> sys.database_event_session_events sys.database_event_session_events.event_id|Molti-a-uno|  

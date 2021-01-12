@@ -17,14 +17,14 @@ helpviewer_keywords:
 - fn_trace_gettable function
 - sys.fn_trace_gettable function
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 85ffb20fb0ead23c8027ab9b4ba45f906fe8c097
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 1f1593e1d12621b5dbe858b0f012322f447111e4
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464747"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101302"
 ---
 # <a name="sysfn_trace_gettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ fn_trace_gettable ( 'filename' , number_files )
  Specifica il file di traccia iniziale da leggere. *filename* è di **tipo nvarchar (256)** e non prevede alcun valore predefinito.  
   
  *number_files*  
- Specifica il numero di file di rollover da leggere. Questo numero include il file iniziale specificato nel *nome*file. *number_files* è di **tipo int**.  
+ Specifica il numero di file di rollover da leggere. Questo numero include il file iniziale specificato nel *nome* file. *number_files* è di **tipo int**.  
   
 ## <a name="remarks"></a>Osservazioni  
  Se *number_files* viene specificato come **valore predefinito**, **fn_trace_gettable** legge tutti i file di rollover fino a quando non raggiunge la fine della traccia. **fn_trace_gettable** restituisce una tabella con tutte le colonne valide per la traccia specificata. Per ulteriori informazioni, vedere [sp_trace_setevent &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
@@ -87,7 +87,7 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [sp_trace_generateevent &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setfilter &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+ [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)  
   
   

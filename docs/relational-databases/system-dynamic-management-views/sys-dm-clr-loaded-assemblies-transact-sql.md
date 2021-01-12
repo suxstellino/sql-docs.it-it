@@ -1,6 +1,6 @@
 ---
 description: sys.dm_clr_loaded_assemblies (Transact-SQL)
-title: sys. dm_clr_loaded_assemblies (Transact-SQL) | Microsoft Docs
+title: sys.dm_clr_loaded_assemblies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_loaded_assemblies dynamic management view
 ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 42abc84bf1b5a78979da4c7443158abc6eddabc8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: d132a0389ca636dbc24afe016b98389021d8d848
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539459"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099957"
 ---
 # <a name="sysdm_clr_loaded_assemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,15 +36,15 @@ ms.locfileid: "89539459"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**assembly_id**|**int**|ID dell'assembly caricato. Il **assembly_id** può essere utilizzato per cercare ulteriori informazioni sull'assembly nella vista del catalogo [sys. Assemblies &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) . Si noti che il [!INCLUDE[tsql](../../includes/tsql-md.md)] catalogo [sys. Assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) Mostra gli assembly solo nel database corrente. La vista **SQS. dm_clr_loaded_assemblies** Mostra tutti gli assembly caricati nel server.|  
-|**appdomain_address**|**int**|Indirizzo del dominio applicazione (**AppDomain**) in cui viene caricato l'assembly. Tutti gli assembly di proprietà di un singolo utente vengono sempre caricati nello stesso **AppDomain**. Il **appdomain_address** può essere utilizzato per cercare ulteriori informazioni sull' **AppDomain** nella vista [sys. dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md) .|  
+|**assembly_id**|**int**|ID dell'assembly caricato. Il **assembly_id** può essere utilizzato per cercare ulteriori informazioni sull'assembly nella vista del catalogo [sys. Assemblies &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) . Si noti che il [!INCLUDE[tsql](../../includes/tsql-md.md)] catalogo [sys. Assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) Mostra gli assembly solo nel database corrente. La visualizzazione **SQS.dm_clr_loaded_assemblies** Mostra tutti gli assembly caricati nel server.|  
+|**appdomain_address**|**int**|Indirizzo del dominio applicazione (**AppDomain**) in cui viene caricato l'assembly. Tutti gli assembly di proprietà di un singolo utente vengono sempre caricati nello stesso **AppDomain**. Il **appdomain_address** può essere utilizzato per cercare ulteriori informazioni sull' **appdomain** nella visualizzazione [sys.dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md) .|  
 |**load_time**|**datetime**|Ora di caricamento dell'assembly. Si noti che l'assembly rimane caricato fino a quando non viene sottoposto a richieste [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di memoria e Scarica **AppDomain**. È possibile monitorare **load_time** per comprendere la frequenza con cui si verifica un utilizzo elevato di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memoria e Scarica l' **AppDomain**.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="remarks"></a>Osservazioni  
- La vista **dm_clr_loaded_assemblies. appdomain_address** ha una relazione molti-a-uno con  **dm_clr_appdomains. appdomain_address**. La vista **dm_clr_loaded_assemblies. assembly_id** dispone di una relazione uno-a-molti con **sys. Assemblies. assembly_id**.  
+ La vista **dm_clr_loaded_assemblies. appdomain_address** ha una relazione molti-a-uno con  **dm_clr_appdomains. appdomain_address**. La vista **dm_clr_loaded_assemblies. assembly_id** ha una relazione uno-a-molti con **sys. Assemblies. assembly_id**.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrato come visualizzare dettagli relativi a tutti gli assembly del database corrente che sono attualmente caricati.  

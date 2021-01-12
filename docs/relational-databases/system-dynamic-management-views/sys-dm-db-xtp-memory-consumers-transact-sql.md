@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_memory_consumers dynamic management view
 ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a962925e0a359055286b6598914cd3e79cf8036c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5b27a5202f20e6ced2ad73734688702cfbb7e7a2
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474972"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099891"
 ---
 # <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "97474972"
 |memory_consumer_address|**varbinary**|Indirizzo interno del consumer. Solo per uso interno.|  
 |xtp_object_id|**bigint**|ID oggetto OLTP in memoria che corrisponde alla tabella ottimizzata per la memoria.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Nell'output gli allocatori a livello di database fanno riferimento a tabelle utente, indici e tabelle di sistema. VARHEAP con object_id = NULL indica la memoria allocata alle tabelle con colonne a lunghezza variabile.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -68,7 +68,7 @@ ms.locfileid: "97474972"
  Quando una tabella ottimizzata per la memoria dispone di un indice columnstore, il sistema usa alcune tabelle interne che utilizzano una certa quantità di memoria per tenere traccia dei dati per l'indice columnstore. Per informazioni dettagliate su queste tabelle interne e query di esempio che mostrano il consumo di memoria, vedere [sys.memory_optimized_tables_internal_attributes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
   
 ```  
 -- memory consumers (database level)  

@@ -1,6 +1,6 @@
 ---
-description: Change Data Capture-sys. dm_cdc_log_scan_sessions
-title: sys. dm_cdc_log_scan_sessions (Transact-SQL) | Microsoft Docs
+description: Change Data Capture-sys.dm_cdc_log_scan_sessions
+title: sys.dm_cdc_log_scan_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - change data capture [SQL Server], log scan reporting
 - sys.dm_cdc_log_scan_sessions dynamic management view
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7bef7989e6533b56ff1976ccf5fe145954a69afb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 312a0577d6ac2d092b01b34fcdb2aa034d36995d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534337"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100070"
 ---
-# <a name="change-data-capture---sysdm_cdc_log_scan_sessions"></a>Change Data Capture-sys. dm_cdc_log_scan_sessions
+# <a name="change-data-capture---sysdm_cdc_log_scan_sessions"></a>Change Data Capture-sys.dm_cdc_log_scan_sessions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una riga per ogni sessione di analisi dei log nel database corrente. L'ultima riga restituita rappresenta la sessione corrente. È possibile utilizzare questa vista per restituire le informazioni sullo stato relative alla sessione di analisi dei log corrente o informazioni aggregate relative a tutte le sessioni dall'ultimo avvio dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -60,7 +60,7 @@ ms.locfileid: "89534337"
  I valori in questa vista a gestione dinamica vengono reimpostati ogni volta che l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviata.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'autorizzazione VIEW DATABASE STATE per eseguire una query sulla vista a gestione dinamica **sys. dm_cdc_log_scan_sessions** . Per ulteriori informazioni sulle autorizzazioni per le viste a gestione dinamica, vedere [funzioni e viste a gestione dinamica &#40;&#41;Transact-SQL ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ È richiesta l'autorizzazione VIEW DATABASE STATE per eseguire query sulla vista a gestione dinamica **sys.dm_cdc_log_scan_sessions** . Per ulteriori informazioni sulle autorizzazioni per le viste a gestione dinamica, vedere [funzioni e viste a gestione dinamica &#40;&#41;Transact-SQL ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite informazioni relative alla sessione più recente.  
@@ -79,7 +79,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. dm_cdc_errors &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)  
+ [sys.dm_cdc_errors &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)  
   
   
 

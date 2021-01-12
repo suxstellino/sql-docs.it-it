@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscription_properties system table
 ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8895f78aa31e5fa38b52de7163ddb2a1554e5617
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 9927dd1e15f04a073d0fb3cf7f95e13b1f425e0c
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545511"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100497"
 ---
 # <a name="mssubscription_properties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "89545511"
 |**distribuzione**|**sysname**|Nome del server di distribuzione.|  
 |**distributor_login**|**sysname**|ID dell'account di accesso utilizzato nel server di distribuzione per l'autenticazione di SQL Server.|  
 |**distributor_password**|**nvarchar (524)**|Password (crittografata) utilizzata nel server di distribuzione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**distributor_security_mode**|**int**|Modalità di sicurezza implementata nel server di distribuzione.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione 0.<br /><br /> **1** = autenticazione di Windows.|  
+|**distributor_security_mode**|**int**|Modalità di sicurezza implementata nel server di distribuzione.<br /><br />   =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione 0.<br /><br /> **1** = autenticazione di Windows.|  
 |**ftp_address**|**sysname**|Indirizzo di rete del servizio File Transfer Protocol (FTP) per il server di distribuzione.|  
 |**ftp_port**|**int**|Numero di porta del servizio FTP per il server di distribuzione.|  
 |**ftp_login**|**sysname**|Nome utente utilizzato per la connessione al servizio FTP.|  
