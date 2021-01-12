@@ -39,14 +39,14 @@ helpviewer_keywords:
 - TVF
 - functions [SQL Server], invoking
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 37904c7f99fc766913521bf9fd598941ec8407ef
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: cb4c79d1f4c8c7b8103ff9d34b8f32fd497b8c6a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300823"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095806"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 
@@ -271,7 +271,7 @@ RETURNS return_data_type
 ## <a name="arguments"></a>Argomenti
 
 *OR ALTER*
-**Si applica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Modifica la funzione in modo condizionale solo se esiste già.
 
@@ -294,7 +294,7 @@ Specificare un nome di parametro utilizzando come primo carattere il simbolo di 
 > [!NOTE]
 > ANSI_WARNINGS non viene applicata quando vengono passati parametri a una stored procedure, una funzione definita dall'utente oppure in caso di dichiarazione e impostazione delle variabili in un'istruzione batch. Se, ad esempio, la variabile viene definita come **char(3)** e quindi impostata su un valore maggiore di tre caratteri, i dati verranno troncati alle dimensioni definite e l'istruzione `INSERT` o `UPDATE` avrà esito positivo.
 
-[ *type_schema_name* . ] *parameter_data_type* Tipo di dati del parametro e, facoltativamente, lo schema a cui appartiene. Per le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] sono consentiti tutti i tipi di dati, compresi i tipi CLR definiti dall'utente e i tipi di tabella definiti dall'utente, eccetto il tipo di dati **timestamp** . Per le funzioni CLR sono consentiti tutti i tipi di dati, inclusi i tipi CLR definiti dall'utente, eccetto i tipi di dati **text** , **ntext** , **image** , i tipi di dati definiti dall'utente e **timestamp** . Non è possibile specificare i tipi non scalari, **cursor** e **table** , come tipo di dati dei parametri nelle funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] o CLR.
+[ *type_schema_name*. ] *parameter_data_type* Tipo di dati del parametro e, facoltativamente, lo schema a cui appartiene. Per le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] sono consentiti tutti i tipi di dati, compresi i tipi CLR definiti dall'utente e i tipi di tabella definiti dall'utente, eccetto il tipo di dati **timestamp**. Per le funzioni CLR sono consentiti tutti i tipi di dati, inclusi i tipi CLR definiti dall'utente, eccetto i tipi di dati **text**, **ntext**, **image**, i tipi di dati definiti dall'utente e **timestamp**. Non è possibile specificare i tipi non scalari,**cursor** e **table**, come tipo di dati dei parametri nelle funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] o CLR.
 
 Se *type_schema_name* non viene specificato, [!INCLUDE[ssDE](../../includes/ssde-md.md)] cerca *scalar_parameter_data_type* nell'ordine seguente:
 
@@ -302,7 +302,7 @@ Se *type_schema_name* non viene specificato, [!INCLUDE[ssDE](../../includes/ssde
 - Schema predefinito dell'utente corrente nel database corrente.
 - Schema **dbo** nel database corrente.
 
-[ = *default* ] Valore predefinito del parametro. Se viene definito un valore *default* , è possibile eseguire la funzione senza specificare un valore per il parametro corrispondente a tale valore.
+[ =*default* ] Valore predefinito del parametro. Se viene definito un valore *default*, è possibile eseguire la funzione senza specificare un valore per il parametro corrispondente a tale valore.
 
 > [!NOTE]
 > È possibile specificare parametri predefiniti per le funzioni CLR, ad eccezione dei tipi di dati **varchar(max)** e **varbinary(max)** .
@@ -311,7 +311,7 @@ Se a un parametro della funzione è associato un valore predefinito, alla chiama
 
 READONLY indica che il parametro non può essere aggiornato o modificato all'interno della definizione della funzione. READONLY è obbligatorio per i parametri di tipo tabella definiti dall'utente e non può essere usato per altri tipi di parametro.
 
-*return_data_type* Valore restituito di una funzione scalare definita dall'utente. Per le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] sono consentiti tutti i tipi di dati, compresi i tipi CLR definiti dall'utente, eccetto il tipo di dati **timestamp** . Per le funzioni CLR, sono consentiti tutti i tipi di dati, compresi i tipi CLR definiti dall'utente, eccetto i tipi di dati **text** , **ntext** , **image** e **timestamp** . Non è possibile specificare un tipo non scalare, **cursor** o **table** , come tipo di dati restituito nelle funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] o CLR.
+*return_data_type* Valore restituito di una funzione scalare definita dall'utente. Per le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] sono consentiti tutti i tipi di dati, compresi i tipi CLR definiti dall'utente, eccetto il tipo di dati **timestamp**. Per le funzioni CLR, sono consentiti tutti i tipi di dati, compresi i tipi CLR definiti dall'utente, eccetto i tipi di dati **text**, **ntext**, **image** e **timestamp**. Non è possibile specificare un tipo non scalare,**cursor** o **table**, come tipo di dati restituito nelle funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] o CLR.
 
 *function_body* Specifica che una serie di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], che nel loro complesso non producono alcun effetto collaterale, ad esempio la modifica di una tabella, definisce il valore della funzione. *function_body* viene usato solo in funzioni scalari e funzioni con valori di tabella con istruzioni multiple.
 
@@ -321,7 +321,7 @@ Nelle funzioni con valori di tabella con istruzioni multiple *function_body* cor
 
 *scalar_expression* Specifica il valore scalare restituito dalla funzione scalare.
 
-TABLE specifica che il valore restituito della funzione con valori di tabella è una tabella. Alle funzioni con valori di tabella è possibile passare solo costanti e @ *local_variables* .
+TABLE specifica che il valore restituito della funzione con valori di tabella è una tabella. Alle funzioni con valori di tabella è possibile passare solo costanti e @*local_variables*.
 
 Nelle funzioni inline con valori di tabella il valore restituito TABLE viene definito tramite una sola istruzione SELECT. Alle funzioni inline non sono associate variabili restituite.
 
@@ -331,12 +331,12 @@ Nelle funzioni inline con valori di tabella il valore restituito TABLE viene def
 
 ORDER (\<order_clause>) Specifica l'ordine in base a cui vengono restituiti i risultati dalla funzione con valori di tabella. Per altre informazioni, vedere la sezione "[Uso dell'ordinamento nelle funzioni CLR con valori di tabella](#using-sort-order-in-clr-table-valued-functions)" più avanti in questo argomento.
 
-EXTERNAL NAME \<method_specifier> *assembly_name* . *class_name* . *method_name*
-**Si applica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 e versioni successive)
+EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name*
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 e versioni successive)
 
 Specifica l'assembly e il metodo a cui dovrà fare riferimento il nome della funzione creata.
 
-- *assembly_name* : deve corrispondere a un valore nella colonna `name` di `SELECT * FROM sys.assemblies;`.
+- *assembly_name*: deve corrispondere a un valore nella colonna `name` di `SELECT * FROM sys.assemblies;`.
 
   Si tratta del nome usato nell'istruzione `CREATE ASSEMBLY`.
 
@@ -355,9 +355,9 @@ In un tipico esempio di MyFood.DLL, in cui tutti i tipi sono nello spazio dei no
 > - Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può eseguire il codice CLR. È possibile creare, modificare ed eliminare gli oggetti di database che fanno riferimento a moduli CLR; tuttavia non è possibile eseguire questi riferimenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finché non viene abilitata l'opzione [clr enabled option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). Per abilitare questa opzione, usare [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).
 > - Questa opzione non è disponibile in un database indipendente.
 
-*\<*table_type_definition*>* ( { \<column_definition> \<column_constraint>| \<computed_column_definition> } [ \<table_constraint> ] [ ,... *n* ] ) Definisce il tipo di dati tabella per una funzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. La dichiarazione di tabella include definizioni di colonna, nonché vincoli di colonna o tabella. La tabella viene sempre inserita nel filegroup primario.
+*\<*table_type_definition*>* ( { \<column_definition> \<column_constraint>| \<computed_column_definition> } [ \<table_constraint> ] [ ,...*n* ] ) Definisce il tipo di dati tabella per una funzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. La dichiarazione di tabella include definizioni di colonna, nonché vincoli di colonna o tabella. La tabella viene sempre inserita nel filegroup primario.
 
-*\< clr_table_type_definition >* ( { *column_name**data_type* } [ ,... *n* ] ) **Si applica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ( [anteprima in alcune aree](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)).
+*\< clr_table_type_definition >* ( { *column_name**data_type* } [ ,...*n* ] ) **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([anteprima in alcune aree](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)).
 
 Definisce i tipi di dati della tabella per una funzione CLR. La dichiarazione di tabella include solo nomi di colonna e tipi di dati. La tabella viene sempre inserita nel filegroup primario.
 
@@ -375,7 +375,7 @@ EXECUTE AS EXECUTE AS è obbligatorio per funzioni definite dall'utente scalari 
 
 Specifica che la funzione includerà una o più delle opzioni seguenti.
 
-ENCRYPTION **Si applica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 e versioni successive)
+ENCRYPTION **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 e versioni successive)
 
 Indica che il testo originale dell'istruzione CREATE FUNCTION verrà convertito da [!INCLUDE[ssDE](../../includes/ssde-md.md)] in un formato offuscato. L'output dell'offuscamento non è visibile direttamente nelle viste del catalogo. Gli utenti che non hanno accesso a tabelle di sistema o file del database non possono recuperare il testo offuscato. Il testo è tuttavia disponibile per gli utenti con privilegi che consentono l'accesso alle tabelle di sistema attraverso la [porta DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) o l'accesso diretto a file del database. Gli utenti in grado di collegare un debugger al processo del server possono inoltre recuperare la procedura originale dalla memoria in fase di esecuzione. Per altre informazioni sull'accesso ai metadati di sistema, vedere [Configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).
 
@@ -407,32 +407,32 @@ Clausola EXECUTE AS Specifica il contesto di sicurezza nel quale viene eseguita 
 
 Per altre informazioni, vedere [Clausola EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).
 
-INLINE = { ON | OFF } **SI APPLICA A** : SQL Server 2019 e versioni successive.
+INLINE = { ON | OFF } **SI APPLICA A**: SQL Server 2019 e versioni successive.
 
 Specifica se questa funzione scalare definita dall'utente deve essere impostata come inline. Questa clausola è applicabile solo alle funzioni scalari definite dall'utente. La clausola `INLINE` non è obbligatoria. Se la clausola `INLINE` viene omessa, viene automaticamente impostata su ON/OFF in base al fatto che possa essere eseguito l'inline della funzione. Se viene specificato `INLINE=ON` ma la funzione definita dall'utente non è idonea per l'inlining, viene generato un errore. Per altre informazioni, vedere [Inlining di funzioni definite dall'utente scalari](../../relational-databases/user-defined-functions/scalar-udf-inlining.md).
 
 **\< column_definition >::=**
 
-Definisce il tipo di dati della tabella. La dichiarazione di tabella include definizioni di colonna e vincoli. Per le funzioni CLR, è possibile specificare solo *column_name* e *data_type* .
+Definisce il tipo di dati della tabella. La dichiarazione di tabella include definizioni di colonna e vincoli. Per le funzioni CLR, è possibile specificare solo *column_name* e *data_type*.
 
 *column_name* Nome di una colonna della tabella. I nomi delle colonne devono essere conformi alle regole per gli identificatori e devono essere univoci nella tabella. *column_name* può essere costituito da un numero di caratteri compreso tra 1 e 128.
 
-*data_type* Specifica il tipo di dati della colonna. Per le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] sono consentiti tutti i tipi di dati, compresi i tipi CLR definiti dall'utente, eccetto il tipo di dati **timestamp** . Per le funzioni CLR sono consentiti tutti i tipi di dati, compresi i tipi CLR definiti dall'utente, eccetto i tipi di dati **text** , **ntext** , **image** , **char** , **varchar** , **varchar(max)** e **timestamp** . Non è possibile specificare il tipo non scalare **cursor** come tipo di dati di colonna nelle funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] o CLR.
+*data_type* Specifica il tipo di dati della colonna. Per le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] sono consentiti tutti i tipi di dati, compresi i tipi CLR definiti dall'utente, eccetto il tipo di dati **timestamp**. Per le funzioni CLR sono consentiti tutti i tipi di dati, compresi i tipi CLR definiti dall'utente, eccetto i tipi di dati **text**, **ntext**, **image**, **char**, **varchar**, **varchar(max)** e **timestamp**. Non è possibile specificare il tipo non scalare **cursor** come tipo di dati di colonna nelle funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] o CLR.
 
 DEFAULT *constant_expression* Specifica il valore assegnato alla colonna quando non ne viene specificato uno in modo esplicito durante un inserimento. *constant_expression* è una costante, un valore NULL o il valore di una funzione di sistema. Le definizioni dell'opzione DEFAULT possono essere applicate a qualsiasi colonna eccetto quelle che includono la proprietà IDENTITY. Non è possibile specificare l'opzione DEFAULT per le funzioni CLR con valori di tabella.
 
 COLLATE *collation_name* specifica le regole di confronto per la colonna. Se viene omesso, alla colonna vengono assegnate le regole di confronto predefinite del database. È possibile usare nomi di regole di confronto di Windows o SQL. Per un elenco di regole di confronto e altre informazioni su queste, vedere [Windows_collation_name & &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) e [Nome delle regole di confronto di SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).
 
-La clausola COLLATE consente di modificare le regole di confronto solo per le colonne con tipo di dati **char** , **varchar** , **nchar** e **nvarchar** .
+La clausola COLLATE consente di modificare le regole di confronto solo per le colonne con tipo di dati **char**, **varchar**, **nchar** e **nvarchar**.
 
 > [!NOTE]
 > Non è possibile specificare la clausola `COLLATE` per le funzioni CLR con valori di tabella.
 
-ROWGUIDCOL Indica che la nuova colonna è un identificatore univoco di riga globale. È possibile designare come colonna ROWGUIDCOL una sola colonna di tipo **uniqueidentifier** per ogni tabella. La proprietà ROWGUIDCOL può essere assegnata solo a una colonna **uniqueidentifier** .
+ROWGUIDCOL Indica che la nuova colonna è un identificatore univoco di riga globale. È possibile designare come colonna ROWGUIDCOL una sola colonna di tipo **uniqueidentifier** per ogni tabella. La proprietà ROWGUIDCOL può essere assegnata solo a una colonna **uniqueidentifier**.
 
 La proprietà ROWGUIDCOL non impone l'univocità dei valori archiviati nella colonna e non genera automaticamente valori per le nuove righe inserite nella tabella. Per generare valori univoci per ogni colonna, utilizzare la funzione NEWID nelle istruzioni INSERT. È possibile specificare un valore predefinito. Non è tuttavia possibile specificare l'opzione NEWID come valore predefinito.
 
-IDENTITY indica che la nuova colonna è una colonna Identity. Quando si aggiunge una nuova riga alla tabella, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna alla colonna un valore univoco e incrementale. Le colonne Identity vengono comunemente utilizzate in combinazione con vincoli PRIMARY KEY e svolgono la funzione di identificatore di riga univoco per la tabella. La proprietà IDENTITY può essere assegnata a colonne **tinyint** , **smallint** , **int** , **bigint** , **decimal(p,0)** o **numeric(p,0)** . Ogni tabella può includere una sola colonna Identity. Non è consentito associare valori predefiniti e vincoli DEFAULT alle colonne Identity. È necessario specificare sia il valore di *seed* che di *increment* oppure è possibile omettere entrambi questi valori. In questo secondo caso, il valore predefinito è (1,1).
+IDENTITY indica che la nuova colonna è una colonna Identity. Quando si aggiunge una nuova riga alla tabella, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna alla colonna un valore univoco e incrementale. Le colonne Identity vengono comunemente utilizzate in combinazione con vincoli PRIMARY KEY e svolgono la funzione di identificatore di riga univoco per la tabella. La proprietà IDENTITY può essere assegnata a colonne **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** o **numeric(p,0)** . Ogni tabella può includere una sola colonna Identity. Non è consentito associare valori predefiniti e vincoli DEFAULT alle colonne Identity. È necessario specificare sia il valore di *seed* che di *increment* oppure è possibile omettere entrambi questi valori. In questo secondo caso, il valore predefinito è (1,1).
 
 Non è possibile specificare l'opzione IDENTITY per le funzioni CLR con valori di tabella.
 
@@ -496,15 +496,15 @@ Se una funzione definita dall'utente non viene creata tramite la clausola `SCHEM
 
 ## <a name="data-types"></a>Tipi di dati
 
-Se si specificano parametri in una funzione CLR, essi dovranno essere di tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come precedentemente definito per *scalar_parameter_data_type* . Per informazioni sul confronto tra i tipi di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e i tipi di dati di integrazione CLR oppure i tipi di dati CLR di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vedere [Mapping dei dati dei parametri CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).
+Se si specificano parametri in una funzione CLR, essi dovranno essere di tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come precedentemente definito per *scalar_parameter_data_type*. Per informazioni sul confronto tra i tipi di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e i tipi di dati di integrazione CLR oppure i tipi di dati CLR di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vedere [Mapping dei dati dei parametri CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).
 
 Perché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] faccia riferimento al metodo corretto in caso di un sovraccarico a livello di classe, è necessario che il metodo specificato in \<method_specifier>:
 
-- Riceva lo stesso numero di parametri specificati in [ ,... *n* ].
+- Riceva lo stesso numero di parametri specificati in [ ,...*n* ].
 - Riceva tutti i parametri in base al valore e non in base al riferimento.
 - Utilizzi tipi di parametro compatibili con quelli specificati nella funzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-Se il tipo di dati restituito della funzione CLR specifica un tipo tabella (RETURNS TABLE), il tipo di dati restituito del metodo specificato in \<method_specifier> deve essere **IEnumerator** o **IEnumerable** . Si presuppone che l'interfaccia venga implementata dall'autore della funzione. A differenza delle funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], le funzioni CLR non possono includere vincoli PRIMARY KEY, UNIQUE o CHECK in \<table_type_definition>. I tipi di dati delle colonne specificati in \<table_type_definition> devono corrispondere ai tipi delle rispettive colonne del set di risultati restituito dal metodo specificato in \<method_specifier> in fase di esecuzione. Questa verifica del tipo non viene eseguita al momento della creazione della funzione.
+Se il tipo di dati restituito della funzione CLR specifica un tipo tabella (RETURNS TABLE), il tipo di dati restituito del metodo specificato in \<method_specifier> deve essere **IEnumerator** o **IEnumerable**. Si presuppone che l'interfaccia venga implementata dall'autore della funzione. A differenza delle funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], le funzioni CLR non possono includere vincoli PRIMARY KEY, UNIQUE o CHECK in \<table_type_definition>. I tipi di dati delle colonne specificati in \<table_type_definition> devono corrispondere ai tipi delle rispettive colonne del set di risultati restituito dal metodo specificato in \<method_specifier> in fase di esecuzione. Questa verifica del tipo non viene eseguita al momento della creazione della funzione.
 
 Per altre informazioni sulla programmazione delle funzioni CLR, vedere [Funzioni CLR definite dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md).
 
@@ -617,7 +617,7 @@ Nella tabella seguente vengono elencate le viste del catalogo di sistema utilizz
 
 Nell'esempio seguente viene creata la funzione definita dall'utente `ISOweek`. Questa funzione calcola il numero di settimana ISO in base a un argomento di data specificato. Per consentire alla funzione di eseguire il calcolo correttamente, è necessario richiamare `SET DATEFIRST 1` prima della funzione.
 
-L'esempio illustra anche l'uso della clausola [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) per specificare il contesto di protezione in cui è possibile eseguire una stored procedure. Nell'esempio, l'opzione `CALLER` specifica che la procedura verrà eseguita nel contesto dell'utente che l'ha richiamata. Le altre opzioni che è possibile specificare sono `SELF`, `OWNER` e *user_name* .
+L'esempio illustra anche l'uso della clausola [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) per specificare il contesto di protezione in cui è possibile eseguire una stored procedure. Nell'esempio, l'opzione `CALLER` specifica che la procedura verrà eseguita nel contesto dell'utente che l'ha richiamata. Le altre opzioni che è possibile specificare sono `SELF`, `OWNER` e *user_name*.
 
 Di seguito è riportata la chiamata della funzione, in cui `DATEFIRST` è impostato su `1`.
 
@@ -733,7 +733,7 @@ GO
 
 L'esempio crea la funzione CLR `len_s`, ma prima che venga effettivamente creata la funzione, l'assembly `SurrogateStringFunction.dll` viene registrato nel database locale.
 
-**Si applica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 e versioni successive)
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 e versioni successive)
 
 ```sql
 DECLARE @SamplesPath nvarchar(1024);

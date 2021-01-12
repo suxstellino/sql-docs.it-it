@@ -24,14 +24,14 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - file importing [SQL Server]
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 852957ca30b73c1b252c27a4581679f360f1e96e
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 9e0d729d951de184aa16717e784f14ae244639d8
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300726"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098499"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -91,7 +91,7 @@ BULK INSERT
 
 **'** _data_file_ **'** è il percorso completo del file contenente i dati da importare nella tabella o nella vista specificata. L'istruzione BULK INSERT consente di importare dati da un disco o da Archiviazione BLOB di Azure, ad esempio unità di rete, dischi floppy, dischi rigidi e così via.
 
-*data_file* deve specificare un percorso valido dal server in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se *data_file* corrisponde a un file remoto, è necessario specificare il nome UNC (Universal Naming Convention). Il formato del nome UNC è \\\\*NomeSistema*\\*NomeCondivisione*\\*Percorso*\\*NomeFile* . Ad esempio:
+*data_file* deve specificare un percorso valido dal server in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se *data_file* corrisponde a un file remoto, è necessario specificare il nome UNC (Universal Naming Convention). Il formato del nome UNC è \\\\*NomeSistema*\\*NomeCondivisione*\\*Percorso*\\*NomeFile*. Ad esempio:
 
 ```sql
 BULK INSERT Sales.Orders
@@ -99,7 +99,7 @@ FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
 ```
 
 **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 e database SQL di Azure.
-A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, data_file può essere presente nell'archiviazione BLOB di Azure. In tal caso, è necessario specificare l'opzione **data_source_name** . Per un esempio, vedere [Importazione di dati da un file nell'archiviazione BLOB di Azure](#f-importing-data-from-a-file-in-azure-blob-storage).
+A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, data_file può essere presente nell'archiviazione BLOB di Azure. In tal caso, è necessario specificare l'opzione **data_source_name**. Per un esempio, vedere [Importazione di dati da un file nell'archiviazione BLOB di Azure](#f-importing-data-from-a-file-in-azure-blob-storage).
 
 > [!IMPORTANT]
 > Database SQL di Azure supporta solo la lettura da Archiviazione BLOB di Azure.
@@ -122,7 +122,7 @@ Una situazione in cui può essere necessario disabilitare i vincoli (comportamen
 > [!NOTE]
 > L'opzione MAXERRORS non viene applicata al controllo dei vincoli.
 
-CODEPAGE **=** { **'** ACP **'** \| **'** OEM **'** \| **'** RAW **'** \| **'** _code_page_ **'** } specifica la tabella codici dei dati contenuti nel file di dati. CODEPAGE è pertinente solo se i dati contengono colonne di tipo **char** , **varchar** o **text** con valori carattere maggiori di **127** o minori di **32** . Per un esempio, vedere [Definizione di una tabella codici](#d-specifying-a-code-page).
+CODEPAGE **=** { **'** ACP **'** \| **'** OEM **'** \| **'** RAW **'** \| **'** _code_page_ **'** } specifica la tabella codici dei dati contenuti nel file di dati. CODEPAGE è pertinente solo se i dati contengono colonne di tipo **char**, **varchar** o **text** con valori carattere maggiori di **127** o minori di **32**. Per un esempio, vedere [Definizione di una tabella codici](#d-specifying-a-code-page).
 
 > [!IMPORTANT]
 > CODEPAGE non è un'opzione supportata in Linux per [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. Per [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)], è consentita solo l'opzione **'RAW'** per CODEPAGE.
@@ -132,8 +132,8 @@ CODEPAGE **=** { **'** ACP **'** \| **'** OEM **'** \| **'** RAW **'** \| **'** 
 
 |Valore CODEPAGE|Descrizione|
 |--------------------|-----------------|
-|ACP|Le colonne con tipo di dati **char** , **varchar** o **text** vengono convertire dalla tabella codici [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (ISO 1252) a quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
-|OEM (predefinito)|Le colonne con tipo di dati **char** , **varchar** o **text** vengono convertire dalla tabella codici OEM di sistema a quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
+|ACP|Le colonne con tipo di dati **char**, **varchar** o **text** vengono convertire dalla tabella codici [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (ISO 1252) a quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
+|OEM (predefinito)|Le colonne con tipo di dati **char**, **varchar** o **text** vengono convertire dalla tabella codici OEM di sistema a quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
 |RAW|Non viene eseguita alcuna conversione da una tabella codici a un'altra. Si tratta dell'opzione più rapida.|
 |*code_page*|Numero specifico della tabella codici, ad esempio 850.<br /><br /> **&#42;&#42; Importante &#42;&#42;** Le versioni precedenti a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] non supportano la tabella codici 65001 (codifica UTF-8).|
 | &nbsp; | &nbsp; |
@@ -145,9 +145,9 @@ DATAFILETYPE **=** { **'char'** \| **'native'** \| **'widechar'** \| **'widenati
 |Valore DATAFILETYPE|Rappresentazione di tutti i dati|
 |------------------------|------------------------------|
 |**char** (impostazione predefinita)|Formato carattere.<br /><br /> Per altre informazioni, vedere [Usare il formato carattere per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md).|
-|**native**|Tipi di dati nativi (database). Creare il file di dati nativo tramite l'importazione bulk dei dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'utilità **bcp** .<br /><br /> Il valore native rappresenta un'alternativa con prestazioni superiori rispetto al valore char. L'uso del formato nativo è consigliabile per il trasferimento bulk dei dati tra più istanze di SQL Server tramite un file di dati che non contiene caratteri estesi o DBCS (Double Byte Character Set).<br /><br /> Per altre informazioni, vedere [Usare il formato nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md).|
+|**native**|Tipi di dati nativi (database). Creare il file di dati nativo tramite l'importazione bulk dei dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'utilità **bcp**.<br /><br /> Il valore native rappresenta un'alternativa con prestazioni superiori rispetto al valore char. L'uso del formato nativo è consigliabile per il trasferimento bulk dei dati tra più istanze di SQL Server tramite un file di dati che non contiene caratteri estesi o DBCS (Double Byte Character Set).<br /><br /> Per altre informazioni, vedere [Usare il formato nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md).|
 |**widechar**|Caratteri Unicode.<br /><br /> Per altre informazioni, vedere [Usare il formato carattere Unicode per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).|
-|**widenative**|Tipi di dati nativi (database), ad eccezione delle colonne di tipo **char** , **varchar** e **text** , in cui i dati vengono archiviati in formato Unicode. Creare il file di dati **widenative** tramite l'importazione bulk dei dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'utilità **bcp** .<br /><br /> Il valore **widenative** rappresenta un'alternativa con prestazioni migliori rispetto a **widechar** . Se il file di dati contiene caratteri estesi [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)], specificare **widenative** .<br /><br /> Per altre informazioni, vedere [Usare il formato Unicode nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md).|
+|**widenative**|Tipi di dati nativi (database), ad eccezione delle colonne di tipo **char**, **varchar** e **text**, in cui i dati vengono archiviati in formato Unicode. Creare il file di dati **widenative** tramite l'importazione bulk dei dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'utilità **bcp**.<br /><br /> Il valore **widenative** rappresenta un'alternativa con prestazioni migliori rispetto a **widechar**. Se il file di dati contiene caratteri estesi [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)], specificare **widenative**.<br /><br /> Per altre informazioni, vedere [Usare il formato Unicode nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md).|
 | &nbsp; | &nbsp; |
 
 ERRORFILE **='** _file_name_ **'** specifica il file usato per raccogliere le righe che contengono errori di formattazione e non possono essere convertite in un set di righe OLE DB. Tali righe vengono copiate nel file degli errori dal file di dati così come sono.
@@ -177,14 +177,14 @@ Per altre informazioni sul mantenimento dei valori Identity, vedere [Mantenere i
 
 KEEPNULLS specifica che durante l'operazione di importazione bulk le colonne vuote devono mantenere un valore Null. Ciò significa che durante l'operazione non verranno inseriti eventuali valori predefiniti per le colonne vuote. Per altre informazioni, vedere [Mantenere i valori Null o usare i valori predefiniti durante l'importazione in blocco &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).
 
-KILOBYTES_PER_BATCH **=** _kilobytes_per_batch_ specifica il numero approssimativo di kilobyte (KB) di dati per ogni batch come *kilobytes_per_batch* . Per impostazione predefinita, il valore KILOBYTES_PER_BATCH è sconosciuto. Per alcune considerazioni relative alle prestazioni, vedere la sezione "Osservazioni" di seguito in questo argomento.
+KILOBYTES_PER_BATCH **=** _kilobytes_per_batch_ specifica il numero approssimativo di kilobyte (KB) di dati per ogni batch come *kilobytes_per_batch*. Per impostazione predefinita, il valore KILOBYTES_PER_BATCH è sconosciuto. Per alcune considerazioni relative alle prestazioni, vedere la sezione "Osservazioni" di seguito in questo argomento.
 
 LASTROW **=** _last_row_ specifica il numero dell'ultima riga da caricare. Il valore predefinito è 0, che indica l'ultima riga nel file di dati specificato.
 
-MAXERRORS **=** _max_errors_ specifica il numero massimo di errori di sintassi consentiti nei dati prima dell'annullamento dell'operazione di importazione bulk. Ogni riga che non è possibile importare tramite l'operazione di importazione bulk viene ignorata e considerata come errore. Se non si specifica *max_errors* , il valore predefinito è 10.
+MAXERRORS **=** _max_errors_ specifica il numero massimo di errori di sintassi consentiti nei dati prima dell'annullamento dell'operazione di importazione bulk. Ogni riga che non è possibile importare tramite l'operazione di importazione bulk viene ignorata e considerata come errore. Se non si specifica *max_errors*, il valore predefinito è 10.
 
 > [!NOTE]
-> L'opzione MAX_ERRORS non è applicabile alle verifiche dei vincoli o alla conversione di tipi di dati **money** e **bigint** .
+> L'opzione MAX_ERRORS non è applicabile alle verifiche dei vincoli o alla conversione di tipi di dati **money** e **bigint**.
 
 ORDER ( { *column* [ ASC | DESC ] } [ **,** ... *n* ] ) specifica la modalità di ordinamento dei dati nel file. Le prestazioni dell'importazione bulk sono migliori se i dati da importare vengono ordinati in base all'indice cluster della tabella, se disponibile. Se il file di dati viene ordinato in modo diverso rispetto all'ordine di una chiave di indice cluster o se la tabella non include un indice cluster, la clausola ORDER viene ignorata. I nomi di colonna specificati devono corrispondere a nomi di colonna validi nella tabella di destinazione. Per impostazione predefinita, per l'operazione di inserimento bulk si presume che il file di dati non sia ordinato. Per garantire l'ottimizzazione dell'importazione bulk, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene inoltre verificato che i dati importati siano ordinati.
 
@@ -212,7 +212,7 @@ WITH ( FORMAT='CSV');
 FIELDQUOTE **=** 'field_quote' **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Specifica il carattere da usare come carattere virgolette nel file CSV. Se non viene specificato alcun carattere, viene usato il carattere virgolette (") in base alla definizione dello standard [RFC 4180](https://tools.ietf.org/html/rfc4180).
 
-FORMATFILE **=** ' _format_file_path_ ' specifica il percorso completo di un file di formato. Un file di formato descrive il file di dati contenente le risposte archiviate create tramite l'utilità **bcp** nella stessa tabella o vista. È consigliabile utilizzare il file di formato nei casi seguenti:
+FORMATFILE **=** '_format_file_path_' specifica il percorso completo di un file di formato. Un file di formato descrive il file di dati contenente le risposte archiviate create tramite l'utilità **bcp** nella stessa tabella o vista. È consigliabile utilizzare il file di formato nei casi seguenti:
 
 - Il file di dati contiene un numero di colonne maggiore o minore rispetto alla tabella o alla vista.
 - Le colonne sono in un ordine diverso.
@@ -222,15 +222,15 @@ FORMATFILE **=** ' _format_file_path_ ' specifica il percorso completo di un fil
 **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 e database SQL di Azure.
 A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, format_file_path può essere presente nell'archiviazione BLOB di Azure.
 
-FIELDTERMINATOR **='** _field_terminator_ **'** specifica il carattere di terminazione del campo da usare per i file di dati di tipo **char** e **widechar** . Il carattere di terminazione del campo predefinito è \t (carattere di tabulazione). Per altre informazioni, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).
+FIELDTERMINATOR **='** _field_terminator_ **'** specifica il carattere di terminazione del campo da usare per i file di dati di tipo **char** e **widechar**. Il carattere di terminazione del campo predefinito è \t (carattere di tabulazione). Per altre informazioni, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).
 
-ROWTERMINATOR **='** _row_terminator_ **'** specifica il carattere di terminazione della riga da usare per i file di dati di tipo **char** e **widechar** . Il carattere di terminazione della riga predefinito è **\r\n** (carattere di nuova riga). Per altre informazioni, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).
+ROWTERMINATOR **='** _row_terminator_ **'** specifica il carattere di terminazione della riga da usare per i file di dati di tipo **char** e **widechar**. Il carattere di terminazione della riga predefinito è **\r\n** (carattere di nuova riga). Per altre informazioni, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).
 
 ## <a name="compatibility"></a>Compatibilità
 
 L'istruzione BULK INSERT consente di applicare meccanismi restrittivi di convalida e controllo dei dati letti da un file che potrebbero causare errori negli script esistenti eseguiti in dati non validi. L'istruzione BULK INSERT, ad esempio, prevede le verifiche seguenti:
 
-- Validità delle rappresentazioni native dei tipi di dati **float** o **real** .
+- Validità delle rappresentazioni native dei tipi di dati **float** o **real**.
 - Lunghezza in byte pari dei dati Unicode.
 
 ## <a name="data-types"></a>Tipi di dati
@@ -239,10 +239,10 @@ L'istruzione BULK INSERT consente di applicare meccanismi restrittivi di convali
 
 Le conversioni del tipo di dati da string a decimal usate in BULK INSERT seguono le stesse regole della funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md), che rifiuta le stringhe che rappresentano valori numerici con notazione scientifica. Tali stringhe vengono quindi considerate da BULK INSERT come valori non validi e vengono segnalati errori di conversione.
 
-Per risolvere il problema, usare un file di formato per eseguire l'importazione bulk dei dati **float** in notazione scientifica in una colonna decimale. Nel file di formato, descrivere in modo esplicito la colonna come dati **real** o **float** . Per altre informazioni su questi tipi di dati, vedere [float e real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md).
+Per risolvere il problema, usare un file di formato per eseguire l'importazione bulk dei dati **float** in notazione scientifica in una colonna decimale. Nel file di formato, descrivere in modo esplicito la colonna come dati **real** o **float**. Per altre informazioni su questi tipi di dati, vedere [float e real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md).
 
 > [!NOTE]
-> I file di formato rappresentano i dati **real** con il tipo di dati **SQLFLT4** e i dati **float** con il tipo di dati **SQLFLT8** . Per informazioni sui file di formato diverso da XML, vedere [Specifica del tipo di archiviazione di file tramite bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md).
+> I file di formato rappresentano i dati **real** con il tipo di dati **SQLFLT4** e i dati **float** con il tipo di dati **SQLFLT8**. Per informazioni sui file di formato diverso da XML, vedere [Specifica del tipo di archiviazione di file tramite bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md).
 
 #### <a name="example-of-importing-a-numeric-value-that-uses-scientific-notation"></a>Esempio di importazione di un valore numerico con notazione scientifica
 
@@ -295,7 +295,7 @@ Per eseguire l'esportazione o l'importazione bulk di dati SQLXML, utilizzare uno
 
 ## <a name="general-remarks"></a>Osservazioni generali
 
-Per un confronto tra l'istruzione BULK INSERT, l'istruzione INSERT ... SELECT \* FROM OPENROWSET(BULK...) e il comando **bcp** , vedere [Importazione ed esportazione bulk di dati &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).
+Per un confronto tra l'istruzione BULK INSERT, l'istruzione INSERT ... SELECT \* FROM OPENROWSET(BULK...) e il comando **bcp**, vedere [Importazione ed esportazione bulk di dati &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).
 
 Per informazioni sulla preparazione dei dati per le operazioni di importazione bulk, vedere [Preparazione dei dati per l'importazione o l'esportazione bulk &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).
 
@@ -314,7 +314,7 @@ Prima di [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, i file 
 
 ## <a name="restrictions"></a><a name="Limitations"></a> Restrizioni
 
-Quando si utilizza un file di formato con BULK INSERT, è possibile specificare al massimo 1024 campi. Si tratta dello stesso numero massimo di colonne consentite in una tabella. Se si usa un file di formato con BULK INSERT insieme a un file di dati contenente più di 1024 campi, verrà generato l'errore 4822. L' [utilità bcp](../../tools/bcp-utility.md) non ha questa limitazione. Pertanto, per i file di dati contenenti più di 1024 campi, usare BULK INSERT senza un file di formato oppure usare il comando **bcp** .
+Quando si utilizza un file di formato con BULK INSERT, è possibile specificare al massimo 1024 campi. Si tratta dello stesso numero massimo di colonne consentite in una tabella. Se si usa un file di formato con BULK INSERT insieme a un file di dati contenente più di 1024 campi, verrà generato l'errore 4822. L'[utilità bcp](../../tools/bcp-utility.md) non ha questa limitazione. Pertanto, per i file di dati contenenti più di 1024 campi, usare BULK INSERT senza un file di formato oppure usare il comando **bcp**.
 
 ## <a name="performance-considerations"></a>Considerazioni sulle prestazioni
 

@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: 846ce27ff8e7d9560a6d4cc691d1523fddd913fa
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 5252cae293cd4c700f359b8168e0d5d5d10a70cf
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92418830"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099244"
 ---
 # <a name="mssqlserver_832"></a>MSSQLSERVER_832
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ## <a name="details"></a>Dettagli
 
-|Attributo|valore|
+|Attributo|Valore|
 |---|---|
 |Nome prodotto|SQL Server|
 |ID evento|832|
@@ -60,4 +60,4 @@ Vengono controllate solo le pagine non attualmente modificate nella cache (o "di
 
 È possibile che anche `DBCC CHECKDB` non segnali un errore per una pagina in questo stato dopo la scrittura su disco. Il motivo è che la modifica non corretta potrebbe trovarsi in posizioni della pagina che non contengono dati, né contengono informazioni importanti sulla struttura della pagina o delle righe oppure potrebbe trattarsi di modifiche ai dati che CHECKDB non è in grado di rilevare.  
 
-Per altri dettagli e informazioni sul messaggio 832, vedere anche il white paper [Concetti di base di I/O di SQL Server, capitolo 2](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10)).
+Per altri dettagli e informazioni sul messaggio 832, vedere anche il white paper [Concetti di base di I/O di SQL Server, capitolo 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10)).

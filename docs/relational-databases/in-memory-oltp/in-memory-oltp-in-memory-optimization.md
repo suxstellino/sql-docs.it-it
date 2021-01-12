@@ -15,12 +15,12 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f462f256c98c4482af67527401cc6d30f3f0776
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 281fe018c5c2d5e0717fb2c35dfcc8c3c9e8c3fc
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465382"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100236"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>OLTP in memoria e ottimizzazione per la memoria
 
@@ -56,7 +56,7 @@ Per una panoramica più dettagliata di OLTP in memoria e un'analisi degli scenar
 |[Esempi di codice di OLTP in memoria](./sample-database-for-in-memory-oltp.md)|Sono contenuti esempi di codice che illustrano come creare e usare una tabella ottimizzata per la memoria.|  
 |[Tabelle ottimizzate per la memoria](./sample-database-for-in-memory-oltp.md)|Vengono introdotte le tabelle ottimizzate per la memoria.|  
 |[Variabili di tabella con ottimizzazione per la memoria](./faster-temp-table-and-table-variable-by-using-memory-optimization.md)|Esempio di codice in cui viene mostrato come usare una variabile di tabella ottimizzata per la memoria anziché una variabile di tabella tradizionale per ridurre l'utilizzo di tempdb.|  
-|[Indici in tabelle con ottimizzazione per la memoria](/sql/relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables)|Vengono introdotti indici ottimizzati per la memoria.|  
+|[Indici in tabelle con ottimizzazione per la memoria](./indexes-for-memory-optimized-tables.md)|Vengono introdotti indici ottimizzati per la memoria.|  
 |[Stored procedure compilate in modo nativo](./a-guide-to-query-processing-for-memory-optimized-tables.md)|Vengono illustrate le stored procedure compilate in modo nativo.|  
 |[Gestione della memoria per OLTP in memoria](/previous-versions/sql/sql-server-2016/dn465872(v=sql.130))|Informazioni e gestione dell'utilizzo della memoria nel sistema.|  
 |[Creazione e gestione dell'archiviazione per gli oggetti ottimizzati per la memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)|Vengono illustrati i file di dati e differenziali in cui vengono archiviate le informazioni sulle transazioni nelle tabelle ottimizzate per la memoria.|  
@@ -136,4 +136,3 @@ I passaggi generali illustrati nel video sono i seguenti:
 
 ## <a name="see-also"></a>Vedere anche  
  [Caratteristiche del database](../databases/databases.md)  
-  

@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rgward
 ms.author: ramakoni
-ms.openlocfilehash: bfcd8763c649f83bb9e72881c6facda29917f7b8
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 7aa3b39996f8dc282e11d92706743a7ba42998da
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92418891"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099269"
 ---
 # <a name="mssqlserver_7105"></a>MSSQLSERVER_7105
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ## <a name="details"></a>Dettagli
 
-|Attributo|valore|
+|Attributo|Valore|
 |---|---|
 |Nome prodotto|SQL Server|
 |ID evento|7105|
@@ -55,7 +55,7 @@ Vedere le sezioni Risoluzione e [Ulteriori informazioni](#more-information) per 
 1. Come indicato nel messaggio, il primo passaggio da eseguire consiste nell'eseguire `DBCC CHECKDB` sul database o `DBCC CHECKTABLE` sulla tabella in cui si è verificato il problema.
 
     - L'ID del database è indicato nel messaggio.
-    - Per individuare la tabella interessata esatta senza eseguire `DBCC CHECKDB`, sarà necessario individuare le tabelle a cui ha avuto accesso la query che ha riscontrato l'errore. Un metodo consiste nell'usare SQL Profiler per tracciare la query. Tuttavia, in [!INCLUDE[sskatmai](../../includes/sskatmai-md.md)] e [!INCLUDE[sskatmai](../../includes/sskatmai-md.md)] R2 è possibile trovare la query usando la sessione Eventi estesi system_health. Vedere questo collegamento per altre informazioni sull'uso della sessione system_health: [Usare la sessione system_health](/sql/relational-databases/extended-events/use-the-system-health-session).
+    - Per individuare la tabella interessata esatta senza eseguire `DBCC CHECKDB`, sarà necessario individuare le tabelle a cui ha avuto accesso la query che ha riscontrato l'errore. Un metodo consiste nell'usare SQL Profiler per tracciare la query. Tuttavia, in [!INCLUDE[sskatmai](../../includes/sskatmai-md.md)] e [!INCLUDE[sskatmai](../../includes/sskatmai-md.md)] R2 è possibile trovare la query usando la sessione Eventi estesi system_health. Vedere questo collegamento per altre informazioni sull'uso della sessione system_health: [Usare la sessione system_health](../extended-events/use-the-system-health-session.md).
 
     - Come per qualsiasi problema di coerenza del database, è possibile risolvere questi errori eseguendo il ripristino da un backup valido noto che non contiene questo problema.
 

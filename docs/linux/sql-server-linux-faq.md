@@ -7,12 +7,12 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 7b6583ce7fb4ae2d0b37d898b549a385cfc09763
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: dc5d54c3d64d43eb4b68a6762e3bd024587937ab
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115444"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094651"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Domande frequenti su SQL Server in Linux
 
@@ -105,7 +105,7 @@ Le sezioni seguenti contengono domande e risposte comuni per SQL Server in esecu
 
 1. **È disponibile uno strumento come SSMS eseguito in Linux?**
 
-   Il nuovo Azure Data Studio è uno strumento multipiattaforma per la gestione di SQL Server. Per altre informazioni, vedere [Informazioni su Azure Data Studio](../azure-data-studio/what-is.md).
+   Il nuovo Azure Data Studio è uno strumento multipiattaforma per la gestione di SQL Server. Per altre informazioni, vedere [Informazioni su Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md).
 
 1. **I comandi come sqlcmd e bcp sono disponibili in Linux?**
 

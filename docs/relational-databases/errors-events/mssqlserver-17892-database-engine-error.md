@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: 59cf1ed10d71bf9813f2ce814d88e7f7d64b6b2e
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 905b961e2fbf882f59b050a3acb7ba0f9c2f9046
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92418790"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099335"
 ---
 # <a name="mssqlserver_17892"></a>MSSQLSERVER_17892
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ## <a name="details"></a>Dettagli
 
-|Attributo|valore|
+|Attributo|Valore|
 |---|---|
 |Nome prodotto|SQL Server|
 |ID evento|17892|
@@ -36,7 +36,7 @@ ms.locfileid: "92418790"
 
 ## <a name="explanation"></a>Spiegazione
 
-L'errore 17892 viene generato quando non è possibile eseguire correttamente il codice di un trigger di accesso. I [trigger di accesso](/sql/relational-databases/triggers/logon-triggers) attivano stored procedure in risposta a un evento LOGON generato quando viene stabilita una sessione utente a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Viene segnalato all'utente un messaggio di errore simile al seguente:
+L'errore 17892 viene generato quando non è possibile eseguire correttamente il codice di un trigger di accesso. I [trigger di accesso](../triggers/logon-triggers.md) attivano stored procedure in risposta a un evento LOGON generato quando viene stabilita una sessione utente a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Viene segnalato all'utente un messaggio di errore simile al seguente:
 
 > Messaggio 17892, livello 14, stato 1, server \<Server Name>, riga 1  
 Accesso non riuscito per l'account di accesso \<Login Name> a causa dell'esecuzione di un trigger.
@@ -62,15 +62,15 @@ Il problema può verificarsi se si verifica un errore durante l'esecuzione del c
   
   In alternativa, è possibile semplicemente eliminare o disabilitare il trigger di accesso in modo che gli utenti possano continuare ad accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
-- **Scenario 2** : non sono presenti sessioni correnti aperte con privilegi amministrativi, ma la connessione amministrativa dedicata (DAC) è abilitata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+- **Scenario 2**: non sono presenti sessioni correnti aperte con privilegi amministrativi, ma la connessione amministrativa dedicata (DAC) è abilitata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-    In questo caso, è possibile usare la connessione DAC per eseguire gli stessi passaggi illustrati nel caso 1 perché le connessioni DAC non sono interessate dai trigger di accesso. Per altre informazioni sulla connessione DAC, vedere: [Connessione di diagnostica per gli amministratori di database](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators).
+    In questo caso, è possibile usare la connessione DAC per eseguire gli stessi passaggi illustrati nel caso 1 perché le connessioni DAC non sono interessate dai trigger di accesso. Per altre informazioni sulla connessione DAC, vedere: [Connessione di diagnostica per gli amministratori di database](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).
 
     Per verificare se la connessione DAC è abilitata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile controllare se nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è presente un messaggio simile al seguente:
 
     > 2020-02-09 16:17:44.150 Stabilito il supporto per le connessioni amministrative dedicate per l'attesa locale sulla porta 1434.  
 
-- **Scenario 3** : la connessione DAC non è stata abilitata nel server e non è disponibile una sessione di amministrazione esistente per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+- **Scenario 3**: la connessione DAC non è stata abilitata nel server e non è disponibile una sessione di amministrazione esistente per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
     In questo scenario, l'unico modo per risolvere il problema è eseguire i passaggi seguenti:
   
@@ -80,7 +80,7 @@ Il problema può verificarsi se si verifica un errore durante l'esecuzione del c
         > [!NOTE]
         > Per la procedura precedente è necessario un account *SA* o un account amministratore equivalente.
   
-         Per altre informazioni su queste e altre opzioni di avvio, vedere: [Opzioni di avvio del servizio del motore di database](/sql/database-engine/configure-windows/database-engine-service-startup-options).
+         Per altre informazioni su queste e altre opzioni di avvio, vedere: [Opzioni di avvio del servizio del motore di database](../../database-engine/configure-windows/database-engine-service-startup-options.md).
 
 ## <a name="more-information"></a>Ulteriori informazioni
 

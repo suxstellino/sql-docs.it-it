@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: 4a3857e9e98bfbe7fcc86ee07272698f0fcac763
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 3228a21b43fd5b5ed2a23c5e13b47353e55cd028
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92418773"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093276"
 ---
 # <a name="mssqlserver_3859"></a>MSSQLSERVER_3859
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ## <a name="details"></a>Dettagli
 
-|Attributo|valore|
+|Attributo|Valore|
 |---|---|
 |Nome prodotto|SQL Server|
 |ID evento|3859|
@@ -52,10 +52,10 @@ Questo errore indica modifiche eseguite dall'utente sulle tabelle di sistema. L'
 
     Quando si esegue il comando `DBCC_CHECKDB` dopo l'aggiornamento manuale di una tabella di sistema, viene restituito il messaggio di avviso seguente:
 
-    > Risultati DBCC per ' **nome_database** '.  
+    > Risultati DBCC per '**nome_database**'.  
     Messaggio 8992, livello 16, stato 1, riga 1  
-    Messaggio di controllo del catalogo 3859, stato 1: Avviso: il catalogo di sistema è stato aggiornato direttamente nel database con ID \%d, l'ultima volta alle ore **date_time** .  
-    CHECKDB ha trovato 0 errori di allocazione e 0 errori di consistenza nel database ' **nome_db** '.  
+    Messaggio di controllo del catalogo 3859, stato 1: Avviso: il catalogo di sistema è stato aggiornato direttamente nel database con ID \%d, l'ultima volta alle ore **date_time**.  
+    CHECKDB ha trovato 0 errori di allocazione e 0 errori di consistenza nel database '**nome_db**'.  
     Esecuzione DBCC completata. Se sono stati visualizzati messaggi di errore DBCC, rivolgersi all'amministratore di sistema.
 
 ## <a name="user-action"></a>Azione utente
@@ -77,4 +77,4 @@ Per risolvere questo problema, usare uno dei metodi seguenti.
 
 ## <a name="more-information"></a>Ulteriori informazioni
 
-Per altre informazioni, vedere: [Tabelle di base di sistema](/sql/relational-databases/system-tables/system-base-tables).
+Per altre informazioni, vedere: [Tabelle di base di sistema](../system-tables/system-base-tables.md).

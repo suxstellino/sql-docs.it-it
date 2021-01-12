@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: 870f9b9f4d3fcc8186ed1d16faee861ed63e4135
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 8b9d79dc7b23339b5b152695daf5efc5c47847a4
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92418799"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099354"
 ---
 # <a name="mssqlserver_17112"></a>MSSQLSERVER_17112
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ## <a name="details"></a>Dettagli
 
-|Attributo|valore|
+|Attributo|Valore|
 |---|---|
 |Nome prodotto|SQL Server|
 |ID evento|17112|
@@ -36,7 +36,7 @@ ms.locfileid: "92418799"
 
 ## <a name="explanation"></a>Spiegazione
 
-Questo errore indica che è stata specificata un'[opzione di avvio del servizio del motore di database](/sql/database-engine/configure-windows/database-engine-service-startup-options) non valida. Quando un'opzione di avvio non viene specificata correttamente, l'avvio di SQL Server non riesce oppure l'esecuzione potrebbe essere diversa dal previsto. Viene generato anche l'errore 17112.
+Questo errore indica che è stata specificata un'[opzione di avvio del servizio del motore di database](../../database-engine/configure-windows/database-engine-service-startup-options.md) non valida. Quando un'opzione di avvio non viene specificata correttamente, l'avvio di SQL Server non riesce oppure l'esecuzione potrebbe essere diversa dal previsto. Viene generato anche l'errore 17112.
 
 In alcuni casi, è possibile che l'istanza venga avviata, ma quando si esamina il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i parametri di avvio non risultano corretti:
 
@@ -67,5 +67,5 @@ Usare lo strumento Gestione configurazione [!INCLUDE[ssNoVersion](../../includes
 
 Per altre informazioni su questo argomento, vedere gli argomenti seguenti:
 
-- [Opzioni di avvio del servizio del motore di database](/sql/database-engine/configure-windows/database-engine-service-startup-options)
-- [Configurazione delle opzioni di avvio del server (Gestione configurazione SQL Server)](/sql/database-engine/configure-windows/scm-services-configure-server-startup-options)
+- [Opzioni di avvio del servizio del motore di database](../../database-engine/configure-windows/database-engine-service-startup-options.md)
+- [Configurazione delle opzioni di avvio del server (Gestione configurazione SQL Server)](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)

@@ -28,15 +28,15 @@ helpviewer_keywords:
 - auto_update_statistics
 - Query Store options
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 97139ed9331853a5d84d261c69510993fb7231a2
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 652a4b13db3fdd98b774a5c884e68848a3b0b847
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642265"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099569"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opzioni di ALTER DATABASE SET (Transact-SQL)
 
@@ -2005,10 +2005,6 @@ Non è possibile cambiare lo stato di ALLOW_SNAPSHOT_ISOLATION se il database è
 
 Se si imposta ALLOW_SNAPSHOT_ISOLATION in un database READ_ONLY, tale impostazione viene mantenuta anche se il database viene in seguito impostato su READ_WRITE.
 
-È possibile modificare le impostazioni di ALLOW_SNAPSHOT_ISOLATION per i database master, model, msdb e tempdb. Se si cambia l'impostazione per il database tempdb, tale impostazione viene mantenuta ogni volta che l'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene arrestata e riavviata. Se si modifica l'impostazione per il database model, questa diventa l'impostazione predefinita per i nuovi database creati, con l'eccezione di tempdb.
-
-L'impostazione predefinita dell'opzione è ON per i database master e msdb.
-
 L'impostazione corrente di questa opzione può essere determinata esaminando la colonna `snapshot_isolation_state` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
 READ_COMMITTED_SNAPSHOT { ON | OFF }     
@@ -2809,7 +2805,7 @@ Definisce il tempo CPU di compilazione trascorso totale usato da una query nel p
 TOTAL_EXECUTION_CPU_TIME_MS     
 Definisce il tempo CPU di esecuzione trascorso totale usato da una query nel periodo di valutazione. Il valore predefinito è 100. Questo significa che per il valore predefinito della soglia dei criteri di acquisizione non aggiornati una query deve aver usato almeno 100 ms di tempo CPU al giorno per l'esecuzione perché venga salvata in modo permanente in Query Store. TOTAL_EXECUTION_CPU_TIME_MS è di tipo **int**.
 
-**\<snapshot_option> ::=**
+**\<snapshot_option>**
 
 Determina il livello di isolamento delle transazioni.
 
