@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2c03d436a85e174e1af17e47c8dc27d3ad2d6976
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fbf4875ec03cc961e696ae5f39bd0e29abccb4e9
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541914"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98168429"
 ---
 # <a name="sp_dbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,9 +44,9 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @dbname = ] name` Nome del database per cui si desidera modificare il livello di compatibilità. I nomi di database devono essere conformi alle regole per gli identificatori. *Name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @dbname = ] name` Nome del database per cui si desidera modificare il livello di compatibilità. I nomi di database devono essere conformi alle regole per gli identificatori. *Name* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @new_cmptlevel = ] version` Versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con cui il database deve essere reso compatibile. *Version* è di **tinyint**e il valore predefinito è null. Il valore deve essere uno dei seguenti:  
+`[ @new_cmptlevel = ] version` Versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con cui il database deve essere reso compatibile. *Version* è di **tinyint** e il valore predefinito è null. Il valore deve essere uno dei seguenti:  
   
  **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
@@ -56,7 +56,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
   
  **120** = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
- **130** = [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
+ **130** = [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -66,7 +66,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
   
  Se il *nome* viene specificato senza *versione*, [!INCLUDE[ssDE](../../includes/ssde-md.md)] restituisce un messaggio che Visualizza il livello di compatibilità corrente del database specificato.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Per una descrizione dei livelli di compatibilità, vedere [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  

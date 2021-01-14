@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1aa72c49e5862621da193d4e4a400813c7cd0d91
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 7e731d14967d808aa57f3fa0e001e5e593238ffd
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480591"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170433"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Novità in Master Data Services (MDS)
 
@@ -30,7 +30,7 @@ ms.locfileid: "89480591"
   
  **Scaricare**  
   
--   Per scaricare [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], passare a  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** .  
+-   Per scaricare [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], passare a  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** .  
   
 -   Se si ha un account di Azure,  fare clic **[qui](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2019?tab=Overview)** per creare rapidamente una macchina virtuale in cui è già installato [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
   
@@ -81,7 +81,7 @@ ms.locfileid: "89480591"
   
  In questa versione di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] vengono forniti altri livelli di autorizzazioni grazie all'introduzione di questi nuovi tipi: lettura, creazione, aggiornamento ed eliminazione. Ad esempio, un utente che ha solo l'autorizzazione di aggiornamento ora può aggiornare i dati master senza creare o eliminare i dati. Quando si concede l'autorizzazione di creazione, aggiornamento o eliminazione, all'utente viene assegnata automaticamente anche l'autorizzazione di lettura. È anche possibile combinare le autorizzazioni di lettura, creazione, aggiornamento ed eliminazione.  
   
- Durante l'aggiornamento a [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], le autorizzazioni precedenti vengono convertite nelle nuove autorizzazioni, come illustrato nella tabella seguente.  
+ Durante l'aggiornamento a [!INCLUDE[ssSQL15](../includes/sssql16-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], le autorizzazioni precedenti vengono convertite nelle nuove autorizzazioni, come illustrato nella tabella seguente.  
   
 |Autorizzazione nella versione precedente|Nuova autorizzazione|  
 |------------------------------------|--------------------|  
@@ -113,7 +113,7 @@ ms.locfileid: "89480591"
   
 ## <a name="improved-troubleshooting"></a>Risoluzione dei problemi migliorata  
   
- In [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]sono state aggiunte funzionalità per migliorare il debug e semplificare la risoluzione dei problemi. Per altre informazioni, vedere [Traccia &#40;Master Data Services&#41;](../master-data-services/tracing-master-data-services.md).  
+ In [!INCLUDE[ssSQL15](../includes/sssql16-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]sono state aggiunte funzionalità per migliorare il debug e semplificare la risoluzione dei problemi. Per altre informazioni, vedere [Traccia &#40;Master Data Services&#41;](../master-data-services/tracing-master-data-services.md).  
   
 ## <a name="improved-manageability"></a>Gestione migliorata  
   

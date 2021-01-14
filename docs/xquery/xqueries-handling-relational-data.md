@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5ebd9c4d2bae1c491d2bd7a23e52c83457942fb6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6ac32119090ba7973ad628c35f6b5b994eb03561
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775475"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172353"
 ---
 # <a name="xqueries-handling-relational-data"></a>XQuery per la gestione di dati relazionali
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -34,14 +34,14 @@ ms.locfileid: "85775475"
   
 -   funzione **SQL: Variable ()**  
   
- È possibile utilizzare queste estensioni XQuery quando si specifica un'espressione XQuery nel metodo **query ()** del tipo di dati **XML** . Di conseguenza, il metodo **query ()** può produrre codice XML che combina i dati da tipi di dati XML e non**XML** .  
+ È possibile utilizzare queste estensioni XQuery quando si specifica un'espressione XQuery nel metodo **query ()** del tipo di dati **XML** . Di conseguenza, il metodo **query ()** può produrre codice XML che combina i dati da tipi di dati XML e non **XML** .  
   
  È inoltre possibile utilizzare queste funzioni quando si utilizzano i metodi con tipo di dati **XML** **Modify ()**, **value ()**, **query ()** e **exist ()** per esporre un valore relazionale all'interno di XML.  
   
  Per ulteriori informazioni, vedere funzione [SQL: Column () (XQuery)](../xquery/xquery-extension-functions-sql-column.md) e [funzione SQL: Variable () (XQuery)](../xquery/xquery-extension-functions-sql-variable.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [&#40;di dati XML SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [Dati XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
  [Costrutto XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
   

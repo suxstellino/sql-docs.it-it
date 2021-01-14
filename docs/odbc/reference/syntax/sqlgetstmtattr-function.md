@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e321d460-e997-4527-aee6-207cf5a498e9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a780f72b163628894671192fa11fa1fed906923f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f6af1813068b51780c9181f3e3e98559769495fe
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421215"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172373"
 ---
 # <a name="sqlgetstmtattr-function"></a>Funzione SQLGetStmtAttr
 **Conformità**  
@@ -62,20 +62,20 @@ SQLRETURN SQLGetStmtAttr(
  Se *ValuePtr* è null, *StringLengthPtr* restituisce comunque il numero totale di byte (escluso il carattere di terminazione null per i dati di tipo carattere) disponibili per restituire nel buffer a cui punta *ValuePtr*.  
   
  *BufferLength*  
- Input Se *attribute* è un attributo definito da ODBC e *ValuePtr* punta a una stringa di caratteri o a un buffer binario, questo argomento deve essere la lunghezza di \* *ValuePtr*. Se *attribute* è un attributo definito da ODBC e \* *ValuePtr* è un numero intero, *bufferLength* viene ignorato. Se il valore restituito in * \* ValuePtr* è una stringa Unicode (quando si chiama **SQLGetStmtAttrW**), l'argomento *bufferLength* deve essere un numero pari.  
+ Input Se *attribute* è un attributo definito da ODBC e *ValuePtr* punta a una stringa di caratteri o a un buffer binario, questo argomento deve essere la lunghezza di \* *ValuePtr*. Se *attribute* è un attributo definito da ODBC e \* *ValuePtr* è un numero intero, *bufferLength* viene ignorato. Se il valore restituito in *\* ValuePtr* è una stringa Unicode (quando si chiama **SQLGetStmtAttrW**), l'argomento *bufferLength* deve essere un numero pari.  
   
  Se *attribute* è un attributo definito dal driver, l'applicazione indica la natura dell'attributo a gestione driver impostando l'argomento *bufferLength* . *BufferLength* può avere i valori seguenti:  
   
--   Se * \* ValuePtr* è un puntatore a una stringa di caratteri, *bufferLength* è la lunghezza della stringa o del SQL_NTS.  
+-   Se *\* ValuePtr* è un puntatore a una stringa di caratteri, *bufferLength* è la lunghezza della stringa o del SQL_NTS.  
   
--   Se * \* ValuePtr* è un puntatore a un buffer binario, l'applicazione inserisce il risultato della macro SQL_LEN_BINARY_ATTR (*length*) in *bufferLength*. Questo inserisce un valore negativo in *bufferLength*.  
+-   Se *\* ValuePtr* è un puntatore a un buffer binario, l'applicazione inserisce il risultato della macro SQL_LEN_BINARY_ATTR (*length*) in *bufferLength*. Questo inserisce un valore negativo in *bufferLength*.  
   
--   Se * \* ValuePtr* è un puntatore a un valore diverso da una stringa di caratteri o una stringa binaria, il valore di *bufferLength* deve essere SQL_IS_POINTER.  
+-   Se *\* ValuePtr* è un puntatore a un valore diverso da una stringa di caratteri o una stringa binaria, il valore di *bufferLength* deve essere SQL_IS_POINTER.  
   
--   Se * \* ValuePtr* contiene un tipo di dati a lunghezza fissa, *BufferLength* è SQL_IS_INTEGER o SQL_IS_UINTEGER, in base alle esigenze.  
+-   Se *\* ValuePtr* contiene un tipo di dati a lunghezza fissa, *BufferLength* è SQL_IS_INTEGER o SQL_IS_UINTEGER, in base alle esigenze.  
   
  *StringLengthPtr*  
- Output Puntatore a un buffer in cui restituire il numero totale di byte, escluso il carattere di terminazione null, disponibile per restituire in * \* ValuePtr*. Se *ValuePtr* è un puntatore null, non viene restituita alcuna lunghezza. Se il valore dell'attributo è una stringa di caratteri e il numero di byte disponibili per restituire è maggiore o uguale a *bufferLength*, i dati in * \* ValuePtr* vengono troncati a *bufferLength* meno la lunghezza di un carattere di terminazione null e con terminazione null dal driver.  
+ Output Puntatore a un buffer in cui restituire il numero totale di byte, escluso il carattere di terminazione null, disponibile per restituire in *\* ValuePtr*. Se il valore dell'attributo è una stringa di caratteri e il numero di byte disponibili per restituire è maggiore o uguale a *bufferLength*, i dati in *\* ValuePtr* vengono troncati a *bufferLength* meno la lunghezza di un carattere di terminazione null e con terminazione null dal driver.  
   
 ## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
@@ -86,11 +86,11 @@ SQLRETURN SQLGetStmtAttr(
 |SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
-|01004|Dati stringa, troncati a destra|I dati restituiti in * \* ValuePtr* sono stati troncati in modo da essere *bufferLength* meno la lunghezza di un carattere di terminazione null. La lunghezza del valore stringa untruncated viene restituita in **StringLengthPtr*. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
+|01004|Dati stringa, troncati a destra|I dati restituiti in *\* ValuePtr* sono stati troncati in modo da essere *bufferLength* meno la lunghezza di un carattere di terminazione null. La lunghezza del valore stringa untruncated viene restituita in **StringLengthPtr*. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |24000|Stato del cursore non valido|L' *attributo* argument è stato SQL_ATTR_ROW_NUMBER e il cursore non è aperto oppure il cursore è stato posizionato prima dell'inizio del set di risultati o dopo la fine del set di risultati.|  
 |HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nell'argomento *MessageText* descrive l'errore e la relativa origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
-|HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *statementHandle*. Questa funzione asincrona era ancora in esecuzione quando è stata chiamata la funzione **SQLGetStmtAttr** .<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona per *statementHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato per *statementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.|  
+|HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *statementHandle*. Questa funzione asincrona era ancora in esecuzione quando è stata chiamata la funzione **SQLGetStmtAttr** .<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona per *statementHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations** o **SQLSetPos** è stato chiamato per *statementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
 |HY090|Lunghezza della stringa o del buffer non valida|*(DM) \* ValuePtr* è una stringa di caratteri e bufferLength è minore di zero, ma non uguale a SQL_NTS.|  
 |HY092|Identificatore di attributo/opzione non valido|Il valore specificato per l' *attributo* argument non è valido per la versione di ODBC supportata dal driver.|  
@@ -103,7 +103,7 @@ SQLRETURN SQLGetStmtAttr(
 ## <a name="comments"></a>Commenti  
  Per informazioni generali sugli attributi dell'istruzione, vedere [attributi](../../../odbc/reference/develop-app/statement-attributes.md)di istruzione.  
   
- Una chiamata a **SQLGetStmtAttr** restituisce in * \* ValuePtr* il valore dell'attributo dell'istruzione specificato nell' *attributo*. Tale valore può essere un valore SQLULEN o una stringa di caratteri con terminazione null. Se il valore è un valore SQLULEN, è possibile che alcuni driver scrivano solo la versione precedente a 32 bit o a 16 bit di un buffer e lascino invariati il bit di ordine superiore. Pertanto, le applicazioni devono utilizzare un buffer di SQLULEN e inizializzare il valore su 0 prima di chiamare questa funzione. Inoltre, gli argomenti *bufferLength* e *StringLengthPtr* non vengono utilizzati. Se il valore è una stringa con terminazione null, l'applicazione specifica la lunghezza massima di tale stringa nell'argomento *bufferLength* e il driver restituisce la lunghezza di tale stringa nel buffer * \* StringLengthPtr* .  
+ Una chiamata a **SQLGetStmtAttr** restituisce in *\* ValuePtr* il valore dell'attributo dell'istruzione specificato nell' *attributo*. Tale valore può essere un valore SQLULEN o una stringa di caratteri con terminazione null. Se il valore è un valore SQLULEN, è possibile che alcuni driver scrivano solo la versione precedente a 32 bit o a 16 bit di un buffer e lascino invariati il bit di ordine superiore. Pertanto, le applicazioni devono utilizzare un buffer di SQLULEN e inizializzare il valore su 0 prima di chiamare questa funzione. Inoltre, gli argomenti *bufferLength* e *StringLengthPtr* non vengono utilizzati. Se il valore è una stringa con terminazione null, l'applicazione specifica la lunghezza massima di tale stringa nell'argomento *bufferLength* e il driver restituisce la lunghezza di tale stringa nel buffer *\* StringLengthPtr* .  
   
  Per consentire alle applicazioni che chiamano **SQLGetStmtAttr** di funzionare con ODBC 2. driver *x* , viene eseguito il mapping di una chiamata a **SQLGetStmtAttr** in Gestione driver a **SQLGetStmtOption**.  
   

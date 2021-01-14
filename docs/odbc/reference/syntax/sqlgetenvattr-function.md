@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 01f4590f-427a-4280-a1c3-18de9f7d86c1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 937524b89d199ee3ae0bd5d1d722bf3a14ec8ce4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 457896a5c845bc42e446f1a115ee47863f7fced3
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461002"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171853"
 ---
 # <a name="sqlgetenvattr-function"></a>Funzione SQLGetEnvAttr
 **Conformità**  
@@ -60,10 +60,10 @@ SQLRETURN SQLGetEnvAttr(
  Se *ValuePtr* è null, *StringLengthPtr* restituisce comunque il numero totale di byte (escluso il carattere di terminazione null per i dati di tipo carattere) disponibili per restituire nel buffer a cui punta *ValuePtr*.  
   
  *BufferLength*  
- Input Se *ValuePtr* punta a una stringa di caratteri, questo argomento deve essere la lunghezza di \* *ValuePtr*. Se \* *ValuePtr* è un numero intero, *bufferLength* viene ignorato. Se * \* ValuePtr* è una stringa Unicode (quando si chiama **SQLGetEnvAttrW**), l'argomento *bufferLength* deve essere un numero pari. Se il valore dell'attributo non è una stringa di caratteri, *bufferLength* è inutilizzato.  
+ Input Se *ValuePtr* punta a una stringa di caratteri, questo argomento deve essere la lunghezza di \* *ValuePtr*. Se \* *ValuePtr* è un numero intero, *bufferLength* viene ignorato. Se *\* ValuePtr* è una stringa Unicode (quando si chiama **SQLGetEnvAttrW**), l'argomento *bufferLength* deve essere un numero pari. Se il valore dell'attributo non è una stringa di caratteri, *bufferLength* è inutilizzato.  
   
  *StringLengthPtr*  
- Output Puntatore a un buffer in cui restituire il numero totale di byte, escluso il carattere di terminazione null, disponibile per restituire in * \* ValuePtr*. Se *ValuePtr* è un puntatore null, non viene restituita alcuna lunghezza. Se il valore dell'attributo è una stringa di caratteri e il numero di byte disponibili per restituire è maggiore o uguale a *bufferLength*, i dati in \* *ValuePtr* vengono troncati a *bufferLength* meno la lunghezza di un carattere di terminazione null e con terminazione null dal driver.  
+ Output Puntatore a un buffer in cui restituire il numero totale di byte, escluso il carattere di terminazione null, disponibile per restituire in *\* ValuePtr*. Se il valore dell'attributo è una stringa di caratteri e il numero di byte disponibili per restituire è maggiore o uguale a *bufferLength*, i dati in \* *ValuePtr* vengono troncati a *bufferLength* meno la lunghezza di un carattere di terminazione null e con terminazione null dal driver.  
   
 ## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR o SQL_INVALID_HANDLE.  
@@ -75,7 +75,7 @@ SQLRETURN SQLGetEnvAttr(
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |01004|Dati stringa, troncati a destra|I dati restituiti in \* *ValuePtr* sono stati troncati in modo da essere *bufferLength* meno il carattere di terminazione null. La lunghezza del valore stringa untruncated viene restituita in **StringLengthPtr*. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer *\* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY010|Errore sequenza funzione|(DM) **SQL_ATTR_ODBC_VERSION** non è stato ancora impostato tramite **SQLSetEnvAttr**. Non è necessario impostare **SQL_ATTR_ODBC_VERSION** in modo esplicito se si utilizza **SQLAllocHandleStd**.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
@@ -99,7 +99,7 @@ SQLRETURN SQLGetEnvAttr(
 |Restituzione dell'impostazione di un attributo di connessione|[Funzione SQLSetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |Restituzione dell'impostazione di un attributo di istruzione|[Funzione SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)|  
 |Impostazione di un attributo di connessione|[Pagina relativa alla funzione SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
-|Impostazione di un attributo Environment|[Funzione SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)|  
+|Impostazione di un attributo Environment|[SQLSetEnvAttr Function](../../../odbc/reference/syntax/sqlsetenvattr-function.md)|  
 |Impostazione di un attributo di istruzione|[Funzione SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
 ## <a name="see-also"></a>Vedere anche  

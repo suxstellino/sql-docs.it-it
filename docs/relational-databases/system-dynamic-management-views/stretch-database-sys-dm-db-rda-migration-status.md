@@ -1,6 +1,6 @@
 ---
-title: sys. dm_db_rda_migration_status (Transact-SQL) | Microsoft Docs
-description: Informazioni su come sys. dm_db_rda_migration_status contiene una riga per ogni batch di dati migrati da ogni tabella abilitata per l'estensione nell'istanza locale di SQL Server.
+title: sys.dm_db_rda_migration_status (Transact-SQL) | Microsoft Docs
+description: Informazioni su come sys.dm_db_rda_migration_status contiene una riga per ogni batch di dati migrati da ogni tabella abilitata per l'estensione nell'istanza locale di SQL Server.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 87e69284a4fdcac90420ec8a091fd1bd66933bb0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: eac014075edd5663b490791f6c49fc0b865afd2a
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87238831"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171633"
 ---
-# <a name="stretch-database---sysdm_db_rda_migration_status"></a>Stretch Database-sys. dm_db_rda_migration_status
+# <a name="stretch-database---sysdm_db_rda_migration_status"></a>Stretch Database sys.dm_db_rda_migration_status
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Contiene una riga per ogni batch di dati migrati da ogni tabella abilitata per l'estensione nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I batch sono identificati in base all'ora di inizio e all'ora di fine.  
   
- **sys. dm_db_rda_migration_status** ha come ambito il contesto di database corrente. Assicurarsi di trovarsi nel contesto del database delle tabelle abilitate per l'estensione per le quali si desidera visualizzare lo stato di migrazione.  
+ **sys.dm_db_rda_migration_status** viene definito come ambito del contesto di database corrente. Assicurarsi di trovarsi nel contesto del database delle tabelle abilitate per l'estensione per le quali si desidera visualizzare lo stato di migrazione.  
   
- In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , l'output di **sys. dm_db_rda_migration_status** è limitato a 200 righe.  
+ In [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] l'output di **sys.dm_db_rda_migration_status** è limitato a 200 righe.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  

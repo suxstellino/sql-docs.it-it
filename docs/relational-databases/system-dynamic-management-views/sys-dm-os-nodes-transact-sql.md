@@ -21,12 +21,12 @@ ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4cbcefbe3249a06e0f49fff5f0abe43010e9a54
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 4409ba73ba7231f674ac60f3ed63b06b6c454fa7
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101487"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170643"
 ---
 # <a name="sysdm_os_nodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "98101487"
 Un componente interno denominato SQLOS crea le strutture di nodi che imitano la località del processore hardware. Queste strutture possono essere modificate usando [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md) per creare layout dei nodi personalizzati.  
 
 > [!NOTE]
-> A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] utilizzerà automaticamente soft-NUMA per determinate configurazioni hardware. Per altre informazioni, vedere [Soft-NUMA automatico](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa).
+> A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] , [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] utilizzerà automaticamente soft-NUMA per determinate configurazioni hardware. Per altre informazioni, vedere [Soft-NUMA automatico](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa).
   
 Nella tabella seguente sono incluse informazioni su questi nodi.  
   
@@ -44,7 +44,7 @@ Nella tabella seguente sono incluse informazioni su questi nodi.
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|ID del nodo.|  
-|node_state_desc|**nvarchar(256)**|Descrizione dello stato del nodo. I valori sono visualizzati con i valori reciprocamente esclusivi all'inizio, seguiti dai valori combinabili. Esempio:<br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />Sono disponibili quattro valori di node_state_desc che si escludono a vicenda. Sono elencate di seguito con le relative descrizioni.<br /><ul><li>ONLINE: il nodo è online<li>OFFLINE: il nodo è offline<li>IDLE: il nodo non ha richieste di lavoro in sospeso ed è entrato in uno stato inattivo.<li>IDLE_READY: il nodo non ha richieste di lavoro in sospeso ed è pronto per entrare in uno stato inattivo.</li></ul><br />Sono disponibili tre valori node_state_desc combinabili, elencati di seguito con le relative descrizioni.<br /><ul><li>DAC: questo nodo è riservato per la [connessione amministrativa dedicata](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<li>THREAD_RESOURCES_LOW: non è possibile creare nuovi thread in questo nodo a causa di una condizione di memoria insufficiente.<li>AGGIUNTA a caldo: indica che i nodi sono stati aggiunti in risposta a un evento di aggiunta di CPU a caldo.</li></ul>|  
+|node_state_desc|**nvarchar(256)**|Descrizione dello stato del nodo. I valori sono visualizzati con i valori reciprocamente esclusivi all'inizio, seguiti dai valori combinabili. Ad esempio:<br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />Sono disponibili quattro valori di node_state_desc che si escludono a vicenda. Sono elencate di seguito con le relative descrizioni.<br /><ul><li>ONLINE: il nodo è online<li>OFFLINE: il nodo è offline<li>IDLE: il nodo non ha richieste di lavoro in sospeso ed è entrato in uno stato inattivo.<li>IDLE_READY: il nodo non ha richieste di lavoro in sospeso ed è pronto per entrare in uno stato inattivo.</li></ul><br />Sono disponibili tre valori node_state_desc combinabili, elencati di seguito con le relative descrizioni.<br /><ul><li>DAC: questo nodo è riservato per la [connessione amministrativa dedicata](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<li>THREAD_RESOURCES_LOW: non è possibile creare nuovi thread in questo nodo a causa di una condizione di memoria insufficiente.<li>AGGIUNTA a caldo: indica che i nodi sono stati aggiunti in risposta a un evento di aggiunta di CPU a caldo.</li></ul>|  
 |memory_object_address|**varbinary (8)**|Indirizzo dell'oggetto memoria associato al nodo. Una relazione uno-a-uno con [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).memory_object_address.|  
 |memory_clerk_address|**varbinary (8)**|Indirizzo del clerk di memoria associato al nodo. Una relazione uno-a-uno con [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).memory_clerk_address.|  
 |io_completion_worker_address|**varbinary (8)**|Indirizzo del thread di lavoro assegnato al completamento I/O per il nodo. Una relazione uno-a-uno con [sys.dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).worker_address.|  

@@ -18,12 +18,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57a595a2bcb78d86c3a770db6b584974c229a0df
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9c01a9e02576d666c39df13dc6e7e01f6d622a7d
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97483653"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98169873"
 ---
 # <a name="automatic-tuning"></a>Ottimizzazione automatica
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -99,7 +99,7 @@ Senza l'ottimizzazione automatica, gli utenti devono monitorare periodicamente i
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce tutte le viste e le procedure necessarie per monitorare le prestazioni e risolvere i problemi in Query Store.
 
-In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] è possibile trovare regressioni della scelta del piano usando le viste di sistema query Store. A partire da [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] , il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] rileva e Mostra le potenziali regressioni della scelta del piano e le azioni consigliate da applicare nel [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) DMV. La DMV Mostra le informazioni sul problema, l'importanza del problema e i dettagli, ad esempio la query identificata, l'ID del piano regressione, l'ID del piano usato come baseline per il confronto e l' [!INCLUDE[tsql_md](../../includes/tsql-md.md)] istruzione che può essere eseguita per risolvere il problema.
+In [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)] è possibile trovare regressioni della scelta del piano usando le viste di sistema query Store. A partire da [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] , il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] rileva e Mostra le potenziali regressioni della scelta del piano e le azioni consigliate da applicare nel [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) DMV. La DMV Mostra le informazioni sul problema, l'importanza del problema e i dettagli, ad esempio la query identificata, l'ID del piano regressione, l'ID del piano usato come baseline per il confronto e l' [!INCLUDE[tsql_md](../../includes/tsql-md.md)] istruzione che può essere eseguita per risolvere il problema.
 
 | tipo | description | Datetime | score | dettagli | ... |
 | --- | --- | --- | --- | --- | --- |

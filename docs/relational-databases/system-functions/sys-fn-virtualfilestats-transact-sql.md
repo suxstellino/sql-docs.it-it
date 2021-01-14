@@ -22,12 +22,12 @@ ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21ebb356139cf33f87a4e3da84a5004bd7405ae9
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 4c49575ef666cf35c26dd4e924cbb75b17cb9c4e
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096376"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170143"
 ---
 # <a name="sysfn_virtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +56,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|ID del database.|  
 |**FileId**|**smallint**|ID di file.|  
-|**TimeStamp**|**bigint**|Timestamp del prelevamento dei dati. **int** nelle versioni precedenti a [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] . |  
+|**TimeStamp**|**bigint**|Timestamp del prelevamento dei dati. **int** nelle versioni precedenti a [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] . |  
 |**NumberReads**|**bigint**|Numero di letture eseguite nel file.|  
 |**BytesRead**|**bigint**|Numero di letture di byte eseguite nel file.|  
 |**IoStallReadMS**|**bigint**|Periodo di tempo totale, in millisecondi, durante il quale gli utenti attendono il completamento delle operazioni di lettura I/O nel file.|  
@@ -67,7 +67,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |**FileHandle**|**bigint**|Valore dell'handle di file.|  
 |**BytesOnDisk**|**bigint**|Dimensioni fisiche del file (numero di byte) su disco.<br /><br /> Per i file di database, si tratta dello stesso valore delle **dimensioni** in **sys.database_files**, ma è espresso in byte anziché in pagine.<br /><br /> Per i file sparse di snapshot del database, è lo spazio utilizzato dal sistema operativo per il file.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **fn_virtualfilestats** è una funzione con valori di tabella di sistema che fornisce informazioni statistiche, ad esempio il numero totale di operazioni di i/o eseguite su un file. Questa funzione consente di tenere traccia della durata dell'attesa da parte degli utenti per la lettura o la scrittura in un file. Consente inoltre di identificare i file in cui si verifica un elevato numero di operazioni di I/O.  
   
 ## <a name="permissions"></a>Autorizzazioni  
