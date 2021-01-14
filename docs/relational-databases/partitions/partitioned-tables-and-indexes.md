@@ -2,7 +2,7 @@
 description: Partitioned Tables and Indexes
 title: Tabelle e indici partizionati | Microsoft Docs
 ms.custom: ''
-ms.date: 01/20/2016
+ms.date: 1/5/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -17,12 +17,12 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4cb894ef393f767d85af5c43b50bffce87f3a6fc
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: dcc5d8e3602261c975f5517ea859e19fc7902936
+ms.sourcegitcommit: 629229a7c33a3ed99db63b89127bb016449f7d3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480042"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97952056"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,6 +55,9 @@ Oggetto di database che definisce la modalità con cui viene eseguito il mapping
   
 ### <a name="partition-scheme"></a>Schema di partizione 
 Oggetto di database che mappa le partizioni di una funzione di partizione a un set di filegroup. Il principale motivo per cui inserire le partizioni in filegroup separati consiste nel fatto che in tal modo è possibile eseguire operazioni di backup nelle partizioni in modo indipendente, in quanto è possibile eseguire backup in filegroup singoli.  
+
+> [!NOTE]
+> In Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] sono supportati solo i filegroup primari.  
   
 ### <a name="partitioning-column"></a>Colonna di partizionamento  
 Colonna di una tabella o di un indice utilizzata da una funzione di partizione per partizionare la tabella o l'indice. Le colonne calcolate che partecipano a una funzione di partizione devono essere contrassegnate in modo esplicito come PERSISTED. È possibile utilizzare come colonna di partizionamento tutti i tipi di dati che possono essere utilizzati come colonne di indice, eccetto il tipo di dati **timestamp**. Non è possibile specificare i tipi di dati **ntext**, **text**, **image**, **xml**, **varchar(max)** , **nvarchar(max)** o **varbinary(max)** . Inoltre, non è possibile specificare colonne di tipo definito dall'utente Common Language Runtime (CLR) di Microsoft .NET Framework né colonne di tipo di dati alias.  

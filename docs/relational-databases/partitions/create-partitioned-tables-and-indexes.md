@@ -2,7 +2,7 @@
 description: Creare tabelle e indici partizionati
 title: Creare tabelle e indici partizionati | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 1/5/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 791c2fa9d0ea4aad3c59f0edbafb2a28a2585d25
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 387a2f88afd22004f7146384ce29ddc2ba2f2da7
+ms.sourcegitcommit: 629229a7c33a3ed99db63b89127bb016449f7d3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464852"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97952051"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Creare tabelle e indici partizionati
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,6 +50,9 @@ ms.locfileid: "97464852"
 3.  Creazione di uno schema di partizione tramite cui viene eseguito il mapping delle partizioni di una tabella o un indice partizionato ai nuovi filegroup.  
   
 4.  Creazione o modifica di una tabella o un indice e specificazione dello schema di partizione come percorso di archiviazione.  
+ 
+> [!NOTE]
+> In Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] sono supportati solo i filegroup primari.  
   
  **Contenuto dell'articolo**  
   
@@ -96,7 +99,7 @@ ms.locfileid: "97464852"
 3.  In **Righe** fare clic su **Aggiungi**. Nella nuova riga immettere il nome del filegroup.  
   
     > [!WARNING]  
-    >  Durante la creazione di partizioni, è necessario disporre sempre di un filegroup aggiuntivo oltre al numero di filegroup specificati per i valori limite.  
+    >  Quando si specificano più filegroup, è necessario disporre sempre di un filegroup aggiuntivo oltre al numero di filegroup specificati per i valori limite durante la creazione delle partizioni.  
   
 4.  Continuare ad aggiungere righe finché non vengono creati tutti i filegroup per la tabella partizionata.  
   
@@ -138,7 +141,7 @@ ms.locfileid: "97464852"
   
      Dopo aver completato questa pagina, fare clic su **Avanti**.  
   
-6.  In **Intervallo** della pagina **Esegui mapping partizioni** selezionare **Limite sinistro** o **Limite destro** per specificare se includere il valore di delimitazione superiore o inferiore all'interno di ogni filegroup creato. Durante la creazione di partizioni, è necessario immettere sempre un filegroup aggiuntivo oltre al numero di filegroup specificati per i valori limite.  
+6.  In **Intervallo** della pagina **Esegui mapping partizioni** selezionare **Limite sinistro** o **Limite destro** per specificare se includere il valore di delimitazione superiore o inferiore all'interno di ogni filegroup creato. Quando si specificano più filegroup, è necessario immettere sempre un filegroup aggiuntivo oltre al numero di filegroup specificati per i valori limite durante la creazione delle partizioni.  
   
      In **Filegroup** nella griglia **Selezionare i filegroup e specificare i valori limite** selezionare il filegroup in cui si desidera partizionare i dati. In **Limite** immettere il valore limite per ogni filegroup. Se il valore limite viene lasciato vuoto, la funzione di partizione consente di eseguire il mapping dell'intera tabella o dell'intero indice a un'unica partizione tramite il nome della funzione di partizione.  
   
@@ -345,6 +348,34 @@ ms.locfileid: "97464852"
         ON myRangePS1 (col1) ;  
     GO  
     ```  
+
+
+#### <a name="to-create-a-partitioned-table-in-azure-sqldbesa"></a>Per creare una tabella partizionata in Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+
+In Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] l'aggiunta di file e gruppi di file non è supportata, ma il partizionamento delle tabelle è supportato tramite il partizionamento solo del filegroup PRIMARY.
+  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  
+1.  Sulla barra Standard fare clic su **Nuova query**.  
+  
+1.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio vengono creati una funzione di partizione e un schema di partizione. Una nuova tabella viene creata con lo schema di partizione specificato come percorso di archiviazione. 
+
+    ```
+    -- Creates a partition function called myRangePF1 that will partition a table into four partitions  
+    CREATE PARTITION FUNCTION myRangePF1 (int)  
+        AS RANGE LEFT FOR VALUES (1, 100, 1000) ;  
+    GO  
+    -- Creates a partition scheme called myRangePS1 that applies myRangePF1 to the PRIMARY filegroup 
+    CREATE PARTITION SCHEME myRangePS1  
+        AS PARTITION myRangePF1  
+        ALL TO ('PRIMARY') ;  
+    GO  
+    -- Creates a partitioned table called PartitionTable that uses myRangePS1 to partition col1  
+    CREATE TABLE PartitionTable (col1 int PRIMARY KEY, col2 char(10))  
+        ON myRangePS1 (col1) ;  
+    GO
+    ```  
+
   
 #### <a name="to-determine-if-a-table-is-partitioned"></a>Per determinare se una tabella è partizionata  
   

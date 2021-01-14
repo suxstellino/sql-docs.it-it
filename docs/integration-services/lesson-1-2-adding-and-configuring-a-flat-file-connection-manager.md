@@ -11,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d83b2c6a19b7a73be4293dcb66edc6cbc22909d9
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 57bf9bd3863e5486c890088324641a5100581a02
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88449733"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099225"
 ---
 # <a name="lesson-1-2-add-and-configure-a-flat-file-connection-manager"></a>Lezione 1-2: Aggiungere e configurare una gestione connessione file flat
 
@@ -48,7 +48,7 @@ In questa esercitazione si configureranno le proprietà seguenti nella gestione 
   
 4.  Nella finestra di dialogo **Apri** individuare il file **SampleCurrencyData.txt** nel computer.  
   
-5.  Deselezionare i nomi di colonna nella prima casella di controllo della riga di dati.  
+5.  Deselezionare la casella di controllo **Nomi di colonne nella prima riga di dati**.  
   
 ### <a name="set-locale-sensitive-properties"></a>Impostare le proprietà dipendenti dalle impostazioni locali  
   

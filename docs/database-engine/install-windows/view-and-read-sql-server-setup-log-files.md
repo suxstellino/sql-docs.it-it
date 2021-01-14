@@ -19,12 +19,12 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 6de120e1a1c980dd7ba187b750ebceea509e65c5
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: be4e9caceee1e3d8f87e927a172472ac9f7b4988
+ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460614"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975524"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Visualizzare e leggere i file di log del programma di installazione di SQL Server
 
@@ -144,4 +144,4 @@ Il file SystemConfigurationCheck_Report.htm si trova nel percorso %programfiles%
 [!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
   
 ## <a name="see-also"></a>Vedere anche  
- [Installare SQL Server 2017](../../database-engine/install-windows/install-sql-server.md)
+ [Installare SQL Server 2019](../../database-engine/install-windows/install-sql-server.md)

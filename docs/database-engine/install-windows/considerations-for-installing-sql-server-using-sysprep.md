@@ -11,12 +11,12 @@ ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: b394c18d1db40bec24bfa0d676bb74b66d3b1faa
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 127d1a0bcac97d2b802460549b38c79012f71329
+ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460724"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975427"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Considerazioni sull'installazione di SQL Server tramite SysPrep
 
@@ -69,7 +69,7 @@ In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , SysPrep supporta tutt
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vengono preparati automaticamente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vengono completati quando si completa l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite il passaggio di completamento dell'immagine.  
   
-Per informazioni sulle edizioni supportate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vedere [Edizioni e funzionalità supportate di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
+Per informazioni sulle edizioni supportate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md) e [SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md)  
   
 È possibile eseguire un aggiornamento dell'edizione durante la configurazione di un'istanza predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa opzione non è supportata per le edizioni Express di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

@@ -15,18 +15,18 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/07/2019
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 3481a3d5252752e1cf952375d1c35c1c4b9939f1
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a8a0e3db546f4a74e1ec9bcc3c6312d8ca848777
+ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97438834"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975497"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>Aggiungere funzionalità a un'istanza di SQL Server (programma di installazione)
 
 [!INCLUDE [ SQL Server - Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-Questo articolo offre una procedura dettagliata per aggiungere funzionalità a un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Alcuni componenti o servizi di SQL Server sono specifici di un'istanza di SQL Server. Essi sono anche noti come specifici dell'istanza. Condividono la stessa versione dell'istanza che li ospita e vengono utilizzati esclusivamente per quell'istanza. È possibile aggiungere i componenti specifici dell'istanza a un'istanza di SQL Server, insieme ai componenti condivisi, se non sono già installati. Per un elenco delle funzionalità supportate dalle edizioni di SQL Server, vedere [Edizioni e funzionalità supportate per SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
+Questo articolo offre una procedura dettagliata per aggiungere funzionalità a un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Alcuni componenti o servizi di SQL Server sono specifici di un'istanza di SQL Server. Essi sono anche noti come specifici dell'istanza. Condividono la stessa versione dell'istanza che li ospita e vengono utilizzati esclusivamente per quell'istanza. È possibile aggiungere i componenti specifici dell'istanza a un'istanza di SQL Server, insieme ai componenti condivisi, se non sono già installati. Per un elenco delle funzionalità supportate dalle edizioni di SQL Server, vedere [Edizioni e funzionalità supportate per SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md) o [SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md).
 
 Per aggiungere funzionalità a un'istanza di SQL Server dal prompt dei comandi, vedere [Installare SQL Server dal prompt dei comandi](./install-sql-server-from-the-command-prompt.md).
 
@@ -58,7 +58,7 @@ Prima di continuare, vedere gli articoli in [Pianificazione di un'installazione 
 
 7. Nella pagina Tipo di installazione selezionare l'opzione **Aggiungi funzionalità a un'istanza esistente di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** e quindi selezionare l'istanza da aggiornare.
 
-8. Nella pagina Selezione funzionalità selezionare i componenti per l'installazione. Una volta selezionato il nome della funzionalità desiderata, nel riquadro a destra verrà visualizzata una descrizione per ogni gruppo di componenti. È possibile selezionare qualsiasi combinazione di caselle di controllo. Per altre informazioni, vedere [Edizioni e funzionalità supportate di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md). Ogni componente può essere installato una sola volta in un'istanza specificata di SQL Server. Per installare più componenti, è necessario installare un'istanza aggiuntiva di SQL Server.
+8. Nella pagina Selezione funzionalità selezionare i componenti per l'installazione. Una volta selezionato il nome della funzionalità desiderata, nel riquadro a destra verrà visualizzata una descrizione per ogni gruppo di componenti. È possibile selezionare qualsiasi combinazione di caselle di controllo. Per altre informazioni, vedere [Edizioni e funzionalità supportate di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md) e [SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md). Ogni componente può essere installato una sola volta in un'istanza specificata di SQL Server. Per installare più componenti, è necessario installare un'istanza aggiuntiva di SQL Server.
 
     I prerequisiti per le funzionalità selezionate vengono visualizzati nel riquadro di destra. Il programma di installazione di SQL Server consentirà di installare i prerequisiti che non sono già stati installati durante la procedura di installazione descritta più avanti in questo argomento.
 

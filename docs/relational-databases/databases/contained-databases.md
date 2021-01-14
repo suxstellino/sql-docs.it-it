@@ -17,12 +17,12 @@ ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cc6e5734edbf7203f98d1b7fc7a685e699aaa635
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bbad843d482945a29cb03fde9545b1c19fb354f9
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481432"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098395"
 ---
 # <a name="contained-databases"></a>Database indipendenti
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -128,15 +128,13 @@ ms.locfileid: "97481432"
 ##  <a name="limitations"></a><a name="Limitations"></a> Limitazioni  
  I database parzialmente indipendenti non supportano le funzionalità indicate di seguito.  
   
--   Nei database parzialmente indipendenti non è supportato l'utilizzo di funzionalità di replica, di rilevamento modifiche o Change Data Capture.  
+-   Replica, Change Data Capture o rilevamento modifiche.  
   
 -   Procedure numerate  
   
 -   Oggetti associati a schema che dipendono da funzioni predefinite con modifiche delle regole di confronto  
   
--   Modifica di associazione a seguito di modifiche delle regole di confronto, inclusi riferimenti a oggetti, colonne, simboli o tipi.  
-  
--   Replica, Change Data Capture e rilevamento modifiche.  
+-   Modifica di associazione a seguito di modifiche delle regole di confronto, inclusi riferimenti a oggetti, colonne, simboli o tipi.
   
 > [!WARNING]  
 >  Le stored procedure temporanee sono attualmente consentite. Poiché le stored procedure temporanee violano l'indipendenza, non ne è previsto il supporto nelle versioni future del database indipendente.  

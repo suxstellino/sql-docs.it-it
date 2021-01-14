@@ -11,12 +11,12 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 0ffc98081b71cec996b2949fa13c6b222d7b85a2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 87f1521927518446b355fea828e50901d6e35bc1
+ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460634"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975532"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>Eseguire l'aggiornamento a un'edizione diversa di SQL Server (programma di installazione)
 
@@ -24,6 +24,7 @@ ms.locfileid: "97460634"
 
 Il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'aggiornamento dell'edizione fra le varie edizioni di [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]. Per informazioni sui percorsi di aggiornamento supportati, vedere [Aggiornamenti di versione ed edizione supportati](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md). Prima di iniziare l'aggiornamento dell'edizione di un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], rivedere gli articoli seguenti:  
 
+  [Edizioni e funzionalità supportate di SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md)
 - [Edizioni e le funzionalità supportate di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)  
 - [Edizioni e le funzionalità supportate di SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)  
 - [Limiti della capacità di calcolo per edizione di SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  

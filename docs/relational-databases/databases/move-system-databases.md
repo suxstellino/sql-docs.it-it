@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a72ccacd9401a8b7955eae10751c5ac67ca211ac
-ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
+ms.openlocfilehash: c24a98684e87eb94a3cd9e100f203509789b7a0f
+ms.sourcegitcommit: 4a813a0741502c56c0cd5ecaafafad2e857a9d7f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96523060"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98031110"
 ---
 # <a name="move-system-databases"></a>Spostare i database di sistema
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "96523060"
   
 2.  Arrestare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o arrestare il sistema per eseguire la manutenzione. Per altre informazioni, vedere [Avviare, arrestare, sospendere, riprendere, riavviare i servizi SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
-3.  Spostare il file o i file nella nuova posizione.  
+3.  Spostare il file o i file nella nuova posizione e verificare che l'account del servizio [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] abbia ancora dell'autorizzazione per accedervi.
 
 4.  Riavviare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o il server. Per altre informazioni, vedere [Avviare, arrestare, sospendere, riprendere, riavviare i servizi SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
@@ -151,14 +151,10 @@ ms.locfileid: "96523060"
   
 3.  Nella finestra di dialogo **Proprietà (** _nome_istanza_ **) di SQL Server** fare clic sulla scheda **Parametri di avvio** .  
   
-4.  Nella casella **Parametri esistenti** selezionare il parametro -d per spostare il file di dati master. Per salvare le modifiche, fare clic su **Aggiorna** .  
+4.  Nella casella **Parametri esistenti** selezionare il parametro -d. Nella casella **Specificare un parametro di avvio** impostare il parametro sul nuovo percorso del file di *dati* master. Per salvare le modifiche, fare clic su **Aggiorna** .
   
-     Nella casella **Specificare un parametro di avvio** impostare il parametro sul nuovo percorso del database master.  
-  
-5.  Nella casella **Parametri esistenti** selezionare il parametro -l per spostare il file di log master. Per salvare le modifiche, fare clic su **Aggiorna** .  
-  
-     Nella casella **Specificare un parametro di avvio** impostare il parametro sul nuovo percorso del database master.  
-  
+5.  Nella casella **Parametri esistenti** selezionare il parametro -l. Nella casella **Specificare un parametro di avvio** impostare il parametro sul nuovo percorso del file di *log* master. Per salvare le modifiche, fare clic su **Aggiorna** .
+
      Il valore del parametro per il file di dati deve seguire il parametro `-d` e il valore per il file di log deve seguire il parametro `-l` . L'esempio seguente illustra i valori dei parametri per il percorso predefinito del file di dati master.  
   
      `-dC:\Program Files\Microsoft SQL Server\MSSQL<version>.MSSQLSERVER\MSSQL\DATA\master.mdf`  
@@ -170,14 +166,16 @@ ms.locfileid: "96523060"
      `-dE:\SQLData\master.mdf`  
   
      `-lE:\SQLData\mastlog.ldf`  
+
+6.  Fare clic su **OK** per salvare in modo permanente le modifiche e chiudere la finestra di dialogo **Proprietà (** _nome istanza_ **)** di SQL Server.
+
+7.  Arrestare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] facendo clic con il pulsante destro del mouse sul nome dell'istanza e scegliendo **Arresta**.  
   
-6.  Arrestare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] facendo clic con il pulsante destro del mouse sul nome dell'istanza e scegliendo **Arresta**.  
+8.  Spostare i file master.mdf e mastlog.ldf nel nuovo percorso.  
   
-7.  Spostare i file master.mdf e mastlog.ldf nel nuovo percorso.  
+9.  Riavviare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-8.  Riavviare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-9. Verificare la modifica dei file per il database master eseguendo la query seguente.  
+10. Verificare la modifica dei file per il database master eseguendo la query seguente.  
   
     ```  
     SELECT name, physical_name AS CurrentLocation, state_desc  
@@ -186,7 +184,7 @@ ms.locfileid: "96523060"
     GO  
     ```  
 
-10. A questo punto SQL Server dovrebbe essere eseguito normalmente. Microsoft consiglia comunque di modificare anche la voce del Registro di sistema in `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup`, dove *instance_ID* è simile a `MSSQL13.MSSQLSERVER`. In tale hive impostare il valore `SQLDataRoot` sul nuovo percorso. Se non si aggiorna il Registro di sistema, l'applicazione di patch e l'aggiornamento possono avere esito negativo.
+11. A questo punto SQL Server dovrebbe essere eseguito normalmente. Microsoft consiglia comunque di modificare anche la voce del Registro di sistema in `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup`, dove *instance_ID* è simile a `MSSQL13.MSSQLSERVER`. In tale hive impostare il valore `SQLDataRoot` sul nuovo percorso. Se non si aggiorna il Registro di sistema, l'applicazione di patch e l'aggiornamento possono avere esito negativo.
 
   
 ##  <a name="moving-the-resource-database"></a><a name="Resource"></a> Spostamento del database delle risorse  

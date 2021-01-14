@@ -9,12 +9,12 @@ ms.topic: how-to
 author: bluefooted
 ms.author: pamela
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a25835dd5fbac5f95434d46ac152d44ea6974496
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 00b4856ab0c057b7f63aae44834884bc775d8e92
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440132"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102169"
 ---
 # <a name="diagnose-and-resolve-spinlock-contention-on-sql-server"></a>Diagnosticare e risolvere i conflitti di spinlock in SQL Server
 
@@ -137,7 +137,7 @@ Il processo tecnico generale per la diagnosi dei conflitti di spinlock di SQL Se
 
 2. **Passaggio 2**: acquisire le statistiche da *sys.dm\_ os_spinlock_stats* per trovare il tipo di spinlock per cui si riscontra la maggior parte dei conflitti.
 
-3. **Passaggio 3**: ottenere i simboli di debug per sqlservr.exe (sqlservr.pdb) e inserire i simboli nella stessa directory del file EXE del servizio SQL Server (sqlservr.exe) per l'istanza di SQL Server. Per visualizzare gli stack di chiamate per gli eventi di backoff, è necessario disporre dei simboli per la versione specifica di SQL Server che si sta eseguendo. I simboli per SQL Server sono disponibili nel server dei simboli Microsoft. Per altre informazioni su come scaricare i simboli dal server dei simboli Microsoft, vedere [Debug con i simboli](https://docs.microsoft.com/windows/win32/dxtecharts/debugging-with-symbols).
+3. **Passaggio 3**: ottenere i simboli di debug per sqlservr.exe (sqlservr.pdb) e inserire i simboli nella stessa directory del file EXE del servizio SQL Server (sqlservr.exe) per l'istanza di SQL Server. Per visualizzare gli stack di chiamate per gli eventi di backoff, è necessario disporre dei simboli per la versione specifica di SQL Server che si sta eseguendo. I simboli per SQL Server sono disponibili nel server dei simboli Microsoft. Per altre informazioni su come scaricare i simboli dal server dei simboli Microsoft, vedere [Debug con i simboli](/windows/win32/dxtecharts/debugging-with-symbols).
 
 4. **Passaggio 4**: usare gli eventi estesi di SQL Server per tenere traccia degli eventi di backoff per i tipi di spinlock di interesse.
 
@@ -237,7 +237,7 @@ drop event session spin_lock_backoff on server
 Analizzando l'output, è possibile visualizzare gli stack di chiamate per i percorsi di codice più comuni per le rotazioni SOS_CACHESTORE. Lo script è stato eseguito un paio di volte in momenti diversi in periodi in cui l'utilizzo della CPU era elevato per verificare la coerenza negli stack di chiamate restituiti. Si noti che gli stack di chiamate con il numero più alto di bucket di slot sono comuni tra i due output (35.668 e 8.506). Questi stack di chiamate hanno un "numero di slot" due volte maggiore rispetto alla voce successiva più alta. Questa condizione indica un percorso del codice di interesse.
 
 > [!NOTE]
-> Non è insolito che lo script precedente restituisca stack di chiamate. Quando lo script viene eseguito per 1 minuto, si è notato che gli stack con un numero di slot \>1000 e gli stack con un numero di slot \>10.000 sono probabilmente problematici.
+> Non è insolito che lo script precedente restituisca stack di chiamate. Quando lo script viene eseguito per 1 minuto, si è notato che gli stack di chiamate con un numero di slot > 1000 sono problematici, ma il numero di slot > 10.000 è più probabile che sia problematico perché ha un numero di slot superiore.
 
 > [!NOTE]
 > La formattazione dell'output seguente è stata pulita per migliorare la leggibilità.
