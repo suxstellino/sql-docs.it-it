@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: d4e47c95ec9deb98e06659f85e6ec9840409f629
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 466abc8687a7f325d216a6b5b6545bc516b2b34d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471272"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101991"
 ---
 # <a name="plot-histograms-in-python"></a>Tracciare istogrammi in Python 
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -37,7 +37,7 @@ Questo articolo descrive come tracciare un grafico dei dati usando il pacchetto 
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) per il ripristino del database di esempio in Istanza gestita di SQL di Azure.
 ::: moniker-end
 
-* Azure Data Studio. Per eseguire l'installazione, vedere [Azure Data Studio](../../azure-data-studio/what-is.md).
+* Azure Data Studio. Per eseguire l'installazione, vedere [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md).
 
 * [Ripristinare il database DW di esempio](../../samples/adventureworks-install-configure.md) per ottenere i dati di esempio usati in questo articolo.
 

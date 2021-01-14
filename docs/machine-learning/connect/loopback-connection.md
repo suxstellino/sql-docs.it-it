@@ -10,12 +10,12 @@ ms.author: anmunde
 ms.reviewer: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
-ms.openlocfilehash: 4cce378546ef8c6fa9405f24fb9157dc6a249969
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 49d62ab967f972d777a02659b5a87b9e11740604
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471252"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094569"
 ---
 # <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>Connessione loopback a SQL Server da uno script Python o R
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -48,7 +48,7 @@ Ecco un esempio della stringa di connessione loopback in Linux:
 
 L'indirizzo del server, il percorso del file del certificato client e il percorso del file di chiave client sono univoci per ogni `sp_execute_external_script` e possono essere ottenuti usando l'API **rx_get_sql_loopback_connection_string()** per Python o **rxGetSqlLoopbackConnectionString()** per R.
 
-Per altre informazioni sugli attributi della stringa di connessione, vedere [Parole chiave e attributi per la stringa di connessione e DSN](../../connect/odbc/dsn-connection-string-attribute.md?view=sql-server-linux-ver15#new-connection-string-keywords-and-connection-attributes) per Microsoft ODBC Driver for SQL Server.
+Per altre informazioni sugli attributi della stringa di connessione, vedere [Parole chiave e attributi per la stringa di connessione e DSN](../../connect/odbc/dsn-connection-string-attribute.md#new-connection-string-keywords-and-connection-attributes) per Microsoft ODBC Driver for SQL Server.
 
 ## <a name="generate-connection-string-with-revoscalepy-for-python"></a>Generare la stringa di connessione con revoscalepy per Python
 

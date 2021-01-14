@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bd3a092906bf2a7d46c7f343b7edf913bdd4d9cf
-ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
+ms.openlocfilehash: ced001726b7a8306f2064c1436ddb41cf65a6eb0
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92914343"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091809"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>Che cosa sono i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
@@ -69,11 +69,11 @@ I [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 
 
 La gestione e il monitoraggio vengono forniti tramite una combinazione di strumenti da riga di comando, API, portali e viste a gestione dinamica.
 
-È possibile usare [Azure Data Studio](../azure-data-studio/what-is.md) per eseguire un'ampia gamma di attività sul cluster Big Data:
+È possibile usare [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md) per eseguire un'ampia gamma di attività sul cluster Big Data:
 - Frammenti predefiniti per attività di gestione comuni.
 - Possibilità di esplorare HDFS, caricare file, visualizzare file in anteprima e creare directory.
 - Possibilità di creare, aprire ed eseguire notebook compatibili con Jupyter.
-- Procedura guidata di virtualizzazione dei dati per semplificare la creazione di origini dati esterne (funzionalità abilitata dall' **estensione di virtualizzazione dei dati** ).
+- Procedura guidata di virtualizzazione dei dati per semplificare la creazione di origini dati esterne (funzionalità abilitata dall'**estensione di virtualizzazione dei dati**).
 
 ## <a name="architecture"></a><a id="architecture"></a> Architettura
 

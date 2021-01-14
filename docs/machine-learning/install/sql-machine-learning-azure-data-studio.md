@@ -8,17 +8,17 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15'
-ms.openlocfilehash: bd7dacd4807e4e779f43d396d9d1e9b19d4134dc
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b1e3d81e0229d028b9fab6a4521ee11cb20ce1b8
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471202"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091550"
 ---
 # <a name="run-python-and-r-scripts-in-azure-data-studio-notebooks-with-sql-server-machine-learning-services"></a>Eseguire script Python e R in notebook di Azure Data Studio con SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
-Informazioni su come eseguire script Python e R in notebook di [Azure Data Studio](../../azure-data-studio/what-is.md) con [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Azure Data Studio è uno strumento per database multipiattaforma.
+Informazioni su come eseguire script Python e R in notebook di [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) con [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Azure Data Studio è uno strumento per database multipiattaforma.
 
 ## <a name="prerequisites"></a>Prerequisiti
 

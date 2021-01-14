@@ -11,19 +11,19 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 05441d59b725a172fddfb83ae116cda2d3ca5596
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 90e585e887e9415a8cf1f9d0104595547f2d1c87
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935554"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171983"
 ---
 # <a name="subscription-settings-and-a-file-share-account-report-server-configuration-manager"></a>Impostazioni di sottoscrizione e un account di condivisione file (Gestione configurazione del server di report)
   Usare la pagina **Impostazioni sottoscrizione** di Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per configurare un account di condivisione file per i server di report in modalità nativa e le sottoscrizioni con recapito tramite condivisione file. L'account di condivisione file consente di usare un singolo set di credenziali in più sottoscrizioni che recapitano i report a una condivisione file. Quando è necessario modificare le credenziali, è possibile configurare la modifica per l'account di condivisione file e non è necessario aggiornare ogni sottoscrizione.  
   
  Sono disponibili due flussi di lavoro con le sottoscrizioni con recapito tramite condivisione dei file [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
--   A partire dalla versione [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , l'amministratore di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] può configurare un singolo account di condivisione file, utilizzato per una o più sottoscrizioni. È necessario configurare l'opzione **Specificare un account di condivisione file**e quindi gli utenti selezionano **Usa l'account di condivisione file**nelle singole pagine di configurazione della sottoscrizione.  
+-   A partire dalla versione [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] , l'amministratore di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] può configurare un singolo account di condivisione file, utilizzato per una o più sottoscrizioni. È necessario configurare l'opzione **Specificare un account di condivisione file** e quindi gli utenti selezionano **Usa l'account di condivisione file** nelle singole pagine di configurazione della sottoscrizione.  
   
 -   È possibile configurare singole sottoscrizioni con credenziali specifiche per la condivisione file di destinazione.  
   

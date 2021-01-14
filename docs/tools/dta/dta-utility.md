@@ -21,12 +21,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/09/2017
-ms.openlocfilehash: ebeb72707e1dd65344b30ffe88c0ae5b4425f796
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a80c3fc49962ad4a67430163f81d00b37c05329b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786016"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98169219"
 ---
 # <a name="dta-utility"></a>dta - utilità
 
@@ -84,7 +84,7 @@ dta
  Visualizza le informazioni sull'utilizzo.  
   
  **-A** _time_for_tuning_in_minutes_  
- Specifica il limite di tempo di ottimizzazione espresso in minuti. **dta** utilizza l'intervallo di tempo specificato per ottimizzare il carico di lavoro e generare uno script in base alle indicazioni relative alla modifica della progettazione fisica. Per impostazione predefinita, **dta** utilizza un tempo di ottimizzazione pari a 8 ore. Se si specifica 0, viene impostato un tempo di ottimizzazione illimitato. È possibile che l'utilità**dta** termini l'ottimizzazione dell'intero carico di lavoro prima che sia trascorso il limite di tempo specificato. Per garantire l'ottimizzazione dell'intero carico di lavoro, è tuttavia consigliabile specificare un tempo di ottimizzazione illimitato (-A 0).  
+ Specifica il limite di tempo di ottimizzazione espresso in minuti. **dta** utilizza l'intervallo di tempo specificato per ottimizzare il carico di lavoro e generare uno script in base alle indicazioni relative alla modifica della progettazione fisica. Per impostazione predefinita, **dta** utilizza un tempo di ottimizzazione pari a 8 ore. Se si specifica 0, viene impostato un tempo di ottimizzazione illimitato. È possibile che l'utilità **dta** termini l'ottimizzazione dell'intero carico di lavoro prima che sia trascorso il limite di tempo specificato. Per garantire l'ottimizzazione dell'intero carico di lavoro, è tuttavia consigliabile specificare un tempo di ottimizzazione illimitato (-A 0).  
   
  **-a**  
  Ottimizza il carico di lavoro e applica l'indicazione senza richiedere conferma all'utente.  
@@ -102,7 +102,7 @@ dta
  Specifica il numero massimo di colonne negli indici proposto da **dta** . Il valore massimo è 1024. Per impostazione predefinita, questo argomento è impostato su 16.  
   
  **-c** _max_key_columns_in_index_  
- Specifica il numero massimo di colonne chiave negli indici proposto da **dta** . Il valore predefinito è 16, ovvero il valore massimo consentito. In**dta** viene inoltre presa in considerazione la creazione di indici con colonne incluse. Gli indici con colonne incluse indicati dall'utilità potrebbero superare il numero di colonne specificato in questo argomento.  
+ Specifica il numero massimo di colonne chiave negli indici proposto da **dta** . Il valore predefinito è 16, ovvero il valore massimo consentito. In **dta** viene inoltre presa in considerazione la creazione di indici con colonne incluse. Gli indici con colonne incluse indicati dall'utilità potrebbero superare il numero di colonne specificato in questo argomento.  
   
  **-D** _database_name_  
  Specifica il nome di ogni database da ottimizzare. Il primo database è il database predefinito. Per specificare più database, separare i relativi nomi con una virgola, ad esempio:  
@@ -164,7 +164,7 @@ dta -d AdventureWorks2012 ...
 >  L'utilità **dta** non elimina il contenuto delle tabelle del log di ottimizzazione specificate dall'utente se la sessione viene eliminata. Quando si esegue l'ottimizzazione di carichi di lavoro molto estesi, è consigliabile specificare una tabella per il log di ottimizzazione. Poiché l'ottimizzazione di carichi di lavoro estesi può generare log di ottimizzazione estesi, è possibile eliminare le sessioni molto più velocemente in caso di utilizzo di una tabella.  
   
  **-F**  
- Consente a **dta** di sovrascrivere un file di output esistente. Se esiste già un file di output con lo stesso nome e si omette **-F** , **dta**restituisce un errore. È possibile usare **-F** con **-of**, **-or**oppure **-ox**.  
+ Consente a **dta** di sovrascrivere un file di output esistente. Se esiste già un file di output con lo stesso nome e si omette **-F** , **dta** restituisce un errore. È possibile usare **-F** con **-of**, **-or** oppure **-ox**.  
   
  **-fa** _physical_design_structures_to_add_  
  Specifica i tipi di strutture di progettazione fisica che **dta** deve includere nell'indicazione. Nella tabella seguente sono riportati e descritti i valori che è possibile specificare per questo argomento. Se non si specifica alcun valore, **dta** usa l'argomento predefinito **-fa IDX**.  
@@ -184,7 +184,7 @@ dta -d AdventureWorks2012 ...
 [Indicazioni relative agli indici columnstore in Ottimizzazione guidata motore di database](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  
-|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.|  
+|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive.|  
 
   
  **-fk** _keep_existing_option_  
@@ -210,10 +210,10 @@ dta -d AdventureWorks2012 ...
  Se si specifica ALIGNED, nell'indicazione generata da **dta** ogni indice proposto viene partizionato esattamente nello stesso modo della tabella sottostante per la quale è stato definito l'indice. Gli indici non cluster in una vista indicizzata sono allineati in base alla vista indicizzata. Per questo argomento è possibile specificare solo un valore. Il valore predefinito è **-fp NONE**.  
   
  **-fx** _drop_only_mode_  
- Specifica che **dta** prende in considerazione esclusivamente l'eliminazione delle strutture di progettazione fisica esistenti. Non verranno considerate le nuove strutture di progettazione fisica. Se si specifica questa opzione, **dta** valuta l'utilità delle strutture di progettazione fisica esistenti e propone di eliminare le strutture utilizzate meno di frequente. Questo argomento non utilizza alcun valore e non può essere usato in combinazione con gli argomenti **-fa**, **-fp**o **-fk ALL**  
+ Specifica che **dta** prende in considerazione esclusivamente l'eliminazione delle strutture di progettazione fisica esistenti. Non verranno considerate le nuove strutture di progettazione fisica. Se si specifica questa opzione, **dta** valuta l'utilità delle strutture di progettazione fisica esistenti e propone di eliminare le strutture utilizzate meno di frequente. Questo argomento non utilizza alcun valore e non può essere usato in combinazione con gli argomenti **-fa**, **-fp** o **-fk ALL**  
   
  **-ID** _session_ID_  
- Specifica l'identificatore numerico per la sessione di ottimizzazione. Se omesso, **dta** genera un numero di identificazione. È possibile utilizzare questo identificatore per visualizzare le informazioni relative alle sessioni di ottimizzazione correnti. Se per **-ID**non si specifica alcun valore, è necessario specificare un nome di sessione usando **-s**.  
+ Specifica l'identificatore numerico per la sessione di ottimizzazione. Se omesso, **dta** genera un numero di identificazione. È possibile utilizzare questo identificatore per visualizzare le informazioni relative alle sessioni di ottimizzazione correnti. Se per **-ID** non si specifica alcun valore, è necessario specificare un nome di sessione usando **-s**.  
   
  **-ip**  
  Specifica che la cache dei piani deve essere utilizzata come carico di lavoro. Vengono analizzati i primi 1.000 eventi della cache dei piani per i database selezionati in modo esplicito. Questo valore può essere modificato tramite l'opzione **-n**.  
@@ -222,7 +222,7 @@ dta -d AdventureWorks2012 ...
  Specifica che Query Store deve essere usato come carico di lavoro. Vengono analizzati i primi 1.000 eventi di Query Store per i database selezionati in modo esplicito. Questo valore può essere modificato tramite l'opzione **-n**.  Per altre informazioni, vedere [Archivio query](../../relational-databases/performance/how-query-store-collects-data.md) e [Ottimizzazione del database tramite un carico di lavoro dell'archivio query](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
  ||  
 |-|  
-|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.|  
+|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive.|  
      
  **-if** _workload_file_  
  Specifica il percorso e il nome del file del carico di lavoro da utilizzare come input per l'ottimizzazione. Il file deve essere in formato trc (file di traccia di SQL Server Profiler), sql (file SQL) oppure log (file di traccia di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). È inoltre necessario specificare un file o una tabella del carico di lavoro.  
@@ -281,7 +281,7 @@ dta -iq -I 48
 In questo caso DTA userà Query Store come origine del carico di lavoro e considererà solo le query eseguite nelle ultime 48 ore.  
   ||  
 |-|  
-|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.|  
+|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive.|  
 
 
   
@@ -343,7 +343,7 @@ In questo caso DTA userà Query Store come origine del carico di lavoro e consid
  **-Tf** _table_list_file_  
  Specifica il nome del file contenente l'elenco di tabelle da ottimizzare. Ogni tabella inclusa nel file deve iniziare su una nuova riga. Le tabelle devono essere qualificate con nomi di tabella composti da tre parti, ad esempio **AdventureWorks2012.HumanResources.Department**. In alternativa, per richiamare la funzionalità di ridimensionamento delle tabelle, il nome di una tabella esistente può essere seguito da un numero che indica il numero previsto di righe nella tabella. Ottimizzazione guidata motore di database utilizza il numero previsto di righe durante l'ottimizzazione o la valutazione delle istruzioni nel carico di lavoro che fanno riferimento a queste tabelle. Possono essere presenti uno o più spazi tra il numero di *number_of_rows* e *table_name*.  
   
- Il formato di file per *table_list_file*è:  
+ Il formato di file per *table_list_file* è:  
   
  *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
@@ -409,7 +409,7 @@ AdventureWorks2012.Production.Product  2000000
 
 Il contenuto di table_list.txt determina quanto segue:  
 
-- Verranno ottimizzate solo le tabelle **Customer**, **Store**e **Product** .  
+- Verranno ottimizzate solo le tabelle **Customer**, **Store** e **Product** .  
   
 - Si presuppone che il numero di righe delle tabelle **Customer** e **Product** sia rispettivamente 100.000 e 2.000.000.  
   

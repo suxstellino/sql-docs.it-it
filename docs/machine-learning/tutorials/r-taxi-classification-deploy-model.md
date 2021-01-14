@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
-ms.openlocfilehash: 0b32d12a694062e56611abaff18dc4f1e2f23061
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 026090f3eb61e2bd2ffe2b96eb09751cc3543dbf
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470112"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101868"
 ---
 # <a name="r-tutorial-run-predictions-in-sql-stored-procedures"></a>Esercitazione su R: Eseguire le previsioni nelle stored procedure SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -70,7 +70,7 @@ GO
 
 + L'istruzione SELECT ottiene il modello serializzato dal database e lo archivia nella variabile R `mod` per l'ulteriore elaborazione con R.
 
-+ I nuovi casi per l'assegnazione dei punteggi vengono ottenuti dalla query [!INCLUDE[tsql](../../includes/tsql-md.md)] specificata in `@inquery`, il primo parametro della stored procedure. Man mano che vengono letti i dati della query, le righe vengono salvate nel frame di dati predefinito `InputDataSet`. Questo frame di dati viene passato alla funzione [PREDICT](/sql/t-sql/queries/predict-transact-sql), che genera i punteggi.
++ I nuovi casi per l'assegnazione dei punteggi vengono ottenuti dalla query [!INCLUDE[tsql](../../includes/tsql-md.md)] specificata in `@inquery`, il primo parametro della stored procedure. Man mano che vengono letti i dati della query, le righe vengono salvate nel frame di dati predefinito `InputDataSet`. Questo frame di dati viene passato alla funzione [PREDICT](../../t-sql/queries/predict-transact-sql.md), che genera i punteggi.
   
   `OutputDataSet <- data.frame(predict(mod, InputDataSet, type = "response"));`
   

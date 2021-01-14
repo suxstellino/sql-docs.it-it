@@ -8,12 +8,12 @@ ms.topic: how-to
 author: garyericson
 ms.author: garye
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: cd0528125a4bd74b259fd02facb0589f4e123aad
-ms.sourcegitcommit: 8a8c89b0ff6d6dfb8554b92187aca1bf0f8bcc07
+ms.openlocfilehash: dcb3806c4ac165080e791db01d829272b3297e8a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97617550"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091559"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Installare pacchetti Python con sqlmlutils
 
@@ -40,7 +40,7 @@ Per altre informazioni sulla posizione dei pacchetti e sui percorsi di installaz
 + È necessario che sia installato [Machine Learning Services per SQL Server](../install/sql-machine-learning-services-windows-install.md) con l'opzione relativa al linguaggio Python.
 ::: moniker-end
 
-+ Installare [Azure Data Studio](../../azure-data-studio/what-is.md) nel computer client usato per connettersi a SQL Server. È possibile usare altri strumenti di query o gestione di database, ma in questo articolo si presuppone che venga usato Azure Data Studio.
++ Installare [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) nel computer client usato per connettersi a SQL Server. È possibile usare altri strumenti di query o gestione di database, ma in questo articolo si presuppone che venga usato Azure Data Studio.
 
 + Installare il kernel Python in Azure Data Studio. È anche possibile installare e usare Python dalla riga di comando e usare un ambiente di sviluppo Python alternativo come [Visual Studio Code](https://code.visualstudio.com/download) con l'[estensione Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python).
 

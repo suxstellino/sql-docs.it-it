@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/17/2020
-ms.openlocfilehash: 346e964b30f76bf79c20d6f348636a626a8beee2
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 98211695d60592c8178c4b60e45f2105c3b86db4
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642382"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102679"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Note sulla versione per SQL Server Management Studio (SSMS)
 
@@ -188,7 +188,7 @@ SSMS 18.7 è la versione più recente di SSMS disponibile a livello generale. Se
 | SQL Server Management Studio (SSMS) - Generale | Correzione di un problema per cui il tentativo di connessione a un database SQL di Azure potrebbe richiedere alcuni secondi (accesso SQL in un database utente). |
 | SQL Server Management Studio (SSMS) - Generale | Correzione di un problema per cui SSMS non gestiva/visualizzava il deadlock acquisito (file con estensione xdl). |
 | SQL Server Management Studio (SSMS) - Generale | Correzione di un problema per cui il tentativo di aprire le impostazioni del log degli errori per SQL Server 2008 R2 e versioni precedenti aveva esito negativo con la proprietà ErrorLogSizeKb non trovata. |
-| SQL Server Management Studio (SSMS) - Generale | Correzioni e miglioramenti generali relativi al supporto del [pool SQL serverless in Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). |
+| SQL Server Management Studio (SSMS) - Generale | Correzioni e miglioramenti generali relativi al supporto del [pool SQL serverless in Azure Synapse Analytics](/azure/synapse-analytics/sql/on-demand-workspace-overview). |
 | Importare file flat | Correzione di un problema per cui la procedura guidata non rilevava il possibile utilizzo del file in un'altra applicazione generando invece un errore. Vedere questa [segnalazione di un utente per SQL Server](https://feedback.azure.com/forums/908035/suggestions/40761574). |
 | Importa/Esporta applicazione livello dati | Correzione del livello di servizio predefinito su S0 Standard durante l'importazione di un file bacpac (stesso comportamento del portale di Azure e SqlPackage.exe). |
 | Importare file flat | Correzione di un problema per cui la procedura guidata non rilevava il possibile utilizzo del file in un'altra applicazione generando invece un errore. Vedere questa [segnalazione di un utente per SQL Server](https://feedback.azure.com/forums/908035/suggestions/40761574). |
@@ -220,7 +220,7 @@ SSMS 18.7 è la versione più recente di SSMS disponibile a livello generale. Se
 | Procedura guidata Genera script | La procedura guidata ha esito negativo quando si tenta di enumerare gli oggetti di database in SQL Server 2014 e versioni precedenti. Vedere questa [segnalazione di un utente per SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587). | Usare SSMS 18.6 per selezionare gli oggetti nella procedura guidata di generazione script per SQL 2014 e versioni precedenti. |
 | Integration Services | Quando si importano o esportano pacchetti in Integration Services o si esportano pacchetti in Azure-SSIS Integration Runtime, gli script vanno persi per i pacchetti che contengono attività o componenti di script. Soluzione alternativa: Rimuovere la cartella "C:\Programmi (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". | N/D |
 | Integration Services | Le connessioni remote a Integration Services possono avere esito negativo e visualizzare il messaggio "Il servizio specificato non esiste come servizio installato" in un sistema operativo più recente. Soluzione alternativa: Identificare il percorso del registro di sistema correlato di Integration Services in Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID e all'interno di questi hive rinominare la chiave del registro di sistema denominata 'LocalService' in 'LocalService_A' per la versione specifica di Integration Services che si sta tentando di connettere | N/D |
-| Esplora oggetti | Le versioni di SSMS precedenti alla 18.7 presentano una modifica sostanziale in Esplora oggetti a causa delle modifiche del motore relative al [pool SQL serverless in Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | Per continuare a usare Esplora oggetti in SSMS con pool SQL serverless in Azure Synapse Analytics, è necessario SSMS 18.7 o versione successiva. |
+| Esplora oggetti | Le versioni di SSMS precedenti alla 18.7 presentano una modifica sostanziale in Esplora oggetti a causa delle modifiche del motore relative al [pool SQL serverless in Azure Synapse Analytics](/azure/synapse-analytics/sql/on-demand-workspace-overview). | Per continuare a usare Esplora oggetti in SSMS con pool SQL serverless in Azure Synapse Analytics, è necessario SSMS 18.7 o versione successiva. |
 | Archivio query | Il nodo di Esplora oggetti per Query Store genera un errore quando si fa clic con il pulsante destro del mouse. | Per accedere direttamente agli elementi, espandere il nodo e fare clic con il pulsante destro del mouse su singole opzioni figlio. |
 
 ### <a name="186"></a>18.6

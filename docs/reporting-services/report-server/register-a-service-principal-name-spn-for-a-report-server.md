@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c87da88bcec8d1fcc29c282a1e012121a81f6f45
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 38985454ae83a73fd27dac886fd0f4ee10e5ad55
+ms.sourcegitcommit: 1f826eb3f73bd4d94bc9638b9cdd60991a2e2fa0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91986707"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98125587"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>Registrare un nome dell'entità servizio (SPN) per un server di report
   Se si distribuisce [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una rete che utilizza il protocollo Kerberos per l'autenticazione reciproca, è necessario creare un nome dell'entità servizio (SPN) per il server di report se questo è configurato per l'esecuzione come account utente di dominio.  
@@ -66,7 +66,7 @@ Setspn -s http/<computer-name>.<domain-name> <domain-user-account>
   
 6.  Aprire il file **RsReportServer.config** e individuare la sezione `<AuthenticationTypes>`.  
   
-7.  Aggiungere `<RSWindowsNegotiate/>` come prima voce in questa sezione per abilitare Kerberos.  
+7.  Aggiungere `<RSWindowsNegotiate />` come prima voce in questa sezione per abilitare Kerberos.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare un account del servizio &#40;Gestione configurazione del server di report&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   

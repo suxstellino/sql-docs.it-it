@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: 85ee78e0d7558cf2ad683321a13a842ff5d8daf5
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 3e71b33eb08fd386232e992e9b47da7b5057aa32
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471332"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170723"
 ---
 # <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>Gestire carichi di lavoro Python ed R con Resource Governor in Machine Learning Services per SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -36,7 +36,7 @@ Per impostazione predefinita, i runtime degli script esterni per l'apprendimento
  
 Per impostazione predefinita, i processi esterni usano fino al 20% della memoria totale dell'host nel server locale. È possibile modificare il pool di risorse predefinito per apportare modifiche a livello di server, con i processi R e Python che usano qualsiasi capacità resa disponibile ai processi esterni.
 
-Se necessario, è possibile creare **pool di risorse esterne** personalizzati, con classificatori e gruppi di carico di lavoro associati, per determinare l'allocazione delle risorse per richieste provenienti da programmi o host specifici o altri criteri forniti. Un pool di risorse esterne è un nuovo tipo di pool di risorse introdotto in [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] per supportare la gestione dei processi R e Python esterni al motore di database.
+Se necessario, è possibile creare **pool di risorse esterne** personalizzati, con classificatori e gruppi di carico di lavoro associati, per determinare l'allocazione delle risorse per richieste provenienti da programmi o host specifici o altri criteri forniti. Un pool di risorse esterne è un nuovo tipo di pool di risorse introdotto in [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)] per supportare la gestione dei processi R e Python esterni al motore di database.
 
 1. [Abilitare la governance delle risorse](../../relational-databases/resource-governor/enable-resource-governor.md) (disattivata per impostazione predefinita).
 

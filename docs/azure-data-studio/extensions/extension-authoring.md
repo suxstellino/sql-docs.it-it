@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu
 ms.custom: ''
 ms.date: 08/26/2020
-ms.openlocfilehash: 92c6a5d9522d015786eafdefaeea64b46925b92b
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: d23e37065eb18a7a22d5717a95379161c10870a0
+ms.sourcegitcommit: e40e75055c1435c5e3f9b6e3246be55526807b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364038"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98151237"
 ---
 # <a name="extend-functionality-by-creating-azure-data-studio-extensions"></a>Estendere le funzionalità creando estensioni per Azure Data Studio
 
@@ -35,7 +35,7 @@ Per sviluppare un'estensione, è necessario che [Node.js](https://nodejs.org/) s
 Per creare la nuova estensione, è possibile usare il generatore di estensioni di Azure Data Studio. Il [generatore di estensioni](https://www.npmjs.com/package/generator-azuredatastudio) Yeoman è un utile punto di partenza per i progetti di estensioni. Per avviare il generatore, immettere il comando seguente in un prompt dei comandi:
 
 ```console
-npm install -g yo generator-azuredatastudio # Install the generator
+npm install -g yo generator-azuredatastudio
 yo azuredatastudio
 ```
 

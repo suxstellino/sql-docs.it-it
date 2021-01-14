@@ -12,12 +12,12 @@ helpviewer_keywords:
 - failover clustering [SQL Server], upgrading
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 90ab761cdc9a84008803ebb4bc5493eb87778f20
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 4d9e3116902ae96eaa97e9624ea33ba3fa8952d3
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642677"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171583"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Aggiornare istanze di SQL Server in esecuzione in cluster di Windows Server 2008/2008 R2/2012
 
@@ -30,7 +30,7 @@ ms.locfileid: "97642677"
 
 -   Prima della migrazione, nel cluster parallelo non devono essere installati [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)].
 
--   Il tempo di inattività durante la migrazione di un cluster che usa esclusivamente gruppi di disponibilità (con o senza istanze di cluster di failover di SQL Server) può essere limitato notevolmente tramite l'uso di gruppi di disponibilità distribuiti. In questo caso, tuttavia, tutte le istanze devono eseguire [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] RTM o versione successiva.
+-   Il tempo di inattività durante la migrazione di un cluster che usa esclusivamente gruppi di disponibilità (con o senza istanze di cluster di failover di SQL Server) può essere limitato notevolmente tramite l'uso di gruppi di disponibilità distribuiti. In questo caso, tuttavia, tutte le istanze devono eseguire [!INCLUDE[sssql15-md](../../../includes/sssql16-md.md)] RTM o versione successiva.
 
 -   Tutte le strategie di migrazione richiedono il ruolo sysadmin di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Tutti gli utenti di Windows usati da servizi di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ad esempio account di Windows che eseguono agenti di replica, devono avere autorizzazioni a livello del sistema operativo per ogni computer nel nuovo ambiente.
 
@@ -54,11 +54,11 @@ La strategia di migrazione appropriata dipende da alcuni parametri della topolog
 \* Esclusi i nomi di listener di gruppi di disponibilità
 
 ## <a name="scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis"></a>Scenario 1: Cluster Windows con gruppi di disponibilità di SQL Server e nessuna istanza del cluster di failover
-Se la configurazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa esclusivamente gruppi di disponibilità e non usa istanze del cluster di failover, è possibile eseguire la migrazione in un nuovo cluster creando una distribuzione parallela di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un altro cluster Windows con Windows Server 2016/2012 R2. Dopo questa operazione è possibile creare un gruppo di disponibilità distribuito in cui il cluster di destinazione sia un cluster secondario rispetto al cluster di produzione corrente. Ciò richiede l'aggiornamento a [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] o versione successiva.
+Se la configurazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa esclusivamente gruppi di disponibilità e non usa istanze del cluster di failover, è possibile eseguire la migrazione in un nuovo cluster creando una distribuzione parallela di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un altro cluster Windows con Windows Server 2016/2012 R2. Dopo questa operazione è possibile creare un gruppo di disponibilità distribuito in cui il cluster di destinazione sia un cluster secondario rispetto al cluster di produzione corrente. Ciò richiede l'aggiornamento a [!INCLUDE[sssql15-md](../../../includes/sssql16-md.md)] o versione successiva.
 
 ###  <a name="to-perform-the-upgrade"></a>Per eseguire l'aggiornamento
 
-1.  Se necessario, aggiornare tutte le istanze a [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] o versione successiva. Le istanze parallele devono eseguire la stessa versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+1.  Se necessario, aggiornare tutte le istanze a [!INCLUDE[sssql15-md](../../../includes/sssql16-md.md)] o versione successiva. Le istanze parallele devono eseguire la stessa versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 2.  Creare un gruppo di disponibilità per il cluster di destinazione. Se il nodo primario del cluster di destinazione non è un'istanza di cluster di failover, creare un listener.
 

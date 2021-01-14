@@ -10,22 +10,22 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 80535a9baefe60301927723511a5bf1afeb805a8
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: be07fa7f00f38f4f7ff3782593b19a584627e2f7
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378418"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091699"
 ---
 # <a name="monitor-cluster-with-azdata-and-kubectl"></a>Monitorare il cluster con azdata e kubectl
 
 ## <a name="use-azdata"></a>Usare azdata
 
-È anche possibile usare i comandi di [azdata](deploy-install-azdata.md) per visualizzare sia gli endpoint che lo stato del cluster.
+È anche possibile usare i comandi di [azdata](../azdata/install/deploy-install-azdata.md) per visualizzare sia gli endpoint che lo stato del cluster.
 
 ### <a name="service-endpoints"></a>Endpoint di servizio
 
-1. Accedere al cluster Big Data con [azdata login](reference-azdata.md). Impostare il parametro **--controller-endpoint** sull'indirizzo IP esterno dell'endpoint controller.
+1. Accedere al cluster Big Data con [azdata login](../azdata/reference/reference-azdata.md). Impostare il parametro **--controller-endpoint** sull'indirizzo IP esterno dell'endpoint controller.
 
    ```bash
    azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
@@ -39,7 +39,7 @@ ms.locfileid: "92378418"
    azdata login --endpoint https://<control_domain_name>:30080 --auth ad
    ```
 
-1. Eseguire [`azdata bdc endpoint list`](reference-azdata-bdc-endpoint.md) per ottenere un elenco con una descrizione di ogni endpoint e i relativi valori di porta e indirizzo IP. 
+1. Eseguire [`azdata bdc endpoint list`](../azdata/reference/reference-azdata-bdc-endpoint.md) per ottenere un elenco con una descrizione di ogni endpoint e i relativi valori di porta e indirizzo IP. 
 
    ```bash
    azdata bdc endpoint list -o table
@@ -65,14 +65,14 @@ ms.locfileid: "92378418"
 
 ### <a name="view-cluster-status"></a>Visualizzare lo stato del cluster
 
-È possibile visualizzare lo stato del cluster con il comando [`azdata bdc status show`](reference-azdata-bdc-status.md).
+È possibile visualizzare lo stato del cluster con il comando [`azdata bdc status show`](../azdata/reference/reference-azdata-bdc-status.md).
 
 ```bash
 azdata bdc status show
 ```
 
 > [!TIP]
-> Per eseguire il comando per lo stato, è prima di tutto necessario accedere con il comando **azdata login** , mostrato nella sezione precedente sugli endpoint.
+> Per eseguire il comando per lo stato, è prima di tutto necessario accedere con il comando **azdata login**, mostrato nella sezione precedente sugli endpoint.
 
 Di seguito viene mostrato un output di esempio di questo comando:
 
@@ -150,7 +150,7 @@ Di seguito viene mostrato un output di esempio di questo comando:
 
 ### <a name="view-specific-resource-status"></a>Visualizzare lo stato di risorse specifiche
 
-È possibile visualizzare lo stato di una risorsa specifica nel cluster con il comando [azdata bdc status show](reference-azdata-bdc-status.md). Quando si usa questo comando è possibile filtrare usando il parametro `--resource`. Ecco alcuni esempi di input per il parametro `--resource`:
+È possibile visualizzare lo stato di una risorsa specifica nel cluster con il comando [azdata bdc status show](../azdata/reference/reference-azdata-bdc-status.md). Quando si usa questo comando è possibile filtrare usando il parametro `--resource`. Ecco alcuni esempi di input per il parametro `--resource`:
 
 - master
 - controllo
@@ -242,7 +242,7 @@ Di seguito è riportato un output di esempio:
 
 ### <a name="view-controller-status"></a>Visualizzare lo stato del controller
 
-È possibile visualizzare lo stato del controller con il comando [`azdata bdc control status show`](reference-azdata-bdc-control-status.md). Questo comando fornisce collegamenti simili ai dashboard di monitoraggio correlati ai componenti del controller del cluster Big Data.
+È possibile visualizzare lo stato del controller con il comando [`azdata bdc control status show`](../azdata/reference/reference-azdata-bdc-control-status.md). Questo comando fornisce collegamenti simili ai dashboard di monitoraggio correlati ai componenti del controller del cluster Big Data.
 
 
 ## <a name="next-steps"></a>Passaggi successivi

@@ -10,12 +10,12 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d258ac514cd998fd121c87a8d6da4a2694878c3e
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: ee0ceb3a9f86fc2a7fabe44e9279b7e63dabfb8b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378394"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091686"
 ---
 # <a name="monitor-cluster-with-azdata-and-grafana-dashboard"></a>Monitorare il cluster con azdata e il dashboard Grafana
 
@@ -24,18 +24,18 @@ Questo articolo descrive come monitorare un'applicazione in un cluster Big Data 
 ## <a name="prerequisites"></a>Prerequisiti
 
 - [Cluster Big Data di SQL Server 2019](deployment-guidance.md)
-- [Utilità della riga di comando azdata](deploy-install-azdata.md)
+- [Utilità della riga di comando azdata](../azdata/install/deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>Capabilities
 
-In SQL Server 2019 è possibile creare, eliminare, descrivere, inizializzare, elencare, eseguire e aggiornare l'applicazione. La tabella seguente descrive i comandi per la distribuzione di applicazioni che è possibile usare con **azdata** .
+In SQL Server 2019 è possibile creare, eliminare, descrivere, inizializzare, elencare, eseguire e aggiornare l'applicazione. La tabella seguente descrive i comandi per la distribuzione di applicazioni che è possibile usare con **azdata**.
 
 |Comando |Descrizione |
 |:---|:---|
 |`azdata bdc endpoint list` | Elenca gli endpoint per il cluster di Big Data. |
 
 
-È possibile usare l'esempio seguente per elencare l'endpoint del **dashboard Grafana** :
+È possibile usare l'esempio seguente per elencare l'endpoint del **dashboard Grafana**:
 
 ```bash
 azdata bdc endpoint list --endpoint-name metricsui 
