@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15e8b648603952226af45d485d5678f5d0d3bbd6
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 28d083e053e31c1fcce26e233ba22211e211a993
+ms.sourcegitcommit: 1f826eb3f73bd4d94bc9638b9cdd60991a2e2fa0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84548013"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98125588"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Vista ExecutionLog ed ExecutionLog3 del server di report
   Il log di esecuzione del server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]include informazioni sui report eseguiti in uno o più server in una distribuzione con scalabilità orizzontale in modalità nativa o in una farm di SharePoint. Il log consente di conoscere la frequenza con cui un report viene richiesto, i formati di output più usati e i millisecondi dedicati a ogni fase dell'elaborazione. Nel log, inoltre, sono contenute informazioni sul tempo impiegato per l'esecuzione di una query del set di dati di un report e su quello speso per l'elaborazione dei dati. Se si è un amministratore del server di report, è possibile esaminare le informazioni sul log, identificare le attività con esecuzione prolungata e inviare suggerimenti agli autori del report sulle aree del report, set di dati o elaborazione, che potrebbero essere migliorate.  
@@ -27,7 +27,7 @@ ms.locfileid: "84548013"
 ##  <a name="viewing-log-information"></a><a name="bkmk_top"></a> Visualizzazione delle informazioni sul log di esecuzione  
  Nel server di report vengono registrati i dati sull'esecuzione dei report in una tabella interna del database. Le informazioni della tabella sono disponibili dalle viste SQL Server.  
   
- Il log di esecuzione del report viene archiviato nel database del server di report denominato **ReportServer**per impostazione predefinita. Nelle viste SQL sono incluse le informazioni sul log di esecuzione. Le viste "2" e "3" sono state aggiunte in versioni più recenti e contengono nuovi campi oppure campi con nomi più descrittivi rispetto alle versioni precedenti. Le viste precedenti rimangono nel prodotto, così non vengono influenzate le applicazioni personalizzate basata su di esse. Se non si dispone di una dipendenza da una vista precedente, ad esempio ExecutionLog, si consiglia di usare la vista più recente, ExecutionLog**3**.  
+ Il log di esecuzione del report viene archiviato nel database del server di report denominato **ReportServer** per impostazione predefinita. Nelle viste SQL sono incluse le informazioni sul log di esecuzione. Le viste "2" e "3" sono state aggiunte in versioni più recenti e contengono nuovi campi oppure campi con nomi più descrittivi rispetto alle versioni precedenti. Le viste precedenti rimangono nel prodotto, così non vengono influenzate le applicazioni personalizzate basata su di esse. Se non si dispone di una dipendenza da una vista precedente, ad esempio ExecutionLog, si consiglia di usare la vista più recente, ExecutionLog **3**.  
   
  In questo argomento  
   
@@ -328,11 +328,11 @@ select * from ExecutionLog2 order by TimeStart DESC
 |Format|Formato di rendering.|  
 |Parametri|Valori dei parametri usati per l'esecuzione del report.|  
 |ReportAction|Valori possibili: Render, Sort, BookMarkNavigation, DocumentNavigation, GetDocumentMap, Findstring|  
-|TimeStart|Ora di inizio e ora dell'arresto, che indicano la durata dell'elaborazione del report.|  
-|TimeEnd||  
-|TimeDataRetrieval|Numero di millisecondi dedicati al recupero dei dati, all'elaborazione del report e al rendering del report.|  
-|TimeProcessing||  
-|TimeRendering||  
+|TimeStart|Ora di inizio che indica la durata dell'elaborazione del report.|
+|TimeEnd|Ora di fine che indica la durata dell'elaborazione del report.|
+|TimeDataRetrieval|Numero di millisecondi impiegati per il recupero dei dati.|
+|TimeProcessing|Numero di millisecondi impiegati per l'elaborazione del report.|
+|TimeRendering|Numero di millisecondi impiegati per il rendering del report.|
 |Source (Sorgente)|Origine dell'esecuzione del report (1=Live, 2=Cache, 3=Snapshot, 4=History).|  
 |Stato|Stato (rsSuccess oppure un codice di errore; in caso di più errori, viene registrato solo il primo).|  
 |ByteCount|Dimensione dei report visualizzabili, in byte.|  

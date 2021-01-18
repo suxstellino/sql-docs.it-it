@@ -3,18 +3,18 @@ title: Eseguire l'installazione al prompt dei comandi
 description: Eseguire il programma di installazione di SQL Server dalla riga di comando per aggiungere Machine Learning Services con Python ed R a un'istanza del motore di database di SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 11/25/2020
+ms.date: 01/07/2021
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: 7c9fb33f32a5807f46136ec1ede69386927621ca
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9b0bf3444ab09cbbbb4aa8eca225dfa9964898c3
+ms.sourcegitcommit: d681796e8c012eca2d9629d3b816749e9f50f868
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471142"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98005326"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>Installare SQL Server Machine Learning Services con R e Python dalla riga di comando
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -73,7 +73,7 @@ In caso di installazione dal prompt dei comandi, in [!INCLUDE[ssNoVersion](../..
 | /FEATURES = AdvancedAnalytics | Installa la versione nel database: SQL Server Machine Learning Services (In-Database).  |
 | /FEATURES = SQL_INST_MR | Associare questo argomento ad AdvancedAnalytics. Installa la funzionalità R (In-Database), inclusi Microsoft R Open e i pacchetti R proprietari. |
 | /FEATURES = SQL_INST_MPY | Associare questo argomento ad AdvancedAnalytics. Installa la funzionalità Python (In-Database), inclusi Anaconda e i pacchetti Python proprietari. |
-| /FEATURES = SQL_INST_MJAVA | Associare questo argomento ad AdvancedAnalytics. Installa la funzionalità Java (In-Database), incluso Open JRE. |
+| /FEATURES = SQL_INST_MJAVA | Associare questo argomento ad AdvancedAnalytics. Installa la funzionalità Java (In-Database), incluso Open JRE. Si applica a [Estensione del linguaggio Java di SQL Server](../../language-extensions/install/windows-java.md).|
 | /FEATURES = SQL_SHARED_MR | Installa la funzionalità R per la versione autonoma: SQL Server Machine Learning Server (Standalone). Un server autonomo è una "funzionalità condivisa" non associata a un'istanza del motore di database.|
 | /FEATURES = SQL_SHARED_MPY | Installa la funzionalità Python per la versione autonoma: SQL Server Machine Learning Server (Standalone). Un server autonomo è una "funzionalità condivisa" non associata a un'istanza del motore di database.|
 | /IACCEPTROPENLICENSETERMS  | Indica che sono state accettate le condizioni di licenza per l'uso dei componenti R open source. |
