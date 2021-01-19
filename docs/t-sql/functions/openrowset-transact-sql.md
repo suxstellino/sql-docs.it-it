@@ -26,12 +26,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: d81ecf6b555022aeac47e810041d96a57f61b00b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 43f3bbae327731f6522b71c0fdaafbc9441fe9ca
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468212"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98169750"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -249,7 +249,7 @@ SELECT *
 |ACP|Converte le colonne con tipo di dati **char**, **varchar** o **text** dalla tabella codici ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (ISO 1252) a quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
 |OEM (predefinito)|Converte le colonne con tipo di dati **char**, **varchar** o **text** dalla tabella codici OEM di sistema a quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
 |RAW|Non vengono eseguite conversioni tra tabelle codici. Si tratta dell'opzione più rapida.|
-|*code_page*|Indica la tabella codici di origine in cui vengono codificati i dati di tipo carattere del file di dati, ad esempio 850.<br /><br /> **Importante** Le versioni precedenti a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] non supportano la tabella codici 65001 (codifica UTF-8).|
+|*code_page*|Indica la tabella codici di origine in cui vengono codificati i dati di tipo carattere del file di dati, ad esempio 850.<br /><br /> **Importante** Le versioni precedenti a [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] non supportano la tabella codici 65001 (codifica UTF-8).|
 
 ##### <a name="format"></a>FORMAT
 `FORMAT` **=** 'CSV' **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.

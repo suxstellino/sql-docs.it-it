@@ -12,12 +12,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7dbbbf20d23c33e0aaef2bad8800cae457414db6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c40cb726e20f015a46cd808200ebbe67d9c1dc10
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460494"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98168398"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Stimare i requisiti di memoria delle tabelle con ottimizzazione per la memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,7 +30,7 @@ Se si prende in considerazione la migrazione da tabelle basate su disco a tabell
   
 ## <a name="basic-guidance-for-estimating-memory-requirements"></a>Materiale sussidiario di base per la stima dei requisiti di memoria
 
-A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]non esiste alcun limite alle dimensioni delle tabelle ottimizzate per la memoria, ad eccezione della memoria disponibile.  In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] le dimensioni dei dati supportate sono pari a 256 GB per le tabelle SCHEMA_AND_DATA.
+A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]non esiste alcun limite alle dimensioni delle tabelle ottimizzate per la memoria, ad eccezione della memoria disponibile.  In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] le dimensioni dei dati supportate sono pari a 256 GB per le tabelle SCHEMA_AND_DATA.
 
 Le dimensioni di una tabella ottimizzata per la memoria corrispondono alle dimensioni dei dati più l'overhead per le intestazioni di riga. Durante la migrazione di una tabella basata su disco a una tabella ottimizzata per la memoria, le dimensioni della tabella ottimizzata per la memoria corrispondono approssimativamente alle dimensioni dell'indice o dell'heap cluster della tabella originale basata su disco.
 

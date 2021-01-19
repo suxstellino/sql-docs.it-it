@@ -16,12 +16,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 345c02a175643967a509900ab415b90708a3d9e7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 910db0887a50e12163ddeda927159f5e6c97b74b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478302"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98169279"
 ---
 # <a name="tempdb-database"></a>database tempdb
 
@@ -213,7 +213,7 @@ Posizionare il database `tempdb` in un sottosistema di I/O veloce. In presenza d
 Posizionare il database `tempdb` in dischi diversi da quelli usati dai database utente.
 
 ## <a name="performance-improvements-in-tempdb-for-sql-server"></a>Miglioramenti delle prestazioni in tempdb per SQL Server
-A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], le prestazioni di `tempdb` vengono ulteriormente ottimizzate nei modi seguenti:  
+A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], le prestazioni di `tempdb` vengono ulteriormente ottimizzate nei modi seguenti:  
   
 - Le tabelle temporanee e le variabili di tabella vengono memorizzate nella cache. La memorizzazione nella cache consente di eseguire molto rapidamente le operazioni di eliminazione e creazione degli oggetti temporanei. La memorizzazione nella cache riduce anche l'allocazione delle pagine e la contesa dei metadati.  
 - Il protocollo di latch delle pagine di allocazione è stato migliorato per ridurre il numero di latch di `UP` (aggiornamento) usati.  
