@@ -1836,7 +1836,7 @@
       items:
         - name: Gestione
           items:
-            - name: Creazione
+            - name: Create
               href: relational-databases/tables/create-tables-database-engine.md
             - name: Delete
               href: relational-databases/tables/delete-tables-database-engine.md
@@ -1986,6 +1986,8 @@
               href: relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md
             - name: Utilizzare
               href: relational-databases/track-changes/work-with-change-data-sql-server.md
+            - name: Interoperabilità
+              href: relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md
         - name: Rilevamento modifiche
           href: relational-databases/track-changes/about-change-tracking-sql-server.md
           items:
@@ -1995,8 +1997,6 @@
               href: relational-databases/track-changes/manage-change-tracking-sql-server.md
             - name: Utilizzare
               href: relational-databases/track-changes/work-with-change-tracking-sql-server.md
-            - name: Interoperabilità
-              href: relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md
     - name: Trigger
       items:
         - name: Trigger LOGON
@@ -7785,11 +7785,12 @@
                     - name: Sviluppare applicazioni con .NET Framework
                       href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
             - name: Always Encrypted con enclave sicuri
-              href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
               items:
+                - name: Configurare Always Encrypted con enclave sicuri
+                  href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
                 - name: Configurare l'ambiente per supportare gli enclave e l'attestazione
                   items:
-                    - name: Configurare gli enclave VBS con l'attestazione del servizio Sorveglianza host
+                    - name: Set up SQL Server
                       items:
                         - name: Pianificare l'attestazione del servizio Sorveglianza host
                           href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-plan.md
@@ -7797,6 +7798,8 @@
                           href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md
                         - name: Registrare il computer per il servizio Sorveglianza host
                           href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-register.md
+                        - name: Configurare l'enclave sicuro in SQL Server
+                          href: relational-databases/security/encryption/always-encrypted-enclaves-configure-enclave-type.md
                 - name: Gestire le chiavi per Always Encrypted con enclave sicuri
                   items:
                     - name: Gestire le chiavi abilitate per l'enclave
@@ -7813,12 +7816,10 @@
                       href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-tsql.md
                     - name: Abilitare Always Encrypted con enclave sicuri per le colonne crittografate esistenti
                       href: relational-databases/security/encryption/always-encrypted-enclaves-enable-for-encrypted-columns.md
-                - name: Eseguire query delle colonne usando Always Encrypted con enclave sicuri
-                  items:
-                    - name: Eseguire query delle colonne usando Always Encrypted con enclave sicuri
-                      href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns.md
-                    - name: Eseguire query delle colonne usando Always Encrypted con enclave sicuri con SSMS
-                      href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns-ssms.md
+                - name: Eseguire istruzioni Transact-SQL con enclave sicure
+                  href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns.md
+                - name: Risolvere problemi comuni con enclavi sicuri
+                  href: relational-databases/security/encryption/always-encrypted-enclaves-troubleshooting.md
                 - name: Creare e usare indici sulle colonne abilitate per l'enclave
                   href: relational-databases/security/encryption/always-encrypted-enclaves-create-use-indexes.md
                 - name: Sviluppare applicazioni usando Always Encrypted con enclave sicuri
@@ -7964,8 +7965,10 @@
               href: /azure/sql-database/sql-database-always-encrypted-azure-key-vault
         - name: Always Encrypted con enclave sicuri
           items:
-            - name: Introduzione ad Always Encrypted con enclave sicuri tramite SSMS
+            - name: Introduzione ad Always Encrypted con enclavi sicuri in SQL Server
               href: relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
+            - name: Introduzione ad Always Encrypted con enclavi sicuri in database SQL di Azure >
+              href: /azure/azure-sql/database/always-encrypted-enclaves-getting-started
             - name: Creare e usare indici in colonne Always Encrypted con gli enclavi sicuri
               href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
             - name: Sviluppare un'applicazione .NET Framework usando Always Encrypted con enclave sicuri
@@ -9220,6 +9223,8 @@
                   href: ssms/menu-help/options-environment-help-general-page.md
                 - name: Opzioni (opzioni Esecuzione query - Guida - Pagina generale)
                   href: ssms/menu-help/options-query-execution.md
+                - name: Opzioni (Servizio di Azure - Guida - Generale)
+                  href: ssms/menu-help/options-azure-services.md
                 - name: Strumenti esterni
                   href: ssms/menu-help/external-tools.md
                 - name: Personalizza (pagina Comandi)
@@ -9990,6 +9995,8 @@
           href: linux/sql-server-linux-deploy-pacemaker-cluster.md
         - name: Creare e configurare gruppi di disponibilità
           href: linux/sql-server-linux-create-availability-group.md
+        - name: Creare usando la disponibilità elevata con HPE Serviceguard
+          href: linux/sql-server-availability-group-ha-hpe.md
         - name: Distribuire in Kubernetes
           href: linux/tutorial-sql-server-containers-kubernetes.md
         - name: Configurare la replica
