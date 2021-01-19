@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b18a3131329e0485221a0ae2cdaafd0726a4f31c
-ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
+ms.openlocfilehash: 1b5726aad103012b0ed7619749c1f6f669baa234
+ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97878965"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98241836"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Abilitare connessioni crittografate al motore di database
 
@@ -40,7 +40,7 @@ ms.locfileid: "97878965"
  Nel computer server deve essere stato effettuato il provisioning di un certificato. Per effettuare il provisioning del certificato nel computer server, occorre [importarlo in Windows](#single-server). Il computer client deve essere configurato per [considerare attendibile l'autorità radice del certificato](#about).  
   
 > [!IMPORTANT]
-> A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], Secure Sockets Layer (SSL) non è più disponibile. Usare in alternativa Transport Layer Security (TLS).
+> A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], Secure Sockets Layer (SSL) non è più disponibile. Usare in alternativa Transport Layer Security (TLS).
 
 ## <a name="transport-layer-security-tls"></a>Transport Layer Security (TLS)
 
@@ -92,7 +92,7 @@ Affinché un certificato TLS venga caricato da [!INCLUDE[ssNoVersion](../../incl
 
 - La proprietà **Soggetto** del certificato deve specificare che il nome comune (CN, Common Name) corrisponde al nome host oppure al nome di dominio completo (FQDN, Fully Qualified Domain Name) del server. Quando si usa il nome host, nel certificato deve essere specificato il suffisso DNS. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione in un cluster di failover, è necessario che il nome comune corrisponda al nome host oppure al nome di dominio completo del server virtuale e che sia stato eseguito il provisioning dei certificati in tutti i nodi del cluster di failover.
 
-- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) supportano i certificati con caratteri jolly. SNAC è stato deprecato e sostituito con [Microsoft OLE DB Driver per SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) e [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md). È possibile che altri client non supportino i certificati con caratteri jolly. Per altre informazioni, vedere la documentazione del client e [KB 258858](https://support.microsoft.com/kb/258858).       
+- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) supportano i certificati con caratteri jolly. SNAC è stato deprecato e sostituito con [Microsoft OLE DB Driver per SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) e [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md). È possibile che altri client non supportino i certificati con caratteri jolly.      
   Non è possibile selezionare il certificato con caratteri jolly usando Gestione configurazione SQL Server. Per usare un certificato con caratteri jolly, è necessario modificare la chiave del Registro di sistema `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` e immettere l'identificazione personale del certificato, senza spazi, nel valore **Certificato**.  
 
   > [!WARNING]  

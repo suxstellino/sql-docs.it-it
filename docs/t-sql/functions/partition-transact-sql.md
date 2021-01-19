@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 95f101b79978c86e2b963891d495ff5a067b5fd9
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: e32332d4b258a4fb37b49aa4d6715483998cd83d
+ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96128371"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98241878"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Restituisce il numero della partizione a cui verrebbe eseguito il mapping di un set di valori di una colonna di partizionamento per una funzione di partizione specificata in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  Restituisce il numero della partizione a cui verrebbe eseguito il mapping di un set di valori di una colonna di partizionamento per una funzione di partizione specificata in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
