@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: c6e99ae69d27bbaebbd0fa8bd720820f14064d9b
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: bb30e3c829dcdabde66fd1a330ec617eea7e5b34
+ms.sourcegitcommit: 7791bd2ba339edc5cd2078a6537c8f6bfe72a19b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095622"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98564469"
 ---
 # <a name="syscolumn_store_row_groups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -39,14 +39,14 @@ ms.locfileid: "98095622"
 |**index_id**|INT|ID dell'indice per la tabella che contiene questo indice columnstore.|  
 |**partition_number**|INT|ID della partizione della tabella che contiene il row_group_id del gruppo di righe. È possibile utilizzare il partition_number per creare un join di questa DMV a sys.partitions.|  
 |**row_group_id**|INT|Numero del gruppo di righe associato a questo gruppo di righe. Univoco all'interno della partizione.<br /><br /> -1 = parte finale di una tabella in memoria.|  
-|* * delta_store_hobt_id|bigint * *|Hobt_id per il gruppo di righe aperto nell'archivio Delta.<br /><br /> NULL se il gruppo di righe non è presente nell'archivio Delta.<br /><br /> NULL per la parte finale di una tabella in memoria.|  
+|**delta_store_hobt_id**|bigint|Hobt_id per il gruppo di righe aperto nell'archivio Delta.<br /><br /> NULL se il gruppo di righe non è presente nell'archivio Delta.<br /><br /> NULL per la parte finale di una tabella in memoria.|  
 |**state**|TINYINT|Numero ID associato a state_description.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = RIMOZIONE DEFINITIVA|  
 |**state_description**|nvarchar(60)|Descrizione dello stato persistente del gruppo di righe:<br /><br /> INVISIBILE: un segmento compresso nascosto nel processo di compilazione da dati in un archivio Delta. Nelle azioni di lettura verrà utilizzato l'archivio delta fino al completamento del segmento compresso invisibile. Successivamente, il nuovo segmento diventa visibile e l'archivio delta di origine viene rimosso.<br /><br /> APRIRE: un gruppo di righe di lettura/scrittura che accetta nuovi record. Un gruppo di righe aperto presenta ancora il formato rowstore e non è stato compresso nel formato columnstore.<br /><br /> CLOSED: gruppo di righe compilato ma non ancora compresso dal processo del motore di Tuple.<br /><br /> COMPRESSO: gruppo di righe che è stato riempito e compresso.|  
 |**total_rows**|bigint|Righe totali archiviate fisicamente nel gruppo di righe. È possibile che alcune siano state eliminate, ma risultano comunque archiviate. Il numero massimo di righe in un gruppo di righe è 1.048.576 (esadecimale FFFFF).|  
 |**deleted_rows**|bigint|Righe totali nel gruppo di righe contrassegnate come eliminate. Sempre 0 per i gruppi di righe DELTA.|  
 |**size_in_bytes**|bigint|Dimensioni in byte di tutti i dati nel gruppo di righe, esclusi i metadati o i dizionari condivisi, per i gruppi di righe DELTA e COLUMNSTORE.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Restituisce una riga per ogni gruppo di righe columnstore per ogni tabella che dispone di un indice columnstore cluster o non cluster.  
   
  Utilizzare **sys.column_store_row_groups** per determinare il numero di righe incluse nel gruppo di righe e le dimensioni del gruppo di righe.  

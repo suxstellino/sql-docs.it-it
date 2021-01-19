@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 02b97900b86eac3c4fb5ffc61b7cf6922d4800e2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9aa65ff9b5b9c14441ac555d40788e92082f01c5
+ms.sourcegitcommit: 7791bd2ba339edc5cd2078a6537c8f6bfe72a19b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546327"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98564447"
 ---
 # <a name="sp_addpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -84,7 +84,7 @@ sp_addpublication [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ \@publication = ] 'publication'` Nome della pubblicazione da creare. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito. Il nome deve essere univoco all'interno del database.  
+`[ \@publication = ] 'publication'` Nome della pubblicazione da creare. *Publication* è di **tipo sysname** e non prevede alcun valore predefinito. Il nome deve essere univoco all'interno del database.  
   
 `[ \@taskid = ] taskid` Supportato solo per compatibilità con le versioni precedenti. utilizzare [sp_addpublication_snapshot &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md).  
   
@@ -92,7 +92,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@sync_method = ] _'sync_method'` Modalità di sincronizzazione. *sync_method* è di **tipo nvarchar (13)**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |**native**|Genera l'output in modalità nativa del programma per la copia bulk per tutte le tabelle. *Non supportato per i Publisher Oracle*.|  
 |**character**|Genera l'output in modalità carattere del programma per la copia bulk per tutte le tabelle. _Per un server di pubblicazione Oracle,_ il **carattere** _è valido solo per la replica snapshot_.|  
@@ -104,7 +104,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@repl_freq = ] 'repl_freq'` Tipo di frequenza di replica. *repl_freq* è di tipo **nvarchar (10)**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |**Continuous** (impostazione predefinita)|Il server di pubblicazione genera l'output per tutte le transazioni basate su log. Per gli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editori non è necessario che *sync_method* sia impostato su **concurrent_c**.|  
 |**snapshot**|Il server di pubblicazione genera solo gli eventi di sincronizzazione pianificati. Per gli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editori non è necessario che *sync_method* sia impostato su **carattere**.|  
@@ -113,7 +113,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@status = ] 'status'` Specifica se i dati della pubblicazione sono disponibili. *status* è di **tipo nvarchar (8)**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |**active**|I dati della pubblicazione risultano immediatamente disponibili per i Sottoscrittori.|  
 |**inattivo** (impostazione predefinita)|I dati della pubblicazione non sono disponibili per i Sottoscrittori quando viene creata la pubblicazione (è possibile creare una sottoscrizione, che tuttavia non viene elaborata).|  
@@ -136,48 +136,48 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@autogen_sync_procs = ] 'autogen_sync_procs'` Specifica se la stored procedure di sincronizzazione per le sottoscrizioni aggiornabili viene generata nel server di pubblicazione. *autogen_sync_procs* è di **tipo nvarchar (5)**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |**true**|Questo valore viene impostato automaticamente quando sono abilitate le sottoscrizioni aggiornabili.|  
 |**false**|Questo valore viene impostato automaticamente quando non sono abilitate le sottoscrizioni aggiornabili oppure per server di pubblicazione Oracle.|  
 |NULL (predefinito)|Il valore predefinito è **true** quando le sottoscrizioni aggiornabili sono abilitate e **false** quando le sottoscrizioni aggiornabili non sono abilitate.|  
   
 > [!NOTE]  
->  Il valore fornito dall'utente per *autogen_sync_procs*verrà sostituito a seconda dei valori specificati per *allow_queued_tran* e *allow_sync_tran*.  
+>  Il valore fornito dall'utente per *autogen_sync_procs* verrà sostituito a seconda dei valori specificati per *allow_queued_tran* e *allow_sync_tran*.  
   
-`[ \@retention = ] retention` Periodo di memorizzazione in ore per l'attività della sottoscrizione. la *conservazione* è di **tipo int**e il valore predefinito è 336 ore. Se una sottoscrizione non viene attivata entro il periodo di memorizzazione, scade e viene rimossa. Il valore di questo parametro può essere maggiore del periodo di memorizzazione massimo del database di distribuzione utilizzato dal server di pubblicazione. Se è **0**, le sottoscrizioni note alla pubblicazione non scadranno mai e verranno rimosse dall'agente di pulizia delle sottoscrizioni scaduto.  
+`[ \@retention = ] retention` Periodo di memorizzazione in ore per l'attività della sottoscrizione. la *conservazione* è di **tipo int** e il valore predefinito è 336 ore. Se una sottoscrizione non viene attivata entro il periodo di memorizzazione, scade e viene rimossa. Il valore di questo parametro può essere maggiore del periodo di memorizzazione massimo del database di distribuzione utilizzato dal server di pubblicazione. Se è **0**, le sottoscrizioni note alla pubblicazione non scadranno mai e verranno rimosse dall'agente di pulizia delle sottoscrizioni scaduto.  
   
 `[ \@allow_queued_tran = ] 'allow_queued_updating'` Abilita o Disabilita l'accodamento delle modifiche nel Sottoscrittore finché non è possibile applicarle al server di pubblicazione. *allow_queued_updating* è di **tipo nvarchar (5)** e il valore predefinito è false. Se **false**, le modifiche nel Sottoscrittore non vengono accodate. **true** *non è supportato per i Publisher Oracle*.  
   
-`[ \@snapshot_in_defaultfolder = ] 'snapshot_in_default_folder'` Specifica se i file di snapshot sono archiviati nella cartella predefinita. *snapshot_in_default_folder* è di **tipo nvarchar (5)** e il valore predefinito è true. Se **true**, i file di snapshot sono disponibili nella cartella predefinita. Se **false**, i file di snapshot sono stati archiviati nel percorso alternativo specificato da *alternate_snapshot_folder*. Le posizioni alternative possono essere un altro server, un'unità di rete oppure un supporto rimovibile, ad esempio un CD o un disco rimovibile. È inoltre possibile archiviare i file di snapshot in un sito FTP in modo che possano essere successivamente recuperati dal Sottoscrittore. Si noti che questo parametro può essere true e avere ancora una posizione nel parametro ** \@ alt_snapshot_folder** . Tale combinazione indica che i file di snapshot vengono archiviati sia nella posizione predefinita che in posizioni alternative.  
+`[ \@snapshot_in_defaultfolder = ] 'snapshot_in_default_folder'` Specifica se i file di snapshot sono archiviati nella cartella predefinita. *snapshot_in_default_folder* è di **tipo nvarchar (5)** e il valore predefinito è true. Se **true**, i file di snapshot sono disponibili nella cartella predefinita. Se **false**, i file di snapshot sono stati archiviati nel percorso alternativo specificato da *alternate_snapshot_folder*. Le posizioni alternative possono essere un altro server, un'unità di rete oppure un supporto rimovibile, ad esempio un CD o un disco rimovibile. È inoltre possibile archiviare i file di snapshot in un sito FTP in modo che possano essere successivamente recuperati dal Sottoscrittore. Si noti che questo parametro può essere true e avere ancora una posizione nel parametro **\@ alt_snapshot_folder** . Tale combinazione indica che i file di snapshot vengono archiviati sia nella posizione predefinita che in posizioni alternative.  
   
 `[ \@alt_snapshot_folder = ] 'alternate_snapshot_folder'` Specifica la posizione della cartella alternativa per lo snapshot. *alternate_snapshot_folder* è di **tipo nvarchar (255)** e il valore predefinito è null.  
   
-`[ \@pre_snapshot_script = ] 'pre_snapshot_script'` Specifica un puntatore al percorso di un file con **estensione SQL** . *pre_snapshot_script* è di **tipo nvarchar (255) e**il valore predefinito è null. L'agente di distribuzione esegue lo script pre-snapshot prima dell'esecuzione di tutti gli script di oggetti replicati durante l'applicazione di uno snapshot in un Sottoscrittore. Lo script viene eseguito nel contesto di sicurezza utilizzato dall'agente di distribuzione per la connessione al database di sottoscrizione.  
+`[ \@pre_snapshot_script = ] 'pre_snapshot_script'` Specifica un puntatore al percorso di un file con **estensione SQL** . *pre_snapshot_script* è di **tipo nvarchar (255)** e il valore predefinito è null. L'agente di distribuzione esegue lo script pre-snapshot prima dell'esecuzione di tutti gli script di oggetti replicati durante l'applicazione di uno snapshot in un Sottoscrittore. Lo script viene eseguito nel contesto di sicurezza utilizzato dall'agente di distribuzione per la connessione al database di sottoscrizione.  
   
 `[ \@post_snapshot_script = ] 'post_snapshot_script'` Specifica un puntatore al percorso di un file con **estensione SQL** . *post_snapshot_script* è di **tipo nvarchar (255)** e il valore predefinito è null. L'agente di distribuzione esegue lo script post-snapshot dopo l'applicazione di tutti gli altri dati e script di oggetti replicati durante una sincronizzazione iniziale. Lo script viene eseguito nel contesto di sicurezza utilizzato dall'agente di distribuzione per la connessione al database di sottoscrizione.  
   
-`[ \@compress_snapshot = ] 'compress_snapshot'`Specifica che lo snapshot scritto nella posizione ** \@ alt_snapshot_folder** deve essere compresso nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB. *compress_snapshot* è di **tipo nvarchar (5)** e il valore predefinito è false. **false** specifica che lo snapshot non verrà compresso; **true** specifica che lo snapshot verrà compresso. I file di snapshot con una dimensione superiore a 2 gigabyte (GB) non possono essere compressi. I file di snapshot compressi vengono decompressi nella posizione in cui viene eseguito l'agente di distribuzione. Per le sottoscrizioni pull in genere vengono utilizzati snapshot compressi in modo che i file vengano decompressi nel Sottoscrittore. Non è possibile comprimere lo snapshot all'interno della cartella predefinita.  
+`[ \@compress_snapshot = ] 'compress_snapshot'`Specifica che lo snapshot scritto nella posizione **\@ alt_snapshot_folder** deve essere compresso nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB. *compress_snapshot* è di **tipo nvarchar (5)** e il valore predefinito è false. **false** specifica che lo snapshot non verrà compresso; **true** specifica che lo snapshot verrà compresso. I file di snapshot con una dimensione superiore a 2 gigabyte (GB) non possono essere compressi. I file di snapshot compressi vengono decompressi nella posizione in cui viene eseguito l'agente di distribuzione. Per le sottoscrizioni pull in genere vengono utilizzati snapshot compressi in modo che i file vengano decompressi nel Sottoscrittore. Non è possibile comprimere lo snapshot all'interno della cartella predefinita.  
   
-`[ \@ftp_address = ] 'ftp_address'` È l'indirizzo di rete del servizio FTP per il server di distribuzione. *ftp_address* è di **tipo sysname**e il valore predefinito è null. Specifica la posizione in cui i file di snapshot della pubblicazione possono essere prelevati dall'agente di distribuzione o di merge di un Sottoscrittore. Poiché questa proprietà viene archiviata per ogni pubblicazione, ogni pubblicazione può avere un *ftp_address*diverso. La pubblicazione deve supportare la propagazione di snapshot tramite FTP.  
+`[ \@ftp_address = ] 'ftp_address'` È l'indirizzo di rete del servizio FTP per il server di distribuzione. *ftp_address* è di **tipo sysname** e il valore predefinito è null. Specifica la posizione in cui i file di snapshot della pubblicazione possono essere prelevati dall'agente di distribuzione o di merge di un Sottoscrittore. Poiché questa proprietà viene archiviata per ogni pubblicazione, ogni pubblicazione può avere un *ftp_address* diverso. La pubblicazione deve supportare la propagazione di snapshot tramite FTP.  
   
-`[ \@ftp_port = ] ftp_port` Numero di porta del servizio FTP per il server di distribuzione. *ftp_port* è di **tipo int**e il valore predefinito è 21. Specifica la posizione dei file di snapshot della pubblicazione, dove i file possono essere prelevati dall'agente di distribuzione o di merge di un Sottoscrittore. Poiché questa proprietà viene archiviata per ogni pubblicazione, ogni pubblicazione può disporre di un proprio *ftp_port*.  
+`[ \@ftp_port = ] ftp_port` Numero di porta del servizio FTP per il server di distribuzione. *ftp_port* è di **tipo int** e il valore predefinito è 21. Specifica la posizione dei file di snapshot della pubblicazione, dove i file possono essere prelevati dall'agente di distribuzione o di merge di un Sottoscrittore. Poiché questa proprietà viene archiviata per ogni pubblicazione, ogni pubblicazione può disporre di un proprio *ftp_port*.  
   
 `[ \@ftp_subdirectory = ] 'ftp_subdirectory'` Specifica la posizione in cui i file di snapshot saranno disponibili per il agente di distribuzione o agente di merge del Sottoscrittore se la pubblicazione supporta la propagazione di snapshot tramite FTP. *ftp_subdirectory* è di **tipo nvarchar (255)** e il valore predefinito è null. Poiché questa proprietà viene archiviata per ogni pubblicazione, ogni pubblicazione può disporre di un proprio *ftp_subdirctory* o scegliere di non avere sottodirectory, indicato con un valore null.  
   
-`[ \@ftp_login = ] 'ftp_login'` Nome utente utilizzato per la connessione al servizio FTP. *ftp_login* è di **tipo sysname**e il valore predefinito è Anonymous.  
+`[ \@ftp_login = ] 'ftp_login'` Nome utente utilizzato per la connessione al servizio FTP. *ftp_login* è di **tipo sysname** e il valore predefinito è Anonymous.  
   
-`[ \@ftp_password = ] 'ftp_password'` Password utente utilizzata per la connessione al servizio FTP. *ftp_password* è di **tipo sysname**e il valore predefinito è null.  
+`[ \@ftp_password = ] 'ftp_password'` Password utente utilizzata per la connessione al servizio FTP. *ftp_password* è di **tipo sysname** e il valore predefinito è null.  
   
 `[ \@allow_dts = ] 'allow_dts'` Specifica che la pubblicazione consente le trasformazioni dei dati. Quando si crea una sottoscrizione, è possibile specificare un pacchetto DTS. *allow_transformable_subscriptions* è di **tipo nvarchar (5)** e il valore predefinito è false, che non consente le trasformazioni DTS. Quando *allow_dts* è true, è necessario che *sync_method* sia impostato su **character** o **concurrent_c**.  
   
  **true** *non è supportato per i Publisher Oracle*.  
   
-`[ \@allow_subscription_copy = ] 'allow_subscription_copy'` Abilita o Disabilita la possibilità di copiare i database di sottoscrizione che sottoscrivono la pubblicazione. *allow_subscription_copy* è di**tipo nvarchar (5)** e il valore predefinito è false.  
+`[ \@allow_subscription_copy = ] 'allow_subscription_copy'` Abilita o Disabilita la possibilità di copiare i database di sottoscrizione che sottoscrivono la pubblicazione. *allow_subscription_copy* è di **tipo nvarchar (5)** e il valore predefinito è false.  
   
 `[ \@conflict_policy = ] 'conflict_policy'` Specifica i criteri di risoluzione dei conflitti seguiti quando viene utilizzata l'opzione del Sottoscrittore ad aggiornamento in coda. *conflict_policy* è di **tipo nvarchar (100)** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |**pub wins**|Prevale il server di pubblicazione.|  
 |**sub reinit**|Reinizializzare la sottoscrizione.|  
@@ -188,13 +188,13 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@centralized_conflicts = ] 'centralized_conflicts'` Specifica se i record dei conflitti vengono archiviati nel server di pubblicazione. *centralized_conflicts* è di **tipo nvarchar (5)** e il valore predefinito è true. Se **true**, i record dei conflitti vengono archiviati nel server di pubblicazione. Se **false**, i record dei conflitti vengono archiviati sia nel server di pubblicazione che nel Sottoscrittore che ha causato il conflitto. *Non supportato per i Publisher Oracle*.  
   
-`[ \@conflict_retention = ] conflict_retention` Specifica il periodo di memorizzazione dei conflitti, in giorni. Si tratta del periodo di tempo durante il quale i metadati dei conflitti rimangono archiviati per la replica transazionale peer-to-peer e le sottoscrizioni ad aggiornamento in coda. *conflict_retention* è di **tipo int**e il valore predefinito è 14. *Non supportato per i Publisher Oracle*.  
+`[ \@conflict_retention = ] conflict_retention` Specifica il periodo di memorizzazione dei conflitti, in giorni. Si tratta del periodo di tempo durante il quale i metadati dei conflitti rimangono archiviati per la replica transazionale peer-to-peer e le sottoscrizioni ad aggiornamento in coda. *conflict_retention* è di **tipo int** e il valore predefinito è 14. *Non supportato per i Publisher Oracle*.  
   
 `[ \@queue_type = ] 'queue_type'` Specifica il tipo di coda utilizzato. *queue_type* è di **tipo nvarchar (10)** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
-|**SQL**|Consente di utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'archiviazione delle transazioni.|  
+|**sql**|Consente di utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'archiviazione delle transazioni.|  
 |NULL (predefinito)|Il valore predefinito è **SQL**, che specifica di utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per archiviare le transazioni.|  
   
 > [!NOTE]  
@@ -204,18 +204,18 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@add_to_active_directory = ] 'add\to_active_directory'` Questo parametro è deprecato ed è supportato solo per la compatibilità con le versioni precedenti degli script. Non è più possibile aggiungere informazioni di pubblicazione in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory.  
   
-`[ \@logreader_job_name = ] 'logreader_agent_name'` Nome di un processo di Agent esistente. *logreader_agent_name* è di **tipo sysname**e il valore predefinito è null. Questo parametro viene specificato solo quando l'agente di lettura log utilizzerà un processo esistente anziché uno nuovo.  
+`[ \@logreader_job_name = ] 'logreader_agent_name'` Nome di un processo di Agent esistente. *logreader_agent_name* è di **tipo sysname** e il valore predefinito è null. Questo parametro viene specificato solo quando l'agente di lettura log utilizzerà un processo esistente anziché uno nuovo.  
   
-`[ \@qreader_job_name = ] 'queue_reader_agent_name'` Nome di un processo di Agent esistente. *queue_reader_agent_name* è di **tipo sysname**e il valore predefinito è null. Questo parametro viene specificato solo quando l'agente di lettura coda utilizzerà un processo esistente anziché uno nuovo.  
+`[ \@qreader_job_name = ] 'queue_reader_agent_name'` Nome di un processo di Agent esistente. *queue_reader_agent_name* è di **tipo sysname** e il valore predefinito è null. Questo parametro viene specificato solo quando l'agente di lettura coda utilizzerà un processo esistente anziché uno nuovo.  
   
-`[ \@publisher = ] 'publisher'` Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ \@publisher = ] 'publisher'` Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname** e il valore predefinito è null.  
   
 > [!NOTE]  
 >  non utilizzare *Publisher* quando si aggiunge una pubblicazione a un server di pubblicazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 `[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'` Indica se i sottoscrittori possono inizializzare una sottoscrizione di questa pubblicazione da un backup anziché da uno snapshot iniziale. *allow_initialize_from_backup* è di **tipo nvarchar (5)**. i possibili valori sono i seguenti:  
   
-|valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |**true**|Abilita l'inizializzazione da un backup.|  
 |**false**|Disabilita l'inizializzazione da un backup.|  
@@ -226,13 +226,13 @@ sp_addpublication [ @publication = ] 'publication'
 > [!WARNING]  
 >  Per evitare la mancanza di dati del Sottoscrittore, quando si utilizza **sp_addpublication** con `@allow_initialize_from_backup = N'true'`, utilizzare sempre `@immediate_sync = N'true'`.  
   
-`[ \@replicate_ddl = ] replicate_ddl` Indica se per la pubblicazione è supportata la replica dello schema. *replicate_ddl* è di **tipo int**e il valore predefinito è **1** per i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher e **0** per i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher non. **1** indica che le istruzioni Data Definition Language (DDL) eseguite nel server di pubblicazione vengono replicate, mentre **0** indica che le istruzioni DDL non vengono replicate. *La replica dello schema non è supportata per server di pubblicazione Oracle.* Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+`[ \@replicate_ddl = ] replicate_ddl` Indica se per la pubblicazione è supportata la replica dello schema. *replicate_ddl* è di **tipo int** e il valore predefinito è **1** per i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher e **0** per i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher non. **1** indica che le istruzioni Data Definition Language (DDL) eseguite nel server di pubblicazione vengono replicate, mentre **0** indica che le istruzioni DDL non vengono replicate. *La replica dello schema non è supportata per server di pubblicazione Oracle.* Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
- Il parametro * \@ replicate_ddl* viene rispettato quando un'istruzione DDL aggiunge una colonna. Il parametro * \@ replicate_ddl* viene ignorato quando un'istruzione DDL modifica o rilascia una colonna per i motivi seguenti.  
+ Il parametro *\@ replicate_ddl* viene rispettato quando un'istruzione DDL aggiunge una colonna. Il parametro *\@ replicate_ddl* viene ignorato quando un'istruzione DDL modifica o rilascia una colonna per i motivi seguenti.  
   
--   Quando viene rilasciata una colonna, è necessario aggiornare sysarticlecolumns per evitare l'inclusione della colonna eliminata da parte delle nuove istruzioni DML che determinerebbe la mancata esecuzione dell'agente di distribuzione. Il parametro * \@ replicate_ddl* viene ignorato perché la replica deve sempre replicare la modifica dello schema.  
+-   Quando viene rilasciata una colonna, è necessario aggiornare sysarticlecolumns per evitare l'inclusione della colonna eliminata da parte delle nuove istruzioni DML che determinerebbe la mancata esecuzione dell'agente di distribuzione. Il parametro *\@ replicate_ddl* viene ignorato perché la replica deve sempre replicare la modifica dello schema.  
   
--   Quando una colonna viene modificata, è probabile che venga modificato il tipo di dati di origine o il supporto dei valori Null, di conseguenza le istruzioni DML contengono un valore che potrebbe non essere compatibile con la tabella nel Sottoscrittore. Tali istruzioni DML potrebbero determinare la mancata esecuzione dell'agente di distribuzione. Il parametro * \@ replicate_ddl* viene ignorato perché la replica deve sempre replicare la modifica dello schema.  
+-   Quando una colonna viene modificata, è probabile che venga modificato il tipo di dati di origine o il supporto dei valori Null, di conseguenza le istruzioni DML contengono un valore che potrebbe non essere compatibile con la tabella nel Sottoscrittore. Tali istruzioni DML potrebbero determinare la mancata esecuzione dell'agente di distribuzione. Il parametro *\@ replicate_ddl* viene ignorato perché la replica deve sempre replicare la modifica dello schema.  
   
 -   Quando un'istruzione DDL aggiunge una nuova colonna, sysarticlecolumns non include la nuova colonna. Le istruzioni DML non tenteranno di replicare i dati per la nuova colonna. Il parametro viene rispettato perché la replica o la non replica di DDL è accettabile.  
   
@@ -302,7 +302,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@p2p_conflictdetection = ] 'p2p_conflictdetection'` Consente al agente di distribuzione di rilevare i conflitti se la pubblicazione è abilitata per la replica peer-to-peer. *p2p_conflictdetection* è di **tipo nvarchar (5)** e il valore predefinito è true. Per altre informazioni, vedere [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
-`[ \@p2p_originator_id = ] p2p_originator_id` Specifica un ID per un nodo in una topologia peer-to-peer. *p2p_originator_id* è di **tipo int**e il valore predefinito è null. Questo ID viene utilizzato per il rilevamento dei conflitti se *p2p_conflictdetection* è impostato su true. Specificare un ID positivo diverso da zero che non sia mai stato utilizzato nella topologia. Per un elenco di ID già utilizzati, eseguire [sp_help_peerconflictdetection](../../relational-databases/system-stored-procedures/sp-help-peerconflictdetection-transact-sql.md).  
+`[ \@p2p_originator_id = ] p2p_originator_id` Specifica un ID per un nodo in una topologia peer-to-peer. *p2p_originator_id* è di **tipo int** e il valore predefinito è null. Questo ID viene utilizzato per il rilevamento dei conflitti se *p2p_conflictdetection* è impostato su true. Specificare un ID positivo diverso da zero che non sia mai stato utilizzato nella topologia. Per un elenco di ID già utilizzati, eseguire [sp_help_peerconflictdetection](../../relational-databases/system-stored-procedures/sp-help-peerconflictdetection-transact-sql.md).  
   
 `[ \@p2p_continue_onconflict = ] 'p2p_continue_onconflict'` Determina se l'agente di distribuzione continua a elaborare le modifiche dopo che è stato rilevato un conflitto. *p2p_continue_onconflict* è di **tipo nvarchar (5)** e il valore predefinito è false.  
   
@@ -317,7 +317,7 @@ sp_addpublication [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_addpublication** viene utilizzata nella replica snapshot e nella replica transazionale.  
   
  Se sono presenti più pubblicazioni che pubblicano lo stesso oggetto di database, solo le pubblicazioni con un valore *replicate_ddl* **1** eseguiranno la replica delle istruzioni ALTER TABLE, ALTER VIEW, alter procedure, ALTER FUNCTION e alter trigger DDL. Una istruzione ALTER TABLE DROP COLUMN DDL verrà tuttavia replicata da tutte le pubblicazioni che stanno pubblicando la colonna eliminata.  
