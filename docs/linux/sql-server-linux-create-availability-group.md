@@ -8,18 +8,18 @@ ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 075a2e7ed11abe0ceadfa4f50ba82ca57ff97f0e
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: ecb634a770b4990bfbbc094b15498b03bdea4a57
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785150"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172003"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Creare e configurare un gruppo di disponibilità per SQL Server in Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-Questa esercitazione illustra come creare e configurare un gruppo di disponibilità per [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] in Linux. A differenza di [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] e versioni precedenti in Windows, è possibile abilitare i gruppi di disponibilità sia che si crei o non si crei prima il cluster Pacemaker sottostante. L'integrazione con il cluster, se necessaria, viene eseguita solo in un momento successivo.
+Questa esercitazione illustra come creare e configurare un gruppo di disponibilità per [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] in Linux. A differenza di [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] e versioni precedenti in Windows, è possibile abilitare i gruppi di disponibilità sia che si crei o non si crei prima il cluster Pacemaker sottostante. L'integrazione con il cluster, se necessaria, viene eseguita solo in un momento successivo.
 
 L'esercitazione include le attività seguenti:
  

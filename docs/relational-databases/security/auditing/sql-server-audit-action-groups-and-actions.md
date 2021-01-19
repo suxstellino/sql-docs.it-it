@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: DavidTrigano
 ms.author: datrigan
-ms.openlocfilehash: 51f971caef999424e002a49ab357e33fd1f0657a
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+ms.openlocfilehash: e435d8c94dfdfc8f989875d48440554e04405376
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243572"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172493"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Azioni e gruppi di azioni di SQL Server Audit
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -126,7 +126,7 @@ ms.locfileid: "93243572"
  Le azioni a livello di server non consentono di applicare filtri dettagliati sulle azioni a livello di database. Per implementare l'applicazione di filtri dettagliati sull'azione, è necessario un controllo a livello di database, ad esempio un controllo di azioni SELECT nella tabella relativa ai clienti  per account di accesso nel gruppo relativo ai dipendenti. In una specifica del controllo di un database utente non includere oggetti con ambito server, ad esempio viste di sistema.  
 
  > [!NOTE]
- > A causa dell'overhead associato all'abilitazione del controllo a livello di transazione, a partire da [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 e [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4, il controllo a livello di transazione è disabilitato per impostazione predefinita, a meno che la modalità di conformità ai criteri comuni non sia abilitata.  Se la modalità di conformità ai criteri comuni è disabilitata, sarà comunque possibile aggiungere un'azione da TRANSACTION_GROUP a una specifica di controllo, ma non verranno raccolte azioni di transazione.  A partire da [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 e [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 e versioni successive, se si intende configurare azioni di transazione da TRANSACTION_GROUP, assicurarsi che l'infrastruttura di controllo a livello di transazione sia abilitata procedendo all'abilitazione della modalità di conformità ai criteri comuni.  Tenere presente che in [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] il controllo a livello di transazione può anche essere disabilitato con il flag di traccia 3427 a partire da SP1 CU2.
+ > A causa dell'overhead associato all'abilitazione del controllo a livello di transazione, a partire da [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] SP2 CU3 e [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4, il controllo a livello di transazione è disabilitato per impostazione predefinita, a meno che la modalità di conformità ai criteri comuni non sia abilitata.  Se la modalità di conformità ai criteri comuni è disabilitata, sarà comunque possibile aggiungere un'azione da TRANSACTION_GROUP a una specifica di controllo, ma non verranno raccolte azioni di transazione.  A partire da [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] SP2 CU3 e [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 e versioni successive, se si intende configurare azioni di transazione da TRANSACTION_GROUP, assicurarsi che l'infrastruttura di controllo a livello di transazione sia abilitata procedendo all'abilitazione della modalità di conformità ai criteri comuni.  Tenere presente che in [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] il controllo a livello di transazione può anche essere disabilitato con il flag di traccia 3427 a partire da SP1 CU2.
   
 ## <a name="database-level-audit-action-groups"></a>Gruppi di azioni di controllo a livello di database  
  I gruppi di azioni di controllo a livello di database sono analoghi alle classi di eventi di controllo della sicurezza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ulteriori informazioni sulle classi degli eventi, vedere [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  

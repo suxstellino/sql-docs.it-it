@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3a268de26245955dd6be838e822f1cb84b693324
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: f612518baa1d933cfe174af58426db99e01f61d7
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92497019"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171213"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilità per tabelle con ottimizzazione per la memoria
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "92497019"
   
  Quando una riga viene eliminata o aggiornata, non viene rimossa o modificata sul posto nel file di dati, ma le righe eliminate vengono rilevate in un altro tipo di file: il file differenziale. Le operazioni di aggiornamento sono elaborate come una tupla di operazioni di eliminazione e inserimento per ogni riga. Ciò consente di eliminare le operazioni di I/O casuali nel file di dati.  
  
-   Dimensioni: Ogni file di dati viene ridimensionato approssimativamente su 128 MB per i computer con memoria superiore a 16 GB e a 16 MB per i computer con memoria minore o uguale a 16 GB. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SQL Server può usare la modalità di checkpoint di grandi dimensioni se ritiene che il sottosistema di archiviazione sia sufficientemente veloce. In modalità di checkpoint di grandi dimensioni, i file di dati vengono ridimensionati a 1GB. In questo modo è possibile migliorare l'efficienza del sottosistema di archiviazione per i carichi di lavoro con velocità effettiva elevata.  
+   Dimensioni: Ogni file di dati viene ridimensionato approssimativamente su 128 MB per i computer con memoria superiore a 16 GB e a 16 MB per i computer con memoria minore o uguale a 16 GB. In [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SQL Server può usare la modalità di checkpoint di grandi dimensioni se ritiene che il sottosistema di archiviazione sia sufficientemente veloce. In modalità di checkpoint di grandi dimensioni, i file di dati vengono ridimensionati a 1GB. In questo modo è possibile migliorare l'efficienza del sottosistema di archiviazione per i carichi di lavoro con velocità effettiva elevata.  
    
 ### <a name="the-delta-file"></a>File differenziale  
  Ogni file di dati è associato a un file differenziale con lo stesso intervallo di transazione che tiene traccia delle righe eliminate inserite dalle transazioni nell'intervallo di transazione. Questo file di dati e differenziale è spesso indicato come coppia di file di checkpoint (CFP, Checkpoint File Pair) e corrisponde all'unità di allocazione e deallocazione, oltre che all'unità per le operazioni di unione. Ad esempio, in un file differenziale che corrisponde all'intervallo di transazione (100, 200) verranno archiviate le righe eliminate inserite dalle transazioni nell'intervallo (100, 200). Come per i file di dati, l'accesso al file differenziale avviene in ordine sequenziale.  
@@ -50,7 +50,7 @@ ms.locfileid: "92497019"
  Quando una riga viene eliminata, la riga non viene rimossa dal file di dati ma viene aggiunto un riferimento alla riga nel file differenziale associato all'intervallo di transazione in cui è stata inserita la riga di dati. Poiché la riga da eliminare esiste già nel file di dati, nel file differenziale sono archiviate solo le informazioni di riferimento `{inserting_tx_id, row_id, deleting_tx_id }` seguendo l'ordine del log delle transazioni delle operazioni originali di eliminazione o aggiornamento.  
   
 
- Dimensioni: ogni file differenziale viene ridimensionato approssimativamente a 16 MB per i computer con memoria superiore a 16 GB e a 1 MB per i computer con memoria minore o uguale a 16 GB. All'avvio di [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SQL Server può usare la modalità di checkpoint di grandi dimensioni se ritiene che il sottosistema di archiviazione sia sufficientemente veloce. In modalità di checkpoint di grandi dimensioni, i file differenziali vengono ridimensionati a 128MB.  
+ Dimensioni: ogni file differenziale viene ridimensionato approssimativamente a 16 MB per i computer con memoria superiore a 16 GB e a 1 MB per i computer con memoria minore o uguale a 16 GB. All'avvio di [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SQL Server può usare la modalità di checkpoint di grandi dimensioni se ritiene che il sottosistema di archiviazione sia sufficientemente veloce. In modalità di checkpoint di grandi dimensioni, i file differenziali vengono ridimensionati a 128MB.  
  
 ## <a name="populating-data-and-delta-files"></a>Popolamento dei file di dati e differenziali  
  I file di dati e differenziali vengono popolati in base ai record del log delle transazioni generati dalle transazioni di cui è stato eseguito il commit nelle tabelle ottimizzate per la memoria e aggiungono le informazioni relative alle righe inserite o eliminate nei file di dati e differenziali appropriati. A differenza delle tabelle basate su disco in cui le pagine di dati e indice vengono scaricate con I/O casuale al completamento del checkpoint, la persistenza della tabella ottimizzata per la memoria è un'operazione in background continua. Si accede a più file differenziali poiché una transazione può eliminare o aggiornare qualsiasi riga inserita da una transazione precedente. Le informazioni di eliminazione vengono sempre aggiunte alla fine del file differenziale. Ad esempio, una transazione con un timestamp del commit pari a 600 inserisce una nuova riga ed elimina le righe inserite dalle transazioni con un timestamp del commit pari a 150, 250 e 450, come illustrato nell'immagine seguente. Tutte e quattro le operazioni di I/O dei file (tre per le righe eliminate e una per le righe appena inserite) sono operazioni solo di accodamento ai corrispondenti file di dati e differenziali.  
@@ -61,7 +61,7 @@ ms.locfileid: "92497019"
  L'accesso alle coppie di file di dati e differenziali viene effettuato nei casi seguenti.  
   
  Thread di lavoro del checkpoint offline  
- Il thread accoda inserimenti ed eliminazioni effettuati nelle righe di dati ottimizzati per la memoria alle coppie di file di dati e differenziali corrispondenti. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] esiste un solo thread di lavoro del checkpoint offline; all'avvio di [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] esistono più thread di lavoro del checkpoint.  
+ Il thread accoda inserimenti ed eliminazioni effettuati nelle righe di dati ottimizzati per la memoria alle coppie di file di dati e differenziali corrispondenti. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] esiste un solo thread di lavoro del checkpoint offline; all'avvio di [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] esistono più thread di lavoro del checkpoint.  
   
  Operazione Merge  
  L'operazione unisce una o più coppie di file di dati e differenziali e crea una nuova coppia.  

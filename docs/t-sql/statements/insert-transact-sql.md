@@ -33,12 +33,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6cccb11c84b9b5354d418dae19557f7f76e027cf
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 206aefdd3cd58b94124a0840cef7e788c5a29390
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095731"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171273"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -319,7 +319,7 @@ Per le righe inserite in un heap come risultato di un'azione di inserimento in u
   
 A differenza dell'istruzione `BULK INSERT`, che contiene un blocco di aggiornamento bulk meno restrittivo, l'istruzione `INSERT INTO … SELECT` con l'hint `TABLOCK` contiene un blocco esclusivo (X) nella tabella. Ciò significa che non è possibile inserire righe usando operazioni di inserimento multiple eseguite simultaneamente. 
 
-Tuttavia, a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e dal livello di compatibilità del database 130, una singola istruzione `INSERT INTO … SELECT` può essere eseguita in parallelo durante l'inserimento in heap o indici columnstore cluster (CCI). Gli inserimenti paralleli sono possibili quando si usa l'hint `TABLOCK`.  
+Tuttavia, a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e dal livello di compatibilità del database 130, una singola istruzione `INSERT INTO … SELECT` può essere eseguita in parallelo durante l'inserimento in heap o indici columnstore cluster (CCI). Gli inserimenti paralleli sono possibili quando si usa l'hint `TABLOCK`.  
 
 Il parallelismo per l'istruzione precedente presenta i requisiti seguenti, simili ai requisiti per la registrazione minima:  
 -   La tabella di destinazione deve essere un heap vuoto o non vuoto.  

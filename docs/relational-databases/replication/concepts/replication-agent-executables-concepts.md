@@ -18,12 +18,12 @@ ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 41525854d161d029beae6e0956bc11e536ab813b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bd6886f7ad5569d4eba40e9e603c9fccead17f71
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460304"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171223"
 ---
 # <a name="replication-agent-executables-concepts"></a>Concetti di base relativi ai file eseguibili dell'agente di replica
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "97460304"
 >  Le interruzioni di riga presenti negli esempi sono state aggiunte per facilitare la lettura. I comandi in un file batch devono essere inseriti in un'unica riga.  
   
 ### <a name="running-the-snapshot-agent"></a>Esecuzione dell'agente snapshot  
- Questo file batch di esempio richiama l'agente snapshot dal prompt dei comandi per generare uno snapshot per la pubblicazione **AdvWorksSalesOrdersMerge**. Gli script seguenti usano il percorso dei file di [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] (versione 130). È necessario adeguare gli script in modo che puntino ai file per la versione in uso di [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)].  
+ Questo file batch di esempio richiama l'agente snapshot dal prompt dei comandi per generare uno snapshot per la pubblicazione **AdvWorksSalesOrdersMerge**. Gli script seguenti usano il percorso dei file di [!INCLUDE[ssSQL15_md](../../../includes/sssql16-md.md)] (versione 130). È necessario adeguare gli script in modo che puntino ai file per la versione in uso di [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)].  
   
 ```  
 REM -- Declare variables  

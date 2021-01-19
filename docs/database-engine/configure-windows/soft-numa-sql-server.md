@@ -18,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e2674f1453242e6f9b580ff41524254a10896f76
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: df2d323f8978ea5ce9cdaf23c2acf177517ff1ff
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538043"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170933"
 ---
 # <a name="soft-numa-sql-server"></a>Soft-NUMA (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-I processori moderni includono più core per socket. Ogni socket è solitamente rappresentato come un unico nodo NUMA. Il motore di database di SQL Server suddivide le varie strutture interne e i thread del servizio per nodo NUMA.  In caso di processori che contengono da 10 a più core per socket, l'uso di soft-NUMA (software non-uniform memory access) per suddividere i nodi NUMA hardware aumenta generalmente la scalabilità e le prestazioni. Nelle versioni precedenti a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 l'architettura NUMA basata su software (soft-NUMA) richiedeva che il Registro di sistema venisse modificato per aggiungere una maschera di affinità di configurazione dei nodi ed era configurata a livello di host e non per istanza. A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], l'architettura soft-NUMA viene configurata automaticamente a livello dell'istanza di database all'avvio del servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+I processori moderni includono più core per socket. Ogni socket è solitamente rappresentato come un unico nodo NUMA. Il motore di database di SQL Server suddivide le varie strutture interne e i thread del servizio per nodo NUMA.  In caso di processori che contengono da 10 a più core per socket, l'uso di soft-NUMA (software non-uniform memory access) per suddividere i nodi NUMA hardware aumenta generalmente la scalabilità e le prestazioni. Nelle versioni precedenti a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 l'architettura NUMA basata su software (soft-NUMA) richiedeva che il Registro di sistema venisse modificato per aggiungere una maschera di affinità di configurazione dei nodi ed era configurata a livello di host e non per istanza. A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], l'architettura soft-NUMA viene configurata automaticamente a livello dell'istanza di database all'avvio del servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 > [!NOTE]  
 > L'architettura soft-NUMA consente di aggiungere processori a caldo.  
   
 ## <a name="automatic-soft-numa"></a>Architettura soft-NUMA automatica  
-Con [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], ogni volta che [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] rileva più di 8 core fisici per ogni nodo o socket NUMA all'avvio, vengono creati automaticamente nodi soft-NUMA per impostazione predefinita. Il conteggio delle core fisiche in un nodo non distingue tra core di processori fisici e con hyperthreading.  Quando il numero di core fisici rilevato è maggiore di 8 per ogni socket, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] crea nodi soft-NUMA che contengono idealmente 8 core, ma che possono scendere a 5 o salire fino a 9 core logici per nodo. La dimensione del nodo hardware può essere limitata da una maschera di affinità di CPU. Il numero di nodi NUMA non supera mai il numero massimo di nodi NUMA supportati.  
+Con [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], ogni volta che [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] rileva più di 8 core fisici per ogni nodo o socket NUMA all'avvio, vengono creati automaticamente nodi soft-NUMA per impostazione predefinita. Il conteggio delle core fisiche in un nodo non distingue tra core di processori fisici e con hyperthreading.  Quando il numero di core fisici rilevato è maggiore di 8 per ogni socket, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] crea nodi soft-NUMA che contengono idealmente 8 core, ma che possono scendere a 5 o salire fino a 9 core logici per nodo. La dimensione del nodo hardware può essere limitata da una maschera di affinità di CPU. Il numero di nodi NUMA non supera mai il numero massimo di nodi NUMA supportati.  
   
 È possibile disabilitare o riabilitare soft-NUMA usando l'istruzione [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) con l'argomento `SET SOFTNUMA`. Per rendere effettiva la modifica del valore di questa impostazione è necessario riavviare il motore di database.  
   
@@ -51,7 +51,7 @@ La figura seguente illustra il tipo di informazioni relative a soft-NUMA visibil
 ```   
 
 > [!NOTE]
-> A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, usare il flag di traccia 8079 per consentire a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di usare la configurazione soft-NUMA automatica. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] questo comportamento è controllato dal motore e il flag di traccia 8079 non ha alcun effetto. Per altre informazioni, vedere [DBCC TRACEON - Flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
+> A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, usare il flag di traccia 8079 per consentire a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di usare la configurazione soft-NUMA automatica. A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] questo comportamento è controllato dal motore e il flag di traccia 8079 non ha alcun effetto. Per altre informazioni, vedere [DBCC TRACEON - Flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 ## <a name="manual-soft-numa"></a>Architettura soft-NUMA manuale  
 Per configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] manualmente per l'uso di soft-NUMA, disabilitare l'architettura soft-NUMA automatica e modificare il registro per aggiungere una maschera di affinità di configurazione dei nodi. Se si usa questo metodo, la maschera soft-NUMA può essere definita come voce del Registro di sistema binaria, DWORD (esadecimale o decimale) o QWORD (esadecimale o decimale). Per configurare un numero maggiore delle prime 32 CPU, usare i valori del registro QWORD o BINARY (i valori QWORD non possono essere usati nelle versioni precedenti a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]). Dopo aver modificato il registro, è necessario riavviare [!INCLUDE[ssDE](../../includes/ssde-md.md)] per rendere effettiva la configurazione di soft-NUMA.  
@@ -101,7 +101,7 @@ SET PROCESS AFFINITY CPU=4 TO 7;
   
  Nell'esempio seguente si supponga di avere un server DL580 G9 con 18 core per socket (in 4 socket) e che ogni socket si trovi nel proprio gruppo K. Una possibile configurazione soft-NUMA potrebbe essere simile alla seguente: sei core per nodo, tre nodi per gruppo, quattro gruppi.  
   
-|Esempio per un server [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] con più gruppi K|Type|Nome del valore|Dati del valore|  
+|Esempio per un server [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] con più gruppi K|Type|Nome del valore|Dati del valore|  
 |-----------------------------------------------------------------------------------------------------------------|----------|----------------|----------------|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node0|DWORD|CPUMask|0x3F|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node0|DWORD|Gruppo|0|  

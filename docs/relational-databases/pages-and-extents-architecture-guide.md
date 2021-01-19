@@ -15,12 +15,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fdc13dcfa509ed2df3ec39afe5a9aa591aa6e39
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 22e1a4832e3ef02d2b596ecd0dd4af3a08a7ec6e
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461942"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171873"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guida sull'architettura di pagina ed extent
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -92,12 +92,12 @@ L'extent è l'unità di base in cui viene gestito lo spazio. Un extent è costit
 
 Fino a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] incluso, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non alloca interi extent in tabelle che includono quantità di dati ridotte. In una nuova tabella o in un nuovo indice vengono generalmente allocate pagine da extent misti. Se la tabella o l'indice aumenta di dimensioni fino a includere otto pagine, per le allocazioni successive a esso dirette vengono utilizzati extent uniformi. Se si crea un indice per una tabella esistente che contiene un numero di righe sufficiente per generare otto pagine nell'indice, tutte le allocazioni per l'indice appartengono a extent uniformi. 
 
-A partire da [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], il valore predefinito per la maggior parte delle allocazioni in un database utente e in tempdb consiste nell'usare extent uniformi, ad eccezione delle allocazioni appartenenti alle prime otto pagine di una [catena IAM](#IAM). Le allocazioni per i database master, msdb e modello continuano a mantenere il comportamento precedente. 
+A partire da [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], il valore predefinito per la maggior parte delle allocazioni in un database utente e in tempdb consiste nell'usare extent uniformi, ad eccezione delle allocazioni appartenenti alle prime otto pagine di una [catena IAM](#IAM). Le allocazioni per i database master, msdb e modello continuano a mantenere il comportamento precedente. 
 
 > [!NOTE]
 > Fino a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] incluso, è possibile usare il flag di traccia 1118 per modificare l'allocazione predefinita in modo da usare sempre extent uniformi. Per altre informazioni su questo flag di traccia, vedere [DBCC TRACEON - Flag di traccia](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 >   
-> A partire da [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], la funzionalità fornita dal flag di traccia 1118 è abilitata automaticamente per tempdb e tutti i database utente. Per i database utente, questo comportamento è controllato dall'opzione `SET MIXED_PAGE_ALLOCATION` di `ALTER DATABASE`, con il valore predefinito OFF, e il flag di traccia 1118 non ha alcun effetto. Per altre informazioni, vedere [Opzioni ALTER DATABASE SET (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
+> A partire da [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], la funzionalità fornita dal flag di traccia 1118 è abilitata automaticamente per tempdb e tutti i database utente. Per i database utente, questo comportamento è controllato dall'opzione `SET MIXED_PAGE_ALLOCATION` di `ALTER DATABASE`, con il valore predefinito OFF, e il flag di traccia 1118 non ha alcun effetto. Per altre informazioni, vedere [Opzioni ALTER DATABASE SET (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], la funzione di sistema `sys.dm_db_database_page_allocations` può segnalare le informazioni sull'allocazione delle pagine per un database, una tabella, un indice e una partizione.
 

@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 8e64eb57dbcfecabaa5c6f24881206152df4d8d0
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: f7e96df4eba36bbcb3da18a1423b5162aef557a7
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97639868"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170803"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>Configurare il routing di sola lettura per un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Per configurare un gruppo di disponibilità Always On in modo da supportare il routing di sola lettura in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)], è possibile usare [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell. Con *routing di sola lettura* si intende la capacità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di instradare le richieste di connessione in sola lettura valide a una [replica secondaria leggibile](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) Always On, ovvero una replica configurata per consentire carichi di lavoro di sola lettura quando viene eseguita nel ruolo secondario. Per supportare il routing di sola lettura, il gruppo di disponibilità deve possedere un [listener del gruppo di disponibilità](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md). I client in sola lettura devono indirizzare le richieste di connessione al listener e le stringhe di connessione del client devono specificare la finalità dell'applicazione come in sola lettura, ovvero devono essere *richieste di connessione con finalità di lettura*.  
 
-Il routing di sola lettura è disponibile in [!INCLUDE[sssql15](../../../includes/sssql15-md.md)] e versioni successive.
+Il routing di sola lettura è disponibile in [!INCLUDE[sssql15](../../../includes/sssql16-md.md)] e versioni successive.
 
 > [!NOTE]  
 >  Per informazioni su come configurare una replica secondaria leggibile, vedere [Configurare l'accesso in sola lettura in una replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
@@ -104,7 +104,7 @@ Il routing di sola lettura è disponibile in [!INCLUDE[sssql15](../../../include
         >  È necessario impostare l'URL del routing di sola lettura prima di configurare l'elenco di routing di sola lettura.  
   
 ###  <a name="configure-load-balancing-across-read-only-replicas"></a><a name="loadbalancing"></a> Configurare il bilanciamento del carico tra le repliche di sola lettura  
- A partire da [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], è possibile configurare il bilanciamento del carico in un set di repliche di sola lettura. In precedenza, il routing di sola lettura indirizzava sempre il traffico alla prima replica disponibile nell'elenco di routing. Per sfruttare i vantaggi di questa funzionalità, usare un livello di parentesi nidificate per racchiudere le istanze del server **READ_ONLY_ROUTING_LIST** nei comandi **CREATE AVAILABILITY GROUP** o **ALTER AVAILABILITY GROUP** .  
+ A partire da [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)], è possibile configurare il bilanciamento del carico in un set di repliche di sola lettura. In precedenza, il routing di sola lettura indirizzava sempre il traffico alla prima replica disponibile nell'elenco di routing. Per sfruttare i vantaggi di questa funzionalità, usare un livello di parentesi nidificate per racchiudere le istanze del server **READ_ONLY_ROUTING_LIST** nei comandi **CREATE AVAILABILITY GROUP** o **ALTER AVAILABILITY GROUP** .  
   
  Ad esempio, l'elenco di routing seguente bilancia il carico della richiesta di connessione con finalità di lettura tra due repliche di sola lettura, `Server1` e `Server2`. Le parentesi nidificate che racchiudono questi server identificano il set con carico bilanciato. Se nessuna replica è disponibile in tale set, verrà eseguito il tentativo di connettersi in modo sequenziale alle altre repliche, `Server3` e `Server4`, nell'elenco di routing di sola lettura.  
   

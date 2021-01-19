@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 79e04e64a4fc89bb3e745d67b1cdbe929850b6ec
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: f2295f8694a9573b0e9c541ea817e9e03e70f83e
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642988"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171083"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>Transazioni: gruppi di disponibilità Always On e mirroring del database
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,9 +34,9 @@ Questo articolo descrive il supporto delle transazioni tra database e delle tran
 SQL Server 2017 supporta le transazioni distribuite per i database nei gruppi di disponibilità. Questo supporto include i database nella stessa istanza di SQL Server o i database in istanze diverse di SQL Server. Le transazioni distribuite non sono supportate per i database configurati per il mirroring.
 
 > [!NOTE]
-> [!INCLUDE[SQL Server 2016](../../../includes/sssql15-md.md)] Nel Service Pack 2 e nelle versioni successive è disponibile un supporto completo per le transazioni distribuite in gruppi di disponibilità. 
+> [!INCLUDE[SQL Server 2016](../../../includes/sssql16-md.md)] Nel Service Pack 2 e nelle versioni successive è disponibile un supporto completo per le transazioni distribuite in gruppi di disponibilità. 
 > 
-> Nelle versioni di [!INCLUDE[SQL Server 2016](../../../includes/sssql15-md.md)] precedenti a Service Pack 2 le transazioni distribuite tra database (ovvero le transazioni che usano database nella stessa istanza di SQL Server) che coinvolgono un database in un gruppo di disponibilità non sono supportate.
+> Nelle versioni di [!INCLUDE[SQL Server 2016](../../../includes/sssql16-md.md)] precedenti a Service Pack 2 le transazioni distribuite tra database (ovvero le transazioni che usano database nella stessa istanza di SQL Server) che coinvolgono un database in un gruppo di disponibilità non sono supportate.
 
 Per configurare un gruppo di disponibilità per le transazioni distribuite, vedere [Configurare il gruppo di disponibilità per le transazioni distribuite](configure-availability-group-for-distributed-transactions.md).
 

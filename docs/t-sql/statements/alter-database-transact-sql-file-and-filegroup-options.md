@@ -44,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: b32b17c2909b22068daf4090f0cac7bb6575706a
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: a0b3238eb85d1fc916d0543bb9723e9a44a7a884
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094661"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171803"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Opzioni per file e filegroup ALTER DATABASE (Transact-SQL)
 
@@ -139,7 +139,7 @@ REMOVE FILE *logical_file_name* rimuove la descrizione del file logico da un'ist
 *logical_file_name* è il nome logico usato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per fare riferimento al file.
 
 > [!WARNING]
-> Sarà possibile rimuovere un file di database con backup `FILE_SNAPSHOT` associati, ma non saranno eliminati tutti gli snapshot associati per evitare di invalidare i backup che fanno riferimento al file di database. Il file verrà troncato, ma non sarà eliminato fisicamente in modo da mantenere inalterati i backup FILE_SNAPSHOT. Per altre informazioni, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive).
+> Sarà possibile rimuovere un file di database con backup `FILE_SNAPSHOT` associati, ma non saranno eliminati tutti gli snapshot associati per evitare di invalidare i backup che fanno riferimento al file di database. Il file verrà troncato, ma non sarà eliminato fisicamente in modo da mantenere inalterati i backup FILE_SNAPSHOT. Per altre informazioni, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive).
 
 MODIFY FILE specifica il file da modificare. È possibile modificare una sola proprietà \<filespec> alla volta. L'opzione NAME deve essere sempre specificata in \<filespec> per identificare il file da modificare. Se si specifica l'opzione SIZE, le nuove dimensioni del file devono essere superiori a quelle correnti.
 
@@ -242,7 +242,7 @@ Se FILEGROWTH viene omesso, i valori predefiniti sono i seguenti:
 
 |Versione|Valori predefiniti|
 |-------------|--------------------|
-|A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Dati 64 MB. File di log 64 MB.|
+|A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]|Dati 64 MB. File di log 64 MB.|
 |A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Dati 1 MB. File di log 10%.|
 |Prima di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Dati 10%. File di log 10%.|
 
@@ -286,13 +286,13 @@ DEFAULT cambia il filegroup predefinito del database in *filegroup_name*. In un 
 
 NAME = *new_filegroup_name* cambia il nome del filegroup in *new_filegroup_name*.
 
-AUTOGROW_SINGLE_FILE **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive)
+AUTOGROW_SINGLE_FILE **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive)
 
 Quando un file del filegroup raggiunge la soglia dell'aumento automatico delle dimensioni, vengono aumentate le dimensioni solo di quel file. Questa è la modalità predefinita.
 
 AUTOGROW_ALL_FILES
 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive)
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive)
 
 Quando un file del filegroup raggiunge la soglia dell'aumento automatico delle dimensioni, vengono aumentate le dimensioni di tutti i file del filegroup.
 

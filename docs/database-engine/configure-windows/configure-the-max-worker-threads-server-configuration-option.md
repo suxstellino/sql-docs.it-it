@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 89da087dd829642653fee6ae8648af3c1c00c2a0
-ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
+ms.openlocfilehash: 4d95d8f774d2b9daba6bd2a0e7a179dd901ef0ac
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97878894"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171043"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Configurare l'opzione di configurazione del server max worker threads
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ Il valore predefinito per **max worker threads** è 0. In questo modo, in [!INCL
   
 -   La tabella seguente visualizza il numero massimo di thread di lavoro configurato automaticamente (quando il valore è impostato su 0) in base a diverse combinazioni di CPU, architettura del computer e versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], usando la formula: **_Numero massimo di ruoli di lavoro predefiniti_ + ((* CPU logiche* - 4) * *Ruoli di lavoro per CPU*)**.  
   
-    |Numero di CPU|Computer a 32 bit (fino a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])|Computer a 64 bit (fino a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1)|Computer a 64 bit (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|   
+    |Numero di CPU|Computer a 32 bit (fino a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])|Computer a 64 bit (fino a [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1)|Computer a 64 bit (a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|   
     |------------|------------|------------|------------|  
     |\< = 4|256|512|512|   
     |8|288|576|576|   
@@ -79,14 +79,14 @@ Il valore predefinito per **max worker threads** è 0. In questo modo, in [!INCL
     |128|1248|2496|4480|   
     |256|2272|4544|8576|   
     
-    Fino a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, i *Ruoli di lavoro per CPU* dipendono solo dall'architettura (a 32 bit o a 64 bit):
+    Fino a [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1, i *Ruoli di lavoro per CPU* dipendono solo dall'architettura (a 32 bit o a 64 bit):
     
     |Numero di CPU|Computer a 32 bit <sup>1</sup>|Computer a 64 bit|   
     |------------|------------|------------|   
     |\< = 4|256|512|   
     |\> 4|256 + ((CPU logica - 4) * 8)|512 <sup>2</sup> + ((CPU logiche - 4) * 16)|   
     
-    A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], i *Ruoli di lavoro per CPU* dipendono dall'architettura e dal numero di processori (compreso tra 4 e 64 o maggiore di 64):
+    A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], i *Ruoli di lavoro per CPU* dipendono dall'architettura e dal numero di processori (compreso tra 4 e 64 o maggiore di 64):
     
     |Numero di CPU|Computer a 32 bit <sup>1</sup>|Computer a 64 bit|   
     |------------|------------|------------|   
@@ -94,7 +94,7 @@ Il valore predefinito per **max worker threads** è 0. In questo modo, in [!INCL
     |\> 4 e \< = 64|256 + ((CPU logica - 4) * 8)|512 <sup>2</sup> + ((CPU logiche - 4) * 16)|   
     |\> 64|256 + ((CPU logica - 4) * 32)|512 <sup>2</sup> + ((CPU logiche - 4) * 32)|   
   
-    <sup>1</sup> A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], non è più possibile installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un sistema operativo a 32 bit. I valori per i computer a 32 bit vengono indicati per offrire assistenza ai clienti che eseguono [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni precedenti. Si consiglia 1.024 come numero massimo di thread di lavoro per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione in un computer a 32 bit.
+    <sup>1</sup> A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], non è più possibile installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un sistema operativo a 32 bit. I valori per i computer a 32 bit vengono indicati per offrire assistenza ai clienti che eseguono [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni precedenti. Si consiglia 1.024 come numero massimo di thread di lavoro per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione in un computer a 32 bit.
     
     <sup>2</sup> A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] il valore *Default Max Workers* (Ruoli di lavoro massimi predefiniti) è diviso per 2 per i computer con meno di 2 GB di memoria.
   

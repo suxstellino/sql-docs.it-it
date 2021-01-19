@@ -22,12 +22,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8d9cc3f1218ab0e374359a57dce6cb13dc0b8a6
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 3680ba07e290f8b531ab46576f76bd3ffeee3460
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099417"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170443"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -108,7 +108,7 @@ UPDATE STATISTICS [ schema_name . ] table_name
   
  SAMPLE è utile per i casi speciali in cui il piano di query, basato sul campionamento predefinito, non è ottimale. Nella maggior parte delle situazioni, non è necessario specificare SAMPLE perché Query Optimizer utilizza il campionamento e determina le dimensioni del campione statisticamente significative per impostazione predefinita, come richiesto per creare piani di query di alta qualità. 
  
-A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], il campionamento dei dati per la generazione di statistiche avviene in parallelo, usando il livello di compatibilità 130, per migliorare le prestazioni della raccolta delle statistiche. Query optimizer userà le statistiche di esempio parallele, ogni volta che una dimensione di tabella supera una determinata soglia. 
+A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], il campionamento dei dati per la generazione di statistiche avviene in parallelo, usando il livello di compatibilità 130, per migliorare le prestazioni della raccolta delle statistiche. Query optimizer userà le statistiche di esempio parallele, ogni volta che una dimensione di tabella supera una determinata soglia. 
    
  Questa opzione non può essere utilizzata quando viene specificata l'opzione FULLSCAN. Se non si specifica né SAMPLE né FULLSCAN, Query Optimizer utilizza i dati campionati e calcola le dimensioni del campione per impostazione predefinita.  
   
@@ -136,7 +136,7 @@ Se **ON**, le statistiche mantengono la percentuale di campionamento impostata p
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) e [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) espongono il valore di percentuale di campionamento persistente per la statistica selezionata.
  
- **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) e versioni successive (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).  
+ **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 CU4) e versioni successive (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).  
  
  ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] Forza la rielaborazione delle statistiche a livello foglia che coprono le partizioni specificate nella clausola ON PARTITIONS e successivamente ne determina il merge per compilare le statistiche globali. L'opzione WITH RESAMPLE è necessaria in quanto non è possibile eseguire il merge di statistiche di partizioni compilate con frequenze di campionamento differenti.  
   
@@ -171,7 +171,7 @@ Se **ON**, le statistiche mantengono la percentuale di campionamento impostata p
 **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive
 
 MAXDOP = *max_degree_of_parallelism*  
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
   
  Esegue l'override dell'opzione di configurazione **max_degree_of_parallelism** per la durata dell'operazione statistica. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilizzare MAXDOP per limitare il numero di processori utilizzati durante l'esecuzione di un piano parallelo. Il valore massimo è 64 processori.  
   

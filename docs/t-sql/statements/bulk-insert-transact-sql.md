@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 9e0d729d951de184aa16717e784f14ae244639d8
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 12c1273473fd91c0ea5222add0288fac1b06f37b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098499"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170593"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -135,7 +135,7 @@ CODEPAGE **=** { **'** ACP **'** \| **'** OEM **'** \| **'** RAW **'** \| **'** 
 |ACP|Le colonne con tipo di dati **char**, **varchar** o **text** vengono convertire dalla tabella codici [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (ISO 1252) a quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
 |OEM (predefinito)|Le colonne con tipo di dati **char**, **varchar** o **text** vengono convertire dalla tabella codici OEM di sistema a quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
 |RAW|Non viene eseguita alcuna conversione da una tabella codici a un'altra. Si tratta dell'opzione più rapida.|
-|*code_page*|Numero specifico della tabella codici, ad esempio 850.<br /><br /> **&#42;&#42; Importante &#42;&#42;** Le versioni precedenti a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] non supportano la tabella codici 65001 (codifica UTF-8).|
+|*code_page*|Numero specifico della tabella codici, ad esempio 850.<br /><br /> **&#42;&#42; Importante &#42;&#42;** Le versioni precedenti a [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] non supportano la tabella codici 65001 (codifica UTF-8).|
 | &nbsp; | &nbsp; |
 
 DATAFILETYPE **=** { **'char'** \| **'native'** \| **'widechar'** \| **'widenative'** } specifica che l'operazione di importazione viene eseguita tramite BULK INSERT usando il valore specificato per il tipo di file di dati.

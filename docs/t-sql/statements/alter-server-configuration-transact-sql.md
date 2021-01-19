@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 5fc18fa93e47267d299c3b568011de5645f943da
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: bab0801b0193d9f675ef69e566eef375f0930e5b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98092034"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170863"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -245,7 +245,7 @@ Disabilita l'opzione di estensione del pool di buffer. Disabilitare l'opzione di
   
 **\<soft_numa>**  
 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]).  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]).  
   
 ON  
 Consente il partizionamento automatico in modo da dividere i nodi hardware NUMA di grandi dimensioni in nodi NUMA di dimensioni ridotte. Per modificare il valore corrente è necessario riavviare il motore di database.  

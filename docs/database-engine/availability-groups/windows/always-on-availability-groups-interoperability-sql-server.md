@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: a7c1e12e2e0253f0f22df8dd5ea841671adc94ec
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 60c298991f80586ed9b830b856b84b3640ac509e
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643783"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170793"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Gruppi di disponibilità Always On: interoperabilità (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ Nella tabella seguente vengono elencate le funzionalità di [!INCLUDE[ssNoVersio
 
 Le funzionalità seguenti interagiscono con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] con restrizioni specifiche. Per informazioni dettagliate, vedere gli argomenti collegati.
 
-- Transazioni tra database/distribuite ([!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] e Windows Server 2016). Per altre informazioni, vedere [Transazioni tra database non supportate per il mirroring del database o i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
+- Transazioni tra database/distribuite ([!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] e Windows Server 2016). Per altre informazioni, vedere [Transazioni tra database non supportate per il mirroring del database o i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 - L'[agente di raccolta dati del sistema di statistiche query](../../../relational-databases/data-collection/system-data-collection-set-reports.md#Query) non può essere eseguito in modo affidabile in un ambiente con database secondari non leggibili. Per usare l'agente di raccolta dati del sistema di statistiche query, impostare tutte le repliche del gruppo di disponibilità secondario in modo da consentire l'[accesso in lettura](configure-read-only-access-on-an-availability-replica-sql-server.md). 
 
 ## <a name="features-that-do-not-interoperate-with-always-on-availability-groups"></a><a name="NoInterop"></a> Funzionalità prive di interoperabilità con i gruppi di disponibilità AlwaysOn

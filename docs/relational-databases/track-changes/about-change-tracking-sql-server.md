@@ -18,12 +18,12 @@ ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 345601ea43048fca18fabb93b52d5d5f4eb153d0
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0271ca850648af434d225429976b4e111e49d498
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472602"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171383"
 ---
 # <a name="about-change-tracking-sql-server"></a>Informazioni sul rilevamento delle modifiche (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -76,7 +76,7 @@ Le informazioni del rilevamento modifiche per tutte le tabelle (abilitata al ril
 
 Ogni tabella abilitata al rilevamento modifiche ha una tabella su disco interna, usata dalle funzioni di rilevamento modifiche per determinare la versione di modifica e le righe modificate da una specifica versione. Ogni volta che il thread **auto cleanup** si attiva, analizza tutti i database utente nell'istanza di SQL Server allo scopo di identificare i database abilitati al rilevamento modifiche. In base al periodo di memorizzazione impostato per il database, ogni tabella interna su disco viene ripulita dai record scaduti.
 
-Nei Service Pack per [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] è stata aggiunta una stored procedure per la pulizia manuale delle tabelle interne di rilevamento modifiche. Altre informazioni sulla stored procedure sono disponibili nell'articolo [KB173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking-side-table-in-sql-server-2014-sp2-or-2016-sp1). 
+Nei Service Pack per [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] è stata aggiunta una stored procedure per la pulizia manuale delle tabelle interne di rilevamento modifiche. Altre informazioni sulla stored procedure sono disponibili nell'articolo [KB173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking-side-table-in-sql-server-2014-sp2-or-2016-sp1). 
   
 ## <a name="see-also"></a>Vedere anche  
  [Abilitare e disabilitare il rilevamento delle modifiche &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)   

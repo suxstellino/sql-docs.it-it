@@ -15,12 +15,12 @@ ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: 8ebdef5d75c430ec5ba208613b72771939fdfc9b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 90a24ba11ce482e8d8608e1641d64ace067ad41b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481482"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170973"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>Opzione di configurazione del server external scripts enabled
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -31,9 +31,9 @@ Usare l'opzione **external scripts enabled** per abilitare l'esecuzione di scrip
 
 È necessario abilitare l'opzione external script enabled prima di eseguire uno script esterno usando la procedura [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) . Usare **sp_execute_external_script** per eseguire script scritti in un linguaggio supportato, come R o Python. 
 
-+ Per [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]
++ Per [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]
 
-    [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] include il supporto del linguaggio di programmazione R in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], oltre a un set di strumenti per workstation R e librerie di connettività.
+    [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] include il supporto del linguaggio di programmazione R in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], oltre a un set di strumenti per workstation R e librerie di connettività.
 
     Installare la funzionalità **R Services** durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per abilitare l'esecuzione di script R.
 

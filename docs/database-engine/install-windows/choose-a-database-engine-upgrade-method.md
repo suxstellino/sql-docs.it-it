@@ -11,12 +11,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: c36d6718455f85314f98219b860a801984804d9d
-ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
+ms.openlocfilehash: 4acdd7f1d8b6a39af4054f30381665d1504bcb71
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97975461"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171833"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Scegliere un metodo di aggiornamento del motore di database
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
@@ -86,10 +86,10 @@ Sono disponibili diversi approcci da considerare quando si intende eseguire l'ag
  Ad esempio, è possibile usare questo approccio per aggiornare gli elementi seguenti:  
   
 -   Un'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su un sistema operativo non supportato.    
--   Un'installazione x86 di SQL Server dal momento che [!INCLUDE[ss2016](../../includes/sssql15-md.md)] e versioni successive non supportano le installazioni x86.   
+-   Un'installazione x86 di SQL Server dal momento che [!INCLUDE[ss2016](../../includes/sssql16-md.md)] e versioni successive non supportano le installazioni x86.   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su un nuovo hardware e/o su una nuova versione del sistema operativo.    
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in combinazione con il consolidamento dei server.   
--   SQL Server 2005 come [!INCLUDE[ss2016](../../includes/sssql15-md.md)] e versioni successive non supportano l'aggiornamento sul posto di SQL Server 2005. Per altre informazioni, vedere [Aggiornamento da SQL Server 2005](../../sql-server/end-of-support/sql-server-end-of-life-overview.md).
+-   SQL Server 2005 come [!INCLUDE[ss2016](../../includes/sssql16-md.md)] e versioni successive non supportano l'aggiornamento sul posto di SQL Server 2005. Per altre informazioni, vedere [Aggiornamento da SQL Server 2005](../../sql-server/end-of-support/sql-server-end-of-life-overview.md).
 
   
 I passaggi necessari per un nuovo aggiornamento di installazione variano leggermente a seconda che si usi l'archiviazione associata o l'archiviazione SAN.  

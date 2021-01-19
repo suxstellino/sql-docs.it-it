@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 465aef4e631602a645bbeff5b437cb2f09994d3c
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: a665d78d180d87fe0d412b025bcce75d509285d4
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "90990407"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171203"
 ---
 # <a name="integration-services-service-ssis-service"></a>Servizio Integration Services (servizio SSIS)
 
@@ -274,7 +274,7 @@ Durante l'installazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion
 ```  
   
 ### <a name="modify-the-configuration-file-location"></a>Modificare il percorso del file di configurazione  
- La chiave del Registro di sistema **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** specifica il percorso e il nome del file di configurazione usato dal servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Il valore predefinito della chiave del Registro di sistema è **C:\Programmi\Microsoft SQL Server\130\DTS\Binn\ MsDtsSrvr.ini.xml**. È possibile aggiornare il valore della chiave del Registro di sistema per utilizzare un nome e un percorso diversi per il file di configurazione. Si noti che il numero di versione nel percorso (120 per SQL Server [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)], 130 per [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e così via) varia in base alla versione di SQL Server.
+ La chiave del Registro di sistema **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** specifica il percorso e il nome del file di configurazione usato dal servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Il valore predefinito della chiave del Registro di sistema è **C:\Programmi\Microsoft SQL Server\130\DTS\Binn\ MsDtsSrvr.ini.xml**. È possibile aggiornare il valore della chiave del Registro di sistema per utilizzare un nome e un percorso diversi per il file di configurazione. Si noti che il numero di versione nel percorso (120 per SQL Server [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)], 130 per [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e così via) varia in base alla versione di SQL Server.
   
 > [!CAUTION]  
 >  La modifica non corretta del Registro di sistema può causare seri problemi che potrebbero richiedere la reinstallazione del sistema operativo. [!INCLUDE[msCoName](../../includes/msconame-md.md)] non può garantire che i problemi causati dalla modifica non corretta del Registro di sistema possano essere risolti. Prima di modificare il Registro di sistema, eseguire il backup dei dati importanti. Per informazioni sul backup, sul ripristino e sulla modifica del Registro di sistema, vedere l'articolo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base relativo alla [descrizione del Registro di sistema di Microsoft Windows](https://support.microsoft.com/kb/256986).  

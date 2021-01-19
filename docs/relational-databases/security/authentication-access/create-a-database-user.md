@@ -25,12 +25,12 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c06db04136d3e38ad62fe71313490c0a54670c46
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5088cb94c4c4387cd77835bbe02502764d3c2384
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97479432"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171703"
 ---
 # <a name="create-a-database-user"></a>Creazione di un utente di database
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "97479432"
   
  Per coloro che non hanno familiarità con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], può essere difficile determinare il tipo di utente che si vuole creare. Per prima cosa, chiedersi se la persona o il gruppo con l'esigenza di accedere al database ha un account di accesso. Gli account di accesso nel database master sono comuni per le persone che gestiscono [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e per quelle che devono accedere a molti o a tutti i database nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per questa situazione, creare un **utente SQL con account di accesso**. L'utente del database è l'identità dell'account di accesso quando è connesso a un database. Può utilizzare lo stesso nome dell'account, ma non si tratta di una condizione obbligatoria. In questo argomento si presuppone che esista già un account di accesso in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per informazioni su come creare un account di accesso, vedere [Creare un account di accesso](../../../relational-databases/security/authentication-access/create-a-login.md).  
   
- Se la persona o il gruppo che deve accedere al database non ha un account di accesso e deve accedere solo a uno o alcuni database, creare un **utente di Windows** o un **utente SQL con password**. Noto anche come utente di database indipendente, questo tipo di utente non è associato a un account di accesso nel database master. È un'ottima scelta se si vuole avere la possibilità di spostare facilmente il database tra istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per usare questa opzione in [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], un amministratore deve prima abilitare i database indipendenti per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]e il database deve essere abilitato per l'indipendenza. Per altre informazioni, vedere [Utenti di database indipendente: rendere portabile un database](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+ Se la persona o il gruppo che deve accedere al database non ha un account di accesso e deve accedere solo a uno o alcuni database, creare un **utente di Windows** o un **utente SQL con password**. Noto anche come utente di database indipendente, questo tipo di utente non è associato a un account di accesso nel database master. È un'ottima scelta se si vuole avere la possibilità di spostare facilmente il database tra istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per usare questa opzione in [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)], un amministratore deve prima abilitare i database indipendenti per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]e il database deve essere abilitato per l'indipendenza. Per altre informazioni, vedere [Utenti di database indipendente: rendere portabile un database](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 > **IMPORTANTE** Per la connessione come utente di database indipendente, è necessario specificare il nome del database indipendente come parte della stringa di connessione. Per specificare il database in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], nella finestra di dialogo **Connetti a** fare clic su **Opzioni** e quindi sulla scheda **Proprietà connessione** .  
   

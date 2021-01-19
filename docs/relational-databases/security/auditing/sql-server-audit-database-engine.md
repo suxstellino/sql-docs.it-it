@@ -17,12 +17,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: davidtrigano
 ms.author: datrigan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: e978c269a17f42bc75729303a860c61d4868f3fb
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 45b22073dd0ac7e4c87d8fb838e9e55e346b5b5d
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468612"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171463"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Database Engine)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "97468612"
   
  È possibile registrare gruppi di azioni di controllo del server per istanza e gruppi di azioni di controllo del database o azioni di controllo del database per database. L'evento di controllo si verificherà ogni volta che viene rilevata un'azione controllabile.  
   
- Tutte le edizioni dei controlli a livello server di supporto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Tutte le edizioni supportano i controlli a livello del database a partire da [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1. Nelle versioni precedenti i controlli a livello di database sono limitati alle edizioni Enterprise, Developer ed Evaluation. Per altre informazioni, vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Tutte le edizioni dei controlli a livello server di supporto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Tutte le edizioni supportano i controlli a livello del database a partire da [!INCLUDE[ssSQL15_md](../../../includes/sssql16-md.md)] SP1. Nelle versioni precedenti i controlli a livello di database sono limitati alle edizioni Enterprise, Developer ed Evaluation. Per altre informazioni, vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 > [!NOTE]  
 >  Questo argomento si applica a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  Per [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], vedere [Introduzione al controllo del database SQL](/azure/azure-sql/database/auditing-overview).  

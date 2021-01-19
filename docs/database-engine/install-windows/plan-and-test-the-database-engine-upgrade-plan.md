@@ -11,12 +11,12 @@ ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 73c70e347de00a18f4c4ec5ce3228d6d000d16f0
-ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
+ms.openlocfilehash: 45b0ba2a207be68b0faaea0af0ba7592ae1f0f94
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97975475"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172273"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>Pianificare e testare il piano di aggiornamento del motore di database
 
@@ -39,7 +39,7 @@ ms.locfileid: "97975475"
   
 -   **Ambiente corrente:** eseguire ricerche nell'ambiente corrente per comprendere i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in uso e i client connessi all'ambiente.  
   
-    -   **Provider client:** anche se l'aggiornamento non richiede di aggiornare il provider dei singoli client, è possibile scegliere di eseguire questa operazione. Se si esegue l'aggiornamento da [!INCLUDE[sql14](../../includes/sssql14-md.md)] o versione precedente, le funzionalità [!INCLUDE[sql15](../../includes/sssql15-md.md)] seguenti richiedono un provider aggiornato per ogni client o per offrire funzionalità aggiuntive:  
+    -   **Provider client:** anche se l'aggiornamento non richiede di aggiornare il provider dei singoli client, è possibile scegliere di eseguire questa operazione. Se si esegue l'aggiornamento da [!INCLUDE[sql14](../../includes/sssql14-md.md)] o versione precedente, le funzionalità [!INCLUDE[sql15](../../includes/sssql16-md.md)] seguenti richiedono un provider aggiornato per ogni client o per offrire funzionalità aggiuntive:  
   
        -   [Always Encrypted &#40;Motore di database&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
   

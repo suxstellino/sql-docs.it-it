@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 1c4563a10433d4cbead089da026d086f9c021ccb
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 78a84099b202ca55588e1365b27d80004d2cdaa5
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126280"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172613"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -156,7 +156,7 @@ I controlli di consistenza logica negli indici variano in base al livello di com
          Tramite questi controlli di consistenza logica vengono eseguiti controlli incrociati della tabella degli indici interna dell'oggetto Index con la tabella utente a cui viene fatto riferimento. Per trovare le righe esterne, viene creata una query interna per eseguire un'intersezione completa della tabella interna e della tabella utente. L'esecuzione di questa query può influire notevolmente sulle prestazioni e non è possibile tenere traccia del relativo stato di avanzamento. È pertanto consigliabile specificare WITH EXTENDED_LOGICAL_CHECKS solo se si sospetta la presenza di problemi dell'indice non correlati a danni fisici o se i checksum a livello di pagina sono stati disabilitati e si sospetta la presenza di danni hardware a livello di colonna.    
     -   Se l'indice è un indice filtrato, tramite DBCC CHECKDB vengono eseguiti controlli di consistenza per verificare che le voci di indice soddisfino il predicato del filtro.   
       
-- A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], non verranno eseguiti per impostazione predefinita controlli aggiuntivi su colonne calcolate persistenti, colonne UDT e indici filtrati per evitare valutazioni di espressioni costose. Questa modifica riduce notevolmente la durata di CHECKDB su database contenenti tali oggetti. Tuttavia, le verifiche di coerenza fisica di questi oggetti vengono sempre completate. Le valutazioni delle espressioni vengono eseguite, oltre alle verifiche logiche già presenti, ovvero viste indicizzate, indici XML e indici spaziali, solo quando è specificata l'opzione EXTENDED_LOGICAL_CHECKS, in quanto parte di tale opzione.
+- A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], non verranno eseguiti per impostazione predefinita controlli aggiuntivi su colonne calcolate persistenti, colonne UDT e indici filtrati per evitare valutazioni di espressioni costose. Questa modifica riduce notevolmente la durata di CHECKDB su database contenenti tali oggetti. Tuttavia, le verifiche di coerenza fisica di questi oggetti vengono sempre completate. Le valutazioni delle espressioni vengono eseguite, oltre alle verifiche logiche già presenti, ovvero viste indicizzate, indici XML e indici spaziali, solo quando è specificata l'opzione EXTENDED_LOGICAL_CHECKS, in quanto parte di tale opzione.
 -  Se il livello di compatibilità è 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]) o minore, a meno che non venga specificato NOINDEX, tramite DBCC CHECKTABLE vengono eseguite verifiche di coerenza sia fisica che logica in una singola tabella o vista indicizzata e in tutti i relativi indici non cluster e XML. Gli indici spaziali non sono supportati.
     
  **Per informazioni sul livello di compatibilità di un database**    

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: b6e369cc3677e399182f631885afdfb3b3ac53ee
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 76aa3e890169e73d30d9a15aa57aa4fd832a7ef9
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96129413"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171313"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Backup e ripristino di database SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "96129413"
   
  Il componente di backup e ripristino di SQL Server rappresenta uno strumento essenziale per la sicurezza e la protezione di dati di importanza critica archiviati nei database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ridurre al minimo il rischio di perdita irreparabile dei dati, è necessario eseguire il backup dei database a intervalli regolari per preservare le modifiche ai dati. Una strategia di backup e ripristino ben pianificata aiuta a proteggere i database dalla perdita di dati dovuta a vari errori. Testare la strategia ripristinando un set di backup e poi recuperando il database per prepararsi a rispondere in modo efficace a una situazione di emergenza.
   
- Oltre alle risorse di archiviazione locale per l'archiviazione di backup, SQL Server supporta anche il backup e il ripristino dal servizio Archiviazione BLOB di Azure. Per altre informazioni, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Per i file di database archiviati tramite il servizio di archiviazione BLOB di Microsoft Azure, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] consente di usare gli snapshot di Azure per backup quasi istantanei e operazioni di ripristino più veloci. Per altre informazioni, vedere [Backup di snapshot di file per i file di database in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md). Azure offre anche una soluzione di backup di livello aziendale per SQL Server in esecuzione in macchine virtuali di Azure. Si tratta di una soluzione di backup completamente gestita che supporta gruppi di disponibilità Always On, conservazione a lungo termine, recupero temporizzato e gestione e monitoraggio centralizzati. Per altre informazioni, vedere [Backup di Azure per SQL Server in macchine virtuali di Azure](/azure/backup/backup-azure-sql-database).
+ Oltre alle risorse di archiviazione locale per l'archiviazione di backup, SQL Server supporta anche il backup e il ripristino dal servizio Archiviazione BLOB di Azure. Per altre informazioni, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Per i file di database archiviati tramite il servizio di archiviazione BLOB di Microsoft Azure, [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] consente di usare gli snapshot di Azure per backup quasi istantanei e operazioni di ripristino più veloci. Per altre informazioni, vedere [Backup di snapshot di file per i file di database in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md). Azure offre anche una soluzione di backup di livello aziendale per SQL Server in esecuzione in macchine virtuali di Azure. Si tratta di una soluzione di backup completamente gestita che supporta gruppi di disponibilità Always On, conservazione a lungo termine, recupero temporizzato e gestione e monitoraggio centralizzati. Per altre informazioni, vedere [Backup di Azure per SQL Server in macchine virtuali di Azure](/azure/backup/backup-azure-sql-database).
   
 ##  <a name="why-back-up"></a>Perché è importante eseguire un backup?  
 -   L'esecuzione di backup dei database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'esecuzione di procedure di ripristino di test sui backup e l'archiviazione delle copie di backup in una posizione esterna sicura costituiscono modi validi per evitare una perdita di dati potenzialmente irreversibile. **Il backup è l'unico modo per proteggere i dati.**

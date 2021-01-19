@@ -12,12 +12,12 @@ ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 702d2adcfda0f75937b9629467f14ca66f4acdad
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0ca8263c5d75fca3bc59164d8d3ff7acaa9c5f2e
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97407471"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172733"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Indici columnstore - Data warehouse
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "97407471"
   Gli indici columnstore, in combinazione con il partizionamento, sono essenziali per la creazione di un data warehouse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="whats-new"></a>Novità  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] offre prestazioni migliori degli indici columnstore grazie all'introduzione delle funzionalità seguenti:  
+ [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] offre prestazioni migliori degli indici columnstore grazie all'introduzione delle funzionalità seguenti:  
   
 -   Supporto in AlwaysOn dell'esecuzione di query su un indice columnstore in una replica secondaria leggibile.  
 -   Supporto in MARS (Multiple Active Result Sets) degli indici columnstore.  
@@ -39,7 +39,7 @@ ms.locfileid: "97407471"
 -   Isolamento dello snapshot per il livello di compatibilità del database 130 e i livelli superiori.  
   
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>Migliorare le prestazioni con una combinazione di indici non cluster e columnstore  
- A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], è possibile definire indici non cluster in un indice columnstore cluster.   
+ A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], è possibile definire indici non cluster in un indice columnstore cluster.   
   
 ### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>Esempio: migliorare l'efficienza del posizionamento all'interno delle tabelle con un indice non cluster  
  Per migliorare l'efficienza del posizionamento all'interno delle tabelle in un data warehouse, è possibile creare un indice non cluster progettato per l'esecuzione di query le cui prestazioni vengono ottimizzate dal posizionamento all'interno delle tabelle. Le query che cercano valori corrispondenti o restituiscono un intervallo di valori ridotto garantiscono prestazioni migliori con un indice albero B che con un indice columnstore. Tali query non richiedono l'analisi completa della tabella eseguita dall'indice columnstore e restituiscono il risultato corretto più velocemente eseguendo una ricerca binaria tramite un indice albero B.  
@@ -101,7 +101,7 @@ WITH CHECK ADD FOREIGN KEY([AccountKey]) REFERENCES my_dimension(Accountkey);
 ```  
   
 ### <a name="improve-performance-by-enabling-row-level-and-row-group-level-locking"></a>Migliorare le prestazioni abilitando il blocco a livello di riga e a livello di gruppo di righe  
- Per integrare l'indice non cluster in un indice columnstore, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] offre la funzionalità di blocco granulare per le operazioni di selezione, aggiornamento ed eliminazione. È possibile eseguire query con blocco a livello di riga per operazioni di index seek su un indice non cluster e con blocco a livello di gruppo di righe per operazioni di analisi completa di tabelle sull'indice columnstore. Usare questa funzionalità per ottenere una concorrenza più elevata in lettura e scrittura con l'uso appropriato del blocco a livello di riga e a livello di gruppo di righe.  
+ Per integrare l'indice non cluster in un indice columnstore, [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] offre la funzionalità di blocco granulare per le operazioni di selezione, aggiornamento ed eliminazione. È possibile eseguire query con blocco a livello di riga per operazioni di index seek su un indice non cluster e con blocco a livello di gruppo di righe per operazioni di analisi completa di tabelle sull'indice columnstore. Usare questa funzionalità per ottenere una concorrenza più elevata in lettura e scrittura con l'uso appropriato del blocco a livello di riga e a livello di gruppo di righe.  
   
 ```sql  
 --Granular locking example  

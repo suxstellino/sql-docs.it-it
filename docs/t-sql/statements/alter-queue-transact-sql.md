@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 385a84a0f92c41cbf661abe327d244a2e9b6ebd3
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 09303d17e8cb284251d9c8e585eeadb5a1a1e898
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98092079"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170843"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -107,12 +107,12 @@ WITH
  Specifica se la coda attiva la stored procedure. Se STATUS = ON, la coda avvia la stored procedure specificata con PROCEDURE_NAME quando il numero di procedure in esecuzione è minore di MAX_QUEUE_READERS e quando i messaggi arrivano nella coda più velocemente di quanto non vengano ricevuti dalle stored procedure. Se STATUS = OFF, la coda non attiva la stored procedure.  
   
  REBUILD [ WITH \<queue_rebuild_options> ]  
- **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.  
+ **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive.  
   
  Ricompila tutti gli indici della tabella interna della coda. Usare questa funzionalità quando si verificano problemi di frammentazione a causa di un carico elevato. MAXDOP è l'unica opzione di ricompilazione della coda supportata. L'operazione REBUILD viene sempre eseguita in modalità offline.  
   
  REORGANIZE [ WITH ( LOB_COMPACTION = { ON | OFF } ) ]  
- **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.  
+ **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive.  
   
  Riorganizza tutti gli indici della tabella interna della coda.   
 A differenza di REORGANIZE nelle tabelle utente, l'operazione REORGANIZE in una coda viene sempre eseguita in modalità offline perché i blocchi a livello di pagina sono disabilitati in modo esplicito nelle code.  
@@ -121,7 +121,7 @@ A differenza di REORGANIZE nelle tabelle utente, l'operazione REORGANIZE in una 
 >  In linea generale, quando la frammentazione dell'indice è compresa tra il 5 e il 30%, è consigliabile riorganizzare l'indice. Se la frammentazione è superiore al 30%, ricompilare l'indice. Si tratta tuttavia di indicazioni di carattere generale, da considerare come punto di partenza per l'ambiente. Per determinare la percentuale di frammentazione dell'indice, usare [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md). Vedere l'esempio G in tale articolo.  
   
  MOVE TO { *file_group* | "default" }  
- **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.  
+ **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive.  
   
  Sposta la tabella interna della coda (con i relativi indici) in un filegroup specificato dall'utente.  Il nuovo filegroup non deve essere di sola lettura.  
   
@@ -226,7 +226,7 @@ ALTER QUEUE ExpenseQueue WITH ACTIVATION (DROP) ;
   
 ### <a name="g-rebuilding-queue-indexes"></a>G. Ricompilazione degli indici della coda  
   
-**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.  
+**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive.  
   
  Nell'esempio seguente viene illustrata la ricompilazione degli indici della coda  
   
@@ -236,7 +236,7 @@ ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)
   
 ### <a name="h-reorganizing-queue-indexes"></a>H. Riorganizzazione degli indici della coda  
   
-**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.  
+**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive.  
   
  Nell'esempio seguente viene illustrata la riorganizzazione degli indici della coda  
   
@@ -246,7 +246,7 @@ ALTER QUEUE ExpenseQueue REORGANIZE
   
 ### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I. Spostamento della tabella interna della coda in un altro filegroup  
   
-**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.  
+**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive.  
   
 ```sql  
 ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]   

@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 0fd814ec47548406eef0b8436751a034c97f4717
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: f3b5176bb0b9ac123090f032e0908d57155ff592
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96505300"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172183"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,7 @@ Ottimizzazione guidata motore di database consente di gestire i seguenti tipi di
  Versione del prompt dei comandi di Ottimizzazione guidata motore di database. L'utilità **dta** è stata sviluppata per consentire l'utilizzo della funzionalità Ottimizzazione guidata motore di database in applicazioni e script.  
   
  **Carico di lavoro**  
- File script Transact-SQL, file di traccia, o tabella di traccia che contiene un carico di lavoro rappresentativo per i database che si desidera ottimizzare. A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], è possibile specificare la cache dei piani come carico di lavoro.  A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], è possibile [specificare Query Store come carico di lavoro](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md). 
+ File script Transact-SQL, file di traccia, o tabella di traccia che contiene un carico di lavoro rappresentativo per i database che si desidera ottimizzare. A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], è possibile specificare la cache dei piani come carico di lavoro.  A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], è possibile [specificare Query Store come carico di lavoro](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md). 
   
  **File di input XML**  
  File in formato XML che Ottimizzazione guidata motore di database può usare per ottimizzare i carichi di lavoro. Il file di input XML supporta le opzioni di ottimizzazione avanzate che non sono disponibili nella GUI o nell'utilità **dta** .  

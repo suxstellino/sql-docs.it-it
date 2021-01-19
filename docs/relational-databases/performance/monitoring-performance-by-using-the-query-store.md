@@ -15,12 +15,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 24d5c3ff3e1b1c3f5c4be81af7a51e525dd102f4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e61f723ddbc3010cc705c076675b731482fdee6b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97418054"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171843"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoraggio delle prestazioni con Query Store
 
@@ -31,7 +31,7 @@ La funzionalità Archivio query di [!INCLUDE[ssNoVersion](../../includes/ssnover
 Per informazioni sul funzionamento di Query Store nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] di Azure, vedere [Uso di Query Store nel database SQL di Azure](best-practice-with-the-query-store.md#Insight).
 
 > [!IMPORTANT]
-> Se si usa Query Store per informazioni dettagliate sui carichi di lavoro Just-In-Time in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], prevedere l'installazione delle correzioni di scalabilità delle prestazioni in [KB 4340759](https://support.microsoft.com/help/4340759) appena possibile.
+> Se si usa Query Store per informazioni dettagliate sui carichi di lavoro Just-In-Time in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], prevedere l'installazione delle correzioni di scalabilità delle prestazioni in [KB 4340759](https://support.microsoft.com/help/4340759) appena possibile.
 
 ## <a name="enabling-the-query-store"></a><a name="Enabling"></a> Abilitazione di Archivio query
 

@@ -11,12 +11,12 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 568b3f60205e94bd0b81ff5e80e8b3db372a4691
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 33fb069efc355ebaa8892a743b926f927d8a435e
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480912"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171283"
 ---
 # <a name="dynamic-data-masking"></a>Dynamic Data Masking
 [!INCLUDE [SQL Server 2016 ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -34,7 +34,7 @@ La maschera dati dinamica è utile per impedire l'accesso non autorizzato ai dat
 
 Lo scopo della maschera dati dinamica consiste nel limitare l'esposizione dei dati sensibili, impedendo la visualizzazione dei dati agli utenti che non dovrebbero averne accesso. La maschera dati dinamica non mira a impedire agli utenti del database di connettersi direttamente al database ed eseguire query complete che espongano parti dei dati sensibili. La maschera dati dinamica è complementare ad altre funzionalità di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio il controllo, la crittografia e la sicurezza a livello di riga, ed è consigliabile usare questa funzionalità insieme alle altre per ottimizzare la protezione dei dati sensibili nel database.  
   
-Il mascheramento dei dati dinamici è disponibile in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]e viene configurato usando i comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] . Per altre informazioni sulla configurazione di una maschera dati dinamica tramite il portale di Azure, vedere [Maschera dati dinamica del database SQL (portale di Azure)](/azure/azure-sql/database/dynamic-data-masking-overview).  
+Il mascheramento dei dati dinamici è disponibile in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]e viene configurato usando i comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] . Per altre informazioni sulla configurazione di una maschera dati dinamica tramite il portale di Azure, vedere [Maschera dati dinamica del database SQL (portale di Azure)](/azure/azure-sql/database/dynamic-data-masking-overview).  
   
 ## <a name="defining-a-dynamic-data-mask"></a>Definizione di una maschera dati dinamica
  Una regola per la maschera può essere definita in una colonna all'interno di una tabella, al fine di nascondere i dati in tale colonna. Sono disponibili quattro tipi di maschere.  

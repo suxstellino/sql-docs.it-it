@@ -12,25 +12,25 @@ ms.assetid: a4891c57-56bb-49f4-9bb5-f11b745279e5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 251af732e6c55ee2b5567bb181859b1fdec1360a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 3e72e67bf033ecef94b318d69b31f33604572cf8
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485223"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172063"
 ---
 # <a name="scalability"></a>Scalabilità
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] contiene miglioramenti di scalabilità dell'archiviazione su disco per le tabelle ottimizzate per la memoria. 
+[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] contiene miglioramenti di scalabilità dell'archiviazione su disco per le tabelle ottimizzate per la memoria. 
 
 ## <a name="multiple-threads-to-persist-memory-optimized-tables"></a>Più thread per rendere persistenti le tabelle ottimizzate per la memoria  
   
 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ha un unico thread di gestione dei checkpoint offline che analizza il log delle transazioni per rilevare le modifiche apportate alle tabelle ottimizzate per la memoria e le rende persistenti nei file di checkpoint, ad esempio nei file di dati e differenziali. In computer con un numero elevato di core, un unico thread di gestione dei checkpoint offline può non essere sufficiente.  
   
-A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la persistenza delle modifiche apportate alle tabelle ottimizzate per la memoria è affidata a più thread simultanei.  
+A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], la persistenza delle modifiche apportate alle tabelle ottimizzate per la memoria è affidata a più thread simultanei.  
   
 ## <a name="multi-threaded-recovery"></a>Recupero multithread
-Nella versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l'applicazione del log come parte dell'operazione di recupero era a thread singolo. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], l'applicazione del log è multithread.  
+Nella versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l'applicazione del log come parte dell'operazione di recupero era a thread singolo. A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], l'applicazione del log è multithread.  
   
 ## <a name="merge-operation"></a>Operazione MERGE  
 Ora l'operazione MERGE è multithread.  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0088f32b5108eef5f3656a2b7640340c001f28a7
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 838b01e2fd4f09b787b11f146143fc6c327504b7
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "94384870"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172213"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novità&#39 di Integration Services in SQL Server 2016
 
@@ -368,7 +368,7 @@ La versione più recente del Feature Pack di Azure include l'attività di carica
 ####  <a name="rich-xml-validation-output-in-the-xml-task"></a><a name="ValidateXML"></a> Output di convalida XML avanzato in Attività XML  
  È possibile convalidare documenti XML e ottenere output avanzato degli errori abilitando la proprietà **ValidationDetails** dell'Attività XML. Prima che fosse disponibile la proprietà **ValidationDetails** , la convalida XML da parte dell'Attività XML restituiva solo un risultato di tipo True o False, senza informazioni sugli errori o sulle rispettive posizioni. Attualmente, quando si imposta **ValidationDetails** su True, il file di output contiene informazioni dettagliate su ogni errore, inclusi il numero di riga e la posizione. È possibile usare questa informazione per comprendere, individuare e risolvere gli errori nei documenti XML. Per ulteriori informazioni, vedere [Validate XML with the XML Task](../integration-services/control-flow/validate-xml-with-the-xml-task.md).  
   
- [!INCLUDE[ssIS](../includes/ssis-md.md)] ha introdotto la proprietà **ValidationDetails** in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 2. Questa nuova proprietà non è stata annunciata o documentata in quel momento. La proprietà **ValidationDetails** è disponibile anche in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] e [!INCLUDE[ssSQL15](../includes/sssql15-md.md)].   
+ [!INCLUDE[ssIS](../includes/ssis-md.md)] ha introdotto la proprietà **ValidationDetails** in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 2. Questa nuova proprietà non è stata annunciata o documentata in quel momento. La proprietà **ValidationDetails** è disponibile anche in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] e [!INCLUDE[ssSQL15](../includes/sssql16-md.md)].   
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

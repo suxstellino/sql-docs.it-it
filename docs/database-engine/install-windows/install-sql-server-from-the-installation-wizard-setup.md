@@ -15,18 +15,18 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 9cc9c07d69be1b08a887ddf4a7ac071647a4d89a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: d2c5f2fc245c981cf0c6d045333528aeff32536c
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440232"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170193"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installare SQL Server dall'Installazione guidata (programma di installazione)
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-In questo articolo viene descritto come installare SQL Server con l'Installazione guidata. Si applica a [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] e a [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)].
+In questo articolo viene descritto come installare SQL Server con l'Installazione guidata. Si applica a [!INCLUDE[SQLServer2016](../../includes/sssql16-md.md)] e a [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)].
 
 Questo articolo fornisce istruzioni dettagliate per installare una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando l'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Poiché nell'Installazione guidata è disponibile un unico albero delle funzionalità per l'installazione di tutti i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], non è necessario installarli singolarmente. Per installare i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] singolarmente, vedere [Installare SQL Server](../../database-engine/install-windows/install-sql-server.md#individual-component-installation).  
 
@@ -131,7 +131,7 @@ Ciò non è applicabile a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
     > [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
 
     > [!NOTE]
-    > Iniziare con [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e selezionare la casella di controllo **Concedi il privilegio Esecuzione attività di manutenzione volume al servizio del motore di database di SQL Server** per consentire all'account di servizio del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] l'uso dell'[inizializzazione immediata dei file di database](../../relational-databases/databases/database-instant-file-initialization.md).
+    > Iniziare con [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e selezionare la casella di controllo **Concedi il privilegio Esecuzione attività di manutenzione volume al servizio del motore di database di SQL Server** per consentire all'account di servizio del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] l'uso dell'[inizializzazione immediata dei file di database](../../relational-databases/databases/database-instant-file-initialization.md).
   
 1. Usare la pagina **Configurazione server - Regole di confronto** per specificare regole di confronto non predefinite per il [!INCLUDE[ssDE](../../includes/ssde-md.md)] e [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].    
 
@@ -300,7 +300,7 @@ Ciò non è applicabile a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
     > [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
 
     > [!NOTE]
-    > Iniziare con [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e selezionare la casella di controllo **Concedi il privilegio Esecuzione attività di manutenzione volume al servizio del motore di database di SQL Server** per consentire all'account di servizio del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] l'uso dell'[inizializzazione immediata dei file di database](../../relational-databases/databases/database-instant-file-initialization.md).
+    > Iniziare con [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e selezionare la casella di controllo **Concedi il privilegio Esecuzione attività di manutenzione volume al servizio del motore di database di SQL Server** per consentire all'account di servizio del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] l'uso dell'[inizializzazione immediata dei file di database](../../relational-databases/databases/database-instant-file-initialization.md).
   
      Usare la pagina **Configurazione server - Regole di confronto** per specificare regole di confronto non predefinite per il [!INCLUDE[ssDE](../../includes/ssde-md.md)] e [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per altre informazioni, vedere [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   

@@ -28,12 +28,12 @@ ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 793adfcb5bbb59dc836bd7ec05728a9ccf979200
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 238fcde63bf0af459ab741f54a411fefb317bfe9
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471982"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170353"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asdb-pdw](../../includes/applies-to-version/sql-asdb-pdw.md)]
@@ -168,7 +168,7 @@ CREATE CERTIFICATE certificate_name
 ## <a name="remarks"></a>Osservazioni  
  Un certificato è un'entità a protezione diretta a livello di database conforme allo standard X.509 e che supporta i campi della specifica X.509 V1. `CREATE CERTIFICATE` consente di caricare un certificato da un file, una costante binaria o un assembly. e può inoltre essere utilizzata per generare una coppia di chiavi e creare un certificato autofirmato.  
   
- La chiave privata deve essere \<= 2500 byte nel formato crittografato. Le chiavi private generate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono lunghe 1024 bit fino a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e 2048 bit a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Le chiavi private importate da un'origine esterna devono avere una lunghezza compresa tra 384 bit e 4,096 bit. La lunghezza di una chiave privata importata deve essere un valore intero multiplo di 64 bit. I certificati usati per TDE sono limitati a chiavi private con dimensioni di 3456 bit.  
+ La chiave privata deve essere \<= 2500 byte nel formato crittografato. Le chiavi private generate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono lunghe 1024 bit fino a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e 2048 bit a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]. Le chiavi private importate da un'origine esterna devono avere una lunghezza compresa tra 384 bit e 4,096 bit. La lunghezza di una chiave privata importata deve essere un valore intero multiplo di 64 bit. I certificati usati per TDE sono limitati a chiavi private con dimensioni di 3456 bit.  
   
  Il numero di serie completo del certificato viene archiviato, ma solo i primi 16 byte vengono visualizzati nella vista del catalogo sys.certificates.  
   
@@ -187,7 +187,7 @@ CREATE CERTIFICATE certificate_name
   
  È possibile creare una descrizione binaria di un certificato usando le funzioni [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) e [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md). Per un esempio che usa **CERTPRIVATEKEY** e **CERTENCODED** per copiare un certificato in un altro database, vedere l'esempio B nell'articolo [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md).  
 
-Gli algoritmi MD2, MD4, MD5, SHA e SHA1 sono deprecati in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Fino a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], un certificato autofirmato viene creato con SHA1. A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], un certificato autofirmato viene creato usando SHA2_256.
+Gli algoritmi MD2, MD4, MD5, SHA e SHA1 sono deprecati in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]. Fino a [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], un certificato autofirmato viene creato con SHA1. A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], un certificato autofirmato viene creato usando SHA2_256.
 
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione `CREATE CERTIFICATE` per il database. Solo gli account di accesso di Windows e di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e i ruoli applicazione possono avere certificati. I gruppi e i ruoli non possono disporre di certificati.  

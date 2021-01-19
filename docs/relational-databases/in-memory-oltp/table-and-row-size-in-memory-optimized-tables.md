@@ -12,17 +12,17 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e16ef746dd970926e61098eb66e8f8ddf6a98b1
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ddc8c6bf630994b66ecd2977edc44bec888a0e8e
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97438750"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172673"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Prima di [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] le dimensioni dei dati all'interno delle righe di un tabella ottimizzata per la memoria non potevano essere superiori a [8.060 byte](?viewFallbackFrom=sql-server-2014). A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e nel database SQL di Azure è invece possibile creare una tabella ottimizzata per la memoria con più colonne di grandi dimensioni, ad esempio più colonne varbinary (8000), e colonne LOB, ad esempio colonne varbinary (max), varchar (max) e nvarchar (max). È anche possibile eseguire operazioni sulle colonne usando moduli T-SQL compilati in modo nativo e tipi di tabella. 
+Prima di [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] le dimensioni dei dati all'interno delle righe di un tabella ottimizzata per la memoria non potevano essere superiori a [8.060 byte](?viewFallbackFrom=sql-server-2014). A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e nel database SQL di Azure è invece possibile creare una tabella ottimizzata per la memoria con più colonne di grandi dimensioni, ad esempio più colonne varbinary (8000), e colonne LOB, ad esempio colonne varbinary (max), varchar (max) e nvarchar (max). È anche possibile eseguire operazioni sulle colonne usando moduli T-SQL compilati in modo nativo e tipi di tabella. 
   
 Le colonne che superano le dimensioni massime delle righe di 8060 byte vengono inserite all'esterno delle righe, in una tabella interna separata. Ogni colonna all'esterno delle righe ha una corrispondente tabella interna, che a sua volta ha un indice non cluster. Per informazioni dettagliate su queste tabelle interne usate per colonne all'esterno di righe, vedere[ sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md). 
  

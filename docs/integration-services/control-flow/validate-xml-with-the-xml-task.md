@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 01ccacdadefac0943e721c27d11287f28d66382b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 97e0ea80dcc5cffefc99cbbc928eace94ade942a
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196075"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172593"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
 
@@ -37,7 +37,7 @@ ms.locfileid: "92196075"
  La funzionalità di convalida XML è facilmente scalabile per documenti XML di grandi dimensioni e un numero elevato di errori. Dato che il file di output è in formato XML, è possibile eseguire una query e analizzare l'output. Ad esempio, se l'output contiene un numero elevato di errori, è possibile raggrupparli usando un [!INCLUDE[tsql](../../includes/tsql-md.md)] , come descritto in questo argomento.  
   
 > [!NOTE]
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) ha introdotto la proprietà **ValidationDetails** in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2. La proprietà è disponibile anche in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) ha introdotto la proprietà **ValidationDetails** in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2. La proprietà è disponibile anche in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)].  
   
 ## <a name="sample-output-for-xml-thats-valid"></a>Esempio di output per un file XML valido  
  Ecco un file di output di esempio con i risultati della convalida per un file XML valido.  

@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: fd729c01993f06c9017a898e1e804dde844e10f2
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 73ee631c0dc853a60e07f09aa2ade5ce58487a0e
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642163"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171093"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>Pagina Seleziona sincronizzazione dati iniziale (procedure guidate gruppi di disponibilità Always On)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "97642163"
   
 ## <a name="automatic-seeding"></a><a name="Auto"></a> Seeding automatico
  
- SQL Server crea automaticamente le repliche secondarie per ogni database nel gruppo. Il seeding automatico richiede che il percorso dei dati e del file di log sia lo stesso in ogni istanza di SQL Server inclusa nel gruppo. Disponibile in [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] e versioni successive. Vedere [Inizializzare automaticamente un gruppo di disponibilità Always On](automatically-initialize-always-on-availability-group.md).
+ SQL Server crea automaticamente le repliche secondarie per ogni database nel gruppo. Il seeding automatico richiede che il percorso dei dati e del file di log sia lo stesso in ogni istanza di SQL Server inclusa nel gruppo. Disponibile in [!INCLUDE[sssql16-md.md](../../../includes/sssql16-md.md)] e versioni successive. Vedere [Inizializzare automaticamente un gruppo di disponibilità Always On](automatically-initialize-always-on-availability-group.md).
 
 ##  <a name="full-database-and-log-backup"></a><a name="Full"></a> Backup completo di database e log 
  Per ogni database primario, tramite l'opzione **Backup completo di database e log** vengono eseguite diverse operazioni in un flusso di lavoro: creare un backup completo e del log del database primario, creare i database secondari corrispondenti ripristinando i backup in ogni istanza del server in cui è ospitata una replica secondaria e creare un join di ogni database secondario al gruppo di disponibilità.  

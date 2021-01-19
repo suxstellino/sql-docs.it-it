@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 278ee9ecf44a90574d212e761089127342b2c9be
-ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
+ms.openlocfilehash: a98aaaea7d243853f31d19c0e7c3aa824ee2cc4e
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96563127"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171473"
 ---
 # <a name="backup-compression-sql-server"></a>Compressione backup (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -94,7 +94,7 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
 
 ## <a name="backup-compression-with-tde"></a>Compressione dei backup con TDE
 
-A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], impostando `MAXTRANSFERSIZE` su un valore **maggiore di 65536 (64 KB)** si abilita un algoritmo di compressione ottimizzato per i database con crittografia [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) che esegue innanzitutto la decrittografia di una pagina, la comprime e quindi ne esegue nuovamente la crittografia. Se il parametro `MAXTRANSFERSIZE` non viene specificato o se viene usato il valore `MAXTRANSFERSIZE = 65536` (64 KB), la compressione di backup con i database con crittografia TDE comprime direttamente le pagine crittografate e potrebbe non produrre rapporti di compressione validi. Per altre informazioni, vedere [Backup Compression for TDE-enabled Databases](/archive/blogs/sqlcat/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases) (Compressione dei backup per i database con TDE).
+A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], impostando `MAXTRANSFERSIZE` su un valore **maggiore di 65536 (64 KB)** si abilita un algoritmo di compressione ottimizzato per i database con crittografia [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) che esegue innanzitutto la decrittografia di una pagina, la comprime e quindi ne esegue nuovamente la crittografia. Se il parametro `MAXTRANSFERSIZE` non viene specificato o se viene usato il valore `MAXTRANSFERSIZE = 65536` (64 KB), la compressione di backup con i database con crittografia TDE comprime direttamente le pagine crittografate e potrebbe non produrre rapporti di compressione validi. Per altre informazioni, vedere [Backup Compression for TDE-enabled Databases](/archive/blogs/sqlcat/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases) (Compressione dei backup per i database con TDE).
 
 A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5, non è più necessario impostare `MAXTRANSFERSIZE` per abilitare questo algoritmo di compressione ottimizzato con TDE. Se viene specificato il comando di backup `WITH COMPRESSION` o la configurazione server *Valore predefinito di compressione backup* è impostata su 1, il valore `MAXTRANSFERSIZE` verrà automaticamente aumentato a 128 KB per abilitare l'algoritmo ottimizzato. Se `MAXTRANSFERSIZE` viene specificato nel comando di backup con un valore > 64K, il valore definito verrà rispettato. In altre parole, SQL Server non ridurrà mai il valore in modo automatico, ma lo aumenterà soltanto. Se è necessario eseguire il backup di un database con crittografia TDE con `MAXTRANSFERSIZE = 65536`, è necessario specificare `WITH NO_COMPRESSION` o assicurarsi che la configurazione server *Valore predefinito di compressione backup* sia impostata su 0.
 

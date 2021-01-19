@@ -22,12 +22,12 @@ ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce010e0093e234c9095c440f3283b8c7942c78bc
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: d972f88744b6c8b108b1f52a54d4bf8507975017
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480052"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171153"
 ---
 # <a name="create-indexes-with-included-columns"></a>Creare indici con colonne incluse
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "97480052"
   
 -   Progettare nuovamente gli indici non cluster con una chiave di indice di dimensioni elevate in modo da usare come colonne chiave solo le colonne usate per le ricerche. Modificare in colonne non chiave tutte le altre colonne che coprono la query. In questo modo si avranno tutte le colonne necessarie per coprire la query, contenendo al tempo stesso le dimensioni della chiave dell'indice e mantenendone l'efficienza.  
   
--   Includere colonne non chiave in un indice non cluster per evitare il superamento delle limitazioni di dimensione correnti degli indici, ovvero numero massimo di colonne chiave pari a 32 e dimensione massima delle chiavi di indice pari a 1.700 byte (16 colonne chiave e 900 byte prima di [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]). Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non prende in esame le colonne non chiave durante il calcolo del numero di colonne chiave indice o della dimensione delle chiavi di indice.  
+-   Includere colonne non chiave in un indice non cluster per evitare il superamento delle limitazioni di dimensione correnti degli indici, ovvero numero massimo di colonne chiave pari a 32 e dimensione massima delle chiavi di indice pari a 1.700 byte (16 colonne chiave e 900 byte prima di [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)]). Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non prende in esame le colonne non chiave durante il calcolo del numero di colonne chiave indice o della dimensione delle chiavi di indice.  
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   

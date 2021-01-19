@@ -31,12 +31,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eca1dbef6ff7d519200e46cff7879d7cb0a9b128
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 991a30108d0683d89d8bece48eb0d2de1c1e0d37
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478252"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171883"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>Risolvere la frammentazione degli indici tramite riorganizzazione o ricompilazione di questi
 
@@ -110,7 +110,7 @@ Una volta noto il grado di frammentazione dell'indice, usare la tabella seguente
 |Valore di **computed fragmentation in percent**|Si applica alla versione|Istruzione correttiva|
 |-----------------------------------------------|--------------------------|--------------------------|
 |> = 20%|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|ALTER INDEX REBUILD|
-|> = 20%|A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|ALTER INDEX REORGANIZE|
+|> = 20%|A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]|ALTER INDEX REORGANIZE|
 
 ### <a name="to-check-the-fragmentation-of-a-rowstore-index-using-tsql"></a>Per controllare la frammentazione di un indice rowstore usando [!INCLUDE[tsql](../../includes/tsql-md.md)]
 
@@ -234,7 +234,7 @@ La ricompilazione di un indice consiste nell'eliminazione e nella ricreazione de
 - Per gli [indici columnstore](columnstore-indexes-overview.md), la ricompilazione ha l'effetto di rimuovere la frammentazione, spostare tutte le righe nel columnstore e recuperare spazio su disco eliminando fisicamente le righe che sono state eliminate logicamente dalla tabella. 
   
   > [!TIP]
-  > A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la ricompilazione dell'indice columnstore in genere non è necessaria perché `REORGANIZE` esegue gran parte della ricompilazione in background come operazione online. 
+  > A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], la ricompilazione dell'indice columnstore in genere non è necessaria perché `REORGANIZE` esegue gran parte della ricompilazione in background come operazione online. 
   
   Per esempi di sintassi, vedere [Esempi: Indici Columnstore](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes).
 
@@ -382,7 +382,7 @@ Ricompilare una partizione dopo il caricamento dei dati assicura che tutti i dat
 
 ## <a name="considerations-specific-to-reorganizing-a-columnstore-index"></a>Considerazioni specifiche per la riorganizzazione di un indice columnstore
 
-Durante la riorganizzazione di un indice columnstore, il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] comprime tutti i rowgroup differenziali CLOSED nel columnstore come rowgroup compresso. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], il comando `REORGANIZE` esegue online le ottimizzazioni di deframmentazione aggiuntive seguenti:
+Durante la riorganizzazione di un indice columnstore, il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] comprime tutti i rowgroup differenziali CLOSED nel columnstore come rowgroup compresso. A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], il comando `REORGANIZE` esegue online le ottimizzazioni di deframmentazione aggiuntive seguenti:
 
 - Rimuove fisicamente le righe da un rowgroup quando più del 10% delle righe è stato eliminato in modo logico. I byte eliminati vengono recuperati sui supporti fisici. Ad esempio, se in un rowgroup compresso di 1 milione di righe 100.000 righe sono state eliminate, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rimuoverà le righe eliminate e ricomprimerà il rowgroup con 900.000 righe. Esegue il salvataggio nell'archiviazione rimuovendo le righe eliminate.
 

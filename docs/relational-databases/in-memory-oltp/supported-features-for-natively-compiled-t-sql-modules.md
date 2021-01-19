@@ -12,12 +12,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3624ab326c6712805d934839fe9403cfe14410e8
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 42d638afd9fc98fb68eb024c0a712bea5f278a26
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485133"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170223"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Funzionalità supportate per i moduli T-SQL compilati in modo nativo
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,20 +42,20 @@ Clausola SELECT:
 -   Alias di nomi e colonne (usando la sintassi AS o =).  
 
 -   Sottoquery scalari
-    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], le sottoquery scalari sono supportate per i moduli compilati in modo nativo.
+    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)].
+      A partire da [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], le sottoquery scalari sono supportate per i moduli compilati in modo nativo.
 
 -   TOP*  
 
 -   SELECT DISTINCT  
-    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], l'operatore DISTINCT è supportato in moduli compilati in modo nativo.
+    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)].
+      A partire da [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], l'operatore DISTINCT è supportato in moduli compilati in modo nativo.
 
         - Le aggregazioni DISTINCT non sono supportate.  
 
 -   UNION e UNION ALL
-    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], gli operatori UNION e UNION ALL sono supportati in moduli compilati in modo nativo.
+    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)].
+      A partire da [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], gli operatori UNION e UNION ALL sono supportati in moduli compilati in modo nativo.
 
 -   Assegnazioni di variabili  
 
@@ -66,12 +66,12 @@ Clausola FROM:
 -   FROM \<natively compiled inline TVF>  
 
 -   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN e INNER JOIN.
-    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], gli operatori JOINS sono supportati in moduli compilati in modo nativo.
+    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)].
+      A partire da [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], gli operatori JOINS sono supportati in moduli compilati in modo nativo.
 
 -   Sottoquery `[AS] table_alias`. Per altre informazioni, vedere [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md). 
-    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], le sottoquery sono supportate in moduli compilati in modo nativo.
+    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)].
+      A partire da [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], le sottoquery sono supportate in moduli compilati in modo nativo.
 
 Clausola WHERE:  
 
@@ -79,8 +79,8 @@ Clausola WHERE:
 
 -   AND, BETWEEN  
 -   OR, NOT, IN, EXISTS
-    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], gli operatori OR/NOT/IN/EXISTS sono supportati in moduli compilati in modo nativo.
+    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)].
+      A partire da [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], gli operatori OR/NOT/IN/EXISTS sono supportati in moduli compilati in modo nativo.
 
 
 Clausola[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) :

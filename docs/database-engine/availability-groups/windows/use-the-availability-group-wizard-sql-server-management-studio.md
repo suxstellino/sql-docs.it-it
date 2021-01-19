@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: f4361019a3f65dbe1fc4a1b65fe54e388175a84d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 59b0e82558e14e29e4fad69ddc86b76d982a634a
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641773"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171103"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Utilizzare la Creazione guidata Gruppo di disponibilità (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -105,7 +105,7 @@ Nella maggior parte dei casi, è possibile usare la Creazione guidata Gruppo di 
   
     -   **Seeding automatico**  
   
-         SQL Server crea automaticamente le repliche secondarie per ogni database nel gruppo. Il seeding automatico richiede che il percorso dei dati e del file di log sia lo stesso in ogni istanza di SQL Server inclusa nel gruppo. Disponibile in [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] e versioni successive. Vedere [Inizializzare automaticamente un gruppo di disponibilità Always On](automatically-initialize-always-on-availability-group.md).
+         SQL Server crea automaticamente le repliche secondarie per ogni database nel gruppo. Il seeding automatico richiede che il percorso dei dati e del file di log sia lo stesso in ogni istanza di SQL Server inclusa nel gruppo. Disponibile in [!INCLUDE[sssql16-md.md](../../../includes/sssql16-md.md)] e versioni successive. Vedere [Inizializzare automaticamente un gruppo di disponibilità Always On](automatically-initialize-always-on-availability-group.md).
     
     -   **Backup completo di database e log**  
   

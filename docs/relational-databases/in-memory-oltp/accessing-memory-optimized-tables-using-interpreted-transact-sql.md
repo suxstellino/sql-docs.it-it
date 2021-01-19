@@ -11,12 +11,12 @@ ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 63e19c205bf635257d8b5b4957fe64b6ec310c64
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c88fd07e9af86a3c12561935364514b23bc2ea91
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465462"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172283"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Accesso alle tabelle con ottimizzazione per la memoria utilizzando codice Transact-SQL interpretato
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "97465462"
   
 [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato fa riferimento a batch o stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] diverse da stored procedure compilate in modo nativo. L'accesso [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato a tabelle ottimizzate per la memoria è denominato accesso di interoperabilità.  
 
-A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], le query in [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato possono analizzare le tabelle ottimizzate per la memoria in parallelo, invece che solo in modalità seriale.
+A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], le query in [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato possono analizzare le tabelle ottimizzate per la memoria in parallelo, invece che solo in modalità seriale.
 
 È inoltre possibile accedere alle tabelle con ottimizzazione per la memoria tramite una stored procedure compilata in modo nativo. Le stored procedure compilate in modo nativo sono consigliate in caso di operazioni OLTP critiche per le prestazioni.  
   

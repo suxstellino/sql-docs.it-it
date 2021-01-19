@@ -56,12 +56,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: eda240576ebb819e387e3fb93d55a06b6a1c1d9e
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 8f884c24acbb4499cbab2e7837367ec49e0c7cbb
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102379"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172323"
 ---
 # <a name="hints-transact-sql---query"></a>Hint (Transact-SQL) - Query
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -217,12 +217,12 @@ IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX
 Impedisce alla query di usare un indice columnstore ottimizzato per la memoria non cluster. Se la query contiene l'hint per la query per evitare l'uso dell'indice columnstore e un hint per l'indice per usare un indice columnstore, gli hint sono in conflitto e la query restituisce un errore.  
   
 MAX_GRANT_PERCENT = <numeric_value>     
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 
 Dimensioni massime della concessione di memoria in percentuale del limite di memoria configurato. Nella query è garantito il non superamento di questo limite. Il limite effettivo può essere inferiore se l'impostazione di Resource Governor è inferiore al valore specificato da questo hint. I valori validi sono compresi tra 0,0 e 100,0.  
   
 MIN_GRANT_PERCENT = <numeric_value>        
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 
 Dimensioni minime della concessione di memoria in percentuale del limite di memoria configurato. Nella query è garantito il recupero del valore `MAX(required memory, min grant)` poiché è necessaria almeno la memoria richiesta per avviare una query. I valori validi sono compresi tra 0,0 e 100,0.  
  
@@ -244,7 +244,7 @@ A causa di questo errore, verrà eseguito il rollback di tutti gli effetti dell'
 Per altre informazioni, vedere [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).     
   
 NO_PERFORMANCE_SPOOL    
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
   
 Impedisce l'aggiunta di un operatore spool ai piani di query (ad eccezione dei piani in cui spool è necessario per garantire una semantica di aggiornamento valida). In alcuni scenari l'operatore spool può ridurre le prestazioni. Ad esempio, poiché lo spool usa tempdb potrebbe verificarsi un conflitto per tempdb in presenza di numerose query simultanee in esecuzione con le operazioni di spooling.  
   
@@ -296,7 +296,7 @@ Impone in Query Optimizer l'applicazione di un piano che funziona anche con dime
 Se non è possibile implementare tale piano, Query Optimizer restituisce un errore invece di posticipare il rilevamento degli errori fino all'esecuzione della query. Le righe possono includere colonne di lunghezza variabile. In [!INCLUDE[ssDE](../../includes/ssde-md.md)] è consentito definire righe con dimensioni massime superiori alla capacità di elaborazione di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. In un'applicazione tuttavia vengono in genere archiviate righe le cui dimensioni effettive rientrano nei limiti della capacità di elaborazione di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Se [!INCLUDE[ssDE](../../includes/ssde-md.md)] rileva una riga di lunghezza eccessiva, viene restituito un errore di esecuzione.  
  
 <a name="use_hint"></a> USE HINT ( **'** _hint\_name_ **'** )    
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
  
 Specifica uno o più hint aggiuntivi per Query Processor. Gli hint aggiuntivi vengono specificati tramite un nome di hint **racchiuso tra virgolette singole**.   
 
@@ -359,7 +359,7 @@ Sono supportati i nomi di hint seguenti:
     
 *  'QUERY_PLAN_PROFILE'      
  Abilita la profilatura leggera per la query. Quando una query contenente questo nuovo hint termina, viene generato un nuovo evento esteso, query_plan_profile. Questo evento esteso espone le statistiche di esecuzione e il codice XML del piano di esecuzione effettivo in modo simile all'evento esteso query_post_execution_showplan, ma solo per le query contenenti il nuovo hint.    
-   **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11). 
+   **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 CU3 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11). 
 
    > [!NOTE]
    > Se si abilita la raccolta dell'evento esteso query_post_execution_showplan, verrà aggiunta un'infrastruttura di profilatura standard a ogni query in esecuzione nel server e le prestazioni generali del server potrebbero rallentare.      

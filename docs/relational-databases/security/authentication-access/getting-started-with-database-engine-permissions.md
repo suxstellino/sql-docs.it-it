@@ -14,12 +14,12 @@ ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81bb8dd3acae7fda65af0ada009b065c909506b3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 41b69dfc9cc5564025fd7b28d14094389ff52450
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460063"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171693"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Introduzione alle autorizzazioni del motore di database
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -100,7 +100,7 @@ AUTHORIZATION  PERMISSION  ON  SECURABLE::NAME  TO  PRINCIPAL;
   
 -   `AUTHORIZATION` deve essere `GRANT`, `REVOKE` o `DENY`.  
   
--   `PERMISSION` stabilisce l'azione consentita o quella non consentita. [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] può specificare 230 autorizzazioni. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] contiene meno autorizzazioni perché alcune azioni non sono rilevanti in Azure. Le autorizzazioni sono elencate nell'argomento [Autorizzazioni &#40;motore di database&#41;](../../../relational-databases/security/permissions-database-engine.md) e nel grafico riportato più avanti.  
+-   `PERMISSION` stabilisce l'azione consentita o quella non consentita. [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] può specificare 230 autorizzazioni. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] contiene meno autorizzazioni perché alcune azioni non sono rilevanti in Azure. Le autorizzazioni sono elencate nell'argomento [Autorizzazioni &#40;motore di database&#41;](../../../relational-databases/security/permissions-database-engine.md) e nel grafico riportato più avanti.  
   
 -   `ON SECURABLE::NAME` specifica il tipo di oggetto a protezione diretta (server, oggetto server, database o oggetto di database) e il nome corrispondente. Alcune autorizzazioni non richiedono `ON SECURABLE::NAME` perché non è ambiguo o non è appropriato nel contesto. Ad esempio, con l'autorizzazione `CREATE TABLE` non è richiesta la clausola `ON SECURABLE::NAME`. Ad esempio, l'istruzione `GRANT CREATE TABLE TO Mary;` consente a Mary di creare tabelle.  
   
@@ -157,7 +157,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
  La prima autorizzazione elencata in precedenza (`GRANT SELECT ON OBJECT::Region TO Ted;`) è la più granulare, ovvero tale istruzione è l'autorizzazione minima possibile che concede l'autorizzazione `SELECT`. Non sono incluse autorizzazioni per gli oggetti subordinati. È un ottimo principio concedere sempre l'autorizzazione minima possibile, ma (contraddicendo ciò) concederla a livelli superiori per semplificare il sistema di concessione. Se quindi Ted deve ottenere le autorizzazioni per l'intero schema, concedere `SELECT` una sola volta a livello di schema, anziché concedere `SELECT` molte volte a livello di tabella o di vista. La progettazione del database ha un notevole impatto sull'efficacia di questa strategia. Questa strategia funziona meglio quando il database viene progettato in modo tale che gli oggetti che devono ottenere autorizzazioni identiche vengano inclusi in un singolo schema.  
   
 ## <a name="list-of-permissions"></a>Elenco di autorizzazioni  
- [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] contiene 230 autorizzazioni. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] contiene 219 autorizzazioni. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] contiene 214 autorizzazioni. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] contiene 195 autorizzazioni. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]e la [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] contengono meno autorizzazioni perché espongono solo una parte del motore di database, anche se contengono alcune autorizzazioni che non si applicano a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
+ [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] contiene 230 autorizzazioni. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] contiene 219 autorizzazioni. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] contiene 214 autorizzazioni. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] contiene 195 autorizzazioni. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]e la [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] contengono meno autorizzazioni perché espongono solo una parte del motore di database, anche se contengono alcune autorizzazioni che non si applicano a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
  
  [!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
  

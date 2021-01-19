@@ -55,12 +55,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01a80dd71397a4528c1d56882cec5934d750bb8f
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c472b3996683512fb6ac7cd3f001d53ca1fd73ae
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093513"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170683"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -90,7 +90,7 @@ CREATE UNIQUE INDEX i1 ON t1 (col1 DESC, col2 ASC, col3 DESC);
 
 **Scenario chiave:**
 
-A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)], usare un indice non cluster per un indice columnstore per migliorare le prestazioni delle query di data warehousing. Per altre informazioni, vedere [Indici columnstore - Data warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md).
+A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)], usare un indice non cluster per un indice columnstore per migliorare le prestazioni delle query di data warehousing. Per altre informazioni, vedere [Indici columnstore - Data warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md).
 
 Per altri tipi di indici, vedere:
 
@@ -250,7 +250,7 @@ Se non diversamente specificato, il tipo di indice predefinito è NONCLUSTERED.
 *column*      
  Una o più colonne su cui è basato l'indice. Specificare due o più nomi di colonna per creare un indice composto sui valori combinati delle colonne specificate. Elencare le colonne da includere nell'indice composto, in base alla priorità di ordinamento, tra parentesi dopo *table_or_view_name*.
 
-In una singola chiave di indice composto è possibile combinare al massimo 32 colonne. Tutte le colonne di una chiave di indice composto devono appartenere alla stessa tabella o vista. La dimensione massima consentita dei valori combinati dell'indice è 900 byte per un indice cluster o 1700 per un indice non cluster. I limiti sono 16 colonne e 900 byte per le versioni precedenti a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].
+In una singola chiave di indice composto è possibile combinare al massimo 32 colonne. Tutte le colonne di una chiave di indice composto devono appartenere alla stessa tabella o vista. La dimensione massima consentita dei valori combinati dell'indice è 900 byte per un indice cluster o 1700 per un indice non cluster. I limiti sono 16 colonne e 900 byte per le versioni precedenti a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)].
 
 Le colonne con tipo di dati LOB (Large Object) **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml** o **image** non possono essere specificate come colonne chiave di un indice. Inoltre, una definizione di vista non può includere colonne di tipo **ntext**, **text** o **image** anche se non vi viene fatto riferimento nell'istruzione CREATE INDEX.
 
@@ -351,7 +351,7 @@ Nome della tabella o della vista che si desidera indicizzare.
 
 Per poter creare un indice per una vista, è necessario che la vista sia definita con l'opzione SCHEMABINDING. Prima di creare qualsiasi indice non cluster per una vista, è necessario creare un indice cluster univoco. Per ulteriori informazioni sulle viste indicizzate, vedere la sezione Osservazioni.
 
-A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] l'oggetto può essere una tabella archiviata con un indice columnstore cluster.
+A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] l'oggetto può essere una tabella archiviata con un indice columnstore cluster.
 
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supporta il formato del nome in tre parti _database_name_.[_schema_name_]._object_name_ quando *database_name* è il database corrente o _database_name_ è `tempdb`e _object_name_ inizia con #.
 
@@ -621,7 +621,7 @@ Gli indici supportano proprietà estese.
 La creazione di un indice cluster per una tabella (heap) e l'eliminazione e la ricreazione di un indice cluster esistente richiedono la disponibilità di un'area di lavoro aggiuntiva nel database per contenere l'ordinamento dei dati e una copia temporanea della tabella originale o dei dati dell'indice cluster esistenti. Per altre informazioni sugli indici cluster, vedere [Creare indici cluster](../../relational-databases/indexes/create-clustered-indexes.md) e [Architettura e guida per la progettazione degli indici di SQL Server](../../relational-databases/sql-server-index-design-guide.md).
 
 ## <a name="nonclustered-indexes"></a>Indici non cluster
-A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] è possibile creare un indice non cluster per una tabella archiviata come indice columnstore cluster. Se si crea prima un indice non cluster per una tabella archiviata come heap o indice cluster, l'indice verrà conservato se in un secondo tempo la tabella viene convertita in un indice columnstore cluster. Non è inoltre necessario eliminare l'indice non cluster quando si ricompila l'indice columnstore cluster.
+A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] è possibile creare un indice non cluster per una tabella archiviata come indice columnstore cluster. Se si crea prima un indice non cluster per una tabella archiviata come heap o indice cluster, l'indice verrà conservato se in un secondo tempo la tabella viene convertita in un indice columnstore cluster. Non è inoltre necessario eliminare l'indice non cluster quando si ricompila l'indice columnstore cluster.
 
 Limitazioni e restrizioni:
 
@@ -682,7 +682,7 @@ Per informazioni sugli indici spaziali, vedere [CREATE SPATIAL INDEX](../../t-sq
 Per informazioni sugli indici XML, vedere [CREATE XML INDEX](../../t-sql/statements/create-xml-index-transact-sql.md) e [Indici XML (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md).
 
 ## <a name="index-key-size"></a>Dimensione della chiave di indice
-La dimensione massima per una chiave di indice è 900 byte per un indice cluster e 1700 byte per un indice non cluster. Prima di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] il limite era sempre 900 byte. È possibile creare indici su colonne **varchar** che superano il limite di byte se i dati esistenti nelle colonne non superano tale limite quando l'indice viene creato. Le successive operazioni di inserimento o aggiornamento nelle colonne che determinano l'aumento della dimensione totale oltre il limite avranno tuttavia esito negativo. La chiave di indice di un indice cluster non può contenere colonne di tipo **varchar** con dati esistenti nell'unità di allocazione ROW_OVERFLOW_DATA. Se viene creato un indice cluster in una colonna **varchar** e i dati esistenti si trovano nell'unità di allocazione IN_ROW_DATA, le azioni di inserimento o aggiornamento successive eseguite nella colonna che comporterebbero lo spostamento dei dati all'esterno delle righe avranno esito negativo.
+La dimensione massima per una chiave di indice è 900 byte per un indice cluster e 1700 byte per un indice non cluster. Prima di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] il limite era sempre 900 byte. È possibile creare indici su colonne **varchar** che superano il limite di byte se i dati esistenti nelle colonne non superano tale limite quando l'indice viene creato. Le successive operazioni di inserimento o aggiornamento nelle colonne che determinano l'aumento della dimensione totale oltre il limite avranno tuttavia esito negativo. La chiave di indice di un indice cluster non può contenere colonne di tipo **varchar** con dati esistenti nell'unità di allocazione ROW_OVERFLOW_DATA. Se viene creato un indice cluster in una colonna **varchar** e i dati esistenti si trovano nell'unità di allocazione IN_ROW_DATA, le azioni di inserimento o aggiornamento successive eseguite nella colonna che comporterebbero lo spostamento dei dati all'esterno delle righe avranno esito negativo.
 
 Negli indici non cluster possono essere incluse colonne non chiave nel relativo livello foglia. Queste colonne non vengono considerate dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] durante il calcolo della dimensione della chiave di indice. Per altre informazioni, vedere [Creare indici con colonne incluse](../../relational-databases/indexes/create-indexes-with-included-columns.md) e [Architettura e guida per la progettazione degli indici di SQL Server](../../relational-databases/sql-server-index-design-guide.md).
 

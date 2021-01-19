@@ -47,12 +47,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016'
-ms.openlocfilehash: 4f0529b6b6a60c2c4997c9f9d49ad9e76efa8455
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 55b1a81a5cbb5078f331df0fb7f1f93048555337
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644431"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170563"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -250,7 +250,7 @@ Specifica un file su disco o un dispositivo a nastri oppure un servizio di archi
 > [!NOTE]
 > Il dispositivo del disco NUL elimina tutte le informazioni inviate al dispositivo e deve essere usato solo per i test. Non è progettato per l'uso in produzione.
 > [!IMPORTANT]
-> Da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], è possibile eseguire un backup solo in un singolo dispositivo per i backup in URL. Per eseguire il backup in più dispositivi durante il backup nell'URL, è necessario usare l[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive ed è necessario usare i token di firma di accesso condiviso (SAS). Per esempi di creazione di una firma di accesso condiviso, vedere [Backup di SQL Server nell'URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) e [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell) (Semplificazione della creazione di credenziali SQL con token di firma di accesso condiviso (SAS) in Archiviazione di Azure con Powershell).
+> Da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], è possibile eseguire un backup solo in un singolo dispositivo per i backup in URL. Per eseguire il backup in più dispositivi durante il backup nell'URL, è necessario usare l[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive ed è necessario usare i token di firma di accesso condiviso (SAS). Per esempi di creazione di una firma di accesso condiviso, vedere [Backup di SQL Server nell'URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) e [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell) (Semplificazione della creazione di credenziali SQL con token di firma di accesso condiviso (SAS) in Archiviazione di Azure con Powershell).
 
 **URL si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 e versioni successive).
 
@@ -288,7 +288,7 @@ Opzioni da utilizzare con un'operazione di backup.
 CREDENTIAL **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 e versioni successive).
 Usata solo quando si crea un backup nel servizio di archiviazione BLOB di Microsoft Azure.
 
-FILE_SNAPSHOT **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive).
+FILE_SNAPSHOT **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive).
 
 Usato per creare uno snapshot di Azure dei file di database quando tutti i file di database di SQL Server vengono archiviati usando il servizio di archiviazione BLOB di Azure. Per altre informazioni, vedere [File di dati di SQL Server in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). Il backup di snapshot di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acquisisce snapshot di Azure dei file di database (file di dati e file di log) in uno stato coerente. Un set coerente di snapshot di Azure costituisce un backup e viene registrato nel file di backup. L'unica differenza tra `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` e `BACKUP LOG TO URL WITH FILE_SNAPSHOT` è che quest'ultimo esegue anche il troncamento del log delle transazioni mentre il primo non esegue alcun troncamento. Con il backup di snapshot di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dopo il backup completo iniziale richiesto da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per stabilire la catena di backup, è necessario un solo backup del log delle transazioni per ripristinare un database nel punto nel tempo del backup del log delle transazioni. Inoltre, sono necessari solo due backup del log delle transazioni per ripristinare un database in un punto nel tempo compreso tra i due backup del log delle transazioni.
 
@@ -696,7 +696,7 @@ Non è possibile utilizzare l'istruzione BACKUP in una transazione esplicita o i
 
 È possibile eseguire operazioni di backup tra piattaforme diverse e anche tra tipi di processore diversi, a condizione che le regole di confronto del database siano supportate dal sistema operativo.
 
-A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], impostando `MAXTRANSFERSIZE` su un valore **maggiore di 65536 (64 KB)** si abilita un algoritmo di compressione ottimizzato per i database con crittografia [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) che esegue innanzitutto la decrittografia di una pagina, la comprime e quindi ne esegue nuovamente la crittografia. Se il parametro `MAXTRANSFERSIZE` non viene specificato o se viene usato il valore `MAXTRANSFERSIZE = 65536` (64 KB), la compressione di backup con i database con crittografia TDE comprime direttamente le pagine crittografate e potrebbe non produrre rapporti di compressione validi. Per altre informazioni, vedere [Backup Compression for TDE-enabled Databases](/archive/blogs/sqlcat/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases) (Compressione dei backup per i database con TDE).
+A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], impostando `MAXTRANSFERSIZE` su un valore **maggiore di 65536 (64 KB)** si abilita un algoritmo di compressione ottimizzato per i database con crittografia [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) che esegue innanzitutto la decrittografia di una pagina, la comprime e quindi ne esegue nuovamente la crittografia. Se il parametro `MAXTRANSFERSIZE` non viene specificato o se viene usato il valore `MAXTRANSFERSIZE = 65536` (64 KB), la compressione di backup con i database con crittografia TDE comprime direttamente le pagine crittografate e potrebbe non produrre rapporti di compressione validi. Per altre informazioni, vedere [Backup Compression for TDE-enabled Databases](/archive/blogs/sqlcat/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases) (Compressione dei backup per i database con TDE).
 
 A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5, non è più necessario impostare `MAXTRANSFERSIZE` per abilitare questo algoritmo di compressione ottimizzato con TDE. Se viene specificato il comando di backup `WITH COMPRESSION` o la configurazione server *Valore predefinito di compressione backup* è impostata su 1, il valore `MAXTRANSFERSIZE` verrà automaticamente aumentato a 128 KB per abilitare l'algoritmo ottimizzato. Se `MAXTRANSFERSIZE` viene specificato nel comando di backup con un valore > 64K, il valore definito verrà rispettato. In altre parole, SQL Server non ridurrà mai il valore in modo automatico, ma lo aumenterà soltanto. Se è necessario eseguire il backup di un database con crittografia TDE con `MAXTRANSFERSIZE = 65536`, è necessario specificare `WITH NO_COMPRESSION` o assicurarsi che la configurazione server *Valore predefinito di compressione backup* sia impostata su 0.
 

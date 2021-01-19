@@ -27,12 +27,12 @@ ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8165d82fa5db393b3f2f66737910ba4de9d11a8
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 6af1077d46fa6378e0853eb570ba560d49e6eaec
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97473882"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171343"
 ---
 # <a name="memory-management-architecture-guide"></a>guida sull'architettura di gestione della memoria
 
@@ -97,7 +97,7 @@ Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.m
 A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], le allocazioni di pagine singole, le allocazioni di più pagine e le allocazioni CLR sono tutte consolidate in un **allocatore di pagine di "qualsiasi dimensione"** e sono incluse nei limiti di memoria controllati dalle opzioni di configurazione *max server memory (MB)* e *min server memory (MB)* . Questa modifica introduce capacità di ridimensionamento più accurate per tutti i requisiti di memoria che passano attraverso lo strumento di gestione della memoria di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
 
 > [!IMPORTANT]
-> Controllare con attenzione le configurazioni correnti di *max server memory (MB)* e *min server memory (MB)* dopo l'aggiornamento alle versioni da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Infatti, a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], queste configurazioni ora includono e tengono conto di più allocazioni di memoria rispetto alle versioni precedenti. Queste modifiche sono valide sia per le versioni a 32 bit che a 64 bit di [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], sia per le versioni da [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] a 64 bit.
+> Controllare con attenzione le configurazioni correnti di *max server memory (MB)* e *min server memory (MB)* dopo l'aggiornamento alle versioni da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Infatti, a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], queste configurazioni ora includono e tengono conto di più allocazioni di memoria rispetto alle versioni precedenti. Queste modifiche sono valide sia per le versioni a 32 bit che a 64 bit di [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], sia per le versioni da [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] a 64 bit.
 
 La tabella seguente indica se un tipo specifico di allocazione di memoria è controllato dalle opzioni di configurazione *max server memory (MB)* e *min server memory (MB)* :
 
@@ -341,9 +341,9 @@ Gli allocatori di heap, detti oggetti memoria in [!INCLUDE[ssNoVersion](../inclu
 Tuttavia, l'uso di mutex può causare contese se molti thread eseguono l'allocazione dallo stesso oggetto memoria in modo estremamente simultaneo. Pertanto, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta il concetto di oggetti memoria partizionati (PMO, Partitioned Memory Objects) e ogni partizione è rappresentata da un singolo oggetto CMemThread. Il partizionamento di un oggetto memoria è definito in modo statico e non può essere modificato dopo la creazione. Poiché i modelli di allocazione della memoria variano notevolmente in base ad aspetti quali l'utilizzo di hardware e memoria, non è possibile stabilire in anticipo il modello di partizionamento perfetto. Nella maggior parte dei casi, l'uso di una singola partizione è sufficiente, ma in alcuni scenari questo può causare contese che possono essere evitate solo con un oggetto memoria con partizionamento elevato. Non è consigliabile partizionare ogni oggetto memoria poiché più partizioni possono causare altre inefficienze e aumentare la frammentazione della memoria.
 
 > [!NOTE]
-> Prima di [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], era possibile usare il flag di traccia 8048 per forzare la conversione di un PMO basato su nodo in un PMO basato su CPU. A partire da [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] questo comportamento è dinamico e controllato dal motore.
+> Prima di [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], era possibile usare il flag di traccia 8048 per forzare la conversione di un PMO basato su nodo in un PMO basato su CPU. A partire da [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] questo comportamento è dinamico e controllato dal motore.
 
-A partire da [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], il [!INCLUDE[ssde_md](../includes/ssde_md.md)] può rilevare in modo dinamico la contesa per un oggetto CMemThread specifico e innalzare di livello l'oggetto a un'implementazione basata su nodo o su CPU.  L'innalzamento di livello del PMO rimane attivo fino al riavvio del processo di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La contesa di CMemThread può essere rilevata dalla presenza di attese CMEMTHREAD elevate nella DMV [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) e osservando le colonne *contention_factor*, *partition_type* *exclusive_allocations_count* e *waiting_tasks_count* della DMV [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).
+A partire da [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], il [!INCLUDE[ssde_md](../includes/ssde_md.md)] può rilevare in modo dinamico la contesa per un oggetto CMemThread specifico e innalzare di livello l'oggetto a un'implementazione basata su nodo o su CPU.  L'innalzamento di livello del PMO rimane attivo fino al riavvio del processo di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La contesa di CMemThread può essere rilevata dalla presenza di attese CMEMTHREAD elevate nella DMV [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) e osservando le colonne *contention_factor*, *partition_type* *exclusive_allocations_count* e *waiting_tasks_count* della DMV [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).
 
 ## <a name="see-also"></a>Vedere anche
 [Opzioni di configurazione del server Server Memory](../database-engine/configure-windows/server-memory-server-configuration-options.md)   

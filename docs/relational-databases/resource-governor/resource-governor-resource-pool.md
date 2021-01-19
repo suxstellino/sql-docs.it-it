@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: d7de8dcd6291330e2e18136e2c16e16b36f3ef71
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: 4028f19dc9d7ac319b083b5e6077021da59e7a9b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96506565"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172313"
 ---
 # <a name="resource-governor-resource-pool"></a>Pool di risorse di Resource Governor
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -105,7 +105,7 @@ Il pool interno rappresenta le risorse utilizzate da [!INCLUDE[ssNoVersion](../.
   
 **Pool predefinito**  
   
-Il pool predefinito è il primo pool utente predefinito. Prima della configurazione il pool predefinito contiene solo il gruppo predefinito. Il pool predefinito non può essere creato o eliminato ma può essere modificato. Il pool predefinito può contenere gruppi definiti dall'utente oltre al gruppo predefinito. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] è presente un pool di risorse predefinito per le operazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di routine e un pool di risorse esterno predefinito per i processi esterni, ad esempio l'esecuzione di script R.  
+Il pool predefinito è il primo pool utente predefinito. Prima della configurazione il pool predefinito contiene solo il gruppo predefinito. Il pool predefinito non può essere creato o eliminato ma può essere modificato. Il pool predefinito può contenere gruppi definiti dall'utente oltre al gruppo predefinito. A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] è presente un pool di risorse predefinito per le operazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di routine e un pool di risorse esterno predefinito per i processi esterni, ad esempio l'esecuzione di script R.  
   
 > [!NOTE]  
 >  Il gruppo predefinito può essere modificato ma non può essere spostato all'esterno del pool predefinito.  
