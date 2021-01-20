@@ -5257,7 +5257,7 @@
                       href: relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md
                 - name: Replica transazionale
                   href: relational-databases/replication/administration/enhance-transactional-replication-performance.md
-            - name: Sicurezza
+            - name: Security
               items:
                 - name: Database di distribuzione
                   href: relational-databases/replication/security/secure-the-distributor.md
@@ -16441,6 +16441,8 @@
                   href: t-sql/statements/add-sensitivity-classification-transact-sql.md
                 - name: BULK INSERT
                   href: t-sql/statements/bulk-insert-transact-sql.md
+                - name: COPIA
+                  href: t-sql/statements/copy-into-transact-sql.md
                 - name: DELETE
                   href: t-sql/statements/delete-transact-sql.md
                 - name: DISABLE TRIGGER
