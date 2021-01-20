@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cef31b2968ea0241b3c999e0dbd781d70974b360
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c590a76696f2729bf5d1c6c5d4ca5b0242a63df6
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426973"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596730"
 ---
 # <a name="connect-to-db2-db2tosql"></a>Connettersi a DB2 (DB2ToSQL)
 Utilizzare la finestra di dialogo **Connetti a DB2** per connettersi al database DB2 di cui si desidera eseguire la migrazione.  
   
-Per accedere a questa finestra di dialogo, scegliere **Connetti a DB2**dal menu **file** . Se è già stata effettuata la connessione, il comando viene **riconnesso a DB2**.  
+Per accedere a questa finestra di dialogo, scegliere **Connetti a DB2** dal menu **file** . Se è già stata effettuata la connessione, il comando viene **riconnesso a DB2**.  
   
 ## <a name="options"></a>Opzioni  
 **Provider**  
@@ -70,7 +70,6 @@ Se si usa la modalità stringa di connessione, immettere la stringa di connessio
   
 Le stringhe di connessione sono costituite da coppie di nome e valore del parametro.  
   
--   Per OLE DB informazioni sulle stringhe di connessione, vedere l'articolo relativo [provider Microsoft OLE DB per DB2](https://go.microsoft.com/fwlink/?LinkId=85640) in MSDN Library.  
+-   Per OLE DB informazioni sulle stringhe di connessione, vedere l'articolo relativo [provider Microsoft OLE DB per DB2](../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) in MSDN Library.  
   
 Per le stringhe di connessione SSMA, includere sempre il parametro provider. Inoltre, assicurarsi di includere il parametro della porta quando ci si connette a DB2.  
-  

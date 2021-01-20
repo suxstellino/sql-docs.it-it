@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1b275826c20944d11fb7e88266a882b3834fbfac
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: ec38d7eeed89d03bab4ebd92446517542e2e51a0
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97490091"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596998"
 ---
 # <a name="adventureworks-sample-databases"></a>Database di esempio AdventureWorks
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +63,7 @@ Se non si è certi di cosa è necessario, iniziare con la versione di OLTP che c
 
 # <a name="sql-server-management-studio-ssms"></a>[SQL Server Management Studio (SSMS)](#tab/ssms)
 
-Se non si ha familiarità con SQL Server Management Studio (SSMS), è possibile vedere [connetti & query](../ssms/quickstarts/connect-query-sql-server.md) per iniziare. 
+Se non si ha familiarità con SQL Server Management Studio (SSMS), è possibile vedere [connetti & query](../ssms/quickstarts/ssms-connect-query-sql-server.md) per iniziare. 
 
 Per ripristinare il database in SQL Server Management Studio, attenersi alla procedura seguente:
 
@@ -208,5 +208,5 @@ Dopo aver ripristinato il database di esempio, usare le esercitazioni seguenti p
 
 
 [Esercitazioni per SQL Server motore di database](../relational-databases/database-engine-tutorials.md)   
-[Connettersi ed eseguire query con SQL Server Management Studio (SSMS)](../ssms/quickstarts/connect-query-sql-server.md)   
-[Connettersi ed eseguire query con Azure Data Studio](../ssms/quickstarts/connect-query-sql-server.md)
+[Connettersi ed eseguire query con SQL Server Management Studio (SSMS)](../ssms/quickstarts/ssms-connect-query-sql-server.md)   
+[Connettersi ed eseguire query con Azure Data Studio](../ssms/quickstarts/ssms-connect-query-sql-server.md)

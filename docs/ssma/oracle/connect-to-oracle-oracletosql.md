@@ -10,18 +10,18 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
 ms.author: alexiva
-ms.openlocfilehash: 497c3df711c2cfacbb2774edf791e4c36837bb87
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: 8e13b9ea8bcd264d1668cf0979dc2956bd11bef7
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779043"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596725"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Connettersi a Oracle (OracleToSQL)
 
 Utilizzare la finestra di dialogo **Connetti a Oracle** per connettersi al database Oracle di cui si desidera eseguire la migrazione.
 
-Per accedere a questa finestra di dialogo, scegliere **Connetti a Oracle**dal menu **file** . Se è già stata effettuata la connessione, il comando viene **riconnesso a Oracle**.
+Per accedere a questa finestra di dialogo, scegliere **Connetti a Oracle** dal menu **file** . Se è già stata effettuata la connessione, il comando viene **riconnesso a Oracle**.
 
 ## <a name="options"></a>Opzioni
 
@@ -70,7 +70,7 @@ Se si utilizza la modalità stringa di connessione, immettere la stringa di conn
 
 Le stringhe di connessione sono costituite da coppie di nome e valore del parametro.
 
-- Per OLE DB informazioni sulle stringhe di connessione, vedere l'articolo relativo [provider Microsoft OLE DB per Oracle](https://go.microsoft.com/fwlink/?LinkId=85640) in MSDN Library.
+- Per OLE DB informazioni sulle stringhe di connessione, vedere l'articolo relativo [provider Microsoft OLE DB per Oracle](../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) in MSDN Library.
 
 Per le stringhe di connessione SSMA, includere sempre il parametro provider. Inoltre, assicurarsi di includere il parametro della porta quando ci si connette a Oracle.
 

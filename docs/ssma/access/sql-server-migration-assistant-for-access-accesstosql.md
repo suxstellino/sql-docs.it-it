@@ -11,12 +11,12 @@ ms.assetid: 40c1eb02-26b2-44ba-969d-6c430c61c281
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: fdb846a0b43bd9816faf931d936c456093ac26e3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 25e7694505f7f67702f476983c33120a87539887
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934009"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596417"
 ---
 # <a name="sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant per Access (AccessToSQL)
 
@@ -28,7 +28,7 @@ Questa documentazione presenta SSMA per l'accesso e fornisce istruzioni dettagli
   
 |Sezione|Descrizione|
 |-----------|---------------|
-|[Novità di SSMA per Access](https://msdn.microsoft.com/a24d3fc0-6911-4bfa-828a-197abf222e02)|Elenca le modifiche apportate alle versioni di SSMA.|  
+|[Novità di SSMA per Access](./what-s-new-in-ssma-for-access-accesstosql.md)|Elenca le modifiche apportate alle versioni di SSMA.|  
 |[Installazione di SQL Server Migration Assistant per l'accesso](installing-sql-server-migration-assistant-for-access-accesstosql.md)|Elenca i prerequisiti per l'installazione di SSMA, la procedura per l'installazione e la gestione delle licenze SSMA e un collegamento alla versione più recente.|  
 |[Introduzione con SQL Server Migration Assistant per Access &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)|Introduce SSMA e la relativa interfaccia utente.|  
 |[Preparazione dei database di Access per la migrazione](preparing-access-databases-for-migration-accesstosql.md)|Viene descritto come preparare i database di Access per la conversione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure.|  
@@ -36,4 +36,4 @@ Questa documentazione presenta SSMA per l'accesso e fornisce istruzioni dettagli
 |[Collegamento di applicazioni di accesso a SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)|Viene descritto come utilizzare le applicazioni di accesso esistenti con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Guida di riferimento all'interfaccia utente](user-interface-reference-accesstosql.md)|Contiene la documentazione per le finestre di dialogo SSMA.|  
 |[Utilizzo della console di SSMA per Access](working-with-ssma-for-access-console-accesstosql.md)|Contiene la documentazione sull'applicazione console SSMA|  
-|[Ottenere assistenza SSMA per l'accesso](https://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|Fornisce informazioni su come ottenere assistenza aggiuntiva.|  
+|[Ottenere assistenza SSMA per l'accesso](../sql-server-migration-assistant.md)|Fornisce informazioni su come ottenere assistenza aggiuntiva.|
