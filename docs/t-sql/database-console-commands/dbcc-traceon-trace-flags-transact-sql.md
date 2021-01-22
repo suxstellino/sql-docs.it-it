@@ -2,7 +2,7 @@
 description: DBCC TRACEON - Flag di traccia (Transact-SQL)
 title: Flag di traccia (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2020
+ms.date: 01/19/2021
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 0332cd817851ff1152d6dc476bd757d971e41bc2
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 2cc8cbcc737c1f77c11aee6826ab39bd8b1ec4f1
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170213"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597238"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - Flag di traccia (Transact-SQL)
 
@@ -193,6 +193,7 @@ Nella tabella seguente vengono elencati e descritti i flag di traccia disponibil
 |**9929**|Riduce i file del checkpoint In memoria a 1 MB. Per altre informazioni, vedere questo [articolo del supporto tecnico Microsoft](https://support.microsoft.com/kb/3147012).<br /><br />**Ambito**: solo globale|  
 |**9939**|Abilita i piani paralleli e l'analisi parallela delle tabelle ottimizzate per la memoria e delle variabili di tabella nelle operazioni DML che fanno riferimento a tabelle ottimizzate per la memoria o variabili di tabella, poiché non rappresentano la destinazione dell'operazione DML in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]. Per altre informazioni, vedere questo [articolo del supporto tecnico Microsoft](https://support.microsoft.com/kb/4013877).<br /><br />**Nota:** il flag di traccia 9939 non è necessario se il flag di traccia 4199 è abilitato anche esplicitamente.<br /><br />**Ambito**: globale, sessione o query (QUERYTRACEON)|   
 |**9944**|Abilita una correzione non predefinita per i tempi di recupero lenti del database quando un database ha un numero elevato di tabelle con ottimizzazione per la memoria o di tipi di tabella con ottimizzazione per la memoria e si possono osservare blocchi con tipi di attesa PREMPTIVE_OS_FINDFILE o PREEMPTIVE_OS_CREATEDIRECTORY. Per altre informazioni, vedere questo [articolo del supporto tecnico Microsoft](https://support.microsoft.com/kb/4090789) e questo [articolo del supporto tecnico Microsoft](https://support.microsoft.com/kb/4052338).<br /><br />**Ambito**: solo globale|  
+|**10054**|Disabilita la regola di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Optimizer che consente di decorrelare le sottoquery nei predicati o in outer join.<br /><br />**Nota:** questo flag di traccia si applica a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e build successive.<br /><br />**Nota:** verificare di testare questa opzione prima di distribuirla in un ambiente di produzione.<br /><br />**Ambito**: globale, sessione o query (QUERYTRACEON)| 
 |**10204**|Disabilita l'unione o la ricompressione durante la riorganizzazione di indici columnstore. In [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] quando viene riorganizzato un indice columnstore, è disponibile una nuova funzionalità che consente di unire automaticamente tutti i rowgroup compressi di dimensioni ridotte in rowgroup compressi di dimensioni maggiori e di ricomprimere tutti i rowgroup con un numero elevato di righe eliminate.<br /><br />**Nota:** il flag di traccia 10204 non si applica agli indici columnstore creati in tabelle ottimizzate per la memoria.<br /><br />**Ambito**: globale o sessione|   
 |**10207**|Consente alle analisi degli indici columnstore cluster (CCI) di ignorare i segmenti o i metadati danneggiati, permettendo il recupero dei dati da un indice columnstore cluster danneggiato. Per altre informazioni, vedere questo [articolo del supporto tecnico Microsoft](https://support.microsoft.com/kb/3067257).<br /><br />**Ambito**: globale o sessione| 
 |**10316**|Abilita la creazione di indici aggiuntivi in una [tabella temporale di gestione temporanea ottimizzata per la memoria interna](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md), in aggiunta alla tabella predefinita. Se si usa un modello di query specifico che include colonne che non sono coperte dall'indice predefinito può essere utile aggiungere altre colonne.<br /><br />**Nota:** le tabelle temporali con controllo delle versioni di sistema per le tabelle ottimizzate per la memoria sono progettate per offrire una velocità effettiva transazionale elevata. Tenere presente che la creazione di indici aggiuntivi può comportare un sovraccarico per le operazioni DML che aggiornano o eliminano righe nella tabella corrente. Se vengono aggiunti indici, è consigliabile individuare il giusto equilibrio tra le prestazioni delle query temporali e il sovraccarico aggiuntivo delle operazioni DML.<br /><br />**Ambito**: globale o sessione|

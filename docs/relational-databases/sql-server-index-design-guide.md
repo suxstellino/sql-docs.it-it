@@ -23,12 +23,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d7e51afb97a5ff698ef9a504375783b93ef9640
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: d8e1c8af9fbd147c7a20ae773dc1797026240293
+ms.sourcegitcommit: 0576ce6d7c9c5514306a90e27fa621ef25825186
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170663"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98575737"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Architettura e guida per la progettazione degli indici di SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -69,7 +69,7 @@ Per informazioni sugli indici full-text, vedere [Popolamento degli indici full-t
  <sup>1</sup> Il formato rowstore è il metodo di archiviazione tradizionale per i dati relazionali di tabella. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], rowstore fa riferimento alla tabella in cui il formato di archiviazione dati sottostante è un heap, un albero B ([indice cluster](#Clustered)) o una tabella ottimizzata per la memoria.
 
 ### <a name="index-design-tasks"></a>Attività di progettazione di indici  
- Le attività seguenti costituiscono la strategia consigliata per la progettazione di indici:  
+ Le attività seguenti costituiscono la strategia consigliata per la progettazione degli indici:  
   
 1.  Comprendere le caratteristiche del database. 
     * Ad esempio, si tratta di un database di elaborazione di transazioni online (OLTP) con modifiche frequenti dei dati che deve sostenere una velocità effettiva elevata. A partire da [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], indici e tabelle ottimizzati per la memoria sono particolarmente adatti per questo scenario, in quanto offrono una progettazione priva di latch. Per altre informazioni, vedere [Indici per tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md), oppure [Indici non cluster per le linee guida di progettazione di tabelle ottimizzate per la memoria](#inmem_nonclustered_index) e [Indice Hash per le linee guida di progettazione di tabelle ottimizzate per la memoria](#hash_index) presenti in questa guida.

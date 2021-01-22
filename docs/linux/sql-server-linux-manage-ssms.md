@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.openlocfilehash: 0b118b1daa1b8b825d4b68ff1e436fd2f0b624f2
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
-ms.translationtype: HT
+ms.openlocfilehash: f5ba3ea9260da9e278273ef39d0f5893b67c120e
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115619"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596433"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Usare SQL Server Management Studio in Windows per gestire SQL Server in Linux
 
@@ -143,6 +143,6 @@ Quando un riquadro è espanso, Monitoraggio attività esegue una query sull'ista
 ## <a name="see-also"></a>Vedere anche
 - [Che cos'è SSMS?](../ssms/sql-server-management-studio-ssms.md)
 - [Esportare e importare un database con SSMS](sql-server-linux-migrate-ssms.md)
-- [Esercitazione: SQL Server Management Studio](../ssms/quickstarts/connect-query-sql-server.md)
+- [Esercitazione: SQL Server Management Studio](../ssms/quickstarts/ssms-connect-query-sql-server.md)
 - [Esercitazione: Scrittura di istruzioni Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Monitoraggio delle prestazioni e dell'attività del server](../relational-databases/performance/server-performance-and-activity-monitoring.md)

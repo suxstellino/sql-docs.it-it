@@ -10,12 +10,12 @@ ms.custom: loading
 ms.date: 08/09/2018
 ms.author: chugu
 author: chugugrace
-ms.openlocfilehash: 7b582e5722b19db3569aaa0f154f5b78864a2838
-ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
-ms.translationtype: HT
+ms.openlocfilehash: 06c69fb6b40fad1f6440583b693719767d6ad1d2
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93328505"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597270"
 ---
 # <a name="load-data-into-a-dedicated-sql-pool-in-azure-synapse-analytics-with-sql-server-integration-services-ssis"></a>Caricare dati in un pool SQL dedicato in Azure Synapse Analytics con SQL Server Integration Services (SSIS)
 
@@ -78,13 +78,13 @@ Per continuare l'esercitazione con questa opzione, è necessario quanto segue:
 
 - [Microsoft SQL Server Integration Services Feature Pack per Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]. L'attività SQL DW Upload (Caricamento SQL Data Warehouse) è un componente del Feature Pack.
 
-- Un account di [Archiviazione BLOB di Azure](https://docs.microsoft.com/azure/storage/). L'attività SQL DW Upload carica i dati da Archiviazione BLOB di Azure in Azure Synapse Analytics. È possibile caricare file già presenti nell'archivio BLOB oppure è possibile caricare i file dal computer. Se si selezionano i file nel computer in uso, l'attività SQL DW Upload (Caricamento SQL Data Warehouse) li carica prima di tutto nell'archivio BLOB per lo staging e quindi li carica nel pool SQL dedicato.
+- Un account di [Archiviazione BLOB di Azure](/azure/storage/). L'attività SQL DW Upload carica i dati da Archiviazione BLOB di Azure in Azure Synapse Analytics. È possibile caricare file già presenti nell'archivio BLOB oppure è possibile caricare i file dal computer. Se si selezionano i file nel computer in uso, l'attività SQL DW Upload (Caricamento SQL Data Warehouse) li carica prima di tutto nell'archivio BLOB per lo staging e quindi li carica nel pool SQL dedicato.
 
 ### <a name="add-and-configure-the-sql-dw-upload-task"></a>Aggiungere e configurare l'attività SQL DW Upload (Caricamento SQL Data Warehouse)
 
-1. Trascinare un'attività SQL DW Upload (Caricamento SQL Data Warehouse) dalla casella degli strumenti al centro dell'area di progettazione (nella scheda **Flusso di controllo** ).
+1. Trascinare un'attività SQL DW Upload (Caricamento SQL Data Warehouse) dalla casella degli strumenti al centro dell'area di progettazione (nella scheda **Flusso di controllo**).
 
-2. Fare doppio clic sull'attività per aprire l' **editor dell'attività SQL DW Upload (Caricamento SQL Data Warehouse)** .
+2. Fare doppio clic sull'attività per aprire l'**editor dell'attività SQL DW Upload (Caricamento SQL Data Warehouse)** .
 
     ![Pagina Generale dell'editor dell'attività SQL DW Upload (Caricamento SQL Data Warehouse)](media/load-data-to-sql-data-warehouse/azure-sql-dw-upload-task-editor.png)
 
@@ -117,7 +117,7 @@ Per continuare l'esercitazione con questa opzione, è necessario quanto segue:
 2. **Una regola del firewall**. È necessario creare una regola del firewall nel pool SQL dedicato con l'indirizzo IP del computer locale prima di poter caricare dati nel pool SQL dedicato.
 
 ### <a name="create-the-basic-data-flow"></a>Creare il flusso di dati di base
-1. Trascinare un'attività Flusso di dati dalla casella degli strumenti al centro dell'area di progettazione (nella scheda **Flusso di controllo** ).
+1. Trascinare un'attività Flusso di dati dalla casella degli strumenti al centro dell'area di progettazione (nella scheda **Flusso di controllo**).
    
     ![Screenshot di Visual Studio che mostra un'attività Flusso di dati trascinata nella scheda Flusso di controllo del riquadro Progettazione.][02]
 2. Fare doppio clic sull'attività Flusso di dati per passare alla scheda Flusso di dati.
@@ -127,7 +127,7 @@ Per continuare l'esercitazione con questa opzione, è necessario quanto segue:
     ![Screenshot di un adattatore di destinazione trascinato in una posizione direttamente sotto l'adattatore di origine.][09]
 
 ### <a name="configure-the-source-adapter"></a>Configurare l'adattatore di origine
-1. Fare doppio clic sull'adattatore di origine per aprire l' **Editor origine ADO.NET**.
+1. Fare doppio clic sull'adattatore di origine per aprire l'**Editor origine ADO.NET**.
    
     ![Screenshot dell'Editor origine ADO.NET. La scheda Gestione connessioni è visibile e sono disponibili controlli per la configurazione delle proprietà del flusso di dati.][03]
 2. Nella scheda **Gestione connessione** della finestra **Editor origine ADO.NET** fare clic sul pulsante **Nuovo** accanto all'elenco **Gestione connessione ADO.NET** per aprire la finestra di dialogo **Configura gestione connessione ADO.NET** e creare le impostazioni di connessione per il database di SQL Server da cui questa esercitazione carica i dati.
@@ -147,15 +147,15 @@ Per continuare l'esercitazione con questa opzione, è necessario quanto segue:
        ![Screenshot di una finestra di dialogo in cui sono visualizzati un pulsante OK e un testo che indica che la connessione di test è riuscita.][06]
    6. Nella finestra di dialogo che indica i risultati del test di connessione fare clic su **OK** per tornare alla finestra di dialogo **Gestione connessione**.
    7. Nella finestra di dialogo **Gestione connessione** fare clic su **OK** per ritornare alla finestra di dialogo **Configura gestione connessione ADO.NET**.
-5. Nella finestra di dialogo **Configura gestione connessione ADO.NET** fare clic su **OK** per ritornare all' **Editor origine ADO.NET**.
-6. Nell' **Editor origine ADO.NET** selezionare la tabella **Sales.SalesOrderDetail** nell'elenco **Nome tabella o vista**.
+5. Nella finestra di dialogo **Configura gestione connessione ADO.NET** fare clic su **OK** per ritornare all'**Editor origine ADO.NET**.
+6. Nell'**Editor origine ADO.NET** selezionare la tabella **Sales.SalesOrderDetail** nell'elenco **Nome tabella o vista**.
    
     ![Screenshot dell'Editor origine ADO.NET. Nell'elenco Nome tabella o vista è selezionata la tabella Sales.SalesOrderDetail.][07]
 7. Fare clic su **Anteprima** per visualizzare le prime 200 righe di dati nella tabella di origine nella finestra di dialogo **Anteprima risultati query**.
    
     ![Screenshot della finestra di dialogo Anteprima risultati query. Sono visibili diverse righe di dati di vendita della tabella di origine.][08]
-8. Nella finestra di dialogo **Anteprima risultati query** fare clic su **Chiudi** per ritornare all' **Editor origine ADO.NET**.
-9. Nell' **Editor origine ADO.NET** fare clic su **OK** per completare la configurazione dell'origine dati.
+8. Nella finestra di dialogo **Anteprima risultati query** fare clic su **Chiudi** per ritornare all'**Editor origine ADO.NET**.
+9. Nell'**Editor origine ADO.NET** fare clic su **OK** per completare la configurazione dell'origine dati.
 
 ### <a name="connect-the-source-adapter-to-the-destination-adapter"></a>Connettere l'adattatore di origine all'adattatore di destinazione
 1. Selezionare l'adattatore di origine nell'area di progettazione.
@@ -166,10 +166,10 @@ Per continuare l'esercitazione con questa opzione, è necessario quanto segue:
     In un pacchetto SSIS tipico è possibile usare diversi altri componenti dalla casella degli strumenti SSIS tra l'origine e la destinazione per ristrutturare, trasformare e pulire i dati mentre attraversano il flusso di dati SSIS. Per mantenere questo esempio il più semplice possibile, viene eseguita la connessione dell'origine direttamente alla destinazione.
 
 ### <a name="configure-the-destination-adapter"></a>Configurare l'adattatore di destinazione
-1. Fare doppio clic sull'adattatore di destinazione per aprire l' **Editor destinazione ADO.NET**.
+1. Fare doppio clic sull'adattatore di destinazione per aprire l'**Editor destinazione ADO.NET**.
    
     ![Screenshot dell'Editor destinazione ADO.NET. La scheda Gestione connessione è visibile e contiene controlli per la configurazione delle proprietà del flusso di dati.][11]
-2. Nella scheda **Gestione connessione** di **Editor di destinazione ADO.NET** , fare clic sul pulsante **Nuovo** accanto all'elenco **Gestione connessione** per aprire la finestra di dialogo **Configura gestione connessione ADO.NET** e specificare le impostazioni di connessione per il database di Azure Synapse Analytics. In questa esercitazione i dati verranno caricati in questo database.
+2. Nella scheda **Gestione connessione** di **Editor di destinazione ADO.NET**, fare clic sul pulsante **Nuovo** accanto all'elenco **Gestione connessione** per aprire la finestra di dialogo **Configura gestione connessione ADO.NET** e specificare le impostazioni di connessione per il database di Azure Synapse Analytics. In questa esercitazione i dati verranno caricati in questo database.
 3. Nella finestra di dialogo **Configura gestione connessione ADO.NET** fare clic sul pulsante **Nuovo** per aprire la finestra di dialogo **Gestione connessione** e creare una nuova connessione dati.
 4. Nella finestra di dialogo **Gestione connessione** eseguire le operazioni seguenti.
    1. Per **Provider** selezionare il provider di dati SqlClient.
@@ -179,8 +179,8 @@ Per continuare l'esercitazione con questa opzione, è necessario quanto segue:
    5. Fare clic su **Test connessione**.
    6. Nella finestra di dialogo che indica i risultati del test di connessione fare clic su **OK** per tornare alla finestra di dialogo **Gestione connessione**.
    7. Nella finestra di dialogo **Gestione connessione** fare clic su **OK** per ritornare alla finestra di dialogo **Configura gestione connessione ADO.NET**.
-5. Nella finestra di dialogo **Configura gestione connessione ADO.NET** fare clic su **OK** per ritornare all' **Editor destinazione ADO.NET**.
-6. Nell' **Editor destinazione ADO.NET** fare clic su **Nuovo** accanto all'elenco **Tabella o vista** per visualizzare la finestra di dialogo **Crea tabella** per creare una nuova tabella di destinazione con un elenco di colonne che corrisponde alla tabella di origine.
+5. Nella finestra di dialogo **Configura gestione connessione ADO.NET** fare clic su **OK** per ritornare all'**Editor destinazione ADO.NET**.
+6. Nell'**Editor destinazione ADO.NET** fare clic su **Nuovo** accanto all'elenco **Tabella o vista** per visualizzare la finestra di dialogo **Crea tabella** per creare una nuova tabella di destinazione con un elenco di colonne che corrisponde alla tabella di origine.
    
     ![Screenshot della finestra di dialogo Crea tabella. È visibile il codice SQL per la creazione di una tabella di destinazione.][12a]
 7. Nella finestra di dialogo **Crea tabella** eseguire le operazioni seguenti.
@@ -190,8 +190,8 @@ Per continuare l'esercitazione con questa opzione, è necessario quanto segue:
    3. Modificare il tipo di dati della colonna **LineTotal** su **money**. Il tipo di dati **decimal** non è supportato nel pool SQL dedicato. Per informazioni sui tipi di dati supportati, vedere [CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)][CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)].
       
        ![Screenshot della finestra di dialogo Crea tabella con il codice per creare una tabella denominata SalesOrderDetail con LineTotal come colonna money e nessuna colonna rowguid.][12b]
-   4. Fare clic su **OK** per creare la tabella e ritornare all' **Editor destinazione ADO.NET**.
-8. Nell' **Editor destinazione ADO.NET** selezionare la scheda **Mapping** per visualizzare come le colonne nell'origine vengono mappate alle colonne nella destinazione.
+   4. Fare clic su **OK** per creare la tabella e ritornare all'**Editor destinazione ADO.NET**.
+8. Nell'**Editor destinazione ADO.NET** selezionare la scheda **Mapping** per visualizzare come le colonne nell'origine vengono mappate alle colonne nella destinazione.
    
     ![Screenshot della scheda Mapping dell'Editor destinazione ADO.NET. Le linee collegano le colonne con nomi identici nelle tabelle di origine e di destinazione.][13]
 9. Fare clic su **OK** per completare la configurazione della destinazione.

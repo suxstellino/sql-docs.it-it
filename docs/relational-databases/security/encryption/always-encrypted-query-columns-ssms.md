@@ -2,7 +2,7 @@
 title: Eseguire query sulle colonne usando Always Encrypted con SQL Server Management Studio | Microsoft Docs
 description: Informazioni su come eseguire query sulle colonne in Always Encrypted usando SQL Server Management Studio. Recuperare testo crittografato o valori di testo archiviati nelle colonne crittografate.
 ms.custom: ''
-ms.date: 10/31/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1406b28cae6d73228d54059cf7463b8eaa578385
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 4bdf43c821bd278e6080e6f9244f3bb169388653
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97406037"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596249"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>Eseguire query sulle colonne usando Always Encrypted con SQL Server Management Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -90,16 +90,17 @@ Se non si Abilita Always Encrypted per una connessione, il provider di dati .NET
 È possibile abilitare o disabilitare Always Encrypted quando si crea una nuova connessione oppure si modifica una connessione esistente usando la finestra di dialogo **Connetti al server**. 
 
 Per abilitare o disabilitare Always Encrypted:
-1. Aprire la finestra di dialogo **Connetti al server**. Per informazioni dettagliate, vedere [Connessione a un'istanza di SQL Server](../../../ssms/quickstarts/connect-query-sql-server.md#connect-to-a-sql-server-instance).
+1. Aprire la finestra di dialogo **Connetti al server**. Per informazioni dettagliate, vedere [Connessione a un'istanza di SQL Server](../../../ssms/quickstarts/ssms-connect-query-sql-server.md#connect-to-a-sql-server-instance).
 1. Fare clic su **Opzioni >>** .
 1. Se si usa SSMS 18 o versione successiva:
     1. Selezionare la scheda **Always Encrypted**.
     1. Per abilitare Always Encrypted, selezionare **Abilita Always Encrypted (crittografia colonna)** . Per disabilitare Always Encrypted, verificare che **Abilita Always Encrypted (crittografia colonna)** non sia selezionato.
-    1. Se si usa [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] e l'istanza di SQL Server è configurata con un'enclave sicuro, è possibile specificare un URL di attestazione dell'enclave. Se l'istanza di SQL Server non usa un'enclave sicuro, assicurarsi di lasciare vuota la casella di testo **URL di attestazione enclave**. Per altre informazioni, vedere [Always Encrypted con enclave sicuri](always-encrypted-enclaves.md).
 1. Se si usa SSMS 17 o versione precedente:
     1. Selezionare la scheda **Proprietà aggiuntive**.
     1. Per abilitare Always Encrypted, digitare `Column Encryption Setting = Enabled`. Per disabilitare Always Encrypted, specificare `Column Encryption Setting = Disabled` o rimuovere l'impostazione di **Crittografia di colonna** dalla scheda **Proprietà aggiuntive** (il valore predefinito è **Disabilitato**).   
  1. Fare clic su **Connetti**.
+
+Per eseguire istruzioni che sfruttano un'enclave protetta sul lato server quando si usa [Always Encrypted con enclave sicure](always-encrypted-enclaves.md), è necessario specificare un URL di attestazione enclave, oltre ad abilitare always Encrypted per la connessione. Per informazioni dettagliate, vedere  [prerequisiti per l'esecuzione di istruzioni T-SQL con le enclave in SSMS](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-t-sql-statements-using-enclaves-in-ssms).
 
 > [!TIP]
 > Per abilitare e disabilitare Always Encrypted per una finestra dell'editor di query esistente:   

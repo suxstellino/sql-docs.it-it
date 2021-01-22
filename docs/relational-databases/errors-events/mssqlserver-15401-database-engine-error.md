@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: c7a3153a34088b6b75c9b51f0cf8829049edfc6e
-ms.sourcegitcommit: d819173fb91af6f20ca6ee59686c35c71b060fbc
-ms.translationtype: HT
+ms.openlocfilehash: 8d996c6e48f90cf54b962481cc1e7cd1ed7b088e
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/28/2020
-ms.locfileid: "97797767"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596323"
 ---
 # <a name="mssqlserver_15401"></a>MSSQLSERVER_15401
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -81,4 +81,4 @@ Verificare che il meccanismo di risoluzione dei nomi (ad esempio, WINS, DNS, HOS
 
 - [Testare un canale tra il computer locale e il relativo dominio](/powershell/module/microsoft.powershell.management/test-computersecurechannel#example-1--test-a-channel-between-the-local-computer-and-its-domain)
 - [LogonSessions v1.4](/sysinternals/downloads/logonsessions)
-- [sp_change_users_login (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql)
+- [sp_change_users_login (Transact-SQL)](../system-stored-procedures/sp-change-users-login-transact-sql.md)

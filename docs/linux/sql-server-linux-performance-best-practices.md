@@ -8,12 +8,12 @@ ms.date: 12/11/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 89b8a7c087fb87ed911be640126ec81021b045a7
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
-ms.translationtype: HT
+ms.openlocfilehash: 2a6ae62d517bc9ceefa1e97e5242ee238278bdc6
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97323508"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597278"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Procedure consigliate per le prestazioni e linee guida per la configurazione per SQL Server in Linux
 
@@ -33,7 +33,7 @@ Provare a usare le impostazioni di configurazione del sistema operativo Linux se
 
 Il sottosistema di archiviazione che ospita dati, log delle transazioni e altri file associati (ad esempio, i file di checkpoint per OLTP in memoria) deve riuscire a gestire il carico di lavoro medio e di picco in modo normale. Negli ambienti locali il fornitore dello spazio di archiviazione supporta in genere la configurazione hardware RAID appropriata con striping su più dischi per garantire i valori appropriati di operazioni di I/O al secondo, velocità effettiva e ridondanza. Questa configurazione può tuttavia variare a seconda del fornitore e dell'offerta di spazio di archiviazione in base alle diverse architetture.
 
-Per SQL Server in Linux distribuito in Macchine virtuali di Azure, valutare l'opportunità di usare RAID software per assicurarsi che vengano soddisfatti i requisiti di operazioni di I/O al secondo e velocità effettiva appropriati. Quando si configura SQL Server in Macchine virtuali di Azure, vedere l'articolo seguente per considerazioni simili sull'archiviazione: [Configurazione dell'archiviazione per le VM di SQL Server](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/storage-configuration)
+Per SQL Server in Linux distribuito in Macchine virtuali di Azure, valutare l'opportunità di usare RAID software per assicurarsi che vengano soddisfatti i requisiti di operazioni di I/O al secondo e velocità effettiva appropriati. Quando si configura SQL Server in Macchine virtuali di Azure, vedere l'articolo seguente per considerazioni simili sull'archiviazione: [Configurazione dell'archiviazione per le VM di SQL Server](/azure/azure-sql/virtual-machines/windows/storage-configuration)
 
 Il seguente è un esempio di come creare RAID software in Linux in Macchine virtuali di Azure. Di seguito è riportato un esempio, ma è consigliabile usare il numero appropriato di dischi dati per la velocità effettiva e le operazioni di I/O al secondo necessarie per i volumi in base ai requisiti relativi ai dati, al log delle transazioni e alle operazioni di I/O di tempdb. In questo esempio otto dischi dati sono stati collegati alla macchina virtuale di Azure: quattro ai file di dati dell'host, due per i log delle transazioni e due per il carico di lavoro tempdb.
 
@@ -195,7 +195,8 @@ La tabella seguente fornisce suggerimenti per le impostazioni del disco:
 
 **Descrizione:**
 
-- **vm.swappiness**: questo parametro controlla il peso relativo assegnato allo scambio della memoria di runtime limitando il kernel allo scambio delle pagine di memoria del processo di SQL Server.
+- **VM. swappiness**: questo parametro controlla il peso relativo dato allo scambio della memoria del processo di runtime rispetto alla cache FileSystem. Il valore predefinito per questo parametro è 60, che indica lo scambio di pagine di memoria del processo di runtime rispetto alla rimozione di pagine della cache filesystem con rapporto di 60:140. L'impostazione del valore 1 indica una preferenza forte per mantenere la memoria del processo di runtime nella memoria fisica a scapito della cache del file System. Poiché SQL Server usa il pool di buffer come cache delle pagine di dati e preferisce la scrittura nell'hardware fisico ignorando la cache del file System per il ripristino affidabile, una configurazione swappiness aggressiva può essere utile per le prestazioni elevate e SQL Server dedicate.
+Per ulteriori informazioni, vedere la [documentazione relativa a/proc/sys/VM/-#swappiness](https://www.kernel.org/doc/html/latest/admin-guide/sysctl/vm.html#swappiness)
 
 - **vm.dirty_\** _: gli accessi in scrittura dei file di SQL Server non vengono memorizzati nella cache, soddisfacendo i requisiti di integrità dei dati. Questi parametri consentono di ottenere prestazioni elevate di scrittura asincrona e di ridurre l'impatto delle operazioni di scrittura nella cache di Linux sulle operazioni di input/output di archiviazione, consentendo una memorizzazione nella cache sufficiente limitando al contempo lo svuotamento.
 

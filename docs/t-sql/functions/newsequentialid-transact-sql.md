@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 4fe754848be676d40387d4887a5a7e519da697f7
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
-ms.translationtype: HT
+ms.openlocfilehash: 7bed17ea5142acb2e9e2168491046b13d5868c44
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111049"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597308"
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91111049"
 > [!IMPORTANT]  
 >  In caso di problemi di riservatezza, non utilizzare questa funzione. È possibile intuire il valore del GUID che verrà generato successivamente e accedere ai dati associati a tale GUID.  
   
- NEWSEQUENTIALID è un wrapper sulla funzione [UuidCreateSequential](https://go.microsoft.com/fwlink/?LinkId=164027) di Windows, a cui è [applicata una riproduzione casuale](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/).
+ NEWSEQUENTIALID è un wrapper sulla funzione [UuidCreateSequential](/windows/win32/api/rpcdce/nf-rpcdce-uuidcreatesequential) di Windows, a cui è [applicata una riproduzione casuale](/archive/blogs/dbrowne/how-to-generate-sequential-guids-for-sql-server-in-net).
   
 > [!WARNING]  
 >  La funzione UuidCreateSequential ha dipendenze hardware. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si possono sviluppare cluster di valori sequenziali quando i database (ad esempio, i database indipendenti) vengono spostati in altri computer. Quando si usa Always On in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], si possono sviluppare cluster di valori sequenziali se si effettua il failover del database in un computer diverso.  
@@ -77,5 +77,4 @@ CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT dbo.myfunction(NEWSEQUENT
 ## <a name="see-also"></a>Vedere anche  
  [NEWID &#40;Transact-SQL&#41;](../../t-sql/functions/newid-transact-sql.md)   
  [Operatori di confronto &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
-  
   

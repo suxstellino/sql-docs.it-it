@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eba3e72558433acab3ba1a0edc3cd921b15281bd
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
-ms.translationtype: HT
+ms.openlocfilehash: 905c5988860aef1a2e495bb17d98a48eaf91c5ce
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88457351"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98594830"
 ---
 # <a name="parsing-data"></a>Analisi dei dati
 
@@ -205,5 +205,4 @@ L'analisi veloce offre un set di routine semplici e veloci per l'analisi dei dat
 ## <a name="standard-parse"></a>Analisi standard
 L'analisi standard è un set di routine di analisi, dipendenti dalle impostazioni locali, da cui sono supportate tutte le conversioni previste dalle API per la conversione dei tipi di dati di automazione disponibili in Oleaut32.dll e Ole2dsip.dll. L'analisi standard è equivalente alle API di analisi di OLE DB.  
   
- L'analisi standard consente di eseguire conversioni tra tipi di dati utilizzati per dati internazionali e deve essere utilizzata quando il formato dei dati non è supportato dall'analisi veloce. Per ulteriori informazioni sull'API di conversione del tipo di dati di automazione, vedere la sezione relativa alle API di conversione dei tipi di dati nel sito Web [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=79427). 
- 
+ L'analisi standard consente di eseguire conversioni tra tipi di dati utilizzati per dati internazionali e deve essere utilizzata quando il formato dei dati non è supportato dall'analisi veloce. Per ulteriori informazioni sull'API di conversione del tipo di dati di automazione, vedere la sezione relativa alle API di conversione dei tipi di dati nel sito Web [MSDN Library](/documentation/). 

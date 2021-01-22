@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 88fe0cd4deb4bc73683e6dbff46f35d1d61da348
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
-ms.translationtype: HT
+ms.openlocfilehash: 7bc27698a8ddb0cffe294a9caf07ec2b307961fe
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116857"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596646"
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
 
@@ -40,7 +40,7 @@ Deframmenta gli indici della tabella o vista specificata.
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] In alternativa, usare [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md).  
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] alla [versione corrente](../../sql-server/what-s-new-in-sql-server-2016.md))
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -238,5 +238,3 @@ GO
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)
   
-  
-

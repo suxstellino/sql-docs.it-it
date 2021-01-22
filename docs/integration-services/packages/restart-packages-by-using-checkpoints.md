@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 090e89467a7916295abdc31305cbe993872ade60
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
-ms.translationtype: HT
+ms.openlocfilehash: 5dbdccf96c35c7c7f66badb49d6566ac6009d6c0
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88425243"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596368"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Riavvio dei pacchetti tramite checkpoint
 
@@ -47,7 +47,7 @@ ms.locfileid: "88425243"
 > [!NOTE]  
 >  L'utilizzo di checkpoint e transazioni nello stesso pacchetto può provocare risultati imprevisti. È possibile, ad esempio, che un pacchetto che restituisce un errore e viene riavviato da un checkpoint ripeta una transazione di cui è già stato eseguito correttamente il commit.  
   
- I dati di checkpoint non vengono salvati per i contenitori Ciclo For e Foreach. Al riavvio di un pacchetto, i contenitori Ciclo For e Foreach e i contenitori figlio vengono rieseguiti. Un contenitore figlio del ciclo eseguito correttamente non viene registrato nel file del checkpoint, ma rieseguito. Per altre informazioni e per ottenere una soluzione, vedere [SSIS Checkpoints are not honored for For Loop or Foreach Loop container items](https://go.microsoft.com/fwlink/?LinkId=241633)(Mancata applicazione dei checkpoint SSIS per gli elementi contenitori Ciclo For e Foreach).  
+ I dati di checkpoint non vengono salvati per i contenitori Ciclo For e Foreach. Al riavvio di un pacchetto, i contenitori Ciclo For e Foreach e i contenitori figlio vengono rieseguiti. Un contenitore figlio del ciclo eseguito correttamente non viene registrato nel file del checkpoint, ma rieseguito. Per altre informazioni e per ottenere una soluzione, vedere [SSIS Checkpoints are not honored for For Loop or Foreach Loop container items](/troubleshoot/sql/integration-services/ssis-checkpoints-not-honored-for-loop)(Mancata applicazione dei checkpoint SSIS per gli elementi contenitori Ciclo For e Foreach).  
   
  Se il pacchetto viene riavviato, le configurazioni di pacchetto non vengono caricate nuovamente. Il pacchetto infatti utilizza le informazioni di configurazione scritte nel file del checkpoint. Ciò garantisce che per la riesecuzione di un pacchetto vengano utilizzate le configurazioni in uso quando il pacchetto ha avuto esito negativo.  
   
@@ -119,4 +119,4 @@ ms.locfileid: "88425243"
   
 -   Articolo tecnico [Automatic Restart of SSIS packages after Failover or Failure](https://go.microsoft.com/fwlink/?LinkId=200407)(Riavvio automatico di pacchetti SSIS in caso di failover o errore) nel sito Web social.technet.microsoft.com  
   
--   Articolo del supporto tecnico [SSIS Checkpoints are not honored for For Loop or Foreach Loop container items](https://go.microsoft.com/fwlink/?LinkId=241633)(Mancata applicazione dei checkpoint SSIS per gli elementi contenitori Ciclo For e Foreach) nel sito Web support.microsoft.com.  
+-   Articolo del supporto tecnico [SSIS Checkpoints are not honored for For Loop or Foreach Loop container items](/troubleshoot/sql/integration-services/ssis-checkpoints-not-honored-for-loop)(Mancata applicazione dei checkpoint SSIS per gli elementi contenitori Ciclo For e Foreach) nel sito Web support.microsoft.com.

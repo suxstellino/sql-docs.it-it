@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 27fa2389740a7b2d15cb019d86ba1d02559ce6d4
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 75cb332c949dbf73a532dbc754db4fce1530a350
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172663"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597221"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,12 +49,12 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' | @msg_variable} , [ param_value 
  ID del messaggio archiviato in sys.messages. Se *msg_number* è <= 13000 o se il messaggio non esiste in sys.messages, viene restituito NULL.  
   
  *msg_string*  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla [versione corrente](../../sql-server/what-s-new-in-sql-server-2016.md)).  
   
  È una stringa racchiusa tra virgolette singole contenente segnaposto per il valore del parametro. Il messaggio di errore può contenere un massimo di 2.047 caratteri. Se contiene più di 2.048 caratteri, vengono visualizzati solo i primi 2.044 e vengono aggiunti tre punti a indicare che il messaggio è stato troncato. I parametri di sostituzione utilizzano un maggior numero di caratteri rispetto a quanto viene visualizzato nell'output a causa della gestione dell'archiviazione interna.  Per informazioni sulla struttura di una stringa di messaggio e sull'uso di parametri nella stringa, vedere la descrizione dell'argomento *msg_str* in [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md).  
 
  *@msg_variable*  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla [versione corrente](../../sql-server/what-s-new-in-sql-server-2016.md)).  
   
  È una variabile nvarchar o varchar che contiene una stringa conforme ai criteri per l'argomento *msg_string* precedente.  
   
@@ -85,7 +85,7 @@ SELECT @var1;
   
 ### <a name="b-example-with-a-message-string"></a>B. Esempio con una stringa di messaggio  
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla [versione corrente](../../sql-server/what-s-new-in-sql-server-2016.md)).  
   
  Nell'esempio seguente viene accettata come input una stringa.  
   
@@ -129,5 +129,3 @@ SELECT FORMATMESSAGE('Hello %-20s!', 'TEST');
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
  [Funzioni di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
-  
-  

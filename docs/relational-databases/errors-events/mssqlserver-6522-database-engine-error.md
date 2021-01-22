@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: 836ad79e049d7c5613755e64ca441f9ed5d73048
-ms.sourcegitcommit: d819173fb91af6f20ca6ee59686c35c71b060fbc
-ms.translationtype: HT
+ms.openlocfilehash: f48534e104139ee7cbd4eb7602fce2a8e51eeb73
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/28/2020
-ms.locfileid: "97797807"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597146"
 ---
 # <a name="mssqlserver_6522"></a>MSSQLSERVER_6522
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -205,7 +205,7 @@ Si supponga che il tipo di dati MyDateTime occupi 9 byte nella risorsa di archiv
 ## <a name="references"></a>Riferimenti
 
 - Per altre informazioni sulla versione dell'assembly, vedere la [documentazione ritirata di Visual Studio 2005](https://www.microsoft.com/download/details.aspx?id=55984).
-- Per altre informazioni su come aggiornare un assembly, vedere [ALTER ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/alter-assembly-transact-sql).
-- Per altre informazioni su come eliminare un assembly, vedere [DROP ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/drop-assembly-transact-sql).
-- Per altre informazioni su come registrare un assembly in un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [CREATE ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/create-assembly-transact-sql).
-- Per altre informazioni sull'utilità Bcp.exe, vedere [https://msdn2.microsoft.com/library/ms162802.aspx](/sql/tools/bcp-utility).
+- Per altre informazioni su come aggiornare un assembly, vedere [ALTER ASSEMBLY (Transact-SQL)](../../t-sql/statements/alter-assembly-transact-sql.md).
+- Per altre informazioni su come eliminare un assembly, vedere [DROP ASSEMBLY (Transact-SQL)](../../t-sql/statements/drop-assembly-transact-sql.md).
+- Per altre informazioni su come registrare un assembly in un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md).
+- Per altre informazioni sull'utilità Bcp.exe, vedere [https://msdn2.microsoft.com/library/ms162802.aspx](../../tools/bcp-utility.md).

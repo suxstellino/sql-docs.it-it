@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: 6a854486d1867e84bcd9b13cb148d3026a41d51f
-ms.sourcegitcommit: d819173fb91af6f20ca6ee59686c35c71b060fbc
-ms.translationtype: HT
+ms.openlocfilehash: c6611fcc392d37545f50e12fa8007923d8bc5846
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/28/2020
-ms.locfileid: "97797772"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596350"
 ---
 # <a name="mssqlserver_17890"></a>MSSQLSERVER_17890
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -154,7 +154,7 @@ Prima di assegnare il diritto utente Blocco delle pagine in memoria assicurarsi 
 
 - Prima di configurare le opzioni max server memory e min server memory per più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], considerare i requisiti di memoria del pool non di buffer per ogni istanza di SQL Server. Quindi configurare queste opzioni per ogni istanza di SQL Server.
 
-Idealmente queste informazioni di base vengono raccolte durante i picchi di carico. Pertanto, è possibile determinare i requisiti di memoria per varie applicazioni e componenti per supportare il picco di carico. I requisiti di memoria variano da un sistema all'altro, a seconda delle attività e delle applicazioni in esecuzione nel sistema. È possibile eseguire una query sulle informazioni visualizzate nella DMV sys.dm_os_process_memory per capire se il sistema sta riscontrando condizioni di memoria insufficiente. Per altre informazioni, vedere [sys.dm_os_memory_memory (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-process-memory-transact-sql).
+Idealmente queste informazioni di base vengono raccolte durante i picchi di carico. Pertanto, è possibile determinare i requisiti di memoria per varie applicazioni e componenti per supportare il picco di carico. I requisiti di memoria variano da un sistema all'altro, a seconda delle attività e delle applicazioni in esecuzione nel sistema. È possibile eseguire una query sulle informazioni visualizzate nella DMV sys.dm_os_process_memory per capire se il sistema sta riscontrando condizioni di memoria insufficiente. Per altre informazioni, vedere [sys.dm_os_memory_memory (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-process-memory-transact-sql.md).
 
 ## <a name="improvements-added-in-windows-server-2008-and-r2-version"></a>Miglioramenti aggiunti in Windows Server 2008 e nella versione R2
 

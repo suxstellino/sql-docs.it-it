@@ -18,12 +18,12 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: cawrites
 ms.author: chadam
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest
-ms.openlocfilehash: bfd9a1079dded6f6ffa466e8161aa98eb20c0106
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
-ms.translationtype: HT
+ms.openlocfilehash: 9c247a8316e99373add9d34614d3f6ff4af85c07
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093580"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597355"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 
@@ -49,7 +49,7 @@ FORMAT( value, format [, culture ] )
  *format*  
  Schema di formattazione **nvarchar**.  
   
- L'argomento *format* deve contenere una stringa di formato .NET Framework valida, ovvero una stringa di formato standard (ad esempio "C" o "D") o uno schema di caratteri personalizzati per date e valori numerici (ad esempio "MMMM GG, aaaa (gggg)"). La formattazione composta non è supportata. Per una spiegazione completa di questi schemi di formattazione, vedere la documentazione di .NET Framework sulla formattazione di stringhe in formati di data e ora generali e personalizzati e in formati di numero personalizzati. È consigliabile iniziare con l'argomento "[Formattazione di tipi](https://go.microsoft.com/fwlink/?LinkId=211776)."  
+ L'argomento *format* deve contenere una stringa di formato .NET Framework valida, ovvero una stringa di formato standard (ad esempio "C" o "D") o uno schema di caratteri personalizzati per date e valori numerici (ad esempio "MMMM GG, aaaa (gggg)"). La formattazione composta non è supportata. Per una spiegazione completa di questi schemi di formattazione, vedere la documentazione di .NET Framework sulla formattazione di stringhe in formati di data e ora generali e personalizzati e in formati di numero personalizzati. È consigliabile iniziare con l'argomento "[Formattazione di tipi](/dotnet/standard/base-types/formatting-types)."  
   
  *Impostazioni cultura*  
  Argomento **nvarchar** facoltativo che specifica le impostazioni cultura.  
@@ -129,7 +129,7 @@ Sunday, November 22, 2020   22 November 2020       Sonntag, 22. November 2020  2
   
 ### <a name="b-format-with-custom-formatting-strings"></a>B. FORMAT con stringhe di formattazione personalizzate
 
- Nell'esempio seguente vengono illustrati i valori numerici di formattazione specificando un formato personalizzato. Nell'esempio si presuppone che la data corrente sia il 27 settembre 2012. Per altre informazioni su questi e altri formati personalizzati, vedere [Stringhe di formato numerico personalizzato](https://msdn.microsoft.com/library/0c899ak8.aspx).  
+ Nell'esempio seguente vengono illustrati i valori numerici di formattazione specificando un formato personalizzato. Nell'esempio si presuppone che la data corrente sia il 27 settembre 2012. Per altre informazioni su questi e altri formati personalizzati, vedere [Stringhe di formato numerico personalizzato](/dotnet/standard/base-types/custom-numeric-format-strings).  
   
 ```sql  
 DECLARE @d DATE = GETDATE();  
@@ -148,7 +148,7 @@ Date        Custom Number
   
 ### <a name="c-format-with-numeric-types"></a>C. FORMAT con tipi numerici
 
- Nell'esempio seguente vengono restituite 5 righe della tabella **Sales.CurrencyRate** del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. La colonna **EndOfDateRate** viene archiviata come tipo **money** nella tabella. In questo esempio, la colonna viene restituita senza formattazione e viene quindi formattata specificando i tipi di formato di numero, valuta e generico di .NET. Per altre informazioni su questi e altri formati numerici, vedere [Stringhe di formato numerico standard](https://msdn.microsoft.com/library/dwhawy9k.aspx).  
+ Nell'esempio seguente vengono restituite 5 righe della tabella **Sales.CurrencyRate** del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. La colonna **EndOfDateRate** viene archiviata come tipo **money** nella tabella. In questo esempio, la colonna viene restituita senza formattazione e viene quindi formattata specificando i tipi di formato di numero, valuta e generico di .NET. Per altre informazioni su questi e altri formati numerici, vedere [Stringhe di formato numerico standard](/dotnet/standard/base-types/standard-numeric-format-strings).  
   
 ```sql  
 SELECT TOP(5) CurrencyRateID, EndOfDayRate  

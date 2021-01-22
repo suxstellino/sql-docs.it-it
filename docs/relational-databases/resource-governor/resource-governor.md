@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 6b5f22541039f781e49615b5e8916d138a5c375b
-ms.sourcegitcommit: bb54e4c9dd8c97365b7a96dfcd557b8b86d06978
-ms.translationtype: HT
+ms.openlocfilehash: fea1ba3712f07548d259867f931188d9e5798802
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97736889"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596408"
 ---
 # <a name="resource-governor"></a>Resource Governor
 [!INCLUDE [SQL Server SQL MI](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   La funzionalità Resource Governor di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permette di gestire il carico di lavoro e l'uso delle risorse di sistema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Resource Governor consente di specificare limiti per la quantità di CPU, I/O fisico e memoria che può essere usata dalle richieste in ingresso dell'applicazione.  
   
 > [!NOTE]
-> Sebbene il [database SQL di Azure sfrutti Resource Governor](https://azure.microsoft.com/blog/resource-governance-in-azure-sql-database/) (tra le altre tecniche) per gestire le risorse, la configurazione utente dei pool di risorse e dei gruppi di carico di lavoro personalizzati nel database SQL di Azure non è supportata. Azure Synapse Analytics presenta un'implementazione diversa di un comportamento di Resource Governor simile tramite la [funzionalità di classificazione del carico di lavoro](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-workload-classification).
+> Sebbene il [database SQL di Azure sfrutti Resource Governor](https://azure.microsoft.com/blog/resource-governance-in-azure-sql-database/) (tra le altre tecniche) per gestire le risorse, la configurazione utente dei pool di risorse e dei gruppi di carico di lavoro personalizzati nel database SQL di Azure non è supportata. Azure Synapse Analytics presenta un'implementazione diversa di un comportamento di Resource Governor simile tramite la [funzionalità di classificazione del carico di lavoro](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-workload-classification).
 
 ## <a name="benefits-of-resource-governor"></a>Vantaggi di Resource Governor  
  Resource Governor consente di gestire i carichi di lavoro e le risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificando limiti relativi all'utilizzo delle risorse da parte delle richieste in entrata. Nel contesto di Resource Governor il carico di lavoro è un set di richieste o query con dimensioni simili che può o deve essere considerato come singola entità. Sebbene non si tratti di un requisito obbligatorio, utilizzando in modo uniforme le risorse di un carico di lavoro è possibile sfruttare al massimo i vantaggi offerti da Resource Governor. I limiti delle risorse possono essere riconfigurati in tempo reale con un minimo impatto sui carichi di lavoro in esecuzione.  
@@ -95,5 +95,4 @@ ms.locfileid: "97736889"
   
 ## <a name="see-also"></a>Vedere anche  
  [Istanze del motore di database &#40;SQL Server&#41;](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  
-  
   

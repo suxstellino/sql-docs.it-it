@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: f1221474d86d95400ca955d64b4a0812cffe1c0d
-ms.sourcegitcommit: f87f2f0f1edc91fe400040d8e3a5810347aa8d70
-ms.translationtype: HT
+ms.openlocfilehash: 018252ff40ebf2ea7bd52b34f03ed25ef124a8d7
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96868903"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596312"
 ---
 # <a name="mssqlserver_15581"></a>MSSQLSERVER_15581
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ go
 alter master key drop encryption by service master key
 ```
 
-La chiave master del servizio viene usata per crittografare il certificato usato dalla chiave master del database. Qualsiasi tentativo di usare il database abilitato per TDE richiede l'accesso alla chiave master del database nel database master. Per aprire una chiave master non crittografata con la chiave master del servizio, è necessario usare l'istruzione [OPEN MASTER KEY (Transact-SQL)](/sql/t-sql/statements/open-master-key-transact-sql) insieme a una password per ogni sessione che richiede l'accesso alla chiave master. Poiché questo comando non può essere eseguito nelle sessioni di sistema, non è possibile completare il ripristino nei database abilitati per TDE.
+La chiave master del servizio viene usata per crittografare il certificato usato dalla chiave master del database. Qualsiasi tentativo di usare il database abilitato per TDE richiede l'accesso alla chiave master del database nel database master. Per aprire una chiave master non crittografata con la chiave master del servizio, è necessario usare l'istruzione [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md) insieme a una password per ogni sessione che richiede l'accesso alla chiave master. Poiché questo comando non può essere eseguito nelle sessioni di sistema, non è possibile completare il ripristino nei database abilitati per TDE.
 
 ## <a name="user-action"></a>Azione utente
 

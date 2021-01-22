@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f2e7bc60bcfd7578d70528d92ef025370c28134e
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
-ms.translationtype: HT
+ms.openlocfilehash: 6e980e075f23d3a943870fc6dd02aa420797f8a4
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92194747"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596483"
 ---
 # <a name="sql-server-destination"></a>SQL Server - destinazione
 
@@ -117,7 +117,7 @@ ms.locfileid: "92194747"
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Articolo tecnico relativo alla possibile [visualizzazione dell'errore "Impossibile preparare l'attività Inserimento bulk SSIS per l'inserimento dei dati" nei sistemi con Controllo dell'account utente abilitato](https://go.microsoft.com/fwlink/?LinkId=199482)sul sito support.microsoft.com.  
+-   Articolo tecnico relativo alla possibile [visualizzazione dell'errore "Impossibile preparare l'attività Inserimento bulk SSIS per l'inserimento dei dati" nei sistemi con Controllo dell'account utente abilitato](/troubleshoot/sql/integration-services/error-you-run-ssis-package)sul sito support.microsoft.com.  
   
 -   Articolo tecnico relativo alla [guida alle prestazioni del caricamento dati](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100))sul sito msdn.microsoft.com.  
   
@@ -206,4 +206,3 @@ ms.locfileid: "92194747"
   
 ## <a name="see-also"></a>Vedere anche  
  [Flusso di dati](../../integration-services/data-flow/data-flow.md)  
-  

@@ -9,12 +9,12 @@ ms.technology: security
 ms.topic: how-to
 author: rupp29
 ms.author: arupp
-ms.openlocfilehash: 85be425e0e352961841f5317c7db219153a6c008
-ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
-ms.translationtype: HT
+ms.openlocfilehash: 8d3f89803711e96cb1e37adc9792c54bceb259c4
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91847770"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596503"
 ---
 # <a name="sql-server-connector-error-and-information-logging"></a>Registrazione di errori e informazioni per il Connettore SQL Server
 
@@ -24,7 +24,7 @@ Questo articolo descrive la modifica di voci del Registro di sistema per abilita
 
 Il [Connettore SQL Server per Microsoft Azure Key Vault](https://www.microsoft.com/download/details.aspx?id=45344) consente di usare Microsoft Azure Key Vault come provider EKM (Extensible Key Management) per la crittografia di SQL Server per proteggere le chiavi di crittografia.
 
-Il [download](https://www.microsoft.com/download/details.aspx?id=45344) è costituito dal Connettore SQL Server e dagli script di esempio per consentire a un amministratore di SQL Server di apprendere come configurare il Connettore SQL Server e abilitare gli scenari di crittografia di SQL Server. Per altre informazioni, vedere [Extensible Key Management tramite Key Vault (SQL Server)](https://go.microsoft.com/fwlink/p/?LinkId=521690).
+Il [download](https://www.microsoft.com/download/details.aspx?id=45344) è costituito dal Connettore SQL Server e dagli script di esempio per consentire a un amministratore di SQL Server di apprendere come configurare il Connettore SQL Server e abilitare gli scenari di crittografia di SQL Server. Per altre informazioni, vedere [Extensible Key Management tramite Key Vault (SQL Server)](./extensible-key-management-using-azure-key-vault-sql-server.md).
 
 Per porre domande, condividere informazioni dettagliate e discutere del Connettore SQL Server, usare il [forum di Azure Key Vault](https://social.msdn.microsoft.com/Forums/AzureKeyVault).
 
