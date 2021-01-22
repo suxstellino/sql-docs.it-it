@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016'
-ms.openlocfilehash: 9086c0e4dcda0a98daad3e372e719bde7fc628d7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
-ms.translationtype: HT
+ms.openlocfilehash: 1f25887409183593230d44dfd813e1ff36a3ee36
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099509"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98689043"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -876,6 +876,17 @@ L'istruzione `ALTER DATABASE` deve essere eseguita in modalità autocommit, che 
 La cancellazione della cache dei piani comporta la ricompilazione di tutti i piani di esecuzione successivi e può causare un peggioramento improvviso e temporaneo delle prestazioni di esecuzione delle query. Il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il messaggio informativo seguente per ogni archivio cache cancellato nella cache dei piani: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha rilevato %d occorrenza/e di scaricamento dell'archivio cache '%s' (parte della cache dei piani) a causa di operazioni di manutenzione o riconfigurazione del database". Questo messaggio viene registrato ogni cinque minuti per tutta la durata dello scaricamento della cache.
 
 La cache dei piani viene scaricata anche quando vengono eseguite diverse query in un database con le opzioni predefinite. Successivamente, il database viene eliminato.
+
+`ALTER DATABASE`Per alcune istruzioni è necessario un blocco esclusivo su un database da eseguire. Questo è il motivo per cui potrebbero avere esito negativo quando un altro processo attivo mantiene un blocco sul database. Errore segnalato in un caso analogo al seguente `Msg 5061, Level 16, State 1, Line 38` con Message `ALTER DATABASE failed because a lock could not be placed on database '<database name>'. Try again later` . Si tratta in genere di un errore temporaneo e risolverlo, una volta rilasciati tutti i blocchi nel database, ritentare l'istruzione ALTER DATABASE non riuscita. La vista `sys.dm_tran_locks` di sistema include informazioni sui blocchi attivi. Per verificare se sono presenti blocchi condivisi o esclusivi in un database, utilizzare la query seguente.
+
+```sql
+SELECT
+    resource_type, resource_database_id, request_mode, request_type, request_status, request_session_id 
+FROM 
+    sys.dm_tran_locks
+WHERE
+    resource_database_id = DB_ID('testdb')
+```
 
 ## <a name="viewing-database-information"></a>Visualizzazione delle informazioni sui database
 

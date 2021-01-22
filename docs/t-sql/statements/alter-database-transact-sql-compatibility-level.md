@@ -25,12 +25,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f62ced8657ee943a947e26c5a2a2ed65a9d78b9
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: d16763f2bd009b411952c20cfb1115cf1c977d85
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171913"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98689190"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Livello di compatibilità ALTER DATABASE (Transact-SQL)
 
@@ -142,7 +142,7 @@ Per altri dettagli, incluso il flusso di lavoro consigliato per aggiornare il li
 > Le funzionalità **non più disponibili** introdotte in una determinata versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**non** sono protette dal livello di compatibilità. Ciò si riferisce alle funzionalità rimosse dal [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
 > Ad esempio, l'hint `FASTFIRSTROW` non è più supportato in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ed è stato sostituito dall'hint `OPTION (FAST n )`. Se il livello di compatibilità del database viene impostato su 110, l'hint che non è più supportato non verrà ripristinato.  
 >  
-> Per altre informazioni sulle funzionalità non più disponibili, vedere [Funzionalità del motore di database non più usate in SQL Server](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md) e [Funzionalità del motore di database non più usate in SQL Server 2014](https://docs.microsoft.com/previous-versions/sql/2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014&preserve-view=true).
+> Per altre informazioni sulle funzionalità non più disponibili, vedere [Funzionalità del motore di database non più usate in SQL Server](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md) e [Funzionalità del motore di database non più usate in SQL Server 2014](/previous-versions/sql/2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?preserve-view=true&view=sql-server-2014).
 
 > [!IMPORTANT]
 > Le **modifiche che causano un'interruzione** introdotte in una determinata versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**potrebbero non** essere protette dal livello di compatibilità. Ciò si riferisce alle modifiche funzionali tra le versioni del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Il comportamento di [!INCLUDE[tsql](../../includes/tsql-md.md)] è generalmente protetto dal livello di compatibilità. Gli oggetti di sistema modificati o rimossi **non** sono tuttavia protetti dal livello di compatibilità.
@@ -154,7 +154,7 @@ Per altri dettagli, incluso il flusso di lavoro consigliato per aggiornare il li
 > - Nomi di colonna modificati in oggetti di sistema. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] la colonna *single_pages_kb* in sys.dm_os_sys_info è rinominata in *pages_kb*. Indipendentemente dal livello di compatibilità, la query `SELECT single_pages_kb FROM sys.dm_os_sys_info` genererà l'errore 207 (nome di colonna non valido).
 > - Oggetti di sistema rimossi. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] la store procedure `sp_dboption` è rimossa. Indipendentemente dal livello di compatibilità, l'istruzione `EXEC sp_dboption 'AdventureWorks2016', 'autoshrink', 'FALSE';` genererà l'errore 2812 (Impossibile trovare la stored procedure 'sp_dboption').
 >
-> Per altre informazioni sulle modifiche di rilievo, vedere [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2019](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md), [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md) e [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2014](https://docs.microsoft.com/previous-versions/sql/2014/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016?view=sql-server-2014&preserve-view=true).
+> Per altre informazioni sulle modifiche di rilievo, vedere [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2019](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md), [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md) e [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2014](/previous-versions/sql/2014/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016?preserve-view=true&view=sql-server-2014).
 
 ## <a name="differences-between-compatibility-levels"></a>Differenze tra i livelli di compatibilità
 Per tutte le installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il livello di compatibilità predefinito è associato alla versione del [!INCLUDE[ssDE](../../includes/ssde-md.md)], come illustrato in [questa tabella](#supported-dbcompats). Per le nuove attività di sviluppo, pianificare sempre la certificazione delle applicazioni con il livello di compatibilità del database più recente.

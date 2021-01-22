@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: bab0801b0193d9f675ef69e566eef375f0930e5b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: ce637e88679747faf40ec7f262ceaea3c0f01f5f
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170863"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98688859"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -184,13 +184,13 @@ Consente di impostare il livello di registrazione per il clustering di failover 
 Negli scenari di failover delle risorse, la DLL della risorsa SQL Server può ottenere un file dump prima che si verifichi un failover. Questo vale sia per le tecnologie FCI che per quelle del gruppo di disponibilità. Quando la DLL della risorsa SQL Server determina che una risorsa SQL Server ha avuto esito negativo, la DLL della risorsa SQL Server usa l'utilità Sqldumper.exe per ottenere un file dump del processo di SQL Server. Per assicurarsi che l'utilità Sqldumper.exe generi correttamente il file dump al momento del failover delle risorse, è necessario impostare le tre proprietà seguenti come prerequisiti: SqlDumperDumpTimeOut, SqlDumperDumpPath, SqlDumperDumpFlags.
 
 SQLDUMPEREDUMPFLAGS  
-Determina il tipo di file di dump generati dall'utilità SQLDumper di SQL Server. L'impostazione predefinita è 0. Per questa impostazione vengono usati valori decimali, anziché esadecimali. Per il minidump usare 288, per il minidump con memoria indiretta usare 296, per il dump filtrato usare 33024. Per altre informazioni, vedere l'[articolo sulla knowledge base dell'utilità SQL Server Dumper](https://go.microsoft.com/fwlink/?LinkId=206173).  
+Determina il tipo di file di dump generati dall'utilità SQLDumper di SQL Server. L'impostazione predefinita è 0. Per questa impostazione vengono usati valori decimali, anziché esadecimali. Per il minidump usare 288, per il minidump con memoria indiretta usare 296, per il dump filtrato usare 33024. Per altre informazioni, vedere l'[articolo sulla knowledge base dell'utilità SQL Server Dumper](/troubleshoot/sql/tools/use-sqldumper-generate-dump-file).  
   
 SQLDUMPERDUMPPATH = { 'os_file_path' | DEFAULT }  
-Percorso in cui l'utilità SQLDumper archivia i file di dump. Per altre informazioni, vedere l'[articolo sulla knowledge base dell'utilità SQL Server Dumper](https://go.microsoft.com/fwlink/?LinkId=206173).  
+Percorso in cui l'utilità SQLDumper archivia i file di dump. Per altre informazioni, vedere l'[articolo sulla knowledge base dell'utilità SQL Server Dumper](/troubleshoot/sql/tools/use-sqldumper-generate-dump-file).  
   
 SQLDUMPERDUMPTIMEOUT = { 'dump_time-out' | DEFAULT }  
-Valore di timeout in millisecondi prima che l'utilità SQLDumper generi un dump in caso di errore di SQL Server. Il valore predefinito è 0, che indica che non vi sono limiti di tempo per completare il dump. Per altre informazioni, vedere l'[articolo sulla knowledge base dell'utilità SQL Server Dumper](https://go.microsoft.com/fwlink/?LinkId=206173).  
+Valore di timeout in millisecondi prima che l'utilità SQLDumper generi un dump in caso di errore di SQL Server. Il valore predefinito è 0, che indica che non vi sono limiti di tempo per completare il dump. Per altre informazioni, vedere l'[articolo sulla knowledge base dell'utilità SQL Server Dumper](/troubleshoot/sql/tools/use-sqldumper-generate-dump-file).  
   
  FAILURECONDITIONLEVEL = { 'failure_condition_level' | DEFAULT }  
  Condizioni in cui si verifica il failover o il riavvio dell'istanza del cluster di failover di SQL Server. Il valore predefinito è 3, che indica che si verificherà il failover o il riavvio della risorsa di SQL Server in caso di errori critici del server. Per altre informazioni su questo aspetto e su altri livelli delle condizioni di errore, vedere [Configurare le impostazioni della proprietà FailureConditionLevel](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).  
@@ -484,4 +484,3 @@ GO
 [sys.dm_os_memory_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md)   
 [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)   
 [Estensione pool di buffer](../../database-engine/configure-windows/buffer-pool-extension.md)  
-  

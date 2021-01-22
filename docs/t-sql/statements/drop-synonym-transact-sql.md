@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 23578932-e4de-4c39-a5a0-ce45139c4269
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: a910ab091d961a48b7ff7822cb01924f1c9b1f82
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 2a3dc4b5974059062815000f1671d1fa425137a7
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170383"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98688881"
 ---
 # <a name="drop-synonym-transact-sql"></a>DROP SYNONYM (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
 
 ## <a name="arguments"></a>Argomenti
  *IF EXISTS*  
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla [versione corrente](../../sql-server/what-s-new-in-sql-server-2016.md))
   
  Rimuove in modo condizionale il sinonimo solo se esiste già.  
   
@@ -90,5 +90,3 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
-  
