@@ -11,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6e2e66d27fd8658cc0e060da036cca147817d5cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: 32daaf012159bd42a6f73330bc8371157e459609
+ms.sourcegitcommit: 1f826eb3f73bd4d94bc9638b9cdd60991a2e2fa0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422215"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98125619"
 ---
 # <a name="lesson-3-2-add-and-configure-logging"></a>Lezione 3-2: Aggiungere e configurare le funzionalità di registrazione
 
@@ -29,6 +29,7 @@ In questa attività viene abilitata la registrazione per il flusso di dati del p
 ## <a name="add-logging-to-the-package"></a>Aggiungere le funzionalità di registrazione al pacchetto  
   
 1.  Scegliere **Registrazione** dal menu **SSIS**.  
+    In Visual Studio 2019 il menu **SSIS** si trova in Estensioni-> SSIS. Verificare che sia selezionata la scheda **Flusso di dati** e non **Flusso di controllo**
   
 2.  Nel riquadro **Contenitori** della finestra di dialogo **Configura log SSIS** verificare che sia selezionato l'oggetto in prima posizione. Tale oggetto rappresenta il pacchetto della lezione 3.
   
