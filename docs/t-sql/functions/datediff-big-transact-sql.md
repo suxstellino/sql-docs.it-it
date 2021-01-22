@@ -1,11 +1,8 @@
 ---
+title: DATEDIFF_BIG (Transact-SQL)
 description: DATEDIFF_BIG (Transact-SQL)
-title: DATEDIFF_BIG (Transact-SQL) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -21,12 +18,15 @@ helpviewer_keywords:
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: ea087da6532c43493fd10f647788297d98f35f72
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
-ms.translationtype: HT
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 01/12/2021
+ms.openlocfilehash: 8f6078aebab5456b8867aca1b7f6987d8a1eb6fd
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093660"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98168200"
 ---
 # <a name="datediff_big-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 
@@ -92,11 +92,11 @@ Vedere *startdate*.
 ## <a name="return-value"></a>Valore restituito  
 Restituisce la differenza **bigint** tra *startdate* ed *enddate*, espressa nel limite impostato da *datepart*.
   
-Per un valore restituito esterno all'intervallo per **bigint** (da -9.223.372.036.854.775.808 a +9.223.372.036.854.775.807), `DATEDIFF_BIG` restituisce un errore. A differenza di `DATEDIFF` che restituisce un **int** e può quindi determinare un overflow con una precisione di **minute** o superiore, `DATEDIFF_BIG` può determinare un overflow solo se si usa la precisione **nanosecond** dove la differenza tra *enddate* e *startdate* è superiore a 292 anni, 3 mesi, 10 giorni, 23 ore, 47 minuti e 16.8547758 secondi.
+Per un valore restituito esterno all'intervallo per **bigint** (da -9.223.372.036.854.775.808 a +9.223.372.036.854.775.807), `DATEDIFF_BIG` restituisce un errore. A differenza di  che restituisce un **int** e può quindi determinare un overflow con una precisione di **minute** o superiore, `DATEDIFF_BIG` può determinare un overflow solo se si usa la precisione **nanosecond** dove la differenza tra *enddate* e *startdate* è superiore a 292 anni, 3 mesi, 10 giorni, 23 ore, 47 minuti e 16.8547758 secondi.
   
 Se sia a *startdate* che a *enddate* è stato assegnato solo un valore orario e *datepart* non è un *datepart* orario, `DATEDIFF_BIG` restituisce 0.
   
-Per calcolare il valore restituito, `DATEDIFF_BIG` non usa un componente differenza di fuso orario *startdate* o *enddate*.
+Per calcolare il valore restituito, `DATEDIFF_BIG` usa un componente differenza di fuso orario *startdate* o *enddate*.
   
 Per un valore **smalldatetime** usato per *startdate* o *enddate*, nel valore restituito `DATEDIFF_BIG` imposta sempre i secondi e i millisecondi su 0, perché [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) garantisce la precisione solo a livello di minuti.
   
@@ -127,7 +127,7 @@ Usare `DATEDIFF_BIG` nelle clausole `SELECT <list>`, `WHERE`, `HAVING`, `GROUP B
   
 La specifica di `SET DATEFIRST` non ha alcun effetto su `DATEDIFF_BIG`. `DATEDIFF_BIG` usa sempre la domenica come primo giorno della settimana, per garantire che la funzione operi in modo deterministico.
 
-`DATEDIFF_BIG` può determinare un overflow con una precisione di **nanosecond** se la differenza tra *enddate* e *startdate* restituisce un valore non compreso nell'intervallo per **bigint**.
+`DATEDIFF_BIG` può determinare un overflow con **nanosecond** se la differenza tra *enddate* e *startdate* restituisce un valore non compreso nell'intervallo per **bigint**.
   
 ## <a name="examples"></a>Esempi 
   

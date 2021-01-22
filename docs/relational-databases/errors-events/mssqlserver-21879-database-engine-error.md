@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d543c3bd25fb8a4eec99c4c5cd3e1b11fbae5a90
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: 0c6b6b15e6a9224306bea073e38b9ef808edfddc
+ms.sourcegitcommit: 7791bd2ba339edc5cd2078a6537c8f6bfe72a19b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88332477"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98564435"
 ---
 # <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ Il server collegato usato per eseguire la query sul server di pubblicazione rein
   
     -   Se **sp_validate_redirected_publisher** viene chiamato in modo esplicito da un utente, l'account di accesso di Windows con cui è in esecuzione l'utente viene usato per la connessione.  
   
-    -   Se il server di pubblicazione **sp_validate_redirected_** viene chiamato da un agente di replica di **sp_get_redirected_publisher**, viene usato l'account di accesso di Windows associato all'agente.  
+    -   Se viene chiamata la stored procedure **sp_validate_redirected_publisher** da un agente di replica da **sp_get_redirected_publisher**, viene usato l'account di accesso di Windows associato all'agente.  
   
 L'errore 21879 può indicare che **sp_validate_redirected_publisher** è stato chiamato usando un account di accesso non conosciuto sul server di pubblicazione di destinazione reindirizzato.  
   

@@ -2,7 +2,7 @@
 title: Pianificare l'attestazione del servizio Sorveglianza host
 description: Pianificare l'attestazione del servizio Sorveglianza host per SQL Server Always Encrypted con enclave sicure.
 ms.custom: ''
-ms.date: 10/12/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed376fd4fe0f3c38d9996157c30722c24b27e8aa
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: c4c80a51370de62410367b1225fd85e3ffe7f261
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477642"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534800"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>Pianificare l'attestazione del servizio Sorveglianza host
 
@@ -126,9 +126,20 @@ Questi requisiti includono:
   - Se si esegue [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] in una macchina virtuale, l'hypervisor e la CPU fisica devono offrire funzionalità di virtualizzazione annidata. Per informazioni sulle garanzie quando si eseguono enclave di sicurezza basata sulla virtualizzazione in una macchina virtuale, vedere la sezione [Modello di attendibilità](#trust-model).
     - In Hyper-V 2016 o versione successiva [abilitare le estensioni di virtualizzazione annidata nel processore della macchina virtuale](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
     - In Azure selezionare una dimensione di macchina virtuale che supporta la virtualizzazione annidata, Tutte le macchine virtuali della serie v3 supportano la virtualizzazione annidata, ad esempio Dv3 ed Ev3. Vedere [Creare una VM di Azure in grado di supportare l'annidamento](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
-    - In VMWare vSphere 6.7 o versioni successive, abilitare il supporto della sicurezza basata sulla virtualizzazione per la macchina virtuale come descritto nella [documentazione di VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
+    - In VMware vSphere 6.7 o versioni successive, abilitare il supporto della sicurezza basata sulla virtualizzazione per la macchina virtuale come descritto nella [documentazione di VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
     - Anche altri hypervisor e cloud pubblici possono supportare le funzionalità di virtualizzazione annidata che abilitano Always Encrypted con enclave di sicurezza basata sulla virtualizzazione. Vedere la documentazione della soluzione di virtualizzazione per informazioni sulla compatibilità e istruzioni per la configurazione.
 - Se si prevede di usare l'attestazione TPM, è necessario un chip TPM 2.0 rev 1.16 pronto per l'uso nel server. Per il momento, l'attestazione HGS non funziona con i chip TPM 2.0 rev 1.38. Il modulo TPM deve anche avere un certificato valido della chiave di verifica dell'autenticità.
+
+## <a name="roles-and-responsibilities-when-configuring-attestation-with-hgs"></a>Ruoli e responsabilità per la configurazione dell'attestazione con HGS
+
+La configurazione dell'attestazione con HGS comporta la configurazione di componenti di tipi diversi: HGS, computer [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], istanze di [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] e applicazioni che attivano l'attestazione dell'enclave. La configurazione dei componenti di ogni tipo viene eseguita dagli utenti presupponendo uno dei ruoli distinti seguenti:
+
+- Amministratore di HGS: distribuisce HGS, registra i computer [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] in HGS e condivide l'URL di attestazione di HGS con amministratori di computer [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] e amministratori delle applicazioni client.
+- Amministratore del computer [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]: installa i componenti client di attestazione, abilita VBS nei computer [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], fornisce all'amministratore di HGS le informazioni necessarie per registrare i computer [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] in HGS, configura l'URL di attestazione nei computer [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] e verifica che l'attestazione dei computer [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] in HGS funzioni correttamente.
+- DBA: configura le enclave sicure nelle istanze di [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
+- Amministratore delle applicazioni: configura l'applicazione con l'URL di attestazione ottenuto dall'amministratore di HGS.
+
+Negli ambienti di produzione (che gestiscono dati sensibili reali), è importante che l'organizzazione rispetti la separazione dei ruoli durante la configurazione dell'attestazione, assicurandosi che ogni ruolo distinto venga assunto da persone diverse. In particolare, se l'obiettivo della distribuzione di Always Encrypted nell'organizzazione è quello di ridurre la superficie di attacco garantendo che gli amministratori di computer [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] e i DBA non possano accedere ai dati sensibili, gli amministratori di [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] e i DBA non devono controllare i server HGS.
 
 ## <a name="devtest-environment-considerations"></a>Considerazioni sull'ambiente di sviluppo/test
 

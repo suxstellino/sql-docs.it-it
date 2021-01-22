@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52578422cc9f68c728c901cf39bf05425576133b
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
-ms.translationtype: HT
+ms.openlocfilehash: 65712139819c65c2fe8804cc8e0f6768025b322a
+ms.sourcegitcommit: e3ab17fe9822629eda4df5fb4550df5d495f3134
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94521095"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98207860"
 ---
 # <a name="standalone-sql-server-integration-service-ssis-devops-tools-preview"></a>Versione autonoma di SQL Server Integration Services (SSIS) DevOps Tools (anteprima)
 
@@ -128,6 +128,13 @@ SSISDeploy.exe -source|-s:<source path> -destination|-d:<type>;<path>[;server] [
     ```
 
 ## <a name="release-notes"></a>Note sulla versione
+
+### <a name="version-012-preview"></a>Versione 0.1.2 - Anteprima
+
+Data di rilascio: 14 gennaio 2021
+
+- Correzione di un problema a causa del quale SSISBuild.exe non riesce a compilare il progetto con eccezione NullReference quando i metadati dei parametri del pacchetto nel file di progetto SSIS e nel pacchetto SSIS non corrispondono.
+- Correzione di un problema a causa del quale il pacchetto non può essere eseguito con un messaggio di errore che inizia "Impossibile decrittografare il nodo XML protetto " anche se il pacchetto viene distribuito correttamente in SSISDB con SSISDeploy.exe, quando il progetto SSIS contenente il pacchetto è crittografato con EncryptSensitiveWithUserKey e il pacchetto contiene CM con dati sensibili.
 
 ### <a name="version-011-preview"></a>Version 0.1.1 (anteprima)
 

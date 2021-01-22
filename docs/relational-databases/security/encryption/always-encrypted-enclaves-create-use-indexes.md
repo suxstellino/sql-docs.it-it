@@ -2,7 +2,7 @@
 description: Creare e usare indici in colonne usando Always Encrypted con enclave sicuri
 title: Creare e usare indici in colonne usando Always Encrypted con enclave sicuri | Microsoft Docs
 ms.custom: ''
-ms.date: 10/30/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -11,23 +11,24 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 95b797e271436108c3495f522eff3fd042631285
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 4799cd725dce4eb8300717b8c89d601e9915f7d2
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477662"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534830"
 ---
 # <a name="create-and-use-indexes-on-columns-using-always-encrypted-with-secure-enclaves"></a>Creare e usare indici in colonne usando Always Encrypted con enclave sicuri
-[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
-Questo articolo descrive come creare e usare gli indici nelle colonne crittografate usando chiavi di crittografia di colonna abilitate per l'enclave con [Always Encrypted con enclave sicuri](always-encrypted-enclaves.md). 
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
+
+Questo articolo descrive come creare e usare gli indici nelle colonne crittografate usando chiavi di crittografia di colonna abilitate per l'enclave con [Always Encrypted con enclave sicuri](always-encrypted-enclaves.md).
 
 Always Encrypted con enclave sicuri supporta:
 - Indici cluster e non cluster nelle colonne crittografate con la crittografia deterministica e le chiavi abilitate per l'enclave.
   - Tali indici sono ordinati in base al testo crittografato e non richiedono considerazioni particolari. È possibile gestirli e usarli allo stesso modo degli indici nelle colonne crittografate con la crittografia deterministica e le chiavi non abilitate per l'enclave (come con Always Encrypted). 
 - Indici non cluster nelle colonne crittografate con la crittografia casuale e le chiavi abilitate per l'enclave.
-  - L'elaborazione delle query all'interno di un enclave è utile e garantisce che un indice in una colonna crittografata con la crittografia casuale non perda dati sensibili. I valori delle chiavi nella struttura dei dati dell'indice (albero B) vengono crittografati e ordinati in base ai relativi valori del testo non crittografato. Per altre informazioni, vedere [Indici sulle colonne abilitate per l'enclave tramite la crittografia casuale](always-encrypted-enclaves.md#indexes-on-enclave-enabled-columns-using-randomized-encryption).
+  - I valori delle chiavi nella struttura dei dati dell'indice (albero B) vengono crittografati e ordinati in base ai relativi valori del testo non crittografato. Per altre informazioni, vedere [indici nelle colonne abilitate per l'enclave](always-encrypted-enclaves.md#indexes-on-enclave-enabled-columns).
 
 > [!NOTE]
 > Nel resto dell'articolo vengono illustrati gli indici non cluster nelle colonne crittografate con la crittografia casuale e le chiavi abilitate per l'enclave.
@@ -49,11 +50,11 @@ Per il corretto funzionamento di questo metodo per richiamare le operazioni di i
 - Connettersi al database con Always Encrypted e i calcoli dell'enclave abilitati per la connessione di database.
 - L'applicazione deve avere accesso alla chiave master della colonna che protegge la chiave di crittografia della colonna per la colonna indicizzata.
 
-Quando il motore di SQL Server analizza la query dell'applicazione e determina che sarà necessario aggiornare un indice su una colonna crittografata per eseguire la query, indica al driver client di fornire all'enclave la chiave di crittografia di colonna richiesta tramite un canale sicuro. Si tratta esattamente dello stesso meccanismo usato per fornire all'enclave le chiavi di crittografia di colonna per l'elaborazione di tutte le altre query, ad esempio la crittografia sul posto o le query che usano criteri di ricerca e confronti di intervalli.
+Quando il motore di SQL Server analizza la query dell'applicazione e determina che sarà necessario aggiornare un indice su una colonna crittografata per eseguire la query, indica al driver client di fornire all'enclave la chiave di crittografia di colonna richiesta tramite un canale sicuro. Si tratta esattamente dello stesso meccanismo usato per fornire all'enclave le chiavi di crittografia di colonna per l'elaborazione di tutte le altre query che non usano indici, ad esempio la crittografia sul posto o le query che usano criteri di ricerca e confronti di intervalli.
 
-Questo metodo è utile per garantire che la presenza di indici su colonne crittografate sia trasparente per le applicazioni già connesse al database con Always Encrypted e i calcoli dell'enclave abilitati. La connessione dell'applicazione può usare l'enclave per l'elaborazione delle query. Dopo aver creato un indice su una colonna, il driver all'interno dell'app fornirà in modo trasparente le chiavi di crittografia della colonna all'enclave per le operazioni di indicizzazione. Si noti che la creazione di indici può aumentare il numero di query che richiedono all'applicazione di inviare all'enclave le chiavi di crittografia della colonna.
+Questo metodo è utile per garantire che la presenza di indici su colonne crittografate sia trasparente per le applicazioni già connesse al database con Always Encrypted e i calcoli dell'enclave abilitati. La connessione dell'applicazione può usare l'enclave per l'elaborazione delle query. Dopo aver creato un indice su una colonna, il driver all'interno dell'app fornirà in modo trasparente le chiavi di crittografia della colonna all'enclave per le operazioni di indicizzazione. La creazione di indici può aumentare il numero di query che richiedono all'applicazione di inviare all'enclave le chiavi di crittografia della colonna.
 
-Per usare questo metodo, seguire le indicazioni generali per l'esecuzione di query tramite un enclave sicuro in [Eseguire query delle colonne usando Always Encrypted con enclave sicuri](always-encrypted-enclaves-query-columns.md).
+Per usare questo metodo, seguire le indicazioni generali per l'esecuzione di istruzioni usando un'enclave sicura in [Eseguire istruzioni Transact-SQL con enclave sicure](always-encrypted-enclaves-query-columns.md).
 
 Per istruzioni dettagliate su come usare questo metodo, vedere [Esercitazione: Creazione e uso di indici sulle colonne abilitate per l'enclave tramite la crittografia casuale](../tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md).
 
@@ -86,7 +87,7 @@ Questo metodo è utile per:
 Per istruzioni dettagliate su come usare questo metodo, vedere [Esercitazione: Creazione e uso di indici sulle colonne abilitate per l'enclave tramite la crittografia casuale](../tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md). 
 
 ## <a name="next-steps"></a>Passaggi successivi
-- [Eseguire query delle colonne usando Always Encrypted con enclave sicuri](always-encrypted-enclaves-query-columns.md).
+- [Eseguire istruzioni Transact-SQL con enclave sicure](always-encrypted-enclaves-query-columns.md)
 
 ## <a name="see-also"></a>Vedere anche  
 - [Esercitazione: Creazione e uso di indici sulle colonne abilitate per l'enclave tramite la crittografia casuale](../tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md).

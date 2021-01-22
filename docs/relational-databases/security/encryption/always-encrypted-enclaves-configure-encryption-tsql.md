@@ -2,7 +2,7 @@
 description: Configurare la crittografia delle colonne sul posto con Transact-SQL
 title: Configurare la crittografia delle colonne sul posto con Transact-SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 10/10/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -11,15 +11,16 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: e1e72a9e06c2012390a88243c3ef865ac222564b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: ab59eec637bd5afc127227b09445417ffa1fe4eb
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477692"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534850"
 ---
 # <a name="configure-column-encryption-in-place-with-transact-sql"></a>Configurare la crittografia delle colonne sul posto con Transact-SQL
-[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
+
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
 Questo articolo descrive come eseguire operazioni di crittografia sul posto sulle colonne che usano Always Encrypted con enclave sicuri con l'[istruzione ALTER TABLE](../../../odbc/microsoft/alter-table-statement.md)/`ALTER COLUMN`. Per informazioni di base sulla crittografia sul posto e sui prerequisiti generali, vedere [Configurare la crittografia delle colonne sul posto usando Always Encrypted con enclave sicuri](always-encrypted-enclaves-configure-encryption.md).
 
@@ -33,19 +34,20 @@ Con l'istruzione `ALTER TABLE` o `ALTER COLUMN`, è possibile impostare la confi
 
 Come qualsiasi query che usa un enclave sicuro lato server, un'istruzione `ALTER TABLE`/`ALTER COLUMN` che attiva la crittografia sul posto deve essere inviata tramite una connessione con Always Encrypted e i calcoli dell'enclave abilitati. 
 
-Nel resto dell'articolo viene descritto come attivare la crittografia sul posto usando l'istruzione `ALTER TABLE`/`ALTER COLUMN` da SQL Server Management Studio. In alternativa, è possibile eseguire `ALTER TABLE`/`ALTER COLUMN` dall'applicazione. 
+Nel resto dell'articolo viene descritto come attivare la crittografia sul posto usando l'istruzione `ALTER TABLE`/`ALTER COLUMN` da SQL Server Management Studio. In alternativa, è possibile eseguire `ALTER TABLE`/`ALTER COLUMN` da Azure Data Studio o dall'applicazione. 
 
 > [!NOTE]
-> Gli strumenti diversi da SSMS, incluso il cmdlet [Invoke-Sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) nel modulo di PowerShell SqlServer e [sqlcmd](../../../tools/sqlcmd-utility.md), non supportano attualmente l'uso di `ALTER TABLE`/`ALTER COLUMN` per le operazioni di crittografia sul posto.
+> Attualmente, il cmdlet [Invoke-Sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) nel modulo di PowerShell SqlServer e [sqlcmd](../../../tools/sqlcmd-utility.md) non supportano l'uso di `ALTER TABLE`/`ALTER COLUMN` per le operazioni di crittografia sul posto.
 
 ## <a name="perform-in-place-encryption-with-transact-sql-in-ssms"></a>Eseguire la crittografia sul posto con Transact-SQL in SSMS
 ### <a name="pre-requisites"></a>Prerequisiti
 - Prerequisiti descritti in [Configurare la crittografia delle colonne sul posto usando Always Encrypted con enclave sicuri](always-encrypted-enclaves-configure-encryption.md).
-- SQL Server Management Studio 18.3 o versione successiva.
+- SQL Server Management Studio 18.3 o versione successiva quando si usa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+- SQL Server Management Studio 18.8 o versione successiva quando si usa [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
 ### <a name="steps"></a>Passaggi
 1. Aprire una finestra di query con Always Encrypted e i calcoli dell'enclave abilitati nella connessione di database. Per informazioni dettagliate, vedere [Abilitazione e disabilitazione di Always Encrypted per una connessione di database](always-encrypted-query-columns-ssms.md#en-dis).
-2. Nella finestra di query eseguire l'istruzione `ALTER TABLE`/`ALTER COLUMN`, specificando una chiave di crittografia di colonna abilitata per l'enclave nella clausola `ENCRYPTED WITH`. Se la colonna è una colonna di tipo stringa (ad esempio, `char`, `varchar`, `nchar`, `nvarchar`), potrebbe anche essere necessario modificare le regole di confronto impostando regole di confronto BIN2. 
+2. Nella finestra di query eseguire l'istruzione `ALTER TABLE`/`ALTER COLUMN` specificando la configurazione di crittografia di destinazione per una colonna da crittografare, decrittografare o crittografare di nuovo. Per crittografare o crittografare nuovamente la colonna, usare la clausola `ENCRYPTED WITH`. Se la colonna è una colonna di tipo stringa (ad esempio, `char`, `varchar`, `nchar`, `nvarchar`), potrebbe anche essere necessario modificare le regole di confronto impostando regole di confronto BIN2. 
     
     > [!NOTE]
     > Se la chiave master della colonna è archiviata in Azure Key Vault, potrebbe essere richiesto di accedere ad Azure.
@@ -67,7 +69,7 @@ Nel resto dell'articolo viene descritto come attivare la crittografia sul posto 
 #### <a name="encrypting-a-column-in-place"></a>Crittografia di una colonna sul posto
 L'esempio seguente presuppone che:
 - `CEK1` sia una chiave di crittografia di colonna abilitata per l'enclave.
-- La colonna `SSN` sia di testo non crittografato e usi attualmente le regole di confronto del database predefinite, ad esempio Latin1 non BIN2 (ad esempio, `Latin1_General_CI_AI_KS_WS`).
+- La colonna `SSN` sia di testo non crittografato e usi attualmente le regole di confronto del database predefinite, come Latin1 non BIN2 (ad esempio, `Latin1_General_CI_AI_KS_WS`).
 
 L'istruzione crittografa la colonna `SSN` usando la crittografia casuale e la chiave di crittografia di colonna abilitata per l'enclave sul posto. Sovrascrive anche le regole di confronto del database predefinite con regole di confronto BIN2 corrispondenti (nella stessa tabella codici).
 
@@ -125,7 +127,7 @@ L'esempio seguente presuppone che:
 - La colonna `SSN` venga crittografata con una chiave di crittografia di colonna abilitata per l'enclave.
 - Le regole di confronto correnti, impostate a livello di colonna, siano `Latin1_General_BIN2`.
 
-L'istruzione seguente decrittografa la colonna e mantiene invariate le regole di confronto. In alternativa, è possibile scegliere di modificare le regole di confronto, ad esempio impostando regole di confronto non BIN2 nella stessa istruzione.
+L'istruzione seguente decrittografa la colonna e mantiene invariate le regole di confronto. In alternativa, è possibile scegliere di modificare le regole di confronto. Sostituire ad esempio le regole di confronto con regole di confronto non BIN2 nella stessa istruzione.
 
 ```sql
 ALTER TABLE [dbo].[Employees]
@@ -137,11 +139,13 @@ GO
 ```
 
 ## <a name="next-steps"></a>Passaggi successivi
-- [Eseguire query delle colonne usando Always Encrypted con enclave sicuri](always-encrypted-enclaves-query-columns.md)
+- [Eseguire istruzioni Transact-SQL con enclave sicure](always-encrypted-enclaves-query-columns.md)
 - [Creare e usare indici in colonne usando Always Encrypted con enclave sicuri](always-encrypted-enclaves-create-use-indexes.md)
 - [Sviluppare applicazioni usando Always Encrypted con enclave sicuri](always-encrypted-enclaves-client-development.md)
 
 ## <a name="see-also"></a>Vedere anche  
+- [Risolvere i problemi comuni per Always Encrypted con enclave sicure](always-encrypted-enclaves-troubleshooting.md)
 - [Configurare la crittografia delle colonne sul posto usando Always Encrypted con enclave sicuri](always-encrypted-enclaves-configure-encryption.md)
 - [Abilitare Always Encrypted con enclave sicuri per le colonne crittografate esistenti](always-encrypted-enclaves-enable-for-encrypted-columns.md)
-- [Esercitazione: Introduzione ad Always Encrypted con enclave sicuri tramite SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Esercitazione: Introduzione ad Always Encrypted con enclave sicure in SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Esercitazione: Introduzione ad Always Encrypted con enclave sicure nel database SQL di Azure](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)

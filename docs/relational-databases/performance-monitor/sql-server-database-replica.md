@@ -2,7 +2,7 @@
 title: SQL Server, Database Replica | Microsoft Docs
 description: Informazioni sull'oggetto prestazioni SQLServer:Database Replica, che contiene contatori delle prestazioni sui database secondari di un gruppo di disponibilità Always On.
 ms.custom: ''
-ms.date: 08/24/2016
+ms.date: 01/13/2021
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 176f7b9ba860e6ca7f72e35f6c6a87622948fc70
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
-ms.translationtype: HT
+ms.openlocfilehash: 3dff6cb9b3a65ea5f38a97786e10701bc1f31749
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96505755"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170303"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, replica di database
 
@@ -42,7 +42,7 @@ ms.locfileid: "96505755"
 |**Byte rollforward rimanenti**|Quantità di log in KB di cui deve essere eseguito il rollforward per completare la fase di ripristino.|Replica secondaria|  
 |**Byte di cui è stato eseguito il rollforward/sec**|Quantità di record del log sottoposti a rollforward nel database secondario nell'ultimo secondo.|Replica secondaria|  
 |**Totale log per cui è necessario il rollback**|Kilobyte di log totali che devono essere annullati.|Replica secondaria|  
-|**Ritardo transazioni**|Ritardo di attesa per il riconoscimento di un commit senza terminazione per tutte le transazioni correnti, in millisecondi. Dividere per *Transazioni di scrittura con mirroring/sec* per ottenere il *ritardo delle transazioni medio*. Per altre informazioni, vedere [SQL Server 2012 AlwaysOn – Part 12 – Performance Aspects and Performance Monitoring II](/archive/blogs/saponsqlserver/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii) (SQL Server 2012 AlwaysOn – Parte 12 – Aspetti delle prestazioni e monitoraggio delle prestazioni II)|Replica primaria|  
+|**Ritardo transazioni**|Ritardo di attesa totale per il riconoscimento di un commit senza terminazione per tutte le transazioni correnti, in millisecondi. Dividere per *Transazioni di scrittura con mirroring/sec* per ottenere il *ritardo delle transazioni medio*. Per altre informazioni, vedere [SQL Server 2012 AlwaysOn – Part 12 – Performance Aspects and Performance Monitoring II](/archive/blogs/saponsqlserver/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii) (SQL Server 2012 AlwaysOn – Parte 12 – Aspetti delle prestazioni e monitoraggio delle prestazioni II)|Replica primaria|  
   
 ## <a name="see-also"></a>Vedere anche
   

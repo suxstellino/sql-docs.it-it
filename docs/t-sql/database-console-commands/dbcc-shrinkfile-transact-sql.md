@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 7d7d3c9e8fa3e67a4ee6ba5c2eb2590ee65c18b2
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
-ms.translationtype: HT
+ms.openlocfilehash: 478c7c784c25b1b71bcafd2279ac93bc7545c188
+ms.sourcegitcommit: e40e75055c1435c5e3f9b6e3246be55526807b4c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96119572"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98151312"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -67,7 +67,7 @@ Nome logico del file da compattare.
 Numero di identificazione (ID) del file da compattare. Per ottenere un ID file, usare la funzione di sistema [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) o eseguire una query sulla vista del catalogo [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) nel database corrente.
   
 *target_size*  
-Valore intero che indica le nuove dimensioni in megabyte del file. Se questo argomento viene omesso, il file viene compattato in base alle dimensioni al momento della creazione.
+Valore intero che indica le nuove dimensioni in megabyte del file. Se questo argomento viene omesso o è 0, DBCC SHRINKFILE riduce le dimensioni del file in base alle dimensioni al momento della creazione.
   
 > [!NOTE]  
 >  È possibile ridurre le dimensioni predefinite di un file vuoto usando DBCC SHRINKFILE *target_size*. Se si crea ad esempio un file con dimensioni pari a 5 MB e si riducono le dimensioni a 3 MB mentre il file è ancora vuoto, le dimensioni predefinite vengono impostate su 3 Mb. Questa condizione si applica solo a file vuoti in cui non sono mai stati contenuti dati.  

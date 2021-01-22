@@ -2,7 +2,7 @@
 description: Effettuare il provisioning delle chiavi abilitate per l'enclave
 title: Effettuare il provisioning delle chiavi abilitate per l'enclave | Microsoft Docs
 ms.custom: ''
-ms.date: 10/01/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.prod_service: database-engine, sql-database
@@ -11,15 +11,16 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 02d4b833b45393c6d830048c3e761cd7abac99e7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: e28b6d18b5fe466aa239164b18ebdfe5fef0895c
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477622"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534760"
 ---
 # <a name="provision-enclave-enabled-keys"></a>Effettuare il provisioning delle chiavi abilitate per l'enclave
-[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
+
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
 Questo articolo descrive come effettuare il provisioning di chiavi abilitate per l'enclave che supportano i calcoli all'interno di enclave sicuri lato server usati per [Always Encrypted con enclave sicuri](always-encrypted-enclaves.md). 
 
@@ -39,12 +40,17 @@ Per creare una chiave di crittografia di colonna abilitata per l'enclave, è nec
 Le sezioni seguenti forniscono altri dettagli su come effettuare il provisioning di chiavi abilitate per l'enclave usando SSMS e PowerShell.
 
 ## <a name="provision-enclave-enabled-keys-using-sql-server-management-studio"></a>Effettuare il provisioning di chiavi abilitate per l'enclave con SQL Server Management Studio
-In SQL Server Management Studio 18.3 o versione successiva è possibile effettuare il provisioning di:
+In SQL Server Management Studio è possibile effettuare il provisioning di:
 - Una chiave master di colonna abilitata per l'enclave usando la finestra di dialogo **Nuova chiave master della colonna**.
 - Una chiave di crittografia di colonna abilitata per l'enclave usando la finestra di dialogo **Nuova chiave di crittografia della colonna**.
 
 > [!NOTE]
 > La [procedura guidata Always Encrypted](always-encrypted-wizard.md) attualmente non supporta la generazione di chiavi abilitate per l'enclave. È tuttavia possibile creare chiavi abilitate per l'enclave usando prima le finestre di dialogo precedenti e quindi, quando si esegue la procedura guidata, selezionare una crittografia di colonna abilitata per l'enclave già esistente per le colonne da crittografare.
+
+Requisiti minimi della versione di SSMS:
+
+- SSMS 18.3 quando si usa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+- SSMS 18.8 quando si usa [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
 ### <a name="provision-enclave-enabled-column-master-keys-with-the-new-column-master-key-dialog"></a>Effettuare il provisioning di chiavi master di colonna abilitate per l'enclave con la finestra di dialogo Nuova chiave master della colonna
 Per effettuare il provisioning di una chiave master di colonna abilitata per l'enclave, seguire i passaggi in [Effettuare il provisioning delle chiavi master di colonna con la finestra di dialogo Nuova chiave master della colonna](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog). Assicurarsi di selezionare **Consenti calcoli enclave**. Vedere lo screenshot di seguito:
@@ -52,7 +58,7 @@ Per effettuare il provisioning di una chiave master di colonna abilitata per l'e
 ![Consenti calcoli enclave](./media/always-encrypted-enclaves/allow-enclave-computations.png)
 
 > [!NOTE]
-> La casella di controllo **Consenti calcoli enclave** viene visualizzata solo se l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contiene un'enclave sicuro correttamente inizializzato. Per altre informazioni, vedere [Configurare il tipo di enclave per Always Encrypted](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md).
+> La casella di controllo **Consenti calcoli enclave** viene visualizzata solo se è configurata un'enclave sicura per il database. Se si usa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [Configurare l'enclave sicura in SQL Server](always-encrypted-enclaves-configure-enclave-type.md). Se si usa [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], vedere [Abilitare Intel SGX per il database SQL di Azure](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx).
 
 > [!TIP]
 > Per verificare se una chiave master di colonna è abilitata per l'enclave, fare clic con il pulsante destro del mouse su di essa in Esplora oggetti e scegliere **Proprietà**. Se la chiave è abilitata per l'enclave, **Calcoli dell'enclave: Consentiti** viene visualizzato nella finestra che mostra le proprietà della chiave. In alternativa, è possibile usare la vista [sys.column_master_keys (Transact-SQL)](../../system-catalog-views/sys-column-master-keys-transact-sql.md).
@@ -148,12 +154,13 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 ```
 
 ## <a name="next-steps"></a>Passaggi successivi
-- [Eseguire query delle colonne usando Always Encrypted con enclave sicuri](always-encrypted-enclaves-query-columns.md)
+- [Eseguire istruzioni Transact-SQL con enclave sicure](always-encrypted-enclaves-query-columns.md)
 - [Configurare la crittografia delle colonne sul posto usando Always Encrypted con enclave sicuri](always-encrypted-enclaves-configure-encryption.md)
 - [Abilitare Always Encrypted con enclave sicuri per le colonne crittografate esistenti](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 - [Sviluppare applicazioni usando Always Encrypted con enclave sicuri](always-encrypted-enclaves-client-development.md) 
 
 ## <a name="see-also"></a>Vedere anche  
-- [Esercitazione: Introduzione ad Always Encrypted con enclave sicuri tramite SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Esercitazione: Introduzione ad Always Encrypted con enclave sicure in SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Esercitazione: Introduzione ad Always Encrypted con enclave sicure nel database SQL di Azure](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
 - [Gestire le chiavi per Always Encrypted con enclave sicuri](always-encrypted-enclaves-manage-keys.md)
 - [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)

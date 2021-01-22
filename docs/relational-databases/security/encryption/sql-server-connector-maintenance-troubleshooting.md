@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 4c8a74d33e75ab19b283f3b9d1bfdaf47dc69240
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
-ms.translationtype: HT
+ms.openlocfilehash: fa78eb8ef2da01514e161c58b05146b1699c93f7
+ms.sourcegitcommit: e40e75055c1435c5e3f9b6e3246be55526807b4c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869268"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98151267"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>Manutenzione e risoluzione dei problemi del Connettore SQL Server
 
@@ -139,7 +139,7 @@ Collegamenti diretti a versioni precedenti del Connettore SQL Server
 
 ### <a name="rolling-the-ssnoversion-service-principal"></a>Rollover dell'entità servizio di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa le entità servizio create in Azure Active Directory come credenziali per accedere all'insieme di credenziali delle chiavi. L'entità servizio ha un ID client e una chiave di autenticazione. Le credenziali di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono configurate con il **nome dell'insieme di credenziali**, l' **ID client**e la **chiave di autenticazione**. La **Chiave di autenticazione** è valida per un determinato periodo di tempo (uno o due anni). Prima della scadenza è necessario generare una nuova chiave in Azure AD per l'entità servizio. Successivamente è necessario cambiare le credenziali in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] mantiene una cache per le credenziali nella sessione corrente, per cui, quando vengono modificate le credenziali, [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] deve essere riavviato.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa le entità servizio create in Azure Active Directory come credenziali per accedere all'insieme di credenziali delle chiavi. L'entità servizio ha un ID client e una chiave di autenticazione. Le credenziali di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono configurate con il **nome dell'insieme di credenziali**, l' **ID client** e la **chiave di autenticazione**. La **Chiave di autenticazione** è valida per un determinato periodo di tempo (uno o due anni). Prima della scadenza è necessario generare una nuova chiave in Azure AD per l'entità servizio. Successivamente è necessario cambiare le credenziali in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] mantiene una cache per le credenziali nella sessione corrente, per cui, quando vengono modificate le credenziali, [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] deve essere riavviato.  
   
 ### <a name="key-backup-and-recovery"></a>Backup e ripristino delle chiavi
 
@@ -227,6 +227,7 @@ Codice di errore  |Simbolo  |Descrizione
 2051 | scp_err_OutOfMemory | La memoria del motore SQL è insufficiente e non è stato possibile allocare memoria per il provider EKM.
 2052 | scp_err_ConvertKeyNameToThumbprint | La conversione del nome della chiave in identificazione personale non è riuscita.
 2053 | scp_err_ConvertThumbprintToKeyName|  La conversione dell'identificazione personale nel nome della chiave non è riuscita.
+2058 | scp_err_FailureInRegistry|  Non è stato possibile eseguire l'operazione nel Registro di sistema. L'account del servizio SQL Server non ha l'autorizzazione per creare la chiave del Registro di sistema.
 3000 | ErrorSuccess | L'operazione AKV è stata completata.
 3001 | ErrorUnknown | L'operazione AKV non è riuscita con un errore non specificato.
 3002 | ErrorHttpCreateHttpClientOutOfMemory | Non è possibile creare HttpClient per un'operazione AKV perché la memoria è insufficiente.

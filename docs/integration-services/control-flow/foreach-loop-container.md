@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3265871cc1ddf221b3fb4090936d146f555dd3b5
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
-ms.translationtype: HT
+ms.openlocfilehash: 7ae64e777b08cdf4df6f7e8fdd05ff8c3822a06b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194293"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171523"
 ---
 # <a name="foreach-loop-container"></a>Contenitore Ciclo Foreach
 
@@ -55,7 +55,7 @@ ms.locfileid: "92194293"
   
 -   Foreach File Enumerator, per enumerare i file contenuti in una cartella. È possibile includere nell'enumerazione anche le sottocartelle. È ad esempio possibile leggere tutti i file con estensione log presenti nella cartella di Windows e nelle relative sottocartelle. Si noti che non è possibile specificare l'ordine in cui vengono recuperati i file.  
   
--   Foreach From Variable Enumerator, per enumerare gli oggetti enumerabili contenuti in una variabile specificata. L'oggetto enumerabile può essere una matrice, un oggetto **DataTable**ADO.NET, un enumeratore [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e così via. È ad esempio possibile enumerare i valori di una matrice che contiene i nomi dei server.  
+-   Foreach From Variable Enumerator, per enumerare gli oggetti enumerabili contenuti in una variabile specificata. L'oggetto enumerabile può essere una matrice, un oggetto **DataTable** ADO.NET, un enumeratore [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e così via. È ad esempio possibile enumerare i valori di una matrice che contiene i nomi dei server.  
   
 -   Foreach Item Enumerator, per enumerare elementi costituiti da raccolte. È ad esempio possibile enumerare i nomi degli eseguibili e delle directory di lavoro utilizzate dall'attività Esegui processo.  
   
@@ -134,7 +134,7 @@ Questa procedura descrive la configurazione di un contenitore Ciclo Foreach, inc
   
     -   Per usare l'enumeratore Foreach File, specificare la cartella che contiene i file da enumerare, specificare un filtro per il nome e il tipo di file e quindi specificare se deve essere restituito il nome completo del file. Indicare inoltre se ricercare ulteriori file nelle sottocartelle.  
   
-    -   Per usare l'enumeratore Foreach Item, fare clic su **Colonne**e, nella finestra di dialogo **Colonne For Each Item** , fare clic su **Aggiungi** per aggiungere le colonne. Selezionare un tipo di dati nell'elenco **Tipo di dati** per ogni colonna e quindi fare clic su **OK**.  
+    -   Per usare l'enumeratore Foreach Item, fare clic su **Colonne** e, nella finestra di dialogo **Colonne For Each Item** , fare clic su **Aggiungi** per aggiungere le colonne. Selezionare un tipo di dati nell'elenco **Tipo di dati** per ogni colonna e quindi fare clic su **OK**.  
   
          Digitare i valori nelle colonne oppure selezionarli dagli elenchi.  
   
@@ -461,7 +461,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
 ####  <a name="enumerator--foreach-azure-blob-enumerator"></a><a name="ForeachAzureBlob"></a> Enumeratore = Enumeratore Foreach BLOB di Azure  
  **Azure Blob Enumerator** consente a un pacchetto SSIS di enumerare i file BLOB nel percorso BLOB specificato. È possibile archiviare il nome del file BLOB enumerato in una variabile e usarlo nelle attività interne al Contenitore Ciclo Foreach.  
   
- **Azure Blob Enumerator** è un componente del Feature Pack di SQL Server Integration Services (SSIS) per Azure per [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Scaricare il Feature Pack [qui](https://go.microsoft.com/fwlink/?LinkID=626967).  
+ **Azure Blob Enumerator** è un componente del Feature Pack di SQL Server Integration Services (SSIS) per Azure per [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]. Scaricare il Feature Pack [qui](https://go.microsoft.com/fwlink/?LinkID=626967).  
   
  **Azure storage connection manager** (Gestione connessione di Archiviazione di Azure)  
  Selezionare una gestione connessione di archiviazione di Azure esistente o crearne una nuova che si riferisca a un Account di archiviazione Azure.  
@@ -510,7 +510,7 @@ Specifica il percorso della cartella in cui enumerare i file.
 **SearchRecursively**  
 Specifica se eseguire la ricerca in modo ricorsivo all'interno della cartella specificata.
 
-***Note sulla configurazione delle autorizzazioni dell'entità servizio***
+**_Note sulla configurazione delle autorizzazioni dell'entità servizio_* _
 
 L'autorizzazione Data Lake storage Gen2 è determinata sia da [RBAC](/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) che da [ACL](/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer).
 Verificare che gli ACL siano configurati usando l'ID oggetto (OID) dell'entità servizio per la registrazione dell'app, come descritto [qui](/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal).
@@ -518,7 +518,7 @@ Questo ID è diverso dall'ID applicazione (client) usato con la configurazione d
 Quando a un'entità di sicurezza vengono concesse le autorizzazioni per i dati di Controllo degli accessi in base al ruolo tramite un ruolo predefinito o tramite un ruolo personalizzato, queste autorizzazioni vengono valutate per prime all'autorizzazione di una richiesta.
 Se l'operazione richiesta è autorizzata dalle assegnazioni di Controllo degli accessi in base al ruolo dell'entità di sicurezza, l'autorizzazione viene immediatamente risolta e non vengono eseguiti controlli ACL aggiuntivi.
 In alternativa, se l'entità di sicurezza non dispone di un'assegnazione di Controllo degli accessi in base al ruolo o se l'operazione della richiesta non corrisponde all'autorizzazione assegnata, vengono eseguiti i controlli ACL per determinare se l'entità di sicurezza è autorizzata a eseguire l'operazione richiesta.
-Per il corretto funzionamento dell'enumeratore, concedere almeno l'autorizzazione **Execute** a partire dal file system radice, insieme all'autorizzazione **Read** per la cartella di destinazione.
+Per il corretto funzionamento dell'enumeratore, concedere almeno l'autorizzazione _ *Execute** a partire dal file system radice, insieme all'autorizzazione **Read** per la cartella di destinazione.
 In alternativa, concedere almeno il **Ruolo con autorizzazioni di lettura per i dati dei BLOB di archiviazione** con Controllo degli accessi in base al ruolo.
 Per informazioni dettagliate, vedere [questo articolo](/azure/storage/blobs/data-lake-storage-access-control).
 

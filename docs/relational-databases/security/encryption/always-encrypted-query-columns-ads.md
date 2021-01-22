@@ -2,7 +2,7 @@
 description: Eseguire query sulle colonne usando Always Encrypted con Azure Data Studio
 title: Eseguire query sulle colonne usando Always Encrypted con Azure Data Studio | Microsoft Docs
 ms.custom: ''
-ms.date: 5/19/2020
+ms.date: 01/15/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a61514ff76bbae9e403683529d017f6fcb1c079
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
-ms.translationtype: HT
+ms.openlocfilehash: 93bb5c30eeb9cdc6f10c3b71d0e4f70f3f8c6477
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101879"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534424"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>Eseguire query sulle colonne usando Always Encrypted con Azure Data Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -85,6 +85,7 @@ Oltre a queste autorizzazioni, per decrittografare i risultati delle query o per
 Per altre informazioni, vedere [Creare e archiviare chiavi master della colonna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 ## <a name="enabling-and-disabling-always-encrypted-for-a-database-connection"></a>Abilitazione e disabilitazione di Always Encrypted per una connessione di database   
+
 Quando ci si connette a un database in Azure Data Studio, è possibile abilitare o disabilitare Always Encrypted per la connessione di database. Per impostazione predefinita, Always Encrypted è disabilitato. 
 
 Quando si abilita Always Encrypted per una connessione di database, si indica al [provider di dati Microsoft .NET per SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md), usato da Azure Data Studio, di provare a eseguire le operazioni seguenti in modo trasparente:   
@@ -100,10 +101,11 @@ Se non si abilita Always Encrypted per una connessione, il provider di dati Micr
 Per abilitare o disabilitare Always Encrypted:
 1. Nella finestra di dialogo **Connessione** fare clic su **Avanzate...** .
 2. Per abilitare Always Encrypted per la connessione, impostare il campo **Always Encrypted** su **Attivato**. Per disabilitare Always Encrypted, lasciare vuoto il valore del campo **Always Encrypted** o impostarlo su **Disattivato**.
-3. Se si usa [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] e l'istanza di SQL Server è configurata con un'enclave sicuro, è possibile specificare un protocollo di enclave e un URL di attestazione dell'enclave. Se l'istanza di SQL Server non usa un'enclave sicuro, assicurarsi di lasciare vuoti i campi **Attestation Protocol** (Protocollo di attestazione) e **URL di attestazione enclave**. Per altre informazioni, vedere [Always Encrypted con enclave sicuri](always-encrypted-enclaves.md).
-4. Fare clic su **OK** per chiudere le **Proprietà avanzate**.
+3. Fare clic su **OK** per chiudere le **Proprietà avanzate**.
 
 ![Breve video che illustra i passaggi per abilitare Always Encrypted per la connessione.](../../../relational-databases/security/encryption/media/always-encrypted-ads-connect.gif)
+
+Per eseguire istruzioni che sfruttano un'enclave sicura sul lato server quando si usa [Always Encrypted con enclave sicure](always-encrypted-enclaves.md), è necessario specificare un protocollo di attestazione e un URL di attestazione dell'enclave, oltre ad abilitare Always Encrypted per la connessione. Per informazioni dettagliate, vedere [Prerequisiti per l'esecuzione di istruzioni T-SQL usando le enclave in Azure Data Studio](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-t-sql-statements-using-enclaves-in-azure-data-studio).
 
 > [!TIP]
 > Per abilitare e disabilitare Always Encrypted per una finestra di query, fare clic su **Disconnetti** e quindi fare clic su **Connetti** e completare i passaggi precedenti per riconnettersi al database con i valori desiderati nel campo **Always Encrypted**. 

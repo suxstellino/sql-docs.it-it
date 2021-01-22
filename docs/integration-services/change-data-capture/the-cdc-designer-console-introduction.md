@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e8e1fd0c8e43000573d030a80ce52145bd0c8669
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
-ms.translationtype: HT
+ms.openlocfilehash: ac65acde470d75c616e77d21f6e62ab8d1f5e4e4
+ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384880"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98241853"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Introduzione a CDC Designer Console
 
@@ -43,9 +43,11 @@ ms.locfileid: "94384880"
   
 ### <a name="source-oracle-database"></a>Database Oracle di origine
   
--   Oracle Database 10g Release 2
--   Oracle Database 11g Release 1 e Release 2
--   Oracle Database 12c nell'installazione classica. L'installazione multi-tenant non è supportata.  
+- Oracle Database 10g Release 2
+- Oracle Database 11g Release 1 e Release 2
+- Oracle Database 12c nell'installazione classica (l'installazione multi-tenant non è supportata).  
+- Oracle Database 18c nell'installazione classica (l'installazione multi-tenant non è supportata).
+- Oracle Database 19c nell'installazione classica (l'installazione multi-tenant non è supportata).
 
 ### <a name="target-sql-server-database"></a>Database di SQL Server di destinazione
   

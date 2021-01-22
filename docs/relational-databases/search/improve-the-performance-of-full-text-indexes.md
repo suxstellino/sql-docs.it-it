@@ -18,12 +18,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 79368864ef41860d725772ee9136bb1e66e82790
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 2ec5532f22f50258334f815d12202eb4645b4b17
+ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97479502"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98241852"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Miglioramento delle prestazioni di indici full-text
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ La causa principale del calo delle prestazioni di esecuzione dell'indicizzazione
 -   **Disco**. Se la lunghezza media della coda di attesa del disco è superiore al doppio del numero di testine, il collo di bottiglia è rappresentato dal disco. La soluzione alternativa principale consiste nella creazione di cataloghi full-text separati dai file e dai log del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Posizionare i log, i file di database e i cataloghi full-text su dischi separati. Per migliorare le prestazioni di esecuzione dell'indicizzazione, è inoltre possibile installare dischi più veloci e usare RAID.  
   
     > [!NOTE]  
-    >  A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], il motore di ricerca full-text può usare memoria AWE, in quanto parte del processo sqlservr.exe.  
+    > A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], il motore di ricerca full-text può usare memoria AWE, in quanto parte del processo sqlservr.exe. Per altre informazioni, vedere [Architettura della ricerca full-text](../../relational-databases/search/full-text-search.md#architecture).  
 
 ### <a name="full-text-batching-issues"></a>Problemi relativi ai batch full-text
  Se nel sistema non vengono rilevati colli di bottiglia a livello dell'hardware, le prestazioni di indicizzazione della ricerca full-text dipendono principalmente dagli elementi seguenti:  
@@ -67,7 +67,7 @@ Per ottimizzare le prestazioni degli indici full-text, implementare le procedure
   
 -   Aggiornare le statistiche della tabella di base utilizzando l'istruzione [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) . Un'operazione ancora più importante consiste nell'aggiornamento delle statistiche nell'indice cluster o nella chiave full-text per un popolamento completo. In questo modo, tramite un popolamento a più intervalli è possibile generare partizioni ottimali nella tabella.  
   
--   Prima di eseguire un popolamento completo in un computer di grandi dimensioni con più CPU, è consigliabile limitare temporaneamente la dimensione del pool di buffer impostando il valore di **max server memory** in modo tale da lasciare una quantità di memoria sufficiente per il processo fdhost.exe e il sistema operativo. Per ulteriori informazioni, vedere "Stima dei requisiti di memoria del processo host del daemon di filtri (fdhost.exe)" più avanti in questo argomento.
+-   Prima di eseguire un popolamento completo in un computer di grandi dimensioni con più CPU, è consigliabile limitare temporaneamente la dimensione del pool di buffer impostando il valore di **max server memory** in modo tale da lasciare una quantità di memoria sufficiente per il processo fdhost.exe e il sistema operativo. Per altre informazioni, vedere [Stima dei requisiti di memoria del processo host del daemon di filtri (fdhost.exe)](#estimate) più avanti in questo argomento.
 
 -   Se si usa il popolamento incrementale basato su una colonna timestamp, compilare un indice secondario sulla colonna **timestamp** per migliorare le prestazioni di esecuzione del popolamento incrementale.  
   
@@ -89,24 +89,24 @@ Di seguito sono riportate le parti variabili del nome del file del log di ricerc
  Ad esempio, `SQLFT0000500008.2` è il file del log di ricerca per indicizzazione per un database con ID database = 5 e ID catalogo full-text = 8. Il 2 alla fine del nome file indica che sono disponibili due file del log di tipo ricerca per indicizzazione per questa coppia di database/catalogo.  
 
 ### <a name="check-physical-memory-usage"></a>Controllare l'utilizzo della memoria fisica  
- Durante un popolamento full-text, è possibile che la memoria disponibile per fdhost.exe o sqlservr.exe diventi insufficiente o si esaurisca.
--   Se il log delle ricerche per indicizzazione full-text indica il riavvio frequente del processo fdhost.exe o la restituzione frequente del codice di errore 8007008, uno di questi processi non dispone di memoria sufficiente.
--   Se fdhost.exe produce dump, in particolare in computer di grandi dimensioni con più CPU, è possibile che la memoria si esaurisca.  
+ Durante un popolamento full-text, è possibile che la memoria disponibile per `fdhost.exe` o `sqlservr.exe` diventi insufficiente o si esaurisca.
+-   Se il log delle ricerche per indicizzazione full-text indica il riavvio frequente del processo `fdhost.exe` o la restituzione del codice di errore 8007008, uno di questi processi non dispone di memoria sufficiente.
+-   Se `fdhost.exe` produce dump, in particolare in computer di grandi dimensioni con più CPU, è possibile che la memoria sia in esaurimento.  
 -   Per ottenere informazioni sui buffer di memoria usati da una ricerca per indicizzazione full-text, vedere [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md).  
   
  Di seguito sono elencate le possibili cause di memoria insufficiente:  
   
 -   **Memoria insufficiente**. Se la quantità di memoria fisica disponibile durante un popolamento completo è pari a zero, è possibile che il pool di buffer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stia utilizzando la maggior parte della memoria fisica presente nel sistema.  
   
-     Il processo sqlservr.exe tenta di acquisire tutta la memoria disponibile per il pool di buffer, fino alla quantità massima di memoria del server configurata. Se l'allocazione di **max server memory** è eccessiva, per il processo fdhost.exe possono verificarsi condizioni di memoria insufficiente e l'impossibilità di allocare memoria condivisa.  
+     Il processo `sqlservr.exe` tenta di acquisire tutta la memoria disponibile per il pool di buffer, fino alla quantità massima di memoria del server configurata. Se l'allocazione di **max server memory** è eccessiva, per il processo fdhost.exe possono verificarsi condizioni di memoria insufficiente e l'impossibilità di allocare memoria condivisa.  
   
-     È possibile risolvere questo problema impostando in modo appropriato il valore **max server memory** del pool di buffer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ulteriori informazioni, vedere "Stima dei requisiti di memoria del processo host del daemon di filtri (fdhost.exe)" più avanti in questo argomento. Può inoltre risultare utile ridurre la dimensione del batch per l'indicizzazione full-text.  
+     È possibile risolvere questo problema impostando in modo appropriato il valore **max server memory** del pool di buffer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Stima dei requisiti di memoria del processo host del daemon di filtri (fdhost.exe)](#estimate) più avanti in questo argomento. Può inoltre risultare utile ridurre la dimensione del batch per l'indicizzazione full-text.  
 
 -   **Contesa di memoria**. Durante un popolamento full-text in un computer con più CPU, tra fdhost.exe e sqlservr.exe può verificarsi una contesa per la memoria del pool di buffer. La conseguente mancanza di memoria condivisa genera tentativi batch, sovraccarico della memoria e dump da parte del processo fdhost.exe.  
 
 -   **Problemi di paging**. Anche le dimensioni insufficienti del file di paging, ad esempio in un sistema con un file di paging ridotto con crescita limitata, possono generare condizioni di memoria insufficiente per fdhost.exe o sqlservr.exe. Se nei log delle ricerche per indicizzazione full-text non sono riportati errori di memoria, è probabile che le prestazioni non siano ottimali a causa del paging eccessivo.  
   
-### <a name="estimate-the-memory-requirements-of-the-filter-daemon-host-process-fdhostexe"></a>Stimare i requisiti di memoria per il processo host del daemon di filtri (fdhost.exe)  
+### <a name="estimate-the-memory-requirements-of-the-filter-daemon-host-process-fdhostexe"></a><a name="estimate"></a> Stimare i requisiti di memoria per il processo host del daemon di filtri (fdhost.exe)  
  La quantità di memoria richiesta dal processo fdhost.exe per un popolamento dipende principalmente dal numero di intervalli di ricerca per indicizzazione full-text utilizzati, dalla dimensione della memoria condivisa in ingresso e dal numero massimo di istanze di tale memoria.  
   
  È possibile stimare approssimativamente la quantità di memoria (in byte) utilizzata dall'host del daemon di filtri tramite la formula seguente:  
@@ -145,17 +145,17 @@ Per informazioni essenziali sulle formule seguenti, vedere le note dopo la tabel
   
  Questo esempio è relativo a un computer a 64 bit con 8 GB di RAM e 4 processori dual core. Il primo calcolo consente di stimare i requisiti di memoria di fdhost.exe, ovvero *F*. Il numero di intervalli di ricerca per indicizzazione è `8`.  
   
- `F = 8*10*8=640`  
+ `F = 8*10*8 = 640`  
   
- Il calcolo successivo ottiene il valore ottimale per **max server memory**-*M*. La memoria fisica totale disponibile in questo sistema in MB, *T*, è `8192`.  
+ Il calcolo successivo ottiene il valore ottimale per **max server memory** -*M*. La memoria fisica totale disponibile in questo sistema in MB, *T*, è `8192`.  
   
- `M = 8192-640-500=7052`  
+ `M = 8192-640-500 = 7052`  
   
  #### <a name="example-setting-max-server-memory"></a>Esempio: impostazione della memoria massima del server  
   
  Questo esempio usa le istruzioni [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) e [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) di [!INCLUDE[tsql](../../includes/tsql-md.md)] per impostare **max server memory** sul valore calcolato per *M* nell'esempio precedente, `7052`:  
   
-```  
+```sql  
 USE master;  
 GO  
 EXEC sp_configure 'max server memory', 7052;  
@@ -173,7 +173,7 @@ Le prestazioni di esecuzione dei popolamenti completi non sono ottimali quando l
   
      Per determinare il tempo di attesa delle pagine, eseguire l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente:  
   
-    ```  
+    ```sql  
     SELECT TOP 10 * FROM sys.dm_os_wait_stats ORDER BY wait_time_ms DESC;  
     ```  
   
@@ -205,7 +205,7 @@ Il motore di ricerca full-text usa due tipi di filtri durante il popolamento di 
 -   Alcuni documenti, quali i documenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word, vengono filtrati utilizzando un filtro multithread,
 -   mentre altri, ad esempio i documenti PDF (Portable Document Format) di Adobe Acrobat, vengono filtrati utilizzando un filtro a thread singolo.  
   
- Ai fini della sicurezza, i filtri vengono caricati dai processi dell'host del daemon di filtri. In un'istanza del server viene utilizzato un processo a thread multipli per tutti i filtri a thread multipli e un processo a thread singolo per tutti i filtri a thread singolo. Quando un documento che utilizza un filtro multithread contiene un documento incorporato che utilizza un filtro a thread singolo, il motore di ricerca full-text avvia un processo a thread singolo per il documento incorporato. Nel caso di un documento di Word che contiene un documento PDF, il motore di ricerca full-text usa il processo multithread per esaminare il contenuto in formato Word e avvia un processo a thread singolo per esaminare il contenuto in formato PDF. Un filtro a thread singolo potrebbe tuttavia non funzionare in modo corretto in questo ambiente e potrebbe destabilizzare il processo di filtraggio. In alcune situazioni in cui i documenti incorporati rappresentano una prassi comune, la destabilizzazione potrebbe causare arresti anomali del processo. In questo caso, il motore di ricerca full-text reindirizza tutti i documenti che hanno provocato l'errore, ad esempio un documento di Word in cui è incorporato contenuto in formato PDF, al processo di filtraggio a thread singolo. Se il reindirizzamento viene eseguito di frequente, le prestazioni del processo di indicizzazione full-text risultano ridotte.  
+ Ai fini della sicurezza, i filtri vengono caricati dai processi dell'host del daemon di filtri. In un'istanza del server viene usato un processo a thread multipli per tutti i filtri a thread multipli e un processo a thread singolo per tutti i filtri a thread singolo. Quando un documento che utilizza un filtro multithread contiene un documento incorporato che utilizza un filtro a thread singolo, il motore di ricerca full-text avvia un processo a thread singolo per il documento incorporato. Nel caso di un documento di Word che contiene un documento PDF, il motore di ricerca full-text usa il processo multithread per esaminare il contenuto in formato Word e avvia un processo a thread singolo per esaminare il contenuto in formato PDF. Un filtro a thread singolo potrebbe tuttavia non funzionare in modo corretto in questo ambiente e potrebbe destabilizzare il processo di filtraggio. In alcune situazioni in cui i documenti incorporati rappresentano una prassi comune, la destabilizzazione potrebbe causare arresti anomali del processo. In questo caso, il motore di ricerca full-text reindirizza tutti i documenti che hanno provocato l'errore, ad esempio un documento di Word in cui è incorporato contenuto in formato PDF, al processo di filtraggio a thread singolo. Se il reindirizzamento viene eseguito di frequente, le prestazioni del processo di indicizzazione full-text risultano ridotte.  
   
 Per risolvere questo problema, è necessario contrassegnare il filtro per il documento contenitore, in questo esempio il documento di Word, come filtro a thread singolo. Per contrassegnare un filtro come filtro a thread singolo, impostare il valore **ThreadingModel** del Registro di sistema per il filtro su **Apartment Threaded**. Per informazioni sugli apartment a thread singolo, vedere il white paper [Understanding and Using COM Threading Models](/previous-versions/ms809971(v=msdn.10)).  
   
@@ -217,4 +217,4 @@ Per risolvere questo problema, è necessario contrassegnare il filtro per il doc
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   
  [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql.md)   
  [Risoluzione dei problemi nell'indicizzazione full-text](../../relational-databases/search/troubleshoot-full-text-indexing.md)  
-  
+ [Architettura della ricerca full-text](../../relational-databases/search/full-text-search.md#architecture) 
