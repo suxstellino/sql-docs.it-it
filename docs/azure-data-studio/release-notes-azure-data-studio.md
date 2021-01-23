@@ -8,17 +8,25 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 12/9/2020
-ms.openlocfilehash: 796499f38c9af2d7b2f6af8f860bb945d14bdac2
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.date: 1/22/2020
+ms.openlocfilehash: b0455de16e6808f4d2e67113976ae754830881ee
+ms.sourcegitcommit: 2bdf1f1ee88f4fe3e872227d025e965e95d1b2b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596509"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98711947"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Note sulla versione per Azure Data Studio
 
 **[Scarica e installa l'ultima versione](./download-azure-data-studio.md)**
+
+## <a name="december-2020-hotfix"></a>2020 dicembre (hotfix)
+
+22 gennaio 2020 &nbsp;  /  &nbsp; versione: 1.25.2
+
+| Modifica | Dettagli |
+| ------ | ------- |
+| Correzione [#13899](https://github.com/microsoft/azuredatastudio/issues/13899) bug| Scorrimento ai collegamenti di riferimento incrociato appropriati nei notebook |
 
 ## <a name="december-2020"></a>Dicembre 2020
 

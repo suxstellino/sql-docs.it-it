@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016'
-ms.openlocfilehash: 1f25887409183593230d44dfd813e1ff36a3ee36
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: a5b5a4174a8faae5c57ed6844e96f52b8f271311
+ms.sourcegitcommit: 2bdf1f1ee88f4fe3e872227d025e965e95d1b2b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/22/2021
-ms.locfileid: "98689043"
+ms.locfileid: "98711997"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -168,7 +168,7 @@ Per altre informazioni sui nomi di regole di confronto Windows e SQL, vedere [CO
 **\<delayed_durability_option> ::=**    
 **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.
 
-Per altre informazioni, vedere [Opzioni di ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) e [Controllo della durabilità delle transazioni](../../relational-databases/logs/control-transaction-durability.md).
+Per ulteriori informazioni, vedere [Opzioni ALTER database set](../../t-sql/statements/alter-database-transact-sql-set-options.md) e [controllare la durabilità delle transazioni](../../relational-databases/logs/control-transaction-durability.md).
 
 **\<file_and_filegroup_options>::=**    
 Per altre informazioni, vedere [Opzioni per file e filegroup ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
@@ -482,7 +482,7 @@ Specifica le dimensioni massime del database. Le dimensioni massime devono esser
 |1024 GB|N/D|√|√|√|√ (P)|
 |Da 1024 GB fino a 4096 GB con incrementi di 256 GB*|N/D|N/D|N/D|N/D|√|
 
-\* P11 e P15 consentono un valore massimo di MAXSIZE pari a 4 TB. Le dimensioni predefinite sono 1024 GB. P11 e P15 possono usare fino a 4 TB di spazio di archiviazione incluso senza addebiti aggiuntivi. Nel livello Premium, MAXSIZE maggiore di 1 TB è attualmente disponibile nelle aree seguenti: Stati Uniti orientali 2, Stati Uniti occidentali, US Gov Virginia, Europa occidentale, Germania centrale, Asia sud-orientale, Giappone orientale, Australia orientale, Canada centrale e Canada orientale. Per altri dettagli relativi ai limiti delle risorse per il modello DTU, vedere [DTU resource limits](/azure/sql-database/sql-database-dtu-resource-limits) (Limiti delle risorse DTU).
+\* P11 e P15 consentono un valore massimo di MAXSIZE pari a 4 TB. Le dimensioni predefinite sono 1024 GB. P11 e P15 possono usare fino a 4 TB di spazio di archiviazione incluso senza addebiti aggiuntivi. Nel livello Premium, MAXSIZE maggiore di 1 TB è attualmente disponibile nelle aree seguenti: Stati Uniti orientali 2, Stati Uniti occidentali, US Gov Virginia, Europa occidentale, Germania centrale, Asia sud-orientale, Giappone orientale, Australia orientale, Canada centrale e Canada orientale. Per informazioni dettagliate sulle limitazioni delle risorse per il modello DTU, vedere [limiti delle risorse di DTU](/azure/sql-database/sql-database-dtu-resource-limits).
 
 Il valore MAXSIZE per il modello DTU, se specificato, deve essere un valore valido presente nella tabella precedente per il livello di servizio specificato.
 
@@ -578,7 +578,7 @@ Il valore MAXSIZE per il modello DTU, se specificato, deve essere un valore vali
 |:----- | -------: | -------: | -------: | -------: | -------: |
 |Dimensioni massime dei dati (GB)|1280|1536|2048|4096|4096|
 
-Se non viene impostato alcun `MAXSIZE`valore quando viene usato il modello vCore, il valore predefinito è 32 GB. Per altri dettagli relativi ai limiti delle risorse per il modello vCore, vedere [Limiti delle risorse vCore](/azure/sql-database/sql-database-dtu-resource-limits).
+Se non viene impostato alcun `MAXSIZE`valore quando viene usato il modello vCore, il valore predefinito è 32 GB. Per altri dettagli sulle limitazioni delle risorse per il modello vCore, vedere [limiti delle risorse di vCore](/azure/sql-database/sql-database-dtu-resource-limits).
 
 Le seguenti regole vengono applicate agli argomenti MAXSIZE ed EDITION:
 
@@ -868,26 +868,33 @@ Specifica che il database corrente in uso deve essere modificato.
 
 ## <a name="remarks"></a>Osservazioni
 
-Per rimuovere un database usare [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
-Per ridurre le dimensioni di un database, usare [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
+- Per rimuovere un database usare [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
 
-L'istruzione `ALTER DATABASE` deve essere eseguita in modalità autocommit, che è la modalità predefinita di gestione delle transazioni, e non è consentita in una transazione esplicita o implicita.
+- Per ridurre le dimensioni di un database, usare [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
 
-La cancellazione della cache dei piani comporta la ricompilazione di tutti i piani di esecuzione successivi e può causare un peggioramento improvviso e temporaneo delle prestazioni di esecuzione delle query. Il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il messaggio informativo seguente per ogni archivio cache cancellato nella cache dei piani: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha rilevato %d occorrenza/e di scaricamento dell'archivio cache '%s' (parte della cache dei piani) a causa di operazioni di manutenzione o riconfigurazione del database". Questo messaggio viene registrato ogni cinque minuti per tutta la durata dello scaricamento della cache.
+- L'istruzione `ALTER DATABASE` deve essere eseguita in modalità autocommit, che è la modalità predefinita di gestione delle transazioni, e non è consentita in una transazione esplicita o implicita.
 
+- La cache dei piani per la Istanza gestita viene cancellata impostando una delle opzioni seguenti.
+    - COLLATE
+    - MODIFY FILEGROUP DEFAULT
+    - MODIFY FILEGROUP READ_ONLY
+    - MODIFY FILEGROUP READ_WRITE
+    - MODIFICARE IL NOME
+
+    La cancellazione della cache dei piani comporta la ricompilazione di tutti i piani di esecuzione successivi e può causare un peggioramento improvviso e temporaneo delle prestazioni di esecuzione delle query. Il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il messaggio informativo seguente per ogni archivio cache cancellato nella cache dei piani: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha rilevato %d occorrenza/e di scaricamento dell'archivio cache '%s' (parte della cache dei piani) a causa di operazioni di manutenzione o riconfigurazione del database". Questo messaggio viene registrato ogni cinque minuti per tutta la durata dello scaricamento della cache.
 La cache dei piani viene scaricata anche quando vengono eseguite diverse query in un database con le opzioni predefinite. Successivamente, il database viene eliminato.
 
-`ALTER DATABASE`Per alcune istruzioni è necessario un blocco esclusivo su un database da eseguire. Questo è il motivo per cui potrebbero avere esito negativo quando un altro processo attivo mantiene un blocco sul database. Errore segnalato in un caso analogo al seguente `Msg 5061, Level 16, State 1, Line 38` con Message `ALTER DATABASE failed because a lock could not be placed on database '<database name>'. Try again later` . Si tratta in genere di un errore temporaneo e risolverlo, una volta rilasciati tutti i blocchi nel database, ritentare l'istruzione ALTER DATABASE non riuscita. La vista `sys.dm_tran_locks` di sistema include informazioni sui blocchi attivi. Per verificare se sono presenti blocchi condivisi o esclusivi in un database, utilizzare la query seguente.
-
-```sql
-SELECT
-    resource_type, resource_database_id, request_mode, request_type, request_status, request_session_id 
-FROM 
-    sys.dm_tran_locks
-WHERE
-    resource_database_id = DB_ID('testdb')
-```
-
+- `ALTER DATABASE`Per alcune istruzioni è necessario un blocco esclusivo su un database da eseguire. Questo è il motivo per cui potrebbero avere esito negativo quando un altro processo attivo mantiene un blocco sul database. Errore segnalato in un caso analogo al seguente `Msg 5061, Level 16, State 1, Line 38` con Message `ALTER DATABASE failed because a lock could not be placed on database '<database name>'. Try again later` . Si tratta in genere di un errore temporaneo e risolverlo, una volta rilasciati tutti i blocchi nel database, ritentare l'istruzione ALTER DATABASE non riuscita. La vista `sys.dm_tran_locks` di sistema include informazioni sui blocchi attivi. Per verificare se sono presenti blocchi condivisi o esclusivi in un database, utilizzare la query seguente.
+  
+    ```sql
+    SELECT
+        resource_type, resource_database_id, request_mode, request_type, request_status, request_session_id 
+    FROM 
+        sys.dm_tran_locks
+    WHERE
+        resource_database_id = DB_ID('testdb')
+    ```
+  
 ## <a name="viewing-database-information"></a>Visualizzazione delle informazioni sui database
 
 Per restituire informazioni su database, file e filegroup, è possibile usare viste del catalogo, funzioni di sistema e stored procedure di sistema.
@@ -1325,7 +1332,7 @@ FROM sys.databases;
 
 ### <a name="f-enable-auto-create-and-auto-update-stats-for-a-database"></a>F. Abilitazione della creazione e dell'aggiornamento automatici delle statistiche per un database
 
-Usare l'istruzione seguente per abilitare la creazione e l'aggiornamento automatici delle statistiche in modo asincrono per il database CustomerSales. L'istruzione crea e aggiorna le statistiche di colonna singola necessarie per creare piani di query di qualità elevata.
+Usare l'istruzione seguente per abilitare la creazione e l'aggiornamento automatici delle statistiche in modo asincrono per il database CustomerSales. Questo consente di creare e aggiornare le statistiche a colonna singola in modo da creare piani di query di alta qualità.
 
 ```sql
 ALTER DATABASE CustomerSales

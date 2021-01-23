@@ -40,12 +40,12 @@ ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12bb0423ad450ef94df8767ba8aae10a5c47cade
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: a7903d3a208bd08c9ba22d251a0e4124e81725ea
+ms.sourcegitcommit: 2bdf1f1ee88f4fe3e872227d025e965e95d1b2b4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97439083"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98711987"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>Clausola SELECT - ORDER BY (Transact-SQL)
 
@@ -146,7 +146,7 @@ ORDER BY SchemaName + ''; -- wrong
  In un'istruzione SELECT TOP ((*N*) usare sempre una clausola ORDER BY. È l'unico modo per indicare prevedibilmente quali righe sono interessate dalla clausola TOP. Per altre informazioni, vedere [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
 ## <a name="interoperability"></a>Interoperabilità  
- Se usata con un'istruzione SELECT...INTO per inserire righe da un'altra origine, la clausola ORDER BY non garantisce l'inserimento delle righe nell'ordine specificato.  
+ Quando viene usato con un oggetto SELECT... INTO o ins... Istruzione SELECT per inserire righe da un'altra origine, la clausola ORDER BY non garantisce che le righe vengano inserite nell'ordine specificato.  
   
  L'utilizzo di OFFSET e FETCH in una vista non modifica la proprietà updateability della vista.  
   
