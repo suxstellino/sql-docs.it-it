@@ -11,7 +11,7 @@ ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 ms.openlocfilehash: 462c48c7d0ade07c62a154927c352962f454cc46
 ms.sourcegitcommit: 18e2f0706e03d0b2b6324845244fbafaa077a8dd
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/11/2020
 ms.locfileid: "97103300"
@@ -146,7 +146,7 @@ Aggiungere l'host di SQL Server in Linux a un controller di dominio Active Direc
     > [!NOTE]
     > È possibile specificare le password in uno dei tre modi seguenti:
     >
-    > - Flag password: password \<password\>
+    > - Flag password: --password \<password\>
     > - Variabili di ambiente: `ADUTIL_ACCOUNT_PWD`
     > - Input interattivo
     >
