@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 74c27195e3adbb39714a2df23ef041615262ffc2
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
-ms.translationtype: HT
+ms.openlocfilehash: e455b8b27537a3f7fedd7ca0c9cad356b9d49df4
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867852"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98764899"
 ---
 # <a name="enable-tde-on-sql-server-using-ekm"></a>Abilitare TDE in SQL Server con EKM
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Questo articolo descrive come abilitare Transparent Data Encryption (TDE) in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] per proteggere una chiave di crittografia del database tramite una chiave asimmetrica archiviata in un modulo Extensible Key Management (EKM) con [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+  Questo articolo descrive come abilitare Transparent Data Encryption (TDE) in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] per proteggere una chiave di crittografia del database tramite una chiave asimmetrica archiviata in un modulo Extensible Key Management (EKM) con [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  TDE esegue la crittografia dell'archiviazione di un intero database usando una chiave simmetrica detta "chiave di crittografia del database". È anche possibile proteggere la chiave di crittografia del database usando un certificato protetto dalla chiave master del database master. Per altre informazioni sulla protezione della chiave di crittografia del database tramite la chiave master del database, vedere [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md). Per informazioni sulla configurazione di TDE quando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è in esecuzione in una macchina virtuale di Azure, vedere [Extensible Key Management con l'insieme di credenziali delle chiavi di Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md). Per informazioni sulla configurazione di Transparent Data Encryption usando una chiave nell'insieme di credenziali delle chiavi di Azure, vedere [Usare Connettore SQL Server con le funzionalità di crittografia SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md). 
 
@@ -68,7 +68,7 @@ ms.locfileid: "91867852"
     > [!NOTE]  
     >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non fornisce un provider EKM. Ogni provider EKM può richiedere procedure diverse per l'installazione, la configurazione e l'autorizzazione degli utenti.  Per completare questo passaggio, consultare la documentazione del provider EKM.  
   
-3.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+3.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 4.  Sulla barra Standard fare clic su **Nuova query**.  
   

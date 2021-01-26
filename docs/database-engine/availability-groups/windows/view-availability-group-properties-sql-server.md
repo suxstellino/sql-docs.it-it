@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 61243c87-bd62-4510-863f-2a8f347caf1f
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: c8f9adc01e608ad01b768148847e01a6373cb0b1
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 2b2c7677991ccf6937731710cdd2f90285ee80f2
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641679"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766193"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>Visualizzazione delle Proprietà dei gruppi di disponibilità (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Questo argomento illustra come visualizzare le proprietà di un gruppo di disponibilità per un gruppo di disponibilità Always On tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+  Questo argomento illustra come visualizzare le proprietà di un gruppo di disponibilità per un gruppo di disponibilità Always On tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)] in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)].  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  **Per visualizzare e modificare le proprietà di un gruppo di disponibilità**  

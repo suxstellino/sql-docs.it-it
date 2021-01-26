@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7ec5b337-7201-4a66-a541-7560f8b18784
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: db542dca2f4c200764e5065bff155c908fafcd25
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: ce3cb14ae7e45cfa076a10f5617525b882e3ba14
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641417"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766101"
 ---
 # <a name="some-availability-replicas-do-not-have-a-healthy-role"></a>Alcune repliche di disponibilità non dispongono di un ruolo integro
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,9 +35,6 @@ ms.locfileid: "97641417"
   
 ## <a name="description"></a>Descrizione  
  Questi criteri consentono di eseguire il rollup dello stato di connessione di tutte le repliche di disponibilità e di verificare l'eventuale esistenza di repliche di disponibilità che non presentano un ruolo integro. I criteri sono in uno stato non integro quando una replica di disponibilità non è né primaria né secondaria. Altrimenti, sono in uno stato integro.  
-  
-> [!NOTE]  
->  Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], le informazioni sulle possibili cause e le soluzioni sono disponibili nella pagina relativa ad [alcune repliche di disponibilità che non presentano un ruolo integro](https://go.microsoft.com/fwlink/p/?LinkId=220854) su Wiki di TechNet.  
   
 ## <a name="possible-causes"></a>Possibili cause  
  Nel gruppo di disponibilità è presente almeno una replica di disponibilità il cui ruolo attuale non è primario né secondario.  

@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: f466f699872af9b37447d766c951e5c843af2bd9
-ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
+ms.openlocfilehash: 4b835c60da2d2848b33dd453605290a1fb056180
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85942842"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765482"
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>Aggiornare gli assembly SQLCLR dopo l'aggiornamento di .NET Framework
 
 [!INCLUDE [SQL Server - Windows only ](../../includes/applies-to-version/sql-windows-only.md)]
 
-  [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) è una raccolta di routine SQLCR (SQL Common Language Runtime) che fanno riferimento agli assembly Microsoft .NET Framework 4. Quando si installano aggiornamenti di .NET Framework nel computer che possono interessare un assembly .NET Framework di riferimento di questo tipo, tale operazione comporta una modifica nell'ID della versione del modulo (MVID, Module Version ID) dell'assembly nel Global Assembly Cache (GAC). Questa modifica determina una mancata corrispondenza tra i MVID dell'assembly a cui si fa riferimento nella GAC e l'assembly in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) è una raccolta di routine SQLCR (SQL Common Language Runtime) che fanno riferimento agli assembly Microsoft .NET Framework 4. Quando si installano aggiornamenti di .NET Framework nel computer che possono interessare un assembly .NET Framework di riferimento di questo tipo, tale operazione comporta una modifica nell'ID della versione del modulo (MVID, Module Version ID) dell'assembly nel Global Assembly Cache (GAC). Questa modifica determina una mancata corrispondenza tra i MVID dell'assembly a cui si fa riferimento nella GAC e l'assembly in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
  Se per l'aggiornamento di .NET Framework viene richiesto il riavvio del computer di [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , gli assembly SQLCLR interessati vengono aggiornati automaticamente per correggere il problema di mancata corrispondenza di MVID al riavvio di [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . Per gli aggiornamenti di .NET Framework per cui non è richiesto il riavvio del computer di [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , si verifica tuttavia un errore a causa della mancata corrispondenza nei MVID degli assembly quando si tenta di connettersi a [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] tramite [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]:  
   
@@ -30,7 +30,7 @@ ms.locfileid: "85942842"
 A new version of .NET was installed on this machine. In order to continue to work with DQS please run dqsinstaller.exe -upgradedlls.  
 ```  
   
- Per correggere questo problema, è necessario aggiornare gli assembly SQLCLR interessati in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . È possibile eseguire questa operazione eseguendo il file DQSInstaller.exe con il parametro della riga di comando **upgradedlls** per ignorare la ricreazione di database di DQS e aggiornare solo gli assembly interessati. In questo modo viene garantita l'integrità della Knowledge Base, dei progetti Data Quality e di qualsiasi altro dato di DQS.  
+ Per correggere questo problema, è necessario aggiornare gli assembly SQLCLR interessati in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] . È possibile eseguire questa operazione eseguendo il file DQSInstaller.exe con il parametro della riga di comando **upgradedlls** per ignorare la ricreazione di database di DQS e aggiornare solo gli assembly interessati. In questo modo viene garantita l'integrità della Knowledge Base, dei progetti Data Quality e di qualsiasi altro dato di DQS.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
   

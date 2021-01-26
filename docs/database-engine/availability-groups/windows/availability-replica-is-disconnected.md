@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 14050bd328086daabb6fe0ca1c6b570e800f929e
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 0f62cc4bb263701fc71fceb663a1391a7012f514
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643167"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766029"
 ---
 # <a name="availability-replica-is-disconnected-within-an-always-on-availability-group"></a>La replica di disponibilità è disconnessa in un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,9 +35,6 @@ ms.locfileid: "97643167"
   
 ## <a name="description"></a>Descrizione  
  Tramite questi criteri è possibile controllare lo stato di connessione tra le repliche di disponibilità. I criteri sono in uno stato non integro quando lo stato di connessione della replica di disponibilità è DISCONNESSO. Altrimenti, sono in uno stato integro.  
-  
-> [!NOTE]  
->  Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], le informazioni sulle possibili cause e le soluzioni sono disponibili in [La replica di disponibilità è disconnessa](https://go.microsoft.com/fwlink/p/?LinkId=220857) nella pagina Wiki di TechNet.  
   
 ## <a name="possible-causes"></a>Possibili cause  
  La replica secondaria non è connessa alla replica primaria. Lo stato è DISCONNESSO. Il problema può essere causato da uno dei motivi seguenti:  

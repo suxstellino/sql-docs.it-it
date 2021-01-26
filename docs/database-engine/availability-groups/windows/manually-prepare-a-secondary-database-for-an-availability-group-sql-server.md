@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 5a23a2b4e5af84f74010d00c0d9e24c23d02146c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 3a87c7b4dc37a7b1a70b31b9d7b9191a3570db98
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644197"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98764753"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Preparare un database secondario per un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -180,7 +180,7 @@ Questo argomento illustra come preparare un database per un gruppo di disponibil
         > [!IMPORTANT]  
         >  Se il nome di percorso del database primario è diverso dal nome di percorso dei database secondari, non è possibile aggiungere un file. Alla ricezione del log relativo all'operazione di aggiunta del file, l'istanza del server della replica secondaria tenta infatti di salvare il nuovo file nello stesso percorso utilizzato dal database primario.  
   
-         Ad esempio, tramite il comando seguente viene ripristinato un backup di un database primario che risiede nella directory di dati dell'istanza predefinita di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], C:\Programmi\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA. Con l'operazione di ripristino il database verrà spostato nella directory dei dati di un'istanza remota di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] denominata (*Always On1*) che ospita la replica secondaria su un altro nodo del cluster. In questo percorso, i file di dati e di log vengono ripristinati nella directory *C:\Programmi\Microsoft SQL Server\MSSQL13.On1\MSSQL\DATA* . Per l'operazione di ripristino viene utilizzata l'opzione WITH NORECOVERY per lasciare il database secondario nel database di ripristino.  
+         Ad esempio, tramite il comando seguente viene ripristinato un backup di un database primario che risiede nella directory di dati dell'istanza predefinita di [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)], C:\Programmi\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA. Con l'operazione di ripristino il database verrà spostato nella directory dei dati di un'istanza remota di [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] denominata (*Always On1*) che ospita la replica secondaria su un altro nodo del cluster. In questo percorso, i file di dati e di log vengono ripristinati nella directory *C:\Programmi\Microsoft SQL Server\MSSQL13.On1\MSSQL\DATA* . Per l'operazione di ripristino viene utilizzata l'opzione WITH NORECOVERY per lasciare il database secondario nel database di ripristino.  
   
         ```  
         RESTORE DATABASE MyDB1  

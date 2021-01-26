@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: c0578d5522ca998e7243fd20b77daf8d3705bd85
-ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
-ms.translationtype: HT
+ms.openlocfilehash: 145f061ff1926bc9a93244226dbd36b6ffaf9de8
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97878918"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765919"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Connettersi a un listener del gruppo di disponibilità Always On 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -121,7 +121,7 @@ In alternativa, durante la migrazione dal mirroring del database a [!INCLUDE[ssH
 > [!NOTE]  
 >  È consigliabile utilizzare questa impostazione per le connessioni con una o più subnet a listener di gruppi di disponibilità e a istanze del cluster di failover di SQL Server.  Abilitando questa opzione si aggiungono ulteriori ottimizzazioni, anche per scenari con una sola subnet.  
   
- L'opzione di connessione **MultiSubnetFailover** funziona unicamente con il protocollo di rete TCP ed è supportata solo in caso di connessione a un listener del gruppo di disponibilità e per qualsiasi nome di rete virtuale che si connette a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+ L'opzione di connessione **MultiSubnetFailover** funziona unicamente con il protocollo di rete TCP ed è supportata solo in caso di connessione a un listener del gruppo di disponibilità e per qualsiasi nome di rete virtuale che si connette a [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)].  
   
  Di seguito è riportato un esempio di una stringa di connessione per il provider ADO.NET (System.Data.SqlClient) che consente il failover su più subnet:  
   

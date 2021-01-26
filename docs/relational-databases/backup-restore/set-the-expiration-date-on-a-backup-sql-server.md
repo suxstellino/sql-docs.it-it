@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 76e814df-6487-4893-9f09-7759f1863a5c
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 2fbf2f28d4f3bb0befb5271f51ea6462ec667334
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
-ms.translationtype: HT
+ms.openlocfilehash: f1ca1ab5902c645f1dc1a13d65bc39739e1f5618
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96129070"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765742"
 ---
 # <a name="set-the-expiration-date-on-a-backup-sql-server"></a>Impostazione della data di scadenza di un backup (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  In questo argomento viene descritto come impostare la data di scadenza in un backup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  In questo argomento viene descritto come impostare la data di scadenza in un backup in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Contenuto dell'articolo**  
   

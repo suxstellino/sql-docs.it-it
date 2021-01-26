@@ -35,16 +35,16 @@ helpviewer_keywords:
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7d2ec2dd6935d535bcef0ebb566bf0d0f8f09d6a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 68c3ff265fbf1bf56fb2d7f0ba42aa6f76dd72b2
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758988"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766242"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Utilizzare la Creazione guidata piano di manutenzione
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Questo argomento descrive come creare un piano di manutenzione con uno o più server usando la Creazione guidata piano di manutenzione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Tramite la Creazione guidata piano di manutenzione è possibile creare un piano di manutenzione che potrà essere regolarmente eseguito in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. In questo modo è possibile eseguire a intervalli specificati varie attività di amministrazione di database, tra cui backup, controlli di integrità del database o aggiornamenti delle statistiche del database.  
+  Questo argomento descrive come creare un piano di manutenzione con uno o più server usando la Creazione guidata piano di manutenzione in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Tramite la Creazione guidata piano di manutenzione è possibile creare un piano di manutenzione che potrà essere regolarmente eseguito in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. In questo modo è possibile eseguire a intervalli specificati varie attività di amministrazione di database, tra cui backup, controlli di integrità del database o aggiornamenti delle statistiche del database.  
     
  
 ##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
@@ -87,7 +87,7 @@ Per impedire questa elevazione dei privilegi durante l'esecuzione di piani di ma
   
         > **NOTA** Se si seleziona **Pianificazioni separate per ogni attività**, è necessario eseguire i passaggi indicati in **e** . di seguito per ogni attività del piano di manutenzione.  
   
-    5.  Se si seleziona **Singola pianificazione per l'intero piano o nessuna pianificazione**, scegliere **Cambia**in **Pianificazione**.  
+    5.  Se si seleziona **Singola pianificazione per l'intero piano o nessuna pianificazione**, scegliere **Cambia** in **Pianificazione**.  
   
         1.  Nella casella **Nome** della finestra di dialogo **Nuova pianificazione processo** immettere il nome della pianificazione del processo.  
   
@@ -105,7 +105,7 @@ Per impedire questa elevazione dei privilegi durante l'esecuzione di piani di ma
   
         4.  Se si seleziona **Periodica**:  
   
-            1.  In **Frequenza**nell'elenco **Ricorrenza** specificare la frequenza di occorrenza:  
+            1.  In **Frequenza** nell'elenco **Ricorrenza** specificare la frequenza di occorrenza:  
   
                 -   Se si seleziona **Giornaliera**, nella casella **Ogni** immettere la frequenza in base alla quale si ripete la pianificazione del processo nei giorni.  
   
@@ -117,19 +117,19 @@ Per impedire questa elevazione dei privilegi durante l'esecuzione di piani di ma
   
                     -   Se si sceglie **Ogni**, selezionare il giorno specifico della settimana del mese in cui si desidera sia eseguita la pianificazione del processo e la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si vuole che la pianificazione del processo sia eseguita l'ultimo giorno feriale del mese a mesi alterni, selezionare **Giorno**, selezionare **ultimo** nel primo elenco e **giorno feriale** nel secondo elenco, quindi immettere "2" nell'ultima casella. Nei primi due elenchi è anche possibile selezionare **primo**, **secondo**, **terzo** o **quarto**, nonché i giorni della settimana specifici, ad esempio: domenica o mercoledì. Si noti che il numero più grande consentito nell'ultima casella è "99".  
   
-            2.  In **Frequenza giornaliera**specificare la frequenza in base alla quale si ripete la pianificazione del processo in quel determinato giorno:  
+            2.  In **Frequenza giornaliera** specificare la frequenza in base alla quale si ripete la pianificazione del processo in quel determinato giorno:  
   
                 -   Se si seleziona **Una sola volta alle**, immettere l'ora specifica del giorno in cui deve essere eseguita la pianificazione del processo nella casella **Una sola volta alle** . Immettere l'ora, il minuto e il secondo del giorno, nonché AM o PM.  
   
-                -   Se si seleziona **Ogni**specificare la frequenza in base alla quale la pianificazione del processo viene eseguita durante il giorno scelto in **Frequenza**. Ad esempio, se si vuole che la pianificazione del processo sia ripetuta ogni 2 ore durante il giorno scelto per questa pianificazione, selezionare **Ogni**, immettere "2" nella prima casella e quindi selezionare **ora/e** nell'elenco. In questo elenco è anche possibile selezionare **minuto/i** e **secondo/i**. Si noti che il numero più grande consentito nella prima casella è "100".  
+                -   Se si seleziona **Ogni** specificare la frequenza in base alla quale la pianificazione del processo viene eseguita durante il giorno scelto in **Frequenza**. Ad esempio, se si vuole che la pianificazione del processo sia ripetuta ogni 2 ore durante il giorno scelto per questa pianificazione, selezionare **Ogni**, immettere "2" nella prima casella e quindi selezionare **ora/e** nell'elenco. In questo elenco è anche possibile selezionare **minuto/i** e **secondo/i**. Si noti che il numero più grande consentito nella prima casella è "100".  
   
                      Nella casella **A partire dalle** immettere l'ora in cui dovrebbe iniziare l'esecuzione della pianificazione del processo. Nella casella **Fino alle** immettere l'ora in cui dovrebbe terminare la ripetizione della pianificazione del processo. Immettere l'ora, il minuto e il secondo del giorno, nonché AM o PM.  
   
-            3.  In **Durata**di **Data inizio**immettere la data in cui si desidera sia avviata l'esecuzione della pianificazione del processo. Selezionare **Data fine** o **Nessuna data di fine** per indicare quando dovrebbe terminare l'esecuzione della pianificazione del processo. Se si seleziona **Data fine**immettere la data in cui si desidera venga terminata l'esecuzione della pianificazione del processo.  
+            3.  In **Durata** di **Data inizio** immettere la data in cui si desidera sia avviata l'esecuzione della pianificazione del processo. Selezionare **Data fine** o **Nessuna data di fine** per indicare quando dovrebbe terminare l'esecuzione della pianificazione del processo. Se si seleziona **Data fine** immettere la data in cui si desidera venga terminata l'esecuzione della pianificazione del processo.  
   
         5.  Se si seleziona **Singola occorrenza**, in **Singola occorrenza**, nella casella **Data** immettere la data in cui verrà eseguita la pianificazione del processo. Nella casella **Ora** immettere l'ora in cui verrà eseguita la pianificazione del processo. Immettere l'ora, il minuto e il secondo del giorno, nonché AM o PM.  
   
-        6.  In **Descrizione**in **Riepilogo**verificare che tutte le impostazioni della pianificazione del processo siano corrette.  
+        6.  In **Descrizione** in **Riepilogo** verificare che tutte le impostazioni della pianificazione del processo siano corrette.  
   
         7.  Fare clic su **OK**.  
   
@@ -153,7 +153,7 @@ Per impedire questa elevazione dei privilegi durante l'esecuzione di piani di ma
   
 In questa pagina sono disponibili le opzioni seguenti.  
   
- Elenco**Database**  
+ Elenco **Database**  
  Consente di specificare i database su cui verrà eseguita l'attività.  
   
  -  **Tutti i database**  
@@ -172,7 +172,7 @@ Viene generato un piano di manutenzione per l'esecuzione di questa attività in 
   
   - Viene generato un piano di manutenzione per l'esecuzione di questa attività solo sui database selezionati. Se si sceglie questa opzione, è necessario selezionare almeno un database nell'elenco.  
   
-Casella di controllo**Includi indici**  
+Casella di controllo **Includi indici**  
  - Viene controllata l'integrità di tutte le pagine di indice, nonché delle pagine dei dati della tabella.  
   
 **Solo fisica**  
@@ -189,13 +189,13 @@ Casella di controllo**Includi indici**
   
      In questa pagina sono disponibili le opzioni seguenti.  
   
-     Elenco**Database**  
+     Elenco **Database**  
      Consente di specificare i database su cui verrà eseguita l'attività. Per ulteriori informazioni sulle opzioni disponibili in questo elenco, vedere il passaggio 9.  
   
-     Casella**Compatta database quando le dimensioni superano**  
+     Casella **Compatta database quando le dimensioni superano**  
      Specificare le dimensioni in megabyte che causano l'esecuzione dell'attività.  
   
-     Casella**Spazio che deve rimanere disponibile dopo la compattazione**  
+     Casella **Spazio che deve rimanere disponibile dopo la compattazione**  
      Arresta l'attività di compattazione quando lo spazio disponibile nei file del database raggiunge questa soglia (come percentuale).  
   
      **Mantieni spazio liberato nei file di database**  
@@ -210,57 +210,57 @@ Casella di controllo**Includi indici**
   
      In questa pagina sono disponibili le opzioni seguenti.  
   
-     Elenco**Database**  
+     Elenco **Database**  
      Consente di specificare i database su cui verrà eseguita l'attività. Per ulteriori informazioni sulle opzioni disponibili in questo elenco, vedere il passaggio 9.  
   
-     Elenco**Oggetti**  
+     Elenco **Oggetti**  
      Limitare l'elenco **Selezione** alla visualizzazione di tabelle, viste o entrambe. Questo elenco è disponibile solo se si sceglie un solo database nell'elenco **Database** .  
   
-     Elenco**Selezione**  
+     Elenco **Selezione**  
      Specificare le tabelle o gli indici su cui verrà eseguita l'attività. Questa opzione non è disponibile quando si seleziona **Tabelle e viste** nella casella Oggetto.  
   
-     Casella di controllo**Compatta oggetti di grandi dimensioni**  
+     Casella di controllo **Compatta oggetti di grandi dimensioni**  
      Dealloca spazio per tabelle e viste, se possibile. Questa opzione utilizza l'istruzione `ALTER INDEX ... LOB_COMPACTION = ON`  
   
 2.  Nella pagina **Definizione attività Ricompila indice** selezionare il database o i database in cui verranno creati più indici. In questa attività viene utilizzata l'istruzione `ALTER INDEX ... REBUILD PARTITION`. Per altre informazioni, vedere [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)). Al termine, fare clic su **Avanti**.  
   
      In questa pagina sono disponibili le opzioni seguenti.  
   
-     Elenco**Database**  
+     Elenco **Database**  
      Consente di specificare i database su cui verrà eseguita l'attività. Per ulteriori informazioni sulle opzioni disponibili in questo elenco, vedere il passaggio 9.  
   
-     Elenco**Oggetti**  
+     Elenco **Oggetti**  
      Limitare l'elenco **Selezione** alla visualizzazione di tabelle, viste o entrambe. Questo elenco è disponibile solo se si sceglie un solo database nell'elenco **Database** .  
   
-     Elenco**Selezione**  
+     Elenco **Selezione**  
      Specificare le tabelle o gli indici su cui verrà eseguita l'attività. Questa opzione non è disponibile quando si seleziona **Tabelle e viste** nella casella Oggetto.  
   
-     Area**Opzioni spazio disponibile**  
+     Area **Opzioni spazio disponibile**  
      Contiene opzioni relative all'applicazione del fattore di riempimento a indici e tabelle.  
   
      **Spazio libero predefinito per pagina**  
      Riorganizza le pagine mantenendo la quantità predefinita di spazio disponibile. Selezionando questa opzione verranno eliminati gli indici delle tabelle del database e verranno ricreati utilizzando il fattore di riempimento specificato al momento della creazione degli indici. Questa è l'opzione predefinita.  
   
-     Casella**Modifica percentuale di spazio disponibile per pagina**  
+     Casella **Modifica percentuale di spazio disponibile per pagina**  
      Elimina gli indici delle tabelle del database e li ricrea utilizzando un nuovo fattore di riempimento calcolato automaticamente, riservando in tal modo la quantità di spazio disponibile specificata nelle pagine dell'indice. Maggiore è la percentuale, maggiore sarà la quantità di spazio disponibile riservata nelle pagine dell'indice e maggiori saranno le dimensioni dell'indice. I valori validi sono compresi tra 0 e 100. Utilizza l'opzione `FILLFACTOR` .  
   
-     Area**Opzioni avanzate**  
+     Area **Opzioni avanzate**  
      Presenta opzioni aggiuntive per l'ordinamento degli indici e la reindicizzazione.  
   
-     Casella di controllo**Ordina risultati in tempdb**  
+     Casella di controllo **Ordina risultati in tempdb**  
      Utilizza l'opzione `SORT_IN_TEMPDB` che determina la posizione in cui i risultati intermedi dell'ordinamento, generati durante la creazione dell'indice, vengono memorizzati temporaneamente. Se non è necessario eseguire un'operazione di ordinamento o se l'ordinamento può essere eseguito in memoria, l'opzione `SORT_IN_TEMPDB` viene ignorata.  
   
-     Casella di controllo**Riempi indice**  
+     Casella di controllo **Riempi indice**  
      Utilizza l'opzione `PAD_INDEX` .  
   
-     Casella di controllo**Mantieni indici online durante la reindicizzazione**  
+     Casella di controllo **Mantieni indici online durante la reindicizzazione**  
      Utilizza l'opzione `ONLINE` per consentire agli utenti di accedere alla tabella o ai dati dell'indice cluster sottostanti, nonché agli eventuali indici non cluster associati durante le operazioni sugli indici. La selezione di questa opzione comporta l'attivazione di opzioni aggiuntive per la ricompilazione degli indici che non consentono le ricompilazioni online: **Non ricompilare indici** e **Ricompila indici offline**.  
   
      La selezione di questa opzione attiva anche Bassa priorità usata, che usa l'opzione `WAIT_AT_LOW_PRIORITY` . Le operazioni di ricompilazione dell'indice online rimangono in attesa dei blocchi con priorità bassa per `MAX_DURATION` minuti, consentendo la continuazione delle altre operazioni mentre quella di compilazione dell'indice online è in attesa.  
   
-    > **NOTA** Le operazioni sugli indici online sono disponibili solo in alcune edizioni di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per altre informazioni, vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+    > **NOTA** Le operazioni sugli indici online sono disponibili solo in alcune edizioni di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-     Casella di controllo**MAXDOP**  
+     Casella di controllo **MAXDOP**  
      Esegue l'override dell'opzione di configurazione Massimo grado di parallelismo di sp_configure per DBCC CHECKDB. Per altre informazioni, vedere [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   
 #### <a name="define-the-update-statistics-task"></a>Definizione attività Aggiorna statistiche  
@@ -269,13 +269,13 @@ Casella di controllo**Includi indici**
   
      In questa pagina sono disponibili le opzioni seguenti.  
   
-     Elenco**Database**  
+     Elenco **Database**  
      Consente di specificare i database su cui verrà eseguita l'attività. Per ulteriori informazioni sulle opzioni disponibili in questo elenco, vedere il passaggio 9.  
   
-     Elenco**Oggetti**  
+     Elenco **Oggetti**  
      Limitare l'elenco **Selezione** alla visualizzazione di tabelle, viste o entrambe. Questo elenco è disponibile solo se si sceglie un solo database nell'elenco **Database** .  
   
-     Elenco**Selezione**  
+     Elenco **Selezione**  
      Specificare le tabelle o gli indici su cui verrà eseguita l'attività. Questa opzione non è disponibile quando si seleziona **Tabelle e viste** nella casella Oggetto.  
   
      **Tutte le statistiche esistenti**  
@@ -315,7 +315,7 @@ Casella di controllo**Includi indici**
      Questa cronologia si rivela utile per risolvere problemi relativi a processi del piano di manutenzione non riusciti o per individuare le cause di determinate azioni sul database.  
   
      **Rimuovi dati presenti nella cronologia da più di**  
-     Specifica il periodo di permanenza nella cronologia oltre il quale gli elementi devono essere eliminati. È possibile specificare **Ora/e**, **Giorno/i**, **Settimana/e** (impostazione predefinita), **Mese/i**o **Anno/i**  
+     Specifica il periodo di permanenza nella cronologia oltre il quale gli elementi devono essere eliminati. È possibile specificare **Ora/e**, **Giorno/i**, **Settimana/e** (impostazione predefinita), **Mese/i** o **Anno/i**  
   
 #### <a name="define-the-execute-agent-job-task"></a>Definizione attività Esegui processo di SQL Server Agent  
   
@@ -327,20 +327,20 @@ Casella di controllo**Includi indici**
   
      In questa pagina sono disponibili le opzioni seguenti.  
   
-     Elenco**Tipo di backup**  
+     Elenco **Tipo di backup**  
      Visualizza il tipo di backup da eseguire. Questo valore è di sola lettura.  
   
-     Elenco**Database**  
+     Elenco **Database**  
      Consente di specificare i database su cui verrà eseguita l'attività. Per ulteriori informazioni sulle opzioni disponibili in questo elenco, vedere il passaggio 9.  
   
      **Componente di cui eseguire il backup**  
      Selezionare **Database** per eseguire il backup dell'intero database. Selezionare **File e filegroup** per eseguire il backup solo di una parte del database. Quando si seleziona questa opzione, è necessario specificare il nome del file o del filegroup. Se nella casella **Database** sono selezionati più database, è necessario specificare **Database** solo per **Componente di cui eseguire il backup**. Per eseguire i backup di file o filegroup, creare un'attività per ogni database. Queste opzioni sono disponibili solo se si sceglie un solo database nell'elenco **Database** .  
   
-     Casella di controllo**Scadenza set di backup**  
+     Casella di controllo **Scadenza set di backup**  
      Indica quando è possibile sovrascrivere il set di backup per il backup specifico. Selezionare **Dopo** e immettere un numero di giorni alla scadenza oppure selezionare **Il** e immettere una data di scadenza. Questa opzione è disabilitata se è selezionato **URL** come destinazione di backup.  
   
      **Backup su**  
-     Specifica il supporto su cui eseguire il backup del database. Selezionare **Disco**, **Nastro**o **URL**. Sono disponibili solo i dispositivi nastro collegati al computer in cui è archiviato il database.  
+     Specifica il supporto su cui eseguire il backup del database. Selezionare **Disco**, **Nastro** o **URL**. Sono disponibili solo i dispositivi nastro collegati al computer in cui è archiviato il database.  
   
      **Backup database in uno o più file**  
      Fare clic su **Aggiungi** per aprire la finestra di dialogo **Seleziona destinazione di backup** . Questa opzione è disabilitata se è stato selezionato URL come destinazione di backup.  
@@ -349,27 +349,27 @@ Casella di controllo**Includi indici**
   
      Fare clic su **Contenuto** per leggere l'intestazione del file e visualizzare il contenuto del backup corrente del file.  
   
-     Finestra di dialogo**Seleziona destinazione di backup**  
+     Finestra di dialogo **Seleziona destinazione di backup**  
      Selezionare il file, l'unità nastro o il dispositivo di backup come destinazione. Questa opzione è disabilitata se è stato selezionato URL come destinazione di backup.  
   
-     Elenco**Azione per file di backup esistenti**  
+     Elenco **Azione per file di backup esistenti**  
      Specifica il modo in cui devono essere gestiti i backup esistenti. Selezionare **Accoda** per aggiungere i nuovi backup dopo eventuali backup esistenti nel file o sul nastro. Selezionare **Sovrascrivi** per rimuovere il contenuto meno recente dal file o dal nastro e sostituirlo con il nuovo backup.  
   
      **Crea un file di backup per ogni database**  
      Creare un file di backup nel percorso specificato nella casella della cartella. Viene creato un file per ciascun database selezionato. Questa opzione è disabilitata se è stato selezionato URL come destinazione di backup.  
   
-     Casella di controllo**Crea una sottodirectory per ogni database**  
+     Casella di controllo **Crea una sottodirectory per ogni database**  
      Crea una sottodirectory nella directory specificata che contiene il database di cui si esegue il backup nell'ambito del piano di manutenzione.  
   
     > **IMPORTANTE** La sottodirectory erediterà le autorizzazioni dalla relativa directory padre. Limitare le autorizzazioni per impedire l'accesso non autorizzato.  
   
-     Casella**Cartella**  
+     Casella **Cartella**  
      Specificare la cartella in cui inserire i file di database creati automaticamente. Questa opzione è disabilitata se è stato selezionato URL come destinazione di backup.  
   
      **Credenziali SQL**  
      Selezionare le credenziali SQL usate per l'autenticazione in Archiviazione di Azure. Se non si dispone di credenziali SQL esistenti utilizzabili, fare clic sul pulsante **Crea** per crearne delle nuove.  
   
-    > **IMPORTANTE** La finestra di dialogo visualizzata quando si fa clic su **Crea** richiede un certificato di gestione o il profilo di pubblicazione per la sottoscrizione. Se non si dispone dell'accesso al certificato di gestione o al profilo di pubblicazione, è possibile creare le credenziali di SQL specificando il nome dell'account di archiviazione e le informazioni sulla chiave di accesso tramite Transact-SQL o SQL Server Management Studio. Vedere il codice di esempio nell'argomento [Creare credenziali](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) per creare le credenziali tramite Transact-SQL. In alternativa, utilizzando SQL Server Management Studio, dall'istanza del motore di database, fare clic con il pulsante destro del mouse su **Sicurezza**, scegliere **Nuovo**e selezionare **Credenziale**. Specificare il nome dell'account di archiviazione per **Identity** e la chiave di accesso nel campo **Password** .  
+    > **IMPORTANTE** La finestra di dialogo visualizzata quando si fa clic su **Crea** richiede un certificato di gestione o il profilo di pubblicazione per la sottoscrizione. Se non si dispone dell'accesso al certificato di gestione o al profilo di pubblicazione, è possibile creare le credenziali di SQL specificando il nome dell'account di archiviazione e le informazioni sulla chiave di accesso tramite Transact-SQL o SQL Server Management Studio. Vedere il codice di esempio nell'argomento [Creare credenziali](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) per creare le credenziali tramite Transact-SQL. In alternativa, utilizzando SQL Server Management Studio, dall'istanza del motore di database, fare clic con il pulsante destro del mouse su **Sicurezza**, scegliere **Nuovo** e selezionare **Credenziale**. Specificare il nome dell'account di archiviazione per **Identity** e la chiave di accesso nel campo **Password** .  
   
      **Contenitore di archiviazione di Azure**  
      Specificare il nome del contenitore di Archiviazione di Azure  
@@ -377,16 +377,16 @@ Casella di controllo**Includi indici**
      **Prefisso URL**  
      Viene generato automaticamente in base alle informazioni sull'account di archiviazione archiviate nelle credenziali SQL e al nome del contenitore di archiviazione di Azure specificato. Si consiglia di non modificare le informazioni in questo campo a meno che non si usi un dominio con un formato diverso da **\<storage account>.blob.core.windows.net**.  
   
-     Casella**Estensione file di backup**  
+     Casella **Estensione file di backup**  
      Specificare l'estensione da utilizzare per i file di backup. L'estensione predefinita è bak.  
   
-     Casella di controllo**Verifica integrità backup**  
+     Casella di controllo **Verifica integrità backup**  
      Consente di verificare che il set di backup sia completo e che tutti i volumi siano leggibili.  
   
-     Casella di controllo**Esegui checksum**  
+     Casella di controllo **Esegui checksum**  
      Verifica in ogni pagina la presenza di checksum e di pagine incomplete, se abilitati e disponibili, e genera un checksum per l'intero backup.  
   
-     Casella di controllo**Continua in caso di errori**  
+     Casella di controllo **Continua in caso di errori**  
      Imposta il proseguimento dell'istruzione BACKUP anche in caso di errori, ad esempio checksum non validi o pagine incomplete.  
   
      **Crittografia dei backup**  
@@ -406,15 +406,15 @@ Casella di controllo**Includi indici**
   
      Sono supportate solo le chiavi che si trovano in Extensible Key Management (EKM).  
   
-     Casella di controllo**Dimensione blocco** , elenco  
+     Casella di controllo **Dimensione blocco** , elenco  
   
      Specifica le dimensioni fisiche del blocco, in byte. In genere, questa opzione influisce sulle prestazioni durante la scrittura nei dispositivi nastro, nelle matrici RAID o nella rete SAN.  
   
-     Casella di controllo**Dimensioni massime trasferimento** , elenco  
+     Casella di controllo **Dimensioni massime trasferimento** , elenco  
   
      Specifica le dimensioni massime, in byte, per il trasferimento tra SQL Server e i supporti di backup.  
   
-     Elenco**Imposta compressione backup**  
+     Elenco **Imposta compressione backup**  
      In [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o versioni successive, selezionare uno dei valori di [compressione di backup](../../relational-databases/backup-restore/backup-compression-sql-server.md) seguenti:  
   
     |||  
@@ -453,20 +453,20 @@ Casella di controllo**Includi indici**
      **Cerca nella cartella ed elimina i file in base all'estensione**  
      Consente di eliminare tutti i file con l'estensione specificata contenuti nella cartella indicata. Utilizzare questa opzione per eliminare più file contemporaneamente, ad esempio tutti i file di backup con estensione bak contenuti nella cartella specificata.  
   
-     Casella**Cartella**  
+     Casella **Cartella**  
      Percorso e nome della cartella contenente i file da eliminare.  
   
-     Casella**Estensione file**  
+     Casella **Estensione file**  
      Indica l'estensione dei file da eliminare. Per eliminare più file contemporaneamente, ad esempio tutti i file di backup con estensione bak contenuti nella cartella specificata, specificare l'estensione bak.  
   
-     Casella di controllo**Includi sottocartelle di primo livello**  
+     Casella di controllo **Includi sottocartelle di primo livello**  
      Vengono eliminati i file con l'estensione specificata in **Estensione file** dalle sottocartelle di primo livello nella cartella specificata in **Cartella**.  
   
-     Casella di controllo**Elimina i file in base alla data del file al momento dell'esecuzione dell'attività**  
+     Casella di controllo **Elimina i file in base alla data del file al momento dell'esecuzione dell'attività**  
      Specificare il periodo di memorizzazione minimo trascorso il quale i file verranno eliminati, indicando un numero e un'unità di tempo nella casella **Elimina i file con data anteriore a** .  
   
      **Elimina i file con data anteriore a**  
-     Specificare il periodo di memorizzazione minimo trascorso il quale i file verranno eliminati indicando un numero e un'unità di tempo (**Ora/e**, **Giorno/i**, **Settimana/e**, **Mese/i**o **Anno/i**). I file con data anteriore alla data specificata verranno eliminati.  
+     Specificare il periodo di memorizzazione minimo trascorso il quale i file verranno eliminati indicando un numero e un'unità di tempo (**Ora/e**, **Giorno/i**, **Settimana/e**, **Mese/i** o **Anno/i**). I file con data anteriore alla data specificata verranno eliminati.  
   
 #### <a name="select-report-options"></a>Selezione opzioni report  
   
@@ -474,13 +474,13 @@ Casella di controllo**Includi indici**
   
      In questa pagina sono disponibili le opzioni seguenti.  
   
-     Casella di controllo**Scrivi report in un file di testo**  
+     Casella di controllo **Scrivi report in un file di testo**  
      Salva il report in un file.  
   
-     Casella**Percorso cartella**  
+     Casella **Percorso cartella**  
      Specifica il percorso del file che conterrà il report.  
   
-     Casella di controllo**Invia report tramite posta elettronica**  
+     Casella di controllo **Invia report tramite posta elettronica**  
      Inviare un messaggio di posta elettronica quando un'attività non viene completata in seguito a un errore. Per usare questa attività, l'opzione Posta elettronica database deve essere abilitata e configurata correttamente con MSDB come database host della posta elettronica e un operatore [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve avere un indirizzo di posta elettronica valido.  
   
      **Operatore agente**  
@@ -510,7 +510,7 @@ Casella di controllo**Includi indici**
      Fornisce tutti i messaggi di errore o di avviso restituiti dal processo.  
   
      **Report**  
-     Crea un report contenente i risultati della Creazione guidata partizione. Le opzioni sono **Visualizza report**, **Salva report su file**, **Copia report negli Appunti**e **Invia report per posta elettronica**.  
+     Crea un report contenente i risultati della Creazione guidata partizione. Le opzioni sono **Visualizza report**, **Salva report su file**, **Copia report negli Appunti** e **Invia report per posta elettronica**.  
   
      **Visualizza report**  
      Apre la finestra di dialogo **Visualizza report** in cui è contenuto un report di testo dello stato della Creazione guidata partizione.  

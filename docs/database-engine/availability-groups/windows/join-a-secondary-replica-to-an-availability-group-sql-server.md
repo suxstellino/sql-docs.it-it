@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 9ada906d271130f0160e4bf8ce8f88d88b91b2e0
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 4f9f35186d57900628f39a593e3e338ed89a9d89
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644216"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766416"
 ---
 # <a name="join-a-secondary-replica-to-an-always-on-availability-group"></a>Creare un join di una replica secondaria a un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Questo argomento illustra come creare un join di una replica secondaria a un gruppo di disponibilità AlwaysOn usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Dopo l'aggiunta di una replica secondaria a un gruppo di disponibilità AlwaysOn, è necessario creare un join della replica secondaria al gruppo di disponibilità. L'operazione di join della replica deve essere eseguita nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui viene ospitata la replica secondaria.  
+  Questo argomento illustra come creare un join di una replica secondaria a un gruppo di disponibilità AlwaysOn usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. Dopo l'aggiunta di una replica secondaria a un gruppo di disponibilità AlwaysOn, è necessario creare un join della replica secondaria al gruppo di disponibilità. L'operazione di join della replica deve essere eseguita nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui viene ospitata la replica secondaria.  
 
   
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  

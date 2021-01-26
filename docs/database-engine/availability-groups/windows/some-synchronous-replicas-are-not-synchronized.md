@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e58ed56e-4c30-42e6-a9fc-a8c401620e02
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 34e35a5b50067cef47d353d398c4fecdc82717f2
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 26d0548993776ab86203d0a9ec72dcec0e7c29a0
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97640285"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766128"
 ---
 # <a name="some-synchronous-replicas-are-not-synchronized"></a>Alcune repliche sincrone non sono sincronizzate
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,10 +35,7 @@ ms.locfileid: "97640285"
   
 ## <a name="description"></a>Descrizione  
  Questi criteri consentono di eseguire il rollup dello stato di sincronizzazione dei dati di tutte le repliche di disponibilità e di verificare tutte le repliche di disponibilità che non sono nello stato di sincronizzazione previsto. I criteri sono in uno stato non integro se una replica asincrona è in uno stato NON IN SINCRONIZZAZIONE e una replica sincrona è in uno stato NON SINCRONIZZATO. Altrimenti, i criteri sono in uno stato integro.  
-  
-> [!NOTE]  
->  Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], le informazioni sulle possibili cause e le soluzioni sono disponibili nella pagina relativa ad [alcune repliche sincrone non sono sincronizzate](https://go.microsoft.com/fwlink/p/?LinkId=220853) su Wiki di TechNet.  
-  
+
 ## <a name="possible-causes"></a>Possibili cause  
  In questo gruppo di disponibilità, almeno una replica sincrona non è attualmente sincronizzata. Lo stato di sincronizzazione della replica può essere SINCRONIZZAZIONE IN CORSO o NON IN SINCRONIZZAZIONE.  
   

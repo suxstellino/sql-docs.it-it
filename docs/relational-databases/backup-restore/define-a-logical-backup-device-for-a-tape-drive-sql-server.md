@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 66f36e1d-0287-4fac-8a51-71f9f0d7ad5b
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: ddb39f0d488becdcb7711ef05030bad4aff08aa5
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
-ms.translationtype: HT
+ms.openlocfilehash: 50cf45ac7558ba6d737b1ef286179411d9ff17b7
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96127011"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98764924"
 ---
 # <a name="define-a-logical-backup-device-for-a-tape-drive-sql-server"></a>Definizione di un dispositivo di backup logico per un'unità nastro (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  In questo argomento viene descritto come definire un dispositivo di backup logico per un'unità nastro in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un dispositivo logico è un nome definito dall'utente tramite cui viene fatto riferimento a un dispositivo di backup fisico specifico, ovvero un file su disco o un'unità nastro.  L'inizializzazione del dispositivo fisico viene eseguita successivamente, quando viene scritto un backup nel dispositivo di backup.  
+  In questo argomento viene descritto come definire un dispositivo di backup logico per un'unità nastro in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un dispositivo logico è un nome definito dall'utente tramite cui viene fatto riferimento a un dispositivo di backup fisico specifico, ovvero un file su disco o un'unità nastro.  L'inizializzazione del dispositivo fisico viene eseguita successivamente, quando viene scritto un backup nel dispositivo di backup.  
   
 > [!NOTE]  
 >  Il supporto per i dispositivi di backup su nastro verrà rimosso in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.  

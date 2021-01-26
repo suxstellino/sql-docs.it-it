@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 6e139de7-7de2-4d18-9df0-beac31ba7ff1
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 1c2125a470390f1b7343e4e0f978eb957bd3695e
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
-ms.translationtype: HT
+ms.openlocfilehash: 3a4a7c2b8125e5e63efd1b72170b87360395756e
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96130307"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765211"
 ---
 # <a name="restore-a-backup-from-a-device-sql-server"></a>Ripristino di un backup da un dispositivo (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  In questo argomento viene descritto il ripristino di un backup da un dispositivo in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  In questo argomento viene descritto il ripristino di un backup da un dispositivo in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  
 >  Per informazioni sul backup di SQL Server nel servizio Archiviazione BLOB di Azure, vedere [Backup e ripristino di SQL Server con il servizio Archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  

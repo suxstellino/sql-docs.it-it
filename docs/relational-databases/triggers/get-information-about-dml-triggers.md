@@ -18,16 +18,16 @@ ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 39a4d0a6136990cdb583a432757503099f61cfb6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 7a5e8f14728e5239ab4e0b1d71c78b713f2c27c2
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97403489"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765580"
 ---
 # <a name="get-information-about-dml-triggers"></a>Ottieni informazioni sui trigger DML
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  In questo argomento viene descritto come ottenere informazioni sui trigger DML in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Queste informazioni possono includere i tipi di trigger in una tabella, nonché il nome, il proprietario e la data di creazione o modifica di un trigger. Se il trigger non è stato crittografato al momento della creazione, se ne ottiene la definizione. È possibile utilizzare la definizione per comprendere gli effetti del trigger sulla tabella su cui è stato definito. È inoltre possibile rilevare gli oggetti utilizzati da un trigger specifico. Con queste informazioni, è possibile identificare gli oggetti che influiscono sul trigger qualora vengano modificati o eliminati dal database.  
+  In questo argomento viene descritto come ottenere informazioni sui trigger DML in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Queste informazioni possono includere i tipi di trigger in una tabella, nonché il nome, il proprietario e la data di creazione o modifica di un trigger. Se il trigger non è stato crittografato al momento della creazione, se ne ottiene la definizione. È possibile utilizzare la definizione per comprendere gli effetti del trigger sulla tabella su cui è stato definito. È inoltre possibile rilevare gli oggetti utilizzati da un trigger specifico. Con queste informazioni, è possibile identificare gli oggetti che influiscono sul trigger qualora vengano modificati o eliminati dal database.  
   
  **Contenuto dell'articolo**  
   

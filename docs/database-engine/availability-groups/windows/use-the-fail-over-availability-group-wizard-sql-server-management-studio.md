@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 9da271a07fbce3e730e1eb5594dc7c1f2114ad24
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 6e0d0975bf9663f630ca7494d173ff852a3f7b4e
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641771"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765551"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Utilizzare la Procedura guidata Failover del gruppo di disponibilità (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  In questo argomento viene illustrato come eseguire un failover manuale pianificato o un failover manuale forzato (failover forzato) su un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Per un gruppo di disponibilità il failover si verifica al livello di una replica di disponibilità. Se si esegue il failover su a una replica secondaria con stato SYNCHRONIZED, tramite la procedura guidata viene eseguito un failover manuale pianificato (senza perdita di dati). Se si esegue il failover su una replica secondaria con stato UNSYNCHRONIZED o NOT SYNCHRONIZING, la procedura guidata esegue un failover manuale forzato, noto anche come *failover forzato* (con possibile perdita di dati). In entrambe le forme di failover manuale la replica secondaria a cui si è connessi assume il ruolo primario. Con un failover manuale pianificato attualmente comporta il passaggio della replica primaria precedente al ruolo secondario. Dopo un failover forzato, quando la replica primaria precedente torna online assume il ruolo secondario.  
+  In questo argomento viene illustrato come eseguire un failover manuale pianificato o un failover manuale forzato (failover forzato) su un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. Per un gruppo di disponibilità il failover si verifica al livello di una replica di disponibilità. Se si esegue il failover su a una replica secondaria con stato SYNCHRONIZED, tramite la procedura guidata viene eseguito un failover manuale pianificato (senza perdita di dati). Se si esegue il failover su una replica secondaria con stato UNSYNCHRONIZED o NOT SYNCHRONIZING, la procedura guidata esegue un failover manuale forzato, noto anche come *failover forzato* (con possibile perdita di dati). In entrambe le forme di failover manuale la replica secondaria a cui si è connessi assume il ruolo primario. Con un failover manuale pianificato attualmente comporta il passaggio della replica primaria precedente al ruolo secondario. Dopo un failover forzato, quando la replica primaria precedente torna online assume il ruolo secondario.  
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
  Prima del primo failover manuale pianificato, vedere la sezione "Prima di iniziare" in [Eseguire un failover manuale pianificato di un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md).  

@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 7223b0d8b283caf6300e2be056d399e45e637350
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 590b7634a1dfb903d522c394f3d52ad9dc8ba1df
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643309"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765611"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>Creare un gruppo di disponibilità Always On con Transact-SQL (T-SQL)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  In questo argomento viene descritto come utilizzare [!INCLUDE[tsql](../../../includes/tsql-md.md)] per creare e configurare un gruppo di disponibilità su istanze di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] nelle quali è abilitata la funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Tramite un *gruppo di disponibilità* vengono definiti un set di database utente di cui verrà eseguito il failover come unità singola e un set di partner di failover, noti come *repliche di disponibilità*, che supportano il failover.  
+  In questo argomento viene descritto come utilizzare [!INCLUDE[tsql](../../../includes/tsql-md.md)] per creare e configurare un gruppo di disponibilità su istanze di [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] nelle quali è abilitata la funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Tramite un *gruppo di disponibilità* vengono definiti un set di database utente di cui verrà eseguito il failover come unità singola e un set di partner di failover, noti come *repliche di disponibilità*, che supportano il failover.  
   
 > [!NOTE]  
 >  Per un'introduzione ai gruppi di disponibilità, vedere [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  

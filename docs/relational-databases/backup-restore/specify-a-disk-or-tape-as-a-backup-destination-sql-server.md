@@ -21,17 +21,17 @@ helpviewer_keywords:
 ms.assetid: e391f452-ed8c-4b40-b846-ac3881271b94
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: e80b1913f6ff7c40ff0c3b715e98c9df6b3e20ca
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
-ms.translationtype: HT
+ms.openlocfilehash: 1d39d6fd92c8fc4eab080c8ca9556d399bf7f8b2
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125489"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766408"
 ---
 # <a name="specify-a-disk-or-tape-backup-destination-sql-server"></a>Specificare un disco o un nastro come destinazione di backup (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  In questo argomento si descrive come specificare un disco o un nastro come destinazione di backup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  In questo argomento si descrive come specificare un disco o un nastro come destinazione di backup in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  
 >  Il supporto per i dispositivi di backup su nastro verrà rimosso in una versione futura di SQL Server. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.  

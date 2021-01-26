@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: bea20a1eb563df3d2af9cddf640359673b05dc57
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 12e37d3119341ebef2c3592581fd0fada018210e
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725380"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765818"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
 
@@ -23,9 +23,9 @@ ms.locfileid: "91725380"
 
 [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) è un prodotto per la qualità dei dati basato sulle informazioni. DQS consente di compilare una Knowledge Base e utilizzarla per eseguire varie attività relative alla qualità dei dati di importanza fondamentale, tra cui correzione, arricchimento, standardizzazione e deduplicazione dei dati. DQS consente di eseguire la pulizia dei dati tramite servizi dati di riferimento basati su cloud forniti dai provider di dati di riferimento. DQS offre inoltre funzioni di profiling integrate nelle attività relative alla qualità dei dati, consentendo di analizzare l'integrità dei dati stessi.  
   
- DQS è costituito da un [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] e un [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], entrambi installati come parte di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Il [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] è una funzionalità dell'istanza di SQL Server costituita da tre cataloghi di SQL Server con capacità funzionali e di archiviazione per la qualità dei dati. Il [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] è una funzionalità condivisa di SQL Server utilizzabile da utenti aziendali, Information Worker e professionisti IT per eseguire analisi assistite da computer sulla qualità dei dati in uso e gestire tale qualità in modo interattivo. È possibile eseguire processi relativi alla qualità dei dati anche tramite [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] e la funzionalità di qualità dei dati Master Data Services (MDS), entrambi basati su DQS.  
+ DQS è costituito da un [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] e un [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], entrambi installati come parte di [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]. Il [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] è una funzionalità dell'istanza di SQL Server costituita da tre cataloghi di SQL Server con capacità funzionali e di archiviazione per la qualità dei dati. Il [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] è una funzionalità condivisa di SQL Server utilizzabile da utenti aziendali, Information Worker e professionisti IT per eseguire analisi assistite da computer sulla qualità dei dati in uso e gestire tale qualità in modo interattivo. È possibile eseguire processi relativi alla qualità dei dati anche tramite [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] e la funzionalità di qualità dei dati Master Data Services (MDS), entrambi basati su DQS.  
   
- Per informazioni sull'installazione di DQS, vedere [Install Data Quality Services](../data-quality-services/install-windows/install-data-quality-services.md). Se si vuole aggiornare la versione esistente di DQS a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vedere [Aggiornare Data Quality Services](../database-engine/install-windows/upgrade-data-quality-services.md).  
+ Per informazioni sull'installazione di DQS, vedere [Install Data Quality Services](../data-quality-services/install-windows/install-data-quality-services.md). Se si desidera aggiornare la versione esistente di DQS alla versione più recente di [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] , vedere [aggiornare Data Quality Services](../database-engine/install-windows/upgrade-data-quality-services.md).  
   
  **Sfoglia contenuto per area**  
  ![Icona della cartella file piccola](/analysis-services/analysis-services/media/filefolder-small.png "Icona della cartella file piccola") [Data Quality client applicazione](../data-quality-services/data-quality-client-application.md)  

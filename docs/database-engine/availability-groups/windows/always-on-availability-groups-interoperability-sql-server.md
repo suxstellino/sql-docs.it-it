@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 60c298991f80586ed9b830b856b84b3640ac509e
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 1c0322b1b00b3f5cbff775d3c248ee81916f48a9
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170793"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765137"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Gruppi di disponibilità Always On: interoperabilità (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-In questo argomento viene descritta l'interoperabilità di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] con altre funzionalità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].
+In questo argomento viene documentata l'interoperabilità di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] con altre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] funzionalità di.
 
 ## <a name="features-that-interoperate-with-always-on-availability-groups"></a><a name="Interop"></a> Funzionalità che interagiscono con i gruppi di disponibilità Always On
 
-Nella tabella seguente vengono elencate le funzionalità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di interoperabilità con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un collegamento nella colonna **Ulteriori informazioni** indica che per una determinata funzionalità esistono le considerazioni di interoperabilità.
+Nella tabella seguente sono elencate le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] funzionalità di interoperabilità con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Un collegamento nella colonna **Ulteriori informazioni** indica che per una determinata funzionalità esistono le considerazioni di interoperabilità.
 
 |Funzionalità|Altre informazioni|
 |:------|:---------------|

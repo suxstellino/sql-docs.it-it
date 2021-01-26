@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 9c2b804263539bb195ab8270a57dd8258811d2d4
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: b8ee6cba92f54fd6070abb079769d4386d29bc47
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644350"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765969"
 ---
 # <a name="configure-read-only-access-to-a-secondary-replica-of-an-always-on-availability-group"></a>Configurare l'accesso in sola lettura su una replica secondaria di un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Per impostazione predefinita, l'accesso in lettura e scrittura e l'accesso con finalità di lettura sono entrambi consentiti nella replica primaria, ma non sono consentite connessioni alle repliche secondarie di un gruppo di disponibilità AlwaysOn. Questo argomento descrive come configurare l'accesso alla connessione in una replica di disponibilità di un gruppo di disponibilità AlwaysOn in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell.  
+  Per impostazione predefinita, l'accesso in lettura e scrittura e l'accesso con finalità di lettura sono entrambi consentiti nella replica primaria, ma non sono consentite connessioni alle repliche secondarie di un gruppo di disponibilità AlwaysOn. Questo argomento descrive come configurare l'accesso alla connessione in una replica di disponibilità di un gruppo di disponibilità AlwaysOn in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell.  
   
  Per informazioni sulle implicazioni dell'abilitazione dell'accesso di sola lettura per una replica secondaria e per un'introduzione all'accesso alla connessione, vedere [Informazioni sull'accesso alla connessione client per le repliche di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md) e [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
@@ -155,7 +155,7 @@ GO
          Sono consentite tutte le connessioni ai database nella replica primaria. Si tratta dell'impostazione predefinita.  
   
     > [!NOTE]  
-    >  Per visualizzare la sintassi di un cmdlet, usare il cmdlet **Get-Help** nell'ambiente PowerShell di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] . Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Per visualizzare la sintassi di un cmdlet, usare il cmdlet **Get-Help** nell'ambiente PowerShell di [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Per impostare e utilizzare il provider PowerShell per SQL Server**  
   

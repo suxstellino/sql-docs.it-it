@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: b44d3ffbbff0539b899abf8ffc906f6fe922f65f
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 749c98e454556f14283057d33dd5cf5f127c761c
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643593"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765607"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>Abilitare o disabilitare la funzionalità gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -121,7 +121,7 @@ ms.locfileid: "97643593"
   
 4.  Selezionare la scheda **Disponibilità elevata Always On**.  
   
-5.  Verificare che nel campo **Nome cluster di failover Windows** sia incluso il nome del cluster di failover locale. Se il campo è vuoto, questa istanza del server non supporta attualmente [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Il computer locale non è un nodo del cluster, il cluster WSFC è stato chiuso, oppure si tratta di un'edizione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] che non supporta [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
+5.  Verificare che nel campo **Nome cluster di failover Windows** sia incluso il nome del cluster di failover locale. Se il campo è vuoto, questa istanza del server non supporta attualmente [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Il computer locale non è un nodo del cluster, il cluster WSFC è stato chiuso, oppure si tratta di un'edizione di [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] che non supporta [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
 6.  Selezionare la casella di controllo **Abilita gruppi di disponibilità Always On** e scegliere **OK**.  
   

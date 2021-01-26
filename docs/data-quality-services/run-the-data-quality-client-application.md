@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ed5b6449ea470a63e27a1d23a057ed6507c2ed2e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f83334dbbcc50642c463681614db5f23e10f6807
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466666"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765641"
 ---
 # <a name="run-the-data-quality-client-application"></a>Eseguire l'applicazione client Data Quality
 
@@ -39,15 +39,15 @@ ms.locfileid: "88466666"
 ##  <a name="run-data-quality-client"></a><a name="Run"></a> Esegui Data Quality Client  
  Per eseguire il [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] nel computer in cui è stato installato:  
   
-1.  Fare clic su **Start**, puntare **Tutti i programmi**, fare clic su **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**, su **Data Quality Services**, quindi su **Client Data Quality**.  
+1.  Nel menu **Start** selezionare il **[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]** **Data Quality Client**.  
   
 2.  Nella finestra di dialogo **Connetti al server**:  
   
     1.  Specificare il server a cui si desidera connettere l'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Selezionare **(LOCAL)** per connettersi al [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] nel computer locale. È anche possibile fare clic sulla freccia in giù e selezionare **\<Browse network for more servers>** per connettersi a un server diverso (o per connettersi al server locale in base al nome). Verrà visualizzata la finestra di dialogo **Cerca server** . È possibile selezionare un server nella scheda **Server locali** o nella scheda **Server di rete** .  
   
-    2.  Per crittografare il trasferimento dei dati tra [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] e [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], fare clic su **Opzioni**e quindi selezionare la casella di controllo **Crittografa connessione** .  
+    2.  Per crittografare il trasferimento dei dati tra [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] e [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], fare clic su **Opzioni** e quindi selezionare la casella di controllo **Crittografa connessione** .  
   
-3.  Fare clic su **Connetti**.  
+3.  Fare clic su **Connect** (Connetti).  
   
  Verrà visualizzata la schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Per altre informazioni, vedere [Schermata iniziale del client Data Quality](../data-quality-services/data-quality-client-home-screen.md).  
   

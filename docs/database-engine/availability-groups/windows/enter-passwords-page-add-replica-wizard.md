@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 632082f11b386fde86a9e89595cf13302cd1bc25
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: c9d1cfdb0437972ef5f1115c0e9ba6e667038932
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643545"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765545"
 ---
 # <a name="enter-passwords-page-add-replica-wizard-for-always-on-availability-groups"></a>Pagina Immetti password (Aggiungi replica) per i gruppi di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Questo argomento della Guida descrive le opzioni della pagina **Immetti password** . Questo argomento si applica alla [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+  Questo argomento della Guida descrive le opzioni della pagina **Immetti password** . Questo argomento si applica alla [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] di [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)].  
   
  Se le repliche selezionate nella pagina **Specifica repliche** contengono database con una chiave master del database, viene visualizzata la pagina Immetti password.  
   

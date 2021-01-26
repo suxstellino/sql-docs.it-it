@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aea808be-6f0f-40c2-9aa2-a2a435ec6443
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: c48d324ef9437bb349922604f0149f2a468d8952
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: f4641417055b4a237dbed4459f165dc66f7febc8
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642121"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765889"
 ---
 # <a name="some-availability-replicas-are-disconnected"></a>Alcune repliche di disponibilità sono disconnesse
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,10 +35,7 @@ ms.locfileid: "97642121"
   
 ## <a name="description"></a>Descrizione  
  Questi criteri consentono di eseguire il rollup dello stato di connessione di tutte le repliche di disponibilità e di verificare tutte le repliche di disponibilità che sono disconnesse. I criteri sono in uno stato non integro quando una replica di disponibilità è disconnessa. Altrimenti, sono in uno stato integro.  
-  
-> [!NOTE]  
->  Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], le informazioni sulle possibili cause e le soluzioni sono disponibili in [Alcune repliche di disponibilità sono disconnesse](https://go.microsoft.com/fwlink/p/?LinkId=220855) su Wiki di TechNet.  
-  
+ 
 ## <a name="possible-causes"></a>Possibili cause  
  In questo gruppo di disponibilità, almeno una replica secondaria non è connessa alla replica primaria. Lo stato è DISCONNESSO.  
   

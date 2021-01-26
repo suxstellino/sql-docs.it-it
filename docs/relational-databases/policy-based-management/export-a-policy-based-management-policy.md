@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: f0001b33-9078-4432-8460-496736fb325a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 62fff3bda286f50b2220dbb1ea4732547e98829f
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
-ms.translationtype: HT
+ms.openlocfilehash: 9cbb4d0a3c8583eabe2c2020356b268494179032
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96127858"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765782"
 ---
 # <a name="export-a-policy-based-management-policy"></a>Esportare i criteri della gestione basata su criteri
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  In questo argomento verrà descritto come esportare i criteri della gestione basata su criteri in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  In questo argomento verrà descritto come esportare i criteri della gestione basata su criteri in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **Contenuto dell'articolo**  
   

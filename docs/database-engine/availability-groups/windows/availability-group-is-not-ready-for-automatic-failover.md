@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 276436fb5b7ea41ace997a9c744992d4af177b00
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: b19e7f11a60ac21b191c524c0444414f1c5231e8
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641226"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766035"
 ---
 # <a name="always-on-availability-group-is-not-ready-for-automatic-failover"></a>Il gruppo di disponibilità Always On non è pronto per il failover automatico
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,10 +36,7 @@ ms.locfileid: "97641226"
 ## <a name="description"></a>Descrizione  
  Con questi criteri è possibile verificare che nel gruppo di disponibilità sia disponibile almeno una replica secondaria pronta per il failover. I criteri si trovano in uno stato non integro e viene generato un avviso quando il failover della replica primaria è automatico, ma nessuna delle repliche secondarie nel gruppo di disponibilità è pronta per il failover.  
   
- I criteri sono in uno stato integro quando almeno una replica secondaria è pronta per il failover automatico.  
-  
-> [!NOTE]  
->  Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], le informazioni sulle possibili cause e le soluzioni sono disponibili nella pagina relativa alla situazione in cui il [gruppo di disponibilità non è pronto per il failover automatico](https://go.microsoft.com/fwlink/p/?LinkId=220851) su Wiki di TechNet.  
+ I criteri sono in uno stato integro quando almeno una replica secondaria è pronta per il failover automatico.
   
 ## <a name="possible-causes"></a>Possibili cause  
  Il gruppo di disponibilità non è pronto per il failover automatico. La replica primaria viene configurata per il failover automatico; tuttavia, la replica secondaria non è pronta per il failover automatico. La replica secondaria configurata per il failover automatico potrebbe non essere disponibile o il relativo stato della sincronizzazione dei dati è attualmente NON SINCRONIZZATO.  

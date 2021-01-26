@@ -11,16 +11,16 @@ ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8174cdaae012631ff834392d7bb664c82971ca3d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: b200814dedac25809d1295146ff71d8908bce4da
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464842"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766117"
 ---
 # <a name="modify-a-partition-function"></a>Modificare una funzione di partizione
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  È possibile modificare la modalità di partizionamento di una tabella o di un indice in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aggiungendo o sottraendo, con incrementi di 1, il numero di partizioni specificate nella funzione di partizione della tabella o dell'indice partizionato tramite [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'aggiunta di una partizione consiste nel "suddividere" una partizione esistente in due partizioni e nel ridefinire i limiti delle nuove partizioni. L'eliminazione di una partizione consiste nell'"unire" i limiti di due partizioni in modo da ottenerne una. L'ultima operazione consiste nel ripopolare una partizione lasciando l'altra non assegnata.  
+  È possibile modificare la modalità di partizionamento di una tabella o di un indice in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] aggiungendo o sottraendo, con incrementi di 1, il numero di partizioni specificate nella funzione di partizione della tabella o dell'indice partizionato tramite [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'aggiunta di una partizione consiste nel "suddividere" una partizione esistente in due partizioni e nel ridefinire i limiti delle nuove partizioni. L'eliminazione di una partizione consiste nell'"unire" i limiti di due partizioni in modo da ottenerne una. L'ultima operazione consiste nel ripopolare una partizione lasciando l'altra non assegnata.  
   
 > [!CAUTION]  
 >  La stessa funzione di partizione può essere utilizzata da più tabelle o indici. La modifica di una funzione di partizione viene applicata a tutti gli elementi in un'unica transazione. Controllare le dipendenze della funzione di partizione prima di modificarla.  

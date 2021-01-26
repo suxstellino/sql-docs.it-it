@@ -16,16 +16,16 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: cawrites
 ms.author: chadam
 manager: erikre
-ms.openlocfilehash: 6e6b362f9e121f10515753d46ee098387348f272
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
-ms.translationtype: HT
+ms.openlocfilehash: c58d2479bfc1c7e33431c4da514154a9c06f2dd5
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98091738"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98764784"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Configurare un listener per un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  In questo argomento viene illustrato come creare o configurare un singolo *listener del gruppo di disponibilità* per un gruppo di disponibilità AlwaysOn usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+  In questo argomento viene illustrato come creare o configurare un singolo *listener del gruppo di disponibilità* per un gruppo di disponibilità AlwaysOn usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
 >  Per creare il primo listener di un gruppo di disponibilità, è consigliabile usare [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Evitare di creare un listener direttamente nel cluster WSFC se non necessario, ad esempio per creare un listener aggiuntivo.  

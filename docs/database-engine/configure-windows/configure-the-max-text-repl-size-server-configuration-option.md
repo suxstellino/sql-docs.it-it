@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8248e04f0e69519e4d1d78d39831f40775a8a38c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
-ms.translationtype: HT
+ms.openlocfilehash: 29287fab7f3f0922ad4f44d76bd621b5285c003a
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917953"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765569"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>Configurare l'opzione di configurazione del server max text repl size
  [!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  In questo argomento si illustra come configurare l'opzione di configurazione del server **max text repl size** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **max text repl size** è possibile specificare le dimensioni massime, in byte, di dati di tipo **text**, **ntext**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, and **image** che è possibile aggiungere a una colonna replicata o acquisita tramite un'unica istruzione INSERT, UPDATE, WRITETEXT o UPDATETEXT. Il valore predefinito è 65536 byte. Il valore -1 indica che non esiste alcun limite di dimensioni, tranne il limite imposto dal tipo di dati.  
+  In questo argomento si illustra come configurare l'opzione di configurazione del server **max text repl size** in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **max text repl size** è possibile specificare le dimensioni massime, in byte, di dati di tipo **text**, **ntext**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, and **image** che è possibile aggiungere a una colonna replicata o acquisita tramite un'unica istruzione INSERT, UPDATE, WRITETEXT o UPDATETEXT. Il valore predefinito è 65536 byte. Il valore -1 indica che non esiste alcun limite di dimensioni, tranne il limite imposto dal tipo di dati.  
   
  **Contenuto dell'articolo**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "86917953"
   
 2.  Fare clic sul nodo **Avanzate** .  
   
-3.  Nel gruppo **Varie**impostare il valore desiderato per l'opzione **Dimensioni massime replica testo** .  
+3.  Nel gruppo **Varie** impostare il valore desiderato per l'opzione **Dimensioni massime replica testo** .  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   

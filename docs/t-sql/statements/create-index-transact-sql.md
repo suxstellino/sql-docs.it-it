@@ -55,12 +55,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c472b3996683512fb6ac7cd3f001d53ca1fd73ae
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 3f1322f21ed7ad3f09f30a0f5a5e71e5614a8d47
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170683"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766239"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -642,7 +642,7 @@ Quando si partiziona un indice cluster non univoco, per impostazione predefinita
 
 È possibile creare viste indicizzate per tabelle partizionate in modo analogo agli indici delle tabelle. Per altre informazioni sugli indici partizionati, vedere [Tabelle e indici partizionati](../../relational-databases/partitions/partitioned-tables-and-indexes.md) e [Architettura e guida per la progettazione degli indici di SQL Server](../../relational-databases/sql-server-index-design-guide.md).
 
-In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] le statistiche non vengono create analizzando tutte le righe nella tabella se viene creato o ricompilato un indice partizionato. Query Optimizer utilizza invece l'algoritmo di campionamento predefinito per generare statistiche. Per ottenere statistiche sugli indici partizionati analizzando tutte le righe nella tabella, usare `CREATE STATISTICS` o `UPDATE STATISTICS` con la clausola `FULLSCAN`.
+In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] le statistiche non vengono create analizzando tutte le righe nella tabella se viene creato o ricompilato un indice partizionato. Query Optimizer utilizza invece l'algoritmo di campionamento predefinito per generare statistiche. Per ottenere statistiche sugli indici partizionati analizzando tutte le righe nella tabella, usare `CREATE STATISTICS` o `UPDATE STATISTICS` con la clausola `FULLSCAN`.
 
 ## <a name="filtered-indexes"></a>Indici filtrati
 Un indice filtrato è un indice non cluster ottimizzato, adatto per le query tramite cui viene selezionata una piccola percentuale di righe da una tabella. Utilizza un predicato del filtro per indicizzare una parte dei dati di una tabella. Un indice filtrato progettato correttamente consente di migliorare le prestazioni di esecuzione delle query e di ridurre i costi di archiviazione e di manutenzione.

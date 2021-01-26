@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c1d9b69cc55ab617eb3a4c5b4ed2ebb27726f35b
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
-ms.translationtype: HT
+ms.openlocfilehash: 03f4a469465339664e56aae784c3b734f85ba9b4
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91669941"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765694"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Configurazione di Windows Firewall per l'accesso al Motore di database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 
-  In questo argomento viene descritto come configurare Windows Firewall per l'accesso al Motore di database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite Gestione configurazione SQL Server. I sistemi firewall contribuiscono a impedire l'accesso non autorizzato alle risorse del computer. Per accedere a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] attraverso un firewall, è necessario configurare il firewall nel computer in cui viene eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modo che consenta l'accesso.  
+  In questo argomento viene descritto come configurare Windows Firewall per l'accesso al Motore di database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] tramite Gestione configurazione SQL Server. I sistemi firewall contribuiscono a impedire l'accesso non autorizzato alle risorse del computer. Per accedere a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] attraverso un firewall, è necessario configurare il firewall nel computer in cui viene eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modo che consenta l'accesso.  
   
  Per altre informazioni sulle impostazioni predefinite di Windows Firewall e per una descrizione delle porte TCP che interessano il [!INCLUDE[ssDE](../../includes/ssde-md.md)], Analysis Services, Reporting Services e Integration Services, vedere [Configurare Windows Firewall per consentire l'accesso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md). Sono disponibili numerosi sistemi firewall. Per informazioni specifiche per il sistema in uso, vedere la documentazione del firewall.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "91669941"
   
 1.  Dal menu **Start** scegliere **Esegui**, digitare **WF.msc**, quindi fare clic su **OK**.  
   
-2.  Nel riquadro sinistro di **Windows Firewall con sicurezza avanzata**fare clic con il pulsante destro del mouse su **Regole in entrata**, quindi scegliere **Nuova regola** nel riquadro azioni.  
+2.  Nel riquadro sinistro di **Windows Firewall con sicurezza avanzata** fare clic con il pulsante destro del mouse su **Regole in entrata**, quindi scegliere **Nuova regola** nel riquadro azioni.  
   
 3.  Nella finestra di dialogo **Tipo di regola** selezionare **Porta**, quindi fare clic su **Avanti**.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "91669941"
   
 1.  Dal menu **Start** scegliere **Esegui**, digitare **WF.msc**, quindi fare clic su **OK**.  
   
-2.  Nel riquadro sinistro di **Windows Firewall con sicurezza avanzata**fare clic con il pulsante destro del mouse su **Regole in entrata**, quindi scegliere **Nuova regola** nel riquadro azioni.  
+2.  Nel riquadro sinistro di **Windows Firewall con sicurezza avanzata** fare clic con il pulsante destro del mouse su **Regole in entrata**, quindi scegliere **Nuova regola** nel riquadro azioni.  
   
 3.  Nella finestra di dialogo **Tipo di regola** selezionare **Programma**, quindi fare clic su **Avanti**.  
   

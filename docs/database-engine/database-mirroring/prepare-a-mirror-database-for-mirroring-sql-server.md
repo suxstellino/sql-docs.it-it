@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1fa476693286b32cb2910526bb0ea7431faa5120
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 1996d9610067e7db52c538b20df0680fbc741548
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642160"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766386"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Preparazione di un database mirror per il mirroring (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Prima di avviare una sessione di mirroring del database, è necessario che il proprietario del database o l'amministratore del sistema verifichi che il database mirror sia stato creato e sia pronto per il mirroring. La creazione di un nuovo database mirror richiede l'esecuzione di un backup completo del database principale e di un backup del log successivo. Entrambi i backup devono quindi essere ripristinati sull'istanza del server mirror tramite WITH NORECOVERY.  
   
- In questo argomento viene descritto come preparare un database mirror in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ In questo argomento viene descritto come preparare un database mirror in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 -   **Prima di iniziare:**  
   
@@ -52,7 +52,7 @@ ms.locfileid: "97642160"
   
 -   Le istanze del server principale e del server mirror devono essere eseguite nella stessa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sebbene sia possibile che la versione di SQL Server del server mirror sia successiva, questa configurazione è consigliata solo per processi di aggiornamento accuratamente pianificati. In questo tipo di configurazione si corre il rischio che venga effettuato un failover automatico durante il quale lo spostamento dei dati viene automaticamente sospeso in quanto non è possibile spostare i dati in una versione precedente di SQL Server. Per altre informazioni, vedere [Aggiornamento di istanze con mirroring](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
   
--   Le istanze del server principale e del server mirror devono essere eseguite nella stessa edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per informazioni sul supporto del mirroring del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere [Edizioni e funzionalità supportate di SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md).  
+-   Le istanze del server principale e del server mirror devono essere eseguite nella stessa edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per informazioni sul supporto del mirroring del database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate di SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md).  
   
 -   Il database deve utilizzare il modello di recupero con registrazione completa.  
   

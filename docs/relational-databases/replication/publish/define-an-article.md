@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7703c4ebe7c05dd266866170bf499f3d370ee6c9
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
-ms.translationtype: HT
+ms.openlocfilehash: b93fbfea46931eb460b842a3a34ae13853726792
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867129"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766369"
 ---
 # <a name="define-an-article"></a>Definizione di un articolo
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  In questo argomento viene descritto come definire un articolo in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o RMO (Replication Management Objects).  
+  In questo argomento viene descritto come definire un articolo in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o RMO (Replication Management Objects).  
   
  **Contenuto dell'articolo**  
   
@@ -133,7 +133,7 @@ ms.locfileid: "91867129"
   
  [!code-sql[HowTo#sp_AddTranArticle](../../../relational-databases/replication/codesnippet/tsql/define-an-article_1.sql)]  
   
- In questo esempio si definiscono gli articoli per una pubblicazione di tipo merge, in cui l'articolo `SalesOrderHeader` è filtrato in modo statico in base a **SalesPersonID**e l'articolo `SalesOrderDetail` è filtrato con filtro di join in base a `SalesOrderHeader`.  
+ In questo esempio si definiscono gli articoli per una pubblicazione di tipo merge, in cui l'articolo `SalesOrderHeader` è filtrato in modo statico in base a **SalesPersonID** e l'articolo `SalesOrderDetail` è filtrato con filtro di join in base a `SalesOrderHeader`.  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-an-article_2.sql)]  
   

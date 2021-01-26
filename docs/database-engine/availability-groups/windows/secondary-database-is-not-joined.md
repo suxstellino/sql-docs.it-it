@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 10817e5e-75fa-42dd-baa2-359bea3ad051
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 39cbbe7a884d5e8fe45d0877b7a581016e1e95c2
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 1e41945d69a499908d11d8ebc8cbda7688d544a8
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97640547"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766092"
 ---
 # <a name="secondary-database-is-not-joined"></a>Un database secondario non è associato
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,10 +35,7 @@ ms.locfileid: "97640547"
   
 ## <a name="description"></a>Descrizione  
  Questi criteri consentono di controllare lo stato di join del database secondario, anche noto come "replica di database secondaria". I criteri sono in uno stato non integro quando la replica del set di dati non è unita in join. Altrimenti, sono in uno stato integro.  
-  
-> [!NOTE]  
->  Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]le informazioni sulle cause e sulle soluzioni possibili sono disponibili in [Secondary database is not joined](https://go.microsoft.com/fwlink/p/?LinkId=220862) (Database secondario non unito in join) in TechNet Wiki.  
-  
+
 ## <a name="possible-causes"></a>Possibili cause  
  Questo database secondario non è unito in join al gruppo di disponibilità. La configurazione di questo database secondario è incompleta.  
   

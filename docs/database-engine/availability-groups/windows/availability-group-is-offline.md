@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 56d79fedca8a5cdd0d91be2728430f5edbdab9ab
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: a0c27e56044476217de8be84181115336a6ff015
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641214"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766042"
 ---
 # <a name="always-on-availability-group-is-offline"></a>Un gruppo di disponibilità Always On è offline
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,10 +36,7 @@ ms.locfileid: "97641214"
 ## <a name="description"></a>Descrizione  
  Questi criteri consentono di controllare lo stato online o offline del gruppo di disponibilità. I criteri si trovano in uno stato non integro e viene generato un avviso quando la risorsa cluster del gruppo di disponibilità è offline o nel gruppo di disponibilità non è disponibile una replica primaria.  
   
- I criteri si trovano in uno stato integro quando la risorsa cluster del gruppo di disponibilità è online e nel gruppo di disponibilità è disponibile una replica primaria.  
-  
-> [!NOTE]  
->  Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]le informazioni sulle possibili cause e le possibili soluzioni sono disponibili nella pagina [Availability group is offline](https://go.microsoft.com/fwlink/p/?LinkId=220850) (Il gruppo di disponibilità è offline) in TechNet Wiki.  
+ I criteri si trovano in uno stato integro quando la risorsa cluster del gruppo di disponibilità è online e nel gruppo di disponibilità è disponibile una replica primaria.
   
 ## <a name="possible-causes"></a>Possibili cause  
  Questo problema può essere causato da un errore nell'istanza del server in cui è ospitata la replica primaria o dal passaggio alla modalità offline della risorsa del gruppo di disponibilità WSCF (Windows Server Failover Clustering). Di seguito sono riportate le possibili cause del passaggio alla modalità offline del gruppo di disponibilità:  
