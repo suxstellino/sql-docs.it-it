@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 59b0e82558e14e29e4fad69ddc86b76d982a634a
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 44571469d7b684437dbcbd836080e2cc9a80ef56
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171103"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783055"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Utilizzare la Creazione guidata Gruppo di disponibilità (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Questo argomento descrive come usare la **Creazione guidata gruppo di disponibilità** in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] per creare e configurare un gruppo di disponibilità AlwaysOn in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Tramite un *gruppo di disponibilità* vengono definiti un set di database utente di cui verrà eseguito il failover come unità singola e un set di partner di failover, noti come *repliche di disponibilità*, che supportano il failover.  
+  Questo argomento descrive come usare la **Creazione guidata gruppo di disponibilità** in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] per creare e configurare un gruppo di disponibilità AlwaysOn in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. Tramite un *gruppo di disponibilità* vengono definiti un set di database utente di cui verrà eseguito il failover come unità singola e un set di partner di failover, noti come *repliche di disponibilità*, che supportano il failover.  
   
 > [!NOTE]  
 >  Per un'introduzione ai gruppi di disponibilità, vedere [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  

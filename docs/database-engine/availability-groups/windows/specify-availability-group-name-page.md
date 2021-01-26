@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 8f7851c153833dfc43d751976dc7b37fa34e9dfa
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: f5171195bb3d275eb170330565cd9f90531dc0c6
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97640171"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783402"
 ---
 # <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Pagina Specificare le opzioni del gruppo di disponibilità per un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  In questo argomento vengono descritte le opzioni della pagina **Specifica nome del gruppo di disponibilità** . Questo argomento viene utilizzato dalla [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] e dalla [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+  In questo argomento vengono descritte le opzioni della pagina **Specifica nome del gruppo di disponibilità** . Questo argomento viene utilizzato dalla [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] e dalla [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] di [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)].  
   
 ##  <a name="specify-availability-group-options"></a><a name="PageOptions"></a> Pagina Specificare le opzioni del gruppo di disponibilità  
  **Nome del gruppo di disponibilità**  

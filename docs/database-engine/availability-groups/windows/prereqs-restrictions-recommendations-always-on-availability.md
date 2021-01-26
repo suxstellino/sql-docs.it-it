@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: ec3a84dc54dcaf373f8fd817c259602c7901410d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: e1a2fe365ff2cf40e1dd7e08e113a586e7c2b666
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642534"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783518"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Prerequisiti, restrizioni e consigli per i gruppi di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "97642534"
 >  Prima di distribuire [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], si consiglia di leggere tutte le sezioni presenti in questo argomento.  
     
 ##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> Hotfix di .NET che supportano i gruppi di disponibilità  
- A seconda dei componenti e delle funzionalità di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] che verranno usati con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], potrebbe essere necessario aggiungere hotfix di .NET aggiuntivi identificati nella seguente tabella. Gli hotfix possono essere installati in qualsiasi ordine.  
+ A seconda dei componenti e delle funzionalità di [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] che verranno usati con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], potrebbe essere necessario aggiungere hotfix di .NET aggiuntivi identificati nella seguente tabella. Gli hotfix possono essere installati in qualsiasi ordine.  
   
 |Funzionalità dipendente|Hotfix|Collegamento|  
 |-----------------------|------------|----------|  

@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 17913dab743f1aaaa7672ce855aa85ce8434f3c0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d23880a7ea6a1e8f4c1beccc5ec82f40303b9b76
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727746"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783637"
 ---
 # <a name="working-with-user-defined-types---manipulating-udt-data"></a>Uso di tipi definiti dall'utente (UDT) - Modifica di dati UDT
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -130,7 +130,7 @@ SELECT @PointValue.ToString() AS PointValue;
  La differenza tra l'utilizzo di SELECT e di SET per l'assegnazione delle variabili sta nel fatto che SELECT consente di assegnare più variabili in un'istruzione SELECT, mentre la sintassi di SET richiede che ogni assegnazione di variabile contenga la relativa istruzione SET.  
   
 ## <a name="comparing-data"></a>Confronto dei dati  
- È possibile usare gli operatori di confronto per confrontare i valori nel tipo definito dall'utente se la proprietà **IsByteOrdered** è stata impostata su **true** quando si definisce la classe. Per ulteriori informazioni, vedere [creazione di un tipo definito dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md).  
+ È possibile usare gli operatori di confronto per confrontare i valori nel tipo definito dall'utente se la proprietà **IsByteOrdered** è stata impostata su **true** quando si definisce la classe. Per ulteriori informazioni, vedere [creazione di un tipo di User-Defined](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md).  
   
 ```sql  
 SELECT ID, PointValue.ToString() AS Points   
@@ -157,7 +157,7 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>Chiamata dei metodi UDT  
- È anche possibile richiamare i metodi definiti nel tipo definito dall'utente in [!INCLUDE[tsql](../../includes/tsql-md.md)]. La classe **Point** contiene tre metodi, **distance**, **DistanceFrom**e **DistanceFromXY**. Per gli elenchi di codice che definiscono questi tre metodi, vedere [codifica di tipi definiti dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
+ È anche possibile richiamare i metodi definiti nel tipo definito dall'utente in [!INCLUDE[tsql](../../includes/tsql-md.md)]. La classe **Point** contiene tre metodi, **distance**, **DistanceFrom** e **DistanceFromXY**. Per gli elenchi di codice che definiscono questi tre metodi, vedere [codifica User-Defined tipi](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
  L' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione seguente chiama il metodo **PointValue. distance** :  
   
@@ -232,7 +232,7 @@ WHERE PointValue = '3,4';
 ```  
   
 ### <a name="updating-limitations"></a>Limitazioni relative all'aggiornamento  
- Non è possibile aggiornare più proprietà contemporaneamente utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'istruzione UPDATE seguente, ad esempio, ha esito negativo e restituisce un errore perché non è possibile utilizzare due volte lo stesso nome di colonna in un'istruzione UDATE.  
+ Non è possibile aggiornare più proprietà contemporaneamente utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ad esempio, l'istruzione UPDATE seguente ha esito negativo e restituisce un errore perché non è possibile utilizzare lo stesso nome di colonna due volte in un'unica istruzione UPDATE.  
   
 ```sql  
 UPDATE dbo.Points  
@@ -265,6 +265,6 @@ WHERE ID = 2
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo dei tipi definiti dall'utente in SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)  
+ [Uso di tipi definiti dall'utente in SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)  
   
   

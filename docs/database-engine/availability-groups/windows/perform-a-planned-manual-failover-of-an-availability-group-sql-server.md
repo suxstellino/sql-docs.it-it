@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 3cf135ca98a61382e12973b93eb30ab06ad6f4dd
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 663861d552b619b199e6279353f5bbdcf6658f24
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642567"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783377"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Eseguire un failover manuale pianificato di un gruppo di disponibilità Always On (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-In questo argomento viene illustrato come eseguire un failover manuale senza perdite di dati ( *failover manuale pianificato*) in un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Per un gruppo di disponibilità il failover si verifica al livello di una replica di disponibilità. Un failover manuale pianificato, ad esempio un failover del gruppo di disponibilità AlwaysOn, comporta il passaggio della replica primaria precedente al ruolo secondario. Il failover attualmente comporta il passaggio della replica primaria precedente al ruolo secondario.  
+In questo argomento viene illustrato come eseguire un failover manuale senza perdite di dati ( *failover manuale pianificato*) in un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. Per un gruppo di disponibilità il failover si verifica al livello di una replica di disponibilità. Un failover manuale pianificato, ad esempio un failover del gruppo di disponibilità AlwaysOn, comporta il passaggio della replica primaria precedente al ruolo secondario. Il failover attualmente comporta il passaggio della replica primaria precedente al ruolo secondario.  
   
 Un failover manuale pianificato è supportato solo quando la replica principale e la replica secondaria di destinazione sono in esecuzione in modalità commit sincrono e sono attualmente sincronizzate. Un failover manuale pianificato mantiene tutti i dati presenti nei database secondari associati al gruppo di disponibilità nella replica secondaria di destinazione. Dopo che la replica primaria precedente è passata al ruolo secondario, i relativi database diventano database secondari. Iniziano quindi a eseguire la sincronizzazione con i nuovi database primari. Dopo la transizione di tutti i database allo stato SYNCHRONIZED, la nuova replica secondaria diventa idonea a fungere da destinazione di un futuro failover manuale pianificato.  
   
@@ -94,7 +94,7 @@ Un failover manuale pianificato è supportato solo quando la replica principale 
 2. Usare il cmdlet **Switch-SqlAvailabilityGroup** . 
   
     > [!NOTE] 
-    >  Per visualizzare la sintassi di un cmdlet, usare il cmdlet **Get-Help** nell'ambiente PowerShell di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] . Per altre informazioni, vedere la [guida SQL Server PowerShell](../../../powershell/sql-server-powershell.md). 
+    >  Per visualizzare la sintassi di un cmdlet, usare il cmdlet **Get-Help** nell'ambiente PowerShell di [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere la [guida SQL Server PowerShell](../../../powershell/sql-server-powershell.md). 
   
      Nell'esempio seguente viene eseguito il failover manuale del gruppo di disponibilità *MyAg* alla replica secondaria con il percorso specificato: 
   

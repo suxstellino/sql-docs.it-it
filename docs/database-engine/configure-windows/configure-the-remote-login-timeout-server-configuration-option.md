@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 077adebe-0e3f-42a5-a75e-5e6d04847e2b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad4989bc64fa9460a97a0e4363deddb74605e9e1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: ffc46323f8f3fb783b4a06836f66c535e145a04e
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785687"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783119"
 ---
 # <a name="configure-the-remote-login-timeout-server-configuration-option"></a>Configurare l'opzione di configurazione del server remote login timeout
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  In questo argomento si illustra come configurare l'opzione di configurazione del server **remote login timeout** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **remote login timeout** è possibile specificare il numero di secondi che devono trascorrere prima di considerare non riuscito il tentativo di accesso remoto a un server. Se, ad esempio, si tenta l'accesso a un server remoto non funzionante, con **remote login timeout** viene definito un limite oltre il quale i tentativi di accesso verranno sospesi evitando quindi il protrarsi di tentativi inutili per un periodo di tempo indefinito. Il valore predefinito per questa opzione è 10 secondi. Il valore 0 determina un tempo di attesa infinito.  
+  In questo argomento si illustra come configurare l'opzione di configurazione del server **remote login timeout** in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **remote login timeout** è possibile specificare il numero di secondi che devono trascorrere prima di considerare non riuscito il tentativo di accesso remoto a un server. Se, ad esempio, si tenta l'accesso a un server remoto non funzionante, con **remote login timeout** viene definito un limite oltre il quale i tentativi di accesso verranno sospesi evitando quindi il protrarsi di tentativi inutili per un periodo di tempo indefinito. Il valore predefinito per questa opzione è 10 secondi. Il valore 0 determina un tempo di attesa infinito.  
   
 > [!NOTE]  
 >  Il valore predefinito per questa opzione è 20 secondi in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
@@ -63,7 +63,7 @@ ms.locfileid: "85785687"
   
 2.  Fare clic sul nodo **Avanzate** .  
   
-3.  In **Rete**selezionare un valore per la casella **Remote Login Timeout** .  
+3.  In **Rete** selezionare un valore per la casella **Remote Login Timeout** .  
   
      Utilizzare l'opzione **remote login timeout** per specificare il numero di secondi che devono trascorrere prima di considerare non riuscito il tentativo di accesso remoto.  
   

@@ -14,24 +14,24 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: cawrites
 ms.author: chadam
 manager: erikre
-ms.openlocfilehash: 306a200cadc535ea9da3d5d21dcd74fb15cf278c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: cf6d3f8e77591e9791fe2e8dc57175f1393716ff
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641520"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783264"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services con i gruppi di disponibilità AlwaysOn (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  In questo argomento sono contenute informazioni sulla configurazione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] per l'utilizzo con i [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. I database per le origini dati del report, i database del server di report e la progettazione report rappresentano i tre scenari per l'utilizzo di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . La funzionalità supportata e la configurazione richiesta sono diverse per i tre scenari.  
+  In questo argomento sono contenute informazioni sulla configurazione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] per l'utilizzo con i [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. I database per le origini dati del report, i database del server di report e la progettazione report rappresentano i tre scenari per l'utilizzo di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . La funzionalità supportata e la configurazione richiesta sono diverse per i tre scenari.  
   
  La possibilità di usare le repliche secondarie leggibili come origine dati Reporting Services mentre le repliche secondarie forniscono allo stesso tempo un failover per un database primario è un vantaggio chiave nell'utilizzo dei [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] con le origini dei dati di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .  
   
  Per informazioni generali sui [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [Domande frequenti su AlwaysOn per SQL Server 2012 (../../../sql-server/index.yml)](../../../sql-server/index.yml).  
 
 ##  <a name="requirements-for-using-reporting-services-and-always-on-availability-groups"></a><a name="bkmk_requirements"></a> Requisiti per l'uso di Reporting Services e dei gruppi di disponibilità AlwaysOn  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e il Server di report di Power BI usano .NET Framework 4.0 e supportano le proprietà della stringa di connessione [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] per l'uso con le origini dati.  
+ [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e il Server di report di Power BI usano .NET Framework 4.0 e supportano le proprietà della stringa di connessione [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] per l'uso con le origini dati.  
   
  Per usare i [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] con  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 e versioni precedenti, è necessario scaricare e installare un hotfix per .Net 3.5 SP1. L'hotfix aggiunge supporto a SQL Client per le funzionalità dei gruppi di disponibilità e per le proprietà della stringa di connessione **ApplicationIntent** e **MultiSubnetFailover**. Se l'hotfix non viene installato in ogni computer in cui si trova il server di report, allora gli utenti che provano a visualizzare un'anteprima dei report visualizzeranno un messaggio di errore simile a quello di seguito riportato e questo verrà scritto nel log di traccia del server di report:  
   

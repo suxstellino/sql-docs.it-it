@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: ce723dfbf0171d3c1885c1574bf681fbb2c8e714
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: fa041d70aa80d44194859c92ad58f518cfa14c45
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172563"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783367"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Backup gestito di SQL Server in Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

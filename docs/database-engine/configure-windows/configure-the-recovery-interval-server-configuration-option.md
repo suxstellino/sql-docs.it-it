@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: e4734b3b-8fbe-4b65-9c48-91b5a3dd18e1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a9e1311433aab88efd6e1efbbe4a260c62075a99
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: ac6d7f368a42e8a6c81fadbf151760b5bdfc8b53
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785827"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783158"
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>Configurare l'opzione di configurazione del server recovery interval
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  In questo argomento si illustra come configurare l'opzione di configurazione del server **recovery interval** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **recovery interval** è possibile definire un limite superiore di tempo da impiegare per il recupero di un database. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usa il valore specificato per questa opzione per determinare approssimativamente la frequenza di generazione dei [checkpoint automatici](../../relational-databases/logs/database-checkpoints-sql-server.md) in un database specifico.  
+  In questo argomento si illustra come configurare l'opzione di configurazione del server **recovery interval** in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **recovery interval** è possibile definire un limite superiore di tempo da impiegare per il recupero di un database. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usa il valore specificato per questa opzione per determinare approssimativamente la frequenza di generazione dei [checkpoint automatici](../../relational-databases/logs/database-checkpoints-sql-server.md) in un database specifico.  
   
  Il valore predefinito di recovery-interval è 0. In questo modo, tramite il [!INCLUDE[ssDE](../../includes/ssde-md.md)] è possibile configurare automaticamente l'intervallo di recupero. In genere, con l'intervallo di recupero predefinito vengono generati checkpoint automatici circa una volta al minuto per i database attivi e in un tempo di recupero inferiore al minuto. I valori superiori indicano il tempo di recupero massimo approssimativo, in minuti. Ad esempio, impostando l'intervallo di recupero su 3, il tempo di recupero massimo risulterà di circa 3 minuti.  
   

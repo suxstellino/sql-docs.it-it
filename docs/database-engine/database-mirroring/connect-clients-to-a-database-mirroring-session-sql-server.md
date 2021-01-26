@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 680273a6bab1283be56d130c84b4c156d8fcd280
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: c34c9359534b3ec59aba824dccb649a9168fe725
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644334"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783608"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Connessione di client a una sessione di mirroring del database (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Per connettersi a una sessione di mirroring del database un client può utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client o il provider di dati .NET Framework per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se configurati per un database [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , questi provider di accesso ai dati supportano entrambi completamente il mirroring del database. Per informazioni relative alle considerazioni di programmazione per l'utilizzo di un database con mirroring, vedere [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). È inoltre necessario che l'istanza del server principale corrente sia disponibile e che l'account di accesso del client sia stato creato nell'istanza del server. Per altre informazioni, vedere [Risolvere i problemi relativi agli utenti isolati &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Le connessioni client a una sessione di mirroring del database non richiedono l'istanza del server di controllo del mirroring, se ne esiste una.  
+  Per connettersi a una sessione di mirroring del database un client può utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client o il provider di dati .NET Framework per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se configurati per un database [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] , questi provider di accesso ai dati supportano entrambi completamente il mirroring del database. Per informazioni relative alle considerazioni di programmazione per l'utilizzo di un database con mirroring, vedere [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). È inoltre necessario che l'istanza del server principale corrente sia disponibile e che l'account di accesso del client sia stato creato nell'istanza del server. Per altre informazioni, vedere [Risolvere i problemi relativi agli utenti isolati &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Le connessioni client a una sessione di mirroring del database non richiedono l'istanza del server di controllo del mirroring, se ne esiste una.  
   
   
 ##  <a name="making-the-initial-connection-to-a-database-mirroring-session"></a><a name="InitialConnection"></a> Creazione della connessione iniziale a una sessione di mirroring del database  

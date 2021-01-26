@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: fadd4b3978466775a44ace25a12bb9cfac08a8e7
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 9b029efb566fef24aed4748b51bfc15050d495c0
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642582"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783505"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>Eseguire un failover manuale forzato di un gruppo di disponibilità Always On (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Questo argomento illustra come eseguire un failover forzato (con possibile perdita di dati) in un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un failover forzato rappresenta un tipo di failover manuale che deve essere utilizzato esclusivamente per il ripristino di emergenza, se non è possibile eseguire un [failover manuale pianificato](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) . Se si forza il failover in una replica secondaria non sincronizzata, è possibile che vengano persi alcuni dati. È pertanto consigliabile forzare il failover solo se è necessario ripristinare immediatamente il servizio nel gruppo di disponibilità e si è disposti a rischiare la perdita di dati.  
+  Questo argomento illustra come eseguire un failover forzato (con possibile perdita di dati) in un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. Un failover forzato rappresenta un tipo di failover manuale che deve essere utilizzato esclusivamente per il ripristino di emergenza, se non è possibile eseguire un [failover manuale pianificato](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) . Se si forza il failover in una replica secondaria non sincronizzata, è possibile che vengano persi alcuni dati. È pertanto consigliabile forzare il failover solo se è necessario ripristinare immediatamente il servizio nel gruppo di disponibilità e si è disposti a rischiare la perdita di dati.  
   
  Dopo un failover forzato, la destinazione a cui è stato eseguito il failover del gruppo di disponibilità diventa la nuova replica primaria. I database secondari nelle repliche secondarie rimanenti vengono sospesi e dovranno essere ripresi manualmente. Quando la replica primaria precedente diventa disponibile, passa al ruolo secondario. In questo modo i database primari precedenti diventano database secondari e passano allo stato SUSPENDED. Prima di riprendere uno specifico database secondario, è possibile che si riesca a recuperare i dati perduti. Si tenga tuttavia presente che il troncamento del log delle transazioni viene ritardato in uno specifico database primario mentre i relativi database secondari sono sospesi.  
   

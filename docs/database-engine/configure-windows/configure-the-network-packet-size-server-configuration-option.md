@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c87703d399f9f8906c4a3c4a7ea0703d092c333
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 8cb8e2b3377c4b90e61e9b65225d3d350bfa9897
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785901"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783629"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>Configurare l'opzione di configurazione del server network packet size
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  In questo argomento si illustra come configurare l'opzione di configurazione del server **network packet size** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **Dimensioni pacchetto di rete** è possibile impostare le dimensioni del pacchetto, in byte, applicate in tutta la rete. I pacchetti sono i blocchi di dati di dimensioni fisse utilizzati per il trasferimento delle richieste e delle risposte tra client e server. Le dimensioni predefinite del pacchetto sono di 4.096 byte.  
+  In questo argomento si illustra come configurare l'opzione di configurazione del server **network packet size** in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **Dimensioni pacchetto di rete** è possibile impostare le dimensioni del pacchetto, in byte, applicate in tutta la rete. I pacchetti sono i blocchi di dati di dimensioni fisse utilizzati per il trasferimento delle richieste e delle risposte tra client e server. Le dimensioni predefinite del pacchetto sono di 4.096 byte.  
   
 > [!NOTE]  
 >  È consigliabile modificare le dimensioni dei pacchetti solo se si è certi che l'operazione determinerà un miglioramento delle prestazioni. Per la maggior parte delle applicazioni, le dimensioni predefinite risultano ottimali.  
@@ -83,7 +83,7 @@ ms.locfileid: "85785901"
   
 2.  Fare clic sul nodo **Avanzate** .  
   
-3.  In **Rete**selezionare un valore per la casella **Dimensioni pacchetto di rete** .  
+3.  In **Rete** selezionare un valore per la casella **Dimensioni pacchetto di rete** .  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   

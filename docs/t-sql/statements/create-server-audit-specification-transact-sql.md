@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ddd4bb610c9ed7d9a5da70c9633c31a86cc5b034
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
-ms.translationtype: HT
+ms.openlocfilehash: 66dd3b3b036bdbebcbd19dd52a65d2bf4ac45d1e
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96131281"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783546"
 ---
 # <a name="create-server-audit-specification-transact-sql"></a>CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -66,7 +66,7 @@ FOR SERVER AUDIT audit_name
 ## <a name="permissions"></a>Autorizzazioni  
  Gli utenti che dispongono dell'autorizzazione ALTER ANY SERVER AUDIT possono creare specifiche del controllo del server e associarle a qualsiasi controllo.  
   
- Dopo essere stata creata, la specifica del controllo del server può essere visualizzata dalle entità che dispongono dell'autorizzazione CONTROL SERVER oALTER ANY SERVER AUDIT o dell'account sysadmin oppure dalle entità che possono accedere esplicitamente al controllo.  
+ Una volta creata, una specifica del controllo del server può essere visualizzata dagli utenti che dispongono dell'autorizzazione CONTROL SERVER, dell'account sysadmin o delle entità che hanno accesso esplicito al controllo.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata una specifica del controllo del server denominato `HIPAA_Audit_Specification` che controlla gli accessi non riusciti per un oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit denominato `HIPAA_Audit`.  

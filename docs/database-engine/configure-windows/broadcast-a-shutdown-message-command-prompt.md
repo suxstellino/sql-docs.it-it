@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 9f20ccd5-d952-431d-ba12-339911af9430
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 85d2bac016287afd060cdf727eeea47a6b78d725
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 44a2ecf5405ceda7e85b0f7b0831759dc2313b63
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759213"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783383"
 ---
 # <a name="broadcast-a-shutdown-message-command-prompt"></a>Trasmissione di un messaggio di chiusura (prompt dei comandi)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Questo argomento illustra come trasmettere un messaggio di arresto in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando il comando **net send** . Specificare nel messaggio l'orario di arresto dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , in modo da consentire agli utenti di completare le attività in corso.  
+  Questo argomento illustra come trasmettere un messaggio di arresto in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] usando il comando **net send** . Specificare nel messaggio l'orario di arresto dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , in modo da consentire agli utenti di completare le attività in corso.  
   
 ##  <a name="SSMSProcedure"></a>  
   

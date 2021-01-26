@@ -16,18 +16,18 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 02/18/2020
-ms.openlocfilehash: 79dc463039be1100f265e6bb44561a6e2dc71c93
-ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
-ms.translationtype: HT
+ms.openlocfilehash: a4cdc32bd0514be768ac8ed1723fc88840a7e930
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88200952"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783418"
 ---
 # <a name="change-server-authentication-mode"></a>Modificare la modalità di autenticazione del server
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-In questo argomento viene descritto come modificare la modalità di autenticazione del server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Durante l'installazione [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] è impostato su **Autenticazione di Windows** o **Autenticazione di SQL Server e di Windows**. Dopo l'installazione, è possibile modificare in qualsiasi momento la modalità di autenticazione.
+In questo argomento viene descritto come modificare la modalità di autenticazione del server in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Durante l'installazione [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] è impostato su **Autenticazione di Windows** o **Autenticazione di SQL Server e di Windows**. Dopo l'installazione, è possibile modificare in qualsiasi momento la modalità di autenticazione.
 
 Se si seleziona **Modalità di autenticazione di Windows** durante l'installazione, l'account di accesso sa viene disabilitato e il programma di installazione assegna una password. Se in seguito si modifica la modalità di autenticazione in **Autenticazione di SQL Server e di Windows**, l'account di accesso sa resterà disabilitato. Per usare l'account di accesso sa, usare l'istruzione ALTER LOGIN per abilitare l'account sa e assegnare una nuova password. È possibile connettersi al server tramite l'account sa solo se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
@@ -39,7 +39,7 @@ L'account sa è un account noto di [!INCLUDE[ssNoVersion](../../includes/ssnover
 
 1. In Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fare clic con il pulsante destro del mouse sul server e quindi scegliere **Proprietà**.
 
-2. Nella pagina **Sicurezza** selezionare la nuova modalità di autenticazione del server dall'elenco **Autenticazione server**e quindi fare clic su **OK**.
+2. Nella pagina **Sicurezza** selezionare la nuova modalità di autenticazione del server dall'elenco **Autenticazione server** e quindi fare clic su **OK**.
 
 3. Nella finestra di dialogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fare clic su **OK** per confermare il riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -51,7 +51,7 @@ L'account sa è un account noto di [!INCLUDE[ssNoVersion](../../includes/ssnover
 
 ### <a name="use-ssms"></a>Usare SSMS
 
-1. In Esplora oggetti espandere **Sicurezza**e quindi Account di accesso, fare clic con il pulsante destro del mouse su **sa**e infine scegliere **Proprietà**.
+1. In Esplora oggetti espandere **Sicurezza** e quindi Account di accesso, fare clic con il pulsante destro del mouse su **sa** e infine scegliere **Proprietà**.
 
 2. Nella pagina **Generale** potrebbe essere necessario creare e confermare una password per l'account di accesso **sa**.
 

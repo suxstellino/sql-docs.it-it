@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 8fdc782ce65464c490305291b426fe82a972cd5c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: b30a3004ccf0d5bafa94ae9c601db287a5eef288
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643512"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783318"
 ---
 # <a name="what-is-an-always-on-availability-group"></a>Definizione del gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
- In questo argomento sono introdotti i concetti di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fondamentali per la configurazione e la gestione di uno o più gruppi di disponibilità in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Per un riepilogo dei vantaggi offerti dai gruppi di disponibilità e per una panoramica della terminologia relativa a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
+ In questo argomento sono introdotti i concetti di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fondamentali per la configurazione e la gestione di uno o più gruppi di disponibilità in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. Per un riepilogo dei vantaggi offerti dai gruppi di disponibilità e per una panoramica della terminologia relativa a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
  Un *gruppo di disponibilità* supporta un ambiente di replica per un set discreto di database utente, noti come *database di disponibilità*. È possibile creare un gruppo di disponibilità per la disponibilità elevata (HA) o per la scalabilità in lettura. Un gruppo di disponibilità elevata è un set di database il cui failover viene eseguito contemporaneamente. Un gruppo di disponibilità a scalabilità in lettura è un set di database che vengono copiati in altre istanze di SQL Server per il carico di lavoro di sola lettura. Un gruppo di disponibilità supporta un set di database primari e da uno a otto set di database secondari corrispondenti. I database secondari *non* sono backup. Continuare a eseguire il backup dei database e dei log delle transazioni regolarmente.  
   

@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 3d722d9b-bada-4bf5-a9d7-bfc556bb4915
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: afe6724ebac116e091072ab74ee37142a2ab8230
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 66fa81d56ed0b3ebebd7a95ddea0b12356da5c1d
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85697207"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783682"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>Configurare l'opzione di configurazione del server index create memory
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  In questo argomento si illustra come configurare l'opzione di configurazione del server **index create memory** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **index create memory** è possibile controllare la quantità massima di memoria allocata inizialmente per la creazione di indici quando si indicizzano gli indici. Il valore predefinito per questa opzione è 0 (configurazione automatica). Se in un secondo momento risulta necessaria una quantità maggiore di memoria per la creazione degli indici e la memoria è disponibile, verrà usata dal server, superando quindi le impostazioni relative a questa opzione. Se non è disponibile ulteriore memoria, la creazione degli indici continuerà, usando la memoria già allocata.  
+  In questo argomento si illustra come configurare l'opzione di configurazione del server **index create memory** in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **index create memory** è possibile controllare la quantità massima di memoria allocata inizialmente per la creazione di indici quando si indicizzano gli indici. Il valore predefinito per questa opzione è 0 (configurazione automatica). Se in un secondo momento risulta necessaria una quantità maggiore di memoria per la creazione degli indici e la memoria è disponibile, verrà usata dal server, superando quindi le impostazioni relative a questa opzione. Se non è disponibile ulteriore memoria, la creazione degli indici continuerà, usando la memoria già allocata.  
   
  **Contenuto dell'articolo**  
   
@@ -74,7 +74,7 @@ ms.locfileid: "85697207"
   
 2.  Fare clic sul nodo **Memoria** .  
   
-3.  In **Memoria per la creazione degli indici**digitare o selezionare il valore desiderato per l'opzione index create memory.  
+3.  In **Memoria per la creazione degli indici** digitare o selezionare il valore desiderato per l'opzione index create memory.  
   
      L'opzione **index create memory** consente di gestire la quantità di memoria usata dagli ordinamenti per la creazione di indici. **index create memory** è un'opzione a configurazione automatica e nella maggior parte può essere usata senza apportare alcuna modifica. Se tuttavia si riscontrano difficoltà nella creazione di indici, valutare l'opportunità di aumentare il valore dell'opzione. Gli ordinamenti per le query sono gestiti tramite l'opzione **min memory per query** .  
   

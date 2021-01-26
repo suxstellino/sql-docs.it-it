@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: abab816f9248d1981d62bfeb313130a8b71c4256
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 6f29575ba7d133ddbfb30ef470238b5991162a7d
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641757"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783355"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>Utilizzare la finestra di dialogo Nuovo gruppo di disponibilità (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  In questo argomento sono incluse informazioni sulla modalità di uso della finestra di dialogo **Nuovo gruppo di disponibilità** di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] per creare un gruppo di disponibilità AlwaysOn nelle istanze di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] abilitate per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Tramite un *gruppo di disponibilità* vengono definiti un set di database utente di cui verrà eseguito il failover come unità singola e un set di partner di failover, noti come *repliche di disponibilità*, che supportano il failover.  
+  In questo argomento sono incluse informazioni sulla modalità di uso della finestra di dialogo **Nuovo gruppo di disponibilità** di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] per creare un gruppo di disponibilità AlwaysOn nelle istanze di [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] abilitate per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Tramite un *gruppo di disponibilità* vengono definiti un set di database utente di cui verrà eseguito il failover come unità singola e un set di partner di failover, noti come *repliche di disponibilità*, che supportano il failover.  
   
 > [!NOTE]  
 >  Per un'introduzione ai gruppi di disponibilità, vedere [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  

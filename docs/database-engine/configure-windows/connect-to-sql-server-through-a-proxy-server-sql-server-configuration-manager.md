@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 39714de0-2a1f-4179-9091-5c3fa4612545
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 74187c8e806e6dd1cadb9ea38860b11ec0bcaba0
-ms.sourcegitcommit: f87f2f0f1edc91fe400040d8e3a5810347aa8d70
-ms.translationtype: HT
+ms.openlocfilehash: 325bdae16fdc8309d0f40134ba31041e5b47b547
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96857678"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783263"
 ---
 # <a name="connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager"></a>Connessione a SQL Server tramite un server proxy (Gestione configurazione SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  In questo argomento viene illustrato come connettersi a SQL Server tramite un server proxy in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando Gestione configurazione SQL Server. Per l'attesa da postazioni remote tramite Remote WinSock (RWS), definire la tabella di indirizzi locali (LAT, Local Address Table) per il server proxy, in modo che l'indirizzo del nodo di attesa non sia compreso nell'intervallo degli indirizzi della tabella LAT.  
+  In questo argomento viene illustrato come connettersi a SQL Server tramite un server proxy in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] utilizzando Gestione configurazione SQL Server. Per l'attesa da postazioni remote tramite Remote WinSock (RWS), definire la tabella di indirizzi locali (LAT, Local Address Table) per il server proxy, in modo che l'indirizzo del nodo di attesa non sia compreso nell'intervallo degli indirizzi della tabella LAT.  
   
 ##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Utilizzo di Gestione configurazione SQL Server  
   

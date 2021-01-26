@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9e69236003f1c0ee2b13620b481dfddbaf9acd5a
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 1efefbb0b0a99f03d4ffa46e7d02fec05e8a8e60
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644124"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783558"
 ---
 # <a name="database-mirroring-operating-modes"></a>Modalità di funzionamento del mirroring del database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "97644124"
  In questa sezione vengono descritti il funzionamento del mirroring del database asincrono, i casi in cui è consigliabile utilizzare la modalità a elevate prestazioni e le operazioni da effettuare in caso di errore del server principale.  
   
 > [!NOTE]  
->  La maggior parte delle edizioni di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta solo il mirroring del database sincrono ("solo sicurezza FULL"). Per informazioni sulle edizioni che supportano completamente il mirroring del database, vedere "Disponibilità elevata (AlwaysOn)" in [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
+>  La maggior parte delle edizioni di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] supporta solo il mirroring del database sincrono ("solo sicurezza FULL"). Per informazioni sulle edizioni che supportano completamente il mirroring del database, vedere "Disponibilità elevata (AlwaysOn)" in [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
   
  Quando il livello di protezione delle transazioni viene impostato su OFF, la sessione di mirroring del database opera in modo asincrono. Le operazioni asincrone supportano solo una modalità operativa, ovvero la modalità a prestazioni elevate. Questa modalità migliora le prestazioni, ma comporta una riduzione della disponibilità. La modalità a prestazioni elevate utilizza solo il server principale e il server mirror. I problemi relativi al server mirror non hanno mai alcun impatto sul server principale. In caso di perdita del server principale, il database mirror viene contrassegnato come DISCONNECTED, ma rimane disponibile come standby a caldo (warm standby).  
   

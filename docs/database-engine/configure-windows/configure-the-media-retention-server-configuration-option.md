@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 12e9fe6a-20a5-4c6e-9cc9-d500c003b70a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c7e699d9af02a8d24e01d1e7461aa9ee22c956bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 5f2d67ee55cf43b607aeb91d23fd42980b3438a1
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85696966"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783663"
 ---
 # <a name="configure-the-media-retention-server-configuration-option"></a>Configurare l'opzione di configurazione del server media retention
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  In questo argomento si illustra come configurare l'opzione di configurazione del server **media retention** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **media retention** è possibile specificare il periodo di memorizzazione di ogni set di backup e impedire la sovrascrittura dei backup per il numero di giorni indicato. Dopo aver configurato l'opzione **media retention** , non è necessario specificare il periodo di memorizzazione dei backup di sistema ogni volta che si esegue un'operazione di backup. Il valore predefinito è 0 giorni e quella massimo è 365 giorni.  
+  In questo argomento si illustra come configurare l'opzione di configurazione del server **media retention** in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **media retention** è possibile specificare il periodo di memorizzazione di ogni set di backup e impedire la sovrascrittura dei backup per il numero di giorni indicato. Dopo aver configurato l'opzione **media retention** , non è necessario specificare il periodo di memorizzazione dei backup di sistema ogni volta che si esegue un'operazione di backup. Il valore predefinito è 0 giorni e quella massimo è 365 giorni.  
   
  **Contenuto dell'articolo**  
   
@@ -70,7 +70,7 @@ ms.locfileid: "85696966"
   
 2.  Fare clic sul nodo **Impostazioni database** .  
   
-3.  In **Backup/Ripristino**nella casella **Periodo di memorizzazione predefinito supporti di backup** digitare o selezionare un valore compreso tra 0 e 365 per impostare il numero di giorni per cui il supporto di backup verrà mantenuto dopo l'esecuzione di un backup del database o del log delle transazioni.  
+3.  In **Backup/Ripristino** nella casella **Periodo di memorizzazione predefinito supporti di backup** digitare o selezionare un valore compreso tra 0 e 365 per impostare il numero di giorni per cui il supporto di backup verrà mantenuto dopo l'esecuzione di un backup del database o del log delle transazioni.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   

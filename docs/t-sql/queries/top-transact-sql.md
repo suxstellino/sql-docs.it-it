@@ -22,12 +22,12 @@ ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 295e21500b51bed644807c2cbbab03515fb7e7d9
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: eb6024d0ad3ef6f34d170201c0fbacc3447dab26
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484003"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783592"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -80,7 +80,7 @@ Utilizzare TOP (o OFFSET e FETCH) anziché SET ROWCOUNT per limitare il numero d
 -   Come parte di un'istruzione SELECT, in Query Optimizer il valore di *expression* nella clausola TOP o FETCH può essere preso in considerazione durante l'ottimizzazione della query. Dato che si usa SET ROWCOUNT al di fuori di un'istruzione che esegue una query, il relativo valore non può essere considerato in un piano di query.  
   
 ## <a name="compatibility-support"></a>Informazioni sulla compatibilità  
-Per garantire la compatibilità con le versioni precedenti, le parentesi sono facoltative nelle istruzioni SELECT. È consigliabile usare sempre le parentesi per TOP nelle istruzioni SELECT, in modo da mantenere la coerenza con l'uso obbligatorio nelle istruzioni INSERT, UPDATE, MERGE e DELETE. 
+Per compatibilità con le versioni precedenti, le parentesi sono facoltative nelle istruzioni SELECT se l'espressione è una costante Integer. È consigliabile usare sempre le parentesi per TOP nelle istruzioni SELECT, in modo da mantenere la coerenza con l'uso obbligatorio nelle istruzioni INSERT, UPDATE, MERGE e DELETE. 
   
 ## <a name="interoperability"></a>Interoperabilità  
 L'espressione di TOP non influisce sulle istruzioni eventualmente eseguite a causa di un trigger. Le tabelle **inserted** e **deleted** nei trigger restituiscono solo le righe effettivamente interessate dalle istruzioni INSERT, UPDATE, MERGE o DELETE. Questo si verifica ad esempio se un trigger INSERT viene attivato come risultato di un'istruzione INSERT in cui è stata usata una clausola TOP.  

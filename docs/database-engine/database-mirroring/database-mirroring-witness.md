@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b2fe841ef1b914f275878fa61ad40fe2a016a4a5
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: d3585a187d11ee97e409d196c81ddb00643bb3ac
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644074"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98782968"
 ---
 # <a name="database-mirroring-witness"></a>Server di controllo del mirroring del database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "97644074"
   
  ![Istanza del server che rappresenta il server di controllo del mirroring per 2 database](../../database-engine/database-mirroring/media/dbm-witness-in-2-sessions.gif "Istanza del server che rappresenta il server di controllo del mirroring per 2 database")  
   
- Un'istanza a server singolo può inoltre fungere contemporaneamente da server di controllo del mirroring in alcune sessioni e da partner in altre. Tuttavia, in pratica, un'istanza del server funge in genere da server di controllo del mirroring o da partner. I partner richiedono infatti computer sofisticati, con hardware sufficiente per supportare un database di produzione, mentre è possibile eseguire il server di controllo del mirroring in qualunque sistema Windows disponibile che supporti [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Un'istanza a server singolo può inoltre fungere contemporaneamente da server di controllo del mirroring in alcune sessioni e da partner in altre. Tuttavia, in pratica, un'istanza del server funge in genere da server di controllo del mirroring o da partner. I partner richiedono infatti computer sofisticati, con hardware sufficiente per supportare un database di produzione, mentre è possibile eseguire il server di controllo del mirroring in qualunque sistema Windows disponibile che supporti [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="software-and-hardware-recommendations"></a><a name="SwHwRecommendations"></a> Indicazioni relative a software e hardware  
  È fortemente consigliabile che il server di controllo del mirroring si trovi su un computer diverso rispetto ai partner. I partner di mirroring del database sono supportati solo da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition e da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition. I server di controllo, invece, sono supportati anche da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Workgroup e da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Eccetto durante un aggiornamento da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le istanze del server in una sessione di mirroring devono essere tutte eseguite con la stessa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ad esempio, un server di controllo del mirroring [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] è supportato durante l'aggiornamento da una configurazione di mirroring di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , ma non può essere aggiunto a una configurazione di mirroring di [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] esistente, nuova o successiva.  

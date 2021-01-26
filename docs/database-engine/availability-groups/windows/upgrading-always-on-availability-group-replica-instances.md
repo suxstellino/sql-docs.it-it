@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 785c8421a1ca689e39852401165c4b0249128e8c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 1c2a6ec0dcaf1e1d9b75016fd44aa17f534854fe
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641829"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783598"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Aggiornamento delle istanze di replica dei gruppi di disponibilità AlwaysOn
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-Quando si aggiorna un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospita un gruppo di disponibilità AlwaysOn a una nuova versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], a un nuovo Service Pack o aggiornamento cumulativo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oppure quando la si installa su un nuovo Service Pack o aggiornamento cumulativo di Windows, è possibile ridurre i tempi di inattività per la replica primaria a un singolo failover manuale eseguendo un aggiornamento in sequenza (o a due failover manuali in caso di failback sulla replica primaria originale). Durante il processo di aggiornamento, non sarà disponibile una replica secondaria per il failover o le operazioni di sola lettura e, dopo l'aggiornamento, a seconda del volume di attività nel nodo della replica primaria, l'aggiornamento della replica secondaria al nodo della replica primaria potrebbe richiedere un po' di tempo (è dunque prevedibile un traffico di rete elevato). Occorre sapere anche che dopo il failover iniziale in una replica secondaria che esegue una versione più recente di SQL Server, i database di tale gruppo di disponibilità saranno sottoposti a un processo di aggiornamento affinché la versione adottata sia la più recente. Durante questa operazione le repliche non saranno leggibili per nessuno di questi database. Il tempo di inattività dopo il failover iniziale dipenderà dal numero di database contenuti nel gruppo di disponibilità. Se si prevede di eseguire il failback sulla replica primaria originale, questo passaggio non sarà ripetuto durante il failback.
+Quando si aggiorna un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospita un gruppo di disponibilità AlwaysOn a una nuova versione di [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)], a un nuovo Service Pack o aggiornamento cumulativo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oppure quando la si installa su un nuovo Service Pack o aggiornamento cumulativo di Windows, è possibile ridurre i tempi di inattività per la replica primaria a un singolo failover manuale eseguendo un aggiornamento in sequenza (o a due failover manuali in caso di failback sulla replica primaria originale). Durante il processo di aggiornamento, non sarà disponibile una replica secondaria per il failover o le operazioni di sola lettura e, dopo l'aggiornamento, a seconda del volume di attività nel nodo della replica primaria, l'aggiornamento della replica secondaria al nodo della replica primaria potrebbe richiedere un po' di tempo (è dunque prevedibile un traffico di rete elevato). Occorre sapere anche che dopo il failover iniziale in una replica secondaria che esegue una versione più recente di SQL Server, i database di tale gruppo di disponibilità saranno sottoposti a un processo di aggiornamento affinché la versione adottata sia la più recente. Durante questa operazione le repliche non saranno leggibili per nessuno di questi database. Il tempo di inattività dopo il failover iniziale dipenderà dal numero di database contenuti nel gruppo di disponibilità. Se si prevede di eseguire il failback sulla replica primaria originale, questo passaggio non sarà ripetuto durante il failback.
   
 >[!NOTE]  
 >Questo articolo si limita a illustrare l'aggiornamento di SQL Server. Non viene descritto l'aggiornamento del sistema operativo che contiene WSFC (Windows Server Failover Cluster). L'aggiornamento del sistema operativo Windows che ospita il cluster di failover non è supportato per i sistemi operativi precedenti a Windows Server 2012 R2. Per aggiornare un nodo del cluster in esecuzione in Windows Server 2012 R2, vedere [Aggiornamento in sequenza del sistema operativo del cluster](/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade).  
@@ -28,13 +28,13 @@ Quando si aggiorna un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnove
 ## <a name="prerequisites"></a>Prerequisiti  
 Prima di iniziare, esaminare le informazioni seguenti:  
   
-- [Aggiornamenti di versione ed edizione supportati](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): verificare che sia possibile eseguire l'aggiornamento a SQL Server 2016 dalla versione del sistema operativo Windows e di SQL Server in uso. Ad esempio, non è possibile eseguire l'aggiornamento diretto da un'istanza di SQL Server 2005 a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+- [Aggiornamenti di versione ed edizione supportati](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): verificare che sia possibile eseguire l'aggiornamento a SQL Server 2016 dalla versione del sistema operativo Windows e di SQL Server in uso. Ad esempio, non è possibile eseguire l'aggiornamento diretto da un'istanza di SQL Server 2005 a [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)].  
   
 - [Scegliere un metodo di aggiornamento del motore di database](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): per l'aggiornamento nell'ordine corretto selezionare il metodo e la procedura di aggiornamento appropriati in base alla verifica degli aggiornamenti di versione ed edizione supportati e anche agli altri componenti installati nell'ambiente.  
   
 - [Pianificare e testare il piano di aggiornamento del motore di database](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): esaminare le note sulla versione, i problemi di aggiornamento noti, l'elenco di controllo pre-aggiornamento e sviluppare e testare il piano di aggiornamento.  
   
-- [Requisiti hardware e software per l'installazione di SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  esaminare i requisiti software per l'installazione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Se è necessario software aggiuntivo, installarlo in ogni nodo prima di iniziare il processo di aggiornamento per ridurre al minimo eventuali tempi di inattività.  
+- [Requisiti hardware e software per l'installazione di SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  esaminare i requisiti software per l'installazione di [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. Se è necessario software aggiuntivo, installarlo in ogni nodo prima di iniziare il processo di aggiornamento per ridurre al minimo eventuali tempi di inattività.  
 
 - [Verificare se per i database del gruppo di disponibilità siano in uso Change Data Capture o la replica](#special-steps-for-change-data-capture-or-replication): se i database nel gruppo di disponibilità sono abilitati per Change Data Capture (CDC), seguire queste [istruzioni](#special-steps-for-change-data-capture-or-replication).
 
@@ -64,7 +64,7 @@ Per ridurre al minimo i tempi di inattività e la perdita di dati per i gruppi d
   
 -   Eseguire sempre il failover del gruppo di disponibilità su un'istanza di replica secondaria con commit sincrono. Se si esegue il failover su un'istanza di replica secondaria con commit asincrono, i database sono soggetti alla perdita di dati e lo spostamento dei dati viene automaticamente sospeso fino a quando non viene ripreso manualmente.  
   
--   Non aggiornare l'istanza di replica primaria prima di aver aggiornato tutte le altre istanze di replica secondaria. Non è più possibile recapitare log tramite una replica primaria aggiornata alle repliche secondarie la cui istanza di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] non è ancora stata aggiornata alla stessa versione. Se viene sospeso lo spostamento dei dati in una replica secondaria, il failover automatico per quest'ultima non può essere eseguito e nei database di disponibilità possono verificarsi perdite di dati. Questo vale anche per un aggiornamento in sequenza in cui si esegue manualmente il failover da una replica primaria precedente a una nuova replica primaria. In quanto tale, dopo aver aggiornato la replica primaria precedente, potrebbe essere necessario riprendere la sincronizzazione.
+-   Non aggiornare l'istanza di replica primaria prima di aver aggiornato tutte le altre istanze di replica secondaria. Non è più possibile recapitare log tramite una replica primaria aggiornata alle repliche secondarie la cui istanza di [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] non è ancora stata aggiornata alla stessa versione. Se viene sospeso lo spostamento dei dati in una replica secondaria, il failover automatico per quest'ultima non può essere eseguito e nei database di disponibilità possono verificarsi perdite di dati. Questo vale anche per un aggiornamento in sequenza in cui si esegue manualmente il failover da una replica primaria precedente a una nuova replica primaria. In quanto tale, dopo aver aggiornato la replica primaria precedente, potrebbe essere necessario riprendere la sincronizzazione.
   
 -   Prima di eseguire il failover di un gruppo di disponibilità, verificare che lo stato di sincronizzazione della destinazione di failover sia SINCRONIZZATO.  
 
@@ -123,7 +123,7 @@ Per ridurre al minimo i tempi di inattività e la perdita di dati per i gruppi d
   
 -   Scegliere con attenzione una finestra di manutenzione nei periodi di minore traffico client  
   
--   Durante l'aggiornamento di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] nel sito primario, impostare di nuovo la modalità di commit asincrono, quindi ripristinare il commit sincrono una volta pronti a effettuare nuovamente il failover sul sito primario  
+-   Durante l'aggiornamento di [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] nel sito primario, impostare di nuovo la modalità di commit asincrono, quindi ripristinare il commit sincrono una volta pronti a effettuare nuovamente il failover sul sito primario  
   
 ## <a name="ag-with-failover-cluster-instance-nodes"></a>Gruppo di disponibilità con nodi di istanze del cluster di failover  
  Se in un gruppo di disponibilità sono contenuti nodi di istanze del cluster di failover, è consigliabile aggiornare i nodi inattivi prima di quelli attivi. Nella figura seguente è illustrato uno scenario comune di gruppi di disponibilità con istanze del cluster di failover per la disponibilità elevata locale e il commit asincrono tra le istanze stesse ai fini del ripristino di emergenza remoto ed è indicata la relativa sequenza di aggiornamento.  

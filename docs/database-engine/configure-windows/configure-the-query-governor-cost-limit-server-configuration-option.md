@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 02b34ab8d3c0a3efd79d7d136bf26401ba92fdf4
-ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
-ms.translationtype: HT
+ms.openlocfilehash: 7004a0a7b7322fc939b5df21d40c389dc4a3dc6a
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88216728"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783664"
 ---
 # <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>Configurare l'opzione di configurazione del server query governor cost limit
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-In questo argomento si illustra come configurare l'opzione di configurazione del server **query governor cost limit** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'opzione relativa al limite di costo specifica un limite superiore per il costo stimato consentito per l'esecuzione di una query specifica. Il costo della query è un valore astratto determinato da Query Optimizer in base ai requisiti stimati per l'esecuzione, tra cui tempo di CPU, memoria e I/O su disco. Equivale al tempo trascorso, in secondi, stimato per l'esecuzione di una query in una configurazione hardware specifica. Questo valore astratto non equivale al tempo necessario per completare una query nell'istanza in esecuzione. Deve essere considerato come una misura relativa. Il valore predefinito per questa opzione è 0, cioè Query Governor viene impostato su OFF. Se si imposta il valore su 0, tutte le query verranno eseguite senza limitazione di tempo. Se si specifica un valore diverso da zero e positivo, tramite Query Governor non sarà possibile l'esecuzione delle query il cui costo stimato supera quel valore.   
+In questo argomento si illustra come configurare l'opzione di configurazione del server **query governor cost limit** in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'opzione relativa al limite di costo specifica un limite superiore per il costo stimato consentito per l'esecuzione di una query specifica. Il costo della query è un valore astratto determinato da Query Optimizer in base ai requisiti stimati per l'esecuzione, tra cui tempo di CPU, memoria e I/O su disco. Equivale al tempo trascorso, in secondi, stimato per l'esecuzione di una query in una configurazione hardware specifica. Questo valore astratto non equivale al tempo necessario per completare una query nell'istanza in esecuzione. Deve essere considerato come una misura relativa. Il valore predefinito per questa opzione è 0, cioè Query Governor viene impostato su OFF. Se si imposta il valore su 0, tutte le query verranno eseguite senza limitazione di tempo. Se si specifica un valore diverso da zero e positivo, tramite Query Governor non sarà possibile l'esecuzione delle query il cui costo stimato supera quel valore.   
   
  **Contenuto dell'articolo**  
   

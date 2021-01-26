@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fe7a4f5bc7fb043533656041d5f10d5be1880273
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 71dcf7e52b1c58c7df868f502bc8de5da9892c6b
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85659762"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783434"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Configurare l'opzione di configurazione del server user options
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  In questo argomento si illustra come configurare l'opzione di configurazione del server **user options** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'opzione **user options** consente di specificare impostazioni globali predefinite per tutti gli utenti. Viene creato un elenco di opzioni predefinite per l'elaborazione delle query, che rimane valido per tutta la durata della sessione di lavoro dell'utente. L'opzione **user options** consente di modificare i valori predefiniti delle opzioni SET, se le impostazioni predefinite del server non risultano appropriate.  
+  In questo argomento si illustra come configurare l'opzione di configurazione del server **user options** in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'opzione **user options** consente di specificare impostazioni globali predefinite per tutti gli utenti. Viene creato un elenco di opzioni predefinite per l'elaborazione delle query, che rimane valido per tutta la durata della sessione di lavoro dell'utente. L'opzione **user options** consente di modificare i valori predefiniti delle opzioni SET, se le impostazioni predefinite del server non risultano appropriate.  
   
  Un utente può ottenere la priorità su tali impostazioni predefinite utilizzando l'istruzione SET. È possibile configurare dinamicamente **user options** per i nuovi account di accesso. Dopo aver modificato l'impostazione di **user options**, le nuove sessioni di accesso utilizzano la nuova impostazione, mentre le sessioni correnti non vengono interessate dalla modifica.  
   

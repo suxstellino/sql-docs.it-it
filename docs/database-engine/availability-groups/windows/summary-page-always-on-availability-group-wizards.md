@@ -15,19 +15,19 @@ f1_keywords:
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 7d7b758b1d1ee8fba24a6f4e23568f8fdc6f060c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 48a70988539ee9a35cd8dbd933ee7c6f6f752609
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642954"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783738"
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>Pagina Riepilogo (procedure guidate gruppi di disponibilità Always On)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 <a name="Top"></a>  
   
-  In questo argomento della Guida vengono descritte le opzioni della pagina **Riepilogo** . Questo argomento si applica alla [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], alla [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], alla [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] e alla [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Utilizzare la griglia di questa pagina per rivedere le scelte effettuate per il nuovo gruppo di disponibilità. Per apportare una o più modifiche, fare clic su **Indietro** per tornare alla pagina o alle pagine pertinenti. Al termine, fare clic su **Avanti** per tornare alla pagina **Riepilogo** . Dopo avere effettuato le scelte desiderate, fare clic su **Fine**.  
+  In questo argomento della Guida vengono descritte le opzioni della pagina **Riepilogo** . Questo argomento si applica alla [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], alla [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], alla [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] e alla [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] di [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. Utilizzare la griglia di questa pagina per rivedere le scelte effettuate per il nuovo gruppo di disponibilità. Per apportare una o più modifiche, fare clic su **Indietro** per tornare alla pagina o alle pagine pertinenti. Al termine, fare clic su **Avanti** per tornare alla pagina **Riepilogo** . Dopo avere effettuato le scelte desiderate, fare clic su **Fine**.  
   
 ##  <a name="summary-page-options"></a><a name="PageOptions"></a> Opzioni della pagina Riepilogo  
  **Script**  

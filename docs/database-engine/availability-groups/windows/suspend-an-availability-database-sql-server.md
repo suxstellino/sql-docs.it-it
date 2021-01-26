@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: f918daa031b25ba8f1110dc9f2aaeaebef0a9361
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 4b8b491d5f5caf743ab94367eaaacfe3de4864ad
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642987"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783715"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Sospendere un database di disponibilità (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  È possibile sospendere un database di disponibilità in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Si noti che è necessario eseguire un comando di sospensione nell'istanza del server in cui viene ospitato il database da sospendere o riprendere.  
+  È possibile sospendere un database di disponibilità in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. Si noti che è necessario eseguire un comando di sospensione nell'istanza del server in cui viene ospitato il database da sospendere o riprendere.  
   
  L'effetto del comando di sospensione dipende dalla scelta di sospendere un database primario o secondario, come segue:  
   

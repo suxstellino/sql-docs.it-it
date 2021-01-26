@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0fc4aa01-65a3-4a33-9ef4-caca41add238
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cdf9a2f14547eeda95b49a3f7705823e62f8b538
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 15844802836883d80c4bf50d0df58e7ddbe633d0
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785860"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783164"
 ---
 # <a name="configure-the-query-wait-server-configuration-option"></a>Configurare l'opzione di configurazione del server query wait
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  In questo argomento viene descritto come configurare l'opzione di configurazione del server **query wait** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le query che impegnano una notevole quantità di memoria, ad esempio quelle che eseguono operazioni di ordinamento e di hashing, vengono inserite in una coda se la memoria disponibile è insufficiente per la loro esecuzione. L'opzione **query wait** consente di specificare il tempo in secondi (da 0 a 2147483647) per l'attesa di risorse da parte della query, trascorso il quale si verifica il timeout della query. Il valore predefinito dell'opzione è -1. Vuole dire che il timeout viene calcolato come 25 volte il costo stimato della query.  
+  In questo argomento viene descritto come configurare l'opzione di configurazione del server **query wait** in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le query che impegnano una notevole quantità di memoria, ad esempio quelle che eseguono operazioni di ordinamento e di hashing, vengono inserite in una coda se la memoria disponibile è insufficiente per la loro esecuzione. L'opzione **query wait** consente di specificare il tempo in secondi (da 0 a 2147483647) per l'attesa di risorse da parte della query, trascorso il quale si verifica il timeout della query. Il valore predefinito dell'opzione è -1. Vuole dire che il timeout viene calcolato come 25 volte il costo stimato della query.  
   
 > [!IMPORTANT]  
 >  Durante l'attesa di memoria disponibile, è possibile che una transazione contenente la query in attesa mantenga attivi i blocchi acquisiti. In rari casi è possibile che si verifichi un deadlock non rilevabile. La riduzione del periodo di tempo rappresentato dall'opzione query wait consente di ridurre la probabilità che si verifichino deadlock di questo tipo. Una query rimasta in attesa verrà infine terminata e i blocchi delle transazioni verranno rilasciati. L'aumento del tempo massimo di attesa può tuttavia determinare un aumento del periodo di tempo prima che la query venga terminata. È pertanto sconsigliabile apportare modifiche a questa opzione.  
@@ -65,7 +65,7 @@ ms.locfileid: "85785860"
   
 2.  Fare clic sul nodo **Avanzate** .  
   
-3.  In **Parallelismo**immettere il valore desiderato per l'opzione **query wait** .  
+3.  In **Parallelismo** immettere il valore desiderato per l'opzione **query wait** .  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   

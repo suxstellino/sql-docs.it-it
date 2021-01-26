@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: b920ec34-ba8b-4bb8-af53-a3ffd06bafa6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bc99d890e179bd19a9797471f5b940d6ffb7a44f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 0f65bfbfb0a68a76c9b0471bba42e4182ccff888
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85697238"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783694"
 ---
 # <a name="configure-the-fill-factor-server-configuration-option"></a>Configurare l'opzione di configurazione del server fill factor
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  In questo argomento si illustra come configurare l'opzione di configurazione del server **fill factor** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il fattore di riempimento viene fornito per ottimizzare l'archiviazione dati e le prestazioni degli indici. Quando si crea o si ricompila un indice, il valore del fattore di riempimento consente di determinare la percentuale di spazio in ogni pagina al livello foglia da riempire di dati, riservando il resto come spazio libero per la crescita futura. Per altre informazioni, vedere [Specificare un fattore di riempimento per un indice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
+  In questo argomento si illustra come configurare l'opzione di configurazione del server **fill factor** in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il fattore di riempimento viene fornito per ottimizzare l'archiviazione dati e le prestazioni degli indici. Quando si crea o si ricompila un indice, il valore del fattore di riempimento consente di determinare la percentuale di spazio in ogni pagina al livello foglia da riempire di dati, riservando il resto come spazio libero per la crescita futura. Per altre informazioni, vedere [Specificare un fattore di riempimento per un indice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
   
  **Contenuto dell'articolo**  
   

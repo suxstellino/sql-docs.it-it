@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dc92b34d57f2406c1b5aa59cce67840af4c21918
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 28c73233d8a7b38ec2d14fa92c40f69d9ae0af05
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85697757"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783282"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Configurazione del Motore di database per l'attesa su più porte TCP
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  In questo argomento viene illustrato come configurare il [!INCLUDE[ssDE](../../includes/ssde-md.md)] per l'ascolto su più porte TCP in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando Gestione configurazione SQL Server. Quando TCP/IP è abilitato per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il [!INCLUDE[ssDE](../../includes/ssde-md.md)] è in attesa delle connessioni in ingresso su un punto di connessione composto da un indirizzo IP e dal numero di porta TCP. Le procedure riportate di seguito consentono di creare un endpoint del flusso TDS, in modo che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possa essere in ascolto su una porta TCP aggiuntiva.  
+  In questo argomento viene illustrato come configurare il [!INCLUDE[ssDE](../../includes/ssde-md.md)] per l'ascolto su più porte TCP in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] utilizzando Gestione configurazione SQL Server. Quando TCP/IP è abilitato per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il [!INCLUDE[ssDE](../../includes/ssde-md.md)] è in attesa delle connessioni in ingresso su un punto di connessione composto da un indirizzo IP e dal numero di porta TCP. Le procedure riportate di seguito consentono di creare un endpoint del flusso TDS, in modo che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possa essere in ascolto su una porta TCP aggiuntiva.  
   
  Possibili motivi per la creazione di un secondo endpoint TDS:  
   
@@ -82,12 +82,12 @@ ms.locfileid: "85697757"
   
 3.  Nel riquadro di destra, fare clic con il pulsante destro del mouse sugli indirizzi IP disabilitati da attivare, quindi scegliere **lita**.  
   
-4.  Fare clic con il pulsante destro del mouse su **IPAll**e quindi scegliere **Proprietà**.  
+4.  Fare clic con il pulsante destro del mouse su **IPAll** e quindi scegliere **Proprietà**.  
   
-5.  Nella casella **Porta TCP** digitare le porte sulle quali si desidera che [!INCLUDE[ssDE](../../includes/ssde-md.md)] resti in attesa, separate da virgole. Nell'esempio, se è elencata la porta predefinita 1433, digitare **,1500** in modo che il valore nella casella sia **1433,1500**e quindi fare clic su **OK**.  
+5.  Nella casella **Porta TCP** digitare le porte sulle quali si desidera che [!INCLUDE[ssDE](../../includes/ssde-md.md)] resti in attesa, separate da virgole. Nell'esempio, se è elencata la porta predefinita 1433, digitare **,1500** in modo che il valore nella casella sia **1433,1500** e quindi fare clic su **OK**.  
   
     > [!NOTE]  
-    >  Se non si sta abilitando la porta su tutti gli indirizzi IP, configurare la porta aggiuntiva nella casella delle proprietà per il solo indirizzo desiderato. Nel riquadro della console fare quindi clic con il pulsante destro del mouse su **TCP/IP**, scegliere **Proprietà**e nella casella **Attesa su tutti** selezionare **No**.  
+    >  Se non si sta abilitando la porta su tutti gli indirizzi IP, configurare la porta aggiuntiva nella casella delle proprietà per il solo indirizzo desiderato. Nel riquadro della console fare quindi clic con il pulsante destro del mouse su **TCP/IP**, scegliere **Proprietà** e nella casella **Attesa su tutti** selezionare **No**.  
   
 6.  Nel riquadro di sinistra fare clic su **Servizi di SQL Server**.  
   

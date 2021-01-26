@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e4a2ca1eea0ec4b42bba65b62525bb6d86e52c88
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: b178e38f6e59499ddf74e9a8aaec037bbaa4d442
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85651351"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783439"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>Connettersi a un altro computer (Gestione configurazione SQL Server)
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Questo articolo illustra come connettersi a un altro computer in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Attenersi alla prima procedura per aprire Gestione computer di Windows, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC), connettersi al computer ed espandere l'albero Servizi e applicazioni. Seguire la seconda procedura per creare un file con un collegamento a Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer remoto.
+Questo articolo illustra come connettersi a un altro computer in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Attenersi alla prima procedura per aprire Gestione computer di Windows, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC), connettersi al computer ed espandere l'albero Servizi e applicazioni. Seguire la seconda procedura per creare un file con un collegamento a Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer remoto.
 
 > [!NOTE]
 > Alcune azioni non possono essere eseguite da Configuration Manager quando si effettua la connessione in remoto.
@@ -41,7 +41,7 @@ Per avviare, arrestare, sospendere o riprendere i servizi in un altro computer, 
 
    Gestione computer visualizza i servizi in esecuzione nel computer remoto. Il nodo di primo livello diventa **Gestione computer** \<*remotecomputer*>.
 
-4. Nell'albero della console espandere **Servizi e applicazioni**e quindi espandere **Gestione configurazione SQL Server** per gestire i servizi del computer remoto.
+4. Nell'albero della console espandere **Servizi e applicazioni** e quindi espandere **Gestione configurazione SQL Server** per gestire i servizi del computer remoto.
 
 ### <a name="to-save-a-link-to-sql-server-configuration-manager-for-another-computer"></a>Per salvare un collegamento a Gestione configurazione SQL Server da un altro computer
 
@@ -55,9 +55,9 @@ Per avviare, arrestare, sospendere o riprendere i servizi in un altro computer, 
 7. Nella finestra **Aggiungi snap-in autonomo** fare clic su **Chiudi**.
 8. Nella finestra **Aggiungi/Rimuovi snap-in** fare clic su **OK**.
 9. Espandere **Gestione computer (** _\<computer name>_ **)** e **Servizi e applicazioni**.
-10. Fare clic con il pulsante destro del mouse su **Gestione configurazione SQL Server**e quindi scegliere **Nuova finestra da qui**.
+10. Fare clic con il pulsante destro del mouse su **Gestione configurazione SQL Server** e quindi scegliere **Nuova finestra da qui**.
 11. Scegliere **Radice console** dal menu **Finestra** per tornare alla prima finestra ed eliminare la finestra aperta.
-12. Scegliere **Salva con nome** dal menu **File**e salvare il file nella cartella desiderata con un nome appropriato e l'estensione di file **msc** . Chiudere [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.
+12. Scegliere **Salva con nome** dal menu **File** e salvare il file nella cartella desiderata con un nome appropriato e l'estensione di file **msc** . Chiudere [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.
 13. Per aprire Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer di destinazione, fare doppio clic sul file. È possibile salvare un collegamento al file sul desktop o nel menu **Start** .
 
 > [!CAUTION]

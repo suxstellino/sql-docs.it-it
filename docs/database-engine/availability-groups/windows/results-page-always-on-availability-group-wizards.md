@@ -15,17 +15,17 @@ f1_keywords:
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 96c2ccde671737e55e4c301ab1f755a8192ed10f
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 74e0a717873e4097734b842b7d3c371a167c0088
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641461"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783221"
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>Pagina Risultati (procedure guidate gruppi di disponibilità Always On)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  In questo argomento della Guida vengono descritte le opzioni della pagina **Risultati** . Questo argomento si applica alla [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], alla [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], alla [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]e alla [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Utilizzare questa pagina per visualizzare i risultati della procedura guidata.  
+  In questo argomento della Guida vengono descritte le opzioni della pagina **Risultati** . Questo argomento si applica alla [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], alla [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], alla [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]e alla [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] di [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. Utilizzare questa pagina per visualizzare i risultati della procedura guidata.  
   
 ##  <a name="results-page-options"></a><a name="PageOptions"></a> Opzioni della pagina Risultati  
  La griglia **Riepilogo** include le colonne seguenti:  
