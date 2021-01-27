@@ -22,12 +22,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 1210ec1da44d68aaf778145da8a02bf3f3092e2c
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 701740849d7b1ec8a946fa8f26bcd25568f2e62e
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093844"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98812932"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -50,7 +50,7 @@ fn_get_audit_file ( file_pattern,
  
  - **SQL Server**:
     
-    Questo argomento deve includere sia un percorso (lettera di unità o condivisione di rete) che un nome di file, che può includere un carattere jolly. È possibile utilizzare un singolo asterisco (*) per raccogliere più file da un set di file di controllo. Esempio:  
+    Questo argomento deve includere sia un percorso (lettera di unità o condivisione di rete) che un nome di file, che può includere un carattere jolly. È possibile utilizzare un singolo asterisco (*) per raccogliere più file da un set di file di controllo. Ad esempio:  
   
     -   **\<path>\\\** _: Raccoglie tutti i file di controllo nel percorso specificato.  
   
@@ -60,7 +60,7 @@ fn_get_audit_file ( file_pattern,
   
  - **Database SQL di Azure**:
  
-    Questo argomento viene usato per specificare un URL BLOB (incluso l'endpoint di archiviazione e il contenitore). Sebbene non supporti un carattere jolly asterisco, è possibile usare un prefisso di nome di file parziale (BLOB), anziché il nome del BLOB completo, per raccogliere più file (BLOB) che iniziano con questo prefisso. Esempio:
+    Questo argomento viene usato per specificare un URL BLOB (incluso l'endpoint di archiviazione e il contenitore). Sebbene non supporti un carattere jolly asterisco, è possibile usare un prefisso di nome di file parziale (BLOB), anziché il nome del BLOB completo, per raccogliere più file (BLOB) che iniziano con questo prefisso. Ad esempio:
  
       - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/** : raccoglie tutti i file di controllo (BLOB) per il database specifico.    
       
@@ -128,9 +128,10 @@ fn_get_audit_file ( file_pattern,
 | user_defined_information | **nvarchar(4000)** | **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive, database SQL di Azure e SQL istanza gestita<br /><br /> Utilizzato per registrare eventuali informazioni aggiuntive che l'utente desidera registrare nel log di controllo utilizzando il **sp_audit_write** stored procedure. |  
 
   
-## <a name="remarks"></a>Osservazioni  
- Se l'argomento *file_pattern* passato a **fn_get_audit_file** fa riferimento a un percorso o a un file che non esiste o se il file non è un file di controllo, viene restituito il messaggio di errore **MSG_INVALID_AUDIT_FILE** .  
-  
+## <a name="remarks"></a>Commenti  
+- Se l'argomento *file_pattern* passato a **fn_get_audit_file** fa riferimento a un percorso o a un file che non esiste o se il file non è un file di controllo, viene restituito il messaggio di errore **MSG_INVALID_AUDIT_FILE** .  
+- non è possibile usare **fn_get_audit_file** quando il controllo viene creato con le opzioni **APPLICATION_LOG**, **SECURITY_LOG** o **EXTERNAL_MONITOR** .
+
 ## <a name="permissions"></a>Autorizzazioni
 
 - **SQL Server**: è richiesta l'autorizzazione **Control Server** .  
@@ -139,7 +140,7 @@ fn_get_audit_file ( file_pattern,
   - Gli amministratori non server possono accedere ai log di controllo solo dal database corrente.
   - I BLOB che non soddisfano i criteri indicati sopra verranno ignorati (un elenco di BLOB ignorati verrà visualizzato nel messaggio di output della query) e la funzione restituirà i log solo dai BLOB per cui è consentito l'accesso.  
   
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 - **SQL Server**
 

@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1f17681ffbb922b25cffc6b21ecf2f6317d400db
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: f0a05127f4f6ddcd70fbb00cc5ae3bd2d22fe152
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753793"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813306"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] alla [versione corrente](../../sql-server/what-s-new-in-sql-server-2016.md)).  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level)).  
 
 Viene aggiunto un dispositivo di backup a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -50,18 +50,18 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ## <a name="arguments"></a>Argomenti  
 `[ @devtype = ] 'device_type'` Tipo di dispositivo di backup. *device_type* è di tipo **varchar (20)** e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**disco**|File del disco rigido impostato come dispositivo di backup.|  
 |**nastro**|Qualsiasi dispositivo nastro supportato da [!INCLUDE[msCoName](../../includes/msconame-md.md)].<br /><br /> Nota: Il supporto per i dispositivi di backup su nastro verrà rimosso in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
   
-`[ @logicalname = ] 'logical_name'` Nome logico del dispositivo di backup utilizzato nelle istruzioni BACKUP e RESTOre. *logical_name* è di **tipo sysname**e non prevede alcun valore predefinito e non può essere null.  
+`[ @logicalname = ] 'logical_name'` Nome logico del dispositivo di backup utilizzato nelle istruzioni BACKUP e RESTOre. *logical_name* è di **tipo sysname** e non prevede alcun valore predefinito e non può essere null.  
   
 `[ @physicalname = ] 'physical_name'` È il nome fisico del dispositivo di backup. I nomi fisici devono essere conformi alle regole per i nomi di file del sistema operativo o alle convenzioni di denominazione universali per i dispositivi di rete e devono includere un percorso completo. *physical_name* è di **tipo nvarchar (260)** e non prevede alcun valore predefinito e non può essere null.  
   
  Quando si crea un dispositivo di backup in un percorso di rete remoto, assicurarsi che all'account specificato per l'avvio di [!INCLUDE[ssDE](../../includes/ssde-md.md)] siano associate le autorizzazioni di scrittura necessarie nel computer remoto.  
   
- Se si aggiunge un dispositivo nastro, questo parametro deve corrispondere al nome fisico assegnato al dispositivo nastro locale da Windows. ad esempio, ** \\ \\ .\tape0** per il primo dispositivo nastro nel computer. Il dispositivo nastro deve essere collegato al computer server. Non può pertanto essere utilizzato in remoto. I nomi contenenti caratteri non alfanumerici devono essere racchiusi tra virgolette.  
+ Se si aggiunge un dispositivo nastro, questo parametro deve corrispondere al nome fisico assegnato al dispositivo nastro locale da Windows. ad esempio, **\\ \\ .\tape0** per il primo dispositivo nastro nel computer. Il dispositivo nastro deve essere collegato al computer server. Non può pertanto essere utilizzato in remoto. I nomi contenenti caratteri non alfanumerici devono essere racchiusi tra virgolette.  
   
 > [!NOTE]  
 >  Questa procedura consente di immettere nel catalogo il nome fisico specificato ma non di accedere o creare il dispositivo.  

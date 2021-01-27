@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_index_operational_stats (Transact-SQL)
-title: sys.dm_db_index_operational_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_index_operational_stats (Transact-SQL)
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,16 +17,15 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_db_index_operational_stats dynamic management function
-ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 819d0388ca7b358bb9b6cf455cfb061a1a38fd9a
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 2d8213f841a04342bad282d170ec76c13c120386
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172173"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813592"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -91,7 +90,7 @@ sys.dm_db_index_operational_stats (
 |**object_id**|**int**|ID della tabella o vista.|    
 |**index_id**|**int**|ID dell'indice o dell'heap.<br /><br /> 0 = heap| 
 |**partition_number**|**int**|Numero di partizione in base 1 all'interno dell'indice o heap.| 
-|**hobt_id**|**bigint**|**Si applica a: (da alla** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] [versione corrente](../../sql-server/what-s-new-in-sql-server-2016.md)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> ID del set di righe di dati heap o albero B che tiene traccia dei dati interni per un indice columnstore.<br /><br /> NULL: non è un set di righe columnstore interno.<br /><br /> Per informazioni dettagliate, vedere [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
+|**hobt_id**|**bigint**|[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> ID del set di righe di dati heap o albero B che tiene traccia dei dati interni per un indice columnstore.<br /><br /> NULL: non è un set di righe columnstore interno.<br /><br /> Per informazioni dettagliate, vedere [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
 |**leaf_insert_count**|**bigint**|Conteggio cumulativo degli inserimenti al livello foglia.|    
 |**leaf_delete_count**|**bigint**|Conteggio cumulativo delle eliminazioni al livello foglia. leaf_delete_count viene incrementato solo per i record eliminati che non sono contrassegnati prima come Ghost. Per i record eliminati per primi, viene incrementato il **leaf_ghost_count** .|    
 |**leaf_update_count**|**bigint**|Conteggio cumulativo degli aggiornamenti al livello foglia.|    

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3a779e16b06b00cb925f28e8da34ce3959d7dc7e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d802cb37a972eb498b485d7253a82b8445f4566d
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352887"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813482"
 ---
 # <a name="identifiers-dmx"></a>Identificatori (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -76,7 +76,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   Quando si utilizzano parole riservate come nomi di oggetti o parti di nomi di oggetti.  
   
-     È consigliabile evitare di utilizzare parole chiave riservate come nomi di oggetti. I database aggiornati da versioni precedenti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] possono contenere identificatori che includono parole che non erano riservate nella versione precedente di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , ma che sono parole riservate per [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Per fare riferimento a oggetti di questo tipo, è possibile utilizzare un identificatore delimitato finché non sarà possibile modificare il nome dell'oggetto.  
+     È consigliabile evitare di utilizzare parole chiave riservate come nomi di oggetti. I database aggiornati da versioni precedenti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] possono contenere identificatori che includono parole che non erano riservate nella versione precedente di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , ma che sono parole riservate per [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Per fare riferimento a oggetti di questo tipo, è possibile utilizzare un identificatore delimitato finché non sarà possibile modificare il nome dell'oggetto.  
   
 -   Quando si utilizzano caratteri non elencati come identificatori qualificati.  
   

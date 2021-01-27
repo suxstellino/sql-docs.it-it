@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: e15751fb064d2843770d72f26db94b29de28f199
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
-ms.translationtype: HT
+ms.openlocfilehash: 1f9b85e3d2f14eb534956c218d38f98b634dc89c
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867592"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813289"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Spostare un database protetto da TDE in un'altra istanza di SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91867592"
   
 ##  <a name="to-create-a-database-protected-by-transparent-data-encryption"></a><a name="SSMSProcedure"></a> Per creare un database protetto con TDE  
 
-Le procedure riportate di seguito mostrano che è necessario creare un database protetto da TDE tramite SQL Server Management Studio e mediante l'uso di Transact-SQL.
+Nelle procedure riportate di seguito viene illustrato come creare un database protetto da Transparent Data Encryption utilizzando SQL Server Management Studio e utilizzando Transact-SQL.
   
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMSCreate"></a> Utilizzo di SQL Server Management Studio  
   
@@ -58,12 +58,12 @@ Le procedure riportate di seguito mostrano che è necessario creare un database 
   
 6.  In Esplora oggetti fare clic sul segno più per espandere la cartella **Database** .  
   
-7.  Fare clic con il pulsante destro del mouse sul database creato, scegliere **Attività**e quindi fare clic su **Gestione crittografia del database**.  
+7.  Fare clic con il pulsante destro del mouse sul database creato, scegliere **Attività** e quindi fare clic su **Gestione crittografia del database**.  
   
      Nella finestra di dialogo **Gestione crittografia del database** sono disponibili le opzioni indicate di seguito.  
   
      **Algoritmo di crittografia**  
-     Visualizza o imposta l'algoritmo da usare per la crittografia del database. L'algoritmo predefinito è**AES128** . Il campo non può essere vuoto. Per altre informazioni sugli algoritmi di crittografia, vedere [Choose an Encryption Algorithm](../../../relational-databases/security/encryption/choose-an-encryption-algorithm.md).  
+     Visualizza o imposta l'algoritmo da usare per la crittografia del database. L'algoritmo predefinito è **AES128** . Il campo non può essere vuoto. Per altre informazioni sugli algoritmi di crittografia, vedere [Choose an Encryption Algorithm](../../../relational-databases/security/encryption/choose-an-encryption-algorithm.md).  
   
      **Usa certificato server**  
      Imposta la sicurezza della crittografia mediante un certificato. Selezionarne uno dall'elenco. Se non si ha l'autorizzazione **VIEW DEFINITION** per i certificati del server, l'elenco sarà vuoto. Se viene selezionato un metodo certificato di crittografia, il valore non può essere vuoto. Per altre informazioni sui certificati, vedere [SQL Server Certificates and Asymmetric Keys](../../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
@@ -78,7 +78,7 @@ Le procedure riportate di seguito mostrano che è necessario creare un database 
 
 ###  <a name="using-transact-sql"></a><a name="TsqlCreate"></a> Uso di Transact-SQL  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
@@ -138,7 +138,7 @@ Le procedure riportate di seguito mostrano che è necessario creare un database 
   
 ##  <a name="to-move-a-database-protected-by-transparent-data-encryption"></a><a name="TsqlProcedure"></a> Per spostare un database protetto con TDE 
 
-Le procedure riportate di seguito mostrano che è necessario spostare un database protetto da TDE tramite SQL Server Management Studio e mediante l'uso di Transact-SQL.
+Nelle procedure riportate di seguito viene illustrato come spostare un database protetto da Transparent Data Encryption utilizzando SQL Server Management Studio e utilizzando Transact-SQL.
   
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMSMove"></a> Utilizzo di SQL Server Management Studio  
   
@@ -188,7 +188,7 @@ Le procedure riportate di seguito mostrano che è necessario spostare un databas
   
 7.  In Esplora oggetti in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], fare clic con il pulsante destro del mouse sulla cartella **Database** e selezionare **Collega...** .  
   
-8.  Nella finestra di dialogo **Collega database** , in **Database da collegare**fare clic su **Aggiungi**.  
+8.  Nella finestra di dialogo **Collega database** , in **Database da collegare** fare clic su **Aggiungi**.  
   
 9. Nella finestra di dialogo **Individua file di database -** _nome\_server_ selezionare il file di database da collegare al nuovo server e fare clic su **OK**.  
   
@@ -249,11 +249,11 @@ Le procedure riportate di seguito mostrano che è necessario spostare un databas
      Consente di visualizzare il percorso del file di database selezionato. Il percorso può essere modificato manualmente.  
   
      **Messaggio**  
-     Non viene visualizzato alcun messaggio oppure viene visualizzato il collegamento ipertestuale**Impossibile trovare il file**.  
+     Non viene visualizzato alcun messaggio oppure viene visualizzato il collegamento ipertestuale **Impossibile trovare il file**.  
   
 ###  <a name="using-transact-sql"></a><a name="TsqlMove"></a> Uso di Transact-SQL  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

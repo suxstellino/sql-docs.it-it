@@ -1,8 +1,8 @@
 ---
 description: sys.dm_os_wait_stats (Transact-SQL)
-title: sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_wait_stats (Transact-SQL)
 ms.custom: ''
-ms.date: 08/19/2020
+ms.date: 01/25/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -17,16 +17,15 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_os_wait_stats dynamic management view
-ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1dccbed2d872b2cd2973e644f9f02149f88b11d4
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: da16b2c28c55952e609b98637802c940ff5a6a54
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172753"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813071"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +50,7 @@ In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' 
 Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in pool elastici, il `Server admin` o un `Azure Active Directory admin` account è obbligatorio. Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.   
 
 ##  <a name="types-of-waits"></a><a name="WaitTypes"></a> Tipi di attese  
- Le **attese di risorse** si verificano quando un thread di lavoro richiede l'accesso a una risorsa che non è disponibile perché la risorsa è utilizzata da un altro thread di lavoro o non è ancora disponibile. Un esempio di attesa di risorse è rappresentato da blocchi, latch e attese di I/O su rete e su disco. Le attese di blocchi e latch sono attese a livello di oggetti di sincronizzazione.  
+ Le **attese di risorse** si verificano quando un thread di lavoro richiede l'accesso a una risorsa che non è disponibile perché la risorsa è utilizzata da un altro thread di lavoro o non è ancora disponibile. Esempi di attese di risorse sono blocchi, latch, rete e attese di I/O su disco. Le attese di blocchi e latch sono attese a livello di oggetti di sincronizzazione.  
   
 Le **attese della coda** si verificano quando un thread di lavoro è inattivo, in attesa dell'assegnazione di lavoro. Le attese di code si verificano principalmente nell'ambito di attività di sistema in background quali, ad esempio, il monitoraggio dei deadlock e le attività di pulizia dei record eliminati. Queste attività attenderanno l'inserimento delle richieste di lavoro in una coda di elaborazione. È possibile che le attese di code diventino periodicamente attive anche se non sono stati inseriti nuovi pacchetti nella coda.  
   
@@ -297,7 +296,7 @@ Questo comando reimposta tutti i contatori su 0.
 |HADR_AR_UNLOAD_COMPLETED |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |HADR_ARCONTROLLER_NOTIFICATIONS_SUBSCRIBER_LIST |Il server di pubblicazione di un evento di replica di disponibilità, ad esempio una modifica di stato o di configurazione, è in attesa dell'accesso in lettura/scrittura esclusivo all'elenco di sottoscrittori eventi. Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |HADR_BACKUP_BULK_LOCK |Il database primario Always On ha ricevuto una richiesta di backup da un database secondario ed è in attesa del completamento dell'elaborazione della richiesta da parte del thread in background per l'acquisizione o il rilascio del blocco BulkOp. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
-|HADR_BACKUP_QUEUE |Il thread in background di backup del database primario Always On è in attesa di una nuova richiesta di lavoro dal database secondario. In genere questa situazione si verifica quando nel database primario è contenuto il log BulkOp e il database in questione è in attesa dell'indicazione da parte del database secondario che il blocco possa essere rilasciato dal database primario. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
+|HADR_BACKUP_QUEUE |Il thread in background di backup del database primario Always On è in attesa di una nuova richiesta di lavoro dal database secondario. In genere, questo errore si verifica quando il database primario contiene il registro BulkOp ed è in attesa del database secondario per indicare che il database primario può rilasciare il blocco. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |HADR_CLUSAPI_CALL |Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] thread è in attesa di passare dalla modalità non preemptive (pianificata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) alla modalità preemptive (pianificata dal sistema operativo) per richiamare le API di Windows Server failover clustering. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |HADR_COMPRESSED_CACHE_SYNC |Attesa dell'accesso alla cache di blocchi di log compressi usati per evitare una compressione ridondante dei blocchi di log inviati a più database secondari. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |HADR_CONNECTIVITY_INFO |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
@@ -333,7 +332,7 @@ Questo comando reimposta tutti i contatori su 0.
 |HADR_PARTNER_SYNC |Attesa del controllo della concorrenza nell'elenco di partner. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |HADR_READ_ALL_NETWORKS |Attesa di ottenere l'accesso in lettura o scrittura all'elenco di reti WSFC. Solo per uso interno. Nota: il motore mantiene un elenco di reti WSFC utilizzate nelle viste a gestione dinamica (ad esempio sys.dm_hadr_cluster_networks) o per convalidare Always On istruzioni Transact-SQL che fanno riferimento alle informazioni di rete WSFC. Questo elenco viene aggiornato all'avvio del motore, alle notifiche relative a WSFC e al riavvio interno del Always On, ad esempio la perdita e il ricupero del quorum WSFC. Le attività verranno di solito bloccate quando è in corso un aggiornamento nell'elenco in questione. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |HADR_RECOVERY_WAIT_FOR_CONNECTION |Attesa della connessione del database secondario al database primario prima dell'esecuzione del recupero. Si tratta di un'attesa prevista che può prolungarsi se la connessione al database primario richiede tempo. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
-|HADR_RECOVERY_WAIT_FOR_UNDO |Il recupero del database è in attesa del completamento della fase di ripristino e inizializzazione da parte del database secondario che ne consente il ripristino al punto di log comune con il database primario. Si tratta di un'attesa prevista dopo i failover. Tramite Monitor di sistema di Windows (perfmon.exe) e le DMV è possibile tenere traccia dello stato di rollback. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
+|HADR_RECOVERY_WAIT_FOR_UNDO |Il recupero del database è in attesa del completamento della fase di ripristino e inizializzazione da parte del database secondario che ne consente il ripristino al punto di log comune con il database primario. Si tratta di un'attesa prevista dopo i failover. Lo stato di annullamento può essere rilevato tramite il monitor di sistema di Windows (perfmon.exe) e le viste a gestione dinamica. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |HADR_REPLICAINFO_SYNC |Attesa dell'aggiornamento dello stato corrente della replica da parte del controllo della concorrenza. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |HADR_SEEDING_CANCELLATION |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] e versioni successive.| 
 |HADR_SEEDING_FILE_LIST |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] e versioni successive.| 
@@ -494,11 +493,11 @@ Questo comando reimposta tutti i contatori su 0.
 |PAGEIOLATCH_SH |Si verifica quando un'attività è in attesa di un latch per un buffer in una richiesta di I/O. La richiesta di latch è in modalità condivisa. Attese prolungate possono indicare problemi con il sottosistema disco.| 
 |PAGEIOLATCH_UP |Si verifica quando un'attività è in attesa di un latch per un buffer in una richiesta di I/O. La richiesta di latch è in modalità di aggiornamento. Attese prolungate possono indicare problemi con il sottosistema disco.| 
 |PAGELATCH_DT |Si verifica quando un'attività è in attesa di un latch per un buffer non incluso in una richiesta di I/O. La richiesta di latch è in modalità di eliminazione.| 
-|PAGELATCH_EX |Si verifica quando un'attività è in attesa di un latch per un buffer non incluso in una richiesta di I/O. La richiesta di latch è in modalità esclusiva.| 
+|PAGELATCH_EX |Si verifica quando un'attività è in attesa di un latch per un buffer non incluso in una richiesta di I/O. La richiesta di latch è in modalità esclusiva. </br> Uno scenario comune che conduce a questo latch è la contesa di latch del buffer "Last-page Insert". Per comprendere e risolvere questo problema, usare Risolvi la contesa di [inserimento PAGELATCH_EX Ultima pagina](/troubleshoot/sql/performance/resolve-pagelatch-ex-contention) e la risoluzione dei conflitti di [inserimento dell'ultima pagina nella SQL Server](../diagnose-resolve-latch-contention.md#last-pagetrailing-page-insert-contention). Un altro scenario è la [contesa di latch per le tabelle di piccole dimensioni con un indice non cluster e inserimenti casuali (tabella della coda)](../diagnose-resolve-latch-contention.md#latch-contention-on-small-tables-with-a-non-clustered-index-and-random-inserts-queue-table).| 
 |PAGELATCH_KP |Si verifica quando un'attività è in attesa di un latch per un buffer non incluso in una richiesta di I/O. La richiesta di latch è in modalità di mantenimento.| 
 |PAGELATCH_NL |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |PAGELATCH_SH |Si verifica quando un'attività è in attesa di un latch per un buffer non incluso in una richiesta di I/O. La richiesta di latch è in modalità condivisa.| 
-|PAGELATCH_UP |Si verifica quando un'attività è in attesa di un latch per un buffer non incluso in una richiesta di I/O. La richiesta di latch è in modalità di aggiornamento.| 
+|PAGELATCH_UP |Si verifica quando un'attività è in attesa di un latch per un buffer non incluso in una richiesta di I/O. La richiesta di latch è in modalità di aggiornamento. Questo tipo di attesa può essere comunemente osservato quando una pagina di sistema (buffer) come PFS, GAM, SGAM è bloccato. Per la risoluzione di uno scenario comune, vedere [ridurre i conflitti di allocazione nel database SQL Server tempdb](/troubleshoot/sql/performance/recommendations-reduce-allocation-contention).| 
 |PARALLEL_BACKUP_QUEUE |Si verifica durante la serializzazione dell'output generato da RESTORE HEADERONLY, RESTORE FILELISTONLY o RESTORE LABELONLY.| 
 |PARALLEL_REDO_DRAIN_WORKER |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] e versioni successive.| 
 |PARALLEL_REDO_FLOW_CONTROL |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] e versioni successive.| 

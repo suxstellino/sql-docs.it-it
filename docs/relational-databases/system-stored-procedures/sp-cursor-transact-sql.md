@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 62a4904a608ccfd5ed02cbf21c3342619ea32e8f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 07dcf9bfc42705f2ad49e3ce476ffcd8ad70f052
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810167"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813275"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "91810167"
   
 ||  
 |-|  
-|**Si applica a**: SQL Server (da alla [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [versione corrente](../../sql-server/what-s-new-in-sql-server-2016.md)).|  
+|**Si applica a**: SQL Server (da alla [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level)).|  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ sp_cursor  cursor, optype, rownum, table
  *optype*  
  Parametro obbligatorio che definisce l'operazione che verrà effettuata dal cursore. *optype* richiede uno dei valori di input **int** seguenti.  
   
-|valore|Nome|Descrizione|  
+|Valore|Nome|Descrizione|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|Consente di aggiornare una o più righe nel buffer di recupero.  Le righe specificate in *rownum* vengono nuovamente accessibili e aggiornate.|  
 |0x0002|DELETE|Consente di eliminare una o più righe nel buffer di recupero. Le righe specificate in *rownum* vengono nuovamente accessibili ed eliminate.|  
@@ -99,7 +99,7 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="return-code-values"></a>Valori del codice restituito  
  Quando si utilizza una RPC, un'operazione di eliminazione o aggiornamento posizionata con un numero di buffer 0 restituirà un messaggio completato con un *conteggio delle righe* pari a 0 (esito negativo) o 1 (esito positivo) per ogni riga del buffer di recupero.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ## <a name="optype-parameter"></a>Parametro optype  
  Fatta eccezione per le combinazioni di seposition con UPDATE, DELETE, REFRESH o LOCK; o ABSOLUTe con UPDATE o DELETE, i valori *optype* si escludono a vicenda.  
@@ -130,7 +130,7 @@ sp_cursor  cursor, optype, rownum, table
   
 2.  Utilizzare un parametro per inviare un'istruzione UPDATE o INSERT completa oppure utilizzare più parametri per inviare parti di un'istruzione UPDATE o INSERT che SQL Server verrà compilata in un'istruzione completa. È possibile trovare alcuni esempi nella sezione Esempi più avanti in questo argomento.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
   
 ### <a name="alternative-value-parameter-uses"></a>Utilizzi alternativi del parametro value  
  Per UPDATE:  
