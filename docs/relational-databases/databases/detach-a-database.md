@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d1780847dda15ac7171473d4a163443bedd9bdf8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: eccedfef8f3e882425ccbeb6476cfef2e0ebf9e0
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756171"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813314"
 ---
 # <a name="detach-a-database"></a>Scollegare un database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  In questo argomento viene descritto come scollegare un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. I file scollegati non vengono eliminati e possono essere ricollegati tramite CREATE DATABASE con l'opzione FOR ATTACH o FOR ATTACH_REBUILD_LOG. È possibile spostare e quindi collegare tali file in un altro server.  
+  In questo argomento viene descritto come scollegare un database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. I file scollegati non vengono eliminati e possono essere ricollegati tramite CREATE DATABASE con l'opzione FOR ATTACH o FOR ATTACH_REBUILD_LOG. È possibile spostare e quindi collegare tali file in un altro server.  
   
  **Contenuto dell'articolo**  
   
@@ -57,9 +57,9 @@ ms.locfileid: "85756171"
   
 1.  In Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] connettersi all'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e quindi espanderla.  
   
-2.  Espandere **Database**e selezionare il nome del database utente che si desidera scollegare.  
+2.  Espandere **Database** e selezionare il nome del database utente che si desidera scollegare.  
   
-3.  Fare clic con il pulsante destro del mouse sul nome di database, scegliere **Attività**e quindi fare clic su **Scollega**. Verrà visualizzata la finestra di dialogo **Scollega database** .  
+3.  Fare clic con il pulsante destro del mouse sul nome di database, scegliere **Attività** e quindi fare clic su **Scollega**. Verrà visualizzata la finestra di dialogo **Scollega database** .  
   
      **Database da scollegare**  
      Consente di visualizzare i database da scollegare.  

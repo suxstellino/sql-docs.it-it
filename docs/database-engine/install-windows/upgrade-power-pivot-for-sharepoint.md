@@ -12,12 +12,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016'
 manager: erikre
-ms.openlocfilehash: 03041d41745e51d858f56bfcd21407ad58530dd9
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 2f034ac2223b15a3b66883a3ce3dbc434bcf07db
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460694"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813245"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Aggiornare Power Pivot per SharePoint
 
@@ -57,7 +57,7 @@ ms.locfileid: "97460694"
   
 -   Gli strumenti di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sono una delle funzionalità condivise di SQL Server. Tutte le funzionalità condivise vengono aggiornate contemporaneamente. Se durante un processo di aggiornamento si selezionano altre istanze o funzionalità di SQL Server per le quali è richiesto un aggiornamento della funzionalità condivisa, verrà aggiornato anche lo strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . È possibile che si riscontrino problemi se viene aggiornato lo strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ma non l'istanza di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Per altre informazioni sulle funzionalità condivise di SQL Server, vedere [Eseguire l'aggiornamento a SQL Server 2016 usando l'Installazione guidata &#40;programma di installazione&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
--   Il componente aggiuntivo [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint (**spPowerPivot.msi**) viene installato side-by-side con le versioni precedenti. Ad esempio, il componente aggiuntivo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] viene installato nella cartella `c:\Program Files\Microsoft SQL Server\130\Tools\PowerPivotTools`.  
+-   Il componente aggiuntivo [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint (**spPowerPivot.msi**) viene installato side-by-side con le versioni precedenti. Ad esempio, il componente aggiuntivo viene installato nella cartella `c:\Program Files\Microsoft SQL Server\nnn\Tools\PowerPivotTools` . Per informazioni sui file di installazione SQL Server, vedere [percorsi dei file](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md#shared-files-for-all-instances-of-) .
   
 ##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> Prerequisiti  
  **Autorizzazioni**  

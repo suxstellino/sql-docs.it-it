@@ -17,17 +17,17 @@ ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbad843d482945a29cb03fde9545b1c19fb354f9
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
-ms.translationtype: HT
+ms.openlocfilehash: cd8b60ec5b302183fdb1a0713e71568821dae2fe
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098395"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813094"
 ---
 # <a name="contained-databases"></a>Database indipendenti
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Un *database indipendente* è un database isolato dagli altri database e dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita il database.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] offre all'utente quattro modalità per isolare il database dall'istanza.  
+  Un *database indipendente* è un database isolato dagli altri database e dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita il database.  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] offre all'utente quattro modalità per isolare il database dall'istanza.  
   
 -   Molti dei metadati che descrivono un database vengono gestiti nel database, oltre a (o anziché) essere gestiti nel database master.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "98098395"
   
 -   L'ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di creare report (DMV, XEvents e così via) e agire in base alle informazioni di indipendenza.  
   
- Alcune funzionalità dei database parzialmente indipendenti, ad esempio l'archiviazione dei metadati nel database, si applicano a tutti i database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Alcuni vantaggi dei database parzialmente indipendenti, ad esempio l'autenticazione a livello di database e le regole di confronto del catalogo, devono essere abilitati per poter essere disponibili. L'indipendenza parziale si abilita tramite le istruzioni **CREATE DATABASE** e **ALTER DATABASE** o usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni sull'abilitazione dell'indipendenza parziale del database, vedere [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md).  
+ Alcune funzionalità dei database parzialmente indipendenti, ad esempio l'archiviazione dei metadati nel database, si applicano a tutti i database di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] . Alcuni vantaggi dei database parzialmente indipendenti, ad esempio l'autenticazione a livello di database e le regole di confronto del catalogo, devono essere abilitati per poter essere disponibili. L'indipendenza parziale si abilita tramite le istruzioni **CREATE DATABASE** e **ALTER DATABASE** o usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni sull'abilitazione dell'indipendenza parziale del database, vedere [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md).  
   
 ##  <a name="partially-contained-database-concepts"></a><a name="Concepts"></a> Concetti di database parzialmente indipendente  
  In un database totalmente indipendente sono incluse tutte le impostazioni del database e i metadati necessari per definire il database, mentre non sono presenti dipendenze di configurazione nell'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in cui è installato il database. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la separazione di un database dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può risultare un'operazione dispendiosa in termini di tempo e richiedere una conoscenza dettagliata della relazione tra il database e l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Con i database parzialmente indipendenti è più semplice la separazione di un database dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e dagli altri database.  

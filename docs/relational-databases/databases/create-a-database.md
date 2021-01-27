@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4fddf58b0f7473ea2ae46812d9908dcbbafb7b66
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
-ms.translationtype: HT
+ms.openlocfilehash: 304dbec65d26c1d7daa63ca127a545a587f76bd1
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195667"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813593"
 ---
 # <a name="create-a-database"></a>Creare un database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  In questo argomento si illustra come creare un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  In questo argomento si illustra come creare un database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
 > [!NOTE]
 > Per creare un database nel database SQL di Azure con T-SQL, vedere [Creare database nel database SQL di Azure](../../t-sql/statements/create-database-transact-sql.md).
@@ -74,11 +74,11 @@ ms.locfileid: "92195667"
   
 #### <a name="to-create-a-database"></a>Per creare un database  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere questa istanza.  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere questa istanza.  
   
 2.  Fare clic con il pulsante destro del mouse su **Database**, quindi scegliere **Nuovo database**.  
   
-3.  In **Nuovo database**immettere un nome per il database.  
+3.  In **Nuovo database** immettere un nome per il database.  
   
 4.  Per creare il database accettando tutti i valori predefiniti, scegliere **OK**. In caso contrario, continuare con i passaggi facoltativi seguenti.  
   

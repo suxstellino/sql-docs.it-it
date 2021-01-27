@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 14fe5218577618cea4957fc819879374233210a7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 077f7d98470c385b8333fc9db2f55d04bd13bb44
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715498"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98812963"
 ---
 # <a name="shrink-a-file"></a>Compattare un file
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  In questo argomento si illustra come compattare un file di dati o di log in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  In questo argomento si illustra come compattare un file di dati o di log in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Compattando i file di dati si recupera spazio spostando le pagine di dati dalla fine del file allo spazio non occupato più vicino all'inizio del file. Quando alla fine del file viene creato sufficiente spazio libero, le pagine di dati possono essere deallocate e restituite al file system.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "85715498"
   
 2.  Espandere **Database** , quindi fare clic con il pulsante destro del mouse sul database che si desidera compattare.  
   
-3.  Scegliere **Compatta**dal menu **Attività**, quindi fare clic su **File**.  
+3.  Scegliere **Compatta** dal menu **Attività**, quindi fare clic su **File**.  
   
      **Database**  
      Consente di visualizzare il nome del database selezionato.  

@@ -25,12 +25,12 @@ ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: b98affdc431a7e13f83ed152248e3abc1300bf76
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: d9580cee39f56fad60a007a94c559ab94cfb3637
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98688805"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98812830"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 
@@ -146,7 +146,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. Creazione di una credenziale mediante un token di firma di accesso condiviso
 
-**Si applica a**: da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] alla [versione corrente](../../sql-server/what-s-new-in-sql-server-2016.md) e a Istanza gestita di SQL di Azure.
+**Si applica a**: da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level) e a Istanza gestita di SQL di Azure.
 
 Nell'esempio seguente viene creata una credenziale di firma di accesso condiviso usando un token di firma di accesso condiviso. Per un'esercitazione sulla creazione di criteri di accesso archiviati e di una firma di accesso condiviso in un contenitore di Azure e sulla creazione, in un secondo momento, di una credenziale usando la firma di accesso condiviso, vedere [Esercitazione: Uso del servizio di archiviazione BLOB di Microsoft Azure con i database di SQL Server 2016](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).
 
