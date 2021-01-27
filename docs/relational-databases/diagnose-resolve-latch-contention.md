@@ -9,12 +9,12 @@ ms.topic: how-to
 author: bluefooted
 ms.author: pamela
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75f999052eecd750d548cb6d383eafe5375ed130
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: af2caf850d3f7facb61a7484c5af44e4ba785fa3
+ms.sourcegitcommit: 5f9d682924624fe1e1a091995cd3a673605a4e31
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440146"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98860914"
 ---
 # <a name="diagnose-and-resolve-latch-contention-on-sql-server"></a>Diagnosticare e risolvere una contesa di latch in SQL Server
 
@@ -58,7 +58,7 @@ I latch possono essere acquisiti in cinque diverse modalità, che si distinguono
 
 * **KP** (Keep) - Latch conservativo, assicura che la struttura di riferimento non possa essere eliminata definitivamente. Viene usato quando un thread vuole esaminare una struttura di buffer. Poiché il latch KP è compatibile con tutti i latch tranne che con il latch di eliminazione (DT), il latch KP viene considerato "leggero", perché l'effetto sulle prestazioni quando lo si usa è minimo. Il latch KP, non essendo compatibile con il latch DT, impedirà a qualsiasi altro thread di eliminare definitivamente la struttura di riferimento. Un latch KP, ad esempio, impedirà che la struttura a cui fa riferimento venga eliminata definitivamente dal processo lazywriter. Per altre informazioni su come il processo lazywriter viene usato con la gestione delle pagine di buffer di SQL Server, vedere [Scrittura di pagine](./writing-pages.md).
 
-* **SH** (Shared) - Latch condiviso, necessario per leggere una struttura di pagine. 
+* **Sh** --latch condiviso, necessario per leggere la struttura a cui si fa riferimento, ad esempio per leggere una pagina di dati. Più thread possono accedere simultaneamente a una risorsa per la lettura in un latch condiviso.
 * **UP** (Update) - Latch di aggiornamento. Poiché è compatibile con SH (latch condiviso) e KP, ma con nessun altro, non consentirà a un latch EX di scrivere nella struttura di riferimento. 
 * **EX** (Exclusive) - Latch esclusivo. Impedisce agli altri thread di scrivere o di leggere nella struttura di riferimento. Può essere usato, ad esempio, per modificare il contenuto di una pagina per la protezione delle pagine incomplete. 
 * **DT** (Destroy) - Latch di eliminazione. Deve essere acquisito prima di eliminare definitivamente il contenuto della struttura di riferimento. Un latch DT, ad esempio, deve essere acquisito dal processo lazywriter per liberare una pagina pulita prima di aggiungerla all'elenco di buffer liberi disponibili che possono essere usati da altri thread.
@@ -69,9 +69,9 @@ La compatibilità delle modalità dei latch è illustrata nella tabella seguente
 
 |Modalità latch |**KP**  |**SH** |**UP**  |**EX**  |**DT**|
 |--------|--------|-------|--------|--------|--------|
-|**KP**  |S       |Y      |Y       |Y       |N|
-|**SH**  |S       |Y      |Y       |N       |N|
-|**UP**  |S       |Y      |N       |N       |N|
+|**KP**  |S       |S      |S       |S       |N|
+|**SH**  |S       |S      |S       |N       |N|
+|**UP**  |S       |S      |N       |N       |N|
 |**EX**  |S       |N      |N       |N       |N|
 |**DT**  |N       |N      |N       |N       |N|
 

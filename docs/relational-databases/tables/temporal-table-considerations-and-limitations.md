@@ -12,12 +12,12 @@ ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ba8729558f6e3e1736db9c380a268cd606444f1
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: c39e0d3bc84bd469d599ada0ecd5884e37193a08
+ms.sourcegitcommit: 5f9d682924624fe1e1a091995cd3a673605a4e31
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482347"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98860924"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Considerazioni e limitazioni delle tabelle temporali
 
@@ -53,7 +53,7 @@ Quando si usano le tabelle temporali, tenere presenti le considerazioni seguenti
 - L'utilizzo di tecnologie di replica è limitato:
 
   - **Always On:** supporto completo
-  - **Change Data Capture e rilevamento modifiche dati:** supportati solo nella tabella corrente
+  - **Change Data Capture e rilevamento modifiche:** Supportato solo nella tabella corrente
   - **Replica snapshot e transazionale**: supportata solo per un singolo server di pubblicazione senza attivazione di tabella temporale e per un sottoscrittore con attivazione di tabella temporale. In questo caso, il server di pubblicazione viene usato per un carico di lavoro OLTP, mentre il sottoscrittore viene usato per la ripartizione di report, inclusa l'esecuzione di query 'AS OF'. All'avvio dell'agente di distribuzione viene aperta una transazione che viene mantenuta aperta fino a quando l'agente di distribuzione non è interrotto. A causa di questo comportamento, SysStartTime e SysEndTime vengono popolati con l'ora di inizio della prima transazione avviata dall'agente di distribuzione. Di conseguenza, può essere preferibile eseguire l'agente di distribuzione in base a una pianificazione anziché usare il comportamento predefinito di esecuzione continua, se per l'applicazione o l'organizzazione è importante che SysStartTime e SysEndTime vengano popolati con un'ora vicina all'ora di sistema corrente. L'uso di più sottoscrittori non è supportato poiché potrebbe comportare dati temporali incoerenti a causa della dipendenza dall'orologio di sistema locale.
   - **Replica di tipo merge:** non supportata per le tabelle temporali
 
