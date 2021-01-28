@@ -11,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c26ab977839927751903eead0533256ab91fde2c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: 1d16b944072ea4c6945b0358f576a73e40b8b117
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88370137"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596949"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>Controllo locale per la raccolta di dati di diagnostica e utilizzo di SSMS
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-SQL Server Management Studio (SSMS) include funzionalità abilitate per Internet che consentono di raccogliere e inviare a Microsoft dati anonimi di diagnostica e di utilizzo delle funzionalità. SSMS può raccogliere informazioni standard sul computer e informazioni relative all'uso e alle prestazioni che possono venire trasmesse a Microsoft e analizzate al fine di migliorare la qualità, la sicurezza e l'affidabilità di SSMS. Microsoft non raccoglie il nome, l'indirizzo o altre informazioni di contatto degli utenti. Per informazioni dettagliate, vedere l'[Informativa sulla privacy di Microsoft](https://privacy.microsoft.com/privacystatement) e [Supplemento alla privacy di SQL Server](https://go.microsoft.com/fwlink/?LinkID=868444).
+SQL Server Management Studio (SSMS) include funzionalità abilitate per Internet che consentono di raccogliere e inviare a Microsoft dati anonimi di diagnostica e di utilizzo delle funzionalità. SSMS può raccogliere informazioni standard sul computer e informazioni relative all'uso e alle prestazioni che possono venire trasmesse a Microsoft e analizzate al fine di migliorare la qualità, la sicurezza e l'affidabilità di SSMS. Microsoft non raccoglie il nome, l'indirizzo o altre informazioni di contatto degli utenti. Per informazioni dettagliate, vedere l'[Informativa sulla privacy di Microsoft](https://privacy.microsoft.com/privacystatement) e [Supplemento alla privacy di SQL Server](../sql-server/sql-server-privacy.md).
 
 ## <a name="audit-feature-usage-and-diagnostic-data"></a>Controllare i dati di diagnostica e utilizzo delle funzionalità
 
@@ -62,7 +62,7 @@ Per acconsentire esplicitamente alla raccolta di dati di utilizzo per SQL Server
 
   Tipo di voce `DWORD`: `0` rifiuto esplicito; `1` consenso esplicito
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Configurare la raccolta di dati di diagnostica e utilizzo per SQL Server](../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)
-- [Controllo locale per la raccolta di dati di diagnostica e utilizzo di SQL Server](https://msdn.microsoft.com/library/mt743085.aspx)
+- [Controllo locale per la raccolta di dati di diagnostica e utilizzo di SQL Server](../sql-server/usage-and-diagnostic-data-in-local-audit.md)

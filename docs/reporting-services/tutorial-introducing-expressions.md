@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db1efab37a24e49dcf9eac774809ec788831b037
-ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
-ms.translationtype: HT
+ms.openlocfilehash: 938ac8fc2e006bc74aab59955374f1b012b66b68
+ms.sourcegitcommit: fc24f7ecc155d97e789676fffe55e45840fcb088
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93043821"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98669121"
 ---
 # <a name="tutorial-introducing-expressions"></a>Esercitazione: Introduzione alle espressioni
 In questa esercitazione di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] vengono usate espressioni e operatori comuni per creare report impaginati di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] potenti e flessibili. 
@@ -139,7 +139,7 @@ In questa sezione vengono creati un report tabella, un'origine dati e un set di 
   
 1.  Nel riquadro Dati report espandere la cartella **Set di dati** .  
   
-2.  Fare clic con il pulsante destro del mouse su **DataSet1** e scegliere **Proprietà set di dati.**  
+2.  Fare clic con il pulsante destro del mouse su **DataSet1** e scegliere **Proprietà DataSet**.  
 
     ![Screenshot che mostra come accedere alle proprietà del set di dati in Generatore report.](../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png)
   
@@ -148,7 +148,7 @@ In questa sezione vengono creati un report tabella, un'origine dati e un set di 
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="3-display-first-initial-and-last-name"></a><a name="Concatenate"></a>3. Visualizzare iniziale nome e cognome  
-In questa sezione, viene usata la funzione **Left** e l'operatore di **concatenazione** ( **&** ) in un'espressione tramite cui vengono restituiti un'iniziale del nome e un cognome. È possibile compilare l'espressione passaggio dopo passaggio oppure andare avanti nella procedura e copiare e incollare l'espressione dall'esercitazione nella finestra di dialogo **Espressione** .   
+In questa sezione, viene usata la funzione **Left** e l'operatore di **concatenazione** (**&**) in un'espressione tramite cui vengono restituiti un'iniziale del nome e un cognome. È possibile compilare l'espressione passaggio dopo passaggio oppure andare avanti nella procedura e copiare e incollare l'espressione dall'esercitazione nella finestra di dialogo **Espressione** .   
   
 1.  Fare clic con il pulsante destro del mouse sulla colonna **StateProvince** , scegliere **Inserisci colonna** e fare clic su **A sinistra**.  
   
@@ -319,7 +319,7 @@ In questa sezione viene creato un set di dati PaeseRegione e viene usata la funz
   
 2.  Nel riquadro Dati report fare clic su **Nuovo** e selezionare **Set di dati**.  
   
-3.  Fare clic su **Usare un set di dati incorporato nel report** nella finestra di dialogo **Proprietà set di dati.  
+3.  In **Proprietà set di dati** fare clic su **Usa un set di dati incorporato nel report**.  
   
 4.  Selezionare ExpressionsDataSource nell'elenco **Origine dati** .  
   
@@ -358,7 +358,7 @@ In questa sezione viene creato un set di dati PaeseRegione e viene usata la funz
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>Per cercare valori nel set di dati CountryRegion  
   
-1.  Fare clic sul titolo di colonna **Country Region ID** ed eliminare il testo: **ID** , in modo che si legga **Country Region**.  
+1.  Fare clic sul titolo di colonna **Country Region ID** ed eliminare il testo: **ID**, in modo che si legga **Country Region**.  
   
 2.  Fare clic con il pulsante destro del mouse sulla cella di dati per la colonna **Country Region** e scegliere **Espressione**.  
   

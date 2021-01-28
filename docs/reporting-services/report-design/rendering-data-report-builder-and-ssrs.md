@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a458fdf9-fb2a-4fee-9fbd-b38f36e91753
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f073f61cb469c3a31ef475a93920d7beba99a508
-ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
-ms.translationtype: HT
+ms.openlocfilehash: 4fe6c4989b70421bdf88b87e19bc9ad31d206379
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84012229"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596149"
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>Rendering dei dati (Generatore report e SSRS)
   Quando si utilizzano i renderer del layout, ad esempio HTML, MHTML, Word, Excel, PDF o Immagine, i dati e la relativa organizzazione rimangono invariati. Quando si esegue l'esportazione utilizzando un formato di renderer di dati, ad esempio CSV (Comma-Separated Value) o XML, non viene eseguito il rendering di alcun elemento del layout visivo. Durante il rendering del report, CSV e XML applicano al corpo del report e al relativo contenuto apposite regole che determinano la modalità di rendering dei dati in tali formati.  
@@ -50,6 +50,5 @@ ms.locfileid: "84012229"
  [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Impostazioni relative alle informazioni sul dispositivo di Reporting Services](https://go.microsoft.com/fwlink/?LinkId=102515)  
-  
+ [Impostazioni relative alle informazioni sul dispositivo di Reporting Services](/previous-versions/sql/sql-server-2008/ms155397(v=sql.100))  
   

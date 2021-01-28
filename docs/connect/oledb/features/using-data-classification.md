@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: bazizi
 ms.author: v-beaziz
 manager: kenvh
-ms.openlocfilehash: 2a46b952815fa707b03889d3f9aa6480e6e13d32
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
-ms.translationtype: HT
+ms.openlocfilehash: a833e256272a012cfccbbe018cf4ad275f08db80
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96506680"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596804"
 ---
 # <a name="using-data-classification"></a>Uso della classificazione dei dati
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "96506680"
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 ## <a name="overview"></a>Panoramica
-[Individuazione dati e classificazione SQL](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification) è un set di servizi avanzati per l'individuazione, la classificazione, l'assegnazione di etichette e la creazione di report per i dati sensibili nei database. Microsoft OLE DB Driver per SQL Server (versione [18.5.0](../release-notes-for-oledb-driver-for-sql-server.md#1850)) aggiunge il supporto per il recupero dei metadati di classificazione quando l'origine dati sottostante supporta la funzionalità. È possibile accedere a queste informazioni dall'interfaccia [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md).
+[Individuazione dati e classificazione SQL](../../../relational-databases/security/sql-data-discovery-and-classification.md) è un set di servizi avanzati per l'individuazione, la classificazione, l'assegnazione di etichette e la creazione di report per i dati sensibili nei database. Microsoft OLE DB Driver per SQL Server (versione [18.5.0](../release-notes-for-oledb-driver-for-sql-server.md#1850)) aggiunge il supporto per il recupero dei metadati di classificazione quando l'origine dati sottostante supporta la funzionalità. È possibile accedere a queste informazioni dall'interfaccia [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md).
 
-Per altre informazioni su come assegnare la classificazione alle colonne, vedere [Individuazione dati e classificazione SQL](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification).
+Per altre informazioni su come assegnare la classificazione alle colonne, vedere [Individuazione dati e classificazione SQL](../../../relational-databases/security/sql-data-discovery-and-classification.md).
 
 ## <a name="code-samples"></a>Esempi di codice
 
@@ -231,5 +231,4 @@ void PrintSensitivityClassificationInfo(SENSITIVITYCLASSIFICATION* pSensitivityC
 
 ## <a name="see-also"></a>Vedere anche
  [Interfacce &#40;OLE DB&#41;](../ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
- [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md)  
-
+ [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md)

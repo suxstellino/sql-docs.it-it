@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 126ac3c36d7e72205c4e0268fcd4b1cedf993169
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: b4f0e4ed75e992095cff1f9ae315e3036ba7ef90
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172383"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766229"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Specifiche di capacità massima per SQL Server
 
@@ -122,7 +122,7 @@ Dimensioni e numeri massimi dei vari oggetti testati nell'Utilità [!INCLUDE[ssN
 |File di log per ogni database|1|
 |Volumi per ogni computer|3|
 
-<sup>*</sup> Il numero massimo di istanze gestite di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supportate da Utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] può variare in base alla configurazione hardware del server. Per informazioni introduttive, vedere [Attività e funzionalità di Utilità SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non è disponibile in tutte le edizione di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](./editions-and-components-of-sql-server-2016.md).
+<sup>*</sup> Il numero massimo di istanze gestite di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supportate da Utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] può variare in base alla configurazione hardware del server. Per informazioni introduttive, vedere [Attività e funzionalità di Utilità SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non è disponibile in tutte le edizione di [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vedere [funzionalità supportate dalle edizioni di SQL Server 2019](./editions-and-components-of-sql-server-version-15.md), [funzionalità supportate dalle edizioni di SQL Server 2017](./editions-and-components-of-sql-server-2017.md)o [funzionalità supportate dalle edizioni di SQL Server 2016](./editions-and-components-of-sql-server-2016.md).
 
 ## <a name="ssnoversion-data-tier-application-objects"></a>Oggetti applicazione livello dati [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 

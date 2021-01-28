@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b2dc1633af5b4f6ff8ff981d11766c67510786d
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
-ms.translationtype: HT
+ms.openlocfilehash: 0d9f3036e7d8c580e770ded7bbbec6e5f29b2750
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84778950"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596907"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Formattazione dei punti dati di un grafico (Generatore report e SSRS)
 In un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , per punto dati si intende l'entità singola più piccola di un grafico. Nei grafici senza forme la rappresentazione dei punti dati dipende dal relativo tipo di grafico. Una serie di linee è ad esempio costituita da uno o più punti dati connessi. Nei grafici con forme i punti dati sono rappresentati dai singoli segmenti o sezioni che costituiscono l'intero grafico. In un grafico a torta, ad esempio, ogni parte è un punto dati. Per altre informazioni, vedere [Tipi di grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  
@@ -75,7 +75,7 @@ In un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion
 |#MAX|Massimo di tutti i valori Y della serie|Tutti|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|Primo di tutti i valori Y della serie|Tutti|`=First(Fields!MyDataField.Value)`|  
   
- Per formattare la parola chiave, racchiudere tra parentesi una stringa di formato di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Per specificare il valore del punto dati in una descrizione comandi come numero con due posizioni decimali, includere la stringa di formato "N2" tra parentesi, indicando ad esempio il valore "#VALY {N2}" per la proprietà **ToolTip** della serie. Per altre informazioni sulle stringhe di formato di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , vedere [Formattazione dei tipi di dati](https://go.microsoft.com/fwlink/?LinkId=112024) sul sito MSDN. Per altre informazioni sulla formattazione dei numeri in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Formattazione di numeri e date &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
+ Per formattare la parola chiave, racchiudere tra parentesi una stringa di formato di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Per specificare il valore del punto dati in una descrizione comandi come numero con due posizioni decimali, includere la stringa di formato "N2" tra parentesi, indicando ad esempio il valore "#VALY {N2}" per la proprietà **ToolTip** della serie. Per altre informazioni sulle stringhe di formato di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , vedere [Formattazione dei tipi di dati](/previous-versions/) sul sito MSDN. Per altre informazioni sulla formattazione dei numeri in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Formattazione di numeri e date &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   
  Per altre informazioni sull'aggiunta di parole chiave a un grafico, vedere [Visualizzazione di descrizioni comandi in una serie &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md) e [Modificare il testo di un elemento legenda &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
   
@@ -102,5 +102,4 @@ In un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion
  [Esercitazione: Aggiungere un grafico a torta al report &#40;Generatore report&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

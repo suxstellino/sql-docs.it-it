@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 944fc1a9b5769c797ed9fa372e45c17931814983
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 41ee66ff1a5dc6abd746a1344d03e3cabacf9cd2
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85681541"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813089"
 ---
 # <a name="distributed-replay-security"></a>Sicurezza di Distributed Replay
 
@@ -83,9 +83,9 @@ Prima di installare e usare la funzionalità Riesecuzione distribuita di [!INCLU
   
     3.  Premere INVIO.  
   
-2.  **Configurare le autorizzazioni DCOM a livello di computer**: concedere le autorizzazioni DCOM a livello di computer corrispondenti per ogni account elencato nella tabella seguente. Per altre informazioni sull'impostazione di autorizzazioni a livello di computer, vedere [Elenco di controllo: Gestire le applicazioni DCOM](https://go.microsoft.com/fwlink/?LinkId=185842).  
+2.  **Configurare le autorizzazioni DCOM a livello di computer**: concedere le autorizzazioni DCOM a livello di computer corrispondenti per ogni account elencato nella tabella seguente. Per altre informazioni sull'impostazione di autorizzazioni a livello di computer, vedere [Elenco di controllo: Gestire le applicazioni DCOM](/windows/win32/com/setting-machine-wide-security-using-dcomcnfg).  
   
-3.  **Configurare le autorizzazioni DCOM specifiche dell'applicazione**: concedere le autorizzazioni DCOM corrispondenti specifiche dell'applicazione per ogni account elencato nella tabella seguente. Il nome dell'applicazione DCOM per il servizio controller è **DReplayController**. Per altre informazioni sull'impostazione di autorizzazioni specifiche dell'applicazione, vedere [Elenco di controllo: Gestire le applicazioni DCOM](https://go.microsoft.com/fwlink/?LinkId=185842).  
+3.  **Configurare le autorizzazioni DCOM specifiche dell'applicazione**: concedere le autorizzazioni DCOM corrispondenti specifiche dell'applicazione per ogni account elencato nella tabella seguente. Il nome dell'applicazione DCOM per il servizio controller è **DReplayController**. Per altre informazioni sull'impostazione di autorizzazioni specifiche dell'applicazione, vedere [Elenco di controllo: Gestire le applicazioni DCOM](/windows/win32/com/setting-processwide-security-using-dcomcnfg).  
   
  Nella tabella seguente sono descritte le autorizzazioni DCOM richieste per l'account utente interattivo dello strumento di amministrazione e per gli account del servizio client:  
   
@@ -136,5 +136,4 @@ Prima di installare e usare la funzionalità Riesecuzione distribuita di [!INCLU
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Install Distributed Replay - Overview](../../tools/distributed-replay/install-distributed-replay-overview.md)  
-  
   

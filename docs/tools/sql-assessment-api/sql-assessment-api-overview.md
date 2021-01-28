@@ -8,13 +8,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 11/04/2019
-ms.openlocfilehash: a778fd92a44a229ae6806cef31a10b728f241865
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
-ms.translationtype: HT
+ms.date: 1/25/2021
+ms.openlocfilehash: 39c48fc84047deea9c2bf49751c9bc3a491023b7
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87987670"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766398"
 ---
 # <a name="sql-assessment-api"></a>API Valutazione SQL
 
@@ -22,23 +22,45 @@ L'API Valutazione SQL offre uno strumento per valutare la configurazione dell'is
 
 L'API Valutazione SQL è utile quando ci si vuole assicurare che la configurazione dell'istanza di SQL Server in uso sia conforme alle procedure consigliate. Dopo una valutazione iniziale, la stabilità della configurazione può essere monitorata tramite valutazioni pianificate a intervalli regolari.
 
-L'API può essere usata per valutare Istanza gestita di SQL di Azure e le versioni di SQL Server 2012 e successive. SQL in Linux è supportato.
+L'API può essere usata per valutare:
+ 
+* Istanza gestita di database SQL di Azure e SQL Server le versioni 2012 e successive.
+
+* SQL in sistemi basati su Linux.
+
+L'API viene usata anche dall'estensione SQL Server assessment per Azure Data Studio (ADS).
 
 ## <a name="rules"></a>Regole
 
-Le regole, talvolta denominate controlli, sono definite in file in formato JSON. Il formato del set di regole richiede che vengano specificati il nome e la versione di un set di regole. Quando si usano set di regole personalizzati, è quindi possibile sapere con facilità da quali set di regole provengono le specifiche raccomandazioni.
+Le regole (talvolta denominate controlli) sono definite nei file in formato JSON. Il formato di RuleSet richiede la specifica di un nome e una versione di RuleSet. Quando si usano i RuleSet personalizzati, è possibile sapere facilmente quali sono le indicazioni relative al set di regole.
 
 Il set di regole Microsoft è disponibile in GitHub. Per maggiori dettagli, vedere il [repository di esempi](https://aka.ms/sql-assessment-api).
 
-## <a name="sql-assessment-cmdlets-and-smo-extension"></a>Cmdlet di Valutazione SQL ed estensione SMO
+## <a name="sql-assessment-cmdlets-and-associated-extensions"></a>Cmdlet di Valutazione SQL ed estensioni associate
 
-L'API Valutazione SQL fa parte della versione di [SQL Server Management Objects (SMO)](../../relational-databases/server-management-objects-smo/installing-smo.md) di luglio 2019 e successive e della versione del [modulo SQL Server PowerShell](../../powershell/download-sql-server-ps-module.md) di luglio 2019 e successive.
+L'API Valutazione SQL fa parte di:
+
+* [Azure Data Studio (ADS)](../../azure-data-studio/what-is-azure-data-studio.md)
+
+    Versione di rilascio a partire dal 2020 giugno e versioni successive.
+
+* [Oggetti SMO (SQL Server Management Objects)](../../relational-databases/server-management-objects-smo/installing-smo.md)
+
+    Versione di rilascio a partire da luglio 2019 e versioni successive.
+
+* [Modulo SQL Server PowerShell](../../powershell/download-sql-server-ps-module.md)
+
+    Versione di rilascio a partire da luglio 2019 e versioni successive.
+
+Prima di iniziare a usare l'API Valutazione SQL, assicurarsi di:
+
+* [Installare gli annunci](https://techcommunity.microsoft.com/t5/sql-server/released-sql-server-assessment-extension-for-azure-data-studio/ba-p/1470603)
 
 * [Installare SMO](../../relational-databases/server-management-objects-smo/installing-smo.md)
 
 * [Installare il modulo SQL Server PowerShell](../../powershell/download-sql-server-ps-module.md)
 
-Il modulo SqlServer dispone di due nuovi cmdlet per usare l'API Valutazione SQL:
+Il modulo SqlServer sta ottenendo due nuovi cmdlet per lavorare con Valutazione SQL API:
 
 * **Get-SqlAssessmentItem**: fornisce un elenco dei controlli di valutazione disponibili per un oggetto SQL Server
 
@@ -46,11 +68,11 @@ Il modulo SqlServer dispone di due nuovi cmdlet per usare l'API Valutazione SQL:
 
 Il Framework SMO è integrato dall'estensione dell'API Valutazione SQL che fornisce i metodi seguenti:
 
-* **GetAssessmentItems** : restituisce i controlli disponibili per un determinato oggetto SQL (IEnumerable<…>)
+* **GetAssessmentItems** : restituisce i controlli disponibili per un determinato oggetto SQL (IEnumerable<... >)
 
-* **GetAssessmentResults** : valuta in modo sincrono la valutazione e restituisce i risultati e gli eventuali errori (IEnumerable<...>)
+* **GetAssessmentResults** : valuta in modo sincrono la valutazione e restituisce risultati ed errori se presenti (IEnumerable<... >)
 
-* **GetAssessmentResultsList** : valuta in modo asincrono la valutazione e restituisce i risultati e gli eventuali errori (Task<…>)
+* **GetAssessmentResultsList** : valuta in modo asincrono la valutazione e restituisce i risultati e gli errori, se presenti (Task<... >)
 
 ## <a name="get-started-using-sql-assessment-cmdlets"></a>Introduzione all'uso dei cmdlet di Valutazione SQL
 

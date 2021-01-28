@@ -10,18 +10,18 @@ ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
 ms.date: 06/03/2020
-ms.openlocfilehash: 22f693824c244e02f313e488a067a0b732b2fa10
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
-ms.translationtype: HT
+ms.openlocfilehash: 685b1004cea15c5e1c1708204e75b9c8ce7a40af
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423399"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596575"
 ---
 # <a name="integrate-reporting-services-using-reportviewer-controls---data-collection"></a>Integrare Reporting Services usando i controlli ReportViewer - Raccolta dati
 
 Il controllo raccoglie dati di utilizzo anonimi per una miglior interpretazione delle modalità d'uso del prodotto da parte dei clienti. I dati di utilizzo consentono di concentrare le fasi di sviluppo future sui miglioramenti più importanti per i clienti.
 
-Una spiegazione delle procedure di raccolta e utilizzo dei dati di Microsoft SQL Server e Visualizzatore report è disponibile nell'[Informativa sulla privacy](https://go.microsoft.com/fwlink/?LinkID=868444).
+Una spiegazione delle procedure di raccolta e utilizzo dei dati di Microsoft SQL Server e Visualizzatore report è disponibile nell'[Informativa sulla privacy](../../sql-server/sql-server-privacy.md).
 
 ## <a name="opting-out-of-data-collection"></a>Rifiuto esplicito della raccolta dati
 
@@ -43,7 +43,4 @@ protected void Page_Load(object sender, EventArgs e)
 ## <a name="see-also"></a>Vedere anche
 
 [Uso del controllo Web Form Visualizzatore report](../../reporting-services/application-integration/using-the-webforms-reportviewer-control.md)  
-[Integrazione di Reporting Services tramite i controlli Visualizzatore report](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md) 
-
-
-
+[Integrazione di Reporting Services tramite i controlli Visualizzatore report](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)

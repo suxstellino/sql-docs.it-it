@@ -2,19 +2,19 @@
 title: Uso di Always Encrypted con il driver ODBC
 description: Informazioni su come sviluppare applicazioni ODBC usando Always Encrypted e Microsoft ODBC Driver for SQL Server.
 ms.custom: ''
-ms.date: 09/01/2020
+ms.date: 01/15/2021
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 378403eec3b99d8f916a92fc768f1277a7b18572
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
-ms.translationtype: HT
+ms.openlocfilehash: f066c8b1429a11b67cd6fc78fd93eaad1a6fc110
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727392"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534710"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso di Always Encrypted con ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -26,15 +26,17 @@ ms.locfileid: "91727392"
 
 ### <a name="introduction"></a>Introduzione
 
-Questo articolo include informazioni su come sviluppare applicazioni ODBC usando [Always Encrypted (motore di database)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) o [Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md) e [ODBC Driver for SQL Server](microsoft-odbc-driver-for-sql-server.md).
+In questo articolo vengono fornite informazioni su come sviluppare applicazioni ODBC utilizzando [Always Encrypted (motore di database)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) o [Always Encrypted con le enclavi sicure](../../relational-databases/security/encryption/always-encrypted-enclaves.md) e il [driver ODBC per SQL Server](microsoft-odbc-driver-for-sql-server.md).
 
 Always Encrypted consente alle applicazioni client di eseguire la crittografia dei dati sensibili senza mai rivelare i dati o le chiavi di crittografia a SQL Server o al database SQL di Azure. Di tutto ciò si occupa un driver abilitato per Always Encrypted, come ODBC Driver for SQL Server, che esegue in modo trasparente la crittografia e la decrittografia dei dati sensibili nell'applicazione client. Il driver determina automaticamente i parametri di query corrispondenti alle colonne di database con dati sensibili (protette mediante Always Encrypted) e crittografa i valori di tali parametri prima di passare i dati a SQL Server o al database SQL di Azure. Analogamente, il driver esegue in modo trasparente la decrittografia dei dati, recuperati dalle colonne di database crittografate nei risultati delle query. *Always Encrypted con enclave sicuri* estende la funzionalità esistente per abilitare funzionalità più avanzate per i dati sensibili, mantenendo i dati riservati.
 
-Per altre informazioni, vedere [Always Encrypted (motore di database)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) e [Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+Per altre informazioni, vedere [Always Encrypted (motore di database)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) e [Always Encrypted con le enclave sicure](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 ### <a name="prerequisites"></a>Prerequisiti
 
 Configurare Always Encrypted nel database. Ciò implica il provisioning di chiavi Always Encrypted e l'impostazione della crittografia per le colonne di database selezionate. Se non è presente un database in cui Always Encrypted è configurato, seguire le istruzioni fornite nel blog di [introduzione a Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted). In particolare, il database deve contenere le definizioni dei metadati per una chiave master della colonna, una chiave di crittografia della colonna e una tabella contenente una o più colonne crittografate con tale chiave di crittografia.
+
+Se si usa Always Encrypted con enclave sicure, vedere [Sviluppare applicazioni usando Always Encrypted con enclave sicure](../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md) per altri prerequisiti.
 
 ### <a name="enabling-always-encrypted-in-an-odbc-application"></a>Abilitazione di Always Encrypted in un'applicazione ODBC
 
@@ -61,13 +63,33 @@ Si noti che l'abilitazione di Always Encrypted non è sufficiente per l'esito po
 ### <a name="enabling-always-encrypted-with-secure-enclaves"></a>Abilitare Always Encrypted con enclave sicuri
 
 > [!NOTE]
-> Per usare Always Encrypted con enclave sicuri in Linux e macOS è necessario OpenSSL versione 1.0.1 o successiva.
+> In Linux e macOS è necessario usare OpenSSL versione 1.0.1 o successiva per usare Always Encrypted con enclave sicure.
 
-A partire dalla versione 17.4, il driver supporta Always Encrypted con enclavi sicuri. Per abilitare l'uso dell'enclave quando ci si connette a SQL Server 2019 o versione successiva, impostare il DSN `ColumnEncryption`, la stringa di connessione o l'attributo di connessione con il nome del tipo di enclave e del protocollo di attestazione e i dati di attestazione associati, separati da una virgola. Nella versione 17.4 sono supportati solo il tipo di enclave [Sicurezza basata su virtualizzazione](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) e il protocollo di attestazione [Servizio Sorveglianza host](/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server), indicato da `VBS-HGS`. Per usarlo specificare l'URL del server di attestazione, ad esempio:
+A partire dalla versione 17.4, il driver supporta Always Encrypted con enclavi sicuri. Per abilitare l'uso dell'enclave durante la connessione a un database, impostare la `ColumnEncryption` chiave DSN, la parola chiave della stringa di connessione o l'attributo di connessione sul valore seguente: `<attestation protocol>\<attestation URL>` , dove:
 
-```
-Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
-```
+- `<attestation protocol>` : specifica un protocollo usato per l'attestazione dell'enclave.
+  - Se si usa [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] e il servizio sorveglianza host (HGS), `<attestation protocol>` deve essere `VBS-HGS` .
+  - Se si usa [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e Microsoft Azure attestazione, `<attestation protocol>` deve essere `SGX-AAS` .
+
+- `<attestation URL>` : specifica un URL di attestazione (un endpoint del servizio di attestazione). È necessario ottenere un URL di attestazione per l'ambiente dall'amministratore del servizio di attestazione.
+
+  - Se si usa [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] e il servizio Sorveglianza host (HGS), vedere [Determinare e condividere l'URL di attestazione HGS](../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
+  - Se si usa [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e il servizio Attestazione di Microsoft Azure, vedere [Determinare l'URL di attestazione per i criteri di attestazione](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy).
+
+
+Esempi di stringhe di connessione che abilitano i calcoli enclave per una connessione al database:
+
+- [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)]:
+  
+   ```
+   Driver=ODBC Driver 17 for SQL Server;Server=myServer.myDomain;Database=myDataBase;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://myHGSServer.myDomain/Attestation
+   ```
+
+- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] :
+  
+   ```
+   Driver=ODBC Driver 17 for SQL Server;Server=myServer.database.windows.net;Database=myDataBase;Uid=myUsername;Pwd=myPassword;Encrypt=yes;ColumnEncryption=SGX-AAS,https://myAttestationProvider.uks.attest.azure.net/attest/SgxEnclave
+   ```
 
 Se il server, il servizio di attestazione e le chiavi CMK e CEK con supporto degli enclave sono configurati correttamente per le colonne desiderate, ora è possibile eseguire query che usano l'enclave, ad esempio la crittografia sul posto e i calcoli avanzati, oltre alla funzionalità esistente offerta da Always Encrypted. Per altre informazioni, vedere [Configurare Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md).
 
@@ -619,7 +641,7 @@ Per altre informazioni, vedere [Migrare dati sensibili protetti da Always Encryp
 
 |Nome|Descrizione|  
 |----------|-----------------|  
-|`ColumnEncryption`|I valori accettati sono `Enabled`/`Disabled`.<br>`Enabled`: abilita o disabilita la funzionalità Always Encrypted per la connessione.<br>`Disabled`: disabilita la funzionalità Always Encrypted per la connessione.<br>*type*,*data* -- (versione 17.4 e successive) abilita Always Encrypted con enclave sicuro e protocollo di attestazione *type* e i dati di attestazione associati *data*. <br><br>Il valore predefinito è `Disabled`.|
+|`ColumnEncryption`|I valori accettati sono `Enabled`/`Disabled`.<br>`Enabled`: abilita o disabilita la funzionalità Always Encrypted per la connessione.<br>`Disabled`: disabilita la funzionalità Always Encrypted per la connessione.<br>*protocollo di attestazione*,*URL di attestazione* : (versione 17,4 e successive) consente always Encrypted con l'enclave protetta usando il protocollo di attestazione specificato e l'URL di attestazione. <br><br>Il valore predefinito è `Disabled`.|
 |`KeyStoreAuthentication` | Valori validi: `KeyVaultPassword`, `KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | Quando `KeyStoreAuthentication` = `KeyVaultPassword`, impostare questo valore su un nome dell'entità utente di Azure Active Directory valido. <br>Quando `KeyStoreAuthetication` = `KeyVaultClientSecret`, impostare questo valore su un ID client dell'applicazione di Azure Active Directory valido. |
 |`KeyStoreSecret` | Quando `KeyStoreAuthentication` = `KeyVaultPassword`,impostare questo valore sulla password per il nome utente corrispondente. <br>Quando `KeyStoreAuthentication` = `KeyVaultClientSecret`, impostare questo valore sul segreto dell'applicazione associato a un ID client dell'applicazione di Azure Active Directory valido. |
@@ -629,7 +651,7 @@ Per altre informazioni, vedere [Migrare dati sensibili protetti da Always Encryp
 
 |Nome|Tipo|Descrizione|  
 |----------|-------|----------|  
-|`SQL_COPT_SS_COLUMN_ENCRYPTION`|Pre-connessione|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- Disabilita Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- Abilita Always Encrypted<br> puntatore alla stringa *type*,*data* -- (versione 17.4 e successive) Abilitare con enclave sicuro|
+|`SQL_COPT_SS_COLUMN_ENCRYPTION`|Pre-connessione|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- Disabilita Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- Abilita Always Encrypted<br> puntatore al *protocollo di attestazione*, stringa dell'*URL di attestazione* --(versione 17,4 e successive) abilitata con l'enclave sicura|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|Post-connessione|[Set] Prova a caricare CEKeystoreProvider<br>[Get] Restituisce un nome CEKeystoreProvider|
 |`SQL_COPT_SS_CEKEYSTOREDATA`|Post-connessione|[Set] Scrive dati in CEKeystoreProvider<br>[Get] Legge dati da CEKeystoreProvider|
 |`SQL_COPT_SS_CEKCACHETTL`|Post-connessione|[Set] Imposta il valore TTL della cache delle chiavi di crittografia della colonna<br>[Get] Recupera il valore TTL corrente della cache delle chiavi di crittografia della colonna|
@@ -661,9 +683,9 @@ Quando si riscontrano difficoltà nell'uso di Always Encrypted, iniziare control
 
 - La chiave CMK che esegue la crittografia di CEK dispone di metadati accessibili sul server ed è accessibile anche dal client.
 
-- `ColumnEncryption` è abilitato nel DSN, nella stringa di connessione o nell'attributo di connessione e se si usa l'enclave sicuro, ha il formato appropriato.
+- `ColumnEncryption` è abilitato nel DSN, nella stringa di connessione o nell'attributo di connessione e, se si usa l'enclave protetta, ha il formato corretto.
 
-Inoltre quando si usa l'enclave sicuro gli errori di attestazione identificano il passaggio del processo di attestazione in cui si è verificato l'errore, in base alla tabella seguente:
+Inoltre, quando si usa l'enclave sicura, gli errori di attestazione identificano il passaggio del processo di attestazione in cui si è verificato l'errore, in base alla tabella seguente:
 
 |Passaggio|Descrizione|
 |----|-----------|

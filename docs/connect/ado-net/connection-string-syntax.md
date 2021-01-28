@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 42b1f8704be721c0b52b3c42946c9abbf7efd7db
-ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
-ms.translationtype: HT
+ms.openlocfilehash: 6daf0dc719b284f753c6f089709ed6f0f51dfe2a
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2020
-ms.locfileid: "97771629"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596404"
 ---
 # <a name="connection-string-syntax"></a>Sintassi della stringa di connessione
 
@@ -123,7 +123,7 @@ La tabella seguente descrive tutti i casi.
 |Sì|Sì|Sì|No (impostazione predefinita)|La crittografia viene applicata solo se è disponibile un certificato server verificabile; in caso contrario, il tentativo di connessione non riesce.|  
 |Sì|Sì|Sì|Sì|La crittografia viene sempre applicata, ma può essere utilizzato un certificato server auto-firmato.|  
 
-Per altre informazioni, vedere [Uso della crittografia senza convalida](/sql/relational-databases/native-client/features/using-encryption-without-validation).
+Per altre informazioni, vedere [Uso della crittografia senza convalida](../../relational-databases/native-client/features/using-encryption-without-validation.md).
 
 ## <a name="see-also"></a>Vedere anche
 

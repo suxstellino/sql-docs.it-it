@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017'
-ms.openlocfilehash: 98fd46528437cd9a82ec7d47539db230b8be8eb8
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 4c8852c9b2ce3f7bce027632b741511a008cb646
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97409397"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595881"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>Guida all'esplorazione della documentazione di SQL Server
 
@@ -23,7 +23,7 @@ In questo argomento vengono forniti alcuni suggerimenti e consigli per esplorare
 
 ## <a name="hub-page"></a>Pagina hub
 
-La pagina hub di SQL Server è disponibile all'indirizzo [https://aka.ms/sqldocs](https://aka.ms/sqldocs) ed è il punto di ingresso per trovare il contenuto SQL Server di interesse.
+La pagina hub di SQL Server è disponibile all'indirizzo [https://aka.ms/sqldocs](../index.yml?WT.mc_id=akams) ed è il punto di ingresso per trovare il contenuto SQL Server di interesse.
 
 È sempre possibile tornare a questa pagina selezionando **SQL Docs** dall'intestazione nella parte superiore di ogni pagina all'interno del set di documentazione tecnica di SQL Server: 
 
@@ -31,7 +31,7 @@ La pagina hub di SQL Server è disponibile all'indirizzo [https://aka.ms/sqldocs
 
 ## <a name="offline-documentation"></a>Documentazione offline
 
-Per visualizzare la documentazione di SQL Server su un sistema offline sono disponibili due opzioni. È possibile creare un file PDF da qualsiasi punto della documentazione tecnica di SQL Server, oppure si può scaricare il contenuto offline mediante [Guida offline di SQL Server e Help Viewer](sql-server-help-installation.md). 
+Per visualizzare la documentazione di SQL Server su un sistema offline sono disponibili due opzioni. È possibile creare un file PDF da qualsiasi punto della documentazione tecnica di SQL Server, oppure si può scaricare il contenuto offline mediante [Guida offline di SQL Server e Help Viewer](./sql-server-offline-documentation.md). 
 
 Se si vuole creare un file PDF, fare clic sul collegamento **Scarica PDF** disponibile nella parte inferiore di ogni sommario.
 

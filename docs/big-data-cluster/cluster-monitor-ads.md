@@ -10,12 +10,12 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4c4dc9956b8c3f9802feb839096195c09664d0d6
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
-ms.translationtype: HT
+ms.openlocfilehash: b05864804e8f3f7cbcd67291b61d2099c4d18915
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378403"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595623"
 ---
 # <a name="monitor-cluster-status-with-azure-data-studio"></a>Monitorare lo stato del cluster con Azure Data Studio
 
@@ -23,11 +23,11 @@ Questo articolo illustra come visualizzare lo stato di un cluster Big Data usand
 
 ## <a name="use-azure-data-studio"></a><a id="datastudio"></a> Usare Azure Data Studio
 
-Dopo aver scaricato la versione più recente della **build Insider** di [Azure Data Studio](https://aka.ms/getazuredatastudio), e possibile visualizzare gli endpoint di servizio e lo stato di un cluster Big Data con il dashboard dei cluster Big Data di SQL Server. Alcune delle funzionalità seguenti sono inizialmente disponibili solo per la build Insider di Azure Data Studio.
+Dopo aver scaricato la versione più recente della **build Insider** di [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md), e possibile visualizzare gli endpoint di servizio e lo stato di un cluster Big Data con il dashboard dei cluster Big Data di SQL Server. Alcune delle funzionalità seguenti sono inizialmente disponibili solo per la build Insider di Azure Data Studio.
 
 1. Creare prima di tutto una connessione al cluster Big Data in Azure Data Studio. Per altre informazioni, vedere [Connettersi a un cluster Big Data di SQL Server con Azure Data Studio](connect-to-big-data-cluster.md).
 
-1. Fare clic con il pulsante destro del mouse sull'endpoint del cluster Big Data e scegliere **Gestisci** .
+1. Fare clic con il pulsante destro del mouse sull'endpoint del cluster Big Data e scegliere **Gestisci**.
 
    ![Comando Gestisci del menu di scelta rapida](media/view-cluster-status/right-click-manage.png)
 
@@ -52,13 +52,13 @@ La tabella degli endpoint di servizio espone anche diversi dashboard per il moni
 - Monitoraggio di processi Spark
 - Gestione di risorse di Spark
 
-È possibile fare clic direttamente su questi collegamenti. Verrà richiesto di eseguire l'autenticazione quando si accede a questi dashboard. Per i dashboard delle metriche e dei log, fornire le credenziali di amministratore del controller impostate in fase di distribuzione usando le variabili di ambiente **AZDATA_USERNAME** e **AZDATA_PASSWORD** . I dashboard Spark useranno le credenziali del gateway (Knox), ovvero l'identità di Active Directory in un cluster integrato con AD o **AZDATA_USERNAME** e **AZDATA_PASSWORD** se si usa l'autenticazione di base nel cluster.
+È possibile fare clic direttamente su questi collegamenti. Verrà richiesto di eseguire l'autenticazione quando si accede a questi dashboard. Per i dashboard delle metriche e dei log, fornire le credenziali di amministratore del controller impostate in fase di distribuzione usando le variabili di ambiente **AZDATA_USERNAME** e **AZDATA_PASSWORD**. I dashboard Spark useranno le credenziali del gateway (Knox), ovvero l'identità di Active Directory in un cluster integrato con AD o **AZDATA_USERNAME** e **AZDATA_PASSWORD** se si usa l'autenticazione di base nel cluster.
 
 [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ### <a name="cluster-status-notebook"></a><a id="notebook"></a> Notebook relativo allo stato del cluster
 
-1. È anche possibile visualizzare lo stato del cluster Big Data avviando il notebook relativo allo stato del cluster. Per avviare il notebook, fare clic sull'attività **Stato cluster** .
+1. È anche possibile visualizzare lo stato del cluster Big Data avviando il notebook relativo allo stato del cluster. Per avviare il notebook, fare clic sull'attività **Stato cluster**.
 
     ![avvio](media/view-cluster-status/cluster-status-launch.png)
 
@@ -69,7 +69,7 @@ La tabella degli endpoint di servizio espone anche diversi dashboard per il moni
     - Password del controller
     - Endpoint controller
 
-    Il nome predefinito del cluster Big Data è **mssql-cluster** , a meno che non sia stato personalizzato durante la distribuzione. È possibile trovare l'endpoint controller nel dashboard dei cluster Big Data nella tabella relativa agli endpoint di servizio. L'endpoint è elencato come **Cluster Management Service** (Servizio di gestione cluster). Se non si conoscono le credenziali, rivolgersi all'amministratore che ha distribuito il cluster.
+    Il nome predefinito del cluster Big Data è **mssql-cluster**, a meno che non sia stato personalizzato durante la distribuzione. È possibile trovare l'endpoint controller nel dashboard dei cluster Big Data nella tabella relativa agli endpoint di servizio. L'endpoint è elencato come **Cluster Management Service** (Servizio di gestione cluster). Se non si conoscono le credenziali, rivolgersi all'amministratore che ha distribuito il cluster.
 
 3. Fare clic su **Run Cells** (Esegui celle) sulla barra degli strumenti superiore.
 
@@ -78,7 +78,7 @@ La tabella degli endpoint di servizio espone anche diversi dashboard per il moni
     > [!Note]
     > Se non è disponibile un file di configurazione con i Big Data, verrà richiesto l'endpoint controller. Digitare o incollare l'endpoint e quindi premere INVIO per continuare.
 
-5. Se la connessione viene stabilita correttamente, nel resto del notebook verrà visualizzato l'output di ogni componente del cluster Big Data. Quando si vuole eseguire di nuovo una determinata cella di codice, passare il puntatore sulla cella di codice e fare clic sull'icona **Esegui** .
+5. Se la connessione viene stabilita correttamente, nel resto del notebook verrà visualizzato l'output di ogni componente del cluster Big Data. Quando si vuole eseguire di nuovo una determinata cella di codice, passare il puntatore sulla cella di codice e fare clic sull'icona **Esegui**.
 
 
 ## <a name="next-steps"></a>Passaggi successivi

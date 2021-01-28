@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: e6255f8e-a25e-4b3d-9310-c5da2f9c9333
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 4aaec761c13af9419c58d7a0baeb4ffd414ea716
-ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
-ms.translationtype: HT
+ms.openlocfilehash: fb0c63107430db5a1a7fa74276c6440e7212db2b
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97975476"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766349"
 ---
 # <a name="uninstall-sql-server"></a>Disinstallare SQL Server 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  Seguire gli articoli indicati di seguito per disinstallare completamente un'istanza esistente di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e preparare il sistema in modo che sia possibile reinstallare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Seguire gli articoli indicati di seguito per disinstallare completamente un'istanza esistente di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] e preparare il sistema in modo che sia possibile reinstallare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Disinstallare un'istanza esistente di SQL Server &#40;Setup&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  

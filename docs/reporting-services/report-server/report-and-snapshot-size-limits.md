@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a4fa74909490cf7596faa1e38c83a83b6329bd28
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
-ms.translationtype: HT
+ms.openlocfilehash: 5b5e8dbaee71c53f8f9491f8a1abcd15559e4800
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547993"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596838"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limiti delle dimensioni di report e snapshot
   Le informazioni contenute in questo argomento consentono agli amministratori che gestiscono una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] di conoscere i limiti relativi alle dimensioni dei report quando questi ultimi vengono pubblicati in un server di report, quando ne viene eseguito il rendering in fase di esecuzione e quando vengono salvati nel file system. In questo argomento vengono inoltre fornite indicazioni pratiche su come calcolare le dimensioni di un database del server di report e vengono descritti gli effetti delle dimensioni degli snapshot sulle prestazioni del server.  
@@ -51,7 +51,7 @@ ms.locfileid: "84547993"
  L'unico caso in cui vi è un limite fisico per le dimensioni del report è quando si esegue il rendering in formato Excel. Nei fogli di lavoro non possono essere presenti più di 65536 righe o 256 colonne. Con altri formati di rendering non sono presenti limiti simili, pertanto le dimensioni sono limitate solo dalla quantità di risorse disponibili nel server.  
   
 > [!NOTE]  
->  I processi di elaborazione e rendering dei report avvengono in memoria. Se si utilizzano report di grandi dimensioni o sono presenti numerosi utenti, eseguire una pianificazione delle capacità per garantire agli utenti un livello soddisfacente di prestazioni della distribuzione del server di report. Per altre informazioni su strumenti e linee guida, vedere le pubblicazioni seguenti su MSDN: [Pianificazione di scalabilità e prestazioni con Reporting Services](/previous-versions/sql/sql-server-2005/administrator/cc966418(v=technet.10)) e [Uso di Visual Studio 2005 per eseguire test di carico in un server di report di SQL Server 2005 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=77519).  
+>  I processi di elaborazione e rendering dei report avvengono in memoria. Se si utilizzano report di grandi dimensioni o sono presenti numerosi utenti, eseguire una pianificazione delle capacità per garantire agli utenti un livello soddisfacente di prestazioni della distribuzione del server di report. Per altre informazioni su strumenti e linee guida, vedere le pubblicazioni seguenti su MSDN: [Pianificazione di scalabilità e prestazioni con Reporting Services](/previous-versions/sql/sql-server-2005/administrator/cc966418(v=technet.10)) e [Uso di Visual Studio 2005 per eseguire test di carico in un server di report di SQL Server 2005 Reporting Services](/previous-versions/sql/sql-server-2005/administrator/aa964139(v=sql.90)).  
   
 ## <a name="measuring-snapshot-storage"></a>Calcolo dello spazio di archiviazione degli snapshot  
  Le dimensioni di un determinato snapshot sono direttamente proporzionali alla quantità di dati del report. Gli snapshot hanno in genere dimensioni molto maggiori rispetto agli altri elementi archiviati in un server di report. Le dimensioni degli snapshot variano in genere da pochi MB a decine di MB. Se si dispone di report di dimensioni molto grandi, le dimensioni degli snapshot potrebbero essere anche maggiori. In base alla frequenza di utilizzo degli snapshot e alla modalità di configurazione della cronologia del report, la quantità di spazio su disco necessaria per il database del server di report può aumentare rapidamente in un intervallo di tempo breve.  
@@ -82,5 +82,4 @@ EXEC sp_spaceused
  [Impostare proprietà di elaborazione dei report](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Database del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [Elaborare report di grandi dimensioni](../../reporting-services/report-server/process-large-reports.md)  
-  
   

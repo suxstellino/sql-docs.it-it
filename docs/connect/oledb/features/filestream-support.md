@@ -13,12 +13,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server [FILESTREAM support]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c197dadade12e189e2914d01a19975d9d03b7de4
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
-ms.translationtype: HT
+ms.openlocfilehash: d1fcc048d51186289d13cbe8918b5328f8c604f8
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861481"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766134"
 ---
 # <a name="filestream-support-in-ole-db-driver-for-sql-server"></a>Supporto di FILESTREAM in OLE DB Driver per SQL Server
 [!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
@@ -54,7 +54,7 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>Compatibilità con le versioni precedenti  
-Se il client è stato compilato usando OLE DB Driver per SQL Server e l'applicazione si connette a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] via [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]), il comportamento di **varbinary(max)** sarà compatibile con il comportamento introdotto da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Questo significa che i dati restituiti avranno come dimensione massima 2 GB. Per valori di dimensioni superiori a 2 GB, verrà eseguito un troncamento e restituito l'avviso "Troncamento a destra dei dati della stringa". 
+Se il client è stato compilato utilizzando OLE DB driver per SQL Server e l'applicazione si connette a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] o versione successiva), il comportamento **varbinary (max)** sarà compatibile con il comportamento introdotto da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] . Questo significa che i dati restituiti avranno come dimensione massima 2 GB. Per valori di dimensioni superiori a 2 GB, verrà eseguito un troncamento e restituito l'avviso "Troncamento a destra dei dati della stringa". 
   
 Quando la compatibilità con il tipo di dati è impostata su 80, il comportamento client sarà coerente con il comportamento del client legacy.  
   

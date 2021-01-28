@@ -19,12 +19,12 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 4662b6e9bcea26bc93ab0d5bf07a767797a98d70
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
-ms.translationtype: HT
+ms.openlocfilehash: ee33e30ef69b0c4a464e91576dc33e6d15ca4890
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035939"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596972"
 ---
 # <a name="use-templates-in-sql-server-management-studio"></a>Usare modelli in SQL Server Management Studio
 
@@ -118,7 +118,7 @@ Quando un modello è aperto, è possibile individuare i modelli che si trovano s
 
 Il modo migliore per acquisire familiarità con SSMS è la pratica diretta. Questa *esercitazione* e questi articoli di *procedure* sono utili per varie funzionalità disponibili in SSMS.  Questi articoli illustrano come gestire i componenti di SSMS e individuare le funzionalità usate regolarmente.
 
-* [Connettersi ed eseguire query su un'istanza](../quickstarts/connect-query-sql-server.md)
+* [Connettersi ed eseguire query su un'istanza](../quickstarts/ssms-connect-query-sql-server.md)
 * [Scripting](../tutorials/scripting-ssms.md)
 * [Configurazione di SSMS](../tutorials/ssms-configuration.md)
 * [Suggerimenti e consigli per l'uso di SSMS](../tutorials/ssms-tricks.md)

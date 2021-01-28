@@ -12,12 +12,12 @@ author: maggiesMSFT
 ms.author: maggies
 ms.topic: conceptual
 ms.date: 05/01/2020
-ms.openlocfilehash: f473590243956cd2fcba1961d3580fa052d6f4c1
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
-ms.translationtype: HT
+ms.openlocfilehash: 2515a93b025392735135cd13cbd734975f8ed221
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91934634"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596834"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -43,7 +43,7 @@ ms.locfileid: "91934634"
  Per un elenco dettagliato delle edizioni e delle versioni supportate che è possibile aggiornare, vedere [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
 > [!TIP]  
->  Per le informazioni più recenti relative a problemi riguardanti SQL Server, vedere [Note sulla versione di SQL Server 2016](https://go.microsoft.com/fwlink/?LinkID=398124).  
+>  Per le informazioni più recenti relative a problemi riguardanti SQL Server, vedere [Note sulla versione di SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md).  
   
   
 ##  <a name="side-by-side-installations"></a><a name="bkmk_side_by_side"></a> Installazioni side-by-side  
@@ -69,7 +69,7 @@ ms.locfileid: "91934634"
 
 * [Eseguire l'aggiornamento a SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)
 * [Eseguire l'aggiornamento a SQL Server 2016 usando l'Installazione guidata &#40;programma di installazione&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
-* [Installazione di SQL Server 2016 dal prompt dei comandi](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)
+* [Installazione di SQL Server 2016 dal prompt dei comandi](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
   
   
 ##  <a name="pre-upgrade-checklist"></a><a name="bkmk_upgrade_checklist"></a> Elenco di controllo preliminare all'aggiornamento  
@@ -123,9 +123,9 @@ ms.locfileid: "91934634"
   
     2.  Tra gli strumenti e le utilità di configurazione del server di report aggiornati alla nuova versione sono inclusi lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa, le utilità della riga di comando, ad esempio RS.exe, e Generatore report.  
   
-    3.  Altri strumenti client, ad esempio [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , sono un download separati e devono essere aggiornati separatamente. Per altre informazioni, vedere [Scaricare SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).
+    3.  Altri strumenti client, ad esempio [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , sono un download separati e devono essere aggiornati separatamente. Per altre informazioni, vedere [Scaricare SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
   
-    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] è un download separato. Per altre informazioni, vedere [SQL Server Data Tools in Visual Studio 2015](https://msdn.microsoft.com/mt186501).  
+    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] è un download separato. Per altre informazioni, vedere [SQL Server Data Tools in Visual Studio 2015](/previous-versions/mt186501(v=msdn.10)).  
   
 6.  Il programma di installazione riutilizza la voce di servizio in Gestione controllo servizi per il servizio del server di report di SQL Server Reporting Services. Tale voce di servizio include l'account del servizio Windows del server di report.  
   
@@ -236,13 +236,13 @@ ms.locfileid: "91934634"
   
 -   [Panoramica del processo di aggiornamento a SharePoint 2016](https://technet.microsoft.com/library/cc262483\(v=office.16\)).
 
--   [Panoramica del processo di aggiornamento a SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688).
+-   [Panoramica del processo di aggiornamento a SharePoint 2013](/SharePoint/upgrade-and-update/overview-of-the-upgrade-process-from-sharepoint-2010-to-sharepoint-2013).
   
--   [Pulire le preparazioni prima di un aggiornamento a SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689).  
+-   [Pulire le preparazioni prima di un aggiornamento a SharePoint 2013](/SharePoint/upgrade-and-update/clean-up-an-environment-before-an-upgrade-to-sharepoint-2013).  
   
 -   [Aggiornare i database da SharePoint 2013 a SharePoint 2016](https://technet.microsoft.com/library/cc303436\(v=office.16\)).
 
--   [Aggiornare i database da SharePoint 2010 a SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690).  
+-   [Aggiornare i database da SharePoint 2010 a SharePoint 2013](/SharePoint/upgrade-and-update/upgrade-content-databases-from-sharepoint-2010-to-sharepoint-2013).  
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b6c33eaeda2a7600039b80c49e1ba3c0fa9e36b5
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 08f9271c7b42e7db3d42ffadc111e9b86dd38e68
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97439366"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596187"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>Che cos'è SQL Server Reporting Services (SSRS)?
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-Per informazioni sul server di report di Power BI, vedere [Che cos'è Server di report di Power BI?](https://docs.microsoft.com/power-bi/report-server/get-started)
+Per informazioni sul server di report di Power BI, vedere [Che cos'è Server di report di Power BI?](/power-bi/report-server/get-started)
 
 SQL Server Reporting Services (SSRS) offre un set di servizi e strumenti locali per creare, distribuire e gestire report impaginati e per dispositivi mobili.
 
@@ -49,7 +49,7 @@ Nelle sezioni che seguono sono disponibili informazioni più dettagliate.
 Le fonti seguenti consentono di rimanere aggiornati sulle nuove funzionalità di SQL Server Reporting Services:
 
 * [Novità di Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
-* [Blog del team di SQL Server Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/)
+* [Blog del team di SQL Server Reporting Services](/archive/blogs/sqlrsteamblog/)
 * Il [video di Guy in a Cube sul canale YouTube](https://www.youtube.com/channel/UCFp1vaKzpfvoGai0vE5VJ0w)
 
 ## <a name="paginated-reports"></a>Report impaginati
@@ -119,7 +119,7 @@ Per altre informazioni, vedere [Guida per gli sviluppatori (Reporting Services)]
 ## <a name="next-steps"></a>Passaggi successivi
 
 * [Installare Reporting Services](../reporting-services/install-windows/install-reporting-services.md)
-* [Scaricare la versione più recente di SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)
+* [Scaricare la versione più recente di SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)
 * [Installare Generatore report](../reporting-services/install-windows/install-report-builder.md)
 
 * Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

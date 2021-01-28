@@ -34,12 +34,12 @@ f1_keywords:
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c28f2c267c49f2a31fd07eecdbb9e593237a1835
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
-ms.translationtype: HT
+ms.openlocfilehash: f9276557c2c2d5d3f733d6f37d243eaee0eec68a
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84778073"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534298"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tabelle, matrici ed elenchi (Generatore report e SSRS)
  In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], tabelle, matrici ed elenchi sono *aree dati* in cui i dati del report impaginati vengono visualizzati in celle suddivise in righe e colonne. Nelle celle sono contenuti in genere dati di testo, ad esempio testo, date e numeri ma possono essere contenuti anche misuratori, grafici o elementi del report come le immagini. Di frequente, tabelle, matrici ed elenchi sono definiti collettivamente aree dati *Tablix* .  
@@ -88,7 +88,7 @@ ms.locfileid: "84778073"
   
  ![Nuovo elenco aggiunto dalla casella degli strumenti e selezionato](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "Nuovo elenco aggiunto dalla casella degli strumenti e selezionato")  
   
- Per altre informazioni, vedere [Creare fatture e moduli con elenchi].  
+ Per altre informazioni, vedere [Creare fatture e moduli con elenchi](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
 ##  <a name="preparing-data"></a><a name="PreparingData"></a> Preparazione dei dati  
  Nelle aree dati di tabella, matrice ed elenco vengono visualizzati i dati di un set di dati. È possibile preparare i dati nella query che recupera i dati per il set di dati o impostando proprietà nella tabella, matrice o elenco.  

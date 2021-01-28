@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b41e35d48f6add25f4ff8c535fb7e96ed7afe67f
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
-ms.translationtype: HT
+ms.openlocfilehash: 53e005fcd5c4a11270a5bc2f7c307f521311c548
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935418"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596656"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurare l'autenticazione di Windows nel server di report.
   Per impostazione predefinita, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accetta richieste che specificano l'autenticazione con negoziazione o NTLM. Se nella distribuzione sono incluse applicazioni client e browser che utilizzano tali provider di sicurezza, è possibile utilizzare i valori predefiniti senza alcuna configurazione aggiuntiva. Se si desidera utilizzare un provider di sicurezza diverso per la sicurezza integrata di Windows, ad esempio se si desidera utilizzare direttamente l'autenticazione Kerberos, o se i valori predefiniti sono stati modificati e si desidera ripristinare le impostazioni originali, è possibile utilizzare le informazioni contenute in questo argomento per specificare le impostazioni di autenticazione nel server di report.  
@@ -26,7 +26,7 @@ ms.locfileid: "91935418"
   
  È necessario inoltre che siano soddisfatti i seguenti requisiti aggiuntivi:  
   
--   I file RSReportServer.config devono avere **AuthenticationType** impostato su **RSWindowsNegotiate**, **RSWindowsKerberos**o **RSWindowsNTLM**. Per impostazione predefinita, il file RSReportServer.config include l'impostazione **RSWindowsNegotiate** se l'account del servizio del server di report è NetworkService o LocalSystem; in caso contrario, viene usata l'impostazione **RSWindowsNTLM** . Se sono presenti applicazioni che usano solo l'autenticazione Kerberos, è possibile aggiungere **RSWindowsKerberos** .  
+-   I file RSReportServer.config devono avere **AuthenticationType** impostato su **RSWindowsNegotiate**, **RSWindowsKerberos** o **RSWindowsNTLM**. Per impostazione predefinita, il file RSReportServer.config include l'impostazione **RSWindowsNegotiate** se l'account del servizio del server di report è NetworkService o LocalSystem; in caso contrario, viene usata l'impostazione **RSWindowsNTLM** . Se sono presenti applicazioni che usano solo l'autenticazione Kerberos, è possibile aggiungere **RSWindowsKerberos** .  
   
     > [!IMPORTANT]  
     >  L'uso di **RSWindowsNegotiate** comporterà un errore di autenticazione Kerberos se il servizio del server di report è stato configurato per essere eseguito con un account utente di dominio e non è stato registrato un nome SPN per l'account. Per altre informazioni, vedere [Risoluzione di errori di autenticazione Kerberos durante la connessione a un server di report](#proxyfirewallRSWindowsNegotiate) in questo argomento.  
@@ -54,7 +54,7 @@ ms.locfileid: "91935418"
   
 2.  Individuare \<**Authentication**>.  
   
-3.  Tra le strutture XML seguenti, copiare quella che corrisponde meglio alle proprie esigenze. È possibile specificare **RSWindowsNegotiate**, **RSWindowsNTLM**e **RSWindowsKerberos** in qualsiasi ordine. Se si desidera autenticare la connessione anziché ogni singola richiesta, è necessario abilitare la persistenza dell'autenticazione in modo che tutte le richieste per cui è necessaria l'autenticazione verranno consentite per la durata della connessione.  
+3.  Tra le strutture XML seguenti, copiare quella che corrisponde meglio alle proprie esigenze. È possibile specificare **RSWindowsNegotiate**, **RSWindowsNTLM** e **RSWindowsKerberos** in qualsiasi ordine. Se si desidera autenticare la connessione anziché ogni singola richiesta, è necessario abilitare la persistenza dell'autenticazione in modo che tutte le richieste per cui è necessaria l'autenticazione verranno consentite per la durata della connessione.  
   
      La prima struttura XML è la configurazione predefinita quando l'account del servizio del server di report è NetworkService o LocalSystem:  
   
@@ -149,7 +149,7 @@ ms.locfileid: "91935418"
   
 -   Un'opzione per la conversione del valore decimale in formato esadecimale è rappresentata dalla Calcolatrice di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Tale calcolatrice supporta diverse modalità che includono le opzioni "Dec" ed "Hex". Selezionare l'opzione "Dec", incollare o digitare il valore decimale nel file di log, quindi selezionare l'opzione "Hex".  
   
--   Fare quindi riferimento all'argomento [User-Account-Control Attribute](https://go.microsoft.com/fwlink/?LinkId=183366) (Attributo UserAccountControl) per derivare l'attributo per l'account di servizio.  
+-   Fare quindi riferimento all'argomento [User-Account-Control Attribute](/windows/win32/adschema/a-useraccountcontrol) (Attributo UserAccountControl) per derivare l'attributo per l'account di servizio.  
   
 ##### <a name="spns-configured-in-active-directory-for-the-reporting-services-service-account"></a>Nomi SPN configurati in Active Directory per l'account di servizio di Reporting Services.  
  Per registrare i nomi SPN nel file di log di traccia del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , è possibile abilitare temporaneamente la caratteristica Protezione estesa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -206,5 +206,4 @@ ms.locfileid: "91935418"
  [Configurare l'autenticazione di base nel server di report](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
  [Configurare l'autenticazione personalizzata o basata su form nel server di report](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)   
  [Protezione estesa per l'autenticazione con Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
-  
   

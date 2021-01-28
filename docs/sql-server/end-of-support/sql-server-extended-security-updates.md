@@ -10,12 +10,12 @@ author: cawrites
 ms.author: chadam
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 94939adb2934e16ed7d1c81c33ebab4631c4b114
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: aa8d71f36b4dbb0c8ddaaac3c47571d29c3896c0
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172513"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595468"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>Che cosa sono gli aggiornamenti della sicurezza estesa per SQL Server?
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -353,7 +353,7 @@ Per suggerimenti su come ottimizzare le prestazioni di [!INCLUDE[ssNoVersion](..
 ## <a name="see-also"></a>Vedere anche
 
 - [Pagina del ciclo di vita di SQL Server 2008/2008 R2](https://support.microsoft.com/lifecycle/search?alpha=sql%20server%202008)
-- [Pagina della fine del supporto di SQL Server 2008/2008 R2](https://aka.ms/sqleos)
+- [Pagina della fine del supporto di SQL Server 2008/2008 R2](./sql-server-end-of-life-overview.md?WT.mc_id=akamseos)
 - [Aggiornamenti di sicurezza estesa: domande frequenti](https://aka.ms/sqleosfaq)
 - [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com/security-guidance/summary)
 - [Gestire gli aggiornamenti di Windows con Automazione di Azure](/azure/automation/update-management/overview)
@@ -362,4 +362,3 @@ Per suggerimenti su come ottimizzare le prestazioni di [!INCLUDE[ssNoVersion](..
 - [Migrazione ad Azure: opzioni lift-and-shift per spostare SQL Server 2008/2008 R2 in una macchina virtuale di Azure](https://azure.microsoft.com/services/azure-migrate/)
 - [Cloud Adoption Framework per la migrazione SQL](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)
 - [Script per gli aggiornamenti della sicurezza estesa in GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-server-extended-security-updates/scripts)
-

@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f37521692b7b30cc8db1e56b81222c3e8bad38de
-ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
-ms.translationtype: HT
+ms.openlocfilehash: 40a05ec1ed6b7ffa05132e0cefbd5157b7d3ce92
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84681340"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596329"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Esempi di espressioni (Generatore report e SSRS)
 Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per controllare il contenuto e l'aspetto del report. Vengono scritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] e possono includere funzioni predefinite, codice personalizzato, variabili di gruppo e di report e variabili definite dall'utente. Le espressioni iniziano con un segno di uguale (=). Per altre informazioni sull'editor espressioni e sui tipi di riferimenti che è possibile includere, vedere [Uso delle espressioni nei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) e [Aggiungere un'espressione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
@@ -70,9 +70,9 @@ Per ulteriori informazioni su come scrivere espressioni in cui vengono utilizzat
  Molte espressioni incluse in un report contengono funzioni. Con queste funzioni è possibile formattare dati, applicare logica e accedere ai metadati del report. È possibile scrivere espressioni che usano funzioni della libreria run-time di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] e degli spazi dei nomi <xref:System.Convert> e <xref:System.Math>. È possibile aggiungere riferimenti a funzioni da altri assembly o da codice personalizzato. È anche possibile usare classi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], tra cui <xref:System.Text.RegularExpressions>.  
   
 ##  <a name="visual-basic-functions"></a><a name="VisualBasicFunctions"></a> Funzioni di Visual Basic  
- È possibile utilizzare le funzioni di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] per modificare i dati visualizzati nelle caselle di testo o utilizzati per parametri, proprietà o altre aree del report. In questa sezione vengono forniti esempi che illustrano alcune di queste funzioni. Per altre informazioni, vedere la pagina relativa ai [membri delle librerie di runtime di Visual Basic](https://go.microsoft.com/fwlink/?LinkId=198941) in MSDN.  
+ È possibile utilizzare le funzioni di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] per modificare i dati visualizzati nelle caselle di testo o utilizzati per parametri, proprietà o altre aree del report. In questa sezione vengono forniti esempi che illustrano alcune di queste funzioni. Per altre informazioni, vedere la pagina relativa ai [membri delle librerie di runtime di Visual Basic](/dotnet/visual-basic/language-reference/runtime-library-members) in MSDN.  
   
- In [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] sono disponibili molte opzioni di formato personalizzato, ad esempio per formati di data specifici. Per ulteriori informazioni, vedere [Formattazione dei tipi di dati](https://go.microsoft.com/fwlink/?LinkId=112024) in MSDN.  
+ In [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] sono disponibili molte opzioni di formato personalizzato, ad esempio per formati di data specifici. Per ulteriori informazioni, vedere [Formattazione dei tipi di dati](/previous-versions/) in MSDN.  
   
 ### <a name="math-functions"></a>Funzioni matematiche  
   
@@ -209,7 +209,7 @@ Per ulteriori informazioni su come scrivere espressioni in cui vengono utilizzat
   
      Se la casella di testo contiene solo una data o un numero, per applicare la formattazione è consigliabile usare la proprietà di formattazione della casella di testo, anziché la funzione **Format** all'interno della casella di testo.  
   
--   Le funzioni **Right**, **Len**e **InStr** sono utili per ottenere sottostringhe, ad esempio per ottenere il solo nome utente dalla stringa *DOMAIN*\\*username* . L'espressione seguente restituisce la parte della stringa a destra del carattere barra rovesciata (\\) da un parametro denominato *User*:  
+-   Le funzioni **Right**, **Len** e **InStr** sono utili per ottenere sottostringhe, ad esempio per ottenere il solo nome utente dalla stringa *DOMAIN*\\*username* . L'espressione seguente restituisce la parte della stringa a destra del carattere barra rovesciata (\\) da un parametro denominato *User*:  
   
     ```  
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
@@ -253,7 +253,7 @@ Per ulteriori informazioni su come scrivere espressioni in cui vengono utilizzat
   
 ### <a name="lookupset"></a>LookupSet  
   
--   Specificando un campo chiave è possibile usare la funzione **LookupSet** per recuperare un set di valori da un set di dati per una relazione uno-a-molti. Ad esempio una persona può disporre di più numeri di telefono. Nell'esempio seguente, si supponga che nel set di dati PhoneList sia contenuto un identificatore della persona e un numero di telefono in ogni riga. Tramite**LookupSet** viene restituita una matrice di valori. L'espressione seguente combina i valori restituiti in un'unica stringa e visualizza l'elenco di numeri di telefono per la persona specificata da ContactID:  
+-   Specificando un campo chiave è possibile usare la funzione **LookupSet** per recuperare un set di valori da un set di dati per una relazione uno-a-molti. Ad esempio una persona può disporre di più numeri di telefono. Nell'esempio seguente, si supponga che nel set di dati PhoneList sia contenuto un identificatore della persona e un numero di telefono in ogni riga. Tramite **LookupSet** viene restituita una matrice di valori. L'espressione seguente combina i valori restituiti in un'unica stringa e visualizza l'elenco di numeri di telefono per la persona specificata da ContactID:  
   
     ```  
     =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  
@@ -515,7 +515,7 @@ Per ulteriori informazioni su come scrivere espressioni in cui vengono utilizzat
  È possibile utilizzare codice personalizzato in un report. Il codice personalizzato può essere incorporato in un report o archiviato in un assembly personalizzato utilizzato nel report. Per altre informazioni sul codice personalizzato, vedere [Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
 ### <a name="using-group-variables-for-custom-aggregation"></a>Utilizzo delle variabili di gruppo per l'aggregazione personalizzata  
- È possibile inizializzare il valore di una variabile di gruppo locale all'interno di un particolare ambito del gruppo e quindi includere un riferimento a tale variabile nelle espressioni. Una delle modalità di utilizzo di una variabile di gruppo con codice personalizzato consiste nell'implementare un'aggregazione personalizzata. Per ulteriori informazioni, vedere [Using Group Variables in Reporting Services 2008 for Custom Aggregation](https://go.microsoft.com/fwlink/?LinkId=128714).  
+ È possibile inizializzare il valore di una variabile di gruppo locale all'interno di un particolare ambito del gruppo e quindi includere un riferimento a tale variabile nelle espressioni. Una delle modalità di utilizzo di una variabile di gruppo con codice personalizzato consiste nell'implementare un'aggregazione personalizzata. Per ulteriori informazioni, vedere [Using Group Variables in Reporting Services 2008 for Custom Aggregation](/archive/blogs/robertbruckner/).  
   
  Per altre informazioni sulle variabili, vedere [Riferimenti a raccolte di variabili di report e di gruppo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md).  
   
@@ -558,5 +558,4 @@ Per ulteriori informazioni su come scrivere espressioni in cui vengono utilizzat
  [Utilizzo delle espressioni nei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Filtri di uso comune &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)  
-  
   

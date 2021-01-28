@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: johnnypham
 ms.author: v-jopha
 ms.reviewer: ''
-ms.openlocfilehash: b45f6146f8b5e2f367281720b0fa1c3395d94256
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
-ms.translationtype: HT
+ms.openlocfilehash: 1bcf11727a5ccd640846788b936ff5fefe9c63a3
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96123960"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595679"
 ---
 # <a name="enable-event-tracing-in-sqlclient"></a>Abilitare la traccia eventi in SqlClient
 
@@ -56,7 +56,7 @@ L'esempio seguente abilita la traccia eventi per un'operazione sui dati nel data
 
 ## <a name="event-tracing-support-in-native-sni"></a>Supporto della traccia eventi in SNI nativo
 
-**Microsoft.Data.SqlClient** v2.1.0 estende il supporto per la traccia eventi in **Microsoft.Data.SqlClient.SNI** e **Microsoft.Data.SqlClient.SNI.runtime**. Inviando un EventCommand a `SqlClientEventSource`, è possibile raccogliere gli eventi in SNI.dll nativo tramite gli strumenti [Xperf](https://docs.microsoft.com/windows-hardware/test/wpt/) e [PerfView](https://github.com/microsoft/perfview). I valori di EventCommand validi sono elencati di seguito:
+**Microsoft.Data.SqlClient** v2.1.0 estende il supporto per la traccia eventi in **Microsoft.Data.SqlClient.SNI** e **Microsoft.Data.SqlClient.SNI.runtime**. Inviando un EventCommand a `SqlClientEventSource`, è possibile raccogliere gli eventi in SNI.dll nativo tramite gli strumenti [Xperf](/windows-hardware/test/wpt/) e [PerfView](https://github.com/microsoft/perfview). I valori di EventCommand validi sono elencati di seguito:
 
 ```cs
 // Enables trace events:

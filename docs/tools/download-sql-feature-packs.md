@@ -11,12 +11,12 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
-ms.openlocfilehash: e99362bd36d99aeeb2b44d3947454f198d29be7c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 3afde284deb138b23392eaf4632af22f52ae9b7e
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642446"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98689161"
 ---
 # <a name="download-sql-server-extended-features-and-tools"></a>Scaricare le funzionalità estese e gli strumenti di SQL Server
 
@@ -28,7 +28,7 @@ Questo articolo offre una breve spiegazione dei diversi download e pacchetti aut
 
 | Funzionalità | Descrizione |
 |----|-----|
-| [Librerie client di Analysis Services](https://go.microsoft.com/fwlink/?LinkID=853574) |Le librerie client di Microsoft Analysis Services incapsulano API (Application Programming Interface) per l'autenticazione e lo scambio di richieste e risposte con Microsoft SQL Server Analysis Services 2005 o successiva, Microsoft Azure Analysis Services e Microsoft Power BI.<br><br> Le librerie client di Microsoft Analysis Services includono i seguenti pacchetti di installazione: </br> Microsoft Analysis Services ADOMD.NET </br> Provider OLE DB per Microsoft Analysis Services (MSOLAP) </br> Microsoft Analysis Management Objects (AMO) |
+| [Librerie client di Analysis Services](/analysis-services/client-libraries) |Le librerie client di Microsoft Analysis Services incapsulano API (Application Programming Interface) per l'autenticazione e lo scambio di richieste e risposte con Microsoft SQL Server Analysis Services 2005 o successiva, Microsoft Azure Analysis Services e Microsoft Power BI.<br><br> Le librerie client di Microsoft Analysis Services includono i seguenti pacchetti di installazione: </br> Microsoft Analysis Services ADOMD.NET </br> Provider OLE DB per Microsoft Analysis Services (MSOLAP) </br> Microsoft Analysis Management Objects (AMO) |
 | [NuGetAnalysisSrvs](https://www.nuget.org/profiles/NuGetAnalysisSrvs) | NuGet per Analysis Services |
 |||
 
@@ -44,8 +44,8 @@ Questo articolo offre una breve spiegazione dei diversi download e pacchetti aut
 | Funzionalità | Descrizione |
 |----|-----|
 | [Utilità della riga di comando per SQL Server](https://www.microsoft.com/download/details.aspx?id=52680) | L'utilità SQLCMD consente agli utenti di connettersi, inviare batch Transact-SQL e restituire informazioni sui set di righe da istanze di SQL Server. |
-| [Driver per PHP per SQL Server](https://aka.ms/downloadmsphpsql) | I driver Microsoft per PHP per SQL Server sono estensioni PHP che consentono di leggere e scrivere dati di SQL Server dagli script PHP. |
-| [JDBC Driver per SQL Server](https://aka.ms/downloadmssqljdbc) | Microsoft JDBC Driver per SQL Server consente di accedere a SQL Server da qualsiasi applicazione Java, server applicazioni o applet abilitata per Java.|
+| [Driver per PHP per SQL Server](../connect/php/download-drivers-php-sql-server.md) | I driver Microsoft per PHP per SQL Server sono estensioni PHP che consentono di leggere e scrivere dati di SQL Server dagli script PHP. |
+| [JDBC Driver per SQL Server](../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md) | Microsoft JDBC Driver per SQL Server consente di accedere a SQL Server da qualsiasi applicazione Java, server applicazioni o applet abilitata per Java.|
 | [SQL Server Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=56508) | SQL Server Data-Tier Application Framework è un componente basato su .NET Framework che fornisce servizi relativi al ciclo di vita delle applicazioni per lo sviluppo e la gestione di database. |
 | [SQL Server Semantic Language Statistics](../relational-databases/search/install-and-configure-semantic-search.md) | Il database di statistiche lingua semantica è un componente obbligatorio per la funzionalità di ricerca di semantica statistica di Microsoft SQL Server. |
 | [Oggetti di gestione condivisa di SQL Server](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | SQL Server Management Objects (SMO) è un modello a oggetti di .NET Framework che consente agli sviluppatori di software di creare applicazioni sul lato client per gestire e amministrare oggetti e servizi SQL Server. |

@@ -2,22 +2,21 @@
 title: Proprietà - Protocolli per MSSQLSERVER (scheda Avanzate)
 description: Informazioni su vantaggi e requisiti della protezione estesa per l'autenticazione per il motore di database di SQL Server e su come abilitarla e configurarla.
 ms.custom: seo-lt-2019
-ms.date: 01/24/2019
+ms.date: 01/22/2021
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
-ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: eabb3e524e052823d4ea7b04348a58ccaf24fb64
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: ff312fefc29021a28df51ed4a845067d54024d6a
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478412"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813214"
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>Proprietà - Protocolli per MSSQLSERVER (scheda Avanzate)
 
@@ -30,7 +29,7 @@ Usare la scheda **Avanzate** della finestra di dialogo **Proprietà - Protocolli
 > - [Protezione estesa di Windows \<extendedProtection\>](/iis/configuration/system.webserver/security/authentication/windowsauthentication/extendedprotection/)
 > - [Panoramica sulla protezione estesa per l'autenticazione](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview)
 
-Per ulteriori informazioni sulla configurazione di altri servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e una descrizione completa della **protezione estesa**, vedere le informazioni più recenti su [Microsoft.com](https://go.microsoft.com/fwlink/?LinkId=177752).
+Per ulteriori informazioni sulla configurazione di altri [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizi, vedere [Manage the motore di database Services](../../database-engine/configure-windows/manage-the-database-engine-services.md). Per una descrizione completa della protezione estesa, vedere [connettersi al motore di database usando la protezione estesa](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md).
 
 La **protezione estesa** è supportata in modo completo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client a partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Al momento il supporto per **protezione estesa** non è previsto per altri provider client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 

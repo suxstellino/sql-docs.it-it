@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 028ee19646716666314b0242e0ebe0e3c6551e95
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
-ms.translationtype: HT
+ms.openlocfilehash: 4b376fddd69a44f9280d4c0aaec4f58880d9ff76
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457751"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596495"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>Tipo di connessione SAP NetWeaver BI (SSRS)
   Per includere dati da un'origine dati esterna SAP NetWeaver® Business Intelligence nel report, è necessario disporre di un set di dati basato su un'origine dati del report di tipo [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]. Questo tipo di origine dati incorporata si basa sull'estensione per i dati per il provider di dati [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 1.0 per [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].  
@@ -50,7 +50,7 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
  Nel momento in cui vengono compilate le query, Progettazione query aggiunge automaticamente le proprietà predefinite alla query MDX. Per includere proprietà diverse da quelle predefinite è necessario modificare manualmente la query MDX.  
   
- Per altre informazioni sull'utilizzo di questa finestra Progettazione query, vedere [Interfaccia utente di Progettazione query SAP NetWeaver BI &#40;Generatore report&#41;](https://msdn.microsoft.com/library/8edda06d-1608-498b-bd50-10905e54f6ce).  
+ Per altre informazioni sull'utilizzo di questa finestra Progettazione query, vedere [Interfaccia utente di Progettazione query SAP NetWeaver BI &#40;Generatore report&#41;](/previous-versions/sql/).  
   
   
 ##  <a name="extended-field-properties"></a><a name="Extended"></a> Proprietà di campo estese  
@@ -98,7 +98,7 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 ##  <a name="remarks"></a><a name="Remarks"></a> Osservazioni  
  Non tutte le modalità di recapito report sono supportate da questo provider di dati. Il recapito di report tramite sottoscrizioni guidate dai dati non è supportato per questa estensione per l'elaborazione dati. Per altre informazioni, vedere [Usare un'origine dati esterna per i dati del Sottoscrittore &#40;sottoscrizione guidata dai dati&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
- Per altre informazioni, vedere l'articolo relativo all' [utilizzo di SQL Server 2008 Reporting Services con SAP NetWeaver Business Intelligence](https://go.microsoft.com/fwlink/?LinkId=167352).  
+ Per altre informazioni, vedere l'articolo relativo all' [utilizzo di SQL Server 2008 Reporting Services con SAP NetWeaver Business Intelligence](/previous-versions/sql/sql-server-2008/cc974473(v=sql.100)).  
   
   
 ##  <a name="how-to-topics"></a><a name="HowTo"></a> Procedure  
@@ -134,5 +134,4 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

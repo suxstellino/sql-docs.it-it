@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd0fa20a515850d8ab097ef8e868946d16a0439b
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
-ms.translationtype: HT
+ms.openlocfilehash: 8c0f808ab1118c6d36777cd6e5766e5976a1f9ee
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255524"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596446"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Grafici a barre (Generatore report e SSRS)
   Nei grafici a barre le serie vengono visualizzate come set di barre orizzontali. Il grafico a barre semplice è strettamente correlato all'istogramma, in cui le serie vengono visualizzate come set di barre verticali, e al grafico a barre a intervalli, in cui le serie vengono visualizzate come set di barre orizzontali con punti iniziali e finali variabili.  
@@ -66,7 +66,6 @@ ms.locfileid: "84255524"
  [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Formattazione della legenda in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
  [Aggiungere stili smussato, rilievo e trama a un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [Esercitazione: Aggiunta di un grafico a barre a un report (Generatore report)](https://go.microsoft.com/fwlink/?LinkId=198052)   
- [Esercitazione: Aggiunta di un grafico a barre a un report](https://go.microsoft.com/fwlink/?LinkId=198042)  
-  
+ [Esercitazione: Aggiunta di un grafico a barre a un report (Generatore report)](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
+ [Esercitazione: Aggiunta di un grafico a barre a un report](/previous-versions/sql/sql-server-2008-r2/cc281302(v=sql.105))  
   

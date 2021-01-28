@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f41eef01d203a873b3d5beac61ab5feb2995867f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
-ms.translationtype: HT
+ms.openlocfilehash: 7232e6b5d89ae9c73b81df16a03ebcd00859d7ee
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891401"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597056"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurare un server di report per l'amministrazione remota
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]è possibile configurare istanze del server di report in modalità locale o remota. Per configurare un'istanza remota del server di report, è possibile usare lo strumento di configurazione di Reporting Services oppure scrivere codice personalizzato che usi il provider WMI (Windows Management Instrumentation) per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Lo strumento Gestione configurazione Reporting Services offre un'interfaccia grafica al provider WMI, per consentire di configurare un server di report senza dover scrivere codice. Quando si avvia lo strumento, è possibile specificare un server remoto a cui connettersi.  
@@ -40,7 +40,7 @@ ms.locfileid: "91891401"
   
  In alcune organizzazioni sono presenti criteri di gruppo che impediscono l'amministrazione remota del server per alcuni sistemi operativi o utenti. Prima di iniziare a modificare le impostazioni del firewall, rivolgersi all'amministratore di rete per verificare se vi sono limitazioni all'amministrazione remota.  
   
- Per ulteriori informazioni, vedere [Connecting Through Windows Firewall](https://go.microsoft.com/fwlink/?LinkId=63615) nella documentazione di Platform SDK nel sito Web MSDN.  
+ Per ulteriori informazioni, vedere [Connecting Through Windows Firewall](/windows/win32/wmisdk/connecting-to-wmi-remotely-with-vbscript) nella documentazione di Platform SDK nel sito Web MSDN.  
   
 ## <a name="tasks"></a>Attività  
  Tra le attività che consentono di configurare un server di report remoto sono incluse le seguenti:  
@@ -89,7 +89,7 @@ ms.locfileid: "91891401"
   
 ### <a name="to-set-dcom-permissions-to-enable-remote-wmi-access-for-non-administrators"></a>Per impostare autorizzazioni DCOM per consentire l'accesso WMI remoto a utenti non amministratori  
   
-1.  Nel menu Start, scegliere **Strumenti di amministrazione**e quindi **Servizi componenti**.  
+1.  Nel menu Start, scegliere **Strumenti di amministrazione** e quindi **Servizi componenti**.  
   
      Per Windows Vista, nel menu Start, scegliere **Tutti i programmi**, **Esegui**, quindi immettere **mmc comexp.msc**.  
   
@@ -103,9 +103,9 @@ ms.locfileid: "91891401"
   
 6.  Fare clic su **Sicurezza COM**.  
   
-7.  In **Autorizzazioni di esecuzione e attivazione**fare clic su **Modifica limiti**.  
+7.  In **Autorizzazioni di esecuzione e attivazione** fare clic su **Modifica limiti**.  
   
-8.  Se il proprio nome non è visualizzato in **Autorizzazioni di avvio**fare clic su **Aggiungi**.  
+8.  Se il proprio nome non è visualizzato in **Autorizzazioni di avvio** fare clic su **Aggiungi**.  
   
 9. Digitare il nome del proprio account utente e quindi fare clic su **OK**.  
   
@@ -113,11 +113,11 @@ ms.locfileid: "91891401"
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>Per impostare autorizzazioni nello spazio dei nomi WMI del server di report per utenti non amministratori  
   
-1.  Nel menu Start, scegliere **Strumenti di amministrazione**e quindi **Gestione computer**.  
+1.  Nel menu Start, scegliere **Strumenti di amministrazione** e quindi **Gestione computer**.  
   
 2.  Aprire la cartella Servizi e applicazioni.  
   
-3.  Fare clic con il pulsante destro del mouse su **Controllo WMI**e scegliere **Proprietà**.  
+3.  Fare clic con il pulsante destro del mouse su **Controllo WMI** e scegliere **Proprietà**.  
   
 4.  Fare clic su **Security**.  
   
@@ -135,11 +135,10 @@ ms.locfileid: "91891401"
   
 11. Selezionare la cartella Admin e quindi fare clic su **Sicurezza**.  
   
-12. Fare clic su **Aggiungi**e quindi digitare l'account utente che si desidera utilizzare per gestire il server.  
+12. Fare clic su **Aggiungi** e quindi digitare l'account utente che si desidera utilizzare per gestire il server.  
   
-13. Nella colonna **Consenti** selezionare **Abilita account**, **Abilita remoto**e **Sicurezza da lettura**, quindi scegliere **OK**.  
+13. Nella colonna **Consenti** selezionare **Abilita account**, **Abilita remoto** e **Sicurezza da lettura**, quindi scegliere **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione configurazione del server di report &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
-  
   

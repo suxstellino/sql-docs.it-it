@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 053efc8ddd1f9f00c528c626aa204d612cb82369
-ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
-ms.translationtype: HT
+ms.openlocfilehash: 75b25a7cb08a7473e6a725a841e53011c6967756
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84681280"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596018"
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>Funzioni di Generatore report - Funzione RunningValue
   Restituisce un'aggregazione parziale di tutti i valori numerici non Null specificati dall'espressione, valutata per l'ambito specificato.  
@@ -34,10 +34,10 @@ RunningValue(expression, function, scope)
  Espressione su cui eseguire l'aggregazione, ad esempio `[Quantity]`.  
   
  *function*  
- (**Enum**) Nome della funzione di aggregazione da applicare all'espressione, ad esempio **Sum**. Tale funzione non può essere **RunningValue**, **RowNumber**o **Aggregate**.  
+ (**Enum**) Nome della funzione di aggregazione da applicare all'espressione, ad esempio **Sum**. Tale funzione non può essere **RunningValue**, **RowNumber** o **Aggregate**.  
   
  *ambito*  
- (**String**) Costante di tipo stringa ovvero il nome di un set di dati, area dati o gruppo oppure valore Null (**Nothing** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) tramite cui viene specificato il contesto in cui valutare l'aggregazione. Tramite**Nothing** viene specificato il contesto più esterno, generalmente il set di dati del report.  
+ (**String**) Costante di tipo stringa ovvero il nome di un set di dati, area dati o gruppo oppure valore Null (**Nothing** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) tramite cui viene specificato il contesto in cui valutare l'aggregazione. Tramite **Nothing** viene specificato il contesto più esterno, generalmente il set di dati del report.  
   
 ## <a name="return-type"></a>Tipo restituito  
  Dipende dalla funzione di aggregazione specificata nel parametro *function* .  
@@ -47,7 +47,7 @@ RunningValue(expression, function, scope)
   
  **RunningValue** non può essere usato in un filtro o un'espressione di ordinamento.  
   
- Il set di dati per il quale il valore corrente è calcolato deve avere lo stesso tipo di dati. Per convertire dati con più tipi di dati numerici nello stesso tipo di dati, usare funzioni di conversione come **CInt**, **CDbl** o **CDec**. Per altre informazioni, vedere [Funzioni di conversione del tipo](https://go.microsoft.com/fwlink/?LinkId=96142).  
+ Il set di dati per il quale il valore corrente è calcolato deve avere lo stesso tipo di dati. Per convertire dati con più tipi di dati numerici nello stesso tipo di dati, usare funzioni di conversione come **CInt**, **CDbl** o **CDec**. Per altre informazioni, vedere [Funzioni di conversione del tipo](/dotnet/visual-basic/language-reference/functions/type-conversion-functions).  
   
  *Scope* non può essere un'espressione.  
   
@@ -57,7 +57,7 @@ RunningValue(expression, function, scope)
   
 -   Scope per le aggregazioni nidificate non può essere il nome di un set di dati.  
   
--   *Expression* non deve contenere funzioni **First**, **Last**, **Previous**o **RunningValue** .  
+-   *Expression* non deve contenere funzioni **First**, **Last**, **Previous** o **RunningValue** .  
   
 -   *Expression* non deve contenere aggregazioni nidificate che specificano *recursive*.  
   
@@ -91,5 +91,4 @@ RunningValue(expression, function, scope)
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
-  
   

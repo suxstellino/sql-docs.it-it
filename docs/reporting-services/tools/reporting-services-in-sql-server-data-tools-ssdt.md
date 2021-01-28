@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 30e7824d1519fb09a7947dde1cfdc2b818ebc144
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
-ms.translationtype: HT
+ms.openlocfilehash: 9ed7c7d204fe315280e379206d56f122606d1f03
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916587"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597305"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services in SQL Server Data Tools (SSDT)
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] è un ambiente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] per la creazione di soluzioni di Business Intelligence. SSDT vanta l'ambiente di creazione Progettazione report in cui è possibile aprire, modificare, visualizzare in anteprima, salvare e distribuire definizioni impaginate di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , origini dati condivise, set di dati condivisi e parti di report. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] non è incluso in SQL Server. Scaricare [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714). 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] è un ambiente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] per la creazione di soluzioni di Business Intelligence. SSDT vanta l'ambiente di creazione Progettazione report in cui è possibile aprire, modificare, visualizzare in anteprima, salvare e distribuire definizioni impaginate di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , origini dati condivise, set di dati condivisi e parti di report. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] non è incluso in SQL Server. Scaricare [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md). 
   
  Questo argomento descrive le soluzioni, i progetti, i modelli di progetto e le configurazioni di [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] usati per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], nonché le visualizzazioni, le barre degli strumenti e i collegamenti che è possibile usare in Progettazione report.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "86916587"
   
 -   **Creazione guidata progetto server di report.** Quando si seleziona un progetto Creazione guidata server di report, verrà creato automaticamente un progetto server di report e verrà aperta la Creazione guidata report. Nella procedura guidata è possibile creare un report seguendo le istruzioni riportate in ogni pagina per creare una stringa di connessione a un'origine dati, impostare le credenziali dell'origine dati, progettare una query, aggiungere un'area dati Tabella o Matrice, specificare i dati del report e i gruppi, selezionare uno stile di carattere e colore, pubblicare il report in un server di report e visualizzare l'anteprima del report in locale. Dopo aver creato un report con la procedura guidata, è possibile modificarne i dati e la finestra di progettazione tramite Progettazione report nel progetto server di report.  
   
- ![Nuovi modelli di progetto in SSDT](https://docs.microsoft.com/analysis-services/analysis-services/media/ssdt-biprojects.png "Nuovi modelli di progetto in SSDT")  
+ ![Nuovi modelli di progetto in SSDT](/analysis-services/analysis-services/media/ssdt-biprojects.png "Nuovi modelli di progetto in SSDT")  
   
   
 ##  <a name="report-designer-windows-and-panes"></a><a name="bkmk_ReportDesignerWindowsandPanes"></a> Finestre e riquadri Progettazione report  
@@ -94,7 +94,7 @@ ms.locfileid: "86916587"
   
  Utilizzare il riquadro Proprietà per:  
   
--   Impostare le proprietà per l'elemento attualmente selezionato nell'area di progettazione. Per alcune proprietà è disponibile un elenco a discesa di valori. È inoltre possibile digitare il valore direttamente nella cella. Alcune proprietà contengono una raccolta di valori, indicata dal valore **(Raccolta)** . La maggior parte delle proprietà accetta un'espressione. Le espressioni complesse sono indicate dal valore **\<Expression>** . Fare clic su **\<Expression>** per aprire la finestra di dialogo **Espressione**. Per altre informazioni, vedere [Finestra di dialogo Espressione](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb).  
+-   Impostare le proprietà per l'elemento attualmente selezionato nell'area di progettazione. Per alcune proprietà è disponibile un elenco a discesa di valori. È inoltre possibile digitare il valore direttamente nella cella. Alcune proprietà contengono una raccolta di valori, indicata dal valore **(Raccolta)** . La maggior parte delle proprietà accetta un'espressione. Le espressioni complesse sono indicate dal valore **\<Expression>** . Fare clic su **\<Expression>** per aprire la finestra di dialogo **Espressione**. Per altre informazioni, vedere [Finestra di dialogo Espressione](/previous-versions/sql/).  
   
 -   Utilizzare i pulsanti della barra degli strumenti del riquadro Proprietà per modificare la modalità di visualizzazione della griglia passando dalla visualizzazione per categorie alla visualizzazione in ordine alfabetico. In visualizzazione categorie può essere necessario espandere una categoria per visualizzare tutte le proprietà sottostanti. Per aprire la finestra di dialogo Proprietà di un elemento, fare clic sul pulsante delle **pagine delle proprietà** sulla barra degli strumenti oppure fare clic con il pulsante destro del mouse sull'elemento e scegliere **Proprietà**.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "86916587"
   
  Quando si visualizza l'anteprima di un report, Progettazione report si connette alle origini dati del report, esegue le query del set di dati, memorizza i dati nella cache del computer locale, elabora il report per combinare dati e layout ed esegue il rendering del report. È possibile visualizzare il report nella scheda Anteprima oppure configurare le proprietà del progetto per visualizzarlo in modalità debug e aprirlo direttamente in un browser.  
   
--   **Visualizzazione dell'anteprima dei report con parametri.** Quando si visualizza l'anteprima di un report, quest'ultimo viene automaticamente elaborato se tutti i relativi parametri includono valori predefiniti validi. Se uno o più parametri del report non includono un valore predefinito valido, è necessario scegliere un valore per ogni parametro non assegnato e quindi fare clic su **Visualizza report**sulla barra degli strumenti del report.  
+-   **Visualizzazione dell'anteprima dei report con parametri.** Quando si visualizza l'anteprima di un report, quest'ultimo viene automaticamente elaborato se tutti i relativi parametri includono valori predefiniti validi. Se uno o più parametri del report non includono un valore predefinito valido, è necessario scegliere un valore per ogni parametro non assegnato e quindi fare clic su **Visualizza report** sulla barra degli strumenti del report.  
   
 -   **Informazioni sulla cache di dati locale** Quando si visualizza l'anteprima di un report, il componente Elaborazione report esegue tutte le query per i set di dati del report usando i valori predefiniti correnti dei parametri, quindi salva i risultati come file della cache di dati locale (con estensione rdl). È possibile continuare a progettare il report senza incorrere nell'overhead associato a un nuovo recupero dei dati, se non vengono apportate modifiche alle query del set di dati o ai parametri del report.  
   
@@ -306,7 +306,7 @@ ms.locfileid: "86916587"
   
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Scaricare SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)
+[Scaricare SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)
 [Esplora soluzioni](../../ssms/solution/solution-explorer.md)   
 [Report di Reporting Services](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
 [Report Definition Language](../../reporting-services/reports/report-definition-language-ssrs.md)   

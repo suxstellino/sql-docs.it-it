@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9b263aa61d02c20f55933744449151fa7676bad1
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
-ms.translationtype: HT
+ms.openlocfilehash: 022751a3ec4b47a8e7a3a5f5295306265f659512
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544513"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98594979"
 ---
 # <a name="process-large-reports"></a>Elaborare report di grandi dimensioni
   La corretta esecuzione di report di grandi dimensioni presenta alcuni aspetti complessi e richiede determinate configurazioni. Non è consigliabile eseguire report di grandi dimensioni su richiesta, a meno che siano configurati per supportare l'impaginazione.  
@@ -32,7 +32,7 @@ ms.locfileid: "84544513"
   
  Le dimensioni dei report contenenti dati volatili possono variare in modo significativo da un'esecuzione del report all'altra. In questi casi è opportuno monitorare l'origine dei dati per stabilire gli effetti della volatilità dei dati sul report e l'eventuale necessità di eseguire la procedura indicata in questo argomento.  
   
- Per altre informazioni e suggerimenti sulla diagnosi di errori di timeout e di memoria insufficiente, vedere l'articolo [Come eseguire la diagnosi durante l'esecuzione di report nel server di report](https://go.microsoft.com/fwlink/?LinkId=85634) nel sito Web blogs.msdn.microsoft.com.  
+ Per altre informazioni e suggerimenti sulla diagnosi di errori di timeout e di memoria insufficiente, vedere l'articolo [Come eseguire la diagnosi durante l'esecuzione di report nel server di report](/archive/blogs/lukaszp/) nel sito Web blogs.msdn.microsoft.com.  
   
 ## <a name="configuration-recommendations"></a>Raccomandazioni per la configurazione  
  Per l'esecuzione, il rendering e la visualizzazione dei report sono valide le indicazioni seguenti:  
@@ -72,4 +72,4 @@ ms.locfileid: "84544513"
  [Impostare proprietà di elaborazione dei report](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Precaricare la cache (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
+ [Precaricare la cache (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md)

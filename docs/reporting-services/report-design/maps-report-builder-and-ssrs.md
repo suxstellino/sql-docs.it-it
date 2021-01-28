@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e6dde5a520b845cac47fbfd3c4820d35958c9ba
-ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
-ms.translationtype: HT
+ms.openlocfilehash: a88bd03c8dd4b545fdadf3bd809f9ce64191db79
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92907259"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596791"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mappe (Generatore report e SSRS)
   Per visualizzare i dati aziendali su uno sfondo geografico, è possibile aggiungere una mappa al report impaginato [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Il tipo di mappa da selezionare dipende da quali informazioni si desidera comunicare nel report. È possibile aggiungere una mappa che visualizza solo le posizioni, una mappa a bolle in cui le dimensioni di queste ultime variano in base al numero di unità familiari presenti in un'area, una mappa con marcatori in cui lo stile del marcatore cambia a seconda del prodotto più remunerativo per ogni negozio oppure una mappa linea che consente di visualizzare gli itinerari tra i diversi negozi.  
@@ -58,7 +58,7 @@ ms.locfileid: "92907259"
  Per visualizzare i dati su una mappa, i dati analitici e spaziali devono essere in relazione. Se i dati spaziali e i dati analitici hanno la stessa origine, la relazione è nota. Diversamente, se provengono da origini differenti, è necessario specificare i campi delle corrispondenze per correlarli.  
   
 ### <a name="spatial-data"></a>Dati spaziali  
- I dati spaziali sono costituiti da set di coordinate. I dati spaziali di un'origine dati possono essere un singolo punto, più punti, una singola linea, più linee o un set di poligoni. Ogni set di coordinate definisce un *elemento della mappa* , ad esempio un poligono che rappresenta i confini di una regione, una linea che indica una strada o un punto che identifica la posizione di una città.  
+ I dati spaziali sono costituiti da set di coordinate. I dati spaziali di un'origine dati possono essere un singolo punto, più punti, una singola linea, più linee o un set di poligoni. Ogni set di coordinate definisce un *elemento della mappa*, ad esempio un poligono che rappresenta i confini di una regione, una linea che indica una strada o un punto che identifica la posizione di una città.  
   
  I dati spaziali sono basati su uno dei seguenti sistemi di coordinate:  
   
@@ -161,7 +161,7 @@ ms.locfileid: "92907259"
   
  Per istruzioni dettagliate, vedere [Aggiungere, modificare o eliminare una mappa o un livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Per altre informazioni sulle tessere mappa, vedere la pagina relativa al [sistema a tessere di Bing Maps](https://go.microsoft.com/fwlink/?linkid=147315). Per altre informazioni sull'utilizzo delle tessere mappa di Bing nel report, vedere [Ulteriori condizioni di utilizzo](https://go.microsoft.com/fwlink/?LinkId=151371).  
+ Per altre informazioni sulle tessere mappa, vedere la pagina relativa al [sistema a tessere di Bing Maps](/bingmaps/articles/bing-maps-tile-system). Per altre informazioni sull'utilizzo delle tessere mappa di Bing nel report, vedere [Ulteriori condizioni di utilizzo](https://go.microsoft.com/fwlink/?LinkId=151371).  
   
 ##  <a name="understanding-map-layers-and-map-elements"></a><a name="MapLayers"></a> Informazioni sugli elementi e sui livelli mappa  
  Una mappa può disporre di più livelli, tre sono quelli disponibili. Ogni livello visualizza un tipo di dati spaziali:  
@@ -252,5 +252,4 @@ ms.locfileid: "92907259"
  [Aggiungere percorsi personalizzati a una mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
  [Risolvere problemi relativi ai report: Report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
-  
   

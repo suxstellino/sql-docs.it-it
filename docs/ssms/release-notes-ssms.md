@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/17/2020
-ms.openlocfilehash: 98211695d60592c8178c4b60e45f2105c3b86db4
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
-ms.translationtype: HT
+ms.openlocfilehash: 2e1d3faf6d17417ea1f4a134778ddd9342441231
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102679"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596863"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Note sulla versione per SQL Server Management Studio (SSMS)
 
@@ -46,7 +46,7 @@ SSMS 18.8 è la versione più recente di SSMS disponibile a livello generale. Se
 |----------|---------|
 | Integrazione dell'installazione di Azure Data Studio | Con SSMS viene installato anche Azure Data Studio 1.25.1. |
 | Analysis Services | Aggiunta del supporto per le aree di lavoro di Power BI Premium Gen2. |
-| Controllo | Aggiunta del supporto per EXTERNAL_MONITOR e "controllo operatore".  Per altre informazioni, vedere la [documentazione](https://docs.microsoft.com/azure/azure-sql/managed-instance/auditing-configure) di configurazione. |
+| Controllo | Aggiunta del supporto per EXTERNAL_MONITOR e "controllo operatore".  Per altre informazioni, vedere la [documentazione](/azure/azure-sql/managed-instance/auditing-configure) di configurazione. |
 | Integration Services | Miglioramento della creazione guidata del runtime di integrazione in modo che la creazione di SSISDB sia facoltativa quando si crea SSIS IR |
 
 #### <a name="bug-fixes-in-188"></a>Correzioni di bug nella versione 18.8
@@ -142,7 +142,7 @@ SSMS 18.7 è la versione più recente di SSMS disponibile a livello generale. Se
 | Procedura guidata Genera script | La procedura guidata ha esito negativo quando si tenta di enumerare gli oggetti di database in SQL Server 2014 e versioni precedenti. Vedere questa [segnalazione di un utente per SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587). | Usare SSMS 18.6 per selezionare gli oggetti nella procedura guidata di generazione script per SQL 2014 e versioni precedenti. |
 | Integration Services | Quando si importano o esportano pacchetti in Integration Services o si esportano pacchetti in Azure-SSIS Integration Runtime, gli script vanno persi per i pacchetti che contengono attività o componenti di script. | Rimuovere la cartella "C:\Programmi (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
 | Integration Services | Le connessioni remote a Integration Services possono avere esito negativo e visualizzare il messaggio "Il servizio specificato non esiste come servizio installato" in un sistema operativo più recente. | Identificare il percorso del registro di sistema correlato di Integration Services in Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID e all'interno di questi hive rinominare la chiave del registro di sistema denominata 'LocalService' in 'LocalService_A' per la versione specifica di Integration Services che si sta tentando di connettere |
-| Esplora oggetti | Le versioni di SSMS precedenti alla 18.7 presentano una modifica sostanziale in Esplora oggetti a causa delle modifiche del motore relative al [pool SQL serverless in Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | Per continuare a usare Esplora oggetti in SSMS con pool SQL serverless in Azure Synapse Analytics, è necessario SSMS 18.7 o versione successiva. |
+| Esplora oggetti | Le versioni di SSMS precedenti alla 18.7 presentano una modifica sostanziale in Esplora oggetti a causa delle modifiche del motore relative al [pool SQL serverless in Azure Synapse Analytics](/azure/synapse-analytics/sql/on-demand-workspace-overview). | Per continuare a usare Esplora oggetti in SSMS con pool SQL serverless in Azure Synapse Analytics, è necessario SSMS 18.7 o versione successiva. |
 
 ### <a name="187"></a>18,7
 

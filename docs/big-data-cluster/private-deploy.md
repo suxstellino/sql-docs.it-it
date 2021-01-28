@@ -9,12 +9,12 @@ ms.date: 08/20/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4a55d7f6c9c55891f8d1a7bf97d8834c9df4a796
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
-ms.translationtype: HT
+ms.openlocfilehash: f83c3d1e1a5bf0c9b74d058f144c4d07025c8c05
+ms.sourcegitcommit: fc24f7ecc155d97e789676fffe55e45840fcb088
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283120"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98669118"
 ---
 # <a name="deploy-bdc-in-azure-kubernetes-service-aks-private-cluster"></a>Distribuire un cluster Big Data nel cluster privato del servizio Azure Kubernetes (AKS)
 
@@ -36,7 +36,7 @@ Questa sezione illustra come distribuire un cluster Big Data nel cluster privato
 
 ## <a name="create-a-private-aks-cluster-with-advanced-networking"></a>Creare un cluster privato AKS con gestione di rete avanzata
 
-```console
+```bash
 
 export REGION_NAME=<your Azure region >
 export RESOURCE_GROUP=< your resource group name >
@@ -70,7 +70,7 @@ echo $SUBNET_ID
 
 Per eseguire il passaggio successivo, è necessario effettuare il provisioning di un cluster AKS con Load Balancer Standard, con la funzionalità cluster privato abilitata. Il comando è simile al seguente: 
 
-```console
+```bash
 az aks create \
     --resource-group $RESOURCE_GROUP \
     --name $AKS_NAME \
@@ -90,7 +90,7 @@ Dopo aver completato la distribuzione, è possibile passare al gruppo di risorse
 
 ## <a name="connect-to-an-aks-cluster"></a>Connettersi a un cluster AKS
 
-```console
+```azurecli
 az aks get-credentials -n $AKS_NAME -g $RESOURCE_GROUP
 ```
 
@@ -98,13 +98,13 @@ az aks get-credentials -n $AKS_NAME -g $RESOURCE_GROUP
 
 Dopo la connessione a un cluster AKS è possibile iniziare a distribuire il cluster Big Data, preparare la variabile di ambiente e avviare una distribuzione: 
 
-```console
+```azurecli
 azdata bdc config init --source aks-dev-test --target private-bdc-aks --force
 ```
 
 Generare e configurare il profilo di distribuzione personalizzato del cluster Big Data:
 
-```console
+```azurecli
 azdata bdc config replace -c private-bdc-aks/control.json -j "$.spec.docker.imageTag=2019-CU6-ubuntu-16.04"
 azdata bdc config replace -c private-bdc-aks/control.json -j "$.spec.storage.data.className=default"
 azdata bdc config replace -c private-bdc-aks/control.json -j "$.spec.storage.logs.className=default"
@@ -123,13 +123,13 @@ Se si [distribuisce un cluster Big Data SQL Server (SQL-BDC) con disponibilità 
 
 Nell'esempio seguente `ServiceType` viene impostato su `NodePort`.
 
-```console
+```azurecli
 azdata bdc config replace -c private-bdc-aks /bdc.json -j "$.spec.resources.master.spec.endpoints[1].serviceType=NodePort"
 ```
 
 ## <a name="deploy-bdc-in-aks-private-cluster"></a>Distribuire un cluster Big Data in un cluster privato AKS
 
-```console
+```azurecli
 export AZDATA_USERNAME=<your bdcadmin username>
 export AZDATA_PASSWORD=< your bdcadmin password>
 

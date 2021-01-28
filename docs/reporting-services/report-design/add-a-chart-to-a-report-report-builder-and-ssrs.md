@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2ba53f3fa33bdb8b0f09c13b1afa9aba9398ff87
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
-ms.translationtype: HT
+ms.openlocfilehash: 075dac12d1a4b5e393ead71da7bbf297fe40ae69
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779143"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596773"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>Aggiungere un grafico a un report (Generatore report e SSRS)
   Per riepilogare i dati in formato visivo in un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , usare un'area dati del grafico. È importante scegliere un tipo di grafico appropriato per il tipo di dati da visualizzare. Tale scelta influirà sull'interpretazione dei dati visualizzati nel grafico. Per altre informazioni, vedere [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
@@ -69,9 +69,8 @@ ms.locfileid: "84779143"
  [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Tipi di grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [Punti dati vuoti e Null nei grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Esercitazione: Aggiunta di un grafico a barre al report (Generatore report)](https://go.microsoft.com/fwlink/?LinkId=198052)   
- [Esercitazione: Aggiunta di un grafico a barre a un report (Progettazione report)](https://go.microsoft.com/fwlink/?LinkId=198042)   
- [Esercitazione: Aggiunta di un grafico a torta al report (Generatore report)](https://go.microsoft.com/fwlink/?LinkId=198051)   
- [Esercitazione: Aggiunta di un grafico a torta a un report (Progettazione report)](https://go.microsoft.com/fwlink/?LinkId=198041)  
-  
+ [Esercitazione: Aggiunta di un grafico a barre al report (Generatore report)](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
+ [Esercitazione: Aggiunta di un grafico a barre a un report (Progettazione report)](/previous-versions/sql/sql-server-2008-r2/cc281302(v=sql.105))   
+ [Esercitazione: Aggiunta di un grafico a torta al report (Generatore report)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Esercitazione: Aggiunta di un grafico a torta a un report (Progettazione report)](/previous-versions/sql/sql-server-2008-r2/cc281304(v=sql.105))  
   

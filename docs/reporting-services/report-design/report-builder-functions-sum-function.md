@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2b45a024-398d-43b8-9948-b8b23fb674c9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fe8a7c4948b811a97c2f6973a04227543a496991
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
-ms.translationtype: HT
+ms.openlocfilehash: aee605371a2473fcaca096ec23e1e070ca8f0b19
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364423"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595936"
 ---
 # <a name="report-builder-functions---sum-function"></a>Funzioni di Generatore report - Funzione Sum
   Restituisce la somma di tutti i valori numerici non Null specificati dall'espressione, valutata nell'ambito specificato.  
@@ -31,19 +31,19 @@ Sum(expression, scope, recursive)
   
 #### <a name="parameters"></a>Parametri  
  *expression*  
- ( **Integer** o **Float** ) Espressione su cui eseguire l'aggregazione.  
+ (**Integer** o **Float**) Espressione su cui eseguire l'aggregazione.  
   
  *ambito*  
- ( **String** ) Facoltativo. Nome di un set di dati, gruppo o area dati che contiene gli elementi del report a cui applicare la funzione di aggregazione. Se si omette *scope* , viene usato l'ambito corrente.  
+ (**String**) Facoltativo. Nome di un set di dati, gruppo o area dati che contiene gli elementi del report a cui applicare la funzione di aggregazione. Se si omette *scope* , viene usato l'ambito corrente.  
   
  *ricorsivi*  
- ( **Enumerated Type** ) Facoltativo. **Simple** (impostazione predefinita) o **RdlRecursive**. Specifica se eseguire l'aggregazione in modo ricorsivo.  
+ (**Enumerated Type**) Facoltativo. **Simple** (impostazione predefinita) o **RdlRecursive**. Specifica se eseguire l'aggregazione in modo ricorsivo.  
   
 ## <a name="return-type"></a>Tipo restituito  
  Restituisce un valore **Decimal** per le espressioni decimali e un valore **Double** per tutte le altre espressioni.  
   
 ## <a name="remarks"></a>Osservazioni  
- Il set di dati specificato nell'espressione deve essere dello stesso tipo di dati. Per convertire dati con più tipi di dati numerici nello stesso tipo di dati, usare funzioni di conversione come **CInt** , **CDbl** o **CDec**. Per altre informazioni, vedere [Funzioni di conversione del tipo](https://go.microsoft.com/fwlink/?LinkId=96142).  
+ Il set di dati specificato nell'espressione deve essere dello stesso tipo di dati. Per convertire dati con più tipi di dati numerici nello stesso tipo di dati, usare funzioni di conversione come **CInt**, **CDbl** o **CDec**. Per altre informazioni, vedere [Funzioni di conversione del tipo](/dotnet/visual-basic/language-reference/functions/type-conversion-functions).  
   
  Il valore di *scope* deve essere una costante di tipo stringa e non può essere un'espressione. Per aggregazioni o aggregazioni esterne che non specificano altre aggregazioni, *scope* deve fare riferimento all'ambito corrente o a un ambito contenitore. Per le aggregazioni di aggregazioni, le aggregazioni nidificate possono specificare un ambito figlio.  
   
@@ -53,7 +53,7 @@ Sum(expression, scope, recursive)
   
 -   *Scope* per le aggregazioni nidificate non può essere il nome di un set di dati.  
   
--   *Expression* non deve contenere funzioni **First** , **Last** , **Previous** o **RunningValue** .  
+-   *Expression* non deve contenere funzioni **First**, **Last**, **Previous** o **RunningValue** .  
   
 -   *Expression* non deve contenere aggregazioni nidificate che specificano *recursive*.  
   
@@ -84,5 +84,4 @@ Sum(expression, scope, recursive)
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
-  
   

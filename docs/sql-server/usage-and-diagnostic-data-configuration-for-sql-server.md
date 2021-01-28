@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 76ffe524200c2f8df136074bc089b13e7404d6bd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
-ms.translationtype: HT
+ms.openlocfilehash: 6580e33a824807312fb7f2d37d5cab893dbab2a9
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902057"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596524"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>Configurare la raccolta di dati di diagnostica e utilizzo per SQL Server (Analisi utilizzo software)
 
@@ -50,7 +50,7 @@ Tenere presente che questo processo è incentrato sui meccanismi necessari per o
 - Uso dell'applicazione Segnalazione errori e utilizzo funzionalità
 - Impostazione di sottochiavi del Registro di sistema nel server
 
-Per SQL Server in Linux, fare riferimento a [Customer Feedback for SQL Server on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-customer-feedback) (Commenti e suggerimenti dei clienti per SQL Server in Linux)
+Per SQL Server in Linux, fare riferimento a [Customer Feedback for SQL Server on Linux](../linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md) (Commenti e suggerimenti dei clienti per SQL Server in Linux)
 
 > [!NOTE]
 > È possibile disabilitare l'invio di informazioni a Microsoft solo nelle versioni a pagamento di SQL Server.
@@ -66,7 +66,7 @@ Per rifiutare esplicitamente la raccolta di dati, vedere [Attivazione o disattiv
 Dopo l'installazione, l'impostazione per la raccolta dei dati di diagnostica e di utilizzo per i componenti e le istanze di SQL Server può essere modificata tramite l'applicazione Segnalazione errori e utilizzo funzionalità. L'applicazione è disponibile come parte dell'installazione di SQL Server. Questo strumento consente a ogni istanza di SQL Server di configurare un'impostazione specifica per i report di utilizzo.
 
 > [!NOTE]
-> L'applicazione Segnalazione errori e utilizzo funzionalità è inclusa nell'elenco Strumenti di configurazione di SQL Server. È possibile usare questo strumento per gestire le preferenze per la raccolta dei dati di segnalazione errori e di utilizzo e diagnostica, come in SQL Server 2017. La raccolta dei dati di segnalazione errori è separata dalla raccolta dei dati di utilizzo e diagnostica, pertanto può essere attivata o disattivata indipendentemente dalla raccolta dei dati di utilizzo e diagnostica. La funzionalità di segnalazione errori raccoglie dump di arresto anomalo del sistema che vengono inviati a Microsoft e che possono contenere informazioni riservate, come indicato nell'[informativa sulla privacy](https://go.microsoft.com/fwlink/?LinkID=868444).
+> L'applicazione Segnalazione errori e utilizzo funzionalità è inclusa nell'elenco Strumenti di configurazione di SQL Server. È possibile usare questo strumento per gestire le preferenze per la raccolta dei dati di segnalazione errori e di utilizzo e diagnostica, come in SQL Server 2017. La raccolta dei dati di segnalazione errori è separata dalla raccolta dei dati di utilizzo e diagnostica, pertanto può essere attivata o disattivata indipendentemente dalla raccolta dei dati di utilizzo e diagnostica. La funzionalità di segnalazione errori raccoglie dump di arresto anomalo del sistema che vengono inviati a Microsoft e che possono contenere informazioni riservate, come indicato nell'[informativa sulla privacy](./sql-server-privacy.md).
 
 Per avviare Segnalazione errori e utilizzo funzionalità di SQL Server, fare clic o toccare **Start** e quindi cercare "Errore" nella casella di ricerca. Verrà visualizzato l'elemento Segnalazione errori e utilizzo funzionalità di SQL Server. Dopo avere avviato lo strumento, è possibile gestire i dati di utilizzo e diagnostica, così come gli errori gravi raccolti per le istanze e i componenti installati nel computer.
 
@@ -144,7 +144,7 @@ La procedura per attivare o disattivare questa funzionalità dipende dalla versi
  
 - Windows Server 2016 e Windows 10
 
-    [Configurare i dati di diagnostica di Windows nell'organizzazione](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
+    [Configurare i dati di diagnostica di Windows nell'organizzazione](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 - Windows Server 2008 R2 e Windows 7
 
     [WER Settings](/windows/desktop/wer/wer-settings) (Impostazioni di segnalazione errori Windows)

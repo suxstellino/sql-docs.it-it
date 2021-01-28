@@ -16,12 +16,12 @@ ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: cawrites
 ms.author: chadam
 robots: noindex,nofollow
-ms.openlocfilehash: 8a136b1158f31cf6369bb29f404f4f6f58d6901c
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 08b7d5d8c1680be42902fe287c14418b2732f7f9
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172413"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595438"
 ---
 # <a name="installation-wizard-help"></a>Guida dell'Installazione guidata
 
@@ -119,11 +119,11 @@ Se si installa [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], ac
 **Specificare gli amministratori**: è necessario specificare almeno un amministratore del server per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli utenti o i gruppi specificati diventano membri del ruolo di amministratore del server dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che viene installata. Tali membri devono essere account utente di dominio Windows nello stesso dominio del computer in cui viene installato il software.  
   
 > [!NOTE]  
-> Controllo dell'account utente è una caratteristica di sicurezza di Windows che richiede a un amministratore di approvare in modo specifico azioni o applicazioni amministrative prima di poterle eseguire. Poiché Controllo dell'account utente è attivato per impostazione predefinita, verrà richiesto di consentire operazioni specifiche che necessitano di privilegi elevati. È possibile configurare Controllo dell'account utente per modificare il comportamento predefinito oppure è possibile personalizzarlo per programmi specifici. Per altre informazioni su Controllo dell'account utente e sulla relativa configurazione, vedere [Guida dettagliata su Controllo dell'account utente in Windows](https://go.microsoft.com/fwlink/?linkid=196350) e [Controllo dell'account utente (Wikipedia)](https://go.microsoft.com/fwlink/?linkid=196351).  
+> Controllo dell'account utente è una caratteristica di sicurezza di Windows che richiede a un amministratore di approvare in modo specifico azioni o applicazioni amministrative prima di poterle eseguire. Poiché Controllo dell'account utente è attivato per impostazione predefinita, verrà richiesto di consentire operazioni specifiche che necessitano di privilegi elevati. È possibile configurare Controllo dell'account utente per modificare il comportamento predefinito oppure è possibile personalizzarlo per programmi specifici. Per altre informazioni su Controllo dell'account utente e sulla relativa configurazione, vedere [Guida dettagliata su Controllo dell'account utente in Windows](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc709691(v=ws.10)) e [Controllo dell'account utente (Wikipedia)](https://go.microsoft.com/fwlink/?linkid=196351).  
   
 ### <a name="see-also"></a>Vedere anche
   
-* [Configurare gli account del servizio &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/configure-service-accounts-analysis-services)
+* [Configurare gli account del servizio &#40;Analysis Services&#41;](/analysis-services/instances/configure-service-accounts-analysis-services)
 * [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 
 ## <a name="analysis-services-configuration---data-directories-page"></a>Pagina Configurazione di Analysis Services - Directory dati
@@ -191,7 +191,7 @@ Le directory predefinite della tabella seguente sono configurabili dall'utente d
 #### <a name="see-also"></a>Vedere anche
 
 * Per altre informazioni sulle directory, sui percorsi dei file e sulla denominazione degli ID delle istanze, vedere [Percorsi dei file per le istanze predefinite e denominate di SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md)  
-* [Autorizzazioni NTFS e di condivisione per un file server](https://docs.microsoft.com/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)
+* [Autorizzazioni NTFS e di condivisione per un file server](/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)
 
 ## <a name="database-engine-configuration---server-configuration-page"></a>Pagina <a name="serverconfig"></a> Configurazione del motore di database - Configurazione del server
 
@@ -410,7 +410,7 @@ Al file server SMB si applicano le indicazioni seguenti:
 ### <a name="see-also"></a>Vedere anche
 
 * [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)
-* [Autorizzazioni NTFS e di condivisione per un file server](https://docs.microsoft.com/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)  
+* [Autorizzazioni NTFS e di condivisione per un file server](/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)  
 
 <!--
 The MaxDOP setting applies only to SQL Server 2019 and later.

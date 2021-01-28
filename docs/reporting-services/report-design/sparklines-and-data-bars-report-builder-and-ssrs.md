@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6c7721b8b5002c104ff5076b3b0d1c9bc8219fba
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
-ms.translationtype: HT
+ms.openlocfilehash: b8eb3019b347427b2b24a8fb48083a77935f75f8
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84880721"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595155"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>Grafici sparkline e barre dei dati (Generatore report e SSRS)
   I grafici sparkline e le barre dei dati sono grafici semplici e di piccole dimensioni contenenti numerose informazioni in uno spazio ridotto, spesso in linea con il testo.   
@@ -26,7 +26,7 @@ ms.locfileid: "84880721"
   
  ![rs_SparklineExample](../../reporting-services/report-design/media/rs-sparklineexample.gif "rs_SparklineExample")  
   
- Per una rapida introduzione ai grafici sparkline, vedere [Esercitazione: Aggiungere un grafico sparkline al report &#40;Generatore report&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) e i video [Procedura: Creazione di un grafico sparkline in una tabella](https://go.microsoft.com/fwlink/?LinkId=197092) e [Grafici di tipo sparkline, grafici a barre e indicatori in Generatore report](https://technet.microsoft.com/bi/video/ff877165) .  
+ Per una rapida introduzione ai grafici sparkline, vedere [Esercitazione: Aggiungere un grafico sparkline al report &#40;Generatore report&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) e i video [Procedura: Creazione di un grafico sparkline in una tabella](/SharePoint/sharepoint-server) e [Grafici di tipo sparkline, grafici a barre e indicatori in Generatore report](/previous-versions/dn912438(v=msdn.10)) .  
   
 > [!NOTE]  
 >  È possibile pubblicare grafici sparkline e barre dei dati con tabella, matrice o elenco padri corrispondenti separatamente da un report come parte del report. Altre informazioni su [Parti del report](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -104,5 +104,4 @@ ms.locfileid: "84880721"
 ## <a name="see-also"></a>Vedere anche  
  [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Esercitazione: Aggiungere un grafico sparkline al report &#40;Generatore report&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)   
-  
   

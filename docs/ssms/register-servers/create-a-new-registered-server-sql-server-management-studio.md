@@ -16,18 +16,18 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 9bdbf68766e6c271f17254afc4262de341deaeb3
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
-ms.translationtype: HT
+ms.openlocfilehash: da735323071b83aaee96c5699ef3f727fb7744f7
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037597"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765930"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Creazione di un nuovo server registrato (SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-In questo argomento viene illustrato come salvare le informazioni di connessione per i server ai quali si accede di frequente, registrando il server nel componente Server registrati di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. La registrazione di un server può essere eseguita prima della connessione o durante la connessione da Esplora oggetti. È disponibile un comando di menu speciale che consente di registrare le istanze del server nel computer locale.  
+In questo argomento viene illustrato come salvare le informazioni di connessione per i server ai quali si accede di frequente, registrando il server nel componente Server registrati di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. La registrazione di un server può essere eseguita prima della connessione o durante la connessione da Esplora oggetti. È disponibile un comando di menu speciale che consente di registrare le istanze del server nel computer locale.  
   
  Esistono due tipi di server registrati:  
   
@@ -53,7 +53,7 @@ In questo argomento viene illustrato come salvare le informazioni di connessione
 1.  Se il componente Server registrati non è visibile in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], scegliere **Server registrati** dal menu **Visualizza**.  
   
      **Tipo di server**  
-     Per la registrazione di un server da Server registrati, la casella **Tipo di server** è di sola lettura e corrisponde al tipo di server visualizzato nel riquadro Server registrati. Per registrare un tipo diverso di server, fare clic su **Motore di database**, **Analysis Server**, **Reporting Services**o **Integration Services** o sulla barra degli strumenti **Server registrati** prima di avviare la registrazione di un nuovo server.  
+     Per la registrazione di un server da Server registrati, la casella **Tipo di server** è di sola lettura e corrisponde al tipo di server visualizzato nel riquadro Server registrati. Per registrare un tipo diverso di server, fare clic su **Motore di database**, **Analysis Server**, **Reporting Services** o **Integration Services** o sulla barra degli strumenti **Server registrati** prima di avviare la registrazione di un nuovo server.  
   
      **Nome server**  
      Selezionare l'istanza del server da registrare nel formato: *\<servername>* [\\ *\<instancename>* ].  
@@ -71,7 +71,7 @@ In questo argomento viene illustrato come salvare le informazioni di connessione
     >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] Per altre informazioni, vedere [Scegliere una modalità di autenticazione](../../relational-databases/security/choose-an-authentication-mode.md).  
   
      **Nome utente**  
-     Consente di visualizzare il nome utente utilizzato dalla connessione corrente. Questa opzione di sola lettura è disponibile solo se si è scelto di utilizzare l'autenticazione di Windows per la connessione. Per modificare il **Nome utente**connettersi al computer come utente diverso.  
+     Consente di visualizzare il nome utente utilizzato dalla connessione corrente. Questa opzione di sola lettura è disponibile solo se si è scelto di utilizzare l'autenticazione di Windows per la connessione. Per modificare il **Nome utente** connettersi al computer come utente diverso.  
   
      **Accesso**  
      Immettere l'account di accesso da utilizzare per la connessione. Questa opzione è disponibile solo se si è scelto di utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la connessione.  
@@ -102,7 +102,7 @@ In questo argomento viene illustrato come salvare le informazioni di connessione
   
  Per eseguire query su tutti i server in un gruppo di server locali, fare clic con il pulsante destro del mouse sul gruppo di server, scegliere **Connetti** e fare clic su **Nuova query**. Quando le query vengono eseguite nella nuova finestra dell'editor di query, verranno eseguite su tutti i server del gruppo, utilizzando le informazioni di connessione archiviate, incluso il contesto di autenticazione dell'utente. I server registrati tramite l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ma che non salvano la password non riusciranno a connettersi.  
   
- Per eseguire query su tutti i server registrati con un server di gestione centrale, espandere il server di gestione centrale, fare clic con il pulsante destro del mouse sul gruppo di server, scegliere **Connetti**e fare clic su **Nuova query**. Quando le query vengono eseguite nella nuova finestra Editor query, verranno eseguite su tutti i server del gruppo, utilizzando le informazioni di connessione archiviate e il contesto di autenticazione di Windows dell'utente.  
+ Per eseguire query su tutti i server registrati con un server di gestione centrale, espandere il server di gestione centrale, fare clic con il pulsante destro del mouse sul gruppo di server, scegliere **Connetti** e fare clic su **Nuova query**. Quando le query vengono eseguite nella nuova finestra Editor query, verranno eseguite su tutti i server del gruppo, utilizzando le informazioni di connessione archiviate e il contesto di autenticazione di Windows dell'utente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Nascondere oggetti di sistema in Esplora oggetti](../object/hide-system-objects-in-object-explorer.md)   

@@ -9,12 +9,12 @@ ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b929bd76f77f021fbc1821811beb7e86be8edd2e
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
-ms.translationtype: HT
+ms.openlocfilehash: 20953eb151912f6eddf1e3ea0e13d34f3835e7d6
+ms.sourcegitcommit: 3e2421ae45a8e9fa57fb590a5d1a5566721ea74a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235673"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98921402"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configurare un'istanza del cluster di failover - iSCSI - SQL Server in Linux
 
@@ -58,7 +58,7 @@ Per altre informazioni sull'iniziatore iSCSI per le distribuzioni supportate, fa
 
     Vedere l'esempio seguente:
 
-    ![Screenshot del file con i file completamente compilati.][2]
+    ![Screenshot del file con i valori completamente compilati.][2]
 
 3.  Trovare la destinazione iSCSI.
 

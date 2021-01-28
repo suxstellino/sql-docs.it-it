@@ -9,18 +9,17 @@ dev_langs:
 - XML
 helpviewer_keywords:
 - DTAXML element
-ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 9dd7f40c3cfbac8739caacc10eb821fcd8b8845b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 8d82b1d9198946d9ef7c14e80d443d151a7154d3
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785994"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98812868"
 ---
 # <a name="dtaxml-element-dta"></a>Elemento DTAXML (DTA)
 
@@ -62,7 +61,7 @@ L'elemento radice di un file di input o di output XML di Ottimizzazione guidata 
 |**Elementi figlio**|[Elemento DTAInput &#40;DTA&#41;](../../tools/dta/dtainput-element-dta.md)<br /><br /> Elemento **DTAOutput**. Per informazioni, vedere [Database Engine Tuning Advisor XML schema](https://schemas.microsoft.com/sqlserver/) (Schema XML dell'Ottimizzazione guidata motore di database).|  
   
 ## <a name="remarks"></a>Osservazioni  
- Per ulteriori informazioni sugli spazi dei nomi XML, vedere [Spazi dei nomi in un documento XML](https://go.microsoft.com/fwlink/?LinkId=7341) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN Library.  
+ Per ulteriori informazioni sugli spazi dei nomi XML, vedere [spazi dei nomi in un documento XML](/dotnet/standard/data/xml/managing-namespaces-in-an-xml-document). 
   
 ## <a name="example"></a>Esempio  
  Per esempi di elementi **DTAXML** tipici, vedere [Esempi di file di input XML &#40;DTA&#41;](../../tools/dta/xml-input-file-samples-dta.md).  
@@ -70,5 +69,4 @@ L'elemento radice di un file di input o di output XML di Ottimizzazione guidata 
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)   
  [Avviare e usare Ottimizzazione guidata motore di database](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)  
-  
   

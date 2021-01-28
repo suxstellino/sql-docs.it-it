@@ -19,12 +19,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: sstein
 ms.date: 03/13/2018
-ms.openlocfilehash: 9d8d86fbe427b232831fa3713b94f067e0089a4b
-ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
-ms.translationtype: HT
+ms.openlocfilehash: 2607b029389d0a0d3f4b59e55e031b768baf4aac
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92638939"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597247"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>Creare script per oggetti in SQL Server Management Studio
 
@@ -37,7 +37,7 @@ In questa esercitazione viene illustrato come generare script Transact-SQL (T-SQ
 > * Stored procedure
 > * Eventi estesi
 
-Per creare lo script per un oggetto in **Esplora oggetti** , fare clic con il pulsante destro del mouse su di esso e scegliere l'opzione **Script Object As** (Crea script per oggetto). Questa esercitazione illustra il processo.
+Per creare lo script per un oggetto in **Esplora oggetti**, fare clic con il pulsante destro del mouse su di esso e scegliere l'opzione **Script Object As** (Crea script per oggetto). Questa esercitazione illustra il processo.
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -59,13 +59,13 @@ Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripris
 
 2. Espandere il nodo di **Database** .
 
-3. Fare clic con il pulsante destro del mouse sul database **Adventureworks2016** > **Attività** > **Backup** :
+3. Fare clic con il pulsante destro del mouse sul database **Adventureworks2016** > **Attività** > **Backup**:
 
     ![Eseguire il backup del database](media/scripting-ssms/backupdb.png)
 
 4. Configurare il backup in base alle preferenze. Per questa esercitazione, sono stati lasciati tutti i valori predefiniti. Tutte le modifiche apportate nella finestra si riflettono tuttavia nello script. 
 
-5. Selezionare **Script** > **Genera script azione in nuova finestra Query** :
+5. Selezionare **Script** > **Genera script azione in nuova finestra Query**:
 
     ![Generare lo script per il backup del database - Generare lo script dell'azione](media/scripting-ssms/scriptdbbackup.PNG)
 6. Esaminare il codice T-SQL compilato nella finestra della query.
@@ -75,15 +75,15 @@ Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripris
 
 ### <a name="script-t-sql-when-you-shrink-the-transaction-log"></a>Generare script T-SQL quando si compatta il log delle transazioni
 
-1. Fare clic con il pulsante destro del mouse sul database **AdventureWorks2016** > **Attività** > **Compatta** > **File** :
+1. Fare clic con il pulsante destro del mouse sul database **AdventureWorks2016** > **Attività** > **Compatta** > **File**:
 
      ![Compattare file](media/scripting-ssms/shrinkfiles.png)
 
-2. Selezionare **Log** nell'elenco a discesa **Tipo file** :
+2. Selezionare **Log** nell'elenco a discesa **Tipo file**:
 
     ![Compattare il log delle transazioni](media/scripting-ssms/shrinktlog.png)
 
-3. Selezionare **Script** e quindi **Genera script azione negli Appunti** :
+3. Selezionare **Script** e quindi **Genera script azione negli Appunti**:
 
     ![Genera script negli Appunti](media/scripting-ssms/scriptactiontoclipboard.png)
 
@@ -103,7 +103,7 @@ Nella sezione seguente viene illustrato come generare uno script per un database
 
 2. Espandere il nodo di **Database** .
 
-3. Fare clic con il pulsante destro del mouse sul database **AdventureWorks2016** > **Crea script per database** > **Genera codice per istruzione CREATE in** > **Nuova finestra editor di query** :
+3. Fare clic con il pulsante destro del mouse sul database **AdventureWorks2016** > **Crea script per database** > **Genera codice per istruzione CREATE in** > **Nuova finestra editor di query**:
 
     ![Creare lo script per il database](media/scripting-ssms/scriptdb.png)
 
@@ -125,7 +125,7 @@ Nella sezione seguente viene illustrato come generare uno script per un database
 
 2. Espandere il nodo di **Database** .
 
-3. Fare clic con il pulsante destro del mouse su **AdventureWorks2016** > **Attività** > **Genera script** :
+3. Fare clic con il pulsante destro del mouse su **AdventureWorks2016** > **Attività** > **Genera script**:
 
     ![Generare script per i database](media/scripting-ssms/generatescriptsfordb.png)
 
@@ -133,7 +133,7 @@ Nella sezione seguente viene illustrato come generare uno script per un database
 
     ![Generare script per oggetti](media/scripting-ssms/scriptobjects.png)
 
-5. Selezionare **Avanti** per aprire la pagina **Imposta opzioni di generazione script** , in cui è possibile configurare la posizione in cui salvare lo script e alcune altre opzioni avanzate. 
+5. Selezionare **Avanti** per aprire la pagina **Imposta opzioni di generazione script**, in cui è possibile configurare la posizione in cui salvare lo script e alcune altre opzioni avanzate. 
 
     a. Selezionare **Salva in una nuova finestra Query**.
 
@@ -148,9 +148,9 @@ Nella sezione seguente viene illustrato come generare uno script per un database
    > [!NOTE]
    > È possibile creare lo script di dati per il database quando si seleziona *Schema e dati* per l'opzione **Tipi di dati per cui generare lo script**. Non è tuttavia l'ideale con database di grandi dimensioni perché può richiedere più memoria di quanta ne possa essere allocata da SSMS. Questa limitazione è accettabile per i database di piccole dimensioni. Per spostare i dati per un database di dimensioni maggiori, usare l[Importazione/Esportazione guidata](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
-6. Selezionare **OK** , quindi **Avanti**.
+6. Selezionare **OK**, quindi **Avanti**.
 
-7. Selezionare **Avanti** nel **riepilogo** , quindi selezionare nuovamente **Avanti** per generare lo script in una finestra **Nuova query**.
+7. Selezionare **Avanti** nel **riepilogo**, quindi selezionare nuovamente **Avanti** per generare lo script in una finestra **Nuova query**.
 
 8. Aprire la finestra di dialogo **Trova** premendo CTRL+F. Selezionare la freccia verso il basso per aprire l'opzione **Sostituzione**. Nella riga superiore **Trova** immettere *AdventureWorks2016*. Nella riga inferiore **Sostituisci** immettere *AdventureWorks2016b*.
 
@@ -172,7 +172,7 @@ In questa sezione viene illustrato come generare script di tabelle dal database.
 
 4. Espandere il nodo **Tabelle**.
 
-5. Fare clic con il pulsante destro del mouse su **dbo.ErrorLog** > **Crea script per tabella** > **Genera codice per istruzioni DROP e CREATE in** > **Nuova finestra editor di query** :
+5. Fare clic con il pulsante destro del mouse su **dbo.ErrorLog** > **Crea script per tabella** > **Genera codice per istruzioni DROP e CREATE in** > **Nuova finestra editor di query**:
 
     ![Creare script per tabella](media/scripting-ssms/scripttable.png)
 
@@ -193,7 +193,7 @@ In questa sezione viene illustrato come eliminare e creare una stored procedure.
 
 4. Espandere il nodo **Stored procedure**.
 
-5. Fare clic con il pulsante destro del mouse sulla stored procedure **dbo.uspGetBillOfMaterials** > **Crea script per stored procedure** > **Genera codice per istruzioni DROP e CREATE in** > **Nuova finestra editor di query** :
+5. Fare clic con il pulsante destro del mouse sulla stored procedure **dbo.uspGetBillOfMaterials** > **Crea script per stored procedure** > **Genera codice per istruzioni DROP e CREATE in** > **Nuova finestra editor di query**:
 
     ![Generare script per stored procedure](media/scripting-ssms/script-stored-procedure.png)
 
@@ -209,7 +209,7 @@ In questa sezione viene illustrato come inserire nello script gli [eventi estesi
 
 4. Espandere il nodo **Sessioni**.
 
-5. Fare clic con il pulsante destro del mouse sulla sessione estesa di interesse in > **Crea script per sessione** > **Genera codice per istruzione CREATE in** > **Nuova finestra editor di query** :
+5. Fare clic con il pulsante destro del mouse sulla sessione estesa di interesse in > **Crea script per sessione** > **Genera codice per istruzione CREATE in** > **Nuova finestra editor di query**:
 
     ![Sessione estesa di Nuova finestra editor di query](media/scripting-ssms/scriptxevents.png)
 
@@ -226,7 +226,7 @@ In questa sezione viene illustrato come inserire nello script gli [eventi estesi
 
 Il modo migliore per acquisire familiarità con SSMS è la pratica diretta. Questa *esercitazione* e questi articoli di *procedure* sono utili per varie funzionalità disponibili in SSMS. Questi articoli illustrano come gestire i componenti di SSMS e individuare le funzionalità usate regolarmente.
 
-* [Connettersi ed eseguire query su un'istanza](../quickstarts/connect-query-sql-server.md)
+* [Connettersi ed eseguire query su un'istanza](../quickstarts/ssms-connect-query-sql-server.md)
 * [Uso di modelli in SSMS](../template/templates-ssms.md)
 * [Configurazione di SSMS](ssms-configuration.md)
 * [Suggerimenti e consigli per l'uso di SSMS](ssms-tricks.md)

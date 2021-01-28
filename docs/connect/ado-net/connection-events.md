@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 8151915dc6c16c6225fec9ab90cb5a88e86b992f
-ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
-ms.translationtype: HT
+ms.openlocfilehash: 3fb13f3cc163bb157f418d3bda99e0173d81b842
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2020
-ms.locfileid: "97771445"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596008"
 ---
 # <a name="connection-events"></a>Eventi di connessione
 
@@ -34,7 +34,7 @@ Il provider di dati Microsoft SqlClient per SQL Server presenta oggetti relativi
 
 ## <a name="work-with-the-infomessage-event"></a>Usare l'evento InfoMessage
 
-È possibile recuperare avvisi e messaggi informativi da un'origine dati SQL Server usando l'evento <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> dell'oggetto <xref:Microsoft.Data.SqlClient.SqlConnection>. Gli errori restituiti da un'origine dati con un livello di gravità compreso tra 11 e 16 generano un'eccezione. Tuttavia, l'evento <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> consente di ottenere dall'origine dati i messaggi che non sono associati a un errore. Nel caso di Microsoft SQL Server i messaggi di errore con una gravità uguale o minore di 10 sono considerati informativi e vengono acquisiti usando l'evento <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage>. Per altre informazioni, vedere l'articolo [Gravità degli errori del motore di database](/sql/relational-databases/errors-events/database-engine-error-severities).
+È possibile recuperare avvisi e messaggi informativi da un'origine dati SQL Server usando l'evento <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> dell'oggetto <xref:Microsoft.Data.SqlClient.SqlConnection>. Gli errori restituiti da un'origine dati con un livello di gravità compreso tra 11 e 16 generano un'eccezione. Tuttavia, l'evento <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> consente di ottenere dall'origine dati i messaggi che non sono associati a un errore. Nel caso di Microsoft SQL Server i messaggi di errore con una gravità uguale o minore di 10 sono considerati informativi e vengono acquisiti usando l'evento <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage>. Per altre informazioni, vedere l'articolo [Gravità degli errori del motore di database](../../relational-databases/errors-events/database-engine-error-severities.md).
 
 L'evento <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> riceve un oggetto <xref:Microsoft.Data.SqlClient.SqlInfoMessageEventArgs> che contiene, nella proprietà **Errori**, una raccolta di messaggi dall'origine dati. È possibile eseguire una query negli oggetti **Errore** di questa raccolta per ottenere il numero dell'errore, il testo del messaggio e l'origine dell'errore. Il provider di dati Microsoft SqlClient per SQL Server include anche i dettagli sul database, sulla stored procedure e sul numero di riga da cui proviene il messaggio.
 

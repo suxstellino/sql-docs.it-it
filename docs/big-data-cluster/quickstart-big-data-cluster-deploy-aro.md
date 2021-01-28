@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c5889a9411c54312dd52ee1a5e9f2b7917da6838
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 9f2a96afd598a4a16ad4683f6ed096032f9b8091
+ms.sourcegitcommit: fc24f7ecc155d97e789676fffe55e45840fcb088
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97637471"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98669120"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-red-hat-openshift-aro"></a>Usare uno script Python per distribuire cluster Big Data di SQL Server in Azure Red Hat OpenShift (ARO)
 
@@ -44,7 +44,7 @@ La distribuzione predefinita di cluster Big Data usata in questo articolo è cos
 
 Lo script usa l'interfaccia della riga di comando di Azure per automatizzare la creazione di un cluster di ARO. Prima di eseguire lo script, è necessario accedere almeno una volta al proprio account Azure con l'interfaccia della riga di comando di Azure. Al prompt dei comandi eseguire il comando seguente.
 
-```terminal
+```azurecli
 az login
 ```
 
@@ -58,7 +58,7 @@ az login
 
 1. Eseguire lo script usando quanto segue:
 
-```terminal
+```console
 python deploy-sql-big-data-aro.py
 ```
 
@@ -82,7 +82,7 @@ Se si sta testando [!INCLUDE[big-data-clusters-2019](../includes/ssbigdatacluste
 
 Eseguire il comando dell'interfaccia della riga di comando di Azure seguente per rimuovere il cluster Big Data e il servizio ARO in Azure (sostituire `<resource group name>` con il **gruppo di risorse di Azure** specificato nello script di distribuzione):
 
-```terminal
+```azurecli
 az group delete -n <resource group name>
 ```
 

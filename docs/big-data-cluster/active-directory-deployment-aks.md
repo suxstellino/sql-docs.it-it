@@ -9,16 +9,16 @@ ms.date: 11/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3f6b3ce5f6a594e5be385ee1f7ea7d1c03c1f92a
-ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
-ms.translationtype: HT
+ms.openlocfilehash: 4b11cef91203a9c7939d4d044220283db378e296
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94632948"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595628"
 ---
 # <a name="deploy-sql-server-big-data-clusters-in-ad-mode-on-azure-kubernetes-services-aks"></a>Distribuire cluster Big Data di SQL Server in modalità AD nei servizi Azure Kubernetes (AKS)
 
-I cluster Big Data di SQL Server supportano la [modalità di distribuzione Active Directory (AD)](deploy-active-directory.md) per la **gestione delle identità e degli accessi (IAM)** . La gestione delle identità e degli accessi per il **servizio Azure Kubernetes** si è rilevata complicata perché i protocolli standard del settore come OAuth 2.0 e OpenID Connect, ampiamente supportati dalla piattaforma per la gestione delle identità Microsoft, non sono supportati da SQL Server.  
+I cluster Big Data di SQL Server supportano la [modalità di distribuzione Active Directory (AD)](./active-directory-prerequisites.md) per la **gestione delle identità e degli accessi (IAM)** . La gestione delle identità e degli accessi per il **servizio Azure Kubernetes** si è rilevata complicata perché i protocolli standard del settore come OAuth 2.0 e OpenID Connect, ampiamente supportati dalla piattaforma per la gestione delle identità Microsoft, non sono supportati da SQL Server.  
 
 Questo articolo illustra come distribuire un cluster Big Data in modalità AD durante la distribuzione nel [servizio Azure Kubernetes](/azure/aks/intro-kubernetes). 
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c4bbc8f1c5b96f659936cb955c1f6f31bd0ef0da
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
-ms.translationtype: HT
+ms.openlocfilehash: b6ca1df39a5aeed8b57de5c6eff7ab66e725062d
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91933445"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596535"
 ---
 # <a name="xml-connection-type-ssrs"></a>Tipo di connessione XML (SSRS)
   Per includere dati nel report da un'origine dati XML, è necessario disporre di un set di dati basato su un'origine dati del report di tipo XML. Questo tipo di origine dati incorporato è basato sull'estensione per i dati XML. Utilizzare questo tipo di origine dati per connettersi e recuperare dati da documenti XML, servizi Web o valori XML incorporati nella query.  
@@ -116,7 +116,7 @@ ms.locfileid: "91933445"
   
  Per altre informazioni sulla sintassi delle query, vedere [Sintassi di XML Query per i dati del report XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).  
   
- Per gli esempi, vedere [Reporting Services: uso di origini dati XML e servizio Web](https://go.microsoft.com/fwlink/?LinkId=81654).  
+ Per gli esempi, vedere [Reporting Services: uso di origini dati XML e servizio Web](/previous-versions/sql/sql-server-2005/administrator/aa964129(v=sql.90)).  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>Requisiti per il recupero di dati del servizio Web XML  
  Lo schema non viene rilevato automaticamente dall'estensione per l'elaborazione dati XML. È pertanto necessario essere in grado di individuare i metodi SOAP tramite i quali verranno recuperati i dati desiderati. È inoltre necessario comprendere lo spazio dei nomi o lo schema di indirizzamento che il servizio Web utilizza per i dati.  
@@ -135,7 +135,7 @@ ms.locfileid: "91933445"
 ##  <a name="parameters"></a><a name="Parameters"></a> Parametri  
  La query non viene analizzata per identificare parametri.  
   
- Per aggiungere i parametri, è necessario crearli manualmente usando la pagina **Parametri** nella finestra di dialogo [Proprietà set di dati](https://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) .  
+ Per aggiungere i parametri, è necessario crearli manualmente usando la pagina **Parametri** nella finestra di dialogo [Proprietà set di dati](/previous-versions/sql/) .  
   
 ##  <a name="remarks"></a><a name="Remarks"></a> Osservazioni  
  L'estensione per i dati XML supporta report di dati XML tabulari e non gerarchici. Per altre informazioni, vedere [Aggiungere dati da origini dati esterne &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
@@ -173,5 +173,4 @@ ms.locfileid: "91933445"
  [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

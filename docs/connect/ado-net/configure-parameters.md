@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 14442892bc59fc733c6a67153832b95c3f368b95
-ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
-ms.translationtype: HT
+ms.openlocfilehash: 12dfcb26484b468bed9f9262403806ea88829385
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2020
-ms.locfileid: "97771458"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595774"
 ---
 # <a name="configuring-parameters"></a>Configurazione dei parametri
 
@@ -27,7 +27,7 @@ ms.locfileid: "97771458"
 
 Gli oggetti comando usano i parametri per passare valori a istruzioni o stored procedure SQL, fornendo la verifica e la convalida dei tipi. A differenza del testo dei comandi, l'input dei parametri viene trattato come valore letterale, non come codice eseguibile. In questo modo è possibile difendersi da attacchi SQL injection, in cui l'autore di un attacco inserisce un comando che compromette la sicurezza del server in un'istruzione SQL.
 
-I comandi con parametri possono anche migliorare le prestazioni di esecuzione delle query in quanto aiutano il server database a ottenere una corrispondenza accurata tra il comando in arrivo e un piano di query memorizzato nella cache appropriato. Per altre informazioni, vedere [Memorizzazione nella cache e riutilizzo del piano di esecuzione](/sql/relational-databases/query-processing-architecture-guide#execution-plan-caching-and-reuse) e [Parametri e riutilizzo del piano di esecuzione](/sql/relational-databases/query-processing-architecture-guide#PlanReuse). Oltre ai vantaggi in termini di sicurezza e prestazioni, i comandi con parametri offrono un metodo pratico per organizzare i valori passati a un'origine dati.
+I comandi con parametri possono anche migliorare le prestazioni di esecuzione delle query in quanto aiutano il server database a ottenere una corrispondenza accurata tra il comando in arrivo e un piano di query memorizzato nella cache appropriato. Per altre informazioni, vedere [Memorizzazione nella cache e riutilizzo del piano di esecuzione](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse) e [Parametri e riutilizzo del piano di esecuzione](../../relational-databases/query-processing-architecture-guide.md#PlanReuse). Oltre ai vantaggi in termini di sicurezza e prestazioni, i comandi con parametri offrono un metodo pratico per organizzare i valori passati a un'origine dati.
 
 Per creare un oggetto <xref:System.Data.Common.DbParameter> , è possibile usare il relativo costruttore o aggiungerlo all'oggetto <xref:System.Data.Common.DbCommand.DbParameterCollection%2A> chiamando il metodo `Add` della raccolta <xref:System.Data.Common.DbParameterCollection> . Il metodo `Add` accetta come input argomenti del costruttore o un oggetto parametro esistente, a seconda del provider di dati.
 
@@ -103,7 +103,7 @@ Per altre informazioni, vedere [Generazione dei comandi con CommandBuilders](gen
 Le stored procedure offrono numerosi vantaggi nelle applicazioni guidate dai dati. Usando le stored procedure, le operazioni nel database possono essere incapsulate in un unico comando, ottimizzate per migliorare le prestazioni e rese più sicure con funzioni di sicurezza aggiuntive. Anche se è possibile chiamare una stored procedure passandone il nome seguito dagli argomenti dei parametri come istruzione SQL, l'uso della raccolta <xref:System.Data.Common.DbCommand.Parameters%2A> dell'oggetto <xref:System.Data.Common.DbCommand> di ADO.NET consente di definire in modo più esplicito i parametri delle stored procedure e di accedere ai parametri di output e ai valori restituiti.
 
 > [!NOTE]
-> Le istruzioni con parametri vengono eseguite sul server tramite `sp_executesql,` , che consente il riutilizzo del piano di query. I cursori o le variabili locali del batch `sp_executesql` non sono visibili per il batch che chiama `sp_executesql`. Le modifiche apportate al contesto del database durano solo fino al termine dell'esecuzione dell'istruzione `sp_executesql` . Per altre informazioni, vedere [sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql).
+> Le istruzioni con parametri vengono eseguite sul server tramite `sp_executesql,` , che consente il riutilizzo del piano di query. I cursori o le variabili locali del batch `sp_executesql` non sono visibili per il batch che chiama `sp_executesql`. Le modifiche apportate al contesto del database durano solo fino al termine dell'esecuzione dell'istruzione `sp_executesql` . Per altre informazioni, vedere [sp_executesql (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md).
 
 Quando si usano parametri con <xref:Microsoft.Data.SqlClient.SqlCommand> per eseguire una stored procedure di SQL Server, i nomi dei parametri aggiunti alla raccolta <xref:Microsoft.Data.SqlClient.SqlCommand.Parameters%2A> devono corrispondere ai nomi dei marcatori dei parametri nella stored procedure. Il provider di dati Microsoft SqlClient per SQL Server non supporta il segnaposto punto interrogativo (?) per il passaggio dei parametri a un'istruzione SQL o a una stored procedure. I parametri nella stored procedure vengono trattati come parametri denominati e vengono ricercati marcatori di parametri corrispondenti. Ad esempio, la stored procedure `CustOrderHist` è definita con un parametro denominato `@CustomerID`. Quando il codice esegue la stored procedure deve usare anche un parametro denominato `@CustomerID`.
 

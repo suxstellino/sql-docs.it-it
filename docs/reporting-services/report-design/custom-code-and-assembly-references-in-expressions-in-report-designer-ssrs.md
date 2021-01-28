@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 603207390785ff684167b3b553b31c3b956842c6
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
-ms.translationtype: HT
+ms.openlocfilehash: 31e92b49186e79c78cbaa2d13859d8dd3abe5c5d
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84880760"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596344"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report (SSRS)
   È possibile aggiungere riferimenti a codice personalizzato incorporato in un report o ad assembly personalizzati compilati e salvati nel computer in uso e distribuiti nel server di report. Usare codice incorporato per costanti personalizzate, funzioni complesse o funzioni usate più volte in un singolo report. Usare gli assembly di codice personalizzati per mantenere il codice in un'unica posizione e condividerne l'utilizzo in più report. Il codice personalizzato può includere nuove costanti, variabili, funzioni o subroutine personalizzate. È possibile includere riferimenti di sola lettura a raccolte predefinite come ad esempio Parameters. Non è tuttavia possibile passare alle funzioni personalizzate set di valori di dati. In particolare, non sono supportate le aggregazioni personalizzate.  
@@ -53,12 +53,12 @@ ms.locfileid: "84880760"
   
  Per utilizzare una funzione predefinita, fare doppio clic sul relativo nome nel riquadro Elemento. Nel riquadro Descrizione verrà visualizzata una descrizione della funzione e nel riquadro Esempio un esempio della chiamata alla funzione. Nel riquadro del codice, quando si digita il nome della funzione seguito da una parentesi aperta **(** , tramite IntelliSense verranno visualizzate tutte le sintassi valide per la chiamata alla funzione. Ad esempio per calcolare il valore massimo per un campo denominato `Quantity` in una tabella, aggiungere l'espressione semplice `=Max(` nel riquadro del codice, quindi usare gli smart tag per visualizzare tutte le possibili sintassi valide per la chiamata alla funzione. Per completare questo esempio, digitare `=Max(Fields!Quantity.Value)`.  
   
- Per altre informazioni su ogni funzione, vedere <xref:System.Math>, <xref:System.Convert>e la pagina relativa ai [membri delle librerie run-time di Visual Basic](https://go.microsoft.com/fwlink/?LinkId=198941) in MSDN.  
+ Per altre informazioni su ogni funzione, vedere <xref:System.Math>, <xref:System.Convert>e la pagina relativa ai [membri delle librerie run-time di Visual Basic](/dotnet/visual-basic/language-reference/runtime-library-members) in MSDN.  
   
 ##  <a name="including-references-to-less-commonly-used-functions"></a><a name="NotCommon"></a> Inclusione di riferimenti a funzioni usate meno di frequente  
  Per includere un riferimento ad altri spazi dei nomi CLR usati meno di frequente, è necessario usare un riferimento completo, ad esempio <xref:System.Text.StringBuilder>. IntelliSense non è supportato nel riquadro del codice della finestra di dialogo **Espressione** per queste funzioni usate meno di frequente.  
   
- Per altre informazioni, vedere la pagina relativa ai [membri delle librerie di runtime di Visual Basic](https://go.microsoft.com/fwlink/?LinkId=198941) in MSDN.  
+ Per altre informazioni, vedere la pagina relativa ai [membri delle librerie di runtime di Visual Basic](/dotnet/visual-basic/language-reference/runtime-library-members) in MSDN.  
   
 ##  <a name="including-references-to-external-assemblies"></a><a name="External"></a> Inclusione di riferimenti ad assembly esterni  
  Per includere un riferimento a una classe in un assembly esterno, è necessario identificare l'assembly per il componente Elaborazione report. Usare la pagina **Riferimenti** della finestra di dialogo **Proprietà report** per specificare il nome completo dell'assembly da aggiungere al report. Nell'espressione è necessario usare il nome completo per la classe nell'assembly. Le classi di un assembly esterno non vengono visualizzate nella finestra di dialogo **Espressione** ; è necessario fornire il relativo nome corretto. Un nome completo include lo spazio dei nomi, il nome della classe e il nome del membro.  
@@ -66,7 +66,7 @@ ms.locfileid: "84880760"
 ##  <a name="including-embedded-code"></a><a name="Embedded"></a> Inclusione di codice incorporato  
  Per aggiungere codice incorporato a un report, usare la scheda Codice della finestra di dialogo **Proprietà report** . Il blocco di codice creato può contenere più metodi. È necessario che i metodi del codice incorporato siano scritti in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] e siano basati su istanze. Tramite il componente Elaborazione report, vengono aggiunti automaticamente i riferimenti per gli spazi dei nomi System.Convert e System.Math. Usare la pagina **Riferimenti** della finestra di dialogo **Proprietà report** per aggiungere altri riferimenti ad assembly. Per altre informazioni, vedere [Aggiungere un riferimento a un assembly in un report &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md).  
   
- I metodi nel codice incorporato sono disponibili tramite un membro **Code** definito a livello globale. Per accedere ai metodi, fare riferimento al membro **Code** e al nome del metodo. L'esempio seguente consente di chiamare il metodo **ToUSD**per la conversione del valore del campo `StandardCost` in un valore in dollari:  
+ I metodi nel codice incorporato sono disponibili tramite un membro **Code** definito a livello globale. Per accedere ai metodi, fare riferimento al membro **Code** e al nome del metodo. L'esempio seguente consente di chiamare il metodo **ToUSD** per la conversione del valore del campo `StandardCost` in un valore in dollari:  
   
 ```  
 =Code.ToUSD(Fields!StandardCost.Value)  
@@ -96,7 +96,7 @@ Public Dim MyDoubleVersion As Double = 123.456
 =Code.MyDoubleVersion  
 ```  
   
- Nell'esempio seguente sono inclusi sia il riferimento al codice sia l'implementazione del codice della funzione **FixSpelling**che consente la sostituzione del testo `"Bicycle"` per tutte le occorrenze del testo "Bike" nel campo `SubCategory` .  
+ Nell'esempio seguente sono inclusi sia il riferimento al codice sia l'implementazione del codice della funzione **FixSpelling** che consente la sostituzione del testo `"Bicycle"` per tutte le occorrenze del testo "Bike" nel campo `SubCategory` .  
   
  `=Code.FixSpelling(Fields!SubCategory.Value)`  
   
@@ -120,7 +120,7 @@ End Function
   
  Nella tabella seguente sono inclusi esempi di riferimenti alla raccolta predefinita `Parameters` da codice personalizzato:  
   
- **Passaggio di un'intera raccolta globale di parametri al codice personalizzato.** Questa funzione restituisce il valore di un parametro di report *MyParameter*specifico.  
+ **Passaggio di un'intera raccolta globale di parametri al codice personalizzato.** Questa funzione restituisce il valore di un parametro di report *MyParameter* specifico.  
   
  Riferimento nell'espressione `=Code.DisplayAParameterValue(Parameters)`  
   
@@ -196,5 +196,4 @@ End Function
  [Esercitazioni su Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Esempi di report (Generatore report e SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
-  
   

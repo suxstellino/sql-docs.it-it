@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 13df7080dc1c313279a65eb3457128e43927c9e0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: HT
+ms.openlocfilehash: 95b91ffe542b4085dcdeca9f3e0dcfc4928b6564
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893027"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597010"
 ---
 # <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Procedura: Scrivere uno unit test di SQL Server in esecuzione nell'ambito di una singola transazione
 
@@ -54,10 +54,10 @@ Per alcune procedure di questo argomento è necessario che il servizio Distribut
     > [!NOTE]  
     > Non è possibile eseguire il rollback di una transazione dopo l'esecuzione dell'istruzione COMMIT TRANSACTION.  
   
-    Per altre informazioni sul funzionamento di ROLLBACK TRANSACTION con stored procedure e trigger, vedere la pagina nel sito Web Microsoft: [ROLLBACK TRANSACTION (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkID=115927).  
+    Per altre informazioni sul funzionamento di ROLLBACK TRANSACTION con stored procedure e trigger, vedere la pagina nel sito Web Microsoft: [ROLLBACK TRANSACTION (Transact-SQL)](../t-sql/language-elements/rollback-transaction-transact-sql.md).  
   
 ## <a name="to-create-a-transaction-for-a-single-test-method"></a>Per creare una transazione per un singolo metodo di test  
-In questo esempio viene usata una transazione di ambiente quando si usa il tipo [System.Transactions.TransactionScope](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope). Per impostazione predefinita, nelle connessioni di esecuzione e con privilegi non verrà utilizzata la transazione di ambiente, poiché le connessioni sono state create prima dell'esecuzione del metodo. In SqlConnection è incluso un metodo [System.Data.SqlClient.SqlConnection.EnlistTransaction](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction) che associa una connessione attiva a una transazione. Quando si crea una transazione di ambiente, questa viene registrata automaticamente come la transazione corrente ed è possibile accedervi tramite la proprietà [System.Transactions.Transaction.Current](https://docs.microsoft.com/dotnet/api/system.transactions.transaction.current). In questo esempio viene eseguito il rollback della transazione quando la transazione di ambiente viene eliminata. Se si vuole eseguire il commit delle modifiche apportate dopo l'esecuzione dello unit test, è necessario chiamare il metodo [System.Transactions.TransactionScope.Complete](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope.complete).  
+In questo esempio viene usata una transazione di ambiente quando si usa il tipo [System.Transactions.TransactionScope](/dotnet/api/system.transactions.transactionscope). Per impostazione predefinita, nelle connessioni di esecuzione e con privilegi non verrà utilizzata la transazione di ambiente, poiché le connessioni sono state create prima dell'esecuzione del metodo. In SqlConnection è incluso un metodo [System.Data.SqlClient.SqlConnection.EnlistTransaction](/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction) che associa una connessione attiva a una transazione. Quando si crea una transazione di ambiente, questa viene registrata automaticamente come la transazione corrente ed è possibile accedervi tramite la proprietà [System.Transactions.Transaction.Current](/dotnet/api/system.transactions.transaction.current). In questo esempio viene eseguito il rollback della transazione quando la transazione di ambiente viene eliminata. Se si vuole eseguire il commit delle modifiche apportate dopo l'esecuzione dello unit test, è necessario chiamare il metodo [System.Transactions.TransactionScope.Complete](/dotnet/api/system.transactions.transactionscope.complete).  
   
 #### <a name="to-create-a-transaction-for-a-single-test-method"></a>Per creare una transazione per un singolo metodo di test  
   
@@ -171,8 +171,7 @@ Per alcune procedure di questo argomento vengono utilizzati tipi dell'assembly S
     Lo stato del servizio verrà aggiornato in **Avviato**. A questo punto dovrebbe essere possibile eseguire unit test che utilizzano System.Transactions.  
   
 > [!IMPORTANT]  
-> È possibile che il messaggio di errore seguente venga visualizzato anche se è stato avviato il servizio Distributed Transaction Controller: `System.Transactions.TransactionManagerCommunicationException: Network access for Distributed Transaction Manager (MSDTC) has been disabled. Please enable DTC for network access in the security configuration for MSDTC using the Component Services Administrative tool. ---> System.Runtime.InteropServices.COMException: The transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D024)`. Se viene visualizzato questo errore, è necessario configurare il servizio Distributed Transaction Controller per l'accesso alla rete. Per altre informazioni, vedere [Abilitare l'accesso DTC alla rete](https://go.microsoft.com/fwlink/?LinkId=193916).  
+> È possibile che il messaggio di errore seguente venga visualizzato anche se è stato avviato il servizio Distributed Transaction Controller: `System.Transactions.TransactionManagerCommunicationException: Network access for Distributed Transaction Manager (MSDTC) has been disabled. Please enable DTC for network access in the security configuration for MSDTC using the Component Services Administrative tool. ---> System.Runtime.InteropServices.COMException: The transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D024)`. Se viene visualizzato questo errore, è necessario configurare il servizio Distributed Transaction Controller per l'accesso alla rete. Per altre informazioni, vedere [Abilitare l'accesso DTC alla rete](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753510(v=ws.10)).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Creazione e definizione di unit test di SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-  

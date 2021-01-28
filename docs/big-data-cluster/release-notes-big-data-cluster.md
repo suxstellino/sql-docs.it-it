@@ -9,12 +9,12 @@ ms.date: 01/13/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1382a7e2d1c1e54163c1918b0795197fd9b217cd
-ms.sourcegitcommit: af64e2b8d498af26b973e86db5c00f8d72991295
-ms.translationtype: HT
+ms.openlocfilehash: e10beb2ef41881312e4871021bb2595e52731262
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98192988"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596606"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Note sulla versione dei cluster Big Data di SQL Server 2019
 
@@ -88,7 +88,7 @@ Aggiornamento cumulativo 8 GDR (CU8-GDR) per SQL Server 2019.
 
 |Versione pacchetto | Tag dell'immagine |
 |-----|-----|
-|15.0.4083.2 |[2019-CU8-GDR1-ubuntu-16.04]<br/><br/>[2019-CU8-GDR1-ubuntu-18.04]
+|15.0.4083.2 |[2019-CU8-GDR2-Ubuntu-16,04]|
 
 ## <a name="cu8-september-2020"></a><a id="cu8"></a> CU8 (settembre 2020)
 

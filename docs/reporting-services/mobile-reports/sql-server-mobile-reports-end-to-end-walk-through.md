@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4013c119093adda0fbb721c376eef502a7b05a38
-ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
-ms.translationtype: HT
+ms.openlocfilehash: df09e4168790a4607de19348f50e76a4fbd0f383
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92907249"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596545"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Report per dispositivi mobili di SQL Server: procedura dettagliata completa
 Procedura dettagliata per creare report per dispositivi mobili per schermi di qualsiasi dimensione con [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] nel portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e visualizzarli nell'app Power BI per dispositivi mobili.
@@ -34,12 +34,12 @@ Per proseguire, sono necessari questi prodotti:
   
 * Per creare origini dati e indicatori KPI e per pubblicare set di dati e report per dispositivi mobili, è necessario accedere a un [server di report di Reporting Services in modalità nativa](../install-windows/install-reporting-services-native-mode-report-server.md).  
 * Per creare set di dati condivisi, [installare Generatore report](../install-windows/install-report-builder.md).  
-* Per creare report per dispositivi mobili, [installare SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkId=717766).  
+* Per creare report per dispositivi mobili, [installare SQL Server Mobile Report Publisher](../reporting-services-features-and-tasks-ssrs.md).  
 * [Database di esempio AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
-*  OPPURE: database di esempio World Wide Importers, disponibile nella pagina [Esempi di Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
+*  OPPURE: database di esempio World Wide Importers, disponibile nella pagina [Esempi di Microsoft SQL Server](../../samples/sql-samples-where-are.md).
 * Per visualizzare il risultato: 
   *   [Iscriversi al servizio Power BI](https://go.microsoft.com/fwlink/?LinkID=513879) e
-  *  [Scaricare l'app Power BI per dispositivi mobili](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) per il proprio dispositivo mobile: telefono iOS o Android o dispositivo Windows 10.  
+  *  [Scaricare l'app Power BI per dispositivi mobili](/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) per il proprio dispositivo mobile: telefono iOS o Android o dispositivo Windows 10.  
 
   
 ## <a name="create-a-shared-data-source"></a>Creazione di un'origine dati condivisa  
@@ -78,7 +78,7 @@ Per creare il set di dati condiviso, usare uno strumento client di [!INCLUDE[PRO
    
 4. Nel campo Nome digitare il nome del server in cui è stata salvata l'origine dati, in questo formato:   
    
-   Nome: https:// *localhost* /ReportServer  
+   Nome: https://*localhost*/ReportServer  
    Elementi di tipo: origini dati (file con estensione rsds)  
    
 5. Fare clic su **Apri** e passare all'origine dati creata sul server.  
@@ -135,7 +135,7 @@ Creare gli indicatori KPI direttamente nel portale Web di [!INCLUDE[PRODUCT_NAME
     
 ## <a name=""></a><a name="create-mobile-report">Creare un report per dispositivi mobili di Reporting Services</a>  
    
-Per creare un report per dispositivi mobili di Reporting Services, [installare SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkId=717766)o avviarlo dal portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . 
+Per creare un report per dispositivi mobili di Reporting Services, [installare SQL Server Mobile Report Publisher](../reporting-services-features-and-tasks-ssrs.md)o avviarlo dal portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . 
 
 Quando si apre per la prima volta [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)], verrà visualizzata un'area di disegno vuota in cui è possibile creare il report per dispositivi mobili. È possibile creare prima oggetti visivi oppure iniziare con i propri dati. Se si creano prima oggetti visivi, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] genera automaticamente dati simulati correlati al report e cambia in modo dinamico man mano che si modificano le selezioni degli oggetti visivi. È possibile provare questa funzionalità.   
   
@@ -183,9 +183,9 @@ Quando si apre per la prima volta [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobi
   
 4. Selezionare il server e quindi il set di dati creato.  
    
-3. Nella scheda **Dati** nel riquadro **Proprietà dati** modificare **Le dimensioni rappresentano** , **Il colore rappresenta** e altre proprietà con i campi presenti nei propri dati. 
+3. Nella scheda **Dati** nel riquadro **Proprietà dati** modificare **Le dimensioni rappresentano**, **Il colore rappresenta** e altre proprietà con i campi presenti nei propri dati. 
    
-   *  I campi **Le dimensioni rappresentano** , **Il colore rappresenta** e **Valore centrale personalizzato** devono contenere valori numerici. 
+   *  I campi **Le dimensioni rappresentano**, **Il colore rappresenta** e **Valore centrale personalizzato** devono contenere valori numerici. 
    *  **Raggruppa per** è una categoria, pertanto è un campo di testo.
    
    ![Screenshot della sezione Proprietà dati.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-data-properties.png)
@@ -222,7 +222,7 @@ Gli elenchi di selezione funzionano come filtri dei dati in Power BI ed Excel. �
 
    ![Screenshot dell'elenco di selezione del report per dispositivi mobili.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list.png)
 
-2. Nella scheda **Dati** , **Proprietà dati** , impostare **Chiavi** ed **Etichette** su un campo nei propri dati in base al quale si vuole filtrare i risultati.
+2. Nella scheda **Dati** , **Proprietà dati**, impostare **Chiavi** ed **Etichette** su un campo nei propri dati in base al quale si vuole filtrare i risultati.
 
    ![Screenshot della sezione Proprietà dati dell'elenco di selezione del report per dispositivi mobili.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list-data-properties.png)
    
@@ -232,7 +232,7 @@ Ora che sono stati creati gli oggetti visivi nel layout master, è possibile cre
   
 1. Nell'angolo superiore destro fare clic sull'icona dell'area di disegno > **Telefono**.  
   
-2. Nella scheda Layout in **Control Instances** (Istanze di controllo) verranno visualizzati i due grafici creati.   
+2. Nella scheda Layout in **Control Instances**(Istanze di controllo) verranno visualizzati i due grafici creati.   
   
 3. Trascinare la mappa ad albero fino all'area di disegno del telefono e modificarla in modo che abbia una larghezza pari a quattro colonne e un'altezza pari a tre righe.  
   
@@ -303,8 +303,6 @@ Gli indicatori KPI e i report per dispositivi mobili vengono visualizzati nelle 
   
 ## <a name="see-also"></a>Vedere anche  
  
--  l'articolo relativo ai [report per dispositivi mobili e indicatori KPI dei server di report locali nell'app Power BI per dispositivi mobili](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-app-ssrs-kpis-mobile-on-premises-reports) per i dispositivi iOS e Android
+-  l'articolo relativo ai [report per dispositivi mobili e indicatori KPI dei server di report locali nell'app Power BI per dispositivi mobili](/power-bi/consumer/mobile/mobile-app-ssrs-kpis-mobile-on-premises-reports) per i dispositivi iOS e Android
 -  l'articolo relativo ai [report per dispositivi mobili e indicatori KPI dei server di report locali nell'app Power BI per dispositivi mobili per Windows 10](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
   
-   
-

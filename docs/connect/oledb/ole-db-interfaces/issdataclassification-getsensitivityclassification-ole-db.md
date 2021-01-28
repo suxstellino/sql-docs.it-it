@@ -15,12 +15,12 @@ helpviewer_keywords:
 - GetSensitivityClassification method
 author: bazizi
 ms.author: v-beaziz
-ms.openlocfilehash: 04877e626b57022d0110501b7da6145b2c4997d2
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
-ms.translationtype: HT
+ms.openlocfilehash: 94bda63675db2c73acef4c13c00feab90ae7f337
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96506670"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596463"
 ---
 # <a name="issdataclassificationgetsensitivityclassification"></a>ISSDataClassification::GetSensitivityClassification
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -52,7 +52,7 @@ HRESULT GetSensitivityClassification(
 
   
 ## <a name="remarks"></a>Osservazioni  
-OLE DB Driver per SQL Server alloca un blocco di memoria per conservare la struttura SENSITIVITYCLASSIFICATION e i dati a cui la struttura fa riferimento. Quando l'accesso ai dati di classificazione non è più necessario, il consumer deve deallocare questa memoria chiamando il metodo [IMalloc::Free](https://docs.microsoft.com/windows/win32/api/objidl/nf-objidl-imalloc-free).  
+OLE DB Driver per SQL Server alloca un blocco di memoria per conservare la struttura SENSITIVITYCLASSIFICATION e i dati a cui la struttura fa riferimento. Quando l'accesso ai dati di classificazione non è più necessario, il consumer deve deallocare questa memoria chiamando il metodo [IMalloc::Free](/windows/win32/api/objidl/nf-objidl-imalloc-free).  
   
  La struttura SENSITIVITYCLASSIFICATION è definita nel modo seguente:
   
@@ -153,4 +153,3 @@ typedef struct tagSENSITIVITYPROPERTY
 ## <a name="see-also"></a>Vedere anche  
  [ISSDataClassification](../../oledb/ole-db-interfaces/issdataclassification-ole-db.md)  
  [Set di righe](../ole-db-rowsets/rowsets.md)  
-  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-jizho2
-ms.openlocfilehash: f522b856e759ec9821b5cc549ce3f801951b7283
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
-ms.translationtype: HT
+ms.openlocfilehash: e966e4f2f43ebe546d6baa0b757f682f3eca205b
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95011835"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596358"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Introduzione allo spazio dei nomi Microsoft.Data.SqlClient
 
@@ -43,7 +43,7 @@ Microsoft. Data. SqlClient v 2.1 estende il supporto per Always Encrypted alle p
 
 ### <a name="azure-active-directory-device-code-flow-authentication"></a>Autenticazione con flusso di codice del dispositivo di Active Directory
 Microsoft. Data. SqlClient v 2.1 fornisce il supporto per l'autenticazione "Flusso di codice del dispositivo" con MSAL.NET.
-Documentazione di riferimento: [Flusso di concessione dell'autorizzazione del dispositivo OAuth 2.0](https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-device-code)
+Documentazione di riferimento: [Flusso di concessione dell'autorizzazione del dispositivo OAuth 2.0](/azure/active-directory/develop/v2-oauth2-device-code)
 
 Esempio di stringa di connessione:
 
@@ -60,7 +60,7 @@ public class ActiveDirectoryAuthenticationProvider
 ```
 
 ### <a name="azure-active-directory-managed-identity-authentication"></a>Autenticazione tramite identità gestite di Azure Active Directory
-Microsoft.Data.SqlClient v2.1 introduce il supporto per l'autenticazione di Azure Active Directory tramite [identità gestite](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview).
+Microsoft.Data.SqlClient v2.1 introduce il supporto per l'autenticazione di Azure Active Directory tramite [identità gestite](/azure/active-directory/managed-identities-azure-resources/overview).
 
 Sono supportate le parole chiave dei tipi di autenticazione seguenti:
 - Identità gestita di Active Directory

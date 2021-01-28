@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: sstein, mikeray
 ms.custom: contperf-fy21q2
 ms.date: 12/15/2020
-ms.openlocfilehash: 102eaff45b6cdfb89a159e3de77039c8735395e2
-ms.sourcegitcommit: 8a8c89b0ff6d6dfb8554b92187aca1bf0f8bcc07
-ms.translationtype: HT
+ms.openlocfilehash: e3584fe72ada1cff1d3b35324c5c5563bf97d050
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97619293"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596850"
 ---
 # <a name="quickstart-connect-and-query-a-dedicated-sql-pool-in-azure-synapse-analytics-with-sql-server-management-studio-ssms"></a>Avvio rapido: Connettersi ed eseguire query in un pool SQL dedicato in Azure Synapse Analytics con SQL Server Management Studio (SSMS)
 
@@ -71,9 +71,9 @@ Per seguire questo articolo, è necessario SQL Server Management Studio e avere 
 
 ## <a name="troubleshoot-connectivity-issues"></a>Risolvere i problemi di connettività
 
-È possibile riscontrare problemi di connessione con Azure Synapse Analytics. Per altre informazioni sulla risoluzione dei problemi di connessione, vedere [Risoluzione dei problemi di connettività](https://docs.microsoft.com/azure/azure-sql/database/troubleshoot-common-errors-issues).
+È possibile riscontrare problemi di connessione con Azure Synapse Analytics. Per altre informazioni sulla risoluzione dei problemi di connessione, vedere [Risoluzione dei problemi di connettività](/azure/azure-sql/database/troubleshoot-common-errors-issues).
 
-È possibile prevenire, risolvere i problemi, diagnosticare e mitigare gli errori di connessione e temporanei che si verificano quando si interagisce con il database SQL di Azure o con Istanza gestita di SQL di Azure. Per altre informazioni, vedere [Risolvere gli errori di connessione temporanei](https://docs.microsoft.com/azure/azure-sql/database/troubleshoot-common-connectivity-issues).
+È possibile prevenire, risolvere i problemi, diagnosticare e mitigare gli errori di connessione e temporanei che si verificano quando si interagisce con il database SQL di Azure o con Istanza gestita di SQL di Azure. Per altre informazioni, vedere [Risolvere gli errori di connessione temporanei](/azure/azure-sql/database/troubleshoot-common-connectivity-issues).
 
 ## <a name="create-a-database"></a>Creazione di un database
 

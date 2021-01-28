@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 22f5064c4d861c3f10f88ce4ff1a5727f545fb72
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
-ms.translationtype: HT
+ms.openlocfilehash: 60d621e9bb833615aaed5e6f622afb9591916037
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934958"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597058"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Esercitazione: Individuazione e avvio degli strumenti di Reporting Services (SSRS)
 
@@ -55,7 +55,7 @@ Usare Gestione configurazione in modalità nativa per completare le operazioni s
 
     Verrà visualizzata la finestra di dialogo **Selezione istanza Server report** in cui è possibile selezionare l'istanza del server di report che si desidera configurare.
 
-2. In **Nome server**specificare il nome del computer in cui è installata l'istanza del server di report. Per impostazione predefinita è specificato il nome del computer locale, ma è anche possibile digitare il nome di un'istanza remota di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+2. In **Nome server** specificare il nome del computer in cui è installata l'istanza del server di report. Per impostazione predefinita è specificato il nome del computer locale, ma è anche possibile digitare il nome di un'istanza remota di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
     Se si specifica un computer remoto, fare clic su **Trova** per stabilire una connessione. È necessario configurare in anticipo il server di report per l'amministrazione remota. Per altre informazioni, vedere [Configurare un server di report per l'amministrazione remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).
 
@@ -89,7 +89,7 @@ Per aprire il portale Web è necessario disporre di autorizzazioni sufficienti (
 
 ## <a name="management-studio"></a><a name="bkmk_managements_studio"></a> Management Studio
 
-Gli amministratori del server di report possono utilizzare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per gestire un server di report insieme ad altri componenti server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere l'esercitazione sull'[uso di SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio).
+Gli amministratori del server di report possono utilizzare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per gestire un server di report insieme ad altri componenti server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere l'esercitazione sull'[uso di SQL Server Management Studio](../../ssms/quickstarts/ssms-connect-query-sql-server.md).
 
 ### <a name="to-start-sql-server-management-studio"></a>Per avviare SQL Server Management Studio
 
@@ -101,7 +101,7 @@ Gli amministratori del server di report possono utilizzare [!INCLUDE[ssManStudio
 
     Fare clic su **Start**, selezionare **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], quindi scegliere **SQL Server Management Studio**. Viene visualizzata la finestra di dialogo **Connetti al server** .
 
-2. Se la finestra di dialogo **Connetti al server** non viene visualizzata, in **Esplora oggetti**fare clic su **Connetti** e quindi scegliere **Reporting Services**.
+2. Se la finestra di dialogo **Connetti al server** non viene visualizzata, in **Esplora oggetti** fare clic su **Connetti** e quindi scegliere **Reporting Services**.
 
 3. Nell'elenco **Tipo server** selezionare **Reporting Services**. Se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è incluso nell'elenco, significa che non è installato.
 
@@ -115,13 +115,13 @@ Sono disponibili due diversi strumenti per creare report impaginati di [!INCLUDE
 
 Progettazione report è disponibile in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] - Visual Studio. L'area di progettazione di Progettazione report include finestre a schede, procedure guidate e menu per l'accesso alle funzionalità per la creazione di report. Lo strumento di progettazione report diventa disponibile quando si sceglie un modello di progetto per il server di report o di procedura guidata di server di report in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Per sapere di più, vedere [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).
 
-Scaricare [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714).
+Scaricare [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ### <a name="to-start-report-designer"></a>Per avviare Progettazione report
 
 1. Aprire **SQL Server Data Tools**.
 
-2. Scegliere **Nuovo** dal menu **File**e quindi fare clic su **Progetto**.
+2. Scegliere **Nuovo** dal menu **File** e quindi fare clic su **Progetto**.
 
 3. Nell'elenco **Tipi progetto** fare clic su **Progetti Business Intelligence**.
 
@@ -139,7 +139,7 @@ Per iniziare il primo report, vedere [Creare un report tabella semplice &#40;Ese
 
 [Generatore report in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) è un'applicazione autonoma che è possibile usare per creare report impaginati all'esterno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile personalizzare e aggiornare tutti i report esistenti, sia che siano stati creati in Progettazione report o in versioni precedenti di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Eseguire l'installazione dal portale Web di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o dall'Area download Microsoft.
 
-Quando il report impaginato è pronto, pubblicarlo in un server di report o [salvarlo nel servizio Power BI](https://docs.microsoft.com/power-bi/paginated-reports-save-to-power-bi-service).
+Quando il report impaginato è pronto, pubblicarlo in un server di report o [salvarlo nel servizio Power BI](/power-bi/paginated-reports-save-to-power-bi-service).
 [Scaricare Generatore report](https://go.microsoft.com/fwlink/?LinkID=219138) dall'Area download Microsoft.
 
 ### <a name="to-start-ssrbnoversion"></a>Per iniziare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]
@@ -181,7 +181,7 @@ Usare [SQL Server Mobile Report Publisher](../mobile-reports/create-mobile-repor
 
 [Download SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkID=733527)  
 [Scaricare Generatore report](https://go.microsoft.com/fwlink/?LinkID=219138)  
-[Scaricare SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)  
+[Scaricare SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)  
 [Installare la modalità SharePoint di Reporting Services](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)  
 [Server di report di Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
 [Strumenti di progettazione query](../../reporting-services/report-data/query-design-tools-ssrs.md)  

@@ -9,12 +9,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/25/2019
-ms.openlocfilehash: 22c9550044e5420426f6a423d340e3b32b7a77a4
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
-ms.translationtype: HT
+ms.openlocfilehash: 7637c21ce048c4ffc0277a73c4403c5d16484a21
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034845"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597178"
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>Installare versioni in lingua non inglese di SQL Server Management Studio (SSMS)
 
@@ -29,7 +29,7 @@ Le indicazioni seguenti variano a seconda della versione di Windows disponibile.
 
 1. Installare il Language Pack di Windows per la lingua da usare per SSMS:
    - **Impostazioni** > **Data/ora e lingua** > **Area geografica e lingua** > **Aggiungi una lingua**
-2. Specificare ora le impostazioni locali del sistema per usare il Language Pack installato nel passaggio precedente facendo clic sulla lingua appena installata, quindi selezionare**Imposta come predefinito**. (Dopo aver installato SSMS, è possibile reimpostare le impostazioni locali del sistema sull'inglese.)
+2. Specificare ora le impostazioni locali del sistema per usare il Language Pack installato nel passaggio precedente facendo clic sulla lingua appena installata, quindi selezionare **Imposta come predefinito**. (Dopo aver installato SSMS, è possibile reimpostare le impostazioni locali del sistema sull'inglese.)
 3. Quando il sistema operativo è in esecuzione nella lingua desiderata, installare la versione di SSMS nella lingua desiderata. Per la prima installazione di una lingua nuova di SSMS, usare il pacchetto completo. È possibile usare il pacchetto di aggiornamento per le installazioni successive.
 4. Eseguire SSMS. Dovrebbe essere visualizzato nella lingua installata nel passaggio precedente.
 5. Reimpostare l'inglese per le impostazioni locali di sistema del computer.
@@ -38,7 +38,7 @@ Le indicazioni seguenti variano a seconda della versione di Windows disponibile.
 
 1. Installare il Language Pack di Windows per la lingua da usare per SSMS:
    - **Impostazioni** > **Data/ora e lingua** > **Area geografica e lingua** > **Aggiungi una lingua**
-2. Specificare ora le impostazioni locali del sistema per usare il Language Pack installato nel passaggio precedente facendo clic sulla lingua appena installata, quindi selezionare**Imposta come predefinito**.
+2. Specificare ora le impostazioni locali del sistema per usare il Language Pack installato nel passaggio precedente facendo clic sulla lingua appena installata, quindi selezionare **Imposta come predefinito**.
 3. Quando il sistema operativo è in esecuzione nella lingua desiderata, installare la versione di SSMS nella lingua desiderata. Per la prima installazione di una lingua nuova di SSMS, usare il pacchetto completo. È possibile usare il pacchetto di aggiornamento per le installazioni successive.
 4. Per ogni lingua da installare che non corrisponde alla lingua della prima versione di SSMS installata, installare la versione corrispondente di Visual Studio 2015 Shell (Isolated) Language Pack:
    - Passare a [https://connect.microsoft.com/VisualStudio/ExtendVS](https://connect.microsoft.com/VisualStudio/ExtendVS) (potrebbe essere necessario eseguire l'accesso e completare il processo di *registrazione a Connect*).
@@ -53,4 +53,4 @@ Le indicazioni seguenti variano a seconda della versione di Windows disponibile.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Esercitazione: SQL Server Management Studio](./quickstarts/connect-query-sql-server.md)
+- [Esercitazione: SQL Server Management Studio](./quickstarts/ssms-connect-query-sql-server.md)

@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8f83c1f169706af4a02d1940049d2a1814bc26ca
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
-ms.translationtype: HT
+ms.openlocfilehash: 500ecc4e4b0dae80faa06f8d152b99423bb45251
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914087"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597167"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Progettare report impaginati di Reporting Services con progettazione Report (SSRS)
 
 Usare Progettazione report per creare report e soluzioni di creazione di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] impaginati completi. Tale strumento offre un'interfaccia grafica in cui è possibile definire origini dati, set di dati, query, posizioni di layout del report per aree dati e campi, nonché caratteristiche interattive, quali l'interazione tra parametri e set di report.  
 
-Progettazione report è una funzionalità di  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], un ambiente Microsoft Visual Studio per la creazione di soluzioni di Business Intelligence. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] non è incluso in SQL Server. Scaricare [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714). 
+Progettazione report è una funzionalità di  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], un ambiente Microsoft Visual Studio per la creazione di soluzioni di Business Intelligence. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] non è incluso in SQL Server. Scaricare [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md). 
   
 ## <a name="benefits-of-report-projects"></a>Vantaggi dei progetti report  
 I progetti report costituiscono il contenitore per le definizioni e le risorse del report. Utilizzare i progetti per:  
@@ -70,7 +70,7 @@ I report impaginati sono file archiviati in un progetto report. I report possono
   
 -   **Aggiungere un elemento esistente.** In Progettazione report verrà visualizzata una definizione di report esistente (con estensione rdl). L'apertura di un report o di un progetto da una versione precedente di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] potrebbe determinare l'aggiornamento automatico del progetto alla versione corrente e del report allo schema corrente. Per altre informazioni, vedere [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
   
--   **Importare un [!INCLUDE[msCoName](../../includes/msconame-md.md)]report di Access.** Importare tutti i report da un file di database di Access (con estensione mdb, accdb) o da un file di progetto (con estensione adp). In Progettazione report ogni report nel file di database o di progetto viene convertito in formato RDL e salvato nel progetto report. Non tutte le funzionalità di un report di Access vengono trasferite in un file di definizione di report (con estensione rdl). Per altre informazioni, vedere [Importazione report da Microsoft Access &#40;Reporting Services&#41;](https://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646) e [Caratteristiche supportate dei report di Access &#40;SSRS&#41;](https://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44).  
+-   **Importare un [!INCLUDE[msCoName](../../includes/msconame-md.md)]report di Access.** Importare tutti i report da un file di database di Access (con estensione mdb, accdb) o da un file di progetto (con estensione adp). In Progettazione report ogni report nel file di database o di progetto viene convertito in formato RDL e salvato nel progetto report. Non tutte le funzionalità di un report di Access vengono trasferite in un file di definizione di report (con estensione rdl). Per altre informazioni, vedere [Importazione report da Microsoft Access &#40;Reporting Services&#41;](../reports/reporting-services-reports-ssrs.md) e [Caratteristiche supportate dei report di Access &#40;SSRS&#41;](../reports/reporting-services-reports-ssrs.md).  
   
     > [!NOTE]  
     >  Per utilizzare la caratteristica di importazione è necessario che Access 2002 o versione successiva sia installato nello stesso computer di Progettazione report. Per l'importazione dei report è necessario che sia disponibile l'origine dati dei report di Access.  
@@ -181,7 +181,7 @@ I report impaginati sono file archiviati in un progetto report. I report possono
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Scaricare SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)  
+[Scaricare SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)  
 [Reporting Services in SQL Server Data Tools](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)   
 [Strumenti di progettazione query](../../reporting-services/report-data/query-design-tools-ssrs.md)   
 [Deployment and Version Support in SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  

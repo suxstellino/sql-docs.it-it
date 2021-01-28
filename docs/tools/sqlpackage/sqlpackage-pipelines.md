@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 11/4/2020
-ms.openlocfilehash: 002d145328ca101fee467428e5b7c8b0ff1fdd95
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
-ms.translationtype: HT
+ms.openlocfilehash: a6fc94cf9c692753ef2dc8d93068bda2be8f1bf0
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577855"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98689026"
 ---
 # <a name="sqlpackage-in-development-pipelines"></a>SqlPackage nelle pipeline di sviluppo
 
@@ -31,7 +31,7 @@ Durante la risoluzione dei problemi, è importante conoscere la versione di SqlP
 
 ### <a name="azure-pipelines"></a>Azure Pipelines
 
-Usando la parola chiave [script](https://docs.microsoft.com/azure/devops/pipelines/yaml-schema#script) in una pipeline di Azure, è possibile aggiungere un passaggio a una pipeline di Azure che restituisce il numero di versione di SqlPackage.
+Usando la parola chiave [script](/azure/devops/pipelines/yaml-schema#script) in una pipeline di Azure, è possibile aggiungere un passaggio a una pipeline di Azure che restituisce il numero di versione di SqlPackage.
 
 ```yaml
 - script: sqlpackage.exe /version

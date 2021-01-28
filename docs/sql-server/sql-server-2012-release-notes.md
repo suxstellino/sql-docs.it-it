@@ -13,21 +13,21 @@ ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016
-ms.openlocfilehash: dc92ae7c943729e7c95529b948caca95404dec3a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: fff3b6de7e2e83c535997194ca2622d9cd9e9595
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474532"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766175"
 ---
 # <a name="sql-server-2012-release-notes"></a>Note sulla versione di SQL Server 2012
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 Questo documento descrive i problemi noti di cui è necessario essere a conoscenza prima di installare o risolvere i problemi relativi a [Microsoft SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=238647). Questo documento è disponibile solo online, non nei supporti di installazione, e viene aggiornato periodicamente.  
   
-Per informazioni su come installare SQL Server 2012, vedere il file Leggimi di SQL Server 2012 disponibile nei supporti di installazione e nella pagina di download del [file Leggimi](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) . Ulteriori informazioni sono disponibili nella [documentazione online di SQL Server](https://go.microsoft.com/fwlink/?LinkId=190948) e nel [forum su SQL Server](https://go.microsoft.com/fwlink/?LinkId=213599).  
+Per informazioni su come installare SQL Server 2012, vedere il file Leggimi di SQL Server 2012 disponibile nei supporti di installazione e nella pagina di download del [file Leggimi](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) . Ulteriori informazioni sono disponibili nella [documentazione online di SQL Server](/previous-versions/sql/sql-server-2012/ms130214(v=sql.110)) e nel [forum su SQL Server](https://go.microsoft.com/fwlink/?LinkId=213599).  
   
 ## <a name="10-before-you-install"></a><a name="Install"></a>1.0 Prima di installare  
-Prima di installare [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], si considerino le informazioni riportate di seguito.  
+Prima di installare [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)], si considerino le informazioni riportate di seguito.  
   
 ### <a name="11-rules-documentation-for-sql-server-2012-setup"></a>1.1 Documentazione sulle regole relative al programma di installazione di SQL Server 2012  
 **Problema:** la configurazione del computer viene convalidata dall'installazione di SQL Server prima del completamento dell'operazione di installazione. Le diverse regole in esecuzione durante l'operazione del programma di installazione di SQL Server vengono acquisite tramite il report Controllo configurazione sistema (SCC, System Configuration Checker). La documentazione relativa a queste regole del programma di installazione non è più disponibile in MSDN Library.  
@@ -92,7 +92,7 @@ SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu3
   
 -   In un computer con il sistema operativo Windows Server 2008 R2 Server Core SP1 non è possibile installare Microsoft SQL Server 2012 side-by-side con versioni precedenti di SQL Server.  
   
--   Non tutte le funzionalità di SQL Server 2012 sono supportate nel sistema operativo Server Core. Per altre informazioni sulle funzionalità supportate e sull'installazione di SQL Server 2012 in Server Core, vedere [Installare SQL Server 2012 in Server Core](https://msdn.microsoft.com/library/hh231669(SQL.110).aspx).  
+-   Non tutte le funzionalità di SQL Server 2012 sono supportate nel sistema operativo Server Core. Per altre informazioni sulle funzionalità supportate e sull'installazione di SQL Server 2012 in Server Core, vedere [Installare SQL Server 2012 in Server Core](/previous-versions/sql/sql-server-2012/hh231669(v=sql.110)).  
   
 ### <a name="16-semantic-search-requires-you-to-install-an-additional-dependency"></a>1.6 È necessario installare un'ulteriore dipendenza per la Ricerca semantica  
 **Problema:** la ricerca semantica statistica ha un altro prerequisito, il database di statistiche lingua semantica, che non viene installato dal programma di installazione di SQL Server.  
@@ -162,7 +162,7 @@ Di seguito viene descritto il comportamento dell'installazione dei prerequisiti 
   
         **Per abilitare .NET Framework 3.5 SP1 usare Gestione e manutenzione immagini distribuzione (DISM.exe):**  
   
-        È possibile abilitare .NET Framework 3.5 SP1 usando Gestione e manutenzione immagini distribuzione (DISM.exe). Per altre informazioni sull'abilitazione delle funzionalità di Windows online, vedere [Abilitare o disabilitare funzionalità di Windows online](https://technet.microsoft.com/library/dd744582(WS.10).aspx). Per abilitare .NET Framework 3.5 SP1, seguire le istruzioni riportate di seguito:  
+        È possibile abilitare .NET Framework 3.5 SP1 usando Gestione e manutenzione immagini distribuzione (DISM.exe). Per altre informazioni sull'abilitazione delle funzionalità di Windows online, vedere [Abilitare o disabilitare funzionalità di Windows online](/previous-versions/windows/it-pro/windows-7/dd744582(v=ws.10)). Per abilitare .NET Framework 3.5 SP1, seguire le istruzioni riportate di seguito:  
   
         1.  Al prompt dei comandi digitare il comando riportato di seguito per un elenco delle funzionalità disponibili nel sistema operativo.  
   
@@ -334,7 +334,7 @@ Si verificano problemi con l'attività Elaborazione Analysis Services quando si 
 ### <a name="42-to-reinstall-data-quality-server-delete-the-dqs-objects-after-uninstalling-data-quality-server"></a>4.2 Per installare di nuovo Data Quality Server, eliminare gli oggetti DQS dopo aver disinstallato Data Quality Server  
 **Problema:** se si disinstalla Data Quality Server, gli oggetti DQS (database DQS, account di accesso DQS e una stored procedure DQS) non vengono eliminati dall'istanza di SQL Server.  
   
-**Soluzione alternativa:** per reinstallare Data Quality Server nello stesso computer e nella stessa istanza di SQL Server, è necessario eliminare manualmente gli oggetti DQS dall'istanza di SQL Server. È inoltre necessario eliminare i file dei database DQS (DQS_MAIN, DQS_PROJECTS e DQS_STAGING_DATA) dalla cartella C:\Programmi\Microsoft SQL Server\MSSQL11.<Istanza_SQL_Server>\MSSQL\DATA sul computer, prima di installare nuovamente Data Quality Server. In caso contrario, l'installazione del server Data Quality non verrà completata correttamente. Spostare i file dei database invece di eliminarli se si desidera mantenere dati, quali Knowledge Base o progetti Data Quality. Per altre informazioni sulla rimozione di oggetti DQS dopo il completamento del processo di disinstallazione, vedere [Rimuovere oggetti server Data Quality Services](https://msdn.microsoft.com/library/hh231667.aspx).  
+**Soluzione alternativa:** per reinstallare Data Quality Server nello stesso computer e nella stessa istanza di SQL Server, è necessario eliminare manualmente gli oggetti DQS dall'istanza di SQL Server. È inoltre necessario eliminare i file dei database DQS (DQS_MAIN, DQS_PROJECTS e DQS_STAGING_DATA) dalla cartella C:\Programmi\Microsoft SQL Server\MSSQL11.<Istanza_SQL_Server>\MSSQL\DATA sul computer, prima di installare nuovamente Data Quality Server. In caso contrario, l'installazione del server Data Quality non verrà completata correttamente. Spostare i file dei database invece di eliminarli se si desidera mantenere dati, quali Knowledge Base o progetti Data Quality. Per altre informazioni sulla rimozione di oggetti DQS dopo il completamento del processo di disinstallazione, vedere [Rimuovere oggetti server Data Quality Services](./install/remove-data-quality-server-objects.md).  
   
 ### <a name="43-indication-of-a-terminated-knowledge-discovery-or-interactive-cleansing-activity-is-delayed"></a>4.3 Indicazione di individuazione informazioni terminata o ritardo nell'attività di pulizia interattiva  
 **Problema:** se un amministratore termina un'attività nella schermata Monitoraggio attività, un utente interattivo che sta eseguendo operazioni di individuazione informazioni, gestione del dominio o un'attività di pulizia interattiva non riceverà alcuna indicazione che la propria attività è stata terminata finché non procede all'operazione successiva.  
@@ -578,10 +578,10 @@ Si tratta di una limitazione della build CTP3. Le build future non avranno quest
 **Soluzione alternativa:** usare 'multisubnetfailover = true' nella stringa di connessione.  
   
 #### <a name="576-failure-to-create-new-availability-group-listeners-because-of-active-directory-quotas"></a>5.7.6 Errore nella creazione di nuovi listener del gruppo di disponibilità a causa di quote di Active Directory  
-**Problema:** La creazione di un nuovo listener del gruppo di disponibilità può avere esito negativo perché è stata raggiunta una quota di Active Directory per l'account del computer del nodo del cluster interessato. Per altre informazioni, vedere [Risoluzione dei problemi dell'account del Servizio cluster in relazione alla modifica di oggetti computer](https://support.microsoft.com/kb/307532) e la pagina relativa alle [quote di Active Directory](https://technet.microsoft.com/library/cc904295(WS.10).aspx).  
+**Problema:** La creazione di un nuovo listener del gruppo di disponibilità può avere esito negativo perché è stata raggiunta una quota di Active Directory per l'account del computer del nodo del cluster interessato. Per altre informazioni, vedere [Risoluzione dei problemi dell'account del Servizio cluster in relazione alla modifica di oggetti computer](https://support.microsoft.com/kb/307532) e la pagina relativa alle [quote di Active Directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc904295(v=ws.10)).  
   
 #### <a name="577-netbios-conflicts-because-availability-group-listener-names-use-an-identical-15-character-prefix"></a>5.7.7 Conflitti NetBIOS dovuti all'utilizzo dello stesso prefisso a 15 caratteri nei nomi dei listener del gruppo di disponibilità  
-Se si dispone di due cluster WSFC controllati dallo stesso dominio Active Directory e si tenta di creare listener del gruppo di disponibilità in entrambi i cluster usando nomi con più di 15 caratteri e un prefisso a 15 caratteri identico, verrà restituito un errore in cui si segnala che non è possibile portare online la risorsa del nome di rete virtuale. Per informazioni sulle regole di denominazione dei prefissi per i nomi DNS, vedere [Assegnare nomi ai domini](https://technet.microsoft.com/library/cc731265(WS.10).aspx).  
+Se si dispone di due cluster WSFC controllati dallo stesso dominio Active Directory e si tenta di creare listener del gruppo di disponibilità in entrambi i cluster usando nomi con più di 15 caratteri e un prefisso a 15 caratteri identico, verrà restituito un errore in cui si segnala che non è possibile portare online la risorsa del nome di rete virtuale. Per informazioni sulle regole di denominazione dei prefissi per i nomi DNS, vedere [Assegnare nomi ai domini](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731265(v=ws.10)).  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
@@ -641,4 +641,4 @@ Problema: Quando si prova a installare Preparazione aggiornamento in qualsiasi v
   
 **Soluzione alternativa**: individuare il file **SQLUA.msi** nel supporto SQL Server 2012 in `\1028_CHT_LP\x64\redist\Upgrade Advisor` o `\1028_CHT_LP\x86\redist\Upgrade Advisor`, a seconda dell'architettura del sistema operativo.  
   
-![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
+![horizontal_bar](media/horizontal-bar.png "horizontal_bar")

@@ -29,12 +29,12 @@ ms.reviewer: v-daenge
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: 018508727950aa370fb7b3879541d04ff8384ced
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 2be72374a13dbedb444b2661cf0e53a0d555d98c
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98169623"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98688977"
 ---
 # <a name="bcp-utility"></a>Utilità bcp
 
@@ -71,7 +71,7 @@ Il nuovo BCP supporta l'autenticazione di Azure AD e include anche il supporto d
 
 Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019
 
-Per questo componente sono necessari sia [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) che [Microsoft ODBC Driver 17 for SQL Server](https://aka.ms/downloadmsodbcsql).
+Per questo componente sono necessari sia [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) che [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md).
 
 Per controllare la versione di BCP, eseguire il comando `bcp /v` e verificare che sia in uso la versione 15.0.2000.5 o successiva.
 
@@ -261,7 +261,7 @@ Specifica che il valore o i valori Identity presenti nel file di dati importato 
 
    L'autenticazione interattiva di Azure AD per il database SQL di Azure e Azure Synapse Analytics consente di usare un metodo interattivo che supporta l'autenticazione a più fattori. Per altre informazioni, vedere l'articolo sull'[autenticazione interattiva di Active Directory](../ssdt/azure-active-directory.md#active-directory-interactive-authentication).
 
-   La modalità interattiva di Azure AD richiede **bcp** [versione 15.0.1000.34](#download-the-latest-version-of-bcp-utility) o successiva, nonché [ODBC 17.2 o versioni successive](https://aka.ms/downloadmsodbcsql).  
+   La modalità interattiva di Azure AD richiede **bcp** [versione 15.0.1000.34](#download-the-latest-version-of-bcp-utility) o successiva, nonché [ODBC 17.2 o versioni successive](../connect/odbc/download-odbc-driver-for-sql-server.md).  
 
    Per abilitare l'autenticazione interattiva, specificare l'opzione-G solo con il nome utente (-U) senza una password.
 

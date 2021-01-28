@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: aa20ac9d4118e5fec4dbaf225d27c9db8257a88f
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
-ms.translationtype: HT
+ms.openlocfilehash: 62cf191ec41e71084dbe3ca85230108f9fc712b0
+ms.sourcegitcommit: 0576ce6d7c9c5514306a90e27fa621ef25825186
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393119"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98575713"
 ---
 # <a name="understanding-encryption-support"></a>Informazioni sul supporto della crittografia
 
@@ -79,7 +79,7 @@ Durante l'handshake TLS, il server invia il proprio certificato chiave pubblica 
   
 - Il nome comune nell'oggetto o un nome DNS nel nome alternativo del soggetto (SAN, Subject Alternate Name) del certificato corrisponde esattamente al valore **serverName** specificato nella stringa di connessione o, se specificato, al valore della proprietà **hostNameInCertificate**.  
   
-- Un nome DNS può includere caratteri jolly. Tuttavia, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] non supporta la corrispondenza dei caratteri jolly. In altre parole, abc.com non corrisponderà a \*.com, ma \*.com corrisponderà a \*.com.  
+- Un nome DNS può includere caratteri jolly. La versione precedente 7,2 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] non supporta la corrispondenza con caratteri jolly. In altre parole, abc.com non corrisponderà a \*.com, ma \*.com corrisponderà a \*.com. Con la versione 7,2 e versioni più rilevate, è supportata la corrispondenza dei certificati standard.  
   
 ## <a name="see-also"></a>Vedere anche
 

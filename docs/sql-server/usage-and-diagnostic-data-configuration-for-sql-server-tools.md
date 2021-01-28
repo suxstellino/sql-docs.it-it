@@ -11,12 +11,12 @@ ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
 author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016'
-ms.openlocfilehash: 8f12acd87a21cca6047621abfb985906295b58c1
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: dc701901340bcea2d93c4bc4ef79b00855dd8dc2
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461442"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596621"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools-ceip"></a>Configurare la raccolta di dati di diagnostica e utilizzo per gli strumenti di SQL Server (Analisi utilizzo software)
 
@@ -25,7 +25,7 @@ ms.locfileid: "97461442"
 Informazioni su come il programma Analisi utilizzo software consente a Microsoft di identificare modi per migliorare il software.  È possibile configurare gli strumenti per i quali si vuole o meno partecipare in qualsiasi momento.  
   
 > [!NOTE]  
-> Per una spiegazione delle procedure di raccolta e di trattamento dei dati per le versioni di Microsoft SQL Server, fare riferimento a questa [informativa sulla privacy](https://go.microsoft.com/fwlink/?LinkID=868444).  
+> Per una spiegazione delle procedure di raccolta e di trattamento dei dati per le versioni di Microsoft SQL Server, fare riferimento a questa [informativa sulla privacy](./sql-server-privacy.md).  
   
 ## <a name="opting-in-and-out-of-ceip-for-sql-server-data-tools"></a>Consenso o rifiuto esplicito per la partecipazione ad Analisi utilizzo software per SQL Server Data Tools  
 
@@ -74,10 +74,10 @@ Valore = (DWORD)
 > [!CAUTION]  
 >  La modifica non corretta del Registro di sistema potrebbe danneggiare gravemente il sistema. Prima di apportare modifiche al Registro di sistema, si consiglia di effettuare il backup di tutti i dati importanti presenti sul computer. Se si riscontrano problemi dopo l'applicazione di modifiche manuali, è inoltre possibile utilizzare l'opzione di avvio Ultima configurazione valida nota.  
   
- Per altre informazioni sulle informazioni raccolte, elaborate o trasmesse dal programma Analisi utilizzo software, vedere l'[Informativa sulla privacy](https://go.microsoft.com/fwlink/?LinkID=868444).  
+ Per altre informazioni sulle informazioni raccolte, elaborate o trasmesse dal programma Analisi utilizzo software, vedere l'[Informativa sulla privacy](./sql-server-privacy.md).  
  
 ### <a name="choice-and-control-over-ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>Scelta e controllo per Analisi utilizzo software e SQL Server Data Tools per Visual Studio 2015  
- SSDT per Visual Studio 2015 è lo strumento di modellazione dei dati fornito con SQL Server 2016. Usa le opzioni di Analisi utilizzo software integrate in Visual Studio 2015. In questo [documento della Guida da Visual Studio](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) sono disponibili altre informazioni sull'invio di commenti e suggerimenti con Analisi utilizzo software in Visual Studio 2015.  
+ SSDT per Visual Studio 2015 è lo strumento di modellazione dei dati fornito con SQL Server 2016. Usa le opzioni di Analisi utilizzo software integrate in Visual Studio 2015. In questo [documento della Guida da Visual Studio](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) sono disponibili altre informazioni sull'invio di commenti e suggerimenti con Analisi utilizzo software in Visual Studio 2015.  
   
  Nelle versioni di anteprima di SQL Server 2016, la funzionalità Analisi utilizzo software è attivata per impostazione predefinita. È possibile disattivarla o riattivarla seguendo le istruzioni seguenti.  
   
@@ -116,7 +116,7 @@ Valore = (DWORD)
 > [!CAUTION]  
 >  La modifica non corretta del Registro di sistema potrebbe danneggiare gravemente il sistema. Prima di apportare modifiche al Registro di sistema, si consiglia di effettuare il backup di tutti i dati importanti presenti sul computer. Se si riscontrano problemi dopo l'applicazione di modifiche manuali, è inoltre possibile utilizzare l'opzione di avvio Ultima configurazione valida nota.  
   
- Per altre informazioni sulle informazioni raccolte, elaborate o trasmesse dal programma Analisi utilizzo software, vedere l'[Informativa sulla privacy](https://go.microsoft.com/fwlink/?LinkID=868444).  
+ Per altre informazioni sulle informazioni raccolte, elaborate o trasmesse dal programma Analisi utilizzo software, vedere l'[Informativa sulla privacy](./sql-server-privacy.md).  
   
 ### <a name="choice-and-control-for-ceip-and-sql-server-data-tools---bi-ssdt-bi"></a>Scelta e controllo per il programma Analisi utilizzo software e SQL Server Data Tools - BI (SSDT-BI)  
  Se si usa SSDT-BI, l'utente potrà scegliere di partecipare ad Analisi utilizzo software durante l'installazione. In seguito, le modifiche alla configurazione di Analisi utilizzo software per SSDT-BI possono essere apportate mediante gli strumenti client o modificando le impostazioni del Registro di sistema.  
@@ -148,5 +148,4 @@ Valore = (DWORD)
 -   0 è rifiutare esplicitamente  
   
 -   1 è acconsentire esplicitamente  
-  
   
