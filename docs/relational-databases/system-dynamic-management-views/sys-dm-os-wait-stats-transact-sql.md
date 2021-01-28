@@ -2,7 +2,7 @@
 description: sys.dm_os_wait_stats (Transact-SQL)
 title: sys.dm_os_wait_stats (Transact-SQL)
 ms.custom: ''
-ms.date: 01/25/2021
+ms.date: 01/27/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da16b2c28c55952e609b98637802c940ff5a6a54
-ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+ms.openlocfilehash: 15f49e670fad327da52fe340a1f9b7601d22ef80
+ms.sourcegitcommit: 76c5e10704e3624b538b653cf0352e606b6346d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98813071"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98924743"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -487,17 +487,17 @@ Questo comando reimposta tutti i contatori su 0.
 |OLEDB |Si verifica quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chiama il provider di OLE DB SNAC (SQLNCLI) o il driver Microsoft OLE DB per SQL Server (MSOLEDBSQL). Questo tipo di attesa non viene usato per la sincronizzazione. Indica invece la durata delle chiamate al provider OLE DB.| 
 |ONDEMAND_TASK_QUEUE |Si verifica quando un'attività in background è in attesa di richieste di attività di sistema con priorità elevata. Tempi di attesa prolungati indicano l'assenza di richieste con priorità elevata da elaborare e non costituiscono un problema.| 
 |PAGEIOLATCH_DT |Si verifica quando un'attività è in attesa di un latch per un buffer in una richiesta di I/O. La richiesta di latch è in modalità di eliminazione. Attese prolungate possono indicare problemi con il sottosistema disco.| 
-|PAGEIOLATCH_EX |Si verifica quando un'attività è in attesa di un latch per un buffer in una richiesta di I/O. La richiesta di latch è in modalità esclusiva. Attese prolungate possono indicare problemi con il sottosistema disco.| 
+|PAGEIOLATCH_EX |Si verifica quando un'attività è in attesa di un latch per un buffer in una richiesta di I/O. La richiesta di latch è in modalità esclusiva, ovvero una modalità usata quando il buffer viene scritto su disco. Attese prolungate possono indicare problemi con il sottosistema disco.| 
 |PAGEIOLATCH_KP |Si verifica quando un'attività è in attesa di un latch per un buffer in una richiesta di I/O. La richiesta di latch è in modalità di mantenimento. Attese prolungate possono indicare problemi con il sottosistema disco.| 
 |PAGEIOLATCH_NL |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
-|PAGEIOLATCH_SH |Si verifica quando un'attività è in attesa di un latch per un buffer in una richiesta di I/O. La richiesta di latch è in modalità condivisa. Attese prolungate possono indicare problemi con il sottosistema disco.| 
+|PAGEIOLATCH_SH |Si verifica quando un'attività è in attesa di un latch per un buffer in una richiesta di I/O. La richiesta di latch è in modalità condivisa, ovvero una modalità usata quando il buffer viene letto dal disco. Attese prolungate possono indicare problemi con il sottosistema disco.| 
 |PAGEIOLATCH_UP |Si verifica quando un'attività è in attesa di un latch per un buffer in una richiesta di I/O. La richiesta di latch è in modalità di aggiornamento. Attese prolungate possono indicare problemi con il sottosistema disco.| 
-|PAGELATCH_DT |Si verifica quando un'attività è in attesa di un latch per un buffer non incluso in una richiesta di I/O. La richiesta di latch è in modalità di eliminazione.| 
-|PAGELATCH_EX |Si verifica quando un'attività è in attesa di un latch per un buffer non incluso in una richiesta di I/O. La richiesta di latch è in modalità esclusiva. </br> Uno scenario comune che conduce a questo latch è la contesa di latch del buffer "Last-page Insert". Per comprendere e risolvere questo problema, usare Risolvi la contesa di [inserimento PAGELATCH_EX Ultima pagina](/troubleshoot/sql/performance/resolve-pagelatch-ex-contention) e la risoluzione dei conflitti di [inserimento dell'ultima pagina nella SQL Server](../diagnose-resolve-latch-contention.md#last-pagetrailing-page-insert-contention). Un altro scenario è la [contesa di latch per le tabelle di piccole dimensioni con un indice non cluster e inserimenti casuali (tabella della coda)](../diagnose-resolve-latch-contention.md#latch-contention-on-small-tables-with-a-non-clustered-index-and-random-inserts-queue-table).| 
-|PAGELATCH_KP |Si verifica quando un'attività è in attesa di un latch per un buffer non incluso in una richiesta di I/O. La richiesta di latch è in modalità di mantenimento.| 
+|PAGELATCH_DT |Si verifica quando un'attività è in attesa di un latch per un buffer non incluso in una richiesta di I/O. La richiesta di latch è in modalità di eliminazione. Prima di eliminare il contenuto di una pagina, è necessario acquisire la modalità di eliminazione. Per ulteriori informazioni, vedere [latch modes](../diagnose-resolve-latch-contention.md#sql-server-latch-modes-and-compatibility) .| 
+|PAGELATCH_EX |Si verifica quando un'attività è in attesa di un latch per un buffer non incluso in una richiesta di I/O. La richiesta di latch è in modalità esclusiva. impedisce ad altri thread di scrivere o leggere dalla pagina (buffer). </br></br> Uno scenario comune che conduce a questo latch è la contesa di latch del buffer "Last-page Insert". Per comprendere e risolvere questo problema, usare Risolvi la contesa di [inserimento PAGELATCH_EX Ultima pagina](/troubleshoot/sql/performance/resolve-pagelatch-ex-contention) e la risoluzione dei conflitti di [inserimento dell'ultima pagina nella SQL Server](../diagnose-resolve-latch-contention.md#last-pagetrailing-page-insert-contention). Un altro scenario è la [contesa di latch per le tabelle di piccole dimensioni con un indice non cluster e inserimenti casuali (tabella della coda)](../diagnose-resolve-latch-contention.md#latch-contention-on-small-tables-with-a-non-clustered-index-and-random-inserts-queue-table).| 
+|PAGELATCH_KP |Si verifica quando un'attività è in attesa di un latch per un buffer non incluso in una richiesta di I/O. La richiesta di latch è in modalità di mantenimento che impedisce la distruzione della pagina da parte di un altro thread. Per ulteriori informazioni, vedere [latch modes](../diagnose-resolve-latch-contention.md#sql-server-latch-modes-and-compatibility) .| 
 |PAGELATCH_NL |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
-|PAGELATCH_SH |Si verifica quando un'attività è in attesa di un latch per un buffer non incluso in una richiesta di I/O. La richiesta di latch è in modalità condivisa.| 
-|PAGELATCH_UP |Si verifica quando un'attività è in attesa di un latch per un buffer non incluso in una richiesta di I/O. La richiesta di latch è in modalità di aggiornamento. Questo tipo di attesa può essere comunemente osservato quando una pagina di sistema (buffer) come PFS, GAM, SGAM è bloccato. Per la risoluzione di uno scenario comune, vedere [ridurre i conflitti di allocazione nel database SQL Server tempdb](/troubleshoot/sql/performance/recommendations-reduce-allocation-contention).| 
+|PAGELATCH_SH |Si verifica quando un'attività è in attesa di un latch per un buffer non incluso in una richiesta di I/O. La richiesta di latch è in modalità condivisa che consente a più thread di leggere, ma non modificare, un buffer (pagina). Per ulteriori informazioni, vedere [latch modes](../diagnose-resolve-latch-contention.md#sql-server-latch-modes-and-compatibility) .| 
+|PAGELATCH_UP |Si verifica quando un'attività è in attesa di un latch per un buffer non incluso in una richiesta di I/O. La richiesta di latch è in modalità di aggiornamento. Questo tipo di attesa può essere comunemente osservato quando una pagina di sistema (buffer) come PFS, GAM, SGAM è bloccato. Per ulteriori informazioni, vedere [latch modes](../diagnose-resolve-latch-contention.md#sql-server-latch-modes-and-compatibility) . </br></br> Per la risoluzione di uno scenario comune con questo latch, vedere [ridurre i conflitti di allocazione nel database SQL Server tempdb](/troubleshoot/sql/performance/recommendations-reduce-allocation-contention).| 
 |PARALLEL_BACKUP_QUEUE |Si verifica durante la serializzazione dell'output generato da RESTORE HEADERONLY, RESTORE FILELISTONLY o RESTORE LABELONLY.| 
 |PARALLEL_REDO_DRAIN_WORKER |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] e versioni successive.| 
 |PARALLEL_REDO_FLOW_CONTROL |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] e versioni successive.| 

@@ -9,16 +9,16 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 52ad8a4e8c335eea412264b69d87453a5ce84104
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
+ms.openlocfilehash: 59f9e29940947c1afcf3321fe138030a3fb0d5f1
+ms.sourcegitcommit: 76c5e10704e3624b538b653cf0352e606b6346d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94520975"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98924700"
 ---
-# <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurare la polibase per accedere ai dati esterni nell'archivio BLOB di Azure
+# <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurare PolyBase per l'accesso a dati esterni in Archiviazione BLOB di Azure
 
-Questo articolo illustra come usare la polibase su un'istanza di SQL Server per eseguire query sui dati esterni nell'archivio BLOB di Azure.
+L'articolo illustra come usare PolyBase in un'istanza di SQL Server per eseguire query sui dati esterni in Archiviazione BLOB di Azure.
 
 > [!NOTE]
 > APS supporta attualmente solo l'archiviazione BLOB di Azure con ridondanza locale (con ridondanza locale) standard per utilizzo generico.
@@ -32,12 +32,12 @@ Questo articolo illustra come usare la polibase su un'istanza di SQL Server per 
 
 Per prima cosa, configurare gli APS per l'uso dell'archiviazione BLOB di Azure.
 
-1. Eseguire [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) con "connettività Hadoop" impostata su un provider di archiviazione BLOB di Azure. Per trovare il valore per i provider, vedere [Configurazione della connettività di PolyBase](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
+1. Eseguire [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) con 'hadoop connectivity' impostato su un provider di Archiviazione BLOB di Azure. Per trovare il valore per i provider, vedere [Configurazione della connettività di PolyBase](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
 
    ```sql  
    -- Values map to various external data sources.  
    -- Example: value 7 stands for Hortonworks HDP 2.1 to 2.6 on Linux,
-   -- 2.1 to 2.3 on Windows Server, and Azure Blob storage  
+   -- 2.1 to 2.3 on Windows Server, and Azure Blob Storage  
    sp_configure @configname = 'hadoop connectivity', @configvalue = 7;
    GO
 
@@ -66,7 +66,7 @@ Per eseguire query sui dati nell'archivio BLOB di Azure, è necessario definire 
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. Creare un'origine dati esterna con [Crea origine dati esterna](../t-sql/statements/create-external-data-source-transact-sql.md).
+1. Creare un'origine dati esterna con [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -81,7 +81,7 @@ Per eseguire query sui dati nell'archivio BLOB di Azure, è necessario definire 
 1. Creare un formato di file esterno con [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md).
 
    ```sql
-   -- FORMAT TYPE: Type of format in Azure Blob storage (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
+   -- FORMAT TYPE: Type of format in Azure Blob Storage (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
    -- In this example, the files are pipe (|) delimited
    CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
          FORMAT_TYPE = DELIMITEDTEXT,
@@ -116,7 +116,7 @@ Per eseguire query sui dati nell'archivio BLOB di Azure, è necessario definire 
 
 PolyBase è adatto per assolvere a una triplice funzione:  
   
-- Query ad hoc su tabelle esterne.  
+- Esecuzione di query ad hoc su tabelle esterne.  
 - Importazione di dati.  
 - Esportazione di dati.  
 
@@ -153,12 +153,12 @@ from Insured_Customers INNER JOIN
 ON Insured_Customers.CustomerKey = SensorD.CustomerKey  
 ```  
 
-### <a name="exporting-data"></a>Esportazione dei dati  
+### <a name="exporting-data"></a>Esportazione di dati  
 
 La query seguente consente di esportare i dati dagli APS nell'archivio BLOB di Azure. Può essere usato per archiviare dati relazionali nell'archivio BLOB di Azure, pur continuando a eseguire query.
 
 ```sql
--- Export data: Move old data to Azure Blob storage while keeping it query-able via an external table.  
+-- Export data: Move old data to Azure Blob Storage while keeping it query-able via an external table.  
 CREATE EXTERNAL TABLE [dbo].[FastCustomers2009] 
 WITH (  
       LOCATION='/archive/customer/2009',  
