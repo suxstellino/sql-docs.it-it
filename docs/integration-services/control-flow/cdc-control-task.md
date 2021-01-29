@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 685ac46fd80e92d115dcf8aed3c49abb1ac9d144
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
-ms.translationtype: HT
+ms.openlocfilehash: 492a0cd4b510b91d1f5f17ad04de54b005502bba
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96123574"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049115"
 ---
 # <a name="cdc-control-task"></a>Attività di controllo CDC
 
@@ -37,9 +37,9 @@ ms.locfileid: "96123574"
 |Operazione|Descrizione|  
 |---------------|-----------------|  
 |ResetCdcState|Questa operazione viene utilizzata per reimpostare lo stato CDC persistente associato al contesto CDC corrente. Dopo l'esecuzione di questa operazione, l'LSN massimo corrente della tabella LSN-timestamp `sys.fn_cdc_get_max_lsn` diventa l'inizio dell'intervallo di elaborazione successivo. Per questa operazione è necessaria una connessione al database di origine.|  
-|MarkInitialLoadStart|Questa operazione viene utilizzata all'inizio di un pacchetto di caricamento iniziale per registrare l'LSN corrente nel database di origine prima che tramite il pacchetto di caricamento iniziale venga avviata la lettura delle tabelle di origine. Per questa operazione è necessaria una connessione al database di origine per chiamare `sys.fn_cdc_get_max_lsn`.<br /><br /> Se si seleziona MarkInitialLoadStart quando si usa CDC di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , ovvero non di Oracle, l'utente specificato nella gestione connessione deve essere db_owner o sysadmin.|  
-|MarkInitialLoadEnd|Questa operazione viene utilizzata alla fine di un pacchetto di caricamento iniziale per registrare l'LSN corrente nel database di origine dopo che il pacchetto di caricamento iniziale completa la lettura delle tabelle di origine. Questo LSN viene determinato registrando la data e l'ora correnti in cui si è verificata l'operazione ed eseguendo quindi una query sulla tabella di mapping `cdc.lsn_time_`nel database CDC per trovare una modifica successiva alla data e all'ora.<br /><br /> Se si seleziona MarkInitialLoadEnd quando si usa CDC di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , ovvero non di Oracle, l'utente specificato nella gestione connessione deve essere db_owner o sysadmin.|  
-|MarkCdcStart|Questa operazione viene utilizzata quando il caricamento iniziale viene eseguito da un database snapshot. In questo caso, l'elaborazione delle modifiche deve iniziare immediatamente dopo l'LSN dello snapshot. È possibile specificare il nome del database snapshot da utilizzare e l'attività di controllo CDC esegue una query su [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per trovare l'LSN dello snapshot. È inoltre possibile scegliere di specificare direttamente l'LSN dello snapshot.<br /><br /> Se si seleziona MarkCdcStart quando si usa CDC di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , ovvero non di Oracle, l'utente specificato nella gestione connessione deve essere db_owner o sysadmin.|  
+|MarkInitialLoadStart|Questa operazione viene utilizzata all'inizio di un pacchetto di caricamento iniziale per registrare l'LSN corrente nel database di origine prima che tramite il pacchetto di caricamento iniziale venga avviata la lettura delle tabelle di origine. Per questa operazione è necessaria una connessione al database di origine per chiamare `sys.fn_cdc_get_max_lsn`.<br /><br /> Se si seleziona MarkInitialLoadStart quando si usa CDC di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] , ovvero non di Oracle, l'utente specificato nella gestione connessione deve essere db_owner o sysadmin.|  
+|MarkInitialLoadEnd|Questa operazione viene utilizzata alla fine di un pacchetto di caricamento iniziale per registrare l'LSN corrente nel database di origine dopo che il pacchetto di caricamento iniziale completa la lettura delle tabelle di origine. Questo LSN viene determinato registrando la data e l'ora correnti in cui si è verificata l'operazione ed eseguendo quindi una query sulla tabella di mapping `cdc.lsn_time_`nel database CDC per trovare una modifica successiva alla data e all'ora.<br /><br /> Se si seleziona MarkInitialLoadEnd quando si usa CDC di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] , ovvero non di Oracle, l'utente specificato nella gestione connessione deve essere db_owner o sysadmin.|  
+|MarkCdcStart|Questa operazione viene utilizzata quando il caricamento iniziale viene eseguito da un database snapshot. In questo caso, l'elaborazione delle modifiche deve iniziare immediatamente dopo l'LSN dello snapshot. È possibile specificare il nome del database snapshot da utilizzare e l'attività di controllo CDC esegue una query su [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] per trovare l'LSN dello snapshot. È inoltre possibile scegliere di specificare direttamente l'LSN dello snapshot.<br /><br /> Se si seleziona MarkCdcStart quando si usa CDC di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] , ovvero non di Oracle, l'utente specificato nella gestione connessione deve essere db_owner o sysadmin.|  
   
  Le operazioni seguenti vengono utilizzate per gestire l'intervallo di elaborazione:  
   
@@ -108,17 +108,17 @@ ms.locfileid: "96123574"
   
 -   **Contrassegna avvio caricamento iniziale**: questa operazione viene utilizzata durante l'esecuzione di un caricamento iniziale da un database attivo senza uno snapshot. Viene richiamata all'inizio di un pacchetto di caricamento iniziale per registrare il valore LSN corrente nel database di origine prima che venga avviata la lettura delle tabelle di origine. Questa operazione richiede una connessione al database di origine.  
   
-     Se si seleziona **Contrassegna avvio caricamento iniziale** quando si usa CDC di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (ovvero, non Oracle), l'utente specificato nella gestione connessione deve essere  **db_owner** o **sysadmin**.  
+     Se si seleziona **Contrassegna avvio caricamento iniziale** quando si usa CDC di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] (ovvero, non Oracle), l'utente specificato nella gestione connessione deve essere  **db_owner** o **sysadmin**.  
   
 -   **Contrassegna fine caricamento iniziale**: questa operazione viene utilizzata durante l'esecuzione di un caricamento iniziale da un database attivo senza uno snapshot. Viene richiamata alla fine di un pacchetto di caricamento iniziale per registrare l'LSN corrente nel database di origine al termine della lettura delle tabelle di origine. Questo LSN viene determinato registrando l'ora corrente in cui l'operazione si è verificata ed eseguendo quindi una query sulla tabella `cdc.lsn_time_`mapping nel database CDC per ricercare una modifica successiva a tale ora  
   
-     Se si seleziona **Contrassegna fine caricamento iniziale** quando si usa CDC di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (ovvero, non Oracle), l'utente specificato nella gestione connessione deve essere  **db_owner** o **sysadmin**.  
+     Se si seleziona **Contrassegna fine caricamento iniziale** quando si usa CDC di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] (ovvero, non Oracle), l'utente specificato nella gestione connessione deve essere  **db_owner** o **sysadmin**.  
   
 -   **Contrassegna avvio CDC**: questa operazione viene usata quando il caricamento iniziale è costituito da un database snapshot o da un database disattivato. Viene richiamata in qualsiasi punto all'interno del pacchetto di caricamento iniziale. L'operazione accetta un parametro che può essere un LSN snapshot, un nome di un database snapshot (da cui l'LSN snapshot viene automaticamente derivato) o può essere lasciato vuoto, nel qual caso l'LSN del database corrente viene utilizzato come LSN iniziale per il pacchetto di elaborazione delle modifiche.  
   
      Questa operazione viene utilizzata al posto delle operazioni Contrassegna avvio caricamento iniziale/Contrassegna fine caricamento iniziale.  
   
-     Se si seleziona **Contrassegna avvio CDC** quando si usa CDC di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (ovvero, non Oracle), l'utente specificato nella gestione connessione deve essere  **db_owner** o **sysadmin**.  
+     Se si seleziona **Contrassegna avvio CDC** quando si usa CDC di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] (ovvero, non Oracle), l'utente specificato nella gestione connessione deve essere  **db_owner** o **sysadmin**.  
   
 -   **Ottieni intervallo di elaborazione**: questa operazione viene utilizzata in un pacchetto di elaborazione delle modifiche prima di richiamare il flusso di dati che utilizza il flusso di dati dell'origine CDC. L'operazione consente di stabilire un intervallo di LSN letti dal flusso di dati dell'origine CDC quando il flusso di dati viene richiamato. L'intervallo viene archiviato in una variabile del pacchetto SSIS utilizzata dall'origine CDC durante l'elaborazione del flusso di dati.  
   

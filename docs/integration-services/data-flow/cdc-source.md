@@ -16,19 +16,19 @@ f1_keywords:
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7bd7f2478a08b00d1eb970b80ca3e5fb9f168d21
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
-ms.translationtype: HT
+ms.openlocfilehash: 9c10e3f1aa1460f63f3fcd3e95bb95bef8e63065
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196468"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049211"
 ---
 # <a name="cdc-source"></a>Origine CDC
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  Tramite l'origine CDC viene letto un intervallo di dati delle modifiche da tabelle delle modifiche di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ; queste vengono poi recapitate a valle ad altri componenti SSIS.  
+  Tramite l'origine CDC viene letto un intervallo di dati delle modifiche da tabelle delle modifiche di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] ; queste vengono poi recapitate a valle ad altri componenti SSIS.  
   
  L'intervallo di dati delle modifiche letti dall'origine CDC è denominato intervallo di elaborazione CDC ed è determinato dall'attività di controllo CDC eseguita prima dell'inizio del flusso di dati corrente. L'Intervallo di elaborazione CDC viene derivato dal valore di una variabile del pacchetto che gestisce lo stato dell'elaborazione CDC per un gruppo di tabelle.  
   
@@ -126,7 +126,7 @@ use <cdc-enabled-database-name>
 -   [Estrarre dati delle modifiche tramite l'origine CDC](../../integration-services/data-flow/extract-change-data-using-the-cdc-source.md)  
   
 ## <a name="cdc-source-editor-connection-manager-page"></a>Editor origine CDC (pagina Gestione connessione)
-  Usare la pagina **Gestione connessione** della finestra di dialogo **Editor origine CDC** per selezionare la gestione connessione ADO.NET per il database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] da cui l'origine CDC legge le righe delle modifiche (database CDC). Dopo aver selezionato il database CDC è necessario selezionare una tabella acquisita nel database.  
+  Usare la pagina **Gestione connessione** della finestra di dialogo **Editor origine CDC** per selezionare la gestione connessione ADO.NET per il database di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] da cui l'origine CDC legge le righe delle modifiche (database CDC). Dopo aver selezionato il database CDC è necessario selezionare una tabella acquisita nel database.  
   
  Per altre informazioni sull'origine CDC, vedere [Origine CDC](../../integration-services/data-flow/cdc-source.md).  
   
@@ -137,7 +137,7 @@ use <cdc-enabled-database-name>
   
 2.  Nella scheda **Flusso di dati** fare doppio clic sull'origine CDC.  
   
-3.  Nell' **Editor origine CDC**fare clic su **Gestione connessione**.  
+3.  Nell' **Editor origine CDC** fare clic su **Gestione connessione**.  
   
 ### <a name="options"></a>Opzioni  
  **Gestione connessione ADO.NET**  
@@ -212,7 +212,7 @@ use <cdc-enabled-database-name>
   
 2.  Nella scheda **Flusso di dati** fare doppio clic sull'origine CDC.  
   
-3.  In **Editor origine CDC**fare clic su **Output degli errori**.  
+3.  In **Editor origine CDC** fare clic su **Output degli errori**.  
   
 ### <a name="options"></a>Opzioni  
  **Input/Output**  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6721d36159003077cf771fbff6a0e7a50a182ed2
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
-ms.translationtype: HT
+ms.openlocfilehash: abb62aec3a712ace96d6db82ea8eb0085d8a9e74
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97490011"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049277"
 ---
 # <a name="install-integration-services-ssis"></a>Installare Integration Services (SSIS)
 
@@ -81,7 +81,7 @@ Per usare un server dedicato per i processi di estrazione, trasformazione e cari
 
 ### <a name="configuring-ssis-event-logging"></a>Configurazione della registrazione eventi SSIS
 
-Per impostazione predefinita, in una nuova installazione, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene configurato in modo da non registrare gli eventi correlati all'esecuzione dei pacchetti nel registro eventi delle applicazioni. Questa impostazione impedisce la creazione di un numero eccessivo di voci nel registro eventi quando si utilizza la funzionalità di raccolta dati di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Gli eventi non registrati includono EventID 12288, che indica che il pacchetto è stato avviato, ed EventID 12289, che indica che il pacchetto è stato completato. Per inserire questi due eventi nel registro eventi dell'applicazione, aprire il Registro di sistema per la modifica. Nel Registro di sistema individuare il nodo HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS e modificare il valore di DWORD dell'impostazione LogPackageExecutionToEventLog da 0 a 1.
+Per impostazione predefinita, in una nuova installazione, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene configurato in modo da non registrare gli eventi correlati all'esecuzione dei pacchetti nel registro eventi delle applicazioni. Questa impostazione impedisce la creazione di un numero eccessivo di voci nel registro eventi quando si utilizza la funzionalità di raccolta dati di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Gli eventi non registrati includono EventID 12288, che indica che il pacchetto è stato avviato, ed EventID 12289, che indica che il pacchetto è stato completato. Per inserire questi due eventi nel registro eventi dell'applicazione, aprire il Registro di sistema per la modifica. Nel Registro di sistema individuare il nodo HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS e modificare il valore di DWORD dell'impostazione LogPackageExecutionToEventLog da 0 a 1.
 
 ## <a name="install-additional-components-for-integration-services"></a>Installare i componenti aggiuntivi per Integration Services
 

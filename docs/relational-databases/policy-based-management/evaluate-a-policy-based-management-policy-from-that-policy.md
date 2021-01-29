@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0b3214bd-d0ab-45ab-9281-3d95507abe54
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 28b605b52600fe9855fb9e96f9f2dbc99bbc6a20
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: d2df2f0ea2c9f582053c10330931ed88e92bd172
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760536"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049040"
 ---
 # <a name="evaluate-a-policy-based-management-policy-from-that-policy"></a>Valutare i criteri della gestione basata su criteri da quei criteri
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  In questo argomento verrà descritto come valutare i criteri utilizzandoli in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  In questo argomento verrà descritto come valutare i criteri utilizzandoli in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **Contenuto dell'articolo**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "85760536"
   
 #### <a name="to-evaluate-a-policy"></a>Per valutare i criteri  
   
-1.  In **Esplora oggetti**fare clic sul segno più per espandere il server contenente i criteri da valutare.  
+1.  In **Esplora oggetti** fare clic sul segno più per espandere il server contenente i criteri da valutare.  
   
 2.  Fare clic sul segno più per espandere la cartella **Gestione** .  
   

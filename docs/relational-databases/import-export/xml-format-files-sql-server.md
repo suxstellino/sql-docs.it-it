@@ -16,16 +16,16 @@ ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 630b6a3c00d3bd4fccdb13acaadad64279a460c1
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: d5f90439c622e9740ffe5d58789ce3d950be0279
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465522"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049294"
 ---
 # <a name="xml-format-files-sql-server"></a>File in formato XML (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] viene fornito un XML Schema che definisce la sintassi per la scrittura di *file di formato XML* da utilizzare per l'importazione bulk dei dati in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I file di formato XML devono essere conformi a questo schema, definito in XML Schema Definition Language (XSDL). I file di formato XML sono supportati solo quando gli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installati insieme a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] viene fornito un XML Schema che definisce la sintassi per la scrittura di *file di formato XML* da utilizzare per l'importazione bulk dei dati in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I file di formato XML devono essere conformi a questo schema, definito in XML Schema Definition Language (XSDL). I file di formato XML sono supportati solo quando gli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installati insieme a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
  È possibile usare un file di formato XML con un comando **bcp**, un'istruzione BULK INSERT o un'istruzione INSERT ... Istruzione SELECT \* FROM OPENROWSET(BULK...). Il comando **bcp** consente di generare automaticamente un file di formato XML per una tabella. Per ulteriori informazioni, vedere [bcp Utility](../../tools/bcp-utility.md).  
   

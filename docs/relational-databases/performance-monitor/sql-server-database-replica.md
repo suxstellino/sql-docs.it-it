@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 3dff6cb9b3a65ea5f38a97786e10701bc1f31749
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 0544531bf30bc99781c51b7664f4f5a756f5b00f
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170303"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049196"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, replica di database
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  L'oggetto prestazioni **SQLServer:Database Replica** contiene contatori delle prestazioni che forniscono informazioni sui database secondari di un gruppo di disponibilità Always On in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Questo oggetto è valido solo su un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita una replica secondaria.  
+  L'oggetto prestazioni **SQLServer:Database Replica** contiene contatori delle prestazioni che forniscono informazioni sui database secondari di un gruppo di disponibilità Always On in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Questo oggetto è valido solo su un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita una replica secondaria.  
   
 |Nome contatore|Descrizione|Contenuto in...|  
 |------------------|-----------------|--------------|  

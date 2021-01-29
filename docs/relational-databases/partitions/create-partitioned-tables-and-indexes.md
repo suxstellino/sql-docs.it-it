@@ -30,16 +30,16 @@ ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 387a2f88afd22004f7146384ce29ddc2ba2f2da7
-ms.sourcegitcommit: 629229a7c33a3ed99db63b89127bb016449f7d3d
-ms.translationtype: HT
+ms.openlocfilehash: 273e6f625b0a86be179da529e8b52e0d7ce991cc
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97952051"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049154"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Creare tabelle e indici partizionati
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Utilizzando [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è possibile creare una tabella o un indice partizionato in [!INCLUDE[tsql](../../includes/tsql-md.md)]. I dati delle tabelle e degli indici partizionati vengono suddivisi orizzontalmente in unità che possono essere distribuite in più filegroup di un database. Il partizionamento semplifica la gestione delle tabelle e degli indici di grandi dimensioni e li rende più scalabili.  
+  Utilizzando [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è possibile creare una tabella o un indice partizionato in [!INCLUDE[tsql](../../includes/tsql-md.md)]. I dati delle tabelle e degli indici partizionati vengono suddivisi orizzontalmente in unità che possono essere distribuite in più filegroup di un database. Il partizionamento semplifica la gestione delle tabelle e degli indici di grandi dimensioni e li rende più scalabili.  
   
  La creazione di una tabella o di un indice partizionato richiede generalmente quattro operazioni:  
   

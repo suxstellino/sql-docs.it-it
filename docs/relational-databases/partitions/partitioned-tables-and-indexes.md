@@ -17,19 +17,19 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8471695cfde49d36ba107264fa23654757d8c2ab
-ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
+ms.openlocfilehash: 8a8f1575cab349c6c501f6aa98509e8595efeb77
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98241877"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049129"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta il partizionamento di tabelle e indici. I dati di tabelle e indici partizionati vengono divisi in unità che possono essere distribuite facoltativamente in più filegroup in un database. I dati sono partizionati in senso orizzontale, in modo che per gruppi di righe venga eseguito il mapping in singole partizioni. Tutte le partizioni di un singolo indice o di una singola tabella devono trovarsi nello stesso database. La tabella o indice viene gestito come singola entità logica quando si eseguono query o aggiornamenti sui dati. Nelle versioni precedenti a [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] SP1, le tabelle e gli indici partizionati sono disponibili solo in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 > [!IMPORTANT]  
-> Per impostazione predefinita, in[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] viene supportato un massimo di 15.000 partizioni. Nelle versioni precedenti a[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], il numero di partizioni è limitato a 1.000 per impostazione predefinita.  
+> Per impostazione predefinita, in[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] viene supportato un massimo di 15.000 partizioni. Nelle versioni precedenti a[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], il numero di partizioni è limitato a 1.000 per impostazione predefinita.  
   
 ## <a name="benefits-of-partitioning"></a>Vantaggi del partizionamento  
  Il partizionamento di tabelle o indici di grandi dimensioni può offrire i vantaggi in termini di gestibilità e prestazioni descritti di seguito.  

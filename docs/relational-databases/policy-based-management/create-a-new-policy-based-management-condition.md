@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 8a612f7e-6c70-49db-a4de-48431e097cc5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 76c60d4561eacda47648d2cac710e64c2ccc1f4e
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
-ms.translationtype: HT
+ms.openlocfilehash: f8eef68a189d9e3c3c8cce16de803ce3b87f0207
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96127910"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048818"
 ---
 # <a name="create-a-new-policy-based-management-condition"></a>Creare una nuova condizione della gestione basata su criteri
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Questo argomento descrive come creare una condizione della gestione basata su criteri in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  Questo argomento descrive come creare una condizione della gestione basata su criteri in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **Contenuto dell'articolo**  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 19b4d69708405a3c70ffaacd0f9d81e995f4aba8
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
-ms.translationtype: HT
+ms.openlocfilehash: 6df8e88cfbe4098cdb13a9dce9b929caddbc6571
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384624"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049044"
 ---
 # <a name="cdc-flow-components"></a>Componenti di flusso CDC
 
@@ -25,17 +25,17 @@ ms.locfileid: "94384624"
 
   I componenti Change Data Capture di Attunity per Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] consentono agli sviluppatori SSIS di utilizzare CDC e riducono la complessità dei pacchetti CDC.  
   
- I componenti CDC di SSIS sono progettati per usare le funzionalità CDC di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in cui le tabelle di origine rappresentano lo stesso database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o un database Oracle (quando si usa Oracle CDC Service per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Le tabelle partizionate non sono supportate.  
+ I componenti CDC di SSIS sono progettati per usare le funzionalità CDC di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] in cui le tabelle di origine rappresentano lo stesso database di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] o un database Oracle (quando si usa Oracle CDC Service per [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]). Le tabelle partizionate non sono supportate.  
   
- Sono inclusi componenti Flusso di controllo e di dati che semplificano l'esperienza di lettura ed elaborazione dei dati di modifica nei pacchetti SSIS. I componenti possono essere aggiunti alla libreria componenti in Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], ma vengono installati separatamente.  
+ Sono inclusi componenti Flusso di controllo e di dati che semplificano l'esperienza di lettura ed elaborazione dei dati di modifica nei pacchetti SSIS. I componenti possono essere aggiunti alla libreria componenti in Microsoft [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], ma vengono installati separatamente.  
   
  Di seguito sono elencati i componenti Change Data Capture di Attunity:  
   
- **Componente del flusso di controllo CDC** :  
+ **Componente del flusso di controllo CDC**:  
   
  [Attività di controllo CDC](../../integration-services/control-flow/cdc-control-task.md)  
   
- **Componenti del flusso di dati CDC** :  
+ **Componenti del flusso di dati CDC**:  
   
  [Origine CDC](../../integration-services/data-flow/cdc-source.md)  
   
@@ -62,7 +62,7 @@ I componenti CDC per SSIS sono supportati nei sistemi operativi e piattaforme se
 -   Windows Server 2016
   
 ### <a name="running-the-installation-program"></a>Esecuzione del programma di installazione  
- Prima di eseguire l'installazione guidata, accertarsi di aver chiuso [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] . Quindi, seguire le indicazioni nell'installazione guidata.  
+ Prima di eseguire l'installazione guidata, accertarsi di aver chiuso [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] . Quindi, seguire le indicazioni nell'installazione guidata.  
   
 ### <a name="restart-ssis-service"></a>Riavviare il servizio SSIS 
 Dopo aver installato i componenti CDC, è necessario riavviare il servizio SSIS per essere certi che i componenti funzionino correttamente quando si sviluppano pacchetti in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] di SQL.  
@@ -70,21 +70,21 @@ Dopo aver installato i componenti CDC, è necessario riavviare il servizio SSIS 
 Al termine dell'installazione dei componenti, viene visualizzato un messaggio. Fare clic su **Sì** quando richiesto.  
   
 ### <a name="uninstalling-the-microsoft-cdc-components"></a>Disinstallazione dei componenti CDC Microsoft  
- Per disinstallare l'origine CDC, la barra di divisione CDC o l'attività di controllo CDC, utilizzare la disinstallazione guidata. Se si usa [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] per lo sviluppo di pacchetti, verificare che [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] sia chiuso prima di eseguire la disinstallazione guidata.  
+ Per disinstallare l'origine CDC, la barra di divisione CDC o l'attività di controllo CDC, utilizzare la disinstallazione guidata. Se si usa [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] per lo sviluppo di pacchetti, verificare che [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] sia chiuso prima di eseguire la disinstallazione guidata.  
   
 ## <a name="benefits"></a>Vantaggi  
- I componenti CDC per i componenti [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consentono agli sviluppatori di SSIS di compilare facilmente pacchetti SSIS che elaborano i dati di modifica. Questi componenti migliorano la capacità degli sviluppatori di SSIS di gestire CDC e riducono la complessità dei pacchetti CDC.  
+ I componenti CDC per i componenti [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consentono agli sviluppatori di SSIS di compilare facilmente pacchetti SSIS che elaborano i dati di modifica. Questi componenti migliorano la capacità degli sviluppatori di SSIS di gestire CDC e riducono la complessità dei pacchetti CDC.  
   
  I componenti CDC di SSIS sono utilizzati per fornire i dati di modifica in modo da facilitarne un'ulteriore elaborazione per la replica, ovvero il caricamento di un data warehouse, l'aggiornamento di dimensioni a modifica lenta per OLAP, il controllo delle modifiche o ulteriori altri possibili utilizzi. Il tipo di ulteriore elaborazione utilizzato è determinato dallo sviluppatore di SSIS.  
   
- I componenti CDC di SSIS sono progettati per l'interazione con la funzionalità CDC di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per usare tabelle delle modifiche che si trovano nello stesso database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+ I componenti CDC di SSIS sono progettati per l'interazione con la funzionalità CDC di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] per usare tabelle delle modifiche che si trovano nello stesso database di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="getting-started-with-the-change-data-capture-components"></a>Introduzione ai componenti Change Data Capture  
  Un pacchetto CDC tipico elabora le modifiche apportate a un gruppo di tabelle. La parte del flusso di controllo di base di questo tipo di pacchetto CDC è illustrata nella figura seguente. Questo pacchetto viene denominato pacchetto di elaborazione Trickle-Feed.  
   
  ![Flusso di controllo del pacchetto di elaborazione di Trickle-Feed](../../integration-services/data-flow/media/tricklefeedprocessing.gif "Flusso di controllo del pacchetto di elaborazione di Trickle-Feed")  
   
- Questo flusso di controllo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contiene due attività di controllo CDC e l'attività Flusso di dati. La prima attività denominata **Get CDC Processing Range** stabilisce l'intervallo LSN per le modifiche elaborate nell'attività Flusso di dati denominata **Process Changes**. Questo intervallo viene stabilito in base a ciò che è stato elaborato durante l'ultima esecuzione del pacchetto e salvato in un archivio persistente.  
+ Questo flusso di controllo [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contiene due attività di controllo CDC e l'attività Flusso di dati. La prima attività denominata **Get CDC Processing Range** stabilisce l'intervallo LSN per le modifiche elaborate nell'attività Flusso di dati denominata **Process Changes**. Questo intervallo viene stabilito in base a ciò che è stato elaborato durante l'ultima esecuzione del pacchetto e salvato in un archivio persistente.  
   
  Per altre informazioni sull'uso dell'attività di controllo CDC, vedere [Attività di controllo CDC](../../integration-services/control-flow/cdc-control-task.md) e [CDC Control Task Editor](../control-flow/cdc-control-task.md).  
   
@@ -142,13 +142,13 @@ Al termine dell'installazione dei componenti, viene visualizzato un messaggio. F
  In questa sezione vengono elencate alcune considerazioni di sicurezza correlate all'utilizzo dei componenti CDC in SSIS.  
   
 ### <a name="access-authorization-to-change-data"></a>Autorizzazione di accesso per modificare i dati  
- I pacchetti di aggiornamento Trickle-Feed richiedono l'accesso alle funzioni CDC di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Per impostazione predefinita, l'accesso è consentito ai membri del ruolo predefinito del database **db_owner** . Dato che **db_owner** è un ruolo potente, quando si definiscono le istanze di acquisizione all'interno di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , è consigliabile associare un ruolo di sicurezza di controllo a ogni istanza di acquisizione che consente al pacchetto CDC di SSIS di usare un utente molto più limitato per l'elaborazione delle modifiche.  
+ I pacchetti di aggiornamento Trickle-Feed richiedono l'accesso alle funzioni CDC di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] . Per impostazione predefinita, l'accesso è consentito ai membri del ruolo predefinito del database **db_owner** . Dato che **db_owner** è un ruolo potente, quando si definiscono le istanze di acquisizione all'interno di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] , è consigliabile associare un ruolo di sicurezza di controllo a ogni istanza di acquisizione che consente al pacchetto CDC di SSIS di usare un utente molto più limitato per l'elaborazione delle modifiche.  
   
 ### <a name="access-to-cdc-database-current-lsn"></a>Accesso a LSN corrente del database CDC  
- Le operazioni dell'attività di controllo CDC per contrassegnare l'LSN iniziale per elaborazione delle modifiche devono essere in grado di trovare l'LSN corrente del database CDC. Questi componenti trovano l'LSN usando la stored procedure **sp_replincrementlsn** dal database master. L'autorizzazione Execute per questa procedura deve essere fornita all'account di accesso utilizzato per la connessione al database CDC di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+ Le operazioni dell'attività di controllo CDC per contrassegnare l'LSN iniziale per elaborazione delle modifiche devono essere in grado di trovare l'LSN corrente del database CDC. Questi componenti trovano l'LSN usando la stored procedure **sp_replincrementlsn** dal database master. L'autorizzazione Execute per questa procedura deve essere fornita all'account di accesso utilizzato per la connessione al database CDC di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] .  
   
 ### <a name="access-to-cdc-states-table"></a>Accesso alla tabella CDC States  
- La tabella CDC States viene usata per preservare automaticamente stati CDC che devono essere aggiornati dall'account di accesso usato per la connessione al database CDC di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Poiché questa tabella viene creata dallo sviluppatore di SSIS, impostare l'amministratore di sistema di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] come un utente autorizzato a creare database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ed eseguire attività amministrative e di manutenzione. Inoltre, un amministratore di sistema di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] che utilizza database abilitati CDC deve essere bene informato sulla tecnologia e l'implementazione CDC di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+ La tabella CDC States viene usata per preservare automaticamente stati CDC che devono essere aggiornati dall'account di accesso usato per la connessione al database CDC di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] . Poiché questa tabella viene creata dallo sviluppatore di SSIS, impostare l'amministratore di sistema di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] come un utente autorizzato a creare database di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] ed eseguire attività amministrative e di manutenzione. Inoltre, un amministratore di sistema di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] che utilizza database abilitati CDC deve essere bene informato sulla tecnologia e l'implementazione CDC di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="grouping-tables-for-cdc-processing"></a>Raggruppamento di tabelle per elaborazione CDC  
  La dimensione dei progetti di database varia da alcune tabelle a molte migliaia di tabelle. Quando si progettano pacchetti di caricamento iniziale e CDC, è opportuno raggruppare le tabelle in gruppi molto più piccoli per una gestione più semplice e una maggiore efficienza. In questa sezione vengono elencate varie considerazioni che influiscono sull'ordinamento di tabelle in piccoli gruppi, in cui le tabelle vengono inizialmente caricate e quindi aggiornate come un gruppo.  
@@ -181,7 +181,7 @@ Al termine dell'installazione dei componenti, viene visualizzato un messaggio. F
 |2- ILEND (Initial-Load-Ended)|Si tratta dello stato esistente quando il pacchetto di caricamento iniziale termina correttamente. Si verifica dopo la chiamata di operazione MarkInitialLoadEnd all'attività di controllo CDC.<br /><br /> Per altre informazioni sulle operazioni dell'attività di controllo CDC, vedere [Attività di controllo CDC](../../integration-services/control-flow/cdc-control-task.md).|  
 |3-ILUPDATE (Initial Load Update)|Si tratta dello stato esistente dopo la prima esecuzione del pacchetto di aggiornamento in seguito al caricamento iniziale mentre l'elaborazione dell'intervallo di elaborazione iniziale è ancora in corso. Si verifica dopo la chiamata dell'attività di controllo CDC dall'operazione **GetProcessingRange** .<br /><br /> Se si usa la colonna **_$reprocessing** , viene impostato su 1 per indicare che le righe potrebbero essere già in corso di rielaborazione nella destinazione.<br /><br /> Per altre informazioni sulle operazioni dell'attività di controllo CDC, vedere [Attività di controllo CDC](../../integration-services/control-flow/cdc-control-task.md).|  
 |4-TFEND (Trickle-Feed-Update-Ended)|Si tratta dello stato previsto per le esecuzioni CDC normali. Indica che l'esecuzione precedente è stata completata e che è possibile avviare una nuova esecuzione con un nuovo intervallo di elaborazione.|  
-|5-TFSTART (Trickle-Feed-Update-Started)|Si tratta dello stato esistente in esecuzioni successive del pacchetto di aggiornamento dopo la chiamata dell'attività di controllo CDC dall'operazione **GetProcessingRange** .<br /><br /> Indica che un'esecuzione CDC normale è stata avviata in maniera pulita, ma non è stata o non è ancora, terminata ( **MarkProcessedRange** ).<br /><br /> Per altre informazioni sulle operazioni dell'attività di controllo CDC, vedere [Attività di controllo CDC](../../integration-services/control-flow/cdc-control-task.md).|  
+|5-TFSTART (Trickle-Feed-Update-Started)|Si tratta dello stato esistente in esecuzioni successive del pacchetto di aggiornamento dopo la chiamata dell'attività di controllo CDC dall'operazione **GetProcessingRange** .<br /><br /> Indica che un'esecuzione CDC normale è stata avviata in maniera pulita, ma non è stata o non è ancora, terminata (**MarkProcessedRange**).<br /><br /> Per altre informazioni sulle operazioni dell'attività di controllo CDC, vedere [Attività di controllo CDC](../../integration-services/control-flow/cdc-control-task.md).|  
 |6-TFREDO (Reprocessing-Trickle-Feed-Updates)|Si tratta dello stato di **GetProcessingRange** che si verifica dopo TFSTART. Indica che l'esecuzione precedente non è stata completata correttamente.<br /><br /> Se si utilizza la colonna __$reprocessing, viene impostato su 1 per indicare che a livello di destinazione è possibile che le righe siano già in corso di rielaborazione.|  
 |7-ERROR|Il gruppo CDC si trova in uno stato ERROR.|  
   

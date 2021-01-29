@@ -16,19 +16,19 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 8584c274304757724d0eceb88a91257112ef694a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 82314d905d6336ae35d564096db00aa4e426436c
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474002"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049076"
 ---
 # <a name="format-files-to-import-or-export-data-sql-server"></a>Formattare i file per importare ed esportare i dati (SQL Server)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Quando si importando dati in blocco in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o si esportano dati in blocco da una tabella, è possibile usare un *file di formato* per archiviare le informazioni sul formato necessarie all'esportazione o all'importazione in blocco dei dati. Sono incluse informazioni sul formato per ogni campo in un file di dati relativo a quella tabella.
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta due tipi di file di formato: file di formato XML e file di formato non XML. In entrambi i tipi di file di formato XML e non XML sono contenute descrizioni di ogni campo in un file di dati; nei file di formato XML sono inoltre presenti descrizioni delle colonne della tabella corrispondente. In generale, i file di formato XML e non XML sono intercambiabili. È tuttavia consigliabile utilizzare la sintassi XML per i nuovi file di formato, in quanto questo tipo di file offre numerosi vantaggi rispetto ai file di formato non XML. Per altre informazioni, vedere [File in formato XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] supporta due tipi di file di formato: file di formato XML e file di formato non XML. In entrambi i tipi di file di formato XML e non XML sono contenute descrizioni di ogni campo in un file di dati; nei file di formato XML sono inoltre presenti descrizioni delle colonne della tabella corrispondente. In generale, i file di formato XML e non XML sono intercambiabili. È tuttavia consigliabile utilizzare la sintassi XML per i nuovi file di formato, in quanto questo tipo di file offre numerosi vantaggi rispetto ai file di formato non XML. Per altre informazioni, vedere [File in formato XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).
 
 ## <a name="benefits-of-format-files"></a><a name="Benefits"></a> Vantaggi dei file di formato
 

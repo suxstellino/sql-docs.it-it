@@ -19,17 +19,17 @@ ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9df5eb968e329f67fd9a98f7ddb1d4eff027a35
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 0d309a308e71057f71fd20b0d0652d14a6011ce5
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460364"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048904"
 ---
 # <a name="enable-indexes-and-constraints"></a>Abilitazione di indici e vincoli
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  In questo argomento si descrive come abilitare un indice disabilitato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Dopo la disabilitazione, un indice rimane nello stato disabilitato finché non viene ricompilato o rimosso.  
+  In questo argomento si descrive come abilitare un indice disabilitato in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Dopo la disabilitazione, un indice rimane nello stato disabilitato finché non viene ricompilato o rimosso.  
   
  **Contenuto dell'articolo**  
   

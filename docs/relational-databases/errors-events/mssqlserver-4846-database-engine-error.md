@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a455e809-1883-4c7d-b3e3-835ee5bfe258
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9654cb637d07bb8bbf658e0daecc4361c195b81d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: 6ad0d502627845f9e5abea5e2159f020579092c6
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471033"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048934"
 ---
 # <a name="mssqlserver_4846"></a>MSSQLSERVER_4846
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ Per risolvere gli errori di memoria, eseguire la procedura seguente:
   
     -   **min memory per query**  
   
-    Valutare eventuali impostazioni non comuni e, se necessario, correggerle. Considerare i requisiti di memoria per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Le impostazioni predefinite sono elencate nell'argomento "Impostazione delle opzioni di configurazione del server" nella documentazione online di SQL Server.  
+    Valutare eventuali impostazioni non comuni e, se necessario, correggerle. Considerare i requisiti di memoria per [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Le impostazioni predefinite sono elencate nell'argomento "Impostazione delle opzioni di configurazione del server" nella documentazione online di SQL Server.  
   
 4.  Osservare l'output di DBCC MEMORYSTATUS e il modo in cui viene modificato quando vengono visualizzati questi messaggi di errore.  
   

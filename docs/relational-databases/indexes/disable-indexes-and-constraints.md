@@ -25,17 +25,17 @@ ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d06bb8ed9286c22a2381f31a36814ea305642365
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 97718ff757e09cd33116c47f31155f6ae0edb08b
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481172"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048894"
 ---
 # <a name="disable-indexes-and-constraints"></a>Disabilitazione di indici e vincoli
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  In questo argomento si descrive come disabilitare un indice o i vincoli in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La disabilitazione di un indice impedisce all'utente di accedere all'indice e, per gli indici cluster, ai dati della tabella sottostante. La definizione dell'indice viene mantenuta nei metadati e le statistiche relative all'indice vengono preservate negli indici non cluster. La disabilitazione di un indice non cluster o cluster di una vista consente di eliminare fisicamente i dati dell'indice. La disabilitazione di un indice cluster in una tabella impedisce l'accesso ai dati. Questi ultimi vengono comunque mantenuti nella tabella, ma non sono disponibili per le operazioni DML (Data Manipulation Language) finché l'indice non viene eliminato o ricompilato.  
+  In questo argomento si descrive come disabilitare un indice o i vincoli in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La disabilitazione di un indice impedisce all'utente di accedere all'indice e, per gli indici cluster, ai dati della tabella sottostante. La definizione dell'indice viene mantenuta nei metadati e le statistiche relative all'indice vengono preservate negli indici non cluster. La disabilitazione di un indice non cluster o cluster di una vista consente di eliminare fisicamente i dati dell'indice. La disabilitazione di un indice cluster in una tabella impedisce l'accesso ai dati. Questi ultimi vengono comunque mantenuti nella tabella, ma non sono disponibili per le operazioni DML (Data Manipulation Language) finché l'indice non viene eliminato o ricompilato.  
   
  **Contenuto dell'articolo**  
   

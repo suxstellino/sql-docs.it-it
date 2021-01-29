@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3af62a68c6aeb36f6527afc66744ad8c2f66947f
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
-ms.translationtype: HT
+ms.openlocfilehash: 1dbe4520d621c85edafe4150cd60cc3571ceb9be
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88494175"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049282"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>Attività Riorganizza indice (Piano di manutenzione)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Usare la finestra di dialogo **Attività Riorganizza indice** per razionalizzare l'ordine di ricerca delle pagine dell'indice. In questa attività viene utilizzata l'istruzione `ALTER INDEX REORGANIZE` con i database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+  Usare la finestra di dialogo **Attività Riorganizza indice** per razionalizzare l'ordine di ricerca delle pagine dell'indice. In questa attività viene utilizzata l'istruzione `ALTER INDEX REORGANIZE` con i database di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opzioni  
  **Connection**  

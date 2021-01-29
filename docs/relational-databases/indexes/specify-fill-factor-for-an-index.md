@@ -15,17 +15,17 @@ ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016
-ms.openlocfilehash: d80ece2cf3b8974f203bf03601dd9c41bfc9bf79
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: e1e0a2b406d6817c43a5a4a51bea90b556c5cea6
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478142"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048774"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Specificare un fattore di riempimento per un indice
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  In questo argomento si descrive il fattore di riempimento e come specificare un valore del fattore di riempimento in un indice in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  In questo argomento si descrive il fattore di riempimento e come specificare un valore del fattore di riempimento in un indice in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  L'opzione del fattore di riempimento viene fornita per ottimizzare l'archiviazione dati e le prestazioni degli indici. Quando si crea o si ricompila un indice, il valore del fattore di riempimento determina la percentuale di spazio in ogni pagina al livello foglia da riempire di dati, riservando lo spazio rimanente in ogni pagina come spazio libero per la crescita futura. Se ad esempio si specifica un fattore di riempimento pari a 80, significa che il 20% di ogni pagina al livello foglia verrà lasciato vuoto, rendendo disponibile lo spazio per l'espansione dell'indice con l'aggiunta di dati alla tabella sottostante. Lo spazio vuoto viene riservato tra le righe anziché alla fine dell'indice.  
   

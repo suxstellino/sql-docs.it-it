@@ -19,23 +19,23 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 5b83b5781d8c40c0acc6ee79ab0730c249def7c5
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 211b5e8185440e68b1bd7572dc32abf358e6735e
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172523"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049224"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Avvio e utilizzo di Ottimizzazione guidata motore di database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  In questo argomento viene descritto come avviare e utilizzare Ottimizzazione guidata motore di database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per informazioni su come visualizzare e usare i risultati dopo l'ottimizzazione di un database, vedere [Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
+  In questo argomento viene descritto come avviare e utilizzare Ottimizzazione guidata motore di database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Per informazioni su come visualizzare e usare i risultati dopo l'ottimizzazione di un database, vedere [Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
   
 ##  <a name="initialize-the-database-engine-tuning-advisor"></a><a name="Initialize"></a> Inizializzare Ottimizzazione guidata motore di database  
  Al primo utilizzo, è necessario che lo strumento Ottimizzazione guidata motore di database sia avviato da un utente membro del ruolo predefinito del server **sysadmin** . Questa operazione viene richiesta perché è necessario creare diverse tabelle di sistema nel database **msdb** per supportare operazioni di ottimizzazione. L'inizializzazione consente anche agli utenti membri del ruolo predefinito del database **db_owner** di ottimizzare carichi di lavoro nelle tabelle dei database di cui sono proprietari.  
   
  Un utente con le autorizzazioni di amministratore di sistema deve eseguire una delle azioni seguenti.  
   
--   Utilizzare l'interfaccia utente grafica di Ottimizzazione guidata motore di database per connettersi a un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per ulteriori informazioni, vedere [Avviare Ottimizzazione guidata motore di database](#Start) più avanti in questo argomento.  
+-   Utilizzare l'interfaccia utente grafica di Ottimizzazione guidata motore di database per connettersi a un'istanza di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Avviare Ottimizzazione guidata motore di database](#Start) più avanti in questo argomento.  
   
 -   Utilizzare l'utilità **dta** per ottimizzare il primo carico di lavoro. Per ulteriori informazioni, vedere [Utilizzare l'utilità dta](#dta) , più avanti in questo argomento.  
   

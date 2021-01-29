@@ -15,12 +15,12 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5159591eeafc76ca16fde95f8a7b9789acc084e1
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 48d4d4b9602049c0c09e9e60ac8991c5c9a74154
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485313"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049247"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "97485313"
     > [!IMPORTANT]  
     >  Le prestazioni di un sistema di database dipendono da molti fattori, non tutti osservabili e misurabili tramite l'agente di raccolta delle prestazioni delle transazioni. Pertanto, il report di analisi delle prestazioni delle transazioni non è in grado di garantire che i miglioramenti effettivi delle prestazioni corrisponderanno alle eventuali stime eseguite.  
   
- Il report di analisi delle prestazioni delle transazioni e gli assistenti alla migrazione vengono installati come parte di SQL Server Management Studio (SSMS) quando si seleziona **Strumenti di gestione - Di base** o **Strumenti di gestione - Avanzati** quando si installa [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oppure quando si sceglie di [scaricare SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).    
+ Il report di analisi delle prestazioni delle transazioni e gli assistenti alla migrazione vengono installati come parte di SQL Server Management Studio (SSMS) quando si seleziona **Strumenti di gestione - Di base** o **Strumenti di gestione - Avanzati** quando si installa [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] oppure quando si sceglie di [scaricare SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).    
   
 ## <a name="transaction-performance-analysis-reports"></a>Report di analisi delle prestazioni delle transazioni  
  Per generare report di analisi delle prestazioni delle transazioni in **Esplora oggetti** fare clic con il pulsante destro del mouse sul database, scegliere **Report**, quindi **Report standard** e infine **Panoramica dell'analisi delle prestazioni delle transazioni**. Per generare un report di analisi significativo, è richiesto un carico di lavoro attivo o di recente esecuzione del database.  
