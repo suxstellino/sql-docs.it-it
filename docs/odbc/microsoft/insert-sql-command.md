@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - INSERT [ODBC]
 ms.assetid: 9b648198-349f-46f6-b869-13d129945971
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 92c4b2068149164716d52fd3693e56164ab788ab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ca0342aa083fbcb34ce05b8925baa19da3018b17
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449503"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194573"
 ---
 # <a name="insert---sql-command"></a>INSERT (comando SQL)
 Accoda un record alla fine di una tabella che contiene i valori di campo specificati.  
@@ -47,7 +47,7 @@ INSERT INTO dbf_name [(fname1 [, fname2, ...])]
  VALORI ( *eExpression1*[, *eExpression2*[,...]])  
  Specifica i valori dei campi inseriti nel nuovo record. Se si omettono i nomi dei campi, è necessario specificare i valori dei campi nell'ordine definito dalla struttura della tabella.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il nuovo record contiene i dati elencati nella clausola VALUEs.  
   
 ## <a name="driver-remarks"></a>Osservazioni del driver  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_spatial_geometry_histogram
 - sp_help_spatial_geometry_histogram_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d875178db938e92aa60e3396cee2242d6a54e3f7
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 75609570d3c021b350fc06cbaf35f32dee4bd8ba
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810215"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183603"
 ---
 # <a name="sp_help_spatial_geometry_histogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,19 +47,19 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## <a name="arguments"></a>Argomenti  
 `[ @tabname = ] 'tabname'` Nome completo o non qualificato della tabella per la quale è stato specificato l'indice spaziale.  
   
- Le virgolette sono necessarie solo se viene specificata una tabella qualificata. Nel caso di un nome completo, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. *TabName* è di **tipo sysname**e non prevede alcun valore predefinito.  
+ Le virgolette sono necessarie solo se viene specificata una tabella qualificata. Nel caso di un nome completo, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. *TabName* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @colname = ] 'colname'` Nome della colonna spaziale specificata. *colname* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @colname = ] 'colname'` Nome della colonna spaziale specificata. *colname* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @resolution = ] 'resolution'` Risoluzione del rettangolo di delimitazione. I valori validi sono compresi tra 10 e 5000. la *risoluzione* è di **tinyint**e non prevede alcun valore predefinito.  
+`[ @resolution = ] 'resolution'` Risoluzione del rettangolo di delimitazione. I valori validi sono compresi tra 10 e 5000. la *risoluzione* è di **tinyint** e non prevede alcun valore predefinito.  
   
-`[ @xmin = ] 'xmin'` Proprietà del rettangolo di delimitazione X-Minimum. *xmin* è di tipo **float**e non prevede alcun valore predefinito.  
+`[ @xmin = ] 'xmin'` Proprietà del rettangolo di delimitazione X-Minimum. *xmin* è di tipo **float** e non prevede alcun valore predefinito.  
   
-`[ @ymin = ] 'ymin'` Proprietà del rettangolo delimitatore Y minimo. *yMin* è di tipo **float**e non prevede alcun valore predefinito.  
+`[ @ymin = ] 'ymin'` Proprietà del rettangolo delimitatore Y minimo. *yMin* è di tipo **float** e non prevede alcun valore predefinito.  
   
-`[ @xmax = ] 'xmax'` Proprietà del rettangolo di delimitazione X-Maximum. *Xmax* è di tipo **float**e non prevede alcun valore predefinito.  
+`[ @xmax = ] 'xmax'` Proprietà del rettangolo di delimitazione X-Maximum. *Xmax* è di tipo **float** e non prevede alcun valore predefinito.  
   
-`[ @ymax = ] 'ymax'` Proprietà del valore massimo di Y del rettangolo di delimitazione. *yMax* è di tipo **float**e non prevede alcun valore predefinito.  
+`[ @ymax = ] 'ymax'` Proprietà del valore massimo di Y del rettangolo di delimitazione. *yMax* è di tipo **float** e non prevede alcun valore predefinito.  
   
 `[ @sample = ] 'sample'` Percentuale della tabella utilizzata. I valori validi sono compresi tra 0 e 100. *esempio* è un valore **float**. Il valore predefinito è 100.  
   
@@ -75,12 +75,12 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Autorizzazioni  
  L'utente deve essere un membro del ruolo **public** . È necessario disporre dell'autorizzazione READ ACCESS per il server e l'oggetto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Nella scheda spaziale di SSMS viene illustrata una rappresentazione grafica dei risultati. È possibile eseguire una query sui risultati rispetto alla finestra spaziale per ottenere un numero approssimativo di risultati. Gli oggetti nella tabella potrebbero riguardare più di una cella, pertanto la somma delle celle potrebbe essere maggiore del numero di oggetti effettivi.  
   
  È possibile che una riga aggiuntiva venga aggiunta al set di risultati contenente il numero di oggetti esterni al rettangolo di selezione o che toccano il bordo dello stesso. L'oggetto **Cellid** di questa riga è 0 e la **cella** di questa riga contiene un oggetto **LineString** che rappresenta il rettangolo di delimitazione. Questa riga rappresenta l'intero spazio esterno al rettangolo di selezione.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene creata una tabella di esempio, quindi viene chiamato **sp_help_spatial_geometry_histogram** nella tabella.  
   
  `USE AdventureWorksDW2012`  

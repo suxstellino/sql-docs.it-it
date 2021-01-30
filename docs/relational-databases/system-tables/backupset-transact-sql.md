@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - backupset
 - backupset_TSQL
@@ -21,12 +21,12 @@ ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 87d509f0a49668bd354fd1132bb3501c6d2bdbcd
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: fe3235515a86a6fbe7ca378d3c162b31c8214b82
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098699"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183379"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "98098699"
 |**encryptor_thumbprint**|**varbinary(20)**|L'identificazione digitale del componente di crittografia che può essere utilizzato per trovare il certificato o la chiave asimmetrica nel database. Nel caso in cui il backup non è stato crittografato, questo valore è NULL.|  
 |**encryptor_type**|**nvarchar(32)**|Tipo di componente di crittografia usato: certificato o chiave asimmetrica. . Nel caso in cui il backup non è stato crittografato, questo valore è NULL.|  
   
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 - RESTOre VERIFYONLY FROM *backup_device* with LOADHISTORY popola la colonna della tabella **BackupMediaSet** con i valori appropriati dell'intestazione del set di supporti.  
 - Per ridurre il numero di righe in questa tabella e in altre tabelle di backup e di cronologia, eseguire la [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) stored procedure.  
 - Per SQL Istanza gestita, la tabella backupset Mostra solo la cronologia di backup per i [backup di sola copia](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)avviati dall'utente. La tabella backupset non Mostra la cronologia di backup per i backup automatici eseguiti dal servizio. 

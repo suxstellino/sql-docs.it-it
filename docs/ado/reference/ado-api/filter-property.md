@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::Filter
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2519fdf691cc0f982f16a3aa77fdb66036bd86e8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7366ba67d36049f1c5df701bc633d76f56bb9af5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973002"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167326"
 ---
 # <a name="filter-property"></a>Proprietà Filter
 Indica un filtro per i dati in un [Recordset](./recordset-object-ado.md).  
@@ -36,7 +36,7 @@ Imposta o restituisce un valore **Variant** , che può contenere uno degli eleme
   
 -   Valore [FilterGroupEnum](./filtergroupenum.md) .  
   
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Utilizzare la proprietà **Filter** per schermare selettivamente i record in un oggetto **Recordset** . Il **Recordset** filtrato diventa il cursore corrente. Sono interessate anche altre proprietà che restituiscono valori basati sul **cursore** corrente, ad esempio la [proprietà AbsolutePosition (ADO)](./absoluteposition-property-ado.md), la [Proprietà AbsolutePage (ADO)](./absolutepage-property-ado.md), la [proprietà RecordCount (ADO)](./recordcount-property-ado.md)e la [proprietà PageCount (ADO)](./pagecount-property-ado.md). Se si imposta la proprietà **Filter** su un nuovo valore specifico, il record corrente viene spostato sul primo record che soddisfa il nuovo valore.
   
@@ -76,7 +76,7 @@ Questa configurazione genera l'errore in fase di esecuzione. Tuttavia, `rs.Filte
 
 Per una spiegazione dei valori di segnalibro da cui è possibile compilare una matrice da usare con la proprietà Filter, vedere la proprietà [Bookmark Property (ADO)](./bookmark-property-ado.md) .
 
-Solo i filtri sotto forma di stringhe di criteri influiscono sul contenuto di un **Recordset**salvato in modo permanente. Un esempio di stringa di criteri è `OrderDate > '12/31/1999'` . I filtri creati con una matrice di segnalibri o con un valore di **FilterGroupEnum**non influiscono sul contenuto del **Recordset**salvato in modo permanente. Queste regole si applicano ai recordset creati con cursori sul lato client o sul lato server.
+Solo i filtri sotto forma di stringhe di criteri influiscono sul contenuto di un **Recordset** salvato in modo permanente. Un esempio di stringa di criteri è `OrderDate > '12/31/1999'` . I filtri creati con una matrice di segnalibri o con un valore di **FilterGroupEnum** non influiscono sul contenuto del **Recordset** salvato in modo permanente. Queste regole si applicano ai recordset creati con cursori sul lato client o sul lato server.
   
 > [!NOTE]
 >  Quando si applica il flag adFilterPendingRecords a un **Recordset** filtrato e modificato in modalità di aggiornamento batch, il **Recordset** risultante è vuoto se il filtro è basato sul campo chiave di una tabella a chiave singola ed è stata apportata la modifica ai valori dei campi chiave. Il **Recordset** risultante non sarà vuoto se si verifica una delle seguenti istruzioni:  
@@ -89,7 +89,7 @@ Solo i filtri sotto forma di stringhe di criteri influiscono sul contenuto di un
   
 -   Sono state apportate modifiche a tutti i campi in una tabella con più chiavi.  
   
-Nella tabella seguente sono riepilogati gli effetti di **adFilterPendingRecords** in diverse combinazioni di filtro e modifiche. La colonna sinistra mostra le possibili modifiche. È possibile apportare modifiche in uno qualsiasi dei campi non con chiave, nel campo chiave di una tabella a chiave singola o in uno qualsiasi dei campi chiave di una tabella con più chiavi. La riga superiore mostra il criterio di filtro. I filtri possono essere basati su uno qualsiasi dei campi non con chiave, il campo chiave in una tabella a chiave singola o uno qualsiasi dei campi chiave in una tabella con più chiavi. Le celle di intersezione mostrano i risultati. Un **+** segno più significa che l'applicazione di **adFilterPendingRecords** restituisce un **Recordset**non vuoto. Un **-** segno meno indica un **Recordset**vuoto.  
+Nella tabella seguente sono riepilogati gli effetti di **adFilterPendingRecords** in diverse combinazioni di filtro e modifiche. La colonna sinistra mostra le possibili modifiche. È possibile apportare modifiche in uno qualsiasi dei campi non con chiave, nel campo chiave di una tabella a chiave singola o in uno qualsiasi dei campi chiave di una tabella con più chiavi. La riga superiore mostra il criterio di filtro. I filtri possono essere basati su uno qualsiasi dei campi non con chiave, il campo chiave in una tabella a chiave singola o uno qualsiasi dei campi chiave in una tabella con più chiavi. Le celle di intersezione mostrano i risultati. Un **+** segno più significa che l'applicazione di **adFilterPendingRecords** restituisce un **Recordset** non vuoto. Un **-** segno meno indica un **Recordset** vuoto.  
   
 |Combinazioni|Non chiavi|Chiave singola|Più chiavi|
 |-|--------------|----------------|-------------------|
@@ -107,4 +107,4 @@ Nella tabella seguente sono riepilogati gli effetti di **adFilterPendingRecords*
 [Esempio di proprietà Filter e RecordCount (VB)](./filter-and-recordcount-properties-example-vb.md) 
  [Esempio di proprietà Filter e RecordCount (VC + +)](./filter-and-recordcount-properties-example-vc.md) 
  [Metodo Clear (ADO)](./clear-method-ado.md) 
- [Optimize Property-Dynamic (ADO)](./optimize-property-dynamic-ado.md)
+ [Ottimizza Property-Dynamic (ADO)](./optimize-property-dynamic-ado.md)

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.service_broker_endpoints_TSQL
 - service_broker_endpoints
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: d8e8a6590dedf9c43da14147c503d1e62423e595
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7a3859eea7237eebb83b994fef037e377b433940
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096695"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212106"
 ---
 # <a name="sysservice_broker_endpoints-transact-sql"></a>sys.service_broker_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "98096695"
 |**encryption_algorithm**|**tinyint**|Algoritmo di crittografia. Di seguito sono riportati i valori possibili con le relative descrizioni e le opzioni DDL corrispondenti.<br /><br /> **0** : nessuna. Opzione DDL corrispondente: disabilitata.<br /><br /> **1** : RC4. Opzione DDL corrispondente: {required &#124; algoritmo obbligatorio RC4}.<br /><br /> **2** : AES. Opzione DDL corrispondente: algoritmo obbligatorio AES.<br /><br /> **3** : nessuna, RC4. Opzione DDL corrispondente: {supported &#124; algoritmo supportato RC4}.<br /><br /> **4** : nessuno, AES. Opzione DDL corrispondente: AES algoritmo supportato.<br /><br /> **5** : RC4, AES. Opzione DDL corrispondente: algoritmo obbligatorio RC4 AES.<br /><br /> **6** : AES, RC4. Opzione DDL corrispondente: algoritmo obbligatorio AES RC4.<br /><br /> **7** : None, RC4, AES. Opzione DDL corrispondente: algoritmo supportato RC4 AES.<br /><br /> **8** : nessuna, AES, RC4. Opzione DDL corrispondente: algoritmo supportato AES RC4.<br /><br /> Non ammette i valori Null.|  
 |**encryption_algorithm_desc**|**nvarchar(60)**|Descrizione dell'algoritmo di crittografia. Di seguito sono elencati i valori possibili e le opzioni DDL corrispondenti:<br /><br /> Nessuno: disabilitato<br /><br /> RC4: {required &#124; algoritmo obbligatorio RC4}<br /><br /> AES: algoritmo obbligatorio AES<br /><br /> NONE, RC4: {supported &#124; algoritmo supportato RC4}<br /><br /> NESSUNO, AES: algoritmo supportato AES<br /><br /> RC4, AES: algoritmo obbligatorio RC4 AES<br /><br /> AES, RC4: algoritmo obbligatorio AES RC4<br /><br /> NONE, RC4, AES: algoritmo supportato RC4 AES<br /><br /> NONE, AES, RC4: algoritmo supportato AES RC4<br /><br /> Ammette valori Null.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 > [!NOTE]  
 >  L'algoritmo RC4 è supportato solo per motivi di compatibilità con le versioni precedenti. È possibile crittografare il nuovo materiale usando RC4 o RC4_128 solo quando il livello di compatibilità del database è 90 o 100. (Non consigliato.) Usare un algoritmo più recente, ad esempio uno degli algoritmi AES. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive il materiale crittografato utilizzando RC4 o RC4_128 può essere decrittografato in qualsiasi livello di compatibilità.  

@@ -7,19 +7,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - SortColumn property [RDS]
 ms.assetid: f6f80f67-f0fb-4e63-a5f5-8fdf312aac63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 62187b1643c315099d40d0bdd878699fcfc0065c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: edbfa8f6c4dbb1296e9bf86aed43148bb7b12ec2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724228"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168775"
 ---
 # <a name="sortcolumn-property-rds"></a>Proprietà SortColumn (Servizi Desktop remoto)
 Indica in quale colonna ordinare i record.  
@@ -41,10 +41,10 @@ DataControl.SortColumn = String
  *Stringa*  
  Valore **stringa** che rappresenta il nome o l'alias della colonna in base alla quale ordinare i record.  
   
-## <a name="remarks"></a>Osservazioni  
- Le proprietà **SortColumn**, [SortDirection](./sortdirection-property-rds.md), [FilterValue](./filtervalue-property-rds.md), [FilterCriterion](./filtercriterion-property-rds.md)e [FilterColumn offrono](./filtercolumn-property-rds.md) forniscono funzionalità di ordinamento e filtro nella cache sul lato client. La funzionalità di ordinamento ordina i record in base ai valori di una colonna. La funzionalità di filtro Visualizza un subset di record in base ai criteri di ricerca, mentre il [Recordset](../ado-api/recordset-object-ado.md) completo viene mantenuto nella cache. Il metodo [Reset](./reset-method-rds.md) eseguirà i criteri e sostituirà il **Recordset** corrente con un **Recordset**aggiornabile.  
+## <a name="remarks"></a>Commenti  
+ Le proprietà **SortColumn**, [SortDirection](./sortdirection-property-rds.md), [FilterValue](./filtervalue-property-rds.md), [FilterCriterion](./filtercriterion-property-rds.md)e [FilterColumn offrono](./filtercolumn-property-rds.md) forniscono funzionalità di ordinamento e filtro nella cache sul lato client. La funzionalità di ordinamento ordina i record in base ai valori di una colonna. La funzionalità di filtro Visualizza un subset di record in base ai criteri di ricerca, mentre il [Recordset](../ado-api/recordset-object-ado.md) completo viene mantenuto nella cache. Il metodo [Reset](./reset-method-rds.md) eseguirà i criteri e sostituirà il **Recordset** corrente con un **Recordset** aggiornabile.  
   
- Per eseguire l'ordinamento in un **Recordset**, è innanzitutto necessario salvare le modifiche in sospeso. Se si utilizza **RDS. DataControl**, è possibile usare il metodo [SubmitChanges](./submitchanges-method-rds.md) . Ad esempio, se il Servizi Desktop remoto **. DataControl** è denominato ADC1, il codice è `ADC1.SubmitChanges` . Se si utilizza un **Recordset**ADO, è possibile utilizzare il relativo metodo [UpdateBatch](../ado-api/updatebatch-method.md) . L'uso di **UpdateBatch** è il metodo consigliato per gli oggetti **Recordset** creati con il metodo [CreateRecordset](./createrecordset-method-rds.md) . Ad esempio, il codice potrebbe essere `myRS.UpdateBatch` o `ADC1.Recordset.UpdateBatch` .  
+ Per eseguire l'ordinamento in un **Recordset**, è innanzitutto necessario salvare le modifiche in sospeso. Se si utilizza **RDS. DataControl**, è possibile usare il metodo [SubmitChanges](./submitchanges-method-rds.md) . Ad esempio, se il Servizi Desktop remoto **. DataControl** è denominato ADC1, il codice è `ADC1.SubmitChanges` . Se si utilizza un **Recordset** ADO, è possibile utilizzare il relativo metodo [UpdateBatch](../ado-api/updatebatch-method.md) . L'uso di **UpdateBatch** è il metodo consigliato per gli oggetti **Recordset** creati con il metodo [CreateRecordset](./createrecordset-method-rds.md) . Ad esempio, il codice potrebbe essere `myRS.UpdateBatch` o `ADC1.Recordset.UpdateBatch` .  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto DataControl (Servizi Desktop remoto)](./datacontrol-object-rds.md)  

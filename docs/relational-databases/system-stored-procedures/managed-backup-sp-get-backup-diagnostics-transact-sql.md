@@ -1,13 +1,13 @@
 ---
-description: managed_backup. sp_get_backup_diagnostics (Transact-SQL)
-title: managed_backup. sp_get_backup_diagnostics (Transact-SQL) | Microsoft Docs
+description: managed_backup managed_backup.sp_get_backup_diagnostics (Transact-SQL)
+title: managed_backup managed_backup.sp_get_backup_diagnostics (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_get_backup_diagnostics_TSQL
 - sp_get_backup_diagnostics
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: efd884b6e757ab81cf01eda00b0322ef3ec5c701
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fbda9abd944665d3f0d52c174e0b1a5c1e488fa0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543693"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205283"
 ---
-# <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup. sp_get_backup_diagnostics (Transact-SQL)
+# <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup managed_backup.sp_get_backup_diagnostics (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Restituisce gli eventi estesi registrati da Smart Admin.  
@@ -69,7 +69,7 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 ### <a name="permissions"></a>Autorizzazioni  
  Sono necessarie le autorizzazioni **Execute** per la stored procedure. Sono inoltre necessarie le autorizzazioni **View Server state** , poiché vengono chiamati internamente altri oggetti di sistema che richiedono questa autorizzazione.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituiti tutti gli eventi registrati per i 30 minuti precedenti.  
   
 ```  

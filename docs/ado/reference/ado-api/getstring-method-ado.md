@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset20::raw_GetString
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 15a3ffc6252f1caf56ea1d47006cb84d7f3df201
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d1626dd9ff1c97426a0597b010015adada4c17c7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990862"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167246"
 ---
 # <a name="getstring-method-ado"></a>Metodo GetString (ADO)
 Restituisce il [Recordset](./recordset-object-ado.md) sotto forma di stringa.  
@@ -39,21 +39,21 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
   
 #### <a name="parameters"></a>Parametri  
  *StringFormat*  
- Valore [StringFormatEnum](./stringformatenum.md) che specifica la modalità di conversione del **Recordset** in una stringa. I parametri *RowDelimiter*, *ColumnDelimiter*e *NullExpr* vengono utilizzati solo con un oggetto *StringFormat* di **adClipString**.  
+ Valore [StringFormatEnum](./stringformatenum.md) che specifica la modalità di conversione del **Recordset** in una stringa. I parametri *RowDelimiter*, *ColumnDelimiter* e *NullExpr* vengono utilizzati solo con un oggetto *StringFormat* di **adClipString**.  
   
  *NumRows*  
- Facoltativa. Numero di righe da convertire nel **Recordset**. Se *NumRows* non è specificato o è maggiore del numero totale di righe nel **Recordset**, tutte le righe nel **Recordset** vengono convertite.  
+ facoltativo. Numero di righe da convertire nel **Recordset**. Se *NumRows* non è specificato o è maggiore del numero totale di righe nel **Recordset**, tutte le righe nel **Recordset** vengono convertite.  
   
  *ColumnDelimiter*  
- Facoltativa. Un delimitatore utilizzato tra le colonne, se specificato, in caso contrario il carattere di TABULAzione.  
+ facoltativo. Un delimitatore utilizzato tra le colonne, se specificato, in caso contrario il carattere di TABULAzione.  
   
  *RowDelimiter*  
- Facoltativa. Un delimitatore utilizzato tra le righe, se specificato, in caso contrario il carattere di ritorno A capo.  
+ facoltativo. Un delimitatore utilizzato tra le righe, se specificato, in caso contrario il carattere di ritorno A capo.  
   
  *NullExpr*  
- Facoltativa. Espressione utilizzata al posto di un valore null, se specificato, in caso contrario una stringa vuota.  
+ facoltativo. Espressione utilizzata al posto di un valore null, se specificato, in caso contrario una stringa vuota.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  I dati di riga, ma senza dati dello schema, vengono salvati nella stringa. Pertanto, non è possibile riaprire un **Recordset** utilizzando questa stringa.  
   
  Questo metodo è equivalente al metodo **GetClipString** di RDO.  

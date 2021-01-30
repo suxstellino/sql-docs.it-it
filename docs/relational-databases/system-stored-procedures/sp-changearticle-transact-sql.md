@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changearticle
 - sp_changearticle_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2eb11859c0d0e4552324b0a3d7d5e005f9bd89b7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 22d64091d206161546856e7186958ab60217bcc2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548235"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203741"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,9 +44,9 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` Nome della pubblicazione contenente l'articolo. *Publication* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publication = ] 'publication'` Nome della pubblicazione contenente l'articolo. *Publication* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @article = ] 'article'` Nome dell'articolo di cui modificare la proprietà. *article* è di **tipo sysname**e il valore predefinito è null.  
+`[ @article = ] 'article'` Nome dell'articolo di cui modificare la proprietà. *article* è di **tipo sysname** e il valore predefinito è null.  
   
 `[ @property = ] 'property'` Proprietà dell'articolo da modificare. *Property* è di **tipo nvarchar (100)**.  
   
@@ -71,7 +71,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**nessuna**|Non utilizza alcun comando.|  
 ||**goccia**|Rimuove la tabella di destinazione.|  
 ||**delete**|Elimina la tabella di destinazione.|  
-||**troncare**|Tronca la tabella di destinazione.|  
+||**truncate**|Tronca la tabella di destinazione.|  
 |**pub_identity_range**||Controlla le dimensioni degli intervalli di valori Identity assegnati nel Sottoscrittore. Non supportato per la replica peer-to-peer.|  
 |**schema_option**||Specifica la mappa di bit dell'opzione di generazione dello schema per l'articolo specificato. *schema_option* è **binario (8)**. Per ulteriori informazioni, vedere la sezione Osservazioni di seguito in questo argomento.|  
 ||**0x00**|Disabilita la creazione di script eseguita dall'agente snapshot.|  
@@ -108,11 +108,11 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x40000000**|Replica le autorizzazioni.|  
 ||**0x80000000**|Tenta di eliminare le dipendenze da tutti gli oggetti che non fanno parte della pubblicazione.|  
 ||**0x100000000**|Utilizzare questa opzione per replicare l'attributo FILESTREAM se è specificato nelle colonne **varbinary (max)** . Non specificare questa opzione se si stanno replicando tabelle nei Sottoscrittori [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. La replica di tabelle con colonne FILESTREAM [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] nei Sottoscrittori non è supportata, indipendentemente dalla modalità di impostazione di questa opzione dello schema.<br /><br /> Vedere l'opzione correlata **0x800000000**.|  
-||**0x200000000**|Converte i tipi di dati di data e ora (**Data**, **ora**, **DateTimeOffset**e **datetime2**) introdotti in in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tipi di dati supportati nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+||**0x200000000**|Converte i tipi di dati di data e ora (**Data**, **ora**, **DateTimeOffset** e **datetime2**) introdotti in in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tipi di dati supportati nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 ||**0x400000000**|Replica l'opzione di compressione per dati e indici. Per altre informazioni, vedere [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
 ||**0x800000000**|Impostare questa opzione per archiviare i dati FILESTREAM nel relativo filegroup nel Sottoscrittore. Se questa opzione non è impostata, i dati FILESTREAM vengono archiviati nel filegroup predefinito. Tramite la replica non vengono creati filegroup, pertanto, se si imposta questa opzione, è necessario creare il filegroup prima di applicare lo snapshot nel Sottoscrittore. Per altre informazioni su come creare oggetti prima di applicare lo snapshot, vedere [eseguire gli script prima e dopo l'applicazione dello snapshot](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).<br /><br /> Vedere l'opzione correlata **0x100000000**.|  
 ||**0x1000000000**|Converte Common Language Runtime tipi CLR definiti dall'utente (UDT) di dimensioni maggiori di 8000 byte in **varbinary (max)** in modo che le colonne di tipo UDT possano essere replicate nei Sottoscrittori che eseguono [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .|  
-||**0x2000000000**|Converte il tipo di dati **hierarchyid** in **varbinary (max)** in modo che le colonne di tipo **hierarchyid** possano essere replicate nei Sottoscrittori che eseguono [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Per ulteriori informazioni sull'utilizzo delle colonne **hierarchyid** nelle tabelle replicate, vedere [hierarchyid &#40;&#41;Transact-SQL ](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
+||**0x2000000000**|Converte il tipo di dati **hierarchyid** in **varbinary (max)** in modo che le colonne di tipo **hierarchyid** possano essere replicate nei Sottoscrittori che eseguono [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Per ulteriori informazioni sull'utilizzo delle colonne **hierarchyid** nelle tabelle replicate, vedere [hierarchyid &#40;&#41;Transact-SQL](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 ||**0x4000000000**|Replica gli eventuali indici filtrati sulla tabella. Per altre informazioni sugli indici filtrati, vedere [creare indici filtrati](../../relational-databases/indexes/create-filtered-indexes.md).|  
 ||**0x8000000000**|Converte i tipi di dati **geography** e **Geometry** in **varbinary (max)** in modo che le colonne di questi tipi possano essere replicate nei Sottoscrittori che eseguono [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .|  
 ||**0x10000000000**|Replica gli indici nelle colonne di tipo **geography** e **Geometry**.|  
@@ -142,7 +142,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**upd_cmd**||Istruzione UPDATE da eseguire. In alternativa, viene creata dal log.|  
 |NULL|NULL|Restituisce un elenco di proprietà dell'articolo che è possibile modificare.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Conferma che l'azione eseguita da questo stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è di **bit**e il valore predefinito è **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Conferma che l'azione eseguita da questo stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è di **bit** e il valore predefinito è **0**.  
   
  **0** specifica che le modifiche apportate all'articolo non invalidano lo snapshot. Se la stored procedure rileva che la modifica richiede un nuovo snapshot, viene generato un errore e non viene apportata alcuna modifica.  
   
@@ -158,7 +158,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  Per ulteriori informazioni sulle proprietà che richiedono la reinizializzazione di tutte le sottoscrizioni esistenti in caso di modifica, vedere la sezione Osservazioni.  
   
-`[ @publisher = ] 'publisher'` Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'` Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname** e il valore predefinito è null.  
   
 > [!NOTE]  
 >  Impossibile utilizzare *Publisher* quando si modificano le proprietà degli articoli in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
@@ -166,10 +166,10 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_changearticle** viene utilizzata nella replica snapshot e nella replica transazionale.  
   
- Quando un articolo appartiene a una pubblicazione che supporta la replica transazionale peer-to-peer, è possibile modificare solo le proprietà **Description**, **ins_cmd**, **upd_cmd**e **del_cmd** .  
+ Quando un articolo appartiene a una pubblicazione che supporta la replica transazionale peer-to-peer, è possibile modificare solo le proprietà **Description**, **ins_cmd**, **upd_cmd** e **del_cmd** .  
   
  La modifica di una delle proprietà seguenti richiede la generazione di un nuovo snapshot ed è necessario specificare il valore **1** per il parametro *force_invalidate_snapshot* :  
   
@@ -220,12 +220,12 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**indexed view logbased manualfilter**|Tutte le opzioni|Tutte le opzioni, ma **0x02**|  
 |**indexed view logbased manualview**|Tutte le opzioni|Tutte le opzioni, ma **0x02**|  
 |**indexed view logbase manualboth**|Tutte le opzioni|Tutte le opzioni, ma **0x02**|  
-|**proc exec**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**e **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**e **0x80000000**|  
-|**serializable proc exec**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**e **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**e **0x80000000**|  
-|**proc schema only**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**e **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**e **0x80000000**|  
-|**view schema only**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**e **0x80000000**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**e **0x80000000**|  
-|**func schema only**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**e **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**e **0x80000000**|  
-|**indexed view schema only**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**e **0x80000000**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**e **0x80000000**|  
+|**proc exec**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000** e **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000** e **0x80000000**|  
+|**serializable proc exec**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000** e **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000** e **0x80000000**|  
+|**proc schema only**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000** e **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000** e **0x80000000**|  
+|**view schema only**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000** e **0x80000000**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000** e **0x80000000**|  
+|**func schema only**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000** e **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000** e **0x80000000**|  
+|**indexed view schema only**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000** e **0x80000000**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000** e **0x80000000**|  
   
 > [!NOTE]
 >  Per le pubblicazioni ad aggiornamento in coda, il valore *schema_option* di **0x80** deve essere abilitato. I valori *schema_option* supportati per le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazioni non sono: **0x01**, **0x02**, **0x10**, **0x40**, **0x80**, **0x1000** e **0x4000**.  

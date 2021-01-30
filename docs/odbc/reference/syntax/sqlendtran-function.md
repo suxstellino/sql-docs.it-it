@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLEndTran
 apilocation:
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fea27beb03c19dd9499175678ecfdcb7759a73f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2961cab7c061583f68387e29ed564efc16916870
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461131"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195602"
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran Function
 **Conformità**  
@@ -64,7 +64,7 @@ SQLRETURN SQLEndTran(
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE o SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLEndTran** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, è possibile ottenere un valore SQLSTATE associato chiamando **SQLGetDiagRec** con l' *handle*e il *HandleType* appropriati. La tabella seguente elenca i valori SQLSTATE restituiti comunemente da **SQLEndTran** e ne illustra ognuno nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituite da Gestione driver. Il codice restituito associato a ogni valore SQLSTATE è SQL_ERROR, a meno che non sia specificato diversamente.  
+ Quando **SQLEndTran** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, è possibile ottenere un valore SQLSTATE associato chiamando **SQLGetDiagRec** con l' *handle* e il *HandleType* appropriati. La tabella seguente elenca i valori SQLSTATE restituiti comunemente da **SQLEndTran** e ne illustra ognuno nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituite da Gestione driver. Il codice restituito associato a ogni valore SQLSTATE è SQL_ERROR, a meno che non sia specificato diversamente.  
   
 |SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
@@ -76,10 +76,10 @@ SQLRETURN SQLEndTran(
 |25S03|Viene eseguito il rollback della transazione|Il driver non è stato in grado di garantire che tutto il lavoro nella transazione globale possa essere completato in modo atomico e che sia stato eseguito il rollback di tutte le operazioni nella transazione attiva nell' *handle* .|  
 |40001|Errore di serializzazione|È stato eseguito il rollback della transazione a causa di un deadlock delle risorse con un'altra transazione.|  
 |40002|Violazione del vincolo di integrità|Il *CompletionType* è stato SQL_COMMIT e l'impegno delle modifiche ha causato la violazione del vincolo di integrità. Di conseguenza, è stato eseguito il rollback della transazione.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* szMessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer *\* szMessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY008|Operation canceled|L'elaborazione asincrona è stata abilitata per *connectionHandle*. La funzione è stata chiamata e prima del completamento dell'esecuzione della [funzione SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) è stata chiamata in *connectionHandle*. La funzione è stata chiamata nuovamente in *connectionHandle*.<br /><br /> La funzione è stata chiamata e prima del completamento dell'esecuzione di **SQLCancelHandle** è stato chiamato su *connectionHandle* da un thread diverso in un'applicazione multithread.|  
-|HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per un handle di istruzione associato a *connectionHandle* ed è ancora in esecuzione quando è stato chiamato **SQLEndTran** .<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per *connectionHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato per un handle di istruzione associato a *connectionHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per l' *handle* con *HandleType* impostato su SQL_HANDLE_DBC ed è ancora in esecuzione quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per uno degli handle di istruzione associati all' *handle* e restituiti SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.|  
+|HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per un handle di istruzione associato a *connectionHandle* ed è ancora in esecuzione quando è stato chiamato **SQLEndTran** .<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per *connectionHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations** o **SQLSetPos** è stato chiamato per un handle di istruzione associato a *connectionHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per l' *handle* con *HandleType* impostato su SQL_HANDLE_DBC ed è ancora in esecuzione quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect** o **SQLMoreResults** è stato chiamato per uno degli handle di istruzione associati all' *handle* e restituiti SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.|  
 |HY012|Codice operazione transazione non valido|(DM) il valore specificato per l'argomento *CompletionType* non è né SQL_COMMIT né SQL_ROLLBACK.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
 |HY092|Identificatore di attributo/opzione non valido|(DM) il valore specificato per l'argomento *HandleType* non è né SQL_HANDLE_ENV né SQL_HANDLE_DBC.|  
@@ -152,7 +152,7 @@ SQLRETURN SQLEndTran(
 |Annullamento di una funzione in esecuzione in modo asincrono in un handle di connessione.|[Funzione SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md)|  
 |Restituzione di informazioni su un driver o un'origine dati|[Funzione SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)|  
 |Liberare un handle|[SQLFreeHandle Function](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
-|Liberazione di un handle di istruzione|[Funzione SQLFreeStmt](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
+|Liberazione di un handle di istruzione|[SQLFreeStmt Function](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni di riferimento sulle API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

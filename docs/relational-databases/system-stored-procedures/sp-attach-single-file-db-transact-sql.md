@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_attach_single_file_db
 - sp_attach_single_file_db_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0b8026e1aae3df927a6cc454f7fb4763e3d05093
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: e8fd050ff5706cc2406fcb4502c5d93a8253bc4c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753495"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99197703"
 ---
 # <a name="sp_attach_single_file_db-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @dbname = ] 'dbname'` Nome del database da collegare al server. Il nome deve essere univoco. *dbname* è di **tipo sysname**e il valore predefinito è null.  
+`[ @dbname = ] 'dbname'` Nome del database da collegare al server. Il nome deve essere univoco. *dbname* è di **tipo sysname** e il valore predefinito è null.  
   
 `[ @physname = ] 'physical_name'` Nome fisico, incluso il percorso, del file di database. *physical_name* è di **tipo nvarchar (260)** e il valore predefinito è null.  
   
@@ -75,7 +75,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ## <a name="permissions"></a>Autorizzazioni  
  Per informazioni sul modo in cui vengono gestite le autorizzazioni quando viene collegato un database, vedere [create database &#40;SQL Server&#41;Transact-SQL ](../../t-sql/statements/create-database-transact-sql.md).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene scollegato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], quindi uno dei file inclusi nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] viene collegato al server corrente.  
   
 ```  

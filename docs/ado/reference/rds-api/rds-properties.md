@@ -7,19 +7,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - RDS properties [ADO]
 - properties [ADO], RDS
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 75124c0fc8d7a0c3c0bb0ea491c84c3673339108
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 6bf9a232f2dadfc562cd6e7e183858c3a7f64e9c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724352"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168825"
 ---
 # <a name="rds-properties"></a>Proprietà di Servizi Desktop remoto
 > [!IMPORTANT]
@@ -33,7 +33,7 @@ ms.locfileid: "91724352"
 |[FilterColumn offrono (Servizi Desktop remoto)](./filtercolumn-property-rds.md)|Indica la colonna in cui valutare i criteri di filtro.|  
 |[FilterCriterion (Servizi Desktop remoto)](./filtercriterion-property-rds.md)|Indica l'operatore di valutazione da utilizzare nel valore del filtro.|  
 |[FilterValue (Servizi Desktop remoto)](./filtervalue-property-rds.md)|Indica il valore per filtrare i record.|  
-|[Gestore (RDS)](./handler-property-rds.md)|Indica il nome di un programma di personalizzazione sul lato server (*gestore*) che estende la funzionalità di **RDSServer. DataFactory**ed eventuali parametri usati dal *gestore*.|  
+|[Gestore (RDS)](./handler-property-rds.md)|Indica il nome di un programma di personalizzazione sul lato server (*gestore*) che estende la funzionalità di **RDSServer. DataFactory** ed eventuali parametri usati dal *gestore*.|  
 |[InternetTimeout (Servizi Desktop remoto)](./internettimeout-property-rds.md)|Indica il numero di millisecondi di attesa prima che si verifichi il timeout di una richiesta.|  
 |[ReadyState (Servizi Desktop remoto)](./readystate-property-rds.md)|Indica lo stato di un oggetto **DataControl** durante il recupero dei dati nell'oggetto **Recordset** .|  
 |[Recordset e SourceRecordset (RDS)](./recordset-sourcerecordset-properties-rds.md)|Indica l'oggetto **Recordset** restituito da un oggetto business personalizzato.|  

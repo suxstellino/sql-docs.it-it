@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::CursorType
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5401b5b5b9e91b6b851f70d2d3a7e19f5e5d7a82
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 703c89fb8f5e1479e09162429ac93fa43c66e0be
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974322"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167622"
 ---
 # <a name="cursortype-property-ado"></a>Proprietà CursorType (ADO)
 Indica il tipo di cursore utilizzato in un oggetto [Recordset](./recordset-object-ado.md) .  
@@ -29,7 +29,7 @@ Indica il tipo di cursore utilizzato in un oggetto [Recordset](./recordset-objec
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore [CursorTypeEnum](./cursortypeenum.md) . Il valore predefinito è **adOpenForwardOnly**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare la proprietà **CursorType** per specificare il tipo di cursore da utilizzare per l'apertura dell'oggetto **Recordset** .  
   
  Se la proprietà [CursorLocation](./cursorlocation-property-ado.md) è impostata su **adUseClient**, è supportata solo un'impostazione di **adOpenStatic** . Se viene impostato un valore non supportato, non verrà generato alcun errore. verrà invece usato il **CursorType** supportato più vicino.  

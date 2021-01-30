@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_resync_targetserver
 - sp_resync_targetserver_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8d7076615c68b7cd0918a3556753fd0d41d5bcf6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3bd9b8b4b73cf79fc1adc9dcff8fd4754c944e35
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551252"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194364"
 ---
 # <a name="sp_resync_targetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ sp_resync_targetserver
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @server_name = ] 'server'` Nome del server da risincronizzare. *server* è di tipo **sysname**e non prevede alcun valore predefinito. Se si specifica **All** , tutti i server di destinazione vengono risincronizzati.  
+`[ @server_name = ] 'server'` Nome del server da risincronizzare. *server* è di tipo **sysname** e non prevede alcun valore predefinito. Se si specifica **All** , tutti i server di destinazione vengono risincronizzati.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -49,13 +49,13 @@ sp_resync_targetserver
 ## <a name="result-sets"></a>Set di risultati  
  Segnala il risultato delle azioni **sp_post_msx_operation** .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_resync_targetserver** Elimina il set di istruzioni corrente per il server di destinazione e invia un nuovo set per il server di destinazione da scaricare. Le nuove istruzioni prevedono l'eliminazione di tutti i processi multiserver e l'inserimento dei vari processi indirizzati al server.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Le autorizzazioni per l'esecuzione di questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
+ Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene risincronizzato il server di destinazione `SEATTLE1`.  
   
 ```  

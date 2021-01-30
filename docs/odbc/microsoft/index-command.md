@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - index command [ODBC]
 ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ec9ed3c0ec0e91f3c4fd3a0019c8ac463a8620c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ac225132e2d89f1edd4baab012b2383cd508588
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449523"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183390"
 ---
 # <a name="index-command"></a>INDEX (comando)
 Consente di creare un file di indice per visualizzare e accedere ai record di tabella in ordine logico.  
@@ -91,7 +91,7 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
  ADDITIVE  
  Mantiene aperto tutti i file di indice aperti in precedenza. Se si omette la clausola ADDITIVe quando si crea un file di indice o un file per una tabella con indice, i file di indice aperti in precedenza (ad eccezione dell'indice composto strutturale) verranno chiusi.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  I record in una tabella con un file di indice vengono visualizzati e accessibili nell'ordine specificato dall'espressione dell'indice. L'ordine fisico dei record della tabella non viene modificato da un file di indice.  
   
 ## <a name="index-types"></a>Tipi di indice  

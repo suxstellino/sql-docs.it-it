@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropdistributor
 - sp_dropdistributor_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2477b0a95fb74b26ecf8294baf2ce48a9fd32d12
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f7a08c3f8cd035db38533f9b7fd56aaa34c39399
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543484"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205145"
 ---
 # <a name="sp_dropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,13 +39,13 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @no_checks = ] no_checks` Indica se verificare la presenza di oggetti dipendenti prima di eliminare il server di distribuzione. *no_checks* è di **bit**e il valore predefinito è 0.  
+`[ @no_checks = ] no_checks` Indica se verificare la presenza di oggetti dipendenti prima di eliminare il server di distribuzione. *no_checks* è di **bit** e il valore predefinito è 0.  
   
  Se è **0**, **sp_dropdistributor** verifica che tutti gli oggetti di pubblicazione e distribuzione oltre al server di distribuzione siano stati eliminati.  
   
  Se è **1**, **sp_dropdistributor** Elimina tutti gli oggetti di pubblicazione e distribuzione prima di disinstallare il server di distribuzione.  
   
-`[ @ignore_distributor = ] ignore_distributor` Indica se questo stored procedure viene eseguito senza connettersi al server di distribuzione. *ignore_distributor* è di **bit**e il valore predefinito è **0**.  
+`[ @ignore_distributor = ] ignore_distributor` Indica se questo stored procedure viene eseguito senza connettersi al server di distribuzione. *ignore_distributor* è di **bit** e il valore predefinito è **0**.  
   
  Se è **0**, **sp_dropdistributor** si connette al server di distribuzione e rimuove tutti gli oggetti di replica. Se **sp_dropdistributor** non è in grado di connettersi al server di distribuzione, il stored procedure ha esito negativo.  
   
@@ -54,10 +54,10 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_dropdistributor** viene utilizzato in tutti i tipi di replica.  
   
- Se nel server sono presenti altri oggetti editore o di distribuzione, **sp_dropdistributor** ha esito negativo a meno che ** \@ no_checks** non sia impostato su **1**.  
+ Se nel server sono presenti altri oggetti editore o di distribuzione, **sp_dropdistributor** ha esito negativo a meno che **\@ no_checks** non sia impostato su **1**.  
   
  Questa stored procedure deve essere eseguita dopo l'eliminazione del database di distribuzione tramite l'esecuzione di **sp_dropdistributiondb**.  
   

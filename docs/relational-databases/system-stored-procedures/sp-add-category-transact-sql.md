@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_category
 - sp_add_category_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 845801380e1047dc9c44bf597a5fbea21e9d8dc4
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: f3ddc04ec70eb08be9ca10c96b45166c0b67aa63
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753713"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194406"
 ---
 # <a name="sp_add_category-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,7 +48,7 @@ sp_add_category
 ## <a name="arguments"></a>Argomenti  
 `[ @class = ] 'class'` Classe della categoria da aggiungere. la classe è di *tipo* **varchar (8)** e il valore predefinito è job. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |JOB|Aggiunge una categoria di processi.|  
 |ALERT|Aggiunge una categoria di avvisi.|  
@@ -56,13 +56,13 @@ sp_add_category
   
 `[ @type = ] 'type'` Tipo di categoria da aggiungere. il *tipo* è **varchar (12)** e il valore predefinito è **local**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |LOCAL|Categoria di processi locali.|  
 |FUNZIONALITÀ MULTISERVER|Categoria di processi multiserver.|  
 |NONE|Categoria per una classe diversa da JOB **.**|  
   
-`[ @name = ] 'name'` Nome della categoria da aggiungere. Il nome deve essere univoco all'interno della classe specificata. *Name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @name = ] 'name'` Nome della categoria da aggiungere. Il nome deve essere univoco all'interno della classe specificata. *Name* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -76,7 +76,7 @@ sp_add_category
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_add_category**.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  In questo esempio viene creata la categoria di processi locale `AdminJobs`.  
   
 ```  

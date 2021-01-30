@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_delete_collection_item
 - sp_syscollector_delete_collection_item_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9c2b0990-1d3d-4a59-94a0-3cca6fef4681
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee92161ff7effa336e6e1791c7da5b7988a926c2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ae900632edd8ccce0e31c87bd7814c41f02da291
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544741"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204324"
 ---
 # <a name="sp_syscollector_delete_collection_item-transact-sql"></a>sp_syscollector_delete_collection_item (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È necessario eseguire sp_syscollector_delete_collection_item nel contesto del database di sistema msdb. Non è possibile eliminare elementi della raccolta dai set di raccolta di sistema.  
   
  Durante questa operazione, il set di raccolta che contiene l'elemento della raccolta viene arrestato e riavviato.  
@@ -59,7 +59,7 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa procedura, è richiesta l'appartenenza al ruolo predefinito del database dc_admin (con autorizzazione EXECUTE) .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene eliminato un elemento della raccolta denominato `MyCollectionItem1`.  
   
 ```  

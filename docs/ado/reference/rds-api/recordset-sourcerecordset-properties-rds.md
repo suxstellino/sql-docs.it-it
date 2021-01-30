@@ -7,19 +7,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Recordset property [ADO]
 ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cdf8a894341343fee7576daed45c75a46857b909
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: b4f8f1db220bdf68205e3bd4628a27d0b57705b8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724298"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168812"
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>Proprietà Recordset e SourceRecordset (Servizi Desktop remoto)
 Indica l'oggetto **Recordset** restituito da un oggetto business personalizzato.  
@@ -44,7 +44,7 @@ Recordset = DataControl.Recordset
  *Recordset*  
  Variabile oggetto che rappresenta un oggetto **Recordset** .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È possibile impostare la proprietà **SourceRecordset** su un [Recordset](../ado-api/recordset-object-ado.md) restituito da un oggetto business personalizzato.  
   
  Queste proprietà consentono a un'applicazione di gestire il processo di associazione per mezzo di un processo personalizzato. Ricevono un set di righe racchiuso in un **Recordset** in modo che sia possibile interagire direttamente con il **Recordset**, eseguendo azioni quali l'impostazione delle proprietà o l'iterazione del **Recordset**.  

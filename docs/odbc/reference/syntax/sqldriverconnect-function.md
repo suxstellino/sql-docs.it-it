@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLDriverConnect
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d9ff73c570e607f687ff8293587b8dbcef551926
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: 58c9f2071825c6c7d8f873f300e8e5c3f46af9b6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745901"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195640"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect Function
 **Conformità**  
@@ -92,18 +92,18 @@ SQLRETURN SQLDriverConnect(
 |01004|Dati stringa, troncati a destra|L' \* *OutConnectionString* del buffer non era sufficientemente grande da restituire l'intera stringa di connessione, quindi la stringa di connessione è stata troncata. La lunghezza della stringa di connessione non troncata viene restituita in **StringLength2Ptr*. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |01S00|Attributo della stringa di connessione non valido|È stata specificata una parola chiave attribute non valida nella stringa di connessione (*InConnectionString*), ma il driver è stato comunque in grado di connettersi all'origine dati. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |01S02|Valore di opzione modificato|Il driver non supportava il valore specificato a cui punta l'argomento *ValuePtr* in **SQLSetConnectAttr** e sostituisce un valore simile. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
-|01S08|Errore durante il salvataggio del DSN del file|La stringa in * \* InConnectionString* contiene una parola chiave **FileDSN** , ma il file con estensione DSN non è stato salvato. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
-|01S09|Parola chiave non valida|(DM) la stringa in * \* InConnectionString* contiene una parola chiave **SaveFile** , ma non un **driver** o una parola chiave **FileDSN** . (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
+|01S08|Errore durante il salvataggio del DSN del file|La stringa in *\* InConnectionString* contiene una parola chiave **FileDSN** , ma il file con estensione DSN non è stato salvato. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
+|01S09|Parola chiave non valida|(DM) la stringa in *\* InConnectionString* contiene una parola chiave **SaveFile** , ma non un **driver** o una parola chiave **FileDSN** . (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |08001|Il client non è in grado di stabilire la connessione|Il driver non è stato in grado di stabilire una connessione con l'origine dati.|  
 |08002|Nome della connessione in uso|(DM) il *connectionHandle* specificato è già stato utilizzato per stabilire una connessione con un'origine dati e la connessione è ancora aperta.|  
 |08004|Il server ha rifiutato la connessione|L'origine dati ha rifiutato la creazione della connessione per motivi definiti dall'implementazione.|  
 |08S01|Errore collegamento comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato effettuato il tentativo di connessione del driver non è riuscito prima dell'elaborazione della funzione **SQLDriverConnect** .|  
 |28000|Specifica di autorizzazione non valida|L'identificatore utente o la stringa di autorizzazione, o entrambi, come specificato nella stringa di connessione (*InConnectionString*), hanno violato le restrizioni definite dall'origine dati.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* szMessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer *\* szMessageText* descrive l'errore e la sua origine.|  
 |HY000|Errore generale: DSN del file non valido|(DM) la stringa in **InConnectionString* contiene una parola chiave FILEDSN, ma il nome del file con estensione DSN non è stato trovato.|  
 |HY000|Errore generale: Impossibile creare il buffer di file|(DM) la stringa in **InConnectionString* contiene una parola chiave FILEDSN, ma il file con estensione DSN non è leggibile.|  
 |HY001|Errore di allocazione della memoria|Gestione driver non è in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione **SQLDriverConnect** .<br /><br /> Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
-|HY008|Operation canceled|L'elaborazione asincrona è stata abilitata per *connectionHandle*. La funzione è stata chiamata e prima del completamento dell'esecuzione è stata chiamata la [funzione SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) su *connectionHandle*e quindi la funzione **SQLDriverConnect** è stata chiamata nuovamente sul *connectionHandle*.<br /><br /> In alternativa, la funzione **SQLDriverConnect** è stata chiamata e prima del completamento dell'esecuzione, **SQLCancelHandle** è stato chiamato su *connectionHandle* da un thread diverso in un'applicazione multithread.|  
+|HY008|Operation canceled|L'elaborazione asincrona è stata abilitata per *connectionHandle*. La funzione è stata chiamata e prima del completamento dell'esecuzione è stata chiamata la [funzione SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) su *connectionHandle* e quindi la funzione **SQLDriverConnect** è stata chiamata nuovamente sul *connectionHandle*.<br /><br /> In alternativa, la funzione **SQLDriverConnect** è stata chiamata e prima del completamento dell'esecuzione, **SQLCancelHandle** è stato chiamato su *connectionHandle* da un thread diverso in un'applicazione multithread.|  
 |HY010|Errore sequenza funzione|(DM) un'altra funzione in esecuzione asincrona (non **SQLDriverConnect**) è stata chiamata per *connectionHandle* ed è stata ancora eseguita quando è stata chiamata la funzione **SQLDriverConnect** .|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione **SQLDriverConnect** perché non è possibile accedere agli oggetti di memoria sottostanti, probabilmente a causa di condizioni di memoria insufficiente.|  
 |HY090|Lunghezza della stringa o del buffer non valida|(DM) il valore specificato per l'argomento *StringLength1* è minore di 0 e non è uguale a SQL_NTS.<br /><br /> (DM) il valore specificato per l'argomento *bufferLength* è minore di 0.|  
@@ -123,9 +123,9 @@ SQLRETURN SQLDriverConnect(
 |IM009|Impossibile caricare la DLL di traduzione|Il driver non è stato in grado di caricare la DLL di conversione specificata per l'origine dati o per la connessione.|  
 |IM010|Nome origine dati troppo lungo|(DM) il valore dell'attributo per la parola chiave DSN è più lungo di SQL_MAX_DSN_LENGTH caratteri.|  
 |IM011|Nome driver troppo lungo|(DM) il valore dell'attributo per la parola chiave **driver** è più lungo di 255 caratteri.|  
-|IM012|Errore di sintassi della parola chiave DRIVER|(DM) la coppia parola chiave-valore per la parola chiave **driver** contiene un errore di sintassi.<br /><br /> (DM) la stringa in * \* InConnectionString* contiene una parola chiave **FileDSN** , ma il file con estensione DSN non contiene una parola chiave del **driver** o una parola chiave **DSN** .|  
+|IM012|Errore di sintassi della parola chiave DRIVER|(DM) la coppia parola chiave-valore per la parola chiave **driver** contiene un errore di sintassi.<br /><br /> (DM) la stringa in *\* InConnectionString* contiene una parola chiave **FileDSN** , ma il file con estensione DSN non contiene una parola chiave del **driver** o una parola chiave **DSN** .|  
 |IM014|Il DSN specificato contiene una mancata corrispondenza dell'architettura tra il driver e l'applicazione|(DM) l'applicazione a 32 bit utilizza un DSN che si connette a un driver a 64 bit. o viceversa.|  
-|IM015|SQLDriverConnect del driver su SQL_HANDLE_DBC_INFO_HANDLE non riuscito|Se un driver restituisce SQL_ERROR, gestione driver restituirà SQL_ERROR all'applicazione e la connessione avrà esito negativo.<br /><br /> Per ulteriori informazioni su SQL_HANDLE_DBC_INFO_TOKEN, vedere [sviluppo della conoscenza del pool di connessioni in un driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).|  
+|IM015|SQLDriverConnect del driver su SQL_HANDLE_DBC_INFO_HANDLE non riuscito|Se un driver restituisce SQL_ERROR, gestione driver restituirà SQL_ERROR all'applicazione e la connessione avrà esito negativo.<br /><br /> Per ulteriori informazioni su SQL_HANDLE_DBC_INFO_TOKEN, vedere [sviluppo di Connection-Pool awareness in un driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).|  
 |IM017|Polling disabilitato in modalità di notifica asincrona|Ogni volta che viene utilizzato il modello di notifica, il polling è disabilitato.|  
 |IM018|**SQLCompleteAsync** non è stato chiamato per completare l'operazione asincrona precedente su questo handle.|Se la chiamata di funzione precedente nell'handle restituisce SQL_STILL_EXECUTING e se è abilitata la modalità di notifica, è necessario chiamare **SQLCompleteAsync** sull'handle per eseguire la post-elaborazione e completare l'operazione.|  
 |S1118|Il driver non supporta la notifica asincrona|Quando il driver non supporta la notifica asincrona, non è possibile impostare SQL_ATTR_ASYNC_DBC_EVENT o SQL_ATTR_ASYNC_DBC_RETCODE_PTR.|  
@@ -153,7 +153,7 @@ SQLRETURN SQLDriverConnect(
   
  La stringa di connessione può includere un numero qualsiasi di parole chiave definite dal driver. Poiché la parola chiave **driver** non utilizza informazioni delle informazioni di sistema, il driver deve definire parole chiave sufficienti in modo che un driver possa connettersi a un'origine dati utilizzando solo le informazioni nella stringa di connessione. Per ulteriori informazioni, vedere "linee guida per i driver" più avanti in questa sezione. Il driver definisce quali parole chiave sono necessarie per la connessione all'origine dati.  
   
- Nella tabella seguente vengono descritti i valori di attributo delle parole chiave **DSN**, **FileDSN**, **driver**, **UID**, **pwd**e **SaveFile** .  
+ Nella tabella seguente vengono descritti i valori di attributo delle parole chiave **DSN**, **FileDSN**, **driver**, **UID**, **pwd** e **SaveFile** .  
   
 |Parola chiave|Descrizione del valore dell'attributo|  
 |-------------|---------------------------------|  
@@ -170,7 +170,7 @@ SQLRETURN SQLDriverConnect(
   
  Le parole chiave **FileDSN** e **DSN** si escludono a vicenda: qualsiasi parola chiave visualizzata per prima viene usata e quella visualizzata come seconda viene ignorata. Le parole chiave **FileDSN** e **driver** , d'altra parte, non si escludono a vicenda. Se una parola chiave viene visualizzata in una stringa di connessione con **FileDSN**, viene utilizzato il valore dell'attributo della parola chiave nella stringa di connessione, anziché il valore dell'attributo della stessa parola chiave nel file con estensione DSN.  
   
- Se viene utilizzata la parola chiave **FileDSN** , per creare una stringa di connessione vengono utilizzate le parole chiave specificate in un file con estensione DSN. Per ulteriori informazioni, vedere "origini dati file" di seguito in questa sezione. La parola chiave **UID** è facoltativa. è possibile creare un file con estensione DSN solo con la parola chiave **driver** . La parola chiave **pwd** non è archiviata in un file con estensione DSN. La directory predefinita per il salvataggio e il caricamento di un file con estensione DSN sarà una combinazione del percorso specificato da **CommonFileDir** in HKEY_LOCAL_MACHINE \Software\Microsoft\ Windows\CurrentVersion e "ODBC\DataSources". Se CommonFileDir erano "C:\Programmi file comuni", la directory predefinita sarà "C:\Programmi Comuni\odbc\data Sources".  
+ Se viene utilizzata la parola chiave **FileDSN** , per creare una stringa di connessione vengono utilizzate le parole chiave specificate in un file con estensione DSN. Per ulteriori informazioni, vedere "origini dati file" di seguito in questa sezione. La parola chiave **UID** è facoltativa. è possibile creare un file con estensione DSN solo con la parola chiave **driver** . La parola chiave **pwd** non è archiviata in un file con estensione DSN. La directory predefinita per il salvataggio e il caricamento di un file con estensione DSN sarà una combinazione del percorso specificato da **CommonFileDir** in HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ Windows\CurrentVersion e "ODBC\DataSources". Se CommonFileDir erano "C:\Programmi file comuni", la directory predefinita sarà "C:\Programmi Comuni\odbc\data Sources".  
   
 > [!NOTE]  
 >  Un file con estensione DSN può essere modificato direttamente chiamando le funzioni [SQLReadFileDSN](../../../odbc/reference/syntax/sqlreadfiledsn-function.md) e [SQLWriteFileDSN](../../../odbc/reference/syntax/sqlwritefiledsn-function.md) nella dll del programma di installazione.  
@@ -182,7 +182,7 @@ SQLRETURN SQLDriverConnect(
   
  L'azione di gestione driver si basa sul valore dell'argomento *DriverCompletion* :  
   
--   SQL_DRIVER_PROMPT: se la stringa di connessione non contiene la parola chiave **driver**, **DSN**o **FileDSN** , gestione driver Visualizza la finestra di dialogo origini dati. Costruisce una stringa di connessione dal nome dell'origine dati restituito dalla finestra di dialogo e da eventuali altre parole chiave passate dall'applicazione. Se il nome dell'origine dati restituito dalla finestra di dialogo è vuoto, gestione driver specifica la coppia parola chiave-valore DSN = valore predefinito. (In questa finestra di dialogo non verrà visualizzata un'origine dati con il nome "default").  
+-   SQL_DRIVER_PROMPT: se la stringa di connessione non contiene la parola chiave **driver**, **DSN** o **FileDSN** , gestione driver Visualizza la finestra di dialogo origini dati. Costruisce una stringa di connessione dal nome dell'origine dati restituito dalla finestra di dialogo e da eventuali altre parole chiave passate dall'applicazione. Se il nome dell'origine dati restituito dalla finestra di dialogo è vuoto, gestione driver specifica la coppia parola chiave-valore DSN = valore predefinito. (In questa finestra di dialogo non verrà visualizzata un'origine dati con il nome "default").  
   
 -   SQL_DRIVER_COMPLETE o SQL_DRIVER_COMPLETE_REQUIRED: se la stringa di connessione specificata dall'applicazione include la parola chiave **DSN** , gestione driver copia la stringa di connessione specificata dall'applicazione. In caso contrario, esegue le stesse operazioni eseguite quando *DriverCompletion* è SQL_DRIVER_PROMPT.  
   
@@ -228,7 +228,7 @@ SQLRETURN SQLDriverConnect(
   
 2.  Se il driver restituisce SQL_SUCCESS e il nome del file non è una stringa vuota, gestione driver scrive le informazioni di connessione restituite nell'argomento *OutConnectionString* nel file specificato con il formato specificato nella sezione "stringhe di connessione" riportata in precedenza in questa sezione.  
   
-3.  Se il driver restituisce SQL_SUCCESS e il nome del file è una stringa vuota (""), gestione driver chiama la finestra di dialogo **File-Salva** comune con *HWND* specificato e scrive le informazioni di connessione restituite in *OutConnectionString* nel file specificato nella finestra di dialogo file-Salva comune con il formato specificato nella sezione "stringhe di connessione" riportata in precedenza in questa sezione.  
+3.  Se il driver restituisce SQL_SUCCESS e il nome del file è una stringa vuota (""), gestione driver chiama la finestra di dialogo **File-Salva** comune con *HWND* specificato e scrive le informazioni di connessione restituite in *OutConnectionString* nel file specificato nella finestra di dialogo File-Save comune con il formato specificato nella sezione "stringhe di connessione" riportata in precedenza in questa sezione.  
   
 4.  Se il driver restituisce SQL_SUCCESS, restituisce l'argomento *OutConnectionString* contenente la stringa di connessione all'applicazione.  
   

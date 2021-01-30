@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQL statements [ODBC], elements supported
 - minimum SQL syntax supported [ODBC]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5c24f5dd55530e38ea47ed9a2b846d549bb26d56
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5911de3ce17fc0557b9fad885fa7cdc6ce5024ac
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456574"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194869"
 ---
 # <a name="elements-used-in-sql-statements"></a>Elementi usati nelle istruzioni SQL
 Gli elementi seguenti vengono usati nelle istruzioni SQL elencate in precedenza.  
@@ -98,7 +98,7 @@ Gli elementi seguenti vengono usati nelle istruzioni SQL elencate in precedenza.
   
  *table-reference-list* :: = *Table-Reference* [,*Table-Reference*]...  
   
- fattore di *termine::* = *Factor* &#124; *termine* { \*&#124;*/* } *factor*  
+ fattore di *termine::* = *Factor* &#124; *termine* { \*&#124;*/* }   
   
  *unsigned-integer* :: = {*digit*}  
   

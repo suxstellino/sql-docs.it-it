@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cursorexecute
 - sp_cursorexecute_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 07795588a4c1d6df43a7041f9254a661e527be14
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6aab1670ae9d517ec60d3af572d15eaf12432f7d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543598"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205160"
 ---
 # <a name="sp_cursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ sp_cursorexecute prepared_handle, cursor
  Identificatore del cursore generato da SQL Server. *Cursor* è un parametro obbligatorio che deve essere fornito in tutte le procedure successive che agiscono sul cursore, ad esempio sp_cursorfetch  
   
  *scrollopt*  
- Opzione di scorrimento. *scrollopt* è un parametro facoltativo che richiede un valore di input **int** . Il parametro sp_cursorexecute*scrollopt* ha le stesse opzioni di valore di quelle per sp_cursoropen.  
+ Opzione di scorrimento. *scrollopt* è un parametro facoltativo che richiede un valore di input **int** . Il parametro sp_cursorexecute *scrollopt* ha le stesse opzioni di valore di quelle per sp_cursoropen.  
   
 > [!NOTE]  
 >  Il valore PARAMETERIZED_STMT non è supportato.  
@@ -59,7 +59,7 @@ sp_cursorexecute prepared_handle, cursor
 >  Se non si specifica un valore *scrollopt* , il valore predefinito è KEYSET indipendentemente dal valore di *scrollopt* specificato in sp_cursorprepare.  
   
  *ccopt*  
- Opzione del controllo della valuta. *ccopt* è un parametro facoltativo che richiede un valore di input **int** . Il parametro sp_cursorexecute*ccopt* ha le stesse opzioni di valore di quelle per sp_cursoropen.  
+ Opzione del controllo della valuta. *ccopt* è un parametro facoltativo che richiede un valore di input **int** . Il parametro sp_cursorexecute *ccopt* ha le stesse opzioni di valore di quelle per sp_cursoropen.  
   
 > [!IMPORTANT]  
 >  Se non si specifica un valore *ccopt* , il valore predefinito è ottimistico indipendentemente dal valore di *ccopt* specificato in sp_cursorprepare.  
@@ -80,12 +80,12 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="code-return-value"></a>Valore restituito del codice  
  *RowCount* può restituire i valori seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |-1|Numero di righe non note.|  
 |-n|Un popolamento asincrono è attivo.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ## <a name="scrollopt-and-ccopt-parameters"></a>Parametri scrollopt e ccopt  
  *scrollopt* e *ccopt* sono utili quando i piani memorizzati nella cache vengono interrotti per la cache del server, vale a dire che l'handle preparato che identifica l'istruzione deve essere ricompilato. I valori dei parametri *scrollopt* e *ccopt* devono corrispondere ai valori inviati nella richiesta originale a sp_cursorprepare.  

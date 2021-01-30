@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 3331aa89-24d0-4c0e-b377-c720c1107ad5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6439ecd5d19e4daf2eaf42009bae375bb9d20e7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 24dfc1370ab2038e8b57465b94cc0ba56e84d61d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429600"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193271"
 ---
 # <a name="odbc-appendixes"></a>Appendici ODBC
 I dettagli tecnici relativi all'interfaccia Microsoft ODBC sono contenuti nelle seguenti appendici:  
@@ -33,4 +33,4 @@ I dettagli tecnici relativi all'interfaccia Microsoft ODBC sono contenuti nelle 
   
 -   [Appendice F: Libreria di cursori ODBC](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)  
   
--   [Appendice G: Linee guida per la compatibilità con le versioni precedenti dei driver](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)
+-   [Appendice G: Indicazioni per la compatibilità con le versioni precedenti dei driver](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)

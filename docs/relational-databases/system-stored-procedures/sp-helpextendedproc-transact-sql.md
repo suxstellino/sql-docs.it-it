@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpextendedproc
 - sp_helpextendedproc_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 12255797c4c9799e6e6ec3110dea58f4617142eb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e8256d22c8565b56b328119e6b5618ca4f8d226b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549672"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99197621"
 ---
 # <a name="sp_helpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,19 +43,19 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @funcname = ] 'procedure'` Nome del stored procedure esteso per il quale vengono restituite informazioni. la *routine* è di **tipo sysname**e il valore predefinito è null.  
+`[ @funcname = ] 'procedure'` Nome del stored procedure esteso per il quale vengono restituite informazioni. la *routine* è di **tipo sysname** e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome della colonna|Tipo di dati|Descrizione|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**nome**|**sysname**|Nome della stored procedure estesa.|  
-|**Libreria dll**|**nvarchar(255)**|Nome della DLL.|  
+|**dll**|**nvarchar(255)**|Nome della DLL.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Quando viene specificata la *procedura* , **sp_helpextendedproc** segnala la stored procedure estesa specificata. Quando questo parametro non viene specificato, **sp_helpextendedproc** restituisce tutti i nomi di stored procedure estesi e i nomi delle dll a cui appartiene ogni stored procedure estesa.  
   
 ## <a name="permissions"></a>Autorizzazioni  

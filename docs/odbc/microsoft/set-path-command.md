@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SET PATH command [ODBC]
 ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 36131e53d1a10d8af3e7ca226768a9c08a14ba77
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a97ac5a074116fcaad0477625ea683226abaf76e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421835"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203927"
 ---
 # <a name="set-path-command"></a>SET PATH (comando)
 Specifica un percorso per le ricerche di file. Per informazioni specifiche del driver, vedere la sezione Osservazioni.  
@@ -34,7 +34,7 @@ SET PATH TO [Path]
  A [ *percorso*]  
  Specifica le directory in cui si vuole eseguire la ricerca in Visual FoxPro. Usare virgole o punti e virgola per separare le directory.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  SET PATH consente di specificare i percorsi di ricerca per altri programmi Visual FoxPro che possono essere chiamati all'interno delle stored procedure. SET PATH non modificherà il percorso dell'origine dati specificata per la connessione.  
   
  Problema impostare percorso su senza *percorso* per ripristinare il percorso della directory o della cartella predefinita.  

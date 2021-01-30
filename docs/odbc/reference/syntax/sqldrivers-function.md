@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLDrivers
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9abe7502b7efcfba695bd58081752342504378ab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 905dfe1bc24872468868abef9f1c8cc2323d110a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461163"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195614"
 ---
 # <a name="sqldrivers-function"></a>Funzione SQLDrivers
 **Conformità**  
@@ -73,7 +73,7 @@ SQLRETURN SQLDrivers(
  Se *DriverAttributes* è null, *AttributesLengthPtr* restituisce comunque il numero totale di byte (escluso il carattere di terminazione null per i dati di tipo carattere) disponibili per restituire nel buffer a cui punta *DriverAttributes*.  
   
  *BufferLength2*  
- Input Lunghezza del buffer \* *DriverAttributes* , in caratteri. Se il valore * \* DriverDescription* è una stringa Unicode (quando si chiama **SQLDriversW**), l'argomento *bufferLength* deve essere un numero pari.  
+ Input Lunghezza del buffer \* *DriverAttributes* , in caratteri. Se il valore *\* DriverDescription* è una stringa Unicode (quando si chiama **SQLDriversW**), l'argomento *bufferLength* deve essere un numero pari.  
   
  *AttributesLengthPtr*  
  Output Puntatore a un buffer in cui restituire il numero totale di byte, escluso il byte di terminazione null, disponibile per restituire in \* *DriverAttributes*. Se il numero di byte disponibili per restituire è maggiore o uguale a *BufferLength2*, l'elenco di coppie di valori di attributo in \* *DriverAttributes* viene troncato a *BufferLength2* meno la lunghezza del carattere di terminazione null.  
@@ -88,9 +88,9 @@ SQLRETURN SQLDrivers(
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|(DM) Gestione driver-messaggio informativo specifico. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |01004|Dati stringa, troncati a destra|(DM) il buffer \* *DriverDescription* non era sufficientemente grande da restituire la descrizione completa del driver. Pertanto, la descrizione è stata troncata. La lunghezza della descrizione del driver completa viene restituita in \* *DescriptionLengthPtr*. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)<br /><br /> (DM) il buffer \* *DriverAttributes* non era sufficientemente grande da restituire l'elenco completo di coppie di valori di attributo. Pertanto, l'elenco è stato troncato. La lunghezza dell'elenco non troncato di coppie di valori di attributo viene restituita in **AttributesLengthPtr*. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer *\* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|(DM) Gestione driver non è in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
-|HY010|Errore sequenza funzione|(DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per *statementHandle* e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.|  
+|HY010|Errore sequenza funzione|(DM) **SQLExecute**, **SQLExecDirect** o **SQLMoreResults** è stato chiamato per *statementHandle* e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
 |HY090|Lunghezza della stringa o del buffer non valida|(DM) il valore specificato per l'argomento *BufferLength1* è minore di 0.<br /><br /> (DM) il valore specificato per l'argomento *BufferLength2* è minore di 0 o uguale a 1.|  
 |HY103|Codice di recupero non valido|(DM) il valore specificato per la *direzione* dell'argomento non è uguale a SQL_FETCH_FIRST o SQL_FETCH_NEXT.|  

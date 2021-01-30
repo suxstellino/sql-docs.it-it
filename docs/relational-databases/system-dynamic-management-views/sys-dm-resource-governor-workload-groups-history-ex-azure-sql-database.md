@@ -6,7 +6,7 @@ ms.date: 01/05/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex_TSQL
 - sys.dm_resource_governor_workload_groups_history_ex
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-ms.openlocfilehash: 69f310b699e59845dbd62a908a6a49bfb6efb42f
-ms.sourcegitcommit: 11ca2305a8d7e420daf772eb97861706c9e08e31
+ms.openlocfilehash: ac8bc675c5a059c211e6ecfbed063d54daf6ee92
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97928450"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203307"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (database SQL di Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -87,7 +87,7 @@ Gli utenti possono accedere a questa vista a gestione dinamica per monitorare il
 > [!IMPORTANT]
 > La maggior parte dei dati esposti da questa DMV è destinata al consumo interno ed è soggetta a modifiche.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Nell'esempio seguente vengono restituiti i dati di frequenza massima dei log e il consumo a ogni snapshot da parte del pool di utenti:
 

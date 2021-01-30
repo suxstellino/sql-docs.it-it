@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_alert_TSQL
 - sp_delete_alert
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a831315e-793d-41c4-8333-b324bb2bc614
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e69f85b682cd9e6654bcc259fdb5b1c851e8cda3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e4f244ce6b4861b3214c753985d2f78a2bdfece8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549854"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195569"
 ---
 # <a name="sp_delete_alert-transact-sql"></a>sp_delete_alert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_delete_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @name = ] 'name'` Nome dell'avviso. *Name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @name = ] 'name'` Nome dell'avviso. *Name* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -54,7 +54,7 @@ sp_delete_alert [ @name = ] 'name'
 ## <a name="permissions"></a>Autorizzazioni  
  Questa procedura può essere eseguita solo dai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene rimosso l'avviso denominato `Test Alert`.  
   
 ```  

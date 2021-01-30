@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 07/28/2016
 ms.service: sql-database
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_set_firewall_rule
 - sp_set_firewall_rule_TSQL
@@ -20,12 +20,12 @@ ms.assetid: a974a561-5382-4039-8499-3a56767bcefe
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest
-ms.openlocfilehash: 795aeb9a03f839cae400e92060ac21056f314d2f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: aa47f5578403fa6cfd2f945ebcaa5bff767d967b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468282"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184737"
 ---
 # <a name="sp_set_firewall_rule-azure-sql-database"></a>sp_set_firewall_rule (Database di SQL Azure)
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - server_file_audits_TSQL
 - sys.server_file_audits_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: b72b618559f02fed01e1760168f72ea4a12065ae
-ms.sourcegitcommit: e40e75055c1435c5e3f9b6e3246be55526807b4c
+ms.openlocfilehash: 01cc8c02293c7e1ff5c26af7a9c3fbc579746d51
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98151291"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193814"
 ---
 # <a name="sysserver_file_audits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "98151291"
 |create_date|**datetime**|Data UTC di creazione del controllo dei file.|  
 |modify_date|**datetime**|Data UTC dell'ultima modifica del controllo dei file.|  
 |principal_id|**int**|ID del proprietario del controllo come registrato nel server.|  
-|type|**char(2)**|Tipo di controllo:<br /><br /> SL = NT registro eventi di sicurezza<br /><br /> AL = registro eventi applicazioni NT<br /><br /> FL = file in file system|  
+|tipo|**char(2)**|Tipo di controllo:<br /><br /> SL = NT registro eventi di sicurezza<br /><br /> AL = registro eventi applicazioni NT<br /><br /> FL = file in file system|  
 |type_desc|**nvarchar(60)**|Descrizione del tipo di controllo.|  
 |on_failure|**tinyint**|In condizione di errore:<br /><br /> 0 = Continua<br /><br /> 1 = Arresta l'istanza del server<br /><br /> 2= Errore operazione|  
 |on_failure_desc|**nvarchar(60)**|Voce in condizione di errore:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  

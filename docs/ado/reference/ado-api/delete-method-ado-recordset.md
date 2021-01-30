@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::raw_Delete
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1eb9209c-602c-4507-b0c2-6527a599b67d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a43aa64d970865b8de706fc4297bba9fd0d18786
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d445a6bfc705821b49408027c13ef1474cdc0d94
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974092"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167569"
 ---
 # <a name="delete-method-ado-recordset"></a>Metodo Delete (Recordset - ADO)
 Elimina il record corrente o un gruppo di record.  
@@ -41,7 +41,7 @@ recordset.Delete AffectRecords
 > [!NOTE]
 >  **adAffectAll** e **adAffectAllChapters** non sono argomenti validi da **eliminare**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  L'utilizzo del metodo **Delete** contrassegna il record corrente o un gruppo di record in un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per l'eliminazione. Se l'oggetto **Recordset** non consente l'eliminazione dei record, si verificherà un errore. Se si è in modalità di aggiornamento immediato, le eliminazioni vengono eseguite immediatamente nel database. Se un record non può essere eliminato correttamente (ad esempio, a causa di violazioni di integrità del database), il record rimarrà in modalità di modifica dopo la chiamata a [Update](../../../ado/reference/ado-api/update-method.md). Ciò significa che è necessario annullare l'aggiornamento con [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) prima di spostare il record corrente (ad esempio, con [Close](../../../ado/reference/ado-api/close-method-ado.md), [Move](../../../ado/reference/ado-api/move-method-ado.md)o [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  
   
  Se si è in modalità di aggiornamento batch, i record vengono contrassegnati per l'eliminazione dalla cache e l'effettiva eliminazione viene eseguita quando si chiama il metodo [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) . Utilizzare la proprietà [Filter](../../../ado/reference/ado-api/filter-property.md) per visualizzare i record eliminati.  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_category_TSQL
 - sp_delete_category
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cdeb258bf7a61e5cfa4bafe796729f7c445e8cde
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 69befe88ea56ea64e6d6be33a96174d5bd8bb805
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541832"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195533"
 ---
 # <a name="sp_delete_category-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +43,13 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ## <a name="arguments"></a>Argomenti  
 `[ @class = ] 'class'` Classe della categoria. la classe è di *tipo* **varchar (8)** e non prevede alcun valore predefinito e deve avere uno di questi valori.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**PROCESSO**|Elimina una categoria di processi.|  
 |**AVVISO**|Elimina una categoria di avvisi.|  
 |**OPERATORE**|Elimina una categoria di operatori.|  
   
-`[ @name = ] 'name'` Nome della categoria da rimuovere. *Name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @name = ] 'name'` Nome della categoria da rimuovere. *Name* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -65,7 +65,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ## <a name="permissions"></a>Autorizzazioni  
  Questa procedura può essere eseguita solo dai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene eliminata la categoria di processi `AdminJobs`.  
   
 ```  
@@ -78,7 +78,7 @@ EXEC dbo.sp_delete_category
 GO   
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [sp_add_category &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
  [sp_help_category &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [sp_update_category &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   

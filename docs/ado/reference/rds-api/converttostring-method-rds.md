@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - ConvertToString method [ADO]
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec87fd4bc4495874aae88b3051081e30dda9bbb9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4edcebbfdee8a9a1411189786593c129ee32771c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722427"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169035"
 ---
 # <a name="converttostring-method-rds"></a>Metodo ConvertToString (Servizi Desktop remoto)
 Converte un [Recordset](../ado-api/recordset-object-ado.md) in una stringa MIME che rappresenta i dati del recordset.  
@@ -41,12 +41,12 @@ DataFactory.ConvertToString(Recordset)
  *Recordset*  
  Variabile oggetto che rappresenta un oggetto **Recordset** .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Con i file ASP, usare **ConvertToString** per incorporare il **Recordset** in una pagina HTML generata sul server per il trasporto in un computer client.  
   
  **ConvertToString** carica innanzitutto il **Recordset** nelle tabelle dei servizi del cursore e quindi genera un flusso in formato MIME.  
   
- Nel client, Remote Data Service può convertire di nuovo la stringa MIME in un **Recordset**completamente funzionante. Funziona bene per gestire meno di 400 righe di dati con una larghezza non superiore a 1024 byte per riga. Non è consigliabile usarlo per il flusso di dati BLOB e set di risultati di grandi dimensioni tramite HTTP. Sulla stringa non viene eseguita alcuna compressione di rete, quindi i set di dati di dimensioni molto grandi impiegheranno molto tempo per il trasporto su HTTP rispetto al formato Tablegram ottimizzato per la rete definito e distribuito da Remote Data Service come formato del protocollo di trasporto nativo.  
+ Nel client, Remote Data Service può convertire di nuovo la stringa MIME in un **Recordset** completamente funzionante. Funziona bene per gestire meno di 400 righe di dati con una larghezza non superiore a 1024 byte per riga. Non è consigliabile usarlo per il flusso di dati BLOB e set di risultati di grandi dimensioni tramite HTTP. Sulla stringa non viene eseguita alcuna compressione di rete, quindi i set di dati di dimensioni molto grandi impiegheranno molto tempo per il trasporto su HTTP rispetto al formato Tablegram ottimizzato per la rete definito e distribuito da Remote Data Service come formato del protocollo di trasporto nativo.  
   
 > [!NOTE]
 >  Se si usano Active Server pagine per incorporare la stringa MIME risultante in una pagina HTML del client, tenere presente che le versioni di VBScript precedenti alla versione 2,0 limitano le dimensioni della stringa a 32K. Se questo limite viene superato, viene restituito un errore. Quando si usa l'incorporamento MIME tramite i file ASP, l'ambito della query è relativamente piccolo. Per risolvere il problema, scaricare la versione più recente di VBScript dal sito Web Microsoft Windows Script Technologies.  

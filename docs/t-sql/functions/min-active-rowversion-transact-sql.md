@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - MIN_ACTIVE_ROWVERSION
 - MIN_ACTIVE_ROWVERSION_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 87c89547-8ea1-4820-b75e-36be683e4e10
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 415d86958972d059b0cb9a27b8a741ac7a4ed136
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
-ms.translationtype: HT
+ms.openlocfilehash: f28737a094a5d42b6d0e28c06793aa227c14795b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102511"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195936"
 ---
 # <a name="min_active_rowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,14 +46,14 @@ MIN_ACTIVE_ROWVERSION ( )
 ## <a name="return-types"></a>Tipi restituiti
  Restituisce un valore **binary(8)**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  MIN_ACTIVE_ROWVERSION è una funzione non deterministica che restituisce il valore di **rowversion** attivo più basso nel database corrente. Quando viene eseguita un'istruzione INSERT o UPDATE in una tabella contenente una colonna di tipo **rowversion** , viene solitamente generato un nuovo valore **rowversion**. Se nel database non sono presenti valori attivi, MIN_ACTIVE_ROWVERSION restituisce lo stesso valore di @@DBTS + 1.  
   
  MIN_ACTIVE_ROWVERSION è utile in scenari come la sincronizzazione dei dati che usano i valori di **rowversion** per raggruppare i set di modifiche. Se un'applicazione usa @@DBTS invece di MIN_ACTIVE_ROWVERSION, potrebbero andare perse modifiche attive al momento della sincronizzazione.  
   
  La funzione MIN_ACTIVE_ROWVERSION non è interessata dalle modifiche apportate ai livelli di isolamento delle transazioni.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituiti valori di **rowversion** usando `MIN_ACTIVE_ROWVERSION` e `@@DBTS`. Si noti che i valori sono diversi quando non vi sono transazioni attive nel database.  
   
 ```sql  

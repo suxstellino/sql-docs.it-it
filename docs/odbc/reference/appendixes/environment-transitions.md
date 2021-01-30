@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - environment transitions [ODBC]
 - transitioning states [ODBC], environment
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9d11b1ab-f4c8-48ca-9812-8c04303f939d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4cb4366a044f42440eb70934b9f853947e4f3224
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: daef0bc276831358cd3d82dd10a1dd44082214af
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466231"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194833"
 ---
 # <a name="environment-transitions"></a>Transizioni di ambiente
 Negli ambienti ODBC sono disponibili i tre stati seguenti.  
@@ -35,7 +35,7 @@ Negli ambienti ODBC sono disponibili i tre stati seguenti.
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
   
-|E0<br /><br /> Non allocato|E1<br /><br /> Allocato|E2<br /><br /> Connessione|  
+|E0<br /><br /> Non allocato|E1<br /><br /> Allocato|E2<br /><br /> Connessioni|  
 |------------------------|----------------------|-----------------------|  
 |E1 [1]|--[4]|--[4]|  
 |IH 2|E2 [5]<br />HY010 6|--[4]|  
@@ -55,7 +55,7 @@ Negli ambienti ODBC sono disponibili i tre stati seguenti.
   
 ## <a name="sqldatasources-and-sqldrivers"></a>SQLDataSources e SQLDrivers  
   
-|E0<br /><br /> Non allocato|E1<br /><br /> Allocato|E2<br /><br /> Connessione|  
+|E0<br /><br /> Non allocato|E1<br /><br /> Allocato|E2<br /><br /> Connessioni|  
 |------------------------|----------------------|-----------------------|  
 |IH|--[1]<br />HY010 2|--[1]<br />HY010 2|  
   
@@ -65,7 +65,7 @@ Negli ambienti ODBC sono disponibili i tre stati seguenti.
   
 ## <a name="sqlendtran"></a>SQLEndTran  
   
-|E0<br /><br /> Non allocato|E1<br /><br /> Allocato|E2<br /><br /> Connessione|  
+|E0<br /><br /> Non allocato|E1<br /><br /> Allocato|E2<br /><br /> Connessioni|  
 |------------------------|----------------------|-----------------------|  
 |IH 1|--[3]<br />HY010 4|--[3]<br />HY010 4|  
 |IH 2|IH|--|  
@@ -80,7 +80,7 @@ Negli ambienti ODBC sono disponibili i tre stati seguenti.
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
-|E0<br /><br /> Non allocato|E1<br /><br /> Allocato|E2<br /><br /> Connessione|  
+|E0<br /><br /> Non allocato|E1<br /><br /> Allocato|E2<br /><br /> Connessioni|  
 |------------------------|----------------------|-----------------------|  
 |IH 1|E0|HY010|  
 |IH 2|IH|--[4]<br />E1 [5]|  
@@ -98,7 +98,7 @@ Negli ambienti ODBC sono disponibili i tre stati seguenti.
   
 ## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>SQLGetDiagField e SQLGetDiagRec  
   
-|E0<br /><br /> Non allocato|E1<br /><br /> Allocato|E2<br /><br /> Connessione|  
+|E0<br /><br /> Non allocato|E1<br /><br /> Allocato|E2<br /><br /> Connessioni|  
 |------------------------|----------------------|-----------------------|  
 |IH 1|--|--|  
 |IH 2|IH|--|  
@@ -109,7 +109,7 @@ Negli ambienti ODBC sono disponibili i tre stati seguenti.
   
 ## <a name="sqlgetenvattr"></a>SQLGetEnvAttr  
   
-|E0<br /><br /> Non allocato|E1<br /><br /> Allocato|E2<br /><br /> Connessione|  
+|E0<br /><br /> Non allocato|E1<br /><br /> Allocato|E2<br /><br /> Connessioni|  
 |------------------------|----------------------|-----------------------|  
 |IH|--[1]<br />HY010 2|--|  
   
@@ -119,7 +119,7 @@ Negli ambienti ODBC sono disponibili i tre stati seguenti.
   
 ## <a name="sqlsetenvattr"></a>SQLSetEnvAttr  
   
-|E0<br /><br /> Non allocato|E1<br /><br /> Allocato|E2<br /><br /> Connessione|  
+|E0<br /><br /> Non allocato|E1<br /><br /> Allocato|E2<br /><br /> Connessioni|  
 |------------------------|----------------------|-----------------------|  
 |IH|--[1]<br />HY010 2|Hy011|  
   
@@ -129,6 +129,6 @@ Negli ambienti ODBC sono disponibili i tre stati seguenti.
   
 ## <a name="all-other-odbc-functions"></a>Tutte le altre funzioni ODBC  
   
-|E0<br /><br /> Non allocato|E1<br /><br /> Allocato|E2<br /><br /> Connessione|  
+|E0<br /><br /> Non allocato|E1<br /><br /> Allocato|E2<br /><br /> Connessioni|  
 |------------------------|----------------------|-----------------------|  
 |IH|IH|--|

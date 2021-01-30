@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropmergesubscription_TSQL
 - sp_dropmergesubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8d1b10deb11751ba8a8d2c5ee49cda293e695d50
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 29cf6541b12f49194c1d1a6562d3fb80975a5591
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538943"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204793"
 ---
 # <a name="sp_dropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +43,15 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è null. È necessario che la pubblicazione esista già e che sia conforme alle regole per gli identificatori.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname** e il valore predefinito è null. È necessario che la pubblicazione esista già e che sia conforme alle regole per gli identificatori.  
   
-`[ @subscriber = ] 'subscriber'` Nome del Sottoscrittore. *Subscriber* è di **tipo sysname**e il valore predefinito è null.  
+`[ @subscriber = ] 'subscriber'` Nome del Sottoscrittore. *Subscriber* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @subscriber_db = ] 'subscriber_db'` Nome del database di sottoscrizione. *subscription_database*è di **tipo sysname**e il valore predefinito è null.  
+`[ @subscriber_db = ] 'subscriber_db'` Nome del database di sottoscrizione. *subscription_database* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @subscription_type = ] 'subscription_type'` Tipo di sottoscrizione. *subscription_type*è di **tipo nvarchar (15)**. i possibili valori sono i seguenti.  
+`[ @subscription_type = ] 'subscription_type'` Tipo di sottoscrizione. *subscription_type* è di **tipo nvarchar (15)**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**tutti**|Sottoscrizioni push, pull e anonime.|  
 |**Anonimo**|Sottoscrizione anonima.|  
@@ -59,14 +59,14 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 |**tirare**|Sottoscrizione pull.|  
 |**both** (impostazione predefinita)|Sottoscrizione sia push che pull.|  
   
-`[ @ignore_distributor = ] ignore_distributor` Indica se questo stored procedure viene eseguito senza connettersi al server di distribuzione. *ignore_distributor* è di **bit**e il valore predefinito è **0**. È possibile utilizzare questo parametro per eliminare una sottoscrizione senza eseguire attività di pulizia dei dati nel server di distribuzione. Risulta inoltre utile se è stato necessario reinstallare il server di distribuzione.  
+`[ @ignore_distributor = ] ignore_distributor` Indica se questo stored procedure viene eseguito senza connettersi al server di distribuzione. *ignore_distributor* è di **bit** e il valore predefinito è **0**. È possibile utilizzare questo parametro per eliminare una sottoscrizione senza eseguire attività di pulizia dei dati nel server di distribuzione. Risulta inoltre utile se è stato necessario reinstallare il server di distribuzione.  
   
-`[ @reserved = ] reserved` È riservato per usi futuri. *riservato* è di **bit**e il valore predefinito è **0**.  
+`[ @reserved = ] reserved` È riservato per usi futuri. *riservato* è di **bit** e il valore predefinito è **0**.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_dropmergesubscription** viene utilizzata nella replica di tipo merge.  
   
 ## <a name="example"></a>Esempio  

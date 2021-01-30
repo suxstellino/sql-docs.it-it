@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Cancel method [RDS]
 ms.assetid: 560b5b3d-fba9-4275-8920-9c3e186134f7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24f72c16e1c27d070bcc52fc29c6599cc11c737e
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: e87e8d173e1ab9aa8978ed9ab98c6a2f37a93e79
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722692"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169064"
 ---
 # <a name="cancel-method-rds"></a>Metodo Cancel (Servizi Desktop remoto)
 Annulla l'esecuzione di una chiamata al metodo asincrona in sospeso.  
@@ -35,7 +35,7 @@ RDS.DataControl.Cancel
 ```  
   
 ## <a name="remarks"></a>Osservazioni  
- Quando si chiama **Annulla**, [ReadyState](./readystate-property-rds.md) viene impostato automaticamente su **adcReadyStateLoaded**e il [Recordset](../ado-api/recordset-object-ado.md) sarà vuoto.  
+ Quando si chiama **Annulla**, [ReadyState](./readystate-property-rds.md) viene impostato automaticamente su **adcReadyStateLoaded** e il [Recordset](../ado-api/recordset-object-ado.md) sarà vuoto.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto DataControl (Servizi Desktop remoto)](./datacontrol-object-rds.md)  

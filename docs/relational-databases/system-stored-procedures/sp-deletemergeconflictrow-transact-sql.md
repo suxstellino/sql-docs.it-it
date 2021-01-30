@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_deletemergeconflictrow
 - sp_deletemergeconflictrow_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4b2fae5fad15490fee5c239a26e8e0b5e0a25832
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 392d64a854db224542438f28d821a3ade597bdc8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543535"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203687"
 ---
 # <a name="sp_deletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +42,11 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @conflict_table = ] 'conflict_table'` Nome della tabella dei conflitti. *conflict_table* è di **tipo sysname**e il valore predefinito è **%** . Se il *conflict_table* viene specificato come null o **%** , si presuppone che si verifichi un conflitto di eliminazione e che la riga corrispondente a *rowguid* e *origin_datasource* e *Source_object* venga eliminata dalla tabella [MSmerge_conflicts_info &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) .  
+`[ @conflict_table = ] 'conflict_table'` Nome della tabella dei conflitti. *conflict_table* è di **tipo sysname** e il valore predefinito è **%** . Se il *conflict_table* viene specificato come null o **%** , si presuppone che si verifichi un conflitto di eliminazione e che la riga corrispondente a *rowguid* e *origin_datasource* e *Source_object* venga eliminata dalla tabella [MSmerge_conflicts_info &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) .  
   
 `[ @source_object = ] 'source_object'` Nome della tabella di origine. *source_object* è di **tipo nvarchar (386)** e il valore predefinito è null.  
   
-`[ @rowguid = ] 'rowguid'` Identificatore di riga per il conflitto di eliminazione. *rowguid* è di tipo **uniqueidentifier**e non prevede alcun valore predefinito.  
+`[ @rowguid = ] 'rowguid'` Identificatore di riga per il conflitto di eliminazione. *rowguid* è di tipo **uniqueidentifier** e non prevede alcun valore predefinito.  
   
 `[ @origin_datasource = ] 'origin_datasource'` Origine del conflitto. *origin_datasource* è di tipo **varchar (255)** e non prevede alcun valore predefinito.  
   
@@ -55,7 +55,7 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_deletemergeconflictrow** viene utilizzata nella replica di tipo merge.  
   
  [MSmerge_conflicts_info &#40;tabella&#41;Transact-SQL ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) è una tabella di sistema e non viene eliminata dal database, anche se è vuota.  
