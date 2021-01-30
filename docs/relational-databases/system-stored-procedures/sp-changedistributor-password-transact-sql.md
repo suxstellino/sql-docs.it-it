@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changedistributor_password
 - sp_changedistributor_password_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9f9f964e2db0c47dcf03b52a65c3a8e7c2599dde
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dbffbe5309b0f48458c34c374d9621a6cad73266
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536722"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158993"
 ---
 # <a name="sp_changedistributor_password-transact-sql"></a>sp_changedistributor_password (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,12 +38,12 @@ sp_changedistributor_password [ @password= ] 'password'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @password = ] 'password'` Nuova password. *password* è di **tipo sysname**e non prevede alcun valore predefinito. Se il server di distribuzione è locale, la password dell'account di accesso del sistema **distributor_admin** viene modificata.  
+`[ @password = ] 'password'` Nuova password. *password* è di **tipo sysname** e non prevede alcun valore predefinito. Se il server di distribuzione è locale, la password dell'account di accesso del sistema **distributor_admin** viene modificata.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_changedistributor_password** viene utilizzato in tutti i tipi di replica.  
   
 ## <a name="example"></a>Esempio  

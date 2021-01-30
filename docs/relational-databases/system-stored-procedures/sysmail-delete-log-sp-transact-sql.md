@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_delete_log_sp_TSQL
 - sysmail_delete_log_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7cc01563da03abda4ea8eef8b639ba5704549f55
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1f3921d220f367d15849eab080369db986d8f53e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538435"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160013"
 ---
 # <a name="sysmail_delete_log_sp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,12 +44,12 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ## <a name="arguments"></a>Argomenti  
 `[ @logged_before = ] 'logged_before'` Elimina le voci fino alla data e all'ora specificate dall'argomento *logged_before* . *logged_before* è di tipo **DateTime** con valore predefinito. che indica tutte le date.  
   
-`[ @event_type = ] 'event_type'` Elimina le voci di log del tipo specificato come *event_type*. *event_type* è di tipo **varchar (15)** e non prevede alcun valore predefinito. Le voci valide sono **esito positivo**, **avviso**, **errore**e **informativo**. NULL indica tutti i tipi di eventi.  
+`[ @event_type = ] 'event_type'` Elimina le voci di log del tipo specificato come *event_type*. *event_type* è di tipo **varchar (15)** e non prevede alcun valore predefinito. Le voci valide sono **esito positivo**, **avviso**, **errore** e **informativo**. NULL indica tutti i tipi di eventi.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Usare il stored procedure **sysmail_delete_log_sp** per eliminare definitivamente le voci dal log di posta elettronica database. Un argomento facoltativo consente di eliminare solo i record meno recenti tramite l'impostazione di una data e un'ora. Gli eventi con una data anteriore a quella specificata nell'argomento verranno eliminati. Un argomento facoltativo consente di eliminare solo gli eventi di un determinato tipo, specificati come argomento **event_type** .  
   
  L'eliminazione delle voci dal log di Posta elettronica database non comporta la rimozione dei messaggi di posta elettronica dalle tabelle di Posta elettronica database. Utilizzare [sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md) per eliminare la posta elettronica dalle tabelle posta elettronica database.  

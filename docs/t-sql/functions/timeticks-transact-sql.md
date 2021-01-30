@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - '@@TIMETICKS_TSQL'
 - '@@TIMETICKS'
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 9d036633-837f-4309-9c45-3d9600258018
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1e9aa3e2d1da4795d674d654deeb5caa91f7ea17
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
-ms.translationtype: HT
+ms.openlocfilehash: 4d40c22881165b997c550e6b594984202764071f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380476"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158699"
 ---
 # <a name="x40x40timeticks-transact-sql"></a>&#x40;&#x40;TIMETICKS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "91380476"
 ## <a name="return-types"></a>Tipi restituiti
  **integer**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  L'intervallo di tempo per tick dipende dal computer. Ogni tick nel sistema operativo equivale a 31,25 millisecondi, ovvero un trentaduesimo di secondo.  
   
 ## <a name="examples"></a>Esempi  

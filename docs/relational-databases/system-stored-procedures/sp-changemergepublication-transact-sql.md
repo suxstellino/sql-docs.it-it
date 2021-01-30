@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changemergepublication_TSQL
 - sp_changemergepublication
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e909e343a22ca1a249e5de03bc5eb64948e982cd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e7807a445de3ddf919679b09002646c87b313c5d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541900"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159860"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 `[ @property = ] 'property'` Proprietà da modificare per la pubblicazione specificata. *Property* è di **tipo sysname**. i possibili valori sono elencati nella tabella seguente.  
   
@@ -50,11 +50,11 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  Nella tabella seguente vengono descritte le proprietà della pubblicazione che è possibile modificare e le limitazioni previste per i valori di tali proprietà.  
   
-|Proprietà|valore|Descrizione|  
+|Proprietà|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Le sottoscrizioni anonime sono consentite.|  
 ||**false**|Le sottoscrizioni anonime non sono consentite.|  
-|**allow_partition_realignment**|**true**|Le eliminazioni che vengono inviate al Sottoscrittore si basano sui risultati delle modifiche effettuate in una sua partizione. Vengono eliminati i dati che non appartengono più a tale partizione. Questo è il comportamento predefinito.|  
+|**allow_partition_realignment**|**true**|Le eliminazioni che vengono inviate al Sottoscrittore si basano sui risultati delle modifiche effettuate in una sua partizione. Vengono eliminati i dati che non appartengono più a tale partizione. Comportamento predefinito.|  
 ||**false**|Nel Sottoscrittore rimangono i dati di una vecchia partizione, mentre non vengono replicate le modifiche apportate a tali dati nel server di pubblicazione. Viceversa, le modifiche apportate nel Sottoscrittore vengono replicate nel server di pubblicazione. Ciò consente di conservare i dati relativi a una sottoscrizione in una vecchia partizione, nel caso in cui sia necessario accedervi per eseguire analisi cronologiche.|  
 |**allow_pull**|**true**|È consentita la creazione di sottoscrizioni pull per la pubblicazione specificata.|  
 ||**false**|Non è consentita la creazione di sottoscrizioni pull per la pubblicazione specificata.|  
@@ -115,13 +115,13 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**inactive**|La pubblicazione è in uno stato inattivo.|  
 |**sync_mode**|**nativo** o<br /><br /> **BCP nativo**|L'output del programma di copia bulk in modalità nativa di tutte le tabelle viene utilizzato per lo snapshot iniziale.|  
 ||**character**<br /><br /> o **carattere BCP**|L'output del programma di copia bulk in modalità carattere di tutte le tabelle viene utilizzato per lo snapshot iniziale, che è obbligatorio per tutti i Sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**use_partition_groups**<br /><br /> Nota: dopo aver usato partition_groups, se si ripristina l'uso di **SetupBelongs**e si imposta **use_partition_groups = false** in **changemergearticle**, questo potrebbe non essere riflesso correttamente dopo che è stato creato uno snapshot. I trigger generati dallo snapshot sono conformi ai gruppi di partizioni.<br /><br /> La soluzione alternativa a questo scenario consiste nell'impostare lo stato su inattivo, modificare il **use_partition_groups**, quindi impostare stato su attivo.|**true**|La pubblicazione utilizza partizioni pre-calcolate.|  
+|**use_partition_groups**<br /><br /> Nota: dopo aver usato partition_groups, se si ripristina l'uso di **SetupBelongs** e si imposta **use_partition_groups = false** in **changemergearticle**, questo potrebbe non essere riflesso correttamente dopo che è stato creato uno snapshot. I trigger generati dallo snapshot sono conformi ai gruppi di partizioni.<br /><br /> La soluzione alternativa a questo scenario consiste nell'impostare lo stato su inattivo, modificare il **use_partition_groups**, quindi impostare stato su attivo.|**true**|La pubblicazione utilizza partizioni pre-calcolate.|  
 ||**false**|La pubblicazione non utilizza partizioni pre-calcolate.|  
 |**validate_subscriber_info**||Elenca le funzioni utilizzate per recuperare le informazioni relative al Sottoscrittore. Convalida quindi i criteri di applicazione dei filtri dinamici utilizzati per il Sottoscrittore per verificare che le informazioni vengano partizionate in modo coerente.|  
 |**web_synchronization_url**||Valore predefinito dell'URL Internet utilizzato per la sincronizzazione tramite il Web.|  
 |NULL (predefinito)||Restituisce l'elenco dei valori supportati per la *Proprietà*.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Conferma che l'azione eseguita da questo stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è di **bit**e il valore predefinito è **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Conferma che l'azione eseguita da questo stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è di **bit** e il valore predefinito è **0**.  
   
  **0** indica che la modifica della pubblicazione non invalida lo snapshot. Se la stored procedure rileva che la modifica richiede un nuovo snapshot, viene generato un errore e non viene apportata alcuna modifica.  
   
@@ -140,7 +140,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_changemergepublication** viene utilizzata nella replica di tipo merge.  
   
  La modifica delle proprietà seguenti richiede la generazione di un nuovo snapshot. È necessario specificare il valore **1** per il parametro *force_invalidate_snapshot* .  

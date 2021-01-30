@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cdc_help_change_data_capture_TSQL
 - sys.sp_cdc_help_change_data_capture_TSQL
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 13f78f25cd02ccf9c698518b5aa10f7fda0b7694
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 79c12ab4b1bdfb3a955c83ef3d724a026f24f1ea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809822"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159777"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,14 +47,14 @@ sys.sp_cdc_help_change_data_capture
   
 ## <a name="arguments"></a>Argomenti  
  [ @source_schema =]'*source_schema*'  
- Nome dello schema a cui appartiene la tabella di origine. *source_schema* è di **tipo sysname**e il valore predefinito è null. Quando si specifica *source_schema* , è necessario specificare anche *source_name* .  
+ Nome dello schema a cui appartiene la tabella di origine. *source_schema* è di **tipo sysname** e il valore predefinito è null. Quando si specifica *source_schema* , è necessario specificare anche *source_name* .  
   
  Se è diverso da NULL, *source_schema* deve esistere nel database corrente.  
   
  Se *source_schema* è diverso da null, anche *source_name* deve essere non null.  
   
  [ @source_name =]'*source_name*'  
- Nome della tabella di origine. *source_name* è di **tipo sysname**e il valore predefinito è null. Quando si specifica *source_name* , è necessario specificare anche *source_schema* .  
+ Nome della tabella di origine. *source_name* è di **tipo sysname** e il valore predefinito è null. Quando si specifica *source_name* , è necessario specificare anche *source_schema* .  
   
  Se è diverso da NULL, *source_name* deve esistere nel database corrente.  
   
@@ -83,7 +83,7 @@ sys.sp_cdc_help_change_data_capture
 |index_column_list|**nvarchar(max)**|Elenco delle colonne dell'indice utilizzato per identificare in modo univoco le righe nella tabella di origine.|  
 |captured_column_list|**nvarchar(max)**|Elenco delle colonne di origine acquisite.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Quando sia *source_schema* che *source_name* il valore predefinito è null o viene impostato in modo esplicito su null, questo stored procedure restituisce informazioni per tutte le istanze di acquisizione del database a cui il chiamante ha accesso SELECT. Quando *source_schema* e *SOURCE_NAME* sono non null, vengono restituite solo le informazioni sulla tabella abilitata specificata specifica.  
   
 ## <a name="permissions"></a>Autorizzazioni  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - driver manager [ODBC], backward compatibility
 - compatibility [ODBC], driver manager
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 57f65c38-d9ee-46c8-9051-128224a582c6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 399dec39e18c9e31ce4a93172d0597c333fb40cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d210d5c202f11151cf22a64362b652958422f513
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386167"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158164"
 ---
 # <a name="what-the-driver-manager-does"></a>Funzionamento di Gestione driver
 Nella tabella seguente viene riepilogato il modo in cui gestione driver ODBC *3. x* esegue il mapping delle chiamate ai driver ODBC *2. x* e ODBC *3. x* .  
@@ -29,7 +29,7 @@ Nella tabella seguente viene riepilogato il modo in cui gestione driver ODBC *3.
 |Funzione or<br /><br /> attributo di istruzione|Commenti|  
 |-----------------------------------------|--------------|  
 |SQL_ATTR_FETCH_BOOKMARK_PTR|Punta al segnalibro da usare con **SQLFetchScroll**. Di seguito sono riportati i dettagli di implementazione:<br /><br /> -Quando un'applicazione imposta questa impostazione in un driver ODBC *2. x* , gestione driver ODBC *3. x* lo memorizza nella cache. Dereferenzia il puntatore e passa il valore al driver ODBC *2. x* nell'argomento *FetchOffset* di **SQLExtendedFetch** quando **SQLFetchScroll** viene chiamato successivamente dall'applicazione.<br />-Quando un'applicazione imposta questa impostazione in un driver ODBC *3. x* , la gestione driver ODBC *3. x* passa la chiamata al driver.|  
-|SQL_ATTR_ROW_STATUS_PTR|Punta alla matrice di stato della riga compilata da **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**e **SQLSetPos**. Di seguito sono riportati i dettagli di implementazione:<br /><br /> -Quando un'applicazione imposta questa impostazione in un driver ODBC *2. x* , il relativo valore viene memorizzato in Gestione driver ODBC *3. x* . Passa questo valore al driver ODBC *2. x* nell'argomento *RowStatusArray* di **SQLExtendedFetch** quando viene chiamato **SQLFetchScroll** o **SQLFetch** .<br />-Quando un'applicazione imposta questa impostazione in un driver ODBC *3. x* , la gestione driver ODBC *3. x* passa la chiamata al driver.<br />-In stato S6, se un'applicazione imposta SQL_ATTR_ROW_STATUS_PTR e quindi chiama **SQLBulkOperations** (con un' *operazione* di SQL_ADD) o **SQLSetPos** senza prima chiamare **SQLFetch** o **SQLFetchScroll**, viene restituito SQLState HY011 (l'attributo non può essere impostato adesso).|  
+|SQL_ATTR_ROW_STATUS_PTR|Punta alla matrice di stato della riga compilata da **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations** e **SQLSetPos**. Di seguito sono riportati i dettagli di implementazione:<br /><br /> -Quando un'applicazione imposta questa impostazione in un driver ODBC *2. x* , il relativo valore viene memorizzato in Gestione driver ODBC *3. x* . Passa questo valore al driver ODBC *2. x* nell'argomento *RowStatusArray* di **SQLExtendedFetch** quando viene chiamato **SQLFetchScroll** o **SQLFetch** .<br />-Quando un'applicazione imposta questa impostazione in un driver ODBC *3. x* , la gestione driver ODBC *3. x* passa la chiamata al driver.<br />-In stato S6, se un'applicazione imposta SQL_ATTR_ROW_STATUS_PTR e quindi chiama **SQLBulkOperations** (con un' *operazione* di SQL_ADD) o **SQLSetPos** senza prima chiamare **SQLFetch** o **SQLFetchScroll**, viene restituito SQLState HY011 (l'attributo non può essere impostato adesso).|  
 |SQL_ATTR_ROWS_FETCHED_PTR|Punta al buffer in cui **SQLFetch** e **SQLFetchScroll** restituiscono il numero di righe recuperate. Di seguito sono riportati i dettagli di implementazione:<br /><br /> -Quando un'applicazione imposta questa impostazione in un driver ODBC *2. x* , il relativo valore viene memorizzato in Gestione driver ODBC *3. x* . Passa questo valore al driver ODBC *2. x* nell'argomento *RowCountPtr* di **SQLExtendedFetch** quando **SQLFetch** o **SQLFetchScroll** viene chiamato dall'applicazione.<br />-Quando un'applicazione imposta questa impostazione in un driver ODBC *3. x* , la gestione driver ODBC *3. x* passa la chiamata al driver.|  
 |SQL_ATTR_ROW_ARRAY_SIZE|Imposta la dimensione del set di righe. Di seguito sono riportati i dettagli di implementazione:<br /><br /> -Quando un'applicazione imposta questa impostazione in un driver ODBC *2. x* , gestione driver ODBC *3. x* ne esegue il mapping all'attributo dell'istruzione SQL_ROWSET_SIZE.<br />-Quando un'applicazione imposta questa impostazione in un driver ODBC *3. x* , la gestione driver ODBC *3. x* passa la chiamata al driver.<br />-Quando un'applicazione che utilizza un driver ODBC *3. x* chiama **SQLSetScrollOptions**, SQL_ROWSET_SIZE viene impostato sul valore nell'argomento *RowsetSize* se il driver sottostante non supporta **SQLSetScrollOptions**.|  
 |SQL_ROWSET_SIZE|Imposta le dimensioni del set di righe utilizzate da **SQLExtendedFetch** quando **SQLExtendedFetch** viene chiamato da un'applicazione ODBC *2. x* . Di seguito sono riportati i dettagli di implementazione:<br /><br /> -Quando un'applicazione imposta questa impostazione, gestione driver ODBC *3. x* passa la chiamata al driver, indipendentemente dalla versione del driver.<br />-Quando un'applicazione che utilizza un driver ODBC *2. x* chiama **SQLSetScrollOptions**, SQL_ROWSET_SIZE viene impostato sul valore nell'argomento **RowsetSize** .|  

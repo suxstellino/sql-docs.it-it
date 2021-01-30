@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data types [ODBC], interval data types
 - precision [ODBC], interval data types
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3d65493f-dce7-4d29-9f59-c63a4e47918c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 97375bf23a8530d78dea65dc75ce487cc4f807dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a79bf67c0a8ccc988d9e171be9760be98c1dc5fa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425003"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160834"
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>Override della precisione iniziale e in secondi predefinita per i tipi di dati intervallo
 Quando il campo SQL_DESC_TYPE di un ARD è impostato su un tipo DateTime o Interval C, chiamando **SQLBindCol** o **SQLSetDescField**, il campo SQL_DESC_PRECISION, che contiene la precisione intervallo secondi, viene impostato sui valori predefiniti seguenti:  
@@ -42,4 +42,4 @@ Quando il campo SQL_DESC_TYPE di un ARD è impostato su un tipo DateTime o Inter
   
  Se l'applicazione chiama **SQLGetData** per restituire dati in un tipo DateTime o Interval C, vengono utilizzate la precisione iniziali dell'intervallo e i secondi di intervallo predefiniti. Se il valore predefinito non è accettabile, l'applicazione deve chiamare **SQLSetDescField** per impostare il campo del descrittore o **SQLSetDescRec** per impostare SQL_DESC_PRECISION. La chiamata a **SQLGetData** deve avere un *targetType* di SQL_ARD_TYPE per usare i valori nei campi del descrittore.  
   
- Quando viene chiamato **SQLPutData** , viene letta la precisione del tempo di precisione e di intervallo per i secondi di intervallo, dai campi del record del descrittore che corrispondono al parametro o alla colonna data-at-execution, ovvero i campi APD per le chiamate a **SQLExecute** o **SQLExecDirect**o i campi ARD per le chiamate a **SQLBulkOperations** o **SQLSetPos**.
+ Quando viene chiamato **SQLPutData** , viene letta la precisione del tempo di precisione e di intervallo per i secondi di intervallo, dai campi del record del descrittore che corrispondono al parametro o alla colonna data-at-execution, ovvero i campi APD per le chiamate a **SQLExecute** o **SQLExecDirect** o i campi ARD per le chiamate a **SQLBulkOperations** o **SQLSetPos**.

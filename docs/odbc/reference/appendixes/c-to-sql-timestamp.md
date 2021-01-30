@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data conversions from C to SQL types [ODBC], timestamp
 - timestamp data type [ODBC]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e51d82e8acd59c8b4e6f5a8385720b0bd38eba4c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 54632816fb7013639e1cdb761fbc8df53c461a0d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449033"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158592"
 ---
 # <a name="c-to-sql-timestamp"></a>Da C a SQL: timestamp
 Identificatore per il tipo di dati timestamp ODBC C:  
@@ -41,6 +41,6 @@ Identificatore per il tipo di dati timestamp ODBC C:
   
  Per informazioni sui valori validi in una struttura SQL_C_TIMESTAMP, vedere tipi di [dati C](../../../odbc/reference/appendixes/c-data-types.md), più indietro in questa appendice.  
   
- Quando i dati timestamp C vengono convertiti in dati di tipo carattere SQL, i dati di tipo carattere risultanti sono in "*aaaa* - *mm* - *GG* *HH*:*mm*:*SS*[.* f...*] " formato.  
+ Quando i dati timestamp C vengono convertiti in dati di tipo carattere SQL, i dati di tipo carattere risultanti sono in "*aaaa* - *mm* - *GG* *HH*:*mm*:*SS*[.*f...*] "Format.  
   
  Il driver ignora il valore di lunghezza/indicatore durante la conversione dei dati dal tipo di dati timestamp C e presuppone che le dimensioni del buffer dei dati siano le dimensioni del tipo di dati timestamp C. Il valore di lunghezza/indicatore viene passato nell'argomento *StrLen_Or_Ind* in **SQLPutData** e nel buffer specificato con l'argomento *StrLen_or_IndPtr* in **SQLBindParameter**. Il buffer di dati viene specificato con l'argomento *DataPtr* in **SQLPutData** e l'argomento *ParameterValuePtr* in **SQLBindParameter**.

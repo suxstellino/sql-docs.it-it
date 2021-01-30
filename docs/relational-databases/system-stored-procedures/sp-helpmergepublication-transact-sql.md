@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpmergepublication
 - sp_helpmergepublication_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1042543ba82dcbd4bc7376acf6943a838506b6fa
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8001e98b207ca9493ff71b1f874b12b0d5227306
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549598"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160606"
 ---
 # <a name="sp_helpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,22 +44,22 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Argomenti  
  [ @publication **=** ] **'**_pubblicazione_**'**  
- Nome della pubblicazione. *Publication*è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni su tutte le pubblicazioni di tipo merge nel database corrente.  
+ Nome della pubblicazione. *Publication* è di **tipo sysname** e il valore predefinito è **%** , che restituisce informazioni su tutte le pubblicazioni di tipo merge nel database corrente.  
   
- [ @found **=** ] **'***trovato***'** output  
- Flag che indica le righe che restituiscono valori. *trovato*è di **tipo int** e un parametro di output e il valore predefinito è null. **1** indica che la pubblicazione è stata trovata. **0** indica che la pubblicazione non è stata trovata.  
+ [ @found **=** ] **'**_trovato_*_'_* output  
+ Flag che indica le righe che restituiscono valori. *trovato* è di **tipo int** e un parametro di output e il valore predefinito è null. **1** indica che la pubblicazione è stata trovata. **0** indica che la pubblicazione non è stata trovata.  
   
- [ @publication_id **=** ] output **'***publication_id***'**  
+ [ @publication_id **=** ] output **'**_publication_id_*_'_*  
  Numero di identificazione della pubblicazione. *publication_id* è di tipo **uniqueidentifier** e un parametro di output e il valore predefinito è null.  
   
- [ @reserved **=** ] **'***riservato***'**  
+ [ @reserved **=** ] **'**_riservato_*_'_*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*riservato* è di **tipo nvarchar (20)** e il valore predefinito è null.  
   
- [ @publisher **=** ] **'***Publisher***'**  
- Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+ [ @publisher **=** ] **'**_Publisher_*_'_*  
+ Nome del server di pubblicazione. *Publisher* è di **tipo sysname** e il valore predefinito è null.  
   
- [ @publisher_db **=** ] **'***publisher_db***'**  
- Nome del database di pubblicazione. *publisher_db* è di **tipo sysname**e il valore predefinito è null.  
+ [ @publisher_db **=** ] **'**_publisher_db_*_'_*  
+ Nome del database di pubblicazione. *publisher_db* è di **tipo sysname** e il valore predefinito è null.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -70,7 +70,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |description|**nvarchar(255)**|Descrizione della pubblicazione.|  
 |status|**tinyint**|Viene indicato quando i dati della pubblicazione sono disponibili.|  
 |retention|**int**|Tempo per salvare i metadati delle modifiche per gli articoli nella pubblicazione. Le unità per questo periodo di tempo possono essere giorni, settimane, mesi o anni. Per informazioni sulle unità, vedere la colonna retention_period_unit.|  
-|sync_mode|**tinyint**|Modalità di sincronizzazione della pubblicazione:<br /><br /> **0** = programma per la copia bulk nativa (utilità**bcp** )<br /><br /> **1** = copia bulk carattere|  
+|sync_mode|**tinyint**|Modalità di sincronizzazione della pubblicazione:<br /><br /> **0** = programma per la copia bulk nativa (utilità **bcp** )<br /><br /> **1** = copia bulk carattere|  
 |allow_push|**int**|Determina se è possibile creare sottoscrizioni push per la pubblicazione specificata. **0** indica che non è consentita una sottoscrizione push.|  
 |allow_pull|**int**|Determina se è possibile creare sottoscrizioni pull per la pubblicazione specificata. **0** indica che non è consentita una sottoscrizione pull.|  
 |allow_anonymous|**int**|Determina se è possibile creare sottoscrizioni anonime per la pubblicazione specificata. **0** indica che non è consentita una sottoscrizione anonima.|  
@@ -118,7 +118,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  sp_helpmergepublication viene utilizzata per la replica di tipo merge.  
   
 ## <a name="permissions"></a>Autorizzazioni  

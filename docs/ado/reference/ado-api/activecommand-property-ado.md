@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset20::ActiveCommand
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df737543e8cc09735c7da413b89406b6f2385079
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0a8d8dab4944cfa2d43bc571442e294699154f12
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977154"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159264"
 ---
 # <a name="activecommand-property-ado"></a>Proprietà ActiveCommand (ADO)
 Indica l'oggetto [comando](./command-object-ado.md) che ha creato l'oggetto [Recordset](./recordset-object-ado.md) associato.  
@@ -29,10 +29,10 @@ Indica l'oggetto [comando](./command-object-ado.md) che ha creato l'oggetto [Rec
 ## <a name="return-value"></a>Valore restituito  
  Restituisce una **variante** che contiene un oggetto **comando** . Il valore predefinito è un riferimento a un oggetto null.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La proprietà **ActiveCommand** è di sola lettura.  
   
- Se non è stato utilizzato un oggetto **comando** per creare il **Recordset**corrente, viene restituito un riferimento a un oggetto **null** .  
+ Se non è stato utilizzato un oggetto **comando** per creare il **Recordset** corrente, viene restituito un riferimento a un oggetto **null** .  
   
  Utilizzare questa proprietà per trovare l'oggetto **comando** associato quando viene fornito solo l'oggetto **Recordset** risultante.  
   

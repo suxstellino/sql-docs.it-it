@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4f72e6427ce1906166374485c1041752de99e878
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6e0abc6c184911e91cbdc01e1825f7808208a74a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977272"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159293"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>Esempio di proprietà AbsolutePage, PageCount e PageSize (VC + +)
-In questo esempio vengono utilizzate le proprietà [AbsolutePage](./absolutepage-property-ado.md), [PageCount](./pagecount-property-ado.md)e [pageSize](./pagesize-property-ado.md) per visualizzare i nomi e le date di assunzione della tabella ***Employee*** , cinque record alla volta.  
+In questo esempio vengono utilizzate le proprietà [AbsolutePage](./absolutepage-property-ado.md), [PageCount](./pagecount-property-ado.md)e [pageSize](./pagesize-property-ado.md) per visualizzare i nomi e le date di assunzione dalla tabella ***Employee** _, cinque record alla volta.  
   
 ```  
 // BeginAbsolutePageCpp.cpp  
@@ -82,7 +82,7 @@ void AbsolutePageX() {
    _RecordsetPtr pRstEmployees = NULL;  
   
    // Define Other Variables.    Interface Pointer declared.(VC++ Extensions)  
-   IADORecordBinding *picRs = NULL;  
+   IADORecordBinding _picRs = NULL;  
    CEmployeeRs emprs;   // C++ class object   
    HRESULT hr = S_OK;  
    _bstr_t strMessage;  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SYS.DM_EXEC_COMPUTE_NODE_ERRORS_TSQL
 - DM_EXEC_COMPUTE_NODE_ERRORS
@@ -23,12 +23,12 @@ ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f2de93073776522947a227f60ef9aa3fd894323
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: f3b865b3b1b77371bd7dba30b5e61f0428efee24
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094091"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160091"
 ---
 # <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact-SQL)
 
@@ -40,7 +40,7 @@ ms.locfileid: "98094091"
 |-----------------|---------------|-----------------|-----------|  
 |error_id|`nvarchar(36)`|ID numerico univoco associato all'errore.|Univoco in tutti gli errori di query nel sistema|  
 |source|`nvarchar(255)`|Descrizione del processo o del thread di origine||  
-|type|`nvarchar(255)`|Tipo di errore.||  
+|tipo|`nvarchar(255)`|Tipo di errore.||  
 |create_time|`datetime`|Data e ora dell'occorrenza dell'errore||  
 |compute_node_id|`int`|Identificatore del nodo di calcolo specifico|Vedere compute_node_id di [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
 |rexecution_id|`nvarchar(36)`|Identificatore della query di polibase, se disponibile.||  

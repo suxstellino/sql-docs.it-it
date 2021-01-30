@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLManageDataSources
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 81f4616cb04d5d17cca687843d28efa1027ff65f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4fbb34d2daafc4a135cbf51c2b0382d3965f9dfc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460974"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160804"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **Conformità**  
@@ -39,7 +39,7 @@ ms.locfileid: "88460974"
 ```cpp  
   
 BOOL SQLManageDataSources(  
-     HWND     hwnd);  
+     HWND     hwnd);  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -50,7 +50,7 @@ BOOL SQLManageDataSources(
  **SQLManageDataSources** restituisce false se *HWND* non è un handle di finestra valido. In caso contrario, restituisce TRUE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLManageDataSources** restituisce false, è possibile ottenere un valore * \* pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i valori * \* pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLManageDataSources** restituisce false, è possibile ottenere un valore *\* pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i valori *\* pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
@@ -64,7 +64,7 @@ BOOL SQLManageDataSources(
   
  ![Finestra di dialogo Amministratore origine dati ODBC](../../../odbc/reference/syntax/media/ch23e.gif "CH23E")  
   
- Nella finestra di dialogo vengono visualizzate le origini dati elencate nelle informazioni di sistema in tre schede: **DSN utente**, **DSN di sistema**e **DSN su file**. Se l'utente fa doppio clic su un'origine dati o seleziona un'origine dati e fa clic su **Configura**, **SQLManageDataSources** chiama **ConfigDSN** nella DLL di installazione con l'opzione ODBC_CONFIG_DSN.  
+ Nella finestra di dialogo vengono visualizzate le origini dati elencate nelle informazioni di sistema in tre schede: **DSN utente**, **DSN di sistema** e **DSN su file**. Se l'utente fa doppio clic su un'origine dati o seleziona un'origine dati e fa clic su **Configura**, **SQLManageDataSources** chiama **ConfigDSN** nella DLL di installazione con l'opzione ODBC_CONFIG_DSN.  
   
  Se l'utente fa clic su **Aggiungi**, **SQLManageDataSources** Visualizza la finestra di dialogo **Crea nuova origine dati** , mostrata nella figura seguente.  
   

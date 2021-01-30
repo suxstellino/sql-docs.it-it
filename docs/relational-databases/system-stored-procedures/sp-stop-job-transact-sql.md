@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_stop_job_TSQL
 - sp_stop_job
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c9f44d705f9aff418312a9f8d0f1a9a9f8012216
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b7f4c7010ae6b00f083e54bcd3b6ec152d5d66ab
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551206"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159787"
 ---
 # <a name="sp_stop_job-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,9 +45,9 @@ sp_stop_job
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_name = ] 'job_name'` Nome del processo da arrestare. *job_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @job_name = ] 'job_name'` Nome del processo da arrestare. *job_name* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @job_id = ] job_id` Numero di identificazione del processo da arrestare. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
+`[ @job_id = ] job_id` Numero di identificazione del processo da arrestare. *job_id* è di tipo **uniqueidentifier** e il valore predefinito è null.  
   
 `[ @originating_server = ] 'master_server'` Nome del server master. Se specificato, vengono arrestati tutti i processi multiserver. *master_server* è di **tipo nvarchar (128)** e il valore predefinito è null. Specificare questo parametro solo quando si chiama **sp_stop_job** in un server di destinazione.  
   
@@ -80,7 +80,7 @@ sp_stop_job
   
  I membri di **SQLAgentUserRole** e **SQLAgentReaderRole** possono arrestare solo i processi di cui sono proprietari. I membri di **SQLAgentOperatorRole** possono arrestare tutti i processi locali, inclusi quelli di proprietà di altri utenti. I membri di **sysadmin** possono arrestare tutti i processi locali e multiserver.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene arrestato un processo denominato `Weekly Sales Data Backup`.  
   
 ```  

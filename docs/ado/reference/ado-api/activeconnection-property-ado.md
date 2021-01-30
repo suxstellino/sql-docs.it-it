@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Command15::ActiveConnection
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bc1a54d70639e4e3ff78748b4e04483fcfefafdb
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: efcb376c9ad27dff5a0c85d73f70ae4000385e3d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976962"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159234"
 ---
 # <a name="activeconnection-property-ado"></a>Proprietà ActiveConnection (ADO)
 Indica a quale oggetto [connessione](./connection-object-ado.md) appartiene attualmente il [comando](./command-object-ado.md), il [Recordset](./recordset-object-ado.md)o l'oggetto [record](./record-object-ado.md) specificato.  
@@ -31,7 +31,7 @@ Indica a quale oggetto [connessione](./connection-object-ado.md) appartiene attu
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **stringa** che contiene una definizione per una connessione se la connessione viene chiusa o una **variante** contenente l'oggetto **connessione** corrente se la connessione è aperta. Il valore predefinito è un riferimento a un oggetto null. Vedere la proprietà [ConnectionString](./connectionstring-property-ado.md) .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare la proprietà **ActiveConnection** per determinare l'oggetto **connessione** in cui verrà eseguito l'oggetto **comando** specificato oppure verrà aperto il **Recordset** specificato.  
   
 ## <a name="command"></a>Comando  
@@ -58,9 +58,9 @@ Indica a quale oggetto [connessione](./connection-object-ado.md) appartiene attu
  Se si imposta la proprietà **source** dell'oggetto **Recordset** su una variabile oggetto **Command** valida, la proprietà **ActiveConnection** del **Recordset** eredita l'impostazione della proprietà **ActiveConnection** dell'oggetto **comando** .  
   
 > [!NOTE]
->  **Utilizzo servizio dati remoto** Se utilizzata su un oggetto **Recordset** sul lato client, questa proprietà può essere impostata solo su una *stringa di connessione*o (in Microsoft Visual Basic o Visual Basic, Scripting Edition).  
+>  **Utilizzo servizio dati remoto** Se utilizzata su un oggetto **Recordset** sul lato client, questa proprietà può essere impostata solo su una *stringa di connessione* o (in Microsoft Visual Basic o Visual Basic, Scripting Edition).  
   
-## <a name="record"></a>Record  
+## <a name="record"></a>Registra  
  Questa proprietà è di lettura/scrittura quando l'oggetto **record** è chiuso e può contenere una stringa di connessione o un riferimento a un oggetto **Connection** aperto. Questa proprietà è di sola lettura quando l'oggetto **record** è aperto e contiene un riferimento a un oggetto **Connection** aperto.  
   
  Un oggetto **connessione** viene creato in modo implicito quando l'oggetto **record** viene aperto da un URL. Aprire il **record** con un oggetto di **connessione** aperto esistente assegnando l'oggetto **connessione** a questa proprietà o utilizzando l'oggetto **connessione** come parametro nella chiamata al metodo [Open](./open-method-ado-record.md) . Se il **record** viene aperto da un **record** o da un [Recordset](./recordset-object-ado.md)esistente, viene automaticamente associato all'oggetto di **connessione** del **record** o dell'oggetto **Recordset** .  

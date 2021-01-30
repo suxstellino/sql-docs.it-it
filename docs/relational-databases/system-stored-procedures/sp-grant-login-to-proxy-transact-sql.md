@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_grant_login_to_proxy
 - sp_grant_login_to_proxy_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 90e1a6d5-a692-4462-a163-4b0709d83150
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: e5e1c8ad821aeee5eff2a7671636941bad816405
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c59f8b19e63f491757386ba5562ea9e0106e92a8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493284"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159810"
 ---
 # <a name="sp_grant_login_to_proxy-transact-sql"></a>sp_grant_login_to_proxy (Transact-SQL)
 
@@ -45,26 +45,26 @@ sp_grant_login_to_proxy
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @login_name = ] 'login_name'` Nome dell'account di accesso a cui concedere l'accesso. Il *login_name* è di **tipo nvarchar (256)** e il valore predefinito è null. È necessario specificare uno dei ** \@ login_name**, ** \@ fixed_server_role**o ** \@ msdb_role** oppure il stored procedure ha esito negativo.  
+`[ @login_name = ] 'login_name'` Nome dell'account di accesso a cui concedere l'accesso. Il *login_name* è di **tipo nvarchar (256)** e il valore predefinito è null. È necessario specificare uno dei **\@ login_name**, **\@ fixed_server_role** o **\@ msdb_role** oppure il stored procedure ha esito negativo.  
   
-`[ @fixed_server_role = ] 'fixed_server_role'` Ruolo predefinito del server al quale concedere l'accesso. Il *fixed_server_role* è di **tipo nvarchar (256)** e il valore predefinito è null. È necessario specificare uno dei ** \@ login_name**, ** \@ fixed_server_role**o ** \@ msdb_role** oppure il stored procedure ha esito negativo.  
+`[ @fixed_server_role = ] 'fixed_server_role'` Ruolo predefinito del server al quale concedere l'accesso. Il *fixed_server_role* è di **tipo nvarchar (256)** e il valore predefinito è null. È necessario specificare uno dei **\@ login_name**, **\@ fixed_server_role** o **\@ msdb_role** oppure il stored procedure ha esito negativo.  
   
-`[ @msdb_role = ] 'msdb_role'` Ruolo del database nel database **msdb** al quale concedere l'accesso. Il *msdb_role* è di **tipo nvarchar (256)** e il valore predefinito è null. È necessario specificare uno dei ** \@ login_name**, ** \@ fixed_server_role**o ** \@ msdb_role** oppure il stored procedure ha esito negativo.  
+`[ @msdb_role = ] 'msdb_role'` Ruolo del database nel database **msdb** al quale concedere l'accesso. Il *msdb_role* è di **tipo nvarchar (256)** e il valore predefinito è null. È necessario specificare uno dei **\@ login_name**, **\@ fixed_server_role** o **\@ msdb_role** oppure il stored procedure ha esito negativo.  
   
-`[ @proxy_id = ] id` Identificatore del proxy al quale concedere l'accesso. *ID* è di **tipo int**e il valore predefinito è null. È necessario specificare uno dei ** \@ proxy_id** o ** \@ proxy_name** oppure il stored procedure ha esito negativo.  
+`[ @proxy_id = ] id` Identificatore del proxy al quale concedere l'accesso. *ID* è di **tipo int** e il valore predefinito è null. È necessario specificare uno dei **\@ proxy_id** o **\@ proxy_name** oppure il stored procedure ha esito negativo.  
   
-`[ @proxy_name = ] 'proxy_name'` Nome del proxy per il quale concedere l'accesso. Il *proxy_name* è di **tipo nvarchar (256)** e il valore predefinito è null. È necessario specificare uno dei ** \@ proxy_id** o ** \@ proxy_name** oppure il stored procedure ha esito negativo.  
+`[ @proxy_name = ] 'proxy_name'` Nome del proxy per il quale concedere l'accesso. Il *proxy_name* è di **tipo nvarchar (256)** e il valore predefinito è null. È necessario specificare uno dei **\@ proxy_id** o **\@ proxy_name** oppure il stored procedure ha esito negativo.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_grant_login_to_proxy** deve essere eseguito dal database **msdb** .  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_grant_login_to_proxy**.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene consentito all'account di accesso `adventure-works\terrid` di utilizzare il proxy `Catalog application proxy`.  
   
 ```sql

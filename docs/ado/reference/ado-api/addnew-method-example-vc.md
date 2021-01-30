@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9cc8774b-6711-4837-b442-959eaf79343e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d53033550d087844c429230c036aa1bf11e144a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7d6cd3ebc136fabee9a27ce15f22a42956cb25de
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976692"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161694"
 ---
 # <a name="addnew-method-example-vc"></a>Esempio del metodo AddNew (VC++)
 In questo esempio viene usato il metodo [AddNew](./addnew-method-ado.md) per creare un nuovo record con il nome specificato.  
