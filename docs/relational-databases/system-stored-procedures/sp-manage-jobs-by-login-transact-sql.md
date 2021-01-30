@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_manage_jobs_by_login
 - sp_manage_jobs_by_login_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e16bce5905a993082ca480996fae9639dd053eeb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5f367f869092bde5458c732fda3e79bc06e43cb8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547624"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185352"
 ---
 # <a name="sp_manage_jobs_by_login-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +43,11 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @action = ] 'action'` Azione da eseguire per l'account di accesso specificato. *Action* è di tipo **varchar (10)** e non prevede alcun valore predefinito. Quando *Action*è **Delete**, **sp_manage_jobs_by_login** Elimina tutti i processi di proprietà di *current_owner_login_name*. Quando *Action* viene **riassegnata**, tutti i processi vengono assegnati a *new_owner_login_name*.  
+`[ @action = ] 'action'` Azione da eseguire per l'account di accesso specificato. *Action* è di tipo **varchar (10)** e non prevede alcun valore predefinito. Quando *Action* è **Delete**, **sp_manage_jobs_by_login** Elimina tutti i processi di proprietà di *current_owner_login_name*. Quando *Action* viene **riassegnata**, tutti i processi vengono assegnati a *new_owner_login_name*.  
   
-`[ @current_owner_login_name = ] 'current_owner_login_name'` Nome dell'account di accesso del proprietario del processo corrente. *current_owner_login_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @current_owner_login_name = ] 'current_owner_login_name'` Nome dell'account di accesso del proprietario del processo corrente. *current_owner_login_name* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @new_owner_login_name = ] 'new_owner_login_name'` Nome dell'account di accesso del nuovo proprietario del processo. Utilizzare questo parametro solo se l' *azione* viene **riassegnata**. *new_owner_login_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @new_owner_login_name = ] 'new_owner_login_name'` Nome dell'account di accesso del nuovo proprietario del processo. Utilizzare questo parametro solo se l' *azione* viene **riassegnata**. *new_owner_login_name* è di **tipo sysname** e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -58,7 +58,7 @@ sp_manage_jobs_by_login
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa stored procedure, è necessario che agli utenti venga concesso il ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  In questo esempio tutti i processi di `danw` vengono riassegnati a `françoisa`.  
   
 ```  

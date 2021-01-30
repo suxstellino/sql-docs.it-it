@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLCancel
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ac0b5972-627f-4440-8c5a-0e8da728726d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 040cd9034a8f754a26f577b7efd6e1307e4c90c5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c1d630af340bf676deda8c18f415b85aba15403c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448873"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185801"
 ---
 # <a name="sqlcancel-function"></a>Funzione SQLCancel
 **Conformità**  
@@ -41,7 +41,7 @@ ms.locfileid: "88448873"
 ```cpp  
   
 SQLRETURN SQLCancel(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -57,7 +57,7 @@ SQLRETURN SQLCancel(
 |SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) nell'argomento buffer * \* MessageText* descrive l'errore e la relativa origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) nell'argomento buffer *\* MessageText* descrive l'errore e la relativa origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *statementHandle*. Questa funzione asincrona era ancora in esecuzione quando è stata chiamata la funzione **SQLCancel** .<br /><br /> L'operazione di annullamento (DM) non è riuscita perché è in corso un'operazione asincrona su un handle di connessione associato a *statementHandle*.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
@@ -109,12 +109,12 @@ SQLRETURN SQLCancel(
 |Esecuzione di operazioni di inserimento o aggiornamento bulk|[Funzione SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  
 |Annulla una funzione in esecuzione in modo asincrono in un handle di connessione, oltre alla funzionalità di **SQLCancel**.|[Funzione SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md)|  
 |Esecuzione di un'istruzione SQL|[Funzione SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
-|Esecuzione di un'istruzione SQL preparata|[SQLExecute (funzione)](../../../odbc/reference/syntax/sqlexecute-function.md)|  
+|Esecuzione di un'istruzione SQL preparata|[Funzione SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |Liberazione di un handle di istruzione|[SQLFreeStmt](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
 |Recupero di un campo di un record di diagnostica o di un campo dell'intestazione di diagnostica|[Funzione SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|  
 |Recupero di più campi di una struttura di dati di diagnostica|[Funzione SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|  
 |Restituzione del parametro successivo per l'invio dei dati|[Funzione SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md)|  
-|Invio di dati dei parametri in fase di esecuzione|[Funzione SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|  
+|Invio di dati dei parametri in fase di esecuzione|[SQLPutData Function](../../../odbc/reference/syntax/sqlputdata-function.md)|  
 |Posizionare il cursore in un set di righe, aggiornare i dati nel set di righe o aggiornare o eliminare dati nel set di risultati|[Funzione SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
   
 ## <a name="see-also"></a>Vedere anche  

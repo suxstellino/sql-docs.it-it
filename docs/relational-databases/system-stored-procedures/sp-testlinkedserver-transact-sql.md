@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_testlinkedserver
 - sp_testlinkedserver_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e63ca7d4-47d6-455e-9aac-421f9683dadc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 483b717511d70028bd8af4fc4649f210bbb972b1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0e9e0b7de928ff615816880c378a28c2997cc410
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534825"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195412"
 ---
 # <a name="sp_testlinkedserver-transact-sql"></a>sp_testlinkedserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_testlinkedserver [ @servername ] = servername
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @servername = ]servername` Nome del server collegato. *nomeserver* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @servername = ]servername` Nome del server collegato. *nomeserver* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 ## <a name="result-sets"></a>Set di risultati  
  nessuno  
@@ -48,7 +48,7 @@ sp_testlinkedserver [ @servername ] = servername
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni non vengono controllate, tuttavia il chiamante deve disporre del mapping di account di accesso appropriato.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene creato un server collegato denominato `SEATTLESales` e viene quindi testata la connessione.  
   
 ```  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_job
 - sp_update_job_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 494e284bb9df06094116d075979673bf2b033dea
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e559c50589681f7d00b1bd6048b1e23579213bee
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551195"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184703"
 ---
 # <a name="sp_update_job-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +57,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_id = ] job_id` Numero di identificazione del processo da aggiornare. *job_id*è di tipo **uniqueidentifier**.  
+`[ @job_id = ] job_id` Numero di identificazione del processo da aggiornare. *job_id* è di tipo **uniqueidentifier**.  
   
 `[ @job_name = ] 'job_name'` Nome del processo. *job_name* è di **tipo nvarchar (128)**.  
   
@@ -75,20 +75,20 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 `[ @owner_login_name = ] 'login'` Nome dell'account di accesso proprietario del processo. *login* è di **tipo nvarchar (128)** solo i membri del ruolo predefinito del server **sysadmin** possono modificare la proprietà del processo.  
   
-`[ @notify_level_eventlog = ] eventlog_level` Specifica quando inserire una voce nel registro applicazioni di Microsoft Windows per questo processo. *eventlog_level*è di **tipo int**. i possibili valori sono i seguenti.  
+`[ @notify_level_eventlog = ] eventlog_level` Specifica quando inserire una voce nel registro applicazioni di Microsoft Windows per questo processo. *eventlog_level* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione (azione)|  
+|Valore|Descrizione (azione)|  
 |-----------|----------------------------|  
 |**0**|Mai|  
 |**1**|In caso di esito positivo|  
 |**2**|In caso di esito negativo|  
-|**3**|Sempre|  
+|**3**|Always|  
   
-`[ @notify_level_email = ] email_level` Specifica quando inviare un messaggio di posta elettronica al termine del processo. *email_level*è di **tipo int**. *email_level*usa gli stessi valori di *eventlog_level*.  
+`[ @notify_level_email = ] email_level` Specifica quando inviare un messaggio di posta elettronica al termine del processo. *email_level* è di **tipo int**. *email_level* usa gli stessi valori di *eventlog_level*.  
   
-`[ @notify_level_netsend = ] netsend_level` Specifica quando inviare un messaggio di rete al termine del processo. *netsend_level*è di **tipo int**. *netsend_level*usa gli stessi valori di *eventlog_level*.  
+`[ @notify_level_netsend = ] netsend_level` Specifica quando inviare un messaggio di rete al termine del processo. *netsend_level* è di **tipo int**. *netsend_level* usa gli stessi valori di *eventlog_level*.  
   
-`[ @notify_level_page = ] page_level` Specifica quando inviare una pagina al termine del processo. *page_level* è di **tipo int**. *page_level*usa gli stessi valori di *eventlog_level*.  
+`[ @notify_level_page = ] page_level` Specifica quando inviare una pagina al termine del processo. *page_level* è di **tipo int**. *page_level* usa gli stessi valori di *eventlog_level*.  
   
 `[ @notify_email_operator_name = ] 'operator_name'` Nome dell'operatore a cui viene inviato il messaggio di posta elettronica quando viene raggiunto *email_level* . *email_name* è di **tipo nvarchar (128)**.  
   
@@ -96,14 +96,14 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 `[ @notify_page_operator_name = ] 'page_operator'` Nome dell'operatore a cui viene inviata una pagina. *page_operator* è di **tipo nvarchar (128)**.  
   
-`[ @delete_level = ] delete_level` Specifica quando eliminare il processo. *delete_value*è di **tipo int**. *delete_level*usa gli stessi valori di *eventlog_level*.  
+`[ @delete_level = ] delete_level` Specifica quando eliminare il processo. *delete_value* è di **tipo int**. *delete_level* usa gli stessi valori di *eventlog_level*.  
   
 `[ @automatic_post = ] automatic_post` Riservati.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_update_job** deve essere eseguito dal database **msdb** .  
   
  **sp_update_job** modifica solo le impostazioni per le quali vengono forniti i valori dei parametri. Se si omette un parametro, viene mantenuta l'impostazione corrente.  
@@ -121,7 +121,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
  Solo i membri di **sysadmin** possono utilizzare questa stored procedure per modificare gli attributi dei processi di proprietà di altri utenti.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono modificati il nome, la descrizione e lo stato di attivazione del processo `NightlyBackups`.  
   
 ```  

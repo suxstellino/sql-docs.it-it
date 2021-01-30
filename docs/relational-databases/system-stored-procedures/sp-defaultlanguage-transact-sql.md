@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_defaultlanguage
 - sp_defaultlanguage_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5eb94ea64b22f233d1c7c1e5d508fc0704f931ab
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9c382a442e6b87220f2650e65adc03089f2014b3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549864"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195556"
 ---
 # <a name="sp_defaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,14 +44,14 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @loginame = ] 'login'` Nome dell'account di accesso. *login* è di **tipo sysname**e non prevede alcun valore predefinito. l' *account di accesso* può essere un account di accesso esistente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un utente o un gruppo di Windows.  
+`[ @loginame = ] 'login'` Nome dell'account di accesso. *login* è di **tipo sysname** e non prevede alcun valore predefinito. l' *account di accesso* può essere un account di accesso esistente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un utente o un gruppo di Windows.  
   
-`[ @language = ] 'language'` Lingua predefinita dell'account di accesso. *Language* è di **tipo sysname**e il valore predefinito è null. la *lingua* deve essere una lingua valida nel server. Se la *lingua* non è specificata *, il linguaggio viene* impostato sulla lingua predefinita del server. la lingua predefinita è definita dalla variabile di configurazione **sp_configure** **lingua predefinita**. Se si modifica la lingua predefinita del server non viene modificata la lingua predefinita degli account di accesso esistenti.  
+`[ @language = ] 'language'` Lingua predefinita dell'account di accesso. *Language* è di **tipo sysname** e il valore predefinito è null. la *lingua* deve essere una lingua valida nel server. Se la *lingua* non è specificata *, il linguaggio viene* impostato sulla lingua predefinita del server. la lingua predefinita è definita dalla variabile di configurazione **sp_configure** **lingua predefinita**. Se si modifica la lingua predefinita del server non viene modificata la lingua predefinita degli account di accesso esistenti.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_defaultlanguage** chiama ALTER LOGIN, che supporta opzioni aggiuntive. Per informazioni sulla modifica delle impostazioni predefinite degli account di accesso, vedere [ALTER login &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
   
  Per modificare la lingua della sessione corrente, eseguire l'istruzione SET LANGUAGE. Utilizzare la @LANGUAGE funzione @ per visualizzare l'impostazione della lingua corrente.  
@@ -63,7 +63,7 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY LOGIN.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente l'istruzione `ALTER LOGIN` viene utilizzata per modificare la lingua predefinita dell'account di accesso `Fathima` e impostarla sull'arabo. Questo è il metodo preferito.  
   
 ```  

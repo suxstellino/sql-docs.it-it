@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_trace_getinfo
 - fn_trace_getinfo_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 04b140fe-110a-47b8-98b5-e4c161beb6c9
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: c7426552dd52732b6b22f9947862b8607418f482
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: dae691a749a91e00276dd74477b35f7916b76618
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093811"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205350"
 ---
 # <a name="sysfn_trace_getinfo-transact-sql"></a>sys.fn_trace_getinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
 |proprietà|**int**|Proprietà della traccia:<br /><br /> 1= Opzioni della traccia. Per ulteriori informazioni, vedere @options in [sp_trace_create &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).<br /><br /> 2 = Nome del file<br /><br /> 3 = Dimensioni massime<br /><br /> 4 = Ora di arresto<br /><br /> 5 = Stato corrente della traccia. 0 = arrestato. 1 = in esecuzione.|  
 |Valore|**sql_variant**|Informazioni sulla proprietà della traccia specificata.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se viene passato l'ID di una traccia specifica, fn_trace_getinfo restituisce le informazioni su tale traccia. Se viene passato un ID non valido, questa funzione restituisce un set di righe vuoto.  
   
  fn_trace_getinfo aggiunge un'estensione trc al nome di qualsiasi file di traccia incluso nel relativo set di risultati. Per informazioni sulla definizione di una traccia, vedere [sp_trace_create &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md). Per informazioni simili sui filtri di traccia, vedere [sys.fn_trace_getfilterinfo &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md).  
@@ -66,7 +66,7 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
 ## <a name="permissions"></a>Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER TRACE nel server.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituite informazioni su tutte le tracce attive.  
   
 ```  

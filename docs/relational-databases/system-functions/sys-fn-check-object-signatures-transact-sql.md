@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.fn_check_object_signatures_TSQL
 - fn_check_object_signatures_TSQL
@@ -21,12 +21,12 @@ ms.assetid: 47509566-d3d7-46a9-89c1-91b4895d56b9
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4efb55bdeb3455c2c98278e8b90021c5cf194146
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 25c4774812d900bcbc0b9979b966f7ba7a3945bc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099677"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206132"
 ---
 # <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -61,14 +61,14 @@ fn_ check_object_signatures (
 ## <a name="tables-returned"></a>Tabelle restituite  
  Nella tabella seguente sono elencate le colonne restituite da **fn_check_object_signatures** .  
   
-|Colonna|Type|Descrizione|  
+|Colonna|Tipo|Descrizione|  
 |------------|----------|-----------------|  
 |type|**nvarchar(120)**|Restituisce la descrizione del tipo o l'assembly.|  
 |entity_id|**int**|Restituisce l'identificatore dell'oggetto valutato.|  
 |is_signed|**int**|Restituisce 0 quando l'oggetto non viene firmato con l'identificazione digitale fornita. Restituisce 1 quando l'oggetto viene firmato con l'identificazione digitale fornita.|  
 |is_signature_valid|**int**|Quando il valore is_signed è 1, restituisce 0 se la firma non è valida e 1 se è valida.<br /><br /> Quando il valore is_signed è 0, restituisce sempre 0.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Usare **fn_check_object_signatures** per verificare che gli utenti malintenzionati non abbiano alterato gli oggetti.  
   
 ## <a name="permissions"></a>Autorizzazioni  

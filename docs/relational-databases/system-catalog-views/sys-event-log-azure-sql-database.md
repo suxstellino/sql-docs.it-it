@@ -6,7 +6,7 @@ ms.date: 01/28/2019
 ms.service: sql-database
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - event_log
 - sys.event_log_TSQL
@@ -21,12 +21,12 @@ ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: c3a358e23d9428440166dd98a0f29ca8e4ea11c5
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: ae823cddc60a82c343bc949515493f9405a51a9a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093101"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203861"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Database di SQL Azure)
 
@@ -42,7 +42,7 @@ ms.locfileid: "98093101"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Nome del database. Se la connessione ha esito negativo e l'utente non ha specificato un nome di database, questa colonna è vuota.|  
-|**start_time**|**datetime2**|Data e ora UTC dell'inizio dell'intervallo di aggregazione. In caso di eventi aggregati, l'ora è sempre un multiplo di 5 minuti. Esempio:<br /><br /> 28/09/2011 16:00:00<br />'29-09-2011 16:05:00'<br />'28-09-2011 16:10:00'|  
+|**start_time**|**datetime2**|Data e ora UTC dell'inizio dell'intervallo di aggregazione. In caso di eventi aggregati, l'ora è sempre un multiplo di 5 minuti. Ad esempio:<br /><br /> 28/09/2011 16:00:00<br />'29-09-2011 16:05:00'<br />'28-09-2011 16:10:00'|  
 |**end_time**|**datetime2**|Data e ora UTC della fine dell'intervallo di aggregazione. Per gli eventi aggregati, **end_time** è sempre esattamente 5 minuti dopo rispetto al **start_time** corrispondente nella stessa riga. Per gli eventi non aggregati, **start_time** e **end_time** uguali alla data e all'ora UTC effettive dell'evento.|  
 |**event_category**|**nvarchar (64)**|Componente di alto livello tramite cui è stato generato l'evento.<br /><br /> Per un elenco di valori possibili, vedere [tipi di evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
 |**event_type**|**nvarchar (64)**|Tipo di evento.<br /><br /> Per un elenco di valori possibili, vedere [tipi di evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
@@ -89,7 +89,7 @@ ms.locfileid: "98093101"
 
  Gli utenti con l'autorizzazione per accedere al database **Master** hanno accesso in sola lettura a questa vista.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ### <a name="event-aggregation"></a>Aggregazione evento
 
@@ -129,7 +129,7 @@ start_time                    end_time
 - Se si verifica un errore del computer nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Data Center, è possibile che nella tabella eventi manchi una piccola quantità di dati.  
 - Se un indirizzo IP è stato bloccato tramite DoSGuard, gli eventi di tentativi di connessione dall'indirizzo IP in questione non possono essere raccolti, né verranno visualizzati in questa vista.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
   
 ### <a name="simple-examples"></a>Esempi semplici
 

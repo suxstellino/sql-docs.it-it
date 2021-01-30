@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLAllocHandle
 apilocation:
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9488e5d8d627feac2877878cc2d10a52ec15e4e6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1d546ddfa5f7e18365fec4bdff08032a8bba749f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487294"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184331"
 ---
 # <a name="sqlallochandle-function"></a>Funzione SQLAllocHandle
 **Conformità**  
@@ -36,7 +36,7 @@ ms.locfileid: "88487294"
  **SQLAllocHandle** alloca un handle di ambiente, connessione, istruzione o descrittore.  
   
 > [!NOTE]  
->  Questa funzione è una funzione generica per l'allocazione di handle che sostituisce le funzioni ODBC 2,0 **SQLAllocConnect**, **SQLAllocEnv**e **SQLAllocStmt**. Per consentire alle applicazioni che chiamano **SQLAllocHandle** di funzionare con ODBC 2. driver *x* , una chiamata a **SQLAllocHandle** viene mappata in Gestione driver a **SQLAllocConnect**, **SQLAllocEnv**o **SQLAllocStmt**, a seconda dei casi. Per ulteriori informazioni, vedere "Commenti". Per ulteriori informazioni su ciò che Gestione driver esegue il mapping di questa funzione a quando ODBC 3. l'applicazione *x* funziona con ODBC 2. driver *x* , vedere [mapping di funzioni di sostituzione per la compatibilità con le versioni precedenti delle applicazioni](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
+>  Questa funzione è una funzione generica per l'allocazione di handle che sostituisce le funzioni ODBC 2,0 **SQLAllocConnect**, **SQLAllocEnv** e **SQLAllocStmt**. Per consentire alle applicazioni che chiamano **SQLAllocHandle** di funzionare con ODBC 2. driver *x* , una chiamata a **SQLAllocHandle** viene mappata in Gestione driver a **SQLAllocConnect**, **SQLAllocEnv** o **SQLAllocStmt**, a seconda dei casi. Per ulteriori informazioni, vedere "Commenti". Per ulteriori informazioni su ciò che Gestione driver esegue il mapping di questa funzione a quando ODBC 3. l'applicazione *x* funziona con ODBC 2. driver *x* , vedere [mapping di funzioni di sostituzione per la compatibilità con le versioni precedenti delle applicazioni](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -62,7 +62,7 @@ SQLRETURN SQLAllocHandle(
   
 -   SQL_HANDLE_STMT  
   
- SQL_HANDLE_DBC_INFO_TOKEN handle viene utilizzato solo dal driver e dalla gestione driver. Le applicazioni non devono usare questo tipo di handle. Per ulteriori informazioni su SQL_HANDLE_DBC_INFO_TOKEN, vedere [sviluppo della conoscenza del pool di connessioni in un driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
+ SQL_HANDLE_DBC_INFO_TOKEN handle viene utilizzato solo dal driver e dalla gestione driver. Le applicazioni non devono usare questo tipo di handle. Per ulteriori informazioni su SQL_HANDLE_DBC_INFO_TOKEN, vedere [sviluppo di Connection-Pool awareness in un driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
   
  *InputHandle puntare*  
  Input Handle di input nel cui contesto è necessario allocare il nuovo handle. Se *HandleType* è SQL_HANDLE_ENV, questo è SQL_NULL_HANDLE. Se *HandleType* è SQL_HANDLE_DBC, deve essere un handle di ambiente e, se è SQL_HANDLE_STMT o SQL_HANDLE_DESC, deve essere un handle di connessione.  
@@ -78,9 +78,9 @@ SQLRETURN SQLAllocHandle(
 ## <a name="environment-handle-allocation-errors"></a>Errori di allocazione dell'handle di ambiente  
  L'allocazione dell'ambiente si verifica sia all'interno di gestione driver che all'interno di ogni driver. L'errore restituito da **SQLAllocHandle** con *HandleType* SQL_HANDLE_ENV dipende dal livello in cui si è verificato l'errore.  
   
- Se Gestione driver non è in grado di allocare memoria per * \* OutputHandlePtr* quando viene chiamato **SQLAllocHandle** con *HandleType* di SQL_HANDLE_ENV oppure se l'applicazione fornisce un puntatore null per *OutputHandlePtr*, **SQLAllocHandle** restituisce SQL_ERROR. Gestione driver imposta **OutputHandlePtr* su SQL_NULL_HENV, a meno che l'applicazione non abbia fornito un puntatore null, che restituisce SQL_ERROR. Nessun handle con cui associare ulteriori informazioni di diagnostica.  
+ Se Gestione driver non è in grado di allocare memoria per *\* OutputHandlePtr* quando viene chiamato **SQLAllocHandle** con *HandleType* di SQL_HANDLE_ENV oppure se l'applicazione fornisce un puntatore null per *OutputHandlePtr*, **SQLAllocHandle** restituisce SQL_ERROR. Gestione driver imposta **OutputHandlePtr* su SQL_NULL_HENV, a meno che l'applicazione non abbia fornito un puntatore null, che restituisce SQL_ERROR. Nessun handle con cui associare ulteriori informazioni di diagnostica.  
   
- Gestione driver non chiama la funzione di allocazione di handle di ambiente a livello di driver finché l'applicazione non chiama **SQLConnect**, **SQLBrowseConnect**o **SQLDriverConnect**. Se si verifica un errore nella funzione **SQLAllocHandle** a livello di driver, la funzione **SQLConnect**, **SQLBrowseConnect**o **SQLDriverConnect** a livello di gestione driver restituisce SQL_ERROR. La struttura dei dati di diagnostica contiene SQLSTATE IM004 ( **SQLAllocHandle** del driver non riuscita). L'errore viene restituito in un handle di connessione.  
+ Gestione driver non chiama la funzione di allocazione di handle di ambiente a livello di driver finché l'applicazione non chiama **SQLConnect**, **SQLBrowseConnect** o **SQLDriverConnect**. Se si verifica un errore nella funzione **SQLAllocHandle** a livello di driver, la funzione **SQLConnect**, **SQLBrowseConnect** o **SQLDriverConnect** a livello di gestione driver restituisce SQL_ERROR. La struttura dei dati di diagnostica contiene SQLSTATE IM004 ( **SQLAllocHandle** del driver non riuscita). L'errore viene restituito in un handle di connessione.  
   
  Per ulteriori informazioni sul flusso di chiamate di funzione tra Gestione driver e un driver, vedere [funzione SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md).  
   
@@ -108,10 +108,10 @@ SQLRETURN SQLAllocHandle(
   
  Più di un ambiente, una connessione o un handle di istruzione può essere allocato da un'applicazione per volta se più allocazioni sono supportate dal driver. In ODBC non è definito alcun limite per il numero di handle di ambiente, connessione, istruzione o descrittore che possono essere allocati in un momento qualsiasi. I driver possono imporre un limite al numero di un determinato tipo di handle che può essere allocato alla volta. Per ulteriori informazioni, vedere la documentazione del driver.  
   
- Se l'applicazione chiama **SQLAllocHandle** con * \* OutputHandlePtr* impostato su un ambiente, una connessione, un'istruzione o un handle descrittore già esistente, il driver sovrascrive le informazioni associate all' *handle*, a meno che l'applicazione non usi il pool di connessioni (vedere "allocazione di un attributo di ambiente per il pool di connessioni" più avanti in questa sezione). Gestione driver non controlla se l' *handle* immesso in * \* OutputHandlePtr* è già in uso, né controlla il contenuto precedente di un handle prima di sovrascriverlo.  
+ Se l'applicazione chiama **SQLAllocHandle** con *\* OutputHandlePtr* impostato su un ambiente, una connessione, un'istruzione o un handle descrittore già esistente, il driver sovrascrive le informazioni associate all' *handle*, a meno che l'applicazione non usi il pool di connessioni (vedere "allocazione di un attributo di ambiente per il pool di connessioni" più avanti in questa sezione). Gestione driver non controlla se l' *handle* immesso in *\* OutputHandlePtr* è già in uso, né controlla il contenuto precedente di un handle prima di sovrascriverlo.  
   
 > [!NOTE]  
->  La programmazione di applicazioni ODBC non è corretta per chiamare **SQLAllocHandle** due volte con la stessa variabile dell'applicazione definita per * \* OutputHandlePtr* senza chiamare **SQLFreeHandle** per liberare l'handle prima della riallocazione. La sovrascrittura degli handle ODBC in questo modo può causare un comportamento incoerente o errori della parte dei driver ODBC.  
+>  La programmazione di applicazioni ODBC non è corretta per chiamare **SQLAllocHandle** due volte con la stessa variabile dell'applicazione definita per *\* OutputHandlePtr* senza chiamare **SQLFreeHandle** per liberare l'handle prima della riallocazione. La sovrascrittura degli handle ODBC in questo modo può causare un comportamento incoerente o errori della parte dei driver ODBC.  
   
  Nei sistemi operativi che supportano più thread, le applicazioni possono utilizzare lo stesso ambiente, connessione, istruzione o handle descrittore su thread diversi. I driver devono pertanto supportare l'accesso sicuro, multithread a queste informazioni; un modo per ottenere questo risultato, ad esempio, consiste nell'usare una sezione critica o un semaforo. Per ulteriori informazioni sul threading, vedere [multithreading](../../../odbc/reference/develop-app/multithreading.md).  
   
@@ -128,7 +128,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="allocating-an-environment-handle"></a>Allocazione di un handle di ambiente  
  Un handle di ambiente fornisce l'accesso a informazioni globali, ad esempio handle di connessione validi e handle di connessione attivi. Per informazioni generali sugli handle di ambiente, vedere [handle di ambiente](../../../odbc/reference/develop-app/environment-handles.md).  
   
- Per richiedere un handle di ambiente, un'applicazione chiama **SQLAllocHandle** con un *HandleType* di SQL_HANDLE_ENV e un *InputHandle puntare* di SQL_NULL_HANDLE. Il driver alloca memoria per le informazioni sull'ambiente e passa di nuovo il valore dell'handle associato nell'argomento * \* OutputHandlePtr* . L'applicazione passa il valore * \* OutputHandle* in tutte le chiamate successive che richiedono un argomento dell'handle di ambiente. Per altre informazioni, vedere [allocazione dell'handle di ambiente](../../../odbc/reference/develop-app/allocating-the-environment-handle.md).  
+ Per richiedere un handle di ambiente, un'applicazione chiama **SQLAllocHandle** con un *HandleType* di SQL_HANDLE_ENV e un *InputHandle puntare* di SQL_NULL_HANDLE. Il driver alloca memoria per le informazioni sull'ambiente e passa di nuovo il valore dell'handle associato nell'argomento *\* OutputHandlePtr* . L'applicazione passa il valore *\* OutputHandle* in tutte le chiamate successive che richiedono un argomento dell'handle di ambiente. Per altre informazioni, vedere [allocazione dell'handle di ambiente](../../../odbc/reference/develop-app/allocating-the-environment-handle.md).  
   
  In un handle di ambiente di gestione driver, se esiste già un handle di ambiente di un driver, **SQLAllocHandle** con un *HandleType* di SQL_HANDLE_ENV non viene chiamato in tale driver quando viene effettuata una connessione, solo **SQLAllocHandle** con un *HandleType* di SQL_HANDLE_DBC. Se il punto di controllo dell'ambiente di un driver non esiste nell'handle di ambiente di gestione driver, entrambi SQLAllocHandle con HandleType SQL_HANDLE_ENV e SQLAllocHandle con HandleType di SQL_HANDLE_DBC vengono chiamati nel driver quando il primo handle di connessione dell'ambiente è connesso al driver.  
   
@@ -148,9 +148,9 @@ SQLRETURN SQLAllocHandle(
 ## <a name="allocating-a-connection-handle"></a>Allocazione di un handle di connessione  
  Un handle di connessione fornisce l'accesso a informazioni quali gli handle di istruzione e descrittore validi per la connessione e se una transazione è attualmente aperta. Per informazioni generali sugli handle di connessione, vedere [handle di connessione](../../../odbc/reference/develop-app/connection-handles.md).  
   
- Per richiedere un handle di connessione, un'applicazione chiama **SQLAllocHandle** con un *HandleType* di SQL_HANDLE_DBC. L'argomento *InputHandle puntare* è impostato sull'handle di ambiente restituito dalla chiamata a **SQLAllocHandle** che ha allocato tale handle. Il driver alloca memoria per le informazioni di connessione e passa di nuovo il valore dell'handle associato in * \* OutputHandlePtr*. L'applicazione passa il valore * \* OutputHandlePtr* in tutte le chiamate successive che richiedono un handle di connessione. Per ulteriori informazioni, vedere [allocazione di un handle di connessione](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md).  
+ Per richiedere un handle di connessione, un'applicazione chiama **SQLAllocHandle** con un *HandleType* di SQL_HANDLE_DBC. L'argomento *InputHandle puntare* è impostato sull'handle di ambiente restituito dalla chiamata a **SQLAllocHandle** che ha allocato tale handle. Il driver alloca memoria per le informazioni di connessione e passa di nuovo il valore dell'handle associato in *\* OutputHandlePtr*. L'applicazione passa il valore *\* OutputHandlePtr* in tutte le chiamate successive che richiedono un handle di connessione. Per ulteriori informazioni, vedere [allocazione di un handle di connessione](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md).  
   
- Gestione driver elabora la funzione **SQLAllocHandle** e chiama la funzione **SQLAllocHandle** del driver quando l'applicazione chiama **SQLConnect**, **SQLBrowseConnect**o **SQLDriverConnect**. Per ulteriori informazioni, vedere [funzione SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md).  
+ Gestione driver elabora la funzione **SQLAllocHandle** e chiama la funzione **SQLAllocHandle** del driver quando l'applicazione chiama **SQLConnect**, **SQLBrowseConnect** o **SQLDriverConnect**. Per ulteriori informazioni, vedere [funzione SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md).  
   
  Se l'attributo SQL_ATTR_ODBC_VERSION Environment non è impostato prima della chiamata di **SQLAllocHandle** per allocare un handle di connessione nell'ambiente, la chiamata per allocare la connessione restituirà SQLSTATE HY010 (errore della sequenza di funzioni).  
   
@@ -161,7 +161,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="allocating-a-statement-handle"></a>Allocazione di un handle di istruzione  
  Un handle di istruzione fornisce l'accesso alle informazioni di istruzione, ad esempio i messaggi di errore, il nome del cursore e le informazioni sullo stato per l'elaborazione di istruzioni SQL. Per informazioni generali sugli handle di istruzione, vedere [handle di istruzione](../../../odbc/reference/develop-app/statement-handles.md).  
   
- Per richiedere un handle di istruzione, un'applicazione si connette a un'origine dati e quindi chiama **SQLAllocHandle** prima di inviare istruzioni SQL. In questa chiamata, *HandleType* deve essere impostato su SQL_HANDLE_STMT e *InputHandle puntare* deve essere impostato sull'handle di connessione restituito dalla chiamata a **SQLAllocHandle** che ha allocato tale handle. Il driver alloca memoria per le informazioni sull'istruzione, associa l'handle di istruzione alla connessione specificata e passa il valore dell'handle associato in * \* OutputHandlePtr*. L'applicazione passa il valore * \* OutputHandlePtr* in tutte le chiamate successive che richiedono un handle di istruzione. Per ulteriori informazioni, vedere [allocazione di un handle di istruzione](../../../odbc/reference/develop-app/allocating-a-statement-handle-odbc.md).  
+ Per richiedere un handle di istruzione, un'applicazione si connette a un'origine dati e quindi chiama **SQLAllocHandle** prima di inviare istruzioni SQL. In questa chiamata, *HandleType* deve essere impostato su SQL_HANDLE_STMT e *InputHandle puntare* deve essere impostato sull'handle di connessione restituito dalla chiamata a **SQLAllocHandle** che ha allocato tale handle. Il driver alloca memoria per le informazioni sull'istruzione, associa l'handle di istruzione alla connessione specificata e passa il valore dell'handle associato in *\* OutputHandlePtr*. L'applicazione passa il valore *\* OutputHandlePtr* in tutte le chiamate successive che richiedono un handle di istruzione. Per ulteriori informazioni, vedere [allocazione di un handle di istruzione](../../../odbc/reference/develop-app/allocating-a-statement-handle-odbc.md).  
   
  Quando viene allocato l'handle di istruzione, il driver alloca automaticamente un set di quattro descrittori e assegna gli handle per tali descrittori agli attributi dell'istruzione SQL_ATTR_APP_ROW_DESC, SQL_ATTR_APP_PARAM_DESC, SQL_ATTR_IMP_ROW_DESC e SQL_ATTR_IMP_PARAM_DESC. Questi vengono definiti descrittori allocati in *modo implicito* . Per allocare un descrittore dell'applicazione in modo esplicito, vedere la sezione seguente "allocazione di un handle di descrittore".  
   
@@ -182,12 +182,12 @@ SQLRETURN SQLAllocHandle(
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
 |Esecuzione di un'istruzione SQL|[Funzione SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
-|Esecuzione di un'istruzione SQL preparata|[SQLExecute (funzione)](../../../odbc/reference/syntax/sqlexecute-function.md)|  
+|Esecuzione di un'istruzione SQL preparata|[Funzione SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |Liberare un ambiente, una connessione, un'istruzione o un handle descrittore|[SQLFreeHandle Function](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
 |Preparazione di un'istruzione per l'esecuzione|[Pagina relativa alla funzione SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
 |Impostazione di un attributo di connessione|[Pagina relativa alla funzione SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
-|Impostazione di un campo del descrittore|[SQLSetDescField (funzione)](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
-|Impostazione di un attributo Environment|[Funzione SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)|  
+|Impostazione di un campo del descrittore|[Funzione SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
+|Impostazione di un attributo Environment|[SQLSetEnvAttr Function](../../../odbc/reference/syntax/sqlsetenvattr-function.md)|  
 |Impostazione di un attributo di istruzione|[Funzione SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
 ## <a name="see-also"></a>Vedere anche  

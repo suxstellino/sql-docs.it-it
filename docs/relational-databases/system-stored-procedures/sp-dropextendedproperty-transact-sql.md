@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropextendedproperty_TSQL
 - sp_dropextendedproperty
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 28a73c5cea3f957c83529de4d452efc88f6a6551
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c42236cc1f0157d774ea38d356ba8f122407c2c3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549792"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205133"
 ---
 # <a name="sp_dropextendedproperty-transact-sql"></a>sp_dropextendedproperty (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -80,10 +80,10 @@ sp_dropextendedproperty
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Ai fini della definizione delle proprietà estese, gli oggetti inclusi in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono classificati in base a tre livelli, ovvero 0, 1 e 2. Il livello 0 è il livello più alto e viene definito come oggetti inclusi nell'ambito del database. Gli oggetti di livello 1 sono inclusi nell'ambito di uno schema o utente, mentre gli oggetti di livello 2 sono contenuti dagli oggetti di livello 1. È possibile definire le proprietà estese per gli oggetti di qualsiasi livello. I riferimenti a un oggetto presente in un livello devono essere qualificati con i tipi e i nomi di tutti gli oggetti di livello superiore.  
   
- Dato un *property_name*valido, se tutti i tipi e i nomi di oggetto sono null e una proprietà esiste nel database corrente, la proprietà viene eliminata. Vedere l'esempio B più avanti in questo argomento.  
+ Dato un *property_name* valido, se tutti i tipi e i nomi di oggetto sono null e una proprietà esiste nel database corrente, la proprietà viene eliminata. Vedere l'esempio B più avanti in questo argomento.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  I membri dei ruoli predefiniti del database db_owner e db_ddladmin possono eliminare le proprietà estese di qualsiasi oggetto, anche se il ruolo db_ddladmin non può aggiungere proprietà al database stesso oppure a utenti o ruoli.  
@@ -134,7 +134,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di motore di database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sys. fn_listextendedproperty &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [sys.fn_listextendedproperty &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_addextendedproperty &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
  [sys.extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  

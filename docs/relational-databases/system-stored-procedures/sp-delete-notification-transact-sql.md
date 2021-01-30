@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_notification_TSQL
 - sp_delete_notification
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b55d3898-596d-47a5-a4f0-d65dc736223b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0f023990f20765272fe2cde09f5599ecf736f076
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 85ce389d41eb57a38507d09be5c9ebdd6814ac51
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546159"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181315"
 ---
 # <a name="sp_delete_notification-transact-sql"></a>sp_delete_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +42,9 @@ sp_delete_notification
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @alert_name = ] 'alert'` Nome dell'avviso. *Alert* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @alert_name = ] 'alert'` Nome dell'avviso. *Alert* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @operator_name = ] 'operator'` Nome dell'operatore. *operator* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @operator_name = ] 'operator'` Nome dell'operatore. *operator* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -58,7 +58,7 @@ sp_delete_notification
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa stored procedure, è necessario che agli utenti venga concesso il ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene rimossa la notifica inviata all'operatore `François Ajenstat` quando viene restituito l'avviso `Test Alert`.  
   
 ```  

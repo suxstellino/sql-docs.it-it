@@ -1,13 +1,13 @@
 ---
 description: sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
-title: sys. sp_xtp_bind_db_resource_pool (Transact-SQL) | Microsoft Docs
+title: sys.sp_xtp_bind_db_resource_pool (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_xtp_bind_db_resource_pool_TSQL
 - sp_xtp_bind_db_resource_pool
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 436d04ea81df4b25646b4b56d8ac59ffc9fa3b91
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 73312fdb49f223f8a275ade2a13bf2d988649404
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540408"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205090"
 ---
 # <a name="syssp_xtp_bind_db_resource_pool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -93,7 +93,7 @@ Database 'Hekaton_DB' cannot be explicitly bound to the resource pool 'internal'
 ```  
   
 **Il database è già associato a un altro pool di risorse**  
- Un database può essere associato a un solo pool di risorse in qualsiasi momento. Le associazioni di database ai pool di risorse devono essere rimosse in modo esplicito prima che possano essere associate a un altro pool. Vedere [sys. sp_xtp_unbind_db_resource_pool &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md).  
+ Un database può essere associato a un solo pool di risorse in qualsiasi momento. Le associazioni di database ai pool di risorse devono essere rimosse in modo esplicito prima che possano essere associate a un altro pool. Vedere [sys.sp_xtp_unbind_db_resource_pool &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md).  
 *Il database% s è già associato al pool di risorse% s.  Prima di poter creare una nuova associazione, è necessario annullare l'associazione.*  
   
 ```  

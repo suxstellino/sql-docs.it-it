@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_subscription_cleanup_TSQL
 - sp_subscription_cleanup
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bdc8aaa0-ff2d-40c2-84b2-4ba513ced279
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9e42190faccca3e4e373b097b08e2e098de30c6c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 79e44839da9a2df185a125007e7491b6d269d02e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541117"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186215"
 ---
 # <a name="sp_subscription_cleanup-transact-sql"></a>sp_subscription_cleanup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,18 +41,18 @@ sp_subscription_cleanup [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @publisher_db = ] 'publisher_db'` Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è null. che indica che le sottoscrizioni che utilizzano una pubblicazione con agente condiviso nel database di pubblicazione vengono eliminate.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname** e il valore predefinito è null. che indica che le sottoscrizioni che utilizzano una pubblicazione con agente condiviso nel database di pubblicazione vengono eliminate.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_subscription_cleanup** viene utilizzata per la replica transazionale e snapshot.  
   
 ## <a name="permissions"></a>Autorizzazioni  

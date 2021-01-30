@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_jobserver
 - sp_delete_jobserver_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4db36a6fbcf09ca6758fd3838ab489bc6aa23cb2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b53fecfb2d8fa27476db16039471dffb4efbad54
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546147"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195475"
 ---
 # <a name="sp_delete_jobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +41,9 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_id = ] job_id` Numero di identificazione del processo da cui verrà rimosso il server di destinazione specificato. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
+`[ @job_id = ] job_id` Numero di identificazione del processo da cui verrà rimosso il server di destinazione specificato. *job_id* è di tipo **uniqueidentifier** e il valore predefinito è null.  
   
-`[ @job_name = ] 'job_name'` Nome del processo da cui verrà rimosso il server di destinazione specificato. *job_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @job_name = ] 'job_name'` Nome del processo da cui verrà rimosso il server di destinazione specificato. *job_name* è di **tipo sysname** e il valore predefinito è null.  
   
 > [!NOTE]  
 >  È necessario specificare *job_id* o *job_name* . non è possibile specificare entrambi.  
@@ -59,7 +59,7 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa stored procedure, gli utenti devono essere membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente il server viene rimosso `SEATTLE2` dall'elaborazione del `Weekly Sales Backups` processo.  
   
 > [!NOTE]  

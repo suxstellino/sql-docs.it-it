@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLSetScrollOptions function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLSetScrollOptions
 ms.assetid: a0fa4510-8891-4a61-a867-b2555bc35f05
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 111fb84cd584e23b18d889634893556de86311a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 105443a2b33a1903f1f22affef1c6ca70ee2cfdf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476923"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202601"
 ---
 # <a name="sqlsetscrolloptions-mapping"></a>Mapping di SQLSetScrollOptions
 Quando un'applicazione chiama **SQLSetScrollOptions** tramite un driver ODBC *3. x* e il driver non supporta **SQLSetScrollOptions**, la chiamata a  
@@ -65,7 +65,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CURSOR_TYPE, ValuePtr, 0)  
     ```  
   
-     con * \* ValuePtr* impostato su uno dei valori nella tabella seguente, in base al valore dell'argomento *KeysetSize* in **SQLSetScrollOptions**.  
+     con *\* ValuePtr* impostato su uno dei valori nella tabella seguente, in base al valore dell'argomento *KeysetSize* in **SQLSetScrollOptions**.  
   
     |Argomento *KeysetSize*|*\*ValuePtr*|  
     |---------------------------|------------------|  
@@ -81,7 +81,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CONCURRENCY, ValuePtr, 0)  
     ```  
   
-     con * \* ValuePtr* impostato sull'argomento della *concorrenza* in **SQLSetScrollOptions**.  
+     con *\* ValuePtr* impostato sull'argomento della *concorrenza* in **SQLSetScrollOptions**.  
   
 -   Se l'argomento *KeysetSize* nella chiamata a **SQLSetScrollOptions** è positivo, una chiamata a  
   
@@ -89,7 +89,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_KEYSET_SIZE, ValuePtr, 0)  
     ```  
   
-     con * \* ValuePtr* impostato sull'argomento *KeysetSize* in **SQLSetScrollOptions**.  
+     con *\* ValuePtr* impostato sull'argomento *KeysetSize* in **SQLSetScrollOptions**.  
   
 -   Una chiamata a  
   
@@ -97,7 +97,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ROWSET_SIZE, ValuePtr, 0)  
     ```  
   
-     con * \* ValuePtr* impostato sull'argomento *RowsetSize* in **SQLSetScrollOptions**.  
+     con *\* ValuePtr* impostato sull'argomento *RowsetSize* in **SQLSetScrollOptions**.  
   
     > [!NOTE]  
     >  Quando Gestione driver esegue il mapping di **SQLSetScrollOptions** per un'applicazione che utilizza un driver ODBC *3. x* che non **supporta SQLSetScrollOptions**, gestione driver imposta l'opzione dell'istruzione SQL_ROWSET_SIZE, non l'attributo dell'istruzione SQL_ATTR_ROW_ARRAY_SIZE, sull'argomento *RowsetSize* in **SQLSetScrollOption**. Di conseguenza, **SQLSetScrollOptions** non può essere utilizzato da un'applicazione durante il recupero di più righe mediante una chiamata a **SQLFetch** o **SQLFetchScroll**. Può essere utilizzato solo quando si recuperano più righe tramite una chiamata a **SQLExtendedFetch**.

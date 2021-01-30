@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLConnect
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 714bc6f69a72609ee266effff71f1898d62ec7d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 90d982db52e0656fba25eb54065ea84b751a7b18
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461203"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206134"
 ---
 # <a name="sqlconnect-function"></a>Funzione SQLConnect
 **Conformità**  
@@ -85,12 +85,12 @@ SQLRETURN SQLConnect(
 |08004|Il server ha rifiutato la connessione|L'origine dati ha rifiutato la creazione della connessione per motivi definiti dall'implementazione.|  
 |08S01|Errore collegamento comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui il driver stava tentando di connettersi non è riuscito prima del completamento dell'elaborazione della funzione.|  
 |28000|Specifica di autorizzazione non valida|Il valore specificato per il *nome utente* dell'argomento o il valore specificato per l' *autenticazione* con argomenti ha violato le restrizioni definite dall'origine dati.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer *\* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|(DM) Gestione driver non è in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY008|Operation canceled|L'elaborazione asincrona è stata abilitata per *connectionHandle*. È stata chiamata la funzione **SQLConnect** e prima del completamento dell'esecuzione è stata chiamata la [funzione SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) su *connectionHandle*, quindi la funzione **SQLConnect** è stata chiamata nuovamente nel *connectionHandle*.<br /><br /> In alternativa, è stata chiamata la funzione **SQLConnect** e prima del completamento dell'esecuzione **SQLCancelHandle** è stato chiamato su *connectionHandle* da un thread diverso in un'applicazione multithread.|  
 |HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per *connectionHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
-|HY090|Lunghezza della stringa o del buffer non valida|(DM) il valore specificato per l'argomento *NameLength1*, *NameLength2*o *NameLength3* è minore di 0 ma non uguale a SQL_NTS.<br /><br /> (DM) il valore specificato per l'argomento *NameLength1* supera la lunghezza massima consentita per il nome di un'origine dati.|  
+|HY090|Lunghezza della stringa o del buffer non valida|(DM) il valore specificato per l'argomento *NameLength1*, *NameLength2* o *NameLength3* è minore di 0 ma non uguale a SQL_NTS.<br /><br /> (DM) il valore specificato per l'argomento *NameLength1* supera la lunghezza massima consentita per il nome di un'origine dati.|  
 |HYT00|Timeout|Il periodo di timeout della query è scaduto prima del completamento della connessione all'origine dati. Il periodo di timeout viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_LOGIN_TIMEOUT.|  
 |HY114|Il driver non supporta l'esecuzione di funzioni asincrone a livello di connessione|(DM) l'applicazione ha abilitato l'operazione asincrona sull'handle di connessione prima di effettuare la connessione. Tuttavia, il driver non supporta le operazioni asincrone sull'handle di connessione.|  
 |HYT01|Timeout connessione scaduto|Il periodo di timeout della connessione è scaduto prima che l'origine dati abbia risposto alla richiesta. Il periodo di timeout della connessione viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
@@ -101,9 +101,9 @@ SQLRETURN SQLConnect(
 |IM005|SQLAllocHandle del driver su SQL_HANDLE_DBC non riuscito|(DM) durante **SQLConnect**, gestione driver ha chiamato la funzione **SQLAllocHandle** del driver con un *HandleType* di SQL_HANDLE_DBC e il driver ha restituito un errore.|  
 |IM006|Errore di SQLSetConnectAttr del driver|Durante **SQLConnect**, gestione driver ha chiamato la funzione **SQLSetConnectAttr** del driver e il driver ha restituito un errore. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |IM009|Impossibile connettersi alla DLL di traduzione|Il driver non è stato in grado di connettersi alla DLL di traduzione specificata per l'origine dati.|  
-|IM010|Nome origine dati troppo lungo|(DM) * \* nomeserver* è più lungo di SQL_MAX_DSN_LENGTH caratteri.|  
+|IM010|Nome origine dati troppo lungo|(DM) *\* nomeserver* è più lungo di SQL_MAX_DSN_LENGTH caratteri.|  
 |IM014|Il DSN specificato contiene una mancata corrispondenza dell'architettura tra il driver e l'applicazione|(DM) l'applicazione a 32 bit utilizza un DSN che si connette a un driver a 64 bit. o viceversa.|  
-|IM015|SQLConnect del driver su SQL_HANDLE_DBC_INFO_HANDLE non riuscito|Se un driver restituisce SQL_ERROR, gestione driver restituirà SQL_ERROR all'applicazione e la connessione avrà esito negativo.<br /><br /> Per ulteriori informazioni su SQL_HANDLE_DBC_INFO_TOKEN, vedere [sviluppo della conoscenza del pool di connessioni in un driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).|  
+|IM015|SQLConnect del driver su SQL_HANDLE_DBC_INFO_HANDLE non riuscito|Se un driver restituisce SQL_ERROR, gestione driver restituirà SQL_ERROR all'applicazione e la connessione avrà esito negativo.<br /><br /> Per ulteriori informazioni su SQL_HANDLE_DBC_INFO_TOKEN, vedere [sviluppo di Connection-Pool awareness in un driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).|  
 |IM017|Polling disabilitato in modalità di notifica asincrona|Ogni volta che viene utilizzato il modello di notifica, il polling è disabilitato.|  
 |IM018|**SQLCompleteAsync** non è stato chiamato per completare l'operazione asincrona precedente su questo handle.|Se la chiamata di funzione precedente nell'handle restituisce SQL_STILL_EXECUTING e se è abilitata la modalità di notifica, è necessario chiamare **SQLCompleteAsync** sull'handle per eseguire la post-elaborazione e completare l'operazione.|  
 |S1118|Il driver non supporta la notifica asincrona|Quando il driver non supporta la notifica asincrona, non è possibile impostare SQL_ATTR_ASYNC_DBC_EVENT o SQL_ATTR_ASYNC_DBC_RETCODE_PTR.|  
@@ -111,7 +111,7 @@ SQLRETURN SQLConnect(
 ## <a name="comments"></a>Commenti  
  Per informazioni sui motivi per cui un'applicazione usa **SQLConnect**, vedere [connessione con SQLConnect](../../../odbc/reference/develop-app/connecting-with-sqlconnect.md).  
   
- Gestione driver non si connette a un driver finché l'applicazione non chiama una funzione (**SQLConnect**, **SQLDriverConnect**o **SQLBrowseConnect**) per connettersi al driver. Fino a quel momento, gestione driver funziona con i propri handle e gestisce le informazioni di connessione. Quando l'applicazione chiama una funzione di connessione, gestione driver controlla se un driver è attualmente connesso a per il *connectionHandle*specificato:  
+ Gestione driver non si connette a un driver finché l'applicazione non chiama una funzione (**SQLConnect**, **SQLDriverConnect** o **SQLBrowseConnect**) per connettersi al driver. Fino a quel momento, gestione driver funziona con i propri handle e gestisce le informazioni di connessione. Quando l'applicazione chiama una funzione di connessione, gestione driver controlla se un driver è attualmente connesso a per il *connectionHandle* specificato:  
   
 -   Se un driver non è connesso a, gestione driver si connette al driver e chiama **SQLAllocHandle** con un *HandleType* di SQL_HANDLE_ENV, **SQLAllocHandle** con *HandleType* di SQL_HANDLE_DBC, **SQLSetConnectAttr** (se l'applicazione ha specificato eventuali attributi di connessione) e la funzione di connessione nel driver. Gestione driver restituisce SQLSTATE IM006 ( **SQLSetConnectOption** del driver non riuscita) e SQL_SUCCESS_WITH_INFO per la funzione di connessione se il driver ha restituito un errore per **SQLSetConnectAttr**. Per ulteriori informazioni, vedere [connessione a un'origine dati o a un driver](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md).  
   
@@ -149,9 +149,9 @@ SQLRETURN SQLConnect(
   
  Dopo l'abilitazione del pool di connessioni, viene chiamato **SQLAllocHandle** con *HandleType* SQL_HANDLE_ENV per allocare un ambiente. L'ambiente allocato da questa chiamata è un ambiente condiviso perché il pool di connessioni è stato abilitato. Tuttavia, l'ambiente che verrà utilizzato non viene determinato fino a quando non viene chiamato **SQLAllocHandle** con un *HandleType* di SQL_HANDLE_DBC.  
   
- Per allocare una connessione viene chiamato **SQLAllocHandle** con *HandleType* SQL_HANDLE_DBC. Gestione driver tenta di trovare un ambiente condiviso esistente corrispondente agli attributi dell'ambiente impostati dall'applicazione. Se non esiste alcun ambiente di questo tipo, ne viene creato uno come *ambiente condiviso*implicito. Se viene trovato un ambiente condiviso corrispondente, l'handle di ambiente viene restituito all'applicazione e il relativo conteggio dei riferimenti viene incrementato.  
+ Per allocare una connessione viene chiamato **SQLAllocHandle** con *HandleType* SQL_HANDLE_DBC. Gestione driver tenta di trovare un ambiente condiviso esistente corrispondente agli attributi dell'ambiente impostati dall'applicazione. Se non esiste alcun ambiente di questo tipo, ne viene creato uno come *ambiente condiviso* implicito. Se viene trovato un ambiente condiviso corrispondente, l'handle di ambiente viene restituito all'applicazione e il relativo conteggio dei riferimenti viene incrementato.  
   
- Tuttavia, la connessione che verrà utilizzata non viene determinata fino a quando non viene chiamato **SQLConnect** . A questo punto, gestione driver tenta di trovare una connessione esistente nel pool di connessioni che corrisponde ai criteri richiesti dall'applicazione. Questi criteri includono le opzioni di connessione richieste nella chiamata a **SQLConnect** (i valori delle parole chiave *ServerName*, *username*e *Authentication* ) ed eventuali attributi di connessione impostati da **SQLAllocHandle** con un *HandleType* di SQL_HANDLE_DBC è stato chiamato. Gestione driver controlla questi criteri con le parole chiave e gli attributi di connessione corrispondenti nelle connessioni del pool. Se viene rilevata una corrispondenza, viene utilizzata la connessione nel pool. Se non viene trovata alcuna corrispondenza, viene creata una nuova connessione.  
+ Tuttavia, la connessione che verrà utilizzata non viene determinata fino a quando non viene chiamato **SQLConnect** . A questo punto, gestione driver tenta di trovare una connessione esistente nel pool di connessioni che corrisponde ai criteri richiesti dall'applicazione. Questi criteri includono le opzioni di connessione richieste nella chiamata a **SQLConnect** (i valori delle parole chiave *ServerName*, *username* e *Authentication* ) ed eventuali attributi di connessione impostati da **SQLAllocHandle** con un *HandleType* di SQL_HANDLE_DBC è stato chiamato. Gestione driver controlla questi criteri con le parole chiave e gli attributi di connessione corrispondenti nelle connessioni del pool. Se viene rilevata una corrispondenza, viene utilizzata la connessione nel pool. Se non viene trovata alcuna corrispondenza, viene creata una nuova connessione.  
   
  Se l'attributo SQL_ATTR_CP_MATCH Environment è impostato su SQL_CP_STRICT_MATCH, la corrispondenza deve essere esatta per una connessione nel pool da usare. Se l'attributo SQL_ATTR_CP_MATCH Environment è impostato su SQL_CP_RELAXED_MATCH, le opzioni di connessione nella chiamata a **SQLConnect** devono corrispondere ma non tutti gli attributi di connessione devono corrispondere.  
   

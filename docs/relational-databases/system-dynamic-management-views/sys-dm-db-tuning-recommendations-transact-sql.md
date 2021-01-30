@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_db_tuning_recommendations
 - dm_db_tuning_recommendations
@@ -22,12 +22,12 @@ ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cad75b88b14fd9bc64acbbd8b167619d3dbcc2e3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b9037aaefe27cd50deb9b61af423a8074ab86f65
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472882"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204810"
 ---
 # <a name="sysdm_db_tuning_recommendations-transact-sql"></a>\_indicazioni sull'ottimizzazione del database sys.dm \_ \_ (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]

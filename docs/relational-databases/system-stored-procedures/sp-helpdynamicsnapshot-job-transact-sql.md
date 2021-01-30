@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpdynamicsnapshot_TSQL
 - sp_helpdynamicsnapshot_job_TSQL
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b11598fc8dacc27f88856e2afdc3adced41470f7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: faf8fcfe5636dc588b111701c5b2cf0668feed78
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549670"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204433"
 ---
 # <a name="sp_helpdynamicsnapshot_job-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,15 +46,15 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni su tutti i processi di snapshot dei dati filtrati che corrispondono al *dynamic_snapshot_jobid*e *dynamic_snapshot_jobname*specificati per tutte le pubblicazioni.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname** e il valore predefinito è **%** , che restituisce informazioni su tutti i processi di snapshot dei dati filtrati che corrispondono al *dynamic_snapshot_jobid* e *dynamic_snapshot_jobname* specificati per tutte le pubblicazioni.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Nome di un processo di snapshot dei dati filtrati. *dynamic_snapshot_jobname*è di **tipo sysname**e il valore predefinito è **%** ', che restituisce tutti i processi dinamici per una pubblicazione con la *dynamic_snapshot_jobid*specificata. Se quando è stato creato il processo non è stato specificato in modo esplicito un nome di processo, il nome del processo verrà indicato nel formato seguente:  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Nome di un processo di snapshot dei dati filtrati. *dynamic_snapshot_jobname* è di **tipo sysname** e il valore predefinito è **%** ', che restituisce tutti i processi dinamici per una pubblicazione con la *dynamic_snapshot_jobid* specificata. Se quando è stato creato il processo non è stato specificato in modo esplicito un nome di processo, il nome del processo verrà indicato nel formato seguente:  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
 ```  
   
-`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` Identificatore di un processo di snapshot dei dati filtrati. *dynamic_snapshot_jobid*è di tipo **uniqueidentifier**e il valore predefinito è null, che restituisce tutti i processi di snapshot corrispondenti al *dynamic_snapshot_jobname*specificato.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` Identificatore di un processo di snapshot dei dati filtrati. *dynamic_snapshot_jobid* è di tipo **uniqueidentifier** e il valore predefinito è null, che restituisce tutti i processi di snapshot corrispondenti al *dynamic_snapshot_jobname* specificato.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -80,7 +80,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_helpdynamicsnapshot_job** viene utilizzata nella replica di tipo merge.  
   
  Se vengono utilizzati tutti i valori predefiniti dei parametri, verranno restituite informazioni su tutti i processi di snapshot dei dati partizionati per l'intero database di pubblicazione.  

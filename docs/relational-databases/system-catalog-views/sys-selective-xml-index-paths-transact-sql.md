@@ -1,12 +1,12 @@
 ---
 description: sys.selective_xml_index_paths (Transact-SQL)
-title: sys. selective_xml_index_paths (Transact-SQL) | Microsoft Docs
+title: sys.selective_xml_index_paths (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - xml_schema_attributes_TSQL
 - xml_schema_attributes
@@ -20,12 +20,12 @@ ms.assetid: 07a73d71-ec3e-4894-947a-5859ca62c606
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: adc4ffa7ae43709a572ff1d7f4de1b3e26974ebb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4a768ded6ef89a54f35e7ce30a64bc3dd6e277ac
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490118"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182473"
 ---
 # <a name="sysselective_xml_index_paths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +64,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**max_length**|**smallint**|Lunghezza massima (in byte) del tipo.<br /><br /> -1 = La colonna è di tipo varchar(max), nvarchar(max), varbinary(max) o xml.|  
 |**precisione**|**tinyint**|Precisione massima del tipo se numerico. In caso contrario, 0|  
 |**scale**|**tinyint**|Scala massima del tipo se numerico. Altrimenti, è impostato su 0.|  
-|**collation_name**|**sysname**|Nome delle regole di confronto del tipo se di tipo carattere. In caso contrario, NULL.|  
+|**nome_regole_di_confronto**|**sysname**|Nome delle regole di confronto del tipo se di tipo carattere. In caso contrario, NULL.|  
 |**is_singleton**|**bit**|0 = hint SINGLETON non presente.<br /><br /> 1 = hint di ottimizzazione SINGLETON applicato.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
