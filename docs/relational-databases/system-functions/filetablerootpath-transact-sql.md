@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - FileTableRootPath_TSQL
 - FileTableRootPath
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: f08273adcf261ecfdafaa70793d50b31360f7e40
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: b21eb896c32b2afdfb56b1318406ee96f93546df
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093868"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196132"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
  *FileTable_name*  
  Nome dell'oggetto FileTable. *FileTable_name* è di tipo **nvarchar**. Questo parametro è facoltativo. Il valore predefinito corrisponde al database corrente. È inoltre facoltativo specificare *schema_name* . È possibile passare NULL per *FileTable_name* per usare il valore del parametro predefinito  
   
- *\@Opzione*  
+ *\@opzione*  
  Espressione Integer che definisce la formattazione del componente server del percorso. l' *\@ opzione* può avere uno dei valori seguenti:  
   
 |Valore|Descrizione|  
@@ -90,7 +90,7 @@ WHERE Name = N'document.docx';
   
 -   **db_datareader** o versione successiva per ottenere il percorso radice per il database corrente.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Negli esempi seguenti viene illustrato come chiamare la funzione **FileTableRootPath** .  
   
 ```  

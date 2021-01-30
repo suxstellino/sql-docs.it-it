@@ -6,18 +6,18 @@ ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: reference
 helpviewer_keywords:
 - 1205 (Database Engine error)
 ms.assetid: 9fe3f67c-df3c-4642-a3a4-ccc0e138b632
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a4959ec2bd2a1f58008075c4066da92e7dc99c87
-ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.openlocfilehash: 8ce9d2d99d3db0fc18586b9292876d2e4e6c985b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99076463"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99197169"
 ---
 # <a name="mssqlserver_1205"></a>MSSQLSERVER_1205
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_cdc_increment_lsn_TSQL
 - sys.fn_cdc_increment_lsn_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: ee5d44cbe53d31609a454eb5acbed52a53ae194e
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 2e20b1d3146ee9e8f08cafdac3d2a4b1771a2081
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099675"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194395"
 ---
 # <a name="sysfn_cdc_increment_lsn-transact-sql"></a>sys.fn_cdc_increment_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sys.fn_cdc_increment_lsn ( lsn_value )
 ## <a name="return-type"></a>Tipo restituito  
  **binary(10)**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il valore LSN restituito dalla funzione è sempre maggiore del valore specificato e non esiste alcun valore LSN tra i due valori.  
   
  Per eseguire sistematicamente query su un flusso di dati delle modifiche, è possibile ripetere periodicamente la chiamata della funzione di query, specificando ogni volta un nuovo intervallo di query per delimitare le modifiche restituite nella query. Per assicurarsi che non si verifichino perdite di dati, il limite superiore della query precedente viene spesso utilizzato per generare il limite inferiore della query successiva. Poiché l'intervallo di query è un intervallo chiuso, il nuovo limite inferiore deve essere più grande del limite superiore precedente, ma piccolo abbastanza da garantire che nessuna modifica abbia valori LSN compresi tra questo valore e il limite superiore precedente. La funzione sys.fn_cdc_increment_lsn viene utilizzata per ottenere questo valore.  
@@ -57,7 +57,7 @@ sys.fn_cdc_increment_lsn ( lsn_value )
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo del database public.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene utilizzato `sys.fn_cdc_increment_lsn` al fine di generare un nuovo valore di limite inferiore per una query di acquisizione di dati delle modifiche basata sul limite superiore salvato da una precedente query e salvato nella variabile `@save_to_lsn`.  
   
 ```  

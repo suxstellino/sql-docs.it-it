@@ -6,19 +6,19 @@ ms.date: 05/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Broker:Forwarded Message Dropped event class
 ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ccb035e127b6476ca18b5745dbaf58b66c8c929e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 14a917d6a6faec85cbc712f612e593fdfe19bc06
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97476252"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99197862"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped - classe di evento
 
@@ -56,7 +56,7 @@ ms.locfileid: "97476252"
 |SPID|**int**|ID del processo server assegnato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al processo associato al client.|12|Sì|  
 |StartTime|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
 |State|**int**|Indica la posizione che ha generato l'evento all'interno del codice sorgente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni punto che può generare questo evento è contraddistinto da un codice di stato diverso. Questo codice di stato consente al supporto tecnico Microsoft di individuare la posizione in cui è stato generato l'evento.|30|No|  
-|Success|**int**|Intervallo di tempo in cui il messaggio è stato attivo. Quando questo valore è uguale o maggiore a quello della durata (TTL), il messaggio viene eliminato.|23|No|  
+|Operazione riuscita|**int**|Intervallo di tempo in cui il messaggio è stato attivo. Quando questo valore è uguale o maggiore a quello della durata (TTL), il messaggio viene eliminato.|23|No|  
 |TargetLoginName|**nvarchar**|Indirizzo di rete a cui doveva essere inoltrato il messaggio.|42|No|  
 |TargetUserName|**nvarchar**|Nome del servizio di origine per il messaggio.|39|No|  
 |TextData|**ntext**|Descrizione del motivo per cui il messaggio è stato eliminato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|1|Sì|  

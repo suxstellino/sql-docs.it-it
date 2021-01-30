@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_maintenance_plan_db_TSQL
 - sp_delete_maintenance_plan_db
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b3e6f99c99dbe65206c450aeeb2e935a7a5f0d25
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: cc76fc7d139da1440f7bf22ca8ab452ff98bc3bc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541816"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193762"
 ---
 # <a name="sp_delete_maintenance_plan_db-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_delete_maintenance_plan_db** deve essere eseguito dal database **msdb** .  
   
  Il **sp_delete_maintenance_plan_db** stored procedure rimuove l'associazione tra il piano di manutenzione e il database specificato. non elimina o Elimina definitivamente il database.  
@@ -66,7 +66,7 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_delete_maintenance_plan_db**.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Elimina il piano di manutenzione nel database **AdventureWorks2012** , aggiunto in precedenza tramite **sp_add_maintenance_plan_db**.  
   
 ```  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_os_threads_TSQL
 - sys.dm_os_threads
@@ -21,12 +21,12 @@ ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0163e4176202f4bfe8b55ecca0fe4812ec5d26b
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 91c0b28d2b30cc7e7d5f11eed8fe25f4c4907198
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096500"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193791"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,7 +75,7 @@ Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in 
 
 Poiché il motore SQL funziona in Linux, alcune di queste informazioni non corrispondono ai dati di diagnostica di Linux. Ad esempio, non `os_thread_id` corrisponde al risultato di strumenti quali `ps` `top` o procfs (/proc/ `pid` ).  A causa del livello di astrazione della piattaforma (SQLPAL), un livello tra SQL Server componenti e il sistema operativo.
 
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  All'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vengono avviati dei thread a cui vengono associati thread di lavoro. Componenti esterni, ad esempio una stored procedure estesa, possono tuttavia avviare thread nel processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non dispone di controllo su questi thread. sys.dm_os_threads possibile fornire informazioni sui thread non autorizzati che utilizzano risorse nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo.  
   
  La query seguente consente di individuare i thread di lavoro che eseguono thread non avviati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], con il tempo utilizzato per l'esecuzione.  

@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - external_languages
 - external_languages_TSQL
@@ -20,12 +20,12 @@ ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15'
-ms.openlocfilehash: 107a775af7379167716993e4d95b524e361eed31
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: d0532579a372c264bf2477026d56275431610bf3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477482"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193929"
 ---
 # <a name="sysexternal_languages-transact-sql"></a>sys.external_languages (Transact-SQL)
 [!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
@@ -43,7 +43,7 @@ Nella vista del catalogo sys.external_languages viene elencata una riga per ogni
 |create_date |datetime2 |Data e ora di creazione|
 |principal_id |INT |ID dell'entità a cui appartiene la libreria esterna|
 
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 
 + [sys.external_language_files](sys-external-language-files-transact-sql.md)  
 + [CREA LINGUA ESTERNA](../../t-sql/statements/create-external-language-transact-sql.md) 

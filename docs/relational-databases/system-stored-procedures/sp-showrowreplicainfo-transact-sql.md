@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_showrowreplicainfo_TSQL
 - sp_showrowreplicainfo
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5a46fd42c9caa69e808635fc9dcc5125403697a6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f2a66e8e6123adef864ca2beadef31cd4a9cbffe
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543037"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193485"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +41,11 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @ownername = ] 'ownername'` Nome del proprietario della tabella. *OwnerName* è di **tipo sysname**e il valore predefinito è null. Questo parametro risulta utile per differenziare le tabelle quando un database contiene più tabelle aventi lo stesso nome ma appartenenti a proprietari diversi.  
+`[ @ownername = ] 'ownername'` Nome del proprietario della tabella. *OwnerName* è di **tipo sysname** e il valore predefinito è null. Questo parametro risulta utile per differenziare le tabelle quando un database contiene più tabelle aventi lo stesso nome ma appartenenti a proprietari diversi.  
   
-`[ @tablename = ] 'tablename'` Nome della tabella contenente la riga per la quale vengono restituite le informazioni. *TableName* è di **tipo sysname**e il valore predefinito è null.  
+`[ @tablename = ] 'tablename'` Nome della tabella contenente la riga per la quale vengono restituite le informazioni. *TableName* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @rowguid = ] rowguid` Identificatore univoco della riga. *rowguid* è di tipo **uniqueidentifier**e non prevede alcun valore predefinito.  
+`[ @rowguid = ] rowguid` Identificatore univoco della riga. *rowguid* è di tipo **uniqueidentifier** e non prevede alcun valore predefinito.  
   
 `[ @show = ] 'show'` Determina la quantità di informazioni da restituire nel set di risultati. *show* è di **tipo nvarchar (20)** e il valore predefinito è both. Se **Row**, vengono restituite solo le informazioni sulla versione di riga. Se **colonne**, vengono restituite solo le informazioni sulla versione della colonna. Se sono **entrambi**, vengono restituite entrambe le informazioni di riga e colonna.  
   
@@ -75,7 +75,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ## <a name="result-set-for-both"></a>Set di risultati per informazioni su riga e colonna  
  Se il valore viene scelto per *Mostra* **, vengono restituiti** entrambi i set di risultati di riga e colonna.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_showrowreplicainfo** viene utilizzata nella replica di tipo merge.  
   
 ## <a name="permissions"></a>Autorizzazioni  

@@ -1,11 +1,11 @@
 ---
 description: sys.dm_fts_semantic_similarity_population (Transact-SQL)
-title: sys. dm_fts_semantic_similarity_population (Transact-SQL) | Microsoft Docs
+title: sys.dm_fts_semantic_similarity_population (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_fts_semantic_similarity_population_TSQL
 - sys.dm_fts_semantic_similarity_population
@@ -19,19 +19,19 @@ ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 2857896ffefb5591482a44051081aa1034f3fee0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c031c0794dc541d0363edb8e0c1102bc885882d4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88398487"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196246"
 ---
 # <a name="sysdm_fts_semantic_similarity_population-transact-sql"></a>sys.dm_fts_semantic_similarity_population (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una riga di informazioni sullo stato relative al popolamento dell'indice di somiglianza dei documenti per ogni indice di somiglianza in ogni tabella a cui è associato un indice semantico.  
   
- Il passaggio del popolamento segue il passaggio dell'estrazione. Per informazioni sullo stato relative al passaggio di estrazione della somiglianza, vedere [sys. dm_fts_index_population &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md).  
+ Il passaggio del popolamento segue il passaggio dell'estrazione. Per informazioni sullo stato relative al passaggio di estrazione della somiglianza, vedere [sys.dm_fts_index_population &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md).  
     
 ||||  
 |-|-|-|  
@@ -53,14 +53,14 @@ ms.locfileid: "88398487"
  Per altre informazioni, vedere [gestire e monitorare la ricerca semantica](../../relational-databases/search/manage-and-monitor-semantic-search.md).  
   
 ## <a name="metadata"></a>Metadati  
- Per ulteriori informazioni sullo stato dell'indicizzazione semantica, eseguire una query su [sys. dm_fts_index_population &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md).  
+ Per ulteriori informazioni sullo stato dell'indicizzazione semantica, eseguire query [sys.dm_fts_index_population &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md).  
   
 ## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene illustrato come eseguire una query sullo stato dei popolamenti dell'indice di somiglianza dei documenti per tutte le tabelle a cui è associato un indice semantico:  
   
 ```  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - size of data types [ODBC]
 - decimal digits of data types [ODBC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0c56d0d4cdd4c40c2174085d80618bbcc58af14e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7a4d37601891c26ce4d59a9bfd788ce1c702ce5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456618"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194906"
 ---
 # <a name="decimal-digits"></a>Cifre decimali
 Le *cifre decimali* dei tipi di dati Decimal e numeric sono definite come il numero massimo di cifre a destra del separatore decimale o la scala dei dati. Per le colonne o i parametri con numero a virgola mobile approssimativo, la scala non è definita perché il numero di cifre a destra del separatore decimale non è fisso. Per i dati DateTime o Interval contenenti un componente secondi, le cifre decimali sono definite come il numero di cifre a destra del separatore decimale nel componente secondi dei dati.  

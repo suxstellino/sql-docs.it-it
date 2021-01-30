@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_backuphistory
 - sp_delete_backuphistory_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f4aa6b663bdfe8f1b5da5c00b4da26e5b7817e19
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ac5426940ed3fd2a94c055968a22ec1000e4d564
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549861"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195545"
 ---
 # <a name="sp_delete_backuphistory-transact-sql"></a>sp_delete_backuphistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @oldest_date = ] 'oldest\_date'` Data meno recente mantenuta nelle tabelle di cronologia di backup e ripristino. *oldest_date* è di tipo **DateTime**e non prevede alcun valore predefinito.  
+`[ @oldest_date = ] 'oldest\_date'` Data meno recente mantenuta nelle tabelle di cronologia di backup e ripristino. *oldest_date* è di tipo **DateTime** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -75,7 +75,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** , ma è possibile concedere le autorizzazioni ad altri utenti.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono eliminate dalle tabelle di cronologia di backup e ripristino tutte le voci create prima delle ore 0.00 del 14 gennaio 2010.  
   
 ```  

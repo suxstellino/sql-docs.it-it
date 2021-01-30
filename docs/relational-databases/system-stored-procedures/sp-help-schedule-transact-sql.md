@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_schedule
 - sp_help_schedule_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9e6dbddc56d00732495bce71b7c05c79f76adb20
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 24a0d594e02fad844d651933bab8d89bc9d35bb2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538816"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193532"
 ---
 # <a name="sp_help_schedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,13 +44,13 @@ sp_help_schedule
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @schedule_id = ] id` Identificatore della pianificazione da elencare. *schedule_name* è di **tipo int**e non prevede alcun valore predefinito. È possibile specificare *schedule_id* o *schedule_name* .  
+`[ @schedule_id = ] id` Identificatore della pianificazione da elencare. *schedule_name* è di **tipo int** e non prevede alcun valore predefinito. È possibile specificare *schedule_id* o *schedule_name* .  
   
-`[ @schedule_name = ] 'schedule_name'` Nome della pianificazione da elencare. *schedule_name* è di **tipo sysname**e non prevede alcun valore predefinito. È possibile specificare *schedule_id* o *schedule_name* .  
+`[ @schedule_name = ] 'schedule_name'` Nome della pianificazione da elencare. *schedule_name* è di **tipo sysname** e non prevede alcun valore predefinito. È possibile specificare *schedule_id* o *schedule_name* .  
   
-`[ @attached_schedules_only = ] attached_schedules_only ]` Specifica se visualizzare solo le pianificazioni a cui è associato un processo. *attached_schedules_only* è di **bit**e il valore predefinito è **0**. Quando *attached_schedules_only* è **0**, vengono visualizzate tutte le pianificazioni. Quando *attached_schedules_only* è **1**, il set di risultati contiene solo le pianificazioni associate a un processo.  
+`[ @attached_schedules_only = ] attached_schedules_only ]` Specifica se visualizzare solo le pianificazioni a cui è associato un processo. *attached_schedules_only* è di **bit** e il valore predefinito è **0**. Quando *attached_schedules_only* è **0**, vengono visualizzate tutte le pianificazioni. Quando *attached_schedules_only* è **1**, il set di risultati contiene solo le pianificazioni associate a un processo.  
   
-`[ @include_description = ] include_description` Specifica se includere le descrizioni nel set di risultati. *include_description* è di **bit**e il valore predefinito è **0**. Quando *include_description* è **0**, la colonna *schedule_description* del set di risultati contiene un segnaposto. Quando *include_description* è **1**, la descrizione della pianificazione viene inclusa nel set di risultati.  
+`[ @include_description = ] include_description` Specifica se includere le descrizioni nel set di risultati. *include_description* è di **bit** e il valore predefinito è **0**. Quando *include_description* è **0**, la colonna *schedule_description* del set di risultati contiene un segnaposto. Quando *include_description* è **1**, la descrizione della pianificazione viene inclusa nel set di risultati.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -78,7 +78,7 @@ sp_help_schedule
 |**schedule_description**|**nvarchar(4000)**|Descrizione in inglese della pianificazione, se richiesta.|  
 |**job_count**|**int**|Restituisce il numero di processi che fanno riferimento a questa pianificazione.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se non vengono specificati parametri, **sp_help_schedule** elenca le informazioni per tutte le pianificazioni nell'istanza di.  
   
 ## <a name="permissions"></a>Autorizzazioni  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_post_msx_operation
 - sp_post_msx_operation_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 304eef1c0e707ecb77fb8d13d5e2b524eb9e9e00
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: be9ef622f686044800f634837819b4cba92821a6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545994"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196033"
 ---
 # <a name="sp_post_msx_operation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,23 +46,23 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @operation = ] 'operation'` Tipo di operazione per l'operazione pubblicata. *Operation*è di tipo **varchar (64)** e non prevede alcun valore predefinito. Le operazioni valide dipendono dalla *object_type*.  
+`[ @operation = ] 'operation'` Tipo di operazione per l'operazione pubblicata. *Operation* è di tipo **varchar (64)** e non prevede alcun valore predefinito. Le operazioni valide dipendono dalla *object_type*.  
   
-|Tipo oggetto|Operazione|  
+|Tipo di oggetto|Operazione|  
 |-----------------|---------------|  
-|**PROCESSO**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> AVVIO<br /><br /> STOP|  
+|**PROCESSO**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> START<br /><br /> STOP|  
 |**SERVER**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**PIANIFICAZIONE**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
   
-`[ @object_type = ] 'object'` Tipo di oggetto per il quale pubblicare un'operazione. I tipi validi sono **Job**, **Server**e **Schedule**. l' *oggetto* è di tipo **varchar (64)** e il valore predefinito è **Job**.  
+`[ @object_type = ] 'object'` Tipo di oggetto per il quale pubblicare un'operazione. I tipi validi sono **Job**, **Server** e **Schedule**. l' *oggetto* è di tipo **varchar (64)** e il valore predefinito è **Job**.  
   
-`[ @job_id = ] job_id` Numero di identificazione del processo a cui si applica l'operazione. *job_id* è di tipo **uniqueidentifier**e non prevede alcun valore predefinito. **0x00** indica tutti i processi. Se l' *oggetto* è **Server**, *job_id*non è obbligatorio.  
+`[ @job_id = ] job_id` Numero di identificazione del processo a cui si applica l'operazione. *job_id* è di tipo **uniqueidentifier** e non prevede alcun valore predefinito. **0x00** indica tutti i processi. Se l' *oggetto* è **Server**, *job_id* non è obbligatorio.  
   
 `[ @specific_target_server = ] 'target_server'` Nome del server di destinazione per cui si applica l'operazione specificata. Se *job_id* viene specificato, ma non viene specificato *target_server* , le operazioni vengono inviate per tutti i server di processo del processo. *target_server* è di **tipo nvarchar (30)** e il valore predefinito è null.  
   
-`[ @value = ] value` Intervallo di polling, in secondi. *value* è **int**e il valore predefinito è NULL. Specificare questo parametro solo se *Operation* è **set-poll**.  
+`[ @value = ] value` Intervallo di polling, in secondi. *value* è **int** e il valore predefinito è NULL. Specificare questo parametro solo se *Operation* è **set-poll**.  
   
-`[ @schedule_uid = ] schedule_uid` Identificatore univoco per la pianificazione a cui si applica l'operazione. *schedule_uid* è di tipo **uniqueidentifier**e non prevede alcun valore predefinito.  
+`[ @schedule_uid = ] schedule_uid` Identificatore univoco per la pianificazione a cui si applica l'operazione. *schedule_uid* è di tipo **uniqueidentifier** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -73,7 +73,7 @@ sp_post_msx_operation
 ## <a name="remarks"></a>Osservazioni  
  **sp_post_msx_operation** deve essere eseguito dal database **msdb** .  
   
- **sp_post_msx_operation** può essere sempre chiamato in modo sicuro perché determina innanzitutto se il server corrente è un agente di Microsoft SQL Server multiserver e, in caso affermativo, se l' *oggetto*è un processo multiserver.  
+ **sp_post_msx_operation** può essere sempre chiamato in modo sicuro perché determina innanzitutto se il server corrente è un agente di Microsoft SQL Server multiserver e, in caso affermativo, se l' *oggetto* è un processo multiserver.  
   
  Una volta inviata, un'operazione viene visualizzata nella tabella **sysdownloadlist** . Dopo la creazione e l'inserimento di un processo, è necessario comunicare ai server di destinazione (TSX) tutte le successive modifiche apportate al processo. A tale scopo è possibile utilizzare l'elenco di download.  
   

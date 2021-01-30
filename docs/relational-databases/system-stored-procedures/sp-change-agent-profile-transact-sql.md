@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_change_agent_profile
 - sp_change_agent_profile_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f920c8a65deb7b71ca6e780d19f06c3a1b94ce24
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dbd36aff1dcb94d796a2c491699e0c3b874b0e5a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543729"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99197667"
 ---
 # <a name="sp_change_agent_profile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,9 +40,9 @@ sp_change_agent_profile [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @profile_id = ] profile_id` ID del profilo. *profile_id* è di **tipo int**e non prevede alcun valore predefinito.  
+`[ @profile_id = ] profile_id` ID del profilo. *profile_id* è di **tipo int** e non prevede alcun valore predefinito.  
   
-`[ @property = ] 'property'` Nome della proprietà. *Property* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @property = ] 'property'` Nome della proprietà. *Property* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 `[ @value = ] 'value'` Nuovo valore della proprietà. *value* è di **tipo nvarchar (3000)** e non prevede alcun valore predefinito.  
   
@@ -55,7 +55,7 @@ sp_change_agent_profile [ @profile_id = ] profile_id
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_change_agent_profile** viene utilizzato in tutti i tipi di replica.  
   
 ## <a name="permissions"></a>Autorizzazioni  

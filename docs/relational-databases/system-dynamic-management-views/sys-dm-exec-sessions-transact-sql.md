@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_exec_sessions_TSQL
 - sys.dm_exec_sessions
@@ -21,12 +21,12 @@ ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 49f04a21e95c0cc7a63b97fd9fd4add1729b25a7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c9cfe8d7d41a56b216fdb5598173ac252ca989a1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098981"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192953"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -98,7 +98,7 @@ Tutti possono visualizzare le proprie informazioni sulla sessione.
 **[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** Richiede `VIEW DATABASE STATE` per visualizzare tutte le connessioni al database corrente. `VIEW DATABASE STATE` non è possibile concedere nel `master` database. 
   
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Quando è abilitata l'opzione di configurazione del server **common criteria compliance enabled** , le statistiche di accesso vengono visualizzate nelle colonne seguenti.  
   
 -   last_successful_logon  

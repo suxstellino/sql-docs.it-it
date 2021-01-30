@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLRateConnection function [ODBC]
 ms.assetid: e8da2ffb-d6ef-4ca7-824f-57afd29585d8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cc6b217e8d9e06c4ab011d15cfe016dfefc91d76
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 40aec3459e43d2684bd80f0ced55171314551d92
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487122"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192544"
 ---
 # <a name="sqlrateconnection-function"></a>Funzione SQLRateConnection
 **Conformità**  
@@ -53,7 +53,7 @@ SQLRETURN  SQLRateConnection(
  Input Se *fRequiredTransactionEnlistment* è true, *transId* rappresenta la transazione DTC che verrà integrata dalla richiesta. Se *fRequiredTransactionEnlistment* è false, *transId* verrà ignorato.  
   
  *Spettegolare*  
- Output classificazione di riutilizzo di *hCandidateConnection*per *hRequest*. Questa valutazione sarà compresa tra 0 e 100 (inclusi).  
+ Output classificazione di riutilizzo di *hCandidateConnection* per *hRequest*. Questa valutazione sarà compresa tra 0 e 100 (inclusi).  
   
 ## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_ERROR o SQL_INVALID_HANDLE.  
@@ -61,7 +61,7 @@ SQLRETURN  SQLRateConnection(
 ## <a name="diagnostics"></a>Diagnostica  
  Gestione driver non elaborerà le informazioni di diagnostica restituite da questa funzione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **SQLRateConnection** produce un punteggio compreso tra 0 e 100 (inclusi) che indica il modo in cui una connessione esistente corrisponde alla richiesta.  
   
 |Punteggio|Significato (quando viene restituito SQL_SUCCESS)|  

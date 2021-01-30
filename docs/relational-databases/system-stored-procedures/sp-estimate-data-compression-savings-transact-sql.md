@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_estimate_data_compression_savings_TSQL
 - sp_estimate_data_compression_savings
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4615bc9a30d28224ee3d1ed906a704af923d046d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 938e6994f5d19f59023009cf9806ca62280dc5b9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543491"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193558"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -90,7 +90,7 @@ sp_estimate_data_compression_savings
 |sample_size_with_current_compression_setting (KB)|**bigint**|Dimensioni del campione con l'impostazione di compressione corrente. È inclusa qualsiasi frammentazione.|  
 |sample_size_with_requested_compression_setting (KB)|**bigint**|Dimensioni del campione creato utilizzando l'impostazione di compressione richiesta e, se applicabile, il fattore di riempimento esistente e senza frammentazione.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Usare `sp_estimate_data_compression_savings` per stimare i risparmi che possono verificarsi quando si abilita una tabella o una partizione per la compressione di righe, pagine, columnstore o archivio columnstore. Se, ad esempio, le dimensioni medie della riga possono essere ridotte del 40%, è possibile ridurre del 40% le dimensioni dell'oggetto. Si potrebbe non ottenere un risparmio in termini di spazio a seconda del fattore di riempimento e delle dimensioni della riga. Se, ad esempio, si dispone di una riga di 8.000 byte e si riducono le dimensioni del 40%, è comunque possibile adattare una sola riga a una pagina di dati. e non si ottiene alcun risparmio.  
   
  Se i risultati dell'esecuzione di `sp_estimate_data_compression_savings` indicano un aumento delle dimensioni della tabella, significa che in molte righe della tabella viene utilizzata quasi la precisione completa dei tipi di dati e l'aggiunta del limitato overhead necessario per il formato compresso supera il risparmio derivante dalla compressione. In questi rari casi, non abilitare la compressione.  
@@ -110,7 +110,7 @@ sp_estimate_data_compression_savings
  Prima di SQL Server 2019, questa procedura non si applicava agli indici columnstore e pertanto non accettava il COLUMNStore dei parametri di compressione dei dati e la COLUMNSTORE_ARCHIVE.  A partire da SQL Server 2019, gli indici columnstore possono essere usati sia come oggetto di origine per la stima che come tipo di compressione richiesto.
 
  > [!IMPORTANT]
- > Quando i [metadati tempdb con ottimizzazione](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) per la memoria sono abilitati in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] , la creazione di indici columnstore in tabelle temporanee non è supportata. A causa di questa limitazione, sp_estimate_data_compression_savings non è supportata con il COLUMNStore e COLUMNSTORE_ARCHIVE parametri di compressione dei dati quando i metadati TempDB ottimizzati per la memoria sono abilitati.
+ > Quando i [metadati tempdb con ottimizzazione](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) per la memoria sono abilitati in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] , la creazione di indici columnstore in tabelle temporanee non è supportata. A causa di questa limitazione, sp_estimate_data_compression_savings non è supportata con i parametri COLUMNStore e COLUMNSTORE_ARCHIVE compressione dati quando Memory-Optimized metadati TempDB sono abilitati.
 
 ## <a name="considerations-for-columnstore-indexes"></a>Considerazioni sugli indici columnstore
  A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] , `sp_estimate_compression_savings` supporta la stima della compressione dell'archivio columnstore e columnstore. A differenza della compressione di pagine e righe, per applicare la compressione columnstore a un oggetto è necessario creare un nuovo indice columnstore. Per questo motivo, quando si usano le opzioni COLUMNStore e COLUMNSTORE_ARCHIVE di questa procedura, il tipo dell'oggetto di origine fornito alla routine determina il tipo di indice columnstore usato per la stima delle dimensioni compresse. La tabella seguente illustra gli oggetti di riferimento usati per stimare i risparmi di compressione per ogni tipo di oggetto di origine quando il @data_compression parametro è impostato su columnstore o COLUMNSTORE_ARCHIVE.
@@ -136,7 +136,7 @@ sp_estimate_data_compression_savings
 > [!NOTE]  
 > Quando si stima la compressione rowstore (nessuno, riga o pagina) da un oggetto di origine columnstore, assicurarsi che l'indice di origine non contenga più di 32 colonne, perché questo è il limite supportato in un indice rowstore (non cluster).
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono stimate le dimensioni della tabella `Production.WorkOrderRouting` in caso di utilizzo della compressione `ROW`.  
   
 ```sql  

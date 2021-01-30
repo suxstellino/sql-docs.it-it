@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cursor_prepexec
 - sp_cursor_prepexec_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c5df94e84c602e03d5ead3e2ce36a29d5d314791
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: df6a482aeca510fde3d89dd74ddafc0ebe713287
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535035"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196007"
 ---
 # <a name="sp_prepexec-transact-sql"></a>sp_prepexec (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,15 +45,15 @@ sp_prepexec handle OUTPUT, params , stmt
  Identificatore dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *handle* generato da. *handle* è un parametro obbligatorio con un valore restituito **int** .  
   
  *params*  
- Identifica le istruzioni con parametri. La definizione *params* delle variabili viene sostituita per i marcatori di parametro nell'istruzione. *params* è un parametro obbligatorio che richiede un valore di input **ntext**, **nchar**o **nvarchar** . Immettere un valore NULL se l'istruzione non è con parametri.  
+ Identifica le istruzioni con parametri. La definizione *params* delle variabili viene sostituita per i marcatori di parametro nell'istruzione. *params* è un parametro obbligatorio che richiede un valore di input **ntext**, **nchar** o **nvarchar** . Immettere un valore NULL se l'istruzione non è con parametri.  
   
  *stmt*  
- Definisce il set di risultati del cursore. Il parametro *stmt* è obbligatorio e richiede un valore di input **ntext**, **nchar**o **nvarchar** .  
+ Definisce il set di risultati del cursore. Il parametro *stmt* è obbligatorio e richiede un valore di input **ntext**, **nchar** o **nvarchar** .  
   
  *bound_param*  
  Indica l'utilizzo facoltativo di parametri aggiuntivi. *bound_param* chiama un valore di input di qualsiasi tipo di dati per definire i parametri aggiuntivi in uso.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene preparata ed eseguita un'istruzione semplice:  
   
 ```  
@@ -67,7 +67,7 @@ EXEC sp_prepexec @Out output,
 EXEC sp_unprepare @Out;  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
  [sp_execute &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-execute-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

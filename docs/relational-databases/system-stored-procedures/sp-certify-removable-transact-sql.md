@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_certify_removable_TSQL
 - sp_certify_removable
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5c80828117bfa4219d6f7377c4ed0123dec977aa
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: 69a0c6e1331144fc340ad15bb103e593d3ba8f65
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753527"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99197674"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se il database è configurato correttamente, **sp_certify_removable** esegue le operazioni seguenti:  
   
 -   Imposta il database offline per consentire la copia dei file.  
@@ -83,7 +83,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni Execute sono limitate ai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene confermato che il database `inventory` è pronto per la rimozione.  
   
 ```  

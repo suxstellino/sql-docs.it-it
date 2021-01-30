@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dbo.sysalerts
 - sysalerts_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: ff1e70701882c1740ae91212c8d33ae5e7e3040b
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 69250eb1576daa37aeb4b633f86ee7dc019255c5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094871"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195839"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "98094871"
 |**id**|**int**|ID dell'avviso.|  
 |**nome**|**sysname**|Nome dell'avviso.|  
 |**event_source**|**nvarchar (100)**|Origine dell'evento: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**event_category_id**|**int**|Riservato per usi futuri.|  
-|**event_id**|**int**|Riservato per usi futuri.|  
+|**event_category_id**|**int**|Riservato per utilizzi futuri.|  
+|**event_id**|**int**|Riservato per utilizzi futuri.|  
 |**message_id**|**int**|ID messaggio definito dall'utente o riferimento al messaggio **sysmessages** che attiva questo avviso.|  
 |**severity**|**int**|Livello di gravità che attiva l'avviso.|  
 |**abilitato**|**tinyint**|Stato dell'avviso:<br /><br /> **0** = disabilitato.<br /><br /> **1** = abilitata.|  
@@ -60,14 +60,14 @@ ms.locfileid: "98094871"
 |**performance_condition**|**nvarchar(512)**|Riservato.|  
 |**category_id**|**int**|Riservato.|  
   
- ## <a name="remarks"></a>Osservazioni
+ ## <a name="remarks"></a>Commenti
 
 Nella tabella seguente vengono illustrati i valori per la maschera di maschera include_event_description. Il valore decimale viene restituito da dbo.sysavvisi. 
 
 |decimal | BINARY | significato |
 |------|------|------|
 |0 |0000 |Nessun messaggio |
-|1 |0001 |posta elettronica |
+|1 |0001 |email |
 |2 |0010 |pager |
 |3 |0011 |cercapersone e messaggi di posta elettronica |
 |4 |0100 |Net send |
