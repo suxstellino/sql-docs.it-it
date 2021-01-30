@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpserver
 - sp_helpserver_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6dace48b51c971095b136190ab1094ea8db79984
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 83d212a6cfb817f3aa28c87ab0999d0488cec5e9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89526625"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211919"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +42,11 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @server = ] 'server'` È il server in cui vengono segnalate le informazioni. Quando il *Server* non è specificato, segnala tutti i server in **master.sys. Servers**. il *Server* è di **tipo sysname**e il valore predefinito è null.  
+`[ @server = ] 'server'` È il server in cui vengono segnalate le informazioni. Quando il *Server* non è specificato, segnala tutti i server in **master.sys. Servers**. il *Server* è di **tipo sysname** e il valore predefinito è null.  
   
 `[ @optname = ] 'option'` Opzione che descrive il server. *Option* è di tipo **varchar (** 35 **)** e il valore predefinito è null. i valori possibili sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**regole di confronto compatibili**|L'utilizzo di questa opzione influisce sull'esecuzione delle query distribuite in server collegati. Se questa opzione è impostata su true,|  
 |**accesso ai dati**|Consente di attivare e disabilitare un server collegato per l'accesso a query distribuite.|  
@@ -77,7 +77,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**connect_timeout**|**int**|Valore di timeout per la connessione al server collegato.|  
 |**query_timeout**|**int**|Valore di timeout per le query eseguite sul server collegato.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  A un server possono essere associati più stati.  
   
 ## <a name="permissions"></a>Autorizzazioni  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_altermessage_TSQL
 - sp_altermessage
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 726ad7eed8f306321bce16880abe93befee4e2c5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c5f7a871967c854376e9601373e4e28c3532cf9a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542031"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203253"
 ---
 # <a name="sp_altermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +42,15 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [** @message_id =** ] *message_number*  
+ [**@message_id =** ] *message_number*  
  Numero di errore del messaggio da modificare da **sys. messages**. *message_number* è di **tipo int** e non prevede alcun valore predefinito.  
   
-`[ @parameter = ] 'write\_to\_log_'`Viene utilizzato con ** \@ parameter_value** per indicare che il messaggio deve essere scritto nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro applicazioni di Windows. *write_to_log* è di **tipo sysname** e non prevede alcun valore predefinito. *write_to_log* deve essere impostato su WITH_LOG o null. Se *write_to_log* è impostato su WITH_LOG o null e il valore per ** \@ parameter_value** è **true**, il messaggio viene scritto nel registro applicazioni di Windows. Se *write_to_log* è impostato su WITH_LOG o null e il valore per ** \@ parameter_value** è **false**, il messaggio non viene sempre scritto nel registro applicazioni di Windows, ma può essere scritto in base alla modalità di generazione dell'errore. Se *write_to_log* è specificato, è necessario specificare anche il valore per ** \@ parameter_value** .  
+`[ @parameter = ] 'write\_to\_log_'`Viene utilizzato con **\@ parameter_value** per indicare che il messaggio deve essere scritto nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro applicazioni di Windows. *write_to_log* è di **tipo sysname** e non prevede alcun valore predefinito. *write_to_log* deve essere impostato su WITH_LOG o null. Se *write_to_log* è impostato su WITH_LOG o null e il valore per **\@ parameter_value** è **true**, il messaggio viene scritto nel registro applicazioni di Windows. Se *write_to_log* è impostato su WITH_LOG o null e il valore per **\@ parameter_value** è **false**, il messaggio non viene sempre scritto nel registro applicazioni di Windows, ma può essere scritto in base alla modalità di generazione dell'errore. Se *write_to_log* è specificato, è necessario specificare anche il valore per **\@ parameter_value** .  
   
 > [!NOTE]  
 >  Se un messaggio viene scritto nel registro applicazioni di Windows, viene registrato inoltre nel file di log degli errori di [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-`[ @parameter_value = ]'value_'`Viene usato con il ** \@ parametro** per indicare che l'errore deve essere scritto nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro applicazioni di Windows. *value* è di tipo **varchar (5)** e non prevede alcun valore predefinito. Se **true**, l'errore viene sempre scritto nel registro applicazioni di Windows. Se **false**, l'errore non viene sempre scritto nel registro applicazioni di Windows, ma può essere scritto in base al modo in cui è stato generato l'errore. Se viene specificato *value* , è necessario specificare anche *write_to_log* per il ** \@ parametro** .  
+`[ @parameter_value = ]'value_'`Viene usato con il **\@ parametro** per indicare che l'errore deve essere scritto nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro applicazioni di Windows. *value* è di tipo **varchar (5)** e non prevede alcun valore predefinito. Se **true**, l'errore viene sempre scritto nel registro applicazioni di Windows. Se **false**, l'errore non viene sempre scritto nel registro applicazioni di Windows, ma può essere scritto in base al modo in cui è stato generato l'errore. Se viene specificato *value* , è necessario specificare anche *write_to_log* per il **\@ parametro** .  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -66,7 +66,7 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **serveradmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene registrato il messaggio `55001` esistente nel registro applicazioni di Windows.  
   
 ```  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - functions [ODBC], time functions
 - functions [ODBC], date functions
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: bdf054a0-7aba-4e99-a34a-799917376fd5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dcbdf9f40a9cd1f1296920e3d2ea71fcb5ce6b39
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e73d295613f3f11b72317d20b49a6c75be802cbd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386377"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202500"
 ---
 # <a name="time-date-and-interval-functions"></a>Funzioni di data, ora e intervallo
 Nella tabella seguente sono elencate le funzioni di data e ora incluse nel set di funzioni scalari ODBC. Un'applicazione può determinare quali funzioni di data e ora sono supportate da un driver chiamando **SQLGetInfo** con un *tipo di informazioni* SQL_TIMEDATE_FUNCTIONS.  
   
- Gli argomenti identificati come *timestamp_exp* possono essere il nome di una colonna, il risultato di un'altra funzione scalare o ODBC- *Time-* Escape, *ODBC-date-Escape*o *ODBC-timestamp-Escape*, in cui il tipo di dati sottostante potrebbe essere rappresentato come SQL_CHAR, SQL_VARCHAR, SQL_TYPE_TIME, SQL_TYPE_DATE o SQL_TYPE_TIMESTAMP.  
+ Gli argomenti identificati come *timestamp_exp* possono essere il nome di una colonna, il risultato di un'altra funzione scalare o ODBC- *Time-* Escape, *ODBC-date-Escape* o *ODBC-timestamp-Escape*, in cui il tipo di dati sottostante potrebbe essere rappresentato come SQL_CHAR, SQL_VARCHAR, SQL_TYPE_TIME, SQL_TYPE_DATE o SQL_TYPE_TIMESTAMP.  
   
  Gli argomenti identificati come *date_exp* possono essere il nome di una colonna, il risultato di un'altra funzione scalare o ODBC *-date-Escape* o *ODBC-timestamp-Escape*, in cui il tipo di dati sottostante potrebbe essere rappresentato come SQL_CHAR, SQL_VARCHAR, SQL_TYPE_DATE o SQL_TYPE_TIMESTAMP.  
   

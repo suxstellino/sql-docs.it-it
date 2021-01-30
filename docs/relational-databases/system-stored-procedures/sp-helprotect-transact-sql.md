@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helprotect
 - sp_helprotect_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fff150e26e7342beda98b2eb362e1fbb310cdab0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f64ca2d34d11811bec87c1e4e378b424065299c4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538734"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211923"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89538734"
   Restituisce un report con informazioni sulle autorizzazioni utente per un oggetto o sulle autorizzazioni per le istruzioni, nel database corrente.  
   
 > [!IMPORTANT]  
->  **sp_helprotect** non restituisce informazioni sulle entità a protezione diretta introdotte in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . In alternativa, utilizzare [sys. database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) e [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) .  
+>  **sp_helprotect** non restituisce informazioni sulle entità a protezione diretta introdotte in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . In alternativa, usare [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) e [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) .  
   
  Non elenca le autorizzazioni che sono sempre assegnate ai ruoli predefiniti del server o del database. Non include gli account di accesso o gli utenti che ricevono autorizzazioni in base all'appartenenza a un ruolo.  
   
@@ -52,11 +52,11 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
  Se *object_statement* è un'istruzione, può essere un'istruzione create.  
   
-`[ @username = ] 'security_account'` Nome dell'entità per cui vengono restituite le autorizzazioni. *security_account* è di **tipo sysname**e il valore predefinito è null, che restituisce tutte le entità nel database corrente. *security_account* deve esistere nel database corrente.  
+`[ @username = ] 'security_account'` Nome dell'entità per cui vengono restituite le autorizzazioni. *security_account* è di **tipo sysname** e il valore predefinito è null, che restituisce tutte le entità nel database corrente. *security_account* deve esistere nel database corrente.  
   
-`[ @grantorname = ] 'grantor'` Nome dell'entità a cui sono state concesse le autorizzazioni. il *concedente* è di **tipo sysname**e il valore predefinito è null, che restituisce tutte le informazioni relative alle autorizzazioni concesse da qualsiasi entità nel database.  
+`[ @grantorname = ] 'grantor'` Nome dell'entità a cui sono state concesse le autorizzazioni. il *concedente* è di **tipo sysname** e il valore predefinito è null, che restituisce tutte le informazioni relative alle autorizzazioni concesse da qualsiasi entità nel database.  
   
-`[ @permissionarea = ] 'type'` Stringa di caratteri che indica se visualizzare le autorizzazioni per gli oggetti (stringa di caratteri **o**), autorizzazioni per istruzioni **(stringhe di**caratteri) o entrambe (**sistema operativo**). il *tipo* è **varchar (10)** e il valore predefinito è **sistema operativo**. il *tipo* può essere qualsiasi combinazione **di o** e **s**, con o senza virgole o spazi tra **o** e **s**.  
+`[ @permissionarea = ] 'type'` Stringa di caratteri che indica se visualizzare le autorizzazioni per gli oggetti (stringa di caratteri **o**), autorizzazioni per istruzioni **(stringhe di** caratteri) o entrambe (**sistema operativo**). il *tipo* è **varchar (10)** e il valore predefinito è **sistema operativo**. il *tipo* può essere qualsiasi combinazione **di o** e **s**, con o senza virgole o spazi tra **o** e **s**.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -73,7 +73,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |**Azione**|**nvarchar(60)**|Nome dell'autorizzazione. La validità delle istruzioni di autorizzazione dipende dal tipo di oggetto.|  
 |**Colonna**|**sysname**|Tipo di autorizzazione:<br /><br /> All = L'autorizzazione è valida per tutte le colonne correnti dell'oggetto.<br /><br /> New = L'autorizzazione è valida per le nuove colonne che potrebbero essere modificate in futuro nell'oggetto (tramite l'istruzione ALTER).<br /><br /> All+New = L'autorizzazione è valida sia per le colonne correnti che per le nuove colonne.<br /><br /> Restituisce un punto se il tipo di autorizzazione non si applica alle colonne.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Tutti i parametri nella procedura seguente sono facoltativi. Se vengono omessi tutti i parametri, `sp_helprotect` visualizza tutte le autorizzazioni concesse o negate nel database corrente.  
   
  Se vengono specificati alcuni parametri, ma non tutti, utilizzare i parametri denominati per identificare i vari parametri oppure utilizzare `NULL` come segnaposto dei parametri omessi. Ad esempio, per restituire tutte le autorizzazioni per il proprietario di database (`dbo`) che concede le autorizzazioni, eseguire l'istruzione seguente:  

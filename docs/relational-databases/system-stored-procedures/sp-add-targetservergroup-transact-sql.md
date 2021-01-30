@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_targetservergroup
 - sp_add_targetservergroup_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: acb69343-d766-46ff-b771-0c7655c5231a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5f67f8f5c0ad88e30df0f742b25d08bf23fbfd50
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f070ce20e9efc67f8d40b5597a7118aeecddfd32
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541997"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192384"
 ---
 # <a name="sp_add_targetservergroup-transact-sql"></a>sp_add_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_add_targetservergroup [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @name = ] 'name'` Nome del gruppo di server da creare. *Name* è di **tipo sysname**e non prevede alcun valore predefinito. il *nome* non può contenere virgole.  
+`[ @name = ] 'name'` Nome del gruppo di server da creare. *Name* è di **tipo sysname** e non prevede alcun valore predefinito. il *nome* non può contenere virgole.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -54,7 +54,7 @@ sp_add_targetservergroup [ @name = ] 'name'
 ## <a name="permissions"></a>Autorizzazioni  
  Questa procedura può essere eseguita solo dai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene creato il gruppo di server di destinazione `Servers Processing Customer Orders`.  
   
 ```  

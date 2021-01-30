@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpsubscription_TSQL
 - sp_helpsubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5ff06497437017fd6771a7402c18d16a5ee6f94b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 73fc43bf20a9306d0224392d984b3f2bff74ec6f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543263"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192901"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,21 +43,21 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` Nome della pubblicazione associata. *Publication* è di **tipo sysname**e il valore predefinito è **%** , che restituisce tutte le informazioni sulla sottoscrizione per questo server.  
+`[ @publication = ] 'publication'` Nome della pubblicazione associata. *Publication* è di **tipo sysname** e il valore predefinito è **%** , che restituisce tutte le informazioni sulla sottoscrizione per questo server.  
   
-`[ @article = ] 'article'` Nome dell'articolo. *article* è di **tipo sysname**e il valore predefinito è **%** , che restituisce tutte le informazioni sulla sottoscrizione per le pubblicazioni e i Sottoscrittori selezionati. Se è **All**, viene restituita una sola voce per la sottoscrizione completa di una pubblicazione.  
+`[ @article = ] 'article'` Nome dell'articolo. *article* è di **tipo sysname** e il valore predefinito è **%** , che restituisce tutte le informazioni sulla sottoscrizione per le pubblicazioni e i Sottoscrittori selezionati. Se è **All**, viene restituita una sola voce per la sottoscrizione completa di una pubblicazione.  
   
-`[ @subscriber = ] 'subscriber'` Nome del sottoscrittore su cui si desidera ottenere informazioni sulla sottoscrizione. *Subscriber* è di **tipo sysname**e il valore predefinito è **%** , che restituisce tutte le informazioni sulla sottoscrizione per le pubblicazioni e gli articoli selezionati.  
+`[ @subscriber = ] 'subscriber'` Nome del sottoscrittore su cui si desidera ottenere informazioni sulla sottoscrizione. *Subscriber* è di **tipo sysname** e il valore predefinito è **%** , che restituisce tutte le informazioni sulla sottoscrizione per le pubblicazioni e gli articoli selezionati.  
   
-`[ @destination_db = ] 'destination_db'` Nome del database di destinazione. *destination_db* è di **tipo sysname**e il valore predefinito è **%** .  
+`[ @destination_db = ] 'destination_db'` Nome del database di destinazione. *destination_db* è di **tipo sysname** e il valore predefinito è **%** .  
   
-`[ @found = ] 'found'OUTPUT` Flag che indica la restituzione di righe. *trovato*è di **tipo int** e un parametro di output e il valore predefinito è 23456.  
+`[ @found = ] 'found'OUTPUT` Flag che indica la restituzione di righe. *trovato* è di **tipo int** e un parametro di output e il valore predefinito è 23456.  
   
  **1** indica che la pubblicazione è stata trovata.  
   
  **0** indica che la pubblicazione non è stata trovata.  
   
-`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è il nome del server corrente.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname** e il valore predefinito è il nome del server corrente.  
   
 > [!NOTE]  
 >  il *server di pubblicazione* non deve essere specificato, tranne quando si tratta di un server di pubblicazione Oracle.  
@@ -98,7 +98,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_helpsubscription** viene utilizzata per la replica snapshot e transazionale.  
   
 ## <a name="permissions"></a>Autorizzazioni  

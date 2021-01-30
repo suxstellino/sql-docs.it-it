@@ -5,7 +5,7 @@ ms.date: 10/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CREATE TRIGGER
 - TRIGGER
@@ -28,12 +28,12 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.openlocfilehash: d4b71ddb3cb0b8dbd60ccfb9df778baaaff3f68d
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: f190b4b7c4bab6845a871c7c937d084b07c94228
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170333"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99177919"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 

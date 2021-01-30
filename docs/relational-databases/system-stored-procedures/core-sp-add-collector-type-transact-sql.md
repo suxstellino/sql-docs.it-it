@@ -1,13 +1,13 @@
 ---
 description: core.sp_add_collector_type (Transact-SQL)
-title: Core. sp_add_collector_type (Transact-SQL) | Microsoft Docs
+title: core.sp_add_collector_type (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_collector_type
 - sp_add_collector_type_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1d981037-2147-464e-a456-7d8e479bce89
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b9d907512edb385afba38b4ad1854a4535b67d9d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0db58f15641ab57d7eb35782c62334106a4bcdf7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536813"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181330"
 ---
 # <a name="coresp_add_collector_type-transact-sql"></a>core.sp_add_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ core.sp_add_collector_type [ @collector_type_uid = ] 'collector_type_uid'
   
 ## <a name="arguments"></a>Argomenti  
  [ @collector_type_uid =]'*collector_type_uid*'  
- GUID per il tipo agente di raccolta. *collector_type_uid* è di tipo **uniqueidentifier**e non prevede alcun valore predefinito.  
+ GUID per il tipo agente di raccolta. *collector_type_uid* è di tipo **uniqueidentifier** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -52,7 +52,7 @@ core.sp_add_collector_type [ @collector_type_uid = ] 'collector_type_uid'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del database di **mdw_admin** (con autorizzazione Execute).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene aggiunto il tipo di agente di raccolta query T-SQL generico alla vista core.supported_collector_types. Per impostazione predefinita, il tipo agente di raccolta query T-SQL generico esiste già. Se pertanto si esegue il codice in un'installazione predefinita, viene visualizzato un messaggio che indica che il tipo di agente di raccolta esiste già.  
   
  Il codice viene eseguito correttamente se il tipo di agente di raccolta query T-SQL generico è stato rimosso utilizzando la stored procedure core.sp_remove_collector_type e quindi si desidera aggiungerlo di nuovo come tipo di agente di raccolta query registrato in grado di caricare i dati nel data warehouse di gestione.  

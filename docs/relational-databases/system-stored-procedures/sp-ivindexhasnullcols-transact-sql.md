@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_ivindexhasnullcols
 - sp_ivindexhasnullcols_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fe91514a87999bb053f6011e74b3b96ec075fbf4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9fc065d30bc8fac8195a3a389de1b316645bcd57
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549615"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183400"
 ---
 # <a name="sp_ivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +39,9 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @viewname = ] 'view_name'` Nome della visualizzazione da verificare. *view_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @viewname = ] 'view_name'` Nome della visualizzazione da verificare. *view_name* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @fhasnullcols = ] field_has_null_columns OUTPUT` Flag che indica se l'indice della vista include colonne che ammettono valori NULL. *view_name* è di **tipo sysname**e non prevede alcun valore predefinito. Restituisce un valore pari a **1** se l'indice della vista include colonne che ammettono valori null. Restituisce un valore pari a **0** se la vista non contiene colonne che ammettono valori null.  
+`[ @fhasnullcols = ] field_has_null_columns OUTPUT` Flag che indica se l'indice della vista include colonne che ammettono valori NULL. *view_name* è di **tipo sysname** e non prevede alcun valore predefinito. Restituisce un valore pari a **1** se l'indice della vista include colonne che ammettono valori null. Restituisce un valore pari a **0** se la vista non contiene colonne che ammettono valori null.  
   
 > [!NOTE]  
 >  Se il stored procedure stesso restituisce un codice restituito **1**, ovvero l'esecuzione del stored procedure ha avuto un errore, questo valore è **0** e deve essere ignorato.  
@@ -49,7 +49,7 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_ivindexhasnullcols** viene utilizzata dalla replica transazionale.  
   
  Per impostazione predefinita, gli articoli di vista indicizzata di una pubblicazione vengono creati sotto forma di tabella nei Sottoscrittori. Quando tuttavia la colonna indicizzata ammette valori Null, la vista indicizzata viene creata come vista indicizzata anziché come tabella nel Sottoscrittore. Tramite l'esecuzione di questa stored procedure è possibile verificare se nella vista indicizzata corrente esiste o meno questo problema.  

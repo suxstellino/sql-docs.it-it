@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_update_profileaccount_sp_TSQL
 - sysmail_update_profileaccount_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ccfcd3627627dd2fca78ba02b74f89f2bea07116
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 140256e73adee3593c620b17f81ac10c163030f3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473349"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181844"
 ---
 # <a name="sysmail_update_profileaccount_sp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +43,15 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @profile_id = ] profile_id` ID del profilo da aggiornare. *profile_id* è di **tipo int**e il valore predefinito è null. È necessario specificare il *profile_id* o l' *profile_name* .  
+`[ @profile_id = ] profile_id` ID del profilo da aggiornare. *profile_id* è di **tipo int** e il valore predefinito è null. È necessario specificare il *profile_id* o l' *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'` Nome del profilo da aggiornare. *profile_name* è di **tipo sysname**e il valore predefinito è null. È necessario specificare il *profile_id* o l' *profile_name* .  
+`[ @profile_name = ] 'profile_name'` Nome del profilo da aggiornare. *profile_name* è di **tipo sysname** e il valore predefinito è null. È necessario specificare il *profile_id* o l' *profile_name* .  
   
-`[ @account_id = ] account_id` ID dell'account da aggiornare. *account_id* è di **tipo int**e il valore predefinito è null. È necessario specificare il *account_id* o l' *account_name* .  
+`[ @account_id = ] account_id` ID dell'account da aggiornare. *account_id* è di **tipo int** e il valore predefinito è null. È necessario specificare il *account_id* o l' *account_name* .  
   
-`[ @account_name = ] 'account_name'` Nome dell'account da aggiornare. *account_name* è di **tipo sysname**e il valore predefinito è null. È necessario specificare il *account_id* o l' *account_name* .  
+`[ @account_name = ] 'account_name'` Nome dell'account da aggiornare. *account_name* è di **tipo sysname** e il valore predefinito è null. È necessario specificare il *account_id* o l' *account_name* .  
   
-`[ @sequence_number = ] sequence_number` Nuovo numero di sequenza per l'account. *sequence_number* è di **tipo int**e non prevede alcun valore predefinito. Il numero di sequenza determina l'ordine in cui gli account sono utilizzati nel profilo.  
+`[ @sequence_number = ] sequence_number` Nuovo numero di sequenza per l'account. *sequence_number* è di **tipo int** e non prevede alcun valore predefinito. Il numero di sequenza determina l'ordine in cui gli account sono utilizzati nel profilo.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -71,7 +71,7 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene modificato il numero di sequenza dell'account `Admin-BackupServer` all'interno del profilo `AdventureWorks Administrator` nel database **msdb** . Dopo l'esecuzione del codice, il numero di sequenza dell'account è `3`, ad indicare che sarà utilizzato se i primi due account restituiscono un messaggio di errore.  
   
 ```  

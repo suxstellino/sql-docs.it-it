@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_update_principalprofile_sp
 - sysmail_update_principalprofile_sp_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bba3f6ca7046825f4bdd13e062b67b554b636405
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 85bab8892a9459ee5de954596ffea2be2a5aed92
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492820"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181863"
 ---
 # <a name="sysmail_update_principalprofile_sp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +42,15 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @principal_id = ] principal_id` ID dell'utente del database o del ruolo nel database **msdb** per l'associazione da modificare. *principal_id* è di **tipo int**e il valore predefinito è null. È necessario specificare *principal_id* o *principal_name* .  
+`[ @principal_id = ] principal_id` ID dell'utente del database o del ruolo nel database **msdb** per l'associazione da modificare. *principal_id* è di **tipo int** e il valore predefinito è null. È necessario specificare *principal_id* o *principal_name* .  
   
-`[ @principal_name = ] 'principal_name'` Nome dell'utente del database o del ruolo nel database **msdb** per l'associazione da aggiornare. *principal_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare *principal_id* o *principal_name* .  
+`[ @principal_name = ] 'principal_name'` Nome dell'utente del database o del ruolo nel database **msdb** per l'associazione da aggiornare. *principal_name* è di **tipo sysname** e il valore predefinito è null. È possibile specificare *principal_id* o *principal_name* .  
   
-`[ @profile_id = ] profile_id` ID del profilo per l'associazione da modificare. *profile_id* è di **tipo int**e il valore predefinito è null. È necessario specificare *profile_id* o *profile_name* .  
+`[ @profile_id = ] profile_id` ID del profilo per l'associazione da modificare. *profile_id* è di **tipo int** e il valore predefinito è null. È necessario specificare *profile_id* o *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'` Nome del profilo per l'associazione da modificare. *profile_name* è di **tipo sysname**e il valore predefinito è null. È necessario specificare *profile_id* o *profile_name* .  
+`[ @profile_name = ] 'profile_name'` Nome del profilo per l'associazione da modificare. *profile_name* è di **tipo sysname** e il valore predefinito è null. È necessario specificare *profile_id* o *profile_name* .  
   
-`[ @is_default = ] 'is_default'` Indica se il profilo è il profilo predefinito per l'utente del database. A un utente del database può essere associato un solo profilo predefinito. *is_default* è di **bit**e non prevede alcun valore predefinito.  
+`[ @is_default = ] 'is_default'` Indica se il profilo è il profilo predefinito per l'utente del database. A un utente del database può essere associato un solo profilo predefinito. *is_default* è di **bit** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -63,14 +63,14 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
   
  Quando il nome dell'entità per l'associazione è **pubblico** o l'ID entità per l'associazione è **0**, questo stored procedure modifica il profilo pubblico. È possibile associare un solo profilo pubblico predefinito.  
   
- Quando ** \@ is_default** è'**1**' e l'entità è associata a più di un profilo, il profilo specificato diventa il profilo predefinito per l'entità. Il profilo che in precedenza era il profilo predefinito è tuttora associato all'entità, ma non è più il profilo predefinito.  
+ Quando **\@ is_default** è'**1**' e l'entità è associata a più di un profilo, il profilo specificato diventa il profilo predefinito per l'entità. Il profilo che in precedenza era il profilo predefinito è tuttora associato all'entità, ma non è più il profilo predefinito.  
   
  Il stored procedure **sysmail_update_principalprofile_sp** si trova nel database **msdb** ed è di proprietà dello schema **dbo** . La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  **A. Impostazione di un profilo come profilo pubblico predefinito per un database**  
   
  Nell'esempio seguente viene impostato il profilo come `General Use Profile` profilo pubblico predefinito per gli utenti nel database **msdb** .  

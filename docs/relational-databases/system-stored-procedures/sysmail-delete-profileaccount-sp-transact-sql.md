@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_delete_profileaccount_sp
 - sysmail_delete_profileaccount_sp_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d5cc2643440544a3b1e65bc6fbb07df0b95e5594
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d364dfb4de4408da2f424185e6cad4f62b0c54cf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89525746"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181991"
 ---
 # <a name="sysmail_delete_profileaccount_sp-transact-sql"></a>sysmail_delete_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +41,13 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @profile_id = ] profile_id` ID del profilo da eliminare. *profile_id* è di **tipo int**e il valore predefinito è null. È possibile specificare il *profile_id* o l' *profile_name* .  
+`[ @profile_id = ] profile_id` ID del profilo da eliminare. *profile_id* è di **tipo int** e il valore predefinito è null. È possibile specificare il *profile_id* o l' *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'` Nome del profilo da eliminare. *profile_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare il *profile_id* o l' *profile_name* .  
+`[ @profile_name = ] 'profile_name'` Nome del profilo da eliminare. *profile_name* è di **tipo sysname** e il valore predefinito è null. È possibile specificare il *profile_id* o l' *profile_name* .  
   
-`[ @account_id = ] account_id` ID dell'account da eliminare. *account_id* è di **tipo int**e il valore predefinito è null. È possibile specificare il *account_id* o l' *account_name* .  
+`[ @account_id = ] account_id` ID dell'account da eliminare. *account_id* è di **tipo int** e il valore predefinito è null. È possibile specificare il *account_id* o l' *account_name* .  
   
-`[ @account_name = ] 'account_name'` Nome dell'account da eliminare. *account_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare il *account_id* o l' *account_name* .  
+`[ @account_name = ] 'account_name'` Nome dell'account da eliminare. *account_name* è di **tipo sysname** e il valore predefinito è null. È possibile specificare il *account_id* o l' *account_name* .  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -67,7 +67,7 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente l'account `Audit Account` viene rimosso dal profilo `AdventureWorks Administrator`.  
   
 ```  

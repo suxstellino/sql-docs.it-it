@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - DROP SYNONYM
 - DROP_SYNONYM_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - dropping synonyms
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 1c59f82646b8481fed01a67806f2d439cff1e241
-ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+ms.openlocfilehash: 807844102e78dc1a47370acec88d0c9624ea25d3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98813447"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181217"
 ---
 # <a name="drop-synonym-transact-sql"></a>DROP SYNONYM (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

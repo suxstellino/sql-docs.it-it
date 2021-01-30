@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLBrowseConnect
 apilocation:
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 712dbb366e25098c7956ffbb9c8733a437339297
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 33983c9fb41625fa6479c47045ca4a04738a1463
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499634"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181077"
 ---
 # <a name="sqlbrowseconnect-function"></a>Funzione SQLBrowseConnect
 **Conformità**  
@@ -53,13 +53,13 @@ SQLRETURN SQLBrowseConnect(
  [Input] Handle di connessione.  
   
  *InConnectionString*  
- Input Sfoglia stringa di connessione richiesta (vedere "argomento*InConnectionString* " in "Commenti").  
+ Input Sfoglia stringa di connessione richiesta (vedere "argomento *InConnectionString* " in "Commenti").  
   
  *StringLength1*  
  Input Lunghezza di **InConnectionString* in caratteri.  
   
  *OutConnectionString*  
- Output Puntatore a un buffer di caratteri in cui restituire la stringa di connessione del risultato della ricerca (vedere "argomento*OutConnectionString* " in "comments").  
+ Output Puntatore a un buffer di caratteri in cui restituire la stringa di connessione del risultato della ricerca (vedere "argomento *OutConnectionString* " in "comments").  
   
  Se *OutConnectionString* è null, *StringLength2Ptr* restituirà comunque il numero totale di caratteri, escluso il carattere di terminazione null per i dati di tipo carattere, disponibile per restituire nel buffer a cui punta *OutConnectionString*.  
   
@@ -86,7 +86,7 @@ SQLRETURN SQLBrowseConnect(
 |08004|Il server ha rifiutato la connessione|L'origine dati ha rifiutato la creazione della connessione per motivi definiti dall'implementazione.|  
 |08S01|Errore collegamento comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato effettuato il tentativo di connessione del driver non è riuscito prima dell'elaborazione della funzione.|  
 |28000|Specifica di autorizzazione non valida|L'identificatore utente o la stringa di autorizzazione o entrambi, come specificato nella stringa di connessione della richiesta Browse (*InConnectionString*), hanno violato le restrizioni definite dall'origine dati.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer *\* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|(DM) Gestione driver non è in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.<br /><br /> Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY008|Operation canceled|Un'operazione asincrona è stata annullata chiamando la [funzione SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md). Quindi, la funzione originale è stata chiamata nuovamente in *connectionHandle*.<br /><br /> Un'operazione è stata annullata chiamando **SQLCancelHandle** su *connectionHandle* da un thread diverso in un'applicazione multithread.|  
 |HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per *connectionHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.|  
@@ -113,7 +113,7 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="inconnectionstring-argument"></a>Argomento InConnectionString  
  Una stringa di connessione per la richiesta browse presenta la sintassi seguente:  
   
- *Connection-String* :: = *attribute*[ `;` ] &#124; *attribute* `;` *stringa di connessione*dell'attributo;<br>
+ *Connection-String* :: = *attribute*[ `;` ] &#124;  `;` *stringa di connessione* dell'attributo;<br>
  *attribute::* = Attribute *-keyword*- `=` *valore* &#124; `DRIVER=` [ `{` ]*attributo-valore*[ `}` ]<br>
  *attribute-keyword* :: = `DSN` &#124; `UID` &#124; `PWD` &#124; il *driver-defined-attribute-keyword*<br>
  *attribute-value* :: = *stringa di caratteri*<br>
@@ -128,7 +128,7 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="outconnectionstring-argument"></a>Argomento OutConnectionString  
  La stringa di connessione per il risultato della ricerca è un elenco di attributi di connessione. Un attributo Connection è costituito da una parola chiave Attribute e da un valore di attributo corrispondente. La stringa di connessione del risultato browse presenta la sintassi seguente:  
   
- *Connection-String* :: = *attribute*[ `;` ] &#124; *attribute* `;` *stringa di connessione* dell'attributo<br>
+ *Connection-String* :: = *attribute*[ `;` ] &#124;  `;` *stringa di connessione* dell'attributo<br>
  *attribute::* = [ `*` ] attributo *-parola chiave* `=` *-valore*<br>
  *attribute-keyword* :: = *ODBC-attribute-keyword* &#124; *driver-defined-attribute-keyword*<br>
  *ODBC-attribute-keyword* = { `UID` &#124; `PWD` } [ `:` *identificatore localizzato*] *driver-defined-attribute-keyword* :: = *Identifier*[ `:` *localizzated-Identifier*] *attribute-value* :: = `{` *Attribute-Value-List* `}` &#124; `?` (le parentesi graffe sono valore letterale, vengono restituite dal driver).<br>
@@ -142,11 +142,11 @@ SQLRETURN SQLBrowseConnect(
   
 -   Le parole chiave degli attributi **UID** e **pwd** hanno lo stesso significato definito in **SQLDriverConnect**.  
   
--   Una *parola chiave attribute-defined definisce* il tipo di attributo per il quale è possibile fornire un valore di attributo. Ad esempio, potrebbe essere **Server**, **database**, **host**o **DBMS**.  
+-   Una *parola chiave attribute-defined definisce* il tipo di attributo per il quale è possibile fornire un valore di attributo. Ad esempio, potrebbe essere **Server**, **database**, **host** o **DBMS**.  
   
--   *ODBC-attribute-Keywords* e *driver-defined-attribute-* Keywords includono una versione localizzata o intuitiva della parola chiave. Questa operazione può essere utilizzata dalle applicazioni come etichetta in una finestra di dialogo. Tuttavia, quando si passa una stringa della richiesta browse al driver, è necessario usare **UID**, **pwd**o l' *identificatore* da solo.  
+-   *ODBC-attribute-Keywords* e *driver-defined-attribute-* Keywords includono una versione localizzata o intuitiva della parola chiave. Questa operazione può essere utilizzata dalle applicazioni come etichetta in una finestra di dialogo. Tuttavia, quando si passa una stringa della richiesta browse al driver, è necessario usare **UID**, **pwd** o l' *identificatore* da solo.  
   
--   {*Attribute-Value-List*} è un'enumerazione di valori effettivi validi per la *parola chiave attribute*corrispondente. Si noti che le parentesi graffe ( {} ) non indicano un elenco di opzioni, ma vengono restituite dal driver. Ad esempio, potrebbe trattarsi di un elenco di nomi di server o di un elenco di nomi di database.  
+-   {*Attribute-Value-List*} è un'enumerazione di valori effettivi validi per la *parola chiave attribute* corrispondente. Si noti che le parentesi graffe ( {} ) non indicano un elenco di opzioni, ma vengono restituite dal driver. Ad esempio, potrebbe trattarsi di un elenco di nomi di server o di un elenco di nomi di database.  
   
 -   Se il *valore dell'attributo* è un punto interrogativo singolo (?), un singolo valore corrisponde alla *parola chiave attribute*. Ad esempio, UID = JohnS; PWD = sesamo.  
   

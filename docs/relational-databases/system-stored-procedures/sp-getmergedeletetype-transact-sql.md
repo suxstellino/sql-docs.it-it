@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_getmergedeletetype
 - sp_getmergedeletetype_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d2a254a81bdd4b1a4d7718e8960ced22666b5705
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 816815f36511cb64f52ec5a48f20c04121fe67bb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538924"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183153"
 ---
 # <a name="sp_getmergedeletetype-transact-sql"></a>sp_getmergedeletetype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,17 +40,17 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
 ## <a name="arguments"></a>Argomenti  
 `[ @source_object = ] 'source_object'` Nome dell'oggetto di origine. *source_object* è di **tipo nvarchar (386)** e non prevede alcun valore predefinito.  
   
-`[ @rowguid = ] 'rowguid'` Identificatore di riga per il tipo di eliminazione. *rowguid* è di tipo **uniqueidentifier**e non prevede alcun valore predefinito.  
+`[ @rowguid = ] 'rowguid'` Identificatore di riga per il tipo di eliminazione. *rowguid* è di tipo **uniqueidentifier** e non prevede alcun valore predefinito.  
   
-`[ @delete_type = ] delete_type OUTPUT` Codice che indica il tipo di eliminazione. *delete_type* è di **tipo int**e non prevede alcun valore predefinito. *delete_type* è anche un parametro di output. i possibili valori sono i seguenti.  
+`[ @delete_type = ] delete_type OUTPUT` Codice che indica il tipo di eliminazione. *delete_type* è di **tipo int** e non prevede alcun valore predefinito. *delete_type* è anche un parametro di output. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Eliminazione eseguita dall'utente|  
 |**5**|Eliminazione parziale|  
 |**6**|Eliminazione eseguita dal sistema|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_getmergedeletetype** viene utilizzata nella replica di tipo merge.  
   
 ## <a name="permissions"></a>Autorizzazioni  

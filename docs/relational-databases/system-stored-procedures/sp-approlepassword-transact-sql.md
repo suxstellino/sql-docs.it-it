@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_approlepassword
 - sp_approlepassword_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7967dc0b-bee2-4c63-b8e9-1c3ce2f5db2a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: db286dbd3fd0c38f6316939fd274db415d9856a2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9e2b2f109ca1e5abe94db0d4aa491c16b95cc713
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89528956"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203222"
 ---
 # <a name="sp_approlepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @rolename = ] 'role'` Nome del ruolo applicazione. *Role* è di **tipo sysname**e non prevede alcun valore predefinito. il *ruolo* deve esistere nel database corrente.  
+`[ @rolename = ] 'role'` Nome del ruolo applicazione. *Role* è di **tipo sysname** e non prevede alcun valore predefinito. il *ruolo* deve esistere nel database corrente.  
   
-`[ @newpwd = ] 'password'` Nuova password per il ruolo applicazione. *password* è di **tipo sysname**e non prevede alcun valore predefinito. la *password* non può essere null.  
+`[ @newpwd = ] 'password'` Nuova password per il ruolo applicazione. *password* è di **tipo sysname** e non prevede alcun valore predefinito. la *password* non può essere null.  
   
 > [!IMPORTANT]  
 >  Non utilizzare una password NULL. Usare una password complessa. Per altre informazioni, vedere [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
@@ -53,7 +53,7 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Impossibile eseguire **sp_approlepassword** in una transazione definita dall'utente.  
   
 ## <a name="permissions"></a>Autorizzazioni  

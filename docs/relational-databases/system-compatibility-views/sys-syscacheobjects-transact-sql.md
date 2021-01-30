@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.syscacheobjects_TSQL
 - sys.syscacheobjects
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 4b33b97a5b3753d63e1df4759d26970cf6359ee2
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 4e3374c67917f3468bb9b31d73acd47544d07405
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097809"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180719"
 ---
 # <a name="syssyscacheobjects-transact-sql"></a>sys.syscacheobjects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "98097809"
 |-----------------|---------------|-----------------|  
 |**bucketid**|**int**|ID bucket. I valori sono compresi tra 0 e le dimensioni della directory -1. Le dimensioni della directory corrispondono a quelle della tabella hash.|  
 |**cacheobjtype**|**nvarchar(17)**|Tipo di oggetto nella cache:<br /><br /> Piano compilato<br /><br /> Piano eseguibile<br /><br /> Albero di analisi<br /><br /> Cursore<br /><br /> Stored procedure estesa|  
-|**objtype**|**nvarchar(8)**|Tipo di oggetto:<br /><br /> Stored procedure<br /><br /> Istruzione preparata<br /><br /> Query ad hoc ( [!INCLUDE[tsql](../../includes/tsql-md.md)] inviate come eventi di linguaggio dalle utilità **SQLCMD** o **osql** , anziché da chiamate a procedure remote)<br /><br /> ReplProc (procedura della replica)<br /><br /> Trigger<br /><br /> Visualizza<br /><br /> Predefinito<br /><br /> Tabella utente<br /><br /> Tabella di sistema<br /><br /> Controllo<br /><br /> Regola|  
+|**objtype**|**nvarchar(8)**|Tipo di oggetto:<br /><br /> Stored procedure<br /><br /> Istruzione preparata<br /><br /> Query ad hoc ( [!INCLUDE[tsql](../../includes/tsql-md.md)] inviate come eventi di linguaggio dalle utilità **SQLCMD** o **osql** , anziché da chiamate a procedure remote)<br /><br /> ReplProc (procedura della replica)<br /><br /> Trigger<br /><br /> Visualizzazione<br /><br /> Predefinito<br /><br /> Tabella utente<br /><br /> Tabella di sistema<br /><br /> Controllo<br /><br /> Regola|  
 |**objid**|**int**|Una delle chiavi principali utilizzate per la ricerca di un oggetto nella cache. Si tratta dell'ID oggetto archiviato in **sysobjects** per gli oggetti di database (procedure, viste, trigger e così via). Per gli oggetti della cache come SQL ad hoc o preparata, **objid** è un valore generato internamente.|  
 |**dbid**|**smallint**|ID del database in cui è stato compilato l'oggetto della cache.|  
 |**dbidexec**|**smallint**|ID del database da cui viene eseguita la query.<br /><br /> Per la maggior parte degli oggetti, **dbidexec** ha lo stesso valore di **dbid**.<br /><br /> Per le viste di sistema, **dbidexec** è l'ID del database da cui viene eseguita la query.<br /><br /> Per le query ad hoc, **dbidexec** è 0. Questo significa che **dbidexec** ha lo stesso valore di **dbid**.|  

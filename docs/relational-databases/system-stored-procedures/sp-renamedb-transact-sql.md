@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_renamedb
 - sp_renamedb_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 85ded9c74077436ccf94c33350b4193726819068
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5b2e0ceff1889df17d1ab5ca62c6819c41679374
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538570"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179202"
 ---
 # <a name="sp_renamedb-transact-sql"></a>sp_renamedb (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,9 +43,9 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @dbname = ] 'old_name'` Nome corrente del database. *old_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @dbname = ] 'old_name'` Nome corrente del database. *old_name* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @newname = ] 'new_name'` Nuovo nome del database. *new_name* necessario attenersi alle regole per gli identificatori. *new_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @newname = ] 'new_name'` Nuovo nome del database. *new_name* necessario attenersi alle regole per gli identificatori. *new_name* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o un numero diverso da zero (esito negativo)  
@@ -53,7 +53,7 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza ai ruoli predefiniti del server **sysadmin** o **dbcreator** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene creato il database `Accounting` e quindi il nome viene modificato in `Financial`. Viene quindi eseguita una query sulla vista del catalogo `sys.databases` per verificare il nuovo nome del database.  
   
 ```  
