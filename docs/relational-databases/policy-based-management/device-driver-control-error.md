@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7101d77a-84ca-4c00-af1c-17679234e9fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2631fc0d816766c175be0254b24fd47dd2a20e46
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: 4ee0b7b6ee2bbc792ab737e443813234a167d204
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475623"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076999"
 ---
 # <a name="device-driver-control-error"></a>Errore di verifica driver dispositivo
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,8 +27,8 @@ ms.locfileid: "88475623"
 ## <a name="best-practices-recommendations"></a>Procedure consigliate  
  Per ulteriori informazioni sulla risoluzione di questo errore, esaminare gli articoli seguenti della Microsoft Knowledge Base:  
   
--   [Articolo 259237 della Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?linkid=117746)  
+-   [Articolo 259237 della Microsoft Knowledge Base](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/259237)  
   
--   [Articolo 154690 della Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?linkid=117747)  
+-   [Articolo 154690 della Microsoft Knowledge Base](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/154690)  
   
   

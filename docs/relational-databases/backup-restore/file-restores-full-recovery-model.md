@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 69ad35549678772fc0da1c834ba4064beeb19ed7
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
-ms.translationtype: HT
+ms.openlocfilehash: fd5fa04b32d9c00f810b61bbca81963e21bd5697
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125610"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076879"
 ---
 # <a name="file-restores-full-recovery-model"></a>Ripristini di file (modello di recupero con registrazione completa)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "96125610"
   
      In un *ripristino di file offline*, i file o i filegroup danneggiati vengono ripristinati mentre il database è offline. Al termine della sequenza di ripristino, il database torna online.  
   
-     Tutte le edizioni di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supportano il ripristino di file offline.  
+     Tutte le edizioni di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] supportano il ripristino di file offline.  
   
 -   Ripristino di file online  
   

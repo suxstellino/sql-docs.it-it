@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 57c864996d15886eb69ef7caf0f000349b238b9c
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
-ms.translationtype: HT
+ms.openlocfilehash: e66f271830e686af36b450e27db2b5c98ad41244
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96130582"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075943"
 ---
 # <a name="back-up-a-transaction-log"></a>Eseguire il backup di un log delle transazioni
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  In questo argomento viene descritto come eseguire il backup di un log delle transazioni in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell.  
+  In questo argomento viene descritto come eseguire il backup di un log delle transazioni in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell.  
 
 ## <a name="before-you-begin"></a>Prima di iniziare
 ### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8aecf4b22cf02ae91d259f45daff1d2cd8414f97
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: c283a2aad1cc9380dc1363c86f847ae4027174be
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534690"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075883"
 ---
 # <a name="run-transact-sql-statements-using-secure-enclaves"></a>Eseguire istruzioni Transact-SQL con enclave sicure
 
@@ -67,7 +67,7 @@ L'ambiente deve soddisfare i requisiti seguenti per supportare l'esecuzione di i
 - È necessario ottenere un URL di attestazione dall'ambiente dall'amministratore del servizio di attestazione.
 
   - Se si usa [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] e il servizio Sorveglianza host (HGS), vedere [Determinare e condividere l'URL di attestazione HGS](always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
-  - Se si usa [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] e il servizio Attestazione di Microsoft Azure, vedere [Determinare l'URL di attestazione per i criteri di attestazione](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy).
+  - Se si usa [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] e il servizio Attestazione di Microsoft Azure, vedere [Determinare l'URL di attestazione per i criteri di attestazione](/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sql-server-ver15#secure-enclave-attestation).
 
 - Se ci si connette al database usando l'applicazione, è necessario usare un driver client che supporti Always Encrypted con enclave sicure. L'applicazione deve connettersi al database con la funzionalità Always Encrypted abilitata per la connessione al database e il protocollo di attestazione e l'URL di attestazione configurati correttamente. Per informazioni dettagliate, vedere [Sviluppare applicazioni usando Always Encrypted con enclave sicure](always-encrypted-enclaves-client-development.md).
 - Se si usa SQL Server Management Studio (SSMS) o Azure SQL Data Studio, è necessario abilitare Always Encrypted e configurare il protocollo di attestazione e l'URL di attestazione durante la connessione al database. Per altre informazioni, vedere le sezioni seguenti.

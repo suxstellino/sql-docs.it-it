@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c8b658fc2589ad0c39173ac206036b8274acc858
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: deb83a831430dd6ad57bf50eca26b9e30c49f22c
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774136"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076213"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>Sottoscrivere una categoria di criteri o annullarne la sottoscrizione per un database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Questo argomento illustra come sottoscrivere una categoria di criteri o annullarne la sottoscrizione per un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Questo argomento illustra come sottoscrivere una categoria di criteri o annullarne la sottoscrizione per un database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Contenuto dell'articolo**  
   
@@ -47,11 +47,11 @@ ms.locfileid: "85774136"
   
 #### <a name="to-subscribe-or-unsubscribe-a-database-to-a-policy-category"></a>Per sottoscrivere una categoria di criteri o annullarne la sottoscrizione per un database  
   
-1.  In **Esplora oggetti**fare clic sul segno più per espandere il server contenente il database in cui si desidera gestire le sottoscrizioni di categorie.  
+1.  In **Esplora oggetti** fare clic sul segno più per espandere il server contenente il database in cui si desidera gestire le sottoscrizioni di categorie.  
   
 2.  Fare clic sul segno più per espandere la cartella **Database** .  
   
-3.  Fare clic con il pulsante destro del mouse sul database dove si desidera gestire sottoscrizioni di categorie, scegliere **Criteri**e selezionare **Categorie**.  
+3.  Fare clic con il pulsante destro del mouse sul database dove si desidera gestire sottoscrizioni di categorie, scegliere **Criteri** e selezionare **Categorie**.  
   
      Nella finestra di dialogo **Categorie** sono disponibili le opzioni seguenti:  
   
@@ -84,7 +84,7 @@ ms.locfileid: "85774136"
   
 #### <a name="to-subscribe-a-database-to-a-policy-category"></a>Per sottoscrivere una categoria di criteri per un database  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "85774136"
   
 #### <a name="to-unsubscribe-a-database-to-a-policy-category"></a>Per annullare la sottoscrizione di una categoria di criteri per un database  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

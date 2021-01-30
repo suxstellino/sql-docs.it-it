@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3ca4b241b3f1224eeee37ca11b34b1345151c6d6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: HT
+ms.openlocfilehash: 4ef84f22bf255b8dcb21ba371de5c3045da3ca6b
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898037"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076749"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Definizione e modifica di un filtro di join tra articoli di merge
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  In questo argomento viene descritto come definire e modificare un filtro di join tra articoli di merge in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La replica di tipo merge supporta i filtri di join, solitamente utilizzati in combinazione con filtri con parametri per estendere il partizionamento della tabella ad altri articoli correlati.  
+  In questo argomento viene descritto come definire e modificare un filtro di join tra articoli di merge in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La replica di tipo merge supporta i filtri di join, solitamente utilizzati in combinazione con filtri con parametri per estendere il partizionamento della tabella ad altri articoli correlati.  
   
  **Contenuto dell'articolo**  
   
@@ -60,11 +60,11 @@ ms.locfileid: "85898037"
   
 1.  Nella pagina **Filtro righe tabella** della Creazione guidata nuova pubblicazione o nella pagina **Filtro righe** di **Proprietà pubblicazione - \<Publication>** selezionare un filtro di riga o un filtro di join esistente nel riquadro **Tabelle filtrate**.  
   
-2.  Fare clic su **Aggiungi**e quindi su **Aggiungi join per estendere il filtro selezionato**.  
+2.  Fare clic su **Aggiungi** e quindi su **Aggiungi join per estendere il filtro selezionato**.  
   
 3.  Creare l'istruzione per il join. Selezionare **Per compilare l'istruzione verrà utilizzato il generatore** o **L'istruzione per il join verrà scritta manualmente**.  
   
-    -   Se si sceglie di utilizzare il generatore, utilizzare le colonne della griglia, ovvero**Congiunzione**, **Colonna tabella filtrata**, **Operatore**e **Colonna tabella unita in join**, per compilare un'istruzione per il join.  
+    -   Se si sceglie di utilizzare il generatore, utilizzare le colonne della griglia, ovvero **Congiunzione**, **Colonna tabella filtrata**, **Operatore** e **Colonna tabella unita in join**, per compilare un'istruzione per il join.  
   
          In tutte le colonne della griglia è disponibile una casella combinata a discesa, che consente di selezionare due colonne e un operatore, ovvero **=** , **<>** , **<=** , **\<**, **>=** , **>** e **like**. I risultati vengono visualizzati nell'area di testo **Anteprima** . Se il join è associato a più di due colonne, selezionare una congiunzione (AND oppure OR) dalla colonna **Congiunzione** e quindi immettere altre due colonne e un operatore.  
   

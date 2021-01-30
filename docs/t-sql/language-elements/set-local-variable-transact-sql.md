@@ -19,12 +19,12 @@ ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: caf0fcb2a9b00c8f391280395629348f055d4039
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
-ms.translationtype: HT
+ms.openlocfilehash: e3b9f365940dfe2b9e8544bf32391458e567e6d5
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100955"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99077129"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -184,7 +184,7 @@ Per altre informazioni, vedere [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-s
   
 È possibile usare l'operatore di assegnazione composta in tutti i casi in cui è presente un'assegnazione con un'espressione a destra dell'operatore, incluse le variabili e un'istruzione SET in un'istruzione UPDATE, SELECT o RECEIVE.  
   
-Non usare una variabile in un'istruzione SELECT per concatenare valori, ovvero per calcolare valori aggregati. Si potrebbero verificare risultati di query imprevisti. Non necessariamente, infatti, tutte le espressioni nell'elenco SELECT, incluse le assegnazioni, vengono eseguite esattamente una volta per ogni riga di output. Per altre informazioni, vedere [questo articolo della Knowledge Base](https://support.microsoft.com/kb/287515).  
+Non usare una variabile in un'istruzione SELECT per concatenare valori, ovvero per calcolare valori aggregati. Si potrebbero verificare risultati di query imprevisti. Non necessariamente, infatti, tutte le espressioni nell'elenco SELECT, incluse le assegnazioni, vengono eseguite esattamente una volta per ogni riga di output. Per altre informazioni, vedere [questo articolo della Knowledge Base](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/287515).  
   
 ## <a name="permissions"></a>Autorizzazioni  
 È richiesta l'appartenenza al ruolo public. Tutti gli utenti possono usare SET **@** _local_variable_.  

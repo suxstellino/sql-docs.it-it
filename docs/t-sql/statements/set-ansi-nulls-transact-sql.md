@@ -26,17 +26,17 @@ ms.assetid: aae263ef-a3c7-4dae-80c2-cc901e48c755
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current || azuresqldb-current'
-ms.openlocfilehash: c2d152ce66276575de5fb299cda2e54ab0c37a43
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
-ms.translationtype: HT
+ms.openlocfilehash: c69d86c513ffe75933889ad2c51e2c6ae981d235
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102338"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076503"
 ---
 # <a name="set-ansi_nulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Specifica il comportamento conforme allo standard ISO degli operatori di confronto Uguale a (=) e Diverso da (<>) quando vengono usati con valori Null in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+Specifica il comportamento conforme allo standard ISO degli operatori di confronto Uguale a (=) e Diverso da (<>) quando vengono usati con valori Null in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 

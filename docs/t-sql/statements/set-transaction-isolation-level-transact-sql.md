@@ -28,12 +28,12 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0310498564525293dba5dde525c24d4ffd620aad
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
-ms.translationtype: HT
+ms.openlocfilehash: 888458c724bcf9bb9e880472ca45ce6dae311f04
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98080291"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076143"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -164,12 +164,12 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 |Livello di isolamento|Accesso Transact-SQL|Accesso al file system|  
 |---------------------|-------------------------|------------------------|  
-|Read Uncommitted|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|Non supportato|  
-|Read Committed|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
-|Repeatable Read|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|Non supportato|  
-|Serializable|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|Non supportato|  
-|Snapshot Read Committed|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
-|Snapshot|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
+|Read Uncommitted|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|Non supportato|  
+|Read Committed|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|  
+|Repeatable Read|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|Non supportato|  
+|Serializable|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|Non supportato|  
+|Snapshot Read Committed|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|  
+|Snapshot|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene impostato il livello `TRANSACTION ISOLATION LEVEL` per la sessione. Per ogni istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] successiva, tutti i blocchi condivisi verranno mantenuti attivi da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fino alla fine della transazione.  

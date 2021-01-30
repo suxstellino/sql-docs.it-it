@@ -28,17 +28,17 @@ helpviewer_keywords:
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: d1bb72ca6736a49874050043b84a961928aed370
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
-ms.translationtype: HT
+ms.openlocfilehash: d50c141e5c0d7c941ff08c82f9e3ff980ac9920f
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093488"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075853"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Crea una funzione nel database corrente che esegue il mapping delle righe di una tabella o di un indice in partizioni in base ai valori della colonna specificata. L'utilizzo di CREATE PARTITION FUNCTION rappresenta il primo passaggio per la creazione di una tabella o di un indice partizionato. In una tabella o indice di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] possono essere presenti al massimo 15.000 partizioni.  
+  Crea una funzione nel database corrente che esegue il mapping delle righe di una tabella o di un indice in partizioni in base ai valori della colonna specificata. L'utilizzo di CREATE PARTITION FUNCTION rappresenta il primo passaggio per la creazione di una tabella o di un indice partizionato. In una tabella o indice di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] possono essere presenti al massimo 15.000 partizioni.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

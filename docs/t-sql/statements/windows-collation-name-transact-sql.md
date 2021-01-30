@@ -19,12 +19,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e89cac604654a1793a65bdd43dcd38cf77484b06
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
-ms.translationtype: HT
+ms.openlocfilehash: b52ecbd0ab18d30168d03ff6cf377c9f30659c0c
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099384"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076133"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows_collation_name (Transact-SQL)
 
@@ -134,7 +134,7 @@ Per elencare le regole di confronto di Windows supportate dall'istanza di [!INCL
 SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 ```
 
-Nella tabella seguente vengono elencate tutte le regole di confronto di Windows supportate in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Nella tabella seguente vengono elencate tutte le regole di confronto di Windows supportate in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].
 
 |Impostazioni locali di Windows|Regole di confronto versione 100|Regole di confronto 90|
 |--------------------|---------------------------|--------------------------|

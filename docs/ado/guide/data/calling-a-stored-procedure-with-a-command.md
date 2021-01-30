@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac6f8388e3f07bf93e00f1d24aa3a782237ca0e5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5c66c4bdd347aaa8d01ab80d3a11ae67ce683b47
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991582"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075863"
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>Chiamata di una stored procedure con Command
 È possibile usare un comando per chiamare un stored procedure. L'esempio di codice alla fine di questo argomento si riferisce a un stored procedure nel database di esempio Northwind, denominato CustOrdersOrders, che è definito nel modo seguente.  
@@ -35,7 +35,7 @@ ORDER BY OrderID
   
  Per ulteriori informazioni su come definire e chiamare stored procedure, vedere la documentazione SQL Server.  
   
- Questa stored procedure è simile al comando utilizzato nei [parametri dell'oggetto comando](./command-object-parameters.md). Accetta un parametro ID cliente e restituisce informazioni sugli ordini del cliente. Nell'esempio di codice seguente viene utilizzato questo stored procedure come origine per un **Recordset**ADO.  
+ Questa stored procedure è simile al comando utilizzato nei [parametri dell'oggetto comando](./command-object-parameters.md). Accetta un parametro ID cliente e restituisce informazioni sugli ordini del cliente. Nell'esempio di codice seguente viene utilizzato questo stored procedure come origine per un **Recordset** ADO.  
   
  L'utilizzo della stored procedure consente di accedere a un'altra funzionalità di ADO: il metodo di **aggiornamento** della raccolta **Parameters** . Utilizzando questo metodo, ADO è in grado di inserire automaticamente tutte le informazioni sui parametri richiesti dal comando in fase di esecuzione. L'utilizzo di questa tecnica comporta una riduzione delle prestazioni, in quanto ADO deve eseguire una query sull'origine dati per ottenere informazioni sui parametri.  
   
@@ -134,4 +134,4 @@ End Function
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Articolo della Knowledge base 117500](https://go.microsoft.com/fwlink/?LinkId=117500)
+ [Articolo della Knowledge base 117500](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/185125)

@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: daff2b55669f1922425c2976340e5ee46f964dc5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: cc7660d1990f556ae3ccfb8d34d66519dd2ecd76
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423455"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076779"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Creazione di una pubblicazione da un database Oracle
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  In questo argomento viene descritto come creare una pubblicazione da un database Oracle in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+  In questo argomento viene descritto come creare una pubblicazione da un database Oracle in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **Contenuto dell'articolo**  
   
@@ -72,7 +72,7 @@ ms.locfileid: "88423455"
   
      L'opzione **Completa** è progettata per offrire pubblicazioni snapshot e transazionali con il set completo di caratteristiche supportate per la pubblicazione Oracle. L'opzione **Gateway** consente l'ottimizzazione della progettazione specifica per migliorare le prestazioni per i casi in cui la replica funge da gateway tra i sistemi. Non è possibile utilizzare l'opzione **Gateway** se si intende pubblicare la stessa tabella in più pubblicazioni transazionali. Se si seleziona **Gateway**, una tabella può essere presente al massimo in una pubblicazione transazionale e in un numero qualsiasi di pubblicazioni snapshot.  
   
-7.  Fare clic su **Connetti**per creare una connessione al server di pubblicazione Oracle e configurarla per la replica. La finestra di dialogo **Connetti al server** verrà chiusa e verrà visualizzata di nuovo la finestra di dialogo **Proprietà database di distribuzione - \<Distributor>** .  
+7.  Fare clic su **Connetti** per creare una connessione al server di pubblicazione Oracle e configurarla per la replica. La finestra di dialogo **Connetti al server** verrà chiusa e verrà visualizzata di nuovo la finestra di dialogo **Proprietà database di distribuzione - \<Distributor>** .  
   
     > [!NOTE]  
     >  Se si verificano problemi con la configurazione di rete, a questo punto verrà visualizzato un errore. Se si verificano problemi durante la connessione al database Oracle, vedere la sezione relativa all'impossibilità di connessione del server di distribuzione SQL Server all'istanza del database Oracle in [Troubleshooting Oracle Publishers](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).  
@@ -87,7 +87,7 @@ ms.locfileid: "88423455"
   
 3.  Fare clic con il pulsante destro del mouse sulla cartella **Pubblicazioni locali** e scegliere **Nuova pubblicazione Oracle**.  
   
-4.  Nella pagina **Server di pubblicazione Oracle** della Creazione guidata nuova pubblicazione selezionare il server di pubblicazione Oracle. Se il server di pubblicazione Oracle non è disponibile, fare clic su **Aggiungi server di pubblicazione Oracle**per visualizzare i passaggi della procedura precedente.  
+4.  Nella pagina **Server di pubblicazione Oracle** della Creazione guidata nuova pubblicazione selezionare il server di pubblicazione Oracle. Se il server di pubblicazione Oracle non è disponibile, fare clic su **Aggiungi server di pubblicazione Oracle** per visualizzare i passaggi della procedura precedente.  
   
 5.  Nella pagina **Tipo di pubblicazione** selezionare **Pubblicazione snapshot** o **Pubblicazione transazionale**.  
   

@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cecd24ccf5aba44beff0a258ee75cf26722358f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 36c15a9d7de2c613b3a25b16827bfcc037393524
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773903"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076223"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Creazione di una sottoscrizione per un Sottoscrittore non SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  In questo argomento viene descritto come creare una sottoscrizione per un Sottoscrittore non SQL Server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La replica transazionale e la replica snapshot supportano la pubblicazione di dati su sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per informazioni sulle piattaforme di Sottoscrittori supportate, vedere [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+  In questo argomento viene descritto come creare una sottoscrizione per un Sottoscrittore non SQL Server in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La replica transazionale e la replica snapshot supportano la pubblicazione di dati su sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per informazioni sulle piattaforme di Sottoscrittori supportate, vedere [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
  **Contenuto dell'articolo**  
   
@@ -102,11 +102,11 @@ ms.locfileid: "85773903"
   
 9. Nella finestra di dialogo **Sicurezza agente di distribuzione** :  
   
-    -   Nei campi **Account processo**, **Password**e **Conferma password** , inserire l'account e la password di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con cui deve essere eseguito l'agente di distribuzione e stabilire le connessioni locali al server di distribuzione.  
+    -   Nei campi **Account processo**, **Password** e **Conferma password** , inserire l'account e la password di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con cui deve essere eseguito l'agente di distribuzione e stabilire le connessioni locali al server di distribuzione.  
   
          L'account richiede le autorizzazioni minime seguenti: membro del ruolo predefinito **db_owner** del database di distribuzione, membro dell'elenco di accesso alla pubblicazione, autorizzazione di lettura sulla condivisione snapshot e autorizzazione di lettura sulla directory di installazione del provider OLE DB. Per altre informazioni sull'elenco di acceso alla pubblicazione, vedere [Proteggere il server di pubblicazione](../../relational-databases/replication/security/secure-the-publisher.md).  
   
-    -   Nei campi **Nome account di accesso**, **Password**e **Conferma password**di **Connessione al Sottoscrittore** , inserire il nome account di accesso e la password da utilizzare per la connessione al Sottoscrittore. Questo nome account di accesso dovrebbe essere già configurato ed avere autorizzazioni sufficienti per la creazione di oggetti nel database di sottoscrizione.  
+    -   Nei campi **Nome account di accesso**, **Password** e **Conferma password** di **Connessione al Sottoscrittore** , inserire il nome account di accesso e la password da utilizzare per la connessione al Sottoscrittore. Questo nome account di accesso dovrebbe essere già configurato ed avere autorizzazioni sufficienti per la creazione di oggetti nel database di sottoscrizione.  
   
     -   Nel campo **Opzioni di connessione aggiuntive** , specificare le eventuali opzioni di connessione per il Sottoscrittore nel formato di stringa di connessione (Oracle non richiede opzioni aggiuntive). Le opzioni devono essere separate dal punto e virgola. L'esempio seguente illustra una stringa di connessione DB2 (le interruzioni di riga sono inserite per agevolare la lettura):  
   

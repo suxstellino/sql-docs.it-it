@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 481493a50fdefc22f6eb4d77feb13cfc4848388d
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: 78c1769be6c0b54f290f90f2dee90dba5a409d99
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534650"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075803"
 ---
 # <a name="configure-and-use-always-encrypted-with-secure-enclaves"></a>Configurare e usare Always Encrypted con enclave sicuri 
 
@@ -46,9 +46,9 @@ Per informazioni dettagliate, vedere gli articoli seguenti:
 ### <a name="set-up-the-secure-enclave-and-attestation-in-sssdsfull"></a>Configurare l'enclave sicura e l'attestazione in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]
 
 Per informazioni dettagliate, vedere gli articoli seguenti:
-- [Pianificare le enclave e l'attestazione di Intel SGX in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]](/azure/azure-sql/database/always-encrypted-enclaves-sqldbmi-plan)
-- [Abilitare Intel SGX per il database SQL di Azure](/azure/azure-sql/database/always-encrypted-enclaves-sqldbmi-enable-sgx)
-- [Configurare l'attestazione di Azure per il server logico del database SQL di Azure](/azure/azure-sql/database/always-encrypted-enclaves-sqldbmi-configure-attestation)
+- [Pianificare le enclave e l'attestazione di Intel SGX in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]](/azure/azure-sql/database/always-encrypted-enclaves-plan)
+- [Abilitare Intel SGX per il database SQL di Azure](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx)
+- [Configurare l'attestazione di Azure per il server logico del database SQL di Azure](/azure/azure-sql/database/always-encrypted-enclaves-configure-attestation)
 
 ## <a name="manage-keys-for-always-encrypted-with-secure-enclaves"></a>Gestire le chiavi per Always Encrypted con enclave sicuri
 Per informazioni dettagliate, vedere gli articoli seguenti:
