@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_msx_defect
 - sp_msx_defect_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a1b5ea1139e0cfc1b27d7b79df29e6c1b1381b4d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2ca7f1d044ddfe0730052ff811e6084d5c070b6d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541545"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174444"
 ---
 # <a name="sp_msx_defect-transact-sql"></a>sp_msx_defect (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_msx_defect [@forced_defection =] forced_defection
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @forced_defection = ] forced_defection` Specifica se forzare o meno l'esclusione se il SQLServerAgent master è stato perduto definitivamente a causa di un database **msdb** danneggiato in modo irreversibile oppure se non è stato eseguito alcun backup del database **msdb** . *forced_defection*è di **bit**e il valore predefinito è **0**, che indica che non deve verificarsi alcuna esclusione forzata. Il valore **1** impone la defezione.  
+`[ @forced_defection = ] forced_defection` Specifica se forzare o meno l'esclusione se il SQLServerAgent master è stato perduto definitivamente a causa di un database **msdb** danneggiato in modo irreversibile oppure se non è stato eseguito alcun backup del database **msdb** . *forced_defection* è di **bit** e il valore predefinito è **0**, che indica che non deve verificarsi alcuna esclusione forzata. Il valore **1** impone la defezione.  
   
  Dopo aver forzato un'esclusione eseguendo **sp_msx_defect**, un membro del ruolo predefinito del server **sysadmin** nel SQLServerAgent master deve eseguire il comando seguente per completare l'esclusione:  
   

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::Update
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb673de86d48143a8869460eeab3377f3c0ec0d2
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 279d0e82bff4d71a2c3b18bbdc7ff88f0b9581a9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988102"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172429"
 ---
 # <a name="update-method"></a>Metodo Update
 Salva le modifiche apportate alla riga corrente di un oggetto [Recordset](./recordset-object-ado.md) o alla raccolta di [campi](./fields-collection-ado.md) di un oggetto [record](./record-object-ado.md) .  
@@ -36,12 +36,12 @@ record.Fields.Update
   
 #### <a name="parameters"></a>Parametri  
  *Fields*  
- Facoltativa. **Variant** che rappresenta un singolo nome o una matrice **Variant** che rappresenta nomi o posizioni ordinali del campo o dei campi che si desidera modificare.  
+ facoltativo. **Variant** che rappresenta un singolo nome o una matrice **Variant** che rappresenta nomi o posizioni ordinali del campo o dei campi che si desidera modificare.  
   
  *Valori*  
- Facoltativa. **Variant** che rappresenta un singolo valore o una matrice **Variant** che rappresenta i valori per il campo o i campi nel nuovo record.  
+ facoltativo. **Variant** che rappresenta un singolo valore o una matrice **Variant** che rappresenta i valori per il campo o i campi nel nuovo record.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ## <a name="recordset"></a>recordset  
  Usare il metodo **Update** per salvare le modifiche apportate al record corrente di un oggetto **Recordset** , a partire dalla chiamata al metodo [AddNew](./addnew-method-ado.md) o dalla modifica dei valori di campo in un record esistente. L'oggetto **Recordset** deve supportare gli aggiornamenti.  
@@ -62,7 +62,7 @@ record.Fields.Update
   
  Il record corrente rimane aggiornato dopo la chiamata al metodo **Update** .  
   
-## <a name="record"></a>Record  
+## <a name="record"></a>Registra  
  Il metodo **Update** finalizza le aggiunte, le eliminazioni e gli aggiornamenti ai campi nella raccolta [Fields](./fields-collection-ado.md) di un oggetto **record** .  
   
  Ad esempio, i campi eliminati con il metodo **Delete** vengono contrassegnati per l'eliminazione immediatamente ma rimangono nella raccolta. È necessario chiamare il metodo **Update** per eliminare effettivamente questi campi dalla raccolta del provider.  

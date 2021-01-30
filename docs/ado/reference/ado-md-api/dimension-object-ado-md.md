@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Dimension
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f034dd2bea6b7b37f69dcff58013263ec9ba5187
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 8a8738c6e5143a8fc23da2c008a01b28db36ee04
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986882"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174279"
 ---
 # <a name="dimension-object-ado-md"></a>Oggetto Dimension (ADO MD)
 Rappresenta una delle dimensioni di un cubo multidimensionale che contiene una o più gerarchie di membri.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Con le raccolte e le proprietà di un oggetto **dimensione** , è possibile eseguire le operazioni seguenti:  
   
 -   Identificare la **dimensione** con le proprietà [Name](./name-property-ado-md.md) e [UniqueName](./uniquename-property-ado-md.md) .  
@@ -39,7 +39,7 @@ Rappresenta una delle dimensioni di un cubo multidimensionale che contiene una o
   
  La raccolta **Properties** contiene proprietà fornite dal provider. Nella tabella seguente sono elencate le proprietà che potrebbero essere disponibili. L'elenco di proprietà effettivo può variare a seconda dell'implementazione del provider. Per un elenco più completo delle proprietà disponibili, vedere la documentazione relativa al provider.  
   
-|Name|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |CatalogName|Nome del catalogo a cui appartiene il cubo.|  
 |CubeName|Nome del cubo.|  

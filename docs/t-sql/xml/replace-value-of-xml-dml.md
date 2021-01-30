@@ -6,7 +6,7 @@ ms.date: 07/26/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7efecb0dbecf4ae7e4d9d142eb6f3bff3f94d616
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
-ms.translationtype: HT
+ms.openlocfilehash: 6882fa93bb1d4837f909bc00f74fdf9e83e7c5c4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116543"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174385"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ with Expression2
 Identifica un nodo di cui è necessario aggiornare il valore. Deve identificare solo un singolo nodo, ovvero *Expression1* deve essere un singleton statico. Se l'istanza XML è tipizzata, il nodo deve essere di tipo semplice. Quando vengono selezionati più nodi, viene generato un errore. Se *Expression1* restituisce una sequenza vuota, non viene eseguita alcuna sostituzione di valori e non vengono restituiti errori. *Expression1* deve restituire un singolo elemento con contenuto di tipo semplice (tipo elenco o atomico), un nodo di testo o un nodo di attributo. *Expression1* non può essere un tipo unione, un tipo complesso, un'istruzione di elaborazione, un nodo di documento o un nodo di commento. In caso contrario verrà restituito un errore.  
   
 *Expression2*  
-Identifica il nuovo valore del nodo. Può essere un'espressione che restituisce un nodo di tipo semplice, perché **data()** verrà usato in modo implicito. Se il valore è un elenco di valori, l'istruzione **update** sostituisce il valore precedente con l'elenco. In caso di modifica di un'istanza XML tipizzata, *Expression2* deve essere dello stesso tipo o sottotipo di *Expression*1. In caso contrario, viene restituito un errore. In caso di modifica di un'istanza XML non tipizzata, *Expression2* deve essere un'espressione che è possibile atomizzare. In caso contrario, viene restituito un errore.  
+Identifica il nuovo valore del nodo. Può essere un'espressione che restituisce un nodo di tipo semplice, perché **data()** verrà usato in modo implicito. Se il valore è un elenco di valori, l'istruzione **update** sostituisce il valore precedente con l'elenco. In caso di modifica di un'istanza XML tipizzata, *Expression2* deve essere dello stesso tipo o sottotipo di *Expression* 1. In caso contrario, viene restituito un errore. In caso di modifica di un'istanza XML non tipizzata, *Expression2* deve essere un'espressione che è possibile atomizzare. In caso contrario, viene restituito un errore.  
   
 ## <a name="examples"></a>Esempi  
 Negli esempi seguenti di istruzione XML DML **replace value of** viene illustrata la modalità di aggiornamento dei nodi in un documento XML.  

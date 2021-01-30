@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - CubeDef
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: de22ce013d94b1830ba220c318c06bbe716423bd
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: bae255b0de860a1caee016d5e8867c7fb9b3ffee
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987022"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174317"
 ---
 # <a name="cubedef-object-ado-md"></a>Oggetto CubeDef (ADO MD)
 Rappresenta un cubo da uno schema multidimensionale, contenente un set di dimensioni correlate.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Con le raccolte e le proprietà di un oggetto **CubeDef** , è possibile eseguire le operazioni seguenti:  
   
 -   Identificare un **CubeDef** con la proprietà [Name](./name-property-ado-md.md) .  
@@ -39,7 +39,7 @@ Rappresenta un cubo da uno schema multidimensionale, contenente un set di dimens
   
  La raccolta **Properties** contiene proprietà fornite dal provider. Nella tabella seguente sono elencate le proprietà che potrebbero essere disponibili. L'elenco di proprietà effettivo può variare a seconda dell'implementazione del provider. Per un elenco più completo delle proprietà disponibili, vedere la documentazione relativa al provider.  
   
-|Name|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |CatalogName|Nome del catalogo a cui appartiene il cubo.|  
 |CreatedOn|Data e ora di creazione del cubo.|  

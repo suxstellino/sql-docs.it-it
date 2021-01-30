@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_check_TSQL
 - sp_check_subset_filter
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f019cfa61e58cecd64f86c41a2863034c6f4817c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6d311670fca8b5514057bd122980e8647566240e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543647"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174538"
 ---
 # <a name="sp_check_subset_filter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,7 +49,7 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
   
 `[ @subset_filterclause = ] 'subset_filterclause'` Clausola di filtro sottoposta a test. *subset_filterclause* è di **tipo nvarchar (1000)** e non prevede alcun valore predefinito.  
   
-`[ @has_dynamic_filters = ] has_dynamic_filters` Indica se la clausola di filtro è un filtro di riga con parametri. *has_dynamic_filters* è di **bit**e il valore predefinito è null ed è un parametro di output. Restituisce un valore pari a **1** quando la clausola di filtro è un filtro di riga con parametri.  
+`[ @has_dynamic_filters = ] has_dynamic_filters` Indica se la clausola di filtro è un filtro di riga con parametri. *has_dynamic_filters* è di **bit** e il valore predefinito è null ed è un parametro di output. Restituisce un valore pari a **1** quando la clausola di filtro è un filtro di riga con parametri.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -64,7 +64,7 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_check_subset_filter** viene utilizzata nella replica di tipo merge.  
   
  **sp_check_subset_filter** possono essere eseguite su qualsiasi tabella anche se la tabella non è pubblicata. Questa stored procedure può essere utilizzata per verificare una clausola di filtro prima di definire un articolo filtrato.  

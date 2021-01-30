@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_columns_ex
 - sp_columns_ex_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9ea62e350628099685b372362a3d6d075a90367b
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.openlocfilehash: 6696187b8f2b85b8a7ed179bfe406490e2c650aa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364836"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174484"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +64,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nome del qualificatore della tabella o della vista. Vari prodotti DBMS supportano la denominazione in tre parti per le tabelle ( _qualificatore_**.** _proprietario_**.** _nome_ ). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella. Questo campo può essere NULL.|  
+|**TABLE_CAT**|**sysname**|Nome del qualificatore della tabella o della vista. Vari prodotti DBMS supportano la denominazione in tre parti per le tabelle (_qualificatore_**.** _proprietario_**.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella. Questo campo può essere NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nome del proprietario della tabella o della vista. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome dell'utente del database che ha creato la tabella. Questo campo restituisce sempre un valore.|  
 |**TABLE_NAME**|**sysname**|Nome della tabella o della vista. Questo campo restituisce sempre un valore.|  
 |**COLUMN_NAME**|**sysname**|Nome della colonna, per ogni colonna della **table_name** restituita. Questo campo restituisce sempre un valore.|  
@@ -87,7 +87,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
  Per ulteriori informazioni, vedere la documentazione di Microsoft ODBC.  
   
 ## <a name="remarks"></a>Commenti  
-- **sp_columns_ex** viene eseguita eseguendo una query sul set di righe delle colonne dell'interfaccia **IDBSchemaRowset** del provider OLE DB corrispondente a *table_server*. I parametri *table_name* , *TABLE_SCHEMA* , *TABLE_CATALOG* e *Column* vengono passati a questa interfaccia per limitare le righe restituite.  
+- **sp_columns_ex** viene eseguita eseguendo una query sul set di righe delle colonne dell'interfaccia **IDBSchemaRowset** del provider OLE DB corrispondente a *table_server*. I parametri *table_name*, *TABLE_SCHEMA*, *TABLE_CATALOG* e *Column* vengono passati a questa interfaccia per limitare le righe restituite.  
   
 - **sp_columns_ex** restituisce un set di risultati vuoto se il provider di OLE DB del server collegato specificato non supporta il set di righe COLUMNS dell'interfaccia **IDBSchemaRowset** .  
   
@@ -96,7 +96,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene restituito il tipo di dati della colonna `JobTitle` della tabella `HumanResources.Employee` inclusa nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] disponibile nel server collegato `Seattle1`.  
   
 ```  
