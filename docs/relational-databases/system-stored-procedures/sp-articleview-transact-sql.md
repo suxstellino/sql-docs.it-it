@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_articleview
 - sp_articleview_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e2d0efe52bb7f187ebfc981008610be81bc9528e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 014ccf37727534d16fa5b16bc280da5b76dfb76e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89528759"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203195"
 ---
 # <a name="sp_articleview-transact-sql"></a>sp_articleview (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,17 +47,17 @@ sp_articleview [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` Nome della pubblicazione contenente l'articolo. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione contenente l'articolo. *Publication* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @article = ] 'article'` Nome dell'articolo. *article* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @article = ] 'article'` Nome dell'articolo. *article* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 `[ @view_name = ] 'view_name'` Nome della vista che definisce l'articolo pubblicato. *view_name* è di **tipo nvarchar (386)** e il valore predefinito è null.  
   
-`[ @filter_clause = ] 'filter_clause'` Clausola di restrizione (WHERE) che definisce un filtro orizzontale. Quando si specifica la clausola di restrizione, omettere la parola chiave WHERE. *filter_clause* è di tipo **ntext**e il valore predefinito è null.  
+`[ @filter_clause = ] 'filter_clause'` Clausola di restrizione (WHERE) che definisce un filtro orizzontale. Quando si specifica la clausola di restrizione, omettere la parola chiave WHERE. *filter_clause* è di tipo **ntext** e il valore predefinito è null.  
   
-`[ @change_active = ] change_active` Consente di modificare le colonne delle pubblicazioni con sottoscrizioni. *change_active* è di **tipo int**e il valore predefinito è **0**. Se è **0**, le colonne non vengono modificate. Se è **1**, le visualizzazioni possono essere create o ricreate in articoli attivi con sottoscrizioni.  
+`[ @change_active = ] change_active` Consente di modificare le colonne delle pubblicazioni con sottoscrizioni. *change_active* è di **tipo int** e il valore predefinito è **0**. Se è **0**, le colonne non vengono modificate. Se è **1**, le visualizzazioni possono essere create o ricreate in articoli attivi con sottoscrizioni.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Conferma che l'azione eseguita da questo stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è di **bit**e il valore predefinito è **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Conferma che l'azione eseguita da questo stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è di **bit** e il valore predefinito è **0**.  
   
  **0** specifica che le modifiche apportate all'articolo non invalidano lo snapshot. Se la stored procedure rileva che la modifica richiede un nuovo snapshot, viene generato un errore e non viene apportata alcuna modifica.  
   
@@ -69,12 +69,12 @@ sp_articleview [ @publication = ] 'publication'
   
  **1** specifica che le modifiche apportate all'articolo provocano la reinizializzazione della sottoscrizione esistente e consente la reinizializzazione della sottoscrizione.  
   
-`[ @publisher = ] 'publisher'` Specifica un server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'` Specifica un server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname** e il valore predefinito è null.  
   
 > [!NOTE]  
 >  il *Server* di pubblicazione non deve essere utilizzato per la pubblicazione da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
-`[ @refreshsynctranprocs = ] refreshsynctranprocs` Indica se le stored procedure utilizzate per sincronizzare la replica vengono ricreate automaticamente. *refreshsynctranprocs* è di **bit**e il valore predefinito è 1.  
+`[ @refreshsynctranprocs = ] refreshsynctranprocs` Indica se le stored procedure utilizzate per sincronizzare la replica vengono ricreate automaticamente. *refreshsynctranprocs* è di **bit** e il valore predefinito è 1.  
   
  **1** indica che le stored procedure vengono ricreate.  
   
@@ -85,18 +85,18 @@ sp_articleview [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_articleview** crea la vista che definisce l'articolo pubblicato e inserisce l'ID di questa visualizzazione nella colonna **sync_objid** della tabella [sysarticles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md) e inserisce il testo della clausola di restrizione nella colonna **filter_clause** . Se tutte le colonne vengono replicate e non è presente alcun **filter_clause**, il **sync_objid** nella tabella [sysarticles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md) viene impostato sull'ID della tabella di base e l'utilizzo di **sp_articleview** non è obbligatorio.  
   
  Per pubblicare una tabella filtrata verticalmente, ovvero per filtrare le colonne, eseguire prima **sp_addarticle** senza *sync_object* parametro, eseguire [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) una volta per ogni colonna da replicare (definendo il filtro verticale), quindi eseguire **sp_articleview** per creare la vista che definisce l'articolo pubblicato.  
   
- Per pubblicare una tabella filtrata orizzontalmente, ovvero per filtrare le righe, eseguire [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) senza parametro *Filter* . Eseguire [sp_articlefilter &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md), fornendo tutti i parametri, inclusi *filter_clause*. Eseguire quindi **sp_articleview**, specificando tutti i parametri, incluso il *filter_clause*identico.  
+ Per pubblicare una tabella filtrata orizzontalmente, ovvero per filtrare le righe, eseguire [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) senza parametro *Filter* . Eseguire [sp_articlefilter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md), fornendo tutti i parametri, inclusi *filter_clause*. Eseguire quindi **sp_articleview**, specificando tutti i parametri, incluso il *filter_clause* identico.  
   
- Per pubblicare una tabella filtrata verticalmente e orizzontalmente, eseguire [sp_addarticle &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) senza *sync_object* o parametri di *filtro* . Eseguire [sp_articlecolumn &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) una volta per ogni colonna da replicare, quindi eseguire sp_articlefilter &#40;&#41;e **sp_articleview** [Transact-SQL](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) .  
+ Per pubblicare una tabella filtrata verticalmente e orizzontalmente, eseguire [sp_addarticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) senza *sync_object* o parametri di *filtro* . Eseguire [sp_articlecolumn &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) una volta per ogni colonna da replicare, quindi eseguire sp_articlefilter &#40;&#41;e **sp_articleview** [Transact-SQL](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) .  
   
- Se l'articolo dispone già di una vista che definisce l'articolo pubblicato, **sp_articleview** Elimina la vista esistente e ne crea una nuova automaticamente. Se la vista è stata creata manualmente (**digitare** in [sysarticles &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/sysarticles-transact-sql.md) è **5**), la vista esistente non viene eliminata.  
+ Se l'articolo dispone già di una vista che definisce l'articolo pubblicato, **sp_articleview** Elimina la vista esistente e ne crea una nuova automaticamente. Se la vista è stata creata manualmente (**digitare** in [sysarticles &#40;&#41;Transact-SQL](../../relational-databases/system-tables/sysarticles-transact-sql.md) è **5**), la vista esistente non viene eliminata.  
   
- Se si crea un filtro personalizzato stored procedure e una vista che definisce l'articolo pubblicato manualmente, non eseguire **sp_articleview**. Specificare invece questi parametri come *filtro* e *sync_object* parametri per [SP_ADDARTICLE &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), insieme al valore del *tipo* appropriato.  
+ Se si crea un filtro personalizzato stored procedure e una vista che definisce l'articolo pubblicato manualmente, non eseguire **sp_articleview**. Specificare invece questi parametri come *filtro* e *sync_object* parametri per [SP_ADDARTICLE &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), insieme al valore del *tipo* appropriato.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articleview-transact-_1.sql)]  

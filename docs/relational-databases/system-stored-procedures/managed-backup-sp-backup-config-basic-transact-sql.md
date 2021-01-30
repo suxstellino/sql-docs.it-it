@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_backup_config_basic_TSQL
 - sp_backup_config_basic
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 428dff3f22b5a924f7a208a988334c14ece752a3
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: 0ef304af8088ee35aeb19022f5d7f6cf539f554d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753735"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193602"
 ---
 # <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -66,7 +66,7 @@ EXEC managed_backup.sp_backup_config_basic
  Nome delle credenziali SQL usate per l'autenticazione nell'account di archiviazione di Azure. @credentail_name è di **tipo sysname**. Quando specificato, il backup viene archiviato in un BLOB di pagine. Se questo parametro è NULL, il backup verrà archiviato come BLOB in blocchi. Il backup nel BLOB di pagine è deprecato, quindi è preferibile usare la nuova funzionalità di backup dei BLOB in blocchi. Quando utilizzato per modificare la configurazione di [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], questo parametro è facoltativo. Se non è specificato, vengono conservati i valori di configurazione esistenti.  
   
 > [!WARNING]
->  Il parametro ** \@ credential_name** non è supportato in questo momento. È supportato solo il backup in un BLOB in blocchi, che richiede che il parametro sia NULL.  
+>  Il parametro **\@ credential_name** non è supportato in questo momento. È supportato solo il backup in un BLOB in blocchi, che richiede che il parametro sia NULL.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -76,7 +76,7 @@ EXEC managed_backup.sp_backup_config_basic
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **db_backupoperator** database, con autorizzazioni **ALTER ANY CREDENTIAL** e autorizzazioni **Execute** per **sp_delete_backuphistory** stored procedure.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  È possibile creare il contenitore dell'account di archiviazione e l'URL della firma di accesso condiviso usando i comandi di Azure PowerShell più recenti. Nell'esempio seguente viene creato un nuovo contenitore, contenitore, nell'account di archiviazione mystorageaccount, quindi viene ottenuto un URL di firma di accesso condiviso con autorizzazioni complete.  
   
 ```powershell  

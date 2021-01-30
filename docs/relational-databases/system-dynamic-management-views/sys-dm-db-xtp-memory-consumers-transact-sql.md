@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_db_xtp_memory_consumers
 - dm_db_xtp_memory_consumers
@@ -21,12 +21,12 @@ ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b27a5202f20e6ced2ad73734688702cfbb7e7a2
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 28968656d3efbb5a9cc658168944b75e93350d44
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099891"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193621"
 ---
 # <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "98099891"
 |memory_consumer_address|**varbinary**|Indirizzo interno del consumer. Solo per uso interno.|  
 |xtp_object_id|**bigint**|ID oggetto OLTP in memoria che corrisponde alla tabella ottimizzata per la memoria.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Nell'output gli allocatori a livello di database fanno riferimento a tabelle utente, indici e tabelle di sistema. VARHEAP con object_id = NULL indica la memoria allocata alle tabelle con colonne a lunghezza variabile.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -68,7 +68,7 @@ ms.locfileid: "98099891"
  Quando una tabella ottimizzata per la memoria dispone di un indice columnstore, il sistema usa alcune tabelle interne che utilizzano una certa quantità di memoria per tenere traccia dei dati per l'indice columnstore. Per informazioni dettagliate su queste tabelle interne e query di esempio che mostrano il consumo di memoria, vedere [sys.memory_optimized_tables_internal_attributes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
   
 ```  
 -- memory consumers (database level)  

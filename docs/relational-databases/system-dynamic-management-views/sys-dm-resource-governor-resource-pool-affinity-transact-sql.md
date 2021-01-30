@@ -6,7 +6,7 @@ ms.date: 08/09/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_resource_governor_resource_pool_affinity_TSQL
 - sys.dm_resource_governor_resource_pool_affinity
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a197ec19-a2ba-44f5-a4f2-3eee33ebd77d
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: d5fa2993e4ae716f72ad93bc388c466e69f00da3
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c0929d8f06a4b3262d78ea42a035cbd01b654c54
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097545"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203360"
 ---
 # <a name="sysdm_resource_governor_resource_pool_affinity-transact-sql"></a>sys.dm_resource_governor_resource_pool_affinity (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "98097545"
 |Processor_group|**smallint**|ID del gruppo di processori logici Windows. Non ammette i valori Null.|  
 |Scheduler_mask|**bigint**|Maschera binaria che rappresenta le utilità di pianificazione associate a questo pool. Non ammette i valori Null.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  I pool creati con un'affinità equivalente ad AUTO non saranno visualizzati in questa vista perché non presentano affinità. Per ulteriori informazioni, vedere le istruzioni per la creazione di un [pool di risorse &#40;&#41;Transact-SQL ](../../t-sql/statements/create-resource-pool-transact-sql.md) e il [pool di risorse alter Resource &#40;transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md) .  
   
 ## <a name="see-also"></a>Vedere anche  

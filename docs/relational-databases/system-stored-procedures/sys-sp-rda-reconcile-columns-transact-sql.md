@@ -1,12 +1,12 @@
 ---
-title: sys. sp_rda_reconcile_columns (Transact-SQL) | Microsoft Docs
-description: Informazioni su sys. sp_rda_reconcile_columns. Usare questa stored procedure per riconciliare le colonne nelle tabelle di Azure remote e le tabelle SQL Server abilitate per l'estensione.
+title: sys.sp_rda_reconcile_columns (Transact-SQL) | Microsoft Docs
+description: Informazioni sulle sys.sp_rda_reconcile_columns. Usare questa stored procedure per riconciliare le colonne nelle tabelle di Azure remote e le tabelle SQL Server abilitate per l'estensione.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: stored-procedures
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_rda_reconcile_columns
 - sys.sp_rda_reconcile_columns_TSQL
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1788e373c8bab330182df9338e447946cda87bd3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8eb33cbb1fd2975d96a727f6a7fde457c9827cc8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538445"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211782"
 ---
-# <a name="syssp_rda_reconcile_columns-transact-sql"></a>sys. sp_rda_reconcile_columns (Transact-SQL)
+# <a name="syssp_rda_reconcile_columns-transact-sql"></a>sys.sp_rda_reconcile_columns (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Consente di riconciliare le colonne della tabella remota di Azure con le colonne nella tabella SQL Server abilitata per l'estensione.  
@@ -45,7 +45,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- \@objname ='* \@ ObjName*'  
+ \@objname ='*\@ ObjName*'  
  Nome della tabella SQL Server abilitata per l'estensione.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
@@ -54,7 +54,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede autorizzazioni db_owner.  
    
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se sono presenti colonne nella tabella di Azure remota che non esistono più nella tabella SQL Server con estensione abilitata, queste colonne aggiuntive non impediscono a Stretch Database di funzionare normalmente. È possibile rimuovere le colonne aggiuntive manualmente.  
   
 ## <a name="example"></a>Esempio  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_repldone
 - sp_repldone_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a8e32127986fb67a28abfa2433caefc044ed1b2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4889616070df4a42150272e0c9cd17aee941b063
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538584"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203145"
 ---
 # <a name="sp_repldone-transact-sql"></a>sp_repldone (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,16 +48,16 @@ sp_repldone [ @xactid= ] xactid
   
 `[ @xact_seqno = ] xact_seqno` LSN dell'ultimo record per l'ultima transazione distribuita del server. *xact_seqno* è **binario (10)** e non prevede alcun valore predefinito.  
   
-`[ @numtrans = ] numtrans` Numero di transazioni distribuite. *numtrans* è di **tipo int**e non prevede alcun valore predefinito.  
+`[ @numtrans = ] numtrans` Numero di transazioni distribuite. *numtrans* è di **tipo int** e non prevede alcun valore predefinito.  
   
-`[ @time = ] time` Numero di millisecondi, se specificato, necessario per distribuire l'ultimo batch di transazioni. *Time* è di **tipo int**e non prevede alcun valore predefinito.  
+`[ @time = ] time` Numero di millisecondi, se specificato, necessario per distribuire l'ultimo batch di transazioni. *Time* è di **tipo int** e non prevede alcun valore predefinito.  
   
-`[ @reset = ] reset` Stato di reimpostazione. *Reset* è di **tipo int**e non prevede alcun valore predefinito. Se è **1**, tutte le transazioni replicate nel log vengono contrassegnate come distribuite. Se è **0**, il log delle transazioni viene reimpostato sulla prima transazione replicata e nessuna transazione replicata viene contrassegnata come distribuita. *Reset* è valido solo quando *xactid* e *xact_seqno* sono null.  
+`[ @reset = ] reset` Stato di reimpostazione. *Reset* è di **tipo int** e non prevede alcun valore predefinito. Se è **1**, tutte le transazioni replicate nel log vengono contrassegnate come distribuite. Se è **0**, il log delle transazioni viene reimpostato sulla prima transazione replicata e nessuna transazione replicata viene contrassegnata come distribuita. *Reset* è valido solo quando *xactid* e *xact_seqno* sono null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_repldone** viene utilizzata nella replica transazionale.  
   
  **sp_repldone** viene utilizzato dal processo di lettura log per tenere traccia delle transazioni distribuite.  
@@ -69,7 +69,7 @@ sp_repldone [ @xactid= ] xactid
 ## <a name="permissions"></a>Autorizzazioni  
  I membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_repldone**.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Quando *xactid* è null, *xact_seqno* è null e *Reset* è **1**, tutte le transazioni replicate nel log vengono contrassegnate come distribuite. Ciò risulta utile quando nel log delle transazioni sono presenti transazioni replicate non più valide e si desidera troncare il log, ad esempio:  
   
 ```sql

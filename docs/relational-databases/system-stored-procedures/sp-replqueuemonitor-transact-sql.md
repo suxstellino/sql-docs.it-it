@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replqueuemonitor
 - sp_replqueuemonitor_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: db91c3bef035398fa98d8eeb88f68bbd1c5cf09a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8fa6635b4f31692e5f45e848043e44496e2d702f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534929"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211667"
 ---
 # <a name="sp_replqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,17 +42,17 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è null. Il server deve essere configurato per la pubblicazione. Il valore NULL indica tutti i server di pubblicazione.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname** e il valore predefinito è null. Il server deve essere configurato per la pubblicazione. Il valore NULL indica tutti i server di pubblicazione.  
   
-`[ @publisherdb = ] 'publisher_db' ]` Nome del database di pubblicazione. *publisher_db* è di **tipo sysname**e il valore predefinito è null. che indica tutti i database di pubblicazione.  
+`[ @publisherdb = ] 'publisher_db' ]` Nome del database di pubblicazione. *publisher_db* è di **tipo sysname** e il valore predefinito è null. che indica tutti i database di pubblicazione.  
   
-`[ @publication = ] 'publication' ]` Nome della pubblicazione. *Publication*è di **tipo sysname**e il valore predefinito è null. che indica tutte le pubblicazioni.  
+`[ @publication = ] 'publication' ]` Nome della pubblicazione. *Publication* è di **tipo sysname** e il valore predefinito è null. che indica tutte le pubblicazioni.  
   
-`[ @tranid = ] 'tranid' ]` ID della transazione. *tranid*è di **tipo sysname**e il valore predefinito è null. che indica tutte le transazioni.  
+`[ @tranid = ] 'tranid' ]` ID della transazione. *tranid* è di **tipo sysname** e il valore predefinito è null. che indica tutte le transazioni.  
   
 `[ @queuetype = ] 'queuetype' ]` Tipo di coda in cui vengono archiviate le transazioni. *QueueType* è di **tinyint** e il valore predefinito è **0**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Tutti i tipi di coda|  
 |**1**|accodamento messaggi|  
@@ -61,7 +61,7 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_replqueuemonitor** viene utilizzata per la replica snapshot o transazionale con sottoscrizioni ad aggiornamento in coda. I messaggi in coda che non includono comandi SQL o che fanno parte di un comando SQL esteso non vengono visualizzati.  
   
 ## <a name="permissions"></a>Autorizzazioni  

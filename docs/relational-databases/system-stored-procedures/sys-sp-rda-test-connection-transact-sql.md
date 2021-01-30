@@ -1,12 +1,12 @@
 ---
-title: sys. sp_rda_test_connection (Transact-SQL) | Microsoft Docs
-description: Informazioni su come usare sys. sp_rda_test_connection per testare la connessione da SQL Server al server Azure remoto e segnala problemi che possono impedire la migrazione dei dati.
+title: sys.sp_rda_test_connection (Transact-SQL) | Microsoft Docs
+description: Informazioni su come usare sys.sp_rda_test_connection per testare la connessione da SQL Server al server Azure remoto e segnala problemi che possono impedire la migrazione dei dati.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: stored-procedures
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_rda_test_connection
 - sys.sp_rda_test_connection_TSQL
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 031e3abe622a4a15fa9656e65bce80b5eaf27365
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e584604a0229e3e2e0c213b70d8fd4bca0321c2b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540404"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211720"
 ---
-# <a name="syssp_rda_test_connection-transact-sql"></a>sys. sp_rda_test_connection (Transact-SQL)
+# <a name="syssp_rda_test_connection-transact-sql"></a>sys.sp_rda_test_connection (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Verifica la connessione da SQL Server al server Azure remoto e segnala problemi che possono impedire la migrazione dei dati.  
@@ -49,9 +49,9 @@ EXECUTE sys.sp_rda_test_connection
  @server_address = N'*azure_server_fully_qualified_address*'  
  Indirizzo completo del server Azure.  
   
--   Se si specifica un valore per ** \@ database_name**, ma il database specificato non è abilitato per l'estensione, è necessario specificare un valore per ** \@ server_address**.  
+-   Se si specifica un valore per **\@ database_name**, ma il database specificato non è abilitato per l'estensione, è necessario specificare un valore per **\@ server_address**.  
   
--   Se si specifica un valore per ** \@ database_name**e il database specificato è abilitato per l'estensione, non è necessario specificare un valore per ** \@ server_address**. Se si specifica un valore per ** \@ server_address**, il stored procedure lo ignora e usa il server di Azure esistente già associato al database abilitato per l'estensione.  
+-   Se si specifica un valore per **\@ database_name** e il database specificato è abilitato per l'estensione, non è necessario specificare un valore per **\@ server_address**. Se si specifica un valore per **\@ server_address**, il stored procedure lo ignora e usa il server di Azure esistente già associato al database abilitato per l'estensione.  
   
  @azure_username = N'*azure_username*  
  Nome utente del server Azure remoto.  
@@ -79,7 +79,7 @@ EXECUTE sys.sp_rda_test_connection
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede autorizzazioni db_owner.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
   
 ### <a name="check-the-connection-from-sql-server-to-the-remote-azure-server"></a>Controllare la connessione dal SQL Server al server Azure remoto  
   

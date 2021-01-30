@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_clr_properties
 - sys.dm_clr_properties_TSQL
@@ -21,12 +21,12 @@ ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34dfbfbecf82df79520fc5a530bcb8c18c544c77
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c23c8d624a9670cdb309d43f645831b5e09fab5a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095277"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212094"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "98095277"
   
  Lo **stato di CLR arrestato** viene visualizzato solo quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in corso l'arresto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Le proprietà e i valori di questa visualizzazione potrebbero cambiare in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a causa dei miglioramenti della funzionalità di integrazione con CLR.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -77,7 +77,7 @@ ms.locfileid: "98095277"
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in pool elastici, il `Server admin` o un `Azure Active Directory admin` account è obbligatorio. Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.   
 
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  L'esempio seguente recupera informazioni relative al CLR hosted:  
   
 ```  

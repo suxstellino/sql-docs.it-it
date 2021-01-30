@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SQLCancelHandle
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3f466f63d6da9aa9a96b9e929ea2b59a3e43491d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 727f9c15809969560410cfa54bdf9b70ec765f53
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448851"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181039"
 ---
 # <a name="sqlcancelhandle-function"></a>Funzione SQLCancelHandle
 **Conformità**  
@@ -60,9 +60,9 @@ SQLRETURN SQLCancelHandle(
 |SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) nell'argomento buffer * \* MessageText* descrive l'errore e la relativa origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) nell'argomento buffer *\* MessageText* descrive l'errore e la relativa origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
-|HY010|Errore sequenza funzione|È stata chiamata una funzione in esecuzione asincrona, correlata all'istruzione per uno degli handle di istruzione associati all' *handle*e *HandleType* è stato impostato su SQL_HANDLE_DBC. La funzione asincrona era ancora in esecuzione quando è stato chiamato **SQLCancelHandle** .<br /><br /> (DM) l'argomento *HandleType* è stato SQL_HANDLE_STMT; una funzione in esecuzione asincrona è stata chiamata sull'handle di connessione associato; e la funzione era ancora in esecuzione quando questa funzione è stata chiamata.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per uno degli handle di istruzione associati all' *handle* e *HandleType* è stato impostato su SQL_HANDLE_DBC e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.<br /><br /> **SQLBrowseConnect** è stato chiamato per *connectionHandle*e ha restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima del completamento del processo di esplorazione.|  
+|HY010|Errore sequenza funzione|È stata chiamata una funzione in esecuzione asincrona, correlata all'istruzione per uno degli handle di istruzione associati all' *handle* e *HandleType* è stato impostato su SQL_HANDLE_DBC. La funzione asincrona era ancora in esecuzione quando è stato chiamato **SQLCancelHandle** .<br /><br /> (DM) l'argomento *HandleType* è stato SQL_HANDLE_STMT; una funzione in esecuzione asincrona è stata chiamata sull'handle di connessione associato; e la funzione era ancora in esecuzione quando questa funzione è stata chiamata.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect** o **SQLMoreResults** è stato chiamato per uno degli handle di istruzione associati all' *handle* e *HandleType* è stato impostato su SQL_HANDLE_DBC e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.<br /><br /> **SQLBrowseConnect** è stato chiamato per *connectionHandle* e ha restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima del completamento del processo di esplorazione.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
 |HY092|Identificatore di attributo/opzione non valido|*HandleType* è stato impostato su SQL_HANDLE_ENV o SQL_HANDLE_DESC.|  
 |HY117|Connessione sospesa a causa di uno stato di transazione sconosciuto. Sono consentite solo le funzioni di disconnessione e di sola lettura.|(DM) per ulteriori informazioni sullo stato Suspended, vedere [funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
@@ -91,7 +91,7 @@ SQLRETURN SQLCancelHandle(
 > [!NOTE]  
 >  Per informazioni sull'utilizzo di **SQLCancelHandle** in un'applicazione che verrà distribuita in un sistema operativo Windows precedente a Windows 7, vedere [Compatibility Matrix](../../../odbc/reference/develop-app/compatibility-matrix.md).  
   
-#### <a name="canceling-connection-related-asynchronous-processing"></a>Annullamento dell'elaborazione asincrona relativa alla connessione  
+#### <a name="canceling-connection-related-asynchronous-processing"></a>Annullamento Connection-Related elaborazione asincrona  
  Se una funzione restituisce SQL_STILL_EXECUTING, un'applicazione può chiamare **SQLCancelHandle** per annullare l'operazione. Se la richiesta di annullamento ha esito positivo, **SQLCancelHandle** restituisce SQL_SUCCESS. Ciò non significa che la funzione originale è stata annullata; indica che la richiesta di annullamento è stata elaborata. Il driver e l'origine dati determinano quando o se l'operazione viene annullata. L'applicazione deve continuare a chiamare la funzione originale fino a quando non viene SQL_STILL_EXECUTING il codice restituito. Se la funzione originale è stata annullata, il codice restituito è SQL_ERROR e SQLSTATE HY008 (operazione annullata). Se la funzione originale ha completato l'elaborazione normale (non è stata annullata), il codice restituito è SQL_SUCCESS o SQL_SUCCESS_WITH_INFO, oppure SQL_ERROR e un valore SQLSTATE diverso da HY008 (operazione annullata), se la funzione originale non è riuscita.  
   
 #### <a name="canceling-functions-executing-on-another-thread"></a>Annullamento di funzioni in esecuzione su un altro thread  

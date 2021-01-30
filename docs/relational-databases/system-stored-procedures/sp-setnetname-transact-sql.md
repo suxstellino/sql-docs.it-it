@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_setnetname
 - sp_setnetname_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 71584754f3b175201623a222feae6722f39809ce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f84120579d3eae3b2755eaab89eff137af6190db
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543071"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193495"
 ---
 # <a name="sp_setnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +42,11 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- ** @server ='** *server* **'**  
- Nome del server remoto specificato nella sintassi di chiamata a stored procedure remote codificata dall'utente. Per usare questo *Server*, è necessario che esista già una riga in **sys. Servers** . *server* è di tipo **sysname**e non prevede alcun valore predefinito.  
+ **@server ='** *server* **'**  
+ Nome del server remoto specificato nella sintassi di chiamata a stored procedure remote codificata dall'utente. Per usare questo *Server*, è necessario che esista già una riga in **sys. Servers** . *server* è di tipo **sysname** e non prevede alcun valore predefinito.  
   
- ** @netname ='** *network_name* **'**  
- Nome di rete del computer a cui vengono effettuate chiamate a stored procedure remote. *network_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+ **@netname ='** *network_name* **'**  
+ Nome di rete del computer a cui vengono effettuate chiamate a stored procedure remote. *network_name* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
  Questo nome deve corrispondere al nome del computer [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows e può includere caratteri non consentiti negli identificatori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -77,7 +77,7 @@ EXEC sp_setnetname 'rpcserv2', 'sqlserv2';
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza ai ruoli predefiniti del server **sysadmin** e **setupadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene illustrata una tipica sequenza di amministrazione utilizzata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire la chiamata a una stored procedure remota.  
   
 ```  

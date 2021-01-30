@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - column_store_segments
 - sys.column_store_segments_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 189a5cca5cfac0cce6437ccc256d461140f3c40b
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 4a4aa951ac82857f16b4866ed581c883ffcda7bb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095609"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203451"
 ---
 # <a name="syscolumn_store_segments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ Restituisce una riga per ogni segmento di colonna in un indice columnstore. È p
 |**null_value**|**bigint**|Valore utilizzato per rappresentare i valori Null.|  
 |**on_disk_size**|**bigint**|Dimensioni del segmento in byte.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 Il tipo di codifica del segmento columnstore viene selezionato da [!INCLUDE[ssde_md](../../includes/ssde_md.md)] con l'obiettivo di raggiungere il costo di archiviazione più basso, analizzando i dati del segmento. Se i dati sono per lo più distinti, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] Usa la codifica basata su valore. Se i dati non sono per lo più distinti, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] Usa la codifica basata su hash. La scelta tra la codifica basata su stringa e quella basata su valori è correlata al tipo di dati archiviati, a seconda che si tratti di dati stringa o binari. Tutte le codifiche sfruttano i vantaggi della codifica di bit e di lunghezza, quando possibile.
  
 ## <a name="permissions"></a>Autorizzazioni  
@@ -59,7 +59,7 @@ Il tipo di codifica del segmento columnstore viene selezionato da [!INCLUDE[ssde
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 ### <a name="the-following-query-returns-information-about-segments-of-a-columnstore-index"></a>Nella query seguente vengono restituite le informazioni sui segmenti di un indice columnstore.  
   

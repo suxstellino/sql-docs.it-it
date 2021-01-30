@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - C data types [ODBC], defined
 - SQL data types [ODBC], defined
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 77ca1ac4b4628880e6f0a87237b347aadb66584d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b2ff95858f654bef654b18105b4fda52c77cca0c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88411487"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212549"
 ---
 # <a name="appendix-d-data-types"></a>Appendice D: Tipi di dati
 ODBC definisce due set di tipi di dati: tipi di dati SQL e tipi di dati C. I tipi di dati SQL indicano il tipo di dati archiviati nell'origine dati. I tipi di dati C indicano il tipo di dati archiviati nei buffer dell'applicazione.  
@@ -49,7 +49,7 @@ ODBC definisce due set di tipi di dati: tipi di dati SQL e tipi di dati C. I tip
   
 -   [Trasferimento dei dati in forma binaria](../../../odbc/reference/appendixes/transferring-data-in-its-binary-form.md)  
   
--   [Linee guida per i tipi di dati intervallo e numerici](../../../odbc/reference/appendixes/guidelines-for-interval-and-numeric-data-types.md)  
+-   [Indicazioni per i tipi di dati intervallo e numerici](../../../odbc/reference/appendixes/guidelines-for-interval-and-numeric-data-types.md)  
   
 -   [Vincoli del calendario gregoriano](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)  
   

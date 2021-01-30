@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLDriverToDataSource
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0de28eb5-8aa9-43e4-a87f-7dbcafe800dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: da885e3be81a7a7de04a58bbb92725317477e80e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2ea0697dcedcf27992e771382b47a4b6713b1535
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461142"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211911"
 ---
 # <a name="sqldrivertodatasource-function"></a>Funzione SQLDriverToDataSource
 **SQLDriverToDataSource** supporta le traduzioni per i driver ODBC. Questa funzione non viene chiamata dalle applicazioni abilitate per ODBC. le applicazioni richiedono la conversione tramite **SQLSetConnectAttr**. Il driver associato al *connectionHandle* specificato in **SQLSETCONNECTATTR** chiama la DLL specificata per eseguire traduzioni di tutti i flussi di dati dal driver all'origine dati. È possibile specificare una DLL di traduzione predefinita nel file di inizializzazione ODBC.  
@@ -97,9 +97,9 @@ BOOL SQLDriverToDataSource(
   
  Se viene specificato lo stesso buffer per *rgbValueIn* e *rgbValueOut*, la conversione dei dati nel buffer verrà eseguita sul posto.  
   
- Anche se *cbValueIn*, *cbValueOutMax*e *pcbValueOut* sono di tipo SDWORD, **SQLDriverToDataSource** non supporta necessariamente puntatori enormi.  
+ Anche se *cbValueIn*, *cbValueOutMax* e *pcbValueOut* sono di tipo SDWORD, **SQLDriverToDataSource** non supporta necessariamente puntatori enormi.  
   
- Se **SQLDriverToDataSource** restituisce false, il troncamento dei dati potrebbe essersi verificato durante la conversione. Se *pcbValueOut* (il numero di byte disponibili per restituire nel buffer di output) è maggiore di *cbValueOutMax* (lunghezza del buffer di output), si è verificato un troncamento. Il driver deve determinare se il troncamento è accettabile o meno. Se non si è verificato il troncamento, **SQLDriverToDataSource** ha restituito false a causa di un altro errore. In entrambi i casi, in *szErrorMsg*viene restituito un messaggio di errore specifico.  
+ Se **SQLDriverToDataSource** restituisce false, il troncamento dei dati potrebbe essersi verificato durante la conversione. Se *pcbValueOut* (il numero di byte disponibili per restituire nel buffer di output) è maggiore di *cbValueOutMax* (lunghezza del buffer di output), si è verificato un troncamento. Il driver deve determinare se il troncamento è accettabile o meno. Se non si è verificato il troncamento, **SQLDriverToDataSource** ha restituito false a causa di un altro errore. In entrambi i casi, in *szErrorMsg* viene restituito un messaggio di errore specifico.  
   
  Per ulteriori informazioni sulla conversione dei dati, vedere [dll di traduzione](../../../odbc/reference/develop-app/translation-dlls.md).  
   
