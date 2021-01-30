@@ -6,7 +6,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_cdc_log_scan_sessions
 - dm_cdc_log_scan_sessions_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 312a0577d6ac2d092b01b34fcdb2aa034d36995d
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: e8f69ed4f8b1ca90bc6de468b4136c6c36687cfc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100070"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99148194"
 ---
 # <a name="change-data-capture---sysdm_cdc_log_scan_sessions"></a>Change Data Capture-sys.dm_cdc_log_scan_sessions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,13 +56,13 @@ ms.locfileid: "98100070"
 |**empty_scan_count**|**int**|Numero di sessioni consecutive che non contengono transazioni di acquisizione dei dati delle modifiche.|  
 |**failed_sessions_count**|**int**|Numero di sessioni non riuscite.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  I valori in questa vista a gestione dinamica vengono reimpostati ogni volta che l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviata.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE per eseguire query sulla vista a gestione dinamica **sys.dm_cdc_log_scan_sessions** . Per ulteriori informazioni sulle autorizzazioni per le viste a gestione dinamica, vedere [funzioni e viste a gestione dinamica &#40;&#41;Transact-SQL ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituite informazioni relative alla sessione più recente.  
   
 ```  
