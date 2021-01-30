@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2a23c3fffb8bfffa1cd9343d36dfd4c12bf5f1f
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: fbc14748b9799b78e8e92a983f8b0f5eb409f1ad
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094969"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201886"
 ---
 # <a name="sysfn_stmt_sql_handle_from_sql_stmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 
@@ -68,12 +68,12 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione **Execute** per il database e l'autorizzazione **Delete** per le viste del catalogo di archivio query.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene eseguita un'istruzione, quindi viene utilizzato `sys.fn_stmt_sql_handle_from_sql_stmt` per restituire l'handle SQL dell'istruzione.  
   
 ```  

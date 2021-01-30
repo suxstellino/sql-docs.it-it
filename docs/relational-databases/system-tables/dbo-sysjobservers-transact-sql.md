@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysjobservers
 - sysjobservers_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 7ac1d8facbabb42be31a9d45e091e1106c25e0c9
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 2aafe81cf4c28c560cf99e34e5bd721f36668a54
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097423"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202331"
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ Archivia l'associazione o la relazione di un determinato processo con uno o più
 |last_run_duration|**int**|Durata di esecuzione del processo, in ore, minuti e secondi. Calcolato mediante la formula: (*ore* \* 10000) + (*minuti* \* 100) + *secondi*.|  
 
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Un valore superiore a *4* indica che l'agente SQL non conosce lo stato del processo. Il *last_run_outcome* viene inizialmente impostato su *5* quando viene creato un processo.
 

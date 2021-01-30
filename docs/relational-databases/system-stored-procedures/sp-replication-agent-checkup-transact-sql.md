@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replication_agent_checkup_TSQL
 - sp_replication_agent_checkup
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5bcd42ae639fad4b50feb6aac829a39abc9a1cad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77dd179aa4024f969d8e27a3d57cdc03374a4497
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485727"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204401"
 ---
 # <a name="sp_replication_agent_checkup-transact-sql"></a>sp_replication_agent_checkup (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,12 +38,12 @@ sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @heartbeat_interval = ] 'heartbeat_interval'` Numero massimo di minuti per cui un agente può passare senza registrare un messaggio di stato. *heartbeat_interval* è di **tipo int**e il valore predefinito è 10 minuti.  
+`[ @heartbeat_interval = ] 'heartbeat_interval'` Numero massimo di minuti per cui un agente può passare senza registrare un messaggio di stato. *heartbeat_interval* è di **tipo int** e il valore predefinito è 10 minuti.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **sp_replication_agent_checkup** genera l'errore 14151 per ogni agente rilevato come sospetto. Registra inoltre nella cronologia un messaggio di errore relativo agli agenti.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_replication_agent_checkup** viene utilizzata per la replica snapshot, la replica transazionale e la replica di tipo merge.  
   
 ## <a name="permissions"></a>Autorizzazioni  

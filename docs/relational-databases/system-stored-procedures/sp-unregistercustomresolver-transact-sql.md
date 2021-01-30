@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_unregistercustomresolver_TSQL
 - sp_unregistercustomresolver
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08bd20c8-c6be-4be2-be9f-2b5e1d7bee43
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 54d4b4ff0b08f0cd5a2a1275c0f1bc65d462137e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1a8bb2c7384312d9782bdb6169d17ace6eae7c6f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547311"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202340"
 ---
 # <a name="sp_unregistercustomresolver-transact-sql"></a>sp_unregistercustomresolver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_unregistercustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_unregistercustomresolver** viene utilizzata nella replica di tipo merge.  
   
  Utilizzare [sp_enumcustomresolvers](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) in qualsiasi server della topologia di replica per restituire l'elenco dei moduli della logica di business o dei resolver com personalizzati registrati disponibili per la topologia.  

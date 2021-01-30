@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_vupgrade_replication_TSQL
 - sp_vupgrade_replication
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 76af37a788db667d1fc7e39976a63d04feb72a29
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7a47e06ee2d762763922974074927ea50e3944e4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547843"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201809"
 ---
 # <a name="sp_vupgrade_replication-transact-sql"></a>sp_vupgrade_replication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,7 +47,7 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 > [!NOTE]  
 >  Questo parametro viene ignorato quando si esegue l'aggiornamento a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive.  
   
-`[ @password = ] 'password'` Password dell'amministratore di sistema da utilizzare per la creazione di nuovi oggetti di sistema nel database di distribuzione. *password* è di **tipo sysname**e il valore predefinito è **''** (stringa vuota). Questo parametro non è obbligatorio se *security_mode* è impostato su **1**, ovvero l'autenticazione di Windows.  
+`[ @password = ] 'password'` Password dell'amministratore di sistema da utilizzare per la creazione di nuovi oggetti di sistema nel database di distribuzione. *password* è di **tipo sysname** e il valore predefinito è **''** (stringa vuota). Questo parametro non è obbligatorio se *security_mode* è impostato su **1**, ovvero l'autenticazione di Windows.  
   
 > [!NOTE]  
 >  Questo parametro viene ignorato quando si esegue l'aggiornamento a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive.  
@@ -66,7 +66,7 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_vupgrade_replication** viene utilizzato per l'aggiornamento di tutti i tipi di replica.  
   
 ## <a name="permissions"></a>Autorizzazioni  

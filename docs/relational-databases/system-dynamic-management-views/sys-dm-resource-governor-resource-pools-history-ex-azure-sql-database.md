@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.resource_governor
 - sys.resource_governor_TSQL
@@ -21,12 +21,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current
-ms.openlocfilehash: 32082b09a5e583e68f2f06794d80d1d3f21b4e76
-ms.sourcegitcommit: 11ca2305a8d7e420daf772eb97861706c9e08e31
+ms.openlocfilehash: 998777c9a6cbe8a4194997210f1938b09f98df3f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97928440"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203289"
 ---
 # <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 
@@ -111,7 +111,7 @@ Gli utenti possono accedere a questa vista a gestione dinamica per monitorare il
 > [!IMPORTANT]
 > La maggior parte dei dati esposti da questa DMV è destinata al consumo interno ed è soggetta a modifiche.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Nell'esempio seguente vengono restituiti i dati di frequenza massima dei log e il consumo a ogni snapshot da parte del pool di utenti  
 

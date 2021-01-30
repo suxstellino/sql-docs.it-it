@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addmergealternatepublisher_TSQL
 - sp_addmergealternatepublisher
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e0589b82f3126819e1638d90c8e67dea7556aafe
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7c0caf60fb3b1323c24924f177ca4d8cdf1105ea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548362"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202357"
 ---
 # <a name="sp_addmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,19 +46,19 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @publisher_db = ] 'publisher_db'` Nome del database di pubblicazione. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` Nome del database di pubblicazione. *publisher_db* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @alternate_publisher = ] 'alternate_synchronization_partner'` Nome del server di pubblicazione alternativo. *alternate_synchronization_partner* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @alternate_publisher = ] 'alternate_synchronization_partner'` Nome del server di pubblicazione alternativo. *alternate_synchronization_partner* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @alternate_publisher_db = ] 'alternate_publisher_db'` Nome del database di pubblicazione nel server di pubblicazione alternativo. *alternate_publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @alternate_publisher_db = ] 'alternate_publisher_db'` Nome del database di pubblicazione nel server di pubblicazione alternativo. *alternate_publisher_db* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @alternate_publication = ] 'alternate_synchronization_partner'` Nome della pubblicazione nel partner di sincronizzazione alternativo. *alternate_synchronization_partner* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @alternate_publication = ] 'alternate_synchronization_partner'` Nome della pubblicazione nel partner di sincronizzazione alternativo. *alternate_synchronization_partner* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @alternate_distributor = ] 'alternate_distributor'` Nome del server di distribuzione per il partner di sincronizzazione alternativo. *alternate_distributor* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @alternate_distributor = ] 'alternate_distributor'` Nome del server di distribuzione per il partner di sincronizzazione alternativo. *alternate_distributor* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 `[ @friendly_name = ] 'friendly_name'` Nome visualizzato in base al quale è possibile identificare l'associazione del server di pubblicazione, della pubblicazione e del server di distribuzione che costituisce un partner di sincronizzazione alternativo. *friendly_name* è di **tipo nvarchar (255)** e il valore predefinito è null.  
   
@@ -67,7 +67,7 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_addmergealternatepublisher** viene utilizzata nella replica di tipo merge.  
   
 ## <a name="permissions"></a>Autorizzazioni  

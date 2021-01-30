@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replmonitorhelpsubscription_TSQL
 - sp_replmonitorhelpsubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dab0e5d4f8f655b0e3140878279a8abca090d262
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 898104516115207bd0cee45bf05f187922c13f6e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543120"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204372"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,15 +45,15 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'` Nome del server di pubblicazione di cui viene monitorato lo stato. *Publisher* è di **tipo sysname**e il valore predefinito è null. Se **null**, vengono restituite informazioni per tutti i server di pubblicazione che utilizzano il server di distribuzione.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione di cui viene monitorato lo stato. *Publisher* è di **tipo sysname** e il valore predefinito è null. Se **null**, vengono restituite informazioni per tutti i server di pubblicazione che utilizzano il server di distribuzione.  
   
-`[ @publisher_db = ] 'publisher_db'` Nome del database pubblicato. *publisher_db* è di **tipo sysname**e il valore predefinito è null. Se NULL, vengono restituite informazioni su tutti i database pubblicati nel server di pubblicazione.  
+`[ @publisher_db = ] 'publisher_db'` Nome del database pubblicato. *publisher_db* è di **tipo sysname** e il valore predefinito è null. Se NULL, vengono restituite informazioni su tutti i database pubblicati nel server di pubblicazione.  
   
-`[ @publication = ] 'publication'` Nome della pubblicazione da monitorare. *Publication* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publication = ] 'publication'` Nome della pubblicazione da monitorare. *Publication* è di **tipo sysname** e il valore predefinito è null.  
   
 `[ @publication_type = ] publication_type` Se il tipo di pubblicazione. *publication_type* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Pubblicazione transazionale.|  
 |**1**|Pubblicazione snapshot.|  
@@ -62,7 +62,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
 `[ @mode = ] mode` Modalità di filtro da utilizzare per la restituzione delle informazioni di monitoraggio delle sottoscrizioni. *mode* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**0** (predefinito)|Restituisce tutte le sottoscrizioni.|  
 |**1**|Restituisce solo le sottoscrizioni con errori.|  
@@ -73,9 +73,9 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**6**|Restituisce solo le sottoscrizioni in fase di sincronizzazione.|  
 |**7**|Restituisce solo le sottoscrizioni che non sono in fase di sincronizzazione.|  
   
-`[ @topnum = ] topnum` Limita il set di risultati solo al numero specificato di sottoscrizioni all'inizio dei dati restituiti. *topnum* è di **tipo int**e non prevede alcun valore predefinito.  
+`[ @topnum = ] topnum` Limita il set di risultati solo al numero specificato di sottoscrizioni all'inizio dei dati restituiti. *topnum* è di **tipo int** e non prevede alcun valore predefinito.  
   
-`[ @exclude_anonymous = ] exclude_anonymous` Indica se le sottoscrizioni pull anonime vengono escluse dal set di risultati. *exclude_anonymous* è di **bit**e il valore predefinito è **0**. il valore **1** indica che le sottoscrizioni anonime vengono escluse e il valore **0** indica che sono incluse.  
+`[ @exclude_anonymous = ] exclude_anonymous` Indica se le sottoscrizioni pull anonime vengono escluse dal set di risultati. *exclude_anonymous* è di **bit** e il valore predefinito è **0**. il valore **1** indica che le sottoscrizioni anonime vengono escluse e il valore **0** indica che sono incluse.  
   
 `[ @refreshpolicy = ] refreshpolicy` Solo per uso interno.  
   
@@ -90,7 +90,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**publisher_db**|**sysname**|Nome del database di pubblicazione.|  
 |**pubblicazione**|**sysname**|Nome di una pubblicazione.|  
 |**publication_type**|**int**|Tipo di pubblicazione. I possibili valori sono i seguenti:<br /><br /> **0** = pubblicazione transazionale<br /><br /> **1** = pubblicazione snapshot<br /><br /> **2** = pubblicazione di tipo merge|  
-|**subtype**|**int**|Tipo di sottoscrizione. I possibili valori sono i seguenti:<br /><br /> **0** = push<br /><br /> **1** = pull<br /><br /> **2** = Anonimo|  
+|**sottotipo**|**int**|Tipo di sottoscrizione. I possibili valori sono i seguenti:<br /><br /> **0** = push<br /><br /> **1** = pull<br /><br /> **2** = Anonimo|  
 |**latenza**|**int**|Latenza più alta, espressa in secondi, per le modifiche dei dati propagate dall'agente di lettura log o dagli agenti di distribuzione per una pubblicazione transazionale.|  
 |**latencythreshold**|**int**|Latenza massima per una pubblicazione transazionale, superata la quale viene generato un avviso.|  
 |**agentnotrunning**|**int**|Indica da quante ore l'agente non viene eseguito.|  
@@ -117,7 +117,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_replmonitorhelpsubscription** viene utilizzato con tutti i tipi di replica.  
   
  **sp_replmonitorhelpsubscription** Ordina il set di risultati in base alla gravità dello stato della sottoscrizione, determinato dal valore di *monitorranking*. Le righe di tutte le sottoscrizioni in errore, ad esempio, vengono ordinate prima delle righe delle sottoscrizioni con avviso.  

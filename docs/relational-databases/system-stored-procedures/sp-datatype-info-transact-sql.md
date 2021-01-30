@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_datatype_info_TSQL
 - sp_datatype_info
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff2af6626004412a028777634269c6dc13e4fa8c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 22d01167f9dbe1a268dc436efb506507e1fbe7f9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546131"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201297"
 ---
 # <a name="sp_datatype_info-transact-sql"></a>sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -41,9 +41,9 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @data_type = ] data_type` Numero di codice per il tipo di dati specificato. Per ottenere un elenco di tutti i tipi di dati, omettere questo parametro. *data_type* è di **tipo int**e il valore predefinito è 0.  
+`[ @data_type = ] data_type` Numero di codice per il tipo di dati specificato. Per ottenere un elenco di tutti i tipi di dati, omettere questo parametro. *data_type* è di **tipo int** e il valore predefinito è 0.  
   
-`[ @ODBCVer = ] odbc_version` Versione di ODBC utilizzata. *odbc_version* è di **tinyint**e il valore predefinito è 2.  
+`[ @ODBCVer = ] odbc_version` Versione di ODBC utilizzata. *odbc_version* è di **tinyint** e il valore predefinito è 2.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  Nessuno  
@@ -68,12 +68,12 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |MINIMUM_SCALE|**smallint**|Scala minima del tipo di dati nell'origine dati. Se a un tipo di dati è associata una scala fissa, le colonne MINIMUM_SCALE e MAXIMUM_SCALE contengono entrambe lo stesso valore. Se la scala non è applicabile, viene restituito NULL.|  
 |MAXIMUM_SCALE|**smallint**|Scala massima del tipo di dati nell'origine dati. Se la scala massima non viene definita separatamente nell'origine dati, ma viene invece definita come corrispondente al valore della precisione massima, questa colonna contiene lo stesso valore della colonna PRECISION.|  
 |SQL_DATA_TYPE|**smallint**|Valore del tipo di dati SQL visualizzato nel campo TYPE del descrittore. Questa colonna corrisponde alla colonna DATA_TYPE, ad eccezione dei tipi di dati **DateTime** e **intervallo** ANSI. Questo campo restituisce sempre un valore.|  
-|SQL_DATETIME_SUB|**smallint**|sottocodice **DateTime** o ANSI **intervallo** se il valore di SQL_DATA_TYPE è SQL_DATETIME o SQL_INTERVAL. Per i tipi di dati diversi da **DateTime** e **intervallo**ANSI, questo campo è null.|  
+|SQL_DATETIME_SUB|**smallint**|sottocodice **DateTime** o ANSI **intervallo** se il valore di SQL_DATA_TYPE è SQL_DATETIME o SQL_INTERVAL. Per i tipi di dati diversi da **DateTime** e **intervallo** ANSI, questo campo è null.|  
 |NUM_PREC_RADIX|**int**|Numero di bit o di cifre per il calcolo del numero massimo che può contenere una colonna. Nel caso di tipi di dati numerici approssimati, questa colonna contiene il valore 2 per indicare diversi bit. Nel caso di tipi di dati numerici esatti, questa colonna contiene il valore 10 per indicare diverse cifre decimali. Negli altri casi la colonna è NULL. L'applicazione può calcolare il numero massimo che è possibile immettere nella colonna tramite la combinazione di precisione e radice.|  
 |INTERVAL_PRECISION|**smallint**|Valore della precisione principale dell'intervallo se *data_type* è l' **intervallo**; in caso contrario, NULL.|  
 |USERTYPE|**smallint**|valore **UserType** dalla tabella systypes.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  sp_datatype_info è equivalente a SQLGetTypeInfo in ODBC. I risultati restituiti vengono ordinati in base a DATA_TYPE e quindi in base alla precisione del mapping del tipo di dati al tipo di dati SQL ODBC corrispondente.  
   
 ## <a name="permissions"></a>Autorizzazioni  

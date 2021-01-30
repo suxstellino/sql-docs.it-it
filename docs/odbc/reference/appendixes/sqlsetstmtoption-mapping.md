@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLSetStmtOption
 - SQLSetStmtOption function [ODBC], mapping
 ms.assetid: 6a9921aa-8a53-4668-9b13-87164062f1e5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f2c4a65ade202003d454988372895ba40fb6eeef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8907de6d6ac80737ba0bb47ca3c6954a482c857f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424878"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202576"
 ---
 # <a name="sqlsetstmtoption-mapping"></a>Mapping di SQLSetStmtOption
 Quando un'applicazione chiama **SQLSetStmtOption** tramite un driver ODBC *3. x* , la chiamata a  
@@ -48,7 +48,7 @@ SQLSetStmtOption(StatementHandle, fOption, vParam)
     SQLSetStmtAttr(StatementHandle, fOption, ValuePtr, BufferLength)  
     ```  
   
- Nei tre casi precedenti, l'argomento **statementHandle** è impostato sul valore in *HSTMT*, l'argomento *attribute* è impostato sul valore in *fOption*e l'argomento *ValuePtr* è impostato sul valore come *parametro vParam*.  
+ Nei tre casi precedenti, l'argomento **statementHandle** è impostato sul valore in *HSTMT*, l'argomento *attribute* è impostato sul valore in *fOption* e l'argomento *ValuePtr* è impostato sul valore come *parametro vParam*.  
   
  Poiché Gestione driver non sa se l'attributo di istruzione definito dal driver necessita di un valore integer stringa o a 32 bit, deve passare un valore valido per l'argomento *StringLength* di **SQLSetStmtAttr**. Se il driver ha definito una semantica speciale per gli attributi di istruzione definiti dal driver e deve essere chiamata usando **SQLSetStmtOption**, deve supportare **SQLSetStmtOption**.  
   

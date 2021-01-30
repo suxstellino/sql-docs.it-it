@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_article_validation_TSQL
 - sp_article_validation
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 111b11b9563373f972ba6d30338e67075f992bed
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1b2dda5e359b062716c9c0fead89b4ad2628488a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536735"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203224"
 ---
 # <a name="sp_article_validation-transact-sql"></a>sp_article_validation (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,11 +45,11 @@ sp_article_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` Nome della pubblicazione in cui è presente l'articolo. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione in cui è presente l'articolo. *Publication* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @article = ] 'article'` Nome dell'articolo da convalidare. *article* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @article = ] 'article'` Nome dell'articolo da convalidare. *article* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @rowcount_only = ] type_of_check_requested` Specifica se viene restituito solo il conteggio delle righe per la tabella. *type_of_check_requested* è di **smallint**e il valore predefinito è **1**.  
+`[ @rowcount_only = ] type_of_check_requested` Specifica se viene restituito solo il conteggio delle righe per la tabella. *type_of_check_requested* è di **smallint** e il valore predefinito è **1**.  
   
  Se è **0**, eseguire un conteggio delle righe e un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] checksum compatibile con 7,0.  
   
@@ -65,13 +65,13 @@ sp_article_validation [ @publication = ] 'publication'
 |**1**|Esegue un conteggio rapido da **sysindexes. Rows**. Il conteggio delle righe in **sysindexes** è più veloce rispetto al conteggio delle righe nella tabella effettiva. Tuttavia, **sysindexes** viene aggiornato in modalità differita e il conteggio delle righe potrebbe non essere accurato.|  
 |**2** (impostazione predefinita)|Esegue un conteggio rapido condizionale eseguendo innanzitutto un tentativo con il metodo rapido. Se il metodo rapido evidenzia delle differenze, viene applicato il metodo completo. Se *expected_rowcount* è null e il stored procedure viene usato per ottenere il valore, viene sempre usato un conteggio completo (*).|  
   
-`[ @shutdown_agent = ] shutdown_agent` Specifica se l'agente di distribuzione deve essere chiuso immediatamente dopo il completamento della convalida. *shutdown_agent* è di **bit**e il valore predefinito è **0**. Se è **0**, il agente di distribuzione non viene arrestato. Se è **1**, il agente di distribuzione si arresta dopo la convalida dell'articolo.  
+`[ @shutdown_agent = ] shutdown_agent` Specifica se l'agente di distribuzione deve essere chiuso immediatamente dopo il completamento della convalida. *shutdown_agent* è di **bit** e il valore predefinito è **0**. Se è **0**, il agente di distribuzione non viene arrestato. Se è **1**, il agente di distribuzione si arresta dopo la convalida dell'articolo.  
   
-`[ @subscription_level = ] subscription_level` Specifica se la convalida viene prelevata o meno da un set di sottoscrittori. *subscription_level* è di **bit**e il valore predefinito è **0**. Se è **0**, la convalida viene applicata a tutti i sottoscrittori. Se è **1**, la convalida viene applicata solo a un subset di sottoscrittori specificato dalle chiamate a **sp_marksubscriptionvalidation** nella transazione aperta corrente.  
+`[ @subscription_level = ] subscription_level` Specifica se la convalida viene prelevata o meno da un set di sottoscrittori. *subscription_level* è di **bit** e il valore predefinito è **0**. Se è **0**, la convalida viene applicata a tutti i sottoscrittori. Se è **1**, la convalida viene applicata solo a un subset di sottoscrittori specificato dalle chiamate a **sp_marksubscriptionvalidation** nella transazione aperta corrente.  
   
 `[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @publisher = ] 'publisher'` Specifica un server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'` Specifica un server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname** e il valore predefinito è null.  
   
 > [!NOTE]  
 >  il *server di pubblicazione* non deve essere utilizzato quando viene richiesta la convalida in un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione.  
@@ -79,7 +79,7 @@ sp_article_validation [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_article_validation** viene utilizzata nella replica transazionale.  
   
  **sp_article_validation** fa in modo che le informazioni di convalida vengano raccolte nell'articolo specificato e invii una richiesta di convalida al log delle transazioni. Quando l'agente di distribuzione riceve la richiesta, confronta le informazioni di convalida incluse nella richiesta con quelle della tabella del Sottoscrittore. I risultati della convalida vengono visualizzati negli avvisi di Monitoraggio replica e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  

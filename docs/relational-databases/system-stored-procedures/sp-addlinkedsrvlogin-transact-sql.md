@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addlinkedsrvlogin_TSQL
 - sp_addlinkedsrvlogin
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4658625065876f35e3eb892381be67226795584f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bcefbe0acef90deb488a1d95f162a4d94f60aa95
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548430"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202381"
 ---
 # <a name="sp_addlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,26 +44,26 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
   
 ## <a name="arguments"></a>Argomenti  
  `[ @rmtsrvname = ] 'rmtsrvname'`  
- Nome di un server collegato a cui viene applicato il mapping dell'account di accesso. *rmtsrvname* è di **tipo sysname**e non prevede alcun valore predefinito.  
+ Nome di un server collegato a cui viene applicato il mapping dell'account di accesso. *rmtsrvname* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
  `[ @useself = ] { 'TRUE' | 'FALSE' | NULL }'`  
  Determina se connettersi a *rmtsrvname* tramite rappresentazione di account di accesso locali o inviando esplicitamente un account di accesso e una password. Il tipo di dati è **varchar (** 8 **)** e il valore predefinito è true.  
   
- Il valore TRUE indica che gli account di accesso utilizzano le proprie credenziali per connettersi a *rmtsrvname*, con gli argomenti *rmtuser* e *rmtpassword* ignorati. FALSE specifica che gli argomenti *rmtuser* e *rmtpassword* vengono usati per connettersi a *rmtsrvname* per il *locallogin*specificato. Se anche *rmtuser* e *rmtpassword* sono impostati su null, per la connessione al server collegato non viene utilizzato alcun account di accesso o password.  
+ Il valore TRUE indica che gli account di accesso utilizzano le proprie credenziali per connettersi a *rmtsrvname*, con gli argomenti *rmtuser* e *rmtpassword* ignorati. FALSE specifica che gli argomenti *rmtuser* e *rmtpassword* vengono usati per connettersi a *rmtsrvname* per il *locallogin* specificato. Se anche *rmtuser* e *rmtpassword* sono impostati su null, per la connessione al server collegato non viene utilizzato alcun account di accesso o password.  
   
  `[ @locallogin = ] 'locallogin'`  
- Account di accesso per il server locale. *locallogin* è di **tipo sysname**e il valore predefinito è null. NULL specifica che questa voce si applica a tutti gli account di accesso locali che si connettono a *rmtsrvname*. Se non è NULL, *locallogin* può essere un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso di o un account di accesso di Windows. È necessario che l'account di accesso di Windows disponga dell'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ottenuto tramite concessione diretta o in seguito all'appartenenza a un gruppo di Windows che dispone dell'accesso.  
+ Account di accesso per il server locale. *locallogin* è di **tipo sysname** e il valore predefinito è null. NULL specifica che questa voce si applica a tutti gli account di accesso locali che si connettono a *rmtsrvname*. Se non è NULL, *locallogin* può essere un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso di o un account di accesso di Windows. È necessario che l'account di accesso di Windows disponga dell'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ottenuto tramite concessione diretta o in seguito all'appartenenza a un gruppo di Windows che dispone dell'accesso.  
   
  `[ @rmtuser = ] 'rmtuser'`  
- Account di accesso remoto utilizzato per connettersi a *rmtsrvname* quando @useself è false. Quando il server remoto è un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che non utilizza l'autenticazione di Windows, *rmtuser* è un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso. *rmtuser* è di **tipo sysname**e il valore predefinito è null.  
+ Account di accesso remoto utilizzato per connettersi a *rmtsrvname* quando @useself è false. Quando il server remoto è un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che non utilizza l'autenticazione di Windows, *rmtuser* è un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso. *rmtuser* è di **tipo sysname** e il valore predefinito è null.  
   
  `[ @rmtpassword = ] 'rmtpassword'`  
- Password associata a *rmtuser*. *rmtpassword* è di **tipo sysname**e il valore predefinito è null.  
+ Password associata a *rmtuser*. *rmtpassword* è di **tipo sysname** e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Quando un utente accede al server locale ed esegue una query distribuita che accede a una tabella del server collegato, il server locale deve accedere al server collegato per parte dell'utente che desidera accedere a tale tabella. Per specificare le credenziali dell'account di accesso utilizzate nel server locale per l'accesso al server collegato, utilizzare la procedura sp_addlinkedsrvlogin.  
   
 > [!NOTE]  

@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: 1016db6e-9950-4ae2-a004-bd4171e27359
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6558dda3bf0cb87f3cdfc14b3beda0fc2c329557
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 4854c6e7e7b02b127cd8622ecb3c089485da5464
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094622"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203836"
 ---
 # <a name="sysexternal_data_sources-transact-sql"></a>sys.external_data_sources (Transact-SQL)
 
@@ -33,9 +33,9 @@ ms.locfileid: "98094622"
 |-----------------|---------------|-----------------|-----------|  
 |data_source_id|**int**|ID oggetto per l'origine dati esterna.||  
 |name|**sysname**|Nome dell'origine dati esterna.||  
-|location|**nvarchar(4000)**|Stringa di connessione, che include il protocollo, l'indirizzo IP e la porta per l'origine dati esterna.||  
+|posizione|**nvarchar(4000)**|Stringa di connessione, che include il protocollo, l'indirizzo IP e la porta per l'origine dati esterna.||  
 |type_desc|**nvarchar(255)**|Tipo di origine dati visualizzato sotto forma di stringa.|HADOOP, RDBMS, SHARD_MAP_MANAGER, RemoteDataArchiveTypeExtDataSource|  
-|type|**tinyint**|Tipo di origine dati visualizzato sotto forma di numero.|0-HADOOP<br /><br /> 1-RDBMS<br /><br /> 2-SHARD_MAP_MANAGER<br /><br /> 3-RemoteDataArchiveTypeExtDataSource|  
+|tipo|**tinyint**|Tipo di origine dati visualizzato sotto forma di numero.|0-HADOOP<br /><br /> 1-RDBMS<br /><br /> 2-SHARD_MAP_MANAGER<br /><br /> 3-RemoteDataArchiveTypeExtDataSource|  
 |resource_manager_location|**nvarchar(4000)**|Per il tipo HADOOP, l'indirizzo IP e la posizione della porta di Hadoop Resource Manager. Viene usato per l'invio di un processo in un'origine dati Hadoop.<br /><br /> NULL per altri tipi di origini dati esterne.||  
 |credential_id|**int**|ID oggetto della credenziale con ambito database utilizzata per la connessione all'origine dati esterna.||  
 |database_name|**sysname**|Per il tipo RDBMS, il nome del database remoto. Per Type, SHARD_MAP_MANAGER, il nome del database di gestione delle mappe partizioni. NULL per altri tipi di origini dati esterne.||  

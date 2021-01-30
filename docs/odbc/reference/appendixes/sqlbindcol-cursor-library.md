@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLAllocStmt function [ODBC], Cursor Library
 ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f3b3968687f1c9062457a16ec7c5bc11cb32d3a9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 64b51f58fd51b9bcad1abd86750b024be131a8a0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456480"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202943"
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol (libreria di cursori)
 > [!IMPORTANT]  
@@ -28,9 +28,9 @@ ms.locfileid: "88456480"
   
  Un'applicazione alloca uno o più buffer affinché la libreria di cursori restituisca il set di righe corrente in. Chiama **SQLBindCol** una o più volte per associare questi buffer al set di risultati.  
   
- Un'applicazione può chiamare **SQLBindCol** per riassociare le colonne del set di risultati dopo aver chiamato **SQLExtendedFetch**, **SQLFetch**o **SQLFetchScroll**, purché il tipo di dati C, le dimensioni della colonna e le cifre decimali della colonna associata rimangano invariate. L'applicazione non deve chiudere il cursore per riassociare le colonne a indirizzi diversi.  
+ Un'applicazione può chiamare **SQLBindCol** per riassociare le colonne del set di risultati dopo aver chiamato **SQLExtendedFetch**, **SQLFetch** o **SQLFetchScroll**, purché il tipo di dati C, le dimensioni della colonna e le cifre decimali della colonna associata rimangano invariate. L'applicazione non deve chiudere il cursore per riassociare le colonne a indirizzi diversi.  
   
- La libreria di cursori supporta l'impostazione dell'attributo SQL_ATTR_ROW_BIND_OFFSET_PTR Statement per l'utilizzo degli offset di binding. Non è necessario chiamare**SQLBindCol** per eseguire questa operazione di riassociazione. Se la libreria di cursori viene utilizzata con un driver ODBC *3. x* , l'offset di binding non viene utilizzato quando viene chiamato **SQLFetch** . L'offset di binding viene utilizzato se **SQLFetch** viene chiamato quando la libreria di cursori viene utilizzata con un driver ODBC *2. x* perché viene quindi eseguito il mapping di **SQLFetch** a **SQLExtendedFetch**.  
+ La libreria di cursori supporta l'impostazione dell'attributo SQL_ATTR_ROW_BIND_OFFSET_PTR Statement per l'utilizzo degli offset di binding. Non è necessario chiamare **SQLBindCol** per eseguire questa operazione di riassociazione. Se la libreria di cursori viene utilizzata con un driver ODBC *3. x* , l'offset di binding non viene utilizzato quando viene chiamato **SQLFetch** . L'offset di binding viene utilizzato se **SQLFetch** viene chiamato quando la libreria di cursori viene utilizzata con un driver ODBC *2. x* perché viene quindi eseguito il mapping di **SQLFetch** a **SQLExtendedFetch**.  
   
  La libreria di cursori supporta la chiamata a **SQLBindCol** per associare la colonna del segnalibro.  
   

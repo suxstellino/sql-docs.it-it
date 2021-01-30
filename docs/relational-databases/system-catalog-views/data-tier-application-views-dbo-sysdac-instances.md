@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dbo.sysdac_instances_TSQL
 - sysdac_instances
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: f5178fdb50b8a959471c8be973080d1416ba10f6
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: b548d5a92b20df8256b4e54b566dd8e6615b754a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98092666"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201432"
 ---
 # <a name="data-tier-application-views---dbosysdac_instances"></a>Viste dell'applicazione livello dati-dbo.sysdac_instances
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "98092666"
 |created_by|**sysname**|Account di accesso utilizzato per la creazione dell'istanza di applicazione livello dati.|  
 |database_name|**sysname**|Nome del database creato per l'istanza di applicazione livello dati.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Un'applicazione livello dati include un tipo di applicazione livello dati, ovvero una definizione degli oggetti di livello dati logici utilizzati da un'applicazione, quali tabelle e viste. Un pacchetto DAC è un file utilizzato per la distribuzione di DAC. Il pacchetto di applicazione livello dati contiene una rappresentazione di tutti gli oggetti logici contenuti nel tipo di applicazione livello dati. Il pacchetto di applicazione livello dati può essere utilizzato per la distribuzione di una o più copie, o istanze, dell'applicazione livello dati in un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Ogni istanza di applicazione livello dati distribuita dallo stesso pacchetto di applicazione livello dati condivide lo stesso tipo, ma è associata a un nome di istanza e a un identificatore univoci.  
   
 ## <a name="permissions"></a>Autorizzazioni  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addlogin
 - sp_addlogin_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 585461904b68f26d3ea71e255b24e9ed6d38786a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a85da6cb0e9f0d2a490c802e4d67f8096999f217
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474560"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202400"
 ---
 # <a name="sp_addlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,19 +53,19 @@ sp_addlogin [ @loginame = ] 'login'
   
 ## <a name="arguments"></a>Argomenti  
  [ @loginame =]'*login*'  
- Nome dell'account di accesso. *login* è di **tipo sysname**e non prevede alcun valore predefinito.  
+ Nome dell'account di accesso. *login* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
  [ @passwd =]'*password*'  
- Password dell'account di accesso. *password* è di **tipo sysname**e il valore predefinito è null.  
+ Password dell'account di accesso. *password* è di **tipo sysname** e il valore predefinito è null.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
  [ @defdb =]'*database*'  
- Database predefinito dell'account di accesso, ovvero il primo database a cui viene connesso l'account dopo l'accesso. il *database* è di **tipo sysname**e il valore predefinito è **Master**.  
+ Database predefinito dell'account di accesso, ovvero il primo database a cui viene connesso l'account dopo l'accesso. il *database* è di **tipo sysname** e il valore predefinito è **Master**.  
   
  [ @deflanguage =]'*Language*'  
- Lingua predefinita dell'account di accesso. *Language* è di **tipo sysname**e il valore predefinito è null. Se *la lingua non* è specificata, la *lingua* predefinita del nuovo account di accesso viene impostata sulla lingua predefinita corrente del server.  
+ Lingua predefinita dell'account di accesso. *Language* è di **tipo sysname** e il valore predefinito è null. Se *la lingua non* è specificata, la *lingua* predefinita del nuovo account di accesso viene impostata sulla lingua predefinita corrente del server.  
   
  [ @sid =]'*SID*'  
  ID di sicurezza (SID, Security Identification Number). *SID* è di tipo **varbinary (16)** e il valore predefinito è null. Se *SID* è null, il sistema genera un SID per il nuovo account di accesso. Nonostante l'utilizzo di un tipo di dati **varbinary** , i valori diversi da null devono avere una lunghezza esattamente di 16 byte e non devono essere già esistenti. La specifica di *SID* è utile, ad esempio, quando si crea uno script o si trasferiscono gli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso da un server a un altro e si desidera che gli account di accesso dispongano dello stesso SID in server diversi.  
@@ -75,14 +75,14 @@ sp_addlogin [ @loginame = ] 'login'
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|NULL|La password viene passata in forma non crittografata. Questa è la modalità predefinita.|  
+|NULL|La password viene passata in forma non crittografata. Questo è il valore predefinito.|  
 |**skip_encryption**|Per la password è già stato eseguito l'hashing. [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve archiviare il valore senza ripetere l'hashing.|  
 |**skip_encryption_old**|Per la password specificata è stato eseguito l'hashing con una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve archiviare il valore senza ripetere l'hashing. Questa opzione è disponibile solo in funzione delle operazioni di aggiornamento.|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  I nomi degli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere composti da 1 a 128 caratteri, inclusi lettere, simboli e numeri. Gli account di accesso non possono contenere una barra rovesciata ( \\ ), essere un nome di account di accesso riservato, ad esempio SA o Public, oppure essere già esistenti oppure essere null o una stringa vuota ( `''` ).  
   
  Se viene specificato il nome di un database predefinito, è possibile connettersi a tale database senza eseguire l'istruzione USE. Tuttavia, non è possibile utilizzare il database predefinito fino a quando non si dispone dell'accesso al database da parte del proprietario del database (utilizzando [sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md) o [sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)) o [sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md).  
@@ -141,9 +141,9 @@ EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2012', 'us_english', 0x
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [sp_droplogin &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
+ [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [sp_helpuser &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [sp_revokelogin &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+ [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [xp_logininfo &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
   
   

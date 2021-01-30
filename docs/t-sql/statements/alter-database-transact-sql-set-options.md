@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -31,12 +31,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: d02a4199775c519602e88573c7fbca72c1e8f9a9
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 103731192f584a1cf81c972c4b43fa3673a49c58
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170483"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204297"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opzioni di ALTER DATABASE SET (Transact-SQL)
 
@@ -2805,7 +2805,7 @@ Definisce il tempo CPU di compilazione trascorso totale usato da una query nel p
 TOTAL_EXECUTION_CPU_TIME_MS     
 Definisce il tempo CPU di esecuzione trascorso totale usato da una query nel periodo di valutazione. Il valore predefinito è 100. Questo significa che per il valore predefinito della soglia dei criteri di acquisizione non aggiornati una query deve aver usato almeno 100 ms di tempo CPU al giorno per l'esecuzione perché venga salvata in modo permanente in Query Store. TOTAL_EXECUTION_CPU_TIME_MS è di tipo **int**.
 
-**\<snapshot_option>**
+**\<snapshot_option> ::=**
 
 Determina il livello di isolamento delle transazioni.
 

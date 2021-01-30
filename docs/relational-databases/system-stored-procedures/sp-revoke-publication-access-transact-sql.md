@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_revoke_publication_access_TSQL
 - sp_revoke_publication_access
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 84ed9e77-991f-4fa5-a21f-7c6bfec1b3e3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0be8037325faba0cecb0988903677c14260b8a47
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 287f696d9e68cbef8bbe180f287952206ef755bc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446788"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211852"
 ---
 # <a name="sp_revoke_publication_access-transact-sql"></a>sp_revoke_publication_access (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,14 +38,14 @@ sp_revoke_publication_access [ @publication = ] 'publication' , [ @login = ] 'lo
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` Nome della pubblicazione a cui accedere. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione a cui accedere. *Publication* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @login = ] 'login'` ID di accesso. *login* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @login = ] 'login'` ID di accesso. *login* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_revoke_publication_access** viene utilizzata per la replica snapshot, transazionale e di tipo merge.  
   
  **sp_revoke_publication_access** possono essere chiamate ripetutamente.  

@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLSetConnectOption function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLSetConnectOption
 ms.assetid: a1b325cf-0c42-41c1-b141-b5a4fee7e708
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6c1f1379bfd2bbc2faccf719d68009ed63b350fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 919220fed87878bf0bcf23359f0714f702f9a6a8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476963"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202658"
 ---
 # <a name="sqlsetconnectoption-mapping"></a>Mapping di SQLSetConnectOption
 Quando ODBC 2. *x* l'applicazione chiama **SQLSetConnectOption** tramite un driver ODBC 3 *. x* , la chiamata a  
@@ -48,7 +48,7 @@ SQLSetConnectOption(hdbc, fOption, vParam)
     SQLSetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength)  
     ```  
   
- Nei tre casi precedenti, l'argomento *connectionHandle* è impostato sul valore in *HDBC*, l'argomento *attribute* è impostato sul valore in *fOption*e l'argomento *ValuePtr* è impostato sullo stesso valore di *parametro vParam*.  
+ Nei tre casi precedenti, l'argomento *connectionHandle* è impostato sul valore in *HDBC*, l'argomento *attribute* è impostato sul valore in *fOption* e l'argomento *ValuePtr* è impostato sullo stesso valore di *parametro vParam*.  
   
  Poiché Gestione driver non è in grado di stabilire se l'attributo di connessione definito dal driver necessita di un valore integer stringa o a 32 bit, deve passare un valore valido per l'argomento *bufferLength* di **SQLSetConnectAttr**. Se il driver ha definito una semantica speciale per gli attributi di connessione definiti dal driver e deve essere chiamata usando **SQLSetConnectOption**, deve supportare **SQLSetConnectOption**.  
   

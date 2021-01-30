@@ -6,19 +6,19 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - 'TM: Rollback Tran Completed event class'
 ms.assetid: af4043db-bc9f-4cd8-8d07-ef3efae85148
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 564644e5b1e4225c89a68e9ed90f7a4a03ad9d6b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: c0b8fba8c0109b584922998606750d061b356dc2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97483543"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203483"
 ---
 # <a name="tm-rollback-tran-completed-event-class"></a>TM: Rollback Tran Completed - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "97483543"
 |SessionLoginName|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica Login1 e LoginName indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |SPID|**int**|ID della sessione in cui si è verificato l'evento.|12|Sì|  
 |StartTime|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
-|Success|**int**|1 = esito positivo. 0 = esito negativo (ad esempio, 1 indica che un controllo delle autorizzazioni ha avuto esito positivo, 0 che l'esito è stato negativo).|23|Sì|  
+|Operazione riuscita|**int**|1 = esito positivo. 0 = esito negativo (ad esempio, 1 indica che un controllo delle autorizzazioni ha avuto esito positivo, 0 che l'esito è stato negativo).|23|Sì|  
 |TextData|**ntext**|Valore di testo che dipende dalla classe di evento acquisita nella traccia.|1|Sì|  
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|**bigint**|Token utilizzato per descrivere la transazione corrente.|50|Sì|  

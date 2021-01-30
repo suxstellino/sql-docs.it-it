@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changearticlecolumndatatype
 - sp_changearticlecolumndatatype_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e222ac8a81f42717ffba16a959e7e8cb6479286a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 34f3f1878fcae59601a6ac94ff8536f3d22d6ea5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541921"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203706"
 ---
 # <a name="sp_changearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,24 +48,24 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` Nome della pubblicazione Oracle. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione Oracle. *Publication* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @article = ] 'article'` Nome dell'articolo. *article* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @article = ] 'article'` Nome dell'articolo. *article* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @column = ] 'column'` Nome della colonna per cui modificare il mapping dei tipi di dati. *Column* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @column = ] 'column'` Nome della colonna per cui modificare il mapping dei tipi di dati. *Column* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @type = ] 'type'` Nome del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati nella colonna di destinazione. *Type* è di tipo **sysname**e il valore predefinito è null.  
+`[ @type = ] 'type'` Nome del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati nella colonna di destinazione. *Type* è di tipo **sysname** e il valore predefinito è null.  
   
-`[ @length = ] length` Lunghezza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati nella colonna di destinazione. *length* è di tipo **bigint**e il valore predefinito è null.  
+`[ @length = ] length` Lunghezza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati nella colonna di destinazione. *length* è di tipo **bigint** e il valore predefinito è null.  
   
-`[ @precision = ] precision` Precisione del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati nella colonna di destinazione. *Precision* è di tipo **bigint**e il valore predefinito è null.  
+`[ @precision = ] precision` Precisione del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati nella colonna di destinazione. *Precision* è di tipo **bigint** e il valore predefinito è null.  
   
-`[ @publisher = ] 'publisher'` Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'` Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname** e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **Sp_changearticlecolumndatatype** viene utilizzato per eseguire l'override dei mapping dei tipi di dati predefiniti tra i tipi di server di pubblicazione supportati (Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Per visualizzare i mapping dei tipi di dati predefiniti, eseguire [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md).  
   
  **sp_changearticlecolumndatatype** è supportato solo per i Publisher Oracle. Se si esegue questa stored procedure su una pubblicazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene generato un errore.  

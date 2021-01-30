@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syspolicy_configure
 - sp_syspolicy_configure_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 820952e0829014efc3669759dabf5d1dfc208d91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: abf343b9230e8eeef0ce95ca8e2667c20c714cb8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473584"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201243"
 ---
 # <a name="sp_syspolicy_configure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 -   'LogOnSuccess' - Specifica se vengono registrate le valutazioni di criteri riuscite nella gestione basata su criteri.  
   
-`[ @value = ] value` Valore associato al valore specificato per *Name*. il *valore* è **sql_variant**ed è obbligatorio.  
+`[ @value = ] value` Valore associato al valore specificato per *Name*. il *valore* è **sql_variant** ed è obbligatorio.  
   
 -   Se si specifica ' Enabled ' per il *nome*, è possibile usare uno dei valori seguenti:  
   
@@ -70,7 +70,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È necessario eseguire sp_syspolicy_configure nel contesto del database di sistema msdb.  
   
  Per visualizzare i valori impostati attualmente, eseguire una query sulla vista di sistema msdb.dbo.syspolicy_configuration.  
@@ -81,7 +81,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 > [!IMPORTANT]  
 >  Possibile elevazione di credenziali: gli utenti nel ruolo PolicyAdministratorRole possono creare trigger server e pianificare le esecuzioni di criteri che influiscono sul funzionamento dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Gli utenti con il ruolo PolicyAdministratorRole possono ad esempio creare criteri che impediscono la creazione della maggior parte degli oggetti nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A causa di questa possibile elevazione di credenziali, il ruolo PolicyAdministratorRole deve essere concesso solo a utenti ritenuti attendibili per il controllo della configurazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene abilitata la gestione basata su criteri.  
   
 ```  

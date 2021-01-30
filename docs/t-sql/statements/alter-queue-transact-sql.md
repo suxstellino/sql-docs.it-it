@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - ALTER_QUEUE_TSQL
 - ALTER QUEUE
@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 09303d17e8cb284251d9c8e585eeadb5a1a1e898
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 2f82564a5beeadbf17f8e3d4cfac7bb5d01da051
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170843"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204101"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

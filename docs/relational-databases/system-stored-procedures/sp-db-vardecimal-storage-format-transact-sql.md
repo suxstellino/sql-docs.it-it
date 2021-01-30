@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_db_vardecimal_storage_format
 - sp_db_vardecimal_storage_format_TSQL
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c521931a96701101c7db2eac8027dc0223b53f3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: aad29b6722f748051f085f10a25a38b59e6ae424
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543563"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201289"
 ---
 # <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
 ## <a name="arguments"></a>Argomenti  
  [ @dbname =]'*database_name*'  
- Nome del database per il quale deve essere modificato il formato di archiviazione. *database_name* è di **tipo sysname**e non prevede alcun valore predefinito. Se il nome del database viene omesso, viene restituito lo stato del formato di archiviazione vardecimal di tutti i database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Nome del database per il quale deve essere modificato il formato di archiviazione. *database_name* è di **tipo sysname** e non prevede alcun valore predefinito. Se il nome del database viene omesso, viene restituito lo stato del formato di archiviazione vardecimal di tutti i database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [ @vardecimal_storage_format =] {' On ' |' OFF '}  
  Specifica se il formato di archiviazione vardecimal è abilitato. @vardecimal_storage_format può essere ON oppure OFF. Il parametro è di tipo **varchar (3)** e non prevede alcun valore predefinito. Se viene specificato il nome di un database ma viene omesso @vardecimal_storage_format, viene restituita l'impostazione corrente del database specificato. Questo argomento non ha effetto in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive.  
@@ -62,7 +62,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
  Se l' @vardecimal_storage_format argomento non viene specificato, restituisce il nome del database Columns e lo stato vardecimal.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  sp_db_vardecimal_storage_format restituisce lo stato di vardecimal ma non consente di modificare tale stato.  
   
  sp_db_vardecimal_storage_format avrà esito negativo nelle circostanze seguenti:  
@@ -87,7 +87,7 @@ FROM sys.objects
 GO  
 ```  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Tramite il codice seguente viene abilitata la compressione nel database `AdventureWorks2012`, viene verificato lo stato e quindi vengono compresse le colonne decimal e numeric della tabella `Sales.SalesOrderDetail`.  
   
 ```  

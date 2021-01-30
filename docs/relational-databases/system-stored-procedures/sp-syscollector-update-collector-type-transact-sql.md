@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_update_collector_type_TSQL
 - sp_syscollector_update_collector_type
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 175e3299c37afe307de8b5f809e44646d0a26047
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4ad2fefb206f417c4759f3e85d34a63f320e34d6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534848"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201864"
 ---
 # <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @collector_type_uid = ] 'collector_type_uid'` GUID per il tipo di agente di raccolta. *collector_type_uid* è di tipo **uniqueidentifier**e, se è null, verrà creata e restituita automaticamente come output.  
+`[ @collector_type_uid = ] 'collector_type_uid'` GUID per il tipo di agente di raccolta. *collector_type_uid* è di tipo **uniqueidentifier** e, se è null, verrà creata e restituita automaticamente come output.  
   
 `[ @name = ] 'name'` Nome del tipo di agente di raccolta. *Name* è di **tipo sysname** e deve essere specificato.  
   

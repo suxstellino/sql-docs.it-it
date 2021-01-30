@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_servershareddrives
 - fn_servershareddrives_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ff01eff7-8cb6-460c-ba7a-6a52bda6d471
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: f8260d8c84276239864d6d3d7639766b8a62b5f3
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 0e14222f8d785a54eb2506afdce98a5d9071d416
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096383"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201897"
 ---
 # <a name="sysfn_servershareddrives-transact-sql"></a>sys.fn_servershareddrives (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ fn_servershareddrives()
   
  Se l'istanza del server corrente non è un server cluster, **fn_servershareddrives** restituisce un set di righe vuoto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La funzione `fn_servershareddrives` restituisce l'elenco delle unità condivise utilizzate dal server del cluster corrente. Queste unità condivise appartengono allo stesso gruppo di cluster della [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risorsa. A sua volta, la risorsa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dipende da queste unità.  
   
  Questa funzione risulta utile per l'identificazione delle unità disponibili agli utenti.  
@@ -58,7 +58,7 @@ fn_servershareddrives()
 ## <a name="permissions"></a>Autorizzazioni  
  L'utente deve disporre dell'autorizzazione VIEW SERVER STATE per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente la funzione `fn_servershareddrives` viene utilizzata per eseguire una query su un'istanza del server del cluster.  
   
 ```  

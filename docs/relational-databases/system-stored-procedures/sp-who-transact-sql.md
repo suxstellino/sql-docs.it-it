@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_who_TSQL
 - sp_who
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a3d3af35b9d886e41d43e0c480c49a7e593e00f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db60af487d1ee7b7475b0b4d6ec1d8f67decb1ca
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463978"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201802"
 ---
 # <a name="sp_who-transact-sql"></a>sp_who (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,8 +59,8 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 |Colonna|Tipo di dati|Descrizione|  
 |------------|---------------|-----------------|  
 |**spid**|**smallint**|ID di sessione.|  
-|**ecid**|**smallint**|ID del contesto di esecuzione di un determinato thread associato a un ID di sessione specifico.<br /><br /> ECID = {0, 1, 2, 3,... *n*}, dove 0 rappresenta sempre il thread principale o padre e {1, 2, 3,... *n*} rappresenta i sottothread.|  
-|**Stato**|**nchar(30)**|Stato del processo. I valori possibili sono:<br /><br /> **inattivo**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sta reimpostando la sessione.<br /><br /> **in esecuzione**. Nella sessione vengono eseguiti uno o più batch. Se si abilita la funzionalità MARS (Multiple Active Result Sets), una sessione può eseguire più batch. Per altre informazioni vedere [Uso di MARS &#40;Multiple Active Result Set&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **sfondo**. Nella sessione viene eseguita un'attività in background, ad esempio il rilevamento dei deadlock.<br /><br /> eseguire il **rollback**. Nella sessione è in corso il rollback di una transazione.<br /><br /> **in sospeso**. La sessione è in attesa che un thread di lavoro diventi disponibile.<br /><br /> **runnable**. L'attività della sessione si trova nella coda eseguibile di un'utilità di pianificazione in attesa di un quantum temporale.<br /><br /> **spinloop**. L'attività della sessione è in attesa che venga liberato uno spinlock.<br /><br /> **sospeso**. La sessione è in attesa del completamento di un evento, ad esempio di I/O.|  
+|**ECID**|**smallint**|ID del contesto di esecuzione di un determinato thread associato a un ID di sessione specifico.<br /><br /> ECID = {0, 1, 2, 3,... *n*}, dove 0 rappresenta sempre il thread principale o padre e {1, 2, 3,... *n*} rappresenta i sottothread.|  
+|**Stato**|**nchar(30)**|Stato del processo. I valori possibili sono:<br /><br /> **inattivo**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sta reimpostando la sessione.<br /><br /> **in esecuzione**. Nella sessione vengono eseguiti uno o più batch. Se si abilita la funzionalità MARS (Multiple Active Result Sets), una sessione può eseguire più batch. Per altre informazioni vedere [Uso di MARS &#40;Multiple Active Result Set&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **sfondo**. Nella sessione viene eseguita un'attività in background, ad esempio il rilevamento dei deadlock.<br /><br /> eseguire il **rollback**. Nella sessione è in corso il rollback di una transazione.<br /><br /> **in sospeso**. La sessione è in attesa che un thread di lavoro diventi disponibile.<br /><br /> **eseguibile**. L'attività della sessione si trova nella coda eseguibile di un'utilità di pianificazione in attesa di un quantum temporale.<br /><br /> **spinloop**. L'attività della sessione è in attesa che venga liberato uno spinlock.<br /><br /> **sospeso**. La sessione è in attesa del completamento di un evento, ad esempio di I/O.|  
 |**loginame**|**nchar (128)**|Nome dell'account di accesso associato a un particolare processo.|  
 |**hostname**|**nchar (128)**|Nome host o di computer per ogni processo.|  
 |**blk**|**char (5)**|ID di sessione del processo di blocco, se esistente. In caso contrario, il valore di questa colonna è zero.<br /><br /> Quando una transazione associata a un ID di sessione specificato viene bloccata da una transazione distribuita orfana, questa colonna restituirà il valore -2 per tale transazione.|  
@@ -70,12 +70,12 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
   
  In caso di elaborazione parallela, vengono creati thread secondari per l'ID di sessione specifico. Il thread principale è indicato da `spid = <xxx>` e `ecid =0`. Gli altri sottothread hanno lo stesso `spid = <xxx>` , ma con **ECID** > 0.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Con il termine processo di blocco si indica un processo che mantiene bloccate, potenzialmente con un blocco esclusivo, risorse necessarie per un altro processo.  
   
  A tutte le transazioni distribuite orfane viene assegnato il valore di ID di sessione -2. Le transazioni distribuite orfane sono transazioni distribuite non associate a un ID di sessione. Per altre informazioni, vedere [Usare transazioni contrassegnate per recuperare coerentemente i database correlati &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
- Eseguire una query sulla colonna **is_user_process** di sys. dm_exec_sessions per separare i processi di sistema dai processi utente.  
+ Eseguire una query sulla colonna **is_user_process** di sys.dm_exec_sessions per separare i processi di sistema dai processi utente.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server per visualizzare tutte le sessioni in esecuzione nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In caso contrario, sarà possibile visualizzare solo la sessione corrente.  

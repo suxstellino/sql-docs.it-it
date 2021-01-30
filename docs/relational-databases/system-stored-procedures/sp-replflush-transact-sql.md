@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replflush
 - sp_replflush_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 20809f5f-941d-427f-8f0c-de7a6c487584
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cb5d459f1a9b89836a412450eb4215182b914ba8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 45a015f0b7b2448c0cf19c147247e1dd09b565b2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541197"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211896"
 ---
 # <a name="sp_replflush-transact-sql"></a>sp_replflush (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,7 +43,7 @@ sp_replflush
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_replflush** viene utilizzata nella replica transazionale.  
   
  Le definizioni degli articoli vengono archiviate nella cache per migliorare il grado di efficienza. **sp_replflush** viene utilizzata da altre stored procedure di replica ogni volta che la definizione di un articolo viene modificata o eliminata.  

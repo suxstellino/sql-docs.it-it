@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysdatabases_TSQL
 - sys.sysdatabases_TSQL
@@ -22,12 +22,12 @@ ms.assetid: 60a93880-62f1-4eda-a886-f046706ba90c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2a5ed7033605db917f972e83bcf6c014c49f52bd
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: f742ce25d05d588cb70e9d68b254e06f8e478500
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099158"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201420"
 ---
 # <a name="syssysdatabases-transact-sql"></a>sys.sysdatabases (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "98099158"
 |**Stato**|**int**|Bit di stato, alcuni dei quali possono essere impostati utilizzando [ALTER database](../../t-sql/statements/alter-database-transact-sql.md) come indicato di seguito:<br /><br /> 1 = **AutoClose** (alter database)<br /><br /> 4 = **select into/bulkcopy** (alter database using set Recovery)<br /><br /> 8 = **tronca. log in chkpt** (alter database tramite set Recovery)<br /><br /> 16 = **rilevamento pagine incomplete** (alter database)<br /><br /> 32 = **caricamento** in corso<br /><br /> 64 = **pre-ripristino**<br /><br /> 128 = **ripristino**<br /><br /> 256 = **non recuperato**<br /><br /> 512 = **offline** (alter database)<br /><br /> 1024 = **sola lettura** (alter database)<br /><br /> 2048 = **solo dbo use** (alter database using set RESTRICTED_USER)<br /><br /> 4096 = **utente singolo** (alter database)<br /><br /> 32768 = **modalità di emergenza**<br /><br /> 65536 = **checksum** (alter database)<br /><br /> 4194304 = **compattazione automatica** (alter database)<br /><br /> 1073741824 = **chiusura** normale<br /><br /> È possibile attivare più bit contemporaneamente.|  
 |**status2**|**int**|16384 = **valore predefinito ANSI null** (alter database)<br /><br /> 65536 = **concat null restituisce null** (alter database)<br /><br /> 131072 = **trigger ricorsivi** (alter database)<br /><br /> 1048576 = **cursore locale predefinito** (alter database)<br /><br /> 8388608 = **identificatore tra virgolette** (alter database)<br /><br /> 33554432 = **chiusura cursore al commit** (alter database)<br /><br /> 67108864 = **valori Null ANSI** (alter database)<br /><br /> 268435456 = **Avvisi ANSI** (alter database)<br /><br /> 536870912 = **full-text enabled** (impostato tramite **sp_fulltext_database**)|  
 |**crdate**|**datetime**|Data di creazione|  
-|**riservati**|**datetime**|Riservato per usi futuri.|  
+|**riservati**|**datetime**|Riservato per utilizzi futuri.|  
 |**category**|**int**|Include una mappa di bit di informazioni utilizzate per la replica.<br /><br /> 1 = Pubblicata per una replica snapshot o transazionale.<br /><br /> 2 = Sottoscritta a una pubblicazione snapshot o transazionale.<br /><br /> 4 = Pubblicata per una replica di tipo merge.<br /><br /> 8 = Sottoscritta a una pubblicazione di tipo merge.<br /><br /> 16 = Database di distribuzione.|  
 |**cmptlevel**|**tinyint**|Livello di compatibilità del database. Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|  
 |**filename**|**nvarchar(260)**|Percorso del sistema operativo e nome del file primario del database.<br /><br /> **filename** è visibile a **dbcreator**, **sysadmin**, proprietario del DATABASE con le autorizzazioni create any database o agli utenti autorizzati che dispongono di una delle autorizzazioni seguenti: ALTER ANY database, create any database, View any Definition. Per restituire il percorso e il nome del file, eseguire una query sulla vista di compatibilità dei [ filesys.sys](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md) o sulla visualizzazione [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) .|  

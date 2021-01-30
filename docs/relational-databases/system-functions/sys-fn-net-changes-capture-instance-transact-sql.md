@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.fn_net_changes_TSQL
 - fn_net_changes_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: eb0c58b3544afd5fa529db0c95af7c2f6ba3e6d3
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: fdaa7d3a2f741ba480443a997fe561c4aa5c3a50
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096348"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201904"
 ---
 # <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -100,7 +100,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
 |__CDC_OPERATION|**nvarchar (2)**|Codice operativo che indica che l'operazione è necessaria per applicare la riga all'ambiente di destinazione. L'operazione può variare in base al valore dell'argomento *row_filter_option* fornito nella chiamata seguente:<br /><br /> *row_filter_option* =' all',' all with mask '<br /><br /> 'D' - operazione di eliminazione<br /><br /> 'I' - operazione di inserimento<br /><br /> 'UN' - operazione di aggiornamento<br /><br /> *row_filter_option* =' all with merge '<br /><br /> 'D' - operazione di eliminazione<br /><br /> 'M' - operazione di inserimento oppure di aggiornamento|  
 |\<columns from @update_flag_list>|**bit**|Flag di bit denominato aggiungendo _uflag al nome della colonna. Il flag accetta un valore non null solo quando *row_filter_option* **=' all with mask '** e \_ _CDC_OPERATION **=' un'**. È impostato su 1 se la colonna corrispondente è stata modificata all'interno della finestra di query. Altrimenti, è impostato su 0.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il fn_net_changes_<capture_instance funzione> funge da wrapper per la funzione di query CDC.fn_cdc_get_net_changes_<capture_instance>. La stored procedure sys.sp_cdc_generate_wrapper viene utilizzata per creare lo script per il wrapper.  
   
  Le funzioni wrapper non vengono create automaticamente. Per creare le funzioni wrapper, è necessario eseguire due operazioni:  

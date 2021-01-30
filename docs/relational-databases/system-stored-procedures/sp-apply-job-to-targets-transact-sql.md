@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_apply_job_to_targets
 - sp_apply_job_to_targets_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a164569a5a62e24dabe0d47839eaa084b32e2efa
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f9fdc4cffdbe21d1c6c502aa813db55e0444d696
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89528957"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203241"
 ---
 # <a name="sp_apply_job_to_targets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,29 +43,29 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_id = ] job_id` Numero di identificazione del processo da applicare ai server di destinazione o ai gruppi di server di destinazione specificati. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
+`[ @job_id = ] job_id` Numero di identificazione del processo da applicare ai server di destinazione o ai gruppi di server di destinazione specificati. *job_id* è di tipo **uniqueidentifier** e il valore predefinito è null.  
   
-`[ @job_name = ] 'job_name'` Nome del processo da applicare al server di destinazione o ai gruppi di server di destinazione associati specificati. *job_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @job_name = ] 'job_name'` Nome del processo da applicare al server di destinazione o ai gruppi di server di destinazione associati specificati. *job_name* è di **tipo sysname** e il valore predefinito è null.  
   
 > [!NOTE]  
 >  È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi.  
   
 `[ @target_server_groups = ] 'target_server_groups'` Elenco delimitato da virgole dei gruppi di server di destinazione a cui deve essere applicato il processo specificato. *target_server_groups* è di **tipo nvarchar (2048)** e il valore predefinito è null.  
   
-`[ @target_servers = ] 'target_servers'` Elenco delimitato da virgole dei server di destinazione a cui deve essere applicato il processo specificato. *target_servers*è di **tipo nvarchar (2048)** e il valore predefinito è null.  
+`[ @target_servers = ] 'target_servers'` Elenco delimitato da virgole dei server di destinazione a cui deve essere applicato il processo specificato. *target_servers* è di **tipo nvarchar (2048)** e il valore predefinito è null.  
   
-`[ @operation = ] 'operation'` Indica se il processo specificato deve essere applicato o rimosso dai server di destinazione o dai gruppi di server di destinazione specificati. *Operation*è di tipo **varchar (7)** e il valore predefinito è Apply. Le operazioni valide sono **Apply** e **Remove**.  
+`[ @operation = ] 'operation'` Indica se il processo specificato deve essere applicato o rimosso dai server di destinazione o dai gruppi di server di destinazione specificati. *Operation* è di tipo **varchar (7)** e il valore predefinito è Apply. Le operazioni valide sono **Apply** e **Remove**.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_apply_job_to_targets** fornisce un modo semplice per applicare (o rimuovere) un processo da più server di destinazione e rappresenta un'alternativa alla chiamata di **sp_add_jobserver** (o **sp_delete_jobserver**) una volta per ogni server di destinazione.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Questa procedura può essere eseguita solo dai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente il processo `Backup Customer Information` creato in precedenza viene applicato a tutti i server di destinazione nel gruppo `Servers Maintaining Customer Information`.  
   
 ```  

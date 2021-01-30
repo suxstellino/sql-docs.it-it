@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - state transitions [ODBC]
 - transitioning states [ODBC], about state transitions
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8b81b43d40d3552959ade377cb7b967eb7331b7f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67c14205590ccdf9d20a30f44c13aa2da5abbe8d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88411617"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212567"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Appendice B: Tabelle della transizione di stato ODBC
 Nelle tabelle di questa appendice viene illustrato il modo in cui le funzioni ODBC determinano transizioni degli Stati dell'ambiente, della connessione, dell'istruzione e del descrittore. Lo stato dell'ambiente, della connessione, dell'istruzione o del descrittore determina in genere quando è possibile chiamare le funzioni che utilizzano il tipo di handle corrispondente (ambiente, connessione, istruzione o descrittore). Gli Stati dell'ambiente, della connessione, dell'istruzione e del descrittore si sovrappongono approssimativamente come illustrato nelle illustrazioni seguenti. Ad esempio, l'esatta sovrapposizione degli Stati di connessione C5 e C6 e gli Stati di istruzione da S1 a S12 sono dipendenti dall'origine dati, perché le transazioni iniziano in momenti diversi in origini dati diverse e lo stato del descrittore D1i (descrittore allocato in modo implicito) dipende dallo stato di qualsiasi istruzione. Per una descrizione di ogni stato, vedere [transizioni di ambiente](../../../odbc/reference/appendixes/environment-transitions.md), [transizioni di connessione](../../../odbc/reference/appendixes/connection-transitions.md), [transizioni di istruzioni](../../../odbc/reference/appendixes/statement-transitions.md)e [transizioni di descrittori](../../../odbc/reference/appendixes/descriptor-transitions.md), più avanti in questa appendice.  
@@ -65,22 +65,22 @@ Nelle tabelle di questa appendice viene illustrato il modo in cui le funzioni OD
 |b|Prima o dopo. Il cursore è stato posizionato prima dell'inizio del set di risultati o dopo la fine del set di risultati.|  
 |c|Funzione corrente. La funzione corrente è stata eseguita in modo asincrono.|  
 |d|Sono necessari i dati. La funzione ha restituito SQL_NEED_DATA.|  
-|e|Errore. La funzione ha restituito SQL_ERROR.|  
+|h|Errore. La funzione ha restituito SQL_ERROR.|  
 |i|Riga non valida. Il cursore è stato posizionato in corrispondenza di una riga nel set di risultati e la riga è stata eliminata o si è verificato un errore in un'operazione sulla riga. Se la matrice di stato della riga esiste, il valore nella matrice di stato della riga per la riga è stato SQL_ROW_DELETED o SQL_ROW_ERROR. La matrice di stato della riga fa riferimento all'attributo dell'istruzione SQL_ATTR_ROW_STATUS_PTR.|  
-|nf|Non trovato. La funzione ha restituito SQL_NO_DATA. Questa operazione non si applica quando **SQLExecDirect**, **SQLExecute**o **SQLParamData** restituisce SQL_NO_DATA dopo l'esecuzione di un'istruzione di aggiornamento o eliminazione ricercata.|  
+|nf|Non trovato. La funzione ha restituito SQL_NO_DATA. Questa operazione non si applica quando **SQLExecDirect**, **SQLExecute** o **SQLParamData** restituisce SQL_NO_DATA dopo l'esecuzione di un'istruzione di aggiornamento o eliminazione ricercata.|  
 |np|Non preparato. L'istruzione non è stata preparata.|  
 |nr|Nessun risultato. L'istruzione non creerà o non creerà un set di risultati.|  
 |o|Altra funzione. Un'altra funzione era in esecuzione in modo asincrono.|  
 |p|Preparato. L'istruzione è stata preparata.|  
 |r|Risultati. L'istruzione creerà o creerà un set di risultati (possibilmente vuoto).|  
-|s|Operazione completata. La funzione ha restituito SQL_SUCCESS_WITH_INFO o SQL_SUCCESS.|  
+|s|Esito positivo. La funzione ha restituito SQL_SUCCESS_WITH_INFO o SQL_SUCCESS.|  
 |v|Riga valida. Il cursore è stato posizionato in corrispondenza di una riga nel set di risultati e la riga è stata inserita correttamente, aggiornata correttamente oppure un'altra operazione sulla riga è stata completata correttamente. Se la matrice di stato della riga esiste, il valore nella matrice di stato della riga per la riga è SQL_ROW_ADDED, SQL_ROW_SUCCESS o SQL_ROW_UPDATED. La matrice di stato della riga fa riferimento all'attributo dell'istruzione SQL_ATTR_ROW_STATUS_PTR.|  
 |x|In esecuzione. La funzione ha restituito SQL_STILL_EXECUTING.|  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
  In questo esempio, la riga nella tabella di transizione dello stato dell'ambiente per **SQLFreeHandle** quando *HandleType* è SQL_HANDLE_ENV è la seguente.  
   
-|E0<br /><br /> Non allocato|E1<br /><br /> Allocato|E2<br /><br /> Connessione|  
+|E0<br /><br /> Non allocato|E1<br /><br /> Allocato|E2<br /><br /> Connessioni|  
 |------------------------|----------------------|-----------------------|  
 |IH|E0|HY010|  
   

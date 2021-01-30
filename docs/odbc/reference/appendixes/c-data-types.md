@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data types [ODBC], C data types
 - C data types [ODBC], about C data types
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6dadd93f13418d520c4ab908ba0d9402d07c893a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5dbce167ea65daa030030bd32a909c5af3d06262
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421525"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212462"
 ---
 # <a name="c-data-types"></a>Tipi di dati C
 I tipi di dati ODBC C indicano il tipo di dati dei buffer C utilizzati per archiviare i dati nell'applicazione.  
@@ -109,7 +109,7 @@ struct tagSQL_NUMERIC_STRUCT {
    SQLCHAR precision;  
    SQLSCHAR scale;  
    SQLCHAR sign[g];  
-   SQLCHAR val[SQL_MAX_NUMERIC_LEN];[e], [f]   
+   SQLCHAR val[SQL_MAX_NUMERIC_LEN];[e], [f]   
 } SQL_NUMERIC_STRUCT;  
 ```  
   

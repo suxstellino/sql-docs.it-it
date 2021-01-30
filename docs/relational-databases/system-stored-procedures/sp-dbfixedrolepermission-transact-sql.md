@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dbfixedrolepermission
 - sp_dbfixedrolepermission_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a7abd42379d62d9a2c34adb50b7610494493b6c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 78f1381d05c5841ce48e395f8cc1cd477b820e01
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536614"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201278"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @rolename = ] 'role'` Nome di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ruolo predefinito del database valido. *Role* è di **tipo sysname**e il valore predefinito è null. Se *Role* non è specificato, vengono visualizzate le autorizzazioni per tutti i ruoli predefiniti del database.  
+`[ @rolename = ] 'role'` Nome di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ruolo predefinito del database valido. *Role* è di **tipo sysname** e il valore predefinito è null. Se *Role* non è specificato, vengono visualizzate le autorizzazioni per tutti i ruoli predefiniti del database.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -55,7 +55,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 |**DbFixedRole**|**sysname**|Nome del ruolo predefinito del database|  
 |**Autorizzazione**|**nvarchar (70)**|Autorizzazioni associate a **DbFixedRole**|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Per visualizzare un elenco dei ruoli predefiniti del database, eseguire **sp_helpdbfixedrole**. Nella tabella seguente vengono elencati i ruoli predefiniti del database.  
   
 |Ruolo predefinito del database|Descrizione|  

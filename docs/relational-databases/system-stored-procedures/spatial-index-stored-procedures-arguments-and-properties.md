@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 840668495c620ca3cb7a403d3775238b12a52ec8
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: f9faf0901643b07420f8627d6afda4b9713d034a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809727"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201754"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Stored procedure per l'indice spaziale-argomenti e proprietà
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "91809727"
 `[ @xml_output = ] 'xml_output'` Parametro di output che restituisce il set di risultati in un frammento XML. *xml_output* è di **XML** e non prevede alcun valore predefinito.  
   
 ## <a name="properties"></a>Proprietà  
- Impostare ** \@ verboseoutput** = 0 per restituire le proprietà principali, come illustrato nella tabella seguente. ** \@ verboseoutput** > 0 per restituire tutte le proprietà dell'indice spaziale.  
+ Impostare **\@ verboseoutput** = 0 per restituire le proprietà principali, come illustrato nella tabella seguente. **\@ verboseoutput** > 0 per restituire tutte le proprietà dell'indice spaziale.  
   
  **Base_Table_Rows**  
  Numero di righe nella tabella di base. Il valore è **bigint**.  
@@ -301,7 +301,7 @@ ms.locfileid: "91809727"
 ## <a name="permissions"></a>Autorizzazioni  
  L'utente deve essere un membro del ruolo **public** . È necessario disporre dell'autorizzazione READ ACCESS per il server e l'oggetto. Queste condizioni si applicano a tutte le stored procedure relative agli indici spaziali.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Le proprietà che contengono valori NULL non sono incluse nel set restituito.  
   
 ## <a name="examples"></a>Esempi  

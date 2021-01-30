@@ -7,7 +7,7 @@ ms.prod_service: database-engine
 ms.reviewer: ''
 ms.custom: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addsubscription
 - sp_addsubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1cf622748da040060681dac848273238f73c66a5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a4bb033d4817fcf08a7816f8c6598802e9ac3f8c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548343"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211956"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -77,24 +77,24 @@ sp_addsubscription [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Argomenti  
  [ @publication =]'*pubblicazione*'  
- Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+ Nome della pubblicazione. *Publication* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
  [ @article =]'*article*'  
- Articolo in cui viene sottoscritta la pubblicazione. *article* è di **tipo sysname**e il valore predefinito è all. Se si specifica all, viene aggiunta una sottoscrizione a tutti gli articoli della pubblicazione specificata. Per i server di pubblicazione Oracle sono supportati solo i valori all o NULL.  
+ Articolo in cui viene sottoscritta la pubblicazione. *article* è di **tipo sysname** e il valore predefinito è all. Se si specifica all, viene aggiunta una sottoscrizione a tutti gli articoli della pubblicazione specificata. Per i server di pubblicazione Oracle sono supportati solo i valori all o NULL.  
   
  [ @subscriber =]'*Subscriber*'  
- Nome del Sottoscrittore. *Subscriber* è di **tipo sysname**e il valore predefinito è null.  
+ Nome del Sottoscrittore. *Subscriber* è di **tipo sysname** e il valore predefinito è null.  
 
 > [!NOTE]
 > Il nome del server può essere specificato come `<Hostname>,<PortNumber>` . Potrebbe essere necessario specificare il numero di porta per la connessione quando SQL Server viene distribuito in Linux o Windows con una porta personalizzata e il servizio browser è disabilitato.
   
  [ @destination_db =]'*destination_db*'  
- Nome del database di destinazione in cui verranno inseriti i dati replicati. *destination_db* è di **tipo sysname**e il valore predefinito è null. Se è NULL, *destination_db* viene impostato sul nome del database di pubblicazione. Per i Publisher Oracle, è necessario specificare *destination_db* . Per un Sottoscrittore non SQL Server, specificare il valore (destinazione predefinita) per *destination_db*.  
+ Nome del database di destinazione in cui verranno inseriti i dati replicati. *destination_db* è di **tipo sysname** e il valore predefinito è null. Se è NULL, *destination_db* viene impostato sul nome del database di pubblicazione. Per i Publisher Oracle, è necessario specificare *destination_db* . Per un Sottoscrittore non SQL Server, specificare il valore (destinazione predefinita) per *destination_db*.  
   
  [ @sync_type =]'*sync_type*'  
  Tipo di sincronizzazione per la sottoscrizione. *sync_type* è di **tipo nvarchar (255)**. i possibili valori sono i seguenti:  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |Nessuno|Il Sottoscrittore dispone già dello schema e dei dati iniziali per le tabelle pubblicate.<br /><br /> Nota: questa opzione è stata deprecata. In alternativa, utilizzare il valore replication support only.|  
 |automatic (predefinito)|Lo schema e i dati iniziali per le tabelle pubblicate vengono trasferiti per primi nel Sottoscrittore.|  
@@ -106,9 +106,9 @@ sp_addsubscription [ @publication = ] 'publication'
 >  Le tabelle e i dati di sistema vengono sempre trasferiti.  
   
  [ @status =]'*status*'  
- Stato della sottoscrizione. *status* è di **tipo sysname**e il valore predefinito è null. Se non è impostato in modo esplicito, questo parametro viene impostato automaticamente dalla replica su uno dei valori seguenti.  
+ Stato della sottoscrizione. *status* è di **tipo sysname** e il valore predefinito è null. Se non è impostato in modo esplicito, questo parametro viene impostato automaticamente dalla replica su uno dei valori seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |active|La sottoscrizione è inizializzata e in grado di accettare modifiche. Questa opzione viene impostata quando il valore di *sync_type* è None, Initialize with backup o replication support only.|  
 |subscribed|La sottoscrizione deve essere inizializzata. Questa opzione viene impostata quando il valore di *sync_type* è automatico.|  
@@ -122,7 +122,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @update_mode =]'*update_mode*'  
  Tipo di aggiornamento. *update_mode* è di **tipo nvarchar (30)**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |read only (predefinito)|La sottoscrizione è di sola lettura. Le modifiche apportate nel Sottoscrittore non vengono ritrasmesse al server di pubblicazione.|  
 |sync tran|Abilita il supporto per sottoscrizioni ad aggiornamento immediato. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
@@ -135,7 +135,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @loopback_detection =]'*loopback_detection*'  
  Indica se l'agente di distribuzione reinvia al Sottoscrittore le transazioni generate nel Sottoscrittore stesso. *loopback_detection* è di **tipo nvarchar (5)**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |true|L'agente di distribuzione non reinvia le transazioni generate nel Sottoscrittore al Sottoscrittore. Utilizzato con la replica transazionale bidirezionale. Per altre informazioni, vedere [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
 |false|L'agente di distribuzione reinvia le transazioni generate nel Sottoscrittore al Sottoscrittore.|  
@@ -144,24 +144,24 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_type =] *frequency_type*  
  Frequenza di pianificazione dell'attività di distribuzione. *frequency_type* è di tipo int. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |1|Singola occorrenza|  
 |2|On demand|  
 |4|Ogni giorno|  
 |8|Settimanale|  
-|16|Mensilmente|  
+|16|Ogni mese|  
 |32|Mensile relativa|  
 |64 (impostazione predefinita)|Avvio automatico|  
 |128|Periodica|  
   
  [ @frequency_interval =] *frequency_interval*  
- Valore da applicare alla frequenza impostata da *frequency_type*. *frequency_interval* è di **tipo int**e il valore predefinito è null.  
+ Valore da applicare alla frequenza impostata da *frequency_type*. *frequency_interval* è di **tipo int** e il valore predefinito è null.  
   
  [ @frequency_relative_interval =] *frequency_relative_interval*  
  Data dell'agente di distribuzione. Questo parametro viene usato quando *frequency_type* è impostato su 32 (mensile relativo). *frequency_relative_interval* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |1|First (Primo)|  
 |2|Second|  
@@ -171,12 +171,12 @@ sp_addsubscription [ @publication = ] 'publication'
 |NULL (predefinito)||  
   
  [ @frequency_recurrence_factor =] *frequency_recurrence_factor*  
- Fattore di occorrenza utilizzato da *frequency_type*. *frequency_recurrence_factor* è di **tipo int**e il valore predefinito è null.  
+ Fattore di occorrenza utilizzato da *frequency_type*. *frequency_recurrence_factor* è di **tipo int** e il valore predefinito è null.  
   
  [ @frequency_subday =] *frequency_subday*  
  Frequenza di ripianificazione in minuti durante il periodo definito. *frequency_subday* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |1|Una sola volta|  
 |2|Second|  
@@ -185,19 +185,19 @@ sp_addsubscription [ @publication = ] 'publication'
 |NULL||  
   
  [ @frequency_subday_interval =] *frequency_subday_interval*  
- Intervallo per *frequency_subday*. *frequency_subday_interval* è di **tipo int**e il valore predefinito è null.  
+ Intervallo per *frequency_subday*. *frequency_subday_interval* è di **tipo int** e il valore predefinito è null.  
   
  [ @active_start_time_of_day =] *active_start_time_of_day*  
- Ora del giorno della prima esecuzione pianificata dell'agente di distribuzione nel formato HHMMSS. *active_start_time_of_day* è di **tipo int**e il valore predefinito è null.  
+ Ora del giorno della prima esecuzione pianificata dell'agente di distribuzione nel formato HHMMSS. *active_start_time_of_day* è di **tipo int** e il valore predefinito è null.  
   
  [ @active_end_time_of_day =] *active_end_time_of_day*  
- Ora del giorno dell'ultima esecuzione pianificata dell'agente di distribuzione, nel formato HHMMSS. *active_end_time_of_day* è di **tipo int**e il valore predefinito è null.  
+ Ora del giorno dell'ultima esecuzione pianificata dell'agente di distribuzione, nel formato HHMMSS. *active_end_time_of_day* è di **tipo int** e il valore predefinito è null.  
   
  [ @active_start_date =] *active_start_date*  
- Data della prima esecuzione pianificata dell'agente di distribuzione nel formato AAAAMMGG. *active_start_date* è di **tipo int**e il valore predefinito è null.  
+ Data della prima esecuzione pianificata dell'agente di distribuzione nel formato AAAAMMGG. *active_start_date* è di **tipo int** e il valore predefinito è null.  
   
  [ @active_end_date =] *active_end_date*  
- Data dell'ultima esecuzione pianificata dell'agente di distribuzione, nel formato AAAAMMGG. *active_end_date* è di **tipo int**e il valore predefinito è null.  
+ Data dell'ultima esecuzione pianificata dell'agente di distribuzione, nel formato AAAAMMGG. *active_end_date* è di **tipo int** e il valore predefinito è null.  
   
  [ @optional_command_line =]'*optional_command_line*'  
  Prompt dei comandi facoltativo da eseguire. *optional_command_line* è di **tipo nvarchar (4000)** e il valore predefinito è null.  
@@ -215,7 +215,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  Questo parametro è deprecato ed è ancora disponibile per compatibilità con gli script di versioni precedenti.  
   
  [ @offloadserver =]'*remote_agent_server_name*'  
- Specifica il nome di rete del server da utilizzare per l'attivazione remota. *remote_agent_server_name*è di **tipo sysname**e il valore predefinito è null.  
+ Specifica il nome di rete del server da utilizzare per l'attivazione remota. *remote_agent_server_name* è di **tipo sysname** e il valore predefinito è null.  
   
  [ @dts_package_name =]'*dts_package_name*'  
  Specifica il nome del pacchetto Data Transformation Services (DTS). *dts_package_name* è di **tipo sysname** e il valore predefinito è null. Ad esempio, per specificare il pacchetto DTSPub_Package, il parametro deve essere `@dts_package_name = N'DTSPub_Package'`. Questo parametro è disponibile per sottoscrizioni push. Per aggiungere informazioni sul pacchetto DTS a una sottoscrizione pull, utilizzare sp_addpullsubscription_agent.  
@@ -233,7 +233,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @publisher =]'*Publisher*'  
- Specifica un server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+ Specifica un server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname** e il valore predefinito è null.  
   
 > [!NOTE]  
 >  il *Server* di pubblicazione non deve essere specificato per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
@@ -241,37 +241,37 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @backupdevicetype =]'*backupdevicetype*'  
  Specifica il tipo di dispositivo di backup utilizzato durante l'inizializzazione di un Sottoscrittore da un backup. *backupdevicetype* è di **tipo nvarchar (20)**. i possibili valori sono i seguenti:  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |logical (predefinito)|Il dispositivo di backup è un dispositivo logico.|  
 |disk|Il dispositivo di backup è l'unità disco.|  
 |tape|Il dispositivo di backup è l'unità nastro.|  
   
- *backupdevicetype* viene utilizzato solo quando *sync_method*è impostato su initialize_with_backup.  
+ *backupdevicetype* viene utilizzato solo quando *sync_method* è impostato su initialize_with_backup.  
   
  [ @backupdevicename =]'*backupdevicename*'  
  Specifica il nome del dispositivo utilizzato durante l'inizializzazione di un Sottoscrittore da un backup. *backupdevicename* è di **tipo nvarchar (1000)** e il valore predefinito è null.  
   
  [ @mediapassword =]'*MEDIAPASSWORD*'  
- Specifica una password per il set di supporti se durante la formattazione dei supporti è stata impostata una password. *MEDIAPASSWORD* è di **tipo sysname**e il valore predefinito è null.  
+ Specifica una password per il set di supporti se durante la formattazione dei supporti è stata impostata una password. *MEDIAPASSWORD* è di **tipo sysname** e il valore predefinito è null.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  [ @password =]'*password*'  
- Specifica una password per il backup se durante la creazione del backup è stata impostata una password. *password* è di **tipo sysname**e il valore predefinito è null.  
+ Specifica una password per il backup se durante la creazione del backup è stata impostata una password. *password* è di **tipo sysname** e il valore predefinito è null.  
   
  [ @fileidhint =] *fileidhint*  
- Identifica un valore ordinale del set di backup da ripristinare. *fileidhint* è di **tipo int**e il valore predefinito è null.  
+ Identifica un valore ordinale del set di backup da ripristinare. *fileidhint* è di **tipo int** e il valore predefinito è null.  
   
  [ @unload =] *scaricamento*  
- Specifica se è necessario scaricare un dispositivo di backup su nastro dopo il completamento dell'inizializzazione dal backup. *unload* è di **bit**e il valore predefinito è 1. 1 specifica che il nastro deve essere scaricato. *unload* viene usato solo quando *backupdevicetype* è Tape.  
+ Specifica se è necessario scaricare un dispositivo di backup su nastro dopo il completamento dell'inizializzazione dal backup. *unload* è di **bit** e il valore predefinito è 1. 1 specifica che il nastro deve essere scaricato. *unload* viene usato solo quando *backupdevicetype* è Tape.  
   
  [ @subscriptionlsn =] *SubscriptionLSN*  
  Specifica il numero di sequenza del file di log (LSN) al quale una sottoscrizione deve iniziare a recapitare le modifiche a un nodo in una topologia di replica transazionale peer-to-peer. Usato con il @sync_type valore initialize from LSN per assicurarsi che tutte le transazioni rilevanti vengano replicate in un nuovo nodo. Per altre informazioni, vedere [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
  [ @subscriptionstreams =] *SubscriptionStreams*  
- Numero di connessioni consentite per agente di distribuzione per l'applicazione di batch di modifiche in parallelo a un Sottoscrittore, conservando molte delle caratteristiche transazionali disponibili quando si utilizza un singolo thread. *SubscriptionStreams* è di **tinyint**e il valore predefinito è null. È supportato un intervallo di valori compreso tra 1 e 64. Questo parametro non è supportato per i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sottoscrittori non, i Publisher Oracle o le sottoscrizioni peer-to-peer. Ogni volta che vengono utilizzati flussi di sottoscrizioni, vengono aggiunte nuove righe nella tabella msreplication_subscriptions (1 per stream) con agent_id impostato su NULL.  
+ Numero di connessioni consentite per agente di distribuzione per l'applicazione di batch di modifiche in parallelo a un Sottoscrittore, conservando molte delle caratteristiche transazionali disponibili quando si utilizza un singolo thread. *SubscriptionStreams* è di **tinyint** e il valore predefinito è null. È supportato un intervallo di valori compreso tra 1 e 64. Questo parametro non è supportato per i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sottoscrittori non, i Publisher Oracle o le sottoscrizioni peer-to-peer. Ogni volta che vengono utilizzati flussi di sottoscrizioni, vengono aggiunte nuove righe nella tabella msreplication_subscriptions (1 per stream) con agent_id impostato su NULL.  
   
 > [!NOTE]  
 >  Subscriptionstreams non funziona per gli articoli configurati per fornire [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per utilizzare subscriptionstreams, configurare gli articoli per fornire invece chiamate di stored procedure.  
@@ -279,7 +279,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @subscriber_type =] *subscriber_type*  
  Tipo di Sottoscrittore. *subscriber_type* è di **tinyint**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |0 (predefinito)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sottoscrittore|  
 |1|Server dell'origine dei dati ODBC.|  
@@ -292,7 +292,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La stored procedure sp_addsubscription viene utilizzata per la replica snapshot e transazionale.  
   
  Se la stored procedure sp_addsubscription viene eseguita da un membro del ruolo predefinito del server sysadmin per creare una sottoscrizione push, il processo dell'agente di distribuzione viene creato in modo implicito e viene eseguito utilizzando l'account del servizio SQL Server Agent. Si consiglia di eseguire [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) e specificare le credenziali di un account di Windows diverso da quello specifico dell'agente per @job_login e @job_password . Per altre informazioni, vedere [Modello di sicurezza dell'agente di replica](../../relational-databases/replication/security/replication-agent-security-model.md).  
@@ -307,11 +307,11 @@ sp_addsubscription [ @publication = ] 'publication'
   
 -   Pubblicazioni che includono un articolo configurato per l'utilizzo di istruzioni con parametri.  
   
- Inoltre, se per una pubblicazione l'opzione *allow_queued_tran* è impostata su true (che consente l'accodamento delle modifiche nel Sottoscrittore fino a quando non è possibile applicarle nel server di pubblicazione), la colonna timestamp di un articolo viene inviata come **timestamp**e le modifiche apportate a tale colonna vengono inviate al Sottoscrittore. Nel Sottoscrittore viene quindi generato e aggiornato il valore della colonna timestamp. Per un Sottoscrittore ODBC o OLE DB, sp_addsubscription ha esito negativo se viene effettuato un tentativo di sottoscrivere una pubblicazione con *allow_queued_tran* impostata su true e gli articoli con colonne timestamp.  
+ Inoltre, se per una pubblicazione l'opzione *allow_queued_tran* è impostata su true (che consente l'accodamento delle modifiche nel Sottoscrittore fino a quando non è possibile applicarle nel server di pubblicazione), la colonna timestamp di un articolo viene inviata come **timestamp** e le modifiche apportate a tale colonna vengono inviate al Sottoscrittore. Nel Sottoscrittore viene quindi generato e aggiornato il valore della colonna timestamp. Per un Sottoscrittore ODBC o OLE DB, sp_addsubscription ha esito negativo se viene effettuato un tentativo di sottoscrivere una pubblicazione con *allow_queued_tran* impostata su true e gli articoli con colonne timestamp.  
   
  Se una sottoscrizione non utilizza un pacchetto DTS, non è in grado di sottoscrivere una pubblicazione impostata su *allow_transformable_subscriptions*. Se la tabella della pubblicazione deve essere replicata sia come sottoscrizione DTS che come sottoscrizione non DTS, è necessario creare due pubblicazioni distinte, una per ogni tipo di sottoscrizione.  
   
- In caso di selezione delle opzioni **sync_type** , i parametri *replication support only*, *initialize with backup*o *initialize from lsn*e l'agente di lettura log devono essere in esecuzione dopo aver eseguito **sp_addsubscription**, in modo che gli script impostati vengano scritti nel database di distribuzione. L'agente di lettura log deve essere in esecuzione con un account membro del ruolo predefinito del server **sysadmin** . Quando l'opzione **sync_type** è impostata su *Automatic*, non sono richieste azioni dell'agente di lettura log speciali.  
+ In caso di selezione delle opzioni **sync_type** , i parametri *replication support only*, *initialize with backup* o *initialize from lsn* e l'agente di lettura log devono essere in esecuzione dopo aver eseguito **sp_addsubscription**, in modo che gli script impostati vengano scritti nel database di distribuzione. L'agente di lettura log deve essere in esecuzione con un account membro del ruolo predefinito del server **sysadmin** . Quando l'opzione **sync_type** è impostata su *Automatic*, non sono richieste azioni dell'agente di lettura log speciali.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server sysadmin o del ruolo predefinito del database db_owner possono eseguire sp_addsubscription. Per le sottoscrizioni pull, gli utenti che dispongono di un account di accesso nell'elenco di accesso della pubblicazione possono eseguire sp_addsubscription.  

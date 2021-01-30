@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - error codes [ODBC]
 - SQLSTATE [ODBC]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c06902e4-721d-42e2-b818-05f0e18e4ce0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a587578ba74cd2ed36a919953000190a6274b62d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b37c846230cd60e067cf7ff2c8e7a72c74d1e540
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88411549"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212577"
 ---
 # <a name="appendix-a-odbc-error-codes"></a>Appendice A: codici di errore ODBC
 In questo argomento vengono illustrati i valori SQLSTATE per ODBC 3. *x*. Per ulteriori informazioni su ODBC 3. i valori SQLSTATE *x* , vedere la pagina relativa ai [mapping SQLSTATE](../../../odbc/reference/develop-app/sqlstate-mappings.md).  
