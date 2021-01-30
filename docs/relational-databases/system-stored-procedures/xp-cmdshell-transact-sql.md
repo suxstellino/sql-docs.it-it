@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - xp_cmdshell
 - xp_cmdshell_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7f545d556069e31e349c0a8badf0fd9d95e6dcef
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 73bea06c7919c40b1080458f3e6982d2c10ebe47
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257608"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99125007"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +63,7 @@ GO
 The command(s) completed successfully.  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il processo di Windows generato da **xp_cmdshell** dispone degli stessi diritti di sicurezza dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio.  
  
 > [!IMPORTANT]
@@ -90,7 +90,7 @@ EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';
   
  Quando è abilitata per la prima volta, **xp_cmdshell** richiede l'autorizzazione Control Server per l'esecuzione e il processo di Windows creato da **xp_cmdshell** ha lo stesso contesto di sicurezza dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio. L' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio ha spesso più autorizzazioni di quelle necessarie per il lavoro eseguito dal processo creato da **xp_cmdshell**. Per migliorare la sicurezza, l'accesso alle **xp_cmdshell** deve essere limitato agli utenti con privilegi elevati.  
   
- Per consentire a non amministratori di utilizzare **xp_cmdshell**e consentire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a di creare processi figlio con il token di sicurezza di un account con privilegi di meno, attenersi alla seguente procedura:  
+ Per consentire a non amministratori di utilizzare **xp_cmdshell** e consentire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a di creare processi figlio con il token di sicurezza di un account con privilegi di meno, attenersi alla seguente procedura:  
   
 1.  Creare e personalizzare un account utente locale di Windows o un account di dominio con i privilegi minimi richiesti dai processi.  
   
@@ -99,7 +99,7 @@ EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';
     > [!NOTE]  
     >  È anche possibile configurare questo account proxy usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] facendo clic con il pulsante destro del mouse su **Proprietà** sul nome del server in Esplora oggetti e cercando la scheda **sicurezza** per la sezione **account proxy server** .  
   
-3.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , utilizzando il database master, eseguire l' `GRANT exec ON xp_cmdshell TO N'<some_user>';` istruzione per fornire a utenti specifici non**sysadmin** la possibilità di eseguire **xp_cmdshell**. L'utente specificato deve esistere nel database master.  
+3.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , utilizzando il database master, eseguire l' `GRANT exec ON xp_cmdshell TO N'<some_user>';` istruzione per fornire a utenti specifici non **sysadmin** la possibilità di eseguire **xp_cmdshell**. L'utente specificato deve esistere nel database master.  
   
  Ora gli utenti non amministratori possono avviare i processi del sistema operativo con **xp_cmdshell** e questi processi vengono eseguiti con le autorizzazioni dell'account proxy configurato. Gli utenti che dispongono dell'autorizzazione CONTROL SERVER (membri del ruolo predefinito del server **sysadmin** ) continueranno a ricevere le autorizzazioni dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio per i processi figlio avviati dal **xp_cmdshell**.  
   

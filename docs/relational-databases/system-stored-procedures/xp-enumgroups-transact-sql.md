@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - xp_enumgroups_TSQL
 - xp_enumgroups
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 59535a5dd2d5df7b5d165e58a30358001378d360
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a0319158b7e2627bac7cd67a8f15e10dc4694b51
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551090"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99124070"
 ---
 # <a name="xp_enumgroups-transact-sql"></a>xp_enumgroups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ xp_enumgroups [ 'domain_name' ]
   
 ## <a name="arguments"></a>Argomenti  
  **'** *Domain_name* **'**  
- Nome del dominio Windows per cui si desidera ottenere un elenco di gruppi globali. *Domain_name* è di **tipo sysname**e il valore predefinito è null.  
+ Nome del dominio Windows per cui si desidera ottenere un elenco di gruppi globali. *Domain_name* è di **tipo sysname** e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -53,7 +53,7 @@ xp_enumgroups [ 'domain_name' ]
 |**utenti**|**sysname**|Nome del gruppo di Windows.|  
 |**Commento**|**sysname**|Descrizione del gruppo di Windows fornita da Windows.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se *Domain_name* è il nome del computer basato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su Windows su cui è in esecuzione un'istanza di o se non è specificato alcun nome di dominio, **xp_enumgroups** enumera i gruppi locali dal computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Impossibile utilizzare **xp_enumgroups** quando un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione in Windows 98.  
@@ -61,7 +61,7 @@ xp_enumgroups [ 'domain_name' ]
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del database **db_owner** nel database **Master** o l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono elencati i gruppi nel dominio `sales`.  
   
 ```  

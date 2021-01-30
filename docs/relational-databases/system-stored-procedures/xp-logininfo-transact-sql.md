@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - xp_logininfo_TSQL
 - xp_logininfo
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 44b76081c7ec5fdd3496b670b1884347d1a84d1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6df69edd25c5c2f451e8a4aa657caf99a4c8103d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419215"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99124104"
 ---
 # <a name="xp_logininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,12 +42,12 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @acctname = ] 'account_name'` Nome di un utente o gruppo di Windows a cui è stato concesso l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *account_name* è di **tipo sysname**e il valore predefinito è null. Se *account_name* non è specificato, vengono restituiti tutti i gruppi di Windows e gli utenti di Windows a cui sono state concesse in modo esplicito le autorizzazioni di accesso. *account_name* deve essere completo. ad esempio ADVWKS4\macraes o BUILTIN\Administrators.  
+`[ @acctname = ] 'account_name'` Nome di un utente o gruppo di Windows a cui è stato concesso l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *account_name* è di **tipo sysname** e il valore predefinito è null. Se *account_name* non è specificato, vengono restituiti tutti i gruppi di Windows e gli utenti di Windows a cui sono state concesse in modo esplicito le autorizzazioni di accesso. *account_name* deve essere completo. ad esempio ADVWKS4\macraes o BUILTIN\Administrators.  
   
  **' all'**  |  **' members '**  
- Specifica se devono essere restituite informazioni su tutti i percorsi di autorizzazione per l'account oppure sui membri del gruppo di Windows. ** \@ Option** è di tipo **varchar (10)** e il valore predefinito è null. A meno che non sia specificato **All** , viene visualizzato solo il primo percorso di autorizzazione.  
+ Specifica se devono essere restituite informazioni su tutti i percorsi di autorizzazione per l'account oppure sui membri del gruppo di Windows. **\@ Option** è di tipo **varchar (10)** e il valore predefinito è null. A meno che non sia specificato **All** , viene visualizzato solo il primo percorso di autorizzazione.  
   
-`[ @privilege = ] variable_name` Parametro di output che restituisce il livello di privilegio dell'account di Windows specificato. *variable_name* è di tipo **varchar (10)** e il valore predefinito è "not wanted". Il livello di privilegio restituito è **User**, **admin**o **null**.  
+`[ @privilege = ] variable_name` Parametro di output che restituisce il livello di privilegio dell'account di Windows specificato. *variable_name* è di tipo **varchar (10)** e il valore predefinito è "not wanted". Il livello di privilegio restituito è **User**, **admin** o **null**.  
   
  OUTPUT  
  Quando specificato, inserisce *variable_name* nel parametro di output.  
@@ -61,11 +61,11 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |-----------------|---------------|-----------------|  
 |**nome account**|**sysname**|Nome completo dell'account di Windows.|  
 |**type**|**carattere (8)**|Tipo di account di Windows. I valori validi sono **utente** o **gruppo**.|  
-|**privilegio**|**char(9)**|Privilegio di accesso per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I valori validi sono **admin**, **User**o **null**.|  
+|**privilegio**|**char(9)**|Privilegio di accesso per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I valori validi sono **admin**, **User** o **null**.|  
 |**mapped login name**|**sysname**|Per gli account utente con privilegi utente, il nome dell'account di **accesso mappato** Mostra il nome dell'account di accesso con mapping che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di usare quando si accede con questo account usando le regole mappate con il nome di dominio aggiunto prima.|  
 |**permission path**|**sysname**|Appartenenza al gruppo che ha permesso all'account di ottenere l'accesso.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se viene specificato *account_name* , **xp_logininfo** segnala il livello di privilegio più elevato del gruppo o dell'utente di Windows specificato. Se un utente di Windows può accedere sia come amministratore di sistema che come utente di dominio, verrà restituito come amministratore di sistema. Se l'utente è membro di più gruppi di Windows con livello di privilegio uguale, viene restituito soltanto il gruppo a cui è stato concesso per primo l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Se *account_name* è un utente o un gruppo di Windows valido che non è associato a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso, viene restituito un set di risultati vuoto. Se non è possibile identificare *account_name* come un utente o un gruppo di Windows valido, viene restituito un messaggio di errore.  
@@ -79,7 +79,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **public** nel database **Master** con l'autorizzazione Execute concessa.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono visualizzate informazioni sul gruppo di Windows `BUILTIN\Administrators`.  
   
 ```  
@@ -87,10 +87,10 @@ EXEC xp_logininfo 'BUILTIN\Administrators';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_denylogin &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
- [sp_grantlogin &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [sp_revokelogin &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
+ [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+ [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Stored procedure estese generali &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   
