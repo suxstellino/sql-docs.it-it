@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_control_dbmasterkey_password
 - sp_control_dbmasterkey_password_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 08b749ad756a47ed991acd1ad0ea1d533bbb770c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 06de3460a55eecba6c1525576caec85d6baa905f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481445"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190037"
 ---
 # <a name="sp_control_dbmasterkey_password-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -53,13 +53,13 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
  @action= N'drop '  
  Specifica che una credenziale per il database specificato verrà rimossa dall'archivio delle credenziali. Il valore passato a @action è **nvarchar**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve utilizzare una chiave master del database per decrittografare o crittografare una chiave, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue un tentativo di decrittografia della chiave master del database con la chiave master del servizio dell'istanza. Se il tentativo non riesce, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue una ricerca nell'archivio delle credenziali per individuare le credenziali di chiave master con lo stesso GUID del database per cui è necessaria la chiave master. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si tenta quindi di decrittografare la chiave master del database con ogni credenziale corrispondente fino a quando non si riesce a completare l'operazione o non sono disponibili altre credenziali da provare.  
   
 > [!CAUTION]  
 >  Non creare una credenziale per la chiave master di un database che non deve essere accessibile per l'account sa e altre entità server con privilegi elevati. È possibile configurare un database in modo che la sua gerarchia di chiavi non possa essere decrittografata dalla chiave master del servizio. Questa opzione è supportata come difesa in profondità per i database contenenti informazioni crittografate che non devono essere accessibili per l'account sa o altre entità server con privilegi elevati. La creazione di una credenziale per la chiave master di un database con queste esigenze annulla questa difesa in profondità, consentendo all'account sa e ad altre entità server con privilegi elevati di decrittografare il database.  
   
- Le credenziali create utilizzando sp_control_dbmasterkey_password sono visibili nella vista del catalogo [sys. master_key_passwords](../../relational-databases/system-catalog-views/sys-master-key-passwords-transact-sql.md) . I nomi delle credenziali create per le chiavi master dei database hanno il formato seguente: `##DBMKEY_<database_family_guid>_<random_password_guid>##`. La password viene archiviata come segreto della credenziale. Per ogni password aggiunta all'archivio delle credenziali esiste una riga in sys.credentials.  
+ Le credenziali create utilizzando sp_control_dbmasterkey_password sono visibili nella vista del catalogo [sys.master_key_passwords](../../relational-databases/system-catalog-views/sys-master-key-passwords-transact-sql.md) . I nomi delle credenziali create per le chiavi master dei database hanno il formato seguente: `##DBMKEY_<database_family_guid>_<random_password_guid>##`. La password viene archiviata come segreto della credenziale. Per ogni password aggiunta all'archivio delle credenziali esiste una riga in sys.credentials.  
   
  Non è possibile utilizzare sp_control_dbmasterkey_password per creare una credenziale per i database di sistema seguenti: master, model, msdb o tempdb.  
   
@@ -101,9 +101,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare un database mirror crittografato](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
- [Stored procedure di sicurezza &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Impostare un database mirror crittografato](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
+ [Stored procedure di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [Credenziali &#40;motore di database&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)  
   

@@ -19,12 +19,12 @@ ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd89afe79f1e6cf7a5745b04378c1b403142c56e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 6f78a502be14ffcf51937823d61bd61c144777f5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97426414"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187268"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Utilizzo delle tabelle inserite ed eliminate
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "97426414"
 > [!NOTE]  
 >  Se le azioni dei trigger dipendono dal numero di righe interessate dalle modifiche apportate ai dati, usare le verifiche (ad esempio un esame di @@ROWCOUNT) nel caso di modifiche apportate ai dati di più righe (un'istruzione INSERT, DELETE o UPDATE basata su un'istruzione SELECT) ed eseguire le azioni appropriate. Per altre informazioni, vedere [Creazione di trigger DML per gestire più righe di dati](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] non è possibile usare i riferimenti di colonna di tipo **text**, **ntext** o **image** nelle tabelle inserted e deleted per i trigger AFTER. Questi tipi di dati sono tuttavia disponibili per garantire la compatibilità con le versioni precedenti. L'archiviazione preferita per i dati di grandi dimensioni consiste nell'usare i tipi di dati **varchar(max)** , **nvarchar(max)** e **varbinary(max)** . I trigger AFTER e INSTEAD OF supportano i dati **varchar(max)** , **nvarchar(max)** e **varbinary(max)** nelle tabelle inserted e deleted. Per altre informazioni, vedere [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+ [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] non è possibile usare i riferimenti di colonna di tipo **text**, **ntext** o **image** nelle tabelle inserted e deleted per i trigger AFTER. Questi tipi di dati sono tuttavia disponibili per garantire la compatibilità con le versioni precedenti. L'archiviazione preferita per i dati di grandi dimensioni consiste nell'usare i tipi di dati **varchar(max)** , **nvarchar(max)** e **varbinary(max)** . I trigger AFTER e INSTEAD OF supportano i dati **varchar(max)** , **nvarchar(max)** e **varbinary(max)** nelle tabelle inserted e deleted. Per altre informazioni, vedere [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
  **Esempio di utilizzo della tabella inserted in un trigger per l'applicazione delle regole business**  
   

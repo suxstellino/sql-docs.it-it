@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - changesubscription
 - sp_changesubscription
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d1dd4a0fc40cf24896de912c1254b154a5538866
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: db0e26092acb2a8cb0fc546a18c0b8f4010fa8fc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543687"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189583"
 ---
 # <a name="sp_changesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,19 +49,19 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` Nome della pubblicazione da modificare. *Publication*è di **tipo sysname**e non prevede alcun valore predefinito  
+`[ @publication = ] 'publication'` Nome della pubblicazione da modificare. *Publication* è di **tipo sysname** e non prevede alcun valore predefinito  
   
-`[ @article = ] 'article'` Nome dell'articolo da modificare. *article* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @article = ] 'article'` Nome dell'articolo da modificare. *article* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @subscriber = ] 'subscriber'` Nome del Sottoscrittore. *Subscriber* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @subscriber = ] 'subscriber'` Nome del Sottoscrittore. *Subscriber* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @destination_db = ] 'destination_db'` Nome del database di sottoscrizione. *destination_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @destination_db = ] 'destination_db'` Nome del database di sottoscrizione. *destination_db* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 `[ @property = ] 'property'` Proprietà da modificare per la sottoscrizione specificata. *Property* è di **tipo nvarchar (30)**. i possibili valori sono i valori della tabella.  
   
-`[ @value = ] 'value'` Nuovo valore per la *Proprietà*specificata. *value* è di **tipo nvarchar (4000)**. i possibili valori sono i valori della tabella.  
+`[ @value = ] 'value'` Nuovo valore per la *Proprietà* specificata. *value* è di **tipo nvarchar (4000)**. i possibili valori sono i valori della tabella.  
   
-|Proprietà|valore|Descrizione|  
+|Proprietà|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||Account di accesso per l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows utilizzato per l'esecuzione dell'agente.|  
 |**distrib_job_password**||Password dell'account di Windows utilizzato per l'esecuzione dell'agente.|  
@@ -79,7 +79,7 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**3**|Provider OLE DB|  
 |**memory_optimized**|**bit**|Indica che la sottoscrizione supporta le tabelle con ottimizzazione per la memoria. *memory_optimized* è di **bit**, dove 1 è uguale a true (la sottoscrizione supporta le tabelle con ottimizzazione per la memoria).|  
   
-`[ @publisher = ] 'publisher'` Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'` Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname** e il valore predefinito è null.  
   
 > [!NOTE]  
 >  il *Server* di pubblicazione non deve essere specificato per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
@@ -87,7 +87,7 @@ sp_changesubscription [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_changesubscription** viene utilizzata per la replica snapshot e transazionale.  
   
  **sp_changesubscription** può essere utilizzato solo per modificare le proprietà delle sottoscrizioni push o delle sottoscrizioni pull necessarie per la replica transazionale ad aggiornamento in coda. Per modificare le proprietà di tutti gli altri tipi di sottoscrizioni pull, utilizzare [sp_change_subscription_properties &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md).  

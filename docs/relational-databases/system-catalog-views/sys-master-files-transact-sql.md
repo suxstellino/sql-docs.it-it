@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.master_files
 - master_files_TSQL
@@ -21,12 +21,12 @@ ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55b5465b2c43b02247a48478272393f941a4a51d
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 1cfe105e765fbdafc1c4e61e0c340b3db44ed095
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095532"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191361"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "98095532"
 |database_id|**int**|ID del database al quale è associato il file corrente. Il masterdatabase_id è sempre 1.|  
 |file_id|**int**|ID del file all'interno del database. Il file_id primario è sempre 1.|  
 |file_guid|**uniqueidentifier**|Identificatore univoco del file.<br /><br /> NULL = il database è stato aggiornato da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (valido per SQL Server 2005 e versioni precedenti).|  
-|type|**tinyint**|Tipo di file:<br /><br /> 0 = Righe<br /><br /> 1 = Log<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Full-text (cataloghi full-text precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]; i cataloghi full-text aggiornati a oppure creati in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive indicheranno un tipo di file 0).|  
+|tipo|**tinyint**|Tipo di file:<br /><br /> 0 = Righe<br /><br /> 1 = Log<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Full-text (cataloghi full-text precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]; i cataloghi full-text aggiornati a oppure creati in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive indicheranno un tipo di file 0).|  
 |type_desc|**nvarchar(60)**|Descrizione del tipo di file:<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (cataloghi full-text precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]).|  
 |data_space_id|**int**|ID dello spazio dati al quale appartiene il file. Lo spazio dati è un filegroup.<br /><br /> 0 = File di log|  
 |name|**sysname**|Nome logico del file nel database.|  

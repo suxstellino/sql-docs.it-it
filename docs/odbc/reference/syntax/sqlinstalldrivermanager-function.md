@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLInstallDriverManager
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b39e2c9304fd47394617d48f22ac91284af1b45d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b85af0323de46972ec6d6c4bf88359209b0015d5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421175"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189701"
 ---
 # <a name="sqlinstalldrivermanager-function"></a>Funzione SQLInstallDriverManager
 **Conformità**  
@@ -58,7 +58,7 @@ BOOL SQLInstallDriverManager(
  La funzione restituisce TRUE se ha esito positivo, FALSE in caso di esito negativo.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLInstallDriverManager** restituisce false, è possibile ottenere un valore * \* pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i valori * \* pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLInstallDriverManager** restituisce false, è possibile ottenere un valore *\* pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i valori *\* pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
@@ -74,7 +74,7 @@ BOOL SQLInstallDriverManager(
   
  Se una versione precedente di gestione driver è stata installata in precedenza dal programma di installazione dell'applicazione, i componenti principali devono essere disinstallati e reinstallati, in modo che il conteggio di utilizzo dei componenti di base sia valido. **SQLRemoveDriverManager** deve essere chiamato prima per decrementare il numero di utilizzo dei componenti. **SQLInstallDriverManager** deve quindi essere chiamato per incrementare il conteggio di utilizzo dei componenti. Il programma di installazione dell'applicazione deve sostituire i vecchi file dei componenti di base con i nuovi file. I conteggi di utilizzo dei file rimarranno invariati e altre applicazioni che utilizzano i file dei componenti di base della versione precedente utilizzeranno ora i file di versione più recenti.  
   
- In una nuova installazione dei componenti di base di ODBC, driver e convertitori, il programma di installazione dell'applicazione deve chiamare le funzioni seguenti in sequenza: **SQLInstallDriverManager**, **SQLInstallDriverEx**, **SQLConfigDriver** (con un *fRequest* di ODBC_INSTALL_DRIVER), quindi **SQLInstallTranslatorEx**. In una disinstallazione dei componenti di base, dei driver e dei convertitori, il programma di installazione dell'applicazione deve chiamare le seguenti funzioni in sequenza: **SQLRemoveTranslator**, **SQLRemoveDriver**e quindi **SQLRemoveDriverManager**. Queste funzioni devono essere chiamate in questa sequenza. In un aggiornamento di tutti i componenti, tutte le funzioni di disinstallazione devono essere chiamate in sequenza, quindi tutte le funzioni di installazione devono essere chiamate in sequenza.  
+ In una nuova installazione dei componenti di base di ODBC, driver e convertitori, il programma di installazione dell'applicazione deve chiamare le funzioni seguenti in sequenza: **SQLInstallDriverManager**, **SQLInstallDriverEx**, **SQLConfigDriver** (con un *fRequest* di ODBC_INSTALL_DRIVER), quindi **SQLInstallTranslatorEx**. In una disinstallazione dei componenti di base, dei driver e dei convertitori, il programma di installazione dell'applicazione deve chiamare le seguenti funzioni in sequenza: **SQLRemoveTranslator**, **SQLRemoveDriver** e quindi **SQLRemoveDriverManager**. Queste funzioni devono essere chiamate in questa sequenza. In un aggiornamento di tutti i componenti, tutte le funzioni di disinstallazione devono essere chiamate in sequenza, quindi tutte le funzioni di installazione devono essere chiamate in sequenza.  
   
 ## <a name="related-functions"></a>Funzioni correlate  
   

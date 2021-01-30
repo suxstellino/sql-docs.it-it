@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLWriteFileDSN
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9e18f56f-1061-416b-83d4-ffeec42ab5a9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4bd63c368f4055821df41faceb7b9c33cf20bde3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f778c2669a55e3f63c1946d2b4323ae64242c533
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421005"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191670"
 ---
 # <a name="sqlwritefiledsn-function"></a>Funzione SQLWriteFileDSN
 **Conformità**  
@@ -39,10 +39,10 @@ ms.locfileid: "88421005"
 ```cpp  
   
 BOOL SQLWriteFileDSN(  
-     LPCSTR     lpszFileName,  
-     LPCSTR     lpszAppName,  
-     LPCSTR     lpszKeyName,  
-     LPCSTR     lpszString);  
+     LPCSTR     lpszFileName,  
+     LPCSTR     lpszAppName,  
+     LPCSTR     lpszKeyName,  
+     LPCSTR     lpszString);  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -62,13 +62,13 @@ BOOL SQLWriteFileDSN(
  La funzione restituisce TRUE se ha esito positivo, FALSE in caso di esito negativo.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLWriteFileDSN** restituisce false, è possibile ottenere un valore * \* pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i valori * \* pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLWriteFileDSN** restituisce false, è possibile ottenere un valore *\* pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i valori *\* pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Errore generale del programma di installazione|Si è verificato un errore per il quale non è stato specificato alcun errore di programma di installazione.|  
 |ODBC_ERROR_INVALID_PATH|Percorso di installazione non valido|Il percorso del nome file specificato nell'argomento *lpszFileName* non è valido.|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|Tipo di richiesta non valido|L'argomento *lpszAppName*, *lpszKeyName*o *lpszString* è null.|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|Tipo di richiesta non valido|L'argomento *lpszAppName*, *lpszKeyName* o *lpszString* è null.|  
   
 ## <a name="comments"></a>Commenti  
  ODBC riserva il nome della sezione [ODBC] in cui archiviare le informazioni di connessione. Le parole chiave riservate per questa sezione sono le stesse riservate per una stringa di connessione in **SQLDriverConnect**. Per ulteriori informazioni, vedere la descrizione della funzione [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) .  

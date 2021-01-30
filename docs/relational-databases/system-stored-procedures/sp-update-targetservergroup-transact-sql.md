@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_targetservergroup_TSQL
 - sp_update_targetservergroup
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f48424649b3265ee810e48c08602140ce133fc98
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 631e1b316cb66c69ed220cf1e1d3ca09f8e45807
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541568"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189507"
 ---
 # <a name="sp_update_targetservergroup-transact-sql"></a>sp_update_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +42,9 @@ sp_update_targetservergroup
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @name = ] 'current_name'` Nome del gruppo di server di destinazione. *current_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @name = ] 'current_name'` Nome del gruppo di server di destinazione. *current_name* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @new_name = ] 'new_name'` Nuovo nome per il gruppo di server di destinazione. *new_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @new_name = ] 'new_name'` Nuovo nome per il gruppo di server di destinazione. *new_name* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -52,10 +52,10 @@ sp_update_targetservergroup
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa stored procedure, è necessario che agli utenti venga concesso il ruolo predefinito del server **sysadmin** .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_update_targetservergroup** deve essere eseguito dal database **msdb** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente il nome del gruppo di server di destinazione `Servers Processing Customer Orders` viene modificato in `Local Servers Processing Customer Orders`.  
   
 ```  

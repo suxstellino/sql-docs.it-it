@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropdistributiondb_TSQL
 - sp_dropdistributiondb
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d5c1cb17767cf61b49345b93f7c5ee5ebfbc9d27
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2de544361c4bcd9befb80e5172e0b4887a984a9d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543485"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191193"
 ---
 # <a name="sp_dropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,12 +38,12 @@ sp_dropdistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @database = ] 'database'` Database da eliminare. il *database* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @database = ] 'database'` Database da eliminare. il *database* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_dropdistributiondb** viene utilizzato in tutti i tipi di replica.  
   
  È necessario eseguire questa stored procedure prima di eliminare il server di distribuzione eseguendo **sp_dropdistributor**.  

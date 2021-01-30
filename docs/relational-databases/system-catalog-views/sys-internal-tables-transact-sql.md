@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.internal_tables
 - internal_tables
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: ecc601c3eec509258cdac61a9c9216077f36f712
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 2064e987a92d42422ddfd7ba33104c6f5558e424
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094515"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191400"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,12 +44,12 @@ ms.locfileid: "98094515"
 |**parent_id**|**int**|ID del padre, indipendentemente dal fatto che sia definito o meno a livello di ambito dello schema. 0 in assenza del padre.<br /><br /> **queue_messages**  =  **object_id** della coda<br /><br /> **xml_index_nodes**  =  **object_id** dell'indice XML<br /><br /> **fulltext_catalog_freelist**  =  **fulltext_catalog_id** del catalogo full-text<br /><br /> **fulltext_index_map**  =  **object_id** dell'indice full-text<br /><br /> **query_notification** o **service_broker_map** = 0<br /><br /> **extended_indexes**  =  **object_id** di un indice esteso, ad esempio un indice spaziale<br /><br /> **object_id** della tabella per cui è abilitato il rilevamento della tabella = **CHANGE_TRACKING**|  
 |**parent_minor_id**|**int**|ID secondario del padre.<br /><br /> **xml_index_nodes**  =  **index_id** dell'indice XML<br /><br /> **extended_indexes**  =  **index_id** di un indice esteso, ad esempio un indice spaziale<br /><br /> 0 = **queue_messages**, **fulltext_catalog_freelist**, **fulltext_index_map**, **query_notification**, **service_broker_map** o **CHANGE_TRACKING**|  
 |**lob_data_space_id**|**int**|Un valore diverso da zero rappresenta l'ID dello spazio dei dati (filegroup o schema di partizione) contenente i dati LOB (Large Object) per questa tabella.|  
-|**filestream_data_space_id**|**int**|Riservato per usi futuri.|  
+|**filestream_data_space_id**|**int**|Riservato per utilizzi futuri.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Le tabelle interne sono collocate nello stesso filegroup dell'entità padre. È possibile utilizzare la query del catalogo illustrata nell'esempio F seguente per restituire il numero di pagine utilizzate dalle tabelle interne per i dati all'interno di righe, all'esterno di righe e LOB (Large Object).  
   
  È possibile utilizzare la procedura di sistema [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) per restituire i dati di utilizzo dello spazio per le tabelle interne. **sp_spaceused** segnala lo spazio interno della tabella nei modi seguenti:  
@@ -58,7 +58,7 @@ ms.locfileid: "98094515"
   
 -   Le pagine utilizzate dalle tabelle interne di indici XML, indici spaziali e indici full-text sono incluse nella colonna **index_size** . Quando viene specificato un nome di tabella o vista indicizzata, le pagine per gli indici XML, spaziali e full-text per tale oggetto vengono incluse nelle colonne **riservate** e **index_size**.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Negli esempi seguenti viene illustrato come eseguire query sui metadati delle tabelle interne utilizzando le viste del catalogo.  
   
 ### <a name="a-show-internal-tables-that-inherit-columns-from-the-sysobjects-catalog-view"></a>R. Visualizzazione delle tabelle interne che ereditano le colonne dalla vista del catalogo sys.objects  

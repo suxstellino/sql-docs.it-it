@@ -6,7 +6,7 @@ ms.date: 06/25/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - external_libraries
 - external_libraries_TSQL
@@ -20,12 +20,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: 540420eee8f6de671df54ace8af9fbe1fe0c501d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8c092f44618b07cad75d4c6be0d3aa42f22145b6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477502"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191560"
 ---
 # <a name="sysexternal_libraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -45,10 +45,10 @@ Nella vista del catalogo sys.external_libraries viene elencata una riga per ogni
 |name |sysname |Nome della libreria esterna. È univoco all'interno del database per proprietario.|
 |principal_id |INT |ID dell'entità a cui appartiene la libreria esterna. |
 |Linguaggio | sysname | Nome della lingua o del runtime che supporta la libreria esterna. I valori validi sono ' R ',' Python ' è Java '. In futuro potrebbero essere aggiunti altri Runtime.|
-|scope |INT |0 per ambito pubblico; 1 per ambito privato |  
+|ambito |INT |0 per ambito pubblico; 1 per ambito privato |  
 |scope_desc |varchar (7) |Indica se il pacchetto è pubblico o privato.|
 
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 
 + [sys.external_library_files](sys-external-library-files-transact-sql.md)  
 + [CREA LIBRERIA ESTERNA](../../t-sql/statements/create-external-library-transact-sql.md)  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_schedule
 - sp_update_schedule_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5aead8188bbdaac714bb68e44be0c54cce12fce6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 13359a3d3588e238ef0b78ed5bfe5148fb447dae
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541584"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189533"
 ---
 # <a name="sp_update_schedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,27 +56,27 @@ sp_update_schedule
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @schedule_id = ] schedule_id` Identificatore della pianificazione da modificare. *schedule_id* è di **tipo int**e non prevede alcun valore predefinito. È necessario specificare *schedule_id* o *schedule_name* .  
+`[ @schedule_id = ] schedule_id` Identificatore della pianificazione da modificare. *schedule_id* è di **tipo int** e non prevede alcun valore predefinito. È necessario specificare *schedule_id* o *schedule_name* .  
   
-`[ @name = ] 'schedule_name'` Nome della pianificazione da modificare. *schedule_name*è di **tipo sysname**e non prevede alcun valore predefinito. È necessario specificare *schedule_id* o *schedule_name* .  
+`[ @name = ] 'schedule_name'` Nome della pianificazione da modificare. *schedule_name* è di **tipo sysname** e non prevede alcun valore predefinito. È necessario specificare *schedule_id* o *schedule_name* .  
   
-`[ @new_name = ] new_name` Nuovo nome della pianificazione. *new_name* è di **tipo sysname**e il valore predefinito è null. Quando *new_name* è null, il nome della pianificazione è invariato.  
+`[ @new_name = ] new_name` Nuovo nome della pianificazione. *new_name* è di **tipo sysname** e il valore predefinito è null. Quando *new_name* è null, il nome della pianificazione è invariato.  
   
-`[ @enabled = ] enabled` Indica lo stato corrente della pianificazione. *Enabled*è di **tinyint**e il valore predefinito è **1** (abilitato). Se è **0**, la pianificazione non è abilitata. Quando la pianificazione non è abilitata, non viene eseguito alcun processo su questa pianificazione.  
+`[ @enabled = ] enabled` Indica lo stato corrente della pianificazione. *Enabled* è di **tinyint** e il valore predefinito è **1** (abilitato). Se è **0**, la pianificazione non è abilitata. Quando la pianificazione non è abilitata, non viene eseguito alcun processo su questa pianificazione.  
   
-`[ @freq_type = ] freq_type` Valore che indica quando deve essere eseguito un processo. *freq_type*è di **tipo int**e il valore predefinito è **0**. i possibili valori sono i seguenti.  
+`[ @freq_type = ] freq_type` Valore che indica quando deve essere eseguito un processo. *freq_type* è di **tipo int** e il valore predefinito è **0**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una sola volta|  
 |**4**|Ogni giorno|  
 |**8**|Settimanale|  
-|**16**|Mensilmente|  
+|**16**|Ogni mese|  
 |**32**|Mensile rispetto all' *intervallo freq*|  
 |**64**|All'avvio del servizio SQLServerAgent|  
 |**128**|Quando il computer è inattivo|  
   
-`[ @freq_interval = ] freq_interval` Giorni in cui viene eseguito un processo. *freq_interval* è di **tipo int**e il valore predefinito è **0**e dipende dal valore di *freq_type*.  
+`[ @freq_interval = ] freq_interval` Giorni in cui viene eseguito un processo. *freq_interval* è di **tipo int** e il valore predefinito è **0** e dipende dal valore di *freq_type*.  
   
 |Valore di *freq_type*|Effetti sui *freq_interval*|  
 |---------------------------|--------------------------------|  
@@ -88,20 +88,20 @@ sp_update_schedule
 |**64** (all'avvio del servizio SQLServerAgent)|*freq_interval* non è utilizzato.|  
 |**128**|*freq_interval* non è utilizzato.|  
   
-`[ @freq_subday_type = ] freq_subday_type` Specifica le unità per *freq_subday_interval * *.* *freq_subday_type*è di **tipo int**e il valore predefinito è **0**. i possibili valori sono i seguenti.  
+`[ @freq_subday_type = ] freq_subday_type` Specifica le unità per *freq_subday_interval * *.* *freq_subday_type* è di **tipo int** e il valore predefinito è **0**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione (unità)|  
+|Valore|Descrizione (unità)|  
 |-----------|--------------------------|  
 |**0x1**|All'ora specificata|  
 |**0x2**|Secondi|  
 |**0x4**|Minuti|  
 |**0x8**|Ore|  
   
-`[ @freq_subday_interval = ] freq_subday_interval` Numero di periodi di *freq_subday_type* da eseguire tra ogni esecuzione di un processo. *freq_subday_interval*è di **tipo int**e il valore predefinito è **0**.  
+`[ @freq_subday_interval = ] freq_subday_interval` Numero di periodi di *freq_subday_type* da eseguire tra ogni esecuzione di un processo. *freq_subday_interval* è di **tipo int** e il valore predefinito è **0**.  
   
-`[ @freq_relative_interval = ] freq_relative_interval` Occorrenza di un processo di *freq_interval* ogni mese, se *freq_interval* è **32** (mensile relativo). *freq_relative_interval*è di **tipo int**e il valore predefinito è **0**. i possibili valori sono i seguenti.  
+`[ @freq_relative_interval = ] freq_relative_interval` Occorrenza di un processo di *freq_interval* ogni mese, se *freq_interval* è **32** (mensile relativo). *freq_relative_interval* è di **tipo int** e il valore predefinito è **0**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione (unità)|  
+|Valore|Descrizione (unità)|  
 |-----------|--------------------------|  
 |**1**|First (Primo)|  
 |**2**|Second|  
@@ -109,26 +109,26 @@ sp_update_schedule
 |**8**|Quarto|  
 |**16**|Last (Ultimo)|  
   
-`[ @freq_recurrence_factor = ] freq_recurrence_factor` Numero di settimane o mesi che intercorre tra l'esecuzione pianificata di un processo. *freq_recurrence_factor* viene utilizzato solo se *freq_type* è **8**, **16**o **32**. *freq_recurrence_factor*è di **tipo int**e il valore predefinito è **0**.  
+`[ @freq_recurrence_factor = ] freq_recurrence_factor` Numero di settimane o mesi che intercorre tra l'esecuzione pianificata di un processo. *freq_recurrence_factor* viene utilizzato solo se *freq_type* è **8**, **16** o **32**. *freq_recurrence_factor* è di **tipo int** e il valore predefinito è **0**.  
   
-`[ @active_start_date = ] active_start_date` Data in cui può iniziare l'esecuzione di un processo. *active_start_date*è di **tipo int**e il valore predefinito è null, che indica la data odierna. La data è nel formato AAAAMMGG. Se *active_start_date* non è null, la data deve essere maggiore o uguale a 19900101.  
+`[ @active_start_date = ] active_start_date` Data in cui può iniziare l'esecuzione di un processo. *active_start_date* è di **tipo int** e il valore predefinito è null, che indica la data odierna. La data è nel formato AAAAMMGG. Se *active_start_date* non è null, la data deve essere maggiore o uguale a 19900101.  
   
  Al termine della creazione della pianificazione, esaminare la data di inizio per verificare che corrisponda alla data corretta. Per ulteriori informazioni, vedere la sezione "pianificazione della data di inizio" in [creare e alleghi pianificazioni ai processi](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
-`[ @active_end_date = ] active_end_date` Data in cui l'esecuzione di un processo può essere arrestata. *active_end_date*è di **tipo int**e il valore predefinito è **99991231**, che indica il 31 dicembre 9999. La data è nel formato AAAAMMGG.  
+`[ @active_end_date = ] active_end_date` Data in cui l'esecuzione di un processo può essere arrestata. *active_end_date* è di **tipo int** e il valore predefinito è **99991231**, che indica il 31 dicembre 9999. La data è nel formato AAAAMMGG.  
   
-`[ @active_start_time = ] active_start_time` Ora di ogni giorno tra *active_start_date* e *active_end_date* per iniziare l'esecuzione di un processo. *active_start_time*è di **tipo int**e il valore predefinito è 000000, che indica 12:00:00 A.M. nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
+`[ @active_start_time = ] active_start_time` Ora di ogni giorno tra *active_start_date* e *active_end_date* per iniziare l'esecuzione di un processo. *active_start_time* è di **tipo int** e il valore predefinito è 000000, che indica 12:00:00 A.M. nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
   
-`[ @active_end_time = ] active_end_time` Tempo di ogni giorno tra *active_start_date* e *active_end_date* per terminare l'esecuzione di un processo. *active_end_time*è di **tipo int**e il valore predefinito è **235959**, che indica le 11:59:59. nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
+`[ @active_end_time = ] active_end_time` Tempo di ogni giorno tra *active_start_date* e *active_end_date* per terminare l'esecuzione di un processo. *active_end_time* è di **tipo int** e il valore predefinito è **235959**, che indica le 11:59:59. nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
   
-`[ @owner_login_name = ] 'owner_login_name']` Nome dell'entità server proprietaria della pianificazione. *owner_login_name* è di **tipo sysname**e il valore predefinito è null, che indica che la pianificazione è di proprietà dell'autore.  
+`[ @owner_login_name = ] 'owner_login_name']` Nome dell'entità server proprietaria della pianificazione. *owner_login_name* è di **tipo sysname** e il valore predefinito è null, che indica che la pianificazione è di proprietà dell'autore.  
   
 `[ @automatic_post = ] automatic_post` Riservati.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Tutti i processi che utilizzano la pianificazione, adottano immediatamente le nuove impostazioni. Cambiando la pianificazione, tuttavia, non vengono arrestati i processi attualmente in esecuzione.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -144,7 +144,7 @@ sp_update_schedule
   
  Solo i membri del **ruolo sysadmin** possono modificare una pianificazione di proprietà di un altro utente.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene modificato lo stato abilitato della pianificazione `NightlyJobs` impostandolo su `0` e impostando il proprietario su `terrid`.  
   
 ```  

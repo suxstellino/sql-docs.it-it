@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysdac_history_internal
 - sysdac_history_internal_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: eaea0060136a928e6fab1184c9fd0c08d88df09f
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 2c1770701b0373e56bac0a6c7c5bb2e9eac44ad3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094898"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187938"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>Tabelle applicazioni livello dati - sysdac_history_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "98094898"
 |**date_created**|**datetime**|Data e ora di creazione della voce.|  
 |**date_modified**|**datetime**|Data e ora dell'ultima modifica della voce.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Le azioni di gestione di applicazione livello dati, quali ad esempio la distribuzione o l'eliminazione di un'applicazione livello dati, generano più passaggi. A ogni azione viene assegnato un identificatore dell'azione. A ogni passaggio vengono assegnati un numero di sequenza e una riga in **sysdac_history_internal**, in cui viene registrato lo stato del passaggio. Ogni riga viene creata all'avvio del passaggio dell'azione e aggiornata in base alle necessità per riflettere lo stato dell'operazione. Ad esempio, un'azione Distribuisci DAC può essere assegnata **action_id** 12 e ottenere quattro righe **sysdac_history_internal**:  
   
 | action_id | sequence_id | action_type_name | dac_object_type_name |

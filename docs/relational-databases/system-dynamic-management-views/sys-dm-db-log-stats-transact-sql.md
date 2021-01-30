@@ -6,7 +6,7 @@ ms.date: 05/17/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_db_log_stats_TSQL
 - sys.dm_db_log_stats
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ddfd608b3f2d5bb5c4c259dfb0ec822f245f72b3
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 88ac57a5ba41afacafe8565225ed9ce7bca55991
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096564"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191190"
 ---
 # <a name="sysdm_db_log_stats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ID del database. `database_id` è `int`. Gli input validi sono il numero di ID d
 |recovery_vlf_count |**bigint** |   Numero totale di [file di log virtuali (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) da ripristinare se è stato eseguito il failover o il riavvio del server. |  
 
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 Quando `sys.dm_db_log_stats` viene eseguito su un database che partecipa a un gruppo di disponibilità come replica secondaria, viene restituito solo un subset dei campi descritti in precedenza.  Attualmente, solo `database_id` , `recovery_model` e `log_backup_time` verranno restituiti quando vengono eseguiti su un database secondario.   
 
 ## <a name="permissions"></a>Autorizzazioni  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_OACreate
 - sp_OACreate_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: efcdc5094183143d3f45bc5a0174c0bead5381d2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bd6d44aedf1328234cf51366c3e81bcfb2d6dc94
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541145"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191984"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  Ad esempio, {00026BA1-0000-0000-C000-000000000046} è il CLSID dell'oggetto SQL-DMO **SqlServer** .  
   
- _objecttoken_ **output** objecttoken  
+  **output** objecttoken  
  Token dell'oggetto restituito e deve essere una variabile locale di tipo di dati **int**. Questo token dell'oggetto identifica l'oggetto OLE creato e viene utilizzato nelle chiamate alle altre stored procedure di automazione OLE.  
   
  *context*  
@@ -78,7 +78,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  Per ulteriori informazioni sui codici restituiti HRESULT, vedere [codici restituiti e informazioni sugli errori di automazione OLE](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se sono abilitate le procedure di automazione OLE, una chiamata a **sp_OACreate** avvierà l'ambiente di esecuzione condiviso di automazione OLE. Per ulteriori informazioni sull'abilitazione dell'automazione OLE, vedere [opzione di configurazione del server OLE Automation Procedures](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md).  
   
  L'oggetto OLE creato viene distrutto automaticamente al termine del batch di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_estimated_rowsize_reduction_for_vardecimal
 - sp_estimated_rowsize_reduction_for_vardecimal_TSQL
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f4ab6fbd33edef26f9cf1d37daf6688a68d8d5eb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ea1d65f193bc4d6fd42278e62e39d6fd380d88bd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89527881"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187317"
 ---
 # <a name="sp_estimated_rowsize_reduction_for_vardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +61,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 |**avg_rowlen_vardecimal_format**|**Decimal (12, 2)**|Rappresenta le dimensioni medie delle righe in caso di utilizzo del formato di archiviazione vardecimal.|  
 |**row_count**|**int**|Numero di righe nella tabella.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare **sp_estimated_rowsize_reduction_for_vardecimal** per stimare il risparmio risultante se si abilita una tabella per il formato di archiviazione vardecimal. Se, ad esempio, le dimensioni medie della riga possono essere ridotte del 40%, è possibile ridurre del 40% le dimensioni della tabella. Si potrebbe non ottenere un risparmio in termini di spazio a seconda del fattore di riempimento e delle dimensioni della riga. Se, ad esempio, si riducono del 40% le dimensioni di una riga lunga 8000 byte, una pagina di dati può comunque contenere una sola riga, pertanto non si hanno risparmi in termini di spazio.  
   
  Se i risultati di **sp_estimated_rowsize_reduction_for_vardecimal** indicano che la tabella aumenterà, significa che in molte righe della tabella viene utilizzata quasi la precisione completa dei tipi di dati decimali e l'aggiunta del piccolo overhead necessario per il formato di archiviazione vardecimal è superiore al risparmio del formato di archiviazione vardecimal. In questi rari casi, non abilitare il formato di archiviazione vardecimal.  
@@ -71,7 +71,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per la tabella.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene stimata la riduzione delle dimensioni delle righe in caso di compressione della tabella `Production.WorkOrderRouting` del database `AdventureWorks2012`.  
   
 ```  

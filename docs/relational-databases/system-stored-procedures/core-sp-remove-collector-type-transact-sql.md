@@ -1,13 +1,13 @@
 ---
 description: core.sp_remove_collector_type (Transact-SQL)
-title: Core. sp_remove_collector_type (Transact-SQL) | Microsoft Docs
+title: core.sp_remove_collector_type (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_remove_collector_type
 - sp_remove_collector_type_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 88ceba25-e41a-405f-a416-bb68918a0024
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c6ab7c32846fc322fd54ba81b87e973d5cf40bd4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 537a933dfd53a3ed227c14e2945c747e61793aed
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543785"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187991"
 ---
 # <a name="coresp_remove_collector_type-transact-sql"></a>core.sp_remove_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ core.sp_remove_collector_type [ @collector_type_uid = ] 'collector_type_uid'
   
 ## <a name="arguments"></a>Argomenti  
  [ @collector_type_uid =]'*collector_type_uid*'  
- GUID per il tipo agente di raccolta. *collector_type_uid* è di tipo **uniqueidentifier**e non prevede alcun valore predefinito.  
+ GUID per il tipo agente di raccolta. *collector_type_uid* è di tipo **uniqueidentifier** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -54,7 +54,7 @@ core.sp_remove_collector_type [ @collector_type_uid = ] 'collector_type_uid'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del database di **mdw_admin** (con autorizzazione Execute).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene rimosso il tipo di agente di raccolta query T-SQL generico dalla vista core.supported_collector_types.  
   
 ```  

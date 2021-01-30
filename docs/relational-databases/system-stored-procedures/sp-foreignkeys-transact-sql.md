@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_foreignkeys_TSQL
 - sp_foreignkeys
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8a87d51fff7179ece3442e2459d8d2c5a96c8029
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 377ef64c76238e2e840107dbbe6b32dc9ba4c00f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543402"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189565"
 ---
 # <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,19 +46,19 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @table_server = ] 'table_server'` Nome del server collegato per cui si desidera ottenere informazioni sulla tabella. *table_server* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @table_server = ] 'table_server'` Nome del server collegato per cui si desidera ottenere informazioni sulla tabella. *table_server* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @pktab_name = ] 'pktab_name'` Nome della tabella contenente una chiave primaria. *pktab_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @pktab_name = ] 'pktab_name'` Nome della tabella contenente una chiave primaria. *pktab_name* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @pktab_schema = ] 'pktab_schema'` Nome dello schema con una chiave primaria. *pktab_schema*è di **tipo sysname**e il valore predefinito è null. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il nome del proprietario.  
+`[ @pktab_schema = ] 'pktab_schema'` Nome dello schema con una chiave primaria. *pktab_schema* è di **tipo sysname** e il valore predefinito è null. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il nome del proprietario.  
   
-`[ @pktab_catalog = ] 'pktab_catalog'` Nome del catalogo con una chiave primaria. *pktab_catalog*è di **tipo sysname**e il valore predefinito è null. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il nome del database.  
+`[ @pktab_catalog = ] 'pktab_catalog'` Nome del catalogo con una chiave primaria. *pktab_catalog* è di **tipo sysname** e il valore predefinito è null. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il nome del database.  
   
-`[ @fktab_name = ] 'fktab_name'` Nome della tabella con una chiave esterna. *fktab_name*è di **tipo sysname**e il valore predefinito è null.  
+`[ @fktab_name = ] 'fktab_name'` Nome della tabella con una chiave esterna. *fktab_name* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @fktab_schema = ] 'fktab_schema'` Nome dello schema con una chiave esterna. *fktab_schema*è di **tipo sysname**e il valore predefinito è null.  
+`[ @fktab_schema = ] 'fktab_schema'` Nome dello schema con una chiave esterna. *fktab_schema* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @fktab_catalog = ] 'fktab_catalog'` Nome del catalogo con una chiave esterna. *fktab_catalog*è di **tipo sysname**e il valore predefinito è null.  
+`[ @fktab_catalog = ] 'fktab_catalog'` Nome del catalogo con una chiave esterna. *fktab_catalog* è di **tipo sysname** e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  Nessuno  
@@ -85,13 +85,13 @@ sp_foreignkeys [ @table_server = ] 'table_server'
   
  Nel set di risultati le colonne FK_NAME e PK_NAME restituiscono sempre NULL.  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_foreignkeys** esegue una query sul set di righe FOREIGN_KEYS dell'interfaccia **IDBSchemaRowset** del provider OLE DB che corrisponde a *table_server*. I parametri *table_name*, *TABLE_SCHEMA*, *TABLE_CATALOG*e *Column* vengono passati a questa interfaccia per limitare le righe restituite.  
+## <a name="remarks"></a>Commenti  
+ **sp_foreignkeys** esegue una query sul set di righe FOREIGN_KEYS dell'interfaccia **IDBSchemaRowset** del provider OLE DB che corrisponde a *table_server*. I parametri *table_name*, *TABLE_SCHEMA*, *TABLE_CATALOG* e *Column* vengono passati a questa interfaccia per limitare le righe restituite.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituite informazioni relative alla chiave esterna per la tabella `Department` del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] presente nel server collegato `Seattle1`.  
   
 ```  

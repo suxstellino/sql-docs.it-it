@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - DROP RESOURCE POOL
 - DROP_RESOURCE_POOL_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 18cd6dd9-7a6d-4a08-b9d5-649af23583d5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 3de30be9f5a0fc2b7aa98f4201320f1811ae30f9
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
-ms.translationtype: HT
+ms.openlocfilehash: 88d29f1e9e252c09c6abc0e41ced89ef6f5f6b30
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98081301"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99188446"
 ---
 # <a name="drop-resource-pool-transact-sql"></a>DROP RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ DROP RESOURCE POOL pool_name
  *pool_name*  
  Il nome di un pool di risorse esistente definito dall'utente.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Non è possibile eliminare un pool di risorse contenente gruppi del carico di lavoro.  
   
  Non è possibile eliminare pool predefiniti o interni di Resource Governor.  

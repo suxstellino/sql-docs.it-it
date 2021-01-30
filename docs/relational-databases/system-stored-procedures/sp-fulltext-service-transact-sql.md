@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_fulltext_service
 - sp_fulltext_service_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f29ad11ca5b1df94e445466a5402637a2abab023
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6fbbbe3451994687542f755b4d48953c7dbbe2e9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546121"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187326"
 ---
 # <a name="sp_fulltext_service-transact-sql"></a>sp_fulltext_service (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,12 +43,12 @@ sp_fulltext_service [ [@action=] 'action'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @action = ] 'action'` Proprietà da modificare o reimpostare. *Action* è di **tipo nvarchar (100) e** non prevede alcun valore predefinito. Per un elenco di proprietà di*c*, le relative descrizioni e i valori che è possibile impostare, vedere la tabella sotto l'argomento *value* . Questo argomento restituisce le proprietà seguenti: tipo di dati, valore corrente, valore minimo o massimo e valore che indica se l'oggetto è deprecato, se pertinente.  
+`[ @action = ] 'action'` Proprietà da modificare o reimpostare. *Action* è di **tipo nvarchar (100) e** non prevede alcun valore predefinito. Per un elenco di proprietà di *c*, le relative descrizioni e i valori che è possibile impostare, vedere la tabella sotto l'argomento *value* . Questo argomento restituisce le proprietà seguenti: tipo di dati, valore corrente, valore minimo o massimo e valore che indica se l'oggetto è deprecato, se pertinente.  
   
-`[ @value = ] value` Valore della proprietà specificata. il *valore* è **sql_variant**e il valore predefinito è null. Se @value è null, **sp_fulltext_service** restituisce l'impostazione corrente. In questa tabella sono elencate le proprietà, le descrizioni e i valori che è possibile impostare.  
+`[ @value = ] value` Valore della proprietà specificata. il *valore* è **sql_variant** e il valore predefinito è null. Se @value è null, **sp_fulltext_service** restituisce l'impostazione corrente. In questa tabella sono elencate le proprietà, le descrizioni e i valori che è possibile impostare.  
   
 > [!NOTE]  
->  Le azioni seguenti verranno rimosse in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **clean_up**, **connect_timeout**, **data_timeout**e **resource_usage**. Evitare di utilizzare queste azioni in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui attualmente vengono utilizzate.  
+>  Le azioni seguenti verranno rimosse in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **clean_up**, **connect_timeout**, **data_timeout** e **resource_usage**. Evitare di utilizzare queste azioni in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui attualmente vengono utilizzate.  
   
 |Azione|Tipo di dati|Descrizione|  
 |------------|---------------|-----------------|  
@@ -59,7 +59,7 @@ sp_fulltext_service [ [@action=] 'action'
 |**master_merge_dop**|**int**|Specifica il numero di thread che deve essere utilizzato dal processo di unione nell'indice master. Questo valore non deve superare il numero di CPU o di core della CPU disponibili.<br /><br /> Quando questo argomento non viene specificato, il servizio utilizza il minore di 4 o il numero di CPU o di core della CPU disponibili.|  
 |**pause_indexing**|**int**|Specifica se l'indicizzazione full-text deve essere sospesa, se è attualmente in esecuzione, o ripresa, se è attualmente sospesa.<br /><br /> 0 = Riprende le attività di indicizzazione full-text per l'istanza del server.<br /><br /> 1 = Sospende le attività di indicizzazione full-text per l'istanza del server.|  
 |**resource_usage**|**int**|Non ha alcuna funzione in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive e viene ignorata.|  
-|**update_languages**|NULL|Aggiorna l'elenco di lingue e filtra quelle registrate per la ricerca full-text. Le lingue vengono specificate quando si configura l'indicizzazione e nelle query full-text. I filtri vengono utilizzati dall'host del daemon di filtri per estrarre informazioni testuali dai formati di file corrispondenti, ad esempio docx archiviati in tipi di dati, ad esempio **varbinary**, **varbinary (max)**, **Image**o **XML**, per l'indicizzazione full-text.<br /><br /> Per altre informazioni, vedere [Visualizzazione o modifica di word breaker e filtri registrati](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).|  
+|**update_languages**|NULL|Aggiorna l'elenco di lingue e filtra quelle registrate per la ricerca full-text. Le lingue vengono specificate quando si configura l'indicizzazione e nelle query full-text. I filtri vengono utilizzati dall'host del daemon di filtri per estrarre informazioni testuali dai formati di file corrispondenti, ad esempio docx archiviati in tipi di dati, ad esempio **varbinary**, **varbinary (max)**, **Image** o **XML**, per l'indicizzazione full-text.<br /><br /> Per altre informazioni, vedere [Visualizzazione o modifica di word breaker e filtri registrati](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).|  
 |**upgrade_option**|**int**|Controlla il modo in cui viene eseguita la migrazione di indici full-text durante l'aggiornamento di un database da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a una versione successiva. Questa proprietà si applica ai casi in cui viene eseguito l'aggiornamento tramite il collegamento di un database, il ripristino di un backup di database o di un backup di file oppure la copia del database tramite la Copia guidata database.<br /><br /> Uno dei valori possibili:<br /><br /> 0 = I cataloghi full-text vengono ricompilati utilizzando i nuovi word breaker migliorati. La ricompilazione degli indici può richiedere tempo e dopo l'aggiornamento potrebbe essere necessaria una quantità significativa di CPU e di memoria.<br /><br /> 1= I cataloghi full-text vengono reimpostati. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] I file del catalogo full-text vengono rimossi, ma i metadati per i cataloghi e per gli indici full-text vengono mantenuti. Dopo l'aggiornamento, in tutti gli indici full-text il rilevamento delle modifiche viene disabilitato e le ricerche per indicizzazione non vengono avviate automaticamente. Il catalogo resterà vuoto fino a quando non si eseguirà manualmente un popolamento completo al termine dell'aggiornamento.<br /><br /> 2 = I cataloghi full-text vengono importati. In genere, l'importazione è molto più veloce della ricompilazione. Se ad esempio si utilizza solo una CPU, l'importazione è di circa 10 volte più veloce della ricompilazione. Tuttavia, un catalogo full-text importato non utilizza i word breaker nuovi e migliorati, pertanto potrebbe essere necessario ricompilare i cataloghi full-text.<br /><br /> Nota: la ricompilazione può essere eseguita in modalità a thread multipli e, se sono disponibili più di 10 CPU, la ricompilazione potrebbe essere eseguita più velocemente dell'importazione se si consente a ricompila di usare tutte le CPU.<br /><br /> Se un catalogo full-text non è disponibile, gli indici full-text associati vengono ricreati. Questa opzione è disponibile solo per i database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> Per informazioni sulla scelta dell'opzione di aggiornamento full-text, vedere[Aggiornare la ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md).<br /><br /> Nota: per impostare questa proprietà in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , utilizzare la proprietà **opzione di aggiornamento full-text** . Per altre informazioni, vedere [Gestione e monitoraggio della ricerca full-text per un'istanza del server](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).|  
 |**verify_signature**|**int**|Indica se solo i file binari firmati vengono caricati dal motore di ricerca full-text. Per impostazione predefinita vengono caricati solo i file binari firmati attendibili.<br /><br /> 1 = Verifica che vengano caricati solo i file binari firmati trusted (impostazione predefinita).<br /><br /> 0 = Non verifica se i file binari sono firmati.|  
   

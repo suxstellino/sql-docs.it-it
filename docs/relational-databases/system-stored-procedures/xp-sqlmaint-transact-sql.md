@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - xp_sqlmaint
 - xp_sqlmaint_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cfe66be84a9f631422c624eaf65152569d0405bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b83e5e84d5712e9b1cf3e253222d1ef6d212720
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419185"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187950"
 ---
 # <a name="xp_sqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,10 +49,10 @@ xp_sqlmaint 'switch_string'
  **-?** opzione non valida per **xp_sqlmaint**.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- Nessuno. Restituisce un errore se l'utilità **SQLMaint** ha esito negativo.  
+ Nessuna. Restituisce un errore se l'utilità **SQLMaint** ha esito negativo.  
   
-## <a name="remarks"></a>Osservazioni  
- Se questa procedura viene chiamata da un utente connesso con SQL Server autenticazione, le opzioni **-U "***login_ID***"** e **-P "***password***"** vengono anteposti a *switch_string* prima dell'esecuzione. Se l'utente è connesso con l'autenticazione di Windows, *switch_string* viene passato senza apportare modifiche a **SQLMaint**.  
+## <a name="remarks"></a>Commenti  
+ Se questa procedura viene chiamata da un utente connesso con SQL Server autenticazione, le opzioni **-U "**_login_ID_*_"_* e **-P "**_password_*_"_* vengono anteposti a *switch_string* prima dell'esecuzione. Se l'utente è connesso con l'autenticazione di Windows, *switch_string* viene passato senza apportare modifiche a **SQLMaint**.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  

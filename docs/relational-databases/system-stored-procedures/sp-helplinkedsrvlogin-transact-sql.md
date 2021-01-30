@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helplinkedsrvlogin_TSQL
 - sp_helplinkedsrvlogin
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4468902fc983e94656a7f00c457b51e26a752a82
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 274d1d9a39feac333d5b7d572ec475bb89444c2b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541744"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190014"
 ---
 # <a name="sp_helplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +41,9 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @rmtsrvname = ] 'rmtsrvname'` Nome del server collegato a cui viene applicato il mapping degli account di accesso. *rmtsrvname* è di **tipo sysname**e il valore predefinito è null. NULL indica che vengono restituiti i mapping degli account di accesso definiti per tutti i server collegati nel computer locale in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione.  
+`[ @rmtsrvname = ] 'rmtsrvname'` Nome del server collegato a cui viene applicato il mapping degli account di accesso. *rmtsrvname* è di **tipo sysname** e il valore predefinito è null. NULL indica che vengono restituiti i mapping degli account di accesso definiti per tutti i server collegati nel computer locale in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione.  
   
-`[ @locallogin = ] 'locallogin'` Account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesso nel server locale con mapping al server collegato *rmtsrvname*. *locallogin* è di **tipo sysname**e il valore predefinito è null. NULL specifica che vengono restituiti tutti i mapping degli account di accesso definiti in *rmtsrvname* . Se non è NULL, è necessario che esista già un mapping di *locallogin* a *rmtsrvname* . *locallogin* può essere un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o un utente di Windows. È necessario che l'utente di Windows disponga dell'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ottenuto tramite concessione diretta o in base all'appartenenza a un gruppo di Windows che dispone dell'accesso.  
+`[ @locallogin = ] 'locallogin'` Account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesso nel server locale con mapping al server collegato *rmtsrvname*. *locallogin* è di **tipo sysname** e il valore predefinito è null. NULL specifica che vengono restituiti tutti i mapping degli account di accesso definiti in *rmtsrvname* . Se non è NULL, è necessario che esista già un mapping di *locallogin* a *rmtsrvname* . *locallogin* può essere un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o un utente di Windows. È necessario che l'utente di Windows disponga dell'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ottenuto tramite concessione diretta o in base all'appartenenza a un gruppo di Windows che dispone dell'accesso.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -57,7 +57,7 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 |**Is Self Mapping**|**smallint**|0 = l' **account di accesso locale** viene mappato a **login remoto** durante la connessione al **server collegato**.<br /><br /> 1 = l' **account di accesso locale** viene mappato allo stesso account di accesso e alla stessa password durante la connessione al **server collegato**.|  
 |**Remote Login**|**sysname**|Nome dell'account di accesso su **LinkedServer** mappato a **locallogin** quando **IsSelfMapping** è 0. Se **IsSelfMapping** è 1, **RemoteLogin** è null.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Prima di eliminare i mapping degli account di accesso, utilizzare **sp_helplinkedsrvlogin** per determinare i server collegati interessati.  
   
 ## <a name="permissions"></a>Autorizzazioni  

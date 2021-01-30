@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changesubscriber
 - sp_changesubscriber_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 96cce9a9d9a0b9bf74a1ac3b67d3089f4fcd23ed
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3f920abb3544800d99ba108e024e200fad769f1a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543686"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189606"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,13 +57,13 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @subscriber = ] 'subscriber'` Nome del Sottoscrittore in cui si desidera modificare le opzioni. *Subscriber* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @subscriber = ] 'subscriber'` Nome del Sottoscrittore in cui si desidera modificare le opzioni. *Subscriber* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @type = ] type` Tipo di Sottoscrittore. *Type* è di tipo **tinyint**e il valore predefinito è null. **0** indica un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sottoscrittore. **1** specifica un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittore del server origine dati ODBC non o altro.  
+`[ @type = ] type` Tipo di Sottoscrittore. *Type* è di tipo **tinyint** e il valore predefinito è null. **0** indica un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sottoscrittore. **1** specifica un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittore del server origine dati ODBC non o altro.  
   
 `[ @login = ] 'login'` ID di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesso per l'autenticazione. *login* è di tipo **sysname** e il valore predefinito è NULL.  
   
-`[ @password = ] 'password'` Password di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione. *password* è di **tipo sysname**e il valore predefinito è **%** . **%** indica che non è stata apportata alcuna modifica alla proprietà della password.  
+`[ @password = ] 'password'` Password di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione. *password* è di **tipo sysname** e il valore predefinito è **%** . **%** indica che non è stata apportata alcuna modifica alla proprietà della password.  
   
 `[ @commit_batch_size = ] commit_batch_size` Supportato solo per compatibilità con le versioni precedenti.  
   
@@ -73,22 +73,22 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @frequency_type = ] frequency_type` Frequenza con cui pianificare l'attività di distribuzione. *frequency_type* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Singola occorrenza|  
 |**2**|On demand|  
 |**4**|Ogni giorno|  
 |**8**|Settimanale|  
-|**16**|Mensilmente|  
+|**16**|Ogni mese|  
 |**32**|Mensile relativa|  
 |**64**|Avvio automatico|  
 |**128**|Periodica|  
   
-`[ @frequency_interval = ] frequency_interval` Intervallo per *frequency_type*. *frequency_interval* è di **tipo int**e il valore predefinito è null.  
+`[ @frequency_interval = ] frequency_interval` Intervallo per *frequency_type*. *frequency_interval* è di **tipo int** e il valore predefinito è null.  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval` Data dell'attività di distribuzione. Questo parametro viene usato quando *frequency_type* è impostato su **32** (mensile relativo). *frequency_relative_interval* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|First (Primo)|  
 |**2**|Second|  
@@ -96,37 +96,37 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**8**|Quarto|  
 |**16**|Last (Ultimo)|  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Frequenza con cui l'attività di distribuzione deve ripetersi durante la *frequency_type*definita. *frequency_recurrence_factor* è di **tipo int**e il valore predefinito è null.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Frequenza con cui l'attività di distribuzione deve ripetersi durante la *frequency_type* definita. *frequency_recurrence_factor* è di **tipo int** e il valore predefinito è null.  
   
 `[ @frequency_subday = ] frequency_subday` Frequenza di ripianificazione durante il periodo definito. *frequency_subday* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una sola volta|  
 |**2**|Second|  
 |**4**|Minuto|  
 |**8**|Ora|  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` Intervallo per *frequence_subday*. *frequency_subday_interval* è di **tipo int**e il valore predefinito è null.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Intervallo per *frequence_subday*. *frequency_subday_interval* è di **tipo int** e il valore predefinito è null.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` Ora del giorno in cui l'attività di distribuzione viene pianificata per la prima volta, formattata come HHMMSS. *active_start_time_of_day* è di **tipo int**e il valore predefinito è null.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Ora del giorno in cui l'attività di distribuzione viene pianificata per la prima volta, formattata come HHMMSS. *active_start_time_of_day* è di **tipo int** e il valore predefinito è null.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` Ora del giorno in cui l'attività di distribuzione smette di essere pianificata, formattata come HHMMSS. *active_end_time_of_day*è di **tipo int**e il valore predefinito è null.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Ora del giorno in cui l'attività di distribuzione smette di essere pianificata, formattata come HHMMSS. *active_end_time_of_day* è di **tipo int** e il valore predefinito è null.  
   
-`[ @active_start_date = ] active_start_date` Data della prima pianificazione dell'attività di distribuzione, nel formato AAAAMMGG. *active_start_date* è di **tipo int**e il valore predefinito è null.  
+`[ @active_start_date = ] active_start_date` Data della prima pianificazione dell'attività di distribuzione, nel formato AAAAMMGG. *active_start_date* è di **tipo int** e il valore predefinito è null.  
   
-`[ @active_end_date = ] active_end_date` Data in cui viene arrestata la pianificazione dell'attività di distribuzione, nel formato AAAAMMGG. *active_end_date*è di **tipo int**e il valore predefinito è null.  
+`[ @active_end_date = ] active_end_date` Data in cui viene arrestata la pianificazione dell'attività di distribuzione, nel formato AAAAMMGG. *active_end_date* è di **tipo int** e il valore predefinito è null.  
   
 `[ @description = ] 'description'` È una descrizione di testo facoltativa. *Description* è di **tipo nvarchar (255)** e il valore predefinito è null.  
   
 `[ @security_mode = ] security_mode` Modalità di sicurezza implementata. *security_mode* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Autenticazione|  
 |**1**|Autenticazione di Windows|  
   
-`[ @publisher = ] 'publisher'` Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'` Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname** e il valore predefinito è null.  
   
 > [!NOTE]  
 >  Impossibile utilizzare *Publisher* quando si modificano le proprietà degli articoli in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
@@ -134,7 +134,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_changesubscriber** viene utilizzato in tutti i tipi di replica.  
   
 ## <a name="permissions"></a>Autorizzazioni  

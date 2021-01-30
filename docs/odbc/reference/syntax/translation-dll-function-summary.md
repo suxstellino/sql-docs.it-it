@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - translation DLLs [ODBC]
 - functions [ODBC], translation DLL functions
 ms.assetid: 76436acc-e6b8-42ec-a4bf-0edea65d0286
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0955faeea13cc44da8ca1856cf178076c3e9fa68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 622ca5e50770157e1fad10be49c331f10f7a497b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428883"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191595"
 ---
 # <a name="translation-dll-function-summary"></a>Riepilogo delle funzioni DLL di conversione
 Nella tabella seguente vengono descritte le funzioni DLL di traduzione. Per ulteriori informazioni sulla sintassi e la semantica per ogni funzione, vedere la pagina relativa al [riferimento alle funzioni DLL di traduzione](../../../odbc/reference/syntax/translation-dll-api-reference.md).  

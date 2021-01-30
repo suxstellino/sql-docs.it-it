@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - numeric data type [ODBC], literals
 - conversions with numeric literals [ODBC]
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8e3d9a931a960ce1bd404b6616b4a6e4f0d37c4a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b015a60e376e47a4c3c931d4739a884db23fc98b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424953"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187132"
 ---
 # <a name="rules-for-conversions"></a>Regole per le conversioni
 Le regole in questa sezione sono valide per le conversioni che coinvolgono valori letterali numerici. Ai fini di queste regole, vengono definiti i termini seguenti:  
   
--   *Assegnazione archivio:* Quando si inviano dati a una colonna di una tabella in un database. Questo errore si verifica durante le chiamate a **SQLExecute**, **SQLExecDirect**e **SQLSetPos**. Durante l'assegnazione del negozio, "destinazione" si riferisce a una colonna del database e "Source" si riferisce ai dati nei buffer dell'applicazione.  
+-   *Assegnazione archivio:* Quando si inviano dati a una colonna di una tabella in un database. Questo errore si verifica durante le chiamate a **SQLExecute**, **SQLExecDirect** e **SQLSetPos**. Durante l'assegnazione del negozio, "destinazione" si riferisce a una colonna del database e "Source" si riferisce ai dati nei buffer dell'applicazione.  
   
--   *Assegnazione di recupero:* Durante il recupero dei dati dal database ai buffer dell'applicazione. Questo errore si verifica durante le chiamate a **SQLFetch**, **SQLGetData**, **SQLFetchScroll**e **SQLSetPos**. Durante l'assegnazione del recupero, "destinazione" si riferisce ai buffer dell'applicazione e "Source" si riferisce alla colonna di database.  
+-   *Assegnazione di recupero:* Durante il recupero dei dati dal database ai buffer dell'applicazione. Questo errore si verifica durante le chiamate a **SQLFetch**, **SQLGetData**, **SQLFetchScroll** e **SQLSetPos**. Durante l'assegnazione del recupero, "destinazione" si riferisce ai buffer dell'applicazione e "Source" si riferisce alla colonna di database.  
   
 -   *CS:* Valore nell'origine del carattere.  
   
@@ -47,7 +47,7 @@ Le regole in questa sezione sono valide per le conversioni che coinvolgono valor
 ## <a name="character-source-to-numeric-target"></a>Da origine carattere a destinazione numerica  
  Di seguito sono riportate le regole per la conversione da un'origine carattere (CS) a una destinazione numerica (NT):  
   
-1.  Sostituire CS con il valore ottenuto rimuovendo gli spazi iniziali o finali in CS. Se CS non è un valore *letterale numerico*valido, viene restituito SQLSTATE 22018 (valore di carattere non valido per la specifica del cast).  
+1.  Sostituire CS con il valore ottenuto rimuovendo gli spazi iniziali o finali in CS. Se CS non è un valore *letterale numerico* valido, viene restituito SQLSTATE 22018 (valore di carattere non valido per la specifica del cast).  
   
 2.  Sostituire CS con il valore ottenuto rimuovendo gli zeri iniziali prima del separatore decimale, gli zeri finali dopo la virgola decimale o entrambi.  
   
@@ -68,7 +68,7 @@ Le regole in questa sezione sono valide per le conversioni che coinvolgono valor
   
          Se NS è uguale a 0, YP è 0.  
   
-         Consentire a YSN di essere la stringa di caratteri più breve conforme alla definizione di valore*letterale* exact-numeric e il cui valore interpretato è il valore assoluto di NS. Se la lunghezza di YSN è minore di (*precisione* + 1) del tipo di dati NS, consentire a YP uguale a YSN.  
+         Consentire a YSN di essere la stringa di caratteri più breve conforme alla definizione di valore *letterale* exact-numeric e il cui valore interpretato è il valore assoluto di NS. Se la lunghezza di YSN è minore di (*precisione* + 1) del tipo di dati NS, consentire a YP uguale a YSN.  
   
          In caso contrario, YP è la stringa di caratteri più breve conforme alla definizione di valore *letterale approssimativo* il cui valore interpretato è il valore assoluto di NS e il cui *mantissa* è costituito da una singola *cifra* che non è' 0', seguita da un *punto* e un *intero senza segno*.  
   

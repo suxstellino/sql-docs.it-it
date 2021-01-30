@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_notify_operator_TSQL
 - sp_notify_operator
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 946a2adf54435499ae72d12ed10e984892295533
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 954a314760a22d9b00996dc460062fcc75af16aa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541631"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191998"
 ---
 # <a name="sp_notify_operator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ sp_notify_operator
 ## <a name="arguments"></a>Argomenti  
 `[ @profile_name = ] 'profilename'` Nome del profilo Posta elettronica database da utilizzare per inviare il messaggio. *ProfileName* è di **tipo nvarchar (128)**. Se *ProfileName* non è specificato, viene usato il profilo di posta elettronica database predefinito.  
   
-`[ @id = ] id` Identificatore dell'operatore a cui inviare il messaggio. *ID* è di **tipo int**e il valore predefinito è null. È necessario specificare un *ID* o un *nome* .  
+`[ @id = ] id` Identificatore dell'operatore a cui inviare il messaggio. *ID* è di **tipo int** e il valore predefinito è null. È necessario specificare un *ID* o un *nome* .  
   
 `[ @name = ] 'name'` Nome dell'operatore a cui inviare il messaggio. *Name* è di **tipo nvarchar (128)** e il valore predefinito è null. È necessario specificare un *ID* o un *nome* .  
   
@@ -67,7 +67,7 @@ sp_notify_operator
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Invia il messaggio specificato all'indirizzo di posta elettronica dell'operatore. Se non è stato configurato un indirizzo di posta elettronica per l'operatore, viene restituito un errore.  
   
  Per poter inviare una notifica a un operatore, è necessario innanzitutto configurare Posta elettronica database e un database host della posta elettronica.  
@@ -83,7 +83,7 @@ sp_notify_operator
   
  Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene inviato un messaggio di notifica all'operatore `François Ajenstat` tramite il profilo `AdventureWorks Administrator` di Posta elettronica database. L'oggetto del messaggio di posta elettronica è `Test Notification`. The e-mail message contains the sentence, "This is a test of notification via e-mail."  
   
 ```  
@@ -98,7 +98,7 @@ EXEC dbo.sp_notify_operator
 GO  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Stored procedure di SQL Server Agent &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_operator &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_help_operator &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   

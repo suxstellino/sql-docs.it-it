@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_OAGetErrorInfo_TSQL
 - sp_OAGetErrorInfo
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 89bb7dff2131d8463e26754148aa6e8032503fd7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d55126c7feb362b910e83034a66e4d691f1be84c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546016"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191981"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,16 +47,16 @@ sp_OAGetErrorInfo [ objecttoken ]
  *objecttoken*  
  Token di oggetto di un oggetto OLE creato in precedenza tramite **sp_OACreate** o è null. Se viene specificato *objecttoken* , vengono restituite le informazioni sull'errore relative a tale oggetto. Se viene specificato NULL, vengono restituite le informazioni sull'errore relative all'intero batch.  
   
- _source_ **output** origine  
- Origine delle informazioni sull'errore. Se specificato, deve essere una variabile locale **char**, **nchar**, **varchar**o **nvarchar** . Se necessario, il valore restituito viene troncato in base alla dimensione della variabile locale.  
+  **output** origine  
+ Origine delle informazioni sull'errore. Se specificato, deve essere una variabile locale **char**, **nchar**, **varchar** o **nvarchar** . Se necessario, il valore restituito viene troncato in base alla dimensione della variabile locale.  
   
- _description_ **output** Descrizione  
- Descrizione dell'errore. Se specificato, deve essere una variabile locale **char**, **nchar**, **varchar**o **nvarchar** . Se necessario, il valore restituito viene troncato in base alla dimensione della variabile locale.  
+  **output** Descrizione  
+ Descrizione dell'errore. Se specificato, deve essere una variabile locale **char**, **nchar**, **varchar** o **nvarchar** . Se necessario, il valore restituito viene troncato in base alla dimensione della variabile locale.  
   
- _helpfile_ **output** di fileguida  
- File della Guida relativo all'oggetto OLE. Se specificato, deve essere una variabile locale **char**, **nchar**, **varchar**o **nvarchar** . Se necessario, il valore restituito viene troncato in base alla dimensione della variabile locale.  
+  **output** di fileguida  
+ File della Guida relativo all'oggetto OLE. Se specificato, deve essere una variabile locale **char**, **nchar**, **varchar** o **nvarchar** . Se necessario, il valore restituito viene troncato in base alla dimensione della variabile locale.  
   
- _helpid_ **output** HelpID  
+  **output** HelpID  
  ID di contesto del file della Guida. Se specificato, deve essere una variabile **int** locale.  
   
 > [!NOTE]  
@@ -78,7 +78,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |**HelpFile**|**nvarchar (nn)**|File della Guida relativo all'origine.|  
 |**HelpID**|**int**|ID di contesto della Guida nel file di origine della Guida.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Ogni chiamata a un stored procedure di automazione OLE (eccetto **sp_OAGetErrorInfo**) Reimposta le informazioni sull'errore. Pertanto, **sp_OAGetErrorInfo** ottiene informazioni sugli errori solo per la chiamata stored procedure di automazione OLE più recente. Si noti che poiché **sp_OAGetErrorInfo** non reimposta le informazioni sull'errore, può essere chiamato più volte per ottenere le stesse informazioni sull'errore.  
   
  Nella tabella seguente vengono elencati gli errori di automazione OLE e le cause più comuni.  
@@ -98,7 +98,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o l'autorizzazione Execute direttamente in questa stored procedure. `Ole Automation Procedures` la configurazione deve essere **abilitata** per l'utilizzo di qualsiasi procedura di sistema correlata all'automazione OLE.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono visualizzate le informazioni sull'errore di automazione OLE.  
   
 ```  
