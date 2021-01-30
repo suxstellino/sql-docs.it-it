@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - DataSpace object [RDS], members
 ms.assetid: c4a1f2e7-19ff-465e-9d9a-275ac0f4dc6a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4ad561c6819854839c47444588c851c387481139
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 42ddd9a8b49de373dd6c0fcfd363573be4e29e7c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91720912"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163819"
 ---
 # <a name="dataspace-object-rds-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto DataSpace (Servizi Desktop remoto)
 > [!IMPORTANT]
@@ -31,7 +31,7 @@ ms.locfileid: "91720912"
 ## <a name="methods"></a>Metodi  
  [Metodo CreateObject (Servizi Desktop remoto)](./createobject-method-rds.md)  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventi  
  No.  
   
 ## <a name="see-also"></a>Vedere anche  

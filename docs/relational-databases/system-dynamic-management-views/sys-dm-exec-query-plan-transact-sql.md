@@ -6,7 +6,7 @@ ms.date: 08/02/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_exec_query_plan_TSQL
 - sys.dm_exec_query_plan
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 18d6e4e8e3c6fe097676d1bf65f337610127566a
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: ca28e5540112af972ec84db2cb2a25a36a8ba832
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094117"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161387"
 ---
 # <a name="sysdm_exec_query_plan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -67,7 +67,7 @@ Il *plan_handle* può essere ottenuto dagli oggetti a gestione dinamica seguenti
 |**crittografati**|**bit**|Indica se la stored procedure corrispondente è crittografata.<br /><br /> 0 = non crittografata<br /><br /> 1 = crittografata<br /><br /> La colonna non ammette i valori Null.|  
 |**query_plan**|**xml**|Contiene la rappresentazione Showplan della fase di compilazione del piano di esecuzione della query specificato con *plan_handle*. La rappresentazione Showplan è in formato XML. Viene generato un piano per ogni batch contenente ad esempio istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, chiamate di stored procedure e chiamate di funzioni definite dall'utente.<br /><br /> La colonna ammette i valori Null.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Nelle condizioni seguenti non viene restituito alcun output Showplan nella colonna **query_plan** della tabella restituita per **sys.dm_exec_query_plan**:  
   
 -   Se il piano di query specificato utilizzando *plan_handle* è stato eliminato dalla cache dei piani, la colonna **query_plan** della tabella restituita è null. Questa condizione si verifica, ad esempio, in presenza di un ritardo di tempo tra l'acquisizione dell'handle del piano e il relativo utilizzo in **sys.dm_exec_query_plan**.  
@@ -85,7 +85,7 @@ Il *plan_handle* può essere ottenuto dagli oggetti a gestione dinamica seguenti
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire **sys.dm_exec_query_plan**, un utente deve essere un membro del ruolo predefinito del server **sysadmin** o disporre dell' `VIEW SERVER STATE` autorizzazione per il server.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Negli esempi seguenti viene illustrato l'utilizzo della vista a gestione dinamica **sys.dm_exec_query_plan**.  
   
  Per visualizzare i Showplan XML, eseguire le query seguenti nell'editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e quindi fare clic su **ShowPlanXML** nella colonna **query_plan** della tabella restituita da **sys.dm_exec_query_plan**. Il piano Showplan XML verrà visualizzato nel riquadro di riepilogo di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per salvare lo Showplan XML in un file, fare clic con il pulsante destro del mouse su **ShowplanXml** nella colonna **query_plan** , fare clic su **Salva risultati** con nome, denominare il file nel formato \<*file_name*> . sqlplan, ad esempio ShowplanXML. sqlplan.  

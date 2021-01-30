@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - CreateObject method [ADO]
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ae158d217437184be4ead71beeb2d2404248396f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 5fa625a75bbcadffb37064c04adc7ebd57a48994
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722437"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163863"
 ---
 # <a name="createobject-method-rds"></a>Metodo CreateObject (Servizi Desktop remoto)
 Crea il proxy per l'oggetto business di destinazione e restituisce un puntatore a tale oggetto. Il proxy esegue il marshalling dei dati e li esegue il marshalling sullo Stub lato server per le comunicazioni con l'oggetto business per inviare richieste e dati tramite Internet. Per gli oggetti componente in-process non vengono usati proxy, ma viene fornito solo un puntatore all'oggetto.  
@@ -50,7 +50,7 @@ Crea il proxy per l'oggetto business di destinazione e restituisce un puntatore 
  *awebsrvr* o *nomecomputer*  
  Valore **stringa** che rappresenta un URL che identifica il server Web Internet Information Services (IIS) in cui viene creata un'istanza dell'oggetto business server.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il *protocollo http* è il protocollo Web standard. *Https* è un protocollo Web protetto. Usare il *protocollo DCOM* quando si esegue una rete locale senza http. Il protocollo *in-process* è una libreria di collegamento dinamico (dll) locale; non usa una rete.  
   
 ## <a name="applies-to"></a>Si applica a  

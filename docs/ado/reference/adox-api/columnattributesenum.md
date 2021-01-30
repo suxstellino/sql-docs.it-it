@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - ColumnAttributesEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cd0db27a-1080-40af-a491-3893e7bef9cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c852ef1cdba30b54ff5970f3398bbde8cc0f557e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ca76137d4ea04b96f23d518a17ec7cc60ef89240
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985051"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164249"
 ---
 # <a name="columnattributesenum"></a>ColumnAttributesEnum
 Specifica le caratteristiche di una [colonna](./column-object-adox.md).  

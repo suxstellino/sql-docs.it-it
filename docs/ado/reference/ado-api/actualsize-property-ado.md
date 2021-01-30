@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Field20::ActualSize
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 722803d0-cef5-4d4c-b79d-3f2f58052229
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6684c03c94d26b8c8f6366ac41ccd1b331016426
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 929d787d0d412a405f0df8d3a2377ae8a1493586
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976902"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161786"
 ---
 # <a name="actualsize-property-ado"></a>Proprietà ActualSize (ADO)
 Indica la lunghezza effettiva del valore di un campo in byte.  
@@ -29,7 +29,7 @@ Indica la lunghezza effettiva del valore di un campo in byte.
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Restituisce un valore **Long** .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare la proprietà **ActualSize** per restituire la lunghezza effettiva del valore di un oggetto [campo](./field-object.md) . Per tutti i campi, la proprietà **ActualSize** è di sola lettura. Se ADO non è in grado di determinare la lunghezza del valore dell'oggetto **campo** , la proprietà **ActualSize** restituisce **adUnknown**.  
   
  Le proprietà **ActualSize** e [DefinedSize](./definedsize-property.md) sono diverse, come illustrato nell'esempio seguente. Un oggetto **campo** con un tipo dichiarato di **adVarChar** e una lunghezza massima di 50 caratteri restituisce un valore di proprietà **DefinedSize** pari a 50, ma il valore della proprietà **ActualSize** restituito è la lunghezza dei dati archiviati nel campo per il record corrente. I **campi** con un **DefinedSize** maggiore di 255 byte vengono trattati come colonne a lunghezza variabile.  

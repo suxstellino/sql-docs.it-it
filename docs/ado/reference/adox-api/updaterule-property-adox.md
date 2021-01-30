@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Key::GetUpdateRule
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3113bf5c77dbef03378d2c1359673bf32782f73
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b5704cf6295fdf0f9f1731288cb7b77d793d8447
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983042"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163986"
 ---
 # <a name="updaterule-property-adox"></a>Proprietà UpdateRule (ADOX)
 Indica l'azione eseguita quando viene aggiornata una [chiave](./key-object-adox.md) primaria.  
@@ -33,7 +33,7 @@ Indica l'azione eseguita quando viene aggiornata una [chiave](./key-object-adox.
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta e restituisce un valore **Long** che può essere una delle costanti [RuleEnum](./ruleenum.md) . Il valore predefinito è **adRINone**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questa proprietà è di sola lettura sugli oggetti [chiave](./key-object-adox.md) già accodati alla raccolta.  
   
 ## <a name="applies-to"></a>Si applica a  

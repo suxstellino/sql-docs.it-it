@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - DataFactory object [ADO]
 ms.assetid: e75240c2-b749-471e-b6ea-98cae232efbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e31d39f0820a485d4954d789fe2dfb398d8490b
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 75c727e8c857dcb5c5922f52e56a37e99f223293
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91720982"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163824"
 ---
 # <a name="datafactory-object-rdsserver"></a>Oggetto DataFactory (RDSServer)
 > [!IMPORTANT]

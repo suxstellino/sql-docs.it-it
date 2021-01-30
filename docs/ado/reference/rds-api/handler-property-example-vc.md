@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f8815ce6d607de39861f56bdcecca6c37e9dcc6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 757679e99f9f4de7b7c1c96abf367ad5df5daee1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722161"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163754"
 ---
 # <a name="handler-property-example-vc"></a>Esempio della proprietà Handler (VC++)
 > [!IMPORTANT]
@@ -38,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- Il codice è simile al seguente. Il comando assegnato alla proprietà [SQL](./sql-property.md) corrisponderà all'identificatore ***AuthorById*** e recupererà una riga per l'autore Michael Leary. Sebbene la proprietà [Connect](./connect-property-rds.md) nel codice specifichi l'origine dati Northwind, tale origine dati verrà sovrascritta dalla sezione Msdfmap.ini *Connect* . La proprietà [Recordset](./recordset-sourcerecordset-properties-rds.md) oggetto **DataControl** viene assegnata a un oggetto [Recordset](../ado-api/recordset-object-ado.md) disconnesso esclusivamente come praticità di codifica.  
+ Il codice è simile al seguente. Il comando assegnato alla proprietà [SQL](./sql-property.md) corrisponderà all'identificatore ***AuthorById** _ e recupererà una riga per l'autore Michael Leary. Sebbene la proprietà [Connect](./connect-property-rds.md) nel codice specifichi l'origine dati Northwind, tale origine dati verrà sovrascritta dalla sezione Msdfmap.ini _connect *. La proprietà [Recordset](./recordset-sourcerecordset-properties-rds.md) oggetto **DataControl** viene assegnata a un oggetto [Recordset](../ado-api/recordset-object-ado.md) disconnesso esclusivamente come praticità di codifica.  
   
 ```  
 // BeginHandlerCpp.cpp  

@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dcb81dbe0fc719b2bb31c08a0799e4bc5084519a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 2e5ad157ffccc07ba0b64064122f7f0e55ccd422
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91720787"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163810"
 ---
 # <a name="execute-method-rds"></a>Metodo Execute (Servizi Desktop remoto)
 Esegue la richiesta e crea un recordset ADO da usare in ADO 2,5 e versioni successive.  
@@ -63,7 +63,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
   
  4 =*AllParamInfoSupplied* il chiamante garantisce che le informazioni sui parametri per tutti i parametri vengano fornite in *pParameters*.  
   
- 8 = le informazioni sul parametro*GetInfo* per la query verranno ottenute dal provider OLE DB e restituite nel parametro *pParameters* . La query non viene eseguita e non viene restituito alcun recordset.  
+ 8 = le informazioni sul parametro *GetInfo* per la query verranno ottenute dal provider OLE DB e restituite nel parametro *pParameters* . La query non viene eseguita e non viene restituito alcun recordset.  
   
  16 =*GetHiddenColumns* il recordset verrà aperto utilizzando **adLockBatchOptimistic** e tutte le colonne nascoste verranno incluse nel recordset.  
   
@@ -78,7 +78,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *pInformation*  
  Puntatore a un errore di informazioni restituito da Execute. Se è NULL, non vengono restituite informazioni sull'errore.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il parametro *HandlerString* può essere null. Ciò che accade in questo caso dipende dalla modalità di configurazione del server RDS. Una stringa del gestore "MSDFMAP. handler" indica che deve essere utilizzato il gestore fornito da Microsoft (Msdfmap.dll). Una stringa del gestore "MASDFMAP. Handler, sample.ini" indica che è necessario utilizzare il gestore di Msdfmap.dll e che l'argomento "sample.ini" deve essere passato al gestore. MSDFMAP.dll interpreterà l'argomento come direzione per utilizzare l'sample.ini per verificare le stringhe di connessione e di query.  
   
 ## <a name="applies-to"></a>Si applica a  

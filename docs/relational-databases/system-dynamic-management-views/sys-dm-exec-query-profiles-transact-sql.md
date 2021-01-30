@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_exec_query_profiles_TSQL
 - sys.dm_exec_query_profiles_TSQL
@@ -21,12 +21,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 461898cf3bf9e694e8d8272608861fdbfa0aff79
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 5b1f8aa494a01a8fc99fc48efc79a66b80458524
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170253"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161363"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -93,7 +93,7 @@ A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1, l' *infrastr
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e istanza gestita SQL `VIEW DATABASE STATE` di Azure sono necessarie l'autorizzazione e l'appartenenza al `db_owner` ruolo del database.   
 Nei [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] sugli obiettivi del servizio Basic, S0 e S1 del database SQL e per i database in pool elastici, il `Server admin` o un `Azure Active Directory admin` account è obbligatorio. Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.   
    
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Passaggio 1: accedere a una sessione in cui si prevede di eseguire la query con cui si eseguirà l'analisi `sys.dm_exec_query_profiles` . Per configurare la query per l'utilizzo della profilatura `SET STATISTICS PROFILE ON` . Eseguire la query in questa stessa sessione.  
   
 ```sql  

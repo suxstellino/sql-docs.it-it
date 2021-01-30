@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - DataControl::CreateRecordset
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad1c9b0f36922f29ce015fd459a1be3e788e07f5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4a88898c884cbaf0a9c82a882b15ef48c1e3e3a8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721202"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163856"
 ---
 # <a name="createrecordset-method-rds"></a>Metodo CreateRecordset (Servizi Desktop remoto)
 Crea un [Recordset](../ado-api/recordset-object-ado.md)vuoto e disconnesso.  
@@ -50,14 +50,14 @@ object.CreateRecordset(ColumnInfos)
 |Attributo|Descrizione|  
 |---------------|-----------------|  
 |Nome|Nome dell'intestazione di colonna.|  
-|Type|Integer del tipo di dati.|  
+|Tipo|Integer del tipo di dati.|  
 |Dimensione|Integer della larghezza in caratteri, indipendentemente dal tipo di dati.|  
 |Supporto di valori Null|.|  
 |Scala (facoltativo)|Questo attributo facoltativo definisce la scala per i campi numerici. Se questo valore non viene specificato, i valori numerici verranno troncati a una scala di tre. La precisione non è interessata, ma il numero di cifre che seguono il separatore decimale verrà troncato a tre.|  
   
  Il set di matrici di colonne viene quindi raggruppato in una matrice, che definisce il **Recordset**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  L'oggetto business sul lato server può popolare il **Recordset** risultante con i dati di un provider di dati non OLE DB, ad esempio un file del sistema operativo contenente le virgolette predefinite.  
   
  Nella tabella seguente sono elencati i valori [DataTypeEnum](../ado-api/datatypeenum.md) supportati dal metodo **CreateRecordset** . Il numero elencato è il numero di riferimento utilizzato per definire i campi.  
@@ -66,7 +66,7 @@ object.CreateRecordset(ColumnInfos)
   
  Per alcuni tipi di dati delle variabili, il tipo può essere assegnato al tipo indicato nella colonna di sostituzione. Le sostituzioni non vengono visualizzate finché non viene creato e compilato il **Recordset** . È quindi possibile verificare il tipo di dati effettivo, se necessario.  
   
-|Length|Costante|Numero|Sostituzione|  
+|Length|Costante|Number|Sostituzione|  
 |------------|--------------|------------|------------------|  
 |Fisso|**adTinyInt**|16||  
 |Fisso|**adSmallInt**|2||  

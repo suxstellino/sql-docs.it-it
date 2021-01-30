@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_update_collection_set_TSQL
 - sp_syscollector_update_collection_set
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fd55d65173d190d1c28708bfae46b10eaa0030a4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 207d5b2f02bce0a3c9a9e89cdccdb5fe80790f20
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534840"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161886"
 ---
 # <a name="sp_syscollector_update_collection_set-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ sp_syscollector_update_collection_set
   
 `[ @name = ] 'name'` Nome del set di raccolta. *Name* è di **tipo sysname** e deve avere un valore se *collection_set_id* è null.  
   
-`[ @new_name = ] 'new_name'` Nuovo nome del set di raccolta. *new_name* è di **tipo sysname**e, se utilizzato, non può essere una stringa vuota. *new_name* deve essere univoco. Per un elenco dei nomi dei set di raccolta correnti, eseguire una query sulla vista di sistema syscollector_collection_sets.  
+`[ @new_name = ] 'new_name'` Nuovo nome del set di raccolta. *new_name* è di **tipo sysname** e, se utilizzato, non può essere una stringa vuota. *new_name* deve essere univoco. Per un elenco dei nomi dei set di raccolta correnti, eseguire una query sulla vista di sistema syscollector_collection_sets.  
   
 `[ @target = ] 'target'` Riservato per usi futuri.  
   
@@ -113,7 +113,7 @@ sp_syscollector_update_collection_set
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È necessario eseguire sp_syscollector_update_collection_set nel contesto del database di sistema msdb.  
   
  Il *collection_set_id* o il *nome* deve avere un valore e non può essere null. Per ottenere questi valori, eseguire una query sulla vista di sistema syscollector_collection_sets.  

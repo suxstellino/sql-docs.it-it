@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - RuleEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 738fd3ff-3daf-483d-a0b9-88bef1be54c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 66367d872e27629f1bf437961b99908d0c42e9f2
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 978aa969105b3a773f353986ecd39a38995002df
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983372"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164051"
 ---
 # <a name="ruleenum"></a>RuleEnum
 Specifica la regola da seguire quando viene eliminato un [tasto](./key-object-adox.md) .  
@@ -29,7 +29,7 @@ Specifica la regola da seguire quando viene eliminato un [tasto](./key-object-ad
 |Costante|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adRICascade**|1|Modifiche a cascata.|  
-|**adRINone**|0|Valore predefinito. Non viene eseguita alcuna azione.|  
+|**adRINone**|0|Valore predefinito. Nessuna operazione.|  
 |**adRISetDefault**|3|Il valore della chiave esterna è impostato sul valore predefinito.|  
 |**adRISetNull**|2|Il valore della chiave esterna è impostato su null.|  
   

@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - InternetTimeout property [ADO]
 ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43ab46eefcb897511a2990655362ecb10527be19
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 7eab888961a49b257d0dd408362545332454554e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724502"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163729"
 ---
 # <a name="internettimeout-property-rds"></a>Proprietà InternetTimeout (Servizi Desktop remoto)
 Indica il numero di millisecondi di attesa prima che si verifichi il timeout di una richiesta.  
@@ -30,7 +30,7 @@ Indica il numero di millisecondi di attesa prima che si verifichi il timeout di 
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **Long** che rappresenta il numero di millisecondi prima del timeout di una richiesta.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questa proprietà si applica solo alle richieste inviate con i protocolli HTTP o HTTPS.  
   
  Per l'esecuzione delle richieste in un ambiente a tre livelli possono essere necessari alcuni minuti. Usare questa proprietà per specificare un tempo aggiuntivo per le richieste con esecuzione prolungata.  
