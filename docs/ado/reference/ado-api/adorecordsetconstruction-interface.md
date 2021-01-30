@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - ADORecordsetConstruction
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ecf8f8e12f8d12a3382e7b67b13e8bb12fb69ac9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d9be4f47033616f56177027bc83c4621cef57847
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976222"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164870"
 ---
 # <a name="adorecordsetconstruction-interface"></a>Interfaccia ADORecordsetConstruction
 L'interfaccia **ADORecordsetConstruction** viene utilizzata per costruire un oggetto **Recordset** ADO da un oggetto OLE DB **set di righe** in un'applicazione C/C++.  
@@ -37,9 +37,9 @@ L'interfaccia **ADORecordsetConstruction** viene utilizzata per costruire un ogg
 |[Set di righe](./rowset-property-ado.md)|Lettura/Scrittura.<br />Ottiene o imposta un oggetto OLE DB **set di righe** da/in questo oggetto **Recordset** ADO.|  
   
 ## <a name="methods"></a>Metodi  
- Nessuno.  
+ Nessuna.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventi  
  No.  
   
 ## <a name="remarks"></a>Osservazioni  

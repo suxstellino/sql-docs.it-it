@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Hierarchy
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60d779ec3ed3393417725c9f574a798e5efc0efd
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a1370f83c4214047038eadf4b84813f0b48c3b72
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986652"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164551"
 ---
 # <a name="hierarchy-object-ado-md"></a>Oggetto Hierarchy (ADO MD)
 Rappresenta un modo in cui i membri di una [dimensione](./dimension-object-ado-md.md) possono essere aggregati o sottoposti a rollup. Una dimensione può essere aggregata in una o più gerarchie.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Con le raccolte e le proprietà di un oggetto **gerarchia** , è possibile eseguire le operazioni seguenti:  
   
 -   Identificare la **gerarchia** con le proprietà [Name](./name-property-ado-md.md) e [UniqueName](./uniquename-property-ado-md.md) .  
@@ -39,7 +39,7 @@ Rappresenta un modo in cui i membri di una [dimensione](./dimension-object-ado-m
   
  La raccolta **Properties** contiene proprietà fornite dal provider. Nella tabella seguente sono elencate le proprietà che potrebbero essere disponibili. L'elenco di proprietà effettivo può variare a seconda dell'implementazione del provider. Per un elenco più completo delle proprietà disponibili, vedere la documentazione relativa al provider.  
   
-|Name|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |AllMember|Membro al livello più alto di rollup nella gerarchia.|  
 |CatalogName|Nome del catalogo a cui appartiene il cubo.|  

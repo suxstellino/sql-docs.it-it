@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - converting data from c to SQL types [ODBC], about converting
 - converting data from c to SQL types [ODBC]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 56af1e376edffa0268a2e27c840f035e5cda9763
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a326f91f0a10e8731153817cd8c2eed7ff0656e9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429713"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165391"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Conversione di dati da C ai tipi di dati SQL
-Quando un'applicazione chiama **SQLExecute** o **SQLExecDirect**, il driver recupera i dati per qualsiasi parametro associato a **SQLBindParameter** da percorsi di archiviazione nell'applicazione. Quando un'applicazione chiama **SQLSetPos**, il driver recupera i dati per un'operazione di aggiornamento o aggiunta da colonne associate a **SQLBindCol**. Per i parametri data-at-execution, l'applicazione invia i dati dei parametri con **SQLPutData**. Se necessario, il driver converte i dati dal tipo di dati specificato dall'argomento *ValueType* in **SQLBindParameter** al tipo di dati specificato dall'argomento *ParameterType* in **SQLBindParameter**e quindi invia i dati all'origine dati.  
+Quando un'applicazione chiama **SQLExecute** o **SQLExecDirect**, il driver recupera i dati per qualsiasi parametro associato a **SQLBindParameter** da percorsi di archiviazione nell'applicazione. Quando un'applicazione chiama **SQLSetPos**, il driver recupera i dati per un'operazione di aggiornamento o aggiunta da colonne associate a **SQLBindCol**. Per i parametri data-at-execution, l'applicazione invia i dati dei parametri con **SQLPutData**. Se necessario, il driver converte i dati dal tipo di dati specificato dall'argomento *ValueType* in **SQLBindParameter** al tipo di dati specificato dall'argomento *ParameterType* in **SQLBindParameter** e quindi invia i dati all'origine dati.  
   
  Nella tabella seguente vengono illustrate le conversioni supportate dai tipi di dati ODBC C ai tipi di dati SQL ODBC. Un cerchio pieno indica la conversione predefinita per un tipo di dati SQL (il tipo di dati C da cui verranno convertiti i dati quando il valore di *ValueType* o il campo del descrittore SQL_DESC_CONCISE_TYPE è SQL_C_DEFAULT). Un cerchio vuoto indica una conversione supportata.  
   
@@ -37,7 +37,7 @@ Quando un'applicazione chiama **SQLExecute** o **SQLExecDirect**, il driver recu
   
  ![Conversioni supportate: dal tipo di dati C ODBC al tipo di dati SQL ODBC](../../../odbc/reference/appendixes/media/apd1b.gif "apd1b")  
   
- Le tabelle nelle sezioni seguenti descrivono in che modo il driver o l'origine dati converte i dati inviati all'origine dati. i driver sono necessari per supportare le conversioni da tutti i tipi di dati ODBC C ai tipi di dati SQL ODBC supportati. Per un determinato tipo di dati ODBC C, nella prima colonna della tabella sono elencati i valori di input validi dell'argomento *ParameterType* in **SQLBindParameter**. Nella seconda colonna sono elencati i risultati di un test eseguito dal driver per determinare se è possibile convertire i dati. La terza colonna elenca il SQLSTATE restituito per ogni risultato da **SQLExecDirect**, **SQLExecute**, **SQLBulkOperations**, **SQLSetPos**o **SQLPutData**. I dati vengono inviati all'origine dati solo se viene restituito SQL_SUCCESS.  
+ Le tabelle nelle sezioni seguenti descrivono in che modo il driver o l'origine dati converte i dati inviati all'origine dati. i driver sono necessari per supportare le conversioni da tutti i tipi di dati ODBC C ai tipi di dati SQL ODBC supportati. Per un determinato tipo di dati ODBC C, nella prima colonna della tabella sono elencati i valori di input validi dell'argomento *ParameterType* in **SQLBindParameter**. Nella seconda colonna sono elencati i risultati di un test eseguito dal driver per determinare se è possibile convertire i dati. La terza colonna elenca il SQLSTATE restituito per ogni risultato da **SQLExecDirect**, **SQLExecute**, **SQLBulkOperations**, **SQLSetPos** o **SQLPutData**. I dati vengono inviati all'origine dati solo se viene restituito SQL_SUCCESS.  
   
  Se l'argomento *ParameterType* in **SQLBindParameter** contiene l'identificatore di un tipo di dati SQL ODBC che non viene visualizzato nella tabella per un tipo di dati C specificato, **SQLBindParameter** restituisce SQLSTATE 07006 (violazione dell'attributo del tipo di dati limitato). Se l'argomento *ParameterType* contiene un identificatore specifico del driver e il driver non supporta la conversione dal tipo di dati C ODBC specifico al tipo di dati SQL specifico del driver, **SQLBINDPARAMETER** restituisce SQLSTATE HYC00 (funzionalità facoltativa non implementata).  
   
@@ -54,7 +54,7 @@ Quando un'applicazione chiama **SQLExecute** o **SQLExecDirect**, il driver recu
 -   **Numero di cifre** : numero di caratteri utilizzato per rappresentare un numero, inclusi il segno meno, il separatore decimale ed esponente (se necessario).  
   
 -   **Parole in**   
-     ***corsivo***  -elementi della grammatica SQL. Per la sintassi degli elementi di grammatica, vedere [Appendice C: grammatica SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
+     **_corsivo_**  -elementi della grammatica SQL. Per la sintassi degli elementi di grammatica, vedere [Appendice C: grammatica SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
@@ -76,6 +76,6 @@ Quando un'applicazione chiama **SQLExecute** o **SQLExecDirect**, il driver recu
   
 -   [Da C a SQL: intervalli anno-mese](../../../odbc/reference/appendixes/c-to-sql-year-month-intervals.md)  
   
--   [Da C a SQL: intervalli di tempo](../../../odbc/reference/appendixes/c-to-sql-day-time-intervals.md)  
+-   [Da C a SQL: intervalli di data/ora](../../../odbc/reference/appendixes/c-to-sql-day-time-intervals.md)  
   
 -   [Esempi di conversione di dati da C a SQL](../../../odbc/reference/appendixes/c-to-sql-data-conversion-examples.md)

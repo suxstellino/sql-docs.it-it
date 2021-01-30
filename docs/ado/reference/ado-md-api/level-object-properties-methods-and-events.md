@@ -7,18 +7,18 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Level object [ADO MD], members
 ms.assetid: fdff70b0-95d0-447f-9359-97b8d159420d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b03ccf22210fa4984b5c1424a97f63555606670f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5900553dbdd4742f92c44835766018796bf41ed6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986502"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164532"
 ---
 # <a name="level-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto Level
 ## <a name="propertiescollections"></a>Proprietà/raccolte  
@@ -37,9 +37,9 @@ ms.locfileid: "88986502"
  [UniqueName (proprietà)](./uniquename-property-ado-md.md)  
   
 ## <a name="methods"></a>Metodi  
- Nessuno.  
+ Nessuna.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventi  
  No.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Parameter::Name
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0636b77959a003248ee798684fc74c6309145737
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 384c1e96eb735d8cf9569039f45c2d420679ce0e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990482"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167071"
 ---
 # <a name="name-property-ado"></a>Proprietà Name (ADO)
 Indica il nome di un oggetto.  
@@ -30,8 +30,8 @@ Indica il nome di un oggetto.
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **stringa** che indica il nome di un oggetto.  
   
-## <a name="remarks"></a>Osservazioni  
- Utilizzare la proprietà **Name** per assegnare un nome a o recuperare il nome di un **comando**, di una **proprietà**, di un **campo**o di un oggetto **Parameter** .  
+## <a name="remarks"></a>Commenti  
+ Utilizzare la proprietà **Name** per assegnare un nome a o recuperare il nome di un **comando**, di una **proprietà**, di un **campo** o di un oggetto **Parameter** .  
   
  Il valore è in lettura/scrittura su un oggetto **Command** e in sola lettura su un oggetto **Property** .  
   

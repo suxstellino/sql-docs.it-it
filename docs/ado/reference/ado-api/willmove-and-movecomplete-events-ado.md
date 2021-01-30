@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset::MoveComplete
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 27d86dc84960399be6b5738f72c69430c6834c7e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 46c28cd74fcf7a580d6695e21cd1e5e2750f0519
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987762"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166254"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>Eventi WillMove e MoveComplete (ADO)
 L'evento **WillMove** viene chiamato prima che un'operazione in sospeso modifichi la posizione corrente nel [Recordset](./recordset-object-ado.md). L'evento **MoveComplete** viene chiamato dopo la modifica della posizione corrente nel **Recordset** .  
@@ -40,7 +40,7 @@ MoveComplete adReason, pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>Parametri  
  *adReason*  
- Valore [EventReasonEnum](./eventreasonenum.md) che specifica il motivo di questo evento. Il valore può essere **adRsnMoveFirst**, **adRsnMoveLast**, **adRsnMoveNext**, **adRsnMovePrevious**, **adRsnMove**o **adRsnRequery**.  
+ Valore [EventReasonEnum](./eventreasonenum.md) che specifica il motivo di questo evento. Il valore può essere **adRsnMoveFirst**, **adRsnMoveLast**, **adRsnMoveNext**, **adRsnMovePrevious**, **adRsnMove** o **adRsnRequery**.  
   
  *pError*  
  Oggetto [Error](./error-object.md) . Viene descritto l'errore che si è verificato se il valore di *adStatus* è **adStatusErrorsOccurred**; in caso contrario, il parametro non è impostato.  
@@ -59,7 +59,7 @@ MoveComplete adReason, pError, adStatus, pRecordset
  *pRecordset*  
  Oggetto [Recordset](./recordset-object-ado.md) . **Recordset** per il quale si è verificato l'evento.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Un evento **WillMove** o **MoveComplete** può verificarsi a causa delle operazioni **Recordset** seguenti: [Open](./open-method-ado-recordset.md), [Move](./move-method-ado.md), [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [AddNew](./addnew-method-ado.md)e [Requery](./requery-method.md). Questi eventi possono verificarsi a causa delle proprietà seguenti: [Filter](./filter-property.md), [index](./index-property.md), [Bookmark](./bookmark-property-ado.md), [AbsolutePage](./absolutepage-property-ado.md)e [AbsolutePosition](./absoluteposition-property-ado.md). Questi eventi si verificano anche se un **Recordset** figlio contiene eventi **Recordset** connessi e il **Recordset** padre viene spostato.  
   
  È necessario impostare il parametro *adStatus* su **adStatusUnwantedEvent** per ogni possibile valore *adReason* per arrestare completamente la notifica degli eventi per qualsiasi evento che includa un parametro *adReason* .  

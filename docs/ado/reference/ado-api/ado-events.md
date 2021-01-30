@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - events [ADO]
 - ADO, events
 ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2925a2c0a25bb919b5cfaae7a6b245f1175b9bb
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 343d24455490674a9c926d94a902906992679a2c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976452"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164925"
 ---
 # <a name="ado-events"></a>Eventi ADO
 
@@ -28,7 +28,7 @@ ms.locfileid: "88976452"
 |[BeginTransComplete](./begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Chiamato dopo l'operazione **BeginTrans** .|  
 |[CommitTransComplete](./begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Chiamato dopo l'operazione **CommitTrans** .|  
 |[ConnectComplete](./connectcomplete-and-disconnect-events-ado.md)|Chiamato dopo l'avvio di una connessione.|  
-|[Disconnettere](./connectcomplete-and-disconnect-events-ado.md)|Chiamato al termine di una connessione.|  
+|[Disconnetti](./connectcomplete-and-disconnect-events-ado.md)|Chiamato al termine di una connessione.|  
 |[EndOfRecordset](./endofrecordset-event-ado.md)|Chiamato quando viene eseguito un tentativo di spostarsi in una riga oltre la fine del **Recordset**.|  
 |[ExecuteComplete](./executecomplete-event-ado.md)|Chiamato dopo il completamento dell'esecuzione di un comando.|  
 |[FetchComplete](./fetchcomplete-event-ado.md)|Chiamato dopo che tutti i record di un'operazione asincrona lunga sono stati recuperati nel **Recordset**.|  

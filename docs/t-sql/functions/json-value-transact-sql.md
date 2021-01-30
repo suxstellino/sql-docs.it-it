@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 06/03/2020
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - JSON_VALUE
 - JSON_VALUE_TSQL
@@ -18,12 +18,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: chadam
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017
-ms.openlocfilehash: 9c6571a5938c503b99378003323168a695de58a9
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
-ms.translationtype: HT
+ms.openlocfilehash: b7a1d7ba5eacf32d6e52daa79bb447d0e1df0f7d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98086922"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165002"
 ---
 # <a name="json_value-transact-sql"></a>JSON_VALUE (Transact-SQL)
 

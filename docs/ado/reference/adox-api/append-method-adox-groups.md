@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Groups::raw_Append
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 56b94fc6-7ef0-4e4a-82a3-033b94c46036
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5890ffa77884927574f10edeb0d2acc3a428185e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 859e3dea7f5dbdb84efd44aebc766eb2d195a7e3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985492"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164311"
 ---
 # <a name="append-method-adox-groups"></a>Metodo Append (raccolta Groups ADOX)
 Aggiunge un nuovo oggetto [gruppo](./group-object-adox.md) alla raccolta di [gruppi](./groups-collection-adox.md) .  
@@ -38,7 +38,7 @@ Groups.Append Group
  *Gruppo*  
  Oggetto **gruppo** da accodare o il nome del gruppo da creare e accodare.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La raccolta di **gruppi** di un [Catalogo](./catalog-object-adox.md) rappresenta tutti gli account di gruppo del catalogo. La raccolta **gruppi** per un [utente](./user-object-adox.md) rappresenta solo il gruppo a cui appartiene l'utente.  
   
  Se il provider non supporta la creazione di gruppi, si verificherà un errore.  

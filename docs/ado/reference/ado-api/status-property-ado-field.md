@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Field::Status
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 11f59e99eab0a742a4d7618f7ac66cb486af2933
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b0ae4ed8f72dca085edd0c82220296d65795d6ac
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988722"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166466"
 ---
 # <a name="status-property-ado-field"></a>Proprietà Status (Field - ADO)
 Indica lo stato di un oggetto [campo](./field-object.md) .  
@@ -31,7 +31,7 @@ Indica lo stato di un oggetto [campo](./field-object.md) .
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un valore [FieldStatusEnum](./fieldstatusenum.md) . Il valore predefinito è **adFieldOK**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ## <a name="record-field-status"></a>Stato campo record  
  Le modifiche apportate al valore di un oggetto **campo** nella raccolta Fields di un oggetto [record](./record-object-ado.md) vengono memorizzate nella cache fino a quando non viene chiamato il metodo [Update](./update-method.md) dell'oggetto. A questo punto, se la modifica apportata al valore del campo ha causato un errore, OLE DB genera l'errore **DB_E_ERRORSOCCURRED** (2147749409). La proprietà Status di uno qualsiasi degli oggetti **Field** nella raccolta **Fields** che ha causato l'errore conterrà un valore di [FieldStatusEnum](./fieldstatusenum.md) che descrive la causa del problema.  

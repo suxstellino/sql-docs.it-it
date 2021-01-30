@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Record::ParentURL
@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e3a8323223f97034750c7e6bf7927ac87aefd3bd
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 89b3caf606d47c2be1add80a20830570be3f7fd2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990112"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166864"
 ---
 # <a name="parenturl-property-ado"></a>Proprietà ParentURL (ADO)
 Indica una stringa URL assoluta che punta al [record](./record-object-ado.md) padre dell'oggetto **record** corrente.  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce un valore **stringa** che indica l'URL del **record**padre.  
+ Restituisce un valore **stringa** che indica l'URL del **record** padre.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La proprietà **ParentURL** dipende dall'origine utilizzata per aprire l'oggetto **record** . Ad esempio, è possibile aprire il **record** con un'origine contenente un percorso relativo di una directory a cui fa riferimento la proprietà [ActiveConnection](./activeconnection-property-ado.md) .  
   
  Si supponga che "Second" sia una cartella contenuta in "First". Aprire l'oggetto **record** utilizzando la sintassi seguente:  
@@ -52,13 +52,13 @@ record.Open "second"
  Questa proprietà è di sola lettura.  
   
 > [!NOTE]
->  Questa proprietà è supportata solo dai provider di origine del documento, ad esempio il [provider Microsoft OLE DB per Internet Publishing](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per ulteriori informazioni, vedere [record e campi forniti dal provider](../../guide/data/records-and-provider-supplied-fields.md).  
+>  Questa proprietà è supportata solo dai provider di origine del documento, ad esempio il [provider Microsoft OLE DB per Internet Publishing](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per ulteriori informazioni, vedere [record e campi Provider-Supplied](../../guide/data/records-and-provider-supplied-fields.md).  
   
 > [!NOTE]
 >  Gli URL che usano lo schema http richiameranno automaticamente il [provider di Microsoft OLE DB per la pubblicazione Internet](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per ulteriori informazioni, vedere [URL assoluto e relativo](../../guide/data/absolute-and-relative-urls.md).  
   
 > [!NOTE]
->  Se il record corrente contiene un record di dati di un **Recordset**ADO, l'accesso alla proprietà **ParentURL** genera un errore di run-time, a indicare che non è possibile alcun URL.  
+>  Se il record corrente contiene un record di dati di un **Recordset** ADO, l'accesso alla proprietà **ParentURL** genera un errore di run-time, a indicare che non è possibile alcun URL.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Record (ADO)](./record-object-ado.md)

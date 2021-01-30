@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Record::raw_Open
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1ad606821e423892d49feb49a0920c7aea9056aa
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cdac33c235e50abf35fbed670d872ca631403b5d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990342"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166984"
 ---
 # <a name="open-method-ado-record"></a>Metodo Open (Record - ADO)
 Apre un oggetto [record](./record-object-ado.md) esistente o crea un nuovo elemento rappresentato dal **record**, ad esempio un file o una directory.  
@@ -36,27 +36,27 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
   
 #### <a name="parameters"></a>Parametri  
  *Origine*  
- Facoltativa. **Variant** che può rappresentare l'URL dell'entità che deve essere rappresentata da questo oggetto **record** , un **comando**, un [Recordset](./recordset-object-ado.md) aperto o un altro oggetto **record** , una stringa che contiene un'istruzione SQL SELECT o un nome di tabella.  
+ facoltativo. **Variant** che può rappresentare l'URL dell'entità che deve essere rappresentata da questo oggetto **record** , un **comando**, un [Recordset](./recordset-object-ado.md) aperto o un altro oggetto **record** , una stringa che contiene un'istruzione SQL SELECT o un nome di tabella.  
   
  *ActiveConnection*  
- Facoltativa. **Variant** che rappresenta la stringa di connessione o l'oggetto [connessione](./connection-object-ado.md) aperta.  
+ facoltativo. **Variant** che rappresenta la stringa di connessione o l'oggetto [connessione](./connection-object-ado.md) aperta.  
   
  *Modalità*  
- Facoltativa. Valore [ConnectModeEnum](./connectmodeenum.md) che specifica la modalità di accesso per l'oggetto **record** risultante. Il valore predefinito è **adModeUnknown**.  
+ facoltativo. Valore [ConnectModeEnum](./connectmodeenum.md) che specifica la modalità di accesso per l'oggetto **record** risultante. Il valore predefinito è **adModeUnknown**.  
   
  *CreateOptions*  
- Facoltativa. Valore [RecordCreateOptionsEnum](./recordcreateoptionsenum.md) che specifica se deve essere aperto un file o una directory esistente oppure se è necessario creare un nuovo file o una nuova directory. Il valore predefinito è **adFailIfNotExists**. Se è impostato sul valore predefinito, la modalità di accesso viene ottenuta dalla proprietà [mode](./mode-property-ado.md) . Questo parametro viene ignorato quando il parametro di *origine* non contiene un URL.  
+ facoltativo. Valore [RecordCreateOptionsEnum](./recordcreateoptionsenum.md) che specifica se deve essere aperto un file o una directory esistente oppure se è necessario creare un nuovo file o una nuova directory. Il valore predefinito è **adFailIfNotExists**. Se è impostato sul valore predefinito, la modalità di accesso viene ottenuta dalla proprietà [mode](./mode-property-ado.md) . Questo parametro viene ignorato quando il parametro di *origine* non contiene un URL.  
   
  *Opzioni*  
- Facoltativa. Valore [RecordOpenOptionsEnum](./recordopenoptionsenum.md) che specifica le opzioni per l'apertura del **record**. Il valore predefinito è **adOpenRecordUnspecified**. Questi valori possono essere combinati.  
+ facoltativo. Valore [RecordOpenOptionsEnum](./recordopenoptionsenum.md) che specifica le opzioni per l'apertura del **record**. Il valore predefinito è **adOpenRecordUnspecified**. Questi valori possono essere combinati.  
   
  *UserName*  
- Facoltativa. Valore **stringa** che contiene l'ID utente che, se necessario, autorizza l'accesso all' *origine*.  
+ facoltativo. Valore **stringa** che contiene l'ID utente che, se necessario, autorizza l'accesso all' *origine*.  
   
  *Password*  
- Facoltativa. Valore **stringa** che contiene la password che, se necessaria, verifica il *nome utente*.  
+ facoltativo. Valore **stringa** che contiene la password che, se necessaria, verifica il *nome utente*.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il *codice sorgente* può essere:  
   
 -   Un URL. Se il protocollo per l'URL è http, il provider Internet verrà richiamato per impostazione predefinita. Se l'URL punta a un nodo che contiene uno script eseguibile, ad esempio. Pagina ASP), per impostazione predefinita viene aperto un **record** che contiene l'origine anziché il contenuto eseguito. Usare l'argomento *options* per modificare questo comportamento.  

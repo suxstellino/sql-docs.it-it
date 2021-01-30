@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLConfigDriver
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 04ee54bba13730504ed08cfc1307858edea56282
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: abe28e8d870216cf090e57a93e0c75766db08231
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476157"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165332"
 ---
 # <a name="sqlconfigdriver-function"></a>Funzione SQLConfigDriver
 **Conformità**  
@@ -69,7 +69,7 @@ BOOL SQLConfigDriver(
  Input Nome del driver registrato nelle informazioni di sistema.  
   
  *lpszArgs*  
- Input Stringa con terminazione null che contiene gli argomenti per un *fRequest*specifico del driver.  
+ Input Stringa con terminazione null che contiene gli argomenti per un *fRequest* specifico del driver.  
   
  *lpszMsg*  
  Output Stringa con terminazione null che contiene un messaggio di output generato dall'installazione del driver.  
@@ -84,7 +84,7 @@ BOOL SQLConfigDriver(
  La funzione restituisce TRUE se ha esito positivo, FALSE in caso di esito negativo.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLConfigDriver** restituisce false, è possibile ottenere un valore * \* pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i valori * \* pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLConfigDriver** restituisce false, è possibile ottenere un valore *\* pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i valori *\* pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
@@ -101,7 +101,7 @@ BOOL SQLConfigDriver(
 ## <a name="comments"></a>Commenti  
  **SQLConfigDriver** consente a un'applicazione di chiamare la routine **ConfigDriver** di un driver senza che sia necessario conoscerne il nome e caricare la dll di installazione specifica del driver. Un programma di installazione chiama questa funzione dopo che è stata installata la DLL di installazione del driver. Il programma chiamante deve tenere presente che questa funzione potrebbe non essere disponibile per tutti i driver. In tal caso, il programma chiamante deve continuare senza errori.  
   
-## <a name="driver-specific-options"></a>Opzioni specifiche del driver  
+## <a name="driver-specific-options"></a>Opzioni di Driver-Specific  
  Un'applicazione può richiedere funzionalità specifiche del driver esposte dal driver tramite l'argomento *fRequest* . Il valore di *fRequest* per la prima opzione sarà ODBC_CONFIG_DRIVER_MAX + 1 e le opzioni aggiuntive verranno incrementate di 1 da tale valore. Tutti gli argomenti richiesti dal driver per la funzione devono essere specificati in una stringa con terminazione null passata nell'argomento *lpszArgs* . I driver che forniscono tali funzionalità devono gestire una tabella di opzioni specifiche del driver. Le opzioni devono essere completamente documentate nella documentazione del driver. I writer di applicazioni che utilizzano opzioni specifiche del driver devono tenere presente che questo utilizzo renderà l'applicazione meno interoperativa.  
   
 ## <a name="setting-connection-pooling-timeout"></a>Impostazione del timeout del pool di connessioni  

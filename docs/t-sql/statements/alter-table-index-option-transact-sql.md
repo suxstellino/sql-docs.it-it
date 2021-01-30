@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 6089ef60d4f0c4fc6338404084140f72fa3a3a19
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
-ms.translationtype: HT
+ms.openlocfilehash: 37bd2062d2066aea554f6b2e1b572edcdde8cdaa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094692"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165034"
 ---
 # <a name="alter-table-index_option-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

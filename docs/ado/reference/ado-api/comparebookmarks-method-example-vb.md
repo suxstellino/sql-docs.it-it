@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b651d20173659052a6958b9ce561081f9aff9b3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3896ec0e36fb5416d97cf3e6e6ad8409843cae3a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975042"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164637"
 ---
 # <a name="comparebookmarks-method-example-vb"></a>Esempio del metodo CompareBookmarks (VB)
 Questo esempio illustra il metodo [CompareBookmarks](./comparebookmarks-method-ado.md) . Il valore relativo dei segnalibri è raramente necessario, a meno che un particolare segnalibro non sia in qualche modo speciale.  
   
- Designare una riga casuale di un [Recordset](./recordset-object-ado.md) derivato dalla tabella ***authors*** come destinazione di una ricerca. Visualizzare quindi la posizione di ogni riga relativa a tale destinazione.  
+ Designare una riga casuale di un [Recordset](./recordset-object-ado.md) derivato dalla tabella ***authors** _ come destinazione di una ricerca. Visualizzare quindi la posizione di ogni riga relativa a tale destinazione.  
   
 ```  
 'BeginCompareBookmarksVB  
@@ -59,7 +59,7 @@ Public Sub Main()
   
      ' Open recordset as a static cursor type recordset  
     Set rstAuthors = New ADODB.Recordset  
-    strSQLAuthors = "SELECT * FROM Authors"  
+    strSQLAuthors = "SELECT _ FROM Authors"  
     rstAuthors.Open strSQLAuthors, Cnxn, adOpenStatic, adLockReadOnly, adCmdText  
   
     count = rstAuthors.RecordCount  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a33a9bfe6409c08eba3d3f212c95619634699a55
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 93b41040bbaf871f095bfa533e69886dfa5ffce5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480542"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165117"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar e nvarchar (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

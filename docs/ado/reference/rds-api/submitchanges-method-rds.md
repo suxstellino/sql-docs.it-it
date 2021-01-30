@@ -7,19 +7,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - SubmitChanges method [ADO]
 ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 69a76648c676af5c6420cffde930ac76c096276d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 052c131cb430d911d37f6782565c00a1d3cc53d0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724175"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166109"
 ---
 # <a name="submitchanges-method-rds"></a>Metodo SubmitChanges (Servizi Desktop remoto)
 Invia le modifiche in sospeso del [Recordset](../ado-api/recordset-object-ado.md) memorizzato nella cache locale e aggiornabile all'origine dati specificata nella proprietà [Connect](./connect-property-rds.md) o nella proprietà [URL](./url-property-rds.md) .  
@@ -42,12 +42,12 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  Variabile oggetto che rappresenta un oggetto [RDSServer. DataFactory](./datafactory-object-rdsserver.md) .  
   
  *Connection*  
- Valore **stringa** che rappresenta la connessione creata con **RDS. ** Proprietà [Connect](./connect-property-rds.md) dell'oggetto DataControl.  
+ Valore **stringa** che rappresenta la connessione creata con **RDS.** Proprietà [Connect](./connect-property-rds.md) dell'oggetto DataControl.  
   
  *Recordset*  
  Variabile oggetto che rappresenta un oggetto **Recordset** .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Per poter usare il metodo **SubmitChanges** con RDS, è necessario impostare le proprietà [Connect](./connect-property-rds.md), [Server](./server-property-rds.md)e [SQL](./sql-property.md) **. Oggetto DataControl** .  
   
  Se si chiama il metodo [CancelUpdate](./cancelupdate-method-rds.md) dopo aver chiamato **SubmitChanges** per lo stesso oggetto **Recordset** , la chiamata a **CancelUpdate** ha esito negativo perché è già stato eseguito il commit delle modifiche.  

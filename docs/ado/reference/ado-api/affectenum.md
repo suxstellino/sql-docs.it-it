@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - AffectEnum
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9673567c17cda79c93fba4e74b104bd0cb42edd7
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0a4f722e1ac4557ff5e2fb89d63c3d40f490c5b7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976142"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164862"
 ---
 # <a name="affectenum"></a>AffectEnum
 Specifica quali record sono interessati da un'operazione.  
   
 |Costante|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
-|**adAffectAll**|3|Se al **Recordset**non è applicato alcun [filtro](./filter-property.md) , influiscono su tutti i record.<br /><br /> Se la proprietà **Filter** è impostata su un criterio di stringa, ad esempio "Author =' Smith '", l'operazione influiscono sui record visibili nel capitolo corrente.<br /><br /> Se la proprietà **Filter** è impostata su un membro di [FilterGroupEnum](./filtergroupenum.md) o di una matrice di segnalibri, l'operazione avrà effetto su tutte le righe del **Recordset**. **Nota: adAffectAll** è nascosto nell'Visualizzatore oggetti Visual Basic.|  
+|**adAffectAll**|3|Se al **Recordset** non è applicato alcun [filtro](./filter-property.md) , influiscono su tutti i record.<br /><br /> Se la proprietà **Filter** è impostata su un criterio di stringa, ad esempio "Author =' Smith '", l'operazione influiscono sui record visibili nel capitolo corrente.<br /><br /> Se la proprietà **Filter** è impostata su un membro di [FilterGroupEnum](./filtergroupenum.md) o di una matrice di segnalibri, l'operazione avrà effetto su tutte le righe del **Recordset**. **Nota: adAffectAll** è nascosto nell'Visualizzatore oggetti Visual Basic.|  
 |**adAffectAllChapters**|4|Influiscono su tutti i record di tutti i capitoli di pari livello del **Recordset**, inclusi quelli non visibili tramite un **filtro** attualmente applicato.|  
 |**adAffectCurrent**|1|Influiscono solo sul record corrente.|  
 |**adAffectGroup**|2|Interessa solo i record che soddisfano l'impostazione della proprietà [filtro](./filter-property.md) corrente. Per usare questa opzione, è necessario impostare la proprietà **Filter** su un valore **FilterGroupEnum** o una matrice di **segnalibri** .|  

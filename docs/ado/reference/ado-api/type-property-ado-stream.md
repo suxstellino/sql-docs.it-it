@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Stream::Type
@@ -18,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: f6a17e8c-7a28-48d0-bded-76b9e0cf7639
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a72fb3afba9ff1455cba3fde8ada4cf82cb6cd3d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 61e170cd368771fc75c2c6e552d4465dfe51866c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988302"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166380"
 ---
 # <a name="type-property-ado-stream"></a>Proprietà Type (Stream - ADO)
 Indica il tipo di dati contenuti nel [flusso](./stream-object-ado.md) (binario o testo).  
   
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
- Imposta o restituisce un valore [StreamTypeEnum](./streamtypeenum.md) che specifica il tipo di dati contenuti nell'oggetto **flusso** . Il valore predefinito è **adTypeText**. Tuttavia, se inizialmente i dati binari vengono scritti in un nuovo **flusso**vuoto, il **tipo** verrà modificato in **adTypeBinary**.  
+ Imposta o restituisce un valore [StreamTypeEnum](./streamtypeenum.md) che specifica il tipo di dati contenuti nell'oggetto **flusso** . Il valore predefinito è **adTypeText**. Tuttavia, se inizialmente i dati binari vengono scritti in un nuovo **flusso** vuoto, il **tipo** verrà modificato in **adTypeBinary**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La proprietà **Type** è di lettura/scrittura solo quando la posizione corrente si trova all'inizio del **flusso** ([position](./position-property-ado.md) è 0) e di sola lettura in qualsiasi altra posizione.  
   
- La proprietà**Type** determina i metodi da utilizzare per la lettura e la scrittura del **flusso**. Per i **flussi**di testo, usare [READTEXT](./readtext-method.md) e [WRITETEXT](./writetext-method.md). Per i **flussi**binari, usare [lettura](./read-method.md) e [scrittura](./write-method.md).  
+ La proprietà **Type** determina i metodi da utilizzare per la lettura e la scrittura del **flusso**. Per i **flussi** di testo, usare [READTEXT](./readtext-method.md) e [WRITETEXT](./writetext-method.md). Per i **flussi** binari, usare [lettura](./read-method.md) e [scrittura](./write-method.md).  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Stream (ADO)](./stream-object-ado.md)  

@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ADO, objects and interfaces
 - objects [ADO]
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80391605a0480d8967afb1e0240168a393f09363
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c694a5051729a6ce9b925014ae93b5dbde11f5d9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976312"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164893"
 ---
 # <a name="ado-objects-and-interfaces"></a>Interfacce e oggetti ADO
 Le relazioni tra questi oggetti sono rappresentate nel [modello a oggetti ADO](./ado-object-model.md).  
@@ -39,7 +39,7 @@ Le relazioni tra questi oggetti sono rappresentate nel [modello a oggetti ADO](.
 |[Campo](./field-object.md)|Rappresenta una colonna di dati con un tipo di dati comune.|  
 |[Parametro](./parameter-object.md)|Rappresenta un parametro o un argomento associato a un oggetto **Command** basato su una query con parametri o stored procedure.<br /><br /> L'oggetto **Parameter** non è sicuro per lo scripting.|  
 |[Proprietà](./property-object-ado.md)|Rappresenta una caratteristica dinamica di un oggetto ADO definito dal provider.|  
-|[Record](./record-object-ado.md)|Rappresenta una riga di un **Recordset**o una directory o un file in un file System. L'oggetto **record** è sicuro per lo scripting.|  
+|[Record](./record-object-ado.md)|Rappresenta una riga di un **Recordset** o una directory o un file in un file System. L'oggetto **record** è sicuro per lo scripting.|  
 |[Recordset](./recordset-object-ado.md)|Rappresenta il set di record di una tabella di base o i risultati di un comando eseguito. In qualsiasi momento, l'oggetto **Recordset** fa riferimento solo a un singolo record all'interno del set come record corrente.<br /><br /> L'oggetto **Recordset** è sicuro per lo scripting.|  
 |[Flusso](./stream-object-ado.md)|Rappresenta un flusso di dati binario.<br /><br /> L'oggetto **flusso** è sicuro per lo scripting.|  
   

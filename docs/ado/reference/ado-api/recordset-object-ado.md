@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ff23c57ae3ecf25e7328d304f9716ad24f2aba7e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ecf73bd3708fc33d8ada106dcaa4fb6e1f0b5503
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989741"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166701"
 ---
 # <a name="recordset-object-ado"></a>Oggetto Recordset (ADO)
 Rappresenta l'intero set di record di una tabella di base o i risultati di un comando eseguito. In qualsiasi momento, l'oggetto **Recordset** fa riferimento solo a un singolo record all'interno del set come record corrente.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Si utilizzano oggetti **Recordset** per modificare i dati da un provider. Quando si utilizza ADO, i dati vengono modificati quasi interamente utilizzando oggetti **Recordset** . Tutti gli oggetti **Recordset** sono costituiti da record (righe) e campi (colonne). A seconda della funzionalità supportata dal provider, alcuni metodi o proprietà del **Recordset** potrebbero non essere disponibili.  
   
  Oggetto ADODB. Recordset è il ProgID da utilizzare per creare un oggetto **Recordset** . Applicazioni esistenti che fanno riferimento all'oggetto adore obsoleto. Il ProgID del recordset continuerà a funzionare senza ricompilare, ma il nuovo sviluppo dovrebbe fare riferimento a ADODB. Recordset.  
@@ -49,13 +49,13 @@ Rappresenta l'intero set di record di una tabella di base o i risultati di un co
   
  Quando si apre un **Recordset**, il record corrente viene posizionato sul primo record, se presente, e le proprietà [BOF](./bof-eof-properties-ado.md) e [EOF](./bof-eof-properties-ado.md) sono impostate su **false**. Se non sono presenti record, le impostazioni della proprietà **BOF** e **EOF** sono **true**.  
   
- È possibile usare i metodi [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), **MoveLast**, **MoveNext**e **MovePrevious** ; metodo [Move](./move-method-ado.md) ; e le proprietà [AbsolutePosition](./absoluteposition-property-ado.md), [AbsolutePage](./absolutepage-property-ado.md)e [Filter](./filter-property.md) per riposizionare il record corrente, presupponendo che il provider supporti la funzionalità pertinente. Gli oggetti **Recordset** di sola trasmissione supportano solo il metodo [MoveNext](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) . Quando si usano i metodi **Move** per visitare ogni record (o enumerare **il recordset**), è possibile usare le proprietà **BOF** e **EOF** per determinare se è stato spostato oltre l'inizio o la fine del **Recordset**.  
+ È possibile usare i metodi [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), **MoveLast**, **MoveNext** e **MovePrevious** ; metodo [Move](./move-method-ado.md) ; e le proprietà [AbsolutePosition](./absoluteposition-property-ado.md), [AbsolutePage](./absolutepage-property-ado.md)e [Filter](./filter-property.md) per riposizionare il record corrente, presupponendo che il provider supporti la funzionalità pertinente. Gli oggetti **Recordset** di sola trasmissione supportano solo il metodo [MoveNext](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) . Quando si usano i metodi **Move** per visitare ogni record (o enumerare **il recordset**), è possibile usare le proprietà **BOF** e **EOF** per determinare se è stato spostato oltre l'inizio o la fine del **Recordset**.  
   
  Prima di utilizzare qualsiasi funzionalità di un oggetto **Recordset** , è necessario chiamare il metodo **Supports** sull'oggetto per verificare che la funzionalità sia supportata o disponibile. Non è necessario usare la funzionalità quando il metodo **Supports** restituisce false. Ad esempio, è possibile usare il metodo **MovePrevious** solo se `Recordset.Supports(adMovePrevious)` restituisce **true**. In caso contrario, verrà visualizzato un errore perché l'oggetto **Recordset** potrebbe essere stato chiuso e la funzionalità non è stata resa disponibile nell'istanza. Se una funzionalità a cui si è interessati non è supportata, **Supports** restituirà anche false. In questo caso, è consigliabile evitare di chiamare la proprietà o il metodo corrispondente nell'oggetto **Recordset** .  
   
  Gli oggetti **Recordset** possono supportare due tipi di aggiornamento: immediato e in batch. Nell'aggiornamento immediato, tutte le modifiche ai dati vengono scritte immediatamente nell'origine dati sottostante una volta chiamato il metodo [Update](./update-method.md) . È anche possibile passare matrici di valori come parametri con i metodi [AddNew](./addnew-method-ado.md) e **Update** e aggiornare contemporaneamente più campi in un record.  
   
- Se un provider supporta l'aggiornamento in batch, è possibile fare in modo che la cache del provider cambi a più di un record e quindi trasmetterli in una singola chiamata al database con il metodo [UpdateBatch](./updatebatch-method.md) . Questo vale per le modifiche apportate con i metodi **AddNew**, **Update**e [Delete](./delete-method-ado-recordset.md) . Dopo aver chiamato il metodo **UpdateBatch** , è possibile usare la proprietà [status](./status-property-ado-recordset.md) per verificare la presenza di conflitti di dati per risolverli.  
+ Se un provider supporta l'aggiornamento in batch, è possibile fare in modo che la cache del provider cambi a più di un record e quindi trasmetterli in una singola chiamata al database con il metodo [UpdateBatch](./updatebatch-method.md) . Questo vale per le modifiche apportate con i metodi **AddNew**, **Update** e [Delete](./delete-method-ado-recordset.md) . Dopo aver chiamato il metodo **UpdateBatch** , è possibile usare la proprietà [status](./status-property-ado-recordset.md) per verificare la presenza di conflitti di dati per risolverli.  
   
 > [!NOTE]
 >  Per eseguire una query senza usare un oggetto [Command](./command-object-ado.md) , passare una stringa di query al metodo **Open** di un oggetto **Recordset** . Tuttavia, è necessario un oggetto **comando** quando si desidera salvare in modo permanente il testo del comando ed eseguirlo di nuovo oppure utilizzare parametri di query.  

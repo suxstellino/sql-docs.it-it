@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 06/03/2020
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - JSON_QUERY
 - JSON_QUERY_TSQL
@@ -18,12 +18,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: chadam
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017
-ms.openlocfilehash: ec281dac44455369bc1d7e8f53b2b5b2a7ff5bb0
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
-ms.translationtype: HT
+ms.openlocfilehash: 505d8d6ef00b7d864b0c20fe983de384baa01787
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102561"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165004"
 ---
 # <a name="json_query-transact-sql"></a>JSON_QUERY (Transact-SQL)
 

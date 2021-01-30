@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_filestream_force_garbage_collection
 - sp_filestream_force_garbage_collection_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 627793d900903a28ce4e4b7ee6a3272b4c63ee32
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: 0c234c5c03b00b25babbec0a4fbc197f235c966d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753841"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165246"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,14 +54,14 @@ sp_filestream_force_garbage_collection
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
   
-| valore | Descrizione |
+| Valore | Descrizione |
 | ----- | ----------- |   
 |0|Operazione riuscita|  
 |1|Operazione non riuscita|  
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |*file_name*|Indica il nome del contenitore FILESTREAM|  
 |*num_collected_items*|Indica il numero di elementi FILESTREAM (file/directory) che sono stati sottoposti a Garbage Collection (eliminati) in questo contenitore.|  
@@ -69,7 +69,7 @@ sp_filestream_force_garbage_collection
 |*num_unprocessed_items*|Indica il numero di elementi FILESTREAM (file o directory) idonei che non sono stati elaborati per il Garbage Collection in questo contenitore FILESTREAM. Gli elementi possono non essere elaborati per i vari motivi, tra cui:<br /><br /> File che devono essere bloccati perché non è stato eseguito un checkpoint o backup del log.<br /><br /> File nel modello di recupero FULL o BULK_LOGGED.<br /><br /> È presente una transazione attiva con esecuzione prolungata.<br /><br /> Il processo di lettura log repliche non è stato eseguito. Per ulteriori informazioni, vedere l' [Archivio FILESTREAM white paper SQL Server 2008](/previous-versions/sql/sql-server-2008/hh461480(v=msdn.10)) .|  
 |*last_collected_xact_seqno*|Restituisce l'ultimo numero di sequenza del file di log (LSN) corrispondente fino a cui i file sono stati sottoposti a Garbage Collection per il contenitore FILESTREAM specificato.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Esegue in modo esplicito l'attività Garbage Collector per FILESTREAM per il completamento nel database richiesto (e il contenitore FILESTREAM). I file che non sono più necessari vengono rimossi dal processo di Garbage Collection. Il tempo necessario per il completamento di questa operazione dipende dalle dimensioni dei dati FILESTREAM in tale database o contenitore nonché dalla quantità di attività DML recentemente eseguita sui dati FILESTREAM. Sebbene questa operazione possa essere eseguita con il database in modalità online, ciò potrebbe influire sulle prestazioni del database durante l'esecuzione a causa delle varie attività I/O eseguite dal processo di Garbage Collection.  
   
 > [!NOTE]  
@@ -85,10 +85,10 @@ Garbage Collection (GC) si basa sul troncamento del log. Di conseguenza, se i fi
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo del database db_owner.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Negli esempi seguenti viene eseguito il Garbage Collector per i contenitori FILESTREAM nel database `FSDB`.  
   
-### <a name="a-specifying-no-container"></a>A. Specifica di nessun contenitore  
+### <a name="a-specifying-no-container"></a>R. Specifica di nessun contenitore  
   
 ```sql  
 USE FSDB;  

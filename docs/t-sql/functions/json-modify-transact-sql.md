@@ -5,18 +5,18 @@ ms.custom: ''
 ms.date: 06/03/2020
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: chadam
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017
-ms.openlocfilehash: 547a304b4f5a9b6069d023a751f73d99e8456bbc
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
-ms.translationtype: HT
+ms.openlocfilehash: 547a5489e917e587ffa416ab2554199cbe73e4b2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98092235"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165021"
 ---
 # <a name="json_modify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 

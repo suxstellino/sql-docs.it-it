@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ADO, methods
 - methods [ADO]
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13e126f070f188e47582227fabf4a1e37d6901a3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: dd98478cad7c13b2f4e6950586c1317c1d5d37dd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976372"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164905"
 ---
 # <a name="ado-methods"></a>Metodi ADO
 
@@ -27,7 +27,7 @@ ms.locfileid: "88976372"
 |-|-|  
 |[AddNew](./addnew-method-ado.md)|Crea un nuovo record per un oggetto **Recordset** aggiornabile.|  
 |[Accoda](./append-method-ado.md)|Accoda un oggetto a una raccolta. Se la raccolta è **Fields**, è possibile creare un nuovo oggetto **campo** prima che venga aggiunto alla raccolta.|  
-|[AppendChunk](./appendchunk-method-ado.md)|Accoda i dati a un **campo**di dati di testo o binario di grandi dimensioni o a un oggetto **Parameter** .|  
+|[AppendChunk](./appendchunk-method-ado.md)|Accoda i dati a un **campo** di dati di testo o binario di grandi dimensioni o a un oggetto **Parameter** .|  
 |[BeginTrans, CommitTrans e RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)|Gestisce l'elaborazione delle transazioni all'interno di un oggetto **connessione** come indicato di seguito:<br /><br /> **BeginTrans** : inizia una nuova transazione.<br /><br /> **CommitTrans** -Salva le modifiche e termina la transazione corrente. Potrebbe inoltre avviare una nuova transazione.<br /><br /> **RollbackTrans** : Annulla tutte le modifiche e termina la transazione corrente. Potrebbe inoltre avviare una nuova transazione.|  
 |[Annulla](./cancel-method-ado.md)|Annulla l'esecuzione di una chiamata al metodo asincrona in sospeso.|  
 |[CancelBatch](./cancelbatch-method-ado.md)|Annulla un aggiornamento batch in sospeso.|  
@@ -54,7 +54,7 @@ ms.locfileid: "88976372"
 |[GetRows](./getrows-method-ado.md)|Recupera più record di un oggetto **Recordset** in una matrice.|  
 |[GetString](./getstring-method-ado.md)|Restituisce il **Recordset** sotto forma di stringa.|  
 |[LoadFromFile](./loadfromfile-method-ado.md)|Carica il contenuto di un file esistente in un **flusso**.|  
-|[Spostamento](./move-method-ado.md)|Sposta la posizione del record corrente in un oggetto **Recordset** .|  
+|[Sposta](./move-method-ado.md)|Sposta la posizione del record corrente in un oggetto **Recordset** .|  
 |[MoveFirst, MoveLast, MoveNext e MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Passa al record primo, ultimo, successivo o precedente in un oggetto **Recordset** specificato e fa in modo che registri il record corrente.|  
 |[MoveRecord](./moverecord-method-ado.md)|Sposta un file o una directory e il relativo contenuto in un'altra posizione.|  
 |[NextRecordset](./nextrecordset-method-ado.md)|Cancella l'oggetto **Recordset** corrente e restituisce il **Recordset** successivo avanzando attraverso una serie di comandi.|  

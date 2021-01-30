@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection15::GetVersion
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: db4cb894-9bd9-422d-a58a-cef6941a5784
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f3fa292fbc10ea57dbca6e4aa958ad0e625298d5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6b4ed042d847ab250386857560bcbc232660fcd9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987952"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166302"
 ---
 # <a name="version-property-ado"></a>Proprietà Version (ADO)
 Indica il numero di versione ADO.  
@@ -31,7 +31,7 @@ Indica il numero di versione ADO.
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un valore **stringa** che indica la versione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare la proprietà **Version** per restituire il numero di versione dell'implementazione ADO.  
   
  La versione del provider sarà disponibile come proprietà dinamica nella raccolta [Properties](./properties-collection-ado.md) .  

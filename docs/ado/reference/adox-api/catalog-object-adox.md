@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Catalog
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8329c4a94a6c9e01f0730b3244eabc6c74511cfa
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cfb44f5e35b1f30e504cfbf83a85c5a61aceb987
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985312"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164294"
 ---
 # <a name="catalog-object-adox"></a>Oggetto Catalog (ADOX)
 Contiene le raccolte ([tabelle](./tables-collection-adox.md), [viste](./views-collection-adox.md), [utenti](./users-collection-adox.md), [gruppi](./groups-collection-adox.md)e [procedure](./procedures-collection-adox.md)) che descrivono il catalogo dello schema di un'origine dati.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È possibile modificare l'oggetto **Catalogo** aggiungendo o rimuovendo oggetti o modificando gli oggetti esistenti. Alcuni provider potrebbero non supportare tutti gli oggetti del **Catalogo** o supportare solo la visualizzazione delle informazioni sullo schema.  
   
  Con le proprietà e i metodi di un oggetto **Catalogo** , è possibile:  

@@ -7,23 +7,23 @@ ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a9f2795906dce8c6a43b66397eefc1679ea22d6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 36ca4b14058b2728e60856f3c848452ad922107d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987662"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166242"
 ---
 # <a name="ado-glossary"></a>Glossario di ADO
 In questo argomento vengono definiti i termini rilevanti per ADO.  
   
-## <a name="a"></a>Una  
+## <a name="a"></a>A  
  URL assoluto  
  URL completo che specifica il percorso di una risorsa che risiede in Internet o in una rete Intranet. Vedere anche *URL* e *URL relativo*.  
   
@@ -136,7 +136,7 @@ In questo argomento vengono definiti i termini rilevanti per ADO.
  Protocollo wire che consente ai componenti COM di comunicare direttamente tra loro attraverso una rete. Vedere anche *com*, *Component*.  
   
  DDL (Data Definition Language)  
- Tali istruzioni in SQL che definiscono, anziché modificare, i dati. Lo schema di un database viene creato o modificato con DDL. Ad esempio, **Create Table**, **create index**, **Grant**e **Revoke** sono istruzioni SQL DDL.  
+ Tali istruzioni in SQL che definiscono, anziché modificare, i dati. Lo schema di un database viene creato o modificato con DDL. Ad esempio, **Create Table**, **create index**, **Grant** e **Revoke** sono istruzioni SQL DDL.  
   
  flusso predefinito  
  Flusso di testo o binario, rappresentato da un oggetto **flusso** , associato a oggetti **record** o **Recordset** quando si utilizzano determinati provider di OLE DB, ad esempio il provider Microsoft OLE DB per la pubblicazione Internet. Il flusso predefinito contiene in genere il contenuto di un file, ad esempio il codice HTML per la radice di un sito Web.  
@@ -148,7 +148,7 @@ In questo argomento vengono definiti i termini rilevanti per ADO.
  Oggetto **Recordset** in una cache del client che non dispone più di una connessione in tempo reale al server. Se per qualche motivo è necessario accedere di nuovo all'origine dati originale, ad esempio l'aggiornamento dei dati, è necessario ristabilire la connessione. Tuttavia, è ancora possibile accedere alle raccolte, alle proprietà e ai metodi di un **Recordset** disconnesso.  
   
  DML (Data Manipulation Language)  
- Queste istruzioni in SQL che manipolano, anziché definire, i dati. I valori di un database vengono selezionati e modificati con DML. Ad esempio, **Insert**, **Update**, **Delete**e **Select** sono istruzioni SQL DML.  
+ Queste istruzioni in SQL che manipolano, anziché definire, i dati. I valori di un database vengono selezionati e modificati con DML. Ad esempio, **Insert**, **Update**, **Delete** e **Select** sono istruzioni SQL DML.  
   
  provider di origine del documento  
  Classe speciale di provider che gestiscono cartelle e documenti. Quando un documento è rappresentato da un oggetto **record** o una cartella di documenti viene rappresentata da un oggetto **Recordset** , il provider di origine del documento popola gli oggetti con un set univoco di campi che descrivono le caratteristiche del documento, invece del documento effettivo. Vedere anche record di risorse.  
@@ -161,11 +161,11 @@ In questo argomento vengono definiti i termini rilevanti per ADO.
   
 ## <a name="e"></a>E  
  Enumerazione  
- Elenco di costanti denominate. I valori enumerati non devono essere univoci. Tuttavia, il nome di ogni valore deve essere univoco all'interno dell'ambito in cui è definita l'enumerazione. In ADO, le enumerazioni vengono utilizzate per il parametro numerico e i valori restituiti, per aggiungere significato al codice ADO e per schermare lo sviluppatore dai valori numerici (che potrebbero variare da una versione all'altra). Per aprire un **Recordset**statico, ad esempio, usare il valore enumerato **adOpenStatic** : `Recordset.Open ,,adOpenStatic`  
+ Elenco di costanti denominate. I valori enumerati non devono essere univoci. Tuttavia, il nome di ogni valore deve essere univoco all'interno dell'ambito in cui è definita l'enumerazione. In ADO, le enumerazioni vengono utilizzate per il parametro numerico e i valori restituiti, per aggiungere significato al codice ADO e per schermare lo sviluppatore dai valori numerici (che potrebbero variare da una versione all'altra). Per aprire un **Recordset** statico, ad esempio, usare il valore enumerato **adOpenStatic** : `Recordset.Open ,,adOpenStatic`  
   
  Definito anche come *costante enumerata*. Vedere anche *Constant*.  
   
- event  
+ evento  
  Azione riconosciuta da un oggetto, per la quale è possibile scrivere codice per rispondere. Gli eventi possono essere generati dall'esecuzione del comando, dal completamento delle transazioni, dall'esplorazione del recordset e dagli aggiornamenti dei dati, tra le altre azioni. Vedere anche *gestore eventi*.  
   
  gestore dell'evento  
@@ -264,7 +264,7 @@ In questo argomento vengono definiti i termini rilevanti per ADO.
  Set di righe di un'origine dati con lo stesso schema di campo. Un set di righe può rappresentare tutti o alcuni campi di una tabella. Un set di righe può anche rappresentare una tabella virtuale, creata da una query o un join di due o più tabelle. In ADO i set di righe sono rappresentati da oggetti **Recordset** .  
   
 ## <a name="s"></a>S  
- Scope  
+ Ambito  
  Intervallo di riferimento per un oggetto o una variabile oppure un intervallo di record in una vista o in una tabella. È ad esempio possibile fare riferimento alle variabili locali solo all'interno della routine in cui sono state definite. Le variabili pubbliche sono accessibili da qualsiasi punto dell'applicazione. Gli oggetti, ad esempio il database corrente, si trovano nell'ambito se si trovano nel percorso di ricerca definito. Gli intervalli di record possono essere specificati con una clausola SCOPE in molti comandi.  
   
  provider di servizi  

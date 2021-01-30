@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLDisconnect
 apilocation:
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9e84a58e-db48-4821-a0cd-5c711fcbe36b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 604f5af6f425506996e7e15b7db73878f3d8b2c6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a5f246c3d5aafbc02a138e809a0a07805f8ae30f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428943"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165320"
 ---
 # <a name="sqldisconnect-function"></a>Funzione SQLDisconnect
 **Conformità**  
@@ -40,7 +40,7 @@ ms.locfileid: "88428943"
 ```cpp  
   
 SQLRETURN SQLDisconnect(  
-     SQLHDBC     ConnectionHandle);  
+     SQLHDBC     ConnectionHandle);  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -59,10 +59,10 @@ SQLRETURN SQLDisconnect(
 |01002|Errore di disconnessione|Si è verificato un errore durante la disconnessione. Tuttavia, la disconnessione è riuscita. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |08003|Connessione non aperta|(DM) la connessione specificata nell'argomento *connectionHandle* non è stata aperta.|  
 |25000|Stato della transazione non valido|Transazione in corso sulla connessione specificata dall'argomento *connectionHandle*. La transazione rimane attiva.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer *\* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY008|Operation canceled|L'elaborazione asincrona è stata abilitata per *connectionHandle*. La funzione è stata chiamata e prima di finshed l'esecuzione della [funzione SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) è stata chiamata su *connectionHandle*. La funzione è stata chiamata nuovamente in *connectionHandle*.<br /><br /> La funzione è stata chiamata e prima del completamento dell'esecuzione di **SQLCancelHandle** è stato chiamato su *connectionHandle* da un thread diverso in un'applicazione multithread.|  
-|HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per un *statementHandle* associato a *connectionHandle* ed è ancora in esecuzione quando è stato chiamato **SqlConnection** .<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per *connectionHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato per un *statementHandle* associato a *connectionHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.|  
+|HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per un *statementHandle* associato a *connectionHandle* ed è ancora in esecuzione quando è stato chiamato **SqlConnection** .<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per *connectionHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations** o **SQLSetPos** è stato chiamato per un *statementHandle* associato a *connectionHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
 |HY117|Connessione sospesa a causa di uno stato di transazione sconosciuto. Sono consentite solo le funzioni di disconnessione e di sola lettura.|(DM) per ulteriori informazioni sullo stato Suspended, vedere [funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Timeout connessione scaduto|Il periodo di timeout della connessione è scaduto prima che l'origine dati abbia risposto alla richiesta e la connessione è ancora attiva. Il periodo di timeout della connessione viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
@@ -75,7 +75,7 @@ SQLRETURN SQLDisconnect(
   
  Se un'applicazione chiama **Disconnect** mentre esiste una transazione incompleta associata all'handle di connessione, il driver restituisce SQLSTATE 25000 (stato della transazione non valido), a indicare che la transazione rimane invariata e la connessione è aperta. Una transazione incompleta non è stata sottoposta a commit o ne è stato eseguito il rollback con **SQLEndTran**.  
   
- Se un'applicazione chiama **SqlConnection** prima di avere liberato tutte le istruzioni associate alla connessione, il driver, dopo la disconnessione dall'origine dati, libera tali istruzioni e tutti i descrittori che sono stati allocati in modo esplicito nella connessione. Tuttavia, se una o più istruzioni associate alla connessione sono ancora in esecuzione in modo asincrono, **Disconnect** restituisce SQL_ERROR con un valore SQLSTATE di HY010 (errore della sequenza di funzioni). **Disconnect** , inoltre, libererà tutte le istruzioni associate e tutti i descrittori che sono stati allocati in modo esplicito sulla connessione, se la connessione è in uno stato sospeso oppure se **SQLCancelHandle** **Disconnect** è stato annullato correttamente da SQLCancelHandle.  
+ Se un'applicazione chiama **SqlConnection** prima di avere liberato tutte le istruzioni associate alla connessione, il driver, dopo la disconnessione dall'origine dati, libera tali istruzioni e tutti i descrittori che sono stati allocati in modo esplicito nella connessione. Tuttavia, se una o più istruzioni associate alla connessione sono ancora in esecuzione in modo asincrono, **Disconnect** restituisce SQL_ERROR con un valore SQLSTATE di HY010 (errore della sequenza di funzioni). **Disconnect** , inoltre, libererà tutte le istruzioni associate e tutti i descrittori che sono stati allocati in modo esplicito sulla connessione, se la connessione è in uno stato sospeso oppure se  **Disconnect** è stato annullato correttamente da SQLCancelHandle.  
   
  Per informazioni sul modo in cui un'applicazione usa **Disconnect**, vedere [disconnessione da un'origine dati o da un driver](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md).  
   

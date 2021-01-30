@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Member
@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 784dd3e842547c97f26107beaec67767363ce4ea
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 13831b47dc9c571d02971881626cc555610faf2f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986462"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164491"
 ---
 # <a name="member-object-ado-md"></a>Oggetto Member (ADO MD)
 Rappresenta un membro di un livello in un cubo, gli elementi figlio di un membro di un livello o un membro di una posizione lungo un asse di un insieme di celle.  
   
-## <a name="remarks"></a>Osservazioni  
- Le proprietà di un **membro** variano a seconda del contesto in cui viene utilizzata. Un **membro** di un [livello](./level-object-ado-md.md) in un [CubeDef](./cubedef-object-ado-md.md) ha una proprietà [Children](./children-property-ado-md.md) che restituisce i **membri** al livello inferiore successivo della gerarchia dal **membro**corrente. Per un **membro** di una [posizione](./position-object-ado-md.md), la raccolta **Children** è sempre vuota. Inoltre, la proprietà [Type](./type-property-ado-md.md) si applica solo ai **membri** di un **livello**.  
+## <a name="remarks"></a>Commenti  
+ Le proprietà di un **membro** variano a seconda del contesto in cui viene utilizzata. Un **membro** di un [livello](./level-object-ado-md.md) in un [CubeDef](./cubedef-object-ado-md.md) ha una proprietà [Children](./children-property-ado-md.md) che restituisce i **membri** al livello inferiore successivo della gerarchia dal **membro** corrente. Per un **membro** di una [posizione](./position-object-ado-md.md), la raccolta **Children** è sempre vuota. Inoltre, la proprietà [Type](./type-property-ado-md.md) si applica solo ai **membri** di un **livello**.  
   
  Un **membro** di **position** dispone di due proprietà che risultano utili quando si visualizzano le [celle](./cellset-object-ado-md.md): [DrilledDown](./drilleddown-property-ado-md.md) e [ParentSameAsPrev](./parentsameasprev-property-ado-md.md). Si verificherà un errore se si accede a queste proprietà in un **membro** di un **livello**.  
   
@@ -63,13 +63,13 @@ Rappresenta un membro di un livello in un cubo, gli elementi figlio di un membro
   
 -   Utilizzare la proprietà [DrilledDown](./drilleddown-property-ado-md.md) per determinare se è presente almeno un elemento figlio sull' **asse** che segue immediatamente il **membro**.  
   
--   Utilizzare la proprietà [ParentSameAsPrev](./parentsameasprev-property-ado-md.md) per determinare se l'elemento padre di questo **membro** è uguale all'elemento padre del **membro**immediatamente precedente.  
+-   Utilizzare la proprietà [ParentSameAsPrev](./parentsameasprev-property-ado-md.md) per determinare se l'elemento padre di questo **membro** è uguale all'elemento padre del **membro** immediatamente precedente.  
   
 -   Utilizzare la raccolta delle [Proprietà](../ado-api/properties-collection-ado.md) ADO standard per ottenere informazioni aggiuntive sull'oggetto **Level** .  
   
  La raccolta **Properties** contiene proprietà fornite dal provider. Nella tabella seguente sono elencate le proprietà che potrebbero essere disponibili. L'elenco di proprietà effettivo può variare a seconda dell'implementazione del provider. Per un elenco più completo delle proprietà disponibili, vedere la documentazione relativa al provider.  
   
-|Name|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |CatalogName|Nome del catalogo a cui appartiene il cubo.|  
 |ChildrenCardinality|Numero di elementi figlio del membro.|  

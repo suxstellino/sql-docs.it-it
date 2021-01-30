@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ADO collections [ADO]
 - collections [ADO]
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e23f0dedfafb47a5c97bb11f35c02b5527448e8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: fdab5e24244bc3b4f3bcf90a8401fb34a31f95bc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976522"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164941"
 ---
 # <a name="ado-collections"></a>Raccolte di ADO
 Le relazioni tra queste raccolte e gli oggetti ADO sono rappresentate nel [modello a oggetti ADO](./ado-object-model.md).  
@@ -30,7 +30,7 @@ Le relazioni tra queste raccolte e gli oggetti ADO sono rappresentate nel [model
 |-|-|  
 |[Errori](./errors-collection-ado.md)|Contiene tutti gli oggetti **Error** creati in risposta a un singolo errore correlato al provider.|  
 |[Fields](./fields-collection-ado.md)|Contiene tutti gli oggetti **campo** di un oggetto **Recordset** .|  
-|[Parameters](./parameters-collection-ado.md)|Contiene tutti gli oggetti **Parameter** di un oggetto **Command** .|  
+|[Parametri](./parameters-collection-ado.md)|Contiene tutti gli oggetti **Parameter** di un oggetto **Command** .|  
 |[Proprietà](./properties-collection-ado.md)|Contiene tutti gli oggetti **Property** per un'istanza specifica di un oggetto.|  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Level::Members
@@ -18,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0f12771ebb759a658d5e3c99244755c4daa99b0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: fdcaba24180ad333b2c9f556ac9b26fe75f120d2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986382"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164495"
 ---
 # <a name="members-collection-ado-md"></a>Raccolta Members (ADO MD)
 Contiene gli oggetti [membro](./member-object-ado-md.md) di un livello o di una posizione lungo un asse.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Una raccolta **Members** viene utilizzata per contenere i seguenti tipi di membri:  
   
 -   Membri che costituiscono un livello in un cubo. Questi sono contenuti nella raccolta **Members** di un oggetto [Level](./level-object-ado-md.md) . Ad esempio, usando l'esempio da [Panoramica di schemi e dati multidimensionali](../../guide/multidimensional/overview-of-multidimensional-schemas-and-data.md), i quattro membri del livello paesi sono Canada, USA, Regno Unito e Germania.  
   
--   Membri figlio di un membro specifico all'interno di una gerarchia. Questi membri vengono restituiti dalla proprietà [Children](./children-property-ado-md.md) dell'oggetto **membro** padre. Ad esempio, usando di nuovo lo stesso esempio, i due figli del membro Canada sono Canada-Est e Canada-West.  
+-   Membri figlio di un membro specifico all'interno di una gerarchia. Questi membri vengono restituiti dalla proprietà [Children](./children-property-ado-md.md) dell'oggetto **membro** padre. Ad esempio, usando di nuovo lo stesso esempio, i due figli del membro Canada sono Canada-East e Canada-West.  
   
 -   Membri che definiscono una posizione specifica lungo un asse di un insieme di [celle](./cellset-object-ado-md.md). Se si usa un insieme di celle [con dati multidimensionali](../../guide/multidimensional/working-with-multidimensional-data.md) come esempio, i due membri della prima posizione sull'asse x sono Valentine e Seattle. Questi membri sono contenuti nella raccolta **Members** di un oggetto [position](./position-object-ado-md.md) .  
   

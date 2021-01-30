@@ -1,25 +1,25 @@
 ---
 description: Proprietà dinamica Optimize (ADO)
-title: Optimize Property-Dynamic (ADO) | Microsoft Docs
+title: Ottimizza Property-Dynamic (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Optimize property [ADO]
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3393bbfbfbaeb50c6a608db92dae42bb29fb3b1d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 839c2cb27fc14546523272c1c5b6d69f233557fa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990262"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166947"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Proprietà dinamica Optimize (ADO)
 Specifica se è necessario creare un indice in un [campo](./field-object.md).  
@@ -27,7 +27,7 @@ Specifica se è necessario creare un indice in un [campo](./field-object.md).
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **booleano** che indica se deve essere creato un indice.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Un indice può migliorare le prestazioni delle operazioni che consentono di trovare o ordinare i valori in un [Recordset](./recordset-object-ado.md). L'indice è interno a ADO; non è possibile accedervi o usarlo in modo esplicito nell'applicazione.  
   
  Per creare un indice in un campo, impostare la proprietà **optimize** su **true**. Per eliminare l'indice, impostare questa proprietà su **false**.  

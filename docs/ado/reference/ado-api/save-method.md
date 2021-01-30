@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Recordset::Save
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a32419db6e4dd04cc57b31b1d9267e80a30db41d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 54e75b3ed86a1522c7334f6948b2a5a105971c9f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97638131"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166594"
 ---
 # <a name="save-method"></a>Metodo Save
 Salva il [Recordset](./recordset-object-ado.md) in un oggetto file o [flusso](./stream-object-ado.md) .  
@@ -36,12 +36,12 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>Parametri  
  *Destinazione*  
- Facoltativo. **Variant** che rappresenta il nome percorso completo del file in cui deve essere salvato il **Recordset** o un riferimento a un oggetto **flusso** .  
+ facoltativo. **Variant** che rappresenta il nome percorso completo del file in cui deve essere salvato il **Recordset** o un riferimento a un oggetto **flusso** .  
   
  *PersistFormat*  
- Facoltativo. Valore [PersistFormatEnum](./persistformatenum.md) che specifica il formato in cui deve essere salvato il **Recordset** (XML o ADTG). Il valore predefinito è **adPersistADTG**.  
+ facoltativo. Valore [PersistFormatEnum](./persistformatenum.md) che specifica il formato in cui deve essere salvato il **Recordset** (XML o ADTG). Il valore predefinito è **adPersistADTG**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il metodo **Save** può essere richiamato solo su un **Recordset** aperto. Utilizzare il metodo [Open (recordset ADO)](./open-method-ado-recordset.md) per ripristinare successivamente il **Recordset** dalla *destinazione*.  
   
  Se la proprietà [Filter Property](./filter-property.md) è attiva per il **Recordset**, verranno salvate solo le righe accessibili nel filtro. Se il **Recordset** è gerarchico, verranno salvati il **Recordset** figlio corrente e i relativi elementi figlio, incluso il **Recordset** padre. Se viene chiamato il metodo Save di un **Recordset** figlio, l'elemento figlio e tutti i relativi elementi figlio vengono salvati, ma l'elemento padre non lo è.  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 14668aba6cbc6817b951820bbdee4d5c69a51bc5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c76d26032d9986cba52442d62bb7ef8c10db5419
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989362"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166608"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Esempio dei metodi Save e Open (VB)
 Questi tre esempi illustrano il modo in cui i metodi [Save](./save-method.md) e [Open](./open-method-ado-recordset.md) possono essere usati insieme.  
   
- Si supponga che si stia procedendo a un viaggio di lavoro e che si voglia eseguire una tabella da un database. Prima di procedere, è possibile accedere ai dati come [Recordset](./recordset-object-ado.md) e salvarli in un modulo trasportabile. Quando si arriva alla destinazione, si accede al **Recordset** come **Recordset**locale disconnesso. Apportare modifiche al **Recordset**e quindi salvarlo di nuovo. Infine, quando si torna a casa, si esegue nuovamente la connessione al database e la si aggiorna con le modifiche apportate in viaggio.  
+ Si supponga che si stia procedendo a un viaggio di lavoro e che si voglia eseguire una tabella da un database. Prima di procedere, è possibile accedere ai dati come [Recordset](./recordset-object-ado.md) e salvarli in un modulo trasportabile. Quando si arriva alla destinazione, si accede al **Recordset** come **Recordset** locale disconnesso. Apportare modifiche al **Recordset** e quindi salvarlo di nuovo. Infine, quando si torna a casa, si esegue nuovamente la connessione al database e la si aggiorna con le modifiche apportate in viaggio.  
   
- Per prima cosa, accedere alla tabella ***authors*** e salvarla.  
+ Per prima cosa, accedere alla tabella **_authors_* _ e salvarla.  
   
 ```  
 'BeginSaveVB  
@@ -85,7 +85,7 @@ End Sub
 'EndSaveVB  
 ```  
   
- A questo punto, si è arrivati alla destinazione. Sarà possibile accedere alla tabella ***authors*** come **Recordset**locale e disconnesso. È necessario disporre del provider **MSPersist** nel computer in uso per accedere al file salvato a:\Pubs.xml.  
+ A questo punto, si è arrivati alla destinazione. Si accederà alla tabella _*_authors_*_ come un recordset locale e disconnesso * *. È necessario disporre del provider **MSPersist** nel computer in uso per accedere al file salvato a:\Pubs.xml.  
   
 ```  
 Attribute VB_Name = "Save"  

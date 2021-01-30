@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Command15::CommandText
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c0e7f2e9e346a5379051b101236df186b815aa85
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a387746928ac92dfa6c31fbe33dab66abba05eeb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975192"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164652"
 ---
 # <a name="commandtext-property-ado"></a>Proprietà CommandText (ADO)
 Indica il testo di un comando da emettere a fronte di un provider.  
@@ -29,7 +29,7 @@ Indica il testo di un comando da emettere a fronte di un provider.
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Ottiene o imposta un valore **stringa** che contiene un comando del provider, ad esempio un'istruzione SQL, un nome di tabella, un URL relativo o una chiamata stored procedure. Il valore predefinito è la stringa vuota ("").  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare la proprietà **CommandText** per impostare o restituire il testo di un comando rappresentato da un oggetto [comando](./command-object-ado.md) . Si tratta in genere di un'istruzione SQL, ma può anche essere qualsiasi altro tipo di istruzione di comando riconosciuta dal provider, ad esempio una chiamata stored procedure. Un'istruzione SQL deve essere del dialetto o della versione particolare supportata da query processor del provider.  
   
  Se la proprietà [preparata](./prepared-property-ado.md) dell'oggetto **Command** è impostata su **true** e l'oggetto **Command** è associato a una connessione aperta quando si imposta la proprietà **CommandText** , ADO prepara la query, ovvero un form compilato della query archiviata dal provider, quando si chiamano i metodi [Execute](./execute-method-ado-command.md) o [Open](./open-method-ado-connection.md) .  

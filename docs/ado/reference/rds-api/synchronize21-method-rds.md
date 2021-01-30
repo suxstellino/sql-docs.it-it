@@ -7,19 +7,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Synchronize21 method [ADO]
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46d0d13fa6e735b7763a35186beff59f293cc278
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: fb782b8c61f3ae80c3e37d5ff28b040651eb5669
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724699"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166091"
 ---
 # <a name="synchronize21-method-rds"></a>Metodo Synchronize21 (Servizi Desktop remoto)
 Sincronizzare il recordset specificato con il database specificato dalla stringa di connessione per l'utilizzo con ADO 2,1.  
@@ -58,7 +58,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  *pStatusArray*  
  Variante utilizzata per restituire una matrice sicura di Stati di riga per le righe interessate dalla sincronizzazione. Non impostato se nessuna delle seguenti opzioni di sincronizzazione è impostata: *RefreshWithUpdate*, *Refresh* e *RefreshConflicts*.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il parametro *HandlerString* può essere null. Ciò che accade in questo caso dipende dalla modalità di configurazione del server RDS. Una stringa del gestore "MSDFMAP. handler" indica che deve essere utilizzato il gestore fornito da Microsoft (Msdfmap.dll). Una stringa del gestore "MASDFMAP. Handler, sample.ini" indica che è necessario utilizzare il gestore di Msdfmap.dll e che l'argomento "sample.ini" deve essere passato al gestore. Msdfmap.dll interpreterà quindi l'argomento come direzione per usare il sample.ini per verificare le stringhe di connessione e di query.  
   
 > [!NOTE]

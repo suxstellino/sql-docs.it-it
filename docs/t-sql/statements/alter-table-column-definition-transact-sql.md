@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - column_definition
 - column_definition_TSQL
@@ -22,12 +22,12 @@ ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 001417f19035ab9a304f2af3ae42207bd7600fb1
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 89e98042c006c397ff84a7522b26be1716f5a254
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170833"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165043"
 ---
 # <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

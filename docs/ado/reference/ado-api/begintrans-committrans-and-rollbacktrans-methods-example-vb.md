@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac6978aba505110066229bc13f359e9215a25611
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 02b1296a81bed339071995d66bc9c1454ae86aa8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975922"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164802"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>Esempio di metodi BeginTrans, CommitTrans e RollbackTrans (VB)
-Questo esempio Mostra come modificare il tipo di libro di tutti i libri di psicologia nella tabella ***titles*** del database. Dopo che il metodo [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) ha avviato una transazione che isola tutte le modifiche apportate alla tabella ***titles*** , il metodo [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) Salva le modifiche. È possibile utilizzare il metodo [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) per annullare le modifiche salvate tramite il metodo [Update](./update-method.md) .  
+Questo esempio Mostra come modificare il tipo di libro di tutti i libri di psicologia nella tabella ***titles** _ del database. Dopo che il metodo [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) ha avviato una transazione che isola tutte le modifiche apportate alla tabella _ *_titles_**, il metodo [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) Salva le modifiche. È possibile utilizzare il metodo [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) per annullare le modifiche salvate tramite il metodo [Update](./update-method.md) .  
   
 ```  
 'BeginBeginTransVB  

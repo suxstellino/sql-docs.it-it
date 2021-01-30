@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Axis object [ADO MD], members
 ms.assetid: 89ec13b9-6324-4a95-92a7-3230d46bd02f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4ca075ecc7c2a49608777ebfef4a7cf970ff4353
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a2dee77704779c07c209f1b7bbc9a592e2f43e02
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987352"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166163"
 ---
 # <a name="axis-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto Axis
 ## <a name="propertiescollections"></a>Proprietà/raccolte  
@@ -32,9 +32,9 @@ ms.locfileid: "88987352"
  [Raccolta delle proprietà](../ado-api/properties-collection-ado.md)  
   
 ## <a name="methods"></a>Metodi  
- Nessuno.  
+ Nessuna.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventi  
  No.  
   
 ## <a name="see-also"></a>Vedere anche  

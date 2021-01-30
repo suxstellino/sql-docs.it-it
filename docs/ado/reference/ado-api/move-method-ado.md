@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::Move
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b394d64a9d1b1f403137e9875db83fdd82c2ac1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f870db346e384f4c131ec24bf6c15a5d15a009c1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990592"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167120"
 ---
 # <a name="move-method-ado"></a>Metodo Move (ADO)
 Sposta la posizione del record corrente in un oggetto [Recordset](./recordset-object-ado.md) .  
@@ -39,9 +39,9 @@ recordset.Move NumRecords, Start
  Espressione **Long** con segno che specifica il numero di record spostati dalla posizione corrente del record.  
   
  *Inizia*  
- Facoltativa. Valore **stringa** o **variante** che restituisce un segnalibro. È anche possibile usare un valore [BookmarkEnum](./bookmarkenum.md) .  
+ facoltativo. Valore **stringa** o **variante** che restituisce un segnalibro. È anche possibile usare un valore [BookmarkEnum](./bookmarkenum.md) .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il metodo **Move** è supportato in tutti gli oggetti **Recordset** .  
   
  Se l'argomento *NumRecords* è maggiore di zero, la posizione corrente del record viene spostata in avanti (verso la fine del **Recordset**). Se *NumRecords* è minore di zero, la posizione corrente del record viene spostata indietro (verso l'inizio del **Recordset**).  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection15::Attributes
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ceb141b0ecdbc278e324f19f3bd4b3d7ed1b4eb6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 72cbd650b2ab3c66231383e89b048bb03c42b6f5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975942"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164811"
 ---
 # <a name="attributes-property-ado"></a>Proprietà Attributes (ADO)
 Indica una o più caratteristiche di un oggetto.  
@@ -39,7 +39,7 @@ Indica una o più caratteristiche di un oggetto.
   
  Per un oggetto [Proprietà](./property-object-ado.md) , la proprietà **Attributes** è di sola lettura e il relativo valore può essere la somma di uno o più valori [PropertyAttributesEnum](./propertyattributesenum.md) .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare la proprietà **Attributes** per impostare o restituire le caratteristiche di oggetti **connessione** , oggetti **parametro** , oggetti **campo** o oggetti **Property** .  
   
  Quando si impostano più attributi, è possibile sommare le costanti appropriate. Se si imposta il valore della proprietà su una somma, incluse le costanti incompatibili, si verificherà un errore.  

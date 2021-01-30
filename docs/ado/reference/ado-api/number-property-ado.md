@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Error::Number
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a44c1a4902dbcd37089ee63c41db2b9a089c3aed
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 82206b827f505994cd151833e0bee4b1ff4ad7de
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990432"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167035"
 ---
 # <a name="number-property-ado"></a>Proprietà Number (ADO)
 Indica il numero che identifica in modo univoco un oggetto [Error](./error-object.md) .  
@@ -31,13 +31,13 @@ Indica il numero che identifica in modo univoco un oggetto [Error](./error-objec
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un valore **Long** che può corrispondere a una delle costanti [ErrorValueEnum](./errorvalueenum.md) .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare la proprietà **Number** per determinare l'errore che si è verificato. Il valore della proprietà è un numero univoco che corrisponde alla condizione di errore.  
   
  La raccolta [Errors](./errors-collection-ado.md) restituisce un valore HRESULT in formato esadecimale, ad esempio 0x80004005, o valore Long (ad esempio, 2147467259). Questi valori HRESULT possono essere generati dai componenti sottostanti, ad esempio OLE DB o persino OLE. Per ulteriori informazioni su questi numeri, vedere la pagina relativa agli [errori (OLE DB)](/previous-versions/windows/desktop/ms724533(v=vs.85)) nella Guida [di riferimento per programmatori OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85))*.*  
   
 ## <a name="applies-to"></a>Si applica a  
- [Error (oggetto)](./error-object.md)  
+ [Oggetto Error](./error-object.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di proprietà Description, HelpContext, filelima, NativeError, Number, source e SQLState (VB)](./description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   

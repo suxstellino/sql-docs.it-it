@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Item
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 997777e853a54ae56175b4b5795087e67079813b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6d2fe7bb3d13b988b7bc25b6d3f17a5b2ccf945a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986602"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164533"
 ---
 # <a name="item-property-ado-md-cellset"></a>Proprietà Item (Cellset - ADO MD)
 Recupera una cella da un oggetto [Cell](./cellset-object-ado-md.md) usando le coordinate.  
@@ -45,7 +45,7 @@ Cell = Cellset.Item ( Positions)
   
 -   Posizione ordinale  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare la proprietà **Item** per restituire un oggetto [cella](./cell-object-ado-md.md) all'interno di un oggetto [cellt](./cellset-object-ado-md.md) . Se la proprietà **Item** non riesce a trovare la cella corrispondente all'argomento *Positions* , si verificherà un errore.  
   
  La proprietà **Item** è la proprietà predefinita per l'oggetto **cellt** . I formati di sintassi seguenti sono intercambiabili:  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - WillConnect
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 259ef55060d7968d9ec557c831412ad58609a6df
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a57b99597bea639eddb5e73b2d6e4c7137333bc2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987782"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166263"
 ---
 # <a name="willconnect-event-ado"></a>Evento WillConnect (ADO)
 L'evento **WillConnect** viene chiamato prima dell'avvio di una connessione.  
@@ -47,7 +47,7 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  **Stringa** che contiene una password per la connessione in sospeso.  
   
  *Opzioni*  
- Valore **Long** che indica la modalità di valutazione di *ConnectionString*da parte del provider. L'unica opzione è **adAsyncOpen**.  
+ Valore **Long** che indica la modalità di valutazione di *ConnectionString* da parte del provider. L'unica opzione è **adAsyncOpen**.  
   
  *adStatus*  
  Valore di stato di [EventStatusEnum](./eventstatusenum.md) .  
@@ -59,8 +59,8 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *pConnection*  
  Oggetto [connessione](./connection-object-ado.md) per il quale viene applicata la notifica degli eventi. Le modifiche apportate ai parametri della **connessione** dal gestore dell'evento **WillConnect** non avranno effetto sulla **connessione**.  
   
-## <a name="remarks"></a>Osservazioni  
- Quando viene chiamato **WillConnect** , i parametri *ConnectionString*, *userid*, *password*e *options* sono impostati sui valori stabiliti dall'operazione che ha causato l'evento (la connessione in sospeso) e possono essere modificati prima che l'evento venga restituito. **WillConnect** può restituire una richiesta di annullamento della connessione in sospeso.  
+## <a name="remarks"></a>Commenti  
+ Quando viene chiamato **WillConnect** , i parametri *ConnectionString*, *userid*, *password* e *options* sono impostati sui valori stabiliti dall'operazione che ha causato l'evento (la connessione in sospeso) e possono essere modificati prima che l'evento venga restituito. **WillConnect** può restituire una richiesta di annullamento della connessione in sospeso.  
   
  Quando questo evento viene annullato, **ConnectComplete** viene chiamato con il parametro *adStatus* impostato su **adStatusErrorsOccurred**.  
   

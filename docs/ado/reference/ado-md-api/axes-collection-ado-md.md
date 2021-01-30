@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Axes
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 072fb21a-ec0f-4b02-9022-1cef3ad4bfff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 78113cb7854ec3f56ffe6f7322a6bb732939f27f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 757d833da689c3d5097540571074292ec1bd2d69
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987412"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166185"
 ---
 # <a name="axes-collection-ado-md"></a>Raccolta Axes (ADO MD)
 Contiene gli oggetti [asse](./axis-object-ado-md.md) che definiscono un oggetto Cell.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Un oggetto [cellt](./cellset-object-ado-md.md) contiene una raccolta di **assi** . Una volta aperto il gruppo di **celle** , questa raccolta conterrà almeno un **asse**. Per una spiegazione più dettagliata dell'utilizzo degli oggetti **asse** , vedere l'oggetto [asse](./axis-object-ado-md.md) .  
   
 > [!NOTE]

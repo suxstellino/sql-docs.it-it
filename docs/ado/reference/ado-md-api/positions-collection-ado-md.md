@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Axis::Positions
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bf3e0d66d5b483e065fee725dc9a46d12a6a03ac
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2a11dfa5b6fff9112098443d73ef54a742db06f6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986032"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164426"
 ---
 # <a name="positions-collection-ado-md"></a>Raccolta Positions (ADO MD)
 Contiene gli oggetti [position](./position-object-ado-md.md) che definiscono un punto su un asse.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **Positions** è una raccolta ADO standard. Con le proprietà e i metodi di una raccolta, è possibile eseguire le operazioni seguenti:  
   
 -   Ottenere il numero di oggetti nella raccolta con la proprietà [count](../ado-api/count-property-ado.md) .  

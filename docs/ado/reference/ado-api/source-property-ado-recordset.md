@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::putref_Source
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a05ba2c9-2821-4343-8607-4de9b764ec91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3a71efe111a58ab8f799db512e77da4365ba5f48
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7ece9c2255891424ce26ef6ed81285c6f5767086
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988902"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166503"
 ---
 # <a name="source-property-ado-recordset"></a>Proprietà Source (Recordset - ADO)
 Indica l'origine dati per un oggetto [Recordset](./recordset-object-ado.md) .  
@@ -35,7 +35,7 @@ Indica l'origine dati per un oggetto [Recordset](./recordset-object-ado.md) .
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta un valore **stringa** o un riferimento all'oggetto [Command](./command-object-ado.md) ; restituisce solo un valore **stringa** che indica l'origine del **Recordset**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare la proprietà **source** per specificare un'origine dati per un oggetto **Recordset** utilizzando uno dei seguenti elementi: una variabile oggetto **comando** , un'istruzione SQL, un stored procedure o un nome di tabella.  
   
  Se si imposta la **proprietà Source** su un oggetto **Command** , la proprietà [ActiveConnection](./activeconnection-property-ado.md) dell'oggetto **Recordset** erediterà il valore della proprietà **ActiveConnection** per l'oggetto **comando** specificato. Tuttavia, la lettura della proprietà **source** non restituisce un oggetto **Command** ; Restituisce invece la proprietà [CommandText](./commandtext-property-ado.md) dell'oggetto **Command** a cui si imposta la proprietà **source** .  

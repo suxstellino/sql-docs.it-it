@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Level::Name
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4dfec86bb631dda661b957e02667cd320c20fec6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ce785bf3c9ca351331f071bf74cdf98a6e118618
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986242"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164477"
 ---
 # <a name="name-property-ado-md"></a>Proprietà Name (ADO MD)
 Indica il nome di un oggetto.  
@@ -36,7 +36,7 @@ Indica il nome di un oggetto.
 ## <a name="return-values"></a>Valori restituiti  
  Restituisce una **stringa** ed è di sola lettura.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È possibile recuperare la proprietà **Name** di un oggetto in base a un riferimento ordinale, dopo di che è possibile fare riferimento all'oggetto direttamente in base al nome. Se, ad esempio, `cdf.CubeDefs(0).Name` produce "Bob video store", è possibile fare riferimento a questo [CubeDef](./cubedef-object-ado-md.md) come `cdf.CubeDefs("Bobs Video Store")` .  
   
 ## <a name="applies-to"></a>Si applica a  
