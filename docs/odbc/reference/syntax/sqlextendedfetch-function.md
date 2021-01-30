@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLExtendedFetch
 apilocation:
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ac19d017baf4a3f0e873be64cd2eb812ca1b05e0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 403b8d426049ba6a333920d472c2e69ed279d761
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476111"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179861"
 ---
 # <a name="sqlextendedfetch-function"></a>Funzione SQLExtendedFetch
 **Conformità**  
@@ -66,7 +66,7 @@ SQLRETURN SQLExtendedFetch(
  *RowStatusArray*  
  Output Puntatore a una matrice in cui restituire lo stato di ogni riga. Questa matrice viene utilizzata allo stesso modo della matrice specificata dall'attributo dell'istruzione SQL_ATTR_ROW_STATUS_PTR.  
   
- Tuttavia, l'indirizzo di questa matrice non viene archiviato nel campo SQL_DESC_STATUS_ARRAY_PTR di IRD. Questa matrice viene inoltre usata solo da **SQLExtendedFetch** e da **SQLBulkOperations** con un' *operazione* di SQL_ADD o **SQLSetPos** quando viene chiamata dopo **SQLExtendedFetch**. Non viene usato da **SQLFetch** o **SQLFetchScroll**e non viene usato da **SQLBulkOperations** o **SQLSetPos** quando vengono chiamati dopo **SQLFetch** o **SQLFetchScroll**. Non viene inoltre usato quando **SQLBulkOperations** con un' *operazione* di SQL_ADD viene chiamato prima di chiamare qualsiasi funzione fetch. In altre parole, viene usato solo nello stato dell'istruzione S7. Non viene utilizzato negli Stati di istruzione S5 o S6. Per ulteriori informazioni, vedere [transizioni di istruzioni](../../../odbc/reference/appendixes/statement-transitions.md) nell'Appendice B: tabelle di transizione dello stato ODBC.  
+ Tuttavia, l'indirizzo di questa matrice non viene archiviato nel campo SQL_DESC_STATUS_ARRAY_PTR di IRD. Questa matrice viene inoltre usata solo da **SQLExtendedFetch** e da **SQLBulkOperations** con un' *operazione* di SQL_ADD o **SQLSetPos** quando viene chiamata dopo **SQLExtendedFetch**. Non viene usato da **SQLFetch** o **SQLFetchScroll** e non viene usato da **SQLBulkOperations** o **SQLSetPos** quando vengono chiamati dopo **SQLFetch** o **SQLFetchScroll**. Non viene inoltre usato quando **SQLBulkOperations** con un' *operazione* di SQL_ADD viene chiamato prima di chiamare qualsiasi funzione fetch. In altre parole, viene usato solo nello stato dell'istruzione S7. Non viene utilizzato negli Stati di istruzione S5 o S6. Per ulteriori informazioni, vedere [transizioni di istruzioni](../../../odbc/reference/appendixes/statement-transitions.md) nell'Appendice B: tabelle di transizione dello stato ODBC.  
   
  Le applicazioni devono fornire un puntatore valido nell'argomento *RowStatusArray* . in caso contrario, il comportamento di **SQLExtendedFetch** e il comportamento delle chiamate a **SQLBulkOperations** o **SQLSetPos** dopo che un cursore è stato posizionato da **SQLExtendedFetch** non sono definiti.  
   
@@ -84,7 +84,7 @@ SQLRETURN SQLExtendedFetch(
 |01S06|Tentativo di recupero prima che il set di risultati restituisse il primo set di righe|Il set di righe richiesto ha sovrapposto l'inizio del set di risultati quando la posizione corrente supera la prima riga e *FetchOrientation* è stato SQL_PRIOR o *FetchOrientation* è stato SQL_RELATIVE con un *FetchOffset* negativo il cui valore assoluto era minore o uguale al SQL_ROWSET_SIZE corrente. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |01S07|Troncamento frazionario|I dati restituiti per una colonna sono stati troncati. Per i tipi di dati numerici, la parte frazionaria del numero è stata troncata. Per i tipi di dati time, timestamp e Interval contenenti un componente ora, la parte frazionaria del tempo è stata troncata.<br /><br /> (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |07006|Violazione dell'attributo del tipo di dati con restrizioni|Non è stato possibile convertire un valore di dati nel tipo di dati C specificato da *targetType* in **SQLBindCol**.|  
-|07009|Indice del descrittore non valido|La colonna 0 è stata associata a **SQLBindCol**e l'attributo dell'istruzione SQL_ATTR_USE_BOOKMARKS è stato impostato su SQL_UB_OFF.|  
+|07009|Indice del descrittore non valido|La colonna 0 è stata associata a **SQLBindCol** e l'attributo dell'istruzione SQL_ATTR_USE_BOOKMARKS è stato impostato su SQL_UB_OFF.|  
 |08S01|Errore collegamento comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato connesso il driver non è riuscito prima del completamento dell'elaborazione della funzione.|  
 |22002|Variabile indicatore obbligatoria ma non fornita|Sono stati recuperati dati NULL in una colonna la cui *StrLen_or_IndPtr* impostata da **SQLBindCol** è un puntatore null.<br /><br /> (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |22003|Valore numerico non compreso nell'intervallo|La restituzione del valore numerico (come valore numerico o stringa) per una o più colonne avrebbe causato il troncamento dell'intero, anziché della parte frazionaria del numero.<br /><br /> (La funzione restituisce SQL_SUCCESS_WITH_INFO.)<br /><br /> Per ulteriori informazioni, vedere [linee guida per i tipi di dati interval e numeric](../../../odbc/reference/appendixes/guidelines-for-interval-and-numeric-data-types.md) in Appendice D: tipi di dati.|  
@@ -93,10 +93,10 @@ SQLRETURN SQLExtendedFetch(
 |22015|Overflow del campo Interval|L'assegnazione da un tipo SQL esatto o intervallo di tipo SQL a un tipo intervallo C ha causato la perdita di cifre significative nel campo iniziali.<br /><br /> Quando si recuperano i dati in un tipo intervallo C, non esiste alcuna rappresentazione del valore del tipo SQL nel tipo intervallo C.<br /><br /> (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |22018|Valore di carattere non valido per la specifica del cast|Il tipo C è un valore numerico esatto o approssimativo, un valore DateTime o un tipo di dati interval; il tipo SQL della colonna è un tipo di dati character. e il valore nella colonna non è un valore letterale valido del tipo C associato.<br /><br /> (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |24000|Stato del cursore non valido|Lo stato di *statementHandle* è stato eseguito, ma nessun set di risultati è stato associato a *statementHandle*.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLError** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLError** nel buffer *\* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
-|HY008|Operation canceled|L'elaborazione asincrona è stata abilitata per *statementHandle*. La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *statementHandle*e quindi la funzione è stata chiamata nuovamente su *statementHandle*.<br /><br /> La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *statementHandle* da un thread diverso in un'applicazione multithread.|  
-|HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *statementHandle*. Questa funzione asincrona era ancora in esecuzione quando è stata chiamata la funzione **SQLExtendedFetch** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per *statementHandle* e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.<br /><br /> (DM) il *statementHandle* specificato non si trova in uno stato eseguito. La funzione è stata chiamata senza prima chiamare **SQLExecDirect**, **SQLExecute**o una funzione di catalogo.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per *statementHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato per *statementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.<br /><br /> (DM) **SQLExtendedFetch** è stato chiamato per *statementHandle* dopo la chiamata a **SQLFetch** o **SQLFetchScroll** e prima della chiamata a **SQLFreeStmt** con l'opzione SQL_CLOSE.<br /><br /> (DM) **SQLBulkOperations** è stato chiamato per un'istruzione prima della chiamata a **SQLFetch**, **SQLFetchScroll**o **SQLExtendedFetch** e quindi **SQLExtendedFetch** è stato chiamato prima della chiamata di **SQLFreeStmt** con l'opzione SQL_CLOSE.|  
+|HY008|Operation canceled|L'elaborazione asincrona è stata abilitata per *statementHandle*. La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *statementHandle* e quindi la funzione è stata chiamata nuovamente su *statementHandle*.<br /><br /> La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *statementHandle* da un thread diverso in un'applicazione multithread.|  
+|HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *statementHandle*. Questa funzione asincrona era ancora in esecuzione quando è stata chiamata la funzione **SQLExtendedFetch** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect** o **SQLMoreResults** è stato chiamato per *statementHandle* e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.<br /><br /> (DM) il *statementHandle* specificato non si trova in uno stato eseguito. La funzione è stata chiamata senza prima chiamare **SQLExecDirect**, **SQLExecute** o una funzione di catalogo.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per *statementHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations** o **SQLSetPos** è stato chiamato per *statementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.<br /><br /> (DM) **SQLExtendedFetch** è stato chiamato per *statementHandle* dopo la chiamata a **SQLFetch** o **SQLFetchScroll** e prima della chiamata a **SQLFreeStmt** con l'opzione SQL_CLOSE.<br /><br /> (DM) **SQLBulkOperations** è stato chiamato per un'istruzione prima della chiamata a **SQLFetch**, **SQLFetchScroll** o **SQLExtendedFetch** e quindi **SQLExtendedFetch** è stato chiamato prima della chiamata di **SQLFreeStmt** con l'opzione SQL_CLOSE.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
 |HY106|Tipo di recupero non compreso nell'intervallo|(DM) il valore specificato per l'argomento *FetchOrientation* non è valido. (Vedere "Commenti").<br /><br /> L'argomento *FetchOrientation* è stato SQL_FETCH_BOOKMARK e l'attributo SQL_ATTR_USE_BOOKMARKS istruzione è stato impostato su SQL_UB_OFF.<br /><br /> Il valore dell'opzione dell'istruzione SQL_CURSOR_TYPE è stato SQL_CURSOR_FORWARD_ONLY e il valore dell'argomento *FetchOrientation* non è stato SQL_FETCH_NEXT.<br /><br /> L'argomento *FetchOrientation* è stato SQL_FETCH_RESUME.|  
 |HY107|Valore di riga non compreso nell'intervallo|Il valore specificato con l'opzione dell'istruzione SQL_CURSOR_TYPE è stato SQL_CURSOR_KEYSET_DRIVEN, ma il valore specificato con l'attributo SQL_KEYSET_SIZE istruzione è maggiore di 0 e minore del valore specificato con l'attributo dell'istruzione SQL_ROWSET_SIZE.|  
@@ -110,7 +110,7 @@ SQLRETURN SQLExtendedFetch(
 ## <a name="comments"></a>Commenti  
  Il comportamento di **SQLExtendedFetch** è identico a quello di **SQLFetchScroll**, con le eccezioni seguenti:  
   
--   **SQLExtendedFetch** e **SQLFetchScroll** usano metodi diversi per restituire il numero di righe recuperate. **SQLExtendedFetch** restituisce il numero di righe recuperate in * \* RowCountPtr*; **SQLFetchScroll** restituisce il numero di righe recuperate direttamente nel buffer a cui punta SQL_ATTR_ROWS_FETCHED_PTR. Per ulteriori informazioni, vedere l'argomento *RowCountPtr* .  
+-   **SQLExtendedFetch** e **SQLFetchScroll** usano metodi diversi per restituire il numero di righe recuperate. **SQLExtendedFetch** restituisce il numero di righe recuperate in *\* RowCountPtr*; **SQLFetchScroll** restituisce il numero di righe recuperate direttamente nel buffer a cui punta SQL_ATTR_ROWS_FETCHED_PTR. Per ulteriori informazioni, vedere l'argomento *RowCountPtr* .  
   
 -   **SQLExtendedFetch** e **SQLFetchScroll** restituiscono lo stato di ogni riga in matrici diverse. Per ulteriori informazioni, vedere l'argomento *RowStatusArray* .  
   
@@ -122,7 +122,7 @@ SQLRETURN SQLExtendedFetch(
   
 -   **SQLExtendedFetch** non supporta gli offset di binding (attributo dell'istruzione SQL_ATTR_ROW_BIND_OFFSET_PTR).  
   
--   Le chiamate a **SQLExtendedFetch** non possono essere combinate con chiamate a **SQLFetch** o **SQLFetchScroll**e, se **SQLBulkOperations** viene chiamato prima della chiamata di una funzione di recupero, **SQLExtendedFetch** non può essere chiamato finché il cursore non viene chiuso e riaperto. Ovvero, **SQLExtendedFetch** può essere chiamato solo nello stato dell'istruzione S7. Per ulteriori informazioni, vedere [transizioni di istruzioni](../../../odbc/reference/appendixes/statement-transitions.md) nell'Appendice B: tabelle di transizione dello stato ODBC.  
+-   Le chiamate a **SQLExtendedFetch** non possono essere combinate con chiamate a **SQLFetch** o **SQLFetchScroll** e, se **SQLBulkOperations** viene chiamato prima della chiamata di una funzione di recupero, **SQLExtendedFetch** non può essere chiamato finché il cursore non viene chiuso e riaperto. Ovvero, **SQLExtendedFetch** può essere chiamato solo nello stato dell'istruzione S7. Per ulteriori informazioni, vedere [transizioni di istruzioni](../../../odbc/reference/appendixes/statement-transitions.md) nell'Appendice B: tabelle di transizione dello stato ODBC.  
   
  Quando un'applicazione chiama **SQLFetchScroll** quando si utilizza un driver ODBC 2 *. x* , gestione driver esegue il mapping della chiamata a **SQLExtendedFetch**. Per ulteriori informazioni, vedere "SQLFetchScroll and ODBC 2 *. x* Drivers" in [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md).  
   
@@ -135,9 +135,9 @@ SQLRETURN SQLExtendedFetch(
 |Associazione di un buffer a una colonna in un set di risultati|[Funzione SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |Esecuzione di operazioni bulk di inserimento, aggiornamento o eliminazione|[Funzione SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  
 |Annullamento dell'elaborazione di istruzioni|[Funzione SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|Restituzione di informazioni su una colonna in un set di risultati|[Funzione SQLDescribeCol](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
+|Restituzione di informazioni su una colonna in un set di risultati|[Funzione SQLDescribeCol ](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
 |Esecuzione di un'istruzione SQL|[Funzione SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
-|Esecuzione di un'istruzione SQL preparata|[SQLExecute (funzione)](../../../odbc/reference/syntax/sqlexecute-function.md)|  
+|Esecuzione di un'istruzione SQL preparata|[Funzione SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |Restituzione del numero di colonne del set di risultati|[Funzione SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
 |Posizionamento del cursore, aggiornamento dei dati nel set di righe o aggiornamento o eliminazione di dati nel set di risultati|[Funzione SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
 |Impostazione di un attributo di istruzione|[Funzione SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  

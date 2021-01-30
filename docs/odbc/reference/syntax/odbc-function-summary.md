@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - functions [ODBC], listed by task
 ms.assetid: 7aa635da-e6b7-439f-8e9b-c3860e24de5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 50a0b9146acd71f87b4dd65bbdd34c67725e9948
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d5d27a6093947ba4e29e43f4970848780cbf4e8e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487374"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174651"
 ---
 # <a name="odbc-function-summary"></a>Riepilogo delle funzioni ODBC
 Nella tabella seguente sono elencate le funzioni ODBC raggruppate in base al tipo di attività e viene inclusa la designazione della conformità e una breve descrizione dello scopo di ogni funzione. Per altre informazioni sulle designazioni di conformità, vedere [ODBC e l'interfaccia della](../../../odbc/reference/odbc-and-the-standard-cli.md)riga di comando standard. Per ulteriori informazioni sulla sintassi e la semantica per ogni funzione, vedere [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md).  

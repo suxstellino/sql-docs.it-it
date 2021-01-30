@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helplogins_TSQL
 - sp_helplogins
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9802a6087bd3747c8fe715d56482b54149ee55d8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b58e74a30ddd86fc2edbfc8db553ddf9449181db
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549632"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183121"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,10 +63,10 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nome dell'account di accesso.|  
 |**DBName**|**sysname**|Database predefinito utilizzato da **LoginName** per la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|**UserName**|**sysname**|Account utente a cui è stato eseguito il mapping di **LoginName** in **dbname**e i ruoli di cui è membro **LoginName** in **dbname**.|  
+|**UserName**|**sysname**|Account utente a cui è stato eseguito il mapping di **LoginName** in **dbname** e i ruoli di cui è membro **LoginName** in **dbname**.|  
 |**UserOrAlias**|**carattere (8)**|Membro = **username** è un ruolo.<br /><br /> User = **username** è un account utente.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Prima di rimuovere un account di accesso, utilizzare **sp_helplogins** per identificare gli account utente di cui è stato eseguito il mapping all'account di accesso.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -80,7 +80,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
   
  Se **sp_helplogins** non è in grado di accedere a un database, **sp_helplogins** restituirà quante più informazioni possibile e visualizzerà il messaggio di errore 15622.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituite informazioni sull'account di accesso `John`.  
   
 ```  

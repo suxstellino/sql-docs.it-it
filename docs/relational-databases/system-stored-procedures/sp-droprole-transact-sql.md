@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_droprole
 - sp_droprole_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6180676b4458a5f270f9ecab9bb35d2ed8a481c4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 58832ba9f1d5b508f8125dc137805e59d3977f9e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548116"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187023"
 ---
 # <a name="sp_droprole-transact-sql"></a>sp_droprole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,12 +43,12 @@ sp_droprole [ @rolename= ] 'role'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @rolename = ] 'role'` Nome del ruolo del database da rimuovere dal database corrente. *Role* è di **tipo sysname**e non prevede alcun valore predefinito. il *ruolo* deve essere già presente nel database corrente.  
+`[ @rolename = ] 'role'` Nome del ruolo del database da rimuovere dal database corrente. *Role* è di **tipo sysname** e non prevede alcun valore predefinito. il *ruolo* deve essere già presente nel database corrente.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È possibile rimuovere solo i ruoli del database utilizzando **sp_droprole**.  
   
  Non è possibile rimuovere un ruolo del database a cui sono associati membri esistenti. È necessario rimuovere tutti i membri di un ruolo del database prima di poter rimuovere il ruolo del database stesso. Per rimuovere gli utenti da un ruolo, utilizzare **sp_droprolemember**. Se gli utenti sono ancora membri del ruolo, **sp_droprole** Visualizza tali membri.  
@@ -62,7 +62,7 @@ sp_droprole [ @rolename= ] 'role'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per il ruolo.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene rimosso il ruolo applicazione `Sales`.  
   
 ```  

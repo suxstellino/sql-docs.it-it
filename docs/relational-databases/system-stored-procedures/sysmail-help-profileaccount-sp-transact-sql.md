@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_help_profileaccount_sp_TSQL
 - sysmail_help_profileaccount_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6894b44d7a09fa8f49ffa1d76a8613f930db7d18
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 45b542047875527a26d9c4854b223e626efda5ea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541070"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181938"
 ---
 # <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,13 +44,13 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @profile_id = ] profile_id` ID del profilo da elencare. *profile_id* è di **tipo int**e il valore predefinito è null. È necessario specificare *profile_id* o *profile_name* .  
+`[ @profile_id = ] profile_id` ID del profilo da elencare. *profile_id* è di **tipo int** e il valore predefinito è null. È necessario specificare *profile_id* o *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'` Nome del profilo da elencare. *profile_name* è di **tipo sysname**e il valore predefinito è null. È necessario specificare *profile_id* o *profile_name* .  
+`[ @profile_name = ] 'profile_name'` Nome del profilo da elencare. *profile_name* è di **tipo sysname** e il valore predefinito è null. È necessario specificare *profile_id* o *profile_name* .  
   
-`[ @account_id = ] account_id` ID dell'account da elencare. *account_id* è di **tipo int**e il valore predefinito è null. Quando *account_id* e *ACCOUNT_NAME* sono entrambi null, elenca tutti gli account nel profilo.  
+`[ @account_id = ] account_id` ID dell'account da elencare. *account_id* è di **tipo int** e il valore predefinito è null. Quando *account_id* e *ACCOUNT_NAME* sono entrambi null, elenca tutti gli account nel profilo.  
   
-`[ @account_name = ] 'account_name'` Nome dell'account da elencare. *account_name* è di **tipo sysname**e il valore predefinito è null. Quando *account_id* e *ACCOUNT_NAME* sono entrambi null, elenca tutti gli account nel profilo.  
+`[ @account_name = ] 'account_name'` Nome dell'account da elencare. *account_name* è di **tipo sysname** e il valore predefinito è null. Quando *account_id* e *ACCOUNT_NAME* sono entrambi null, elenca tutti gli account nel profilo.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -66,7 +66,7 @@ sysmail_help_profileaccount_sp
 |**account_name**|**sysname**|Nome dell'account.|  
 |**sequence_number**|**int**|Numero di sequenza dell'account all'interno del profilo.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Quando non viene specificato alcun *profile_id* o *profile_name* , questo stored procedure restituisce informazioni per ogni profilo nell'istanza.  
   
  Il stored procedure **sysmail_help_profileaccount_sp** si trova nel database **msdb** ed è di proprietà dello schema **dbo** . La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
@@ -74,7 +74,7 @@ sysmail_help_profileaccount_sp
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  **A. Visualizzazione di un elenco degli account per un profilo specifico in base al nome**  
   
  Nell'esempio seguente viene visualizzato un elenco di informazioni per il profilo `AdventureWorks Administrator` specificando il nome del profilo.  

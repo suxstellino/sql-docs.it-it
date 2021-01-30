@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpdistributiondb_TSQL
 - sp_helpdistributiondb
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c79c1ed5bbbbf53be84432e4d542affece0b16a3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e9740605d1f3eca456ba506a692b5fc827273e67
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543319"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179294"
 ---
 # <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @database = ] 'database_name'` Nome del database per il quale vengono restituite le proprietà. *database_name* è di **tipo sysname**e il valore predefinito è **%** per tutti i database associati al server di distribuzione e per i quali l'utente dispone delle autorizzazioni.  
+`[ @database = ] 'database_name'` Nome del database per il quale vengono restituite le proprietà. *database_name* è di **tipo sysname** e il valore predefinito è **%** per tutti i database associati al server di distribuzione e per i quali l'utente dispone delle autorizzazioni.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -61,7 +61,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_helpdistributiondb** viene utilizzato in tutti i tipi di replica.  
   
 ## <a name="permissions"></a>Autorizzazioni  

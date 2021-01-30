@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpdb
 - sp_helpdb_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b1b2055f810be69949f72dd97364ccfb47bfa22f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: efb199d0fc846bc37a8f7c1272563de99507c795
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809164"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176440"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @dbname = ] 'name'` Nome del database per il quale vengono restituite informazioni. *Name* è di **tipo sysname**e non prevede alcun valore predefinito. Se il *nome* non è specificato, **sp_helpdb** segnala tutti i database nella vista del catalogo **sys. databases** .  
+`[ @dbname = ] 'name'` Nome del database per il quale vengono restituite informazioni. *Name* è di **tipo sysname** e non prevede alcun valore predefinito. Se il *nome* non è specificato, **sp_helpdb** segnala tutti i database nella vista del catalogo **sys. databases** .  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -70,7 +70,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**crescita**|**nvarchar (18)**|Incremento per l'aumento delle dimensioni del file. Indica la quantità di spazio aggiunta al file ogni volta che è necessario spazio aggiuntivo.|  
 |**utilizzo**|**varchar (9)**|Utilizzo del file. Per un file di dati, il valore è **"solo dati"** e per il file di log il valore è **"log only"**.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La colonna **stato** del set di risultati indica le opzioni impostate su on nel database. Tutte le opzioni di database non vengono segnalate dalla colonna **stato** . Per visualizzare un elenco completo delle impostazioni dell'opzione di database correnti, utilizzare la vista del catalogo **sys. databases** .  
   
 ## <a name="permissions"></a>Autorizzazioni  

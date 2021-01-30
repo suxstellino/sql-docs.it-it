@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_mergemetadataretentioncleanup
 - sp_mergemetadataretentioncleanup_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6f18a4f9357e3af6d9b120195dd13e187de95fd3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3dc35044aedd9a4bd541e93a412fd1e5f5cb0fc5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535121"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99178091"
 ---
 # <a name="sp_mergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,21 +41,21 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @num_genhistory_rows = ] num_genhistory_rows OUTPUT` Restituisce il numero di righe rimosse dalla tabella [MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md) . *num_genhistory_rows* è di **tipo int**e il valore predefinito è **0**.  
+`[ @num_genhistory_rows = ] num_genhistory_rows OUTPUT` Restituisce il numero di righe rimosse dalla tabella [MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md) . *num_genhistory_rows* è di **tipo int** e il valore predefinito è **0**.  
   
-`[ @num_contents_rows = ] num_contents_rows OUTPUT` Restituisce il numero di righe rimosse dalla tabella [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) . *num_contents_rows* è di **tipo int**e il valore predefinito è **0**.  
+`[ @num_contents_rows = ] num_contents_rows OUTPUT` Restituisce il numero di righe rimosse dalla tabella [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) . *num_contents_rows* è di **tipo int** e il valore predefinito è **0**.  
   
-`[ @num_tombstone_rows = ] num_tombstone_rows OUTPUT` Restituisce il numero di righe rimosse dalla tabella [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) . *num_tombstone_rows* è di **tipo int**e il valore predefinito è **0**.  
+`[ @num_tombstone_rows = ] num_tombstone_rows OUTPUT` Restituisce il numero di righe rimosse dalla tabella [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) . *num_tombstone_rows* è di **tipo int** e il valore predefinito è **0**.  
   
 `[ @aggressive_cleanup_only = ] aggressive_cleanup_only` Solo per uso interno.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 > [!IMPORTANT]  
->  Se in un database sono presenti più pubblicazioni e una di queste pubblicazioni utilizza un periodo di memorizzazione infinito, l'esecuzione di **sp_mergemetadataretentioncleanup** non comporta la pulizia dei metadati del rilevamento delle modifiche della replica di tipo merge per il database. È pertanto opportuno utilizzare il periodo di memorizzazione infinito con cautela. Per determinare se una pubblicazione ha un periodo di conservazione infinito, eseguire [sp_helpmergepublication &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) nel server di pubblicazione e prendere nota di eventuali pubblicazioni nel set di risultati con un valore pari a **0** per la **conservazione**.  
+>  Se in un database sono presenti più pubblicazioni e una di queste pubblicazioni utilizza un periodo di memorizzazione infinito, l'esecuzione di **sp_mergemetadataretentioncleanup** non comporta la pulizia dei metadati del rilevamento delle modifiche della replica di tipo merge per il database. È pertanto opportuno utilizzare il periodo di memorizzazione infinito con cautela. Per determinare se una pubblicazione ha un periodo di conservazione infinito, eseguire [sp_helpmergepublication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) nel server di pubblicazione e prendere nota di eventuali pubblicazioni nel set di risultati con un valore pari a **0** per la **conservazione**.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **db_owner** ruolo predefinito del database o gli utenti nell'elenco di accesso alla pubblicazione di un database pubblicato possono eseguire **sp_mergemetadataretentioncleanup**.  

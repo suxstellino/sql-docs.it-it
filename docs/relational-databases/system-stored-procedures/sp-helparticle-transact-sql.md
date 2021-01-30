@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helparticle_TSQL
 - sp_helparticle
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7bc639fef551b78dd73da39cd404999e39219b2d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 14baf63cc2944396a13bbc911fb6be7670244216
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538795"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176483"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,13 +42,13 @@ sp_helparticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @article = ] 'article'` Nome di un articolo della pubblicazione. *article* è di **tipo sysname**e il valore predefinito è **%** . Se l' *articolo* non viene specificato, vengono restituite informazioni su tutti gli articoli relativi alla pubblicazione specificata.  
+`[ @article = ] 'article'` Nome di un articolo della pubblicazione. *article* è di **tipo sysname** e il valore predefinito è **%** . Se l' *articolo* non viene specificato, vengono restituite informazioni su tutti gli articoli relativi alla pubblicazione specificata.  
   
-`[ @returnfilter = ] returnfilter` Specifica se deve essere restituita la clausola di filtro. *returnfilter* è di **bit**e il valore predefinito è **1**, che restituisce la clausola di filtro.  
+`[ @returnfilter = ] returnfilter` Specifica se deve essere restituita la clausola di filtro. *returnfilter* è di **bit** e il valore predefinito è **1**, che restituisce la clausola di filtro.  
   
-`[ @publisher = ] 'publisher'` Specifica un server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'` Specifica un server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname** e il valore predefinito è null.  
   
 > [!NOTE]  
 >  Impossibile specificare *Publisher* quando si richiedono informazioni su un articolo pubblicato da un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione.  
@@ -93,11 +93,11 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_helparticle** viene utilizzata nella replica snapshot e nella replica transazionale.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È possibile eseguire **sp_helparticle**solo i membri del ruolo predefinito del server **sysadmin** , del ruolo predefinito del database **db_owner** o dell'elenco di accesso alla pubblicazione corrente.  
+ È possibile eseguire **sp_helparticle** solo i membri del ruolo predefinito del server **sysadmin** , del ruolo predefinito del database **db_owner** o dell'elenco di accesso alla pubblicazione corrente.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_helptranarticle](../../relational-databases/replication/codesnippet/tsql/sp-helparticle-transact-_1.sql)]  

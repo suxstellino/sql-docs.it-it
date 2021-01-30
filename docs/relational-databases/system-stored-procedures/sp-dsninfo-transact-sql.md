@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dsninfo
 - sp_dsninfo_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 451d19531bbee4814fe9335bc4aaba7707263a10
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 65a3f12555d1dbb0e26702229fdcc47664cc4c82
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536088"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186978"
 ---
 # <a name="sp_dsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,20 +46,20 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @infotype = ] 'info_type'` Tipo di informazioni da restituire. Se *info_type* non viene specificato o se viene specificato null, vengono restituiti tutti i tipi di informazioni. *info_type* è di tipo **varchar (128)** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**DBMS_NAME**|Specifica il nome del produttore dell'origine dati.|  
 |**DBMS_VERSION**|Specifica la versione dell'origine dati.|  
 |**DATABASE_NAME**|Specifica il nome del database.|  
 |**SQL_SUBSCRIBER**|Specifica che l'origine dati può essere un Sottoscrittore.|  
   
-`[ @login = ] 'login'` Account di accesso per l'origine dati. Se l'origine dati include un account di accesso, specificare NULL oppure omettere il parametro. *login*è di tipo **varchar (128)** e il valore predefinito è null.  
+`[ @login = ] 'login'` Account di accesso per l'origine dati. Se l'origine dati include un account di accesso, specificare NULL oppure omettere il parametro. *login* è di tipo **varchar (128)** e il valore predefinito è null.  
   
-`[ @password = ] 'password'` Password per l'account di accesso. Se l'origine dati include un account di accesso, specificare NULL oppure omettere il parametro. *password*è di tipo **varchar (128)** e il valore predefinito è null.  
+`[ @password = ] 'password'` Password per l'account di accesso. Se l'origine dati include un account di accesso, specificare NULL oppure omettere il parametro. *password* è di tipo **varchar (128)** e il valore predefinito è null.  
   
 `[ @dso_type = ] dso_type` Tipo di origine dati. *dso_type* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1** (impostazione predefinita)|Origine dati ODBC|  
 |**3**|Origine dati OLE DB|  
@@ -74,7 +74,7 @@ sp_dsninfo [ @dsn =] 'dsn'
 |**Tipo di informazioni**|**nvarchar (64)**|Tipi di informazioni quali DBMS_NAME, DBMS_VERSION, DATABASE_NAME, SQL_SUBSCRIBER|  
 |**Valore**|**nvarchar(512)**|Valore del tipo di informazioni associato.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_dsninfo** viene utilizzato in tutti i tipi di replica.  
   
  **sp_dsninfo** recupera le informazioni sull'origine dati ODBC o OLE DB che indicano se il database può essere utilizzato per la replica o l'esecuzione di query.  

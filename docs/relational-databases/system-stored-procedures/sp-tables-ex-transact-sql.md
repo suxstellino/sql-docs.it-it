@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_tables_ex
 - sp_tables_ex_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0156f75940cf5e0d2186625d148850dcfb181ad0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0126cfd14adde25d88d6990a5d7e78c2141ea21e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544734"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182767"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,17 +45,17 @@ sp_tables_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @table_server = ] 'table_server'` Nome del server collegato per cui si desidera ottenere informazioni sulla tabella. *table_server* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @table_server = ] 'table_server'` Nome del server collegato per cui si desidera ottenere informazioni sulla tabella. *table_server* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-``[ , [ @table_name = ] 'table_name']`` Nome della tabella per cui si desidera ottenere informazioni sul tipo di dati. *table_name*è di **tipo sysname**e il valore predefinito è null.  
+``[ , [ @table_name = ] 'table_name']`` Nome della tabella per cui si desidera ottenere informazioni sul tipo di dati. *table_name* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @table_schema = ] 'table_schema']` Schema della tabella. *TABLE_SCHEMA*è di **tipo sysname**e il valore predefinito è null.  
+`[ @table_schema = ] 'table_schema']` Schema della tabella. *TABLE_SCHEMA* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @table_catalog = ] 'table_catalog'` Nome del database in cui risiede il *table_name* specificato. *TABLE_CATALOG* è di **tipo sysname**e il valore predefinito è null.  
+`[ @table_catalog = ] 'table_catalog'` Nome del database in cui risiede il *table_name* specificato. *TABLE_CATALOG* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @table_type = ] 'table_type'` Tipo della tabella da restituire. *TABLE_TYPE* è di **tipo sysname**e il valore predefinito è null. i possibili valori sono i seguenti.  
+`[ @table_type = ] 'table_type'` Tipo della tabella da restituire. *TABLE_TYPE* è di **tipo sysname** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**ALIAS**|Nome di un alias.|  
 |**GLOBAL TEMPORARY**|Nome di una tabella temporanea disponibile nell'intero sistema.|  
@@ -66,7 +66,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE**|Nome di una tabella utente.|  
 |**VIEW**|Nome di una vista.|  
   
-`[ @fUsePattern = ] 'fUsePattern'` Determina se i caratteri **_**, **%** , **[** e **]** sono interpretati come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* è di **bit**e il valore predefinito è 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Determina se i caratteri **_**, **%** , **[** e **]** sono interpretati come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* è di **bit** e il valore predefinito è 1.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  Nessuno  
@@ -81,15 +81,15 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE_TYPE**|**varchar(32)**|Tabella, tabella di sistema o vista.|  
 |**COMMENTI**|**varchar (254)**|In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene restituito alcun valore per questa colonna.|  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_tables_ex** viene eseguita eseguendo una query sul set di righe Tables dell'interfaccia **IDBSchemaRowset** del provider OLE DB corrispondente a *table_server*. I parametri *table_name*, *TABLE_SCHEMA*, *TABLE_CATALOG*e *Column* vengono passati a questa interfaccia per limitare le righe restituite.  
+## <a name="remarks"></a>Commenti  
+ **sp_tables_ex** viene eseguita eseguendo una query sul set di righe Tables dell'interfaccia **IDBSchemaRowset** del provider OLE DB corrispondente a *table_server*. I parametri *table_name*, *TABLE_SCHEMA*, *TABLE_CATALOG* e *Column* vengono passati a questa interfaccia per limitare le righe restituite.  
   
  **sp_tables_ex** restituisce un set di risultati vuoto se il provider di OLE DB del server collegato specificato non supporta il set di righe Tables dell'interfaccia **IDBSchemaRowset** .  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituite informazioni sulle tabelle contenute nello schema `HumanResources` del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] nel server collegato `LONDON2`.  
   
 ```  

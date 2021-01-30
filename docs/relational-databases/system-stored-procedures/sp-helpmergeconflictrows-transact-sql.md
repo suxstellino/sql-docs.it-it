@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpmergeconflictrows_TSQL
 - sp_helpmergeconflictrows
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d6d8ea39fd9ccc48f96c838367d5f859226098d1
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 4aeb1205f3d929eed7b2717ff388d8e03891d9e3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809837"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179255"
 ---
 # <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +42,15 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è **%** . Se la pubblicazione viene specificata, vengono restituiti tutti i conflitti risultanti corrispondenti. Se, ad esempio, nella tabella **MSmerge_conflict_Customers** sono presenti righe con conflitti per le pubblicazioni **WA** e **CA** , il passaggio di un nome di pubblicazione **CA** consente di recuperare i conflitti relativi alla pubblicazione della **CA** .  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname** e il valore predefinito è **%** . Se la pubblicazione viene specificata, vengono restituiti tutti i conflitti risultanti corrispondenti. Se, ad esempio, nella tabella **MSmerge_conflict_Customers** sono presenti righe con conflitti per le pubblicazioni **WA** e **CA** , il passaggio di un nome di pubblicazione **CA** consente di recuperare i conflitti relativi alla pubblicazione della **CA** .  
   
-`[ @conflict_table = ] 'conflict_table'` Nome della tabella dei conflitti. *conflict_table* è di **tipo sysname**e non prevede alcun valore predefinito. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive, le tabelle dei conflitti vengono denominate usando **l' \_ _ \_ articolo_** formato nomi con MSmerge_conflict pubblicazione, con una tabella per ogni articolo pubblicato.  
+`[ @conflict_table = ] 'conflict_table'` Nome della tabella dei conflitti. *conflict_table* è di **tipo sysname** e non prevede alcun valore predefinito. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive, le tabelle dei conflitti vengono denominate usando **l' \_ _\_ articolo_** formato nomi con MSmerge_conflict pubblicazione, con una tabella per ogni articolo pubblicato.  
   
-`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @publisher_db = ] 'publisher_db'` Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher_db = ] 'publisher_db'` Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @logical_record_conflicts = ] logical_record_conflicts` Indica se il set di risultati contiene informazioni sui conflitti tra record logici. *logical_record_conflicts* è di **tipo int**e il valore predefinito è 0. **1** indica che vengono restituite informazioni sui conflitti tra record logici.  
+`[ @logical_record_conflicts = ] logical_record_conflicts` Indica se il set di risultati contiene informazioni sui conflitti tra record logici. *logical_record_conflicts* è di **tipo int** e il valore predefinito è 0. **1** indica che vengono restituite informazioni sui conflitti tra record logici.  
   
 ## <a name="result-sets"></a>Set di risultati  
  **sp_helpmergeconflictrows** restituisce un set di risultati costituito dalla struttura della tabella di base e da queste colonne aggiuntive.  
@@ -67,7 +67,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_helpmergeconflictrows** viene utilizzata nella replica di tipo merge.  
   
 ## <a name="permissions"></a>Autorizzazioni  

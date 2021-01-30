@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpmergearticle
 - sp_helpmergearticle_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 04e67d82b6c567a5c94de8009635c31e41864b92
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 43365f58dbfe76c89a5e7e41a0c65c65188edfdf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535212"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179284"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +39,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` Nome della pubblicazione per cui si desidera recuperare informazioni. *Publication*è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni su tutti gli articoli di tipo merge contenuti in tutte le pubblicazioni del database corrente.  
+`[ @publication = ] 'publication'` Nome della pubblicazione per cui si desidera recuperare informazioni. *Publication* è di **tipo sysname** e il valore predefinito è **%** , che restituisce informazioni su tutti gli articoli di tipo merge contenuti in tutte le pubblicazioni del database corrente.  
   
-`[ @article = ] 'article'` Nome dell'articolo per cui si desidera ottenere informazioni. *article*è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni su tutti gli articoli di tipo merge nella pubblicazione specificata.  
+`[ @article = ] 'article'` Nome dell'articolo per cui si desidera ottenere informazioni. *article* è di **tipo sysname** e il valore predefinito è **%** , che restituisce informazioni su tutti gli articoli di tipo merge nella pubblicazione specificata.  
   
 ## <a name="result-set"></a>Set di risultati  
   
@@ -88,7 +88,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_helpmergearticle** viene utilizzata nella replica di tipo merge.  
   
 ## <a name="permissions"></a>Autorizzazioni  

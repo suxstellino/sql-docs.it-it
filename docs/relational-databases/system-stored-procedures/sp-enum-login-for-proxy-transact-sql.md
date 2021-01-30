@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_enum_login_for_proxy_TSQL
 - sp_enum_login_for_proxy
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 7707843979bd0c741ade8e4ae6759d265eb13d06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b51d02a66833df04a82a970319bab4e62f462a33
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486061"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186959"
 ---
 # <a name="sp_enum_login_for_proxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 
@@ -45,9 +45,9 @@ sp_enum_login_for_proxy
 ## <a name="arguments"></a>Argomenti  
 `[ @name = ] 'name'` Nome di un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entità, di un account di accesso, di un ruolo del server o di un ruolo del database **msdb** per cui elencare i proxy. Il nome è di **tipo nvarchar (256)** e il valore predefinito è null.  
   
-`[ @proxy_id = ] id` Numero di identificazione del proxy per cui elencare le informazioni. Il *proxy_id* è di **tipo int**e il valore predefinito è null. È possibile specificare l' *ID* o il *proxy_name* .  
+`[ @proxy_id = ] id` Numero di identificazione del proxy per cui elencare le informazioni. Il *proxy_id* è di **tipo int** e il valore predefinito è null. È possibile specificare l' *ID* o il *proxy_name* .  
   
-`[ @proxy_name = ] 'proxy_name'` Nome del proxy per cui elencare le informazioni. Il *proxy_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare l' *ID* o il *proxy_name* .  
+`[ @proxy_name = ] 'proxy_name'` Nome del proxy per cui elencare le informazioni. Il *proxy_name* è di **tipo sysname** e il valore predefinito è null. È possibile specificare l' *ID* o il *proxy_name* .  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -62,7 +62,7 @@ sp_enum_login_for_proxy
 |**flags**|**int**|Tipo dell'entità di sicurezza.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso<br /><br /> **1** = ruolo predefinito del sistema<br /><br /> **2** = ruolo del database in **msdb**|  
 | &nbsp; | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se non vengono specificati parametri, **sp_enum_login_for_proxy** elenca le informazioni relative a tutti gli account di accesso nell'istanza di per ogni proxy.  
   
  Quando viene fornito un nome proxy o un ID proxy, **sp_enum_login_for_proxy** elenca gli account di accesso che hanno accesso al proxy. Quando viene fornito un nome di account di accesso, **sp_enum_login_for_proxy** elenca i proxy a cui l'account di accesso ha accesso.  

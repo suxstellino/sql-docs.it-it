@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
 ms.assetid: ed42f083-c9e8-4ee4-9d64-d879bf955c78
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 15033816b953df764126853ada353452f00650d6
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: e615ab4c8222ec7ac679f96f360458dfaab5abb9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196175"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182567"
 ---
 # <a name="reserved-keyword-limitations"></a>Limitazioni delle parole chiave riservate
 
@@ -31,4 +31,4 @@ Un elenco di parole chiave riservate ODBC è disponibile all'indirizzo:
 
 - [Parole chiave riservate di ODBC](../reference/appendixes/reserved-keywords.md).
 
-- Nella *Guida di riferimento per programmatori ODBC*vedere [Appendice C: grammatica SQL](../reference/appendixes/appendix-c-sql-grammar.md).
+- Nella *Guida di riferimento per programmatori ODBC* vedere [Appendice C: grammatica SQL](../reference/appendixes/appendix-c-sql-grammar.md).

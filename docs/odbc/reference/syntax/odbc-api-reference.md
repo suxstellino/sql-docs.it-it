@@ -7,17 +7,17 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: dllExport
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1627838d3f34f8092dce2806a1b1d8f885b9bf6a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 60dab6c50856d9f4132b9ec3d066d15c99194814
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476182"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174662"
 ---
 # <a name="odbc-api-reference"></a>Informazioni di riferimento sull'API ODBC
 Negli argomenti di questa sezione viene descritta ogni funzione ODBC in ordine alfabetico. Ogni funzione è definita come funzione del linguaggio di programmazione C. Sono incluse le descrizioni seguenti:  
@@ -57,7 +57,7 @@ Negli argomenti di questa sezione viene descritta ogni funzione ODBC in ordine a
   
 -   [Funzione SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)  
   
--   [Funzione SQLAllocHandle](../../../odbc/reference/syntax/sqlallocstmt-function.md)  
+-   [Funzione SQLAllocStmt](../../../odbc/reference/syntax/sqlallocstmt-function.md)  
   
 -   [Funzione SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)  
   
@@ -77,7 +77,7 @@ Negli argomenti di questa sezione viene descritta ogni funzione ODBC in ordine a
   
 -   [Funzione SQLColAttributes](../../../odbc/reference/syntax/sqlcolattributes-function.md)  
   
--   [Funzione SQLColumnPrivileges](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)  
+-   [SQLColumnPrivileges Function](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)  
   
 -   [Funzione SQLColumns](../../../odbc/reference/syntax/sqlcolumns-function.md)  
   
@@ -89,7 +89,7 @@ Negli argomenti di questa sezione viene descritta ogni funzione ODBC in ordine a
   
 -   [Funzione SQLDataSources](../../../odbc/reference/syntax/sqldatasources-function.md)  
   
--   [Funzione SQLDescribeCol](../../../odbc/reference/syntax/sqldescribecol-function.md)  
+-   [Funzione SQLDescribeCol ](../../../odbc/reference/syntax/sqldescribecol-function.md)  
   
 -   [Funzione SQLDescribeParam](../../../odbc/reference/syntax/sqldescribeparam-function.md)  
   
@@ -105,7 +105,7 @@ Negli argomenti di questa sezione viene descritta ogni funzione ODBC in ordine a
   
 -   [Funzione SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)  
   
--   [SQLExecute (funzione)](../../../odbc/reference/syntax/sqlexecute-function.md)  
+-   [Funzione SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)  
   
 -   [Funzione SQLExtendedFetch](../../../odbc/reference/syntax/sqlextendedfetch-function.md)  
   
@@ -121,7 +121,7 @@ Negli argomenti di questa sezione viene descritta ogni funzione ODBC in ordine a
   
 -   [SQLFreeHandle Function](../../../odbc/reference/syntax/sqlfreehandle-function.md)  
   
--   [Funzione SQLFreeStmt](../../../odbc/reference/syntax/sqlfreestmt-function.md)  
+-   [SQLFreeStmt Function](../../../odbc/reference/syntax/sqlfreestmt-function.md)  
   
 -   [Funzione SQLSetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)  
   
@@ -165,13 +165,13 @@ Negli argomenti di questa sezione viene descritta ogni funzione ODBC in ordine a
   
 -   [Pagina relativa alla funzione SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)  
   
--   [Funzione SQLPrimaryKeys](../../../odbc/reference/syntax/sqlprimarykeys-function.md)  
+-   [SQLPrimaryKeys Function](../../../odbc/reference/syntax/sqlprimarykeys-function.md)  
   
 -   [Funzione SQLProcedureColumns](../../../odbc/reference/syntax/sqlprocedurecolumns-function.md)  
   
 -   [Funzione SQLProcedures](../../../odbc/reference/syntax/sqlprocedures-function.md)  
   
--   [Funzione SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)  
+-   [SQLPutData Function](../../../odbc/reference/syntax/sqlputdata-function.md)  
   
 -   [SQLRowCount Function](../../../odbc/reference/syntax/sqlrowcount-function.md)  
   
@@ -181,11 +181,11 @@ Negli argomenti di questa sezione viene descritta ogni funzione ODBC in ordine a
   
 -   [Funzione SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md)  
   
--   [SQLSetDescField (funzione)](../../../odbc/reference/syntax/sqlsetdescfield-function.md)  
+-   [Funzione SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)  
   
 -   [Funzione SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)  
   
--   [Funzione SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)  
+-   [SQLSetEnvAttr Function](../../../odbc/reference/syntax/sqlsetenvattr-function.md)  
   
 -   [Funzione SQLSetParam](../../../odbc/reference/syntax/sqlsetparam-function.md)  
   

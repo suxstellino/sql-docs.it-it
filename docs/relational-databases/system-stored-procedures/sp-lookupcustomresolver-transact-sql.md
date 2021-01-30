@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_lookupcustomresolver_TSQL
 - sp_lookupcustomresolver
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 54e2f1f4237e169637c7d73085dc29cbffe3e720
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bdafb84d97bad1672780008ae845287ce105bb14
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541733"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185362"
 ---
 # <a name="sp_lookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,23 +47,23 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
   
 `[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` È il valore CLSID dell'oggetto COM associato al nome della logica di business personalizzata specificata nel parametro *article_resolver* . *resolver_clsid* è di **tipo nvarchar (50)** e il valore predefinito è null.  
   
-`[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT` Specifica il tipo di logica di business personalizzata in fase di registrazione. *is_dotnet_assembly* è di **bit**e il valore predefinito è 0. **1** indica che la logica di business personalizzata in fase di registrazione è un assembly del gestore della logica di business. **0** indica che si tratta di un componente com.  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT` Specifica il tipo di logica di business personalizzata in fase di registrazione. *is_dotnet_assembly* è di **bit** e il valore predefinito è 0. **1** indica che la logica di business personalizzata in fase di registrazione è un assembly del gestore della logica di business. **0** indica che si tratta di un componente com.  
   
 `[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` Nome dell'assembly che implementa il gestore della logica di business. *dotnet_assembly_name* è di **tipo nvarchar (255)** e il valore predefinito è null.  
   
 `[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` Nome della classe che esegue l'override <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> di per implementare il gestore della logica di business. *dotnet_class_name* è di **tipo nvarchar (255)** e il valore predefinito è null.  
   
-`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è null. Utilizzare questo parametro quando la stored procedure non viene chiamata dal server di pubblicazione. Se omesso, si presuppone che il server locale è il server di pubblicazione.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname** e il valore predefinito è null. Utilizzare questo parametro quando la stored procedure non viene chiamata dal server di pubblicazione. Se omesso, si presuppone che il server locale è il server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_lookupcustomresolver** viene utilizzata nella replica di tipo merge.  
   
  **sp_lookupcustomresolver** restituisce un valore NULL per *resolver_clsid* quando il componente non è registrato alla distribuzione e il valore "00000000-0000-0000-0000-000000000000" quando la registrazione appartiene a un assembly di .NET Framework registrato come gestore della logica di business.  
   
- **sp_lookupcustomresolver** viene chiamato da [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) e [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) per convalidare il *article_resolver*specificato.  
+ **sp_lookupcustomresolver** viene chiamato da [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) e [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) per convalidare il *article_resolver* specificato.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del database **db_owner** nel database di pubblicazione possono eseguire **sp_lookupcustomresolver**.  

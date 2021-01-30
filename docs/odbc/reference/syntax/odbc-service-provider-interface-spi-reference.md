@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: cdeffb4a-f344-4abe-97f3-be2ede1c8e59
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7ef1eea6dd78537169d3394c7d048d1829e8d9a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e4cbf20ed3d158fca4e7ae58854bf53778dc9db6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487354"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174625"
 ---
 # <a name="odbc-service-provider-interface-spi-reference"></a>Informazioni di riferimento sull'interfaccia del provider di servizi (SPI) ODBC
 Tradizionalmente, ODBC definisce un Application Programming Interface (API). Le funzioni nell'API possono essere chiamate dalle applicazioni e devono essere implementate all'interno di gestione driver e del driver.  
@@ -43,5 +43,5 @@ Tradizionalmente, ODBC definisce un Application Programming Interface (API). Le 
   
 ## <a name="see-also"></a>Vedere anche  
  [Sviluppo di un driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Sviluppo della consapevolezza del pool di connessioni in un driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)   
+ [Sviluppo di Connection-Pool consapevolezza in un driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)   
  [Pool di connessioni di Gestione driver](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)

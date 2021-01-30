@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_mergearticlecolumn
 - sp_mergearticlecolumn_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4be1d2544225a5317ea6af60598a57c958ce14a7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b5d8d2f63afd421081058dd1b53ec8084f4b5e13
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541642"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185311"
 ---
 # <a name="sp_mergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,20 +44,20 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @article = ] 'article'` Nome dell'articolo della pubblicazione. *article* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @article = ] 'article'` Nome dell'articolo della pubblicazione. *article* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @column = ] 'column'` Identifica le colonne su cui creare la partizione verticale. *Column* è di **tipo sysname**e il valore predefinito è null. Se NULL e `@operation = N'add'`, per impostazione predefinita all'articolo vengono aggiunte tutte le colonne della tabella di origine. la *colonna* non può essere null quando l' *operazione* è impostata su **Drop**. Per escludere colonne da un articolo, eseguire **sp_mergearticlecolumn** e specificare la *colonna* e `@operation = N'drop'` per ogni colonna da rimuovere dall' *articolo*specificato.  
+`[ @column = ] 'column'` Identifica le colonne su cui creare la partizione verticale. *Column* è di **tipo sysname** e il valore predefinito è null. Se NULL e `@operation = N'add'`, per impostazione predefinita all'articolo vengono aggiunte tutte le colonne della tabella di origine. la *colonna* non può essere null quando l' *operazione* è impostata su **Drop**. Per escludere colonne da un articolo, eseguire **sp_mergearticlecolumn** e specificare la *colonna* e `@operation = N'drop'` per ogni colonna da rimuovere dall' *articolo* specificato.  
   
 `[ @operation = ] 'operation'` Stato della replica. *Operation* è di **tipo nvarchar (4)** e il valore predefinito è Add. **Aggiungi** contrassegna la colonna per la replica. **Drop** Cancella la colonna.  
   
 `[ @schema_replication = ] 'schema_replication'` Specifica che una modifica dello schema verrà propagata durante l'esecuzione del agente di merge. *schema_replication* è di **tipo nvarchar (5)** e il valore predefinito è false.  
   
 > [!NOTE]  
->  Per *schema_replication*è supportato solo il valore **false** .  
+>  Per *schema_replication* è supportato solo il valore **false** .  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Abilita o Disabilita la possibilità di invalidare uno snapshot. *force_invalidate_snapshot* è di **bit**e il valore predefinito è **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Abilita o Disabilita la possibilità di invalidare uno snapshot. *force_invalidate_snapshot* è di **bit** e il valore predefinito è **0**.  
   
  **0** specifica che le modifiche apportate all'articolo di merge non saranno valide per lo snapshot.  
   
@@ -72,7 +72,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_mergearticlecolumn** viene utilizzata nella replica di tipo merge.  
   
  Non è possibile eliminare una colonna Identity dall'articolo se viene utilizzata la gestione automatica degli intervalli di valori Identity. Per altre informazioni, vedere [Replicare colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).  

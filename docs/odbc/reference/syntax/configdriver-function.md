@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - ConfigDriver
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3d59765d1b6a6a662c02b459e07bac10895838a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5abe589b84eff738aeaf41139082781254fb0488
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428953"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174741"
 ---
 # <a name="configdriver-function"></a>Funzione ConfigDriver
 **Conformità**  
@@ -65,7 +65,7 @@ BOOL ConfigDriver(
  Input Nome del driver registrato nella chiave Odbcinst.ini delle informazioni sul sistema.  
   
  *lpszArgs*  
- Input Stringa con terminazione null che contiene gli argomenti per un *fRequest*specifico del driver.  
+ Input Stringa con terminazione null che contiene gli argomenti per un *fRequest* specifico del driver.  
   
  *lpszMsg*  
  Output Stringa con terminazione null contenente un messaggio di output generato dall'installazione del driver.  
@@ -82,7 +82,7 @@ BOOL ConfigDriver(
  La funzione restituisce TRUE se ha esito positivo, FALSE in caso di esito negativo.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **ConfigDriver** restituisce false, un valore * \* pfErrorCode* associato viene inserito nel buffer di errore del programma di installazione mediante una chiamata a **SQLPostInstallerError** e può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i valori * \* pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
+ Quando **ConfigDriver** restituisce false, un valore *\* pfErrorCode* associato viene inserito nel buffer di errore del programma di installazione mediante una chiamata a **SQLPostInstallerError** e può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i valori *\* pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
@@ -94,7 +94,7 @@ BOOL ConfigDriver(
   
 ## <a name="comments"></a>Commenti  
   
-### <a name="driver-specific-options"></a>Opzioni specifiche del driver  
+### <a name="driver-specific-options"></a>Opzioni di Driver-Specific  
  Un'applicazione può richiedere funzionalità specifiche del driver esposte dal driver tramite l'argomento *fRequest* . Il valore di *fRequest* per la prima opzione sarà ODBC_CONFIG_DRIVER_MAX più 1 e le opzioni aggiuntive verranno incrementate di 1 da tale valore. Tutti gli argomenti richiesti dal driver per la funzione devono essere specificati in una stringa con terminazione null passata nell'argomento *lpszArgs* . I driver che forniscono tali funzionalità devono gestire una tabella di opzioni specifiche del driver. Le opzioni devono essere completamente documentate nella documentazione del driver. I writer di applicazioni che utilizzano opzioni specifiche del driver devono tenere presente che l'applicazione renderà meno interoperabile.  
   
 ### <a name="messages"></a>Messaggi  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - cdc
 - cdc_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 7fa737644611f24d9d0858fd04066d3ba0571ee3
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: db855911d000c9d39c738f39aec0fa8486912957
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102728"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183374"
 ---
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC. &lt; capture_instance &gt; _CT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "98102728"
 |*\<captured source table columns>*|variabile|Le colonne rimanenti della tabella delle modifiche sono le colonne della tabella di origine identificate come colonne acquisite durante la creazione dell'istanza di acquisizione. Se non è stata specificata alcuna colonna nell'elenco delle colonne acquisite, tutte le colonne della tabella di origine vengono incluse in questa tabella.|  
 |**_ _ $ command_id** |**int** |Tiene traccia dell'ordine delle operazioni all'interno di una transazione. |  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 
 La colonna colonna `__$command_id` was è stata introdotta in un aggiornamento cumulativo nelle versioni da 2012 a 2016. Per informazioni sulla versione e sul download, vedere l'articolo [della Knowledge base 3030352 alla correzione: la tabella delle modifiche è ordinata in modo errato per le righe aggiornate dopo aver abilitato Change Data Capture per un database Microsoft SQL Server](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Per ulteriori informazioni, vedere la pagina relativa alla [funzionalità CDC potrebbe interrompersi dopo l'aggiornamento alla versione più recente di cu per SQL Server 2012, 2014 e 2016](/archive/blogs/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016).
 

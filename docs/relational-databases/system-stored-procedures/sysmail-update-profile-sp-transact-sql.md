@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_update_profile_sp
 - sysmail_update_profile_sp_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 78a123514e990499f191cbc6742870647adebc5e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf631b1acd099d8d7821a49163b80d643331ec28
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454746"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181876"
 ---
 # <a name="sysmail_update_profile_sp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,16 +41,16 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @profile_id = ] profile_id` ID del profilo da aggiornare. *profile_id* è di **tipo int**e il valore predefinito è null. È necessario specificare almeno uno dei *profile_id* o *profile_name* . Se si specificano entrambi, la procedura modifica il nome del profilo.  
+`[ @profile_id = ] profile_id` ID del profilo da aggiornare. *profile_id* è di **tipo int** e il valore predefinito è null. È necessario specificare almeno uno dei *profile_id* o *profile_name* . Se si specificano entrambi, la procedura modifica il nome del profilo.  
   
-`[ @profile_name = ] 'profile_name'` Nome del profilo da aggiornare o nuovo nome del profilo. *profile_name* è di **tipo sysname**e il valore predefinito è null. È necessario specificare almeno uno dei *profile_id* o *profile_name* . Se si specificano entrambi, la procedura modifica il nome del profilo.  
+`[ @profile_name = ] 'profile_name'` Nome del profilo da aggiornare o nuovo nome del profilo. *profile_name* è di **tipo sysname** e il valore predefinito è null. È necessario specificare almeno uno dei *profile_id* o *profile_name* . Se si specificano entrambi, la procedura modifica il nome del profilo.  
   
 `[ @description = ] 'description'` Nuova descrizione del profilo. *Description* è di **tipo nvarchar (256)** e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se si specificano sia l'ID che il nome del profilo, la procedura modifica il nome del profilo utilizzando il nome specificato e quindi aggiorna la descrizione del profilo. Se si specifica solo uno di questi argomenti, la procedura aggiorna la descrizione del profilo.  
   
  Il stored procedure **sysmail_update_profile_sp** si trova nel database **msdb** ed è di proprietà dello schema **dbo** . La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
@@ -58,7 +58,7 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  **A. Modifica della descrizione di un profilo**  
   
  Nell'esempio seguente viene modificata la descrizione del profilo denominato `AdventureWorks Administrator` nel database **msdb** .  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - interval literals [ODBC]
 - escape sequences [ODBC], interval
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 303e8dab-8f13-4fa5-857f-15cc1f75bdd6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e2ef792403352568ce5f8d92c07a5b0e1027b507
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0badac832ee4cf4e29f148dbd39a7989536b9c29
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483294"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176500"
 ---
 # <a name="interval-escape-sequences"></a>Sequenze di escape intervallo
 ODBC utilizza sequenze di escape per i valori letterali di intervallo. La sintassi di questa sequenza di escape è la seguente:  

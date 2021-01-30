@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_reinitpullsubscription_TSQL
 - sp_reinitpullsubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b584cb652e6abd79818c733cb4e4fb2742d1527b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c77a8e055da1e37712bda31c5d40d51201a40839
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549560"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185706"
 ---
 # <a name="sp_reinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,23 +40,23 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @publisher_db = ] 'publisher_db'` Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è all, che contrassegna tutte le sottoscrizioni per la reinizializzazione.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname** e il valore predefinito è all, che contrassegna tutte le sottoscrizioni per la reinizializzazione.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_reinitpullsubscription** viene utilizzata nella replica transazionale.  
   
  **sp_reinitpullsubscription** non è supportato per la replica transazionale peer-to-peer.  
   
  **sp_reinitpullsubscription** possibile chiamare dal Sottoscrittore per reinizializzare la sottoscrizione, durante la successiva esecuzione del agente di distribuzione.  
   
- Le sottoscrizioni di pubblicazioni create con un valore **false** per ** \@ immediate_sync** non possono essere reinizializzate dal Sottoscrittore.  
+ Le sottoscrizioni di pubblicazioni create con un valore **false** per **\@ immediate_sync** non possono essere reinizializzate dal Sottoscrittore.  
   
  È possibile reinizializzare una sottoscrizione pull eseguendo **sp_reinitpullsubscription** nel Sottoscrittore o **sp_reinitsubscription** nel server di pubblicazione.  
   

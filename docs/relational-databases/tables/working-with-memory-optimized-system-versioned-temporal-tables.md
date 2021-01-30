@@ -12,12 +12,12 @@ ms.assetid: 691d4f80-6754-43f5-8b43-d4facf08f6fc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 67d1c661f7157081f2693555667c439d589292e4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: acfdadf0216bd243f61339982615c4bf83796dfa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472562"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99177981"
 ---
 # <a name="working-with-memory-optimized-system-versioned-temporal-tables"></a>Utilizzo di una tabella temporale con controllo delle versioni di sistema e ottimizzazione per la memoria
 
@@ -28,7 +28,7 @@ ms.locfileid: "97472562"
 Questo argomento illustra in che modo l'utilizzo di una tabella temporale ottimizzata per la memoria con controllo delle versioni di sistema è diverso dall'utilizzo di una tabella temporale con controllo delle versioni di sistema basata su disco.
 
 > [!NOTE]
-> L'uso di tabelle temporali con ottimizzazione per la memoria è applicabile solo a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e non a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+> L'uso di tabelle temporali con ottimizzazione per la memoria è applicabile solo a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] e non a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
 ## <a name="discovering-metadata"></a>Individuazione dei metadati
 
@@ -79,7 +79,7 @@ GO ;
 
 ```
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Tabelle temporali con controllo delle versioni di sistema con tabelle con ottimizzazione per la memoria](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 - [Creazione di una tabella temporale con controllo delle versioni di sistema e ottimizzazione per la memoria](../../relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md)

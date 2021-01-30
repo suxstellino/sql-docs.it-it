@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLGetPoolID function [ODBC]
 ms.assetid: 95a8666a-ad68-4d89-bf65-f2cc797f8820
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2cd38008b90a1299bdd78c4a56d7394f85876ab0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7bd06a289eab6499995e40a3c6ad9ea56c747e3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421255"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180919"
 ---
 # <a name="sqlgetpoolid-function"></a>Funzione SQLGetPoolID
 **Conformità**  
@@ -49,12 +49,12 @@ SQLRETURN  SQLGetPoolID (
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLGetPoolID** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, gestione driver utilizzerà un **HandleType** di SQL_HANDLE_DBC_INFO_TOKEN e un **handle** di *hDbcInfoToken*.  
   
-## <a name="remarks"></a>Osservazioni  
- **SQLGetPoolID** viene usato per ottenere l'ID del pool in base a un set di informazioni di connessione (da **SQLSetConnectAttrForDbcInfo**, **SQLSetDriverConnectInfo**e **SQLSetConnectInfo**). Questo ID del pool viene usato per identificare un set di connessioni che possono essere usate in modo interscambiabile (probabilmente richiedendo una reimpostazione aggiuntiva). L'ID del pool verrà usato per identificare il pool di connessioni per il gruppo di connessioni.  
+## <a name="remarks"></a>Commenti  
+ **SQLGetPoolID** viene usato per ottenere l'ID del pool in base a un set di informazioni di connessione (da **SQLSetConnectAttrForDbcInfo**, **SQLSetDriverConnectInfo** e **SQLSetConnectInfo**). Questo ID del pool viene usato per identificare un set di connessioni che possono essere usate in modo interscambiabile (probabilmente richiedendo una reimpostazione aggiuntiva). L'ID del pool verrà usato per identificare il pool di connessioni per il gruppo di connessioni.  
   
  Ogni volta che un driver restituisce SQL_ERROR o SQL_INVALID_HANDLE, gestione driver restituisce l'errore all'applicazione (in [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) o [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
   
- Ogni volta che un driver restituisce SQL_SUCCESS_WITH_INFO, gestione driver otterrà le informazioni di diagnostica da *hDbcInfoToken*e restituirà SQL_SUCCESS_WITH_INFO all'applicazione in [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) e [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ Ogni volta che un driver restituisce SQL_SUCCESS_WITH_INFO, gestione driver otterrà le informazioni di diagnostica da *hDbcInfoToken* e restituirà SQL_SUCCESS_WITH_INFO all'applicazione in [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) e [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
  Le applicazioni non devono chiamare direttamente questa funzione. Un driver ODBC che supporta il pool di connessioni compatibile con il driver deve implementare questa funzione.  
   

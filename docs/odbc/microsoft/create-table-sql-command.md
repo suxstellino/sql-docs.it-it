@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - CREATE TABLE [ODBC]
 ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ea84b28e12194ffb1a1b181089622cd169c91b7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0fb1e91c03f7a1a1fee98ce887be991370450999
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471633"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183201"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE (comando SQL)
 Crea una tabella con i campi specificati.  
@@ -115,12 +115,12 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  Poiché una tabella può avere un solo indice primario, non è possibile includere questa clausola se è già stato creato un indice primario per un campo. Visual FoxPro genera un errore se si include più di una clausola PRIMARY KEY in CREATE TABLE.  
   
- TAG *EEXPRESSION3*univoco *TagName3*  
+ TAG *EEXPRESSION3* univoco *TagName3*  
  Crea un indice candidato. *eExpression3* specifica un campo o una combinazione di campi nella tabella. Tuttavia, se è stato creato un indice primario con una delle opzioni di chiave primaria, non è possibile includere il campo specificato per l'indice primario. TAG *TagName3* specifica un nome di tag per il tag di indice candidato creato. I nomi dei tag di indice possono contenere un massimo di 10 caratteri.  
   
  Una tabella può avere più indici candidati.  
   
- CHIAVE esterna *eExpression4*tag *TagName4*[NODUP]  
+ CHIAVE esterna *eExpression4* tag *TagName4*[NODUP]  
  Crea un indice esterno (non primario) e stabilisce una relazione con una tabella padre. *eExpression4* specifica l'espressione di chiave dell'indice esterno e *TagName4* specifica il nome del tag di chiave dell'indice esterno creato. I nomi dei tag di indice possono contenere un massimo di 10 caratteri. Includere NODUP per creare un indice esterno candidato.  
   
  È possibile creare più indici esterni per la tabella, ma le espressioni di indice esterno devono specificare campi diversi nella tabella.  
@@ -131,10 +131,10 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  CHECK *eExpression2*[Error *cMessageText2*]  
  Specifica la regola di convalida della tabella. ERRORE *cMessageText2* specifica il messaggio di errore visualizzato in Visual FoxPro quando viene eseguita la regola di convalida della tabella. Il messaggio viene visualizzato solo quando i dati vengono modificati all'interno di una finestra di esplorazione o di modifica.  
   
- DA ARRAY *ArrayName* arrayName  
+ DA ARRAY  arrayName  
  Specifica il nome di una matrice esistente il cui contenuto è il nome, il tipo, la precisione e la scala per ogni campo della tabella. Il contenuto della matrice può essere definito con la funzione **distanti ()**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La nuova tabella viene aperta nell'area di lavoro disponibile più bassa ed è possibile accedervi tramite il relativo alias. La nuova tabella viene aperta esclusivamente, indipendentemente dall'impostazione corrente di SET EXCLUSIVe.  
   
  Se un database è aperto e non si include la clausola FREE, la nuova tabella verrà aggiunta al database. Non è possibile creare una nuova tabella con lo stesso nome di una tabella nel database.  
