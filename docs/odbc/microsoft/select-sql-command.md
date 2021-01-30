@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - select [ODBC]
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2b5fb0e3d38a2e5594cacf77b116844bcce219d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3fc6ae552bc4e6e8bd681aa3d47ffadeaf81fd0a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466423"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99153519"
 ---
 # <a name="select---sql-command"></a>SELECT (comando SQL)
 Recupera i dati da una o più tabelle.  
@@ -167,7 +167,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  `customer.postalcode BETWEEN 90000 AND 99999`  
   
- Nell'esempio seguente viene verificato se almeno una riga soddisfa i criteri della sottoquery. Quando la condizione di filtro include EXISTs, la condizione di filtro restituisce true (. T.), a meno che la sottoquery non restituisca un set vuoto.  
+ Nell'esempio seguente viene verificato se almeno una riga soddisfa i criteri della sottoquery. Quando la condizione di filtro include EXISTs, la condizione di filtro restituisce true (. T.), a meno che la sottoquery non restituisca il set vuoto.  
   
  **Esempio 6** [not] Exists (*sottoquery*)  
   
@@ -254,7 +254,7 @@ WHERE customer.cust_id NOT IN ;
   
 -   La clausola WHERE trova tutti i numeri dei clienti nella tabella Customer che non sono presenti nella tabella Orders. Poiché nella prima sezione del comando sono state fornite tutte le aziende con un numero di cliente nella tabella Orders, tutte le aziende della tabella Customer sono ora incluse nei risultati della query.  
   
--   Poiché le strutture delle tabelle incluse in un'Unione devono essere identiche, nella seconda istruzione SELECT sono presenti due segnaposto per rappresentare *Orders. order_id* e *orders. emp_id* dalla prima istruzione SELECT.  
+-   Poiché le strutture delle tabelle incluse in un'Unione devono essere identiche, nella seconda istruzione SELECT sono presenti due segnaposto per rappresentare *Orders.order_id* e *Orders.emp_id* dalla prima istruzione SELECT.  
   
     > [!NOTE]  
     >  I segnaposto devono essere dello stesso tipo dei campi che rappresentano. Se il campo è un tipo di data, il segnaposto deve essere {//}. Se il campo è un campo di tipo carattere, il segnaposto deve essere una stringa vuota ("").  
@@ -272,7 +272,7 @@ WHERE customer.cust_id NOT IN ;
   
  I risultati della query non vengono ordinati se non si specifica un ordine con ORDER BY.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  SELECT è un comando SQL incorporato in Visual FoxPro come qualsiasi altro comando Visual FoxPro. Quando si usa SELECT per rappresentare una query, Visual FoxPro interpreta la query e recupera i dati specificati dalle tabelle. È possibile creare una query SELECT dalla finestra del prompt dei comandi o da un programma Visual FoxPro, come per qualsiasi altro comando Visual FoxPro.  
   
 > [!NOTE]  

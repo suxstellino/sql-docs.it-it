@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_os_workers_TSQL
 - sys.dm_os_workers_TSQL
@@ -21,12 +21,12 @@ ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d93b2be18167232798b3d8de6ce1ca67f9e8c9d6
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c3d13344aef1c0a85b9893a9a36f0222253468b9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095128"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99144782"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "98095128"
 |processor_group|**smallint**|Archivia l'ID del gruppo di processori assegnato a questo thread.|  
 |pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se lo stato del thread di lavoro è RUNNING e il thread di lavoro è in esecuzione in modalità non preemptive, l'indirizzo del thread di lavoro corrisponde alla colonna active_worker_address in sys.dm_os_schedulers.  
   
  Quando viene segnalato un thread di lavoro in attesa di un evento, tale thread viene inserito all'inizio della coda eseguibile. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente l'esecuzione di questa operazione mille volte in una riga. Superato questo valore, il thread di lavoro viene inserito alla fine della coda. Lo spostamento di un thread di lavoro alla fine della coda è caratterizzato da alcune implicazioni a livello di prestazioni.  
@@ -86,7 +86,7 @@ ms.locfileid: "98095128"
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l'  `Server Admin` appartenenza al ruolo o un `Azure Active Directory admin` account.   
 
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  La query seguente consente di determinare per quanto tempo un thread di lavoro è rimasto in esecuzione in stato SUSPENDED o RUNNABLE.  
   
 ```sql

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmergepublications
 - sysmergepublications_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 0b2a7e7783ffb67688041a6da39ea99f945a607f
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 70cfe557241aa78c60726cc4e094b5945e876c61
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097345"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99102476"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,14 +39,14 @@ ms.locfileid: "98097345"
 |**conservazione**|**int**|Periodo di memorizzazione per l'intero set di pubblicazioni, in cui l'unità è indicata dal valore della colonna **retention_period_unit** .|  
 |**publication_type**|**tinyint**|Indica se la pubblicazione viene filtrata:<br /><br /> **0** = non filtrato.<br /><br /> **1** = filtrato.|  
 |**pubid**|**uniqueidentifier**|Numero di identificazione univoco della pubblicazione. Viene generato durante l'aggiunta della pubblicazione.|  
-|**designmasterid**|**uniqueidentifier**|Riservato per usi futuri.|  
+|**designmasterid**|**uniqueidentifier**|Riservato per utilizzi futuri.|  
 |**parentid**|**uniqueidentifier**|Indica la pubblicazione padre da cui la pubblicazione corrente di pari livello o subset è stata creata (utilizzato per tipologie gerarchiche di pubblicazione).|  
 |**sync_mode**|**tinyint**|Modalità di sincronizzazione della pubblicazione:<br /><br /> **0** = nativo.<br /><br /> **1** = carattere.|  
 |**allow_push**|**int**|Indica se la pubblicazione consente sottoscrizioni push.<br /><br /> **0** = le sottoscrizioni push non sono consentite.<br /><br /> **1** = le sottoscrizioni push sono consentite.|  
 |**allow_pull**|**int**|Indica se la pubblicazione consente sottoscrizioni pull.<br /><br /> **0** = le sottoscrizioni pull non sono consentite.<br /><br /> **1** = le sottoscrizioni pull sono consentite.|  
 |**allow_anonymous**|**int**|Indica se la pubblicazione consente sottoscrizioni anonime.<br /><br /> **0** = sottoscrizioni anonime non consentite.<br /><br /> **1** = le sottoscrizioni anonime sono consentite.|  
 |**centralized_conflicts**|**int**|Indica se i record dei conflitti vengono archiviati nel server di pubblicazione:<br /><br /> **0** = i record dei conflitti non vengono archiviati nel server di pubblicazione.<br /><br /> **1** = i record dei conflitti vengono archiviati nel server di pubblicazione.|  
-|**Stato**|**tinyint**|Riservato per usi futuri.|  
+|**Stato**|**tinyint**|Riservato per utilizzi futuri.|  
 |**snapshot_ready**|**tinyint**|Indica lo stato dello snapshot della pubblicazione:<br /><br /> **0** = lo snapshot non è pronto per l'utilizzo.<br /><br /> **1** = lo snapshot è pronto per l'utilizzo.<br /><br /> **2** = è necessario creare un nuovo snapshot per la pubblicazione.|  
 |**enabled_for_internet**|**bit**|Indica se i file di sincronizzazione per la pubblicazione sono attivati per Internet tramite il servizio FTP e altri servizi.<br /><br /> **0** = è possibile accedere ai file di sincronizzazione da Internet.<br /><br /> **1** = non è possibile accedere ai file di sincronizzazione da Internet.|  
 |**dynamic_filters**|**bit**|Indica se la pubblicazione viene filtrata utilizzando un filtro di riga con parametri.<br /><br /> **0** = la pubblicazione non è con filtro di riga.<br /><br /> **1** = la pubblicazione è con filtro di riga.|  

@@ -6,7 +6,7 @@ ms.date: 01/07/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_server_services
 - sys.dm_server_services
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 65ba3ca60ceb6d1c4ba327ee191084fc63aca8d6
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: fd00b91eb2ba5018a7ae9865f323ac2f3faeb39d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170653"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99134590"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "98170653"
 |process_id|**int**|ID di processo del servizio. Non può essere null.|  
 |last_startup_time|**datetimeoffset(7)**|Data e ora dell'ultimo avvio del servizio. Ammette i valori Null.|  
 |service_account|**nvarchar(256)**|Account autorizzato a controllare il servizio. L'account consente di avviare o arrestare il servizio oppure di modificarne le proprietà. Non può essere null.|  
-|filename|**nvarchar(256)**|Percorso e nome file dell'eseguibile del servizio. Non può essere null.|  
+|nomefile|**nvarchar(256)**|Percorso e nome file dell'eseguibile del servizio. Non può essere null.|  
 |is_clustered|**nvarchar (1)**|Indica se il servizio è installato come risorsa di un server di cluster. Non può essere null.|  
 |cluster_nodename|**nvarchar(256)**|Il nome del nodo del cluster su cui è installato il servizio. Ammette i valori Null.|
 |instant_file_initialization_enabled|**nvarchar (1)**|Specifica se l'inizializzazione immediata dei file è abilitata per il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] servizio.<br /><br />Y = inizializzazione immediata dei file abilitata per il servizio.<br /><br />N = l'inizializzazione immediata dei file è disabilitata per il servizio.<br /><br /> Ammette i valori Null.<br /><br /> **Nota:** Non si applica ad altri servizi, ad esempio la SQL Server Agent.<br /><br /> **Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (A partire da [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 e [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 e versioni successive.|  

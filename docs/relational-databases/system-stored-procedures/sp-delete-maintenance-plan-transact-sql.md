@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_maintenance_plan
 - sp_delete_maintenance_plan_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f36b63f-3d18-4d42-9469-2febb6926530
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 79f746fd1fccb81688b42994aa1d5fe57502261e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2fdb608b7d3e6887d809388ae28203d68bc09d14
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546193"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158116"
 ---
 # <a name="sp_delete_maintenance_plan-transact-sql"></a>sp_delete_maintenance_plan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,18 +45,18 @@ sp_delete_maintenance_plan [ @plan_id = ] 'plan_id'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @plan_id = ] 'plan\_id'` Specifica l'ID del piano di manutenzione da eliminare. *plan_id* è di tipo **uniqueidentifier**e deve essere un ID valido.  
+`[ @plan_id = ] 'plan\_id'` Specifica l'ID del piano di manutenzione da eliminare. *plan_id* è di tipo **uniqueidentifier** e deve essere un ID valido.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_delete_maintenance_plan** deve essere eseguito dal database **msdb** .  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_delete_maintenance_plan**.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Elimina il piano di manutenzione creato utilizzando **sp_add_maintenance_plan**.  
   
 ```  

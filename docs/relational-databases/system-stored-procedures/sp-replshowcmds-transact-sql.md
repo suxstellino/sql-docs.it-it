@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replshowcmds
 - sp_replshowcmds_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9bbc74050303a854b39ced508caf8a49e1ffdd1d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: efb46a1c57dc44f9fb90bbee84906c7bcd8b86d4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534868"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99157510"
 ---
 # <a name="sp_replshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @maxtrans = ] maxtrans` Numero di transazioni per cui si desidera ottenere informazioni. *maxtrans* è di **tipo int**e il valore predefinito è **1**, che specifica il numero massimo di transazioni in attesa di replica per le quali **sp_replshowcmds** restituisce informazioni.  
+`[ @maxtrans = ] maxtrans` Numero di transazioni per cui si desidera ottenere informazioni. *maxtrans* è di **tipo int** e il valore predefinito è **1**, che specifica il numero massimo di transazioni in attesa di replica per le quali **sp_replshowcmds** restituisce informazioni.  
   
 ## <a name="result-sets"></a>Set di risultati  
  **sp_replshowcmds** è una procedura di diagnostica che restituisce informazioni sul database di pubblicazione da cui viene eseguita.  
@@ -52,7 +52,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 |**type**|**int**|Tipo di comando.|  
 |**command**|**nvarchar(1024)**|Comando [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_replshowcmds** viene utilizzata nella replica transazionale.  
   
  Utilizzando **sp_replshowcmds**, è possibile visualizzare le transazioni attualmente non distribuite (le transazioni rimanenti nel log delle transazioni che non sono state inviate al server di distribuzione).  

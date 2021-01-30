@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_droppullsubscription
 - sp_droppullsubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e4e7e0f9292d9ed94139b9facfe496821b91fb03
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 699d23141e060ee26f96043b44864621a84217c8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543442"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158104"
 ---
 # <a name="sp_droppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,21 +41,21 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'` Nome del server remoto. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito. Se è **All**, la sottoscrizione viene eliminata in tutti i Publisher.  
+`[ @publisher = ] 'publisher'` Nome del server remoto. *Publisher* è di **tipo sysname** e non prevede alcun valore predefinito. Se è **All**, la sottoscrizione viene eliminata in tutti i Publisher.  
   
-`[ @publisher_db = ] 'publisher_db'` Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito. **All** indica tutti i database del server di pubblicazione.  
+`[ @publisher_db = ] 'publisher_db'` Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname** e non prevede alcun valore predefinito. **All** indica tutti i database del server di pubblicazione.  
   
-`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito. Se è **All**, la sottoscrizione viene eliminata in tutte le pubblicazioni.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname** e non prevede alcun valore predefinito. Se è **All**, la sottoscrizione viene eliminata in tutte le pubblicazioni.  
   
 `[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_droppullsubscription** viene utilizzata nella replica snapshot e nella replica transazionale.  
   
- **sp_droppullsubscription** Elimina la riga corrispondente nel [MSreplication_subscriptions &#40;tabella&#41;Transact-SQL ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) e l'agente di distribuzione corrispondente nel Sottoscrittore. Se non viene lasciata alcuna riga in [MSreplication_subscriptions &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md), la tabella viene eliminata.  
+ **sp_droppullsubscription** Elimina la riga corrispondente nel [MSreplication_subscriptions &#40;tabella&#41;Transact-SQL](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) e l'agente di distribuzione corrispondente nel Sottoscrittore. Se non viene lasciata alcuna riga in [MSreplication_subscriptions &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md), la tabella viene eliminata.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_droptranpullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-droppullsubscription-_1.sql)]  

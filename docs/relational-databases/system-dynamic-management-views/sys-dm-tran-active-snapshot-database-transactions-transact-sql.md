@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_tran_active_snapshot_database_transactions_TSQL
 - dm_tran_active_snapshot_database_transactions
@@ -21,12 +21,12 @@ ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24259c4e5842243545b9fc02d07c6b7a33387289
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7798fa7e5e93b4c0e5b5f227877cec536195513b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094000"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99134081"
 ---
 # <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -77,7 +77,7 @@ sys.dm_tran_active_snapshot_database_transactions
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in pool elastici, il `Server admin` o un `Azure Active Directory admin` account è obbligatorio. Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.   
 
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sys.dm_tran_active_snapshot_database_transactions** segnala le transazioni a cui viene assegnato un numero di sequenza della transazione (xsn). Il numero XSN viene assegnato quando la transazione accede per la prima volta all'archivio delle versioni. Negli esempi viene illustrato cosa accade quando si assegna un numero XSN a una transazione in un database abilitato per l'isolamento dello snapshot o l'isolamento Read-committed che utilizza il controllo delle versioni delle righe:  
   
 -   Se una transazione viene eseguita nel livello di isolamento serializzabile, il numero XSN viene assegnato quando la transazione esegue per la prima volta un'istruzione, ad esempio un'operazione UPDATE, che provoca la creazione di una versione di riga.  
@@ -86,7 +86,7 @@ Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in 
   
  Per ogni transazione avviata in un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] i relativi numeri di sequenza vengono incrementati in modo seriale.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene utilizzato uno scenario di test in cui quattro transazioni simultanee, ognuna identificata da un numero di sequenza della transazione (XSN), vengono eseguite in un database con le opzioni ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT impostate su ON. Vengono eseguite le transazioni seguenti:  
   
 -   XSN-57 è un'operazione di aggiornamento con isolamento serializzabile.  

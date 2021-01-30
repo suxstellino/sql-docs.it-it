@@ -6,7 +6,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_repl_tranhash
 - sys.dm_repl_tranhash_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0cc52338-e805-4ed4-9835-b19bbf72448e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: d099f878fd2507d0f491723ffc494ce335246843
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 234a2549d4eaffee6133d35a660c1bbcfb26dd60
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098847"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99137359"
 ---
 # <a name="sysdm_repl_tranhash-transact-sql"></a>sys.dm_repl_tranhash (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "98098847"
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE per il database di pubblicazione per chiamare **dm_repl_tranhash**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Vengono restituite informazioni solo per gli oggetti di database replicati caricati nella cache dell'articolo di replica.  
   
 ## <a name="see-also"></a>Vedere anche  

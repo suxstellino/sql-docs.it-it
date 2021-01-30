@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b1e9f5822260259e34761cc8cb05d80b962fed2
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0dd3d70fcb53d74ec9a364c8fe1b240c25d56112
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989192"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166571"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Esempio del metodo Seek e della proprietà Index (VC++)
-In questo esempio vengono utilizzati il metodo [Seek](./seek-method.md) dell'oggetto [Recordset](./recordset-object-ado.md) e la proprietà [index](./index-property.md) insieme a un determinato ***ID dipendente***, per individuare il nome del dipendente nella tabella ***Employees*** del database Nwind. mdb.  
+In questo esempio vengono utilizzati il metodo [Seek](./seek-method.md) dell'oggetto [Recordset](./recordset-object-ado.md) e la proprietà [index](./index-property.md) insieme a un ***ID dipendente** _ specificato per individuare il nome del dipendente nella tabella _*_Employees_*_ del database Nwind. mdb.  
   
 ```  
 // BeginSeekCpp.cpp  
@@ -69,7 +69,7 @@ void SeekX();
 void PrintProviderError(_ConnectionPtr pConnection);  
 void PrintComError(_com_error &e);  
   
-inline char* mygets(char* strDest, int n) {      
+inline char_ mygets(char* strDest, int n) {      
    char strExBuff[10];  
    char* pstrRet = fgets(strDest, n, stdin);  
   

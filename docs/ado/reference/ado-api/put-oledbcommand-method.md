@@ -7,18 +7,18 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - put_OLEDBCommand method [ADO]
 ms.assetid: ca6a5804-bf5c-4afc-99db-22904bc0b33d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5239a1b1924cb767d0425b2a6c686fc15607a08a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c124bfa83dc9c8546d968b7292850086fa393a25
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989942"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166774"
 ---
 # <a name="put_oledbcommand-method"></a>Metodo put_OLEDBCommand
 Questo metodo non esegue alcuna operazione e restituisce sempre S_OK.  

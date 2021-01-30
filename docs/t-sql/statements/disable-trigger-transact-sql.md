@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - DISABLE_TSQL
 - DISABLE
@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 41976059d1deb47fcbfc1c939240db415ee8cf64
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
-ms.translationtype: HT
+ms.openlocfilehash: 01302c2d9acdf1ce89246be18fd54c3cae72ebff
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98081536"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159345"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -84,7 +84,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
   
  Per disabilitare un trigger DDL con ambito server (ON ALL SERVER) o un trigger LOGON, è necessario disporre dell'autorizzazione CONTROL SERVER per il server. Per disabilitare un trigger DDL con ambito database (ON DATABASE), è necessario disporre almeno dell'autorizzazione ALTER ANY DATABASE DDL TRIGGER nel database corrente.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
 Gli esempi seguenti sono descritti nel database AdventureWorks2012.
   
 ### <a name="a-disabling-a-dml-trigger-on-a-table"></a>R. Disabilitazione di un trigger DML in una tabella  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d842733a3b1356803ad0ca979c058f2afc2043a6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: bb40ff622df8183b51349252663b964249399c3a
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482446"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99077109"
 ---
 # <a name="specify-merge-replication-properties"></a>Specificare le proprietà della replica di tipo merge
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -118,7 +118,7 @@ Selezionare una tabella nella pagina **Articoli** di Creazione guidata nuova pub
 1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specificare il nome della pubblicazione cui appartiene l'articolo per `@publication`, il nome dell'articolo per `@article`, l'oggetto di database da pubblicare per `@source_object` e il valore **true** per `@allow_interactive_resolver`. Per altre informazioni, vedere [definire un articolo](../../../relational-databases/replication/publish/define-an-article.md).  
  
 ## <a name="conflict-tracking-and-resolution-level-for-merge-articles"></a>Livello di rilevamento e risoluzione dei conflitti per gli articoli di merge
-In questo argomento viene descritto come specificare il livello di rilevamento e risoluzione dei conflitti per gli articoli di merge in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+In questo argomento viene descritto come specificare il livello di rilevamento e risoluzione dei conflitti per gli articoli di merge in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  Quando si sincronizza una sottoscrizione di una pubblicazione di tipo merge, la replica verifica la presenza di conflitti causati dalle modifiche apportate agli stessi dati nel server di pubblicazione e nel Sottoscrittore. È possibile specificare se rilevare i conflitti a livello di riga, ovvero considerare un conflitto qualsiasi modifica apportata alla riga, o a livello di colonna, ovvero considerare un conflitto solo le modifiche apportate alla stessa riga e colonna. La risoluzione dei conflitti relativi agli articoli viene eseguita a livello di riga. Per ulteriori informazioni sul rilevamento e sulla risoluzione dei conflitti in caso di utilizzo dei record logici, vedere [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Groups
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9624a30970e5a6f6a0186d2cb9e2390c98968d9e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e0cbcc0941c3c2c7158d15bc73f07e4b835db4f3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984372"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164225"
 ---
 # <a name="groups-collection-adox"></a>Raccolta di Groups (ADOX)
 Contiene tutti gli oggetti [gruppo](./group-object-adox.md) archiviati di un catalogo o di un utente.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La raccolta di **gruppi** di un [Catalogo](./catalog-object-adox.md) rappresenta tutti gli account di gruppo del catalogo. La raccolta **gruppi** per un [utente](./user-object-adox.md) rappresenta solo il gruppo a cui appartiene l'utente.  
   
  Il metodo [Append](./append-method-adox-groups.md) per una raccolta di **gruppi** è univoco per ADOX. È possibile:  

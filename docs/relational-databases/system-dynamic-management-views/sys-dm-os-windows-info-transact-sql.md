@@ -6,7 +6,7 @@ ms.date: 03/30/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_os_windows_info
 - dm_os_windows_info_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 111e5b732dae02a5bc2bc8dcffebb3b563206f9c
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: a7e693efca0460c234004d8db21d1496a3f305ff
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094032"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99144432"
 ---
 # <a name="sysdm_os_windows_info-transact-sql"></a>sys.dm_os_windows_info (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ Per impostazione predefinita, l'autorizzazione SELECT per sys.dm_os_windows_info
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni
 Per visualizzare l'instradamento per SQL in esecuzione su un host non Windows, ad esempio Linux, usare [sys.dm_os_host_info &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituite tutte le colonne dalla vista **sys.dm_os_windows_info** .  
   
 ```  

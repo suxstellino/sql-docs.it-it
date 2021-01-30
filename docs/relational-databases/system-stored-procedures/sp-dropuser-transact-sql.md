@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropuser
 - sp_dropuser_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f44b851dc2d60899f27c8419dfdb557951043683
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ba5b9eb814f48003d93bf6d7b05c2b1c37c1ea76
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536159"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99157145"
 ---
 # <a name="sp_dropuser-transact-sql"></a>sp_dropuser (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,12 +43,12 @@ sp_dropuser [ @name_in_db = ] 'user'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @name_in_db = ] 'user'` Nome dell'utente da rimuovere. l' *utente* è di **tipo sysname**e non prevede alcun valore predefinito. l' *utente* deve esistere nel database corrente. Quando si specifica un account di accesso di Windows, utilizzare il nome con il quale il database identifica l'account di accesso.  
+`[ @name_in_db = ] 'user'` Nome dell'utente da rimuovere. l' *utente* è di **tipo sysname** e non prevede alcun valore predefinito. l' *utente* deve esistere nel database corrente. Quando si specifica un account di accesso di Windows, utilizzare il nome con il quale il database identifica l'account di accesso.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_dropuser** esegue **sp_revokedbaccess** per rimuovere l'utente dal database corrente.  
   
  Utilizzare **sp_helpuser** per visualizzare un elenco dei nomi utente che possono essere rimossi dal database corrente.  

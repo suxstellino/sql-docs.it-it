@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_tran_locks
 - sys.dm_tran_locks
@@ -21,12 +21,12 @@ ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3dad8a8c42e2189a29b2e75743653aca5055eae
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: a39e58fb6ca60a30a73531988eeffac89e7b46e1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101468"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99133970"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "98101468"
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in pool elastici, il `Server admin` o un `Azure Active Directory admin` account è obbligatorio. Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.   
  
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Uno stato di richiesta concessa indica che un blocco è stato concesso per una risorsa al richiedente. Una richiesta in attesa indica che la richiesta non è stata ancora concessa. La colonna **request_status** restituisce i tipi di richieste in attesa seguenti:  
   
 -   Uno stato di richiesta di conversione indica che il richiedente ha già ottenuto una richiesta per la risorsa ed è attualmente in attesa di un aggiornamento alla richiesta iniziale.  

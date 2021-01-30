@@ -7,18 +7,18 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Key object [ADOX], members
 ms.assetid: fba47748-53dd-4a5c-8c00-72e48bbc5bb0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b29d34101ed155248850a1407d85ae527b83052
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 73b6b66a2a6ee3d4df2d91d8dba71592492ffc45
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984042"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164181"
 ---
 # <a name="key-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto Key
 ## <a name="propertiescollections"></a>Proprietà/raccolte  
@@ -35,9 +35,9 @@ ms.locfileid: "88984042"
  [Proprietà UpdateRule](./updaterule-property-adox.md)  
   
 ## <a name="methods"></a>Metodi  
- Nessuno.  
+ Nessuna.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventi  
  No.  
   
 ## <a name="see-also"></a>Vedere anche  

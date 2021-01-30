@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpuser
 - sp_helpuser_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e9ea3b0b0b6d1700c486514c29f889cc7beb3566
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ce2bf386978412c6b1409b31e371f8caa15eccdb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546041"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99103075"
 ---
 # <a name="sp_helpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89546041"
   Restituisce informazioni sulle entità a livello di database nel database corrente.  
   
 > [!IMPORTANT]  
->  **sp_helpuser** non restituisce informazioni sulle entità a protezione diretta introdotte in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . In alternativa, utilizzare [sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) .  
+>  **sp_helpuser** non restituisce informazioni sulle entità a protezione diretta introdotte in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . In alternativa, usare [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) .  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @name_in_db = ] 'security_account'` Nome dell'utente del database o del ruolo del database nel database corrente. *security_account* deve esistere nel database corrente. *security_account* è di **tipo sysname**e il valore predefinito è null. Se non si specifica *security_account* , **sp_helpuser** restituisce informazioni su tutte le entità di database.  
+`[ @name_in_db = ] 'security_account'` Nome dell'utente del database o del ruolo del database nel database corrente. *security_account* deve esistere nel database corrente. *security_account* è di **tipo sysname** e il valore predefinito è null. Se non si specifica *security_account* , **sp_helpuser** restituisce informazioni su tutte le entità di database.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -56,7 +56,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 |**UserName**|**sysname**|Utenti nel database corrente.|  
 |**RoleName**|**sysname**|Ruoli a cui appartiene il **nome utente** .|  
 |**LoginName**|**sysname**|Account di accesso del **nome utente**.|  
-|**DefDBName**|**sysname**|**Nome utente**predefinito del database.|  
+|**DefDBName**|**sysname**|**Nome utente** predefinito del database.|  
 |**DefSchemaName**|**sysname**|Schema predefinito dell'utente del database.|  
 |**UserID**|**smallint**|ID del **nome utente** nel database corrente.|  
 |**SID**|**smallint**|ID di sicurezza dell'utente (SID)|  
@@ -77,8 +77,8 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 |**Users_in_role**|**sysname**|Membro del ruolo nel database corrente.|  
 |**UserID**|**smallint**|ID utente del membro del ruolo.|  
   
-## <a name="remarks"></a>Osservazioni  
- Per visualizzare informazioni sull'appartenenza dei ruoli del database, utilizzare [sys. database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md). Per visualizzare informazioni sui membri del ruolo del server, utilizzare [sys. server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)e per visualizzare informazioni sulle entità a livello di server, utilizzare [sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+## <a name="remarks"></a>Commenti  
+ Per visualizzare informazioni sull'appartenenza dei ruoli del database, utilizzare [sys.database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md). Per visualizzare informazioni sui membri del ruolo del server, utilizzare [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)e per visualizzare informazioni sulle entità a livello di server, utilizzare [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  

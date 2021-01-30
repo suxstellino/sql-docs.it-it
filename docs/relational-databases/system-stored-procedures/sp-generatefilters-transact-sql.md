@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_generatefilters
 - sp_generatefilters_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0aeb5b7a-89d1-4bd5-a371-c27fa924360a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 15be33b6ce5ffdf30dc46952f88bf861101ffa45
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b77633f8ef226adcd27084060f9597f43ba48408
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543386"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99106363"
 ---
 # <a name="sp_generatefilters-transact-sql"></a>sp_generatefilters (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,12 +38,12 @@ sp_generatefilters [ @publication =] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` Nome della pubblicazione da filtrare. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione da filtrare. *Publication* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_generatefilters** viene utilizzata nella replica di tipo merge.  
   
 ## <a name="permissions"></a>Autorizzazioni  

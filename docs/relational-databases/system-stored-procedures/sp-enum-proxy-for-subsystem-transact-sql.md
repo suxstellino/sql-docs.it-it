@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_enum_proxy_for_subsystem_TSQL
 - sp_enum_proxy_for_subsystem
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: f484764e05a23594c32494934a9c366154e02aeb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bac523afb9f802e3f6feb8a23c47835c82bac807
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489437"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99157071"
 ---
 # <a name="sp_enum_proxy_for_subsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 
@@ -44,13 +44,13 @@ sp_enum_proxy_for_subsystem
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @proxy_id = ] proxy_id` Numero di identificazione del proxy per cui elencare le informazioni. Il *proxy_id* è di **tipo int**e il valore predefinito è null. È possibile specificare l' *ID* o il *proxy_name* .  
+`[ @proxy_id = ] proxy_id` Numero di identificazione del proxy per cui elencare le informazioni. Il *proxy_id* è di **tipo int** e il valore predefinito è null. È possibile specificare l' *ID* o il *proxy_name* .  
   
-`[ @proxy_name = ] 'proxy_name'` Nome del proxy per cui elencare le informazioni. Il *proxy_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare l' *ID* o il *proxy_name* .  
+`[ @proxy_name = ] 'proxy_name'` Nome del proxy per cui elencare le informazioni. Il *proxy_name* è di **tipo sysname** e il valore predefinito è null. È possibile specificare l' *ID* o il *proxy_name* .  
   
-`[ @subsystem_id = ] subsystem_id` Numero di identificazione del sottosistema per cui elencare le informazioni. Il *subsystem_id* è di **tipo int**e il valore predefinito è null. È possibile specificare il *subsystem_id* o l' *subsystem_name* .  
+`[ @subsystem_id = ] subsystem_id` Numero di identificazione del sottosistema per cui elencare le informazioni. Il *subsystem_id* è di **tipo int** e il valore predefinito è null. È possibile specificare il *subsystem_id* o l' *subsystem_name* .  
   
-`[ @subsystem_name = ] 'subsystem_name'` Nome del sottosistema per cui elencare le informazioni. Il *subsystem_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare il *subsystem_id* o l' *subsystem_name* .  
+`[ @subsystem_name = ] 'subsystem_name'` Nome del sottosistema per cui elencare le informazioni. Il *subsystem_name* è di **tipo sysname** e il valore predefinito è null. È possibile specificare il *subsystem_id* o l' *subsystem_name* .  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -65,7 +65,7 @@ sp_enum_proxy_for_subsystem
 |**proxy_name**|**sysname**|Nome del proxy.|  
 | &nbsp; | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se non vengono specificati parametri, **sp_enum_proxy_for_subsystem** elenca le informazioni su tutti i proxy nell'istanza di per ogni sottosistema.  
   
  Quando viene fornito un nome proxy o un ID proxy, **sp_enum_proxy_for_subsystem** elenca i sottosistemi a cui il proxy ha accesso. Quando viene fornito un ID sottosistema o un nome di sottosistema, **sp_enum_proxy_for_subsystem** elenca i proxy che hanno accesso a tale sottosistema.  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - compatibility [ODBC], SQLSetPos
 - SQLSetPos function [ODBC], inserting data
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 03e5c4d0-2bb3-4649-9781-89cab73f78eb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 215d02e9b5bd92f6a22f7e45c8c29c7c5a0a6a4c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6c9ddd58e9f463d7878bb4b9b8710ce0e6dfecc4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449013"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99110903"
 ---
 # <a name="calling-sqlsetpos-to-insert-data"></a>Chiamata di SQLSetPos per inserire i dati
 Quando un'applicazione ODBC *2. x* che utilizza un driver *ODBC 3. x* chiama **SQLSetPos** con un argomento *Operation* di SQL_ADD, gestione driver non esegue il mapping della chiamata a **SQLBulkOperations**. Se un driver ODBC *3. x* deve funzionare con un'applicazione che chiama **SQLSetPos** con SQL_ADD, il driver deve supportare tale operazione.  

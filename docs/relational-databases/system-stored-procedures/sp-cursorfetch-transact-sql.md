@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cursorfetch
 - sp_cursorfetch_TSQL
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 45621f2b99616085a2543972df7109b2f2fe8e3c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bd6ad166a48d259ab925ae9369abe0d73a73f13b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543594"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99126314"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Recupera un buffer di una o più righe dal database. Il gruppo di righe in questo buffer viene denominato *buffer di recupero*del cursore. sp_cursorfetch viene richiamato specificando ID = 7 in un pacchetto del flusso TDS (Tabular Data Stream).  
+  Recupera un buffer di una o più righe dal database. Il gruppo di righe in questo buffer viene denominato *buffer di recupero* del cursore. sp_cursorfetch viene richiamato specificando ID = 7 in un pacchetto del flusso TDS (Tabular Data Stream).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +47,7 @@ sp_cursorfetch cursor
  *FetchType*  
  Specifica il buffer del cursore da recuperare. *FetchType* è un parametro facoltativo che richiede uno dei valori di input Integer seguenti.  
   
-|valore|Nome|Descrizione|  
+|Valore|Nome|Descrizione|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|Recupera il primo buffer delle righe *nrows* . Se *nrows* è uguale a 0, il cursore viene posizionato prima del set di risultati e non viene restituita alcuna riga.|  
 |0x0002|NEXT|Recupera il buffer successivo di righe *nrows* .|  
@@ -97,7 +97,7 @@ sp_cursorfetch cursor
 |Per i cursori STATIC e KEYSET|In genere la dimensione del keyset corrente.<br /><br /> **-m** se il cursore si trova in una creazione asincrona con *m* righe trovate fino a questo punto.|  
 |Peri cursori DYNAMIC|-1|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ## <a name="cursor-parameter"></a>Parametro cursor  
  Prima dell'esecuzione di qualsiasi operazione di recupero, il cursore precede per impostazione predefinita la prima riga del set di risultati.  
@@ -134,7 +134,7 @@ sp_cursorfetch cursor
   
  Il parametro di stato di RPC viene impostato su uno dei valori mostrati nella tabella seguente.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |0|La routine è stata eseguita correttamente.|  
 |0x0001|La routine non è riuscita.|  
@@ -143,7 +143,7 @@ sp_cursorfetch cursor
   
  Le righe vengono restituite come set tipico di risultati, ovvero il formato della colonna (0x2a), le righe (0xd1), infine done (0xfd). I token dei metadati vengono inviati nello stesso formato specificato per sp_cursoropen, ovvero: 0x81, 0xa5 e 0xa4 per gli utenti di SQL Server 7.0 e così via. Gli indicatori di stato delle righe vengono inviati come colonne nascoste, analogamente alla modalità BROWSE, alla fine di ogni riga con nome di colonna rowstat e tipo di dati INT4. La colonna rowstat può avere uno dei valori mostrati nella tabella seguente:  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  

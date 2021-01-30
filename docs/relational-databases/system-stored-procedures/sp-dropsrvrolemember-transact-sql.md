@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropsrvrolemember
 - sp_dropsrvrolemember_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7be99181-d221-49d0-9cb2-c930d8c044a0
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 55199532fc86d48914bea690125a1afb55a255cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d042fa55cf15dac997d7e52f9bd39eb7309fd1b5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469527"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158098"
 ---
 # <a name="sp_dropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember (Transact-SQL)
 
@@ -45,10 +45,10 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 ## <a name="arguments"></a>Argomenti
 
 **[ @loginame =]** '_login_'  
-Nome di un account di accesso che si desidera rimuovere dal ruolo predefinito del server. *login* è di **tipo sysname**e non prevede alcun valore predefinito. l' *account di accesso* deve esistere.  
+Nome di un account di accesso che si desidera rimuovere dal ruolo predefinito del server. *login* è di **tipo sysname** e non prevede alcun valore predefinito. l' *account di accesso* deve esistere.  
 
 **[ @rolename =]** '_Role_'  
-Nome di un ruolo del server. *Role* è di **tipo sysname**e il valore predefinito è null. *Role* deve essere uno dei valori seguenti:  
+Nome di un ruolo del server. *Role* è di **tipo sysname** e il valore predefinito è null. *Role* deve essere uno dei valori seguenti:  
 
 -   sysadmin  
   
@@ -69,7 +69,7 @@ Nome di un ruolo del server. *Role* è di **tipo sysname**e il valore predefinit
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Per rimuovere un account di accesso da un ruolo predefinito del server, è possibile utilizzare solo la stored procedure sp_dropsrvrolemember. Utilizzare sp_droprolemember per rimuovere un membro da un ruolo del database.  
   
  L'account di accesso sa non può essere rimosso da nessun ruolo predefinito del server.  
@@ -79,7 +79,7 @@ Nome di un ruolo del server. *Role* è di **tipo sysname**e il valore predefinit
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server sysadmin o l'autorizzazione ALTER ANY LOGIN nel server e l'appartenenza al ruolo dal quale si desidera rimuovere il membro.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente l'account di accesso `JackO` viene rimosso dal ruolo predefinito del server `sysadmin`.  
   
 ```sql
@@ -87,10 +87,10 @@ EXEC sp_dropsrvrolemember 'JackO', 'sysadmin';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [CREAZIONE del ruolo del SERVER &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-role-transact-sql.md)   
+ [CREATE SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-role-transact-sql.md)   
  [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
- [Stored procedure di sicurezza &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addsrvrolemember &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
+ [Stored procedure di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
  [sp_droprolemember &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
- [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Funzioni di sicurezza &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - MSdbms_datatype
 - MSdbms_datatype_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: daf45f65ddc0e7ea496a60a3da8b9fc9d270fc73
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 6db79a6d76443492e4079df48c34c518db4dea0d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098217"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160455"
 ---
 # <a name="msdbms_datatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "98098217"
 |**type**|**sysname**|Nome del tipo di dati (nativo).|  
 |**CreateParams**|**int**|Mappa di bit che descrive la combinazione di lunghezza, precisione e scala valida per ogni tipo di dati, che include:<br /><br /> **0x1** = Precision.<br /><br /> **0x2** = scala.<br /><br /> **0x4** = length.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questa tabella contiene le voci per i tipi di dati di SQL Server in quanto un'istanza di SQL Server può sottoscrivere un database non SQL Server e pubblicare in un Sottoscrittore non SQL Server.  
   
 ## <a name="see-also"></a>Vedere anche  

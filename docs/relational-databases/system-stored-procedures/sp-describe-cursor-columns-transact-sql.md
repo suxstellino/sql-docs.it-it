@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_describe_cursor_columns
 - sp_describe_cursor_columns_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 75d0de65b91c41cdaf006e4c56918c3861123b9c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 11c2a7610b13e806c7c40d0fd2ff5a9e0363fffc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539018"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158438"
 ---
 # <a name="sp_describe_cursor_columns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ sp_describe_cursor_columns
  Nome di una variabile di cursore associata a un cursore aperto. *input_cursor_variable* è di **tipo nvarchar (128)**.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- Nessuno  
+ nessuno  
   
 ## <a name="cursors-returned"></a>Cursori restituiti  
  sp_describe_cursor_columns incapsula il report come parametro di [!INCLUDE[tsql](../../includes/tsql-md.md)] output del **cursore** . In questo modo i batch, le stored procedure e i trigger [!INCLUDE[tsql](../../includes/tsql-md.md)] possono elaborare l'output una riga alla volta. Questo significa inoltre che non è possibile richiamare direttamente la procedura da funzioni API del database. Il parametro di output del **cursore** deve essere associato a una variabile di programma, ma le API del database non supportano l'associazione di parametri o variabili del **cursore** .  
@@ -90,7 +90,7 @@ sp_describe_cursor_columns
 |dbid|**int**|ID del database contenente la tabella di base che include la colonna. Se la colonna del set di risultati è stata creata in base a un'espressione, dbid è -1.|  
 |dbname|**sysname**<br /><br /> (ammette valori Null)|Nome del database contenente la tabella di base che include la colonna. Se la colonna del set di risultati è stata creata in base a un'espressione, dbname è NULL.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La stored procedure sp_describe_cursor_columns descrive gli attributi delle colonne di un set di risultati di un cursore del server, quali il nome e il tipo di dati di ogni colonna. Utilizzare sp_describe_cursor per ottenere una descrizione degli attributi globali del cursore del server. Utilizzare sp_describe_cursor_tables per ottenere un report delle tabelle di base a cui fa riferimento il cursore. Per ottenere un report relativo ai cursori del server [!INCLUDE[tsql](../../includes/tsql-md.md)] visibili nella connessione, utilizzare la stored procedure sp_cursor_list.  
   
 ## <a name="permissions"></a>Autorizzazioni  
