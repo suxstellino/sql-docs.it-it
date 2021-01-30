@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_proxy
 - sp_add_proxy_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 07ab9b3525292f437a87c24aac775d7b22b30598
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c60c3bb1ea9f96352662b72080afbfa1e76b1dce
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536858"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192402"
 ---
 # <a name="sp_add_proxy-transact-sql"></a>sp_add_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,15 +47,15 @@ sp_add_proxy
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @proxy_name = ] 'proxy_name'` Nome del proxy da creare. Il *proxy_name* è di **tipo sysname**e il valore predefinito è null. Quando il *proxy_name* è null o una stringa vuota, il nome del proxy viene impostato automaticamente sul *user_name* fornito.  
+`[ @proxy_name = ] 'proxy_name'` Nome del proxy da creare. Il *proxy_name* è di **tipo sysname** e il valore predefinito è null. Quando il *proxy_name* è null o una stringa vuota, il nome del proxy viene impostato automaticamente sul *user_name* fornito.  
   
-`[ @enabled = ] is_enabled` Specifica se il proxy è abilitato. Il flag di *is_enabled* è di **tinyint**e il valore predefinito è 1. Quando *is_enabled* è **0**, il proxy non è abilitato e non può essere utilizzato da un passaggio di processo.  
+`[ @enabled = ] is_enabled` Specifica se il proxy è abilitato. Il flag di *is_enabled* è di **tinyint** e il valore predefinito è 1. Quando *is_enabled* è **0**, il proxy non è abilitato e non può essere utilizzato da un passaggio di processo.  
   
 `[ @description = ] 'description'` Descrizione del proxy. La descrizione è di **tipo nvarchar (512)** e il valore predefinito è null. La descrizione consente di documentare il proxy, ma non viene altrimenti utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Questo argomento è pertanto facoltativo.  
   
-`[ @credential_name = ] 'credential_name'` Nome delle credenziali per il proxy. Il *credential_name* è di **tipo sysname**e il valore predefinito è null. È necessario specificare *credential_name* o *credential_id* .  
+`[ @credential_name = ] 'credential_name'` Nome delle credenziali per il proxy. Il *credential_name* è di **tipo sysname** e il valore predefinito è null. È necessario specificare *credential_name* o *credential_id* .  
   
-`[ @credential_id = ] credential_id` Numero di identificazione della credenziale per il proxy. Il *credential_id* è di **tipo int**e il valore predefinito è null. È necessario specificare *credential_name* o *credential_id* .  
+`[ @credential_id = ] credential_id` Numero di identificazione della credenziale per il proxy. Il *credential_id* è di **tipo int** e il valore predefinito è null. È necessario specificare *credential_name* o *credential_id* .  
   
 `[ @proxy_id = ] id OUTPUT` Numero di identificazione del proxy assegnato al proxy, se creato correttamente.  
   
@@ -75,7 +75,7 @@ sp_add_proxy
   
  I membri del ruolo di sicurezza predefinito **sysadmin** possono creare passaggi di processo che utilizzano qualsiasi proxy. Utilizzare il stored procedure [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md) per concedere ad altri account di accesso al proxy.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  In questo esempio viene creato un proxy per le credenziali `CatalogApplicationCredential`. Nel codice si presuppone che le credenziali esistano già. Per ulteriori informazioni sulle credenziali, vedere [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md).  
   
 ```  

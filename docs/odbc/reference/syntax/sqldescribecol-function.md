@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLDescribeCol
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4007d5edbd400e65ea92d8c5dcab947a53779ec4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ceffc2b0db32ccce75c566c89ac3d69b535abe29
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491326"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192074"
 ---
 # <a name="sqldescribecol-function"></a>Funzione SQLDescribeCol 
 **Conformità**  
@@ -71,9 +71,9 @@ SQLRETURN SQLDescribeCol(
  *DataTypePtr*  
  Output Puntatore a un buffer in cui restituire il tipo di dati SQL della colonna. Questo valore viene letto dal campo SQL_DESC_CONCISE_TYPE di IRD. Si tratta di uno dei valori dei [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md)o di un tipo di dati SQL specifico del driver. Se non è possibile determinare il tipo di dati, il driver restituisce SQL_UNKNOWN_TYPE.  
   
- In ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME o SQL_TYPE_TIMESTAMP viene restituito in * \* DataTypePTR* per i dati di data, ora o timestamp, rispettivamente, in ODBC 2.* *viene restituito x, SQL_DATE, SQL_TIME o SQL_TIMESTAMP. Gestione driver esegue i mapping necessari quando ODBC 2. l'applicazione *x* funziona con ODBC 3. driver *x* o quando ODBC 3. l'applicazione *x* funziona con ODBC 2. driver *x* .  
+ In ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME o SQL_TYPE_TIMESTAMP viene restituito in *\* DataTypePTR* per i dati di data, ora o timestamp, rispettivamente, in ODBC 2.** viene restituito x, SQL_DATE, SQL_TIME o SQL_TIMESTAMP. Gestione driver esegue i mapping necessari quando ODBC 2. l'applicazione *x* funziona con ODBC 3. driver *x* o quando ODBC 3. l'applicazione *x* funziona con ODBC 2. driver *x* .  
   
- Quando *ColumnNumber* è uguale a 0 (per una colonna di segnalibro), SQL_BINARY viene restituito in * \* DataTypePTR* per i segnalibri a lunghezza variabile. (SQL_INTEGER viene restituito se i segnalibri vengono utilizzati da ODBC 3. applicazione *x* che utilizza ODBC 2. driver *x* o ODBC 2. applicazione *x* che utilizza un ODBC 3. driver *x* .)  
+ Quando *ColumnNumber* è uguale a 0 (per una colonna di segnalibro), SQL_BINARY viene restituito in *\* DataTypePTR* per i segnalibri a lunghezza variabile. (SQL_INTEGER viene restituito se i segnalibri vengono utilizzati da ODBC 3. applicazione *x* che utilizza ODBC 2. driver *x* o ODBC 2. applicazione *x* che utilizza un ODBC 3. driver *x* .)  
   
  Per ulteriori informazioni su questi tipi di dati, vedere tipi di dati [SQL](../../../odbc/reference/appendixes/sql-data-types.md) in Appendice D: tipi di dati. Per informazioni sui tipi di dati SQL specifici del driver, vedere la documentazione del driver.  
   
@@ -101,14 +101,14 @@ SQLRETURN SQLDescribeCol(
 |SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
-|01004|Dati stringa, troncati a destra|Il nome della colonna del buffer \* *ColumnName* non è abbastanza grande per restituire l'intero nome della colonna, quindi il nome della colonna è stato troncato. La lunghezza del nome di colonna non troncato viene restituita in **NameLengthPtr*. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
+|01004|Dati stringa, troncati a destra|Il nome della colonna del buffer \*  non è abbastanza grande per restituire l'intero nome della colonna, quindi il nome della colonna è stato troncato. La lunghezza del nome di colonna non troncato viene restituita in **NameLengthPtr*. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |07005|L'istruzione preparata non è una *specifica del cursore*|L'istruzione associata a *statementHandle* non ha restituito un set di risultati. Nessuna colonna da descrivere.|  
 |07009|Indice del descrittore non valido|(DM) il valore specificato per l'argomento *ColumnNumber* è uguale a 0 e l'opzione SQL_ATTR_USE_BOOKMARKS istruzione è stata SQL_UB_OFF.<br /><br /> Il valore specificato per l'argomento *ColumnNumber* è maggiore del numero di colonne nel set di risultati.|  
 |08S01|Errore collegamento comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato connesso il driver non è riuscito prima del completamento dell'elaborazione della funzione.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer *\* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY008|Operation canceled|L'elaborazione asincrona è stata abilitata per *statementHandle*. La funzione è stata chiamata e prima del completamento dell'esecuzione è stato chiamato **SQLCancel** o **SQLCancelHandle** in *statementHandle*. La funzione è stata chiamata nuovamente in *statementHandle*.<br /><br /> La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *statementHandle* da un thread diverso in un'applicazione multithread.|  
-|HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *statementHandle*. Questa funzione asincrona era ancora in esecuzione quando è stato chiamato **SQLDescribeCol** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per *statementHandle* e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per *statementHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) la funzione è stata chiamata prima di chiamare **SQLPrepare**, **SQLExecute**o una funzione di catalogo nell'handle di istruzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato per *statementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.|  
+|HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *statementHandle*. Questa funzione asincrona era ancora in esecuzione quando è stato chiamato **SQLDescribeCol** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect** o **SQLMoreResults** è stato chiamato per *statementHandle* e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per *statementHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) la funzione è stata chiamata prima di chiamare **SQLPrepare**, **SQLExecute** o una funzione di catalogo nell'handle di istruzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations** o **SQLSetPos** è stato chiamato per *statementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
 |HY090|Lunghezza della stringa o del buffer non valida|(DM) il valore specificato per l'argomento *bufferLength* è minore di 0.|  
 |HY117|Connessione sospesa a causa di uno stato di transazione sconosciuto. Sono consentite solo le funzioni di disconnessione e di sola lettura.|(DM) per ulteriori informazioni sullo stato Suspended, vedere [funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
