@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_job_TSQL
 - sp_help_job
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5c0b2f0845c98f4b5fa403bd98b87718afd0fb26
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 32ffb85143cf448742831071bee7d4b94a25ec57
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549698"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200154"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,16 +53,16 @@ sp_help_job { [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_id = ] job_id` Numero di identificazione del processo. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
+`[ @job_id = ] job_id` Numero di identificazione del processo. *job_id* è di tipo **uniqueidentifier** e il valore predefinito è null.  
   
-`[ @job_name = ] 'job_name'` Nome del processo. *job_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @job_name = ] 'job_name'` Nome del processo. *job_name* è di **tipo sysname** e il valore predefinito è null.  
   
 > [!NOTE]  
 >  Per visualizzare un processo specifico, è necessario specificare *job_id* o *job_name* .  Omettere sia *job_id* che *job_name* per restituire informazioni su tutti i processi.
   
 `[ @job_aspect = ] 'job_aspect'` Attributo del processo da visualizzare. *job_aspect* è di tipo **varchar (9)** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**ALL**|Informazioni sugli attributi del processo|  
 |**PROCESSO**|Informazioni sul processo|  
@@ -72,17 +72,17 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @job_type = ] 'job_type'` Tipo di processi da includere nel report. *job_type* è di tipo **varchar (12)** e il valore predefinito è null. *job_type* può essere **locale** o **multiserver**.  
   
-`[ @owner_login_name = ] 'login_name'` Nome dell'account di accesso del proprietario del processo. *login_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @owner_login_name = ] 'login_name'` Nome dell'account di accesso del proprietario del processo. *login_name* è di **tipo sysname** e il valore predefinito è null.  
   
 `[ @subsystem = ] 'subsystem'` Nome del sottosistema. il *sottosistema* è di **tipo nvarchar (40)** e il valore predefinito è null.  
   
-`[ @category_name = ] 'category'` Nome della categoria. *Category* è di **tipo sysname**e il valore predefinito è null.  
+`[ @category_name = ] 'category'` Nome della categoria. *Category* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @enabled = ] enabled` Numero che indica se vengono visualizzate informazioni per i processi abilitati o i processi disabilitati. *Enabled* è di **tinyint**e il valore predefinito è null. **1** indica i processi abilitati e **0** indica i processi disabilitati.  
+`[ @enabled = ] enabled` Numero che indica se vengono visualizzate informazioni per i processi abilitati o i processi disabilitati. *Enabled* è di **tinyint** e il valore predefinito è null. **1** indica i processi abilitati e **0** indica i processi disabilitati.  
   
-`[ @execution_status = ] status` Stato di esecuzione dei processi. *status* è di **tipo int**e il valore predefinito è null. i possibili valori sono i seguenti.  
+`[ @execution_status = ] status` Stato di esecuzione dei processi. *status* è di **tipo int** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Restituisce solo i processi non inattivi o sospesi.|  
 |**1**|In esecuzione.|  
@@ -94,9 +94,9 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @date_comparator = ] 'date_comparison'` Operatore di confronto da utilizzare nei confronti di *date_created* e *DATE_MODIFIED*. *date_comparison* è di **carattere (1)** e può essere =, \<, or > .  
   
-`[ @date_created = ] date_created` Data di creazione del processo. *date_created*è di tipo **DateTime**e il valore predefinito è null.  
+`[ @date_created = ] date_created` Data di creazione del processo. *date_created* è di tipo **DateTime** e il valore predefinito è null.  
   
-`[ @date_last_modified = ] date_modified` Data dell'Ultima modifica del processo. *DATE_MODIFIED* è di tipo **DateTime**e il valore predefinito è null.  
+`[ @date_last_modified = ] date_modified` Data dell'Ultima modifica del processo. *DATE_MODIFIED* è di tipo **DateTime** e il valore predefinito è null.  
   
 `[ @description = ] 'description_pattern'` Descrizione del processo. *description_pattern* è di **tipo nvarchar (512)** e il valore predefinito è null. *description_pattern* possibile includere i caratteri jolly SQL Server per i criteri di ricerca.  
   
@@ -220,7 +220,7 @@ sp_help_job { [ @job_id = ] job_id
   
  Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- I membri di **SQLAgentUserRole** possono visualizzare solo i processi di cui sono proprietari. I membri di **sysadmin**, **SQLAgentReaderRole**e **SQLAgentOperatorRole** possono visualizzare tutti i processi locali e multiserver.  
+ I membri di **SQLAgentUserRole** possono visualizzare solo i processi di cui sono proprietari. I membri di **sysadmin**, **SQLAgentReaderRole** e **SQLAgentOperatorRole** possono visualizzare tutti i processi locali e multiserver.  
   
 ## <a name="examples"></a>Esempi  
   

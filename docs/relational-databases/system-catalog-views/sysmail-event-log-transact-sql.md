@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_event_log
 - sysmail_event_log_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 58c8e734ed9acdef41b22772c8d3955b825a46de
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: f5c3435be5885aeedbedb7868a2883dc34ff0dff
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096638"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199760"
 ---
 # <a name="sysmail_event_log-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "98096638"
 |**last_mod_date**|**datetime**|Data e ora dell'ultima modifica della riga.|  
 |**last_mod_user**|**sysname**|Autore dell'ultima modifica della riga. Per i messaggi di posta elettronica corrisponde all'utente che ha inviato il messaggio. Per i messaggi generati dal programma esterno Posta elettronica database corrisponde al contesto utente del programma.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Per la risoluzione dei problemi Posta elettronica database, cercare gli eventi relativi agli errori di posta elettronica nella visualizzazione **sysmail_event_log** . Alcuni messaggi, ad esempio quelli relativi agli errori del programma esterno Posta elettronica database, non sono associati a messaggi di posta elettronica specifici. Per cercare gli errori relativi a messaggi di posta elettronica specifici, cercare l' **mailitem_id** del messaggio di posta elettronica non riuscito nella visualizzazione **sysmail_faileditems** e quindi cercare nei **sysmail_event_log** i messaggi correlati a tale **mailitem_id**. Quando viene restituito un errore da **sp_send_dbmail**, il messaggio di posta elettronica non viene inviato al sistema posta elettronica database e l'errore non viene visualizzato in questa vista.  
   
  Quando i tentativi di recapito con singoli account hanno esito negativo, i messaggi di errore rimangono visualizzati durante i successivi tentativi di invio fino a quando il recapito dell'elemento di posta non ha definitivamente esito positivo o negativo. In caso di esito positivo, tutti gli errori accumulati vengono registrati come avvisi distinti, inclusa la **account_id**. Pertanto, è possibile che vengano visualizzati messaggi di avviso anche se il messaggio di posta elettronica è stato inviato. In caso di errore di recapito finale, tutti gli avvisi precedenti vengono registrati come un messaggio di errore senza una **account_id**, perché tutti gli account hanno avuto esito negativo.  

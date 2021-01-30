@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_adjustpublisheridentityrange_TSQL
 - sp_adjustpublisheridentityrange
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cdb8f12f5c5ff3c3c01f5d7cd18827b2fec0e9c8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5855ffeceff68c10e0eac2089a95d2b0184cd327
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541983"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198351"
 ---
 # <a name="sp_adjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,16 +40,16 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` Nome della pubblicazione in cui vengono riallocati i nuovi intervalli di valori Identity. *Publication* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publication = ] 'publication'` Nome della pubblicazione in cui vengono riallocati i nuovi intervalli di valori Identity. *Publication* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @table_name = ] 'table_name'` Nome della tabella in cui vengono riallocati i nuovi intervalli di valori Identity. *table_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @table_name = ] 'table_name'` Nome della tabella in cui vengono riallocati i nuovi intervalli di valori Identity. *table_name* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @table_owner = ] 'table_owner'` Proprietario della tabella nel server di pubblicazione. *TABLE_OWNER* è di **tipo sysname**e il valore predefinito è null. Se *TABLE_OWNER* viene omesso, viene utilizzato il nome dell'utente corrente.  
+`[ @table_owner = ] 'table_owner'` Proprietario della tabella nel server di pubblicazione. *TABLE_OWNER* è di **tipo sysname** e il valore predefinito è null. Se *TABLE_OWNER* viene omesso, viene utilizzato il nome dell'utente corrente.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_adjustpublisheridentityrange** viene utilizzato in tutti i tipi di replica.  
   
  Nel caso di una pubblicazione per la quale è attivata la gestione automatica di intervalli di valori Identity, l'agente di distribuzione o di merge è responsabile della regolazione automatica dell'intervallo di valori Identity in una pubblicazione in base al valore soglia corrispondente. Tuttavia, se per qualche motivo il agente di distribuzione o agente di merge non è stato eseguito per un determinato periodo di tempo e la risorsa dell'intervallo di valori Identity è stata utilizzata in modo significativo fino al punto di soglia, gli utenti possono chiamare **sp_adjustpublisheridentityrange** per allocare un nuovo intervallo di valori per un server di pubblicazione.  

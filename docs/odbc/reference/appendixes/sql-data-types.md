@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQL data types [ODBC]
 - SQL data types [ODBC], about SQL data types
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8209463c3c316a5bd2e45a2d7b08eb65b3cb113d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e15771f52af0830f07f135453d08f4355a3fae8f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483154"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199872"
 ---
 # <a name="sql-data-types"></a>Tipi di dati SQL
-Ogni DBMS definisce tipi SQL personalizzati. Ogni driver ODBC espone solo i tipi di dati SQL definiti dal DBMS associato. Informazioni sul modo in cui un driver esegue il mapping dei tipi SQL DBMS agli identificatori di tipo SQL definiti da ODBC e sul modo in cui un driver esegue il mapping dei tipi SQL DBMS ai propri identificatori di tipo SQL specifici del driver viene restituito tramite una chiamata a **SQLGetTypeInfo**. Un driver restituisce anche i tipi di dati SQL quando si descrivono i tipi di dati di colonne e parametri tramite chiamate a **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**e **SQLSpecialColumns**.  
+Ogni DBMS definisce tipi SQL personalizzati. Ogni driver ODBC espone solo i tipi di dati SQL definiti dal DBMS associato. Informazioni sul modo in cui un driver esegue il mapping dei tipi SQL DBMS agli identificatori di tipo SQL definiti da ODBC e sul modo in cui un driver esegue il mapping dei tipi SQL DBMS ai propri identificatori di tipo SQL specifici del driver viene restituito tramite una chiamata a **SQLGetTypeInfo**. Un driver restituisce anche i tipi di dati SQL quando si descrivono i tipi di dati di colonne e parametri tramite chiamate a **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns** e **SQLSpecialColumns**.  
   
 > [!NOTE]  
 >  I tipi di dati SQL sono contenuti nei campi SQL_DESC_ CONCISE_TYPE, SQL_DESC_TYPE e SQL_DESC_DATETIME_INTERVAL_CODE dei descrittori di implementazione. Le caratteristiche dei tipi di dati SQL sono contenute nei campi SQL_DESC_PRECISION, SQL_DESC_SCALE, SQL_DESC_LENGTH e SQL_DESC_OCTET_LENGTH dei descrittori di implementazione. Per ulteriori informazioni, vedere [identificatori e descrittori di tipi di dati](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md) più avanti in questa appendice.  
@@ -86,7 +86,7 @@ Ogni DBMS definisce tipi SQL personalizzati. Ogni driver ODBC espone solo i tipi
   
  [5] a seconda dell'implementazione, la precisione del SQL_FLOAT può essere 24 o 53: se è 24, il tipo di dati SQL_FLOAT è identico a quello SQL_REAL; Se è 53, il tipo di dati SQL_FLOAT corrisponde a quello SQL_DOUBLE.  
   
- [6] in ODBC *3. x*, i tipi di dati di data, ora e timestamp SQL sono rispettivamente SQL_TYPE_DATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP. in ODBC *2. x*i tipi di dati sono SQL_DATE, SQL_TIME e SQL_TIMESTAMP.  
+ [6] in ODBC *3. x*, i tipi di dati di data, ora e timestamp SQL sono rispettivamente SQL_TYPE_DATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP. in ODBC *2. x* i tipi di dati sono SQL_DATE, SQL_TIME e SQL_TIMESTAMP.  
   
  [7] per ulteriori informazioni sui tipi di dati interval SQL, vedere la sezione relativa ai [tipi di dati interval](../../../odbc/reference/appendixes/interval-data-types.md) , più avanti in questa appendice.  
   

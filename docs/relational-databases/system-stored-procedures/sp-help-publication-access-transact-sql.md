@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_publication_access
 - sp_help_publication_access_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 38ef2fe7710d4716d9b544086f29333c96384bf6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b33b79c6e632eef28feaa5fa8b3f605018b09953
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535237"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199599"
 ---
 # <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,11 +41,11 @@ sp_help_publication_access [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` Nome della pubblicazione a cui accedere. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione a cui accedere. *Publication* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @return_granted = ] 'return_granted'` ID di accesso. *return_granted* è di **bit**e il valore predefinito è 1. Se viene specificato **0** e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene utilizzata l'autenticazione, vengono restituiti gli account di accesso disponibili visualizzati nel server di pubblicazione, ma non nel server di distribuzione. Se viene specificato **0** e viene utilizzata l'autenticazione di Windows, vengono restituiti gli account di accesso non autorizzati in modo specifico al server di pubblicazione o al server di distribuzione.  
+`[ @return_granted = ] 'return_granted'` ID di accesso. *return_granted* è di **bit** e il valore predefinito è 1. Se viene specificato **0** e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene utilizzata l'autenticazione, vengono restituiti gli account di accesso disponibili visualizzati nel server di pubblicazione, ma non nel server di distribuzione. Se viene specificato **0** e viene utilizzata l'autenticazione di Windows, vengono restituiti gli account di accesso non autorizzati in modo specifico al server di pubblicazione o al server di distribuzione.  
   
-`[ @login = ] 'login'` ID di accesso di sicurezza standard. *login* è di **tipo sysname**e il valore predefinito è **%** .  
+`[ @login = ] 'login'` ID di accesso di sicurezza standard. *login* è di **tipo sysname** e il valore predefinito è **%** .  
   
 `[ @initial_list = ] initial_list` Specifica se restituire tutti i membri con accesso alla pubblicazione o solo quelli che hanno eseguito l'accesso prima che nuovi membri siano stati aggiunti all'elenco. *initial_list* è di bit e il valore predefinito è **0**.  
   
@@ -64,7 +64,7 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_help_publication_access** viene utilizzato in tutti i tipi di replica.  
   
  Quando **Isntname** e **Isntgroup** nel set di risultati sono **0**, si presuppone che l'account di accesso sia un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso.  

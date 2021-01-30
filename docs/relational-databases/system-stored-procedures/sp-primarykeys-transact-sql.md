@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_primarykeys_TSQL
 - sp_primarykeys
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c5b967d8ac3d30147e583ffa6268cdd8d2a8d282
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 23117c882ee0c2c55e8d29089327e9dd84643878
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534993"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199592"
 ---
 # <a name="sp_primarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +43,13 @@ sp_primarykeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @table_server = ] 'table_server'_` Nome del server collegato da cui si desidera ottenere informazioni sulla chiave primaria. *table_server* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @table_server = ] 'table_server'_` Nome del server collegato da cui si desidera ottenere informazioni sulla chiave primaria. *table_server* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @table_name = ] 'table_name'` Nome della tabella per cui si desidera ottenere informazioni sulla chiave primaria. *table_name*è di **tipo sysname**e il valore predefinito è null.  
+`[ @table_name = ] 'table_name'` Nome della tabella per cui si desidera ottenere informazioni sulla chiave primaria. *table_name* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @table_schema = ] 'table_schema'` Schema della tabella. *TABLE_SCHEMA* è di **tipo sysname**e il valore predefinito è null. In ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrisponde al proprietario della tabella.  
+`[ @table_schema = ] 'table_schema'` Schema della tabella. *TABLE_SCHEMA* è di **tipo sysname** e il valore predefinito è null. In ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrisponde al proprietario della tabella.  
   
-`[ @table_catalog = ] 'table_catalog'` Nome del catalogo in cui risiede il *table_name* specificato. In ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrisponde al nome del database. *TABLE_CATALOG* è di **tipo sysname**e il valore predefinito è null.  
+`[ @table_catalog = ] 'table_catalog'` Nome del catalogo in cui risiede il *table_name* specificato. In ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrisponde al nome del database. *TABLE_CATALOG* è di **tipo sysname** e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  Nessuno  
@@ -65,15 +65,15 @@ sp_primarykeys [ @table_server = ] 'table_server'
 |**KEY_SEQ**|**int**|Numero sequenziale della colonna in una chiave primaria a più colonne.|  
 |**PK_NAME**|**sysname**|Identificatore della chiave primaria. Se non è applicabile all'origine dei dati, restituisce NULL.|  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_primarykeys** viene eseguita eseguendo una query sul set di righe PRIMARY_KEYS dell'interfaccia **IDBSchemaRowset** del provider di OLE DB corrispondente a *table_server*. I parametri *table_name*, *TABLE_SCHEMA*, *TABLE_CATALOG*e *Column* vengono passati a questa interfaccia per limitare le righe restituite.  
+## <a name="remarks"></a>Commenti  
+ **sp_primarykeys** viene eseguita eseguendo una query sul set di righe PRIMARY_KEYS dell'interfaccia **IDBSchemaRowset** del provider di OLE DB corrispondente a *table_server*. I parametri *table_name*, *TABLE_SCHEMA*, *TABLE_CATALOG* e *Column* vengono passati a questa interfaccia per limitare le righe restituite.  
   
  **sp_primarykeys** restituisce un set di risultati vuoto se il provider di OLE DB del server collegato specificato non supporta il set di righe PRIMARY_KEYS dell'interfaccia **IDBSchemaRowset** .  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituite le colonne chiave primaria dal server `LONDON1` per la tabella `HumanResources.JobCandidate` nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  

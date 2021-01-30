@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLSetDescField
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2c21d3a21e863d62a3cc8d685e81c6e3265c1551
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bd48da2caec1acba5cfe775a2baa1efaaf886aab
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421135"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200971"
 ---
 # <a name="sqlsetdescfield-function"></a>Funzione SQLSetDescField
 
@@ -54,7 +54,7 @@ SQLRETURN SQLSetDescField(
  Input Indica il record del descrittore contenente il campo che l'applicazione cerca di impostare. I record del descrittore sono numerati da 0, con il numero di record 0 che è il record del segnalibro. L'argomento *RecNumber* viene ignorato per i campi di intestazione.  
   
  *FieldIdentifier*  
- Input Indica il campo del descrittore il cui valore deve essere impostato. Per ulteriori informazioni, vedere "argomento*FieldIdentifier* " nella sezione "Commenti".  
+ Input Indica il campo del descrittore il cui valore deve essere impostato. Per ulteriori informazioni, vedere "argomento *FieldIdentifier* " nella sezione "Commenti".  
   
  *ValuePtr*  
  Input Puntatore a un buffer contenente le informazioni sul descrittore o un valore integer. Il tipo di dati dipende dal valore di *FieldIdentifier*. Se *ValuePtr* è un valore integer, può essere considerato come 8 byte (SQLLEN), 4 byte (SQLINTEGER) o 2 byte (SQLSMALLINT), a seconda del valore dell'argomento *FieldIdentifier* .  
@@ -83,20 +83,20 @@ SQLRETURN SQLSetDescField(
 |SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
-|01S02|Valore di opzione modificato|Il driver non supporta il valore specificato in * \* ValuePtr* (se *ValuePtr* è un puntatore) o il valore in *ValuePtr* (se *ValuePtr* è un valore Integer) oppure * \* ValuePtr* non è valido a causa di condizioni di lavoro di implementazione, quindi il driver sostituisce un valore simile. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
-|07009|Indice del descrittore non valido|L'argomento *FieldIdentifier* è un campo record, l'argomento *RecNumber* è 0 e l'argomento *DescriptorHandle* fa riferimento a un handle DIP.<br /><br /> L'argomento *RecNumber* è minore di 0 e l'argomento *DescriptorHandle* fa riferimento a un ARD o a un APD.<br /><br /> L'argomento *RecNumber* è maggiore del numero massimo di colonne o parametri che l'origine dati è in grado di supportare e l'argomento *DescriptorHandle* fa riferimento a un oggetto APD o ARD.<br /><br /> (DM) l'argomento *FieldIdentifier* è stato SQL_DESC_COUNT e l'argomento * \* ValuePtr* è minore di 0.<br /><br /> L'argomento *RecNumber* è uguale a 0 e l'argomento *DescriptorHandle* fa riferimento a un oggetto APD allocato in modo implicito. Questo errore non si verifica con un descrittore di applicazione allocato in modo esplicito, perché non è noto se un descrittore di applicazione allocato in modo esplicito è un valore APD o ARD fino alla fase di esecuzione.|  
+|01S02|Valore di opzione modificato|Il driver non supporta il valore specificato in *\* ValuePtr* (se *ValuePtr* è un puntatore) o il valore in *ValuePtr* (se *ValuePtr* è un valore Integer) oppure *\* ValuePtr* non è valido a causa di condizioni di lavoro di implementazione, quindi il driver sostituisce un valore simile. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
+|07009|Indice del descrittore non valido|L'argomento *FieldIdentifier* è un campo record, l'argomento *RecNumber* è 0 e l'argomento *DescriptorHandle* fa riferimento a un handle DIP.<br /><br /> L'argomento *RecNumber* è minore di 0 e l'argomento *DescriptorHandle* fa riferimento a un ARD o a un APD.<br /><br /> L'argomento *RecNumber* è maggiore del numero massimo di colonne o parametri che l'origine dati è in grado di supportare e l'argomento *DescriptorHandle* fa riferimento a un oggetto APD o ARD.<br /><br /> (DM) l'argomento *FieldIdentifier* è stato SQL_DESC_COUNT e l'argomento *\* ValuePtr* è minore di 0.<br /><br /> L'argomento *RecNumber* è uguale a 0 e l'argomento *DescriptorHandle* fa riferimento a un oggetto APD allocato in modo implicito. Questo errore non si verifica con un descrittore di applicazione allocato in modo esplicito, perché non è noto se un descrittore di applicazione allocato in modo esplicito è un valore APD o ARD fino alla fase di esecuzione.|  
 |08S01|Errore collegamento comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato connesso il driver non è riuscito prima del completamento dell'elaborazione della funzione.|  
 |22001|Dati stringa, troncati a destra|L'argomento *FieldIdentifier* è stato SQL_DESC_NAME e l'argomento *bufferLength* è un valore maggiore di SQL_MAX_IDENTIFIER_LEN.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer *\* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
-|HY010|Errore sequenza funzione|(DM) *DescriptorHandle* è stato associato a un *statementHandle* per il quale è stata chiamata una funzione in esecuzione asincrona (non questa) ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato per *statementHandle* a cui il *DescriptorHandle* è stato associato e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *DescriptorHandle*. Questa funzione asincrona era ancora in esecuzione quando è stata chiamata la funzione **SQLSetDescField** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per uno degli handle di istruzione associati a *DescriptorHandle* e restituiti SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.|  
+|HY010|Errore sequenza funzione|(DM) *DescriptorHandle* è stato associato a un *statementHandle* per il quale è stata chiamata una funzione in esecuzione asincrona (non questa) ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations** o **SQLSetPos** è stato chiamato per *statementHandle* a cui il *DescriptorHandle* è stato associato e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *DescriptorHandle*. Questa funzione asincrona era ancora in esecuzione quando è stata chiamata la funzione **SQLSetDescField** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect** o **SQLMoreResults** è stato chiamato per uno degli handle di istruzione associati a *DescriptorHandle* e restituiti SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
 |HY016|Impossibile modificare il descrittore di una riga di implementazione|L'argomento *DescriptorHandle* è stato associato a un IRD e l'argomento *FieldIdentifier* non è SQL_DESC_ARRAY_STATUS_PTR o SQL_DESC_ROWS_PROCESSED_PTR.|  
 |HY021|Informazioni descrittore incoerenti|I campi SQL_DESC_TYPE e SQL_DESC_DATETIME_INTERVAL_CODE non formano un tipo SQL ODBC valido o un tipo SQL valido specifico del driver (per IPD) o un tipo C ODBC valido (per APD o ARDs).<br /><br /> Le informazioni sul descrittore controllate durante una verifica di coerenza non erano coerenti. (Vedere "Verifica coerenza" in **SQLSetDescRec**).|  
-|HY090|Lunghezza della stringa o del buffer non valida|(DM) * \* ValuePtr* è una stringa di caratteri e *bufferLength* è minore di zero, ma non è uguale a SQL_NTS.<br /><br /> (DM) il driver era un driver ODBC 2 *. x* , il descrittore era un ARD, l'argomento *ColumnNumber* è stato impostato su 0 e il valore specificato per l'argomento *bufferLength* non è uguale a 4.|  
+|HY090|Lunghezza della stringa o del buffer non valida|(DM) *\* ValuePtr* è una stringa di caratteri e *bufferLength* è minore di zero, ma non è uguale a SQL_NTS.<br /><br /> (DM) il driver era un driver ODBC 2 *. x* , il descrittore era un ARD, l'argomento *ColumnNumber* è stato impostato su 0 e il valore specificato per l'argomento *bufferLength* non è uguale a 4.|  
 |HY091|Identificatore del campo del descrittore non valido|Il valore specificato per l'argomento *FieldIdentifier* non è un campo definito da ODBC e non è un valore definito dall'implementazione.<br /><br /> L'argomento *FieldIdentifier* non è valido per l'argomento *DescriptorHandle* .<br /><br /> L'argomento *FieldIdentifier* è un campo di sola lettura definito da ODBC.|  
-|HY092|Identificatore di attributo/opzione non valido|Il valore in * \* ValuePtr* non è valido per l'argomento *FieldIdentifier* .<br /><br /> L'argomento *FieldIdentifier* è stato SQL_DESC_UNNAMED e *ValuePtr* è stato SQL_NAMED.|  
-|HY105|Tipo di parametro non valido|(DM) il valore specificato per il campo SQL_DESC_PARAMETER_TYPE non è valido. Per ulteriori informazioni, vedere la sezione "argomento*InputOutputType* " in **SQLBindParameter**.|  
+|HY092|Identificatore di attributo/opzione non valido|Il valore in *\* ValuePtr* non è valido per l'argomento *FieldIdentifier* .<br /><br /> L'argomento *FieldIdentifier* è stato SQL_DESC_UNNAMED e *ValuePtr* è stato SQL_NAMED.|  
+|HY105|Tipo di parametro non valido|(DM) il valore specificato per il campo SQL_DESC_PARAMETER_TYPE non è valido. Per ulteriori informazioni, vedere la sezione "argomento *InputOutputType* " in **SQLBindParameter**.|  
 |HY117|Connessione sospesa a causa di uno stato di transazione sconosciuto. Sono consentite solo le funzioni di disconnessione e di sola lettura.|(DM) per ulteriori informazioni sullo stato Suspended, vedere Novità di [ODBC 3,8](../../../odbc/reference/what-s-new-in-odbc-3-8.md).|  
 |HYT01|Timeout connessione scaduto|Il periodo di timeout della connessione è scaduto prima che l'origine dati abbia risposto alla richiesta. Il periodo di timeout della connessione viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|Il driver non supporta questa funzione|(DM) il driver associato a *DescriptorHandle* non supporta la funzione.|  
@@ -113,7 +113,7 @@ SQLRETURN SQLSetDescField(
   
  Se un'applicazione chiama **SQLSetDescField** per impostare un campo diverso da SQL_DESC_COUNT o i campi posticipati SQL_DESC_DATA_PTR, SQL_DESC_OCTET_LENGTH_PTR o SQL_DESC_INDICATOR_PTR, il record diventa non associato.  
   
- I campi di intestazione del descrittore vengono impostati chiamando **SQLSetDescField** con il *FieldIdentifier*appropriato. Molti campi di intestazione sono anche attributi di istruzione, quindi possono essere impostati anche tramite una chiamata a **SQLSetStmtAttr**. Questo consente alle applicazioni di impostare un campo del descrittore senza prima ottenere un handle descrittore. Quando **SQLSetDescField** viene chiamato per impostare un campo di intestazione, l'argomento *RecNumber* viene ignorato.  
+ I campi di intestazione del descrittore vengono impostati chiamando **SQLSetDescField** con il *FieldIdentifier* appropriato. Molti campi di intestazione sono anche attributi di istruzione, quindi possono essere impostati anche tramite una chiamata a **SQLSetStmtAttr**. Questo consente alle applicazioni di impostare un campo del descrittore senza prima ottenere un handle descrittore. Quando **SQLSetDescField** viene chiamato per impostare un campo di intestazione, l'argomento *RecNumber* viene ignorato.  
   
  Per impostare i campi dei segnalibri viene usato un *RecNumber* di 0.  
   
@@ -140,7 +140,7 @@ SQLRETURN SQLSetDescField(
   
  L'inizializzazione dei campi di intestazione è illustrata nella tabella seguente.  
   
-|Nome campo intestazione|Type|L/S|Predefinito|  
+|Nome campo intestazione|Tipo|L/S|Predefinito|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|ARD: R APD: R IRD: R R: R|ARD: SQL_DESC_ALLOC_AUTO per implicito o SQL_DESC_ALLOC_USER per esplicito<br /><br /> APD: SQL_DESC_ALLOC_AUTO per implicito o SQL_DESC_ALLOC_USER per esplicito<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> DPI: SQL_DESC_ALLOC_AUTO|  
 |SQL_DESC_ARRAY_SIZE|SQLULEN|ARD: R/W APD: R/W IRD: DIP non usato: non usato|ARD: [1] APD: [1] IRD: DIP non usato: non usato|  
@@ -154,7 +154,7 @@ SQLRETURN SQLSetDescField(
   
  L'inizializzazione dei campi di record è come illustrato nella tabella seguente.  
   
-|Nome campo record|Type|L/S|Predefinito|  
+|Nome campo record|Tipo|L/S|Predefinito|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|ARD: APD non usato: IRD non usato: R dpi: non usato|ARD: APD non usato: IRD non usato: D dpi: non usato|  
 |SQL_DESC_BASE_COLUMN_NAME|SQLCHAR|ARD: APD non usato: IRD non usato: R dpi: non usato|ARD: APD non usato: IRD non usato: D dpi: non usato|  
@@ -216,12 +216,12 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_ARRAY_STATUS_PTR [tutti]**  
  Per ogni tipo di descrittore, questo campo di intestazione SQLUSMALLINT * punta a una matrice di valori SQLUSMALLINT. Queste matrici sono denominate come segue: Row Status Array (IRD), Parameter status Array (dpi), Row Operation Array (ARD) e Parameter Operation Array (APD).  
   
- In IRD, questo campo di intestazione punta a una matrice di stato della riga contenente i valori di stato dopo una chiamata a **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**o **SQLSetPos**. Il numero di elementi della matrice è il numero di righe nel set di righe. L'applicazione deve allocare una matrice di SQLUSMALLINTs e impostare questo campo in modo che punti alla matrice. Per impostazione predefinita, il campo è impostato su un puntatore null. Il driver compilerà la matrice, a meno che il campo SQL_DESC_ARRAY_STATUS_PTR non sia impostato su un puntatore null, nel qual caso non verrà generato alcun valore di stato e la matrice non verrà popolata.  
+ In IRD, questo campo di intestazione punta a una matrice di stato della riga contenente i valori di stato dopo una chiamata a **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll** o **SQLSetPos**. Il numero di elementi della matrice è il numero di righe nel set di righe. L'applicazione deve allocare una matrice di SQLUSMALLINTs e impostare questo campo in modo che punti alla matrice. Per impostazione predefinita, il campo è impostato su un puntatore null. Il driver compilerà la matrice, a meno che il campo SQL_DESC_ARRAY_STATUS_PTR non sia impostato su un puntatore null, nel qual caso non verrà generato alcun valore di stato e la matrice non verrà popolata.  
   
 > [!CAUTION]  
 >  Il comportamento del driver non è definito se l'applicazione imposta gli elementi della matrice di stato della riga a cui punta il campo SQL_DESC_ARRAY_STATUS_PTR di IRD.  
   
- Inizialmente la matrice viene popolata da una chiamata a **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**o **SQLSetPos**. Se la chiamata non ha restituito SQL_SUCCESS o SQL_SUCCESS_WITH_INFO, il contenuto della matrice a cui fa riferimento questo campo non è definito. Gli elementi nella matrice possono contenere i valori seguenti:  
+ Inizialmente la matrice viene popolata da una chiamata a **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll** o **SQLSetPos**. Se la chiamata non ha restituito SQL_SUCCESS o SQL_SUCCESS_WITH_INFO, il contenuto della matrice a cui fa riferimento questo campo non è definito. Gli elementi nella matrice possono contenere i valori seguenti:  
   
 -   SQL_ROW_SUCCESS: la riga è stata recuperata e non è stata modificata dopo l'ultima operazione di recupero.  
   
@@ -293,13 +293,13 @@ SQLRETURN SQLSetDescField(
   
  Per selezionare l'associazione per colonna per le colonne, questo campo è impostato su SQL_BIND_BY_COLUMN (impostazione predefinita).  
   
- Questo campo in ARD può essere impostato anche chiamando **SQLSetStmtAttr** con l' *attributo*SQL_ATTR_ROW_BIND_TYPE.  
+ Questo campo in ARD può essere impostato anche chiamando **SQLSetStmtAttr** con l' *attributo* SQL_ATTR_ROW_BIND_TYPE.  
   
  In APD questo campo specifica l'orientamento dell'associazione da utilizzare per i parametri dinamici.  
   
  Per selezionare l'associazione per colonna per i parametri, questo campo è impostato su SQL_BIND_BY_COLUMN (impostazione predefinita).  
   
- Questo campo nell'APD può essere impostato anche chiamando **SQLSetStmtAttr** con l' *attributo*SQL_ATTR_PARAM_BIND_TYPE.  
+ Questo campo nell'APD può essere impostato anche chiamando **SQLSetStmtAttr** con l' *attributo* SQL_ATTR_PARAM_BIND_TYPE.  
   
  **SQL_DESC_COUNT [tutti]**  
  Questo campo di intestazione SQLSMALLINT specifica l'indice in base 1 del record con il numero più alto che contiene i dati. Quando il driver imposta la struttura dei dati per il descrittore, deve impostare anche il campo SQL_DESC_COUNT per visualizzare il numero di record significativi. Quando un'applicazione alloca un'istanza di questa struttura di dati, non è necessario specificare il numero di record per i quali riservare spazio. Quando l'applicazione specifica il contenuto dei record, il driver esegue le azioni necessarie per garantire che l'handle del descrittore faccia riferimento a una struttura di dati di dimensioni appropriate.  
@@ -311,11 +311,11 @@ SQLRETURN SQLSetDescField(
  Il numero di record in questo campo di un ARD non include una colonna di segnalibro associato. L'unico modo per annullare l'associazione di una colonna bookmark consiste nell'impostare il campo SQL_DESC_DATA_PTR su un puntatore null.  
   
  **SQL_DESC_ROWS_PROCESSED_PTR [descrittori di implementazione]**  
- In un IRD, questo \* campo di intestazione SQLULEN punta a un buffer contenente il numero di righe recuperate dopo una chiamata a **SQLFetch** o **SQLFetchScroll**o il numero di righe interessate in un'operazione bulk eseguita da una chiamata a **SQLBulkOperations** o **SQLSetPos**, incluse le righe di errore.  
+ In un IRD, questo \* campo di intestazione SQLULEN punta a un buffer contenente il numero di righe recuperate dopo una chiamata a **SQLFetch** o **SQLFetchScroll** o il numero di righe interessate in un'operazione bulk eseguita da una chiamata a **SQLBulkOperations** o **SQLSetPos**, incluse le righe di errore.  
   
  In un oggetto DIP, questo campo di intestazione SQLUINTEGER * punta a un buffer contenente il numero di set di parametri elaborati, inclusi i set di errori. Se questo è un puntatore null, non verrà restituito alcun numero.  
   
- SQL_DESC_ROWS_PROCESSED_PTR è valido solo dopo che è stato restituito SQL_SUCCESS o SQL_SUCCESS_WITH_INFO dopo una chiamata a **SQLFetch** o **SQLFetchScroll** (per un campo IRD) o a **SQLExecute**, **SQLEXECDIRECT**o **SQLParamData** (per un campo dpi). Se la chiamata che compila il buffer a cui punta questo campo non restituisce SQL_SUCCESS o SQL_SUCCESS_WITH_INFO, il contenuto del buffer non è definito, a meno che non restituisca SQL_NO_DATA, nel qual caso il valore nel buffer viene impostato su 0.  
+ SQL_DESC_ROWS_PROCESSED_PTR è valido solo dopo che è stato restituito SQL_SUCCESS o SQL_SUCCESS_WITH_INFO dopo una chiamata a **SQLFetch** o **SQLFetchScroll** (per un campo IRD) o a **SQLExecute**, **SQLEXECDIRECT** o **SQLParamData** (per un campo dpi). Se la chiamata che compila il buffer a cui punta questo campo non restituisce SQL_SUCCESS o SQL_SUCCESS_WITH_INFO, il contenuto del buffer non è definito, a meno che non restituisca SQL_NO_DATA, nel qual caso il valore nel buffer viene impostato su 0.  
   
  Questo campo in ARD può essere impostato anche chiamando **SQLSetStmtAttr** con l'attributo SQL_ATTR_ROWS_FETCHED_PTR. Questo campo nell'APD può essere impostato anche chiamando **SQLSetStmtAttr** con l'attributo SQL_ATTR_PARAMS_PROCESSED_PTR.  
   
@@ -342,7 +342,7 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_CONCISE_TYPE [tutti]**  
  Questo campo di intestazione SQLSMALLINT specifica il tipo di dati conciso per tutti i tipi di dati, inclusi i tipi di dati DateTime e Interval.  
   
- I valori nei campi SQL_DESC_CONCISE_TYPE, SQL_DESC_TYPE e SQL_DESC_DATETIME_INTERVAL_CODE sono interdipendenti. Ogni volta che viene impostato uno dei campi, è necessario impostare anche l'altro. SQL_DESC_CONCISE_TYPE possono essere impostate tramite una chiamata a **SQLBindCol** o **SQLBindParameter**o **SQLSetDescField**. SQL_DESC_TYPE possono essere impostate tramite una chiamata a **SQLSetDescField** o **SQLSetDescRec**.  
+ I valori nei campi SQL_DESC_CONCISE_TYPE, SQL_DESC_TYPE e SQL_DESC_DATETIME_INTERVAL_CODE sono interdipendenti. Ogni volta che viene impostato uno dei campi, è necessario impostare anche l'altro. SQL_DESC_CONCISE_TYPE possono essere impostate tramite una chiamata a **SQLBindCol** o **SQLBindParameter** o **SQLSetDescField**. SQL_DESC_TYPE possono essere impostate tramite una chiamata a **SQLSetDescField** o **SQLSetDescRec**.  
   
  Se SQL_DESC_CONCISE_TYPE è impostato su un tipo di dati conciso diverso da un intervallo o da un tipo di dati DateTime, il campo SQL_DESC_TYPE viene impostato sullo stesso valore e il campo SQL_DESC_DATETIME_INTERVAL_CODE è impostato su 0.  
   
@@ -494,13 +494,13 @@ SQLRETURN SQLSetDescField(
   
  Ogni volta che questo campo contiene SQL_DATETIME o SQL_INTERVAL, il campo SQL_DESC_DATETIME_INTERVAL_CODE deve contenere il sottocodice appropriato per il tipo conciso. Per i tipi di dati DateTime, SQL_DESC_TYPE contiene SQL_DATETIME e il campo SQL_DESC_DATETIME_INTERVAL_CODE contiene un sottocodice per il tipo di dati DateTime specifico. Per i tipi di dati intervallo, SQL_DESC_TYPE contiene SQL_INTERVAL e il campo SQL_DESC_DATETIME_INTERVAL_CODE contiene un sottocodice per il tipo di dati intervallo specifico.  
   
- I valori nei campi SQL_DESC_TYPE e SQL_DESC_CONCISE_TYPE sono interdipendenti. Ogni volta che viene impostato uno dei campi, è necessario impostare anche l'altro. SQL_DESC_TYPE possono essere impostate tramite una chiamata a **SQLSetDescField** o **SQLSetDescRec**. SQL_DESC_CONCISE_TYPE possono essere impostate tramite una chiamata a **SQLBindCol** o **SQLBindParameter**o **SQLSetDescField**.  
+ I valori nei campi SQL_DESC_TYPE e SQL_DESC_CONCISE_TYPE sono interdipendenti. Ogni volta che viene impostato uno dei campi, è necessario impostare anche l'altro. SQL_DESC_TYPE possono essere impostate tramite una chiamata a **SQLSetDescField** o **SQLSetDescRec**. SQL_DESC_CONCISE_TYPE possono essere impostate tramite una chiamata a **SQLBindCol** o **SQLBindParameter** o **SQLSetDescField**.  
   
  Se SQL_DESC_TYPE è impostato su un tipo di dati conciso diverso da un intervallo o da un tipo di dati DateTime, il campo SQL_DESC_CONCISE_TYPE viene impostato sullo stesso valore e il campo SQL_DESC_DATETIME_INTERVAL_CODE è impostato su 0.  
   
  Se SQL_DESC_TYPE è impostato sul tipo di dati DateTime o Interval Verbose (SQL_DATETIME o SQL_INTERVAL) e il campo SQL_DESC_DATETIME_INTERVAL_CODE è impostato sul sottocodice appropriato, il campo tipo SQL_DESC_CONCISE viene impostato sul tipo conciso corrispondente. Il tentativo di impostare SQL_DESC_TYPE su uno dei tipi di DateTime o Interval concisi restituirà SQLSTATE HY021 (informazioni descrittore incoerenti).  
   
- Quando il campo SQL_DESC_TYPE viene impostato tramite una chiamata a **SQLBindCol**, **SQLBindParameter**o **SQLSetDescField**, i campi seguenti vengono impostati sui valori predefiniti seguenti, come illustrato nella tabella seguente. I valori dei campi rimanenti dello stesso record non sono definiti.  
+ Quando il campo SQL_DESC_TYPE viene impostato tramite una chiamata a **SQLBindCol**, **SQLBindParameter** o **SQLSetDescField**, i campi seguenti vengono impostati sui valori predefiniti seguenti, come illustrato nella tabella seguente. I valori dei campi rimanenti dello stesso record non sono definiti.  
   
 |Valore di SQL_DESC_TYPE|Altri campi impostati in modo implicito|  
 |------------------------------|---------------------------------|  
@@ -549,4 +549,4 @@ SQLRETURN SQLSetDescField(
   
 ## <a name="see-also"></a>Vedere anche  
  [File di intestazione ODBC](../../../odbc/reference/install/odbc-header-files.md)   
- [Riferimento API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)
+ [Informazioni di riferimento sull'API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)

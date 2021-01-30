@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_operator
 - sp_help_operator_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2cbf7c84c22998b5ee7e43fadad6a42cf02d17b8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 03346efcec8571ed6bf586a09a6da3631da28dc4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535383"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199670"
 ---
 # <a name="sp_help_operator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ sp_help_operator
 ## <a name="arguments"></a>Argomenti  
 `[ @operator_name = ] 'operator_name'` Nome dell'operatore. *operator_name* è di **tipo sysname**. Se *operator_name* viene omesso, vengono restituite informazioni su tutti gli operatori.  
   
-`[ @operator_id = ] operator_id` Numero di identificazione dell'operatore per il quale vengono richieste informazioni. *operator_id*è di **tipo int**e il valore predefinito è null.  
+`[ @operator_id = ] operator_id` Numero di identificazione dell'operatore per il quale vengono richieste informazioni. *operator_id* è di **tipo int** e il valore predefinito è null.  
   
 > [!NOTE]  
 >  È necessario specificare *operator_id* o *operator_name* , ma non è possibile specificarli entrambi.  
@@ -78,7 +78,7 @@ sp_help_operator
 |**last_netsend_time**|**int**|Ora dell'ultima notifica inviata all'operatore tramite un messaggio popup di rete.|  
 |**category_name**|**sysname**|Nome della categoria a cui appartiene l'operatore.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_help_operator** deve essere eseguito dal database **msdb** .  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -92,7 +92,7 @@ sp_help_operator
   
  Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituite informazioni sull'operatore `François Ajenstat`.  
   
 ```  
@@ -104,7 +104,7 @@ EXEC dbo.sp_help_operator
 GO  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [sp_add_operator &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_delete_operator &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [sp_update_operator &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   

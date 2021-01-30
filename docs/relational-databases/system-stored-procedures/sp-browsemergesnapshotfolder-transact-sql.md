@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_browsemergesnapshotfolder
 - sp_browsemergesnapshotfolder_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e248642f-5fea-4ed7-be1a-36ff75abcfde
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0fa33826f8a046e4d60447700c4e9d31aaa4d47f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 294b9740da1005731f42ef0b3527d1417b15b9dc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541951"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199179"
 ---
 # <a name="sp_browsemergesnapshotfolder-transact-sql"></a>sp_browsemergesnapshotfolder (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ sp_browsemergesnapshotfolder [@publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -49,7 +49,7 @@ sp_browsemergesnapshotfolder [@publication= ] 'publication'
 |-----------------|---------------|-----------------|  
 |**snapshot_folder**|**nvarchar (2000)**|Percorso completo della directory snapshot.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_browsemergesnapshotfolder** viene utilizzata nella replica di tipo merge.  
   
  Se la pubblicazione è configurata in modo da generare file di snapshot sia nella directory di lavoro del server di pubblicazione che nella cartella snapshot del server di pubblicazione, nel set di risultati saranno presenti due righe, delle quali la prima contiene la cartella snapshot della pubblicazione e la seconda contiene la directory di lavoro del server di pubblicazione.  

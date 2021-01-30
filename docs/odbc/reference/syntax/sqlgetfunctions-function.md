@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLGetFunctions
 apilocation:
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 396c677c6052176240afaa86e02c5f52ba4739b8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a5ae807638c25b0e01129d1dfbdc6238fd3001f8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460984"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201004"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions Function
 **Conformità**  
@@ -73,16 +73,16 @@ SQLRETURN SQLGetFunctions(
 |--------|-----|-----------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |08S01|Errore collegamento comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato connesso il driver non è riuscito prima del completamento dell'elaborazione della funzione.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer *\* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
-|HY010|Errore sequenza funzione|(DM) **SQLGetFunctions** è stato chiamato prima di **SQLConnect**, **SQLBrowseConnect**o **SQLDriverConnect**.<br /><br /> (DM) **SQLBrowseConnect** è stato chiamato per *ConnectionHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima che **SQLBrowseConnect** restituisse SQL_SUCCESS_WITH_INFO o SQL_SUCCESS.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per *connectionHandle* e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.|  
+|HY010|Errore sequenza funzione|(DM) **SQLGetFunctions** è stato chiamato prima di **SQLConnect**, **SQLBrowseConnect** o **SQLDriverConnect**.<br /><br /> (DM) **SQLBrowseConnect** è stato chiamato per *ConnectionHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima che **SQLBrowseConnect** restituisse SQL_SUCCESS_WITH_INFO o SQL_SUCCESS.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect** o **SQLMoreResults** è stato chiamato per *connectionHandle* e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
 |HY095|Tipo di funzione non compreso nell'intervallo|(DM) è stato specificato un valore *FunctionId* non valido.|  
 |HY117|Connessione sospesa a causa di uno stato di transazione sconosciuto. Sono consentite solo le funzioni di disconnessione e di sola lettura.|(DM) per ulteriori informazioni sullo stato Suspended, vedere [funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Timeout connessione scaduto|Il periodo di timeout della connessione è scaduto prima che l'origine dati abbia risposto alla richiesta. Il periodo di timeout della connessione viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLGetFunctions** restituisce sempre che sono supportati **SQLGetFunctions**, **SQLDataSources**e **SQLDrivers** . Questa operazione viene eseguita perché queste funzioni sono implementate in Gestione driver. Gestione driver eseguirà il mapping di una funzione ANSI alla funzione Unicode corrispondente se la funzione Unicode esiste e eseguirà il mapping di una funzione Unicode alla funzione ANSI corrispondente se esiste la funzione ANSI. Per informazioni sul modo in cui le applicazioni utilizzano **SQLGetFunctions**, vedere [livelli di conformità dell'interfaccia](../../../odbc/reference/develop-app/interface-conformance-levels.md).  
+ **SQLGetFunctions** restituisce sempre che sono supportati **SQLGetFunctions**, **SQLDataSources** e **SQLDrivers** . Questa operazione viene eseguita perché queste funzioni sono implementate in Gestione driver. Gestione driver eseguirà il mapping di una funzione ANSI alla funzione Unicode corrispondente se la funzione Unicode esiste e eseguirà il mapping di una funzione Unicode alla funzione ANSI corrispondente se esiste la funzione ANSI. Per informazioni sul modo in cui le applicazioni utilizzano **SQLGetFunctions**, vedere [livelli di conformità dell'interfaccia](../../../odbc/reference/develop-app/interface-conformance-levels.md).  
   
  Di seguito è riportato un elenco di valori validi per *FunctionId* per le funzioni conformi al livello di conformità standard ISO 92:  
   
@@ -130,7 +130,7 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLFOREIGNKEYS|SQL_API_SQLTABLEPRIVILEGES|  
 |SQL_API_SQLMORERESULTS| |  
   
- [1] quando si utilizza un driver ODBC 2 *. x* , **SQLBulkOperations** verrà restituito come supportato solo se vengono soddisfatte entrambe le condizioni seguenti: il driver ODBC 2 *. x* supporta **SQLSetPos**e il tipo di informazioni SQL_POS_OPERATIONS restituisce il bit SQL_POS_ADD come impostato.  
+ [1] quando si utilizza un driver ODBC 2 *. x* , **SQLBulkOperations** verrà restituito come supportato solo se vengono soddisfatte entrambe le condizioni seguenti: il driver ODBC 2 *. x* supporta **SQLSetPos** e il tipo di informazioni SQL_POS_OPERATIONS restituisce il bit SQL_POS_ADD come impostato.  
   
  Di seguito è riportato un elenco di valori validi per *FunctionId* per le funzioni introdotte in ODBC 3,8 o versioni successive:  
   
@@ -141,13 +141,13 @@ SQLRETURN SQLGetFunctions(
  [2]   **SQLCancelHandle** verrà restituito come supportato solo se il driver supporta sia **SQLCancel** che **SQLCancelHandle**. Se **SQLCancel** è supportato, ma **SQLCancelHandle** non lo è, l'applicazione può comunque chiamare **SQLCancelHandle** su un handle di istruzione, perché verrà mappato a **SQLCancel**.  
   
 ## <a name="sql_func_exists-macro"></a>SQL_FUNC_EXISTS macro  
- La macro SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) viene utilizzata per determinare il supporto di ODBC 3 *. x* o funzioni precedenti dopo che **SQLGetFunctions** è stato chiamato con un argomento *FunctionID* di SQL_API_ODBC3_ALL_FUNCTIONS. L'applicazione chiama SQL_FUNC_EXISTS con l'argomento *SupportedPtr* impostato su *SupportedPtr* passato in *SQLGetFunctions*e con l'argomento *FunctionID* impostato sul **#define** per la funzione. SQL_FUNC_EXISTS Restituisce SQL_TRUE se la funzione è supportata e SQL_FALSE in caso contrario.  
+ La macro SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) viene utilizzata per determinare il supporto di ODBC 3 *. x* o funzioni precedenti dopo che **SQLGetFunctions** è stato chiamato con un argomento *FunctionID* di SQL_API_ODBC3_ALL_FUNCTIONS. L'applicazione chiama SQL_FUNC_EXISTS con l'argomento *SupportedPtr* impostato su *SupportedPtr* passato in *SQLGetFunctions* e con l'argomento *FunctionID* impostato sul **#define** per la funzione. SQL_FUNC_EXISTS Restituisce SQL_TRUE se la funzione è supportata e SQL_FALSE in caso contrario.  
   
 > [!NOTE]
->  Quando si utilizza un driver ODBC*2. x* , gestione driver ODBC 3 *. x* Restituisce SQL_TRUE per **SQLAllocHandle** e **SQLFreeHandle** perché **SQLAllocHandle** è mappato a **SQLAllocEnv**, **SQLAllocConnect**o **SQLAllocStmt**e perché **SQLFreeHandle** è mappato a **SQLFreeEnv**, **SQLFreeConnect**o **SQLFreeStmt**. Tuttavia, **SQLAllocHandle** o **SQLFreeHandle** con un argomento *HandleType* di SQL_HANDLE_DESC non è supportato, sebbene venga restituito SQL_TRUE per le funzioni, perché in questo caso non esiste alcuna funzione ODBC 2 *. x* a cui eseguire il mapping.  
+>  Quando si utilizza un driver ODBC *2. x* , gestione driver ODBC 3 *. x* Restituisce SQL_TRUE per **SQLAllocHandle** e **SQLFreeHandle** perché **SQLAllocHandle** è mappato a **SQLAllocEnv**, **SQLAllocConnect** o **SQLAllocStmt** e perché **SQLFreeHandle** è mappato a **SQLFreeEnv**, **SQLFreeConnect** o **SQLFreeStmt**. Tuttavia, **SQLAllocHandle** o **SQLFreeHandle** con un argomento *HandleType* di SQL_HANDLE_DESC non è supportato, sebbene venga restituito SQL_TRUE per le funzioni, perché in questo caso non esiste alcuna funzione ODBC 2 *. x* a cui eseguire il mapping.  
   
 ## <a name="code-example"></a>Esempio di codice  
- Nei tre esempi seguenti viene illustrato il modo in cui un'applicazione utilizza **SQLGetFunctions** per determinare se un driver supporta **SQLTables**, **SQLColumns**e **SQLStatistics**. Se il driver non supporta queste funzioni, l'applicazione si disconnette dal driver. Nel primo esempio viene chiamato **SQLGetFunctions** una volta per ogni funzione.  
+ Nei tre esempi seguenti viene illustrato il modo in cui un'applicazione utilizza **SQLGetFunctions** per determinare se un driver supporta **SQLTables**, **SQLColumns** e **SQLStatistics**. Se il driver non supporta queste funzioni, l'applicazione si disconnette dal driver. Nel primo esempio viene chiamato **SQLGetFunctions** una volta per ogni funzione.  
   
 ```cpp  
 SQLUSMALLINT TablesExists, ColumnsExists, StatisticsExists;  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobsteplog_TSQL
 - sp_help_jobsteplog
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4499ad9e2dd54e5592bd4ee9d3b22e3505e9d144
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0e5311127f4ff825f862cb3aef2317a2c53578cc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547989"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200098"
 ---
 # <a name="sp_help_jobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,16 +43,16 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_id = ] 'job_id'` Numero di identificazione del processo per il quale restituire le informazioni del log dei passaggi di processo. *job_id* è di **tipo int**e il valore predefinito è null.  
+`[ @job_id = ] 'job_id'` Numero di identificazione del processo per il quale restituire le informazioni del log dei passaggi di processo. *job_id* è di **tipo int** e il valore predefinito è null.  
   
-`[ @job_name = ] 'job_name'` Nome del processo. *job_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @job_name = ] 'job_name'` Nome del processo. *job_name* è di **tipo sysname** e il valore predefinito è null.  
   
 > [!NOTE]  
 >  È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi.  
   
-`[ @step_id = ] step_id` Numero di identificazione del passaggio nel processo. Se viene omesso, vengono inclusi tutti i passaggi del processo. *step_id* è di **tipo int**e il valore predefinito è null.  
+`[ @step_id = ] step_id` Numero di identificazione del passaggio nel processo. Se viene omesso, vengono inclusi tutti i passaggi del processo. *step_id* è di **tipo int** e il valore predefinito è null.  
   
-`[ @step_name = ] 'step_name'` Nome del passaggio nel processo. *step_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @step_name = ] 'step_name'` Nome del passaggio nel processo. *step_name* è di **tipo sysname** e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -71,7 +71,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**log_size**|**float**|Dimensioni in megabyte (MB) del log dei passaggi del processo.|  
 |**log**|**nvarchar(max)**|Output del log dei passaggi del processo.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_help_jobsteplog** si trova nel database **msdb** .  
   
 ## <a name="permissions"></a>Autorizzazioni  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.fn_cdc_map_time_to_lsn
 - fn_cdc_map_time_to_lsn_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 38f07d3d3c46a46bc18f84d54b14809c201ee219
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 6db62a3241b86bdac8dcc955aef865ef8ad99a21
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094964"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198750"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +61,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
 ## <a name="return-type"></a>Tipo restituito  
  **binary(10)**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Per comprendere in che modo è possibile utilizzare il **sys.fn_cdc_map_time_lsn** per eseguire il mapping di intervalli DateTime a intervalli LSN, considerare lo scenario seguente. Si supponga che un utente desideri estrarre su base giornaliera i dati delle modifiche. Ovvero, l'utente desidera solo le modifiche relative a un giorno specifico fino alla mezzanotte (inclusa). Il limite inferiore dell'intervallo di tempo raggiunge, ma non include, la mezzanotte del giorno precedente. Il limite superiore raggiunge e include la mezzanotte del giorno specificato. Nell'esempio seguente viene illustrato come è possibile utilizzare la funzione **sys.fn_cdc_map_time_to_lsn** per eseguire sistematicamente il mapping di questo intervallo basato sul tempo nell'intervallo basato su LSN richiesto dalle funzioni di enumerazione Change Data Capture per restituire tutte le modifiche all'interno di tale intervallo.  
   
  `DECLARE @begin_time datetime, @end_time datetime, @begin_lsn binary(10), @end_lsn binary(10);`  

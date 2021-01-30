@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_indexes_TSQL
 - sp_indexes
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 133a7fb36ff65444853c1bdeb44fdefabe4aab4f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f11b9a32c05450dbe97c9130d774e4d92226fcdb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547895"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198508"
 ---
 # <a name="sp_indexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,24 +46,24 @@ sp_indexes [ @table_server = ] 'table_server'
   
 ## <a name="arguments"></a>Argomenti  
  [ @table_server =]'*table_server*'  
- Nome di un server collegato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di cui vengono richieste informazioni di tabella. *table_server* è di **tipo sysname**e non prevede alcun valore predefinito.  
+ Nome di un server collegato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di cui vengono richieste informazioni di tabella. *table_server* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
  [ @table_name =]'*table_name*'  
- Nome della tabella remota per cui si desidera ottenere le informazioni di indice. *table_name* è di **tipo sysname**e il valore predefinito è null. con cui vengono restituite tutte le tabelle del database specificato.  
+ Nome della tabella remota per cui si desidera ottenere le informazioni di indice. *table_name* è di **tipo sysname** e il valore predefinito è null. con cui vengono restituite tutte le tabelle del database specificato.  
   
  [ @table_schema =]'*TABLE_SCHEMA*'  
- Specifica lo schema di tabella. In ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrisponde al proprietario della tabella. *TABLE_SCHEMA* è di **tipo sysname**e il valore predefinito è null.  
+ Specifica lo schema di tabella. In ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrisponde al proprietario della tabella. *TABLE_SCHEMA* è di **tipo sysname** e il valore predefinito è null.  
   
  [ @table_catalog =]'*table_db*'  
- Nome del database in cui risiede *table_name* . *table_db* è di **tipo sysname**e il valore predefinito è null. Se è NULL, il valore predefinito di *table_db* è **Master**.  
+ Nome del database in cui risiede *table_name* . *table_db* è di **tipo sysname** e il valore predefinito è null. Se è NULL, il valore predefinito di *table_db* è **Master**.  
   
  [ @index_name =]'*index_name*'  
- Nome dell'indice per cui si desidera ottenere informazioni. *index* è di **tipo sysname**e il valore predefinito è null.  
+ Nome dell'indice per cui si desidera ottenere informazioni. *index* è di **tipo sysname** e il valore predefinito è null.  
   
  [ @is_unique =]'*is_unique*'  
- Tipo di indice per cui si desidera ottenere informazioni. *is_unique* è di **bit**e il valore predefinito è null. i possibili valori sono i seguenti.  
+ Tipo di indice per cui si desidera ottenere informazioni. *is_unique* è di **bit** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |1|Restituisce informazioni sugli indici univoci.|  
 |0|Restituisce informazioni sugli indici non univoci.|  
@@ -90,7 +90,7 @@ sp_indexes [ @table_server = ] 'table_server'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituite tutte le informazioni sugli indici dalla tabella `Employees` del database `AdventureWorks2012` nel server collegato `Seattle1`.  
   
 ```  

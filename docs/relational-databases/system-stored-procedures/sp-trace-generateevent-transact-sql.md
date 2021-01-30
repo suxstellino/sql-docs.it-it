@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_trace_generateevent_TSQL
 - sp_trace_generateevent
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d8a5e027b2d76aa1e6965f1fe782b8987a927ce3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3a3120d1c1f9e6e7b3ee1c875d8aa6ae5a997d57
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541586"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200591"
 ---
 # <a name="sp_trace_generateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ sp_trace_generateevent [ @eventid = ] event_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @eventid = ] event_id` ID dell'evento da attivare. *event_id* è di **tipo int**e non prevede alcun valore predefinito. L'ID deve essere uno dei numeri di evento compresi tra 82 e 91, che rappresentano gli eventi definiti dall'utente come impostati con [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
+`[ @eventid = ] event_id` ID dell'evento da attivare. *event_id* è di **tipo int** e non prevede alcun valore predefinito. L'ID deve essere uno dei numeri di evento compresi tra 82 e 91, che rappresentano gli eventi definiti dall'utente come impostati con [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
 `[ @userinfo = ] 'user_info'` Stringa facoltativa definita dall'utente che identifica il motivo dell'evento. *user_info* è di **tipo nvarchar (128)** e il valore predefinito è null.  
   
@@ -61,17 +61,17 @@ sp_trace_generateevent [ @eventid = ] event_id
 |**3**|L'evento specificato non è valido, in quanto non esiste oppure non è appropriato per la stored procedure.|  
 |**13**|Memoria insufficiente. Restituito quando la quantità di memoria disponibile non è sufficiente per eseguire l'azione specificata.|  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_trace_generateevent** esegue molte delle azioni eseguite in precedenza dal **xp_trace_ \* ** stored procedure estese. Utilizzare **sp_trace_generateevent** anziché **xp_trace_generate_event**.  
+## <a name="remarks"></a>Commenti  
+ **sp_trace_generateevent** esegue molte delle azioni eseguite precedentemente dall' **xp_trace_ \* *_ stored procedure estese. Utilizzare _* sp_trace_generateevent** anziché **xp_trace_generate_event**.  
   
- Con **sp_trace_generateevent**è possibile utilizzare solo i numeri ID degli eventi definiti dall'utente. Se si utilizzano altri ID di evento, in[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà generato un errore.  
+ Con **sp_trace_generateevent** è possibile utilizzare solo i numeri ID degli eventi definiti dall'utente. Se si utilizzano altri ID di evento, in[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà generato un errore.  
   
  I parametri di tutte le stored procedure di traccia SQL (**sp_trace_xx**) sono fortemente tipizzati. Se questi parametri non vengono chiamati con i tipi di dati corretti per i parametri di input, come indicato nella descrizione dell'argomento, la stored procedure restituirà un errore.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  L'utente deve disporre delle autorizzazioni ALTER TRACE.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene creato un evento configurabile dall'utente in una tabella di esempio.  
   
 ```  
@@ -95,8 +95,8 @@ you were capturing the event id=82, you will see it in the Profiler output.
 INSERT INTO user_config_test VALUES(1, 'abc');  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [sys. fn_trace_geteventinfo &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+## <a name="see-also"></a>Vedi anche  
+ [sys.fn_trace_geteventinfo &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Traccia SQL](../../relational-databases/sql-trace/sql-trace.md)  
   

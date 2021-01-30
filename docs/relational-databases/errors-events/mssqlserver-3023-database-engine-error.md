@@ -6,25 +6,25 @@ ms.date: 08/20/2020
 ms.prod: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: reference
 helpviewer_keywords:
 - 3023 (Database Engine error)
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: 0197c7e5b75164615572e4041a5b348a4d5abcc4
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
-ms.translationtype: HT
+ms.openlocfilehash: 096d1fd1e736ea731a8fcf72d36507cd64efae1d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92418798"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198149"
 ---
 # <a name="mssqlserver_3023"></a>MSSQLSERVER_3023
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ## <a name="details"></a>Dettagli
 
-|Attributo|valore|
+|Attributo|Valore|
 |---|---|
 |Nome prodotto|SQL Server|
 |ID evento|3023|

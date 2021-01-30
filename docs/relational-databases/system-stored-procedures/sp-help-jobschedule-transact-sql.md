@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobschedule
 - sp_help_jobschedule_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5d74890ab154700159fcf6ca086f88cd2ac57409
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9765feaa9e3237f1ccd8d3a6dcc203c88758aefa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538825"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200124"
 ---
 # <a name="sp_help_jobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,18 +44,18 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_id = ] job_id` Numero di identificazione del processo. *job_id*è di tipo **uniqueidentifier**e il valore predefinito è null.  
+`[ @job_id = ] job_id` Numero di identificazione del processo. *job_id* è di tipo **uniqueidentifier** e il valore predefinito è null.  
   
-`[ @job_name = ] 'job_name'` Nome del processo. *job_name*è di **tipo sysname**e il valore predefinito è null.  
+`[ @job_name = ] 'job_name'` Nome del processo. *job_name* è di **tipo sysname** e il valore predefinito è null.  
   
 > [!NOTE]
 > È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi.
 
-`[ @schedule_name = ] 'schedule_name'` Nome dell'elemento di pianificazione per il processo. *schedule_name*è di **tipo sysname**e il valore predefinito è null.  
+`[ @schedule_name = ] 'schedule_name'` Nome dell'elemento di pianificazione per il processo. *schedule_name* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @schedule_id = ] schedule_id` Numero di identificazione dell'elemento di pianificazione per il processo. *schedule_id*è di **tipo int**e il valore predefinito è null.  
+`[ @schedule_id = ] schedule_id` Numero di identificazione dell'elemento di pianificazione per il processo. *schedule_id* è di **tipo int** e il valore predefinito è null.  
   
-`[ @include_description = ] include_description` Specifica se includere la descrizione della pianificazione nel set di risultati. *include_description* è di **bit**e il valore predefinito è **0**. Quando *include_description* è **0**, la descrizione della pianificazione non è inclusa nel set di risultati. Quando *include_description* è **1**, la descrizione della pianificazione viene inclusa nel set di risultati.  
+`[ @include_description = ] include_description` Specifica se includere la descrizione della pianificazione nel set di risultati. *include_description* è di **bit** e il valore predefinito è **0**. Quando *include_description* è **0**, la descrizione della pianificazione non è inclusa nel set di risultati. Quando *include_description* è **1**, la descrizione della pianificazione viene inclusa nel set di risultati.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -78,7 +78,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**active_start_time**|**int**|Ora di inizio della pianificazione.|  
 |**active_end_time**|**int**|Ora di fine della pianificazione.|  
 |**date_created**|**datetime**|Data di creazione della pianificazione.|  
-|**schedule_description**|**nvarchar(4000)**|Descrizione in inglese della pianificazione derivata dai valori nelle ** pianificazionimsdb.dbo.sys**. Quando *include_description* è **0**, questa colonna contiene testo indicante che la descrizione non è stata richiesta.|  
+|**schedule_description**|**nvarchar(4000)**|Descrizione in inglese della pianificazione derivata dai valori nelle **pianificazionimsdb.dbo.sys**. Quando *include_description* è **0**, questa colonna contiene testo indicante che la descrizione non è stata richiesta.|  
 |**next_run_date**|**int**|Data della successiva esecuzione del processo in base alla pianificazione.|  
 |**next_run_time**|**int**|Ora della successiva esecuzione del processo in base alla pianificazione.|  
 |**schedule_uid**|**uniqueidentifier**|Identificatore della pianificazione.|  
@@ -86,7 +86,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 > **Nota: sp_help_jobschedule** restituisce valori dalle tabelle di sistema **dbo.sysJobSchedules** e **dbo.syspianificazioni** in **msdb**. **sysjobschedules** di aggiornamento ogni 20 minuti. Ciò potrebbe influire sui valori restituiti dalla stored procedure.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  I parametri di **sp_help_jobschedule** possono essere utilizzati solo in determinate combinazioni. Se *schedule_id* è specificato, non è possibile specificare né *job_id* né *job_name* . In caso contrario, è possibile utilizzare i parametri *job_id* o *job_name* con *schedule_name*.  
   
 ## <a name="permissions"></a>Autorizzazioni  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_describe_parameter_encryption
 - sp_describe_parameter_encryption_TSQL
@@ -19,12 +19,12 @@ ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b06ee1588fe46b04348d2e9595eb72206f7b57d2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 41821edc34835f60cef201ae78b3448f3d3f4699
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466822"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200777"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 
@@ -67,7 +67,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|ID della riga nel set di risultati.|  
 |**database_id**|**int**|ID database.|  
 |**column_encryption_key_id**|**int**|ID della chiave di crittografia della colonna. Nota: questo ID indica una riga nel sys.column_encryption_keys &#40;vista del catalogo [&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) .|  
-|**column_encryption_key_version**|**int**|Riservato per usi futuri. Attualmente, contiene sempre 1.|  
+|**column_encryption_key_version**|**int**|Riservato per utilizzi futuri. Attualmente, contiene sempre 1.|  
 |**column_encryption_key_metadata_version**|**binario (8)**|Timestamp che rappresenta l'ora di creazione della chiave di crittografia della colonna.|  
 |**column_encryption_key_encrypted_value**|**varbinary(4000)**|Valore crittografato della chiave di crittografia della colonna.|  
 |**column_master_key_store_provider_name**|**sysname**|Nome del provider per l'archivio delle chiavi che contiene la chiave master della colonna usata per produrre il valore crittografato della chiave di crittografia della colonna.|  

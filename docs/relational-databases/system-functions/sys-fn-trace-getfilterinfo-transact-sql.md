@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_trace_getfilterinfo
 - fn_trace_getfilterinfo_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 09fe4a28-ff8a-4655-9da1-4654d5bc514d
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 889a10c6ae999a5211120e52d7b903d04c5ec70e
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7e20ee696ab4d371c6b12dfb24bd5433170080ba
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097456"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200370"
 ---
 # <a name="sysfn_trace_getfilterinfo-transact-sql"></a>sys.fn_trace_getfilterinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,13 +60,13 @@ fn_trace_getfilterinfo ( trace_id )
 |**comparison_operator**|**int**|Specifica il tipo di confronto eseguito:<br /><br /> 0 = Uguale a<br /><br /> 1 = Diverso da<br /><br /> 2 = Maggiore di<br /><br /> 3 = Minore di<br /><br /> 4 = Maggiore o uguale a<br /><br /> 5 = Minore o uguale a<br /><br /> 6 = Simile a<br /><br /> 7 = Non simile a|  
 |**value**|**sql_variant**|Specifica il valore a cui viene applicato il filtro.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  L'utente imposta *trace_id* valore per identificare, modificare e controllare la traccia. Quando viene passato l'ID di una traccia specifica, **fn_trace_getfilterinfo** restituisce informazioni su qualsiasi filtro in tale traccia. Se alla traccia specificata non è associato un filtro, questa funzione restituisce un set di righe vuoto. Se viene passato un ID non valido, questa funzione restituisce un set di righe vuoto. Per informazioni analoghe sulle tracce, vedere [sys.fn_trace_getinfo &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER TRACE nel server.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituite informazioni su tutti i filtri relativi al numero di traccia 2.  
   
 ```  

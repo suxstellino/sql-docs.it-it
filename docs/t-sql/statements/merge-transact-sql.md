@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - MERGE
 - MERGE_TSQL
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: XiaoyuMSFT
 ms.author: XiaoyuL
-ms.openlocfilehash: 664ef8a40e341f52bda0658d532849a278ae49b9
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
-ms.translationtype: HT
+ms.openlocfilehash: cbc1286bbbced3a546c1057433dba5bbc4289281
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679085"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199386"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -125,7 +125,7 @@ MERGE
 WITH \<common_table_expression>  
 Specifica la vista o il set di risultati denominato temporaneo, noto anche come espressione di tabella comune, definito nell'ambito di un'istruzione MERGE. Il set di risultati deriva da una query semplice e l'istruzione MERGE vi fa riferimento. Per altre informazioni, vedere [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
-TOP ( *expression* ) [ PERCENT ]  
+TOP (*expression*) [ PERCENT ]  
 Specifica il numero o la percentuale di righe interessate. Il valore di *expression* può essere un numero o una percentuale delle righe. Le righe cui viene fatto riferimento nell'espressione TOP non vengono disposte in alcun ordine. Per altre informazioni, vedere [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
 La clausola TOP viene applicata dopo l'unione in join dell'intera tabella di origine con l'intera tabella di destinazione e dopo la rimozione delle righe unite in join non qualificate per un'azione di inserimento, aggiornamento o eliminazione. La clausola TOP riduce ulteriormente il numero di righe unite in join in base al valore specificato. Le azioni di inserimento, aggiornamento o eliminazione vengono applicate alle righe unite in join rimanenti in modo non ordinato. Ciò significa che le righe vengono distribuite tra le azioni definite nelle clausole WHEN senza alcun ordine. La specifica della clausola TOP (10), ad esempio, influisce su 10 righe. Di queste righe, 7 possono essere aggiornate e 3 inserite oppure 1 riga può essere eliminata, 5 aggiornate, 4 inserite e così via.  
@@ -133,10 +133,10 @@ La clausola TOP viene applicata dopo l'unione in join dell'intera tabella di ori
 Poiché l'istruzione MERGE esegue un'analisi completa di entrambe le tabelle di origine e di destinazione, l'uso della clausola TOP per modificare una tabella di grandi dimensioni creando più batch a volte influisce sulle prestazioni di I/O. In questo scenario è importante assicurarsi che tutti i batch successivi abbiano come destinazione nuove righe.  
   
 *database_name*  
-Nome del database in cui si trova *target_table* .  
+Nome del database in cui si trova *target_table*.  
   
 *schema_name*  
-Nome dello schema a cui appartiene la tabella *target_table* .  
+Nome dello schema a cui appartiene la tabella *target_table*.  
   
 *target_table*  
 Tabella o vista rispetto alla quale vengono associate le righe di dati di \<table_source> in base a \<clause_search_condition>. *target_table* rappresenta la destinazione di qualsiasi operazione di inserimento, aggiornamento o eliminazione specificata dalle clausole WHEN dell'istruzione MERGE.  
@@ -146,7 +146,7 @@ Se *target_table* è una vista, qualsiasi azione eseguita su di essa deve soddis
 *target_table* non può essere una tabella remota. Per *target_table* non può essere definita alcuna regola.  
   
 [AS] *table_alias*  
-Un nome alternativo per fare riferimento alla tabella *target_table* .  
+Un nome alternativo per fare riferimento alla tabella *target_table*.  
   
 USING \<table_source>  
 Specifica l'origine dati corrispondente alle righe di dati in *target_table* in base a \<merge_search condition>. Il risultato di questa corrispondenza determina le azioni che le clausole WHEN dell'istruzione MERGE devono eseguire. \<table_source> può essere una tabella remota o una tabella derivata con accesso a tabelle remote.
@@ -170,7 +170,7 @@ Specifica che tutte le righe di *target_table corrispondenti alle righe restitui
 Nell'istruzione MERGE possono essere presenti al massimo due clausole WHEN MATCHED. Se vengono specificate due clausole, alla prima deve essere associata una clausola AND \<search_condition>. Per ogni riga specificata, la seconda clausola WHEN MATCHED viene applicata solo nel caso in cui non venga applicata la prima. Se sono presenti due clausole WHEN MATCHED, è necessario che una specifichi un'azione UPDATE e l'altra un'azione DELETE. Quando nella clausola \<merge_matched> viene specificato UPDATE e più righe di \<table_source> corrispondono a una riga di *target_table* in base a \<merge_search_condition>, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce un errore. L'istruzione MERGE non può aggiornare la stessa riga più di una volta né aggiornare ed eliminare la stessa riga.  
   
 WHEN NOT MATCHED [ BY TARGET ] THEN \<merge_not_matched>  
-Specifica che in *target_table* deve essere inserita una riga per ogni riga restituita da \<table_source> ON \<merge_search_condition> che non corrisponde a una riga in *target_table* , ma che soddisfa un'eventuale condizione di ricerca aggiuntiva. I valori da inserire vengono specificati dalla clausola \<merge_not_matched>. Nell'istruzione MERGE può essere presente una sola clausola WHEN NOT MATCHED [ BY TARGET ].
+Specifica che in *target_table* deve essere inserita una riga per ogni riga restituita da \<table_source> ON \<merge_search_condition> che non corrisponde a una riga in *target_table*, ma che soddisfa un'eventuale condizione di ricerca aggiuntiva. I valori da inserire vengono specificati dalla clausola \<merge_not_matched>. Nell'istruzione MERGE può essere presente una sola clausola WHEN NOT MATCHED [ BY TARGET ].
 
 WHEN NOT MATCHED BY SOURCE THEN \<merge_matched>  
 Specifica che tutte le righe di *target_table che non corrispondono alle righe restituite da \<table_source> ON \<merge_search_condition> e che soddisfano eventuali condizioni di ricerca aggiuntive vengono aggiornate oppure eliminate in base alla clausola \<merge_matched>.  
@@ -196,7 +196,7 @@ INDEX ( index_val [ ,...n ] )
 Specifica il nome o l'ID di uno o più indici della tabella di destinazione per eseguire un join implicito con la tabella di origine. Per altre informazioni, vedere [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 \<output_clause>  
-Restituisce una riga per ogni riga in *target_table* aggiornata, inserita o eliminata, senza alcun ordine specifico. Nella clausola di output è possibile specificare **$action** . **$action** è una colonna di tipo **nvarchar(10)** che restituisce uno dei tre valori per ogni riga: "INSERT", "UPDATE" o "DELETE", secondo l'azione eseguita su tale riga. Per altre informazioni sugli argomenti e il comportamento di questa clausola, vedere [Clausola OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
+Restituisce una riga per ogni riga in *target_table* aggiornata, inserita o eliminata, senza alcun ordine specifico. Nella clausola di output è possibile specificare **$action**. **$action** è una colonna di tipo **nvarchar(10)** che restituisce uno dei tre valori per ogni riga: "INSERT", "UPDATE" o "DELETE", secondo l'azione eseguita su tale riga. Per altre informazioni sugli argomenti e il comportamento di questa clausola, vedere [Clausola OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
 OPTION ( \<query_hint> [ ,...n ] )  
 Specifica che vengono utilizzati hint di ottimizzazione per personalizzare il modo in cui il Motore di database elabora l'istruzione. Per altre informazioni, vedere [Hint per la query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
@@ -215,10 +215,10 @@ Specifica che le righe corrispondenti alle righe di *target_table* vengono elimi
 \<merge_not_matched>  
 Specifica i valori da inserire nella tabella di destinazione.  
   
-( *column_list* )  
+(*column_list*)  
 Elenco di una o più colonne della tabella di destinazione in cui inserire i dati. Le colonne devono essere specificate come un nome costituito da una sola parte. Il valore di *column_list* deve essere racchiuso tra parentesi e delimitato da virgole.  
   
-VALUES ( *values_list* )  
+VALUES ( *values_list*)  
 Elenco di costanti, variabili o espressioni separate da virgole, che restituiscono valori da inserire nella tabella di destinazione. Le espressioni non possono contenere un'istruzione EXECUTE.  
   
 DEFAULT VALUES  

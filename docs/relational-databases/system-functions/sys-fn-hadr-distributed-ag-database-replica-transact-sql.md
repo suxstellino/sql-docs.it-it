@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.fn_hadr_distributed_ag_database_replica
 - sys.fn_hadr_distributed_ag_database_replica_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0e6202a1-e872-4f53-99d7-c16b6f712efc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b87e98f49941cfa9da555d54a10185d21e36d47e
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: e704af7bcdf5df2a27bcb3a9bd8ae37494f7f6de
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753678"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199245"
 ---
 # <a name="sysfn_hadr_distributed_ag_database_replica-transact-sql"></a>sys.fn_hadr_distributed_ag_database_replica (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -55,7 +55,7 @@ sys.fn_hadr_distributed_ag_database_replica( lag_Id, database_id )
 |-----------------|---------------|-----------------|  
 |**group_database_id**|**uniqueidentifier**|ID del database nel gruppo di disponibilità locale.|  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
   
 ### <a name="using-sysfn_hadr_distributed_ag_database_replica"></a>Utilizzo di sys.fn_hadr_distributed_ag_database_replica  
  Nell'esempio seguente l'ID del database viene passato in un gruppo di disponibilità distribuito. Restituisce una tabella con l'ID del database associato al gruppo di disponibilità locale.  

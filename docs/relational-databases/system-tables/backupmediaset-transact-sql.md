@@ -6,7 +6,7 @@ ms.date: 08/09/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - backupmediaset
 - backupmediaset_TSQL
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - backupmediaset system table
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 10b4d744e7ef4e0d11a9788580ea7f8c5a67bd1f
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c886cf2fb117611d5956277656dd7aaadca9afc5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98091581"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198655"
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
 
@@ -43,9 +43,9 @@ Contiene una riga per ogni set di supporti di backup. Questa tabella è archivia
 |**mirror_count**|**tinyint**|Numero di mirroring nel set di supporti.|  
 |**is_password_protected**|**bit**|Set di supporti protetto da password:<br /><br /> 0 = non protetto<br /><br /> 1 = protetto|  
 |**is_compressed**|**bit**|Specifica se il backup è compresso:<br /><br /> 0 = non compresso<br /><br /> 1 = compresso<br /><br /> Durante un aggiornamento di **msdb** , questo valore è impostato su null. che indica un backup non compresso.|  
-|**is_encrypted**|**bit**|Specifica se il backup è crittografato:<br /><br /> 0 = Non crittografato<br /><br /> 1 = Crittografato|  
+|**is_encrypted**|**Po'**|Specifica se il backup è crittografato:<br /><br /> 0 = Non crittografato<br /><br /> 1 = Crittografato|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  RESTOre VERIFYONLY FROM *backup_device* with LOADHISTORY popola le colonne della tabella **BackupMediaSet** con i valori appropriati dell'intestazione del set di supporti.  
   
  Per ridurre il numero di righe in questa tabella e in altre tabelle di backup e di cronologia, eseguire la [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) stored procedure.  

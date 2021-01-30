@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLSetParam
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2ebdc303-3802-443a-8895-69c93dff5618
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: af1dea558853a56b303a02c45606614c9580766c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb8fed73d37bc65e6cf0472a57542d9dbe714c96
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421105"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200947"
 ---
 # <a name="sqlsetparam-function"></a>Funzione SQLSetParam
 **Conformità**  
@@ -37,7 +37,7 @@ ms.locfileid: "88421105"
 > [!NOTE]  
 >  Per ulteriori informazioni su ciò che Gestione driver esegue il mapping di questa funzione a quando ODBC 2. l'applicazione *x* funziona con ODBC 3. driver *x* , vedere [mapping di funzioni deprecate](../../../odbc/reference/appendixes/mapping-deprecated-functions.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Vedere [informazioni su ODBC 64 bit](../../../odbc/reference/odbc-64-bit-information.md), se l'applicazione viene eseguita su un sistema operativo a 64 bit.  
   
 ## <a name="see-also"></a>Vedere anche  

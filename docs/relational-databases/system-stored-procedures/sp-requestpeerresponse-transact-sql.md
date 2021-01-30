@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_requestpeerresponse_TSQL
 - sp_requestpeerresponse
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d07204928403d8ba99aa49688e51239dfdf08804
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ce25686ab2b7947438d207a3acb5fc5b7f6549e2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543110"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199965"
 ---
 # <a name="sp_requestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` Nome della pubblicazione in una topologia peer-to-peer per la quale è in corso la verifica dello stato. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione in una topologia peer-to-peer per la quale è in corso la verifica dello stato. *Publication* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 `[ @description = ] 'description'` Informazioni definite dall'utente che possono essere utilizzate per identificare le singole richieste di stato. *Description* è di **tipo nvarchar (4000)** e il valore predefinito è null.  
   
@@ -49,7 +49,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_requestpeerresponse** viene utilizzata nella replica transazionale peer-to-peer.  
   
  **sp_requestpeerresponse** viene utilizzato per garantire che tutti i comandi siano stati ricevuti da tutti gli altri nodi prima del ripristino di un database pubblicato in una topologia peer-to-peer. Inoltre, viene utilizzata durante la replica di modifiche DDL (Data Definition Language) apportate mentre un nodo era offline per stimare quando tali modifiche verranno recapitate agli altri nodi.  

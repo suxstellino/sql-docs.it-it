@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_unsentitems_TSQL
 - sysmail_unsentitems
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 0e8ffcc7ae60096de1b0355ed113ffb55e02e286
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c532febf9074456ec1806fdb9d7ad0eed9b9b26a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100115"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199683"
 ---
 # <a name="sysmail_unsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "98100115"
 |**last_mod_date**|**datetime**|Data e ora dell'ultima modifica della riga.|  
 |**last_mod_user**|**sysname**|Autore dell'ultima modifica della riga.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Quando si risolvono i problemi relativi a Posta elettronica database, questa vista può consentire di identificare la natura del problema in quanto indica il numero di messaggi in attesa di essere inviati e il tempo di attesa nella coda. Se nessun messaggio viene inviato, è possibile che il programma esterno Posta elettronica database non sia in esecuzione oppure che esista un problema di rete che impedisce a Posta elettronica database di contattare i server SMTP. Se molti dei messaggi non inviati hanno lo stesso **profile_id**, potrebbe essersi verificato un problema con il server SMTP. Considerare l'opportunità di aggiungere altri account al profilo. Se i messaggi vengono inviati ma il tempo di attesa nella coda è eccessivo, è possibile che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necessiti di un maggior numero di risorse per l'elaborazione del volume di messaggi scambiati.  
   
 ## <a name="permissions"></a>Autorizzazioni  

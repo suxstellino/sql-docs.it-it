@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_drop_agent_parameter_TSQL
 - sp_drop_agent_parameter
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b63bde66246e24c3971299a668e8a90aa927385a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e050ab1ccb6b9343a672dc2f6c04be33989046b6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89528092"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200728"
 ---
 # <a name="sp_drop_agent_parameter-transact-sql"></a>sp_drop_agent_parameter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,14 +39,14 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @profile_id = ] profile_id` ID del profilo per il quale è necessario eliminare un parametro. *profile_id* è di **tipo int**e non prevede alcun valore predefinito.  
+`[ @profile_id = ] profile_id` ID del profilo per il quale è necessario eliminare un parametro. *profile_id* è di **tipo int** e non prevede alcun valore predefinito.  
   
-`[ @parameter_name = ] 'parameter_name'` Nome del parametro da eliminare. *parameter_name* è di **tipo sysname**e il valore predefinito è **%** . Se **%** , vengono eliminati tutti i parametri per il profilo specificato.  
+`[ @parameter_name = ] 'parameter_name'` Nome del parametro da eliminare. *parameter_name* è di **tipo sysname** e il valore predefinito è **%** . Se **%** , vengono eliminati tutti i parametri per il profilo specificato.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_drop_agent_parameter** viene utilizzato in tutti i tipi di replica.  
   
 ## <a name="permissions"></a>Autorizzazioni  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobserver
 - sp_help_jobserver_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7e59691a44353826f47550bb67c7a7872fcc4200
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4c5e5f8a4c7ec027c72452ea725ec6def715309a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546096"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200122"
 ---
 # <a name="sp_help_jobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,14 +43,14 @@ sp_help_jobserver
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_id = ] job_id` Numero di identificazione del processo per cui restituire informazioni. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
+`[ @job_id = ] job_id` Numero di identificazione del processo per cui restituire informazioni. *job_id* è di tipo **uniqueidentifier** e il valore predefinito è null.  
   
-`[ @job_name = ] 'job_name'` Nome del processo per cui restituire informazioni. *job_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @job_name = ] 'job_name'` Nome del processo per cui restituire informazioni. *job_name* è di **tipo sysname** e il valore predefinito è null.  
   
 > [!NOTE]  
 >  È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi.  
   
-`[ @show_last_run_details = ] show_last_run_details` Indica se le informazioni sull'esecuzione dell'ultima esecuzione fanno parte del set di risultati. *show_last_run_details* è di **tinyint**e il valore predefinito è **0**. **0** non include informazioni sull'ultima esecuzione e **1** .  
+`[ @show_last_run_details = ] show_last_run_details` Indica se le informazioni sull'esecuzione dell'ultima esecuzione fanno parte del set di risultati. *show_last_run_details* è di **tinyint** e il valore predefinito è **0**. **0** non include informazioni sull'ultima esecuzione e **1** .  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -87,7 +87,7 @@ sp_help_jobserver
   
  I membri di **SQLAgentUserRole** possono visualizzare solo le informazioni per i processi di cui sono proprietari.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituite informazioni sul processo `NightlyBackups`, comprese le informazioni relative all'ultima esecuzione.  
   
 ```  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobstep_TSQL
 - sp_help_jobstep
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 24ec19dc231ce2fedf3a3562312ddc0bf7311e39
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c6a4a59a69612c37a6b6d9208e121b11ea448a35
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535242"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200112"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,18 +43,18 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_id = ] 'job_id'` Numero di identificazione del processo per il quale restituire le informazioni sul processo. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
+`[ @job_id = ] 'job_id'` Numero di identificazione del processo per il quale restituire le informazioni sul processo. *job_id* è di tipo **uniqueidentifier** e il valore predefinito è null.  
   
-`[ @job_name = ] 'job_name'` Nome del processo. *job_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @job_name = ] 'job_name'` Nome del processo. *job_name* è di **tipo sysname** e il valore predefinito è null.  
   
 > [!NOTE]  
 >  È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi.  
   
-`[ @step_id = ] step_id` Numero di identificazione del passaggio nel processo. Se viene omesso, vengono inclusi tutti i passaggi del processo. *step_id* è di **tipo int**e il valore predefinito è null.  
+`[ @step_id = ] step_id` Numero di identificazione del passaggio nel processo. Se viene omesso, vengono inclusi tutti i passaggi del processo. *step_id* è di **tipo int** e il valore predefinito è null.  
   
-`[ @step_name = ] 'step_name'` Nome del passaggio nel processo. *step_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @step_name = ] 'step_name'` Nome del passaggio nel processo. *step_name* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @suffix = ] suffix` Flag che indica se una descrizione di testo viene aggiunta alla colonna dei **flag** nell'output. il *suffisso*è di **bit**e il valore predefinito è **0**. Se il *suffisso* è **1**, viene aggiunta una descrizione.  
+`[ @suffix = ] suffix` Flag che indica se una descrizione di testo viene aggiunta alla colonna dei **flag** nell'output. il *suffisso* è di **bit** e il valore predefinito è **0**. Se il *suffisso* è **1**, viene aggiunta una descrizione.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -79,7 +79,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**retry_attempts**|**int**|Numero massimo di tentativi di esecuzione del comando (nel caso in cui non sia stato eseguito correttamente).|  
 |**retry_interval**|**int**|Intervallo in minuti che intercorre tra un tentativo e il successivo.|  
 |**os_run_priority**|**int**|Riservato.|  
-|**output_file_name**|**nvarchar(200)**|File in cui scrivere l'output del comando ( [!INCLUDE[tsql](../../includes/tsql-md.md)] solo per i passaggi, **CmdExec**e **PowerShell** ).|  
+|**output_file_name**|**nvarchar(200)**|File in cui scrivere l'output del comando ( [!INCLUDE[tsql](../../includes/tsql-md.md)] solo per i passaggi, **CmdExec** e **PowerShell** ).|  
 |**last_run_outcome**|**int**|Risultato dell'ultima esecuzione del passaggio:<br /><br /> **0** = non riuscito<br /><br /> **1** = operazione completata<br /><br /> **2** = nuovo tentativo<br /><br /> **3** = annullato<br /><br /> **5** = sconosciuto|  
 |**last_run_duration**|**int**|Durata (hhmmss) dell'ultima esecuzione del passaggio.|  
 |**last_run_retries**|**int**|Numero di tentativi di esecuzione del comando durante l'ultima esecuzione del passaggio.|  
@@ -87,7 +87,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**last_run_time**|**int**|Ora di inizio dell'ultima esecuzione del passaggio.|  
 |**proxy_id**|**int**|Proxy per il passaggio del processo.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_help_jobstep** si trova nel database **msdb** .  
   
 ## <a name="permissions"></a>Autorizzazioni  

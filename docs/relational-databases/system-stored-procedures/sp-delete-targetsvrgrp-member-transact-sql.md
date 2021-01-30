@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_targetsvrgrp_member_TSQL
 - sp_delete_targetsvrgrp_member
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 178a38d9-9b19-4648-95d7-e1397110d14c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6aae83cbedbacc9175da097ab001fb98780425c4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4b363c9be51bb46339bfd6caac4ae389dda0a8b2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548117"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199130"
 ---
 # <a name="sp_delete_targetsvrgrp_member-transact-sql"></a>sp_delete_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_delete_targetsvrgrp_member [ @group_name = ] 'group_name' , [ server_name = ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @group_name = ] 'group_name'` Nome del gruppo. *group_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @group_name = ] 'group_name'` Nome del gruppo. *group_name* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 `[ @server_name = ] 'server_name'` Nome del server da rimuovere dal gruppo specificato. *server_name* è di **tipo nvarchar (30)** e non prevede alcun valore predefinito.  
   
@@ -53,7 +53,7 @@ sp_delete_targetsvrgrp_member [ @group_name = ] 'group_name' , [ server_name = ]
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa stored procedure, è necessario che agli utenti venga concesso il ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente il server `LONDON1` viene rimosso dal gruppo Servers Maintaining Customer Information.  
   
 ```  

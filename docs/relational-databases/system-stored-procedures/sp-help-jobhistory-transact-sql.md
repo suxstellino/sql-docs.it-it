@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobhistory_TSQL
 - sp_help_jobhistory
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d805cfb7f6cf682e07e703e6854e25737a82b9cc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2cfef1ba5f28b498ab360daf67cc1bf3c79f0d2a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547987"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200135"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,40 +54,40 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_id = ] job_id` Numero di identificazione del processo. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
+`[ @job_id = ] job_id` Numero di identificazione del processo. *job_id* è di tipo **uniqueidentifier** e il valore predefinito è null.  
   
-`[ @job_name = ] 'job_name'` Nome del processo. *job_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @job_name = ] 'job_name'` Nome del processo. *job_name* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @step_id = ] step_id` Numero di identificazione del passaggio. *step_id* è di **tipo int**e il valore predefinito è null.  
+`[ @step_id = ] step_id` Numero di identificazione del passaggio. *step_id* è di **tipo int** e il valore predefinito è null.  
   
-`[ @sql_message_id = ] sql_message_id` Numero di identificazione del messaggio di errore restituito da Microsoft SQL Server durante l'esecuzione del processo. *sql_message_id* è di **tipo int**e il valore predefinito è null.  
+`[ @sql_message_id = ] sql_message_id` Numero di identificazione del messaggio di errore restituito da Microsoft SQL Server durante l'esecuzione del processo. *sql_message_id* è di **tipo int** e il valore predefinito è null.  
   
-`[ @sql_severity = ] sql_severity` Livello di gravità del messaggio di errore restituito da SQL Server durante l'esecuzione del processo. *sql_severity* è di **tipo int**e il valore predefinito è null.  
+`[ @sql_severity = ] sql_severity` Livello di gravità del messaggio di errore restituito da SQL Server durante l'esecuzione del processo. *sql_severity* è di **tipo int** e il valore predefinito è null.  
   
-`[ @start_run_date = ] start_run_date` Data di avvio del processo. *start_run_date*è di **tipo int**e il valore predefinito è null. *start_run_date* deve essere immesso nel formato AAAAMMGG, dove AAAA è un anno di quattro caratteri, mm è il nome di un mese con due caratteri e GG è il nome di un giorno a due cifre.  
+`[ @start_run_date = ] start_run_date` Data di avvio del processo. *start_run_date* è di **tipo int** e il valore predefinito è null. *start_run_date* deve essere immesso nel formato AAAAMMGG, dove AAAA è un anno di quattro caratteri, mm è il nome di un mese con due caratteri e GG è il nome di un giorno a due cifre.  
   
-`[ @end_run_date = ] end_run_date` Data di completamento del processo. *end_run_date* è di **tipo int**e il valore predefinito è null. *end_run_date*deve essere immesso nel formato AAAAMMGG, dove AAAA è un anno a quattro cifre, mm è il nome di un mese con due caratteri e GG è il giorno di due caratteri.  
+`[ @end_run_date = ] end_run_date` Data di completamento del processo. *end_run_date* è di **tipo int** e il valore predefinito è null. *end_run_date* deve essere immesso nel formato AAAAMMGG, dove AAAA è un anno a quattro cifre, mm è il nome di un mese con due caratteri e GG è il giorno di due caratteri.  
   
-`[ @start_run_time = ] start_run_time` Ora di avvio del processo. *start_run_time* è di **tipo int**e il valore predefinito è null. *start_run_time*deve essere immesso nel formato HHMMSS, dove HH è un'ora del giorno con due caratteri, mm è un minuto di due caratteri e SS è il secondo del giorno.  
+`[ @start_run_time = ] start_run_time` Ora di avvio del processo. *start_run_time* è di **tipo int** e il valore predefinito è null. *start_run_time* deve essere immesso nel formato HHMMSS, dove HH è un'ora del giorno con due caratteri, mm è un minuto di due caratteri e SS è il secondo del giorno.  
   
-`[ @end_run_time = ] end_run_time` Ora di completamento dell'esecuzione del processo. *end_run_time* è di **tipo int**e il valore predefinito è null. *end_run_time*deve essere immesso nel formato HHMMSS, dove HH è un'ora del giorno con due caratteri, mm è un minuto di due caratteri e SS è il secondo del giorno.  
+`[ @end_run_time = ] end_run_time` Ora di completamento dell'esecuzione del processo. *end_run_time* è di **tipo int** e il valore predefinito è null. *end_run_time* deve essere immesso nel formato HHMMSS, dove HH è un'ora del giorno con due caratteri, mm è un minuto di due caratteri e SS è il secondo del giorno.  
   
-`[ @minimum_run_duration = ] minimum_run_duration` Periodo di tempo minimo per il completamento del processo. *minimum_run_duration* è di **tipo int**e il valore predefinito è null. *minimum_run_duration*deve essere immesso nel formato HHMMSS, dove HH è un'ora del giorno con due caratteri, mm è un minuto di due caratteri e SS è il secondo del giorno.  
+`[ @minimum_run_duration = ] minimum_run_duration` Periodo di tempo minimo per il completamento del processo. *minimum_run_duration* è di **tipo int** e il valore predefinito è null. *minimum_run_duration* deve essere immesso nel formato HHMMSS, dove HH è un'ora del giorno con due caratteri, mm è un minuto di due caratteri e SS è il secondo del giorno.  
   
-`[ @run_status = ] run_status` Stato di esecuzione del processo. *run_status* è di **tipo int**e il valore predefinito è null. i possibili valori sono i seguenti.  
+`[ @run_status = ] run_status` Stato di esecuzione del processo. *run_status* è di **tipo int** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
-|**0**|Operazione non riuscita|  
-|**1**|Operazione riuscita|  
+|**0**|Non riuscito|  
+|**1**|Completato|  
 |**2**|Nuovo tentativo (solo passaggio)|  
 |**3**|Cancellati|  
 |**4**|Messaggio di esecuzione in corso|  
 |**5**|Sconosciuto|  
   
-`[ @minimum_retries = ] minimum_retries` Il numero minimo di volte in cui un processo deve ritentare l'esecuzione. *minimum_retries* è di **tipo int**e il valore predefinito è null.  
+`[ @minimum_retries = ] minimum_retries` Il numero minimo di volte in cui un processo deve ritentare l'esecuzione. *minimum_retries* è di **tipo int** e il valore predefinito è null.  
   
-`[ @oldest_first = ] oldest_first` Indica se presentare prima l'output con i processi meno recenti. *oldest_first* è di **tipo int**e il valore predefinito è **0**, che presenta prima i processi più recenti. **1** presenta prima i processi meno recenti.  
+`[ @oldest_first = ] oldest_first` Indica se presentare prima l'output con i processi meno recenti. *oldest_first* è di **tipo int** e il valore predefinito è **0**, che presenta prima i processi più recenti. **1** presenta prima i processi meno recenti.  
   
 `[ @server = ] 'server'` Nome del server in cui è stato eseguito il processo. il *Server* è di **tipo nvarchar (30)** e il valore predefinito è null.  
   
@@ -119,7 +119,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**retries_attempted**|**int**|Numero di tentativi di esecuzione del passaggio (è sempre 0 per la cronologia dei processi).|  
 |**server**|**nvarchar(30)**|Server in cui viene eseguito il processo o il passaggio. È sempre (**locale**).|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_help_jobhistory** restituisce un report con la cronologia dei processi pianificati specificati. Se non viene specificato alcun parametro, il report include la cronologia di tutti i processi pianificati.  
   
 ## <a name="permissions"></a>Autorizzazioni  

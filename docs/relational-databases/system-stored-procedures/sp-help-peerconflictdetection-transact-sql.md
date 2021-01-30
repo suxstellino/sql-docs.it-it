@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_peerconflictdetection
 - sp_help_peerconflictdetection_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 960d2a58e01fcb2352fe68d60564534d43d4faf3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 90cd963b22cffd11c400f18a91f2badefff2e799
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89527720"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199612"
 ---
 # <a name="sp_help_peerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,10 +40,10 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Argomenti  
  [ @publication =]'*pubblicazione*'  
- Nome della pubblicazione per cui si desidera restituire le informazioni. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+ Nome della pubblicazione per cui si desidera restituire le informazioni. *Publication* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
  [ @timeout =] *timeout*  
- Specifica l'intervallo di tempo, espresso in secondi, dopo il quale si verifica il timeout della procedura durante l'attesa di una risposta da ogni nodo nella topologia. Se nella topologia è presente un Sottoscrittore di sola lettura, non sarà possibile specificare un valore di timeout. I Sottoscrittori di sola lettura non rispondono mai a una chiamata da questa procedura. *timeout* è di **tipo int**e il valore predefinito è 60.  
+ Specifica l'intervallo di tempo, espresso in secondi, dopo il quale si verifica il timeout della procedura durante l'attesa di una risposta da ogni nodo nella topologia. Se nella topologia è presente un Sottoscrittore di sola lettura, non sarà possibile specificare un valore di timeout. I Sottoscrittori di sola lettura non rispondono mai a una chiamata da questa procedura. *timeout* è di **tipo int** e il valore predefinito è 60.  
   
 ## <a name="result-sets"></a>Set di risultati  
  sp_help_peerconflictdetection restituisce tre set di risultati. Questi risultati sono documentati negli argomenti seguenti:  
@@ -57,7 +57,7 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  sp_help_peerconflictdetection è utilizzato nella replica transazionale peer-to-peer.  
   
 ## <a name="permissions"></a>Autorizzazioni  

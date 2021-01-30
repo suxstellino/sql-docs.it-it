@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - syscollector_collection_items_TSQL
 - syscollector_collection_items
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a279ecd1-a59c-4315-9f08-bf221f00a465
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 79b0c876d8c42cd23f02e91dead3fde841d84f07
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 52f7bb7471b0b8c8d38fc2f4fa1790fd5c12647a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094284"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199785"
 ---
 # <a name="syscollector_collection_items-transact-sql"></a>syscollector_collection_items (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "98094284"
 |**collection_item_id**|**int**|Identifica un elemento del set di raccolta. Non ammette i valori Null.|  
 |**collector_type_uid**|**uniqueidentifier**|GUID utilizzato per identificare il tipo agente di raccolta dati. Non ammette i valori Null.|  
 |**nome**|**nvarchar(4000)**|Nome del set di raccolta. Ammette i valori Null.|  
-|**frequenza**|**int**|La frequenza con cui i dati sono raccolti da un elemento della raccolta. Non ammette i valori Null.|  
+|**frequency**|**int**|La frequenza con cui i dati sono raccolti da un elemento della raccolta. Non ammette i valori Null.|  
 |**parameters**|**xml**|Descrive la parametrizzazione per il tipo di agente di raccolta associato all'elemento della raccolta. Il XML Schema per questo elemento della raccolta viene convalidato con lo schema XML (XSD) archiviato nel **parameter_schema** per un tipo di agente di raccolta specifico. Ammette i valori Null. Per ulteriori informazioni, vedere [syscollector_collector_types &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md).|  
   
 ## <a name="permissions"></a>Autorizzazioni  

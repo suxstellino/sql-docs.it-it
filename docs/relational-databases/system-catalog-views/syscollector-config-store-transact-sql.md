@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - syscollector_config_store_TSQL
 - syscollector_config_store
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: c5914dfa56d4ee6dd360c391c64e636638bb4342
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 0ffb12c3aa43b1e18e20fdf43cf0311c02881138
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094289"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199771"
 ---
 # <a name="syscollector_config_store-transact-sql"></a>syscollector_config_store (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "98094289"
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione SELECT sulla vista o l'appartenenza ai ruoli predefiniti del database dc_operator, dc_proxy o dc_admin.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  L'elenco di proprietà disponibile è fisso e i relativi valori possono essere modificati utilizzando solo la stored procedure appropriata. Nella tabella seguente vengono descritte le proprietà esposte tramite questa vista.  
   
 |Nome proprietà|Descrizione|  
@@ -50,7 +50,7 @@ ms.locfileid: "98094289"
 |MDWDatabase|Nome del data warehouse di gestione. Utilizzare la stored procedure sp_syscollector_set_warehouse_database_name per modificare questo valore.|  
 |MDWInstance|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per il data warehouse di gestione. Utilizzare la stored procedure sp_syscollector_set_warehouse_instance_name per modificare questo valore.|  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene eseguita una query sulla vista syscollector_config_store.  
   
 ```sql  

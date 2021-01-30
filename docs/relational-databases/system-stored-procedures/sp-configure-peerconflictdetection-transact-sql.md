@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_configure_peerconflictdetection_TSQL
 - sp_configure_peerconflictdetection
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 80ce8df6158ca3c0f7cd37fc045c7bd5987e2e0f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 58e583191ba0c18824715664162f89a7911c466a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546188"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198705"
 ---
 # <a name="sp_configure_peerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,19 +46,19 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Argomenti  
  [ @publication =]'*pubblicazione*'  
- Nome della pubblicazione per cui si desidera configurare il rilevamento dei conflitti. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+ Nome della pubblicazione per cui si desidera configurare il rilevamento dei conflitti. *Publication* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
  [ @action =]'*azione*'  
  Specifica se abilitare o disabilitare il rilevamento dei conflitti per una pubblicazione. *Action* è di **tipo nvarchar (5)**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**enable**|Abilita il rilevamento dei conflitti per una pubblicazione.|  
 |**disable**|Disabilita il rilevamento dei conflitti per una pubblicazione.|  
 |NULL (predefinito)||  
   
  [ @originator_id =] *originator_id*  
- Specifica un ID per un nodo in una topologia peer-to-peer. *originator_id* è di **tipo int**e il valore predefinito è null. Questo ID viene utilizzato per il rilevamento dei conflitti se l' *azione* è impostata su **Abilita**. Specificare un ID positivo diverso da zero che non sia mai stato utilizzato nella topologia. Per un elenco degli ID che sono già stati utilizzati, eseguire una query sulla tabella di sistema [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) .  
+ Specifica un ID per un nodo in una topologia peer-to-peer. *originator_id* è di **tipo int** e il valore predefinito è null. Questo ID viene utilizzato per il rilevamento dei conflitti se l' *azione* è impostata su **Abilita**. Specificare un ID positivo diverso da zero che non sia mai stato utilizzato nella topologia. Per un elenco degli ID che sono già stati utilizzati, eseguire una query sulla tabella di sistema [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) .  
   
  [ @conflict_retention =] *conflict_retention*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -78,7 +78,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  sp_configure_peerconflictdetection è utilizzato nella replica transazionale peer-to-peer. Per usare il rilevamento dei conflitti, tutti i nodi devono eseguire [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive e il rilevamento deve essere abilitato per tutti i nodi.  
   
 ## <a name="permissions"></a>Autorizzazioni  

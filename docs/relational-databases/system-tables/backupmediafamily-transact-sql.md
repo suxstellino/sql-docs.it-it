@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - backupmediafamily
 - backupmediafamily_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - backup media [SQL Server], backupmediafamily system table
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 6adacacdb3e075e3eb058005d3b11fc8fc219cbe
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: df687040bf73fb1d78f15d7cca18cc0fc092ee1f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096289"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198677"
 ---
 # <a name="backupmediafamily-transact-sql"></a>backupmediafamily (Transact-SQL)
 
@@ -43,7 +43,7 @@ Include una riga per ogni gruppo di supporti. Se un gruppo di supporti risiede i
 |**physical_block_size**|**int**|Dimensioni fisiche del blocco utilizzate per la scrittura del gruppo di supporti. Può essere NULL.|  
 |**mirror**|**tinyint**|Numero di mirroring (0-3).|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  RESTOre VERIFYONLY FROM *backup_device* with LOADHISTORY popola le colonne della tabella **BackupMediaSet** con i valori appropriati dell'intestazione del set di supporti.  
   
  Per ridurre il numero di righe in questa tabella e in altre tabelle di backup e di cronologia, eseguire la [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) stored procedure.  

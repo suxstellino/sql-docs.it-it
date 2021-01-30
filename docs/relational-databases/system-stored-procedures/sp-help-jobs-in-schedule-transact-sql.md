@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobs_in_schedule_TSQL
 - sp_help_jobs_in_schedule
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d8a9251e807be429bfb0881afc711880520f9f7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1890fc4b8aa3757b55dfc5ad7e33070126300897
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538851"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200143"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +42,9 @@ sp_help_jobs_in_schedule
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @schedule_id = ] schedule_id` Identificatore della pianificazione per cui elencare le informazioni. *schedule_id* è di **tipo int**e non prevede alcun valore predefinito. È possibile specificare *schedule_id* o *schedule_name* .  
+`[ @schedule_id = ] schedule_id` Identificatore della pianificazione per cui elencare le informazioni. *schedule_id* è di **tipo int** e non prevede alcun valore predefinito. È possibile specificare *schedule_id* o *schedule_name* .  
   
-`[ @schedule_name = ] 'schedule_name'` Nome della pianificazione per cui elencare le informazioni. *schedule_name* è di **tipo sysname**e non prevede alcun valore predefinito. È possibile specificare *schedule_id* o *schedule_name* .  
+`[ @schedule_name = ] 'schedule_name'` Nome della pianificazione per cui elencare le informazioni. *schedule_name* è di **tipo sysname** e non prevede alcun valore predefinito. È possibile specificare *schedule_id* o *schedule_name* .  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -87,7 +87,7 @@ sp_help_jobs_in_schedule
 |**has_target**|**int**|Numero di server di destinazione del processo.|  
 |**type**|**int**|Tipo del processo:<br /><br /> **1** = processo locale.<br /><br /> **2** = processo multiserver.<br /><br /> **0** = il processo non dispone di server di destinazione.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questa stored procedure visualizza le informazioni sui processi associati alla pianificazione specificata.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -103,7 +103,7 @@ sp_help_jobs_in_schedule
   
  I membri di **SQLAgentUserRole** possono solo visualizzare lo stato dei processi di cui sono proprietari.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono visualizzati i processi associati alla pianificazione `NightlyJobs`.  
   
 ```  

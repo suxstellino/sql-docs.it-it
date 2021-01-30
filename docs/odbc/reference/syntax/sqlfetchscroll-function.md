@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLFetchScroll
 apilocation:
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e3c725e11c889765c18c2ff14625b6bde4705051
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5cfa442ab1ada0b17e06137257b4d17bf37f854c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476086"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198541"
 ---
 # <a name="sqlfetchscroll-function"></a>Funzione SQLFetchScroll
 **Conformità**  
@@ -93,7 +93,7 @@ SQLRETURN SQLFetchScroll(
 |01S06|Tentativo di recupero prima che il set di risultati restituisse il primo set di righe|Il set di righe richiesto ha sovrapposto l'inizio del set di risultati quando FetchOrientation è stato SQL_FETCH_PRIOR, la posizione corrente supera la prima riga e il numero della riga corrente è minore o uguale alla dimensione del set di righe.<br /><br /> Il set di righe richiesto ha sovrapposto l'inizio del set di risultati quando FetchOrientation è stato SQL_FETCH_PRIOR, la posizione corrente supera la fine del set di risultati e le dimensioni del set di righe sono maggiori delle dimensioni del set di risultati.<br /><br /> Il set di righe richiesto ha sovrapposto l'inizio del set di risultati quando FetchOrientation è stato SQL_FETCH_RELATIVE, FetchOffset è negativo e il valore assoluto di FetchOffset è minore o uguale alla dimensione del set di righe.<br /><br /> Il set di righe richiesto ha sovrapposto l'inizio del set di risultati quando FetchOrientation è stato SQL_FETCH_ABSOLUTE, FetchOffset è negativo e il valore assoluto di FetchOffset è maggiore della dimensione del set di risultati, ma minore o uguale alla dimensione del set di righe.<br /><br /> (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |01S07|Troncamento frazionario|I dati restituiti per una colonna sono stati troncati. Per i tipi di dati numerici, la parte frazionaria del numero è stata troncata. Per i tipi di dati time, timestamp e Interval contenenti un componente ora, la parte frazionaria del tempo è stata troncata.<br /><br /> (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |07006|Violazione dell'attributo del tipo di dati con restrizioni|Impossibile convertire il valore dei dati di una colonna nel set di risultati nel tipo di dati specificato da *targetType* in **SQLBindCol**.<br /><br /> La colonna 0 è stata associata a un tipo di dati di SQL_C_BOOKMARK e l'attributo SQL_ATTR_USE_BOOKMARKS istruzione è stato impostato su SQL_UB_VARIABLE.<br /><br /> La colonna 0 è stata associata a un tipo di dati di SQL_C_VARBOOKMARK e l'attributo dell'istruzione SQL_ATTR_USE_BOOKMARKS non è stato impostato su SQL_UB_VARIABLE.|  
-|07009|Indice del descrittore non valido|Il driver era un driver ODBC 2 *. x* che non supporta **SQLExtendedFetch**e il numero di colonna specificato nell'associazione per una colonna era 0.<br /><br /> La colonna 0 è stata associata e l'attributo dell'istruzione SQL_ATTR_USE_BOOKMARKS è stato impostato su SQL_UB_OFF.|  
+|07009|Indice del descrittore non valido|Il driver era un driver ODBC 2 *. x* che non supporta **SQLExtendedFetch** e il numero di colonna specificato nell'associazione per una colonna era 0.<br /><br /> La colonna 0 è stata associata e l'attributo dell'istruzione SQL_ATTR_USE_BOOKMARKS è stato impostato su SQL_UB_OFF.|  
 |08S01|Errore collegamento comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato connesso il driver non è riuscito prima del completamento dell'elaborazione della funzione.|  
 |22001|Dati stringa, troncati a destra|Un segnalibro a lunghezza variabile restituito per una colonna è stato troncato.|  
 |22002|Variabile indicatore obbligatoria ma non fornita|Sono stati recuperati dati NULL in una colonna la cui *StrLen_or_IndPtr* impostata da **SQLBindCol** (o SQL_DESC_INDICATOR_PTR impostata da **SQLSetDescField** o **SQLSetDescRec**) è un puntatore null.|  
@@ -105,12 +105,12 @@ SQLRETURN SQLFetchScroll(
 |24000|Stato del cursore non valido|Lo stato di *statementHandle* è stato eseguito ma nessun set di risultati è stato associato a *statementHandle*.|  
 |40001|Errore di serializzazione|La transazione in cui è stata eseguita la lettura è stata terminata per impedire il deadlock.|  
 |40003|Completamento istruzione sconosciuto|La connessione associata non è riuscita durante l'esecuzione di questa funzione e non è possibile determinare lo stato della transazione.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer *\* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY008|Operation canceled|L'elaborazione asincrona è stata abilitata per *statementHandle*. La funzione è stata chiamata e prima del completamento dell'esecuzione è stato chiamato **SQLCancel** o **SQLCancelHandle** in *statementHandle*. La funzione è stata chiamata nuovamente in *statementHandle*.<br /><br /> La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *statementHandle* da un thread diverso in un'applicazione multithread.|  
-|HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *statementHandle*. Questa funzione asincrona era ancora in esecuzione quando è stata chiamata la funzione **SQLFetchScroll** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per *statementHandle* e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.<br /><br /> (DM) il *statementHandle* specificato non si trova in uno stato eseguito. La funzione è stata chiamata senza prima chiamare **SQLExecDirect**, **SQLExecute** o una funzione di catalogo.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per *statementHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato per *statementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.<br /><br /> (DM) **SQLFetch** è stato chiamato per *statementHandle* dopo la chiamata di **SQLExtendedFetch** e prima della chiamata a **SQLFreeStmt** con l'opzione SQL_CLOSE.|  
+|HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *statementHandle*. Questa funzione asincrona era ancora in esecuzione quando è stata chiamata la funzione **SQLFetchScroll** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect** o **SQLMoreResults** è stato chiamato per *statementHandle* e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.<br /><br /> (DM) il *statementHandle* specificato non si trova in uno stato eseguito. La funzione è stata chiamata senza prima chiamare **SQLExecDirect**, **SQLExecute** o una funzione di catalogo.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per *statementHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations** o **SQLSetPos** è stato chiamato per *statementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.<br /><br /> (DM) **SQLFetch** è stato chiamato per *statementHandle* dopo la chiamata di **SQLExtendedFetch** e prima della chiamata a **SQLFreeStmt** con l'opzione SQL_CLOSE.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
-|HY090|Lunghezza della stringa o del buffer non valida|L'attributo SQL_ATTR_USE_BOOKMARK Statement è stato impostato su SQL_UB_VARIABLE e la colonna 0 è stata associata a un buffer la cui lunghezza non è uguale alla lunghezza massima per il segnalibro per questo set di risultati. Questa lunghezza è disponibile nel campo SQL_DESC_OCTET_LENGTH di IRD e può essere ottenuta chiamando **SQLDescribeCol**, **SQLColAttribute**o **SQLGetDescField**.|  
+|HY090|Lunghezza della stringa o del buffer non valida|L'attributo SQL_ATTR_USE_BOOKMARK Statement è stato impostato su SQL_UB_VARIABLE e la colonna 0 è stata associata a un buffer la cui lunghezza non è uguale alla lunghezza massima per il segnalibro per questo set di risultati. Questa lunghezza è disponibile nel campo SQL_DESC_OCTET_LENGTH di IRD e può essere ottenuta chiamando **SQLDescribeCol**, **SQLColAttribute** o **SQLGetDescField**.|  
 |HY106|Tipo di recupero non compreso nell'intervallo|DM) il valore specificato per l'argomento FetchOrientation non è valido.<br /><br /> (DM) l'argomento FetchOrientation è stato SQL_FETCH_BOOKMARK e l'attributo SQL_ATTR_USE_BOOKMARKS istruzione è stato impostato su SQL_UB_OFF.<br /><br /> Il valore dell'attributo dell'istruzione SQL_ATTR_CURSOR_TYPE è stato SQL_CURSOR_FORWARD_ONLY e il valore dell'argomento FetchOrientation non è stato SQL_FETCH_NEXT.<br /><br /> Il valore dell'attributo dell'istruzione SQL_ATTR_CURSOR_SCROLLABLE è stato SQL_NONSCROLLABLE e il valore dell'argomento FetchOrientation non è stato SQL_FETCH_NEXT.|  
 |HY107|Valore di riga non compreso nell'intervallo|Il valore specificato con l'attributo dell'istruzione SQL_ATTR_CURSOR_TYPE è stato SQL_CURSOR_KEYSET_DRIVEN, ma il valore specificato con l'attributo SQL_ATTR_KEYSET_SIZE istruzione è maggiore di 0 e minore del valore specificato con l'attributo dell'istruzione SQL_ATTR_ROW_ARRAY_SIZE.|  
 |HY111|Valore segnalibro non valido|L'argomento FetchOrientation è stato SQL_FETCH_BOOKMARK e il segnalibro a cui fa riferimento il valore nell'attributo SQL_ATTR_FETCH_BOOKMARK_PTR istruzione non è valido o è un puntatore null.|  
@@ -165,7 +165,7 @@ SQLRETURN SQLFetchScroll(
 |Condizione|Prima riga del nuovo set di righe|  
 |---------------|-----------------------------|  
 |*Prima dell'avvio*|1|  
-|*CurrRowsetStart + RowsetSize*[1] * \< = LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
+|*CurrRowsetStart + RowsetSize*[1] *\< = LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
 |*CurrRowsetStart + RowsetSize*[1]*> LastResultRow*|*Dopo la fine*|  
 |*Dopo la fine*|*Dopo la fine*|  
   
@@ -201,9 +201,9 @@ SQLRETURN SQLFetchScroll(
 |*CurrRowsetStart + FetchOffset > LastResultRow*|*Dopo la fine*|  
 |*After end e FetchOffset >= 0*|*Dopo la fine*|  
   
- [1]   ***SQLFetchScroll*** restituisce lo stesso set di righe come se fosse stato chiamato con FetchOrientation impostato su SQL_FETCH_ABSOLUTE. Per ulteriori informazioni, vedere la sezione "SQL_FETCH_ABSOLUTE".  
+ [1] ***SQLFetchScroll** _ restituisce lo stesso set di righe come se fosse stato chiamato con FetchOrientation impostato su SQL_FETCH_ABSOLUTE. Per ulteriori informazioni, vedere la sezione "SQL_FETCH_ABSOLUTE".  
   
- [2]   **SQLFetchScroll** restituisce SQLSTATE 01S06 (tentativo di recupero prima che il set di risultati restituisse il primo set di righe) e SQL_SUCCESS_WITH_INFO.  
+ [2] _ *SQLFetchScroll** restituisce SQLSTATE 01S06 (tentativo di recupero prima che il set di risultati restituisse il primo set di righe) e SQL_SUCCESS_WITH_INFO.  
   
  [3] se le dimensioni del set di righe sono state modificate dopo la chiamata precedente per recuperare le righe, si tratta delle nuove dimensioni del set di righe.  
   
@@ -356,11 +356,11 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |Associazione di un buffer a una colonna in un set di risultati|[Funzione SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |Esecuzione di operazioni bulk di inserimento, aggiornamento o eliminazione|[Funzione SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  
 |Annullamento dell'elaborazione di istruzioni|[Funzione SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|Restituzione di informazioni su una colonna in un set di risultati|[Funzione SQLDescribeCol](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
+|Restituzione di informazioni su una colonna in un set di risultati|[Funzione SQLDescribeCol ](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
 |Esecuzione di un'istruzione SQL|[Funzione SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
-|Esecuzione di un'istruzione SQL preparata|[SQLExecute (funzione)](../../../odbc/reference/syntax/sqlexecute-function.md)|  
+|Esecuzione di un'istruzione SQL preparata|[Funzione SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |Recupero di una singola riga o di un blocco di dati in una direzione di sola trasmissione|[Funzione SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)|  
-|Chiusura del cursore sull'istruzione|[Funzione SQLFreeStmt](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
+|Chiusura del cursore sull'istruzione|[SQLFreeStmt Function](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
 |Restituzione del numero di colonne del set di risultati|[Funzione SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
 |Posizionamento del cursore, aggiornamento dei dati nel set di righe o aggiornamento o eliminazione di dati nel set di risultati|[Funzione SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
 |Impostazione di un attributo di istruzione|[Funzione SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
