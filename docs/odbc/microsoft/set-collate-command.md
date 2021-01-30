@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - set collate command [ODBC]
 ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5ca796da60adf0c432b5bbd80065e58563664bc5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f6158f79c589e446c2b3c106a1d14fd58715714f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466383"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208652"
 ---
 # <a name="set-collate-command"></a>SET COLLATE (comando)
 Specifica una sequenza di regole di confronto per i campi carattere nelle successive operazioni di indicizzazione e ordinamento.  
@@ -47,7 +47,7 @@ SET COLLATE TO cSequenceName
 |UNIQWT|Spessore univoco|  
   
 > [!NOTE]  
->  Quando si specifica l'opzione spagnolo, *ch* è una singola lettera che ordina tra *c* e *d*e si *Ordina tra* *l* e *m*.  
+>  Quando si specifica l'opzione spagnolo, *ch* è una singola lettera che ordina tra *c* e *d* e si *Ordina tra* *l* e *m*.  
   
  Se si specifica un'opzione della sequenza di regole di confronto come stringa di caratteri letterali, assicurarsi di racchiudere l'opzione tra virgolette:  
   
@@ -69,7 +69,7 @@ SET COLLATE TO "SWEFIN"
 SET COLLATE TO cSequenceName  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  SET COLLATE consente di ordinare le tabelle contenenti caratteri accentati per qualsiasi lingua supportata. La modifica dell'impostazione di SET COLLATE non influisce sulla sequenza di confronto degli indici aperti in precedenza. Visual FoxPro gestisce automaticamente gli indici esistenti, offrendo la flessibilità necessaria per creare molti tipi diversi di indici, anche per lo stesso campo.  
   
  Se, ad esempio, viene creato un indice con SET COLLATE impostato su generale e l'impostazione SET COLLATE viene successivamente modificata in spagnolo, l'indice mantiene la sequenza generale delle regole di confronto.  

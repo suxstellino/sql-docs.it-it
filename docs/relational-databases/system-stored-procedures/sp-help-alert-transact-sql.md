@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_alert
 - sp_help_alert_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b02f303a4465df18cb049d06ecef585dad29a504
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b39195e5f1dd21fead42a05850f9b5e5e5874b52
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549723"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208941"
 ---
 # <a name="sp_help_alert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,19 +46,19 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ## <a name="arguments"></a>Argomenti  
 `[ @alert_name = ] 'alert_name'` Nome dell'avviso. *alert_name* è di **tipo nvarchar (128)**. Se *alert_name* viene omesso, vengono restituite informazioni su tutti gli avvisi.  
   
-`[ @order_by = ] 'order_by'` Ordine di ordinamento da utilizzare per produrre i risultati. *order_by*è di **tipo sysname**e il valore predefinito è N'*nome*'.  
+`[ @order_by = ] 'order_by'` Ordine di ordinamento da utilizzare per produrre i risultati. *order_by* è di **tipo sysname** e il valore predefinito è N'*nome*'.  
   
-`[ @alert_id = ] alert_id` Numero di identificazione dell'avviso per il quale segnalare le informazioni. *alert_id*è di **tipo int**e il valore predefinito è null.  
+`[ @alert_id = ] alert_id` Numero di identificazione dell'avviso per il quale segnalare le informazioni. *alert_id* è di **tipo int** e il valore predefinito è null.  
   
-`[ @category_name = ] 'category'` Categoria per l'avviso. *Category* è di **tipo sysname**e il valore predefinito è null.  
+`[ @category_name = ] 'category'` Categoria per l'avviso. *Category* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @legacy_format = ] legacy_format` Indica se generare un set di risultati legacy. *legacy_format* è di **bit**e il valore predefinito è **0**. Quando *legacy_format* è **1**, **sp_help_alert** restituisce il set di risultati restituito da **sp_help_alert** in Microsoft SQL Server 2000.  
+`[ @legacy_format = ] legacy_format` Indica se generare un set di risultati legacy. *legacy_format* è di **bit** e il valore predefinito è **0**. Quando *legacy_format* è **1**, **sp_help_alert** restituisce il set di risultati restituito da **sp_help_alert** in Microsoft SQL Server 2000.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Quando ** \@ legacy_format** è **0**, **sp_help_alert** produce il set di risultati seguente.  
+ Quando **\@ legacy_format** è **0**, **sp_help_alert** produce il set di risultati seguente.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -68,7 +68,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Numero dell'errore del messaggio che definisce l'avviso Corrisponde in genere a un numero di errore nella tabella **sysmessages** . Se per la definizione dell'avviso viene utilizzata la gravità, **message_id** è **0** o null.|  
-|**severity**|**int**|Livello di gravità (compreso tra **9** e **25**, **110**, **120**, **130**o **140**) che definisce l'avviso.|  
+|**severity**|**int**|Livello di gravità (compreso tra **9** e **25**, **110**, **120**, **130** o **140**) che definisce l'avviso.|  
 |**abilitato**|**tinyint**|Stato che indica se l'avviso è attualmente abilitato (**1**) o meno (**0**). Gli avvisi non abilitati non vengono inviati.|  
 |**delay_between_responses**|**int**|Periodo di attesa in secondi tra risposte successive per l'avviso.|  
 |**last_occurrence_date**|**int**|Data dell'ultima generazione dell'avviso.|  
@@ -92,7 +92,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**wmi_query**|**nvarchar(512)**|Se **Type** è **3**, in questa colonna viene visualizzata la query per l'evento WMI.|  
 |**type**|**int**|Tipo dell'evento:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avviso evento<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avviso di prestazioni<br /><br /> **3** = avviso evento WMI|  
   
- Quando ** \@ legacy_format** è **1**, **sp_help_alert** produce il set di risultati seguente.  
+ Quando **\@ legacy_format** è **1**, **sp_help_alert** produce il set di risultati seguente.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -102,7 +102,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Numero dell'errore del messaggio che definisce l'avviso Corrisponde in genere a un numero di errore nella tabella **sysmessages** . Se per la definizione dell'avviso viene utilizzata la gravità, **message_id** è **0** o null.|  
-|**severity**|**int**|Livello di gravità (compreso tra **9** e **25**, **110**, **120**, **130**o 1**40**) che definisce l'avviso.|  
+|**severity**|**int**|Livello di gravità (compreso tra **9** e **25**, **110**, **120**, **130** o 1 **40**) che definisce l'avviso.|  
 |**abilitato**|**tinyint**|Stato che indica se l'avviso è attualmente abilitato (**1**) o meno (**0**). Gli avvisi non abilitati non vengono inviati.|  
 |**delay_between_responses**|**int**|Periodo di attesa in secondi tra risposte successive per l'avviso.|  
 |**last_occurrence_date**|**int**|Data dell'ultima generazione dell'avviso.|  
@@ -124,7 +124,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Sarà sempre '**[Uncategorized]**' per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0.|  
 |**type**|**int**|Tipo di avviso:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avviso evento<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avviso di prestazioni<br /><br /> **3** = avviso evento WMI|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_help_alert** deve essere eseguito dal database **msdb** .  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -132,7 +132,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
   
  Per informazioni dettagliate su **SQLAgentOperatorRole**, vedere [SQL Server Agent ruoli](../../ssms/agent/sql-server-agent-fixed-database-roles.md)predefiniti del database.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituite informazioni sull'avviso `Demo: Sev. 25 Errors`.  
   
 ```  

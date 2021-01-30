@@ -1,13 +1,13 @@
 ---
 description: core.sp_create_snapshot (Transact-SQL)
-title: Core. sp_create_snapshot (Transact-SQL) | Microsoft Docs
+title: core.sp_create_snapshot (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_create_snapshot
 - sp_create_snapshot_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 719167961eb9c716266e1a96a17c31ea82367cbc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 737739cfa627e6668d95e6453d66ed1bad4ad637
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550130"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210503"
 ---
 # <a name="coresp_create_snapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,10 +55,10 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  GUID per un tipo agente di raccolta. *collector_type_uid* è di tipo **uniqueidentifier** e non prevede alcun valore predefinito. Per ottenere il GUID, eseguire una query sulla vista dbo.syscollector_collector_types nel database msdb.  
   
  [ @machine_name =]'*machine_name*'  
- Nome del server in cui risiede l'insieme di raccolta. *machine_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+ Nome del server in cui risiede l'insieme di raccolta. *machine_name* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
  [ @named_instance =]'*named_instance*'  
- Nome dell'istanza per l'insieme di raccolta. *named_instance* è di **tipo sysname**e non prevede alcun valore predefinito.  
+ Nome dell'istanza per l'insieme di raccolta. *named_instance* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
  [ @log_id =] *log_id*  
  Identificatore univoco tramite cui viene eseguito il mapping al registro eventi del set di raccolta nel server da cui sono stati raccolti i dati. *log_id* è di tipo **bigint** e non prevede alcun valore predefinito. Per ottenere il valore per *log_id*, eseguire una query sulla visualizzazione dbo.syscollector_execution_log nel database msdb.  
@@ -69,7 +69,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Ogni volta che un pacchetto di caricamento inizia a caricare i dati nel data warehouse di gestione, il componente runtime dell'agente di raccolta dati chiama core.sp_create_snapshot.  
   
  Tramite questa procedura viene verificato quanto segue:  
@@ -83,7 +83,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del database di **mdw_writer** (con autorizzazione Execute).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene creato uno snapshot per il set di raccolta Utilizzo disco, lo snapshot viene aggiunto al data warehouse di gestione e viene restituito l'identificatore dello snapshot. In questo esempio viene utilizzata l'istanza predefinita.  
   
 ```  

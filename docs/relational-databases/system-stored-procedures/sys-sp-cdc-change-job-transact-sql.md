@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_change_job (Transact-SQL)
-title: sys. sp_cdc_change_job (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_change_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_cdc_change_job_TSQL
 - sys.sp_cdc_change_job
@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bf81cfb8cbd06602252e62b3c72bafe694c14ed8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0dcc3a8b69e6cf8e65f96b239dd7699f796246ba
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545870"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210754"
 ---
 # <a name="syssp_cdc_change_job-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Modifica la configurazione di un processo di pulizia dell'acquisizione dei dati delle modifiche o di un processo di acquisizione nel database corrente. Per visualizzare la configurazione corrente di un processo, eseguire una query sulla tabella [dbo. cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) oppure utilizzare [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md).  
+  Modifica la configurazione di un processo di pulizia dell'acquisizione dei dati delle modifiche o di un processo di acquisizione nel database corrente. Per visualizzare la configurazione corrente di un processo, eseguire una query sulla tabella [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) o utilizzare [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,9 +64,9 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  Quando *Continuous* = 0, il processo di **sp_cdc_scan** viene eseguito fino a *max_scans* le analisi del log, elaborando fino a *max_trans* transazioni durante ogni analisi e quindi esce.  
   
- Se ** \@ Continuous** viene modificato da 1 a 0, ** \@ pollingInterval** viene impostato automaticamente su 0. Un valore specificato per ** \@ pollingInterval** diverso da 0 viene ignorato.  
+ Se **\@ Continuous** viene modificato da 1 a 0, **\@ pollingInterval** viene impostato automaticamente su 0. Un valore specificato per **\@ pollingInterval** diverso da 0 viene ignorato.  
   
- Se ** \@ Continuous** viene omesso o impostato in modo esplicito su null e ** \@ pollingInterval** viene impostato in modo esplicito su un valore maggiore di 0, ** \@ Continuous** viene impostato automaticamente su 1.  
+ Se **\@ Continuous** viene omesso o impostato in modo esplicito su null e **\@ pollingInterval** viene impostato in modo esplicito su un valore maggiore di 0, **\@ Continuous** viene impostato automaticamente su 1.  
   
  *Continuous* è valido solo per i processi di acquisizione.  
   
@@ -87,7 +87,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
  nessuno  
   
 ## <a name="remarks"></a>Osservazioni  
- Se un parametro viene omesso, il valore associato nella tabella [dbo. cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) non viene aggiornato. Un parametro impostato esplicitamente su NULL viene considerato come se fosse stato omesso.  
+ Se un parametro viene omesso, il valore associato nella tabella [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) non viene aggiornato. Un parametro impostato esplicitamente su NULL viene considerato come se fosse stato omesso.  
   
  Se si specifica un parametro non valido per il tipo di processo, l'istruzione avrà esito negativo.  
   
@@ -112,7 +112,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-cleanup-job"></a>B. Modifica di un processo di pulizia  
- Nell'esempio seguente viene aggiornato un processo di pulizia nel database `AdventureWorks2012`. Vengono specificati tutti i parametri validi per questo tipo di processo, ad eccezione della ** \@ soglia**. Il valore della ** \@ soglia** non viene modificato.  
+ Nell'esempio seguente viene aggiornato un processo di pulizia nel database `AdventureWorks2012`. Vengono specificati tutti i parametri validi per questo tipo di processo, ad eccezione della **\@ soglia**. Il valore della **\@ soglia** non viene modificato.  
   
 ```  
 USE AdventureWorks2012;  
@@ -124,8 +124,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [dbo. cdc_jobs &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sys. sp_cdc_enable_table &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [dbo.cdc_jobs &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sys.sp_cdc_enable_table &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

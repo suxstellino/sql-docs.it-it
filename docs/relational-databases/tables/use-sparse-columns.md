@@ -16,12 +16,12 @@ ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba2d4bc789c324e3e6153dc971a983638af603f4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 2b2d569c3f37370bd132485e843da005b1769b17
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482341"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211538"
 ---
 # <a name="use-sparse-columns"></a>Utilizzo di colonne di tipo sparse
 
@@ -39,7 +39,7 @@ ms.locfileid: "97482341"
   
      Poiché le colonne di tipo sparse contengono molte righe con valori Null, sono particolarmente adatte per l'utilizzo di indici filtrati. Un indice filtrato applicato a una colonna di tipo sparse consente di indicizzare solo le righe popolate con valori. In questo modo, viene creato un indice più efficiente e di dimensioni minori. Per altre informazioni, vedere [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
- Le colonne di tipo sparse e gli indici filtrati consentono alle applicazioni, ad esempio [!INCLUDE[winSPServ](../../includes/winspserv-md.md)], di archiviare in modo efficiente un elevato numero di proprietà definite dall'utente e accedervi usando [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Le colonne di tipo sparse e gli indici filtrati consentono alle applicazioni, ad esempio [!INCLUDE[winSPServ](../../includes/winspserv-md.md)], di archiviare in modo efficiente un elevato numero di proprietà definite dall'utente e accedervi usando [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="properties-of-sparse-columns"></a>Proprietà delle colonne di tipo sparse  
  Le colonne di tipo sparse hanno le caratteristiche seguenti:  

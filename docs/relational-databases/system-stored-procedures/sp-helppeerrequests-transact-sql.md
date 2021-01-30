@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helppeerrequests_TSQL
 - sp_helppeerrequests
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0ea9dce50e440c9b519032d46340b1b0a495eea0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d728d168ec84d27cbe5c4316eec1e5e0c9f61221
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535150"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210857"
 ---
 # <a name="sp_helppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` Nome della pubblicazione in una topologia peer-to-peer per cui sono state inviate le richieste di stato. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione in una topologia peer-to-peer per cui sono state inviate le richieste di stato. *Publication* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 `[ @description = ] 'description'` Valore che può essere utilizzato per identificare le singole richieste di stato, che consente di filtrare le risposte restituite in base alle informazioni definite dall'utente fornite durante la chiamata di [sp_requestpeerresponse &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md). *Description* è di **tipo nvarchar (4000)** e il valore predefinito è **%** . Per impostazione predefinita, tutte le richieste dello stato per la pubblicazione vengono restituite. Questo parametro viene utilizzato per restituire solo le richieste di stato con una descrizione che corrisponde al valore fornito nella *Descrizione*, in cui le stringhe di caratteri vengono confrontate utilizzando una clausola [like &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md) .  
   
@@ -55,7 +55,7 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_helppeerrequests** viene utilizzata nella replica transazionale peer-to-peer.  
   
  **sp_helppeerrequests** viene utilizzato per il ripristino di un database pubblicato in una topologia peer-to-peer.  

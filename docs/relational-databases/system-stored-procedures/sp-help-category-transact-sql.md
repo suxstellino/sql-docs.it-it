@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_category
 - sp_help_category_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d500bad167bda9085d4caf40bdaa9e442cb26efb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 68c8d1fcf243de008f889d4037bbd38a590c6403
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549705"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208929"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="arguments"></a>Argomenti  
 `[ @class = ] 'class'` Classe su cui vengono richieste informazioni. la classe è di *tipo* **varchar (8)** e il valore predefinito è **Job**. la *classe* può essere uno di questi valori.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**PROCESSO**|Restituisce informazioni su una categoria di processi.|  
 |**AVVISO**|Restituisce informazioni su una categoria di avvisi.|  
@@ -53,21 +53,21 @@ sp_help_category [ [ @class = ] 'class' ]
   
 `[ @type = ] 'type'` Tipo di categoria per cui vengono richieste informazioni. il *tipo* è **varchar (12)** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**LOCAL**|Categoria di processi locali.|  
 |**MULTI -SERVER**|Categoria di processi multiserver.|  
 |**NONE**|Categoria per una classe diversa da **Job**.|  
   
-`[ @name = ] 'name'` Nome della categoria per la quale vengono richieste informazioni. *Name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @name = ] 'name'` Nome della categoria per la quale vengono richieste informazioni. *Name* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @suffix = ] suffix` Specifica se la colonna **category_type** nel set di risultati è un ID o un nome. il *suffisso* è di **bit**e il valore predefinito è **0**. **1** mostra l' **category_type** come nome e **0** lo Visualizza come ID.  
+`[ @suffix = ] suffix` Specifica se la colonna **category_type** nel set di risultati è un ID o un nome. il *suffisso* è di **bit** e il valore predefinito è **0**. **1** mostra l' **category_type** come nome e **0** lo Visualizza come ID.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Quando il ** \@ suffisso** è **0**, **sp_help_category** restituisce il set di risultati seguente:  
+ Quando il **\@ suffisso** è **0**, **sp_help_category** restituisce il set di risultati seguente:  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -75,15 +75,15 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|Tipo di categoria:<br /><br /> **1** = locale<br /><br /> **2** = multiserver<br /><br /> **3** = nessuna|  
 |**nome**|**sysname**|Nome della categoria|  
   
- Quando il ** \@ suffisso** è **1**, **sp_help_category** restituisce il set di risultati seguente:  
+ Quando il **\@ suffisso** è **1**, **sp_help_category** restituisce il set di risultati seguente:  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|ID della categoria|  
-|**category_type**|**sysname**|Tipo di categoria: Uno dei sistemi **locali**, **multiserver**o **None**|  
+|**category_type**|**sysname**|Tipo di categoria: Uno dei sistemi **locali**, **multiserver** o **None**|  
 |**nome**|**sysname**|Nome della categoria|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_help_category** deve essere eseguito dal database **msdb** .  
   
  Se non viene specificato alcun parametro, il set di risultati include informazioni su tutte le categorie dei processi.  

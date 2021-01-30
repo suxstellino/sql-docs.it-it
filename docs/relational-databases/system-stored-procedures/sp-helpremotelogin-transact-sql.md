@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpremotelogin_TSQL
 - sp_helpremotelogin
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4b35458a0c99eb14db60a058ef72e98df529c217
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ff291542fee3d10fe94e9ccd628e05c8f9e77f7b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547982"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210814"
 ---
 # <a name="sp_helpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,11 +44,11 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @remoteserver **=** ] **'***RemoteServer***'**  
- Server remoto per il quale vengono restituite informazioni sugli account di accesso remoti. *RemoteServer* è di **tipo sysname**e il valore predefinito è null. Se *RemoteServer* non è specificato, vengono restituite informazioni su tutti i server remoti definiti nel server locale.  
+ [ @remoteserver **=** ] **'**_RemoteServer_*_'_*  
+ Server remoto per il quale vengono restituite informazioni sugli account di accesso remoti. *RemoteServer* è di **tipo sysname** e il valore predefinito è null. Se *RemoteServer* non è specificato, vengono restituite informazioni su tutti i server remoti definiti nel server locale.  
   
- [ @remotename **=** ] **'***remote_name***'**  
- Account di accesso remoto specifico nel server remoto. *remote_name* è di **tipo sysname**e il valore predefinito è null. Se *remote_name* viene omesso, vengono restituite informazioni su tutti gli utenti remoti definiti per *RemoteServer* .  
+ [ @remotename **=** ] **'**_remote_name_*_'_*  
+ Account di accesso remoto specifico nel server remoto. *remote_name* è di **tipo sysname** e il valore predefinito è null. Se *remote_name* viene omesso, vengono restituite informazioni su tutti gli utenti remoti definiti per *RemoteServer* .  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -62,7 +62,7 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 |remote_user_name|**sysname**|Account di accesso nel server remoto sul quale viene eseguito il mapping a local_user_name.|  
 |opzioni|**sysname**|Trusted = Quando l'account di accesso remoto si connette al server locale dal server remoto, non viene richiesta alcuna password.<br /><br /> Untrusted (o vuoto) = Quando l'account di accesso remoto si connette al server locale dal server remoto, viene sempre richiesta una password.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Per recuperare un elenco dei nomi dei server remoti definiti nel server locale, eseguire sp_helpserver.  
   
 ## <a name="permissions"></a>Autorizzazioni  

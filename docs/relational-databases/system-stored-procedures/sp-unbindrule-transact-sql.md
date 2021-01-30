@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_unbindrule_TSQL
 - sp_unbindrule
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7ddf241acfb6e82e0cdd67315727017fb9965f77
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 42b652e2cc604465ac0db1d2c6f65739916c8684
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547338"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209674"
 ---
 # <a name="sp_unbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ sp_unbindrule [ @objname = ] 'object_name'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Per visualizzare il testo di una regola, eseguire **sp_helptext** specificando il nome della regola come parametro.  
   
  Quando una regola non è associata, le informazioni sull'associazione vengono rimosse dalla tabella **sys. Columns** se la regola è stata associata a una colonna e dalla tabella **sys. Types** se la regola è stata associata a un tipo di dati alias.  

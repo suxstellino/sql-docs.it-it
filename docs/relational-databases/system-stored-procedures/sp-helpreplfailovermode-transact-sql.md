@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpreplfailovermode
 - sp_helpreplfailovermode_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 49573995e7a89b0cb2cc9cdecd55009320f565f4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 11ebe0df55bb0b6b5a2b7f009a0be4be28c788c1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538797"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210834"
 ---
 # <a name="sp_helpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,17 +42,17 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'` Nome del server di pubblicazione che partecipa all'aggiornamento del Sottoscrittore. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito. Il server di pubblicazione deve essere già configurato per la pubblicazione.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione che partecipa all'aggiornamento del Sottoscrittore. *Publisher* è di **tipo sysname** e non prevede alcun valore predefinito. Il server di pubblicazione deve essere già configurato per la pubblicazione.  
   
-`[ @publisher_db = ] 'publisher_db'` Nome del database di pubblicazione. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` Nome del database di pubblicazione. *publisher_db* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @publication = ] 'publication'` Nome della pubblicazione che partecipa all'aggiornamento del Sottoscrittore. *Publication*è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione che partecipa all'aggiornamento del Sottoscrittore. *Publication* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 `[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` Restituisce il valore intero della modalità di failover ed è un parametro di **output** . *failover_mode_id* è di un **tinyint** e il valore predefinito è **0**. Restituisce **0** per l'aggiornamento immediato e **1** per l'aggiornamento in coda.  
   
 `[ @failover_mode = ] 'failover_mode' OUTPUT` Restituisce la modalità in cui vengono apportate modifiche ai dati nel Sottoscrittore. *failover_mode* è di **tipo nvarchar (10)** e il valore predefinito è null. È un parametro di **output** .  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**immediato**|Aggiornamento immediato: gli aggiornamenti implementati nel Sottoscrittore vengono propagati immediatamente al server di pubblicazione tramite il protocollo di commit in due fasi (2PC).|  
 |**accodati**|Aggiornamento in coda: gli aggiornamenti implementati nel Sottoscrittore vengono archiviati in una coda.|  
@@ -60,7 +60,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_helpreplfailovermode** viene utilizzata per la replica snapshot o transazionale per le quali le sottoscrizioni sono abilitate per l'aggiornamento immediato con aggiornamento in coda come failover, in caso di errore.  
   
 ## <a name="permissions"></a>Autorizzazioni  

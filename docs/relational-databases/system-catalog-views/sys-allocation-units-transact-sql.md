@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.allocation_units_TSQL
 - sys.allocation_units
@@ -21,12 +21,12 @@ ms.assetid: ec9de780-68fd-4551-b70b-2d3ab3709b3e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 12a5924d1137f9face839899a742f20d3565f267
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 59fc26433dcf98c88cd0172b8a25ef288622547e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98091574"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210084"
 ---
 # <a name="sysallocation_units-transact-sql"></a>sys.allocation_units (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "98091574"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |allocation_unit_id|**bigint**|ID dell'unità di allocazione. Valore univoco all'interno di un database.|  
-|type|**tinyint**|Tipo di unità di allocazione:<br /><br /> 0 = Rimossa<br /><br /> 1 = Dati all'interno di righe (tutti i tipi di dati, eccetto i tipi di dati LOB)<br /><br /> 2 = dati LOB (Large Object) (**Text**, **ntext**, **Image**, **XML**, tipi di valore di grandi dimensioni e tipi CLR definiti dall'utente)<br /><br /> 3 = Dati di overflow della riga|  
+|tipo|**tinyint**|Tipo di unità di allocazione:<br /><br /> 0 = Rimossa<br /><br /> 1 = Dati all'interno di righe (tutti i tipi di dati, eccetto i tipi di dati LOB)<br /><br /> 2 = dati LOB (Large Object) (**Text**, **ntext**, **Image**, **XML**, tipi di valore di grandi dimensioni e tipi CLR definiti dall'utente)<br /><br /> 3 = Dati di overflow della riga|  
 |type_desc|**nvarchar(60)**|Descrizione del tipo dell'unità di allocazione:<br /><br /> **ELIMINATO**<br /><br /> **IN_ROW_DATA**<br /><br /> **LOB_DATA**<br /><br /> **ROW_OVERFLOW_DATA**|  
 |container_id|**bigint**|ID del contenitore di archiviazione associato all'unità di allocazione.<br /><br /> Se type = 1 o 3, container_id = sys.partitions.hobt_id.<br /><br /> Se type è 2, allora container_id = sys.partitions.partition_id.<br /><br /> 0 = Unità di allocazione contrassegnata per la rimozione posticipata|  
 |data_space_id|**int**|ID del filegroup contenente l'unità di allocazione.|  

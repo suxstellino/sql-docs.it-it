@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - database_audit_specifications_TSQL
 - sys.database_audit_specifications_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: e88134772509f84eb389b3e55de860fdb59380bd
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: da93017ae9f419c02ece8a50731f21d4b7cf36df
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095581"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210394"
 ---
 # <a name="sysdatabase_audit_specifications-transact-sql"></a>sys.database_audit_specifications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "98095581"
 |is_state_enabled|**bit**|Stato della specifica del controllo:<br /><br /> 0-DISABILITATO<br /><br /> 1: ABILITATO|  
 |audit_GUID|**uniqueidentifer**|GUID del controllo che contiene questa specifica. Viene utilizzato durante l'enumerazione delle specifiche del controllo del database membro durante l'avvio o il collegamento del database.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se un database è in modalità di sola lettura, la funzionalità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit non può aggiungere specifiche del controllo del database.  
   
 ## <a name="permissions"></a>Autorizzazioni  

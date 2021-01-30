@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cursorprepexec_TSQL
 - sp_cursorprepexec
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c77a02d7232acdd9dd2f109c6e7ae2d56121382e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b59597048ba7edc1102c3151d720e9bc6ff36942
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549920"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209696"
 ---
 # <a name="sp_cursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,13 +49,13 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  Identificatore del cursore generato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Cursor* è un parametro obbligatorio che deve essere fornito in tutte le procedure successive che agiscono su questo cursore, ad esempio sp_cursorfetch.  
   
  *params*  
- Identifica le istruzioni con parametri. La definizione *params* delle variabili viene sostituita per i marcatori di parametro nell'istruzione. *params* è un parametro obbligatorio che richiede un valore di input **ntext**, **nchar**o **nvarchar** .  
+ Identifica le istruzioni con parametri. La definizione *params* delle variabili viene sostituita per i marcatori di parametro nell'istruzione. *params* è un parametro obbligatorio che richiede un valore di input **ntext**, **nchar** o **nvarchar** .  
   
 > [!NOTE]  
 >  Usare una stringa **ntext** come valore di input quando *stmt* è con parametri e il valore di *scrollopt* PARAMETERIZED_STMT è on.  
   
  *istruzione*  
- Definisce il set di risultati del cursore. Il parametro *Statement* è obbligatorio e richiede un valore di input **ntext**, **nchar**o **nvarchar** .  
+ Definisce il set di risultati del cursore. Il parametro *Statement* è obbligatorio e richiede un valore di input **ntext**, **nchar** o **nvarchar** .  
   
 > [!NOTE]  
 >  Le regole per la specifica del valore stmt sono le stesse di quelle per sp_cursoropen, con l'eccezione che il tipo di dati stringa *stmt* deve essere **ntext**.  
@@ -63,14 +63,14 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  *options*  
  Parametro facoltativo tramite cui viene restituita una descrizione delle colonne dei set di risultati del cursore. * le opzioni richiedono il valore di input **int** seguente.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  Opzione di scorrimento. *scrollopt* è un parametro facoltativo che richiede uno dei valori di input **int** seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -92,7 +92,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  *ccopt*  
  Opzioni del controllo della concorrenza. *ccopt* è un parametro facoltativo che richiede uno dei valori di input **int** seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (precedentemente noto come LOCKCC)|  

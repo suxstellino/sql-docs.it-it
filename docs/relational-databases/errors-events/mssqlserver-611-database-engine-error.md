@@ -6,18 +6,18 @@ ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: reference
 helpviewer_keywords:
 - 611 (Database Engine error)
 ms.assetid: ac6a213f-5c38-44ad-bc85-a62863786614
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d89160b7147a856ada42480b6cf7730f0be6b122
-ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
+ms.openlocfilehash: 7a9776bca7b50043f4e61034476e140f68e804fa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99049069"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211375"
 ---
 # <a name="mssqlserver_611"></a>MSSQLSERVER_611
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

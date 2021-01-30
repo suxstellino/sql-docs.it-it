@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_downloadlist_TSQL
 - sp_help_downloadlist
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2196e6fbbbd0089c7e65592bfc4ebfd17bb14239
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6f60b3da9c05d38b60573aa272c33a7cb6915116
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549731"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208921"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,38 +47,38 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_id = ] job_id` Numero di identificazione del processo per cui restituire informazioni. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
+`[ @job_id = ] job_id` Numero di identificazione del processo per cui restituire informazioni. *job_id* è di tipo **uniqueidentifier** e il valore predefinito è null.  
   
-`[ @job_name = ] 'job_name'` Nome del processo. *job_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @job_name = ] 'job_name'` Nome del processo. *job_name* è di **tipo sysname** e il valore predefinito è null.  
   
 > [!NOTE]  
 >  È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi.  
   
 `[ @operation = ] 'operation'` Operazione valida per il processo specificato. *Operation* è di tipo **varchar (64)** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**DIFETTO**|Operazione del server che richiede al server di destinazione di escludere dal servizio **SQLServerAgent** master.|  
 |**DELETE**|Operazione del processo che rimuove un intero processo.|  
 |**INSERT**|Operazione del processo che inserisce un intero processo o ne aggiorna uno esistente. Include tutti i passaggi e le pianificazioni del processo, se applicabile.|  
 |**RE-ENLIST**|Operazione del server con cui viene attivato il rinvio delle informazioni di integrazione del server di destinazione, tra cui l'intervallo di polling e il fuso orario per il dominio multiserver. Il server di destinazione Riscarica anche i dettagli **MSXOperator** .|  
 |**SET-POLL**|Operazione del server con cui viene impostato l'intervallo di tempo in secondi per il polling del dominio multiserver eseguito dai server di destinazione. Se specificato, il *valore* viene interpretato come il valore dell'intervallo necessario e può essere un valore compreso tra **10** e **28.800**.|  
-|**AVVIO**|Operazione del processo con cui viene richiesto l'avvio dell'esecuzione del processo.|  
+|**INIZIARE**|Operazione del processo con cui viene richiesto l'avvio dell'esecuzione del processo.|  
 |**ARRESTARE**|Operazione del processo con cui viene richiesto l'arresto dell'esecuzione del processo.|  
 |**SYNC-TIME**|Operazione del server con cui viene attivata la sincronizzazione del clock di sistema dei server di destinazione con il clock di sistema del dominio multiserver. Si tratta di un'operazione onerosa ed è pertanto consigliabile non eseguirla di frequente.|  
 |**UPDATE**|Operazione di processo che aggiorna solo le informazioni di **sysjobs** per un processo, non i passaggi o le pianificazioni del processo. Viene chiamato automaticamente da **sp_update_job**.|  
   
-`[ @object_type = ] 'object_type'` Tipo di oggetto per il processo specificato. *object_type* è di tipo **varchar (64)** e il valore predefinito è null. *object_type* può essere un processo o un server. Per ulteriori informazioni sui valori di *object_type*validi, vedere [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
+`[ @object_type = ] 'object_type'` Tipo di oggetto per il processo specificato. *object_type* è di tipo **varchar (64)** e il valore predefinito è null. *object_type* può essere un processo o un server. Per ulteriori informazioni sui valori di *object_type* validi, vedere [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
   
-`[ @object_name = ] 'object_name'` Nome dell'oggetto. *object_name* è di **tipo sysname**e il valore predefinito è null. Se *object_type* è job, *object_name*è il nome del processo. Se *object_type*è server, *object_name*è il nome del server.  
+`[ @object_name = ] 'object_name'` Nome dell'oggetto. *object_name* è di **tipo sysname** e il valore predefinito è null. Se *object_type* è job, *object_name* è il nome del processo. Se *object_type* è server, *object_name* è il nome del server.  
   
 `[ @target_server = ] 'target_server'` Nome del server di destinazione. *target_server* è di **tipo nvarchar (128)** e il valore predefinito è null.  
   
-`[ @has_error = ] has_error` Indica se il processo deve riconoscere gli errori. *has_error* è di **tinyint**e il valore predefinito è null, che indica che non deve essere riconosciuto alcun errore. **1** indica che tutti gli errori devono essere riconosciuti.  
+`[ @has_error = ] has_error` Indica se il processo deve riconoscere gli errori. *has_error* è di **tinyint** e il valore predefinito è null, che indica che non deve essere riconosciuto alcun errore. **1** indica che tutti gli errori devono essere riconosciuti.  
   
-`[ @status = ] status` Stato del processo. *status* è di **tinyint**e il valore predefinito è null.  
+`[ @status = ] status` Stato del processo. *status* è di **tinyint** e il valore predefinito è null.  
   
-`[ @date_posted = ] date_posted` Data e ora per le quali è necessario includere nel set di risultati tutte le voci effettuate dopo la data e l'ora specificate. *date_posted* è di tipo **DateTime**e il valore predefinito è null.  
+`[ @date_posted = ] date_posted` Data e ora per le quali è necessario includere nel set di risultati tutte le voci effettuate dopo la data e l'ora specificate. *date_posted* è di tipo **DateTime** e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -99,9 +99,9 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**Stato**|**tinyint**|Stato del processo:<br /><br /> **0** = non ancora scaricato<br /><br /> **1** = il download è stato completato.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Le autorizzazioni per l'esecuzione di questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
+ Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene visualizzato un elenco di righe in `sysdownloadlist` per il processo `NightlyBackups`.  
   
 ```  

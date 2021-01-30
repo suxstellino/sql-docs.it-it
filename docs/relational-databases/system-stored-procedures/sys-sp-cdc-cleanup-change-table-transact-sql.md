@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_cleanup_change_table (Transact-SQL)
-title: sys. sp_cdc_cleanup_change_table (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_cleanup_change_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cdc_cleanup_change_table
 - sp_cdc_cleanup_change_table_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6d532b168dfdc17b85ada5b9ef6ac653b9903fc6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fc6ca4964beff8adc8f32598948964d597076804
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541105"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210752"
 ---
 # <a name="syssp_cdc_cleanup_change_table-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,19 +47,19 @@ sys.sp_cdc_cleanup_change_table
   
 ## <a name="arguments"></a>Argomenti  
  [ @capture_instance =]'*capture_instance*'  
- Nome dell'istanza di acquisizione associata alla tabella delle modifiche. *capture_instance* è di **tipo sysname**e non prevede alcun valore predefinito e non può essere null.  
+ Nome dell'istanza di acquisizione associata alla tabella delle modifiche. *capture_instance* è di **tipo sysname** e non prevede alcun valore predefinito e non può essere null.  
   
  *capture_instance* necessario assegnare un nome a un'istanza di acquisizione esistente nel database corrente.  
   
  [ @low_water_mark =] *low_water_mark*  
  Numero di sequenza del file di log (LSN) che deve essere utilizzato come nuovo limite minimo per l' *istanza di acquisizione*. *low_water_mark* è **binario (10)** e non prevede alcun valore predefinito.  
   
- Se il valore è diverso da null, deve apparire come valore start_lsn di una voce corrente nella tabella [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Se altre voci in cdc.lsn_time_mapping condividono la stessa ora di commit della voce identificata dal nuovo limite minimo, il valore LSN minore associato a tale gruppo di voci viene scelto come limite minimo.  
+ Se il valore è diverso da null, deve apparire come valore start_lsn di una voce corrente nella tabella [CDC.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Se altre voci in cdc.lsn_time_mapping condividono la stessa ora di commit della voce identificata dal nuovo limite minimo, il valore LSN minore associato a tale gruppo di voci viene scelto come limite minimo.  
   
  Se il valore viene impostato in modo esplicito su NULL, il limite *minimo* corrente per l' *istanza di acquisizione* viene utilizzato per definire il limite superiore per l'operazione di pulizia.  
   
  [ @threshold =]'*Elimina soglia*'  
- Numero massimo di voci che possono essere eliminate utilizzando un'unica istruzione nel processo di pulizia. *delete_threshold* è di tipo **bigint**e il valore predefinito è 5000.  
+ Numero massimo di voci che possono essere eliminate utilizzando un'unica istruzione nel processo di pulizia. *delete_threshold* è di tipo **bigint** e il valore predefinito è 5000.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -81,7 +81,7 @@ sys.sp_cdc_cleanup_change_table
   
 -   I report del processo Cleanup Agent eliminano gli errori.  
   
-     Un amministratore può eseguire questa stored procedure in modo esplicito per riprovare un'operazione non riuscita. Per ripetere la pulizia per una determinata istanza di acquisizione, eseguire sys. sp_cdc_cleanup_change_table e specificare NULL per il @low_water_mark parametro.  
+     Un amministratore può eseguire questa stored procedure in modo esplicito per riprovare un'operazione non riuscita. Per ripetere la pulizia per una determinata istanza di acquisizione, eseguire sys.sp_cdc_cleanup_change_table e specificare NULL per il @low_water_mark parametro.  
   
 -   I criteri basati sulla memorizzazione utilizzati dal processo di Cleanup Agent non sono adeguati.  
   
@@ -91,8 +91,8 @@ sys.sp_cdc_cleanup_change_table
  Richiede l'appartenenza al ruolo predefinito del database db_owner.  
   
 ## <a name="see-also"></a>Vedere anche  
- [CDC. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [sys. fn_cdc_get_min_lsn &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [sys.fn_cdc_get_min_lsn &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
  [sys.fn_cdc_increment_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)  
   
   

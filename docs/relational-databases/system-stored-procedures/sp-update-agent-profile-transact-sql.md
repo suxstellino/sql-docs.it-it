@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_agent_profile_TSQL
 - sp_update_agent_profile
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cc81f227-0df3-4151-bb4d-4f45ea997b71
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 53084511e6981afec31ee3fc3f0bafcb76d496d8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d165fa80f51d1d5b018bd67eda3c4fb06eb5bc52
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547288"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209643"
 ---
 # <a name="sp_update_agent_profile-transact-sql"></a>sp_update_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +38,9 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @agent_type = ] 'agent_type'` Tipo di agente. *agent_type* è di **tipo int**e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
+`[ @agent_type = ] 'agent_type'` Tipo di agente. *agent_type* è di **tipo int** e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Agente snapshot.|  
 |**2**|Agente di lettura log.|  
@@ -48,14 +48,14 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 |**4**|Agente di merge.|  
 |**9**|Agente di lettura coda.|  
   
-`[ @agent_id = ] 'agent_id'` ID dell'agente. *agent_id* è di **tipo int**e non prevede alcun valore predefinito.  
+`[ @agent_id = ] 'agent_id'` ID dell'agente. *agent_id* è di **tipo int** e non prevede alcun valore predefinito.  
   
-`[ @profile_id = ] 'profile_id'` ID del profilo che deve essere utilizzato dall'agente. *profile_id* è di **tipo int**e non prevede alcun valore predefinito. Per visualizzare un elenco dei profili definiti per ogni agente, utilizzare [sp_help_agent_profile &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Per ulteriori informazioni sui profili di sistema, vedere [profili degli agenti di replica](../../relational-databases/replication/agents/replication-agent-profiles.md).  
+`[ @profile_id = ] 'profile_id'` ID del profilo che deve essere utilizzato dall'agente. *profile_id* è di **tipo int** e non prevede alcun valore predefinito. Per visualizzare un elenco dei profili definiti per ogni agente, utilizzare [sp_help_agent_profile &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Per ulteriori informazioni sui profili di sistema, vedere [profili degli agenti di replica](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_update_agent_profile** viene utilizzato in tutti i tipi di replica.  
   
 ## <a name="permissions"></a>Autorizzazioni  

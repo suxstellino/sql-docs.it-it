@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_agent_profile
 - sp_help_agent_profile_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7bcb9de7480bf0aea92f585cfece47cf09545195
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8c335753621a90bbf9872a7786a6619cbd090249
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538857"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208946"
 ---
 # <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,9 +39,9 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @agent_type = ] agent_type` Tipo di agente. *agent_type* è di **tipo int**e il valore predefinito è **0**. i possibili valori sono i seguenti.  
+`[ @agent_type = ] agent_type` Tipo di agente. *agent_type* è di **tipo int** e il valore predefinito è **0**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|agente snapshot|  
 |**2**|Agente di lettura log|  
@@ -49,7 +49,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**4**|Agente di merge|  
 |**9**|Agente di lettura coda|  
   
-`[ @profile_id = ] profile_id` ID del profilo da visualizzare. *profile_id* è di **tipo int**e il valore predefinito è **-1**, che restituisce tutti i profili nella tabella **MSagent_profiles** .  
+`[ @profile_id = ] profile_id` ID del profilo da visualizzare. *profile_id* è di **tipo int** e il valore predefinito è **-1**, che restituisce tutti i profili nella tabella **MSagent_profiles** .  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -65,7 +65,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_help_agent_profile** viene utilizzato in tutti i tipi di replica.  
   
 ## <a name="permissions"></a>Autorizzazioni  

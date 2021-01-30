@@ -5,7 +5,7 @@ titleSuffix: Azure SQL Database
 ms.date: 01/28/2019
 ms.service: sql-database
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.database_connection_stats
 - database_connection_stats
@@ -21,12 +21,12 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: b5d01ec490009c2c3b26dd888bd6050b0638e952
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 948a45e2f9d2dca95bca1c3afbaed419030f47df
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102821"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210360"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Database di SQL Azure)
 
@@ -34,10 +34,10 @@ ms.locfileid: "98102821"
 
   Contiene statistiche per [!INCLUDE[ssSDS](../../includes/sssds-md.md)] gli eventi di **connettività** del database, offrendo una panoramica delle connessioni al database riuscite ed errori. Per altre informazioni sugli eventi di connettività, vedere tipi di evento in [sys.event_log &#40;database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-|Statistiche|Type|Descrizione|  
+|Statistiche|Tipo|Descrizione|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|Nome del database.|  
-|**start_time**|**datetime2**|Data e ora UTC dell'inizio dell'intervallo di aggregazione. L'ora è sempre un multiplo di 5 minuti. Esempio:<br /><br /> 28/09/2011 16:00:00<br />'29-09-2011 16:05:00'<br />'28-09-2011 16:10:00'|  
+|**start_time**|**datetime2**|Data e ora UTC dell'inizio dell'intervallo di aggregazione. L'ora è sempre un multiplo di 5 minuti. Ad esempio:<br /><br /> 28/09/2011 16:00:00<br />'29-09-2011 16:05:00'<br />'28-09-2011 16:10:00'|  
 |**end_time**|**datetime2**|Data e ora UTC della fine dell'intervallo di aggregazione. **End_time** è sempre esattamente 5 minuti dopo rispetto al **start_time** corrispondente nella stessa riga.|  
 |**success_count**|**int**|Numero di connessioni riuscite.|  
 |**total_failure_count**|**int**|Numero totale di connessioni non riuscite. Si tratta della somma di **connection_failure_count**, **terminated_connection_count** e **throttled_connection_count** e non include gli eventi deadlock.|  
@@ -45,7 +45,7 @@ ms.locfileid: "98102821"
 |**terminated_connection_count**|**int**|**_Applicabile solo per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11._**<br /><br /> Numero di connessioni chiuse.|  
 |**throttled_connection_count**|**int**|**_Applicabile solo per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11._**<br /><br /> Numero di connessioni limitate.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ### <a name="event-aggregation"></a>Aggregazione evento
 

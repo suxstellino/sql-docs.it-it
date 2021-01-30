@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_fulltext_catalog_components_TSQL
 - sp_help_fulltext_catalog_components
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2884cda986a99f23c88c71c8960d25a467de0663
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6a3854205649215de979c2421c2a8e506e826245
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548034"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208908"
 ---
 # <a name="sp_help_fulltext_catalog_components-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,10 +48,10 @@ sp_help_fulltext_catalog_components
 |-----------------|---------------|-----------------|  
 |**nome catalogo full-text**|**int**|Nome del catalogo full-text.|  
 |**ID catalogo full-text**|**sysname**|ID del catalogo full-text.|  
-|**componenttype**|**sysname**|Tipo di componente. I tipi validi sono:<br /><br /> Filtro<br /><br /> Protocol handler<br /><br /> Wordbreaker|  
+|**componenttype**|**sysname**|Tipo di componente. I tipi validi sono:<br /><br /> Filtra<br /><br /> Protocol handler<br /><br /> Wordbreaker|  
 |**ComponentName**|**sysname**|Nome del componente.|  
 |**CLSID**|**uniqueidentifier**|Identificatore della classe del componente.|  
-|**fullpath**|**nvarchar(256)**|Percorso della posizione del componente.<br /><br /> NULL = il chiamante non è un membro del ruolo predefinito del server **serveradmin** .|  
+|**FullPath**|**nvarchar(256)**|Percorso della posizione del componente.<br /><br /> NULL = il chiamante non è un membro del ruolo predefinito del server **serveradmin** .|  
 |**version**|**nvarchar(30)**|Versione del componente.|  
 |**Produttore**|**sysname**|Nome del produttore del componente.|  
   

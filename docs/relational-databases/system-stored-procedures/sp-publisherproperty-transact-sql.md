@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_publisherproperty
 - sp_publisherproperty_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 459e5c7c702f01cbae74843e4ed8b3152d25626f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 80e2e9eda3d6a4f900c4ab9f8e48dc783d23cd2d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534970"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210043"
 ---
 # <a name="sp_publisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,11 +40,11 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'` Nome del server di pubblicazione eterogeneo. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione eterogeneo. *Publisher* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 `[ @propertyname = ] 'propertyname'` Nome della proprietà da impostare. *PropertyName* è di **tipo sysname**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**xactsetbatching**|Indica se le transazioni nel server di pubblicazione sono raggruppate in set con consistenza transazionale per elaborazioni successive, noti come Xactset. Il valore **Enabled** indica che è possibile creare Xactset, che è l'impostazione predefinita. Il valore **disabled** indica che i Xactset esistenti vengono elaborati da non vengono creati nuovi Xactset.|  
 |**xactsetjob**|Indica se è attivo il processo Xactset per la creazione di Xactset. Il valore **Enabled** indica che il processo Xactset viene eseguito periodicamente per creare Xactset nel server di pubblicazione. Il valore **disabled** indica che i Xactset vengono creati solo dal agente di lettura log quando esegue il polling del server di pubblicazione per le modifiche.|  
@@ -53,7 +53,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
  Quando *PropertyName* viene omesso, vengono restituite tutte le proprietà impostabili.  
   
  `[ @propertyvalue = ] 'propertyvalue'`  
- Nuovo valore per la proprietà. *PropertyValue* è di **tipo sysname**e il valore predefinito è null. Quando *PropertyValue* viene omesso, viene restituita l'impostazione corrente per la proprietà.  
+ Nuovo valore per la proprietà. *PropertyValue* è di **tipo sysname** e il valore predefinito è null. Quando *PropertyValue* viene omesso, viene restituita l'impostazione corrente per la proprietà.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -65,7 +65,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_publisherproperty** viene utilizzata per la replica transazionale per i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher non.  
   
  Quando viene specificato solo *Publisher* , il set di risultati include le impostazioni correnti per tutte le proprietà che è possibile impostare.  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_maintenance_plan_db_TSQL
 - sp_add_maintenance_plan_db
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 76f4fefa-5b99-4deb-beed-e198987a45a9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d8369e3cdd8ad7d7c943e715361cbd26d99bb00
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8cc84a2afd70a4e5bd89a581b0fb1ac1dcc229f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474626"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209020"
 ---
 # <a name="sp_add_maintenance_plan_db-transact-sql"></a>sp_add_maintenance_plan_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,20 +46,20 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @plan_id = ] 'plan_id'` Specifica l'ID del piano di manutenzione. *plan_id* è di tipo **uniqueidentifier**e deve essere un ID valido.  
+`[ @plan_id = ] 'plan_id'` Specifica l'ID del piano di manutenzione. *plan_id* è di tipo **uniqueidentifier** e deve essere un ID valido.  
   
 `[ @db_name = ] 'database_name'` Specifica il nome del database da aggiungere al piano di manutenzione. Il database deve essere creato o deve esistere prima dell'aggiunta al piano. *database_name* è di tipo **sysname**.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_add_maintenance_plan_db** deve essere eseguito dal database **msdb** .  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_add_maintenance_plan_db**.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  In questo esempio il database **AdventureWorks2012** viene aggiunto al piano di manutenzione creato in **sp_add_maintenance_plan**.  
   
 ```  

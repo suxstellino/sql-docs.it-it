@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addmergepublication
 - sp_addmergepublication_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c3b3b78cc80f441ed340c4732e9b5d43a8af10e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f0c132ffc9315bafc28530afeef83f779c2975e7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89530052"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209433"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -76,18 +76,18 @@ sp_addmergepublication [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` Nome della pubblicazione di tipo merge da creare. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito e non deve essere la parola chiave all. Il nome della pubblicazione deve essere univoco all'interno del database.  
+`[ @publication = ] 'publication'` Nome della pubblicazione di tipo merge da creare. *Publication* è di **tipo sysname** e non prevede alcun valore predefinito e non deve essere la parola chiave all. Il nome della pubblicazione deve essere univoco all'interno del database.  
   
 `[ @description = ] 'description'` Descrizione della pubblicazione. *Description* è di **tipo nvarchar (255)** e il valore predefinito è null.  
   
-`[ @retention = ] retention` Periodo di memorizzazione, in unità del periodo di memorizzazione, per cui salvare le modifiche per la *pubblicazione*specificata. la *conservazione* è di **tipo int**e il valore predefinito è 14 unità. Le unità del periodo di memorizzazione sono definite da *retention_period_unit*. Se la sottoscrizione non viene sincronizzata entro il periodo di memorizzazione specificato e se le modifiche che tale sottoscrizione avrebbe dovuto ricevere sono state rimosse tramite un'operazione di rimozione nel server di distribuzione, la sottoscrizione scade e pertanto dovrà essere reinizializzata. Il periodo di memorizzazione massimo consentito equivale al numero di giorni tra il 31 dicembre 9999 e la data corrente.  
+`[ @retention = ] retention` Periodo di memorizzazione, in unità del periodo di memorizzazione, per cui salvare le modifiche per la *pubblicazione* specificata. la *conservazione* è di **tipo int** e il valore predefinito è 14 unità. Le unità del periodo di memorizzazione sono definite da *retention_period_unit*. Se la sottoscrizione non viene sincronizzata entro il periodo di memorizzazione specificato e se le modifiche che tale sottoscrizione avrebbe dovuto ricevere sono state rimosse tramite un'operazione di rimozione nel server di distribuzione, la sottoscrizione scade e pertanto dovrà essere reinizializzata. Il periodo di memorizzazione massimo consentito equivale al numero di giorni tra il 31 dicembre 9999 e la data corrente.  
   
 > [!NOTE]  
 >  Il periodo di memorizzazione per le pubblicazioni di tipo merge è caratterizzato da un periodo di tolleranza di 24 ore per consentire l'adeguamento dei Sottoscrittori appartenenti a fusi orari diversi. Se, ad esempio, si imposta un periodo di memorizzazione di un giorno, il periodo di memorizzazione effettivo sarà di 48 ore.  
   
 `[ @sync_mode = ] 'sync_mode'` Modalità della sincronizzazione iniziale dei sottoscrittori della pubblicazione. *sync_mode* è di **tipo nvarchar (10)**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**native** (impostazione predefinita)|Genera l'output in modalità nativa del programma per la copia bulk per tutte le tabelle.|  
 |**character**|Genera l'output in modalità carattere del programma per la copia bulk per tutte le tabelle. Obbligatorio per supportare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] e non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori.|  
@@ -115,11 +115,11 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @post_snapshot_script = ] 'post_snapshot_script'` Specifica un puntatore al percorso di un file con **estensione SQL** . *post_snapshot_script* è di **tipo nvarchar (255)** e il valore predefinito è null. L'agente di merge esegue lo script post-snapshot dopo l'applicazione di tutti gli altri script di oggetti replicati e dei dati durante una sincronizzazione iniziale. Lo script viene eseguito nel contesto di sicurezza utilizzato dall'agente di merge durante la connessione al database di sottoscrizione. Gli script post-snapshot non vengono eseguiti nei [!INCLUDE[ssEW](../../includes/ssew-md.md)] sottoscrittori.  
   
-`[ @compress_snapshot = ] 'compress_snapshot'`Specifica che lo snapshot scritto nella posizione ** \@ alt_snapshot_folder** deve essere compresso nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB. *compress_snapshot* è di **tipo nvarchar (5)** e il valore predefinito è false. **false** specifica che lo snapshot non verrà compresso; **true** specifica che lo snapshot deve essere compresso. I file di snapshot di dimensioni superiori a 2GB non possono essere compressi. I file di snapshot compressi vengono decompressi nella posizione dove viene eseguito l'agente di merge; in genere le sottoscrizioni pull vengono utilizzate con gli snapshot compressi in modo che i file vengono decompressi nel Sottoscrittore. Non è possibile comprimere lo snapshot all'interno della cartella predefinita. Per supportare i [!INCLUDE[ssEW](../../includes/ssew-md.md)] sottoscrittori, è necessario specificare **false**.  
+`[ @compress_snapshot = ] 'compress_snapshot'`Specifica che lo snapshot scritto nella posizione **\@ alt_snapshot_folder** deve essere compresso nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB. *compress_snapshot* è di **tipo nvarchar (5)** e il valore predefinito è false. **false** specifica che lo snapshot non verrà compresso; **true** specifica che lo snapshot deve essere compresso. I file di snapshot di dimensioni superiori a 2GB non possono essere compressi. I file di snapshot compressi vengono decompressi nella posizione dove viene eseguito l'agente di merge; in genere le sottoscrizioni pull vengono utilizzate con gli snapshot compressi in modo che i file vengono decompressi nel Sottoscrittore. Non è possibile comprimere lo snapshot all'interno della cartella predefinita. Per supportare i [!INCLUDE[ssEW](../../includes/ssew-md.md)] sottoscrittori, è necessario specificare **false**.  
   
-`[ @ftp_address = ] 'ftp_address'` È l'indirizzo di rete del servizio FTP per il server di distribuzione. *ftp_address* è di **tipo sysname**e il valore predefinito è null. Specifica la posizione dei file di snapshot della pubblicazione, dove i file possono essere prelevati dall'agente di merge di un Sottoscrittore. Poiché questa proprietà viene archiviata per ogni pubblicazione, ogni pubblicazione può avere un *ftp_address*diverso. La pubblicazione deve supportare la propagazione di snapshot tramite FTP.  
+`[ @ftp_address = ] 'ftp_address'` È l'indirizzo di rete del servizio FTP per il server di distribuzione. *ftp_address* è di **tipo sysname** e il valore predefinito è null. Specifica la posizione dei file di snapshot della pubblicazione, dove i file possono essere prelevati dall'agente di merge di un Sottoscrittore. Poiché questa proprietà viene archiviata per ogni pubblicazione, ogni pubblicazione può avere un *ftp_address* diverso. La pubblicazione deve supportare la propagazione di snapshot tramite FTP.  
   
-`[ @ftp_port = ] ftp_port` Numero di porta del servizio FTP per il server di distribuzione. *ftp_port* è di **tipo int**e il valore predefinito è 21. Specifica la posizione dei file di snapshot della pubblicazione, dove i file possono essere prelevati dall'agente di merge di un Sottoscrittore. Poiché questa proprietà viene archiviata per ogni pubblicazione, ogni pubblicazione può disporre di un proprio *ftp_port*.  
+`[ @ftp_port = ] ftp_port` Numero di porta del servizio FTP per il server di distribuzione. *ftp_port* è di **tipo int** e il valore predefinito è 21. Specifica la posizione dei file di snapshot della pubblicazione, dove i file possono essere prelevati dall'agente di merge di un Sottoscrittore. Poiché questa proprietà viene archiviata per ogni pubblicazione, ogni pubblicazione può disporre di un proprio *ftp_port*.  
   
 `[ @ftp_subdirectory = ] 'ftp_subdirectory'` Specifica la posizione in cui i file di snapshot saranno disponibili per l'agente di merge del Sottoscrittore se la pubblicazione supporta la propagazione di snapshot tramite FTP. *ftp_subdirectory* è di **tipo nvarchar (255)** e il valore predefinito è null. Poiché questa proprietà viene archiviata per ogni pubblicazione, ogni pubblicazione può disporre di un proprio *ftp_subdirctory* o scegliere di non avere sottodirectory, indicato con un valore null.  
   
@@ -130,19 +130,19 @@ sp_addmergepublication [ @publication = ] 'publication'
 > [!NOTE]  
 >  I valori riportati sopra in corsivo dipendono dai dettagli della pubblicazione e dalla partizione del Sottoscrittore.  
   
-`[ @ftp_login = ] 'ftp_login'` Nome utente utilizzato per la connessione al servizio FTP. *ftp_login* è di **tipo sysname**e il valore predefinito è "Anonymous".  
+`[ @ftp_login = ] 'ftp_login'` Nome utente utilizzato per la connessione al servizio FTP. *ftp_login* è di **tipo sysname** e il valore predefinito è "Anonymous".  
   
-`[ @ftp_password = ] 'ftp_password'` Password utente utilizzata per la connessione al servizio FTP. *ftp_password* è di **tipo sysname**e il valore predefinito è null.  
+`[ @ftp_password = ] 'ftp_password'` Password utente utilizzata per la connessione al servizio FTP. *ftp_password* è di **tipo sysname** e il valore predefinito è null.  
   
 > [!IMPORTANT]  
 >  Non usare una password vuota. Usare una password complessa.  
   
-`[ @conflict_retention = ] conflict_retention` Specifica il periodo di memorizzazione, espresso in giorni, per cui vengono conservati i conflitti. *conflict_retention* è di **tipo int**e il valore predefinito è 14 giorni prima che la riga con conflitti venga eliminata dalla tabella dei conflitti.  
+`[ @conflict_retention = ] conflict_retention` Specifica il periodo di memorizzazione, espresso in giorni, per cui vengono conservati i conflitti. *conflict_retention* è di **tipo int** e il valore predefinito è 14 giorni prima che la riga con conflitti venga eliminata dalla tabella dei conflitti.  
   
 `[ @keep_partition_changes = ] 'keep_partition_changes'` Specifica se abilitare le ottimizzazioni delle modifiche delle partizioni quando non è possibile utilizzare le partizioni pre-calcolate. *keep_partition_changes* è di **tipo nvarchar (5)** e il valore predefinito è true. **false** indica che le modifiche alle partizioni non sono ottimizzate e quando le partizioni pre-calcolate non vengono utilizzate, le partizioni inviate a tutti i sottoscrittori verranno verificate quando i dati vengono modificati in una partizione. **true** indica che le modifiche alle partizioni sono ottimizzate e che sono interessati solo i sottoscrittori con righe nelle partizioni modificate. Quando si utilizzano partizioni pre-calcolate, impostare *use_partition_groups* su **true** e impostare *keep_partition_changes* su **false**. Per altre informazioni, vedere [Ottimizzare le prestazioni dei filtri con parametri con le partizioni pre-calcolate](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
 > [!NOTE]  
->  Se si specifica il valore **true** per *keep_partition_changes*, specificare il valore **1** per il parametro **-MaxNetworkOptimization**di agente di snapshot. Per ulteriori informazioni su questo parametro, vedere [agente di snapshot di replica](../../relational-databases/replication/agents/replication-snapshot-agent.md). Per informazioni su come specificare i parametri degli agenti, vedere [Replication Agent Administration](../../relational-databases/replication/agents/replication-agent-administration.md).  
+>  Se si specifica il valore **true** per *keep_partition_changes*, specificare il valore **1** per il parametro **-MaxNetworkOptimization** di agente di snapshot. Per ulteriori informazioni su questo parametro, vedere [agente di snapshot di replica](../../relational-databases/replication/agents/replication-snapshot-agent.md). Per informazioni su come specificare i parametri degli agenti, vedere [Replication Agent Administration](../../relational-databases/replication/agents/replication-agent-administration.md).  
   
  Con i [!INCLUDE[ssEW](../../includes/ssew-md.md)] sottoscrittori, *keep_partition_changes* necessario impostare su true per assicurarsi che le eliminazioni vengano propagate correttamente. Se impostato su false, nel Sottoscrittore potrebbero essere presenti più righe rispetto al previsto.  
   
@@ -163,7 +163,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @use_partition_groups = ] 'use_partition_groups'` Specifica che le partizioni pre-calcolate devono essere utilizzate per ottimizzare il processo di sincronizzazione. *use_partition_groups* è di **tipo nvarchar (5)**. i possibili valori sono i seguenti:  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**true**|La pubblicazione utilizza partizioni pre-calcolate.|  
 |**false**|La pubblicazione non utilizza partizioni pre-calcolate.|  
@@ -173,18 +173,18 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @publication_compatibility_level = ] backward_comp_level` Indica la compatibilità con le versioni precedenti della pubblicazione. *backward_comp_level* è di **tipo nvarchar (6)**. i possibili valori sono i seguenti:  
   
-|valore|Versione|  
+|Valore|Versione|  
 |-----------|-------------|  
 |**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
   
-`[ @replicate_ddl = ] replicate_ddl` Indica se per la pubblicazione è supportata la replica dello schema. *replicate_ddl* è di **tipo int**e il valore predefinito è 1. **1** indica che le istruzioni Data Definition Language (DDL) eseguite nel server di pubblicazione vengono replicate, mentre **0** indica che le istruzioni DDL non vengono replicate. Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+`[ @replicate_ddl = ] replicate_ddl` Indica se per la pubblicazione è supportata la replica dello schema. *replicate_ddl* è di **tipo int** e il valore predefinito è 1. **1** indica che le istruzioni Data Definition Language (DDL) eseguite nel server di pubblicazione vengono replicate, mentre **0** indica che le istruzioni DDL non vengono replicate. Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
- Il parametro * \@ replicate_ddl* viene rispettato quando un'istruzione DDL aggiunge una colonna. Il parametro * \@ replicate_ddl* viene ignorato quando un'istruzione DDL modifica o rilascia una colonna per i motivi seguenti.  
+ Il parametro *\@ replicate_ddl* viene rispettato quando un'istruzione DDL aggiunge una colonna. Il parametro *\@ replicate_ddl* viene ignorato quando un'istruzione DDL modifica o rilascia una colonna per i motivi seguenti.  
   
--   Quando viene rilasciata una colonna, è necessario aggiornare sysarticlecolumns per evitare l'inclusione della colonna eliminata da parte delle nuove istruzioni DML che determinerebbe la mancata esecuzione dell'agente di distribuzione. Il parametro * \@ replicate_ddl* viene ignorato perché la replica deve sempre replicare la modifica dello schema.  
+-   Quando viene rilasciata una colonna, è necessario aggiornare sysarticlecolumns per evitare l'inclusione della colonna eliminata da parte delle nuove istruzioni DML che determinerebbe la mancata esecuzione dell'agente di distribuzione. Il parametro *\@ replicate_ddl* viene ignorato perché la replica deve sempre replicare la modifica dello schema.  
   
--   Quando una colonna viene modificata, è probabile che venga modificato il tipo di dati di origine o il supporto dei valori Null, di conseguenza le istruzioni DML contengono un valore che potrebbe non essere compatibile con la tabella nel Sottoscrittore. Tali istruzioni DML potrebbero determinare la mancata esecuzione dell'agente di distribuzione. Il parametro * \@ replicate_ddl* viene ignorato perché la replica deve sempre replicare la modifica dello schema.  
+-   Quando una colonna viene modificata, è probabile che venga modificato il tipo di dati di origine o il supporto dei valori Null, di conseguenza le istruzioni DML contengono un valore che potrebbe non essere compatibile con la tabella nel Sottoscrittore. Tali istruzioni DML potrebbero determinare la mancata esecuzione dell'agente di distribuzione. Il parametro *\@ replicate_ddl* viene ignorato perché la replica deve sempre replicare la modifica dello schema.  
   
 -   Quando un'istruzione DDL aggiunge una nuova colonna, sysarticlecolumns non include la nuova colonna. Le istruzioni DML non tenteranno di replicare i dati per la nuova colonna. Il parametro viene rispettato perché la replica o la non replica di DDL è accettabile.  
   
@@ -192,7 +192,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @allow_web_synchronization = ] 'allow_web_synchronization'` Specifica se la pubblicazione è abilitata per la sincronizzazione Web. *allow_web_synchronization* è di **tipo nvarchar (5)** e il valore predefinito è false. **true** specifica che le sottoscrizioni della pubblicazione possono essere sincronizzate tramite HTTPS. Per altre informazioni, vedere [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md). Per supportare i [!INCLUDE[ssEW](../../includes/ssew-md.md)] sottoscrittori, è necessario specificare **true**.  
   
-`[ @web_synchronization_url = ] 'web_synchronization_url'` Specifica il valore predefinito dell'URL Internet utilizzato per la sincronizzazione Web. *web_synchronization_url*è di **tipo nvarchar (500)** e il valore predefinito è null. Definisce l'URL Internet predefinito se non ne è stato impostato uno in modo esplicito quando viene eseguito [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) .  
+`[ @web_synchronization_url = ] 'web_synchronization_url'` Specifica il valore predefinito dell'URL Internet utilizzato per la sincronizzazione Web. *web_synchronization_url* è di **tipo nvarchar (500)** e il valore predefinito è null. Definisce l'URL Internet predefinito se non ne è stato impostato uno in modo esplicito quando viene eseguito [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) .  
   
 `[ @allow_partition_realignment = ] 'allow_partition_realignment'` Determina se le eliminazioni vengono inviate al Sottoscrittore quando la modifica della riga nel server di pubblicazione comporta la modifica della partizione. *allow_partition_realignment* è di **tipo nvarchar (5)** e il valore predefinito è true. **true** Invia le eliminazioni al Sottoscrittore per riflettere i risultati di una modifica della partizione rimuovendo i dati che non fanno più parte della partizione del Sottoscrittore. **false** lascia i dati di una vecchia partizione nel Sottoscrittore, in cui le modifiche apportate a questi dati nel server di pubblicazione non vengono replicate nel Sottoscrittore, ma le modifiche apportate nel Sottoscrittore vengono replicate nel server di pubblicazione. L'impostazione di *allow_partition_realignment* su **false** viene utilizzata per mantenere i dati in una sottoscrizione da una partizione precedente quando i dati devono essere accessibili per motivi cronologici.  
   
@@ -201,36 +201,36 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @retention_period_unit = ] 'retention_period_unit'` Specifica le unità per il periodo di memorizzazione impostato dalla *conservazione*. *retention_period_unit* è di **tipo nvarchar (10)**. i possibili valori sono i seguenti.  
   
-|valore|Versione|  
+|Valore|Versione|  
 |-----------|-------------|  
 |**giorno** (impostazione predefinita)|Il periodo di memorizzazione è specificato in giorni.|  
 |**week**|Il periodo di memorizzazione è specificato in settimane.|  
 |**month**|Il periodo di memorizzazione è specificato in mesi.|  
 |**year**|Il periodo di memorizzazione è specificato in anni.|  
   
-`[ @generation_leveling_threshold = ] generation_leveling_threshold` Specifica il numero di modifiche contenute in una generazione. Una generazione è una raccolta di modifiche recapitate a un server di pubblicazione o a un Sottoscrittore. *generation_leveling_threshold* è di **tipo int**e il valore predefinito è 1000.  
+`[ @generation_leveling_threshold = ] generation_leveling_threshold` Specifica il numero di modifiche contenute in una generazione. Una generazione è una raccolta di modifiche recapitate a un server di pubblicazione o a un Sottoscrittore. *generation_leveling_threshold* è di **tipo int** e il valore predefinito è 1000.  
   
-`[ @automatic_reinitialization_policy = ] automatic_reinitialization_policy`Specifica se le modifiche vengono caricate dal Sottoscrittore prima di una reinizializzazione automatica richiesta da una modifica alla pubblicazione, in cui è stato specificato il valore **1** per ** \@ force_reinit_subscription**. *automatic_reinitialization_policy* è di bit e il valore predefinito è 0. **1** indica che le modifiche vengono caricate dal Sottoscrittore prima che si verifichi una reinizializzazione automatica.  
+`[ @automatic_reinitialization_policy = ] automatic_reinitialization_policy`Specifica se le modifiche vengono caricate dal Sottoscrittore prima di una reinizializzazione automatica richiesta da una modifica alla pubblicazione, in cui è stato specificato il valore **1** per **\@ force_reinit_subscription**. *automatic_reinitialization_policy* è di bit e il valore predefinito è 0. **1** indica che le modifiche vengono caricate dal Sottoscrittore prima che si verifichi una reinizializzazione automatica.  
   
 > [!IMPORTANT]  
 >  Se si aggiunge, elimina o modifica un filtro con parametri, le modifiche in sospeso nel Sottoscrittore non possono essere caricate nel server di pubblicazione durante la reinizializzazione. Per caricare le modifiche in sospeso, sincronizzare tutte le sottoscrizioni prima di modificare il filtro.  
   
 `[ @conflict_logging = ] 'conflict_logging'` Specifica la posizione di archiviazione dei record dei conflitti. *conflict_logging* è di **tipo nvarchar (15)**. i possibili valori sono i seguenti:  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**pubblicazione**|I record con conflitti vengono archiviati nel server di pubblicazione.|  
 |**Sottoscrittore**|I record con conflitti vengono archiviati nel Sottoscrittore che ha causato il conflitto. Non supportato per i [!INCLUDE[ssEW](../../includes/ssew-md.md)] sottoscrittori.|  
 |**sia**|I record con conflitti vengono archiviati nel server di pubblicazione e nel Sottoscrittore.|  
-|NULL (predefinito)|La replica imposta *conflict_logging* automaticamente conflict_logging **sia** quando il valore *backward_comp_level* è **90RTM** che nel **server di pubblicazione** in tutti gli altri casi.|  
+|NULL (predefinito)|La replica imposta  automaticamente conflict_logging **sia** quando il valore *backward_comp_level* è **90RTM** che nel **server di pubblicazione** in tutti gli altri casi.|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_addmergepublication** viene utilizzata nella replica di tipo merge.  
   
- Per elencare gli oggetti di pubblicazione nel Active Directory utilizzando il parametro ** \@ add_to_active_directory** , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessario che l'oggetto sia già stato creato nella Active Directory.  
+ Per elencare gli oggetti di pubblicazione nel Active Directory utilizzando il parametro **\@ add_to_active_directory** , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessario che l'oggetto sia già stato creato nella Active Directory.  
   
  Se sono presenti più pubblicazioni che pubblicano lo stesso oggetto di database, solo le pubblicazioni con un valore *replicate_ddl* **1** eseguiranno la replica delle istruzioni ALTER TABLE, ALTER VIEW, alter procedure, ALTER FUNCTION e alter trigger DDL. Una istruzione ALTER TABLE DROP COLUMN DDL verrà tuttavia replicata da tutte le pubblicazioni che stanno pubblicando la colonna eliminata.  
   

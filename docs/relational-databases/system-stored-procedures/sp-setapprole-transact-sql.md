@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_setapprole
 - sp_setapprole_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0513878f65513e57a6e26bb52d8101ba6c5d672c
-ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
+ms.openlocfilehash: f34be78bc4d3f47ff2a11d0a6ed09c22c3670dca
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94570958"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209280"
 ---
 # <a name="sp_setapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 
@@ -72,9 +72,9 @@ sp_setapprole [ @rolename = ] 'role',
 
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
- Dopo l'attivazione di un ruolo applicazione tramite **sp_setapprole** , il ruolo rimane attivo fino a quando l'utente non si disconnette dal server o non esegue **sp_unsetapprole**. **sp_setapprole** possono essere eseguite solo da [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni dirette, a livello ad hoc e non all'interno di un'altra stored procedure, trigger o all'interno di una transazione definita dall'utente.  
+ Dopo l'attivazione di un ruolo applicazione tramite **sp_setapprole**, il ruolo rimane attivo fino a quando l'utente non si disconnette dal server o non esegue **sp_unsetapprole**. **sp_setapprole** possono essere eseguite solo da [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni dirette, a livello ad hoc e non all'interno di un'altra stored procedure, trigger o all'interno di una transazione definita dall'utente.  
   
  Per una panoramica dei ruoli applicazione, vedere [ruoli applicazione](../../relational-databases/security/authentication-access/application-roles.md).  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_grant_publication_access_TSQL
 - sp_grant_publication_access
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 5078173bfdf8ea079c0fa553c64a6235b101cdc2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bea8096d3d0d57b6044edc26bb5f64572487157
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469368"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208993"
 ---
 # <a name="sp_grant_publication_access-transact-sql"></a>sp_grant_publication_access (Transact-SQL)
 
@@ -39,16 +39,16 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` Nome della pubblicazione a cui accedere. **'***Publication***'** è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione a cui accedere. **'**_Publication_*_'_* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @login = ] 'login'` ID di accesso. **'***login***'** è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @login = ] 'login'` ID di accesso. **'**_login_*_'_* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_grant_publication_access** viene utilizzata per la replica snapshot, transazionale e di tipo merge.  
   
  È possibile chiamare questa stored procedure ripetutamente.  

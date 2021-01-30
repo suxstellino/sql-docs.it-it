@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpsrvrole_TSQL
 - sp_helpsrvrole
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 120303a4682ec659bca8a1cea6814506bc364cd4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1f3c2c937e03edaaff888b90199ffeea806829bc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535155"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209297"
 ---
 # <a name="sp_helpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @srvrolename = ] 'role'` Nome del ruolo predefinito del server. *Role* è di **tipo sysname**e il valore predefinito è null. *Role* può essere uno dei valori seguenti.  
+`[ @srvrolename = ] 'role'` Nome del ruolo predefinito del server. *Role* è di **tipo sysname** e il valore predefinito è null. *Role* può essere uno dei valori seguenti.  
   
 |Ruolo predefinito del server|Descrizione|  
 |-----------------------|-----------------|  
@@ -63,7 +63,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 |ServerRole|**sysname**|Nome del ruolo del server|  
 |Descrizione|**sysname**|Descrizione di ServerRole|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  I ruoli predefiniti del server sono definiti a livello di server e dispongono delle autorizzazioni per l'esecuzione di attività amministrative specifiche a livello del server. Non è possibile aggiungere, rimuovere o modificare i ruoli predefiniti del server.  
   
  Per aggiungere o rimuovere membri dai ruoli del server, vedere [ALTER server role &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  

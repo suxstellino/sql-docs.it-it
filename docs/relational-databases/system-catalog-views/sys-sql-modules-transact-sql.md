@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sql_modules_TSQL
 - sql_modules
@@ -21,12 +21,12 @@ ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3b841674bd7abffada31bd2baf7e0ab39686a3e
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c44ef469dfa60e7c4ac96386ab87812fab447555
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093083"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210286"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "98093083"
 |**inline_type**|**bit**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] e versioni successive.<br /><br />Indica se l'incorporamento è attualmente attivato per il modulo. <br /><br />0 = l'incorporamento è disattivato<br /><br /> 1 = l'incorporamento è attivato.<br /><br /> Per le funzioni UDF scalari, il valore sarà 1 se l'incorporamento è attivato (in modo esplicito o implicito). Il valore sarà sempre 1 per funzioni con valori inline e 0 per altri tipi di modulo.<br />|  
 
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  L'espressione SQL per un vincolo predefinito, oggetto di tipo D, è disponibile nella vista del catalogo [sys.default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) . L'espressione SQL per un vincolo CHECK, oggetto di tipo C, si trova nella vista del catalogo [sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) .  
   
  Queste informazioni sono descritte anche in [sys.dm_db_uncontained_entities &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
@@ -59,7 +59,7 @@ ms.locfileid: "98093083"
 ## <a name="permissions"></a>Autorizzazioni  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituiti il nome, il tipo e la definizione di ogni modulo del database corrente.  
   
 ```  

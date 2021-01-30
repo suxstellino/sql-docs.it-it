@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_register_custom_scripting
 - sp_register_custom_scripting_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4f73353cc5d2e0e9be02be5a0e6dc59eaf2f909f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f9239f89c5f65f0a4af3ddfd5588a92551dfbcdc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547503"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210449"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="arguments"></a>Argomenti  
 `[ @type = ] 'type'` Tipo di stored procedure o script personalizzato da registrare. il *tipo* è **varchar (16)** e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**insert**|La stored procedure personalizzata registrata viene eseguita quando viene replicata un'istruzione INSERT.|  
 |**update**|La stored procedure personalizzata registrata viene eseguita quando viene replicata un'istruzione UPDATE.|  
@@ -57,14 +57,14 @@ sp_register_custom_scripting [ @type  = ] 'type'
   
  Quando il valore di *tipo* è **custom_script**, è previsto il nome e il percorso completo di un [!INCLUDE[tsql](../../includes/tsql-md.md)] file di script. In caso contrario, il *valore* deve corrispondere al nome di un stored procedure registrato.  
   
-`[ @publication = ] 'publication'` Nome della pubblicazione per cui viene registrato lo script o la stored procedure personalizzata. *Publication* è di **tipo sysname**e il valore predefinito è **null**.  
+`[ @publication = ] 'publication'` Nome della pubblicazione per cui viene registrato lo script o la stored procedure personalizzata. *Publication* è di **tipo sysname** e il valore predefinito è **null**.  
   
-`[ @article = ] 'article'` Nome dell'articolo per cui viene registrato lo script o la stored procedure personalizzata. *article* è di **tipo sysname**e il valore predefinito è **null**.  
+`[ @article = ] 'article'` Nome dell'articolo per cui viene registrato lo script o la stored procedure personalizzata. *article* è di **tipo sysname** e il valore predefinito è **null**.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_register_custom_scripting** viene utilizzata per la replica snapshot e transazionale.  
   
  Questa stored procedure deve essere eseguita prima di apportare una modifica dello schema a una tabella replicata. Per ulteriori informazioni sull'utilizzo di questa stored procedure, vedere [rigenerazione di procedure transazionali personalizzate per riflettere le modifiche dello schema](../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md).  

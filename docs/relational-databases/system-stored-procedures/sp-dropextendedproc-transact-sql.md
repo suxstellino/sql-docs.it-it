@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropextendedproc
 - sp_dropextendedproc_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 02d4287b2825401acd0eca532b3fad100fa32639
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bc877761f2e86ff63883c9f84ead94955044acbf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538970"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209341"
 ---
 # <a name="sp_dropextendedproc-transact-sql"></a>sp_dropextendedproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
  nessuno  
   
 ## <a name="remarks"></a>Osservazioni  
- L'esecuzione di **sp_dropextendedproc** Elimina il nome del stored procedure esteso definito dall'utente dalla vista del catalogo [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) e rimuove la voce dalla vista del catalogo [sys. extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) . Questa stored procedure può essere eseguita solo nel database **Master** .  
+ L'esecuzione di **sp_dropextendedproc** Elimina il nome del stored procedure esteso definito dall'utente dalla vista del catalogo [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) e rimuove la voce dalla vista del catalogo [sys.extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) . Questa stored procedure può essere eseguita solo nel database **Master** .  
   
 **sp_dropextendedproc** non elimina le stored procedure estese di sistema. L'amministratore di sistema deve invece negare l'autorizzazione EXECUTE per il stored procedure esteso al ruolo **public** .  
   
@@ -61,7 +61,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_dropextendedproc**.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene eliminata la stored procedure estesa `xp_hello`.  
   
 > [!NOTE]  

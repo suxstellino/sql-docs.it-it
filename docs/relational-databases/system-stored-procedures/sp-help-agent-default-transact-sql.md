@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_agent_default
 - sp_help_agent_default_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9df854b8199d265dff29277baf6ed9fe443bc46b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a5c2d74b71dfc55f4654b566e314157895f743bf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538881"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208964"
 ---
 # <a name="sp_help_agent_default-transact-sql"></a>sp_help_agent_default (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,11 +39,11 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @profile_id = ] _profile_idOUTPUT` ID della configurazione predefinita per il tipo di agente. *profile_id* è di **tipo int**e non prevede alcun valore predefinito. *profile_id* è anche un parametro di output e restituisce l'ID della configurazione predefinita per il tipo di agente.  
+`[ @profile_id = ] _profile_idOUTPUT` ID della configurazione predefinita per il tipo di agente. *profile_id* è di **tipo int** e non prevede alcun valore predefinito. *profile_id* è anche un parametro di output e restituisce l'ID della configurazione predefinita per il tipo di agente.  
   
-`[ @agent_type = ] 'agent_type'` Tipo di agente. *agent_type* è di **tipo int**e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
+`[ @agent_type = ] 'agent_type'` Tipo di agente. *agent_type* è di **tipo int** e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Agente snapshot.|  
 |**2**|Agente di lettura log.|  
@@ -54,7 +54,7 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_help_agent_default** viene utilizzato in tutti i tipi di replica.  
   
 ## <a name="permissions"></a>Autorizzazioni  

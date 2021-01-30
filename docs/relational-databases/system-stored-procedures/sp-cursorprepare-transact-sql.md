@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cursor_prepare_TSQL
 - sp_cursor_prepare
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3418727f21a0132390a1c1334919b2be6dc36965
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: df4b0ff31a5b8a1723b6c8f130aeab9b32b03166
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539028"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209743"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 >  *prepared_handle* viene successivamente fornito a una procedura sp_cursorexecute per aprire un cursore. Dopo essere stato creato, un handle esiste fino a quando non si esegue la disconnessione o fino a quando non viene rimosso in modo esplicito tramite la routine sp_cursorunprepare.  
   
  *params*  
- Identifica le istruzioni con parametri. La definizione *params* delle variabili viene sostituita per i marcatori di parametro nell'istruzione. *params* è un parametro obbligatorio che richiede un valore di input **ntext**, **nchar**o **nvarchar** . Immettere un valore NULL se l'istruzione non è con parametri.  
+ Identifica le istruzioni con parametri. La definizione *params* delle variabili viene sostituita per i marcatori di parametro nell'istruzione. *params* è un parametro obbligatorio che richiede un valore di input **ntext**, **nchar** o **nvarchar** . Immettere un valore NULL se l'istruzione non è con parametri.  
   
 > [!NOTE]  
 >  Usare una stringa **ntext** come valore di input quando *stmt* è con parametri e il valore di *scrollopt* PARAMETERIZED_STMT è on.  
@@ -62,14 +62,14 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *options*  
  Parametro facoltativo tramite cui viene restituita una descrizione delle colonne dei set di risultati del cursore. *options* richiede il valore di input **int** seguente.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  Opzione di scorrimento. *scrollopt* è un parametro facoltativo che richiede uno dei valori di input **int** seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -91,7 +91,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *ccopt*  
  Opzioni del controllo della concorrenza. *ccopt* è un parametro facoltativo che richiede uno dei valori di input **int** seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (precedentemente noto come LOCKCC)|  
@@ -107,16 +107,16 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
   
  Come per *scrollpt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può assegnare un valore diverso da quello richiesto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il parametro di stato RPC è uno degli elementi seguenti:  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |0|Operazione completata|  
 |0x0001|Errore|  
 |1FF6|Non è stato possibile restituire metadati.<br /><br /> Nota: il motivo è che l'istruzione non produce un set di risultati. ad esempio, si tratta di un'istruzione INSERT o DDL.|  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
   Di seguito è riportato un esempio di utilizzo di sp_cursorprepare e sp_cursorexecute
 
 ```sql

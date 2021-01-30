@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helppublication_TSQL
 - sp_helppublication
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eee9206e8d8ed3d5012ca463fed490ea9d8a6b1c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e45091866308b3c674217e0582bb64da59d51f75
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535136"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210240"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ## <a name="arguments"></a>Argomenti  
 `[ @publication = ] 'publication'` Nome della pubblicazione da visualizzare. *Publication* è di tipo sysname e il valore predefinito è **%** , che restituisce informazioni su tutte le pubblicazioni.  
   
-`[ @found = ] 'found' OUTPUT` Flag che indica la restituzione di righe. *trovato*è di **tipo int** e un parametro di output e il valore predefinito è **23456**. **1** indica che la pubblicazione è stata trovata. **0** indica che la pubblicazione non è stata trovata.  
+`[ @found = ] 'found' OUTPUT` Flag che indica la restituzione di righe. *trovato* è di **tipo int** e un parametro di output e il valore predefinito è **23456**. **1** indica che la pubblicazione è stata trovata. **0** indica che la pubblicazione non è stata trovata.  
   
 `[ @publisher = ] 'publisher'` Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di tipo sysname e il valore predefinito è null.  
   
@@ -59,7 +59,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |status|**tinyint**|Stato corrente della pubblicazione.<br /><br /> **0** = inattivo.<br /><br /> **1** = attivo.|  
 |attività||Disponibile per compatibilità con le versioni precedenti.|  
 |replication frequency|**tinyint**|Tipo di frequenza della replica:<br /><br /> **0** = transazionale<br /><br /> **1** = snapshot|  
-|synchronization method|**tinyint**|Modalità di sincronizzazione:<br /><br /> **0** = programma per la copia bulk nativa (utilità**bcp** )<br /><br /> **1** = copia bulk carattere<br /><br /> **3** = simultanea, ovvero viene utilizzata la copia bulk nativa (utilità**bcp**), ma durante lo snapshot le tabelle non vengono bloccate<br /><br /> **4** = concurrent_c, ovvero viene utilizzata la copia bulk del carattere, ma durante lo snapshot le tabelle non vengono bloccate|  
+|synchronization method|**tinyint**|Modalità di sincronizzazione:<br /><br /> **0** = programma per la copia bulk nativa (utilità **bcp** )<br /><br /> **1** = copia bulk carattere<br /><br /> **3** = simultanea, ovvero viene utilizzata la copia bulk nativa (utilità **bcp**), ma durante lo snapshot le tabelle non vengono bloccate<br /><br /> **4** = concurrent_c, ovvero viene utilizzata la copia bulk del carattere, ma durante lo snapshot le tabelle non vengono bloccate|  
 |description|**nvarchar(255)**|Descrizione facoltativa della pubblicazione.|  
 |immediate_sync|**bit**|Indica se i file di sincronizzazione vengono creati o ricreati a ogni esecuzione dell'agente snapshot.|  
 |enabled_for_internet|**bit**|Indica se i file di sincronizzazione della pubblicazione vengono esposti a Internet tramite FTP e altri servizi.|  
@@ -89,7 +89,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |conflict_retention|**int**|Specifica il periodo di memorizzazione dei conflitti, espresso in giorni.|  
 |conflict_policy|**int**|Specifica i criteri di risoluzione dei conflitti adottati quando viene utilizzata l'opzione per Sottoscrittori ad aggiornamento in coda. I possibili valori sono i seguenti:<br /><br /> **1** = il conflitto viene vinto dal server di pubblicazione.<br /><br /> **2** = il conflitto viene vinto dal Sottoscrittore.<br /><br /> **3** = la sottoscrizione viene reinizializzata.|  
 |queue_type||Specifica il tipo di coda da utilizzare. I possibili valori sono i seguenti:<br /><br /> **MSMQ** = utilizzare [!INCLUDE[msCoName](../../includes/msconame-md.md)] Accodamento messaggi per archiviare le transazioni.<br /><br /> **SQL** = usato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per archiviare le transazioni.<br /><br /> Nota: il supporto per Accodamento messaggi è stato interrotto.|  
-|backward_comp_level||Livello di compatibilità del database. I possibili valori sono i seguenti:<br /><br /> **90**  =  90 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100**  =  100 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level||Livello di compatibilità del database. I possibili valori sono i seguenti:<br /><br />   =  90 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br />   =  100 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_AD|**bit**|Specifica se la pubblicazione è pubblicata in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Il valore **1** indica che è pubblicato e il valore **0** indica che non è pubblicato.|  
 |allow_initialize_from_backup|**bit**|Specifica se i Sottoscrittori possono inizializzare una sottoscrizione di questa pubblicazione da un backup anziché da uno snapshot iniziale. **1** indica che le sottoscrizioni possono essere inizializzate da un backup e **0** indica che non è possibile. Per ulteriori informazioni, vedere [inizializzare una sottoscrizione transazionale senza uno snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) di un Sottoscrittore transazionale senza snapshot.|  
 |replicate_ddl|**int**|Indica se per la pubblicazione è supportata la replica dello schema. **1** indica che le istruzioni Data Definition Language (DDL) eseguite nel server di pubblicazione vengono replicate, mentre **0** indica che le istruzioni DDL non vengono replicate. Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).|  
@@ -98,14 +98,14 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |enabled_for_het_sub|**int**|Specifica se la pubblicazione supporta Sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il valore **1** indica che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i Sottoscrittori non sono supportati. Il valore **0** indica che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportati solo i sottoscrittori. Per altre informazioni, vedere [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).|  
 |enabled_for_p2p_conflictdetection|**int**|Specifica se l'Agente di Distribuzione rileva i conflitti per una pubblicazione abilitata per la replica peer-to-peer. Il valore **1** indica che vengono rilevati conflitti. Per altre informazioni, vedere [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 |originator_id|**int**|Specifica un ID per un nodo in una topologia peer-to-peer. Questo ID viene utilizzato per il rilevamento dei conflitti se **enabled_for_p2p_conflictdetection** è impostato su **1**. Per un elenco degli ID che sono già stati utilizzati, eseguire una query sulla tabella di sistema [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) .|  
-|p2p_continue_onconflict|**int**|Specifica se l'agente di distribuzione continua a elaborare le modifiche quando viene rilevato un conflitto. Il valore **1** indica che l'agente continua a elaborare le modifiche.<br /><br /> ** \* \* Attenzione \* è \* ** consigliabile utilizzare il valore predefinito **0**. Quando questa opzione è impostata su **1**, il agente di distribuzione tenta di eseguire la convergenza dei dati nella topologia applicando la riga in conflitto dal nodo con l'ID originatore più elevato. Questo metodo non garantisce la convergenza. Dopo il rilevamento di un conflitto, è necessario assicurarsi che la topologia sia coerente. Per ulteriori informazioni, vedere la sezione relativa alla gestione dei conflitti in [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
+|p2p_continue_onconflict|**int**|Specifica se l'agente di distribuzione continua a elaborare le modifiche quando viene rilevato un conflitto. Il valore **1** indica che l'agente continua a elaborare le modifiche.<br /><br /> **\* \* Attenzione \* è \*** consigliabile utilizzare il valore predefinito **0**. Quando questa opzione è impostata su **1**, il agente di distribuzione tenta di eseguire la convergenza dei dati nella topologia applicando la riga in conflitto dal nodo con l'ID originatore più elevato. Questo metodo non garantisce la convergenza. Dopo il rilevamento di un conflitto, è necessario assicurarsi che la topologia sia coerente. Per ulteriori informazioni, vedere la sezione relativa alla gestione dei conflitti in [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 |allow_partition_switch|**int**|Specifica se ALTER TABLE... Le istruzioni SWITCH possono essere eseguite sul database pubblicato. Per altre informazioni, vedere [Replicare tabelle e indici partizionati](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
 |replicate_partition_switch|**int**|Specifica se ALTER TABLE... Le istruzioni SWITCH eseguite sul database pubblicato devono essere replicate nei Sottoscrittori. Questa opzione è valida solo se *allow_partition_switch* è impostata su **1**.|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  sp_helppublication viene utilizzato per la replica snapshot e transazionale.  
   
  sp_helppublication restituisce informazioni su tutte le pubblicazioni di proprietà dell'utente che esegue questa procedura.  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpreplicationdboption_TSQL
 - sp_helpreplicationdboption
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6733b1f473c91094bd8af177bce4b13f3cf1b03e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 17c47d247e154ed80f0daeb8bacdb4984864fa03
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89527006"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210809"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,17 +40,17 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @dbname = ] 'dbname'` Nome del database. *dbname* è di **tipo sysname**e il valore predefinito è **%** . Se **%** , il set di risultati contiene tutti i database nel server di pubblicazione; in caso contrario, vengono restituite solo le informazioni sul database specificato. Non vengono restituite informazioni per gli eventuali database per cui l'utente non dispone delle autorizzazioni appropriate, come indicato di seguito.  
+`[ @dbname = ] 'dbname'` Nome del database. *dbname* è di **tipo sysname** e il valore predefinito è **%** . Se **%** , il set di risultati contiene tutti i database nel server di pubblicazione; in caso contrario, vengono restituite solo le informazioni sul database specificato. Non vengono restituite informazioni per gli eventuali database per cui l'utente non dispone delle autorizzazioni appropriate, come indicato di seguito.  
   
 `[ @type = ] 'type'` Limita il set di risultati in modo che contenga solo i database in cui è stato abilitato il valore del *tipo* di opzione di replica specificato. *Type* è di tipo **sysname**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**pubblicare**|È consentita la replica transazionale.|  
 |**pubblicazione di tipo merge**|È consentita la replica di tipo merge.|  
 |**replica consentita** (impostazione predefinita)|È consentita la replica transazionale o la replica di tipo merge.|  
   
-`[ @reserved = ] reserved` Specifica se vengono restituite informazioni sulle pubblicazioni e sulle sottoscrizioni esistenti. *riservato* è di **bit**e il valore predefinito è 0. Se è **1**, il set di risultati include informazioni sulla presenza o meno di pubblicazioni o sottoscrizioni esistenti nel database specificato.  
+`[ @reserved = ] reserved` Specifica se vengono restituite informazioni sulle pubblicazioni e sulle sottoscrizioni esistenti. *riservato* è di **bit** e il valore predefinito è 0. Se è **1**, il set di risultati include informazioni sulla presenza o meno di pubblicazioni o sottoscrizioni esistenti nel database specificato.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -68,7 +68,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_helpreplicationdboption** viene utilizzata per la replica snapshot, transazionale e di tipo merge.  
   
 ## <a name="permissions"></a>Autorizzazioni  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_setdefaultdatatypemapping
 - sp_setdefaultdatatypemapping_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6a712ecb629090947b0612844ce6049540b7359a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 46b17720b7d57110dc334a425976bf621a1395bb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534953"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209243"
 ---
 # <a name="sp_setdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,11 +55,11 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @mapping_id = ] mapping_id` Identifica un mapping del tipo di dati esistente.  *mapping_id* è di **tipo int**e il valore predefinito è null. Se si specifica *mapping_id*, i parametri rimanenti non sono obbligatori.  
+`[ @mapping_id = ] mapping_id` Identifica un mapping del tipo di dati esistente.  *mapping_id* è di **tipo int** e il valore predefinito è null. Se si specifica *mapping_id*, i parametri rimanenti non sono obbligatori.  
   
 `[ @source_dbms = ] 'source_dbms'` Nome del sistema DBMS da cui viene eseguito il mapping dei tipi di dati. *source_dbms* è di **tipo sysname**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|L'origine è un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|L'origine è un database Oracle.|  
@@ -71,23 +71,23 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
 `[ @source_type = ] 'source_type'` Tipo di dati nel sistema DBMS di origine. *source_type* è di **tipo sysname**. Se *mapping_id* è null, è necessario specificare questo parametro.  
   
-`[ @source_length_min = ] source_length_min` Lunghezza minima del tipo di dati nel sistema DBMS di origine. *source_length_min* è di tipo **bigint**e il valore predefinito è null.  
+`[ @source_length_min = ] source_length_min` Lunghezza minima del tipo di dati nel sistema DBMS di origine. *source_length_min* è di tipo **bigint** e il valore predefinito è null.  
   
-`[ @source_length_max = ] source_length_max` Lunghezza massima del tipo di dati nel sistema DBMS di origine. *source_length_max* è di tipo **bigint**e il valore predefinito è null.  
+`[ @source_length_max = ] source_length_max` Lunghezza massima del tipo di dati nel sistema DBMS di origine. *source_length_max* è di tipo **bigint** e il valore predefinito è null.  
   
-`[ @source_precision_min = ] source_precision_min` Precisione minima del tipo di dati nel sistema DBMS di origine. *source_precision_min* è di tipo **bigint**e il valore predefinito è null.  
+`[ @source_precision_min = ] source_precision_min` Precisione minima del tipo di dati nel sistema DBMS di origine. *source_precision_min* è di tipo **bigint** e il valore predefinito è null.  
   
-`[ @source_precision_max = ] source_precision_max` Precisione massima del tipo di dati nel sistema DBMS di origine. *source_precision_max* è di tipo **bigint**e il valore predefinito è null.  
+`[ @source_precision_max = ] source_precision_max` Precisione massima del tipo di dati nel sistema DBMS di origine. *source_precision_max* è di tipo **bigint** e il valore predefinito è null.  
   
-`[ @source_scale_min = ] source_scale_min` È la scala minima del tipo di dati nel sistema DBMS di origine. *source_scale_min* è di **tipo int**e il valore predefinito è null.  
+`[ @source_scale_min = ] source_scale_min` È la scala minima del tipo di dati nel sistema DBMS di origine. *source_scale_min* è di **tipo int** e il valore predefinito è null.  
   
-`[ @source_scale_max = ] source_scale_max` Scala massima del tipo di dati nel sistema DBMS di origine. *source_scale_max* è di **tipo int**e il valore predefinito è null.  
+`[ @source_scale_max = ] source_scale_max` Scala massima del tipo di dati nel sistema DBMS di origine. *source_scale_max* è di **tipo int** e il valore predefinito è null.  
   
-`[ @source_nullable = ] source_nullable` Indica se il tipo di dati nel sistema DBMS di origine supporta un valore NULL. *source_nullable* è di **bit**e il valore predefinito è null. **1** indica che i valori null sono supportati.  
+`[ @source_nullable = ] source_nullable` Indica se il tipo di dati nel sistema DBMS di origine supporta un valore NULL. *source_nullable* è di **bit** e il valore predefinito è null. **1** indica che i valori null sono supportati.  
   
 `[ @destination_dbms = ] 'destination_dbms'` Nome del sistema DBMS di destinazione. *destination_dbms* è di **tipo sysname**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|La destinazione è un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|La destinazione è un database Oracle.|  
@@ -97,20 +97,20 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
 `[ @destination_version = ] 'destination_version'` È la versione del prodotto del sistema DBMS di destinazione. *destination_version* è di tipo **varchar (10)** e il valore predefinito è null.  
   
-`[ @destination_type = ] 'destination_type'` Tipo di dati elencato nel sistema DBMS di destinazione. *destination_type* è di **tipo sysname**e il valore predefinito è null.  
+`[ @destination_type = ] 'destination_type'` Tipo di dati elencato nel sistema DBMS di destinazione. *destination_type* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @destination_length = ] destination_length` Lunghezza del tipo di dati nel sistema DBMS di destinazione. *destination_length* è di tipo **bigint**e il valore predefinito è null.  
+`[ @destination_length = ] destination_length` Lunghezza del tipo di dati nel sistema DBMS di destinazione. *destination_length* è di tipo **bigint** e il valore predefinito è null.  
   
-`[ @destination_precision = ] destination_precision` Precisione del tipo di dati nel sistema DBMS di destinazione. *destination_precision* è di tipo **bigint**e il valore predefinito è null.  
+`[ @destination_precision = ] destination_precision` Precisione del tipo di dati nel sistema DBMS di destinazione. *destination_precision* è di tipo **bigint** e il valore predefinito è null.  
   
-`[ @destination_scale = ] destination_scale` Scala del tipo di dati nel sistema DBMS di destinazione. *destination_scale* è di **tipo int**e il valore predefinito è null.  
+`[ @destination_scale = ] destination_scale` Scala del tipo di dati nel sistema DBMS di destinazione. *destination_scale* è di **tipo int** e il valore predefinito è null.  
   
-`[ @destination_nullable = ] destination_nullable` Indica se il tipo di dati nel sistema DBMS di destinazione supporta il valore NULL. *destination_nullable* è di **bit**e il valore predefinito è null. **1** indica che i valori null sono supportati.  
+`[ @destination_nullable = ] destination_nullable` Indica se il tipo di dati nel sistema DBMS di destinazione supporta il valore NULL. *destination_nullable* è di **bit** e il valore predefinito è null. **1** indica che i valori null sono supportati.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_setdefaultdatatypemapping** viene utilizzato in tutti i tipi di replica tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e un non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS.  
   
  I mapping dei tipi di dati predefiniti vengono applicati a tutte le topologie di replica che includono il sistema DBMS specificato.  

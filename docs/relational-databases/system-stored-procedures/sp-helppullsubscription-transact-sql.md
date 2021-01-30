@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helppullsubscription_TSQL
 - sp_helppullsubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: abad011197d58876915ce242c4c38198b13105ab
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3e7711e7034190f5862d512c3da02df685c3aaf5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535180"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210845"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,13 +41,13 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'` Nome del server remoto. *Publisher* è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni per tutti i server di pubblicazione.  
+`[ @publisher = ] 'publisher'` Nome del server remoto. *Publisher* è di **tipo sysname** e il valore predefinito è **%** , che restituisce informazioni per tutti i server di pubblicazione.  
   
-`[ @publisher_db = ] 'publisher_db'` Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname**e il valore predefinito è **%** , che restituisce tutti i database del server di pubblicazione.  
+`[ @publisher_db = ] 'publisher_db'` Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname** e il valore predefinito è **%** , che restituisce tutti i database del server di pubblicazione.  
   
-`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è **%** , che restituisce tutte le pubblicazioni. Se questo parametro è uguale a ALL, vengono restituite solo le sottoscrizioni pull con independent_agent = **0** .  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname** e il valore predefinito è **%** , che restituisce tutte le pubblicazioni. Se questo parametro è uguale a ALL, vengono restituite solo le sottoscrizioni pull con independent_agent = **0** .  
   
-`[ @show_push = ] 'show_push'` Indica se devono essere restituite tutte le sottoscrizioni push. *show_push*è di **tipo nvarchar (5)** e il valore predefinito è false, che non restituisce le sottoscrizioni push.  
+`[ @show_push = ] 'show_push'` Indica se devono essere restituite tutte le sottoscrizioni push. *show_push* è di **tipo nvarchar (5)** e il valore predefinito è false, che non restituisce le sottoscrizioni push.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -71,11 +71,11 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**immediate_sync**|**bit**|Indica se i file di sincronizzazione vengono creati o ricreati a ogni esecuzione dell'agente snapshot.|  
 |**account di accesso del server di pubblicazione**|**sysname**|ID dell'account di accesso utilizzato nel server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**password del server di pubblicazione**|**nvarchar (524)**|Password (crittografata) utilizzata dal server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**publisher security_mode**|**int**|Modalità di sicurezza implementata nel server di pubblicazione:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione 0<br /><br /> **1** = autenticazione di Windows<br /><br /> **2** = i trigger di sincronizzazione utilizzano una voce **sysservers** statica per eseguire una chiamata di procedura remota (RPC) e il server di *pubblicazione* deve essere definito nella tabella **sysservers** come server remoto o collegato.|  
+|**publisher security_mode**|**int**|Modalità di sicurezza implementata nel server di pubblicazione:<br /><br />   =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione 0<br /><br /> **1** = autenticazione di Windows<br /><br /> **2** = i trigger di sincronizzazione utilizzano una voce **sysservers** statica per eseguire una chiamata di procedura remota (RPC) e il server di *pubblicazione* deve essere definito nella tabella **sysservers** come server remoto o collegato.|  
 |**distribuzione**|**sysname**|Nome del server di distribuzione.|  
 |**distributor_login**|**sysname**|ID dell'account di accesso utilizzato nel server di distribuzione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_password**|**nvarchar (524)**|Password (crittografata) utilizzata nel server di distribuzione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**distributor_security_mode**|**int**|Modalità di sicurezza implementata nel server di distribuzione:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione 0<br /><br /> **1** = autenticazione di Windows|  
+|**distributor_security_mode**|**int**|Modalità di sicurezza implementata nel server di distribuzione:<br /><br />   =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione 0<br /><br /> **1** = autenticazione di Windows|  
 |**ftp_address**|**sysname**|Disponibile solo per compatibilità con le versioni precedenti.|  
 |**ftp_port**|**int**|Disponibile solo per compatibilità con le versioni precedenti.|  
 |**ftp_login**|**sysname**|Disponibile solo per compatibilità con le versioni precedenti.|  
@@ -97,7 +97,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_helppullsubscription** viene utilizzata per la replica snapshot e transazionale.  
   
 ## <a name="permissions"></a>Autorizzazioni  
