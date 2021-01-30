@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.resource_governor_configuration_TSQL
 - sys.resource_governor_configuration
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 89099668-1dc6-4b07-9d8b-49bc95c7bfc0
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 34e8a269a2c8e7fafd0ba0e6645e2363eefa5d77
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c36375450d680d85bd551124f2eb9bfb03d895d6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097976"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206834"
 ---
 # <a name="sysresource_governor_configuration-transact-sql"></a>sys.resource_governor_configuration (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,13 +38,13 @@ ms.locfileid: "98097976"
 |is_enabled|**bit**|Indica lo stato corrente di Resource Governor:<br /><br /> 0 = Resource Governor non è abilitato.<br /><br /> 1 = Resource Governor è abilitato.<br /><br /> Non ammette i valori Null.|  
 |max_outstanding_io_per_volume|**int**|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.<br /><br /> Numero massimo di operazioni di I/O in sospeso per volume.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La vista del catalogo visualizza la configurazione di Resource Governor memorizzata nei metadati. Per vedere la configurazione in memoria utilizzare la vista a gestione dinamica corrispondente.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione VIEW ANY DEFINITION per visualizzare i contenuti e l'autorizzazione CONTROL SERVER per modificarli.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene illustrato come ottenere e confrontare i valori dei metadati archiviati e i valori in memoria della configurazione di Resource Governor.  
   
 ```  

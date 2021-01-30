@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - alter table [ODBC]
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c72d03abff792ff103bf009cd12b718c74bd497d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 186647c40517c5ecf77a55e6bbc08155c98ffed9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483704"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205756"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE (comando SQL)
 Modifica a livello di codice la struttura di una tabella.  
@@ -151,13 +151,13 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  ELIMINA CONTROLLO  
  Rimuove la regola di convalida della tabella.  
   
- AGGIUNGERE il tag *eExpression3*della chiave primaria *TagName2*  
+ AGGIUNGERE il tag *eExpression3* della chiave primaria *TagName2*  
  Aggiunge un indice primario alla tabella. *eExpression3* specifica l'espressione della chiave di indice primaria e *TagName2* specifica il nome del tag di indice primario. I nomi dei tag di indice possono contenere un massimo di 10 caratteri. Se TAG *TagName2* viene omesso e *eExpression3* è un singolo campo, il tag di indice primario avrà lo stesso nome del campo specificato in *eExpression3*.  
   
  ELIMINA CHIAVE PRIMARIA  
  Rimuove l'indice primario e il relativo tag di indice. Poiché una tabella può avere una sola chiave primaria, non è necessario specificare il nome della chiave primaria. La rimozione dell'indice primario comporta anche l'eliminazione di eventuali relazioni permanenti in base alla chiave primaria.  
   
- Aggiungi *EEXPRESSION4*univoco [tag *TagName3*]  
+ Aggiungi *EEXPRESSION4* univoco [tag *TagName3*]  
  Aggiunge un indice candidato alla tabella. *eExpression4* specifica l'espressione della chiave di indice candidata e *TagName3* specifica il nome del tag di indice candidato. I nomi dei tag di indice possono contenere un massimo di 10 caratteri. Se si omette TAG *TagName3* e se *eExpression4* è un singolo campo, il tag index candidato avrà lo stesso nome del campo specificato in *eExpression4*.  
   
  DROP UNIQUE TAG *TagName4*  
@@ -172,7 +172,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  DROP FOREIGN KEY TAG *TagName6*[Save]  
  Elimina una chiave esterna il cui tag di indice è *TagName6*. Se si omette SAVE, il tag index viene eliminato dall'indice strutturale. Includere SAVE per impedire l'eliminazione del tag index dall'indice strutturale.  
   
- Rinominare la colonna *FieldName4*in *FieldName5*  
+ Rinominare la colonna *FieldName4* in *FieldName5*  
  Consente di modificare il nome di un campo nella tabella. *FieldName4* specifica il nome del campo che viene rinominato. *FieldName5* specifica il nuovo nome del campo.  
   
 > [!CAUTION]  
@@ -181,7 +181,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  NOVALIDATE  
  Specifica che Visual FoxPro consente di apportare modifiche alla struttura della tabella. Queste modifiche potrebbero violare l'integrità dei dati nella tabella. Per impostazione predefinita, Visual FoxPro impedisce ad ALTER TABLE di apportare modifiche che violano l'integrità dei dati nella tabella. Includere novalidate per eseguire l'override di questo comportamento predefinito.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È possibile utilizzare ALTER TABLE per modificare la struttura di una tabella che non è stata aggiunta a un database. Tuttavia, Visual FoxPro genera un errore se si includono le clausole DEFAULT, FOREIGN KEY, PRIMARY KEY, REFERENCEs o SET quando si modifica una tabella gratuita.  
   
  ALTER TABLE può ricompilare la tabella creando una nuova intestazione di tabella e aggiungendo i record all'intestazione della tabella. Se ad esempio si modifica il tipo o la larghezza di un campo, è possibile che la tabella venga ricompilata.  

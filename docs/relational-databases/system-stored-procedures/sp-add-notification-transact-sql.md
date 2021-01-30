@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_notification_TSQL
 - sp_add_notification
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0c009cd32cf3fdd92fbb638a00d5f1f4a024a1b8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f09a5638e55ee6bd8e0dfd6e07defc92b0ed365d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493539"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208003"
 ---
 # <a name="sp_add_notification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +41,11 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @alert_name = ] 'alert'` Avviso per la notifica. *Alert* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @alert_name = ] 'alert'` Avviso per la notifica. *Alert* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @operator_name = ] 'operator'` Operatore a cui inviare una notifica quando viene generato l'avviso. *operator* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @operator_name = ] 'operator'` Operatore a cui inviare una notifica quando viene generato l'avviso. *operator* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @notification_method = ] notification_method` Metodo con cui l'operatore riceve una notifica. *notification_method* è di **tinyint**e non prevede alcun valore predefinito. *notification_method* possono essere uno o più di questi valori combinati con un operatore logico **or** .  
+`[ @notification_method = ] notification_method` Metodo con cui l'operatore riceve una notifica. *notification_method* è di **tinyint** e non prevede alcun valore predefinito. *notification_method* possono essere uno o più di questi valori combinati con un operatore logico **or** .  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
@@ -71,7 +71,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_add_notification**.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene aggiunta una notifica di posta elettronica per l'avviso specificato (`Test Alert`).  
   
 > **Nota:** In questo esempio si presuppone che `Test Alert` esista già e che `François Ajenstat` sia un nome di operatore valido.  
@@ -87,7 +87,7 @@ EXEC dbo.sp_add_notification
 GO  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [sp_delete_notification &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
  [sp_help_notification &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
  [sp_update_notification &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   

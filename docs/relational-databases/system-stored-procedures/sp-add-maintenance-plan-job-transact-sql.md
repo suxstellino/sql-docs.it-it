@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_maintenance_plan_job_TSQL
 - sp_add_maintenance_plan_job
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 710a151e6e965b523b26a67e82814d4b23091aba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c0d4d5652c26e2d5fd2947953c7865b247b9448a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474627"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208028"
 ---
 # <a name="sp_add_maintenance_plan_job-transact-sql"></a>sp_add_maintenance_plan_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,20 +45,20 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @plan_id = ] 'plan_id'` Specifica l'ID del piano di manutenzione. *plan_id* è di tipo **uniqueidentifier**e deve essere un ID valido.  
+`[ @plan_id = ] 'plan_id'` Specifica l'ID del piano di manutenzione. *plan_id* è di tipo **uniqueidentifier** e deve essere un ID valido.  
   
-`[ @job_id = ] 'job_id'` Specifica l'ID del processo da associare al piano di manutenzione. *job_id* è di tipo **uniqueidentifier**e deve essere un ID valido. Per creare un processo o i processi, eseguire **sp_add_job**o utilizzare SQL Server Management Studio.  
+`[ @job_id = ] 'job_id'` Specifica l'ID del processo da associare al piano di manutenzione. *job_id* è di tipo **uniqueidentifier** e deve essere un ID valido. Per creare un processo o i processi, eseguire **sp_add_job** o utilizzare SQL Server Management Studio.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_add_maintenance_plan_job** deve essere eseguito dal database **msdb** .  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_add_maintenance_plan_job**.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  In questo esempio il processo "B8FCECB1-E22C-11D2-AA64-00C04F688EAE" viene aggiunto al piano di manutenzione creato utilizzando **sp_add_maintenance_plan_job**.  
   
 ```  

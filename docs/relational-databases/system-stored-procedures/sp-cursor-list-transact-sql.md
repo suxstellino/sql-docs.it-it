@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cursor_list
 - sp_cursor_list_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dca9473813bf8e4324f1b7de6fb1a30c38a21148
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3a60d447d7072c6386faef08d1dd7398f906064d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536644"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205192"
 ---
 # <a name="sp_cursor_list-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,19 +43,19 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
   
 ## <a name="arguments"></a>Argomenti  
  [ @cursor_return =] OUTPUT *cursor_variable_name*  
- Nome di una variabile di cursore dichiarata. *cursor_variable_name* è un **cursore**e non prevede alcun valore predefinito. Il cursore restituito è di tipo scorrevole, dinamico e di sola lettura.  
+ Nome di una variabile di cursore dichiarata. *cursor_variable_name* è un **cursore** e non prevede alcun valore predefinito. Il cursore restituito è di tipo scorrevole, dinamico e di sola lettura.  
   
  [ @cursor_scope =] *cursor_scope*  
- Specifica il livello dei cursori da segnalare. *cursor_scope* è di **tipo int**e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
+ Specifica il livello dei cursori da segnalare. *cursor_scope* è di **tipo int** e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |1|Restituisce tutti i cursori locali.|  
 |2|Restituisce tutti i cursori globali.|  
 |3|Restituisce i cursori locali e quelli globali.|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- Nessuno  
+ nessuno  
   
 ## <a name="cursors-returned"></a>Cursori restituiti  
  sp_cursor_list restituisce un report come parametro di output di un cursore [!INCLUDE[tsql](../../includes/tsql-md.md)], anziché come set di risultati. In questo modo i batch, le stored procedure e i trigger [!INCLUDE[tsql](../../includes/tsql-md.md)] possono elaborare l'output una riga alla volta. Non è possibile richiamare direttamente la procedura da funzioni API del database. Il parametro di output del cursore deve essere associato a una variabile di programma, ma le API del database non supportano l'associazione di parametri o variabili del cursore.  
@@ -79,7 +79,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |last_operation|**smallint**|Ultima operazione eseguita sul cursore:<br /><br /> 0 = Non è stata eseguita alcuna operazione.<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = INSERIMENTO<br /><br /> 4 = UPDATE<br /><br /> 5 = ELIMINA<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|Valore univoco che identifica il cursore nell'ambito del server.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La stored procedure sp_cursor_list consente di creare un elenco dei cursori del server aperti nella connessione e di ottenere una descrizione degli attributi globali di ogni cursore, ad esempio se è scorrevole e aggiornabile. I cursori elencati tramite sp_cursor_list sono i seguenti:  
   
 -   I cursori del server [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -91,7 +91,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione vengono assegnate per impostazione predefinita al ruolo public.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene aperto un cursore globale e viene utilizzata la stored procedure `sp_cursor_list` per creare un report degli attributi del cursore.  
   
 ```  

@@ -1,12 +1,12 @@
 ---
 description: sys.registered_search_property_lists (Transact-SQL)
-title: sys. registered_search_property_lists (Transact-SQL) | Microsoft Docs
+title: sys.registered_search_property_lists (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - registered_search_property_lists_TSQL
 - sys.registered_search_property_lists
@@ -22,12 +22,12 @@ ms.assetid: 630d4caa-9bea-4cd3-a5b1-01098b0855fc
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 9137345d642f1bc599ace1645cd5e441b927c4fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6504ed677747548d940de7858ceade9a6a0ac75a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447850"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206855"
 ---
 # <a name="sysregistered_search_property_lists-transact-sql"></a>sys.registered_search_property_lists (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88447850"
 |**modify_date**|**datetime**|Data dell'ultima modifica apportata all'elenco di proprietà mediante un'istruzione ALTER.|  
 |**principal_id**|**int**|Proprietario dell'elenco di proprietà.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Per altre informazioni, vedere [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -51,7 +51,7 @@ ms.locfileid: "88447850"
 > [!NOTE]  
 >  Il proprietario dell'elenco delle proprietà di ricerca può concedere autorizzazioni REFERENCE o CONTROL per l'elenco. Gli utenti con autorizzazione CONTROL possono inoltre concedere l'autorizzazione REFERENCE ad altri utenti.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono visualizzati l'ID e il nome degli elenchi delle proprietà di ricerca nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  

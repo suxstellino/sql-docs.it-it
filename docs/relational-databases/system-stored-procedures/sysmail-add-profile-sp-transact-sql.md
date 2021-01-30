@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_add_profile_sp_TSQL
 - sysmail_add_profile_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 904a6898bf3791a98d64228b85939275ad5c8548
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4eeb85dee2493a07b1476a25fc90f23c5ad42aeb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547244"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207974"
 ---
 # <a name="sysmail_add_profile_sp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,19 +42,19 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @profile_name = ] 'profile\_name'` Nome del nuovo profilo. *profile_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @profile_name = ] 'profile\_name'` Nome del nuovo profilo. *profile_name* è di **tipo sysname** e non prevede alcun valore predefinito.  
  
    > [!NOTE]
    > Il nome del profilo che usa Azure SQL Istanza gestita SQL Agent deve essere chiamato **AzureManagedInstance_dbmail_profile**
   
 `[ @description = ] 'description'` Descrizione facoltativa del nuovo profilo. *Description* è di **tipo nvarchar (256)** e non prevede alcun valore predefinito.  
   
-`[ @profile_id = ] _new\_profile\_id OUTPUT` Restituisce l'ID del nuovo profilo. *new_profile_id* è di **tipo int**e il valore predefinito è null.  
+`[ @profile_id = ] _new\_profile\_id OUTPUT` Restituisce l'ID del nuovo profilo. *new_profile_id* è di **tipo int** e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Un profilo di Posta elettronica database include qualsiasi numero di account di Posta elettronica database. Le stored procedure di Posta elettronica database possono far riferimento a un profilo attraverso il nome del profilo o l'ID del profilo generato da questa procedura. Per ulteriori informazioni sull'aggiunta di un account a un profilo, vedere [sysmail_add_profileaccount_sp &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md).  
   
  Il nome e la descrizione del profilo possono essere modificati con il stored procedure **sysmail_update_profile_sp**, mentre l'ID del profilo rimane costante per tutta la durata del profilo.  
@@ -66,7 +66,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  **A. Creazione di un nuovo profilo**  
   
  Nell'esempio seguente viene creato un nuovo profilo di Posta elettronica database denominato `AdventureWorks Administrator`.  

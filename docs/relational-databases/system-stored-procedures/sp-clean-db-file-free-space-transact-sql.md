@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_clean_db_file_free_space
 - sp_clean_db_file_free_space_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3eb53a67-969d-4cb8-9681-b1c8e6fd55b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 75463e5785c76e6904d2d7a82bf03f160811e6d0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 032cc0a56b9ae181a4c3f3206bcc95a63485d45c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543627"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206542"
 ---
 # <a name="sp_clean_db_file_free_space-transact-sql"></a>sp_clean_db_file_free_space (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ sp_clean_db_file_free_space
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Le operazioni di aggiornamento o le operazioni di eliminazione da una tabella che provocano lo spostamento di una riga consentono di liberare immediatamente spazio in una pagina poiché rimuovono i riferimenti alla riga specifica. In alcune circostanze, tuttavia, la riga può rimanere fisicamente nella pagina di dati come record fantasma. I record fantasma vengono rimossi periodicamente da un processo in background. Questi dati residui non vengono restituiti dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] in risposta alle query. Tuttavia, negli ambienti in cui la sicurezza fisica dei file di dati o di backup è a rischio, è possibile usare `sp_clean_db_file_free_space` per pulire questi record fantasma. Per eseguire questa operazione contemporaneamente per tutti i file di database, utilizzare [sp_clean_db_free_space (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md). 
   
  La quantità di tempo necessaria per eseguire sp_clean_db_file_free_space dipende dalle dimensioni del file, dallo spazio libero disponibile e dalla capacità del disco. Poiché `sp_clean_db_file_free_space` l'esecuzione di può influire in modo significativo sulle attività di I/O, è consigliabile eseguire questa procedura al di fuori delle ore di lavoro normali.  
@@ -67,7 +67,7 @@ sp_clean_db_file_free_space
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al `db_owner` ruolo del database.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono eliminate le informazioni residue dal file di dati primario del database `AdventureWorks2012`.  
   
 ```sql  

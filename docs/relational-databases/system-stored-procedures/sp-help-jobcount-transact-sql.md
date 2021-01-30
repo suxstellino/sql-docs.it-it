@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobcount
 - sp_help_jobcount_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2498f73d712a2de4c03dbd48c5f18eb0f5d49293
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 19514ea8eb65aee4161e6f1316abdf76eb156196
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89527837"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206442"
 ---
 # <a name="sp_help_jobcount-transact-sql"></a>sp_help_jobcount (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +42,9 @@ sp_help_jobcount
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @schedule_id = ] schedule_id` Identificatore della pianificazione da elencare. *schedule_id* è di **tipo int**e non prevede alcun valore predefinito. È possibile specificare *schedule_id* o *schedule_name* .  
+`[ @schedule_id = ] schedule_id` Identificatore della pianificazione da elencare. *schedule_id* è di **tipo int** e non prevede alcun valore predefinito. È possibile specificare *schedule_id* o *schedule_name* .  
   
-`[ @schedule_name = ] 'schedule_name'` Nome della pianificazione da elencare. *schedule_name* è di **tipo sysname**e non prevede alcun valore predefinito. È possibile specificare *schedule_id* o *schedule_name* .  
+`[ @schedule_name = ] 'schedule_name'` Nome della pianificazione da elencare. *schedule_name* è di **tipo sysname** e non prevede alcun valore predefinito. È possibile specificare *schedule_id* o *schedule_name* .  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -56,7 +56,7 @@ sp_help_jobcount
 |-----------------|---------------|-----------------|  
 |**JobCount**|**int**|Numero di processi per la pianificazione specificata.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questa procedura visualizza un elenco del numero di processi associati alla pianificazione specificata.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -72,7 +72,7 @@ sp_help_jobcount
   
  Solo i membri di **sysadmin** possono visualizzare i conteggi dei processi di proprietà di altri utenti.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene visualizzato un elenco del numero di processi associati alla pianificazione `NightlyJobs`.  
   
 ```  

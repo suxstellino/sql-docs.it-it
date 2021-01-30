@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_change_agent_parameter_TSQL
 - sp_change_agent_parameter
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6020788189dbd352b3a469809e0a95a85a6a5a5f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e8bfb83ad0b05f57d4be97838882288937ffbcc1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548267"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206595"
 ---
 # <a name="sp_change_agent_parameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,12 +38,12 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @profile_id = ] profile_id,` ID del profilo. *profile_id* è di **tipo int**e non prevede alcun valore predefinito.  
+`[ @profile_id = ] profile_id,` ID del profilo. *profile_id* è di **tipo int** e non prevede alcun valore predefinito.  
   
-`[ @parameter_name = ] 'parameter_name'` Nome del parametro. *parameter_name* è di **tipo sysname**e non prevede alcun valore predefinito. I parametri che è possibile modificare per i profili sistema dipendono dal tipo di agente. Per individuare il tipo di agente rappresentato da questo *profile_id* , individuare la colonna *profile_id* nella tabella **MSagent_profiles** e prendere nota del valore di *agent_type* .  
+`[ @parameter_name = ] 'parameter_name'` Nome del parametro. *parameter_name* è di **tipo sysname** e non prevede alcun valore predefinito. I parametri che è possibile modificare per i profili sistema dipendono dal tipo di agente. Per individuare il tipo di agente rappresentato da questo *profile_id* , individuare la colonna *profile_id* nella tabella **MSagent_profiles** e prendere nota del valore di *agent_type* .  
   
 > [!NOTE]  
->  Se un parametro è supportato per un *agent_type*specificato, ma non è stato definito nel profilo agente, viene restituito un errore. Per aggiungere un parametro a un profilo agente, è necessario eseguire [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
+>  Se un parametro è supportato per un *agent_type* specificato, ma non è stato definito nel profilo agente, viene restituito un errore. Per aggiungere un parametro a un profilo agente, è necessario eseguire [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
   
  Per un agente di snapshot (*agent_type* = **1**), se definito nel profilo, è possibile modificare le proprietà seguenti:  
   
@@ -239,14 +239,14 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **SQLQueueMode**  
   
- Per visualizzare i parametri definiti per un determinato profilo, eseguire **sp_help_agent_profile** e prendere nota del *profile_name* associato al *profile_id*. Con il *profile_id*appropriato, eseguire successivamente **sp_help_agent_parameters** utilizzando tale *profile_id* per visualizzare i parametri associati al profilo. I parametri possono essere aggiunti a un profilo eseguendo [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
+ Per visualizzare i parametri definiti per un determinato profilo, eseguire **sp_help_agent_profile** e prendere nota del *profile_name* associato al *profile_id*. Con il *profile_id* appropriato, eseguire successivamente **sp_help_agent_parameters** utilizzando tale *profile_id* per visualizzare i parametri associati al profilo. I parametri possono essere aggiunti a un profilo eseguendo [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
   
 `[ @parameter_value = ] 'parameter_value'` Nuovo valore del parametro. *parameter_value* è di **tipo nvarchar (255)** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_change_agent_parameter** viene utilizzato in tutti i tipi di replica.  
   
 ## <a name="permissions"></a>Autorizzazioni  

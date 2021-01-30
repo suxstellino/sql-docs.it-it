@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - filter_TSQL
 - sp_check_for_sync_trigger
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ddd0563d0a58ec50fc43ed1ac78478068b553ab0
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.openlocfilehash: cb15d74c1ac4845b7ff60bd12983b922008b27c8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364853"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206565"
 ---
 # <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,10 +40,10 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@tabid =** ]' *tabid* '  
+ [**@tabid =** ]'*tabid*'  
  ID di oggetto della tabella in cui vengono controllati i trigger per l'aggiornamento immediato. *tabid* è di **tipo int** e non prevede alcun valore predefinito.  
   
- [ **@trigger_op =** ] output ' *trigger_output_parameters* '  
+ [**@trigger_op =** ] output '*trigger_output_parameters*'  
  Specifica se il parametro di output restituisce il tipo di trigger da cui viene richiamato. *trigger_output_parameters* è **char (10)** . i possibili valori sono i seguenti.  
   
 |Valore|Descrizione|  
@@ -61,7 +61,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ## <a name="remarks"></a>Commenti  
  **sp_check_for_sync_trigger** viene utilizzata nella replica snapshot e nella replica transazionale.  
   
- **sp_check_for_sync_trigger** viene utilizzato per coordinare la replica e i trigger definiti dall'utente. Questa stored procedure determina se viene richiamata nel contesto di un trigger di replica. Ad esempio, è possibile chiamare la stored procedure **sp_check_for_sync_trigger** nel corpo di un trigger definito dall'utente. Se **sp_check_for_sync_trigger** restituisce **0** , l'elaborazione del trigger definito dall'utente continua. Se **sp_check_for_sync_trigger** restituisce **1** , il trigger definito dall'utente viene chiuso. Ciò garantisce che il trigger definito dall'utente non venga attivato quando il trigger di replica aggiorna la tabella.  
+ **sp_check_for_sync_trigger** viene utilizzato per coordinare la replica e i trigger definiti dall'utente. Questa stored procedure determina se viene richiamata nel contesto di un trigger di replica. Ad esempio, è possibile chiamare la stored procedure **sp_check_for_sync_trigger** nel corpo di un trigger definito dall'utente. Se **sp_check_for_sync_trigger** restituisce **0**, l'elaborazione del trigger definito dall'utente continua. Se **sp_check_for_sync_trigger** restituisce **1**, il trigger definito dall'utente viene chiuso. Ciò garantisce che il trigger definito dall'utente non venga attivato quando il trigger di replica aggiorna la tabella.  
   
 ## <a name="examples"></a>Esempi
 

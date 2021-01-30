@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
@@ -14,12 +14,12 @@ ms.assetid: 07213d04-cd31-45fd-a8c8-2e16e09eeaf4
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: ''
-ms.openlocfilehash: a585fb983a8f1662cdd42d361f106a76bfd47cb6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7ab9b0cd8682ecc722f97b563285bdd31665c1fd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483234"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205341"
 ---
 # <a name="parameter-markers"></a>Marcatori di parametro
 In conformità con la specifica SQL-92, un'applicazione non può inserire marcatori di parametro nei percorsi seguenti. Per un elenco più completo, vedere la specifica di SQL-92.  

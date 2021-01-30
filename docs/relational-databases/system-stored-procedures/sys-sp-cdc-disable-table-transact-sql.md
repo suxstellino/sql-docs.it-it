@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_disable_table (Transact-SQL)
-title: sys. sp_cdc_disable_table (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_disable_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_cdc_disable_table
 - sp_cdc_disable_table
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f0819c156cdc3e836028915d89a8d9100eef17c6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 53984d18923cef297e267374045f0f4cb4364419
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541151"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206021"
 ---
 # <a name="syssp_cdc_disable_table-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,11 +47,11 @@ sys.sp_cdc_disable_table
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @source_schema = ] 'source\_schema'` Nome dello schema in cui è contenuta la tabella di origine. *source_schema* è di **tipo sysname**e non prevede alcun valore predefinito e non può essere null.  
+`[ @source_schema = ] 'source\_schema'` Nome dello schema in cui è contenuta la tabella di origine. *source_schema* è di **tipo sysname** e non prevede alcun valore predefinito e non può essere null.  
   
  *source_schema* deve esistere nel database corrente.  
   
-`[ @source_name = ] 'source\_name'` Nome della tabella di origine da cui Change Data Capture deve essere disabilitato. *source_name* è di **tipo sysname**e non prevede alcun valore predefinito e non può essere null.  
+`[ @source_name = ] 'source\_name'` Nome della tabella di origine da cui Change Data Capture deve essere disabilitato. *source_name* è di **tipo sysname** e non prevede alcun valore predefinito e non può essere null.  
   
  *source_name* deve esistere nel database corrente.  
   
@@ -66,12 +66,12 @@ sys.sp_cdc_disable_table
  nessuno  
   
 ## <a name="remarks"></a>Osservazioni  
- **sys. sp_cdc_disable_table** Elimina la tabella delle modifiche Change Data Capture e le funzioni di sistema associate alla tabella di origine e all'istanza di acquisizione specificate. Elimina tutte le righe associate all'istanza di acquisizione specificata dalle tabelle di sistema Change Data Capture e imposta la colonna **is_tracked_by_cdc** per la voce della tabella nella vista del catalogo [sys. Tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) su 0.  
+ **sys.sp_cdc_disable_table** Elimina le funzioni di sistema e tabella delle modifiche Change Data Capture associate alla tabella di origine e all'istanza di acquisizione specificate. Elimina tutte le righe associate all'istanza di acquisizione specificata dalle tabelle di sistema Change Data Capture e imposta la colonna **is_tracked_by_cdc** per la voce della tabella nella vista del catalogo [sys. Tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) su 0.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del database **db_owner** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene disabilitata l'acquisizione dei dati delle modifiche per la tabella `HumanResources.Employee`.  
   
 ```  

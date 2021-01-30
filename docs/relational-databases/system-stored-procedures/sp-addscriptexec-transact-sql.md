@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addscriptexec
 - sp_addscriptexec_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 81d3b8ac9e8eda12ed27099fed5623d0fd3da489
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6349479d4f3ce3097771516640b0eec258e32f5b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536762"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207155"
 ---
 # <a name="sp_addscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,17 +41,17 @@ sp_addscriptexec [ @publication = ] publication
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 `[ @scriptfile = ] 'scriptfile'` È il percorso completo del file script SQL. *scriptfile* è di **tipo nvarchar (4000)** e non prevede alcun valore predefinito.  
   
-`[ @skiperror = ] 'skiperror'` Indica se il agente di distribuzione o agente di merge deve arrestarsi quando viene rilevato un errore durante l'elaborazione dello script. *SkipError* è di **bit**e il valore predefinito è 0.  
+`[ @skiperror = ] 'skiperror'` Indica se il agente di distribuzione o agente di merge deve arrestarsi quando viene rilevato un errore durante l'elaborazione dello script. *SkipError* è di **bit** e il valore predefinito è 0.  
   
  **0** = l'agente si arresterà.  
   
  **1** = l'agente continua lo script e ignora l'errore.  
   
-`[ @publisher = ] 'publisher'` Specifica un server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'` Specifica un server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname** e il valore predefinito è null.  
   
 > [!NOTE]  
 >  il *Server* di pubblicazione non deve essere utilizzato per la pubblicazione da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
@@ -59,7 +59,7 @@ sp_addscriptexec [ @publication = ] publication
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_addscriptexec** viene utilizzata per la replica transazionale e la replica di tipo merge.  
   
  **sp_addscriptexec** non viene utilizzato per la replica snapshot.  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SET_FORCEPLAN_TSQL
 - SET FORCEPLAN
@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: b6c0b08f-2060-4696-9e12-50cb7e674321
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 35fee4ee42f2b401b584e752e1a834c991b03483
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
-ms.translationtype: HT
+ms.openlocfilehash: c60afa83af727a1f6c5090554f87aff11bbf49c6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093386"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206994"
 ---
 # <a name="set-forceplan-transact-sql"></a>SET FORCEPLAN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +57,7 @@ SET FORCEPLAN { ON | OFF }
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni per l'opzione SET FORCEPLAN vengono assegnate per impostazione predefinita a tutti gli utenti.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene eseguito il join di quattro tabelle. L'impostazione dell'opzione `SHOWPLAN_TEXT` è abilitata in modo che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisca le informazioni sulla diversa modalità di elaborazione della query dopo l'abilitazione di `SET FORCE_PLAN`.  
   
 ```sql

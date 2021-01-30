@@ -7,26 +7,26 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - functions [ODBC], numeric functions
 - numeric functions [ODBC]
 ms.assetid: 4fa548dc-e8b0-4179-92ff-81d6a79d10c3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7575d55ad6632ffa511da32a7155ab8c4d0edf3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bef4a075eefffd0f9ec4b918189d40ae71ea78ec
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425023"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207128"
 ---
 # <a name="numeric-functions"></a>Funzioni numeriche
 Nella tabella seguente vengono descritte le funzioni numeriche incluse nel set di funzioni scalari ODBC. Chiamando **SQLGetInfo** con un *tipo di informazioni* SQL_NUMERIC_FUNCTIONS, un'applicazione può determinare quali funzioni numeriche sono supportate da un driver.  
   
  Tutte le funzioni numeriche restituiscono valori di tipo di dati SQL_FLOAT ad eccezione di ABS, ROUND, TRUNCATE, SIGN, FLOOR e CEILING, che restituiscono valori dello stesso tipo di dati dei parametri di input.  
   
- Gli argomenti identificati come *numeric_exp* possono essere il nome di una colonna, il risultato di un'altra funzione scalare o un valore *numerico-Litera*l, in cui il tipo di dati sottostante potrebbe essere rappresentato come SQL_NUMERIC, SQL_DECIMAL, SQL_TINYINT, SQL_SMALLINT, SQL_INTEGER, SQL_BIGINT, SQL_FLOAT, SQL_REAL o SQL_DOUBLE.  
+ Gli argomenti identificati come *numeric_exp* possono essere il nome di una colonna, il risultato di un'altra funzione scalare o un valore *numerico-Litera* l, in cui il tipo di dati sottostante potrebbe essere rappresentato come SQL_NUMERIC, SQL_DECIMAL, SQL_TINYINT, SQL_SMALLINT, SQL_INTEGER, SQL_BIGINT, SQL_FLOAT, SQL_REAL o SQL_DOUBLE.  
   
  Gli argomenti identificati come *float_exp* possono essere il nome di una colonna, il risultato di un'altra funzione scalare o un *valore letterale numerico*, in cui il tipo di dati sottostante può essere rappresentato come SQL_FLOAT.  
   
@@ -40,7 +40,7 @@ Nella tabella seguente vengono descritte le funzioni numeriche incluse nel set d
 |**ARCCOS (** _float_exp_ **)**  (ODBC 1,0)|Restituisce l'arcoseno di *float_exp* come angolo, espresso in radianti.|  
 |**Asin (** _float_exp_ **)**  (ODBC 1,0)|Restituisce il arcoseno di *float_exp* come angolo, espresso in radianti.|  
 |**Atan (** _float_exp_ **)**  (ODBC 1,0)|Restituisce il arcotangente di *float_exp* come angolo, espresso in radianti.|  
-|**Atan2 (** _float_exp1_, _float_exp2_**)**  (ODBC 2,0)|Restituisce l'arcotangente delle coordinate *x* e *y* , specificate da *float_exp1* e *float_exp2*rispettivamente come angolo, espresso in radianti.|  
+|**Atan2 (** _float_exp1_, _float_exp2_**)**  (ODBC 2,0)|Restituisce l'arcotangente delle coordinate *x* e *y* , specificate da *float_exp1* e *float_exp2* rispettivamente come angolo, espresso in radianti.|  
 |**Ceiling (** _numeric_exp_ **)**  (ODBC 1,0)|Restituisce l'intero più piccolo maggiore o uguale a *numeric_exp*. Il valore restituito è dello stesso tipo di dati del parametro di input.|  
 |**Cos (** _float_exp_ **)**  (ODBC 1,0)|Restituisce il coseno di *float_exp*, dove *float_exp* è un angolo espresso in radianti.|  
 |**Lettino (** _float_exp_ **)**  (ODBC 1,0)|Restituisce la cotangente di *float_exp*, dove *float_exp* è un angolo espresso in radianti.|  

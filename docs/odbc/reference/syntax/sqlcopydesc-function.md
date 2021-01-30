@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLCopyDesc
 apilocation:
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ede6d52614c1c35cdc28f6d85e8b3be61235b4ca
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab2ef18e777d433daf4ab93b73d249e62507ea3c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461193"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206311"
 ---
 # <a name="sqlcopydesc-function"></a>Funzione SQLCopyDesc
 **Conformità**  
@@ -40,8 +40,8 @@ ms.locfileid: "88461193"
 ```cpp  
   
 SQLRETURN SQLCopyDesc(  
-     SQLHDESC     SourceDescHandle,  
-     SQLHDESC     TargetDescHandle);  
+     SQLHDESC     SourceDescHandle,  
+     SQLHDESC     TargetDescHandle);  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -65,14 +65,14 @@ SQLRETURN SQLCopyDesc(
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |08S01|Errore collegamento comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato connesso il driver non è riuscito prima del completamento dell'elaborazione della funzione.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer *\* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare la memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY007|L'istruzione associata non è preparata|*SourceDescHandle* è stato associato a un IRD e l'handle di istruzione associato non era nello stato preparato o eseguito.|  
-|HY010|Errore sequenza funzione|(DM) l'handle del descrittore in *SourceDescHandle* o *TargetDescHandle* è stato associato a un *statementHandle* per cui è stata chiamata una funzione in esecuzione asincrona (non questa) ed è ancora in esecuzione quando è stata chiamata la funzione.<br /><br /> (DM) l'handle del descrittore in *SourceDescHandle* o *TargetDescHandle* è stato associato a un *statementHandle* per il quale **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *SourceDescHandle* o *TargetDescHandle*. Questa funzione asincrona era ancora in esecuzione quando è stata chiamata la funzione **SQLCopyDesc** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per uno degli handle di istruzione associati a *SourceDescHandle* o *TargetDescHandle* e ha restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.|  
+|HY010|Errore sequenza funzione|(DM) l'handle del descrittore in *SourceDescHandle* o *TargetDescHandle* è stato associato a un *statementHandle* per cui è stata chiamata una funzione in esecuzione asincrona (non questa) ed è ancora in esecuzione quando è stata chiamata la funzione.<br /><br /> (DM) l'handle del descrittore in *SourceDescHandle* o *TargetDescHandle* è stato associato a un *statementHandle* per il quale **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations** o **SQLSetPos** è stato chiamato e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *SourceDescHandle* o *TargetDescHandle*. Questa funzione asincrona era ancora in esecuzione quando è stata chiamata la funzione **SQLCopyDesc** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect** o **SQLMoreResults** è stato chiamato per uno degli handle di istruzione associati a *SourceDescHandle* o *TargetDescHandle* e ha restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
 |HY016|Impossibile modificare il descrittore di una riga di implementazione|*TargetDescHandle* è stato associato a un IRD.|  
 |HY021|Informazioni descrittore incoerenti|Le informazioni sul descrittore controllate durante una verifica di coerenza non erano coerenti. Per ulteriori informazioni, vedere l'argomento relativo alle verifiche di coerenza in **SQLSetDescField**.|  
-|HY092|Identificatore di attributo/opzione non valido|La chiamata a **SQLCopyDesc** ha richiesto una chiamata a **SQLSetDescField**, ma * \* ValuePtr* non era valido per l'argomento *FieldIdentifier* in *TargetDescHandle*.|  
+|HY092|Identificatore di attributo/opzione non valido|La chiamata a **SQLCopyDesc** ha richiesto una chiamata a **SQLSetDescField**, ma *\* ValuePtr* non era valido per l'argomento *FieldIdentifier* in *TargetDescHandle*.|  
 |HY117|Connessione sospesa a causa di uno stato di transazione sconosciuto. Sono consentite solo le funzioni di disconnessione e di sola lettura.|(DM) per ulteriori informazioni sullo stato Suspended, vedere [funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Timeout connessione scaduto|Il periodo di timeout della connessione è scaduto prima che l'origine dati abbia risposto alla richiesta. Il periodo di timeout della connessione viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|Il driver non supporta questa funzione|(DM) il driver associato a *SourceDescHandle* o *TargetDescHandle* non supporta la funzione.|  
@@ -97,7 +97,7 @@ SQLRETURN SQLCopyDesc(
  Quando **SQLCopyDesc** viene chiamato con un *SourceDescHandle* su un driver e un *TargetDescHandle* in un altro driver, la coda degli errori di *SourceDescHandle* viene cancellata. Questo problema si verifica perché **SQLCopyDesc** in questo caso viene implementato dalle chiamate a **SQLGetDescField** e **SQLSetDescField**.  
   
 > [!NOTE]  
->  Un'applicazione potrebbe essere in grado di associare un handle descrittore allocato in modo esplicito con un *statementHandle*, invece di chiamare **SQLCopyDesc** per copiare i campi da un descrittore a un altro. Un descrittore allocato in modo esplicito può essere associato a un altro *statementHandle* nello stesso *connectionHandle* impostando l'attributo dell'istruzione SQL_ATTR_APP_ROW_DESC o SQL_ATTR_APP_PARAM_DESC sull'handle del descrittore allocato in modo esplicito. Al termine di questa operazione, non è necessario chiamare **SQLCopyDesc** per copiare i valori dei campi del descrittore da un descrittore a un altro. Non è tuttavia possibile associare un handle del descrittore a un *statementHandle* in un altro *connectionHandle*. per usare gli stessi valori di campo del descrittore in *StatementHandles* in *ConnectionHandles*diversi, è necessario chiamare **SQLCopyDesc** .  
+>  Un'applicazione potrebbe essere in grado di associare un handle descrittore allocato in modo esplicito con un *statementHandle*, invece di chiamare **SQLCopyDesc** per copiare i campi da un descrittore a un altro. Un descrittore allocato in modo esplicito può essere associato a un altro *statementHandle* nello stesso *connectionHandle* impostando l'attributo dell'istruzione SQL_ATTR_APP_ROW_DESC o SQL_ATTR_APP_PARAM_DESC sull'handle del descrittore allocato in modo esplicito. Al termine di questa operazione, non è necessario chiamare **SQLCopyDesc** per copiare i valori dei campi del descrittore da un descrittore a un altro. Non è tuttavia possibile associare un handle del descrittore a un *statementHandle* in un altro *connectionHandle*. per usare gli stessi valori di campo del descrittore in *StatementHandles* in *ConnectionHandles* diversi, è necessario chiamare **SQLCopyDesc** .  
   
  Per una descrizione dei campi in un'intestazione o in un record del descrittore, vedere [funzione SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Per ulteriori informazioni sui descrittori, vedere [descrittori](../../../odbc/reference/develop-app/descriptors.md).  
   
@@ -105,7 +105,7 @@ SQLRETURN SQLCopyDesc(
  Un'applicazione può copiare dati da una tabella all'altra senza copiare i dati a livello di applicazione. A tale scopo, l'applicazione associa gli stessi buffer di dati e le informazioni sul descrittore a un'istruzione che recupera i dati e l'istruzione che inserisce i dati in una copia. Questa operazione può essere eseguita condividendo un descrittore dell'applicazione (associazione di un descrittore allocato in modo esplicito come ARD a un'istruzione e APD in un altro) oppure usando **SQLCopyDesc** per copiare i binding tra ARD e l'APD delle due istruzioni. Se le istruzioni sono in connessioni diverse, è necessario usare **SQLCopyDesc** . Inoltre, **SQLCopyDesc** deve essere chiamato per copiare i binding tra IRD e il DPI delle due istruzioni. Quando si esegue la copia tra istruzioni nella stessa connessione, il SQL_ACTIVE_STATEMENTS tipo di informazioni restituito dal driver per una chiamata a **SQLGetInfo** deve essere maggiore di 1 affinché questa operazione abbia esito positivo. Questo non avviene quando si esegue la copia tra le connessioni.  
   
 ### <a name="code-example"></a>Esempio di codice  
- Nell'esempio seguente vengono usate le operazioni del descrittore per copiare i campi della tabella PartsSource nella tabella PartsCopy. Il contenuto della tabella PartsSource viene recuperato nei buffer del set di righe in *hstmt0*. Questi valori vengono usati come parametri di un'istruzione INSERT su *hstmt1* per popolare le colonne della tabella PartsCopy. A tale scopo, i campi di IRD di *hstmt0* vengono copiati nei campi del dispositivo dpi di *hstmt1*e i campi di ARD di *hstmt0* vengono copiati nei campi dell'APD di *hstmt1*. Usare **SQLSetDescField** per impostare l'attributo SQL_DESC_PARAMETER_TYPE di dpi su SQL_PARAM_INPUT quando si copiano i campi IRD da un'istruzione con parametri di output a campi dpi che devono essere parametri di input.  
+ Nell'esempio seguente vengono usate le operazioni del descrittore per copiare i campi della tabella PartsSource nella tabella PartsCopy. Il contenuto della tabella PartsSource viene recuperato nei buffer del set di righe in *hstmt0*. Questi valori vengono usati come parametri di un'istruzione INSERT su *hstmt1* per popolare le colonne della tabella PartsCopy. A tale scopo, i campi di IRD di *hstmt0* vengono copiati nei campi del dispositivo dpi di *hstmt1* e i campi di ARD di *hstmt0* vengono copiati nei campi dell'APD di *hstmt1*. Usare **SQLSetDescField** per impostare l'attributo SQL_DESC_PARAMETER_TYPE di dpi su SQL_PARAM_INPUT quando si copiano i campi IRD da un'istruzione con parametri di output a campi dpi che devono essere parametri di input.  
   
 ```cpp  
 #define ROWS 100  
@@ -193,7 +193,7 @@ while (SQL_SUCCEEDED(rc)) {
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
 |Recupero di più campi di descrizione|[Funzione SQLGetDescRec](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
-|Impostazione di un singolo campo del descrittore|[SQLSetDescField (funzione)](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
+|Impostazione di un singolo campo del descrittore|[Funzione SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
 |Impostazione di più campi di descrizione|[Funzione SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
 ## <a name="see-also"></a>Vedere anche  

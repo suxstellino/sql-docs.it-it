@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_create_collection_item
 - sp_syscollector_create_collection_item_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a99c9adb21d6c9b09d4e1e29ad845253ba3c9b19
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e58f8407c152be375099e9eb70e3fe63d0100e67
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538532"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207042"
 ---
 # <a name="sp_syscollector_create_collection_item-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ sp_syscollector_create_collection_item
  il *nome* deve essere univoco. Per un elenco dei nomi degli elementi della raccolta correnti, eseguire una query sulla vista di sistema syscollector_collection_items.  
   
  [ @frequency =] *frequenza*  
- Utilizzato per specificare la frequenza di raccolta dei dati da parte di questo elemento della raccolta, espressa in secondi. *Frequency* è di **tipo int**e il valore predefinito è 5. Il valore minimo che è possibile specificare è 5 secondi.  
+ Utilizzato per specificare la frequenza di raccolta dei dati da parte di questo elemento della raccolta, espressa in secondi. *Frequency* è di **tipo int** e il valore predefinito è 5. Il valore minimo che è possibile specificare è 5 secondi.  
   
  Se il set di raccolta è impostato sulla modalità non in cache, la frequenza viene ignorata in quanto in questa modalità la raccolta e il caricamento dei dati vengono eseguiti in base alla pianificazione specificata per il set di raccolta. Per visualizzare la modalità di raccolta del set di raccolta, eseguire una query sulla vista di sistema [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) .  
   
@@ -72,7 +72,7 @@ sp_syscollector_create_collection_item
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È necessario eseguire sp_syscollector_create_collection_item nel contesto del database di sistema msdb.  
   
  Il set di raccolta al quale viene aggiunto l'elemento deve essere arrestato prima della creazione dell'elemento della raccolta. Non è possibile aggiungere elementi della raccolta ai set di raccolta di sistema.  
@@ -80,7 +80,7 @@ sp_syscollector_create_collection_item
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa procedura, è richiesta l'appartenenza al ruolo predefinito del database dc_admin (con autorizzazione EXECUTE) .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene creato un elemento della raccolta basato sul tipo di raccolta `Generic T-SQL Query Collector Type` e successivamente tale elemento viene aggiunto al set di raccolta denominato `Simple collection set test 2`. Per creare il set di raccolta specificato, eseguire l'esempio B in [sp_syscollector_create_collection_set &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
 ```  

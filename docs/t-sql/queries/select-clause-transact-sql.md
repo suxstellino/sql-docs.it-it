@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SELECT Clause
 - SELECT_Clause_TSQL
@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 84099c48344e27070433483eeac829640c3ce4c2
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
-ms.translationtype: HT
+ms.openlocfilehash: 2a633f4cfb8a0c9e5158b24c89035c5e97588a46
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115897"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207598"
 ---
 # <a name="select-clause-transact-sql"></a>SELECT Clause (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,7 +73,7 @@ SELECT [ ALL | DISTINCT ]
  Specifica che nel set di risultati devono essere visualizzate solo righe univoche. I valori Null vengono considerati valori uguali.  
   
  TOP (*expression* ) [ PERCENT ] [ WITH TIES ]  
- Indica che dal set di risultati della query verrà restituito solamente un primo set specificato o una prima percentuale di righe specificata. Il valore di*expression* può essere specificato come numero o come percentuale di righe.  
+ Indica che dal set di risultati della query verrà restituito solamente un primo set specificato o una prima percentuale di righe specificata. Il valore di *expression* può essere specificato come numero o come percentuale di righe.  
   
  L'uso di TOP *expression* senza parentesi nelle istruzioni SELECT è supportato per compatibilità con le versioni precedenti, ma non è consigliato. Per altre informazioni, vedere [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
@@ -82,7 +82,7 @@ SELECT [ ALL | DISTINCT ]
  \*  
  Specifica che devono essere restituite tutte le colonne di tutte le tabelle e viste elencate nella clausola FROM. Le colonne vengono restituite in base alla tabella o vista, a seconda di quanto specificato nella clausola FROM, nello stesso ordine in cui sono visualizzate nella tabella o vista.  
   
- *table_name* | *view_name* | *table*_*alias*.*  
+ *table_name* | *view_name* | *table* _ *alias*.*  
  Limita l'ambito dell'argomento \* alla tabella o vista specificata.  
   
  *column_name*  

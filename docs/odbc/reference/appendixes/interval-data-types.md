@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - second intervals [ODBC]
 - data types [ODBC], interval data types
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5b54996c2f2897e47e05088b1985d190acafaad3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41418b59d61b184717c4a3654491154221b9a791
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429673"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207136"
 ---
 # <a name="interval-data-types"></a>Tipi di dati intervallo
 Un intervallo viene definito come la differenza tra due date e ore. Gli intervalli sono espressi in uno dei due modi diversi. Uno è un intervallo di *anno del mese* che esprime gli intervalli in termini di anni e un numero integrale di mesi. L'altro è un intervallo di *tempo* che esprime gli intervalli in termini di giorni, minuti e secondi. Questi due tipi di intervalli sono distinti e non possono essere misti, perché i mesi possono avere un numero di giorni variabile.  
@@ -42,21 +42,21 @@ Un intervallo viene definito come la differenza tra due date e ore. Gli interval
   
  Sono disponibili 13 tipi di dati SQL intervallo e 13 tipi di dati intervallo C. Ognuno dei tipi di dati intervallo C utilizza la stessa struttura, SQL_INTERVAL_STRUCT, per contenere i dati relativi all'intervallo. Per ulteriori informazioni, vedere la sezione successiva, [struttura intervallo C](../../../odbc/reference/appendixes/c-interval-structure.md). Per ulteriori informazioni sui tipi di dati SQL, vedere [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md). Per ulteriori informazioni sui tipi di dati C, vedere [tipi di dati c](../../../odbc/reference/appendixes/c-data-types.md).  
   
-|Identificatore di tipo|Class|Descrizione|  
+|Identificatore di tipo|Classe|Descrizione|  
 |---------------------|-----------|-----------------|  
-|MONTH|Anno mese|Numero di mesi tra due date.|  
-|YEAR|Anno mese|Numero di anni tra due date.|  
-|YEAR_TO_MONTH|Anno mese|Numero di anni e mesi tra due date.|  
-|DAY|Giorno-ora|Numero di giorni tra due date.|  
-|HOUR|Giorno-ora|Numero di ore tra due data/ora.|  
-|MINUTE|Giorno-ora|Numero di minuti tra due date/ore.|  
-|SECOND|Giorno-ora|Numero di secondi tra due date/ore.|  
-|DAY_TO_HOUR|Giorno-ora|Numero di giorni/ore tra due data/ora.|  
-|DAY_TO_MINUTE|Giorno-ora|Numero di giorni/ore/minuti tra due data/ora.|  
-|DAY_TO_SECOND|Giorno-ora|Numero di giorni/ore/minuti/secondi tra due data e ora.|  
-|HOUR_TO_MINUTE|Giorno-ora|Numero di ore/minuti tra due date/ore.|  
-|HOUR_TO_SECOND|Giorno-ora|Numero di ore/minuti/secondi tra due data/ora.|  
-|MINUTE_TO_SECOND|Giorno-ora|Numero di minuti/secondi tra due date/ore.|  
+|MONTH|Year-Month|Numero di mesi tra due date.|  
+|YEAR|Year-Month|Numero di anni tra due date.|  
+|YEAR_TO_MONTH|Year-Month|Numero di anni e mesi tra due date.|  
+|DAY|Day-Time|Numero di giorni tra due date.|  
+|HOUR|Day-Time|Numero di ore tra due data/ora.|  
+|MINUTE|Day-Time|Numero di minuti tra due date/ore.|  
+|SECOND|Day-Time|Numero di secondi tra due date/ore.|  
+|DAY_TO_HOUR|Day-Time|Numero di giorni/ore tra due data/ora.|  
+|DAY_TO_MINUTE|Day-Time|Numero di giorni/ore/minuti tra due data/ora.|  
+|DAY_TO_SECOND|Day-Time|Numero di giorni/ore/minuti/secondi tra due data e ora.|  
+|HOUR_TO_MINUTE|Day-Time|Numero di ore/minuti tra due date/ore.|  
+|HOUR_TO_SECOND|Day-Time|Numero di ore/minuti/secondi tra due data/ora.|  
+|MINUTE_TO_SECOND|Day-Time|Numero di minuti/secondi tra due date/ore.|  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

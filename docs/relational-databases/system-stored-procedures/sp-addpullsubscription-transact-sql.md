@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addpullsubscription
 - sp_addpullsubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8e5c15e1892f6640e8fddbcc0b89898ffce4f6b2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c119173ba184ef8fe3a03c59e90965650bb9c35c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549966"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206675"
 ---
 # <a name="sp_addpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,14 +45,14 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname** e non prevede alcun valore predefinito.  
 
 > [!NOTE]
 > Il nome del server può essere specificato come `<Hostname>,<PortNumber>` . Potrebbe essere necessario specificare il numero di porta per la connessione quando SQL Server viene distribuito in Linux o Windows con una porta personalizzata e il servizio browser è disabilitato.
   
-`[ @publisher_db = ] 'publisher_db'` Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname**e il valore predefinito è null. *publisher_db* viene ignorato dai publisher Oracle.  
+`[ @publisher_db = ] 'publisher_db'` Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname** e il valore predefinito è null. *publisher_db* viene ignorato dai publisher Oracle.  
   
-`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 `[ @independent_agent = ] 'independent_agent'` Specifica se è presente un agente di distribuzione autonomo per la pubblicazione. *independent_agent* è di **tipo nvarchar (5)** e il valore predefinito è true. Se **true**, esiste una agente di distribuzione autonoma per questa pubblicazione. Se **false**, esiste una agente di distribuzione per ogni coppia di database del server di pubblicazione/database del Sottoscrittore. *independent_agent* è una proprietà della pubblicazione e deve avere lo stesso valore presente nel server di pubblicazione.  
   
@@ -62,7 +62,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
   
 `[ @update_mode = ] 'update_mode'` Tipo di aggiornamento. *update_mode* è di **tipo nvarchar (30)**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**sola lettura** (impostazione predefinita)|La sottoscrizione è di sola lettura. Le modifiche apportate nel Sottoscrittore non vengono ritrasmesse al server di pubblicazione. È consigliabile utilizzare questo valore quando non sono previsti aggiornamenti nel Sottoscrittore.|  
 |**synctran**|Abilita il supporto per sottoscrizioni ad aggiornamento immediato.|  
@@ -75,13 +75,13 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_addpullsubscription** viene utilizzata nella replica snapshot e nella replica transazionale.  
   
 > [!IMPORTANT]  
 >  Per le sottoscrizioni ad aggiornamento in coda utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le connessioni ai Sottoscrittori e specificare un account diverso per la connessione a ogni Sottoscrittore. Quando si crea una sottoscrizione pull che supporta l'aggiornamento in coda, la replica imposta sempre la connessione per l'utilizzo dell'autenticazione di Windows. Per le sottoscrizioni pull, il sistema di replica non è in grado di accedere ai metadati nel Sottoscrittore necessari per l'utilizzo dell'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questo caso, è necessario eseguire [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) per modificare la connessione per utilizzare l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione dopo la configurazione della sottoscrizione.  
   
- Se il [MSreplication_subscriptions &#40;tabella&#41;Transact-SQL ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) non esiste nel Sottoscrittore, **sp_addpullsubscription** lo crea. Viene inoltre aggiunta una riga al [MSreplication_subscriptions &#40;tabella&#41;Transact-SQL ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) . Per le sottoscrizioni pull, [sp_addsubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) deve essere chiamato prima nel server di pubblicazione.  
+ Se il [MSreplication_subscriptions &#40;tabella&#41;Transact-SQL](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) non esiste nel Sottoscrittore, **sp_addpullsubscription** lo crea. Viene inoltre aggiunta una riga al [MSreplication_subscriptions &#40;tabella&#41;Transact-SQL ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) . Per le sottoscrizioni pull, [sp_addsubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) deve essere chiamato prima nel server di pubblicazione.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addpullsubscription-t_1.sql)]  

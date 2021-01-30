@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_job_TSQL
 - sp_add_job
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 89f90d460287fadc9cdda97c020ccef7a47ceccd
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: 39f083d083a38e4a581c507354efaf6548471e7d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753860"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206801"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -58,47 +58,47 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_name = ] 'job_name'` Nome del processo. Il nome deve essere univoco e non può contenere il carattere di percentuale ( **%** ). *job_name*è di **tipo nvarchar (128)** e non prevede alcun valore predefinito.  
+`[ @job_name = ] 'job_name'` Nome del processo. Il nome deve essere univoco e non può contenere il carattere di percentuale ( **%** ). *job_name* è di **tipo nvarchar (128)** e non prevede alcun valore predefinito.  
   
-`[ @enabled = ] enabled` Indica lo stato del processo aggiunto. *Enabled*è di **tinyint**e il valore predefinito è 1 (abilitato). Se è **0**, il processo non è abilitato e non viene eseguito in base alla pianificazione. Tuttavia, può essere eseguita manualmente.  
+`[ @enabled = ] enabled` Indica lo stato del processo aggiunto. *Enabled* è di **tinyint** e il valore predefinito è 1 (abilitato). Se è **0**, il processo non è abilitato e non viene eseguito in base alla pianificazione. Tuttavia, può essere eseguita manualmente.  
   
 `[ @description = ] 'description'` Descrizione del processo. *Description* è di **tipo nvarchar (512)** e il valore predefinito è null. Se *Description* viene omesso, viene usato "nessuna descrizione disponibile".  
   
-`[ @start_step_id = ] step_id` Numero di identificazione del primo passaggio da eseguire per il processo. *step_id*è di **tipo int**e il valore predefinito è 1.  
+`[ @start_step_id = ] step_id` Numero di identificazione del primo passaggio da eseguire per il processo. *step_id* è di **tipo int** e il valore predefinito è 1.  
   
-`[ @category_name = ] 'category'` Categoria per il processo. *Category*è di **tipo sysname**e il valore predefinito è null.  
+`[ @category_name = ] 'category'` Categoria per il processo. *Category* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @category_id = ] category_id` Meccanismo indipendente dal linguaggio per specificare una categoria di processi. *category_id*è di **tipo int**e il valore predefinito è null.  
+`[ @category_id = ] category_id` Meccanismo indipendente dal linguaggio per specificare una categoria di processi. *category_id* è di **tipo int** e il valore predefinito è null.  
   
-`[ @owner_login_name = ] 'login'` Nome dell'account di accesso proprietario del processo. *login*è di **tipo sysname**e il valore predefinito è null, che viene interpretato come nome di account di accesso corrente. Solo i membri del ruolo predefinito del server **sysadmin** possono impostare o modificare il valore per ** \@ owner_login_name**. Se gli utenti che non sono membri del ruolo **sysadmin** o modificano il valore di ** \@ owner_login_name**, l'esecuzione di questo stored procedure ha esito negativo e viene restituito un errore.  
+`[ @owner_login_name = ] 'login'` Nome dell'account di accesso proprietario del processo. *login* è di **tipo sysname** e il valore predefinito è null, che viene interpretato come nome di account di accesso corrente. Solo i membri del ruolo predefinito del server **sysadmin** possono impostare o modificare il valore per **\@ owner_login_name**. Se gli utenti che non sono membri del ruolo **sysadmin** o modificano il valore di **\@ owner_login_name**, l'esecuzione di questo stored procedure ha esito negativo e viene restituito un errore.  
   
-`[ @notify_level_eventlog = ] eventlog_level` Valore che indica quando inserire una voce nel registro applicazioni di Microsoft Windows per questo processo. *eventlog_level*è di **tipo int**. i possibili valori sono i seguenti.  
+`[ @notify_level_eventlog = ] eventlog_level` Valore che indica quando inserire una voce nel registro applicazioni di Microsoft Windows per questo processo. *eventlog_level* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Mai|  
 |**1**|In caso di esito positivo|  
 |**2** (impostazione predefinita)|In caso di esito negativo|  
-|**3**|Sempre|  
+|**3**|Always|  
   
-`[ @notify_level_email = ] email_level` Valore che indica quando inviare un messaggio di posta elettronica al termine del processo. *email_level*è di **tipo int**e il valore predefinito è **0**, che indica Never. *email_level*usa gli stessi valori di *eventlog_level*.  
+`[ @notify_level_email = ] email_level` Valore che indica quando inviare un messaggio di posta elettronica al termine del processo. *email_level* è di **tipo int** e il valore predefinito è **0**, che indica Never. *email_level* usa gli stessi valori di *eventlog_level*.  
   
-`[ @notify_level_netsend = ] netsend_level` Valore che indica quando inviare un messaggio di rete al termine del processo. *netsend_level*è di **tipo int**e il valore predefinito è **0**, che indica Never. *netsend_level* usa gli stessi valori di *eventlog_level*.  
+`[ @notify_level_netsend = ] netsend_level` Valore che indica quando inviare un messaggio di rete al termine del processo. *netsend_level* è di **tipo int** e il valore predefinito è **0**, che indica Never. *netsend_level* usa gli stessi valori di *eventlog_level*.  
   
-`[ @notify_level_page = ] page_level` Valore che indica quando inviare una pagina al termine del processo. *page_level*è di **tipo int**e il valore predefinito è **0**, che indica Never. *page_level*usa gli stessi valori di *eventlog_level*.  
+`[ @notify_level_page = ] page_level` Valore che indica quando inviare una pagina al termine del processo. *page_level* è di **tipo int** e il valore predefinito è **0**, che indica Never. *page_level* usa gli stessi valori di *eventlog_level*.  
   
-`[ @notify_email_operator_name = ] 'email_name'` Nome di posta elettronica della persona a cui inviare il messaggio di posta elettronica quando viene raggiunto *email_level* . *email_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @notify_email_operator_name = ] 'email_name'` Nome di posta elettronica della persona a cui inviare il messaggio di posta elettronica quando viene raggiunto *email_level* . *email_name* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @notify_netsend_operator_name = ] 'netsend_name'` Nome dell'operatore a cui viene inviato il messaggio di rete al termine del processo. *netsend_name*è di **tipo sysname**e il valore predefinito è null.  
+`[ @notify_netsend_operator_name = ] 'netsend_name'` Nome dell'operatore a cui viene inviato il messaggio di rete al termine del processo. *netsend_name* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @notify_page_operator_name = ] 'page_name'` Nome della persona a cui eseguire il paging al completamento del processo. *page_name*è di **tipo sysname**e il valore predefinito è null.  
+`[ @notify_page_operator_name = ] 'page_name'` Nome della persona a cui eseguire il paging al completamento del processo. *page_name* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @delete_level = ] delete_level` Valore che indica quando eliminare il processo. *delete_value*è di **tipo int**e il valore predefinito è 0, ovvero Never. *delete_level*usa gli stessi valori di *eventlog_level*.  
+`[ @delete_level = ] delete_level` Valore che indica quando eliminare il processo. *delete_value* è di **tipo int** e il valore predefinito è 0, ovvero Never. *delete_level* usa gli stessi valori di *eventlog_level*.  
   
 > [!NOTE]  
 >  Quando *delete_level* è **3**, il processo viene eseguito una sola volta, indipendentemente dalle pianificazioni definite per il processo. Inoltre, se un processo si autoelimina, viene eliminato anche il contenuto della cronologia corrispondente.  
   
-`[ @job_id = ] _job_idOUTPUT` Numero di identificazione assegnato al processo se viene creato correttamente. *job_id*è una variabile di output di tipo **uniqueidentifier**e il valore predefinito è null.  
+`[ @job_id = ] _job_idOUTPUT` Numero di identificazione assegnato al processo se viene creato correttamente. *job_id* è una variabile di output di tipo **uniqueidentifier** e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -107,7 +107,7 @@ sp_add_job [ @job_name = ] 'job_name'
  nessuno  
   
 ## <a name="remarks"></a>Osservazioni  
- ** \@ originating_server** esiste nel **sp_add_job,** ma non è elencato in argomenti. ** \@ originating_server** è riservata per uso interno.  
+ **\@ originating_server** esiste nel **sp_add_job,** ma non è elencato in argomenti. **\@ originating_server** è riservata per uso interno.  
   
  Dopo l'esecuzione di **sp_add_job** per l'aggiunta di un processo, è possibile usare **sp_add_jobstep** per aggiungere passaggi che eseguono le attività del processo. **sp_add_jobschedule** possibile utilizzare per creare la pianificazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzata dal servizio Agent per eseguire il processo. Utilizzare **sp_add_jobserver** per impostare l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza di in cui viene eseguito il processo e **sp_delete_jobserver** per rimuovere il processo dall' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza di.  
   
@@ -126,7 +126,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  Per informazioni sulle autorizzazioni specifiche associate a ognuno di questi ruoli predefiniti del database, vedere [SQL Server Agent ruoli](../../ssms/agent/sql-server-agent-fixed-database-roles.md)predefiniti del database.  
   
- Solo i membri del ruolo predefinito del server **sysadmin** possono impostare o modificare il valore per ** \@ owner_login_name**. Se gli utenti che non sono membri del ruolo **sysadmin** o modificano il valore di ** \@ owner_login_name**, l'esecuzione di questo stored procedure ha esito negativo e viene restituito un errore.  
+ Solo i membri del ruolo predefinito del server **sysadmin** possono impostare o modificare il valore per **\@ owner_login_name**. Se gli utenti che non sono membri del ruolo **sysadmin** o modificano il valore di **\@ owner_login_name**, l'esecuzione di questo stored procedure ha esito negativo e viene restituito un errore.  
   
 ## <a name="examples"></a>Esempi  
   

@@ -1,13 +1,13 @@
 ---
-description: managed_backup. fn_get_health_status (Transact-SQL)
-title: managed_backup. fn_get_health_status (Transact-SQL) | Microsoft Docs
+description: managed_backup managed_backup.fn_get_health_status (Transact-SQL)
+title: managed_backup managed_backup.fn_get_health_status (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_get_health_status_TSQL
 - smart_admin.fn_get_health_status_TSQL
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4aa10efc95af42c7793fb37b49a72061353b0ee0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b139114cb7be4094c652f1fbf69313d4f7f1f2db
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419555"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207393"
 ---
-# <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup. fn_get_health_status (Transact-SQL)
+# <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup managed_backup.fn_get_health_status (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Restituisce una tabella con 0, una o più righe del conteggio aggregato degli errori restituiti dagli eventi estesi per un periodo specificato.  
@@ -64,14 +64,14 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
 |number_of_retention_loops|INT|Numero di analisi eseguite sui database per valutare il periodo di memorizzazione impostato.|  
   
 ## <a name="best-practices"></a>Procedure consigliate  
- Questi conteggi aggregati possono essere utilizzati per monitorare l'integrità del sistema. Ad esempio, se la colonna number_ of_retention_loops è 0 in 30 minuti, è possibile che la gestione della memorizzazione richieda del tempo o che addirittura non funzioni correttamente. Le colonne di errori diverse da zero possono indicare problemi e, per individuarli, è necessario verificare i registri eventi estesi. In alternativa, utilizzare il stored procedure **managed_backup. sp_get_backup_diagnostics** per ottenere un elenco di eventi estesi per trovare i dettagli dell'errore.  
+ Questi conteggi aggregati possono essere utilizzati per monitorare l'integrità del sistema. Ad esempio, se la colonna number_ of_retention_loops è 0 in 30 minuti, è possibile che la gestione della memorizzazione richieda del tempo o che addirittura non funzioni correttamente. Le colonne di errori diverse da zero possono indicare problemi e, per individuarli, è necessario verificare i registri eventi estesi. In alternativa, usare il stored procedure **managed_backup. sp_get_backup_diagnostics** per ottenere un elenco di eventi estesi per trovare i dettagli dell'errore.  
   
 ## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  Sono richieste le autorizzazioni **Select** per la funzione.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
   
 -   Nel seguente esempio vengono restituiti i conteggi aggregati degli errori per gli ultimi 30 minuti a partire dal momento in cui è iniziata l'esecuzione.  
   

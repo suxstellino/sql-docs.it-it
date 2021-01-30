@@ -1,13 +1,13 @@
 ---
-description: managed_backup. fn_backup_instance_config (Transact-SQL)
-title: managed_backup. fn_backup_instance_config (Transact-SQL) | Microsoft Docs
+description: managed_backup managed_backup.fn_backup_instance_config (Transact-SQL)
+title: managed_backup managed_backup.fn_backup_instance_config (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_backup_instance_config
 - smart_admin.fn_backup_instance_config_TSQL
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 2382a547-c0c9-4e1d-87c9-d8526192eb5a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a65649b7b565475eebd69bcadf4ac28bef707d7b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 534b1417536b233cafd0c7f3499e6ff801f0fa42
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419565"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207421"
 ---
-# <a name="managed_backupfn_backup_instance_config-transact-sql"></a>managed_backup. fn_backup_instance_config (Transact-SQL)
+# <a name="managed_backupfn_backup_instance_config-transact-sql"></a>managed_backup managed_backup.fn_backup_instance_config (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Restituisce una riga con le impostazioni di configurazione predefinite del [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per l'istanza di SQL Server.  
@@ -64,7 +64,7 @@ managed_backup.fn_backup_db_config ()
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo del database **db_backupoperator** con autorizzazioni **ALTER ANY CREDENTIAL** . All'utente non devono essere negate le autorizzazioni **View any Definition** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituite le impostazioni di configurazione predefinite del [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per l'istanza in cui viene eseguito.  
   
 ```  

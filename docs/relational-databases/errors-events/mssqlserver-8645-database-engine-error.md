@@ -6,18 +6,18 @@ ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: reference
 helpviewer_keywords:
 - 8645 (Database Engine error)
 ms.assetid: 63d6d6d7-3850-4061-8e96-b1fa665e3180
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f7672e2e5a3423e5bf5c8ce056d294e376953731
-ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
+ms.openlocfilehash: 8f1772c8c73fb18173916b91ea14adf3cf997f4d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99049254"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205674"
 ---
 # <a name="mssqlserver_8645"></a>MSSQLSERVER_8645
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

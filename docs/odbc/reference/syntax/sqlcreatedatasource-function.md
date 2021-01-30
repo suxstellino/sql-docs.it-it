@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLCreateDataSource
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 76ee851a-dca9-40cc-8e9e-eb3f74e560ee
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eb65e0906e7b69666dd04824f9c4d0819837d2b2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: feca3e6c135e4dba441a20b1fa458f990b437fde
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461213"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206110"
 ---
 # <a name="sqlcreatedatasource-function"></a>Funzione SQLCreateDataSource
 **Conformità**  
@@ -54,7 +54,7 @@ BOOL SQLCreateDataSource(
  **SQLCreateDataSource** restituisce true se l'origine dati viene creata. In caso contrario, restituisce FALSE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLCreateDataSource** restituisce false, è possibile ottenere un valore * \* pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i valori * \* pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLCreateDataSource** restituisce false, è possibile ottenere un valore *\* pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i valori *\* pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
@@ -92,7 +92,7 @@ BOOL SQLCreateDataSource(
   
  Il valore predefinito per l'opzione **Verifica connessione** è true. Questa impostazione predefinita si applica se questa pagina della procedura guidata è attivata o meno. Se si fa clic su **OK** , la stringa specificata nella casella di testo e il valore **verifica questa** opzione di connessione vengono memorizzati nella cache. Se si fa clic sul pulsante **Chiudi** o su **Annulla** , le informazioni specifiche del driver appena immesse andranno perse perché la stringa specificata nella casella di testo e il valore di verifica dell'opzione di **connessione** non vengono memorizzati nella cache.  
   
- Se è stata selezionata l'opzione **origine dati file** nella prima pagina della procedura guidata, dopo che è stato selezionato un driver ed è stato immesso il valore della parola chiave nella pagina avanzate della procedura guidata, all'utente viene richiesto di immettere un nome file. Fare clic su **Sfoglia** per cercare un nome di file, nel qual caso la directory predefinita nella casella **Sfoglia** viene specificata da una combinazione del percorso specificato da CommonFileDir in HKEY_LOCAL_MACHINE \Software\Microsoft\Windows\CurrentVersion e "ODBC\DataSources". (Se CommonFileDir era "C:\Programmi C:\Programmi\File", la directory predefinita sarebbe "C:\Programmi\File Comuni\odbc\data Sources").  
+ Se è stata selezionata l'opzione **origine dati file** nella prima pagina della procedura guidata, dopo che è stato selezionato un driver ed è stato immesso il valore della parola chiave nella pagina avanzate della procedura guidata, all'utente viene richiesto di immettere un nome file. Fare clic su **Sfoglia** per cercare un nome di file, nel qual caso la directory predefinita nella casella **Sfoglia** viene specificata da una combinazione del percorso specificato da CommonFileDir in HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion e "ODBC\DataSources". (Se CommonFileDir era "C:\Programmi C:\Programmi\File", la directory predefinita sarebbe "C:\Programmi\File Comuni\odbc\data Sources").  
   
  Quando viene immesso un nome file e viene fatto clic su **Avanti** , viene verificata la validità del nome file immesso rispetto alle regole di denominazione dei file standard del sistema operativo. Se il nome file non è valido, una finestra di messaggio di errore informa l'utente che è stato immesso un nome di file non valido. Dopo che l'utente ha riconosciuto la finestra di messaggio, lo stato attivo viene restituito alla pagina della procedura guidata in cui viene immesso il nome del file. Se il nome del file è valido, per la revisione viene visualizzata una pagina della procedura guidata che mostra le coppie parola chiave/valore selezionate, come illustrato nella figura seguente.  
   

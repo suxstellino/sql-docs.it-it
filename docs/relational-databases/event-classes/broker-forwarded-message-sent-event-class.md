@@ -6,19 +6,19 @@ ms.date: 05/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Broker:Forwarded Message Sent event class
 ms.assetid: d0ef74d9-a4ef-4918-aa21-6b267e85569f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb738df03a1e4ea5e9472a6bf0ff2646756d500d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: eb714e530973b719cf89a860534af7799ad31d31
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97476232"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205691"
 ---
 # <a name="brokerforwarded-message-sent-event-class"></a>Broker:Forwarded Message Sent - classe di evento
 
@@ -53,7 +53,7 @@ ms.locfileid: "97476232"
 |ServerName|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
 |SPID|**int**|ID del processo server assegnato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al processo associato al client.|12|Sì|  
 |StartTime|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
-|Success|**int**|Quantità di tempo utilizzata durante il processo di inoltro.|23|No|  
+|Operazione riuscita|**int**|Quantità di tempo utilizzata durante il processo di inoltro.|23|No|  
 |TargetLoginName|**nvarchar**|Indirizzo di rete a cui l'istanza ha inviato il messaggio. Si noti che questo indirizzo può essere diverso dalla destinazione finale del messaggio.|42|No|  
 |TargetUserName|**nvarchar**|Nome del servizio di origine per il messaggio.|39|No|  
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|No|  

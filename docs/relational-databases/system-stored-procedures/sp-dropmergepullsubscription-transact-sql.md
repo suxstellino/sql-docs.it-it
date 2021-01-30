@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropmergepullsubscription
 - sp_dropmergepullsubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 20f8fb9eea5be15a3957c9ca430b81cf52a89709
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6d0ee785012033001e9c458749eecc7921ef3fe3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538954"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208231"
 ---
 # <a name="sp_dropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,18 +41,18 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è null. Questo parametro è obbligatorio. Specificare il valore **All** per rimuovere le sottoscrizioni di tutte le pubblicazioni  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname** e il valore predefinito è null. Questo parametro è obbligatorio. Specificare il valore **All** per rimuovere le sottoscrizioni di tutte le pubblicazioni  
   
-`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher*è di **tipo sysname**e il valore predefinito è null. Questo parametro è obbligatorio.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname** e il valore predefinito è null. Questo parametro è obbligatorio.  
   
-`[ @publisher_db = ] 'publisher_db'` Nome del database del server di pubblicazione. *publisher_db*è di **tipo sysname**e il valore predefinito è null. Questo parametro è obbligatorio.  
+`[ @publisher_db = ] 'publisher_db'` Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname** e il valore predefinito è null. Questo parametro è obbligatorio.  
   
-`[ @reserved = ] 'reserved'` È riservato per usi futuri. *riservato* è di **bit**e il valore predefinito è **0**.  
+`[ @reserved = ] 'reserved'` È riservato per usi futuri. *riservato* è di **bit** e il valore predefinito è **0**.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_dropmergepullsubscription** viene utilizzata nella replica di tipo merge.  
   
  **sp_dropmergepullsubscription** elimina la agente di merge per questa sottoscrizione pull di tipo merge, sebbene il agente di merge non venga creato in **sp_addmergepullsubscription**.  

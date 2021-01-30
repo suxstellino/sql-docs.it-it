@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - GetPathLocator
 - GetPathLocator_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 78b7e220-445b-4fdf-811b-7253f4f2b058
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 155921b08c936bfb758f60c65b4ad737546141f5
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: fbdf65d45374fe9c85adaade284ac6a8aab65dbf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096358"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207460"
 ---
 # <a name="getpathlocator-transact-sql"></a>GetPathLocator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ GetPathLocator(filenamespace_path)
 ## <a name="general-remarks"></a>Osservazioni generali  
  Per altre informazioni, vedere [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  È possibile utilizzare la funzione **GetPathLocator** quando si esegue la migrazione di file da un file server a una tabella FileTable. In questo scenario si desidera spostare i file nella tabella FileTable, quindi sostituire il percorso UNC originale per ogni file con il percorso UNC della tabella FileTable. Per un esempio completo, vedere [caricare file in tabelle FileTable](../../relational-databases/blob/load-files-into-filetables.md).  
   
 ## <a name="see-also"></a>Vedere anche  

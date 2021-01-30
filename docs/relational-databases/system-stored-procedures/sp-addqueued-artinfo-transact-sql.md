@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addqueued_artinfo
 - sp_addqueued_artinfo_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 16709ac2b02acf8641661831c4aee831ef95bc19
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c0899ff490b553471fc766413fdf0cca27955fa0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548328"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206660"
 ---
 # <a name="sp_addqueued_artinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,27 +50,27 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @artid = ] 'artid'` Nome dell'ID dell'articolo. *artid* è di **tipo int**e non prevede alcun valore predefinito  
+`[ @artid = ] 'artid'` Nome dell'ID dell'articolo. *artid* è di **tipo int** e non prevede alcun valore predefinito  
   
-`[ @article = ] 'article'` Nome dell'articolo da inserire nello script. *article* è di **tipo sysname**e non prevede alcun valore predefinito  
+`[ @article = ] 'article'` Nome dell'articolo da inserire nello script. *article* è di **tipo sysname** e non prevede alcun valore predefinito  
   
-`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @publisher_db = ] 'publisher_db'` Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @publication = ] 'publication'` Nome della pubblicazione da inserire nello script. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione da inserire nello script. *Publication* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @dest_table = ] _'dest_table'` Nome della tabella di destinazione. *dest_table* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @dest_table = ] _'dest_table'` Nome della tabella di destinazione. *dest_table* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
- [** @owner =** ] **'**_proprietario_**'**  
- Proprietario della sottoscrizione. *owner* è di **tipo sysname**e non prevede alcun valore predefinito.  
+ [**@owner =** ] **'**_proprietario_**'**  
+ Proprietario della sottoscrizione. *owner* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @cft_table = ] 'cft_table'` Nome della tabella dei conflitti ad aggiornamento in coda per l'articolo. *cft_table*è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @cft_table = ] 'cft_table'` Nome della tabella dei conflitti ad aggiornamento in coda per l'articolo. *cft_table* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_addqueued_artinfo** viene utilizzato dal agente di distribuzione come parte dell'inizializzazione della sottoscrizione. In genere, non viene eseguita dagli utenti, ma può risultare utile se l'utente deve configurare una sottoscrizione in modo manuale.  
   
  [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) anziché **sp_addqueued_artinfo**.  

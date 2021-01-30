@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SET REPROCESS command [ODBC]
 ms.assetid: b0708757-b1d7-42f3-8988-787f2a806b8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8daeebd38f295d437dc02c1c34126c30f6426b68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b45188db00eda553bb3443d791d889a4d8c31a77
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421825"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208593"
 ---
 # <a name="set-reprocess-command"></a>SET REPROCESS (comando)
 Specifica il numero di volte o il periodo di blocco di un file o di un record dopo un tentativo di blocco non riuscito.  
@@ -42,7 +42,7 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
   
  Se una routine ON ERROR non è attiva, un comando tenta di bloccare il record o il file e il blocco non può essere inserito, viene generato un errore. Se una funzione tenta di inserire il blocco, l'avviso non viene visualizzato e la funzione restituisce false (. F.).  
   
- Se *nAttempts* è 0 (valore predefinito) e si esegue un comando o una funzione che tenta di bloccare un record o un file, Visual FoxPro tenta di bloccare il record o il file per un periodo illimitato. Se il record o il file diventa disponibile per il blocco durante l'attesa, il blocco viene inserito e il messaggio di sistema viene cancellato. Se una funzione tenta di inserire il blocco, la funzione restituisce true (. T.)  
+ Se *nAttempts* è 0 (valore predefinito) e si esegue un comando o una funzione che tenta di bloccare un record o un file, Visual FoxPro tenta di bloccare il record o il file per un periodo illimitato. Se il record o il file diventa disponibile per il blocco durante l'attesa, il blocco viene inserito e il messaggio di sistema viene cancellato. Se una funzione tenta di inserire il blocco, la funzione restituisce true (. T.).  
   
  Se è attiva una routine ON ERROR e un comando tenta di bloccare il record o il file, la routine ON ERROR ha la precedenza su ulteriori tentativi di bloccare il record o il file. La routine ON ERROR viene immediatamente eseguita. Visual FoxPro non tenta un ulteriore blocco di record o file e non Visualizza il messaggio di sistema.  
   
@@ -53,5 +53,5 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
  A AUTOMATICO  
  Specifica che Visual FoxPro tenta di bloccare il record o il file per un periodo illimitato. (Impostare rielaborazione su-2 è un comando equivalente).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il primo tentativo di bloccare un record o un file non ha sempre esito positivo. Spesso un record o un file è bloccato da un altro utente nella rete. SET REPROCESS determina se Visual FoxPro esegue ulteriori tentativi di blocco del record o del file quando il tentativo iniziale ha esito negativo. È possibile specificare il numero di volte in cui vengono eseguiti altri tentativi o per quanto tempo vengono eseguiti i tentativi. Una routine ON ERROR influiscono sul modo in cui vengono gestiti i tentativi di blocco non riusciti.

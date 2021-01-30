@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_get_sql
 - sys.fn_get_sql_TSQL
@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 4b3e28e4c66d45f28c6239431e8e6d5440d5d4a0
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: aee9ac3d8d75081ad3474f215d6bc289580e2da0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093821"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206058"
 ---
 # <a name="sysfn_get_sql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,9 +62,9 @@ sys.fn_get_sql ( SqlHandle )
 |objectid|**int**|ID dell'oggetto di database. Per istruzioni SQL ad hoc viene restituito NULL.|  
 |d'acquisto|**smallint**|Specifica il numero del gruppo, se le procedure sono raggruppate.<br /><br /> 0 = Le voci immesse non sono procedure.<br /><br /> NULL = Istruzioni SQL ad hoc.|  
 |encrypted|**bit**|Specifica se l'oggetto è crittografato.<br /><br /> 0 = Non crittografato<br /><br /> 1 = Crittografato|  
-|testo|**text**|Testo dell'istruzione SQL. Per gli oggetti crittografati viene restituito NULL.|  
+|text|**text**|Testo dell'istruzione SQL. Per gli oggetti crittografati viene restituito NULL.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È possibile ottenere un handle SQL valido dalla colonna sql_handle della vista a gestione dinamica [sys.dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) .  
   
  Se si passa un handle che non è più presente nella cache, fn_get_sq **l** restituisce un set di risultati vuoto. Se si passa un handle non valido, il batch viene arrestato e viene visualizzato un messaggio di errore.  
@@ -82,7 +82,7 @@ sys.fn_get_sql ( SqlHandle )
 ## <a name="permissions"></a>Autorizzazioni  
  L'utente deve disporre dell'autorizzazione VIEW SERVER STATE nel server.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Gli amministratori del database possono utilizzare la funzione fn_get_sql, come illustrato nell'esempio seguente, per individuare processi che causano problemi. Dopo avere identificato un ID di sessione che causa problemi, l'amministratore può recuperare l'handle SQL di tale sessione, chiamare la funzione fn_get_sql con tale handle e quindi utilizzare l'offset iniziale e quello finale per determinare il testo SQL dell'ID di sessione che crea problemi.  
   
 ```  

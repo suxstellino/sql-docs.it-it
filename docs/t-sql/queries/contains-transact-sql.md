@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CONTAINS_TSQL
 - CONTAINS
@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7e1e56c9132fe59a91274ff90598ddce3a6fe21c
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
-ms.translationtype: HT
+ms.openlocfilehash: 680cbfab28064f92d446705de0ca2b2f778735df
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035874"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207785"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 
@@ -147,7 +147,7 @@ CONTAINS (
  Nome di una colonna con indicizzazione full-text della tabella specificata nella clausola FROM. La colonna o le colonne possono essere di tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** r **varbinary(max)** .  
   
  *column_list*  
- Specifica due o più colonne, separate da virgole. *column_list*deve essere racchiuso tra parentesi. La lingua di tutte le colonne di *column_list* deve essere la stessa, a meno che non sia specificato *language_term*.  
+ Specifica due o più colonne, separate da virgole. *column_list* deve essere racchiuso tra parentesi. La lingua di tutte le colonne di *column_list* deve essere la stessa, a meno che non sia specificato *language_term*.  
   
  \*  
  Specifica che la query esegue ricerche in tutte le colonne con indicizzazione full-text nella tabella specificata nella clausola FROM per la condizione di ricerca indicata. Le colonne nella clausola CONTAINS devono appartenere a una singola tabella che include un indice full-text. La lingua di tutte le colonne della tabella deve essere la stessa, a meno che non sia specificato *language_term*.  
@@ -167,7 +167,7 @@ CONTAINS (
   
  È possibile specificare *language_term* come valore stringa, intero o esadecimale corrispondente all'identificatore LCID di una lingua. Se si specifica *language_term*, la lingua rappresentata dall'argomento viene applicata a tutti gli elementi della condizione di ricerca. Se non si specifica alcun valore, verrà utilizzata la lingua full-text della colonna.  
   
- Se l'argomento *language_term* viene specificato come stringa, corrisponde al valore della colonna**alias** nella vista di compatibilità [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). La stringa deve essere racchiusa tra virgolette singole chiuse, come in '*language_term*'. Se l'argomento *language_term* viene specificato come valore intero, corrisponde all'LCID effettivo che identifica la lingua. Se si specifica un valore esadecimale, *language_term* è 0x seguito dal valore esadecimale di LCID. Il valore esadecimale non deve superare le otto cifre, inclusi gli zeri iniziali.  
+ Se l'argomento *language_term* viene specificato come stringa, corrisponde al valore della colonna **alias** nella vista di compatibilità [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). La stringa deve essere racchiusa tra virgolette singole chiuse, come in '*language_term*'. Se l'argomento *language_term* viene specificato come valore intero, corrisponde all'LCID effettivo che identifica la lingua. Se si specifica un valore esadecimale, *language_term* è 0x seguito dal valore esadecimale di LCID. Il valore esadecimale non deve superare le otto cifre, inclusi gli zeri iniziali.  
   
  Se il valore è in formato DBCS (Double-Byte Character Set), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo converte in Unicode.  
   

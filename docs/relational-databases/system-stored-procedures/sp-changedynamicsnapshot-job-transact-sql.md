@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changedynamicsnapshot_job
 - sp_changedynamicsnapshot_job_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 10bc612a0dc2598c973f6a6d2e3db26b5e0d69ca
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4583e692a8f0f409b12129a19f9acce723e320ce
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536690"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207985"
 ---
 # <a name="sp_changedynamicsnapshot_job-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,21 +52,21 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Nome del processo di snapshot da modificare. *dynamic_snapshot_jobname*è di **tipo sysname**e il valore predefinito è n'%'. Se *dynamic_snapshot_jobid* è specificato, è necessario utilizzare il valore predefinito per *dynamic_snapshot_jobname*.  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Nome del processo di snapshot da modificare. *dynamic_snapshot_jobname* è di **tipo sysname** e il valore predefinito è n'%'. Se *dynamic_snapshot_jobid* è specificato, è necessario utilizzare il valore predefinito per *dynamic_snapshot_jobname*.  
   
-`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` ID del processo di snapshot da modificare. *dynamic_snapshot_jobid* è di tipo **uniqueidentifier**e il valore predefinito è null. Se *dynamic_snapshot_jobname*è specificato, è necessario utilizzare il valore predefinito per *dynamic_snapshot_jobid*.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` ID del processo di snapshot da modificare. *dynamic_snapshot_jobid* è di tipo **uniqueidentifier** e il valore predefinito è null. Se *dynamic_snapshot_jobname* è specificato, è necessario utilizzare il valore predefinito per *dynamic_snapshot_jobid*.  
   
 `[ @frequency_type = ] frequency_type` Frequenza con cui pianificare l'agente. *frequency_type* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Singola occorrenza|  
 |**2**|On demand|  
 |**4**|Ogni giorno|  
 |**8**|Settimanale|  
-|**16**|Mensilmente|  
+|**16**|Ogni mese|  
 |**32**|Mensile relativa|  
 |**64**|Avvio automatico|  
 |**128**|Periodica|  
@@ -74,7 +74,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_interval = ] frequency_interval` Giorni in cui viene eseguito l'agente. *frequency_interval* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Sunday|  
 |**2**|Monday|  
@@ -90,7 +90,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_subday = ] frequency_subday` Frequenza di ripianificazione durante il periodo definito. *frequency_subday* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una sola volta|  
 |**2**|Second|  
@@ -98,11 +98,11 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**8**|Ora|  
 |NULL (predefinito)||  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` Intervallo per *frequency_subday*. *frequency_subday_interval* è di **tipo int**e il valore predefinito è null.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Intervallo per *frequency_subday*. *frequency_subday_interval* è di **tipo int** e il valore predefinito è null.  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval` Data di esecuzione del agente di merge. Questo parametro viene usato quando *frequency_type* è impostato su **32** (mensile relativo). *frequency_relative_interval* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|First (Primo)|  
 |**2**|Second|  
@@ -111,15 +111,15 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**16**|Last (Ultimo)|  
 |NULL (predefinito)||  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Fattore di occorrenza utilizzato da *frequency_type*. *frequency_recurrence_factor* è di **tipo int**e il valore predefinito è null.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Fattore di occorrenza utilizzato da *frequency_type*. *frequency_recurrence_factor* è di **tipo int** e il valore predefinito è null.  
   
-`[ @active_start_date = ] active_start_date` Data della prima pianificazione del agente di merge, formattata come AAAAMMGG. *active_start_date* è di **tipo int**e il valore predefinito è null.  
+`[ @active_start_date = ] active_start_date` Data della prima pianificazione del agente di merge, formattata come AAAAMMGG. *active_start_date* è di **tipo int** e il valore predefinito è null.  
   
-`[ @active_end_date = ] active_end_date` Data di arresto della agente di merge pianificata, formattata come AAAAMMGG. *active_end_date* è di **tipo int**e il valore predefinito è null.  
+`[ @active_end_date = ] active_end_date` Data di arresto della agente di merge pianificata, formattata come AAAAMMGG. *active_end_date* è di **tipo int** e il valore predefinito è null.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` Ora del giorno in cui il agente di merge viene pianificato per la prima volta, formattato come HHMMSS. *active_start_time_of_day* è di **tipo int**e il valore predefinito è null.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Ora del giorno in cui il agente di merge viene pianificato per la prima volta, formattato come HHMMSS. *active_start_time_of_day* è di **tipo int** e il valore predefinito è null.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` Ora del giorno in cui l'agente di merge viene arrestata, formattata come HHMMSS. *active_end_time_of_day* è di **tipo int**e il valore predefinito è null.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Ora del giorno in cui l'agente di merge viene arrestata, formattata come HHMMSS. *active_end_time_of_day* è di **tipo int** e il valore predefinito è null.  
   
 `[ @job_login = ] 'job_login'`[!INCLUDE[msCoName](../../includes/msconame-md.md)]Account di Windows utilizzato per l'esecuzione del agente di snapshot durante la generazione dello snapshot per una sottoscrizione tramite un filtro di riga con parametri. *job_login* è di **tipo nvarchar (257)** e il valore predefinito è null.  
   
@@ -131,7 +131,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_changedynamicsnapshot_job** viene utilizzata nella replica di tipo merge per le pubblicazioni con filtri di riga con parametri.  
   
  Dopo la modifica dell'account di accesso o della password di un agente, è necessario arrestare e riavviare l'agente per rendere effettiva la modifica.  

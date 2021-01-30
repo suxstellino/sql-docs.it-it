@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - PathName_TSQL
 - PathName
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 85058a3d551a385e4d2de8aed2ea9f56dc3b19c7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 191d567a310686a881363ff46a9667530dd79112
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093901"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207356"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  La richiesta del percorso per una colonna con qualsiasi altro tipo di dati o per un columnthat **varbinary (max)** non dispone dell'attributo di archiviazione FILESTREAM provocherà un errore in fase di compilazione della query.  
   
- *\@Opzione*  
+ *\@opzione*  
  [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) integer che definisce il modo in cui deve essere formattato il componente server del percorso. l' *\@ opzione* può essere uno dei valori seguenti. Il valore predefinito è 0.  
   
 |Valore|Descrizione|  
@@ -73,7 +73,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ## <a name="return-value"></a>Valore restituito  
  Il valore restituito è il percorso completo logico oppure il percorso NETBIOS dell'oggetto BLOB. PathName non restituisce un indirizzo IP. Quando l'oggetto BLOB FILESTREAM non è stato creato, viene restituito NULL.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La colonna ROWGUID deve essere visibile in tutte le query in cui viene chiamato PathName.  
   
  Un oggetto BLOB FILESTREAM può essere creato solo utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)].  

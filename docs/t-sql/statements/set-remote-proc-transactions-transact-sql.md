@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - REMOTE_PROC_TRANSACTIONS_TSQL
 - SET REMOTE_PROC_TRANSACTIONS
@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4d284ae9-3f5f-465a-b0dd-1328a4832a03
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: ecfcda70eb37c4b7b10db2ac49a02996140060da
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
-ms.translationtype: HT
+ms.openlocfilehash: 6164638072a8cc41c07bb46e0337a0d3be5498cc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100694"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206970"
 ---
 # <a name="set-remote_proc_transactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ SET REMOTE_PROC_TRANSACTIONS { ON | OFF }
  ON | OFF  
  Quando è impostata su ON, viene avviata una transazione distribuita [!INCLUDE[tsql](../../includes/tsql-md.md)] quando in una transazione locale viene eseguita una stored procedure remota. Quando è impostata su OFF, la chiamata di una stored procedure remota in una transazione locale non avvia una transazione distribuita [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Quando l'opzione REMOTE_PROC_TRANSACTIONS è impostata su ON, la chiamata di una stored procedure remota comporta l'avvio di una transazione distribuita e l'integrazione della transazione in MS DTC. L'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui viene chiamata la stored procedure remota corrisponde all'origine della transazione e ne controlla il completamento. Quando per la connessione viene successivamente eseguita un'istruzione COMMIT TRANSACTION o ROLLBACK TRANSACTION, l'istanza di controllo richiede che il completamento della transazione distribuita nei computer interessati venga gestito da MS DTC.  
   
  Dopo l'avvio di una transazione distribuita [!INCLUDE[tsql](../../includes/tsql-md.md)], è possibile chiamare stored procedure remote in altre istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che sono state definite come server remoti. Tutti i server remoti sono integrati nella transazione distribuita [!INCLUDE[tsql](../../includes/tsql-md.md)]. MS DTC assicura inoltre che la transazione venga completata in ogni server remoto.  

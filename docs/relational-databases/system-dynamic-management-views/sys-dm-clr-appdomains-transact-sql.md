@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_clr_appdomains
 - sys.dm_clr_appdomains
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: ae934fc3b9d8f7664e2542450ee1456298548c85
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7579a0648bbc5eee90512bb70dfd667728b56834
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097771"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208110"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "98097771"
 |**total_allocated_memory_kb**|**bigint**|Dimensioni totali, in kilobyte, di tutte le allocazioni di memoria eseguite dal dominio dell'applicazione dalla sua creazione, senza sottrarre la memoria raccolta. Equivale a **System. AppDomain. MonitoringTotalAllocatedMemorySize**.|  
 |**survived_memory_kb**|**bigint**|Numero di kilobyte rimanenti dall'ultima raccolta di blocco completa e a cui fa riferimento il dominio dell'applicazione corrente. Equivale a **System. AppDomain. MonitoringSurvivedMemorySize**.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Esiste una relazione uno-a-uno tra **dm_clr_appdomains. appdomain_address** e **dm_clr_loaded_assemblies. appdomain_address**.  
   
  Le tabelle seguenti elencano i valori di **stato** possibili, le relative descrizioni e quando si verificano nel ciclo di vita dell' **AppDomain** . È possibile usare queste informazioni per seguire la vita di un **AppDomain** e per controllare lo scaricamento di istanze di **AppDomain** sospette o ripetitive, senza dover analizzare il registro eventi di Windows.  
@@ -84,7 +84,7 @@ ms.locfileid: "98097771"
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE nel database.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene illustrato come visualizzare i dettagli di un **AppDomain** per un determinato assembly:  
   
 ```  

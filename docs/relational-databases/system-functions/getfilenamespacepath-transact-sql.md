@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - GetFileNamespacePath
 - GetFileNamespacePath_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 9ecda7d44603636ff12eef955dd83e7659cb9dc7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 36dc3a717a7ab67ad4db0aa730884597038a0a02
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097488"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207451"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "98097488"
 |**0**|Restituisce il percorso relativo all'interno della directory a livello di database.<br /><br /> Si tratta del valore predefinito.|  
 |**1**|Restituisce il percorso UNC completo, che inizia con `\\computer_name`.|  
   
- *\@Opzione*  
+ *\@opzione*  
  Espressione Integer che definisce la formattazione del componente server del percorso. l' *\@ opzione* può avere uno dei valori seguenti:  
   
 |Valore|Descrizione|  
@@ -87,7 +87,7 @@ SELECT @fullPath = @root + file_stream.GetFileNamespacePath() FROM DocumentStore
 WHERE Name = N'document.docx';  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti viene illustrato come chiamare la funzione **GetFileNamespacePath** per ottenere il percorso UNC per un file o una directory in una tabella FileTable.  

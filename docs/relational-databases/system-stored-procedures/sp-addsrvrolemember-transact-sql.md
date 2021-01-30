@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addsrvrolemember
 - sp_addsrvrolemember_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec0b94d4423574729d4c92d869a73d04673edac8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a8de69bfd8e0fee825bd0e3fb914acddee0cb419
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536743"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207086"
 ---
 # <a name="sp_addsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,10 +45,10 @@ sp_addsrvrolemember [ @loginame= ] 'login'
   
 ## <a name="arguments"></a>Argomenti  
  [ @loginame **=** ] **'**_login_**'**  
- Nome dell'account di accesso aggiunto al ruolo predefinito del server. *login* è di **tipo sysname**e non prevede alcun valore predefinito. *login* può essere un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un account di accesso di Windows. Gli account di Windows che non dispongono ancora dell'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ricevono automaticamente l'autorizzazione di accesso.  
+ Nome dell'account di accesso aggiunto al ruolo predefinito del server. *login* è di **tipo sysname** e non prevede alcun valore predefinito. *login* può essere un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un account di accesso di Windows. Gli account di Windows che non dispongono ancora dell'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ricevono automaticamente l'autorizzazione di accesso.  
   
  [ @rolename **=** ] **'**_Role_**'**  
- Nome del ruolo predefinito del server a cui verrà aggiunto l'account di accesso. *Role* è di **tipo sysname**e il valore predefinito è null. deve essere uno dei valori seguenti:  
+ Nome del ruolo predefinito del server a cui verrà aggiunto l'account di accesso. *Role* è di **tipo sysname** e il valore predefinito è null. deve essere uno dei valori seguenti:  
   
 -   sysadmin  
   
@@ -69,7 +69,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se si aggiunge un account di accesso a un ruolo predefinito del server, tale account eredita le autorizzazioni associate al ruolo.  
   
  L'appartenenza ai ruoli dell'account di accesso sae del ruolo public non può essere modificata.  
@@ -81,7 +81,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo a cui viene aggiunto il nuovo membro.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente l'account di accesso di Windows `Corporate\HelenS` viene aggiunto al ruolo predefinito del server `sysadmin`.  
   
 ```  

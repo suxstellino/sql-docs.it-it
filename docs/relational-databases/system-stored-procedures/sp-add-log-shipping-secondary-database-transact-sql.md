@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_log_shipping_secondary_database
 - sp_add_log_shipping_secondary_database_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 384884e2b2b076b20cb9c679c3494a7c292f77a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d13a58428c4fefe2cc19668de22e604f721d0a96
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464663"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206712"
 ---
 # <a name="sp_add_log_shipping_secondary_database-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,11 +54,11 @@ sp_add_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @secondary_database = ] 'secondary_database'` Nome del database secondario. *secondary_database* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @secondary_database = ] 'secondary_database'` Nome del database secondario. *secondary_database* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 `[ @primary_server = ] 'primary_server'` Nome dell'istanza primaria di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nella configurazione log shipping. *primary_server* è di **tipo sysname** e non può essere null.  
   
-`[ @primary_database = ] 'primary_database'` Nome del database nel server primario. *primary_database* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @primary_database = ] 'primary_database'` Nome del database nel server primario. *primary_database* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 `[ @restore_delay = ] 'restore_delay'` Quantità di tempo, in minuti, che il server secondario attende prima di ripristinare un file di backup specificato. *restore_delay* è di **tipo int** e non può essere null. Il valore predefinito è 0.  
   
@@ -82,11 +82,11 @@ sp_add_log_shipping_secondary_database
   
 `[ @restore_threshold = ] 'restore_threshold'` Numero di minuti che possono trascorrere tra le operazioni di ripristino prima che venga generato un avviso. *restore_threshold* è di **tipo int** e non può essere null.  
   
-`[ @threshold_alert = ] 'threshold_alert'` Avviso da generare quando viene superata la soglia di backup. *threshold_alert* è di **tipo int**e il valore predefinito è 14.420.  
+`[ @threshold_alert = ] 'threshold_alert'` Avviso da generare quando viene superata la soglia di backup. *threshold_alert* è di **tipo int** e il valore predefinito è 14.420.  
   
 `[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Specifica se viene generato un avviso quando viene superato *backup_threshold* . Il valore 1 (valore predefinito) indica che l'avviso viene generato. *threshold_alert_enabled* è di **bit**.  
   
-`[ @history_retention_period = ] 'history_retention_period'` Periodo di tempo in minuti in cui viene mantenuta la cronologia. *history_retention_period* è di **tipo int**e il valore predefinito è null. Se non si specifica un valore, verrà utilizzato il valore 14420.  
+`[ @history_retention_period = ] 'history_retention_period'` Periodo di tempo in minuti in cui viene mantenuta la cronologia. *history_retention_period* è di **tipo int** e il valore predefinito è null. Se non si specifica un valore, verrà utilizzato il valore 14420.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -108,7 +108,7 @@ sp_add_log_shipping_secondary_database
 ## <a name="permissions"></a>Autorizzazioni  
  Questa procedura può essere eseguita solo dai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Questo esempio illustra l'uso del stored procedure **sp_add_log_shipping_secondary_database** per aggiungere il database **LogShipAdventureWorks** come database secondario in una configurazione log shipping con il database primario che [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] risiede nel server primario Tribeca.  
   
 ```  

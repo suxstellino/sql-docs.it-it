@@ -1,13 +1,13 @@
 ---
-description: sys. fn_hadr_backup_is_preferred_replica (Transact-SQL)
-title: sys. fn_hadr_backup_is_preferred_replica (Transact-SQL) | Microsoft Docs
+description: sys.fn_hadr_backup_is_preferred_replica (Transact-SQL)
+title: sys.fn_hadr_backup_is_preferred_replica (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.fn_hadr_backup_is_preferred_replica_TSQL
 - sys.fn_hadr_backup_is_preferred_replica
@@ -22,14 +22,14 @@ helpviewer_keywords:
 ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ce16f8300546c77114a27706a7b7ed32806f98ac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 009e237b8d7ac7d100100969cf9f8a75bbad1195
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427813"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206035"
 ---
-# <a name="sysfn_hadr_backup_is_preferred_replica--transact-sql"></a>sys. fn_hadr_backup_is_preferred_replica (Transact-SQL)
+# <a name="sysfn_hadr_backup_is_preferred_replica--transact-sql"></a>sys.fn_hadr_backup_is_preferred_replica (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Utilizzato per determinare se la replica corrente è la replica di backup preferita.  
@@ -50,7 +50,7 @@ sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )
 ## <a name="returns"></a>Restituisce  
  Restituisce il tipo di dati **bool**: 1 se il database nell'istanza corrente è nella replica preferita; in caso contrario, 0.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare questa funzione in uno script di backup per determinare se il database corrente si trova nella replica preferita per i backup. È possibile eseguire uno script in ogni replica di disponibilità. Ognuno di questi processi analizza gli stessi dati per determinare il processo da eseguire in modo tale che solo uno dei processi pianificati procede effettivamente alla fase di backup. Il codice di esempio avrà un aspetto analogo al seguente:  
   
 ```  

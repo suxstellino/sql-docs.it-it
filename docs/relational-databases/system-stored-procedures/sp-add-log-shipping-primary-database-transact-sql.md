@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_log_shipping_primary_database
 - sp_add_log_shipping_primary_database_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ed823f2b6564593388893db74866931bc1c0c93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c967127366c935b42ac33158982c6734114b2d8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464661"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206714"
 ---
 # <a name="sp_add_log_shipping_primary_database-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @database = ] 'database'` Nome del database primario log shipping. il *database* è di **tipo sysname**e non prevede alcun valore predefinito e non può essere null.  
+`[ @database = ] 'database'` Nome del database primario log shipping. il *database* è di **tipo sysname** e non prevede alcun valore predefinito e non può essere null.  
   
 `[ @backup_directory = ] 'backup_directory'` È il percorso della cartella di backup nel server primario. *backup_directory* è di **tipo nvarchar (500)** e non prevede alcun valore predefinito e non può essere null.  
   
@@ -64,9 +64,9 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
 `[ @backup_job_name = ] 'backup_job_name'` Nome del processo di SQL Server Agent nel server primario che copia il backup nella cartella di backup. *backup_job_name* è di **tipo sysname** e non può essere null.  
   
-`[ @backup_retention_period = ] backup_retention_period` Periodo di tempo, in minuti, per il quale il file di backup del log viene mantenuto nella directory di backup del server primario. *backup_retention_period* è di **tipo int**e non prevede alcun valore predefinito e non può essere null.  
+`[ @backup_retention_period = ] backup_retention_period` Periodo di tempo, in minuti, per il quale il file di backup del log viene mantenuto nella directory di backup del server primario. *backup_retention_period* è di **tipo int** e non prevede alcun valore predefinito e non può essere null.  
   
-`[ @monitor_server = ] 'monitor_server'` Nome del server di monitoraggio. *Monitor_server* è di **tipo sysname**e non prevede alcun valore predefinito e non può essere null.  
+`[ @monitor_server = ] 'monitor_server'` Nome del server di monitoraggio. *Monitor_server* è di **tipo sysname** e non prevede alcun valore predefinito e non può essere null.  
   
 `[ @monitor_server_security_mode = ] monitor_server_security_mode` Modalità di sicurezza utilizzata per la connessione al server di monitoraggio.  
   
@@ -78,13 +78,13 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
 `[ @monitor_server_password = ] 'monitor_server_password'` Password dell'account utilizzato per accedere al server di monitoraggio.  
   
-`[ @backup_threshold = ] backup_threshold` Periodo di tempo, in minuti, dopo l'ultimo backup prima che venga generato un errore di *threshold_alert* . *backup_threshold* è di **tipo int**e il valore predefinito è 60 minuti.  
+`[ @backup_threshold = ] backup_threshold` Periodo di tempo, in minuti, dopo l'ultimo backup prima che venga generato un errore di *threshold_alert* . *backup_threshold* è di **tipo int** e il valore predefinito è 60 minuti.  
   
-`[ @threshold_alert = ] threshold_alert` Avviso da generare quando viene superata la soglia di backup. *threshold_alert* è di **tipo int**e il valore predefinito è 14.420.  
+`[ @threshold_alert = ] threshold_alert` Avviso da generare quando viene superata la soglia di backup. *threshold_alert* è di **tipo int** e il valore predefinito è 14.420.  
   
 `[ @threshold_alert_enabled = ] threshold_alert_enabled` Specifica se verrà generato un avviso quando viene superato *backup_threshold* . Il valore predefinito 0 indica che l'avviso è disabilitato e non verrà generato. *threshold_alert_enabled* è di **bit**.  
   
-`[ @history_retention_period = ] history_retention_period` Periodo di tempo in minuti in cui la cronologia verrà mantenuta. *history_retention_period* è di **tipo int**e il valore predefinito è null. Se non si specifica un valore, verrà utilizzato il valore 14420.  
+`[ @history_retention_period = ] history_retention_period` Periodo di tempo in minuti in cui la cronologia verrà mantenuta. *history_retention_period* è di **tipo int** e il valore predefinito è null. Se non si specifica un valore, verrà utilizzato il valore 14420.  
   
 `[ @backup_job_id = ] backup_job_id OUTPUT`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ID del processo di Agent associato al processo di backup nel server primario. *backup_job_id* è di tipo **uniqueidentifier** e non può essere null.  
   
@@ -120,7 +120,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ## <a name="permissions"></a>Autorizzazioni  
  Questa procedura può essere eseguita solo dai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  In questo esempio il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] viene aggiunto come database primario in una configurazione per il log shipping.  
   
 ```  

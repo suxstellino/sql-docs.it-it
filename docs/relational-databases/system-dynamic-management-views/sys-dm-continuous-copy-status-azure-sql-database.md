@@ -5,7 +5,7 @@ titleSuffix: Azure SQL Database
 ms.date: 03/03/2017
 ms.service: sql-database
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_continuous_copy_status_TSQL
 - dm_continuous_copy_status_TSQL
@@ -21,12 +21,12 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 94370b562160315e53feb46a83cbb68a848e064f
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7e0dc3ec69f4c35b1361cf12f501f4b23abf29c7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099970"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207794"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status (database SQL di Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -52,7 +52,7 @@ Se si usa il database SQL V12 è necessario usare [sys.dm_geo_replication_link_s
 ## <a name="permissions"></a>Autorizzazioni  
  Per recuperare i dati, è richiesta l'appartenenza al ruolo del database **db_owner** . Anche l'utente dbo, i membri del ruolo del database **dbmanager** e l'account di accesso sa possono eseguire query su questa vista.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La vista **sys.dm_continuous_copy_status** viene creata nel database **Resource** ed è visibile in tutti i database, incluso il database master logico. Tuttavia, se si esegue una query su questa vista nel database master logico viene restituito un set vuoto.  
   
  Se la relazione di copia continua viene terminata su un database, la riga relativa a tale database nella vista **sys.dm_continuous_copy_status** scomparirà.  

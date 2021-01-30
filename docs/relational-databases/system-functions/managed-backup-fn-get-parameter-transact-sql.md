@@ -1,13 +1,13 @@
 ---
-description: managed_backup. fn_get_parameter (Transact-SQL)
-title: managed_backup. fn_get_parameter (Transact-SQL) | Microsoft Docs
+description: managed_backup managed_backup.fn_get_parameter (Transact-SQL)
+title: managed_backup managed_backup.fn_get_parameter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - smart_admin.fn_get_parameter_TSQL
 - smart_admin.fn_get_parameter
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: ed94e54d-4516-4806-a8ce-f013d3a04122
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: da8c646cca92a5ef25fd12322fd8a6bd222a1c9e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a30e80c084768df7a40977c052a8649adeae33fc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419515"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207384"
 ---
-# <a name="managed_backupfn_get_parameter-transact-sql"></a>managed_backup. fn_get_parameter (Transact-SQL)
+# <a name="managed_backupfn_get_parameter-transact-sql"></a>managed_backup managed_backup.fn_get_parameter (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Restituisce una tabella con 0, 1 o più righe di coppie di parametri e valori.  
@@ -61,7 +61,7 @@ managed_backup.fn_get_parameter ('parameter_name' | '' | NULL )
 ### <a name="permissions"></a>Autorizzazioni  
  Sono richieste le autorizzazioni SELECT per la funzione.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituiti tutti i parametri configurati almeno una volta, con i relativi valori correnti.  
   
 ```  

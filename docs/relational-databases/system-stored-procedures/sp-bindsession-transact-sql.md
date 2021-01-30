@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_bindsession
 - sp_bindsession_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 900f6383a4a285cac36262096a66e64603467c79
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 64f6b6b4134c5f29dea38d87e7d75e43910ca530
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548231"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206603"
 ---
 # <a name="sp_bindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,12 +44,12 @@ sp_bindsession { 'bind_token' | NULL }
   
 ## <a name="arguments"></a>Argomenti  
  **'** *bind_token* **'**  
- Token che identifica la transazione ottenuta in origine tramite **sp_getbindtoken** o la funzione di **Srv_getbindtoken** Open Data Services. *bind_token*è di tipo **varchar (255)**.  
+ Token che identifica la transazione ottenuta in origine tramite **sp_getbindtoken** o la funzione di **Srv_getbindtoken** Open Data Services. *bind_token* è di tipo **varchar (255)**.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Due sessioni associate condividono esclusivamente la transazione e i blocchi. Ogni sessione mantiene il livello di isolamento specifico impostato e se si imposta un diverso livello di isolamento per una sessione, tale modifica non influisce sul livello di isolamento dell'altra sessione. Ogni sessione è identificata da un account di sicurezza specifico e consente l'accesso solo alle risorse del database per cui l'account in questione dispone delle autorizzazioni.  
   
  **sp_bindsession** utilizza un token di associazione per associare due o più sessioni client esistenti. Tali sessioni devono essere incluse nella stessa istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] da cui è stato ottenuto il token di associazione. Una sessione è un client che esegue un comando. Le sessioni di database associate condividono una transazione e uno spazio di blocco.  

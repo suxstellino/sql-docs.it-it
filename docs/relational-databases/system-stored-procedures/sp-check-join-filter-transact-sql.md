@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - filter_TSQL
 - sp_check_TSQL
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: be5d9341f0ad1372f91666dc7f7022e4f14b2ea3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 74e4114eca77cbbac1c2e2c2471fb0ee10a55ae1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539086"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206562"
 ---
 # <a name="sp_check_join_filter-transact-sql"></a>sp_check_join_filter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -65,7 +65,7 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_check_join_filter** viene utilizzata nella replica di tipo merge.  
   
  **sp_check_join_filter** possono essere eseguite su qualsiasi tabella correlata, anche se non sono pubblicate. Questa stored procedure può essere utilizzata per verificare una clausola di filtro di join prima della definizione di un filtro di join tra due articoli.  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropmergepublication
 - sp_dropmergepublication_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0c787c7c2503f9182b704e83a04664d7d377cef4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 35024724255eea714de42f8fb3a974188730fcef
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538971"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208222"
 ---
 # <a name="sp_dropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,18 +41,18 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` Nome della pubblicazione da eliminare. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito. Se **tutti**, tutte le pubblicazioni di tipo merge esistenti vengono rimosse e il agente di snapshot processo associato. Se si specifica un valore specifico per la *pubblicazione*, vengono eliminate solo la pubblicazione e il processo agente di snapshot associato.  
+`[ @publication = ] 'publication'` Nome della pubblicazione da eliminare. *Publication* è di **tipo sysname** e non prevede alcun valore predefinito. Se **tutti**, tutte le pubblicazioni di tipo merge esistenti vengono rimosse e il agente di snapshot processo associato. Se si specifica un valore specifico per la *pubblicazione*, vengono eliminate solo la pubblicazione e il processo agente di snapshot associato.  
   
-`[ @ignore_distributor = ] ignore_distributor` Utilizzato per eliminare una pubblicazione senza eseguire attività di pulizia nel server di distribuzione. *ignore_distributor* è di **bit**e il valore predefinito è **0**. Questo parametro viene utilizzato anche quando si reinstalla il server di distribuzione.  
+`[ @ignore_distributor = ] ignore_distributor` Utilizzato per eliminare una pubblicazione senza eseguire attività di pulizia nel server di distribuzione. *ignore_distributor* è di **bit** e il valore predefinito è **0**. Questo parametro viene utilizzato anche quando si reinstalla il server di distribuzione.  
   
-`[ @reserved = ] reserved` È riservato per usi futuri. *riservato* è di **bit**e il valore predefinito è **0**.  
+`[ @reserved = ] reserved` È riservato per usi futuri. *riservato* è di **bit** e il valore predefinito è **0**.  
   
 `[ @ignore_merge_metadata = ] ignore_merge_metadata` Solo per uso interno.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_dropmergepublication** viene utilizzata nella replica di tipo merge.  
   
  **sp_dropmergepublication** Elimina in modo ricorsivo tutti gli articoli associati a una pubblicazione e quindi Elimina la pubblicazione stessa. Non è possibile rimuovere una pubblicazione per cui esistono una o più sottoscrizioni. Per informazioni su come rimuovere le sottoscrizioni, vedere [eliminare una sottoscrizione push](../../relational-databases/replication/delete-a-push-subscription.md) ed [eliminare una sottoscrizione pull](../../relational-databases/replication/delete-a-pull-subscription.md).  

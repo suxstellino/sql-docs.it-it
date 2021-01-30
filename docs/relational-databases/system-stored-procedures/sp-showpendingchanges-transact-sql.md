@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_showpendingchanges
 - sp_showpendingchanges_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 78b4901fc70299373044ce0720403031992e37a4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ac2c44e836a56c6fa503b6144e99761294ab473a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547396"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207306"
 ---
 # <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,11 +44,11 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @destination_server = ] 'destination_server'` Nome del server in cui vengono applicate le modifiche replicate. *destination_server* è di **tipo sysname**e il valore predefinito è null.  
+`[ @destination_server = ] 'destination_server'` Nome del server in cui vengono applicate le modifiche replicate. *destination_server* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è null. Quando si specifica *Publication* , i risultati sono limitati solo alla pubblicazione specificata.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname** e il valore predefinito è null. Quando si specifica *Publication* , i risultati sono limitati solo alla pubblicazione specificata.  
   
-`[ @article = ] 'article'` Nome dell'articolo. *article* è di **tipo sysname**e il valore predefinito è null. Quando si specifica *article* , i risultati sono limitati solo all'articolo specificato.  
+`[ @article = ] 'article'` Nome dell'articolo. *article* è di **tipo sysname** e il valore predefinito è null. Quando si specifica *article* , i risultati sono limitati solo all'articolo specificato.  
   
 `[ @show_rows = ] 'show_rows'` Specifica se il set di risultati contiene informazioni più specifiche sulle modifiche in sospeso e il valore predefinito è **0**. Se viene specificato il valore **1** , il set di risultati contiene le colonne is_delete e rowguid.  
   
@@ -69,7 +69,7 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La stored procedure sp_showpendingchanges viene utilizzata per la replica di tipo merge.  
   
  sp_showpendingchanges viene utilizzata per la risoluzione dei problemi relativi alla replica di tipo merge.  

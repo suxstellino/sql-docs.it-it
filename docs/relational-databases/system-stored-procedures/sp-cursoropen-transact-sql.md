@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cursoropen
 - sp_cursoropen_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2942c06e5d63c0be25a05cd34e871447a29e7d6d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1e8e4025a31c92ec001bcb45bee4f8d26f3dc24e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543587"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206273"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *scrollopt*  
  Opzione di scorrimento. *scrollopt* è un parametro facoltativo che richiede uno dei valori di input **int** seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -75,7 +75,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *ccopt*  
  Opzioni del controllo della concorrenza. *ccopt* è un parametro facoltativo che richiede uno dei valori di input **int** seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (precedentemente noto come LOCKCC)|  
@@ -118,7 +118,7 @@ sp_cursoropen cursor OUTPUT, stmt
  0x0002  
  È in corso l'elaborazione di un'operazione FETCH.  
   
- Una  
+ A  
  Questo cursore è stato deallocato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e non è disponibile.  
   
  Quando viene generato un errore, è possibile che i valori restituiti siano incoerenti. L'accuratezza non può pertanto essere garantita.  
@@ -148,7 +148,7 @@ sp_cursoropen cursor OUTPUT, stmt
 > [!NOTE]  
 >  Se la sp_cursoropen procedura viene eseguita correttamente, vengono inviati i parametri RPC return e un set di risultati con le informazioni sul formato della colonna TDS (messaggi 0XA0 & 0xA1 messages). Se non riesce, vengono inviati uno o più messaggi di errore TDS. In entrambi i casi, non verrà restituito alcun dato di riga e il numero di messaggi *eseguiti* sarà zero. Se si utilizza una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedente a 7.0, vengono restituiti i messaggi 0xa0, 0xa1 (standard per le istruzioni SELECT) insieme ai flussi di token 0xa5 e 0xa4. Se si utilizza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, viene restituito 0x81 (standard per le istruzioni SELECT) insieme ai flussi di token 0xa5 e 0xa4.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ## <a name="stmt-parameter"></a>Parametro stmt  
  Se *stmt* specifica l'esecuzione di una stored procedure, i parametri di input possono essere definiti come costanti come parte della stringa *stmt* o specificati come argomenti *boundparam* . È possibile passare variabili dichiarate come parametri associati in questo modo.  
@@ -202,7 +202,7 @@ sp_cursoropen cursor OUTPUT, stmt
 ## <a name="rpc-considerations"></a>Considerazioni su RPC  
  Per richiedere che vengano restituiti metadati sull'elenco di selezione del cursore nel flusso TDS, è possibile impostare il flag di input RPC RETURN_METADATA su 0x0001.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
   
 ### <a name="bound_param-parameter"></a>Parametro bound_param  
  I parametri dopo il quinto vengono passati insieme sul piano dell'istruzione come parametri di input. Il primo parametro di questo tipo deve essere una stringa nel formato:  
