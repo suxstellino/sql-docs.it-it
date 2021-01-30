@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_attach_db_TSQL
 - sp_attach_db
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 79c3d518798c53342e67bfa42ce430d9ffe8e07a
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: cb1d6447fb73174817fe8105c3dea1866d09b789
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753473"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171774"
 ---
 # <a name="sp_attach_db-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,9 +48,9 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @dbname = ] 'dbnam_ '` Nome del database da collegare al server. Il nome deve essere univoco. *dbname* è di **tipo sysname**e il valore predefinito è null.  
+`[ @dbname = ] 'dbnam_ '` Nome del database da collegare al server. Il nome deve essere univoco. *dbname* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @filename1 = ] 'filename_n'` Nome fisico, incluso il percorso, di un file di database. *filename_n* è di **tipo nvarchar (260)** e il valore predefinito è null. È possibile specificare un massimo di 16 nomi di file. I nomi dei parametri iniziano da ** \@ filename1** e incrementano a ** \@ filename16**. L'elenco dei nomi di file deve includere almeno il file primario, il quale contiene le tabelle di sistema che fanno riferimento ad altri file del database. Tale elenco deve includere inoltre tutti i file spostati dopo lo scollegamento del database.  
+`[ @filename1 = ] 'filename_n'` Nome fisico, incluso il percorso, di un file di database. *filename_n* è di **tipo nvarchar (260)** e il valore predefinito è null. È possibile specificare un massimo di 16 nomi di file. I nomi dei parametri iniziano da **\@ filename1** e incrementano a **\@ filename16**. L'elenco dei nomi di file deve includere almeno il file primario, il quale contiene le tabelle di sistema che fanno riferimento ad altri file del database. Tale elenco deve includere inoltre tutti i file spostati dopo lo scollegamento del database.  
   
 > [!NOTE]  
 >  Questo argomento esegue il mapping al parametro FILENAME dell'istruzione CREATE DATABASE. Per alte informazioni, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md).  
@@ -86,7 +86,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="permissions"></a>Autorizzazioni  
  Per informazioni sul modo in cui vengono gestite le autorizzazioni quando viene collegato un database, vedere [create database &#40;SQL Server&#41;Transact-SQL ](../../t-sql/statements/create-database-transact-sql.md).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono collegati file da [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] al server corrente.  
   
 ```  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e44ec3d4-42ae-447d-aaed-bdea53cb0cca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b3033c06d7853768069b20493494e128991abff
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 34e056c23c7192ba1e9d2810df88bb5f0e1a20aa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984572"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172087"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>Esempio dei metodi GetObjectOwner e SetObjectOwner (VB)
 Questo esempio illustra i metodi [GetObjectOwner](./getobjectowner-method-adox.md) e [SetObjectOwner](./setobjectowner-method.md) . Questo codice presuppone l'esistenza dell'accounting del gruppo (vedere l'esempio relativo all' [Accodamento di gruppi e utenti, Metodi ChangePassword (VB)](./groups-and-users-append-changepassword-methods-example-vb.md) per vedere come aggiungere questo gruppo al sistema). Il proprietario della tabella Categories è impostato su Accounting.  

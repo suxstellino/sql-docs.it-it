@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::EditMode
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b6dd04a089d5a28a7eec3b67ebe1c48fe563ff69
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5854dce12ddb2303077111f3129274861a340ebd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973832"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171242"
 ---
 # <a name="editmode-property"></a>Proprietà EditMode
 Indica lo stato di modifica del record corrente.  
@@ -29,7 +29,7 @@ Indica lo stato di modifica del record corrente.
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un valore [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md) .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  ADO gestisce un buffer di modifica associato al record corrente. Questa proprietà indica se sono state apportate modifiche a questo buffer o se è stato creato un nuovo record. Utilizzare la proprietà **EditMode** per determinare lo stato di modifica del record corrente. È possibile verificare la presenza di modifiche in sospeso se un processo di modifica è stato interrotto e determinare se è necessario utilizzare il metodo [Update](../../../ado/reference/ado-api/update-method.md) o [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) .  
   
  In *modalità di aggiornamento immediato* la proprietà **EditMode** viene reimpostata su **adEditNone** dopo che è stata chiamata una chiamata al metodo **Update** . Quando una chiamata a [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) non elimina correttamente il record o i record nell'origine dati (ad esempio, a causa di violazioni di integrità referenziale), il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) rimane in modalità di modifica (**EditMode**  =  **adEditInProgress**). Pertanto, **CancelUpdate** deve essere chiamato prima di spostare il record corrente (ad esempio, [Move](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)o [Close](../../../ado/reference/ado-api/close-method-ado.md) ).  

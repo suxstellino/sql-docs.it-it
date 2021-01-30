@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Command15::get_Parameters
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bad2570c368e469afeb7c69e4f283bdbdfe04674
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4cd94745a6ec2d4f34245b53f509752c13688d45
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990122"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170602"
 ---
 # <a name="parameters-collection-ado"></a>Raccolta Parameters (ADO)
 Contiene tutti gli oggetti [Parameter](./parameter-object.md) di un oggetto [Command](./command-object-ado.md) .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Un oggetto **Command** ha una raccolta **Parameters** costituita da oggetti **Parameter** .  
   
  L'utilizzo del metodo [Refresh](./refresh-method-ado.md) sulla raccolta **Parameters** di un oggetto **Command** recupera le informazioni sui parametri del provider per la query stored procedure o con parametri specificata nell'oggetto **Command** . Alcuni provider non supportano chiamate di stored procedure o query con parametri; Se si chiama il metodo **Refresh** sulla raccolta **Parameters** quando si utilizza tale provider, verrà restituito un errore.  

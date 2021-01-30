@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Connection collection [ADO], ADO/WFC syntax
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25153814172cd0298d2aca5e9499803e17cbfa60
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c0100fb432156a3f970fadfa0f39f2d72daee8b2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974938"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171455"
 ---
 # <a name="connection-ado---wfc-syntax"></a>Connection (sintassi ADO/WFC)
 ## <a name="package-commswfcdata"></a>pacchetto com. ms. wfc. Data  
@@ -86,7 +86,7 @@ public AdoProperties getProperties()
 public com.ms.wfc.data.Errors getErrors()  
 ```  
   
-### <a name="events"></a>Events  
+### <a name="events"></a>Eventi  
  Per ulteriori informazioni sugli eventi ADO/WFC, vedere [creazione di un'istanza di evento ADO in base al linguaggio](../../guide/data/ado-event-instantiation-by-language.md).  
   
 ```  

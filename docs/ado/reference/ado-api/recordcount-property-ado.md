@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::RecordCount
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c2fbd70c1195d0fedf5041a672b704f4bf482d3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 76f3911ccc240a29829efcd5aa301ff5dfb8cbd5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989832"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170460"
 ---
 # <a name="recordcount-property-ado"></a>Proprietà RecordCount (ADO)
 
@@ -33,7 +33,7 @@ Indica il numero di record in un oggetto [Recordset](./recordset-object-ado.md) 
 
 Restituisce un valore **Long** che indica il numero di record nel **Recordset**.
   
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Utilizzare la proprietà **RecordCount** per determinare il numero di record presenti in un oggetto **Recordset** . La proprietà restituisce-1 quando ADO non è in grado di determinare il numero di record o se il tipo di cursore o il provider non supporta **RecordCount**. La lettura della proprietà **RecordCount** in un **Recordset** chiuso causa un errore.
 

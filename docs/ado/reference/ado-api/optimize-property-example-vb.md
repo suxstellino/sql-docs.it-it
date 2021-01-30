@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eeb075e3ad722fa7d449833a6be9b1acaa481eab
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 183d57a53063a4fc72d5218a2fd061a9913ce5c5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990272"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170666"
 ---
 # <a name="optimize-property-example-vb"></a>Esempio della proprietà Optimize (VB)
-In questo esempio viene illustrata la proprietà dinamica **optimize** dell'oggetto [campo](./field-object.md) . Il campo ***zip*** della tabella ***authors*** nel database ***pubs*** non è indicizzato. L'impostazione della proprietà [optimize](./optimize-property-dynamic-ado.md) su **true** nel campo ***zip*** autorizza ADO a compilare un indice che migliora le prestazioni del metodo [Find](./find-method-ado.md) .  
+In questo esempio viene illustrata la proprietà dinamica **optimize** dell'oggetto [campo](./field-object.md) . Il **_campo zip_*_ della tabella _*_authors_*_ nel database _*_pubs_*_ non è indicizzato. L'impostazione della proprietà [optimiz](./optimize-property-dynamic-ado.md) su _* true** nel campo **_zip_* _ autorizza ADO a compilare un indice che migliora le prestazioni del metodo [Find](./find-method-ado.md) .  
   
 ```  
 'BeginOptimizeVB  
@@ -49,7 +49,7 @@ Public Sub Main()
      ' open recordset client-side to enable index creation.  
     Set rstAuthors = New ADODB.Recordset  
     rstAuthors.CursorLocation = adUseClient  
-    strSQLAuthors = "SELECT * FROM Authors"  
+    strSQLAuthors = "SELECT _ FROM Authors"  
     rstAuthors.Open strSQLAuthors, Cnxn, adOpenStatic, adLockReadOnly, adCmdText  
      ' Create the index.  
     rstAuthors!zip.Properties("Optimize") = True  

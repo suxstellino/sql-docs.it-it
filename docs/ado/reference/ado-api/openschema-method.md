@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection15::OpenSchema
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce524119367b53cac86c4bd29e3dc6927671c871
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9b5ca92e42a68639f6b9e3044894ec779109fff5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990282"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170673"
 ---
 # <a name="openschema-method"></a>Metodo OpenSchema
 Ottiene le informazioni sullo schema del database dal provider.  
@@ -42,21 +42,21 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  Qualsiasi valore di [SchemaEnum](./schemaenum.md) che rappresenta il tipo di query dello schema da eseguire.  
   
  *Criteri*  
- Facoltativa. Matrice di vincoli di query per ogni opzione *QueryType* , come elencato in [SchemaEnum](./schemaenum.md).  
+ facoltativo. Matrice di vincoli di query per ogni opzione *QueryType* , come elencato in [SchemaEnum](./schemaenum.md).  
   
  *SchemaID*  
  GUID per una query di schema del provider non definita dalla specifica OLE DB. Questo parametro è obbligatorio se *QueryType* è impostato su **adSchemaProviderSpecific**; in caso contrario, non viene utilizzato.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il metodo **OpenSchema** restituisce informazioni descrittive sull'origine dati, ad esempio le tabelle presenti nell'origine dati, le colonne nelle tabelle e i tipi di dati supportati.  
   
  L'argomento *QueryType* è un GUID che indica le colonne (schemi) restituite. La specifica OLE DB dispone di un elenco completo di schemi.  
   
- L'argomento *criteri* limita i risultati di una query di schema. *Criteri* specifica una matrice di valori che devono essere presenti in un subset di colonne corrispondente, denominate colonne vincolo, nel **Recordset**risultante.  
+ L'argomento *criteri* limita i risultati di una query di schema. *Criteri* specifica una matrice di valori che devono essere presenti in un subset di colonne corrispondente, denominate colonne vincolo, nel **Recordset** risultante.  
   
  La costante **adSchemaProviderSpecific** viene utilizzata per l'argomento *QueryType* se il provider definisce le proprie query dello schema non standard al di fuori di quelle elencate in precedenza. Quando si utilizza questa costante, l'argomento *SchemaID* è necessario per passare il GUID della query dello schema da eseguire. Se *QueryType* è impostato su **adSchemaProviderSpecific** ma *SchemaID* non è specificato, verrà generato un errore.  
   
- I provider non devono supportare tutte le query dello schema OLE DB standard. In particolare, solo **adSchemaTables**, **adSchemaColumns**e **adSchemaProviderTypes** sono necessari per la specifica OLE DB. Tuttavia, non è necessario che il provider supporti i vincoli di *criteri* elencati in precedenza per tali query dello schema.  
+ I provider non devono supportare tutte le query dello schema OLE DB standard. In particolare, solo **adSchemaTables**, **adSchemaColumns** e **adSchemaProviderTypes** sono necessari per la specifica OLE DB. Tuttavia, non è necessario che il provider supporti i vincoli di *criteri* elencati in precedenza per tali query dello schema.  
   
 > [!NOTE]
 >  **Utilizzo servizio dati remoto** Il metodo **OpenSchema** non è disponibile su un oggetto [connessione](./connection-object-ado.md) sul lato client.  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Tables::Append
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ffd2ef32cae3fafb7179568d1342606d32236657
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 56ead8ee314cb5b6bffa31a3292b395c0c990927
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985472"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172291"
 ---
 # <a name="append-method-adox-tables"></a>Metodo Append (raccolta Tables ADOX)
 Aggiunge un nuovo oggetto [Table](./table-object-adox.md) alla raccolta [Tables](./tables-collection-adox.md) .  
@@ -38,7 +38,7 @@ Tables.Append Table
  *Tabella*  
  Valore **Variant** che contiene un riferimento alla **tabella** da accodare o il nome della tabella da creare e aggiungere.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se il provider non supporta la creazione di tabelle, si verificherà un errore.  
   
 ## <a name="applies-to"></a>Si applica a  

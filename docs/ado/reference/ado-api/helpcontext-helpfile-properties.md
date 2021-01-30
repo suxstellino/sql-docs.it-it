@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Error::GetHelpContext
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9ac9c7f712514f50ab8d40704700924ac344d23
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 355f3047a31e82d034cfe23b2d1c069d07a7bbab
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990842"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170952"
 ---
 # <a name="helpcontext-helpfile-properties"></a>Proprietà HelpContext e HelpFile
 Indica il file della guida e l'argomento associato a un oggetto [Error](./error-object.md) .  
@@ -36,13 +36,13 @@ Indica il file della guida e l'argomento associato a un oggetto [Error](./error-
   
 -   **HelpContextID** Restituisce un ID di contesto, come valore **Long** , per un argomento in un file della guida.  
   
--   **HelpFile** Fileguida Restituisce un valore **stringa** che restituisce un percorso completamente risolto a un file della guida.  
+-    Fileguida Restituisce un valore **stringa** che restituisce un percorso completamente risolto a un file della guida.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se nella proprietà FileGuida viene specificato un **file della Guida** , la proprietà **HelpContext** viene utilizzata per visualizzare automaticamente l'argomento della Guida identificato. Se non è disponibile alcun argomento della Guida pertinente, la proprietà **HelpContext** restituisce zero **e la proprietà** fileguida restituisce una stringa di lunghezza zero ("").  
   
 ## <a name="applies-to"></a>Si applica a  
- [Error (oggetto)](./error-object.md)  
+ [Oggetto Error](./error-object.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di proprietà Description, HelpContext, filelima, NativeError, Number, source e SQLState (VB)](./description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   

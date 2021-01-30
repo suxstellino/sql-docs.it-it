@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _ADO::get_Properties
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e9d13eb3c985bdc5e13a44ec59661225476942e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 56e758cf68a87db330d459b638548031122498bd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989992"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170551"
 ---
 # <a name="properties-collection-ado"></a>Raccolta Properties (ADO)
 Contiene tutti gli oggetti [Property](./property-object-ado.md) per un'istanza specifica di un oggetto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Alcuni oggetti ADO hanno una raccolta **Properties** costituita da oggetti **Property** . Ogni oggetto **Proprietà** corrisponde a una caratteristica dell'oggetto ADO specifico del provider.  
   
 > [!NOTE]

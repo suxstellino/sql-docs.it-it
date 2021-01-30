@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - CursorOptionEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a14102f57f2b328314e20e4124ca7e78258fb7e0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 00b50d99fa31e260118a93ce357c1afc4871e4ce
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974352"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171358"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 Specifica la funzionalità che il metodo [supporta](./supports-method.md) deve testare.  

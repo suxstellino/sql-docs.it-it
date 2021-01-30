@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection15::IsolationLevel
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 91945d36801005fb7f7c4dbcc9df5a464c6e4fa4
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: dc9f116c565321051184d16fa0cdf963cc4bfe0e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990772"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170926"
 ---
 # <a name="isolationlevel-property"></a>Proprietà IsolationLevel
 Indica il livello di isolamento per un oggetto [Connection](./connection-object-ado.md) .  
@@ -29,7 +29,7 @@ Indica il livello di isolamento per un oggetto [Connection](./connection-object-
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore [IsolationLevelEnum](./isolationlevelenum.md) . Il valore predefinito è **adXactReadCommitted**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare la proprietà **IsolationLevel** per impostare il livello di isolamento di un oggetto **Connection** . L'impostazione non ha effetto fino alla successiva chiamata del metodo [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) . Se il livello di isolamento richiesto non è disponibile, il provider può restituire il livello di isolamento successivo senza aggiornare la proprietà **IsolationLevel** .  
   
  La proprietà **IsolationLevel** è di lettura/scrittura.  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - GetRowsOptionEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: adc109b9-79f4-4946-a5eb-658e22e9a8a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a827c5dc7e2ae5b59911385982b826944da021c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: da143a7df2677618a290f121376e3399577d9aa7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990872"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170981"
 ---
 # <a name="getrowsoptionenum"></a>GetRowsOptionEnum
 Specifica il numero di record da recuperare da un [Recordset](./recordset-object-ado.md).  

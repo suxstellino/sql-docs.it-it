@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - NextRecordset
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b73779dbca82df1d672a57aae667bc5a666a4945
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: acf9105b6d28e34de0351002063251d49196829a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990462"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170771"
 ---
 # <a name="nextrecordset-method-ado"></a>Metodo NextRecordset (ADO)
 Cancella l'oggetto [Recordset](./recordset-object-ado.md) corrente e restituisce il **Recordset** successivo avanzando attraverso una serie di comandi.  
@@ -40,12 +40,12 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
   
 #### <a name="parameters"></a>Parametri  
  *RecordsAffected*  
- Facoltativa. Variabile **Long** a cui il provider restituisce il numero di record interessati dall'operazione corrente.  
+ facoltativo. Variabile **Long** a cui il provider restituisce il numero di record interessati dall'operazione corrente.  
   
 > [!NOTE]
 >  Questo parametro restituisce solo il numero di record interessati da un'operazione. non restituisce un conteggio dei record da un'istruzione SELECT utilizzata per generare il **Recordset**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Usare il metodo **NextRecordset** per restituire i risultati del comando successivo in un'istruzione di comando composta o in un stored procedure che restituisce più risultati. Se si apre un oggetto **Recordset** basato su un'istruzione di comando composta, ad esempio "Select \* from Tabella1; SELECT \* from Table2 ") con il metodo [Execute](./execute-method-ado-command.md) su un [comando](./command-object-ado.md) o il metodo [Open](./open-method-ado-recordset.md) su un **Recordset**, ADO esegue solo il primo comando e restituisce i risultati al *Recordset*. Per accedere ai risultati dei comandi successivi nell'istruzione, chiamare il metodo **NextRecordset** .  
   
  Finché sono presenti risultati aggiuntivi e il **Recordset** contenente le istruzioni composte non viene disconnesso o sottoposto a marshalling attraverso i limiti del processo, il metodo **NextRecordset** continuerà a restituire oggetti **Recordset** . Se un comando di restituzione della riga viene eseguito correttamente, ma non restituisce alcun record, l'oggetto **Recordset** restituito sarà aperto, ma vuoto. Eseguire un test per questo caso verificando che le proprietà [BOF](./bof-eof-properties-ado.md) e [EOF](./bof-eof-properties-ado.md) siano entrambe **true**. Se un comando non restituito dalla riga viene eseguito correttamente, l'oggetto **Recordset** restituito verrà chiuso, che è possibile verificare testando la proprietà [state](./state-property-ado.md) nel **Recordset**. Quando non sono presenti altri risultati, *Recordset* verrà impostato su *Nothing*.  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d01d2acc51b89fbe1100e535c9aada7dcb8a603
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 337d31ae8b52457df2d54ddc73a7615e78752bb0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973012"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171047"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Esempio di proprietà Filter e RecordCount (VC + +)
-In questo esempio viene utilizzata la proprietà [Filter](./filter-property.md) per aprire un nuovo [Recordset](./recordset-object-ado.md) basato su una condizione specificata applicata a un **Recordset**esistente. Usa la proprietà [RecordCount](./recordcount-property-ado.md) per visualizzare il numero di record nei due **Recordset**. Per eseguire questa procedura, è necessaria la funzione FilterField.  
+In questo esempio viene utilizzata la proprietà [Filter](./filter-property.md) per aprire un nuovo [Recordset](./recordset-object-ado.md) basato su una condizione specificata applicata a un **Recordset** esistente. Usa la proprietà [RecordCount](./recordcount-property-ado.md) per visualizzare il numero di record nei due **Recordset**. Per eseguire questa procedura, è necessaria la funzione FilterField.  
   
 ## <a name="example"></a>Esempio  
   

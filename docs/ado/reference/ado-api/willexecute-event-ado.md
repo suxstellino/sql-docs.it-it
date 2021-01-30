@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - WillExecute
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f56e864efd37b927ae657edc2ef2e8307d839104
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cffc2e0a79ff4bffd83eadac20cf522df6d0c9cc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987772"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172369"
 ---
 # <a name="willexecute-event-ado"></a>Evento WillExecute (ADO)
 L'evento **WillExecute** viene chiamato immediatamente prima dell'esecuzione di un comando in sospeso in una connessione.  
@@ -59,13 +59,13 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *pConnection*  
  Oggetto di [connessione (ADO)](./connection-object-ado.md) per il quale viene applicata la notifica degli eventi.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Un evento **WillExecute** può verificarsi a causa di una connessione.  Metodo [Execute (connessione ADO)](./execute-method-ado-connection.md), metodo [Execute (comando ADO)](./execute-method-ado-command.md)o metodo [Open (recordset ADO)](./open-method-ado-recordset.md) il parametro *pConnection* deve sempre contenere un riferimento valido a un oggetto **Connection** . Se l'evento è dovuto a **Connection.Execute**, i parametri *pRecordset* e *pCommand* sono impostati su **Nothing**. Se l'evento è dovuto a **Recordset. Open**, il parametro *pRecordset* fa riferimento all'oggetto **Recordset** e il parametro *pCommand* è impostato su **Nothing**. Se l'evento è dovuto a **Command.Execute**, il parametro *pCommand* fa riferimento all'oggetto **Command** e il parametro *pRecordset* è impostato su **Nothing**.  
   
  **WillExecute** consente di esaminare e modificare i parametri di esecuzione in sospeso. Questo evento può restituire una richiesta di annullamento del comando in sospeso.  
   
 > [!NOTE]
->  Se l'origine originale per un **comando** è un flusso specificato dalla proprietà [COMMANDSTREAM Property (ADO)](./commandstream-property-ado.md) , l'assegnazione di una nuova stringa al parametro **WillExecute**_source_ WillExecute modifica l'origine del **comando**. La proprietà **CommandStream** verrà deselezionata e la proprietà [COMMANDTEXT Property (ADO)](./commandtext-property-ado.md) verrà aggiornata con la nuova origine. Il flusso originale specificato da **CommandStream** verrà rilasciato e non sarà possibile accedervi.  
+>  Se l'origine originale per un **comando** è un flusso specificato dalla proprietà [COMMANDSTREAM Property (ADO)](./commandstream-property-ado.md) , l'assegnazione di una nuova stringa al parametro _source_ WillExecute modifica l'origine del **comando**. La proprietà **CommandStream** verrà deselezionata e la proprietà [COMMANDTEXT Property (ADO)](./commandtext-property-ado.md) verrà aggiornata con la nuova origine. Il flusso originale specificato da **CommandStream** verrà rilasciato e non sarà possibile accedervi.  
   
  Se il dialetto della nuova stringa di origine è diverso dall'impostazione originale della proprietà della [Proprietà dialetto](./dialect-property.md) (che corrisponde a **CommandStream**), è necessario specificare il dialetto corretto impostando la proprietà **dialetto** dell'oggetto Command a cui fa riferimento *pCommand*.  
   

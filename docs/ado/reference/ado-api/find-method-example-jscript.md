@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - JScript
 helpviewer_keywords:
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bcc1014b589ab45af5aeaaf85b86d4b863f09712
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ff3dc581bffd20bd5192306dd50b0afce6369c66
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88972942"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171030"
 ---
 # <a name="find-method-example-jscript"></a>Esempio del metodo Find (JScript)
-In questo esempio viene utilizzato il metodo [Find](./find-method-ado.md) dell'oggetto [Recordset](./recordset-object-ado.md) per individuare e visualizzare le società del database ***Northwind*** il cui nome inizia con la lettera G. tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **FindJS. asp**.  
+In questo esempio viene utilizzato il metodo [Find](./find-method-ado.md) dell'oggetto [Recordset](./recordset-object-ado.md) per individuare e visualizzare le società nel database ***Northwind** _ il cui nome inizia con la lettera G. tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come _ * FindJS. ASP * *.  
   
 ```  
 <!-- BeginFindJS -->  

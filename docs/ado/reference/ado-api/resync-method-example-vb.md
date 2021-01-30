@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab95315c-fe15-458c-9e0c-937ae5596592
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a82961fd96fe0cebbd04d313a8074c920b6ca0c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c4ac3a795925d3f6ad259b2d597bc73c0874eb15
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989522"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170365"
 ---
 # <a name="resync-method-example-vb"></a>Esempio del metodo Resync (VB)
 In questo esempio viene illustrato l'utilizzo del metodo [Resync](./resync-method.md) per aggiornare i dati in un recordset statico.  

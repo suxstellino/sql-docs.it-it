@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 612ec3cd9e2fbdfba40fd554d52558c8c14baba6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b04dc407bd79f53aed59ccd70464b33ef319ecb5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990612"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170846"
 ---
 # <a name="maxrecords-property-example-vc"></a>Esempio della proprietà MaxRecords (VC++)
-In questo esempio viene usata la proprietà [maxRecords](./maxrecords-property-ado.md) per aprire un [Recordset](./recordset-object-ado.md) contenente i 10 titoli più costosi nella tabella ***titles*** .  
+In questo esempio viene usata la proprietà [maxRecords](./maxrecords-property-ado.md) per aprire un [Recordset](./recordset-object-ado.md) contenente i 10 titoli più costosi nella tabella ***titles** _.  
   
 ## <a name="example"></a>Esempio  
   
@@ -78,7 +78,7 @@ void  MaxRecordsX() {
    _RecordsetPtr pRstTemp = NULL;  
   
    // Define Other Variables  
-   IADORecordBinding *picRs = NULL;   // Interface Pointer Declared    
+   IADORecordBinding _picRs = NULL;   // Interface Pointer Declared    
    CTitleRs titlers;   // C++ Class Object  
   
    try {  

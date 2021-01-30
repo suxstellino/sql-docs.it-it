@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - CursorTypeEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ffc6e245-4471-42ae-84dd-e85bddfce983
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ceb52384d5ed33019bf0d7ec5148322801a1dc2e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 16c4d140efef977e3773e48dfc4f8797fda22dc5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974312"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171326"
 ---
 # <a name="cursortypeenum"></a>CursorTypeEnum
 Specifica il tipo di cursore utilizzato in un oggetto [Recordset](./recordset-object-ado.md) .  

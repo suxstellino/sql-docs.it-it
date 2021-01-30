@@ -6,7 +6,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Stream::raw_Read
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6d4b0ab7c3cc77c1f83eac4c3a30e9f637d950ba
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0adf12bc63745f739aaf8b71a92c660c1c1ad2fd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989902"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170484"
 ---
 # <a name="read-method"></a>Metodo Read
 Legge un numero specificato di byte da un oggetto [flusso](./stream-object-ado.md) binario.  
@@ -35,12 +35,12 @@ Variant = Stream.Read ( NumBytes)
   
 #### <a name="parameters"></a>Parametri  
  *NumBytes*  
- Facoltativa. Valore **Long** che specifica il numero di byte da leggere dal file o il valore [StreamReadEnum](./streamreadenum.md) **adReadAll**, che corrisponde all'impostazione predefinita.  
+ facoltativo. Valore **Long** che specifica il numero di byte da leggere dal file o il valore [StreamReadEnum](./streamreadenum.md) **adReadAll**, che corrisponde all'impostazione predefinita.  
   
 ## <a name="return-value"></a>Valore restituito  
  Il metodo **Read** legge un numero specificato di byte o l'intero flusso da un oggetto **Stream** e restituisce i dati risultanti come **Variant**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se *numBytes* è maggiore del numero di byte rimanenti nel **flusso**, vengono restituiti solo i byte rimanenti. I dati letti non vengono riempiti in modo da corrispondere alla lunghezza specificata da *numBytes*. Se non ci sono byte rimanenti da leggere, viene restituita una variante con un valore null. Impossibile utilizzare **Read** per leggere le versioni precedenti.  
   
 > [!NOTE]

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Record::get_RecordType
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 790e46a2-13d2-451e-a8be-130bd9a206a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 852ca0eeacfddfe7e60db20870dadf0c59962c21
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 60e7241cc7c11fe66767793478bf09d45a013e48
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989682"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170403"
 ---
 # <a name="recordtype-property-ado"></a>Proprietà RecordType (ADO)
 Indica il tipo di oggetto [record](./record-object-ado.md) .  
@@ -31,7 +31,7 @@ Indica il tipo di oggetto [record](./record-object-ado.md) .
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un valore [RecordTypeEnum](./recordtypeenum.md) .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La proprietà **RecordType** è di sola lettura.  
   
 ## <a name="applies-to"></a>Si applica a  

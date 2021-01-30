@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Catalog::raw_Create
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 64f5c21c-b581-42d8-bdc7-c4f1bebaf105
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 588f73fcd2ced95be3cd7f8586faed864b38f8ad
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b44be7497ca6952dd88d6f18ac0b42a6c989db36
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984842"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172210"
 ---
 # <a name="create-method-adox"></a>Metodo Create (ADOX)
 Crea un nuovo catalogo.  
@@ -38,7 +38,7 @@ Catalog.Create ConnectString
  *ConnectString*  
  Valore **stringa** utilizzato per la connessione all'origine dati.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il metodo **create** crea e apre una nuova [connessione](../ado-api/connection-object-ado.md) ADO all'origine dati specificata in *ConnectString*. In caso di esito positivo, il nuovo oggetto **Connection** viene assegnato alla proprietà [ActiveConnection](./activeconnection-property-adox.md) .  
   
  Se il provider non supporta la creazione di nuovi cataloghi, si verificherà un errore.  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Command
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 252a59f63c4ce782a915a1e1cf11af58fd2f233b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b8926e551f97d60256758b7df6c9dabca5584123
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975232"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171486"
 ---
 # <a name="command-object-ado"></a>Oggetto Command (ADO)
 Definisce un comando specifico che si desidera eseguire su un'origine dati.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare un oggetto **comando** per eseguire una query su un database e restituire record in un oggetto [Recordset](./recordset-object-ado.md) , per eseguire un'operazione bulk o per modificare la struttura di un database. A seconda della funzionalità del provider, alcune raccolte di **comandi** , metodi o proprietà possono generare un errore quando vi si fa riferimento.  
   
  Con le raccolte, i metodi e le proprietà di un oggetto **Command** , è possibile eseguire le operazioni seguenti:  

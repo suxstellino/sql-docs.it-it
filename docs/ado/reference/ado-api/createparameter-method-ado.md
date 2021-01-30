@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Command15::raw_CreateParameter
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8fd075dff5ae67c7965082a9b7d0f75f5c4d47eb
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 61793ca158cee6d4143128eae7fdecf3722ae61e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974482"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171381"
 ---
 # <a name="createparameter-method-ado"></a>Metodo CreateParameter (ADO)
 Crea un nuovo oggetto [Parameter](./parameter-object.md) con le proprietà specificate.  
@@ -39,21 +39,21 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
   
 #### <a name="parameters"></a>Parametri  
  *Nome*  
- Facoltativa. Valore **stringa** che contiene il nome dell'oggetto **Parameter** .  
+ facoltativo. Valore **stringa** che contiene il nome dell'oggetto **Parameter** .  
   
  *Tipo*  
- Facoltativa. Valore [DataTypeEnum](./datatypeenum.md) che specifica il tipo di dati dell'oggetto **Parameter** .  
+ facoltativo. Valore [DataTypeEnum](./datatypeenum.md) che specifica il tipo di dati dell'oggetto **Parameter** .  
   
  *Direzione*  
- Facoltativa. Valore [ParameterDirectionEnum](./parameterdirectionenum.md) che specifica il tipo di oggetto **Parameter** .  
+ facoltativo. Valore [ParameterDirectionEnum](./parameterdirectionenum.md) che specifica il tipo di oggetto **Parameter** .  
   
- *Dimensione*  
- Facoltativa. Valore **Long** che specifica la lunghezza massima del valore del parametro in caratteri o byte.  
+ *Dimensioni*  
+ facoltativo. Valore **Long** che specifica la lunghezza massima del valore del parametro in caratteri o byte.  
   
  *Valore*  
- Facoltativa. **Variant** che specifica il valore per l'oggetto **Parameter** .  
+ facoltativo. **Variant** che specifica il valore per l'oggetto **Parameter** .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Usare il metodo **CreateParameter** per creare un nuovo oggetto **Parameter** con un nome, un tipo, una direzione, una dimensione e un valore specificati. Tutti i valori passati negli argomenti vengono scritti nelle proprietà dei **parametri** corrispondenti.  
   
  Questo metodo non aggiunge automaticamente l'oggetto **Parameter** alla raccolta **Parameters** di un oggetto [Command](./command-object-ado.md) . Ciò consente di impostare proprietà aggiuntive i cui valori ADO verranno convalidati quando si aggiunge l'oggetto **Parameter** alla raccolta.  

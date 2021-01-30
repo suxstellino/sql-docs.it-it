@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::raw_Open
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 879456c30c3b34773d6f6b1395a88e04f5faaf9e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 8a6c7b68f817bd3e4937833a4385819bd8de8aac
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990312"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170697"
 ---
 # <a name="open-method-ado-recordset"></a>Metodo Open (Recordset - ADO)
 Apre un cursore su un oggetto [Recordset](./recordset-object-ado.md) .  
@@ -36,30 +36,30 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
 #### <a name="parameters"></a>Parametri  
  *Origine*  
- Facoltativa. **Variante** che restituisce un oggetto [comando](./command-object-ado.md) valido, un'istruzione SQL, un nome di tabella, una chiamata stored procedure, un URL o il nome di un file o di un oggetto [flusso](./stream-object-ado.md) contenente un [Recordset](./recordset-object-ado.md)archiviato in modo permanente.  
+ facoltativo. **Variante** che restituisce un oggetto [comando](./command-object-ado.md) valido, un'istruzione SQL, un nome di tabella, una chiamata stored procedure, un URL o il nome di un file o di un oggetto [flusso](./stream-object-ado.md) contenente un [Recordset](./recordset-object-ado.md)archiviato in modo permanente.  
   
  *ActiveConnection*  
- Facoltativa. **Variant** che restituisce un nome di variabile oggetto [connessione](./connection-object-ado.md) valido o una **stringa** che contiene parametri [ConnectionString](./connectionstring-property-ado.md) .  
+ facoltativo. **Variant** che restituisce un nome di variabile oggetto [connessione](./connection-object-ado.md) valido o una **stringa** che contiene parametri [ConnectionString](./connectionstring-property-ado.md) .  
   
  *CursorType*  
- Facoltativa. Valore [CursorTypeEnum](./cursortypeenum.md) che determina il tipo di cursore che il provider deve utilizzare per l'apertura del **Recordset**. Il valore predefinito è **adOpenForwardOnly**.  
+ facoltativo. Valore [CursorTypeEnum](./cursortypeenum.md) che determina il tipo di cursore che il provider deve utilizzare per l'apertura del **Recordset**. Il valore predefinito è **adOpenForwardOnly**.  
   
  *LockType*  
- Facoltativa. Valore [LockTypeEnum](./locktypeenum.md) che determina il tipo di blocco (concorrenza) che il provider deve utilizzare per l'apertura del **Recordset**. Il valore predefinito è **adLockReadOnly**.  
+ facoltativo. Valore [LockTypeEnum](./locktypeenum.md) che determina il tipo di blocco (concorrenza) che il provider deve utilizzare per l'apertura del **Recordset**. Il valore predefinito è **adLockReadOnly**.  
   
  *Opzioni*  
- Facoltativa. Valore **Long** che indica il modo in cui il provider deve valutare l'argomento di *origine* se rappresenta un oggetto diverso da un oggetto **Command** oppure se il **Recordset** deve essere ripristinato da un file in cui è stato salvato in precedenza. Può essere uno o più valori [CommandTypeEnum](./commandtypeenum.md) o [ExecuteOptionEnum](./executeoptionenum.md) , che possono essere combinati con un operatore OR bit per bit.  
+ facoltativo. Valore **Long** che indica il modo in cui il provider deve valutare l'argomento di *origine* se rappresenta un oggetto diverso da un oggetto **Command** oppure se il **Recordset** deve essere ripristinato da un file in cui è stato salvato in precedenza. Può essere uno o più valori [CommandTypeEnum](./commandtypeenum.md) o [ExecuteOptionEnum](./executeoptionenum.md) , che possono essere combinati con un operatore OR bit per bit.  
   
 > [!NOTE]
->  Se si apre un **Recordset** da un **flusso** contenente un **Recordset**salvato in modo permanente, l'utilizzo di un valore [ExecuteOptionEnum](./executeoptionenum.md) di **adAsyncFetchNonBlocking** non avrà alcun effetto; il recupero sarà sincrono e bloccante.  
+>  Se si apre un **Recordset** da un **flusso** contenente un **Recordset** salvato in modo permanente, l'utilizzo di un valore [ExecuteOptionEnum](./executeoptionenum.md) di **adAsyncFetchNonBlocking** non avrà alcun effetto; il recupero sarà sincrono e bloccante.  
   
 > [!NOTE]
 >  I valori **ExecuteOpenEnum** di **adExecuteNoRecords** o **adExecuteStream** non devono essere utilizzati con **Open**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il cursore predefinito per un **Recordset** ADO è un cursore di sola lettura di sola trasmissione che si trova nel server.  
   
- Utilizzando il metodo **Open** su un oggetto **Recordset** , viene aperto un cursore che rappresenta i record di una tabella di base, i risultati di una query o un **Recordset**salvato in precedenza.  
+ Utilizzando il metodo **Open** su un oggetto **Recordset** , viene aperto un cursore che rappresenta i record di una tabella di base, i risultati di una query o un **Recordset** salvato in precedenza.  
   
  Utilizzare l'argomento di *origine* facoltativo per specificare un'origine dati utilizzando uno dei seguenti elementi: una variabile oggetto **comando** , un'istruzione SQL, un stored procedure, un nome di tabella, un URL o un nome di percorso file completo. Se l' *origine* è un nome di percorso del file, può essere un percorso completo ("c:\dir\file.RST"), un percorso relativo ("... \File.RST ") o un URL ( `https://files/file.rst` ).  
   
@@ -67,7 +67,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  L'argomento *ActiveConnection* corrisponde alla proprietà [ActiveConnection](./activeconnection-property-ado.md) e specifica in quale connessione aprire l'oggetto **Recordset** . Se si passa una definizione di connessione per questo argomento, ADO apre una nuova connessione usando i parametri specificati. Dopo aver aperto il **Recordset** con un cursore sul lato client impostando la proprietà [CursorLocation](./cursorlocation-property-ado.md) su **adUseClient**, è possibile modificare il valore di questa proprietà per inviare aggiornamenti a un altro provider. In alternativa, è possibile impostare questa proprietà su **Nothing** (in Microsoft Visual Basic) o su null per disconnettere il **Recordset** da qualsiasi provider. Tuttavia, la modifica di *ActiveConnection* per un cursore sul lato server genera un errore.  
   
- Per gli altri argomenti che corrispondono direttamente alle proprietà di un oggetto **Recordset** (*source*, *CursorType*e *LockType*), la relazione degli argomenti con le proprietà è la seguente:  
+ Per gli altri argomenti che corrispondono direttamente alle proprietà di un oggetto **Recordset** (*source*, *CursorType* e *LockType*), la relazione degli argomenti con le proprietà è la seguente:  
   
 -   La proprietà è di lettura/scrittura prima dell'apertura dell'oggetto **Recordset** .  
   
@@ -84,9 +84,9 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  Se si passa un oggetto **flusso** nell'argomento di *origine* , non è necessario passare informazioni negli altri argomenti. In caso contrario, verrà generato un errore. Le informazioni **ActiveConnection** non vengono mantenute quando un **Recordset** viene aperto da un **flusso**.  
   
- Il valore predefinito per l'argomento *options* è **AdCmdFile** se al **Recordset**non è associata alcuna connessione. Questa situazione si verifica in genere per gli oggetti **Recordset** archiviati in modo permanente.  
+ Il valore predefinito per l'argomento *options* è **AdCmdFile** se al **Recordset** non è associata alcuna connessione. Questa situazione si verifica in genere per gli oggetti **Recordset** archiviati in modo permanente.  
   
- Se l'origine dati non restituisce record, il provider imposta entrambe le proprietà [BOF](./bof-eof-properties-ado.md) e [EOF](./bof-eof-properties-ado.md) su **true**e la posizione del record corrente non è definita. È comunque possibile aggiungere nuovi dati a questo oggetto **Recordset** vuoto se il tipo di cursore lo consente.  
+ Se l'origine dati non restituisce record, il provider imposta entrambe le proprietà [BOF](./bof-eof-properties-ado.md) e [EOF](./bof-eof-properties-ado.md) su **true** e la posizione del record corrente non è definita. È comunque possibile aggiungere nuovi dati a questo oggetto **Recordset** vuoto se il tipo di cursore lo consente.  
   
  Una volta terminate le operazioni su un oggetto **Recordset** aperto, utilizzare il metodo [Close](./close-method-ado.md) per liberare tutte le risorse di sistema associate. La chiusura di un oggetto non comporta la rimozione dalla memoria; è possibile modificare le impostazioni delle proprietà e usare il metodo **Open** per aprirlo di nuovo in un secondo momento. Per eliminare completamente un oggetto dalla memoria, impostare la variabile oggetto su *Nothing*.  
   

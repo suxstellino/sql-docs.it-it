@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c07862b5-e466-46bd-910b-59ac96709cb9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28e47e8f74eba5fce8315da884486512663c1d71
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e43133695928fecf3860805dcf620ddeabfed1d5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976072"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171571"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vb"></a>Esempio di metodi AppendChunk e GetChunk (VB)
 Questo esempio usa i metodi [AppendChunk](./appendchunk-method-ado.md) e [GetChunk](./getchunk-method-ado.md) per riempire un campo immagine con i dati di un altro record.  

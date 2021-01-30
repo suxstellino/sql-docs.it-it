@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_audit_write
 - sp_audit_write_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 56795d7ed3da83dff9f50d70f639300dae0da3a1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0ac793b35f5e72b93a27369bf00327a969059b0d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536710"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171753"
 ---
 # <a name="sp_audit_write-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
 ## <a name="arguments"></a>Argomenti  
  `[ @user_defined_event_id = ] user_defined_event_id`  
- Parametro definito dall'utente e registrato nella colonna **user_defined_event_id** del log di controllo. * \@ user_defined_event_id* è di tipo **smallint**.  
+ Parametro definito dall'utente e registrato nella colonna **user_defined_event_id** del log di controllo. *\@ user_defined_event_id* è di tipo **smallint**.  
   
  `[ @succeeded = ] succeeded`  
  Parametro passato dall'utente per indicare se l'evento ha avuto esito positivo o meno. Viene visualizzato nella colonna del log di controllo indicante l'esito positivo. `@succeeded` è di **bit**.  
@@ -56,7 +56,7 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
  Gli errori sono causati da parametri di input errati o da problemi di scrittura nel log di controllo di destinazione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Quando il **USER_DEFINED_AUDIT_GROUP** viene aggiunto a una specifica del controllo del server o a una specifica del controllo del database, l'evento attivato da **sp_audit_write** verrà incluso nel log di controllo.  
   
 ## <a name="permissions"></a>Autorizzazioni  

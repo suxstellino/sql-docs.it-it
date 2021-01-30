@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection15::Mode
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eab9f3db1bfe9417411dc832cfa24e3d4496257b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 86b6f8b9f7e55f78242427ab5a648896978ecc0a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990602"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170835"
 ---
 # <a name="mode-property-ado"></a>Proprietà Mode (ADO)
 Indica le autorizzazioni disponibili per la modifica dei dati in una [connessione](./connection-object-ado.md), un [record](./record-object-ado.md)o un oggetto [flusso](./stream-object-ado.md) .  
@@ -31,7 +31,7 @@ Indica le autorizzazioni disponibili per la modifica dei dati in una [connession
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore [ConnectModeEnum](./connectmodeenum.md) . Il valore predefinito per una **connessione** è **adModeUnknown**. Il valore predefinito per un oggetto **record** è **adModeRead**. Il valore predefinito per un **flusso** associato a un'origine sottostante (aperto con un URL come origine o come **flusso** predefinito di un **record**) è **adModeRead**. Il valore predefinito per un **flusso** non associato a un'origine sottostante (di cui è stata creata un'istanza in memoria) è **adModeUnknown**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare la proprietà **mode** per impostare o restituire le autorizzazioni di accesso in uso da parte del provider nella connessione corrente. È possibile impostare la proprietà **mode** solo quando l'oggetto **connessione** è chiuso.  
   
  Per un oggetto **Stream** , se la modalità di accesso non è specificata, viene ereditata dall'origine utilizzata per aprire l'oggetto **flusso** . Se, ad esempio, un **flusso** viene aperto da un oggetto **record** , per impostazione predefinita viene aperto nella stessa modalità del **record**.  

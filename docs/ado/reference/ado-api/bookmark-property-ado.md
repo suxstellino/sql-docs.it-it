@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::Bookmark
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 755397c0cf1b16243cdfa2d7777af487b7629b6e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: dd484230ba2801abcb553fa8f9013dce53799b09
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975772"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171556"
 ---
 # <a name="bookmark-property-ado"></a>Proprietà Bookmark (ADO)
 Indica un segnalibro che identifica in modo univoco il record corrente in un oggetto [Recordset](./recordset-object-ado.md) o imposta il record corrente in un oggetto **Recordset** sul record identificato da un segnalibro valido.  
@@ -29,7 +29,7 @@ Indica un segnalibro che identifica in modo univoco il record corrente in un ogg
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un'espressione **Variant** che restituisce un segnalibro valido.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Usare la proprietà **Bookmark** per salvare la posizione del record corrente e tornare a tale record in qualsiasi momento. I segnalibri sono disponibili solo negli oggetti **Recordset** che supportano la funzionalità di segnalibro.  
   
  Quando si apre un oggetto **Recordset** , ognuno dei relativi record dispone di un segnalibro univoco. Per salvare il segnalibro per il record corrente, assegnare il valore della proprietà **Bookmark** a una variabile. Per tornare rapidamente a tale record in qualsiasi momento dopo il passaggio a un record diverso, impostare la proprietà **Bookmark** dell'oggetto **Recordset** sul valore di tale variabile.  

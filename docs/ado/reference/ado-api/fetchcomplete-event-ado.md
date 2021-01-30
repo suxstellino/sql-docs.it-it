@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset::ExecuteComplete
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ef8df9f6d4ea113d5cca9ad9ffba9c4888776d8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 261a3a39486dc73e95a7339906a49657a0d04634
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973352"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171116"
 ---
 # <a name="fetchcomplete-event-ado"></a>Evento FetchComplete (ADO)
 L'evento **FetchComplete** viene chiamato dopo che tutti i record di un'operazione asincrona lunga sono stati recuperati nel [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -46,7 +46,7 @@ FetchComplete pError, adStatus, pRecordset
  *pRecordset*  
  Oggetto **Recordset** . Oggetto per il quale sono stati recuperati i record.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Per usare **FetchComplete** con Microsoft Visual Basic, è necessario Visual Basic 6,0 o versione successiva.  
   
 ## <a name="see-also"></a>Vedere anche  

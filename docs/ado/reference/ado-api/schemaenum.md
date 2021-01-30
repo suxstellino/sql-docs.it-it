@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - SchemaEnum
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bcbe9bd3c3f4408be7d228c9edae4da20929f69
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 55a55d39117f2367b1b13c1a25b3785fe2d9cacc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989262"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170308"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Specifica il tipo di **Recordset** dello schema recuperato dal metodo [OpenSchema](./openschema-method.md) .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Ulteriori informazioni sulla funzione e sulle colonne restituite per ogni costante ADO sono disponibili negli argomenti dell' [Appendice B: set di righe dello schema](/previous-versions/windows/desktop/ms712921(v=vs.85)) del riferimento per programmatori OLE DB. Il nome di ogni argomento è elencato tra parentesi nella sezione Descrizione della tabella seguente.  
   
  Per informazioni aggiuntive sulla funzione e sulle colonne restituite per ogni costante ADO MD, vedere gli argomenti [OLE DB per gli oggetti OLAP e i set di righe dello schema](/previous-versions/windows/desktop/ms723056(v=vs.85)) nella OLE DB per la documentazione relativa all'elaborazione analitica online (OLAP). Il nome di ogni argomento è elencato tra parentesi nella colonna Descrizione della tabella seguente.  
@@ -73,7 +73,7 @@ Specifica il tipo di **Recordset** dello schema recuperato dal metodo [OpenSchem
 |**adSchemaTablePrivileges**|14|Restituisce i privilegi sulle tabelle definiti nel catalogo, disponibili o concessi da un determinato utente.<br /><br /> (Set di righe TABLE_PRIVILEGES)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME GRANTOR GRANTEE|  
 |**adSchemaTables**|20|Restituisce le tabelle, comprese le visualizzazioni, definite nel catalogo e accessibili a un determinato utente.<br /><br /> (Set di righe Tables)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME TABLE_TYPE|  
 |**adSchemaTranslations**|21|Restituisce le conversioni di caratteri definite nel catalogo accessibili a un determinato utente.<br /><br /> (Set di righe TRANSLATIONs)|TRANSLATION_CATALOG TRANSLATION_SCHEMA TRANSLATION_NAME|  
-|**adSchemaTrustees**|39|Riservato per usi futuri.||  
+|**adSchemaTrustees**|39|Riservato per utilizzi futuri.||  
 |**adSchemaUsagePrivileges**|15|Restituisce i privilegi di utilizzo sugli oggetti definiti nel catalogo, disponibili o concessi da un determinato utente.<br /><br /> (Set di righe USAGE_PRIVILEGES)|OBJECT_CATALOG OBJECT_SCHEMA OBJECT_NAME UTENTE AUTORIZZATO AUTORIZZATO OBJECT_TYPE|  
 |**adSchemaViewColumnUsage**|24|Restituisce le colonne in cui dipendono le tabelle visualizzate, definite nel catalogo e di proprietà di un determinato utente.<br /><br /> (Set di righe VIEW_COLUMN_USAGE)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
 |**adSchemaViews**|23|Restituisce le visualizzazioni definite nel catalogo accessibili a un determinato utente.<br /><br /> (Set di righe VIEWS)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  

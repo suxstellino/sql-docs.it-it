@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ADO MD, objects
 - objects [ADO MD]
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c988c6a1bbe0d8d582af3ab8a355f1109906401c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: ae9723fb593a6f2599a3fe13cbfc359fa280febe
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97639648"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172310"
 ---
 # <a name="ado-md-objects"></a>Oggetti ADO MD
 
@@ -40,7 +40,7 @@ ms.locfileid: "97639648"
   
 |Oggetto|Descrizione|  
 |------------|-----------------|  
-|[Connessione](../ado-api/connection-object-ado.md)|Rappresenta una connessione aperta a un'origine dati.|  
+|[Connection](../ado-api/connection-object-ado.md)|Rappresenta una connessione aperta a un'origine dati.|  
   
  Le relazioni tra questi oggetti sono illustrate nel [modello a oggetti ADO MD](./ado-md-object-model.md).  
   

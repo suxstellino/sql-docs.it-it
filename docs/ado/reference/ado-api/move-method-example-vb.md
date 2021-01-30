@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55eb797a-0205-40d2-a797-55b216d1d3bb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 23640ae4d6613c3502b8021af5efebe16c9d6161
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 24f223b2ccdd4914a1fca0f24fa9285bbe0fab66
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990582"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170824"
 ---
 # <a name="move-method-example-vb"></a>Esempio del metodo Move (VB)
 Questo esempio usa il metodo [Move](./move-method-ado.md) per posizionare il puntatore del record in base all'input dell'utente.  

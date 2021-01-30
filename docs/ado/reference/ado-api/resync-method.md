@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset20::raw_Resync
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 79a43a36fb68063c2f0c880f0d8d086714dcfffe
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b1c4156c56a3c6722fb856511ccb3be1b14c7f5e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989482"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170358"
 ---
 # <a name="resync-method"></a>Metodo Resync
 Aggiorna i dati nell'oggetto [Recordset](./recordset-object-ado.md) corrente o nella raccolta di [campi](./fields-collection-ado.md) di un oggetto [record](./record-object-ado.md) dal database sottostante.  
@@ -38,12 +38,12 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
 #### <a name="parameters"></a>Parametri  
  *AffectRecords*  
- Facoltativa. Valore [AffectEnum](./affectenum.md) che determina il numero di record su cui influirà il metodo di **Risincronizzazione** . Il valore predefinito è **adAffectAll**. Questo valore non è disponibile con il metodo **Resync** della raccolta **Fields** di un oggetto **record** .  
+ facoltativo. Valore [AffectEnum](./affectenum.md) che determina il numero di record su cui influirà il metodo di **Risincronizzazione** . Il valore predefinito è **adAffectAll**. Questo valore non è disponibile con il metodo **Resync** della raccolta **Fields** di un oggetto **record** .  
   
  *ResyncValues*  
- Facoltativa. Valore [ResyncEnum](./resyncenum.md) che specifica se i valori sottostanti vengono sovrascritti. Il valore predefinito è **adResyncAllValues**.  
+ facoltativo. Valore [ResyncEnum](./resyncenum.md) che specifica se i valori sottostanti vengono sovrascritti. Il valore predefinito è **adResyncAllValues**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ## <a name="recordset"></a>recordset  
  Utilizzare il metodo **Resync** per risincronizzare i record del **Recordset** corrente con il database sottostante. Questa operazione è utile se si utilizza un cursore statico o di tipo "solo di tipo", ma si desidera visualizzare eventuali modifiche nel database sottostante.  
@@ -61,7 +61,7 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
  Se *ResyncValues* è impostato su **adResyncAllValues** (valore predefinito), le proprietà [UnderlyingValue](./underlyingvalue-property.md), [value](./value-property-ado.md)e [OriginalValue](./originalvalue-property-ado.md) degli oggetti [Field](./field-object.md) della raccolta sono sincronizzate. Se *ResyncValues* è impostato su **adResyncUnderlyingValues**, viene sincronizzata solo la proprietà **UnderlyingValue** .  
   
- Il valore della proprietà **status** per ogni oggetto **Field** al momento della chiamata influiscono anche sul comportamento della **Risincronizzazione**. Per gli oggetti **campo** con **Status** valori di stato **adFieldPendingUnknown** o **adFieldPendingInsert**, la **Risincronizzazione** non ha alcun effetto. Per i valori di **stato** di **adFieldPendingChange** o **adFieldPendingDelete**, la **Risincronizzazione** sincronizza i valori dei dati per i campi che esistono ancora nell'origine dati.  
+ Il valore della proprietà **status** per ogni oggetto **Field** al momento della chiamata influiscono anche sul comportamento della **Risincronizzazione**. Per gli oggetti **campo** con  valori di stato **adFieldPendingUnknown** o **adFieldPendingInsert**, la **Risincronizzazione** non ha alcun effetto. Per i valori di **stato** di **adFieldPendingChange** o **adFieldPendingDelete**, la **Risincronizzazione** sincronizza i valori dei dati per i campi che esistono ancora nell'origine dati.  
   
  La **Risincronizzazione** non modifica i valori di **stato** degli oggetti **campo** a meno che non si verifichi un errore quando viene chiamata la **Risincronizzazione** . Se, ad esempio, il campo non esiste più, il provider restituirà un valore di **stato** appropriato per l'oggetto **campo** , ad esempio **adFieldDoesNotExist**. I valori di **stato** restituiti possono essere combinati in modo logico all'interno del valore della proprietà **status** .  
   

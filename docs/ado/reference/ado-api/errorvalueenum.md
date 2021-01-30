@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - ErrorValueEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 48962e163804eaa779f82789082e5b8d493bc3cd
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 238c8bf3d0c21625b9317690f70adbe16bd5075f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973582"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171164"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 Specifica il tipo di errore in fase di esecuzione ADO.  
@@ -32,20 +32,20 @@ Specifica il tipo di errore in fase di esecuzione ADO.
   
 -   Decimal negativo: la conversione decimale del numero di errore completo.  
   
--   Esadecimale: rappresentazione esadecimale del numero di errore completo. Il codice della funzionalità di Windows è presente nella quarta cifra. Il codice di struttura per i *numeri di errore ADO è.* Ad esempio ***: 0x800 0E7B***.  
+-   Hexadecimal-The rappresentazione esadecimale del numero di errore completo. Il codice della funzionalità di Windows è presente nella quarta cifra. Il codice di struttura per i *numeri di errore ADO è.* Ad esempio: 0x800 ***a** _0E7B.  
   
 > [!NOTE]
->  OLE DB errori possono essere passati all'applicazione ADO. In genere, questi possono essere identificati da un codice di funzionalità di Windows *4*. Ad esempio, 0x800***4***.  
+>  OLE DB errori possono essere passati all'applicazione ADO. In genere, questi possono essere identificati da un codice di funzionalità di Windows _4 *. Ad esempio, 0x800 * * * 4* *_.  
   
 |Costante|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
-|**adErrBoundToCommand**|3707-2146824581 0x800A0E7B|Impossibile modificare la proprietà **ActiveConnection** di un oggetto **Recordset** con un oggetto **Command** come origine.|  
+|_ *adErrBoundToCommand**|3707-2146824581 0x800A0E7B|Impossibile modificare la proprietà **ActiveConnection** di un oggetto **Recordset** con un oggetto **Command** come origine.|  
 |**adErrCannotComplete**|3732-2146824556 0x800A0E94|Il server non è in grado di completare l'operazione.|  
 |**adErrCantChangeConnection**|3748-2146824540 0x800A0EA4|La connessione è stata negata. La nuova connessione richiesta ha caratteristiche diverse rispetto a quella già in uso.|  
 |**adErrCantChangeProvider**|3220-2146825068 0X800A0C94|Il provider specificato è diverso da quello già in uso.|  
 |**adErrCantConvertvalue**|3724-2146824564 0x800A0E8C|Non è possibile convertire il valore di dati per motivi diversi dalla non corrispondenza di segno o dall'overflow dei dati. Ad esempio, la conversione avrebbe dati troncati.|  
 |**adErrCantCreate**|3725-2146824563 0x800A0E8D|Impossibile impostare o recuperare il valore dei dati perché il tipo di dati del campo è sconosciuto oppure il provider non dispone di risorse sufficienti per eseguire l'operazione.|  
-|**adErrCatalogNotSet**|3747-2146824541 0x800A0EA3|Per l'operazione è necessario un **ParentCatalog**valido.|  
+|**adErrCatalogNotSet**|3747-2146824541 0x800A0EA3|Per l'operazione è necessario un **ParentCatalog** valido.|  
 |**adErrColumnNotOnThisRow**|3726-2146824562 0x800A0E8E|Il record non contiene questo campo.|  
 |**adErrDataConversion**|3421-2146824867 0x800A0D5D|L'applicazione usa un valore di tipo errato per l'operazione corrente.|  
 |**adErrDataOverflow**|3721-2146824567 0x800A0E89|Il valore dei dati è troppo grande per essere rappresentato dal tipo di dati del campo.|  
