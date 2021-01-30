@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Stream::Size
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a487c241-d953-4c31-ae7e-6358d5cf6733
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dc2f09b6c5f6fd784ab5c4ca29a7596b838e38fb
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 36d1da9d1b95480eeaf3018b49018df7541c510f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989102"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170272"
 ---
 # <a name="size-property-ado-stream"></a>Proprietà Size (Stream - ADO)
 Indica le dimensioni del flusso in numero di byte.  
@@ -29,7 +29,7 @@ Indica le dimensioni del flusso in numero di byte.
 ## <a name="return-values"></a>Valori restituiti  
  Restituisce un valore **Long** che specifica le dimensioni del flusso in numero di byte. Il valore predefinito corrisponde alla dimensione del flusso oppure-1 se la dimensione del flusso non è nota.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Le **dimensioni** possono essere utilizzate solo con gli oggetti [flusso](./stream-object-ado.md) aperti.  
   
 > [!NOTE]

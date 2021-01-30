@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Level
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 34dc7bc7eb6d80b3ec50cb1838cda0d0e419053b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ebbebb2150cbe9c03e51ac296c39c362a6670e1d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986512"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169806"
 ---
 # <a name="level-object-ado-md"></a>Oggetto Level (ADO MD)
 Contiene un set di membri, ognuno dei quali ha lo stesso rango all'interno di una gerarchia.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Con le raccolte e le proprietà di un oggetto **livello** , è possibile eseguire le operazioni seguenti:  
   
 -   Identificare il **livello** con le proprietà [Name](./name-property-ado-md.md) e [UniqueName](./uniquename-property-ado-md.md) .  
@@ -43,7 +43,7 @@ Contiene un set di membri, ognuno dei quali ha lo stesso rango all'interno di un
   
  La raccolta **Properties** contiene proprietà fornite dal provider. Nella tabella seguente sono elencate le proprietà che potrebbero essere disponibili. L'elenco di proprietà effettivo può variare a seconda dell'implementazione del provider. Per un elenco più completo delle proprietà disponibili, vedere la documentazione relativa al provider.  
   
-|Name|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |CatalogName|Nome del catalogo a cui appartiene il cubo.|  
 |CubeName|Nome del cubo.|  

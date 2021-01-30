@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - DataControl
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81f7d1a3ca15eaf2ebc2bb6dbaff20ba7762d89c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 5c65d8f639ec1747e7085f8d88c266ed6b6299d4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721102"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169003"
 ---
 # <a name="datacontrol-object-rds"></a>Oggetto DataControl (Servizi Desktop remoto)
 Associa un [Recordset](../ado-api/recordset-object-ado.md) di query di dati a uno o più controlli, ad esempio una casella di testo, un controllo griglia o una casella combinata, per visualizzare i dati del **Recordset** in una pagina Web.  
@@ -47,7 +47,7 @@ Associa un [Recordset](../ado-api/recordset-object-ado.md) di query di dati a un
 > [!NOTE]
 >  Se viene ricevuto un errore, il Servizi Desktop remoto [. DataSpace](./dataspace-object-rds.md) o Servizi Desktop remoto **. L'oggetto DataControl** non viene caricato, assicurarsi di usare l'ID classe corretto. Gli ID di classe per questi oggetti sono stati modificati rispetto alla versione 1,0 e 1,1. Tenere inoltre presente che quando si utilizza l'oggetto di **controllo** Servizi Desktop remoto è necessario impostare anche le colonne che ammettono valori null.  
   
- Per uno scenario di base, è necessario impostare solo le proprietà **SQL**, **Connect**e **server** del Servizi Desktop remoto **. Oggetto DataControl** , che chiamerà automaticamente l'oggetto business predefinito, [RDSServer. DataFactory](./datafactory-object-rdsserver.md).  
+ Per uno scenario di base, è necessario impostare solo le proprietà **SQL**, **Connect** e **server** del Servizi Desktop remoto **. Oggetto DataControl** , che chiamerà automaticamente l'oggetto business predefinito, [RDSServer. DataFactory](./datafactory-object-rdsserver.md).  
   
  Tutte le proprietà in Servizi Desktop remoto **. DataControl** è facoltativo perché gli oggetti business personalizzati possono sostituire le proprie funzionalità.  
   
@@ -72,7 +72,7 @@ Associa un [Recordset](../ado-api/recordset-object-ado.md) di query di dati a un
   
 -   Uso di **adCmdTableDirect**.  
   
- **RDS. **Per impostazione predefinita, l'oggetto DataControl viene eseguito in modalità asincrona. Se è necessaria l'esecuzione sincrona per l'applicazione, impostare il parametro [ExecuteOptions](./executeoptions-property-rds.md) uguale a **adcExecSync** e il parametro [FetchOptions](./fetchoptions-property-rds.md) uguale a **adcFetchUpFront**, come illustrato nell'esempio seguente.  
+ **RDS.** Per impostazione predefinita, l'oggetto DataControl viene eseguito in modalità asincrona. Se è necessaria l'esecuzione sincrona per l'applicazione, impostare il parametro [ExecuteOptions](./executeoptions-property-rds.md) uguale a **adcExecSync** e il parametro [FetchOptions](./fetchoptions-property-rds.md) uguale a **adcFetchUpFront**, come illustrato nell'esempio seguente.  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"   

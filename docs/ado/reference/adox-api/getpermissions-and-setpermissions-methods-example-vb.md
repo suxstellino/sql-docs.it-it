@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dd933007e37f193b9574999137ebd75371f8dda9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 251616700bd2c2cd45d18a4ddec72e0d1784e7bd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984452"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169397"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>Esempio dei metodi GetPermissions e SetPermissions (VB)
 In questo esempio vengono illustrati i metodi [GetPermissions](./getpermissions-method-adox.md) e [sepermissions](./setpermissions-method-adox.md) . Il codice seguente fornisce l'accesso completo per la tabella Orders all'utente amministratore.  

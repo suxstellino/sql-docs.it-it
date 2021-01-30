@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset21::Seek
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3b2058751177d0498e89d1f9bd631a3151490c9d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a7974464ad6302e7ce59b1ce458a46c8b43bcf45
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989162"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170284"
 ---
 # <a name="seek-method"></a>Metodo Seek
 Esegue una ricerca nell'indice di un [Recordset](./recordset-object-ado.md) per individuare rapidamente la riga che corrisponde ai valori specificati e imposta la posizione della riga corrente su quella riga.  
@@ -39,10 +39,10 @@ recordset.Seek KeyValues, SeekOption
  Matrice di valori **Variant** . Un indice è costituito da una o più colonne e la matrice contiene un valore da confrontare con ogni colonna corrispondente.  
   
  *SeekOption*  
- Valore [SeekEnum](./seekenum.md) che specifica il tipo di confronto da eseguire tra le colonne dell'indice e i relativi *valori*di base.  
+ Valore [SeekEnum](./seekenum.md) che specifica il tipo di confronto da eseguire tra le colonne dell'indice e i relativi *valori* di base.  
   
-## <a name="remarks"></a>Osservazioni  
- Utilizzare il metodo **Seek** insieme alla proprietà [index](./index-property.md) se il provider sottostante supporta indici nell'oggetto **Recordset** . Utilizzare il metodo [Supports](./supports-method.md)**(adSeek)** per determinare se il provider sottostante supporta **Seek**e il metodo **Supports (adIndex)** per determinare se il provider supporta gli indici. Ad esempio, il [provider di OLE DB per Microsoft Jet](../../guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) supporta la **ricerca** e l' **Indice**.  
+## <a name="remarks"></a>Commenti  
+ Utilizzare il metodo **Seek** insieme alla proprietà [index](./index-property.md) se il provider sottostante supporta indici nell'oggetto **Recordset** . Utilizzare il metodo [Supports](./supports-method.md)**(adSeek)** per determinare se il provider sottostante supporta **Seek** e il metodo **Supports (adIndex)** per determinare se il provider supporta gli indici. Ad esempio, il [provider di OLE DB per Microsoft Jet](../../guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) supporta la **ricerca** e l' **Indice**.  
   
  Se **Seek** non trova la riga desiderata, non si verifica alcun errore e la riga viene posizionata alla fine del **Recordset**. Impostare la proprietà **index** sull'indice desiderato prima di eseguire questo metodo.  
   

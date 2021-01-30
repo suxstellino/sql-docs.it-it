@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Command25::State
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d118ed6d695f8f047640f0ef16c139204ae36277
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 517ffc71b5e2a95ba5f85fcc9d3561ce82b9ec86
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988842"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170204"
 ---
 # <a name="state-property-ado"></a>Proprietà State (ADO)
 Indica per tutti gli oggetti applicabili se lo stato dell'oggetto è aperto o chiuso. Se l'oggetto esegue un metodo asincrono, indica se lo stato corrente dell'oggetto è la connessione, l'esecuzione o il recupero.  
@@ -29,7 +29,7 @@ Indica per tutti gli oggetti applicabili se lo stato dell'oggetto è aperto o ch
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un valore **Long** che può essere un valore [ObjectStateEnum](./objectstateenum.md) . Il valore predefinito è **adStateClosed**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È possibile utilizzare la proprietà **state** per determinare lo stato corrente di un determinato oggetto in qualsiasi momento.  
   
  La proprietà **state** dell'oggetto può avere una combinazione di valori. Se, ad esempio, un'istruzione è in esecuzione, questa proprietà avrà un valore combinato di **adStateOpen** e **adStateExecuting**.  

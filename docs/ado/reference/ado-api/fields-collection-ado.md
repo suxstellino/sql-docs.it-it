@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Fields
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f16fd27e7bee9d3f9e922de4db625b897266a61
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2e16bf602bd0c54b425587fcf1a50d2cc60b2aa7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973122"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167354"
 ---
 # <a name="fields-collection-ado"></a>Raccolta Fields (ADO)
 Contiene tutti gli oggetti [campo](./field-object.md) di un [Recordset](./recordset-object-ado.md) o di un oggetto [record](./record-object-ado.md) .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Un oggetto **Recordset** include una raccolta **Fields** costituita da oggetti **Field** . Ogni oggetto **campo** corrisponde a una colonna nel **Recordset**. È possibile popolare la raccolta **Fields** prima di aprire il **Recordset** chiamando il metodo [Refresh](./refresh-method-ado.md) sulla raccolta.  
   
 > [!NOTE]
@@ -36,7 +36,7 @@ Contiene tutti gli oggetti [campo](./field-object.md) di un [Recordset](./record
   
  La raccolta **Fields** include un metodo [Append](./append-method-ado.md) , che consente di creare e aggiungere in modo provvisorio un oggetto **campo** alla raccolta e un metodo **Update** , che finalizza eventuali aggiunte o eliminazioni.  
   
- Un oggetto **record** dispone di due campi speciali che possono essere indicizzati con costanti [FieldEnum](./fieldenum.md) . Una costante accede a un campo contenente il flusso predefinito per il **record**e l'altro accede a un campo contenente la stringa URL assoluta per il **record**.  
+ Un oggetto **record** dispone di due campi speciali che possono essere indicizzati con costanti [FieldEnum](./fieldenum.md) . Una costante accede a un campo contenente il flusso predefinito per il **record** e l'altro accede a un campo contenente la stringa URL assoluta per il **record**.  
   
  Alcuni provider, ad esempio il [provider Microsoft OLE DB per Internet Publishing](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md), possono popolare la **raccolta Fields** con un subset di campi disponibili per il **record** o il **Recordset**. Gli altri campi non verranno aggiunti alla raccolta fino a quando non vi viene fatto riferimento in base al nome o indicizzati dal codice.  
   

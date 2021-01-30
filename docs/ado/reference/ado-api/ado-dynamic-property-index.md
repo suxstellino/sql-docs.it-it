@@ -6,18 +6,18 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - dynamic properties [ADO], index
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bbf4cdae12da71f5fc4d3b8fbc11b7ca64c46c5b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4d3d765cbeba49a5c34bbc5529d833cefc5bb1ab
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976492"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167911"
 ---
 # <a name="ado-dynamic-property-index"></a>Indice delle proprietà dinamiche ADO
 I provider di dati, i provider di servizi e i componenti del servizio possono aggiungere proprietà dinamiche alle raccolte di **Proprietà** degli oggetti di [connessione](./connection-object-ado.md) e [Recordset](./recordset-object-ado.md) non aperti. Un provider specificato può anche inserire proprietà aggiuntive quando questi oggetti sono aperti. Alcune di queste proprietà sono elencate nella sezione [proprietà dinamiche ADO](./ado-dynamic-properties.md) . Ulteriori informazioni sono elencate sotto i provider specifici nella sezione [appendice a: Providers](../../guide/appendixes/appendix-a-providers.md) .  
@@ -57,7 +57,7 @@ I provider di dati, i provider di servizi e i componenti del servizio possono ag
 |Dimensioni massime riga|DBPROP_MAXROWSIZE|  
 |Dimensioni massime righe includono BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|  
 |Numero massimo di tabelle in SELECT|DBPROP_MAXTABLESINSELECT|  
-|Mode|DBPROP_INIT_MODE|  
+|Modalità|DBPROP_INIT_MODE|  
 |Set di parametri multipli|DBPROP_MULTIPLEPARAMSETS|  
 |Risultati multipli|DBPROP_MULTIPLERESULTS|  
 |Più oggetti di archiviazione|DBPROP_MULTIPLESTORAGEOBJECTS|  
@@ -81,11 +81,11 @@ I provider di dati, i provider di servizi e i componenti del servizio possono ag
 |Nome descrittivo provider|DBPROP_PROVIDERFRIENDLYNAME|  
 |Provider Name|DBPROP_PROVIDERFILENAME|  
 |Versione del provider|DBPROP_PROVIDERVER|  
-|Origine dati di sola lettura|DBPROP_DATASOURCEREADONLY|  
+|Read-Only origine dati|DBPROP_DATASOURCEREADONLY|  
 |Conversioni di set di righe nel comando|DBPROP_ROWSETCONVERSIONSONCOMMAND|  
 |Termine schema|DBPROP_SCHEMATERM|  
 |Utilizzo dello schema|DBPROP_SCHEMAUSAGE|  
-|Supporto SQL|DBPROP_SQLSUPPORT|  
+|Supporto di SQL|DBPROP_SQLSUPPORT|  
 |Archiviazione strutturata|DBPROP_STRUCTUREDSTORAGE|  
 |Supporto sottoquery|DBPROP_SUBQUERIES|  
 |Termine tabella|DBPROP_TABLETERM|  
@@ -126,7 +126,7 @@ I provider di dati, i provider di servizi e i componenti del servizio possono ag
 |IStream|DBPROP_ISTREAM|  
 |ISupportErrorInfo|DBPROP_ISUPPORTERRORINFO|  
 |Ordine di accesso|DBPROP_ACCESSORDER|  
-|Set di righe solo Accodamento|DBPROP_APPENDONLY|  
+|Set di righe Append-Only|DBPROP_APPENDONLY|  
 |Elaborazione asincrona dei set di righe|DBPROP_ROWSET_ASYNCH|  
 |Ricalcolo automatico|DBPROP_ADC_AUTORECALC|  
 |Dimensioni recupero in background|DBPROP_ASYNCHFETCHSIZE|  
@@ -159,7 +159,7 @@ I provider di dati, i provider di servizi e i componenti del servizio possono ag
 |Numero massimo di righe aperte|DBPROP_MAXOPENROWS|  
 |Numero massimo di righe in sospeso|DBPROP_MAXPENDINGROWS|  
 |Numero massimo di righe|DBPROP_MAXROWS|  
-|Utilizzo della memoria|DBPROP_MEMORYUSAGE|  
+|Utilizzo memoria|DBPROP_MEMORYUSAGE|  
 |Granularità delle notifiche|DBPROP_NOTIFICATIONGRANULARITY|  
 |Fasi di notifica|DBPROP_NOTIFICATIONPHASES|  
 |Oggetti sottoposti a transazione|DBPROP_TRANSACTEDOBJECT|  

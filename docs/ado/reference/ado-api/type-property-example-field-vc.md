@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 64493bab591d4f7a34a5e189a88189664156b63d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d3f433434833ee07e4ebbf999e2ef2ca122f44fc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988252"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170065"
 ---
 # <a name="type-property-example-field-vc"></a>Esempio della proprietà Type (Field) (VC++)
-In questo esempio viene illustrata la proprietà [Type](./type-property-ado.md) visualizzando il nome della costante che corrisponde al valore della proprietà **Type** di tutti gli oggetti [Field](./field-object.md) della tabella ***Employees*** . Per eseguire questa procedura, è necessaria la funzione FieldType.  
+In questo esempio viene illustrata la proprietà [Type](./type-property-ado.md) visualizzando il nome della costante che corrisponde al valore della proprietà **Type** di tutti gli oggetti [Field](./field-object.md) nella tabella **_Employees_* _. Per eseguire questa procedura, è necessaria la funzione FieldType.  
   
 ## <a name="example"></a>Esempio  
   
@@ -154,7 +154,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Campi nella tabella Employee:**  
+ _ *Campi nella tabella Employee:**  
  **Nome: emp_id**  
  **Tipo: adChar**  
  **Nome: fname**  

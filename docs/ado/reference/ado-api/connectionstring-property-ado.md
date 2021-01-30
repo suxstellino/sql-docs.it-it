@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection15::ConnectionString
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2add76a640e89bebe8a941afa5896bb2300750a9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3a5e9bc25728de2859074136adb1a28349b2806d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974772"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167717"
 ---
 # <a name="connectionstring-property-ado"></a>Proprietà ConnectionString (ADO)
 Indica le informazioni utilizzate per stabilire una connessione a un'origine dati.  
@@ -29,7 +29,7 @@ Indica le informazioni utilizzate per stabilire una connessione a un'origine dat
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **stringa** .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare la proprietà **ConnectionString** per specificare un'origine dati passando una stringa di connessione dettagliata contenente una serie di istruzioni *argument* *= value* separate da punti e virgola.  
   
  ADO supporta cinque argomenti per la proprietà **ConnectionString** . tutti gli altri argomenti passano direttamente al provider senza alcuna elaborazione da parte di ADO. Gli argomenti supportati da ADO sono i seguenti.  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Index::PrimaryKey
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 30185312-5e09-4804-852d-e505d660113a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 79a3d8567c4f6a878611cbed890f320fe2f7ac9e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e42da0195d1e95bbeac1939d69b23f9955ad4677
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983652"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169266"
 ---
 # <a name="primarykey-property-adox"></a>Proprietà PrimaryKey (ADOX)
 Indica se l'indice rappresenta la chiave primaria nella tabella.  
@@ -33,7 +33,7 @@ Indica se l'indice rappresenta la chiave primaria nella tabella.
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta e restituisce un valore **booleano** .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il valore predefinito è **False**.  
   
  Questa proprietà è di sola lettura sugli oggetti [Indice](./index-object-adox.md) già accodati a una raccolta.  

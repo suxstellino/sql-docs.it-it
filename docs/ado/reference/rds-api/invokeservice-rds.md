@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - InvokeService [RDS]
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d3dc0ca3744f715f080e5e34a9d4cd5e88bc8b6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4d162b0291a19a80ec0133307c785ad3af588aee
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724492"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168890"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (Servizi Desktop remoto)
 Restituisce un puntatore all'interfaccia richiesta su una versione più idonea dell'oggetto.  
@@ -50,7 +50,7 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
 ## <a name="return-value"></a>Valore restituito  
  Valore HRESULT che indica se la chiamata al metodo **InvokeService** è stata eseguita correttamente.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  L'implementazione del motore di cursori RDS di **InvokeService** accetta il set di righe di input (o più oggetti risultati), popola il motore di cursori dal set di righe di input e quindi restituisce un puntatore su se stesso.  
   
 ## <a name="applies-to"></a>Si applica a  

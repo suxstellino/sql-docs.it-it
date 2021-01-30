@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38a28bf434998943b07ef6463970c26510195299
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1a4cb18c49513ff5f80e5be22f5480e4f6464cb4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974902"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167736"
 ---
 # <a name="connection-object-ado"></a>Oggetto Connection (ADO)
 Rappresenta una connessione aperta a un'origine dati.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Un oggetto **Connection** rappresenta una sessione univoca con un'origine dati. In un sistema di database client/server, può essere equivalente a una connessione di rete effettiva al server. A seconda della funzionalità supportata dal provider, alcune raccolte, metodi o proprietà di un oggetto **connessione** potrebbero non essere disponibili.  
   
  Con le raccolte, i metodi e le proprietà di un oggetto **connessione** , è possibile eseguire le operazioni seguenti:  
@@ -64,7 +64,7 @@ Rappresenta una connessione aperta a un'origine dati.
 >  Non usare questa funzionalità (chiamando un comando denominato o stored procedure come se fosse un metodo nativo sull'oggetto **Connection** ) in un'applicazione Microsoft® .NET Framework, perché l'implementazione sottostante della funzionalità è in conflitto con il modo in cui il .NET Framework interagisce con com.  
   
 ## <a name="execute-a-command-as-a-native-method-of-a-connection-object"></a>Eseguire un comando come metodo nativo di un oggetto Connection  
- Per eseguire un comando, assegnare un nome al comando utilizzando la proprietà [nome](./name-property-ado.md) oggetto **comando** . Impostare la proprietà **ActiveConnection** dell'oggetto **Command** sulla connessione. Eseguire quindi un'istruzione in cui il nome del comando viene usato come se fosse un metodo nell'oggetto **Connection** , seguito da qualsiasi parametro e da un oggetto **Recordset** se vengono restituite righe. Impostare le proprietà del **Recordset** per personalizzare il **Recordset**risultante. Ad esempio:  
+ Per eseguire un comando, assegnare un nome al comando utilizzando la proprietà [nome](./name-property-ado.md) oggetto **comando** . Impostare la proprietà **ActiveConnection** dell'oggetto **Command** sulla connessione. Eseguire quindi un'istruzione in cui il nome del comando viene usato come se fosse un metodo nell'oggetto **Connection** , seguito da qualsiasi parametro e da un oggetto **Recordset** se vengono restituite righe. Impostare le proprietà del **Recordset** per personalizzare il **Recordset** risultante. Ad esempio:  
   
 ```  
 Dim cnn As New ADODB.Connection  

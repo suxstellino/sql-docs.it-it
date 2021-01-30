@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c4eb8b682e7e539c1c0af784eb70016fa1bb25c1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6ab7be112f27f16d25d613b21f9ecbe5b14fcbbd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975962"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167867"
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>Esempio di proprietà Attributes e Name (VC + +)
 In questo esempio viene visualizzato il valore della proprietà [Attributes](./attributes-property-ado.md) per gli oggetti [Connection](./connection-object-ado.md), [Field](./field-object.md)e [Property](./property-object-ado.md) . Usa la proprietà [Name](./name-property-ado.md) per visualizzare il nome di ogni **campo** e oggetto **Property** .  

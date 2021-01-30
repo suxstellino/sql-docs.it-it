@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection15::raw_RollbackTrans
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02c19026d519cf5c115dedfbe4c4dcdbf89cd37b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: de30ee4629d66371e41180e0caf171a91237d65c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975932"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167859"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>Metodi BeginTrans, CommitTrans e RollbackTrans (ADO)
 Questi metodi di transazione gestiscono l'elaborazione delle transazioni all'interno di un oggetto [connessione](./connection-object-ado.md) come indicato di seguito:  
@@ -71,7 +71,7 @@ object.RollbackTrans
  A seconda della proprietà [Attributes](./attributes-property-ado.md) dell'oggetto **Connection** , chiamare i metodi **CommitTrans** o **RollbackTrans** può avviare automaticamente una nuova transazione. Se la proprietà **Attributes** è impostata su **adXactCommitRetaining**, il provider avvia automaticamente una nuova transazione dopo una chiamata a **CommitTrans** . Se la proprietà **Attributes** è impostata su **adXactAbortRetaining**, il provider avvia automaticamente una nuova transazione dopo una chiamata a **RollbackTrans** .  
   
 ## <a name="remote-data-service"></a>Remote Data Service  
- I metodi **BeginTrans**, **CommitTrans**e **RollbackTrans** non sono disponibili in un oggetto **connessione** sul lato client.  
+ I metodi **BeginTrans**, **CommitTrans** e **RollbackTrans** non sono disponibili in un oggetto **connessione** sul lato client.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Connection (ADO)](./connection-object-ado.md)  

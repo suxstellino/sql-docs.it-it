@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Catalog
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e62b4eedd835cff2d5bd99e054648339ffd9bc0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 834594c957c05d4e2acef78bb772afcbe83b685a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987302"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169969"
 ---
 # <a name="catalog-object-ado-md"></a>Oggetto Catalog (ADO MD)
 Contiene informazioni di schema multidimensionali, ovvero cubi e dimensioni sottostanti, gerarchie, livelli e membri, specifiche di un provider di dati multidimensionali (MDP).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Con le raccolte e le proprietà di un oggetto **Catalogo** , è possibile eseguire le operazioni seguenti:  
   
 -   Aprire il catalogo impostando la proprietà [ActiveConnection](./activeconnection-property-ado-md.md) su un oggetto [connessione](../ado-api/connection-object-ado.md) ADO standard o su una stringa di connessione valida.  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Parameter::Direction
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d5732578-3434-4dcd-a9f7-db1abd1b3b94
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af002ff20ff3ad27ab2395529c533738ad797ea6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 8f202ed23634834d569cfa6b499074806572729d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973872"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167516"
 ---
 # <a name="direction-property"></a>Proprietà Direction
 Indica se il [parametro](../../../ado/reference/ado-api/parameter-object.md) rappresenta un parametro di input, un parametro di output, un input e un parametro di output o se il parametro è il valore restituito da un stored procedure.  
@@ -29,7 +29,7 @@ Indica se il [parametro](../../../ado/reference/ado-api/parameter-object.md) rap
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare la proprietà **Direction** per specificare il modo in cui un parametro viene passato a o da una routine. La proprietà **Direction** è di lettura/scrittura; in questo modo è possibile lavorare con i provider che non restituiscono queste informazioni o per impostare queste informazioni quando non si desidera che ADO effettui una chiamata aggiuntiva al provider per recuperare le informazioni sui parametri.  
   
  Non tutti i provider possono determinare la direzione dei parametri nelle stored procedure. In questi casi, è necessario impostare la proprietà **Direction** prima di eseguire la query.  

@@ -1,5 +1,5 @@
 ---
-description: Tabella univoca, schema univoco, proprietà del catalogo univoco-Dynamic (ADO)
+description: Tabella univoca, schema univoco, Properties-Dynamic catalogo univoco (ADO)
 title: Controllare le modifiche apportate alla tabella di base del recordset (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Unique Table property [ADO]
@@ -16,26 +16,26 @@ helpviewer_keywords:
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 50a17938a2e1cffd3cc0bf76d3cc3758358318d2
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 485fe00e6f55e6916341fd4420f0aaaa395fe54b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988162"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170048"
 ---
-# <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Tabella univoca, schema univoco, proprietà del catalogo univoco-Dynamic (ADO)
+# <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Tabella univoca, schema univoco, Properties-Dynamic catalogo univoco (ADO)
 Consente di controllare in modo accurato le modifiche apportate a una determinata tabella di base in un [Recordset](./recordset-object-ado.md) costituito da un'operazione di join in più tabelle di base.  
   
 -   **Tabella univoca** specifica il nome della tabella di base su cui sono consentiti aggiornamenti, inserimenti ed eliminazioni.  
   
--   **Schema univoco** specifica lo *schema*o il nome del proprietario della tabella.  
+-   **Schema univoco** specifica lo *schema* o il nome del proprietario della tabella.  
   
--   **Unique Catalog** specifica il *Catalogo*o il nome del database che contiene la tabella.  
+-   **Unique Catalog** specifica il *Catalogo* o il nome del database che contiene la tabella.  
   
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **stringa** che rappresenta il nome di una tabella, di uno schema o di un catalogo.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La tabella di base desiderata viene identificata in modo univoco dai relativi nomi di catalogo, schema e tabella. Quando viene impostata la proprietà di **tabella univoca** , per trovare la tabella di base vengono utilizzati i valori delle proprietà univoche **dello schema** o del **catalogo univoco** . È previsto, ma non obbligatorio, che sia l'impostazione **dello schema univoco** che delle proprietà del **Catalogo univoche** prima che venga impostata la proprietà della **tabella univoca** .  
   
  La chiave primaria della **tabella univoca** viene considerata come la chiave primaria dell'intero **Recordset**. Si tratta della chiave utilizzata per qualsiasi metodo che richiede una chiave primaria.  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Index::get_IndexNulls
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 313b0bf7-3f37-4823-8fca-bd9c80e078a7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 055b873866758c4aede2a3f6364eb99036159427
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: bf41734c44e4ae2347cdaf560167b72003716f7f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984152"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169354"
 ---
 # <a name="indexnulls-property-adox"></a>Proprietà IndexNulls (ADOX)
 Indica se i record con valori null nei rispettivi campi di indice contengono voci di indice.  
@@ -33,7 +33,7 @@ Indica se i record con valori null nei rispettivi campi di indice contengono voc
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta e restituisce un valore [AllowNullsEnum](./allownullsenum.md) . Il valore predefinito è **adIndexNullsDisallow**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questa proprietà è di sola lettura sugli oggetti [Indice](./index-object-adox.md) già accodati a una raccolta.  
   
 ## <a name="applies-to"></a>Si applica a  

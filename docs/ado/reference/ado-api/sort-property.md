@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::get_Sort
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9397d99d2d020fcf2c703bd96420ee4af4b1a610
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 57f46248dc23d92752a6354a557285daeaf0a0f8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988992"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170251"
 ---
 # <a name="sort-property"></a>Proprietà Sort
 Indica uno o più nomi di campo in cui è ordinato il [Recordset](./recordset-object-ado.md) e se ogni campo viene ordinato in ordine crescente o decrescente.  
@@ -35,7 +35,7 @@ Indica uno o più nomi di campo in cui è ordinato il [Recordset](./recordset-ob
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **stringa** che indica i nomi dei campi nel **Recordset** in cui eseguire l'ordinamento. Ogni nome è separato da una virgola e, facoltativamente, è seguito da uno spazio vuoto e dalla parola chiave **ASC**, che ordina il campo in ordine crescente, o **desc**, che ordina il campo in ordine decrescente. Per impostazione predefinita, se non viene specificata alcuna parola chiave, il campo viene ordinato in ordine crescente.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questa proprietà richiede che la proprietà [CursorLocation](./cursorlocation-property-ado.md) sia impostata su **adUseClient**. Viene creato un indice temporaneo per ogni campo specificato nella proprietà **Sort** se non esiste già un indice.  
   
  L'operazione di ordinamento è efficiente perché i dati non vengono ridisposti fisicamente, ma sono semplicemente accessibili nell'ordine specificato dall'indice.  
@@ -46,7 +46,7 @@ Indica uno o più nomi di campo in cui è ordinato il [Recordset](./recordset-ob
   
  Se si imposta la proprietà **Sort** su una stringa vuota, le righe vengono reimpostate sull'ordine originale ed eliminano gli indici temporanei. Gli indici esistenti non verranno eliminati.  
   
- Si supponga che un **Recordset** contenga tre campi denominati *FirstName*, *middleInitial*e *LastName*. Impostare la proprietà **Sort** sulla stringa " `lastName DESC, firstName ASC` ", che ordina il **Recordset** in base al cognome in ordine decrescente, quindi in base al nome in ordine crescente. Il secondo iniziale viene ignorato.  
+ Si supponga che un **Recordset** contenga tre campi denominati *FirstName*, *middleInitial* e *LastName*. Impostare la proprietà **Sort** sulla stringa " `lastName DESC, firstName ASC` ", che ordina il **Recordset** in base al cognome in ordine decrescente, quindi in base al nome in ordine crescente. Il secondo iniziale viene ignorato.  
   
  Nessun campo può essere denominato "ASC" o "DESC" perché questi nomi sono in conflitto con le parole chiave **ASC** e **desc**. È possibile creare un alias per un campo con un nome in conflitto usando la parola chiave **As** nella query che restituisce il **Recordset**.  
   
@@ -56,6 +56,6 @@ Indica uno o più nomi di campo in cui è ordinato il [Recordset](./recordset-ob
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di proprietà Sort (VB)](./sort-property-example-vb.md)   
  [Esempio di proprietà Sort (VC + +)](./sort-property-example-vc.md)   
- [Optimize Property-Dynamic (ADO)](./optimize-property-dynamic-ado.md)   
+ [Ottimizza Property-Dynamic (ADO)](./optimize-property-dynamic-ado.md)   
  [Proprietà SortColumn (RDS)](../rds-api/sortcolumn-property-rds.md)   
  [Proprietà SortDirection (Servizi Desktop remoto)](../rds-api/sortdirection-property-rds.md)

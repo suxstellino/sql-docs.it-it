@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Record::Source
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9c551e52864caca8834350d5107b76aed88700d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 232bebc8eabf96584a4513c3197f329ecf70fe87
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988942"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170236"
 ---
 # <a name="source-property-ado-record"></a>Proprietà Source (Record - ADO)
 Indica l'origine dati o l'oggetto rappresentato dal [record](./record-object-ado.md).  
@@ -34,10 +34,10 @@ Indica l'origine dati o l'oggetto rappresentato dal [record](./record-object-ado
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **Variant** che indica l'entità rappresentata dal **record**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La proprietà **source** restituisce l'argomento di *origine* del metodo di [apertura](./open-method-ado-record.md) dell'oggetto **record** . Può contenere una stringa URL assoluta o relativa. È possibile utilizzare un URL assoluto senza impostare la proprietà [ActiveConnection](./activeconnection-property-ado.md) per aprire direttamente l'oggetto **record** . In questo caso viene creato un oggetto **connessione** implicito.  
   
- La proprietà **source** può inoltre contenere un riferimento a un **Recordset**già aperto, che consente di aprire un oggetto **record** che rappresenta la riga corrente nel **Recordset**.  
+ La proprietà **source** può inoltre contenere un riferimento a un **Recordset** già aperto, che consente di aprire un oggetto **record** che rappresenta la riga corrente nel **Recordset**.  
   
  La proprietà **source** può inoltre contenere un riferimento a un oggetto [Command](./command-object-ado.md) che restituisce una singola riga di dati dal provider.  
   

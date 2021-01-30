@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Position::Ordinal
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6efe8b5d-a2d5-43a9-a5ea-f9244f8d4ec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6d2485e8331a3eee95cfd5937ffbdbd570b2ecdc
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a560b34e6ec55892a6f779c4808e5a7c69d99bca
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986192"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169736"
 ---
 # <a name="ordinal-property-ado-md-position"></a>Proprietà Ordinal (Position - ADO MD)
 Identifica in modo univoco una [posizione](./position-object-ado-md.md) lungo un asse.  
@@ -30,7 +30,7 @@ Identifica in modo univoco una [posizione](./position-object-ado-md.md) lungo un
 ## <a name="return-values"></a>Valori restituiti  
  Restituisce un valore **Long** integer ed è di sola lettura.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La proprietà **ordinale** di un oggetto [position](./position-object-ado-md.md) corrisponde all'indice della **posizione** all'interno dell' [insieme Positions](./positions-collection-ado-md.md) .  
   
  È possibile recuperare rapidamente una cella utilizzando il **numero ordinale** della **posizione** lungo ogni asse con la proprietà [Item](./item-property-ado-md-cellset.md) dell'oggetto [cellt](./cellset-object-ado-md.md) .  

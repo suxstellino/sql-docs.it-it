@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Field
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4768281228e39ed8eeb6ffc003e463bf8a53450d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6042032018ea75eb7b2b13bb677ad48dca56290b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973232"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167377"
 ---
 # <a name="field-object"></a>Oggetto Field
 Rappresenta una colonna di dati con un tipo di dati comune.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Ogni oggetto **campo** corrisponde a una colonna nel [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Usare la proprietà [value](../../../ado/reference/ado-api/value-property-ado.md) degli oggetti **Field** per impostare o restituire i dati per il record corrente. A seconda delle funzionalità esposte dal provider, alcune raccolte, metodi o proprietà di un oggetto **campo** potrebbero non essere disponibili.  
   
  Con le raccolte, i metodi e le proprietà di un oggetto **campo** , è possibile eseguire le operazioni seguenti:  
@@ -47,7 +47,7 @@ Rappresenta una colonna di dati con un tipo di dati comune.
   
 -   Se il provider supporta gli aggiornamenti batch, risolvere le discrepanze nei valori di campo durante l'aggiornamento in batch con le proprietà [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) e [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) .  
   
- Tutte le proprietà dei metadati (**Name**, **Type**, **DefinedSize**, **Precision**e **NumericScale**) sono disponibili prima di aprire il **Recordset**dell'oggetto **campo** . L'impostazione in quel momento è utile per la costruzione dinamica dei moduli.  
+ Tutte le proprietà dei metadati (**Name**, **Type**, **DefinedSize**, **Precision** e **NumericScale**) sono disponibili prima di aprire il **Recordset** dell'oggetto **campo** . L'impostazione in quel momento è utile per la costruzione dinamica dei moduli.  
   
  Questa sezione contiene l'argomento seguente.  
   

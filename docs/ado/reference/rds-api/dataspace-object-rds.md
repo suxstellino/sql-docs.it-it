@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - DataSpace object [RDS]
 ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e30697dd8b751ec3122683a792a242e6faa0fff0
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: d9ca4337b26a52c28619f703456693a0c715a86a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91720852"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168966"
 ---
 # <a name="dataspace-object-rds"></a>Oggetto DataSpace (Servizi Desktop remoto)
 > [!IMPORTANT]
@@ -29,7 +29,7 @@ ms.locfileid: "91720852"
   
  Remote Data Service richiede proxy di oggetti business in modo che i componenti lato client possano comunicare con gli oggetti business presenti nel livello intermedio. I proxy semplificano la creazione di pacchetti, la disassemblaggio e il trasporto (marshalling) dei dati del [Recordset](../ado-api/recordset-object-ado.md) dell'applicazione attraverso i limiti del processo o del computer.  
   
- Remote Data Service USA **RDS. ** Metodo [CreateObject](./createobject-method-rds.md) dell'oggetto DataSpace per la creazione di proxy di oggetti business. Il proxy dell'oggetto business viene creato dinamicamente ogni volta che viene creata un'istanza della relativa controparte dell'oggetto business di livello intermedio. Remote Data Service supporta i protocolli seguenti: HTTP, HTTPS (HTTP Secure Sockets), DCOM e in-process (i componenti client e l'oggetto business si trovano nello stesso computer).  
+ Remote Data Service USA **RDS.** Metodo [CreateObject](./createobject-method-rds.md) dell'oggetto DataSpace per la creazione di proxy di oggetti business. Il proxy dell'oggetto business viene creato dinamicamente ogni volta che viene creata un'istanza della relativa controparte dell'oggetto business di livello intermedio. Remote Data Service supporta i protocolli seguenti: HTTP, HTTPS (HTTP Secure Sockets), DCOM e in-process (i componenti client e l'oggetto business si trovano nello stesso computer).  
   
 > [!NOTE]
 >  RDS si comporta in modo "senza stato" quando il Servizi Desktop remoto **. L'oggetto DataSpace** usa i protocolli http o HTTPS. Ovvero, qualsiasi informazione interna relativa a una richiesta client viene eliminata dopo che il server restituisce una risposta.  

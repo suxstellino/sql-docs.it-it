@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7cee9fa6460366dd727c2eb1c6ce26c43286ea51
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: eadbd94d0dca864b3d6e9c0a172e60845e7c584e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973042"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167341"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Esempio delle proprietà Filter e RecordCount (VB)
-In questo esempio viene aperto un [Recordset](./recordset-object-ado.md) nella tabella publishers del database ***pubs*** . USA quindi la proprietà [Filter](./filter-property.md) per limitare il numero di record visibili a tali autori in un determinato paese/area geografica. La proprietà **RecordCount** viene utilizzata per mostrare la differenza tra i recordset filtrati e non filtrati.  
+In questo esempio viene aperto un [Recordset](./recordset-object-ado.md) nella tabella Publishers nel database ***pubs** _. USA quindi la proprietà [Filter](./filter-property.md) per limitare il numero di record visibili a tali autori in un determinato paese/area geografica. La proprietà _ *RecordCount** viene utilizzata per mostrare la differenza tra i recordset filtrati e quelli non filtrati.  
   
 ```  
 'BeginFilterVB  

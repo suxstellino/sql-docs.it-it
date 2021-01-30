@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Handler property [ADO]
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5dc5a8cfc455d27a2bb17b40585e3e38cdd581cf
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 7562c5ddc3a8360f2c8672e7526c86b7f77af04d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722050"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168908"
 ---
 # <a name="handler-property-rds"></a>Proprietà Handler (Servizi Desktop remoto)
 Indica il nome di un programma di personalizzazione sul lato server (gestore) che estende la funzionalità di [RDSServer. DataFactory](./datafactory-object-rdsserver.md)ed eventuali parametri usati dal *gestore*.  
@@ -43,12 +43,12 @@ DataControl.Handler = String
  *Stringa*  
  Valore **stringa** che contiene il nome del gestore e qualsiasi parametro, tutti separati da virgole (ad esempio, `"handlerName,parm1,parm2,...,parm` *N* `"` ).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questa proprietà supporta la [personalizzazione](../../guide/remote-data-service/datafactory-customization.md), una funzionalità che richiede l'impostazione della proprietà [CursorLocation](../ado-api/cursorlocation-property-ado.md) su **adUseClient**.  
   
  Il nome del gestore e i relativi parametri, se presenti, sono separati da virgole (","). Si otterrà un comportamento imprevedibile se un punto e virgola (";") viene visualizzato in qualsiasi punto all'interno della *stringa*. È possibile scrivere un gestore personalizzato, purché supporti l'interfaccia **IDataFactoryHandler** .  
   
- Il nome del gestore predefinito è **MSDFMAP. Il gestore**e il relativo parametro predefinito sono un file di personalizzazione denominato **MSDFMAP.INI**. Utilizzare questa proprietà per richiamare file di personalizzazione alternativi creati dall'amministratore del server.  
+ Il nome del gestore predefinito è **MSDFMAP. Il gestore** e il relativo parametro predefinito sono un file di personalizzazione denominato **MSDFMAP.INI**. Utilizzare questa proprietà per richiamare file di personalizzazione alternativi creati dall'amministratore del server.  
   
  L'alternativa all'impostazione della proprietà **handler** consiste nel specificare un gestore e i parametri nella proprietà [ConnectionString](../ado-api/connectionstring-property-ado.md) . ovvero "**handler =**_handlerName, parametro1, parametro2,...;_".  
   

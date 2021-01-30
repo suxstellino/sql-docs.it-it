@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Cell
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b6fceeea4ebe6728ae4adf9bce52cb6b642a926d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c1fd0cdb2322b3cad507745a97faa6b74f245b40
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987211"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169955"
 ---
 # <a name="cell-object-ado-md"></a>Oggetto Cell (ADO MD)
 Rappresenta i dati all'intersezione delle coordinate dell'asse contenute in un oggetto Cell.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Un oggetto **cella** viene restituito dalla proprietà [Item](./item-property-ado-md-cellset.md) di un oggetto [cellt](./cellset-object-ado-md.md) .  
   
  Con le raccolte e le proprietà di un oggetto **cella** , è possibile eseguire le operazioni seguenti:  
@@ -43,7 +43,7 @@ Rappresenta i dati all'intersezione delle coordinate dell'asse contenute in un o
   
  La raccolta **Properties** contiene proprietà fornite dal provider. Nella tabella seguente sono elencate le proprietà che potrebbero essere disponibili. L'elenco di proprietà effettivo può variare a seconda dell'implementazione del provider. Per un elenco più completo delle proprietà disponibili, vedere la documentazione relativa al provider.  
   
-|Name|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |ColoreSfondo|Colore di sfondo utilizzato per la visualizzazione della cella.|  
 |FontFlags|Maschera di maschera che illustra in dettaglio gli effetti sul tipo di carattere.|  

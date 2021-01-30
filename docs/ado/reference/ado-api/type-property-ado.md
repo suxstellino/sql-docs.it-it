@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Parameter::Type
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f4dcfd3c22363ab4950e03844647f990a34f4d5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ac7cb237f0b3c3adb2621e8e7ad15912b907a4d7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988312"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170077"
 ---
 # <a name="type-property-ado"></a>Proprietà Type (ADO)
 Indica il tipo operativo o il tipo di dati di un [parametro](./parameter-object.md), un [campo](./field-object.md)o un oggetto [proprietà](./property-object-ado.md) .  
@@ -30,7 +30,7 @@ Indica il tipo operativo o il tipo di dati di un [parametro](./parameter-object.
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore [DataTypeEnum](./datatypeenum.md) .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Per gli oggetti **Parameter** , la proprietà **Type** è di lettura/scrittura. Per i nuovi oggetti **campo** aggiunti alla raccolta [Fields](./fields-collection-ado.md) di un [record](./record-object-ado.md), il **tipo** è in lettura/scrittura solo dopo che è stata specificata la proprietà [value](./value-property-ado.md) per il **campo** e il provider di dati ha aggiunto correttamente il nuovo **campo** chiamando il metodo [Update](./update-method.md) della raccolta **Fields** .  
   
  Per tutti gli altri oggetti, la proprietà **Type** è di sola lettura.  

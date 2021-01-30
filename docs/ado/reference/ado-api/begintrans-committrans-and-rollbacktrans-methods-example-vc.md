@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4ac19647-73e7-4edf-9913-25c8fd927e36
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 67cce0063dd0c41dbba173e246b4c3884fb3c8f1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: fab3def044f0e8b250be717d63e9ed716db52ca0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975882"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167844"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>Esempio di metodi BeginTrans, CommitTrans e RollbackTrans (VC + +)
-Questo esempio Mostra come modificare il tipo di libro di tutti i libri di psicologia nella tabella ***titles*** del database. Dopo che il metodo [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) ha avviato una transazione che isola tutte le modifiche apportate alla tabella ***titles*** , il metodo [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) Salva le modifiche. È possibile utilizzare il metodo [rollback](./begintrans-committrans-and-rollbacktrans-methods-ado.md) per annullare le modifiche salvate tramite il metodo [Update](./update-method.md) .  
+Questo esempio Mostra come modificare il tipo di libro di tutti i libri di psicologia nella tabella ***titles** _ del database. Dopo che il metodo [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) ha avviato una transazione che isola tutte le modifiche apportate alla tabella _*_titles_*_ , il metodo [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) Salva le modifiche. È possibile utilizzare il metodo [rollback](./begintrans-committrans-and-rollbacktrans-methods-ado.md) per annullare le modifiche salvate tramite il metodo [Update](./update-method.md) .  
   
 ## <a name="example"></a>Esempio  
   
@@ -76,7 +76,7 @@ void BeginTransX() {
    // Define ADO object pointers, initialize pointers on define.  These are in the ADODB::  namespace.  
    _RecordsetPtr rstTitles = NULL;  
    _ConnectionPtr pConnection = NULL;  
-   char * token1, * token2;  
+   char _ token1, * token2;  
   
    // Define Other Variables  
    HRESULT hr = S_OK;    

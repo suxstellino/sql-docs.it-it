@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Levels
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: fed8684a-b428-4ee4-8f8d-928abe4ad9ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c28c286157e9182be43a137e88828d3c162a5b9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 01c9a494376ebe2215d074bc9cd8ebac438eb677
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986452"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169783"
 ---
 # <a name="levels-collection-ado-md"></a>Raccolta Levels (ADO MD)
 Contiene gli oggetti [Level](./level-object-ado-md.md) che costituiscono una gerarchia.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **Levels** è una raccolta ADO standard. Utilizzando le proprietà e i metodi di una raccolta, è possibile eseguire le operazioni seguenti:  
   
 -   Ottenere il numero di oggetti nella raccolta con la proprietà [count](../ado-api/count-property-ado.md) .  

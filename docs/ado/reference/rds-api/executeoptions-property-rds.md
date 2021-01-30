@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - ExecuteOptions property [ADO], VBScript example
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8fe38de33ea0b5f0784af27f031d2a93759d15aa
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 148e889a4b9ac406732a5665d02dd9d52727b6ed
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722357"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168954"
 ---
 # <a name="executeoptions-property-rds"></a>Proprietà ExecuteOptions (Servizi Desktop remoto)
 Indica se l'esecuzione asincrona è abilitata.  
@@ -38,12 +38,12 @@ Indica se l'esecuzione asincrona è abilitata.
 > [!NOTE]
 >  Ogni file eseguibile che usa queste costanti deve fornire le relative dichiarazioni. È possibile tagliare e incollare le dichiarazioni di costanti desiderate dal file Adcvbs. Inc, che si trova nella cartella di installazione predefinita per la libreria RDS.  
   
-## <a name="remarks"></a>Osservazioni  
- Se **ExecuteOptions** è impostato su **adcExecAsync**, viene eseguita in modo asincrono la successiva chiamata di **aggiornamento** sul Servizi Desktop remoto [. ](./datacontrol-object-rds.md) **Recordset**dell'oggetto DataControl.  
+## <a name="remarks"></a>Commenti  
+ Se **ExecuteOptions** è impostato su **adcExecAsync**, viene eseguita in modo asincrono la successiva chiamata di **aggiornamento** sul Servizi Desktop remoto [.](./datacontrol-object-rds.md) **Recordset** dell'oggetto DataControl.  
   
- Se si tenta di chiamare [Reset](./reset-method-rds.md), [Refresh](./refresh-method-rds.md), [SubmitChanges](./submitchanges-method-rds.md), [CancelUpdate](../ado-api/cancelupdate-method-ado.md)o [Recordset](./recordset-sourcerecordset-properties-rds.md) mentre un'altra operazione asincrona potrebbe modificare [RDS. ](./datacontrol-object-rds.md) Il **Recordset** dell'oggetto DataControl è in esecuzione. si verifica un errore.  
+ Se si tenta di chiamare [Reset](./reset-method-rds.md), [Refresh](./refresh-method-rds.md), [SubmitChanges](./submitchanges-method-rds.md), [CancelUpdate](../ado-api/cancelupdate-method-ado.md)o [Recordset](./recordset-sourcerecordset-properties-rds.md) mentre un'altra operazione asincrona potrebbe modificare [RDS.](./datacontrol-object-rds.md) Il **Recordset** dell'oggetto DataControl è in esecuzione. si verifica un errore.  
   
- Se si verifica un errore durante un'operazione asincrona, **RDS. ** Il valore [ReadyState](./readystate-property-rds.md) dell'oggetto DataControl viene modificato da **adcReadyStateLoaded** a **AdcReadyStateComplete**e il valore della proprietà **Recordset** rimane *null*.  
+ Se si verifica un errore durante un'operazione asincrona, **RDS.** Il valore [ReadyState](./readystate-property-rds.md) dell'oggetto DataControl viene modificato da **adcReadyStateLoaded** a **AdcReadyStateComplete** e il valore della proprietà **Recordset** rimane *null*.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto DataControl (Servizi Desktop remoto)](./datacontrol-object-rds.md)  

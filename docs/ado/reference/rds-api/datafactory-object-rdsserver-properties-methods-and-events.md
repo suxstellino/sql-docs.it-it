@@ -7,18 +7,18 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - DataFactory object [ADO], members
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c6df50e972593b6bdabb9f37c5fffaa2667fce52
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: b6e85fd6082a1fe9d86df2fa453b3f56eee5e4e0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91720992"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168986"
 ---
 # <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto DataFactory (RDSServer)
 > [!IMPORTANT]
@@ -40,7 +40,7 @@ ms.locfileid: "91720992"
 |[Metodo Synchronize (Servizi Desktop remoto)](./synchronize-method-rds.md)|Sincronizzare il recordset specificato con il database specificato dalla stringa di connessione (per l'utilizzo con ADO 2,5 o versione successiva).|  
 |[Metodo Synchronize21 (Servizi Desktop remoto)](./synchronize21-method-rds.md)|Sincronizzare il recordset specificato con il database specificato dalla stringa di connessione (per l'utilizzo con ADO 2,1).|  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventi  
  No.  
   
 ## <a name="see-also"></a>Vedere anche  
