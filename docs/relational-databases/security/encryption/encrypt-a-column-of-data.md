@@ -18,18 +18,18 @@ ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: c09f7f91edf2cada0464b6cfbc1922664a86866f
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: ae34b381a6f1d46329855662d0a796ea6ab3d265
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641075"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250194"
 ---
 # <a name="encrypt-a-column-of-data"></a>Crittografia di una colonna di dati
 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]  
 
-Questo articolo descrive come crittografare una colonna di dati tramite la crittografia simmetrica in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] con [!INCLUDE[tsql](../../../includes/tsql-md.md)]. È chiamata a volte crittografia a livello di colonna o crittografia a livello di cella. Questa funzionalità è in anteprima per Azure Synapse Analytics
+Questo articolo descrive come crittografare una colonna di dati tramite la crittografia simmetrica in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] con [!INCLUDE[tsql](../../../includes/tsql-md.md)]. È chiamata a volte crittografia a livello di colonna o crittografia a livello di cella. Questa funzionalità è in anteprima per Azure Synapse Analytics
 
 Gli esempi in questo articolo sono stati convalidati con AdventureWorks2017. Per ottenere i database di esempio, vedere [Database di esempio AdventureWorks](../../../samples/adventureworks-install-configure.md).
 

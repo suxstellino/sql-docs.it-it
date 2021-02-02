@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f6d34e2db139a4b38f073f693d3828f9d403c660
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
-ms.translationtype: HT
+ms.openlocfilehash: 53ea4630f147ce576ad071d1ac593e00452944a3
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809925"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250632"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Compatibilità FILESTREAM con altre funzionalità di SQL Server
 
@@ -72,7 +72,7 @@ ms.locfileid: "91809925"
  Una colonna **varbinary(max)** che ha l'attributo FILESTREAM abilitato sul server di pubblicazione può essere replicata in un sottoscrittore con o senza l'attributo FILESTREAM. Per specificare la modalità di replica della colonna, usare la finestra di dialogo **Proprietà articolo - \<Article>** oppure il parametro @schema_option di [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) o [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). I dati replicati in una colonna **varbinary(max)** che non dispone dell'attributo FILESTREAM non devono superare il limite di 2 GB per quel tipo di dati; in caso contrario, viene generato un errore di runtime. Si consiglia di replicare l'attributo FILESTREAM, a meno che non si stia effettuando la replica dei dati in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. La replica di tabelle con colonne FILESTREAM in Sottoscrittori [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] non è supportata, indipendentemente dall'opzione di schema specificata.  
   
 > [!NOTE]  
->  La replica di valori di dati di dimensioni elevate da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a Sottoscrittori [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] è limitata a dati con dimensioni massime pari a 256 MB. Per ulteriori informazioni, vedere la pagina Web [Specifiche di capacità massima](../../sql-server/maximum-capacity-specifications-for-sql-server.md).  
+>  La replica di valori di dati di dimensioni elevate da [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] a Sottoscrittori [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] è limitata a dati con dimensioni massime pari a 256 MB. Per ulteriori informazioni, vedere la pagina Web [Specifiche di capacità massima](../../sql-server/maximum-capacity-specifications-for-sql-server.md).  
   
 ### <a name="considerations-for-transactional-replication"></a>Considerazioni sulla replica transazionale  
  Se si utilizzano colonne FILESTREAM in tabelle pubblicate per replica transazionale, considerare quanto riportato di seguito.  

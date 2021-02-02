@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 9860b952751937b18ca5e95e92ac959bb86abd23
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: HT
+ms.openlocfilehash: 65441ecd309abbe9b1545de622f0f7d9d4c2d4bc
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892245"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250516"
 ---
 # <a name="restore-a-database-master-key"></a>Ripristino di una chiave master del database
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  In questo argomento viene descritto come ripristinare una chiave master del database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+  In questo argomento viene descritto come ripristinare una chiave master del database in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
   
@@ -46,7 +46,7 @@ ms.locfileid: "85892245"
   
 1. Recuperare una copia della chiave master del database da un supporto di backup fisico o da una directory nel file system locale.  
   
-2. In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+2. In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 3. Sulla barra Standard fare clic su **Nuova query**.  
   

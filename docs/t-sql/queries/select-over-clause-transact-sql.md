@@ -25,12 +25,12 @@ ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b4d37338c5f282df46937c5e70ae747225576e3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f1caba28e45e1eea3217f41e0dc37789f4e3054e
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99193936"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250756"
 ---
 # <a name="select---over-clause-transact-sql"></a>Clausola SELECT - OVER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -174,7 +174,7 @@ ORDER BY *order_by_expression* [COLLATE *collation_name*] [ASC|DESC]
 
  Definisce l'ordine logico delle righe all'interno di ogni partizione del set di risultati. In altre parole, specifica l'ordine logico in cui viene eseguito il calcolo della funzione finestra. 
  - Se non viene specificato, l'ordine predefinito è `ASC` e la funzione finestra utilizza tutte le righe della partizione.
- - Se viene specificato, e non viene specificato in ROWS/RANGE, il valore predefinito `RANGE UNBOUNDED PRECEDING AND CURRENT ROW` viene usato come impostazione predefinita per la cornice della finestra dalle funzioni che possono accettare specifiche facoltative di ROWS/RANGE, ad esempio `min` o `max`. 
+ - Se viene specificato e non viene specificato un intervallo di righe/intervallo, per impostazione predefinita `RANGE UNBOUNDED PRECEDING AND CURRENT ROW` viene usato il valore predefinito per la cornice della finestra dalle funzioni che possono accettare una specifica facoltativa di righe/intervalli, ad esempio `min` o `max` . 
  
 ```sql
 select 

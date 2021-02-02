@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8ff53ca4e4118b105eabac256663a8b052e218fa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: a5e968978dd641f78dfb17d515ab07e3b7e27485
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429053"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250146"
 ---
 # <a name="data-collector-security"></a>Sicurezza agente di raccolta dati
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88429053"
  Nelle sezioni seguenti vengono descritte la sicurezza della raccolta di dati in generale, nonché i ruoli che è necessario concedere agli utenti affinché possano configurare e usare l'agente di raccolta dati ed eseguire attività associate al data warehouse di gestione.  
   
 ## <a name="general-security"></a>Sicurezza generale  
- L'agente di raccolta dati viene installato secondo gli standard documentati specificati per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ L'agente di raccolta dati viene installato secondo gli standard documentati specificati per [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="network-security"></a>Sicurezza di rete  
  Le informazioni riservate possono essere passate tra le istanze di destinazione, l'istanza relazionale associata al server di configurazione, i set di raccolta in esecuzione ed il server che ospita il data warehouse di gestione.  

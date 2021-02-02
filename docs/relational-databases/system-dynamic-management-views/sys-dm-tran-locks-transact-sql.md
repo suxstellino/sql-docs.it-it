@@ -21,17 +21,17 @@ ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a39e58fb6ca60a30a73531988eeffac89e7b46e1
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ec5ad1373336d3cc3873e0a0b81c2ad6c27291fa
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99133970"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250414"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Restituisce informazioni sulle risorse di Gestione blocchi attualmente attive in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Ogni riga rappresenta una richiesta attualmente attiva di un blocco concesso o in attesa di essere concesso, effettuata a Gestione blocchi.  
+  Restituisce informazioni sulle risorse di Gestione blocchi attualmente attive in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Ogni riga rappresenta una richiesta attualmente attiva di un blocco concesso o in attesa di essere concesso, effettuata a Gestione blocchi.  
   
  Le colonne nel set di risultati sono divise in due gruppi principali: risorsa e richiesta. Nel gruppo relativo alle risorse viene descritta la risorsa per cui viene effettuata la richiesta, mentre nel gruppo relativo alle richieste viene descritta la richiesta di blocco.  
   

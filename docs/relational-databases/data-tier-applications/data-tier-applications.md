@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5b13b4fcc5fd0071a5b008f4fa8186379ffecf41
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
-ms.translationtype: HT
+ms.openlocfilehash: 562769cc1f9ce3e895b59811a61026747c0a3724
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193051"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251098"
 ---
 # <a name="data-tier-applications"></a>Applicazioni livello dati
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,14 +50,14 @@ ms.locfileid: "92193051"
   
     -   Oltre ai database SQL 2016, gli strumenti forniti con SQL Server 2016 possono leggere i file con estensione DACPAC generati dagli strumenti di applicazione livello dati forniti con SQL Server 2008 R2 o SQL Server 2012. Sono inclusi i database di SQL Server 2014, 2012, 2008 R2, 2008 e 2005, ma **non** SQL Server 2000.  
   
-    -   Gli strumenti di applicazione livello dati di SQL Server 2008 R2 non sono in grado di leggere i file con estensione DACPAC generati dagli strumenti di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+    -   Gli strumenti di applicazione livello dati di SQL Server 2008 R2 non sono in grado di leggere i file con estensione DACPAC generati dagli strumenti di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 -   Un pacchetto di applicazione livello dati è un file di Windows con l'estensione .dacpac. Il file supporta un formato aperto composto da più sezioni XML che rappresentano i dettagli dell'origine del pacchetto di livello dati, gli oggetti nel database e altre funzionalità. Il file può essere decompresso da un utente avanzato tramite l'utilità DacUnpack.exe che viene fornita con il prodotto per controllare più da vicino ogni sezione.  
   
 -   L'utente deve essere membro del ruolo **dbmanager** o avere le autorizzazioni **CREATE DATABASE** per creare un database, compresa la creazione di un database tramite la distribuzione di un pacchetto di applicazione livello dati. L'utente deve essere membro del ruolo **dbmanager** o avere le autorizzazioni **DROP DATABASE** per eliminare un database.  
   
 ## <a name="dac-tools"></a>Strumenti di applicazione livello dati  
- Un pacchetto di applicazione livello dati può essere perfettamente utilizzato in più strumenti forniti con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Questi strumenti indirizzano i requisiti dei diversi tipi di utente utilizzando un pacchetto di applicazione livello dati come unità di interoperabilità.  
+ Un pacchetto di applicazione livello dati può essere perfettamente utilizzato in più strumenti forniti con [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Questi strumenti indirizzano i requisiti dei diversi tipi di utente utilizzando un pacchetto di applicazione livello dati come unità di interoperabilità.  
   
 -   Sviluppatori di applicazioni:  
   

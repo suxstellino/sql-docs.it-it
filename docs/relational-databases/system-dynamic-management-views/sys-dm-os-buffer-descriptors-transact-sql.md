@@ -21,17 +21,17 @@ ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6749867b40c0673c63b8a6c4279bc31b6fb0682
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ce3894ac989047dc8274c6770e881066023ccabd
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99184973"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250378"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Restituisce informazioni relative a tutte le pagine di dati incluse nel pool di buffer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'output di questa vista può essere utilizzato per determinare la distribuzione delle pagine del database nel pool di buffer in base al database, all'oggetto o al tipo. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] questa DMV restituisce inoltre informazioni sulle pagine di dati nel file di estensione del pool di buffer. Per altre informazioni, vedere [estensione del pool di buffer](../../database-engine/configure-windows/buffer-pool-extension.md).  
+  Restituisce informazioni relative a tutte le pagine di dati incluse nel pool di buffer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'output di questa vista può essere utilizzato per determinare la distribuzione delle pagine del database nel pool di buffer in base al database, all'oggetto o al tipo. In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] questa DMV restituisce inoltre informazioni sulle pagine di dati nel file di estensione del pool di buffer. Per altre informazioni, vedere [estensione del pool di buffer](../../database-engine/configure-windows/buffer-pool-extension.md).  
   
  Quando una pagina di dati viene letta dal disco, viene copiata nel pool di buffer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e memorizzata nella cache per il riutilizzo. Ogni pagina di dati memorizzata nella cache è associata a un descrittore di buffer. I descrittori di buffer identificano in modo univoco ogni pagina di dati attualmente memorizzata nella cache in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys.dm_os_buffer_descriptors restituisce le pagine memorizzate nella cache per tutti i database utente e di sistema. incluse le pagine associate al database Resource.  
   

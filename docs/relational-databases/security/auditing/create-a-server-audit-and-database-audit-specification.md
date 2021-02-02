@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7f773a1ee50395eeebd40e0f08672c324170ccf3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: HT
+ms.openlocfilehash: d015a1adf0bdd5e5f47b49a8dabb6783b8538b7e
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883543"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250081"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Creare una specifica di controllo server e di controllo database
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Questo articolo descrive come creare una specifica di controllo server e di controllo database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+  Questo articolo descrive come creare una specifica di controllo server e di controllo database in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  Il controllo di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o di un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comporta il rilevamento e la registrazione di eventi che si verificano nel sistema. L'oggetto *SQL Server Audit* raccoglie un'unica istanza di azioni a livello di server o di database e gruppi di azioni da monitorare. Il controllo si trova a livello dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è possibile disporre di più controlli. Anche l'oggetto *Database-Level Audit Specification* fa parte di un controllo. È possibile creare una specifica del controllo del database per ogni database di SQL Server e per ogni controllo. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -76,7 +76,7 @@ ms.locfileid: "85883543"
      Specifica i gruppi di azioni di controllo a livello di database e le azioni di controllo da acquisire. Per un elenco di gruppi di azioni di controllo a livello di database e delle azioni di controllo e una descrizione degli eventi contenuti, vedere [Azioni e gruppi di azioni di controllo di SQL Server](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  
   
      **Schema dell'oggetto**  
-     Consente di visualizzare lo schema per il **nome oggetto**specificato.  
+     Consente di visualizzare lo schema per il **nome oggetto** specificato.  
   
      **nome oggetto**  
      Nome dell'oggetto da controllare. Questa opzione è disponibile solo per le azioni di controllo. Non si applica ai gruppi di controllo.  
@@ -88,7 +88,7 @@ ms.locfileid: "85883543"
      Account per filtrare il controllo per l'oggetto da controllare.  
   
      **Puntini di sospensione (...)**  
-     Apre la finestra di dialogo **Seleziona oggetti** in modo da poter cercare e selezionare un oggetto disponibile, in base all'opzione **Nome oggetto**specificata.  
+     Apre la finestra di dialogo **Seleziona oggetti** in modo da poter cercare e selezionare un oggetto disponibile, in base all'opzione **Nome oggetto** specificata.  
   
 4.  Dopo aver selezionato le opzioni desiderate selezionare **OK**.  
   

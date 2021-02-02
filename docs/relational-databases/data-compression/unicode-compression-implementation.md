@@ -15,12 +15,12 @@ ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0a63694f22f825604e5a3b2d453e58ea73766c4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: f78e0bbe469861251c95a0d7fc382be4ed333dd0
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485473"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251113"
 ---
 # <a name="unicode-compression-implementation"></a>Implementazione della compressione Unicode
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "97485473"
 >  La compressione Unicode non è supportata per i dati **nvarchar(max)** anche se archiviati nella riga. Questo tipo di dati, tuttavia, può ancora trarre vantaggio dalla compressione pagina.  
   
 ## <a name="upgrading-from-earlier-versions-of-sql-server"></a>Aggiornamento da versioni precedenti di SQL Server  
- Quando un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene aggiornato a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], le modifiche legate alla compressione Unicode non vengono apportate ad alcun oggetto di database, compresso o meno. Una volta aggiornato il database, gli effetti sugli oggetti sono i seguenti:  
+ Quando un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene aggiornato a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], le modifiche legate alla compressione Unicode non vengono apportate ad alcun oggetto di database, compresso o meno. Una volta aggiornato il database, gli effetti sugli oggetti sono i seguenti:  
   
 -   Se l'oggetto non è compresso, non viene apportata alcuna modifica e l'oggetto continua a funzionare come in precedenza.  
   

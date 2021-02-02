@@ -24,17 +24,17 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5c6647b06d058b1b97188810c4a23644d05c4f7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: bc69ec8ee89cf994c61450804887b8c60388291f
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468592"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250924"
 ---
 # <a name="create-a-login"></a>Creazione di un account di accesso
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Questo argomento illustra come creare un account di accesso in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] o [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] con [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Un account di accesso è l'identità della persona o del processo che esegue la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Questo argomento illustra come creare un account di accesso in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] o [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] con [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Un account di accesso è l'identità della persona o del processo che esegue la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ##  <a name="background"></a><a name="Background"></a> Background  
  Un accesso è un'entità di sicurezza o un'entità che può essere autenticata da un sistema sicuro. Per connettersi a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], gli utenti necessitano di un account di accesso. È possibile creare un account di accesso basato su un'entità di Windows (quale un utente del dominio o un gruppo del dominio Windows) o è possibile creare un account di accesso che non è basato su un'entità di Windows (ad esempio, un accesso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  

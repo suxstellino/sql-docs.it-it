@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: DavidTrigano
 ms.author: datrigan
-ms.openlocfilehash: 05f3d283e90affc8a89e32e2e0f249153f2e4935
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: HT
+ms.openlocfilehash: 3db484c1279546ab76ebf302582dbb984f991fa4
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899079"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250120"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Creazione di un controllo del server e di una specifica del controllo del server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  In questo argomento viene illustrato come creare un controllo del server e la specifica di un controllo del server in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Il*controllo* di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o di un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comporta il rilevamento e la registrazione di eventi che si verificano nel sistema. L'oggetto *SQL Server Audit* raccoglie un'unica istanza di azioni a livello di server o di database e gruppi di azioni da monitorare. Il controllo si trova a livello dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è possibile disporre di più controlli. L'oggetto *specifica controllo server* appartiene a un controllo. È possibile creare una specifica del controllo del server per ogni controllo, poiché entrambi vengono creati nell'ambito dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  In questo argomento viene illustrato come creare un controllo del server e la specifica di un controllo del server in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Il *controllo* di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o di un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comporta il rilevamento e la registrazione di eventi che si verificano nel sistema. L'oggetto *SQL Server Audit* raccoglie un'unica istanza di azioni a livello di server o di database e gruppi di azioni da monitorare. Il controllo si trova a livello dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è possibile disporre di più controlli. L'oggetto *specifica controllo server* appartiene a un controllo. È possibile creare una specifica del controllo del server per ogni controllo, poiché entrambi vengono creati nell'ambito dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  **Contenuto dell'articolo**  
   
@@ -90,7 +90,7 @@ ms.locfileid: "85899079"
     > [!IMPORTANT]  
     >  Quando il controllo è in uno stato di errore, l'esecuzione di eventi controllati può continuare tramite la connessione amministrativa dedicata.  
   
-     Elenco**Destinazione controllo**  
+     Elenco **Destinazione controllo**  
      Indica la destinazione per i dati del controllo. Le opzioni disponibili sono un file binario, il registro applicazioni di Windows o il registro di sicurezza di Windows. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Se non si configurano impostazioni aggiuntive in Windows, non sarà possibile scrivere nel registro di sicurezza di Windows. Per altre informazioni, vedere [Scrivere eventi di controllo di SQL Server nel registro di sicurezza](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md).  
   
      **Percorso file**  
@@ -106,16 +106,16 @@ ms.locfileid: "85899079"
      **Numero massimo di file**  
      Specifica che quando viene raggiunto il numero massimo di file di controllo, qualsiasi azione che causa la generazione di eventi di controllo aggiuntivi avrà esito negativo e verrà visualizzato un errore.  
   
-     Casella di controllo**Senza limiti**  
+     Casella di controllo **Senza limiti**  
      Quando si seleziona la casella di controllo **Senza limiti** in **Numero massimo file di rollover** , non viene applicato alcun limite al numero di file di controllo che verranno creati. La casella di controllo **Senza limiti** viene selezionata per impostazione predefinita e si applica alle selezioni **Numero massimo file di rollover** e **Numero massimo di file** .  
   
-     Casella**Numero di file**  
+     Casella **Numero di file**  
      Specifica il numero di file di controllo da creare, fino a un massimo di 2.147.483.647. Questa opzione è disponibile solo se non è selezionato **Senza limiti** .  
   
      **Dimensioni massime del file**  
      Specifica la dimensione massima per un file di controllo in megabyte (MB), gigabyte (GB) o terabyte (TB). È possibile specificare un numero fino a 2.147.483.647 TB. Se si seleziona la casella di controllo **Senza limiti** non si impono alcun limite alle dimensioni del file. La casella di controllo **Senza limiti** è selezionata per impostazione predefinita.  
   
-     Casella di controllo**Riserva spazio su disco**  
+     Casella di controllo **Riserva spazio su disco**  
      Indica che sul disco viene preallocata una quantità di spazio uguale alle dimensioni massime del file specificate. Questa impostazione può essere utilizzata solo se non è selezionata la casella di controllo **Senza limiti** in **Dimensioni massime file** . Questa casella di controllo non è selezionata per impostazione predefinita.  
   
 3.  Facoltativamente, nella pagina **Filtro** , immettere un predicato o clausola `WHERE` per il controllo del server per specificare opzioni aggiuntive non disponibili nella pagina **Generale** . Racchiudere il predicato tra le parentesi, ad esempio `(object_name = 'EmployeesTable')`.  
@@ -140,7 +140,7 @@ ms.locfileid: "85899079"
      Specifica i gruppi di azioni di controllo a livello di server e le azioni di controllo da acquisire. Per l'elenco di gruppi di azioni di controllo a livello di server e di azioni di controllo e una descrizione degli eventi contenuti, vedere [Azioni e gruppi di azioni di SQL Server Audit](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  
   
      **Schema dell'oggetto**  
-     Consente di visualizzare lo schema per il **nome oggetto**specificato.  
+     Consente di visualizzare lo schema per il **nome oggetto** specificato.  
   
      **nome oggetto**  
      Nome dell'oggetto da controllare. Tale opzione è disponibile solo per le azioni di controllo e non si applica ai gruppi di controllo.  
@@ -152,7 +152,7 @@ ms.locfileid: "85899079"
      Account per filtrare il controllo per l'oggetto da controllare.  
   
      **Puntini di sospensione (...)**  
-     Viene visualizzata la finestra di dialogo **Seleziona oggetti** per eseguire la ricerca e selezionare un oggetto disponibile, in base all'opzione **Nome oggetto**specificata.  
+     Viene visualizzata la finestra di dialogo **Seleziona oggetti** per eseguire la ricerca e selezionare un oggetto disponibile, in base all'opzione **Nome oggetto** specificata.  
   
 3.  Al termine, fare clic su **OK**.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "85899079"
   
 #### <a name="to-create-a-server-audit"></a>Per creare un controllo del server  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "85899079"
 
 #### <a name="to-create-a-server-audit-specification"></a>Per creare una specifica del controllo del server  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

@@ -33,12 +33,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99ef20a9db20238f24361327b79068ed39d430f4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: e2a5f205d7182d1ffedf07b885e7411920ca7b27
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465672"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251194"
 ---
 # <a name="collation-and-unicode-support"></a>Supporto Unicode e delle regole di confronto
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +64,7 @@ Le regole di confronto specificano gli schemi di bit che rappresentano i diversi
     
 I risultati di un'istruzione[!INCLUDE[tsql](../../includes/tsql-md.md)] possono variare se l'istruzione viene eseguita nel contesto di database diversi che utilizzano impostazioni diverse per le regole di confronto. Se possibile, usare regole di confronto standardizzate per l'organizzazione. In questo modo, non è necessario specificare le regole di confronto in ogni carattere o espressione Unicode. Se è necessario usare oggetti con impostazioni diverse per tabelle codici e regole di confronto, codificare le query in modo da considerare la precedenza delle regole di confronto. Per altre informazioni, vedere [Precedenza delle regole di confronto (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md).    
     
-Alle regole di confronto sono associate le opzioni seguenti: distinzione tra maiuscole e minuscole, distinzione tra caratteri accentati e non accentati, distinzione dei caratteri Kana, distinzione di larghezza e distinzione dei selettori di variazione. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce un'opzione aggiuntiva per la codifica [UTF-8](https://www.wikipedia.org/wiki/UTF-8). 
+Alle regole di confronto sono associate le opzioni seguenti: distinzione tra maiuscole e minuscole, distinzione tra caratteri accentati e non accentati, distinzione dei caratteri Kana, distinzione di larghezza e distinzione dei selettori di variazione. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] introduce un'opzione aggiuntiva per la codifica [UTF-8](https://www.wikipedia.org/wiki/UTF-8). 
 
 È possibile specificare queste opzioni aggiungendole al nome delle regole di confronto. Ad esempio, le regole di confronto **Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8** prevedono distinzione tra lettere maiuscole e minuscole, distinzione tra caratteri accentati e non accentati, distinzione dei caratteri Kana, distinzione di larghezza e codifica UTF-8. Sempre a titolo di esempio, le regole di confronto **Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS** prevedono le opzioni seguenti: nessuna distinzione tra lettere maiuscole e minuscole, nessuna distinzione tra caratteri accentati e non accentati, distinzione dei caratteri Kana, distinzione di larghezza, distinzione dei selettori di variazione e usano la codifica non Unicode. 
 
@@ -76,7 +76,7 @@ Il comportamento associato a queste opzioni è descritto nella tabella seguente:
 |Distinzione caratteri accentati/non accentati (\_AS)|Opera una distinzione tra caratteri accentati e non accentati. Il carattere "a", ad esempio, non viene considerato uguale ad "ấ". Se questa opzione non è selezionata, le regole di confronto non fanno distinzione tra caratteri accentati e non accentati. Ovvero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera identici i caratteri accentati e non accentati ai fini dell'ordinamento. È possibile selezionare in modo esplicito l'esclusione della distinzione tra caratteri accentati e non accentati specificando \_AI.|    
 |Distinzione Kana (\_KS)|Opera una distinzione tra i due tipi di caratteri Kana giapponesi, ovvero Hiragana e Katakana. Se questa opzione non è selezionata, le regole di confronto non fanno distinzione tra caratteri Kana. Ovvero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera uguali i caratteri Hiragana e Katakana ai fini dell'ordinamento. Omettere questa opzione è il solo metodo per specificare di non effettuare la distinzione Kana.|   
 |Distinzione larghezza (\_WS)|Opera una distinzione tra caratteri a larghezza intera e caratteri a metà larghezza. Se questa opzione non è selezionata, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera identiche le rappresentazioni con caratteri a larghezza intera e a metà larghezza dello stesso carattere ai fini dell'ordinamento. Omettere questa opzione è il solo metodo per specificare di non effettuare la distinzione larghezza.|  
-|Distinzione dei selettori di variazione (\_VSS)|Opera una distinzione tra vari selettori di variazione di simboli ideografici nelle regole di confronto giapponesi **Japanese_Bushu_Kakusu_140** e **Japanese_XJIS_140** introdotte in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. Una sequenza di variazione è costituita da un carattere di base e da un selettore di variazione aggiuntivo. Se questa opzione \_VSS non è selezionata, le regole di confronto non fanno distinzione tra selettori di variazione e il selettore di variazione non viene considerato nel confronto. Ciò significa che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera identici, ai fini dell'ordinamento, i caratteri basati sullo stesso carattere di base con selettori di variazione diversi. Per altre informazioni, vedere il [database delle variazioni dei simboli ideografici Unicode](https://www.unicode.org/reports/tr37/).<br/><br/> Le regole di confronto con distinzione tra selettori di variazione (\_VSS) non sono supportate negli indici di ricerca full-text. Questi indici supportano solo le opzioni Distinzione caratteri accentati/non accentati (\_AS), Distinzione Kana (\_KS) e Distinzione larghezza (\_WS). I motori CLR e XML di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supportano i selettori di variazione (\_VSS).|      
+|Distinzione dei selettori di variazione (\_VSS)|Opera una distinzione tra vari selettori di variazione di simboli ideografici nelle regole di confronto giapponesi **Japanese_Bushu_Kakusu_140** e **Japanese_XJIS_140** introdotte in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. Una sequenza di variazione è costituita da un carattere di base e da un selettore di variazione aggiuntivo. Se questa opzione \_VSS non è selezionata, le regole di confronto non fanno distinzione tra selettori di variazione e il selettore di variazione non viene considerato nel confronto. Ciò significa che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera identici, ai fini dell'ordinamento, i caratteri basati sullo stesso carattere di base con selettori di variazione diversi. Per altre informazioni, vedere il [database delle variazioni dei simboli ideografici Unicode](https://www.unicode.org/reports/tr37/).<br/><br/> Le regole di confronto con distinzione tra selettori di variazione (\_VSS) non sono supportate negli indici di ricerca full-text. Questi indici supportano solo le opzioni Distinzione caratteri accentati/non accentati (\_AS), Distinzione Kana (\_KS) e Distinzione larghezza (\_WS). I motori CLR e XML di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supportano i selettori di variazione (\_VSS).|      
 |Binario (\_BIN)<sup>1</sup>|Ordina e confronta i dati nelle tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in base agli schemi di bit definiti per ogni carattere. L'ordinamento binario prevede la distinzione tra lettere maiuscole e minuscole e tra caratteri accentati e non accentati e rappresenta inoltre il tipo di ordinamento più rapido. Per altre informazioni, vedere la sezione [Regole di confronto binarie](#Binary-collations) in questo articolo.|      
 |Punto di codice binario (\_BIN2)<sup>1</sup> | Ordina e confronta i dati nelle tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in base ai punti di codice Unicode per i dati Unicode. Per i dati non Unicode, il punto di codice binario usa confronti identici a quelli per gli ordinamenti binari.<br/><br/> Il vantaggio di usare un ordinamento con punto di codice binario è rappresentato dal fatto che non è necessario alcun riordinamento dei dati nelle applicazioni che confrontano i dati ordinati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Di conseguenza, l'ordinamento con punto di codice binario consente di semplificare lo sviluppo delle applicazioni e di ottenere un possibile miglioramento delle prestazioni. Per altre informazioni, vedere la sezione [Regole di confronto binarie](#Binary-collations) in questo articolo.|
 |UTF-8 (\_UTF8)|Abilita l'archiviazione dei dati con codifica UTF-8 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se questa opzione non è selezionata, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa il formato di codifica non Unicode predefinito per i tipi di dati applicabili. Per altre informazioni, vedere la sezione [Supporto di UTF-8](#utf8) in questo articolo.| 
@@ -461,7 +461,7 @@ Se vengono archiviati dati di tipo carattere che riflettono più lingue in [!INC
 > [!NOTE]
 > Per i tipi di dati Unicode, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] può rappresentare un massimo di 65.535 caratteri con UCS-2 o l'intera gamma Unicode (1.114.111 caratteri), se vengono usati caratteri supplementari. Per altre informazioni sull'abilitazione dei caratteri supplementari, vedere [Caratteri supplementari](#Supplementary_Characters).
 
-In alternativa, a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], se si usano regole di confronto abilitate per UTF-8 (\_UTF8) i tipi di dati in precedenza non Unicode (**char** e **varchar**) diventano tipi di dati Unicode che usano la codifica UTF-8. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] non modifica il comportamento dei tipi di dati Unicode esistenti in precedenza (**nchar**, **nvarchar** e **ntext**), che continuano a usare la codifica UCS-2 o UTF-16. Per altre informazioni, vedere [Differenze nell'archiviazione tra UTF-8 e UTF-16](#storage_differences).
+In alternativa, a partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], se si usano regole di confronto abilitate per UTF-8 (\_UTF8) i tipi di dati in precedenza non Unicode (**char** e **varchar**) diventano tipi di dati Unicode che usano la codifica UTF-8. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] non modifica il comportamento dei tipi di dati Unicode esistenti in precedenza (**nchar**, **nvarchar** e **ntext**), che continuano a usare la codifica UCS-2 o UTF-16. Per altre informazioni, vedere [Differenze nell'archiviazione tra UTF-8 e UTF-16](#storage_differences).
 
 ### <a name="unicode-considerations"></a>Considerazioni su Unicode
 Ai tipi di dati non Unicode sono associate numerose limitazioni, perché nei computer non Unicode è disponibile una sola tabella codici. Usando Unicode è possibile ottenere prestazioni migliori, in quanto richiede un minor numero di conversioni tramite la tabella codici. Le regole di confronto Unicode devono essere selezionate singolarmente a livello di database, di colonna o di espressione perché non sono supportate a livello di server.    
@@ -473,7 +473,7 @@ Quando si spostano dati da un server a un client, le regole di confronto del ser
 >
 > Per usare le regole di confronto UTF-16 disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive) e migliorare la ricerca e l'ordinamento di alcuni caratteri Unicode (solo regole di confronto Windows), è possibile selezionare una delle regole di confronto dei caratteri supplementari (\_SC) o una delle regole di confronto versione 140.    
  
-Per usare le regole di confronto UTF-8 disponibili in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e migliorare la ricerca e l'ordinamento di alcuni caratteri Unicode (solo regole di confronto Windows), è necessario selezionare regole di confronto abilitate per la codifica UTF-8 (\_UTF8).
+Per usare le regole di confronto UTF-8 disponibili in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] e migliorare la ricerca e l'ordinamento di alcuni caratteri Unicode (solo regole di confronto Windows), è necessario selezionare regole di confronto abilitate per la codifica UTF-8 (\_UTF8).
  
 -   Il flag UTF8 può essere applicato a:    
     -   Regole di confronto linguistiche che supportano già caratteri supplementari (\_SC) o riconoscono la distinzione tra selettori di variazione (\_VSS)
@@ -484,8 +484,8 @@ Per usare le regole di confronto UTF-8 disponibili in [!INCLUDE[sql-server-2019]
     -   Regole di confronto binarie BIN o BIN2<sup>2</sup>
     -   Regole di confronto di SQL\_*  
     
-<sup>1</sup> A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 le regole di confronto **UTF8_BIN2** sono state sostituite con **Latin1_General_100_BIN2_UTF8**.        
-<sup>2</sup> Fino a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3.    
+<sup>1</sup> A partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CTP 2.3. In [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CTP 3.0 le regole di confronto **UTF8_BIN2** sono state sostituite con **Latin1_General_100_BIN2_UTF8**.        
+<sup>2</sup> Fino a [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CTP 2.3.    
     
 Per valutare i problemi relativi all'utilizzo di tipi di dati Unicode o non Unicode, è necessario eseguire il test dello scenario per verificare le differenze di prestazioni nell'ambiente specifico. È consigliabile standardizzare le regole di confronto usate nei sistemi presenti nell'ambito dell'organizzazione e distribuire server e client Unicode laddove possibile.    
     
@@ -512,7 +512,7 @@ L'Unicode Consortium ha tuttavia stabilito 16 "piani" aggiuntivi di caratteri, o
 
 In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] è stata introdotta una nuova famiglia di regole di confronto per caratteri supplementari (\_SC) utilizzabili con i tipi di dati **nchar**, **nvarchar** e **sql_variant** per rappresentare l'intera gamma di caratteri Unicode (000000-10FFFF). Ad esempio: **Latin1_General_100_CI_AS_SC** o, se si usano regole di confronto per il giapponese, **Japanese_Bushu_Kakusu_100_CI_AS_SC**. 
  
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] estende il supporto dei caratteri supplementari ai tipi di dati **char** e **varchar** con le nuove regole di confronto abilitate per UTF-8 ([\_UTF8](#utf8)). Questi tipi di dati sono inoltre in grado di rappresentare l'intera gamma di caratteri Unicode.   
+[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] estende il supporto dei caratteri supplementari ai tipi di dati **char** e **varchar** con le nuove regole di confronto abilitate per UTF-8 ([\_UTF8](#utf8)). Questi tipi di dati sono inoltre in grado di rappresentare l'intera gamma di caratteri Unicode.   
 
 > [!NOTE]
 > A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], tutte le nuove regole di confronto \_140 supportano automaticamente i caratteri supplementari.
@@ -545,7 +545,7 @@ Nella tabella seguente viene confrontato il comportamento di alcune funzioni per
 ## <a name="gb18030-support"></a><a name="GB18030"></a> Supporto GB18030    
 GB18030 è uno standard separato usato nella Repubblica popolare cinese per la codifica dei caratteri cinesi. In GB18030, i caratteri possono essere di 1, 2 o 4 byte di lunghezza. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre supporto per i caratteri con codifica GB18030 consentendone il riconoscimento al momento dell'ingresso nel server da un'applicazione client e la conversione e archiviazione come caratteri Unicode a livello nativo. Dopo essere stati archiviati nel server, questi caratteri vengono trattati come caratteri Unicode in tutte le operazioni successive. 
 
-È possibile usare una qualsiasi regola di confronto cinese, preferibilmente la versione 100 più recente. Tutte le regole di confronto di livello \_100 supportano l'ordinamento linguistico con caratteri GB18030. Se nei dati sono inclusi caratteri supplementari (coppie di surrogati), è possibile usare le regole di confronto SC disponibili in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per migliorare la ricerca e l'ordinamento.    
+È possibile usare una qualsiasi regola di confronto cinese, preferibilmente la versione 100 più recente. Tutte le regole di confronto di livello \_100 supportano l'ordinamento linguistico con caratteri GB18030. Se nei dati sono inclusi caratteri supplementari (coppie di surrogati), è possibile usare le regole di confronto SC disponibili in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] per migliorare la ricerca e l'ordinamento.    
 
 > [!NOTE]
 > Assicurarsi che gli strumenti client, come [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], usino il tipo di carattere Dengxian per visualizzare correttamente le stringhe contenenti caratteri con codifica GB18030.
@@ -559,9 +559,9 @@ In[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere supporta
     
 Le applicazioni di database che interagiscono con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devono usare controlli che supportano le lingue con alfabeti non latini. I form standard di Windows creati in codice gestito sono abilitati per le lingue con alfabeti non latini.    
 
-## <a name="japanese-collations-added-in--sssqlv14_md"></a><a name="Japanese_Collations"></a> Regole di confronto per il giapponese aggiunte in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+## <a name="japanese-collations-added-in--sssql17-md"></a><a name="Japanese_Collations"></a> Regole di confronto per il giapponese aggiunte in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]
  
-A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], sono supportate nuove famiglie di regole di confronto per il giapponese, con permutazioni di varie opzioni (\_CS, \_AS, \_KS, \_WS e \_VSS). 
+A partire da [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], sono supportate nuove famiglie di regole di confronto per il giapponese, con permutazioni di varie opzioni (\_CS, \_AS, \_KS, \_WS e \_VSS). 
 
 Per elencare queste regole di confronto, è possibile eseguire una query nel [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:      
 
@@ -577,12 +577,12 @@ Queste regole di confronto sono supportate negli indici del [!INCLUDE[ssde_md](.
 <a name="ctp23"></a>
 
 ## <a name="utf-8-support"></a><a name="utf8"></a> Supporto di UTF-8
-In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] viene introdotto il supporto completo per la codifica dei caratteri di grande diffusione UTF-8 come codifica di importazione o esportazione e come regola di confronto di livello database o colonna per i dati di tipo stringa. La codifica UTF-8 è consentita nei tipi di dati **char** e **varchar** ed è abilitata quando si crea o si modifica la regola di confronto di un oggetto convertendola in una regola di confronto che ha il suffisso *UTF8*. Un esempio è la modifica di **LATIN1_GENERAL_100_CI_AS_SC** in **LATIN1_GENERAL_100_CI_AS_SC_UTF8**. 
+In [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] viene introdotto il supporto completo per la codifica dei caratteri di grande diffusione UTF-8 come codifica di importazione o esportazione e come regola di confronto di livello database o colonna per i dati di tipo stringa. La codifica UTF-8 è consentita nei tipi di dati **char** e **varchar** ed è abilitata quando si crea o si modifica la regola di confronto di un oggetto convertendola in una regola di confronto che ha il suffisso *UTF8*. Un esempio è la modifica di **LATIN1_GENERAL_100_CI_AS_SC** in **LATIN1_GENERAL_100_CI_AS_SC_UTF8**. 
 
 UTF-8 è disponibile solo per le regole di confronto di Windows che supportano i caratteri supplementari. Questa funzionalità è stata introdotta in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. I tipi di dati **nchar** e **nvarchar** consentono solo la codifica UCS-2 o UTF-16 e rimangono invariati.
 
 ### <a name="storage-differences-between-utf-8-and-utf-16"></a><a name="storage_differences"></a> Differenze nell'archiviazione tra UTF-8 e UTF-16
-L'Unicode Consortium assegna a ogni carattere un punto di codice univoco, che corrisponde a un valore nell'intervallo 000000-10FFFF. Con [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], sono disponibili entrambe le codifiche UTF-8 e UTF-16 per rappresentare l'intera gamma:    
+L'Unicode Consortium assegna a ogni carattere un punto di codice univoco, che corrisponde a un valore nell'intervallo 000000-10FFFF. Con [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], sono disponibili entrambe le codifiche UTF-8 e UTF-16 per rappresentare l'intera gamma:    
 -  Con la codifica UTF-8, i caratteri nell'intervallo ASCII (000000-00007F) richiedono 1 byte, i punti di codice nell'intervallo 000080-0007FF richiedono 2 byte, i punti di codice nell'intervallo 000800-00FFFF richiedono 3 byte e i punti di codice nell'intervallo 0010000-0010FFFF richiedono 4 byte. 
 -  Con la codifica UTF-16, i punti di codice nell'intervallo 000000-00FFFF richiedono 2 byte e i punti di codice nell'intervallo 0010000-0010FFFF richiedono 4 byte. 
 

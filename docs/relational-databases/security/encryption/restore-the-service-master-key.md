@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: b4e2d053a232d374360177159cb3b97785f73a4f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: HT
+ms.openlocfilehash: 8df8f8a8a01b8ade5372147f274d329baf346ffd
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898025"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250171"
 ---
 # <a name="restore-the-service-master-key"></a>Ripristino della chiave master del servizio
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  In questo argomento viene descritto come ripristinare una chiave master del servizio in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+  In questo argomento viene descritto come ripristinare una chiave master del servizio in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 > [!WARNING]  
 > È improbabile che sia mai necessario ripristinare la chiave master del servizio. In tal caso, tuttavia, è consigliabile procedere con estrema cautela. Per altre informazioni, vedere [Back Up the Service Master Key](../../../relational-databases/security/encryption/back-up-the-service-master-key.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "85898025"
   
 1. Recuperare una copia della chiave master del servizio da un supporto di backup fisico o da una directory nel file system locale.  
   
-2. In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+2. In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 3. Sulla barra Standard fare clic su **Nuova query**.  
   

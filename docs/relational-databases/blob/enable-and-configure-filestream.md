@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4e9e0fca818c4988acacfbfa89af718eda8d8ac5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
-ms.translationtype: HT
+ms.openlocfilehash: ea678a62f4453232fe8442cf2053c3b951e361ef
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246583"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250660"
 ---
 # <a name="enable-and-configure-filestream"></a>Abilitare e configurare FILESTREAM
 
@@ -28,9 +28,9 @@ ms.locfileid: "87246583"
   
 #### <a name="to-enable-and-change-filestream-settings"></a>Per abilitare e modificare le impostazioni FILESTREAM  
   
-1.  Fare clic sul menu **Start** , scegliere **Tutti i programmi**, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], **Strumenti di configurazione**e quindi **Gestione configurazione SQL Server**.  
+1.  Fare clic sul menu **Start** , scegliere **Tutti i programmi**, [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], **Strumenti di configurazione** e quindi **Gestione configurazione SQL Server**.  
   
-2.  Nell'elenco dei servizi fare clic con il pulsante destro del mouse su **Servizi di SQL Server**e quindi scegliere **Apri**.  
+2.  Nell'elenco dei servizi fare clic con il pulsante destro del mouse su **Servizi di SQL Server** e quindi scegliere **Apri**.  
   
 3.  Nello snap-in **Gestione configurazione SQL Server** trovare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui si vuole abilitare FILESTREAM.  
   

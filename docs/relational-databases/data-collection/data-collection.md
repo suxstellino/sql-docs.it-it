@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dd4827f08c9e21ccd45f128bcc64ab9e03c1474b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
-ms.translationtype: HT
+ms.openlocfilehash: 3dd72fbcc8f46f505e086043800ec68068a3cb5e
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193421"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250107"
 ---
 # <a name="data-collection"></a>Raccolta di dati
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  L'agente di raccolta dati è un componente di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] che consente di raccogliere set diversi di dati. La raccolta dati viene eseguita costantemente o in base a una pianificazione definita dall'utente. L'agente di raccolta dati archivia quindi i dati raccolti in un database relazionale noto come data warehouse di gestione.  
+  L'agente di raccolta dati è un componente di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] che consente di raccogliere set diversi di dati. La raccolta dati viene eseguita costantemente o in base a una pianificazione definita dall'utente. L'agente di raccolta dati archivia quindi i dati raccolti in un database relazionale noto come data warehouse di gestione.  
   
 ## <a name="what-is-data-collector"></a>Che cos'è l'agente di raccolta dati 
- L'agente di raccolta dati è un componente chiave della piattaforma di raccolta dati per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e gli strumenti forniti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'agente di raccolta dati fornisce un punto centrale per la raccolta dati attraverso le applicazioni e i server di database. In questo punto di raccolta si possono ottenere dati da diverse origini e non esclusivamente relativi alle prestazioni, a differenza di Traccia SQL.  
+ L'agente di raccolta dati è un componente chiave della piattaforma di raccolta dati per [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] e gli strumenti forniti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'agente di raccolta dati fornisce un punto centrale per la raccolta dati attraverso le applicazioni e i server di database. In questo punto di raccolta si possono ottenere dati da diverse origini e non esclusivamente relativi alle prestazioni, a differenza di Traccia SQL.  
   
  L'agente di raccolta dati consente di regolare l'ambito della raccolta dati per adattarlo agli ambienti di prova e di produzione. Utilizza inoltre un data warehouse, ovvero un database relazionale che consente di gestire i dati raccolti impostando diversi periodi di mantenimento.  
   
  L'agente di raccolta dati supporta l'ottimizzazione dinamica per la raccolta di dati ed è estensibile tramite l'API. Per altre informazioni, vedere [Programmazione dell'agente di raccolta dati](../system-functions/data-collector-functions-transact-sql.md).  
   
- Nella figura seguente viene illustrato come si colloca l'agente di raccolta dati nella strategia complessiva per la raccolta e la gestione dei dati in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Nella figura seguente viene illustrato come si colloca l'agente di raccolta dati nella strategia complessiva per la raccolta e la gestione dei dati in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
  ![Ruolo dell'agente di raccolta dati nella gestione dei dati](../../relational-databases/data-collection/media/datacollectorroleindatastrategy.gif "Ruolo dell'agente di raccolta dati nella gestione dei dati")  
   
