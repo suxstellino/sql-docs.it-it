@@ -46,7 +46,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*     
  Specifica la quantità massima di memoria che una singola richiesta può accettare dal pool. *value* è una percentuale relativa alla dimensione del pool di risorse specificata da MAX_MEMORY_PERCENT.  
 
-*value* è un integer fino a [!INCLUDE[ssSQL17](sssql17-md.md)] e un valore float a partire da [!INCLUDE[sql-server-2019](sssqlv15-md.md)]. Il valore predefinito è 25. L'intervallo consentito per *value* è compreso tra 1 e 100.
+*value* è un integer fino a [!INCLUDE[ssSQL17](sssql17-md.md)] e un valore float a partire da [!INCLUDE[sql-server-2019](sssql19-md.md)]. Il valore predefinito è 25. L'intervallo consentito per *value* è compreso tra 1 e 100.
   
 > [!NOTE]  
 > La quantità specificata si riferisce solo alla memoria di concessione per l'esecuzione della query.  
@@ -72,7 +72,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > Per impostazione predefinita, Resource Governor non impedirà la continuazione di una richiesta se viene superato il tempo massimo, ma verrà generato un evento. Per altre informazioni, vedere [Classe di evento CPU Threshold Exceeded](../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md). 
 
 > [!IMPORTANT]
-> A partire da [!INCLUDE[ssSQL15](sssql16-md.md)] SP2 e [!INCLUDE[ssSQL17](sssql17-md.md)] CU3 e usando il [flag di traccia 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor interrompe una richiesta se viene superato il tempo massimo.
+> A partire da [!INCLUDE[sssql16-md](sssql16-md.md)] SP2 e [!INCLUDE[ssSQL17](sssql17-md.md)] CU3 e usando il [flag di traccia 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor interrompe una richiesta se viene superato il tempo massimo.
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Specifica il tempo massimo, in secondi, che una query può attendere prima che una concessione di memoria (memoria buffer di lavoro) diventi disponibile.  

@@ -41,7 +41,7 @@ IMPORTANCE è locale al pool di risorse. I gruppi di carico di lavoro con divers
 REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*</br>
 Specifica la quantità massima di memoria che una singola richiesta può accettare dal pool. *value* è una percentuale relativa alla dimensione del pool di risorse specificata da MAX_MEMORY_PERCENT.
 
-*value* è un intero fino a [!INCLUDE[ssSQL17](sssql17-md.md)] e un valore float a partire da [!INCLUDE[sql-server-2019](sssqlv15-md.md)] e in Istanza gestita di SQL di Azure. Il valore predefinito è 25. L'intervallo consentito per *value* è compreso tra 1 e 100.
+*value* è un intero fino a [!INCLUDE[ssSQL17](sssql17-md.md)] e un valore float a partire da [!INCLUDE[sql-server-2019](sssql19-md.md)] e in Istanza gestita di SQL di Azure. Il valore predefinito è 25. L'intervallo consentito per *value* è compreso tra 1 e 100.
 
 > [!IMPORTANT]  
 > La quantità specificata si riferisce solo alla memoria di concessione per l'esecuzione della query.
@@ -64,7 +64,7 @@ Viene specificato il tempo massimo della CPU, in secondi, utilizzabile da una ri
 > [!NOTE]
 > Per impostazione predefinita, Resource Governor non impedirà la continuazione di una richiesta se viene superato il tempo massimo, ma verrà generato un evento. Per altre informazioni, vedere [Classe di evento CPU Threshold Exceeded](../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).
 > [!IMPORTANT]
-> A partire da [!INCLUDE[ssSQL15](sssql16-md.md)] SP2 e [!INCLUDE[ssSQL17](sssql17-md.md)] CU3 e usando il [flag di traccia 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor interrompe una richiesta se viene superato il tempo massimo.
+> A partire da [!INCLUDE[sssql16-md](sssql16-md.md)] SP2 e [!INCLUDE[ssSQL17](sssql17-md.md)] CU3 e usando il [flag di traccia 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor interrompe una richiesta se viene superato il tempo massimo.
 
 REQUEST_MEMORY_GRANT_TIMEOUT_SEC = *value*</br>
 Specifica il tempo massimo, in secondi, che una query può attendere prima che una concessione di memoria (memoria buffer di lavoro) diventi disponibile. *value* deve essere 0 o un valore intero positivo. L'impostazione predefinita per *value*, 0, usa un calcolo interno basato sul costo della query per determinare il tempo massimo.
@@ -97,7 +97,7 @@ Associa il gruppo del carico di lavoro al pool di risorse definito dall'utente i
 > Per i gruppi di carico di lavoro e i pool di risorse predefiniti vengono utilizzati sempre nomi scritti in lettere minuscole, ad esempio "default". Questo aspetto deve essere preso in considerazione per i server in cui vengono utilizzate regole di confronto con distinzione tra maiuscole e minuscole. In server con regole di confronto senza distinzione tra maiuscole e minuscole, ad esempio SQL_Latin1_General_CP1_CI_AS, le parole "default" e "Default" vengono considerate uguali.
 
 EXTERNAL external_pool_name | "default"</br>
-**Si applica a**: [!INCLUDE[ssNoVersion](ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](sssql16-md.md)]).
+**Si applica a**: [!INCLUDE[ssNoVersion](ssnoversion-md.md)] (a partire da [!INCLUDE[sssql16-md](sssql16-md.md)]).
 
 Il gruppo del carico di lavoro può specificare un pool di risorse esterne. È possibile definire un gruppo di carico del lavoro e associarlo a due pool:
 
