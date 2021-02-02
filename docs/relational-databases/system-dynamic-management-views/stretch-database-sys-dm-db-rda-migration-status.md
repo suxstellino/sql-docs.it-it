@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: a08b50c897735183d2b3ac39a11cba09b11102e7
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fc0253df9c1f9c593ef2169f03cb3ff98382cdad
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99202460"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236835"
 ---
 # <a name="stretch-database---sysdm_db_rda_migration_status"></a>Stretch Database sys.dm_db_rda_migration_status
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "99202460"
   
  **sys.dm_db_rda_migration_status** viene definito come ambito del contesto di database corrente. Assicurarsi di trovarsi nel contesto del database delle tabelle abilitate per l'estensione per le quali si desidera visualizzare lo stato di migrazione.  
   
- In [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] l'output di **sys.dm_db_rda_migration_status** è limitato a 200 righe.  
+ In [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] l'output di **sys.dm_db_rda_migration_status** è limitato a 200 righe.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  

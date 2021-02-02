@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 92511a835a8a9a6f899f7597900fec6707f6dada
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: ca05529c9b4ce1d9ec603989af81f0d2aeebf76b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96129419"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236402"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Installazione e configurazione di Master Data Services
 
@@ -90,7 +90,7 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](
    
 9. Nella pagina **Funzionalità** verificare che siano selezionate le seguenti funzionalità e quindi fare clic su **Avanti**. Queste funzionalità sono necessarie per [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] in [!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)].
   
-    |Caratteristiche|Caratteristiche|  
+    |Funzionalità|Funzionalità|  
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
@@ -130,11 +130,11 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](
   
 3.  Nella pagina **server database** specificare l'istanza di SQL Server. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] aggiunge il supporto per SQL Server Istanza gestita. Impostare il valore di **SQL Server istanza** sull'host dell'istanza gestita. Ad esempio, `xxxxxx.xxxxxx.database.windows.net`
+    >  [!INCLUDE[sqlv15](../includes/sssql19-md.md)] aggiunge il supporto per SQL Server Istanza gestita. Impostare il valore di **SQL Server istanza** sull'host dell'istanza gestita. Ad esempio: `xxxxxx.xxxxxx.database.windows.net`.
 
 4. Selezionare il **tipo di autenticazione** e quindi fare clic su **Test connessione** per confermare che è possibile connettersi al database usando le credenziali per il tipo di autenticazione selezionato. Fare clic su **Avanti**.
 
-    >Per [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] , per connettersi all'istanza gestita, usare uno dei seguenti tipi di autenticazione:
+    >Per [!INCLUDE[sqlv15](../includes/sssql19-md.md)] , per connettersi all'istanza gestita, usare uno dei seguenti tipi di autenticazione:
     >
     >- Azure Active Directory autenticazione integrata: **utente corrente-Active Directory integrato**
     >- Autenticazione SQL Server: **SQL Server account**.

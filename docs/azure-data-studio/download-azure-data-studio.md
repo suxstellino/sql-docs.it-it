@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 1/22/2020
-ms.openlocfilehash: 65daa495933d0dc974b6ae4d1c14ff9e59bd6249
-ms.sourcegitcommit: 2bdf1f1ee88f4fe3e872227d025e965e95d1b2b4
+ms.openlocfilehash: 1a8de5f990d9f3a8a974705d090dad8dccc1bae6
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98711967"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235731"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Scaricare e installare Azure Data Studio
 
@@ -174,7 +174,7 @@ In un ambiente offline gli aggiornamenti possono essere applicati tramite l'[ins
 
 ## <a name="supported-sql-offerings"></a>Offerte di SQL supportate
 
-- Questa versione di Azure Data Studio funziona con tutte le [versioni supportate di SQL Server 2014 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-MD.md)]](https://support.microsoft.com/lifecycle?C2=1044) e offre supporto per l'uso con le funzionalità cloud più recenti nel database SQL di Azure e in Azure Synapse Analytics. Azure Data Studio fornisce anche il supporto in anteprima per Istanza gestita di SQL di Azure.
+- Questa versione di Azure Data Studio funziona con tutte le [versioni supportate [!INCLUDE [sssql14-md](../includes/sssql14-md.md)]  -  [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] di](https://support.microsoft.com/lifecycle?C2=1044) e fornisce il supporto per l'uso delle funzionalità cloud più recenti nel database SQL di Azure e nell'analisi delle sinapsi di Azure. Azure Data Studio fornisce anche il supporto in anteprima per Istanza gestita di SQL di Azure.
 
 ## <a name="move-user-settings"></a>Spostare le impostazioni utente
 

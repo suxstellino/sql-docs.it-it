@@ -28,12 +28,12 @@ ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c98d84c8e3bc08bfae13c149cfc0487c57e40008
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 259e58dcf9ef713a9bb8787a63ac8cbf3a349c88
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171573"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237727"
 ---
 # <a name="database-checkpoints-sql-server"></a>Checkpoint di database (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -107,11 +107,11 @@ In caso di un arresto anomalo del sistema, i checkpoint indiretti consentono un 
 Tuttavia, un carico di lavoro transazionale online su un database configurato per i checkpoint indiretti può subire un calo delle prestazioni. Questo perché il writer in background utilizzato dai checkpoint indiretti aumenta talvolta il carico di scrittura totale di un'istanza del server.  
  
 > [!IMPORTANT]
-> I checkpoint indiretti rappresentano il comportamento predefinito per i nuovi database creati in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], inclusi i database modello e i database TempDB.          
+> I checkpoint indiretti rappresentano il comportamento predefinito per i nuovi database creati in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], inclusi i database modello e i database TempDB.          
 > I database aggiornati sul posto o ripristinati da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] useranno il comportamento precedente basato sui checkpoint automatici, a meno che non vengano modificati in modo esplicito per l'uso dei checkpoint indiretti.       
 
 ### <a name="improved-indirect-checkpoint-scalability"></a><a name="ctp23"></a> Scalabilità migliorata per il checkpoint indiretto
-Nelle versioni precedenti a [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] è possibile riscontrare errori con l'utilità di pianificazione che non cede il controllo quando il database genera un numero elevato di pagine dirty, ad esempio `tempdb`. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce una scalabilità migliorata per il checkpoint indiretto che consente di evitare questi errori nei database con un carico di lavoro eccessivo di `UPDATE`/`INSERT`.
+Nelle versioni precedenti a [!INCLUDE[ssNoVersion](../../includes/sssql19-md.md)] è possibile riscontrare errori con l'utilità di pianificazione che non cede il controllo quando il database genera un numero elevato di pagine dirty, ad esempio `tempdb`. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] introduce una scalabilità migliorata per il checkpoint indiretto che consente di evitare questi errori nei database con un carico di lavoro eccessivo di `UPDATE`/`INSERT`.
   
 ##  <a name="internal-checkpoints"></a><a name="EventsCausingChkpt"></a> Checkpoint interni  
 I checkpoint interni vengono generati da vari componenti server per garantire che le immagini sul disco corrispondano allo stato corrente del log. I checkpoint interni vengono generati in risposta agli eventi seguenti:  

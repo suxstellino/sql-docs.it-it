@@ -12,12 +12,12 @@ ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72ab05dfce314119c30e08428fdcaa2b94ba25ed
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 8dd4d753f4195a1cf4ae6a92ea8bd617675ba4f7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171773"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237595"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Indici columnstore - Linee guida per la progettazione
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,7 +72,7 @@ Per altre informazioni, vedere [Indici columnstore - Data warehouse](../../relat
 
 ## <a name="add-b-tree-nonclustered-indexes-for-efficient-table-seeks"></a>Aggiungere indici albero B non cluster per ricerche efficienti nelle tabelle
 
-A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] è possibile creare indici albero B non cluster come indici secondari in un indice columnstore cluster. L'indice albero B non cluster viene aggiornato con le modifiche apportate all'indice columnstore. Si tratta di una funzionalità potente con numerosi vantaggi. 
+A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] è possibile creare indici albero B non cluster come indici secondari in un indice columnstore cluster. L'indice albero B non cluster viene aggiornato con le modifiche apportate all'indice columnstore. Si tratta di una funzionalità potente con numerosi vantaggi. 
 
 L'uso di un indice albero B secondario consente di eseguire ricerche di righe specifiche in modo efficiente, senza dover analizzare tutte le righe.  Sono disponibili anche altre opzioni. È possibile ad esempio applicare un vincolo chiave primaria o chiave esterna tramite un vincolo UNIQUE sull'indice albero B. Dato che non è possibile inserire un valore non univoco nell'indice albero B, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può inserire il valore nel columnstore. 
 
@@ -84,7 +84,7 @@ Valutare la possibilità di usare un indice albero B su un indice columnstore ne
 
 ## <a name="use-a-nonclustered-columnstore-index-for-real-time-analytics"></a>Usare un indice columnstore non cluster per analisi in tempo reale
 
-A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] è possibile creare un indice columnstore non cluster su una tabella rowstore basata su disco o su una tabella OLTP in memoria. Questo rende possibile l'esecuzione di analisi in tempo reale su una tabella transazionale. In questo modo è possibile eseguire allo stesso tempo analisi sull'indice columnstore e le transazioni sulla tabella sottostante. Dato che una sola tabella gestisce entrambi gli indici, le modifiche sono disponibili in tempo reale sia per l'indice rowstore che per l'indice columnstore.
+A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] è possibile creare un indice columnstore non cluster su una tabella rowstore basata su disco o su una tabella OLTP in memoria. Questo rende possibile l'esecuzione di analisi in tempo reale su una tabella transazionale. In questo modo è possibile eseguire allo stesso tempo analisi sull'indice columnstore e le transazioni sulla tabella sottostante. Dato che una sola tabella gestisce entrambi gli indici, le modifiche sono disponibili in tempo reale sia per l'indice rowstore che per l'indice columnstore.
 
 Un indice columnstore consente di ottenere livelli di compressione dei dati 10 volte migliori rispetto a un indice rowstore, quindi richiede solo una piccola quantità di spazio di archiviazione aggiuntivo. Ad esempio, se la tabella rowstore compressa richiede 20 GB, l'indice columnstore potrebbe richiedere altri 2 GB. Lo spazio aggiuntivo necessario dipende anche dal numero di colonne nell'indice columnstore non cluster. 
 
@@ -94,7 +94,7 @@ Un indice columnstore consente di ottenere livelli di compressione dei dati 10 v
   
 *   Per evitare la necessità di un data warehouse separato. In genere, le aziende eseguono le transazioni in una tabella rowstore e quindi caricano i dati in un data warehouse separato per le operazioni di analisi. Per molti carichi di lavoro, è possibile evitare il processo di caricamento e la disponibilità di un data warehouse separato creando un indice columnstore non cluster sulle tabelle transazionali.
 
-  [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] offre diverse strategie per rendere efficiente questo scenario. È molto semplice da provare, perché è possibile abilitare un indice columnstore non cluster senza dover modificare l'applicazione OLTP. 
+  [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] offre diverse strategie per rendere efficiente questo scenario. È molto semplice da provare, perché è possibile abilitare un indice columnstore non cluster senza dover modificare l'applicazione OLTP. 
 
 Per aggiungere ulteriori risorse di elaborazione, è possibile eseguire le operazioni di analisi su una replica secondaria leggibile. L'uso di una replica secondaria leggibile consente di separare l'elaborazione del carico di lavoro transazionale e del carico di lavoro di analisi. 
 
@@ -171,11 +171,11 @@ La tabella seguente riepiloga le attività per la creazione e la manutenzione de
   
 |Attività|Argomenti di riferimento|Note|  
 |----------|----------------------|-----------|  
-|Creare una tabella come columnstore.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]è possibile creare la tabella come indice columnstore cluster. Non è necessario creare prima una tabella rowstore e quindi convertirla in columnstore.|  
-|Creare una tabella in memoria con un indice columnstore.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] è possibile creare una tabella in memoria ottimizzata con un indice columnstore. L'indice columnstore può anche essere aggiunto dopo aver creato la tabella, usando la sintassi ALTER TABLE ADD INDEX.|  
+|Creare una tabella come columnstore.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]è possibile creare la tabella come indice columnstore cluster. Non è necessario creare prima una tabella rowstore e quindi convertirla in columnstore.|  
+|Creare una tabella in memoria con un indice columnstore.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] è possibile creare una tabella in memoria ottimizzata con un indice columnstore. L'indice columnstore può anche essere aggiunto dopo aver creato la tabella, usando la sintassi ALTER TABLE ADD INDEX.|  
 |Convertire una tabella rowstore in un columnstore.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Convertire un heap o un albero binario esistente o in un columnstore. Gli esempi illustrano come gestire gli indici esistenti e il nome dell'indice quando si esegue questa conversione.|  
 |Convertire una tabella columnstore in un rowstore.|[CREATE CLUSTERED INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md#d-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index) oppure [Convertire una tabella columnstore di nuovo in un heap rowstore](../../t-sql/statements/create-columnstore-index-transact-sql.md#e-convert-a-columnstore-table-back-to-a-rowstore-heap) |Di solito non è necessario eseguire questa conversione, ma talvolta potrebbe presentarsene la necessità. Gli esempi illustrano come convertire un columnstore in un heap o in un indice cluster.|   
-|Creare un indice columnstore per una tabella rowstore.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Una tabella rowstore può avere un solo indice columnstore.  A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]l'indice columnstore può avere una condizione di filtro. Gli esempi illustrano la sintassi di base.|  
+|Creare un indice columnstore per una tabella rowstore.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Una tabella rowstore può avere un solo indice columnstore.  A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]l'indice columnstore può avere una condizione di filtro. Gli esempi illustrano la sintassi di base.|  
 |Creare indici ad alte prestazioni per l'analisi operativa.|[Introduzione a columnstore per l'analisi operativa in tempo reale](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|Descrive come creare indici columnstore e indici albero B complementari in modo che le query OLTP usino gli indici albero B e le query di analisi usino gli indici columnstore.|  
 |Creare indici columnstore efficienti per il data warehousing.|[Indici columnstore - Data warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Descrive come usare gli indici albero B con le tabelle columnstore per creare query di data warehousing ad alte prestazioni.|  
 |Usare un indice albero B per imporre un vincolo di chiave primaria per un indice columnstore.|[Indici columnstore - Data warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Illustra come combinare indici albero B e indici columnstore per imporre vincoli di chiave primaria per l'indice columnstore.|  

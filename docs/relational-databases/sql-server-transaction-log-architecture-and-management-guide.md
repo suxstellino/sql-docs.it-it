@@ -22,12 +22,12 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a445552a69033bec7564e05d7fc86d7416a5ff47
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: ed532d22800cd10530ecc7db8595fcf75e3737da
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461832"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237936"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guida sull'architettura e gestione del log delle transazioni di SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -239,7 +239,7 @@ Il log attivo deve includere tutte le parti di tutte le transazioni di cui non �
 * Se il sistema viene arrestato dopo che la transazione ha eseguito numerose modifiche di cui non è stato eseguito il commit, la fase di recupero del riavvio successivo può richiedere tempi notevolmente più lunghi rispetto al valore specificato dall'opzione dell' **intervallo di recupero** .
 * È possibile che il log raggiunga dimensioni considerevoli in quanto non può essere troncato dopo il numero MinLSN. Ciò si verifica anche se il database utilizza il modello di recupero con registrazione minima, in base al quale il log delle transazioni viene in genere troncato in corrispondenza di ogni checkpoint automatico.
 
-A partire da [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] e in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] è possibile evitare il ripristino di transazioni con esecuzione prolungata e i problemi descritti in precedenza usando il [recupero del database accelerato](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).  
+A partire da [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] e in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] è possibile evitare il ripristino di transazioni con esecuzione prolungata e i problemi descritti in precedenza usando il [recupero del database accelerato](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).  
 
 ### <a name="replication-transactions"></a>Transazioni di replica
 L'agente di lettura log esegue il monitoraggio del log delle transazioni di tutti i database configurati per la replica transazionale e copia le transazioni contrassegnate per la replica dal log delle transazioni al database di distribuzione. Il log attivo deve contenere tutte le transazioni contrassegnate per la replica, ma non ancora recapitate al database di distribuzione. Se tali transazioni non vengono replicate tempestivamente, potrebbero impedire il troncamento del log. Per altre informazioni, vedere [Replica transazionale](../relational-databases/replication/transactional/transactional-replication.md).

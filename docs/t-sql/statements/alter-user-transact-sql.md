@@ -26,12 +26,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c884d4b07afc92f6a95a5688d3f085d1d7e4f696
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9f10913c23d8ab4b395bea53d1aadb7fbd8d3009
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99199425"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237015"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -114,7 +114,7 @@ NAME = newUserName
 > [!NOTE]
 > È possibile specificare questa opzione solo in un database indipendente e solo per utenti contenuti.
 
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **si applica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
  Elimina i controlli sui metadati di crittografia nel server nelle operazioni di copia bulk. Ciò consente all'utente di eseguire la copia bulk dei dati crittografati tra tabelle o database senza decrittografare i dati. Il valore predefinito è OFF.
 
@@ -302,7 +302,7 @@ ALTER USER userName
 > [!NOTE]
 > Questa opzione è disponibile solo per gli utenti contenuti.
 
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **si applica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
  Elimina i controlli sui metadati di crittografia nel server nelle operazioni di copia bulk. Ciò consente all'utente di eseguire la copia bulk dei dati crittografati tra tabelle o database senza decrittografare i dati. Il valore predefinito è OFF.
 

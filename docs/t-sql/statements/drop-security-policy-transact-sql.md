@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5bd3393d-2fa5-4db0-a69a-a1a72d638e9d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 949c4d3b9d42794a44ec718c562eac861c04014e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 960848d874ee08e9dfc42ea8ec9b58cdf85d24f6
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99211250"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236249"
 ---
 # <a name="drop-security-policy-transact-sql"></a>DROP SECURITY POLICY (Transact-SQL)
 
@@ -44,7 +44,7 @@ DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name
 
 ## <a name="arguments"></a>Argomenti
  *IF EXISTS*  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level)).  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level)).  
   
  Rimuove in modo condizionale il criterio di sicurezza solo se esiste già.  
   

@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: e1dcbea42043d1077dd2b0c9e0f1127c9319842b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: cc9fa042411cdbd308ea40ae9584f039f155dc29
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170743"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236139"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "98170743"
   
  SQL Server supporta l'archiviazione di backup nel servizio di archiviazione BLOB di Microsoft Azure nei modi seguenti:  
   
--   **Gestione dei backup in Microsoft Azure:** usando gli stessi metodi usati per eseguire il backup su DISK e TAPE, è ora possibile eseguire il backup nel servizio di archiviazione Microsoft Azure specificando l'URL come destinazione di backup. È possibile utilizzare questa funzionalità per eseguire il backup manualmente o per configurare la propria strategia di backup allo stesso modo di una risorsa di archiviazione locale o di altre soluzioni esterne. Questa funzionalità viene definita anche **Backup di SQL Server nell'URL**. Per altre informazioni, vedere [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md). Questa funzionalità è disponibile in SQL Server 2012 SP1 CU2 o versione successiva. Questa funzionalità è stata migliorata in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] per garantire prestazioni e funzionalità superiori tramite l'uso di BLOB in blocchi, firme di accesso condiviso e striping.  
+-   **Gestione dei backup in Microsoft Azure:** usando gli stessi metodi usati per eseguire il backup su DISK e TAPE, è ora possibile eseguire il backup nel servizio di archiviazione Microsoft Azure specificando l'URL come destinazione di backup. È possibile utilizzare questa funzionalità per eseguire il backup manualmente o per configurare la propria strategia di backup allo stesso modo di una risorsa di archiviazione locale o di altre soluzioni esterne. Questa funzionalità viene definita anche **Backup di SQL Server nell'URL**. Per altre informazioni, vedere [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md). Questa funzionalità è disponibile in SQL Server 2012 SP1 CU2 o versione successiva. Questa funzionalità è stata migliorata in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] per garantire prestazioni e funzionalità superiori tramite l'uso di BLOB in blocchi, firme di accesso condiviso e striping.  
   
     > [!NOTE]  
     >  Per le versioni di SQL Server precedenti a SQL Server 2012 SP1 CU2, è possibile usare il componente aggiuntivo dello strumento per il backup di SQL Server in Microsoft Azure per creare i backup nel servizio di archiviazione Microsoft Azure in modo rapido e semplice. Per ulteriori informazioni, vedere l' [Area download](https://go.microsoft.com/fwlink/?LinkID=324399).  
@@ -42,7 +42,7 @@ ms.locfileid: "98170743"
 -   Archiviazione flessibile, affidabile e illimitata in una posizione esterna: l'archiviazione dei backup nel servizio BLOB di Microsoft Azure può essere una soluzione esterna utile, flessibile e di facile accesso. La creazione dell'archiviazione in una posizione esterna per i backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere semplice quanto la modifica degli script o dei processi esistenti. Generalmente, l'archiviazione in una posizione esterna deve essere sufficientemente lontana dalla posizione del database di produzione per impedire che una singola situazione di emergenza possa influire sia sulla posizione esterna sia su quella del database di produzione. Scegliendo la replica a livello geografico dell'archiviazione BLOB si dispone di un ulteriore livello di protezione in caso di evento di emergenza che potrebbe influire sull'intera area. Inoltre, i backup sono disponibili sempre e in qualsiasi punto e possono essere facilmente utilizzati per i ripristini.  
   
     > [!IMPORTANT]  
-    >  Con l'uso di BLOB in blocchi in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], è possibile eseguire lo striping del set di backup per supportare file di backup con dimensioni fino a 12,8 TB.  
+    >  Con l'uso di BLOB in blocchi in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], è possibile eseguire lo striping del set di backup per supportare file di backup con dimensioni fino a 12,8 TB.  
   
 -   Archivio di backup: il servizio di archiviazione BLOB di Microsoft Azure offre un'alternativa migliore rispetto al più comune uso della soluzione su nastro adottata per archiviare i backup. L'archiviazione su nastro può richiedere il trasporto fisico alla struttura fuori sede e l'adozione di determinate misure per la protezione dei supporti. L'archiviazione dei backup nell'apposito servizio BLOB di Microsoft Azure garantisce una soluzione di archiviazione immediata, a elevata disponibilità e durevole.  
   

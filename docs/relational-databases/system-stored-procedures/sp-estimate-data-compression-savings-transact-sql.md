@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 938e6994f5d19f59023009cf9806ca62280dc5b9
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 93d169d364369e87f1c363297c2a5c73c58e442b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99193558"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237844"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -110,10 +110,10 @@ sp_estimate_data_compression_savings
  Prima di SQL Server 2019, questa procedura non si applicava agli indici columnstore e pertanto non accettava il COLUMNStore dei parametri di compressione dei dati e la COLUMNSTORE_ARCHIVE.  A partire da SQL Server 2019, gli indici columnstore possono essere usati sia come oggetto di origine per la stima che come tipo di compressione richiesto.
 
  > [!IMPORTANT]
- > Quando i [metadati tempdb con ottimizzazione](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) per la memoria sono abilitati in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] , la creazione di indici columnstore in tabelle temporanee non è supportata. A causa di questa limitazione, sp_estimate_data_compression_savings non è supportata con i parametri COLUMNStore e COLUMNSTORE_ARCHIVE compressione dati quando Memory-Optimized metadati TempDB sono abilitati.
+ > Quando i [metadati tempdb con ottimizzazione](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) per la memoria sono abilitati in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] , la creazione di indici columnstore in tabelle temporanee non è supportata. A causa di questa limitazione, sp_estimate_data_compression_savings non è supportata con i parametri COLUMNStore e COLUMNSTORE_ARCHIVE compressione dati quando Memory-Optimized metadati TempDB sono abilitati.
 
 ## <a name="considerations-for-columnstore-indexes"></a>Considerazioni sugli indici columnstore
- A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] , `sp_estimate_compression_savings` supporta la stima della compressione dell'archivio columnstore e columnstore. A differenza della compressione di pagine e righe, per applicare la compressione columnstore a un oggetto è necessario creare un nuovo indice columnstore. Per questo motivo, quando si usano le opzioni COLUMNStore e COLUMNSTORE_ARCHIVE di questa procedura, il tipo dell'oggetto di origine fornito alla routine determina il tipo di indice columnstore usato per la stima delle dimensioni compresse. La tabella seguente illustra gli oggetti di riferimento usati per stimare i risparmi di compressione per ogni tipo di oggetto di origine quando il @data_compression parametro è impostato su columnstore o COLUMNSTORE_ARCHIVE.
+ A partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] , `sp_estimate_compression_savings` supporta la stima della compressione dell'archivio columnstore e columnstore. A differenza della compressione di pagine e righe, per applicare la compressione columnstore a un oggetto è necessario creare un nuovo indice columnstore. Per questo motivo, quando si usano le opzioni COLUMNStore e COLUMNSTORE_ARCHIVE di questa procedura, il tipo dell'oggetto di origine fornito alla routine determina il tipo di indice columnstore usato per la stima delle dimensioni compresse. La tabella seguente illustra gli oggetti di riferimento usati per stimare i risparmi di compressione per ogni tipo di oggetto di origine quando il @data_compression parametro è impostato su columnstore o COLUMNSTORE_ARCHIVE.
 
  |Oggetto di origine|Oggetto di riferimento|
  |-----------------|---------------|

@@ -21,12 +21,12 @@ ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c50652dee0c0930d528249c340bf905a94763f0e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d5b078e8c93918cc15d547e01d45ab0a3f97adae
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99180686"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236845"
 ---
 # <a name="sysdm_db_file_space_usage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "99180686"
 |user_object_reserved_page_count|**bigint**|Numero totale di pagine allocate da extent uniformi per gli oggetti utente nel database. Sono incluse nel conteggio le pagine non utilizzate da un extent allocato.<br /><br /> Le pagine IAM non vengono incluse perché vengono sempre allocate dagli extent misti. Le pagine PFS vengono incluse se vengono allocate da un extent uniforme.<br /><br /> È possibile utilizzare la colonna total_pages della vista del catalogo [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) per restituire il conteggio delle pagine riservate di ogni unità di allocazione nell'oggetto utente. Si noti, tuttavia, che la colonna total_pages include le pagine IAM.|  
 |internal_object_reserved_page_count|**bigint**|Numero totale di pagine negli extent uniformi allocate per gli oggetti interni nel file. Sono incluse nel conteggio le pagine non utilizzate da un extent allocato.<br /><br /> Le pagine IAM non vengono incluse perché vengono sempre allocate dagli extent misti. Le pagine PFS vengono incluse se vengono allocate da un extent uniforme.<br /><br /> Non esistono viste del catalogo o oggetti a gestione dinamica che restituiscono il conteggio delle pagine di ogni oggetto interno.|  
 |mixed_extent_page_count|**bigint**|Numero totale di pagine allocate e non allocate negli extent misti allocati nel file. Gli extent misti contengono le pagine allocate a oggetti diversi. In questo conteggio sono incluse tutte le pagine IAM nel file.|
-|modified_extent_page_count|**bigint**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 e versioni successive.<br /><br />Numero totale di pagine modificate negli extent allocati del file dall'ultimo backup completo del database. Il numero di pagine modificate può essere utilizzato per tenere traccia della quantità di modifiche differenziali nel database dall'ultimo backup completo, per stabilire se è necessario il backup differenziale.|
+|modified_extent_page_count|**bigint**|**Si applica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 e versioni successive.<br /><br />Numero totale di pagine modificate negli extent allocati del file dall'ultimo backup completo del database. Il numero di pagine modificate può essere utilizzato per tenere traccia della quantità di modifiche differenziali nel database dall'ultimo backup completo, per stabilire se è necessario il backup differenziale.|
 |pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
 |distribution_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> ID numerico univoco associato alla distribuzione.|  
   

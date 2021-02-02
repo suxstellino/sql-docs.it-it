@@ -15,12 +15,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: ef87d8cdfb44d36faff5e06cfdc0b0f691142c03
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: ad05914c851b30c567f15cfa43e85299b37b81c5
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170403"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235793"
 ---
 # <a name="performance-dashboard"></a>Performance Dashboard
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -76,7 +76,7 @@ Il report **Indici mancanti** segnala gli indici potenzialmente mancanti che Que
 
 Il report **Attese** filtra tutte le attese di inattività e sospensione. Per altre informazioni sulle attese, vedere [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) e il [documento relativo all'ottimizzazione delle prestazioni di SQL Server 2005 tramite l'uso di attese e code](https://download.microsoft.com/download/4/7/a/47a548b9-249e-484c-abd7-29f31282b04d/performance_tuning_waits_queues.doc).
 
-I report **Query dispendiose** vengono reimpostati quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene riavviato perché i dati nella DMV sottostante sono stati cancellati. A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], informazioni dettagliate sulle query dispendiose sono reperibili in Query Store. 
+I report **Query dispendiose** vengono reimpostati quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene riavviato perché i dati nella DMV sottostante sono stati cancellati. A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], informazioni dettagliate sulle query dispendiose sono reperibili in Query Store. 
 
 
 > [!NOTE]

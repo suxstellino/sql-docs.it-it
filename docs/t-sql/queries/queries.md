@@ -14,18 +14,18 @@ ms.assetid: 5ff02a32-e8d3-479c-ae8b-07581e41f5f8
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f75ddee41a56bdee08f2ebe0f12185ae5cc6866c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: abe6b791139a4fbc110b4aeb43e0de267a927e96
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99207633"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236002"
 ---
 # <a name="queries"></a>Query
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Data Manipulation Language (DML) è un vocabolario usato per recuperare e utilizzare i dati in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e nel database SQL. Questo linguaggio è per la maggior parte utilizzabile anche in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (vedere ogni singola istruzione per i dettagli). Utilizzare queste istruzioni per operazioni di aggiunta, modifica, esecuzione di query o rimozione dei dati di un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Data Manipulation Language (DML) è un vocabolario usato per recuperare e utilizzare i dati in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] e nel database SQL. Questo linguaggio è per la maggior parte utilizzabile anche in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (vedere ogni singola istruzione per i dettagli). Utilizzare queste istruzioni per operazioni di aggiunta, modifica, esecuzione di query o rimozione dei dati di un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  Nella tabella seguente vengono elencate le istruzioni DML utilizzate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

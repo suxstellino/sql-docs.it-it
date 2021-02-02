@@ -9,22 +9,22 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15'
-ms.openlocfilehash: 4630a96f1abf961174ece179aabfd160a5784ad9
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 5b99f12aebc27d04b384ff0b8d51b5359ca76d19
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471612"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236921"
 ---
 # <a name="configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Configurare la memoria persistente per SQL Server in Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-Questo articolo descrive come configurare la memoria persistente per [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] in Linux.
+Questo articolo descrive come configurare la memoria persistente per [!INCLUDE[sqlv15](../includes/sssql19-md.md)] in Linux.
 
 ## <a name="overview"></a>Panoramica
 
-[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] include una serie di funzionalità in memoria che usano la memoria persistente. In questo documento vengono illustrati i passaggi necessari per configurare la memoria persistente per SQL Server in Linux.
+[!INCLUDE[sqlv15](../includes/sssql19-md.md)] include una serie di funzionalità in memoria che usano la memoria persistente. In questo documento vengono illustrati i passaggi necessari per configurare la memoria persistente per SQL Server in Linux.
 
 > [!NOTE]
 > Il termine _consapevolezza_ è stato usato per spiegare il concetto relativo all'uso di un file system in grado di riconoscere la memoria persistente. L'accesso diretto al file system dalle applicazioni dello spazio utente viene facilitato tramite il mapping di memoria (`mmap()`). Quando viene creato un mapping di memoria per un file, l'applicazione può eseguire istruzioni di caricamento/archiviazione che ignorano completamente lo stack di I/O. Questo è considerato un metodo di accesso ai file "consapevole" dal punto di vista dell'applicazione dell'estensione host (ovvero il codice black box che consente a SQLPAL di interagire con il sistema operativo Windows o Linux).

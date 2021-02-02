@@ -30,12 +30,12 @@ ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1619cb109b39fe385bd0075d7bb5513ee3ca4085
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 3ce1740def1f7d2ebd70ad611f3b7b489ca04f99
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99207554"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235859"
 ---
 # <a name="select---into-clause-transact-sql"></a>Clausola SELECT - INTO (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ SELECT...INTO crea una nuova tabella nel filegroup predefinito e vi inserisce le
  *filegroup*    
  Specifica il nome del filegroup in cui verrà creata la nuova tabella. Il filegroup specificato deve esistere nel database anche se il motore di SQL Server genera un errore.   
  
- **Si applica a:** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 e versioni successive.
+ **Si applica a:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 e versioni successive.
   
 ## <a name="data-types"></a>Tipi di dati  
  L'attributo FILESTREAM non viene trasferito nella nuova tabella. Gli oggetti binari di grandi dimensioni FILESTREAM vengono copiati e archiviati nella nuova tabella come oggetti binari di grandi dimensioni di tipo **varbinary(max)** . Senza l'attributo FILESTREAM, il tipo di dati **varbinary(max)** è soggetto al limite di 2 GB. Se un oggetto BLOB FILESTREAM supera questo valore, viene generato l'errore 7119 e l'istruzione viene arrestata.  
@@ -219,7 +219,7 @@ GO
 ### <a name="e-import-from-an-external-table-created-with-polybase"></a>E. Importare da una tabella esterna creata con PolyBase  
  Importare dati da Hadoop o dall'archiviazione di Azure in SQL Server per l'archivio permanente. Usare `SELECT INTO` per importare i dati a cui fa riferimento una tabella esterna per l'archiviazione permanente in SQL Server. Creare un tabella relazionale e quindi creare un indice di archivio colonne nella parte superiore della tabella in un secondo passaggio.  
   
- **Si applica a:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a:** [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  
@@ -236,7 +236,7 @@ ORDER BY YearlyIncome;
 ### <a name="f-copying-the-data-from-one-table-to-another-and-create-the-new-table-on-a-specified-filegroup"></a>F. Copia dei dati da una tabella a un'altra e creazione della nuova tabella in un filegroup specificato
 Nell'esempio seguente viene illustrato come creare una nuova tabella come copia di un'altra tabella e come caricarla in un filegroup specificato diverso dal filegroup predefinito dell'utente.
 
- **Si applica a:** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 e versioni successive.
+ **Si applica a:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 e versioni successive.
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;

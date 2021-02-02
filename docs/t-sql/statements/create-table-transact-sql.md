@@ -48,12 +48,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 6db3e3c29726dc142e38aa57eac2900852177357
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: cbbf7efce0a0aeac175bc98063323b5f4b7a325a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99177925"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237325"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -464,7 +464,7 @@ IDENTITY indica che la nuova colonna è una colonna Identity. Quando si aggiunge
 
 NOT FOR REPLICATION Nell'istruzione `CREATE TABLE` è possibile specificare la clausola `NOT FOR REPLICATION` per la proprietà IDENTITY, i vincoli FOREIGN KEY e i vincoli CHECK. Se si specifica questa clausola per la proprietà `IDENTITY`, i valori non vengono incrementati nelle colonne Identity per gli inserimenti eseguiti dagli agenti di replica. Se per un vincolo si specifica questa clausola, il vincolo non viene imposto quando gli agenti di replica eseguono le operazioni di inserimento, aggiornamento o eliminazione.
 
-GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] [ NOT NULL ] **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] [ NOT NULL ] **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Indica che il sistema userà una colonna di tipo `datetime2` specifica per registrare l'ora di inizio o l'ora di fine per cui un record è valido. La colonna deve essere definita come `NOT NULL`. Se si tenta di specificare i valori come `NULL`, il sistema genera un errore. Se non si specifica in modo esplicito NOT NULL per una colonna periodo, il sistema definirà la colonna come `NOT NULL` per impostazione predefinita. Usare questo argomento in combinazione con gli argomenti `PERIOD FOR SYSTEM_TIME` e `WITH SYSTEM_VERSIONING = ON` per abilitare il controllo delle versioni di sistema per una tabella. Per altre informazioni, vedere [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
@@ -534,7 +534,7 @@ Se si usa Always Encrypted con enclave sicuri, la crittografia casuale è il tip
 
 Le colonne devono essere di un tipo di dati idoneo.
 
-ALGORITHM **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive).
+ALGORITHM **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive).
 
 Deve essere **'AEAD_AES_256_CBC_HMAC_SHA_256'** .
 
@@ -542,7 +542,7 @@ Per altre informazioni sui vincoli della funzionalità, vedere [Always Encrypted
 
 SPARSE indica che la colonna è di tipo sparse. L'archiviazione delle colonne di tipo sparse è ottimizzata per valori Null. Non è possibile designare le colonne di tipo sparse come NOT NULL. Per altre restrizioni e informazioni relative alle colonne di tipo sparse, vedere [Usare le colonne di tipo sparse](../../relational-databases/tables/use-sparse-columns.md).
 
-MASKED WITH ( FUNCTION = ' *mask_function* ') **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive).
+MASKED WITH ( FUNCTION = ' *mask_function* ') **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive).
 
 Specifica una maschera dati dinamica. *mask_function* è il nome della funzione di maschera con i parametri appropriati. Sono disponibili quattro funzioni:
 
@@ -651,11 +651,11 @@ WITH FILLFACTOR **=** _fillfactor_ specifica il livello di riempimento applicato
 
 *column_set_name* XML COLUMN_SET FOR ALL_SPARSE_COLUMNS è il nome del set di colonne. Un set di colonne è una rappresentazione XML non tipizzata che combina tutte le colonne di tipo sparse di una tabella in un output strutturato. Per altre informazioni sui set di colonne, vedere [Utilizzare set di colonne](../../relational-databases/tables/use-column-sets.md).
 
-PERIOD FOR SYSTEM_TIME (*system_start_time_column_name*, *system_end_time_column_name*) **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+PERIOD FOR SYSTEM_TIME (*system_start_time_column_name*, *system_end_time_column_name*) **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifica i nomi delle colonne che il sistema userà per registrare il periodo di validità di un record. Usare questo argomento in combinazione con gli argomenti GENERATED ALWAYS AS ROW { START | END } e WITH SYSTEM_VERSIONING = ON per consentire il controllo delle versioni di sistema in una tabella. Per altre informazioni, vedere [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
-COMPRESSION_DELAY **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+COMPRESSION_DELAY **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Se è applicata l'ottimizzazione della memoria, il ritardo indica il numero minimo di minuti in cui una riga deve rimanere nella tabella, invariata, prima di essere idonea per la compressione nell'indice columnstore. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seleziona le righe specifiche da comprimere in base all'ora dell'ultimo aggiornamento. Se, ad esempio, le righe cambiano frequentemente durante un periodo di due ore, è possibile impostare `COMPRESSION_DELAY = 120 Minutes` per assicurarsi che gli aggiornamenti vengano completati prima che SQL Server comprima la riga.
 
@@ -677,11 +677,11 @@ PAGE: la tabella o le partizioni specificate vengono compresse usando la compres
 
 COLUMNSTORE
 
-**SI APPLICA A**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**SI APPLICA A**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Si applica solo agli indici columnstore, inclusi gli indici columnstore cluster e quelli non cluster. COLUMNSTORE indica di usare la compressione del columnstore che offre le prestazioni migliori. Questa è la scelta tipica.
 
-COLUMNSTORE_ARCHIVE **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+COLUMNSTORE_ARCHIVE **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Si applica solo agli indici columnstore, inclusi gli indici columnstore cluster e quelli non cluster. COLUMNSTORE_ARCHIVE comprimerà ulteriormente la tabella o la partizione a una dimensione inferiore. Può essere utilizzata per l'archiviazione o in altre situazioni in cui sono richieste dimensioni di archiviazione inferiori ed è possibile concedere più tempo per l'archiviazione e il recupero.
 
@@ -732,7 +732,7 @@ ALLOW_ROW_LOCKS **=** { **ON** | OFF }: se si specifica ON, sono consentiti bloc
 
 ALLOW_PAGE_LOCKS **=** { **ON** | OFF }: se si specifica ON, sono consentiti blocchi di pagina per l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando utilizzare blocchi a livello di pagina. Se si specifica OFF, i blocchi a livello di pagina non vengono utilizzati. Il valore predefinito è ON.
 
-OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** } **si applica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e versioni successive. <BR>
+OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** } **si applica a**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] e versioni successive. <BR>
 Specifica se eseguire o meno l'ottimizzazione per la contesa di inserimento dell'ultima pagina. Il valore predefinito è OFF. Per altre informazioni, vedere le sezione [Chiavi sequenziali](./create-index-transact-sql.md#sequential-keys) della pagina CREATE INDEX.
 
 FILETABLE_DIRECTORY = *directory_name*
@@ -766,12 +766,12 @@ FILETABLE_FULLPATH_UNIQUE_CONSTRAINT_NAME = *constraint_name*
 
 Specifica il nome da usare per il vincolo univoco che viene creato automaticamente per le colonne **parent_path_locator** e **name** di FileTable. Se questo valore non è specificato, tramite il sistema viene generato un nome per il vincolo.
 
-SYSTEM_VERSIONING **=** ON [ ( HISTORY_TABLE **=** *schema_name* .*history_table_name* [, DATA_CONSISTENCY_CHECK **=** { **ON** | OFF } ] ) ] **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).
+SYSTEM_VERSIONING **=** ON [ ( HISTORY_TABLE **=** *schema_name* .*history_table_name* [, DATA_CONSISTENCY_CHECK **=** { **ON** | OFF } ] ) ] **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).
 
 Abilita il controllo delle versioni di sistema della tabella se vengono soddisfatti i requisiti relativi a tipo di dati, vincolo di chiave primaria e vincolo per il supporto dei valori Null. Se non si usa l'argomento `HISTORY_TABLE`, il sistema genera una nuova tabella di cronologia corrispondente allo schema della tabella corrente nello stesso filegroup della tabella corrente, creando un collegamento tra le due tabelle, e consente al sistema di registrare la cronologia di ogni record nella tabella corrente e nella tabella di cronologia. Il nome di questa tabella di cronologia sarà `MSSQL_TemporalHistoryFor<primary_table_object_id>`. Per impostazione predefinita, la tabella di cronologia è **PAGE** compresso. Se si usa l'argomento `HISTORY_TABLE` per creare un collegamento e usare una tabella di cronologia esistente, il collegamento viene creato tra la tabella corrente e la tabella specificata. Se la tabella corrente è partizionata, la tabella di cronologia viene creata nel filegroup predefinito perché la configurazione del partizionamento non viene replicata automaticamente dalla tabella corrente nella tabella di cronologia. Se durante la creazione della tabella di cronologia viene specificato il nome di una tabella di cronologia, è necessario specificare il nome tabella e il nome schema. Quando si crea un collegamento a una tabella di cronologia esistente, è possibile scegliere di eseguire una verifica della coerenza dei dati. La coerenza dei dati viene controllata per garantire che i record esistenti non si sovrappongano. L'impostazione predefinita prevede l'esecuzione della verifica della coerenza dei dati. Usare questo argomento in combinazione con gli argomenti `PERIOD FOR SYSTEM_TIME` e `GENERATED ALWAYS AS ROW { START | END }` per abilitare il controllo delle versioni di sistema per una tabella. Per altre informazioni, vedere [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
 REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive).
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive).
 
 Crea la nuova tabella con Stretch Database abilitato o disabilitato. Per ulteriori informazioni, vedere [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
@@ -783,7 +783,7 @@ Quando si abilita Stretch per una tabella specificando `ON`, se necessario, è p
 
 **Autorizzazioni**. L'abilitazione di Stretch per un database o una tabella richiede autorizzazioni db_owner. L'abilitazione di Stretch per una tabella richiede anche autorizzazioni ALTER per la tabella.
 
-[ FILTER_PREDICATE = { null | *predicate* } ] **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive).
+[ FILTER_PREDICATE = { null | *predicate* } ] **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive).
 
 Specifica facoltativamente un predicato di filtro per selezionare le righe di cui eseguire la migrazione da una tabella che contiene sia dati cronologici sia dati correnti. Il predicato deve eseguire la chiamata a una funzione inline con valori di tabella. Per altre informazioni, vedere [Abilitare Stretch Database per una tabella](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) e [Selezionare le righe di cui eseguire la migrazione tramite una funzione di filtro](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).
 
@@ -794,7 +794,7 @@ Se non si specifica un predicato del filtro, viene eseguita la migrazione dell'i
 
 Quando si specifica un predicato di filtro, è necessario specificare anche *MIGRATION_STATE*.
 
-MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 - Specificare `OUTBOUND` per eseguire la migrazione da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 - Specificare `INBOUND` per copiare i dati remoti per la tabella da [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] di nuovo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e per disabilitare Stretch per la tabella. Per altre informazioni, vedere [Disabilitare Stretch Database e ripristinare i dati remoti](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md).
@@ -855,7 +855,7 @@ Gli indici hash sono supportati solo nelle tabelle ottimizzate per la memoria.
 
 Per altre informazioni sul numero di tabelle, colonne, vincoli e indici consentiti, vedere [Specifiche di capacità massima per SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md).
 
-Lo spazio in tabelle e indici viene generalmente allocato con incrementi di un extent. Quando l'opzione `SET MIXED_PAGE_ALLOCATION` di `ALTER DATABASE` è impostata su TRUE, o sempre prima di [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], se si crea una tabella o un indice, vengono allocate pagine da extent misti finché le pagine non sono sufficienti per riempire un extent uniforme. In seguito, viene allocato un altro extent ogni volta che gli extent allocati risultano pieni. Per visualizzare un report sulla quantità di spazio allocato e usato da una tabella, eseguire `sp_spaceused`.
+Lo spazio in tabelle e indici viene generalmente allocato con incrementi di un extent. Quando l'opzione `SET MIXED_PAGE_ALLOCATION` di `ALTER DATABASE` è impostata su TRUE, o sempre prima di [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], se si crea una tabella o un indice, vengono allocate pagine da extent misti finché le pagine non sono sufficienti per riempire un extent uniforme. In seguito, viene allocato un altro extent ogni volta che gli extent allocati risultano pieni. Per visualizzare un report sulla quantità di spazio allocato e usato da una tabella, eseguire `sp_spaceused`.
 
 [!INCLUDE[ssDE](../../includes/ssde-md.md)] non prevede l'applicazione di un ordine particolare per l'impostazione dei valori DEFAULT, IDENTITY, ROWGUIDCOL o dei vincoli di colonna in una definizione di colonna.
 
@@ -1340,7 +1340,7 @@ CREATE TABLE T1
 
 ### <a name="p-creating-a-system-versioned-disk-based-temporal-table"></a>P. Creazione di una tabella temporale basata su disco con controllo delle versioni di sistema
 
-**SI APPLICA A**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**SI APPLICA A**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Gli esempi seguenti spiegano come creare una tabella temporale collegata a una nuova tabella di cronologia e come creare una tabella temporale collegata a una tabella di cronologia esistente. Si noti che per la tabella temporale deve essere definita una chiave primaria affinché la tabella venga abilitata per il controllo delle versioni di sistema. Per esempi che illustrano come aggiungere o rimuovere il controllo delle versioni di sistema per una tabella esistente, vedere Controllo delle versioni di sistema in [Esempi](../../t-sql/statements/alter-table-transact-sql.md#Example_Top). Per i casi d'uso, vedere [Tabelle temporali](../../relational-databases/tables/temporal-tables.md).
 
@@ -1390,7 +1390,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.Department_History, DATA_CONSI
 
 ### <a name="q-creating-a-system-versioned-memory-optimized-temporal-table"></a>Q. Creazione di una tabella temporale ottimizzata per la memoria con controllo delle versioni di sistema
 
-**SI APPLICA A**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**SI APPLICA A**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 L'esempio seguente illustra come creare una tabella temporale ottimizzata per la memoria con controllo delle versioni di sistema collegata a una nuova tabella di cronologia basata su disco.
 

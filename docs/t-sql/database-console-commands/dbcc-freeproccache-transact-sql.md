@@ -26,12 +26,12 @@ ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 635cbfe8b21f60bf2bb9cec49efac62c627a6ae4
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 1efc7b38c4f68a37c9c43b7dd00cfbf09c6dc277
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172623"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99233545"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -89,7 +89,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
  Ripulire la cache dei piani di query da ogni nodo di calcolo e dal nodo di controllo.  
 
 > [!NOTE]
-> A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], viene usata l'istruzione `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` per cancellare la cache (dei piani) delle procedure per il database nell'ambito.
+> A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], viene usata l'istruzione `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` per cancellare la cache (dei piani) delle procedure per il database nell'ambito.
 
 ## <a name="remarks"></a>Commenti  
 Usare DBCC FREEPROCCACHE per cancellare con cautela la cache dei piani. Se si cancella la cache (dei piani) delle procedure, tutti i piani vengono rimossi e le esecuzioni delle query in entrata vengono compilate in un nuovo piano, anziché riutilizzare piani precedentemente memorizzati nella cache. 

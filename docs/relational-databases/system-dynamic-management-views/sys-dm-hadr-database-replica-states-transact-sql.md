@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 2fa5692ca0f710a56937b3510e7eb4e68b283882
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: af42d2a2a5a014bffbab771637a45e3ac3afd6e6
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99209027"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237534"
 ---
 # <a name="sysdm_hadr_database_replica_states-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "99209027"
 |**last_commit_lsn**|**Numerico (25, 0)**|Numero di sequenza del file di log effettivo che corrisponde all'ultimo record di commit nel log delle transazioni.<br /><br /> Sul database primario corrisponde all'ultimo record di commit elaborato. Nelle righe per i database secondari viene mostrato il numero di sequenza del file di log (LSN) inviato dalla replica secondaria alla replica primaria.<br /><br /> Sulla replica secondaria si tratta dell'ultimo record di commit di cui è stato eseguito il rollforward.|  
 |**last_commit_time**|**datetime**|Ora che corrisponde all'ultimo record di commit.<br /><br /> Sul database secondario, l'ora equivale a quella sul database primario.<br /><br /> Sulla replica primaria ogni riga del database secondario contiene l'ora in cui la replica secondaria che ospita il database secondario ha riferito alla replica primaria. La differenza di tempo tra la riga database primario e una determinata riga del database secondario rappresenta approssimativamente l'obiettivo del punto di ripristino (RPO), presupponendo che il processo di rollforward venga aggiornato e che lo stato di avanzamento sia stato segnalato alla replica primaria dalla replica secondaria.|  
 |**low_water_mark_for_ghosts**|**bigint**|Numero a incremento progressivo costante per il database che indica un limite minimo usato dall'attività di pulizia dei record fantasma sul database primario. Se questo numero non aumenta nel tempo, implica che la pulizia dei record fantasma potrebbe non avvenire. Per decidere quali righe fantasma pulire, la replica primaria utilizza il valore minimo di questa colonna per questo database in tutte le repliche di disponibilità, inclusa quella primaria.|  
-|**secondary_lag_seconds**|**bigint**|Numero di secondi durante i quali la replica secondaria è dietro la replica primaria durante la sincronizzazione.<br /><br />**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive.|  
+|**secondary_lag_seconds**|**bigint**|Numero di secondi durante i quali la replica secondaria è dietro la replica primaria durante la sincronizzazione.<br /><br />**Si applica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive.|  
   
 ##  <a name="understanding-the-lsn-column-values"></a><a name="LSNcolumns"></a> Informazioni sui valori delle colonne LSN  
  I valori delle colonne **end_of_log_lsn**, **last_hardened_lsn**, **last_received_lsn**, **last_sent_lsn**, **recovery_lsn** e **Truncation_lsn** non sono numeri di sequenza del file di log (LSN) effettivi. Ognuno di questi valori riflette invece un ID del blocco di log riempito con zeri.  

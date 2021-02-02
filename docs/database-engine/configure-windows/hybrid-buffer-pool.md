@@ -12,17 +12,17 @@ ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: 73f4abc0c1b2a7cd6943ab6b216133812c145d19
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: ccf508d0415bc6baabc9c054a95ec26cf7989880
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772431"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236514"
 ---
 # <a name="hybrid-buffer-pool"></a>Pool di buffer ibrido
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Il pool di buffer ibrido consente agli oggetti del pool di fare riferimento alle pagine dati nei file di database presenti nei dispositivi con memoria persistente, anziché a copie delle pagine dati nella memoria DRAM volatile. Questa funzionalità è stata introdotta in [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)].
+Il pool di buffer ibrido consente agli oggetti del pool di fare riferimento alle pagine dati nei file di database presenti nei dispositivi con memoria persistente, anziché a copie delle pagine dati nella memoria DRAM volatile. Questa funzionalità è stata introdotta in [!INCLUDE[sqlv15](../../includes/sssql19-md.md)].
 
 ![Pool di buffer ibrido](./media/hybrid-buffer-pool.png)
 
@@ -42,7 +42,7 @@ Per altre informazioni, vedere:
 
 ## <a name="enable-hybrid-buffer-pool"></a>Abilitare il pool di buffer ibrido
 
-[!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] introduce il linguaggio dei dati dinamici per controllare il pool di buffer ibrido.
+[!INCLUDE[sqlv15](../../includes/sssql19-md.md)] introduce il linguaggio dei dati dinamici per controllare il pool di buffer ibrido.
 
 Nell'esempio seguente viene abilitato il pool di buffer ibrido per un'istanza di SQL Server:
 

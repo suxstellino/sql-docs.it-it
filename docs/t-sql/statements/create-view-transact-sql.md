@@ -38,12 +38,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2df015f496f92fdcb2e8d5004edd29b0857bbc14
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1aeb0ce44bc48dbe208bad7ed58a94641c6e0ce9
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99177878"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237030"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 
@@ -95,7 +95,7 @@ AS <select_statement>
 ## <a name="arguments"></a>Argomenti
 
 OR ALTER  
- **Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1).   
+ **Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1).   
   
  Modifica in modo condizionale la vista solo se esiste già. 
  

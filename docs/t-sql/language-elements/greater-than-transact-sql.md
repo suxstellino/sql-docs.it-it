@@ -24,17 +24,17 @@ ms.assetid: 50a7b098-a3fb-4df6-ae42-1272d6346338
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 671fad4aa236a06de542e44abe7fadd599e87d19
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 17d559da1affd2fea887620bc7da3b81d06c53ef
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99115422"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235986"
 ---
 # <a name="gt-greater-than-transact-sql"></a>&gt; (maggiore di) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Confronta due espressioni (operatore di confronto) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Quando si confrontano due espressioni diverse da Null, il risultato è TRUE se il valore dell'operando di sinistra è maggiore del valore di quello di destra. In caso contrario, il risultato è FALSE. Se uno o entrambi gli operandi sono NULL, vedere l'argomento [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
+  Confronta due espressioni (operatore di confronto) in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Quando si confrontano due espressioni diverse da Null, il risultato è TRUE se il valore dell'operando di sinistra è maggiore del valore di quello di destra. In caso contrario, il risultato è FALSE. Se uno o entrambi gli operandi sono NULL, vedere l'argomento [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

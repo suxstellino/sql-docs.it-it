@@ -19,12 +19,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06288dc0bc6e16ab8928322005254f5fac1ddc61
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: adc1affe33d1172b3e648c510b2dbc1d00326849
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171483"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237983"
 ---
 # <a name="transparent-data-encryption-tde"></a>Transparent Data Encryption (TDE)
 
@@ -227,7 +227,7 @@ Per crittografare la chiave di crittografia del database con una chiave asimmetr
 
 Per abilitare TDE per un database, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve eseguire un'analisi della crittografia. L'analisi legge ogni pagina dai file di dati nel pool di buffer e quindi scrive le pagine crittografate di nuovo su disco.
 
-Per avere un maggiore controllo sull'analisi della crittografia, [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] introduce l'analisi TDE, che include una sintassi per sospensione e ripresa. È possibile sospendere l'analisi mentre il carico di lavoro nel sistema è elevato o durante le ore di picco delle attività aziendali e quindi riprendere l'analisi in un secondo momento.
+Per avere un maggiore controllo sull'analisi della crittografia, [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] introduce l'analisi TDE, che include una sintassi per sospensione e ripresa. È possibile sospendere l'analisi mentre il carico di lavoro nel sistema è elevato o durante le ore di picco delle attività aziendali e quindi riprendere l'analisi in un secondo momento.
 
 Per sospendere l'analisi della crittografia TDE, usare la sintassi seguente:
 
@@ -314,7 +314,7 @@ Quando si crittografa un database tramite TDE, i file correlati all'estensione d
 
 ## <a name="tde-and-in-memory-oltp"></a>TDE e OLTP in memoria
 
-È possibile abilitare TDE in un database contenente oggetti OLTP in memoria. In [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] e [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] i dati e i record del log OLTP in memoria vengono crittografati se si abilita TDE. In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] i record del log OLTP in memoria vengono crittografati se si abilita TDE, ma non vengono crittografati i file nel filegroup MEMORY_OPTIMIZED_DATA.
+È possibile abilitare TDE in un database contenente oggetti OLTP in memoria. In [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] e [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] i dati e i record del log OLTP in memoria vengono crittografati se si abilita TDE. In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] i record del log OLTP in memoria vengono crittografati se si abilita TDE, ma non vengono crittografati i file nel filegroup MEMORY_OPTIMIZED_DATA.
 
 ## <a name="related-tasks"></a>Attività correlate
 

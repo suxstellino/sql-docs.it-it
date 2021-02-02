@@ -17,12 +17,12 @@ ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 93b41040bbaf871f095bfa533e69886dfa5ffce5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 038cb4e80af0423a5581ef2b7b51c1bbc54bb5cc
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99165117"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237624"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar e nvarchar (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ Agli oggetti che usano **nchar** o **nvarchar** vengono assegnate le regole di c
   
 Per **nchar** e **nvarchar** l'opzione SET ANSI_PADDING è sempre impostata su ON. L'opzione SET ANSI_PADDING OFF non è valida per i tipi di dati **nchar** o **nvarchar**.
   
-Anteporre la lettera N a costanti di stringa di caratteri Unicode per segnalare input UCS-2 o UTF-16, a seconda che si usino o meno regole di confronto SC. Senza il prefisso N, la stringa viene convertita nella tabella codici predefinita del database che potrebbe non riconoscere certi caratteri. A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], quando si usano regole di confronto abilitate per UTF-8, la tabella codici predefinita è in grado di archiviare il set di caratteri UNICODE UTF-8. 
+Anteporre la lettera N a costanti di stringa di caratteri Unicode per segnalare input UCS-2 o UTF-16, a seconda che si usino o meno regole di confronto SC. Senza il prefisso N, la stringa viene convertita nella tabella codici predefinita del database che potrebbe non riconoscere certi caratteri. A partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], quando si usano regole di confronto abilitate per UTF-8, la tabella codici predefinita è in grado di archiviare il set di caratteri UNICODE UTF-8. 
  
 > [!NOTE]  
 > Quando si usa la lettera N come prefisso di una costante stringa, il risultato della conversione implicita sarà una stringa UCS-2 o UTF-16 se la costante da convertire non supera la lunghezza massima per il tipo di dati stringa nvarchar (4.000). In caso contrario, il risultato della conversione implicita sarà un valore nvarchar (max) di grandi dimensioni.

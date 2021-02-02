@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: fd00b91eb2ba5018a7ae9865f323ac2f3faeb39d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7b37fc021c8d324076e81c8f864099ddd9fdad14
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99134590"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235950"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "99134590"
 |nomefile|**nvarchar(256)**|Percorso e nome file dell'eseguibile del servizio. Non può essere null.|  
 |is_clustered|**nvarchar (1)**|Indica se il servizio è installato come risorsa di un server di cluster. Non può essere null.|  
 |cluster_nodename|**nvarchar(256)**|Il nome del nodo del cluster su cui è installato il servizio. Ammette i valori Null.|
-|instant_file_initialization_enabled|**nvarchar (1)**|Specifica se l'inizializzazione immediata dei file è abilitata per il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] servizio.<br /><br />Y = inizializzazione immediata dei file abilitata per il servizio.<br /><br />N = l'inizializzazione immediata dei file è disabilitata per il servizio.<br /><br /> Ammette i valori Null.<br /><br /> **Nota:** Non si applica ad altri servizi, ad esempio la SQL Server Agent.<br /><br /> **Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (A partire da [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 e [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 e versioni successive.|  
+|instant_file_initialization_enabled|**nvarchar (1)**|Specifica se l'inizializzazione immediata dei file è abilitata per il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] servizio.<br /><br />Y = inizializzazione immediata dei file abilitata per il servizio.<br /><br />N = l'inizializzazione immediata dei file è disabilitata per il servizio.<br /><br /> Ammette i valori Null.<br /><br /> **Nota:** Non si applica ad altri servizi, ad esempio la SQL Server Agent.<br /><br /> **Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (A partire da [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 e [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 e versioni successive.|  
 
 ## <a name="security"></a>Sicurezza  
   

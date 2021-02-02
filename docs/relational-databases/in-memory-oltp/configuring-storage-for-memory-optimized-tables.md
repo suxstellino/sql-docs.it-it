@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ebedb1071dc5953bc78918f928f0f53a7145e282
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: fdb18826c75e55f41e3c02a97e2f8374a22778b3
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98167853"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237557"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Configurazione dell'archiviazione per le tabelle con ottimizzazione per la memoria
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ Un buon punto di partenza per ridimensionare le risorse di archiviazione per que
 -   I file di checkpoint vengono in genere distribuiti in modo uniforme in tutti i contenitori, se lo spazio disponibile lo consente. Con SQL Server 2014 è necessario eseguire il provisioning di un numero dispari di contenitori per ottenere una distribuzione uniforme. A partire dalla versione 2016, sia un numero pari che un numero dispari di contenitori permette una distribuzione uniforme.
   
 ## <a name="encryption"></a>Crittografia  
- In [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive l'archiviazione per le tabelle ottimizzate per la memoria verrà crittografata quando inattive come parte dell'abilitazione di Transparent Data Encryption (TDE) nel database. Per altre informazioni, vedere [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md). In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] i file di checkpoint non vengono crittografati, anche se TDE è abilitata nel database.
+ In [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive l'archiviazione per le tabelle ottimizzate per la memoria verrà crittografata quando inattive come parte dell'abilitazione di Transparent Data Encryption (TDE) nel database. Per altre informazioni, vedere [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md). In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] i file di checkpoint non vengono crittografati, anche se TDE è abilitata nel database.
 
  I dati nelle tabelle ottimizzate per la memoria [non durevoli](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md) (SCHEMA_ONLY) non vengono mai scritti su disco. Di conseguenza, TDE non si applica a tali tabelle.
   

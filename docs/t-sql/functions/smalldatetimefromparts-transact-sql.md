@@ -1,8 +1,8 @@
 ---
 description: SMALLDATETIMEFROMPARTS (Transact-SQL)
-title: SMALLDATETIMEFROMPARTS (Transact-SQL) | Microsoft Docs
+title: SMALLDATETIMEFROMPARTS (Transact-SQL)
 ms.custom: ''
-ms.date: 03/04/2017
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,16 +15,15 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - SMALLDATETIMEFROMPARTS function
-ms.assetid: 7467fdab-e588-419c-9e29-42caec34a9ea
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd264eac643b7291109da0daf896348a3d21865f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0b213719ced09557bceb89c8821e3bd36083eeab
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99159174"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237239"
 ---
 # <a name="smalldatetimefromparts-transact-sql"></a>SMALLDATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,8 +61,8 @@ SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
   
 ## <a name="remarks"></a>Osservazioni  
  Queste funzioni si comportano come un costruttore per un valore **smalldatetime** completamente inizializzato. Se gli argomenti non sono validi, viene generato un errore. Se gli argomenti obbligatori sono Null, viene restituito un valore Null.  
-  
- Questa funzione può essere eseguita in modalità remota in server con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e versioni successive, ma non in server con versioni precedenti a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ 
+ Questa funzione può essere eseguita in modalità remota in server con [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] e versioni successive, ma non in server con versioni precedenti a [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)].  
   
 ## <a name="examples"></a>Esempi  
   

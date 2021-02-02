@@ -23,12 +23,12 @@ ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 94c46015f60c1e5483bceb5c9a887428c06e46b4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c268fc5650495abec05abafee219c045189ba17b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99189874"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237423"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -159,7 +159,7 @@ OBJECTPROPERTY ( id , property )
 |TableUpdateTrigger|Tabella|La tabella include un trigger UPDATE.<br /><br /> > 1 = ID del primo trigger del tipo specificato.|  
 |TableUpdateTriggerCount|Tabella|La tabella include il numero specificato di trigger UPDATE.<br /><br /> > 0 = Numero di trigger UPDATE.|  
 |TableHasColumnSet|Tabella|Indica se la tabella include un set di colonne.<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> Per altre informazioni, vedere [Usare set di colonne](../../relational-databases/tables/use-column-sets.md).|  
-|TableTemporalType|Tabella|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive.<br /><br /> Specifica il tipo di tabella.<br /><br /> 0 = tabella non temporale<br /><br /> 1 = tabella di cronologia per tabella con controllo delle versioni di sistema<br /><br /> 2 = tabella temporale con controllo delle versioni di sistema|  
+|TableTemporalType|Tabella|**Si applica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive.<br /><br /> Specifica il tipo di tabella.<br /><br /> 0 = tabella non temporale<br /><br /> 1 = tabella di cronologia per tabella con controllo delle versioni di sistema<br /><br /> 2 = tabella temporale con controllo delle versioni di sistema|  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **int**  

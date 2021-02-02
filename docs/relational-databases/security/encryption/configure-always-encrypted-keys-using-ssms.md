@@ -16,12 +16,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35f08a014fd1abbc8af6db994ba4c2d9b85a0bd4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: f31a17d3f8bf2285bc41c7462deec4e53008efd1
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97405629"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237078"
 ---
 # <a name="provision-always-encrypted-keys-using-sql-server-management-studio"></a>Effettuare il provisioning di chiavi Always Encrypted con SQL Server Management Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +50,7 @@ La finestra di dialogo **Nuova chiave master della colonna** consente di generar
    
     Per altre informazioni sugli archivi di chiavi sopra indicati, vedere [Creare e archiviare chiavi master della colonna per Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
-5. Se si usa [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] e l'istanza di SQL Server è stata configurata con un enclave sicuro, è possibile selezionare la casella di controllo **Consenti calcoli enclave** per abilitare la chiave per l'enclave. Per informazioni dettagliate, vedere [Always Encrypted con enclave sicuri](always-encrypted-enclaves.md). 
+5. Se si usa [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] e l'istanza di SQL Server è stata configurata con un enclave sicuro, è possibile selezionare la casella di controllo **Consenti calcoli enclave** per abilitare la chiave per l'enclave. Per informazioni dettagliate, vedere [Always Encrypted con enclave sicuri](always-encrypted-enclaves.md). 
 
     > [!NOTE]
     > La casella di controllo **Consenti calcoli enclave** non viene visualizzata se l'istanza di SQL Server non è stata correttamente configurata con un enclave sicuro.

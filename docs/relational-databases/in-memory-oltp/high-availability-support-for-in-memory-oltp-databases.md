@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9b275387efa5cc44b012cccef82fb3284e594abb
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 96686e379f9d10058ebcedffd44405b6c2f8a18a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170543"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237580"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>Supporto della disponibilità elevata per i database OLTP in memoria
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "98170543"
     Le repliche secondarie mantengono lo stato in memoria delle tabelle durevoli ottimizzate per la memoria. In caso di failover automatico o forzato, il tempo di failover al nuovo database primario è paragonabile a quello del failover a tabelle basate su disco, in quanto non è necessario il ripristino. Le tabelle con ottimizzazione per la memoria create come SCHEMA_ONLY sono supportate in questa configurazione. Tuttavia, le modifiche a queste tabelle non vengono registrate e non esisteranno quindi dati in queste tabelle nella replica secondaria.  
   
 -   **Secondario leggibile**   
-    È possibile accedere ed eseguire query su tabelle ottimizzate per la memoria nella replica secondaria se questa è stata configurata per l'accesso in lettura. In [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] la sincronizzazione del timestamp di lettura sulla replica secondaria con il timestamp di lettura sulla replica primaria è molto veloce, il che significa che le modifiche apportate alla replica primaria diventano visibili rapidamente nella replica secondaria. Questo comportamento di sincronizzazione rapida è diverso rispetto a OLTP in memoria di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+    È possibile accedere ed eseguire query su tabelle ottimizzate per la memoria nella replica secondaria se questa è stata configurata per l'accesso in lettura. In [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] la sincronizzazione del timestamp di lettura sulla replica secondaria con il timestamp di lettura sulla replica primaria è molto veloce, il che significa che le modifiche apportate alla replica primaria diventano visibili rapidamente nella replica secondaria. Questo comportamento di sincronizzazione rapida è diverso rispetto a OLTP in memoria di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
 
 ### <a name="considerations"></a>Considerazioni
 

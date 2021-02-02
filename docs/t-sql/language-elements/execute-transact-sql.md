@@ -32,12 +32,12 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d01d1c0046c34480c578846c562207932e8a629c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 32a9e7f42747c6ddf5ef92f8bde260b4a0b234f0
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99118595"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236008"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -374,7 +374,7 @@ Se si passa una singola parola che non inizia con `@` e che non è racchiusa tra
  WITH \<execute_option>  
  Opzioni di esecuzione possibili. Non è possibile specificare opzioni RESULT SETS in un'istruzione INSERT...EXEC.  
  
-AT DATA_SOURCE data_source_name **Si applica a**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] e versioni successive
+AT DATA_SOURCE data_source_name **Si applica a**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] e versioni successive
   
  Specifica che *command_string* viene eseguita in *data_source_name* e che gli eventuali risultati vengono restituiti al client. *data_source_name* deve fare riferimento a una definizione EXTERNAL DATA SOURCE esistente nel database. Sono supportate solo le origini dati che puntano a SQL Server. Inoltre, per le origini dati del cluster Big Data di SQL Server che puntano a un pool di calcolo, è supportato il pool di dati o di archiviazione. Le origini dati vengono definite usando [CREATE EXTERNAL DATA SOURCE](../statements/create-external-data-source-transact-sql.md).  
   
@@ -744,7 +744,7 @@ WITH RESULT SETS
   
  Nell'esempio seguente una stringa di comando viene passata a un'origine dati esterna che punta a un'istanza di SQL Server. 
   
-**Si applica a**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] e versioni successive
+**Si applica a**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] e versioni successive
   
 ```sql    
 EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE my_sql_server;  
@@ -755,7 +755,7 @@ GO
 
  Nell'esempio seguente una stringa di comando viene passata a un'origine dati esterna che punta a un pool di calcolo nel cluster Big Data di SQL Server. Nell'esempio viene creata un'origine dati `SqlComputePool` in un pool di calcolo nel cluster Big Data di SQL Server e viene eseguita un'istruzione `SELECT` sull'origine dati. 
   
-**Si applica a**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] e versioni successive
+**Si applica a**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] e versioni successive
   
 ```sql  
 CREATE EXTERNAL DATA SOURCE SqlComputePool 
@@ -767,7 +767,7 @@ GO
 ### <a name="q-using-execute-with-at-data_source-data_source_name-to-query-data-pool-in-sql-server-big-data-cluster"></a>Q. Uso di EXECUTE con AT DATA_SOURCE data_source_name per eseguire una query su un pool di dati nel cluster Big Data di SQL Server 
  Nell'esempio seguente una stringa di comando viene passata a un'origine dati esterna che punta a un pool di calcolo nel cluster Big Data di SQL Server. Nell'esempio viene creata un'origine dati `SqlDataPool` in un pool di dati nel cluster Big Data di SQL Server e viene eseguita un'istruzione `SELECT` sull'origine dati. 
   
-**Si applica a**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] e versioni successive
+**Si applica a**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] e versioni successive
   
 ```sql  
 CREATE EXTERNAL DATA SOURCE SqlDataPool 
@@ -780,7 +780,7 @@ GO
 
  Nell'esempio seguente una stringa di comando viene passata a un'origine dati esterna che punta a un pool di calcolo nel cluster Big Data di SQL Server. Nell'esempio viene creata un'origine dati `SqlStoragePool` in un pool di dati nel cluster Big Data di SQL Server e viene eseguita un'istruzione `SELECT` sull'origine dati. 
   
-**Si applica a**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] e versioni successive
+**Si applica a**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] e versioni successive
   
 ```sql  
 CREATE EXTERNAL DATA SOURCE SqlStoragePool

@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ae64e777b08cdf4df6f7e8fdd05ff8c3822a06b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 3f1e5c31fdd51a7db14540bfeea3229c170dd2fa
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171523"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236656"
 ---
 # <a name="foreach-loop-container"></a>Contenitore Ciclo Foreach
 
@@ -461,7 +461,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
 ####  <a name="enumerator--foreach-azure-blob-enumerator"></a><a name="ForeachAzureBlob"></a> Enumeratore = Enumeratore Foreach BLOB di Azure  
  **Azure Blob Enumerator** consente a un pacchetto SSIS di enumerare i file BLOB nel percorso BLOB specificato. È possibile archiviare il nome del file BLOB enumerato in una variabile e usarlo nelle attività interne al Contenitore Ciclo Foreach.  
   
- **Azure Blob Enumerator** è un componente del Feature Pack di SQL Server Integration Services (SSIS) per Azure per [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]. Scaricare il Feature Pack [qui](https://go.microsoft.com/fwlink/?LinkID=626967).  
+ **Azure Blob Enumerator** è un componente del Feature Pack di SQL Server Integration Services (SSIS) per Azure per [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. Scaricare il Feature Pack [qui](https://go.microsoft.com/fwlink/?LinkID=626967).  
   
  **Azure storage connection manager** (Gestione connessione di Archiviazione di Azure)  
  Selezionare una gestione connessione di archiviazione di Azure esistente o crearne una nuova che si riferisca a un Account di archiviazione Azure.  

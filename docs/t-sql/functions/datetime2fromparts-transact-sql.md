@@ -1,8 +1,8 @@
 ---
 description: DATETIME2FROMPARTS (Transact-SQL)
-title: DATETIME2FROMPARTS (Transact-SQL) | Microsoft Docs
+title: DATETIME2FROMPARTS (Transact-SQL)
 ms.custom: ''
-ms.date: 07/29/2017
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,16 +15,15 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - DATETIME2FROMPARTS function
-ms.assetid: 632b757d-d2d1-43a5-b870-792a779ae204
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 942d3942d467e0c9ee03ca917fc472dce64d06d4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: cbf14683e7d501ef44ccaff757ace45f7045f304
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99181820"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237927"
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,7 +73,7 @@ Espressione Integer che specifica la precisione del valore **datetime2** che ver
 
 L'argomento *fractions* dipende dall'argomento *precision*. Ad esempio, per un valore di *precision* pari a 7, ogni frazione rappresenta 100 nanosecondi, mentre per *precision* pari a 3, ogni frazione rappresenta un millisecondo. Per un valore di *precision* pari a zero, anche il valore di *fractions* deve essere zero. In caso contrario, `DATETIME2FROMPARTS` genererà un errore.
   
-Questa funzione supporta la comunicazione remota con i server [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e versioni successive. Non supporterà la comunicazione remota con i server con versioni precedenti a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Questa funzione può essere eseguita in modalità remota in server con [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] e versioni successive, ma non in server con versioni precedenti a [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)].  
   
 ## <a name="examples"></a>Esempi  
   

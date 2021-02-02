@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 7d2827c3945423125262a8f4e6842ef255c863e0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 320b9c78fadcef3ba70585def88f744bf16e7767
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161248"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237425"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +57,7 @@ Per l'argomento *id*, l'argomento *property* specifica il tipo di informazioni c
 |**AllowsNull**|Ammette valori Null.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido.|  
 |**ColumnId**|Valore di ID di colonna corrispondente a **sys.columns.column_id**.|ID colonna<br /><br /> **Nota:** quando si eseguono query su più colonne, potrebbero apparire spazi vuoti nella sequenza dei valori di ID di colonna.|  
 |**FullTextTypeColumn**|L'elemento TYPE COLUMN nella tabella in cui sono contenute le informazioni sui tipi di documenti di *column*.|ID di TYPE COLUMN full-text per l'espressione del nome della colonna passata come secondo parametro della funzione.|  
-|**GeneratedAlwaysType**|Valore di colonna generato dal sistema. Corrisponde a **sys.columns.generated_always_type**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive.<br /><br /> 0: non sempre generato<br /><br /> 1: sempre generato all'inizio della riga<br /><br /> 2: sempre generato alla fine della riga|  
+|**GeneratedAlwaysType**|Valore di colonna generato dal sistema. Corrisponde a **sys.columns.generated_always_type**|**Si applica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive.<br /><br /> 0: non sempre generato<br /><br /> 1: sempre generato all'inizio della riga<br /><br /> 2: sempre generato alla fine della riga|  
 |**IsColumnSet**|La colonna è un set di colonne. Per altre informazioni, vedere [Usare set di colonne](../../relational-databases/tables/use-column-sets.md).|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido.|  
 |**IsComputed**|La colonna è una colonna calcolata.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido.|  
 |**IsCursorType**|Il parametro di procedura è di tipo CURSOR.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido.|  

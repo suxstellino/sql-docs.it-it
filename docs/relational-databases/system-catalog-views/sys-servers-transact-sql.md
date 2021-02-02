@@ -21,12 +21,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: 7261cde3df2e1aa31e7a7ab0d5ccbd5f8e8d3e54
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a37a592866c8fcfdc12e5b84657bc7fa7166ee81
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161401"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237886"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "99161401"
 |**server_id**|**int**|ID locale del server collegato.|  
 |**nome**|**sysname**|Quando **server_id** = 0, il valore restituito è il nome del server.<br /><br /> Quando **server_id** > 0, il valore restituito è il nome locale del server collegato.|  
 |**product**|**sysname**|Nome del prodotto del server collegato. Il valore "SQL Server" indica un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|**provider**|**sysname**|Nome del provider OLE DB per la connessione al server collegato.<br /><br />A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] , il valore "sqlncli" viene mappato al [Driver Microsoft OLE DB per SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) per impostazione predefinita. Nelle versioni precedenti il valore "SQLNCLI" viene mappato al [provider di OLE DB SQL Server Native Client (SQLNCLI11)](../../relational-databases/native-client/sql-server-native-client.md).|  
+|**provider**|**sysname**|Nome del provider OLE DB per la connessione al server collegato.<br /><br />A partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] , il valore "sqlncli" viene mappato al [Driver Microsoft OLE DB per SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) per impostazione predefinita. Nelle versioni precedenti il valore "SQLNCLI" viene mappato al [provider di OLE DB SQL Server Native Client (SQLNCLI11)](../../relational-databases/native-client/sql-server-native-client.md).|  
 |**data_source**|**nvarchar(4000)**|Proprietà di connessione dell'origine dei dati OLE DB.|  
 |**location**|**nvarchar(4000)**|Proprietà di connessione della posizione OLE DB. Restituisce NULL se la colonna non include alcun valore.|  
 |**provider_string**|**nvarchar(4000)**|Proprietà di connessione della stringa del provider OLE DB.<br /><br /> È NULL a meno che il chiamante non disponga dell' `ALTER ANY LINKED SERVER` autorizzazione.|  
@@ -60,7 +60,7 @@ ms.locfileid: "99161401"
 |**is_nonsql_subscriber**|**bit**|Il server è un Sottoscrittore non SQL Server per la replica.|  
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|Se 1, la chiamata di una stored procedure remota comporta l'avvio di una transazione distribuita e l'integrazione della transazione in MS DTC. Per altre informazioni, vedere [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md).|  
 |**modify_date**|**datetime**|Data dell'ultima modifica delle informazioni relative al server.|  
-|**is_rda_server**|**bit**|**Si applica a:** A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] .<br /><br />Il server è abilitata per l'archiviazione dati remota (abilitata per l'estensione). Per ulteriori informazioni, vedere [Enable stretch database on the server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).|
+|**is_rda_server**|**bit**|**Si applica a:** A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] .<br /><br />Il server è abilitata per l'archiviazione dati remota (abilitata per l'estensione). Per ulteriori informazioni, vedere [Enable stretch database on the server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).|
   
 ## <a name="permissions"></a>Autorizzazioni  
  Il valore nel **provider_string** è sempre null, a meno che il chiamante disponga dell'autorizzazione ALTER ANY Linked Server.  

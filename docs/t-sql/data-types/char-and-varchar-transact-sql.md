@@ -25,18 +25,18 @@ ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b255c2365bec9ee43a6af1be54f08d7769f9fc67
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a54d7e0abbbb15379f83a13fc0e604b6d087326d
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161900"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236386"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char and varchar (Transact-SQL)
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Tipi di dati character a dimensione fissa **char** o a dimensione variabile **varchar**. A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], quando si usano regole di confronto che supportano UTF-8, questi tipi di dati archiviano l'intera gamma dei dati di tipo carattere [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) e usano la codifica dei caratteri [UTF-8 ](https://www.wikipedia.org/wiki/UTF-8). Se si specificano regole di confronto non UTF-8, questi tipi di dati archiviano solo un subset dei caratteri supportati dalla tabella codici corrispondente di tali regole di confronto.
+Tipi di dati character a dimensione fissa **char** o a dimensione variabile **varchar**. A partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], quando si usano regole di confronto che supportano UTF-8, questi tipi di dati archiviano l'intera gamma dei dati di tipo carattere [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) e usano la codifica dei caratteri [UTF-8 ](https://www.wikipedia.org/wiki/UTF-8). Se si specificano regole di confronto non UTF-8, questi tipi di dati archiviano solo un subset dei caratteri supportati dalla tabella codici corrispondente di tali regole di confronto.
 
 ## <a name="arguments"></a>Argomenti
 
@@ -56,11 +56,11 @@ Agli oggetti che usano **char** o **varchar** vengono assegnate le regole di con
 Le codifiche multibyte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includono:
 
 - Set di caratteri DBCS (Double Byte Character Set) per alcune lingue asiatiche orientali che usano le tabelle codici 936 e 950 (cinese), 932 (giapponese) o 949 (coreano).
-- UTF-8 con tabella codici 65001. **Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+- UTF-8 con tabella codici 65001. **Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)])
 
 In presenza di siti che supportano più lingue:
 
-- A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], è consigliabile usare le regole di confronto abilitate per UTF-8 per il supporto di Unicode e per ridurre al minimo i problemi di conversione dei caratteri.
+- A partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], è consigliabile usare le regole di confronto abilitate per UTF-8 per il supporto di Unicode e per ridurre al minimo i problemi di conversione dei caratteri.
 - Se si usa una versione precedente di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] valutare la possibilità di usare i tipi di dati Unicode **nchar** oppure **nvarchar** per ridurre al minimo i problemi di conversione dei caratteri.
 
 Se si usano i tipi di dati **char** o **varchar**, è consigliabile:

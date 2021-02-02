@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 7401693585955d393568704f32892d052cc2707b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0be25328507c6afa210cd4d51817551395f94770
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99199979"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237756"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +63,7 @@ ON ALL SERVER
 
 ## <a name="arguments"></a>Argomenti
  *IF EXISTS*  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
   
  Rimuove in modo condizionale il trigger solo se esiste già.  
   
@@ -107,7 +107,7 @@ ON ALL SERVER
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-dropping-a-dml-trigger"></a>R. Eliminazione di un trigger DML  
- Nell'esempio seguente viene eliminato il trigger `employee_insupd` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] è possibile usare la sintassi DROP TRIGGER IF EXISTS.  
+ Nell'esempio seguente viene eliminato il trigger `employee_insupd` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] è possibile usare la sintassi DROP TRIGGER IF EXISTS.  
   
 ```sql  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  

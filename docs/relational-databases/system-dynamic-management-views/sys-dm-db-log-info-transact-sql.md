@@ -21,12 +21,12 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12fe1e95cbb1c7ad26025ee52ce111cb3f835704
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 171cada53538f8e5b615e6096a169b0976b57532
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440826"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236053"
 ---
 # <a name="sysdm_db_log_info-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sys.dm_db_log_info ( database_id )
 |vlf_parity|**tinyint** |Parità del [file di log virtuale (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Utilizzato internamente per determinare la fine del log all'interno di un VLF.|
 |vlf_first_lsn|**nvarchar (48)** |Numero di sequenza del file di [log (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) del primo record del log nel [file di log virtuale (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
 |vlf_create_lsn|**nvarchar (48)** |Numero di sequenza del file di [log (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) del record di log che ha creato il [file di log virtuale (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
-|vlf_encryptor_thumbprint|**varbinary(20)**| **Si applica a:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> Mostra l'identificazione digitale del VLF se VLF è crittografato con [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md); in caso contrario, null. |
+|vlf_encryptor_thumbprint|**varbinary(20)**| **Si applica a:** [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] <br><br> Mostra l'identificazione digitale del VLF se VLF è crittografato con [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md); in caso contrario, null. |
 
 ## <a name="remarks"></a>Commenti
 La `sys.dm_db_log_info` funzione a gestione dinamica sostituisce l' `DBCC LOGINFO` istruzione.    

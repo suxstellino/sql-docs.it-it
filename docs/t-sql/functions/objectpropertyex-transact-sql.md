@@ -23,12 +23,12 @@ ms.assetid: be36b3e3-3309-4332-bfb5-c7e9cf8dc8bd
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa3cb3c2f512387d4bb4bdc55511636acb4c29d6
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 611d0f17ae0ed8cd0e7679d149b186563f802ba4
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99189886"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237476"
 ---
 # <a name="objectpropertyex-transact-sql"></a>OBJECTPROPERTYEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -165,7 +165,7 @@ OBJECTPROPERTYEX ( id , property )
 |UserDataAccess|Funzione, vista|L'oggetto accede a dati utente (tabelle utente) nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = Lettura<br /><br /> 0 = Nessuna<br /><br /> Tipo di dati di base: **int**|  
 |TableHasColumnSet|Tabella|Indica se la tabella include un set di colonne.<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> Per altre informazioni, vedere [Usare set di colonne](../../relational-databases/tables/use-column-sets.md).|  
 |Cardinalità|Tabella (definita dal sistema o dall'utente), vista o indice|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> Numero di righe nell'oggetto specificato.|  
-|TableTemporalType|Tabella|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive.<br /><br /> Specifica il tipo di tabella.<br /><br /> 0 = tabella non temporale<br /><br /> 1 = tabella di cronologia per tabella con controllo delle versioni di sistema<br /><br /> 2 = tabella temporale con controllo delle versioni di sistema|  
+|TableTemporalType|Tabella|**Si applica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive.<br /><br /> Specifica il tipo di tabella.<br /><br /> 0 = tabella non temporale<br /><br /> 1 = tabella di cronologia per tabella con controllo delle versioni di sistema<br /><br /> 2 = tabella temporale con controllo delle versioni di sistema|  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **sql_variant**  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 9bfce6f56bdf39597def73884f12ca06f6eb56b7
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: a74539209e56e1e2da9053cfffccd7d528684a30
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170273"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235836"
 ---
 # <a name="sysdm_exec_query_statistics_xml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 
@@ -57,7 +57,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 |query_plan|**xml**|Contiene la rappresentazione Showplan di runtime del piano di esecuzione della query specificato con *plan_handle* contenenti statistiche parziali. La rappresentazione Showplan è in formato XML. Viene generato un piano per ogni batch contenente ad esempio istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, chiamate di stored procedure e chiamate di funzioni definite dall'utente. Ammette valori Null.|
 
 ## <a name="remarks"></a>Commenti
-Questa funzione di sistema è disponibile a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1. Vedere KB [3190871](https://support.microsoft.com/help/3190871)
+Questa funzione di sistema è disponibile a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1. Vedere KB [3190871](https://support.microsoft.com/help/3190871)
 
 Questa funzione di sistema funziona con l'infrastruttura di profilatura delle statistiche di esecuzione di query **standard** e **Lightweight** . Per altre informazioni, vedere [Infrastruttura di profilatura query](../../relational-databases/performance/query-profiling-infrastructure.md).  
 

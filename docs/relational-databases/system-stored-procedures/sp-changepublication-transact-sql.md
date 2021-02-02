@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a0e183d97b17936d5d7e1b414c2d492910a8a8b3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d6d44a187862903181cb19ee2eabafc1fd26ec91
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99207074"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237224"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -112,7 +112,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**simultanee**|Consente di utilizzare l'output generato dal programma per la copia bulk in modalità nativa per tutte le tabelle, senza tuttavia bloccare le tabelle durante il processo di generazione dello snapshot. Questa proprietà non è valida per la replica snapshot.|  
 ||**concurrent_c**|Consente di utilizzare l'output generato dal programma per la copia bulk in modalità carattere per tutte le tabelle, senza tuttavia bloccare le tabelle durante il processo di generazione dello snapshot. Questa proprietà non è valida per la replica snapshot.|  
 |**taskId**||Questa proprietà è deprecata e non è più supportata.|  
-|**allow_drop**|**true**|Abilita il `DROP TABLE` supporto della dll per gli articoli che fanno parte della replica transazionale. Versione minima supportata: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 o versione successiva e [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] Service Pack 1 o versione successiva. Riferimento aggiuntivo: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
+|**allow_drop**|**true**|Abilita il `DROP TABLE` supporto della dll per gli articoli che fanno parte della replica transazionale. Versione minima supportata: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 o versione successiva e [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 1 o versione successiva. Riferimento aggiuntivo: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
 ||**false**|Disabilita `DROP TABLE` il supporto delle dll per articoli che fanno parte della replica transazionale. Si tratta del valore **predefinito** per questa proprietà.|
 |**Null** (impostazione predefinita)||Restituisce l'elenco dei valori supportati per la *Proprietà*.|  
   

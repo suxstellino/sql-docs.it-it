@@ -22,12 +22,12 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 208ea5a903e8a5e3517f5cf663a52a521c6cf9a7
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b8957c55955ba24131f6cc5692e17b86cd2154a4
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99190599"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236159"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,7 +66,7 @@ sys.dm_db_index_physical_stats (
  *object_id* \| \| \| Valore predefinito 0 null  
  ID oggetto della tabella o vista in cui si trova l'indice. *object_id* è di **tipo int**.  
   
- Gli input validi sono il numero di ID di una tabella o vista, NULL, 0 o DEFAULT. Il valore predefinito è 0. NULL, 0 e DEFAULT sono valori equivalenti in questo contesto. A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] , gli input validi includono anche il nome della coda di Service Broker o il nome della tabella interna della coda. Quando vengono applicati parametri predefiniti, ovvero tutti gli oggetti, tutti gli indici e così via, le informazioni sulla frammentazione per tutte le code sono incluse nel set di risultati.  
+ Gli input validi sono il numero di ID di una tabella o vista, NULL, 0 o DEFAULT. Il valore predefinito è 0. NULL, 0 e DEFAULT sono valori equivalenti in questo contesto. A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] , gli input validi includono anche il nome della coda di Service Broker o il nome della tabella interna della coda. Quando vengono applicati parametri predefiniti, ovvero tutti gli oggetti, tutti gli indici e così via, le informazioni sulla frammentazione per tutte le code sono incluse nel set di risultati.  
   
  Specificare NULL per restituire le informazioni per tutte le tabelle e le viste nel database specificato. Se si specifica NULL per *object_id*, è necessario specificare null anche per *index_id* e *partition_number*.  
   
@@ -417,7 +417,7 @@ FROM sys.dm_db_index_physical_stats (db_id(),
   
 ||  
 |-|  
-|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Si applica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
  Negli esempi seguenti viene illustrato come eseguire una query sulle code di Service Broker per la frammentazione.  
   

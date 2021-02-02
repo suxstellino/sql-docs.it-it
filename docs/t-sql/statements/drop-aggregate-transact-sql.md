@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 84ffc4e7-c451-4f1f-9a67-7fc3a120e53f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 462605d4b31cfafa4cc4098f8ae2208a8dac03f6
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 229d304018861f75479408e7af22d9cb1ae89b46
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99210990"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99234153"
 ---
 # <a name="drop-aggregate-transact-sql"></a>DROP AGGREGATE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
 
 ## <a name="arguments"></a>Argomenti
  *IF EXISTS*  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level)).  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level)).  
   
  Rimuove in modo condizionale la funzione di aggregazione solo se esiste già.  
   

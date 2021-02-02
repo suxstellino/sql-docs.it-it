@@ -21,12 +21,12 @@ ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 96bf6756f26e0bc8b82c6f7f008203fcb206c22f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fe236fc66e4155e64006ede1c6eace01982470e8
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99184340"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236897"
 ---
 # <a name="sysdm_database_encryption_keys-transact-sql"></a>sys.dm_database_encryption_keys (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,10 +47,10 @@ ms.locfileid: "99184340"
 |encryptor_thumbprint|**varbinary(20)**|Mostra l'identificazione digitale della crittografia.|  
 |encryptor_type|**nvarchar(32)**|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level)).<br /><br /> Descrive il componente di crittografia.|  
 |percent_complete|**real**|Percentuale di completamento del cambiamento di stato della crittografia del database. In assenza di un cambiamento di stato il valore sarà 0.|
-|encryption_state_desc|**nvarchar(32)**|**Si applica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e versioni successive.<br><br> Stringa che indica se il database è crittografato o non crittografato.<br><br>NONE<br><br>NON crittografati<br><br>CRITTOGRAFATI<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
-|encryption_scan_state|**int**|**Si applica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e versioni successive.<br><br>Indica lo stato corrente dell'analisi della crittografia. <br><br>0 = non è stata avviata alcuna analisi, Transparent Data Encryption non è abilitato<br><br>1 = l'analisi è in corso.<br><br>2 = l'analisi è in corso ma è stata sospesa, l'utente può riprendere.<br><br>3 = l'analisi è stata interrotta per qualche motivo, è necessario un intervento manuale. Per ulteriori informazioni, contattare supporto tecnico Microsoft.<br><br>4 = l'analisi è stata completata correttamente, Transparent Data Encryption è abilitato e la crittografia è stata completata.|
-|encryption_scan_state_desc|**nvarchar(32)**|**Si applica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e versioni successive.<br><br>Stringa che indica lo stato corrente dell'analisi della crittografia.<br><br> NONE<br><br>RUNNING<br><br>SUSPENDED<br><br>ABORTED<br><br>COMPLETARE|
-|encryption_scan_modify_date|**datetime**|**Si applica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e versioni successive.<br><br> Visualizza la data (in formato UTC) dell'Ultima modifica dello stato di analisi della crittografia.|
+|encryption_state_desc|**nvarchar(32)**|**Si applica a**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] e versioni successive.<br><br> Stringa che indica se il database è crittografato o non crittografato.<br><br>NONE<br><br>NON crittografati<br><br>CRITTOGRAFATI<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
+|encryption_scan_state|**int**|**Si applica a**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] e versioni successive.<br><br>Indica lo stato corrente dell'analisi della crittografia. <br><br>0 = non è stata avviata alcuna analisi, Transparent Data Encryption non è abilitato<br><br>1 = l'analisi è in corso.<br><br>2 = l'analisi è in corso ma è stata sospesa, l'utente può riprendere.<br><br>3 = l'analisi è stata interrotta per qualche motivo, è necessario un intervento manuale. Per ulteriori informazioni, contattare supporto tecnico Microsoft.<br><br>4 = l'analisi è stata completata correttamente, Transparent Data Encryption è abilitato e la crittografia è stata completata.|
+|encryption_scan_state_desc|**nvarchar(32)**|**Si applica a**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] e versioni successive.<br><br>Stringa che indica lo stato corrente dell'analisi della crittografia.<br><br> NONE<br><br>RUNNING<br><br>SUSPENDED<br><br>ABORTED<br><br>COMPLETARE|
+|encryption_scan_modify_date|**datetime**|**Si applica a**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] e versioni successive.<br><br> Visualizza la data (in formato UTC) dell'Ultima modifica dello stato di analisi della crittografia.|
   
 ## <a name="permissions"></a>Autorizzazioni
 

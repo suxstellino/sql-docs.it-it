@@ -21,12 +21,12 @@ ms.assetid: 8d0a50b8-2015-4576-930f-e3307dfc888e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9fdfede86fd67c4911a8ec7bb0cdd75df012283
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 94af612964f33f9f463701593f9cddc4b3b992bb
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99160146"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235975"
 ---
 # <a name="sysdm_db_xtp_index_stats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "99160146"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |object_id|**bigint**|ID dell'oggetto a cui appartiene l'indice.|  
-|xtp_object_id|**bigint**|ID interno corrispondente alla versione corrente dell'oggetto.<br /><br /> Nota: si applica a [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] .|  
+|xtp_object_id|**bigint**|ID interno corrispondente alla versione corrente dell'oggetto.<br /><br /> Nota: si applica a [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] .|  
 |index_id|**bigint**|ID dell'indice. index_id è un valore univoco solo nell'ambito dell'oggetto.|  
 |scans_started|**bigint**|Numero di analisi degli indici OLTP in memoria eseguite. Ogni istruzione select, insert, update o delete richiede un'analisi dell'indice.|  
 |scans_retries|**bigint**|Numero di analisi degli indici che è necessario ritentare.|  

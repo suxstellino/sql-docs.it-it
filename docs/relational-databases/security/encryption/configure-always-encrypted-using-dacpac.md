@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 506abf476e04ab1a40059d04031949fa80b31acf
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
-ms.translationtype: HT
+ms.openlocfilehash: 7a42972d4a0cd5e6b456d72ccdba6786ad66c734
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97559323"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237105"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>Configurare la crittografia delle colonne usando Always Encrypted con un pacchetto di applicazione livello dati 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ Per eseguire operazioni di crittografia, lo strumento usato per distribuire un p
 ::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
-> Se si usa [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] e l'istanza di SQL Server è configurata con un'enclave sicura, è possibile eseguire le operazioni di crittografia sul posto, senza trasferire i dati all'esterno del database. Vedere [Configurare la crittografia delle colonne sul posto usando Always Encrypted con enclave sicure](always-encrypted-enclaves-configure-encryption.md). La crittografia sul posto non è disponibile per le distribuzioni di pacchetti DACPAC.
+> Se si usa [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] e l'istanza di SQL Server è configurata con un'enclave sicura, è possibile eseguire le operazioni di crittografia sul posto, senza trasferire i dati all'esterno del database. Vedere [Configurare la crittografia delle colonne sul posto usando Always Encrypted con enclave sicure](always-encrypted-enclaves-configure-encryption.md). La crittografia sul posto non è disponibile per le distribuzioni di pacchetti DACPAC.
 
 ::: moniker-end
 

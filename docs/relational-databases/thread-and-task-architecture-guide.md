@@ -23,12 +23,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02ddc1ad96f45ba67ed613ee7446d8a1c12e1e5b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 3eb9fd5897029fedb0e53378ecbe5f6c12f635ef
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171403"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237661"
 ---
 # <a name="thread-and-task-architecture-guide"></a>guida sull'architettura dei thread e delle attività
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +74,7 @@ In breve, una **richiesta** può generare una o più **attività** per eseguire 
 > -  ThreadDiLavoro 2 esegue attività di minore durata inferiori al millisecondo e pertanto deve cedere il tempo prima dell'esaurimento del quantum completo.     
 >
 > In questo scenario e fino a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], ThreadDiLavoro 1 può fondamentalmente monopolizzare l'utilità di pianificazione avendo più tempo del quantum in generale.   
-> A partire da [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], la pianificazione cooperativa include la pianificazione LDF (Large Deficit First). Con la pianificazione LDF, i modelli di utilizzo del quantum sono monitorati e un solo thread di lavoro non monopolizza un'utilità di pianificazione. Nello stesso scenario, ThreadDiLavoro 2 può utilizzare quantum ripetuti prima che a ThreadDiLavoro 1 vengano concessi ulteriori quantum, impedendo quindi a ThreadDiLavoro 1 di monopolizzare l'utilità di pianificazione con un modello non appropriato.
+> A partire da [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], la pianificazione cooperativa include la pianificazione LDF (Large Deficit First). Con la pianificazione LDF, i modelli di utilizzo del quantum sono monitorati e un solo thread di lavoro non monopolizza un'utilità di pianificazione. Nello stesso scenario, ThreadDiLavoro 2 può utilizzare quantum ripetuti prima che a ThreadDiLavoro 1 vengano concessi ulteriori quantum, impedendo quindi a ThreadDiLavoro 1 di monopolizzare l'utilità di pianificazione con un modello non appropriato.
 
 ### <a name="scheduling-parallel-tasks"></a>Pianificazione delle attività in parallelo
 Si supponga che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sia configurato con MaxDOP 8 e l'affinità di CPU sia configurata per 24 CPU (utilità di pianificazione) tra i nodi NUMA 0 e 1. Le utilità di pianificazione da 0 a 11 appartengono al nodo NUMA 0, le utilità di pianificazione da 12 a 23 appartengono al nodo NUMA 1. Un'applicazione invia la query seguente (richiesta) al [!INCLUDE[ssde_md](../includes/ssde_md.md)]:

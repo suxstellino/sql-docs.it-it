@@ -28,12 +28,12 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.openlocfilehash: f190b4b7c4bab6845a871c7c937d084b07c94228
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 16a67df352f2f1d1b77e48d5fdaff67c9fb77d15
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99177919"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237042"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 
@@ -164,7 +164,7 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
 
 ## <a name="arguments"></a>Argomenti
 OR ALTER  
-**Si applica a**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1). 
+**Si applica a**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1). 
   
 Modifica in modo condizionale il trigger solo se esiste già. 
   

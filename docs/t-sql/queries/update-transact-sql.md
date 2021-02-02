@@ -39,17 +39,17 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b876b8e1a54f500e800486259f20d805f2d6a987
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4dde2d907d13a0f720f925fc33f9e7cb0ba708b5
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99159185"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237810"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Modifica i dati esistenti in una tabella o vista in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per alcuni esempi, vedere [Esempi](#UpdateExamples).  
+  Modifica i dati esistenti in una tabella o vista in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Per alcuni esempi, vedere [Esempi](#UpdateExamples).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

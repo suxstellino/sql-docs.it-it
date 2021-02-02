@@ -21,12 +21,12 @@ ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e3149b73a7926e8c8a953fd685778431ec445b3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7786afaa6ae9b50f8df1e2c0d9ec73e35dcc249d
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99210254"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236037"
 ---
 # <a name="sysdm_db_stats_properties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,8 +57,8 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |rows_sampled|**bigint**|Numero totale di righe campionate per i calcoli statistici.|  
 |steps|**int**|Numero di intervalli nell'istogramma. Per altre informazioni, vedere [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).|  
 |unfiltered_rows|**bigint**|Numero totale di righe nella tabella prima dell'applicazione dell'espressione di filtro (per statistiche filtrate). Se le statistiche non vengono filtrate, unfiltered_rows corrisponde al valore restituito nella colonna rows.|  
-|modification_counter|**bigint**|Numero totale di modifiche per la colonna iniziale delle statistiche, la colonna in cui viene compilato l'istogramma, dall'ultimo aggiornamento delle statistiche.<br /><br /> Tabelle con ottimizzazione per la memoria: a partire [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] da e in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] questa colonna è contenuto il numero totale di modifiche per la tabella dall'ultimo aggiornamento delle statistiche oppure il database è stato riavviato.|  
-|persisted_sample_percent|**float**|Percentuale di campionamento persistente usata per gli aggiornamenti delle statistiche che non specificano in modo esplicito una percentuale di campionamento. Se il valore è zero, non viene impostata alcuna percentuale di campionamento persistente per la statistica.<br /><br /> **Si applica a:** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 CU4|  
+|modification_counter|**bigint**|Numero totale di modifiche per la colonna iniziale delle statistiche, la colonna in cui viene compilato l'istogramma, dall'ultimo aggiornamento delle statistiche.<br /><br /> Tabelle con ottimizzazione per la memoria: a partire [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] da e in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] questa colonna è contenuto il numero totale di modifiche per la tabella dall'ultimo aggiornamento delle statistiche oppure il database è stato riavviato.|  
+|persisted_sample_percent|**float**|Percentuale di campionamento persistente usata per gli aggiornamenti delle statistiche che non specificano in modo esplicito una percentuale di campionamento. Se il valore è zero, non viene impostata alcuna percentuale di campionamento persistente per la statistica.<br /><br /> **Si applica a:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU4|  
   
 ## <a name="remarks"></a><a name="Remarks"></a> Osservazioni  
  **sys.dm_db_stats_properties** restituisce un set di righe vuoto in una delle condizioni seguenti:  

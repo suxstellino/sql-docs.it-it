@@ -20,17 +20,17 @@ ms.assetid: e361c2d4-c01f-4da4-8e89-1ddc724a2629
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6a71b1121815f3985ec2891eaa45789ef320e011
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 385d607f24c981bb3ee32ab434e7256ed685140d
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99205097"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237341"
 ---
 # <a name="percent_rank-transact-sql"></a>PERCENT_RANK (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  Calcola il rango relativo di una riga all'interno di un gruppo di righe in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Utilizzare PERCENT_RANK per valutare la posizione relativa di un valore in un set di risultati della query o di una partizione. PERCENT_RANK è simile alla funzione CUME_DIST.  
+  Calcola il rango relativo di una riga all'interno di un gruppo di righe in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Utilizzare PERCENT_RANK per valutare la posizione relativa di un valore in un set di risultati della query o di una partizione. PERCENT_RANK è simile alla funzione CUME_DIST.  
   
 ## <a name="syntax"></a>Sintassi  
   

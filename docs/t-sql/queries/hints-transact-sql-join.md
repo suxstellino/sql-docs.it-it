@@ -23,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fd73b1369a00bdb737e34b1e94a557e7e72e0a43
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 3d95b42433c45305aae60888dabe827a900f42c7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99207726"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235940"
 ---
 # <a name="hints-transact-sql---join"></a>Hint (Transact-SQL) - Join
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Gli hint di join specificano che Query Optimizer deve imporre una strategia di join tra due tabelle in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per informazioni generali sui join e sulla relativa sintassi, vedere [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
+  Gli hint di join specificano che Query Optimizer deve imporre una strategia di join tra due tabelle in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Per informazioni generali sui join e sulla relativa sintassi, vedere [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
 > [!CAUTION]  
 >  Poiché Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente in genere di selezionare il piano di esecuzione migliore per una query, gli hint devono essere usati solo se strettamente necessari ed esclusivamente da sviluppatori e amministratori di database esperti.

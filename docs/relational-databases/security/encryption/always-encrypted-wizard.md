@@ -17,12 +17,12 @@ ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27af6771eeccf660b1eac623f80e663d93e411b8
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: bedf502949e206b45bf7e1e332962c8c093d1bcb
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97405948"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236703"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Configurare la crittografia delle colonne usando la procedura guidata Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ La procedura guidata funziona spostando i dati all'esterno del database ed esegu
 ::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
-> Se si usa [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] e l'istanza di SQL Server è configurata con un'enclave sicura, è possibile eseguire le operazioni di crittografia sul posto, senza trasferire i dati all'esterno del database. Vedere [Configurare la crittografia delle colonne sul posto usando Always Encrypted con enclave sicure](always-encrypted-enclaves-configure-encryption.md). Si noti che la procedura guidata non supporta la crittografia sul posto.
+> Se si usa [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] e l'istanza di SQL Server è configurata con un'enclave sicura, è possibile eseguire le operazioni di crittografia sul posto, senza trasferire i dati all'esterno del database. Vedere [Configurare la crittografia delle colonne sul posto usando Always Encrypted con enclave sicure](always-encrypted-enclaves-configure-encryption.md). Si noti che la procedura guidata non supporta la crittografia sul posto.
 
 ::: moniker-end
 

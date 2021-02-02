@@ -24,12 +24,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/17/2020
-ms.openlocfilehash: a4798fbc01e015b85e31d9768fd8135af6d202f4
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
-ms.translationtype: HT
+ms.openlocfilehash: 3db5da949d4691e77ddc545626a8e9b41b78857d
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596870"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99234180"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Scaricare SQL Server Management Studio (SSMS)
 
@@ -133,7 +133,7 @@ Questi componenti non vengono disinstallati perché possono essere condivisi con
 
 ## <a name="supported-sql-offerings"></a>Offerte di SQL supportate
 
-- Questa versione di SSMS funziona con tutte le [versioni supportate di SQL Server 2008 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) e offre il massimo livello di supporto per l'uso con le funzionalità cloud più recenti nel database SQL di Azure e in Azure Synapse Analytics.
+- Questa versione di SSMS funziona con tutte le [versioni supportate di SQL Server 2008 - [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) e offre il massimo livello di supporto per l'uso con le funzionalità cloud più recenti nel database SQL di Azure e in Azure Synapse Analytics.
 - È supportata anche l'installazione side-by-side di SSMS 18.x con SSMS 17.x, SSMS 16.x o SQL Server 2014 SSMS e versioni precedenti.
 - SQL Server Integration Services (SSIS) - SQL Server Management Studio versione 17.x o successive non supporta la connessione al servizio legacy SQL Server Integration Services. Per connettersi a una versione precedente di Integration Services, usare la versione di SQL Server Management Studio allineata alla versione di SQL Server. Ad esempio, usare SQL Server Management Studio 16.x per connettersi al servizio SQL Server 2016 Integration Services. SSMS 17.x e SSMS 16.x possono essere installati affiancati nello stesso computer. A partire dalla versione di SQL Server 2012, è consigliabile usare il database Catalogo SSIS, SSISDB, per memorizzare, gestire, eseguire e monitorare i pacchetti Integration Services. Per informazioni dettagliate, vedere [Catalogo SSIS](../integration-services/catalog/ssis-catalog.md).
 

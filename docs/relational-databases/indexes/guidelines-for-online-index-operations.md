@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17c91b53c786934d292692493fa886698128b34d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 9612070531dc13d9646d439501925f59f62c8da7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465302"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236910"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Linee guida per le operazioni sugli indici online
 
@@ -119,7 +119,7 @@ In generale non vi sono differenze di qualità della deframmentazione nella crea
 ## <a name="online-default-options"></a>Opzioni online predefinite
 
 > [!IMPORTANT]
-> Queste opzioni sono disponibili in anteprima pubblica per [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)].
+> Queste opzioni sono disponibili in anteprima pubblica per [!INCLUDE[ssNoVersion](../../includes/sssql19-md.md)].
 
 È possibile impostare opzioni predefinite per determinare lo stato online o resumable (ripristinabile) a livello di database impostando le opzioni di configurazione con ambito database ELEVATE_ONLINE o ELEVATE_RESUMABLE. Con queste opzioni predefinite, è possibile evitare l'esecuzione accidentale di un'operazione che attiva la modalità offline della tabella di database. Entrambe le opzioni fanno sì che il motore del database imposti automaticamente determinate operazioni per l'esecuzione online o ripristinabile.  
 È possibile impostare le opzioni come FAIL_UNSUPPORTED, WHEN_SUPPORTED o OFF tramite il comando [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). È possibile impostare valori diversi per ONLINE e RESUMABLE.

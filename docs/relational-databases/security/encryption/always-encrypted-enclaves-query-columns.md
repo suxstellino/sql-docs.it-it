@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: c283a2aad1cc9380dc1363c86f847ae4027174be
-ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.openlocfilehash: bc92b0af972236b588369869afc5b023735ae699
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99075883"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237130"
 ---
 # <a name="run-transact-sql-statements-using-secure-enclaves"></a>Eseguire istruzioni Transact-SQL con enclave sicure
 
@@ -45,15 +45,15 @@ Le istruzioni [DML (Data Manipulation Language)](../../../t-sql/statements/state
   - [IN (Transact-SQL)](../../../t-sql/language-elements/in-transact-sql.md)
   - [LIKE (Transact-SQL)](../../../t-sql/language-elements/like-transact-sql.md)
   - [DISTINCT](../../../t-sql/queries/select-transact-sql.md#c-using-distinct-with-select)
-  - [Join](../../performance/joins.md) - [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] supporta solo i join a cicli annidati. [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] supporta join a cicli annidati, hash join e merge join
-  - [Clausola SELECT - ORDER BY (Transact-SQL)](../../../t-sql/queries/select-order-by-clause-transact-sql.md). Supportata in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]. Proprietà non supportata in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]
-  - [Clausola SELECT - GROUP BY (Transact-SQL)](../../../t-sql/queries/select-group-by-transact-sql.md). Supportata in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]. Proprietà non supportata in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]
+  - [Join](../../performance/joins.md) - [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] supporta solo i join a cicli annidati. [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] supporta join a cicli annidati, hash join e merge join
+  - [Clausola SELECT - ORDER BY (Transact-SQL)](../../../t-sql/queries/select-order-by-clause-transact-sql.md). Supportata in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]. Proprietà non supportata in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]
+  - [Clausola SELECT - GROUP BY (Transact-SQL)](../../../t-sql/queries/select-group-by-transact-sql.md). Supportata in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]. Proprietà non supportata in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]
 - Query che inseriscono, aggiornano o eliminano righe, che a loro volta attivano l'inserimento e/o la rimozione di una chiave di indice da e verso un indice in una colonna abilitata per l'enclave. Per altre informazioni, vedere [Creare e usare indici in colonne usando Always Encrypted con enclave sicuri](always-encrypted-enclaves-create-use-indexes.md).
 
 > [!NOTE]
 > Le operazioni sugli indici e le query DML riservate che usano le enclave sono supportate solo nelle colonne abilitate per l'enclave che usano la crittografia casuale. La crittografia deterministica non è supportata.
 >
-> In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], le query riservate che usano le enclave su colonne di stringhe di caratteri (`char`, `nchar`) richiedono la configurazione delle regole di confronto binary2 (BIN2) per l'ordinamento per la colonna. In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], è necessario usare le regole di confronto BIN2 o UTF-8.
+> In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], le query riservate che usano le enclave su colonne di stringhe di caratteri (`char`, `nchar`) richiedono la configurazione delle regole di confronto binary2 (BIN2) per l'ordinamento per la colonna. In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], è necessario usare le regole di confronto BIN2 o UTF-8.
 
 ### <a name="dbcc-commands-using-secure-enclaves"></a>Comandi DBCC che usano enclave sicure
 
@@ -104,7 +104,7 @@ Assicurarsi di eseguire le istruzioni da una finestra di query che usa una conne
 1. Nella finestra di dialogo **Connessione** fare clic su **Avanzate...** .
 2. Per abilitare Always Encrypted per la connessione, impostare il campo **Always Encrypted** su **Attivato**.
 3. Specificare il protocollo di attestazione e l'URL di attestazione.
-    - Se si usa [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] impostare **Protocollo di attestazione** su **Servizio Sorveglianza host** e immettere l'URL di attestazione del servizio Sorveglianza host nel campo **URL di attestazione enclave**.
+    - Se si usa [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] impostare **Protocollo di attestazione** su **Servizio Sorveglianza host** e immettere l'URL di attestazione del servizio Sorveglianza host nel campo **URL di attestazione enclave**.
     - Se si usa [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], impostare **Protocollo di attestazione** su **Attestazione di Azure** e immettere l'URL di attestazione che fa riferimento ai criteri nel servizio Attestazione di Microsoft Azure nel campo **URL di attestazione enclave**.
 
     ![Connettersi al server con l'attestazione tramite Azure Data Studio](./media/always-encrypted-enclaves/azure-data-studio-connect-with-enclaves.png)
@@ -191,7 +191,7 @@ GO
 
 La query seguente ordina i record dei dipendenti in base alla colonna `Salary` crittografata, recuperando i 10 dipendenti con gli stipendi più elevati.
 > [!NOTE]
-> L'ordinamento delle colonne crittografate è supportato in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], ma non in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)].
+> L'ordinamento delle colonne crittografate è supportato in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], ma non in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)].
 
 ```sql
 SELECT TOP(10) * FROM [HR].[Employees]

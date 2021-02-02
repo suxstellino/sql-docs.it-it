@@ -24,12 +24,12 @@ ms.assetid: 1f6f13ae-56a2-4ef1-93f5-8e6151b83e1d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbd9346bd818251716c4f07f1229c349f42043ea
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6d7908d4dbd6608f86af35d656906f7060eb8fc3
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99188455"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236975"
 ---
 # <a name="drop-role-transact-sql"></a>DROP ROLE (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -57,7 +57,7 @@ DROP ROLE role_name
 
 ## <a name="arguments"></a>Argomenti
  *IF EXISTS*  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level)).  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level)).  
   
  Rimuove in modo condizionale il ruolo solo se esiste già.  
   

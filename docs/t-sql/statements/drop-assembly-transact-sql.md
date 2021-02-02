@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: cc1357d80d71c96963cd86520e96ba1b5402469f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0dd88564bdd1853c29d08c48605ba3362c8011c9
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99210964"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237153"
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
 
 ## <a name="arguments"></a>Argomenti
  *IF EXISTS*  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level)).  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level)).  
   
  Rimuove in modo condizionale l'assembly solo se esiste già.  
   

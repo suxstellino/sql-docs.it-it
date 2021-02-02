@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: briancarrig
 ms.author: brcarrig
-ms.openlocfilehash: 88f965eadf0defbd75c859fa2308dd255f5c1486
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: 6625022360c93da5cbc43224572908738f6d430c
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470436"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236453"
 ---
 # <a name="in-memory-database-systems-and-technologies"></a>Tecnologie e sistemi di database in memoria
 
@@ -39,13 +39,13 @@ Una cache volatile veloce di fronte a un supporto notevolmente più lento ma dur
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-Il [pool di buffer ibrido](../database-engine/configure-windows/hybrid-buffer-pool.md) espande il pool di buffer per i file di database che risiedono in dispositivi di archiviazione con memoria persistente indirizzabili a byte per entrambe le piattaforme Windows e Linux con [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+Il [pool di buffer ibrido](../database-engine/configure-windows/hybrid-buffer-pool.md) espande il pool di buffer per i file di database che risiedono in dispositivi di archiviazione con memoria persistente indirizzabili a byte per entrambe le piattaforme Windows e Linux con [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)].
 
 ## <a name="memory-optimized-tempdb-metadata"></a>Metadati `tempdb` ottimizzati per la memoria
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduce una nuova funzionalità, ovvero i [metadati tempdb ottimizzati per la memoria](./databases/tempdb-database.md#memory-optimized-tempdb-metadata) che rimuove in modo efficace i colli di bottiglia dovuti alla contesa e sblocca un nuovo livello di scalabilità per i carichi di lavoro tempdb elevati.
+[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] introduce una nuova funzionalità, ovvero i [metadati tempdb ottimizzati per la memoria](./databases/tempdb-database.md#memory-optimized-tempdb-metadata) che rimuove in modo efficace i colli di bottiglia dovuti alla contesa e sblocca un nuovo livello di scalabilità per i carichi di lavoro tempdb elevati.
 
 ## <a name="in-memory-oltp"></a>OLTP in memoria
 
@@ -57,7 +57,7 @@ Il [pool di buffer ibrido](../database-engine/configure-windows/hybrid-buffer-po
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] descrive come configurare la memoria persistente (PMEM) usando la [memoria persistente](../linux/sql-server-linux-configure-pmem.md) dell'utilità `ndctl`.
+[!INCLUDE[sqlv15](../includes/sssql19-md.md)] descrive come configurare la memoria persistente (PMEM) usando la [memoria persistente](../linux/sql-server-linux-configure-pmem.md) dell'utilità `ndctl`.
 
 ## <a name="persisted-log-buffer"></a>Buffer di log persistente
 

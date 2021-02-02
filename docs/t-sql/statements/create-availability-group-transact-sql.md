@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ebd9d62a76072302c5ebfd266539807571d4e01d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1ba1a89e21c7eb57c2f3dd603e35472d56ab62d7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99204984"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236288"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 
@@ -180,13 +180,13 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
   Per altre informazioni su questa impostazione, vedere [Opzione di failover di rilevamento dell'integrità a livello di database](../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md) 
   
  DTC_SUPPORT  **=** { PER_DB | NONE }  
- Specifica se le transazioni tra database sono supportate usando il controllo DTC (Distributed Transaction Coordinator). Le transazioni tra database sono supportate solo a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]. PER_DB crea il gruppo di disponibilità con il supporto per queste transazioni. Per altre informazioni, vedere [Transazioni tra database non supportate per il mirroring del database o i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
+ Specifica se le transazioni tra database sono supportate usando il controllo DTC (Distributed Transaction Coordinator). Le transazioni tra database sono supportate solo a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. PER_DB crea il gruppo di disponibilità con il supporto per queste transazioni. Per altre informazioni, vedere [Transazioni tra database non supportate per il mirroring del database o i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
  BASIC  
- Consente di creare un gruppo di disponibilità di base. I gruppi di disponibilità di base sono limitati a un database e due repliche: una replica primaria e una replica secondaria. Questa opzione sostituisce la funzionalità di mirroring del database di SQL Server Standard Edition ora deprecata. Per altre informazioni, vedere [Gruppi di disponibilità di base &#40;gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md). I gruppi di disponibilità di base sono supportati a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)].  
+ Consente di creare un gruppo di disponibilità di base. I gruppi di disponibilità di base sono limitati a un database e due repliche: una replica primaria e una replica secondaria. Questa opzione sostituisce la funzionalità di mirroring del database di SQL Server Standard Edition ora deprecata. Per altre informazioni, vedere [Gruppi di disponibilità di base &#40;gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md). I gruppi di disponibilità di base sono supportati a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].  
 
  DISTRIBUTED  
- Consente di creare un gruppo di disponibilità distribuito. Questa opzione viene usata con il parametro AVAILABILITY GROUP ON per la connessione di due gruppi di disponibilità in cluster di failover separati di Windows Server.  Per altre informazioni, vedere [Gruppi di disponibilità distribuiti &#40;gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups.md). I gruppi di disponibilità distribuiti sono supportati a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]. 
+ Consente di creare un gruppo di disponibilità distribuito. Questa opzione viene usata con il parametro AVAILABILITY GROUP ON per la connessione di due gruppi di disponibilità in cluster di failover separati di Windows Server.  Per altre informazioni, vedere [Gruppi di disponibilità distribuiti &#40;gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups.md). I gruppi di disponibilità distribuiti sono supportati a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. 
 
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  Opzione introdotta in SQL Server 2017. Consente di impostare un numero minimo di repliche secondarie sincrone necessarie per eseguire il commit prima che la replica primaria esegua il commit di una transazione. Garantisce che la transazione di SQL Server resti in attesa finché i log delle transazioni non vengono aggiornati con il numero minimo di repliche secondarie. Il valore predefinito è 0, che determina lo stesso comportamento di SQL Server 2016. Il valore minimo è 0. Il valore massimo è il numero di repliche meno 1. Questa opzione è correlata alle repliche in modalità di commit sincrono. Quando le repliche sono in modalità di commit sincrono, le scritture presenti nella replica primaria attendono finché non viene eseguito il commit delle scritture presenti nelle repliche secondarie sincrone nel log delle transazioni del database di replica. Se un server SQL che ospita una replica secondaria sincrona si blocca, il server SQL che ospita la replica primaria contrassegna tale replica secondaria come non sincronizzata e continua. Quando il database che non risponde torna online risulta "non sincronizzato" e la replica viene contrassegnata come non integra finché il database primario la rende di nuovo sincrona. Questa impostazione garantisce che la replica primaria attenda l'esecuzione del commit di ogni transazione da parte del numero minimo di repliche. Se il numero minimo delle repliche non è disponibile, i commit nel database primario non riescono. Per il tipo di cluster `EXTERNAL` l'impostazione viene modificata quando il gruppo di disponibilità viene aggiunto a una risorsa cluster. Vedere [Elevata disponibilità e protezione dei dati per le configurazioni di gruppo di disponibilità](../../linux/sql-server-linux-availability-group-ha.md).
@@ -356,7 +356,7 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
   
  Utilizzare un elenco delimitato da virgole per specificare tutte le istanze del server che potrebbero ospitare una replica secondaria leggibile. Il routing di sola lettura segue l'ordine in cui le istanze del server vengono specificate nell'elenco. Se si include l'istanza del server host di una replica nell'elenco di routing di sola lettura della replica, il posizionamento di questa istanza del server alla fine dell'elenco costituisce in genere buona pratica, poiché le connessioni con finalità di lettura vengono indirizzate a una replica secondaria, se ne è disponibile una.  
   
- A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], è possibile eseguire il bilanciamento del carico delle richieste con finalità di lettura in tutte le repliche secondarie leggibili. A questo scopo, inserire le repliche in un set annidato di parentesi all'interno dell'elenco di routing di sola lettura. Per altre informazioni ed esempi, vedere [Configurare il bilanciamento del carico tra le repliche di sola lettura](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing).  
+ A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], è possibile eseguire il bilanciamento del carico delle richieste con finalità di lettura in tutte le repliche secondarie leggibili. A questo scopo, inserire le repliche in un set annidato di parentesi all'interno dell'elenco di routing di sola lettura. Per altre informazioni ed esempi, vedere [Configurare il bilanciamento del carico tra le repliche di sola lettura](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing).  
   
  NONE  
  Specifica che quando questa replica di disponibilità è la replica primaria, il routing di sola lettura non è supportato. Questo è il comportamento predefinito.  

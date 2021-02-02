@@ -21,12 +21,12 @@ ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d7a59efc8b1e6795082d4d7f4e4973522cf371ce
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f61f84416e76e6a03c12efe7336a7d978585736c
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99198562"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235922"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,10 +65,10 @@ ms.locfileid: "99198562"
 |**is_small**|**tinyint**|Se il valore è 1, questa concessione utilizza il semaforo piccolo di risorsa. Se il valore è 0, viene utilizzato un semaforo normale.|  
 |**ideal_memory_kb**|**bigint**|Dimensioni, in kilobyte (KB), della concessione di memoria per inserire tutto nella memoria fisica. Si basa su una stima della cardinalità.|  
 |**pdw_node_id**|**int**|Identificatore del nodo su cui si trova questa distribuzione.<br /><br /> **Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
-|**reserved_worker_count**|**bigint**|Numero di [thread di lavoro](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling)riservati.<br /><br />**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
-|**used_worker_count**|**bigint**|Numero di [thread di lavoro](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) utilizzati in questo momento.<br /><br />**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**max_used_worker_count**|**bigint**|Numero massimo di [thread di lavoro](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) utilizzati fino a questo momento.<br /><br />**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**reserved_node_bitmap**|**bigint**|Bitmap dei nodi NUMA in cui sono riservati i [thread di lavoro](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) .<br /><br />**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**reserved_worker_count**|**bigint**|Numero di [thread di lavoro](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling)riservati.<br /><br />**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
+|**used_worker_count**|**bigint**|Numero di [thread di lavoro](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) utilizzati in questo momento.<br /><br />**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**max_used_worker_count**|**bigint**|Numero massimo di [thread di lavoro](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) utilizzati fino a questo momento.<br /><br />**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**reserved_node_bitmap**|**bigint**|Bitmap dei nodi NUMA in cui sono riservati i [thread di lavoro](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) .<br /><br />**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
   
 ## <a name="permissions"></a>Autorizzazioni  
 

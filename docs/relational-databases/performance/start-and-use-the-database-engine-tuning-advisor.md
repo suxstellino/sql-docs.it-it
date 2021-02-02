@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 211b5e8185440e68b1bd7572dc32abf358e6735e
-ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
+ms.openlocfilehash: da72d129bac65b1b9210e49d33782b257ea9e182
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99049224"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236431"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Avvio e utilizzo di Ottimizzazione guidata motore di database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "99049224"
 
       ||  
       |-|  
-      |**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive.|  
+      |**Si applica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive.|  
 
   
 -   Utilizzare la cache dei piani come carico di lavoro. In questo modo, è possibile evitare di dover creare manualmente un carico di lavoro. Per ulteriori informazioni, vedere [Ottimizzare un database](#Tune) di seguito in questo argomento.  

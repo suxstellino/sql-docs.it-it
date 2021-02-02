@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 724a3c4b375494f277f22004cd9645caa6f6fbe5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ffdf0615671d2f3e019bccde83159bdb75eddcdd
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99186688"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236274"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 
@@ -57,7 +57,7 @@ DROP DATABASE database_name [;]
 ## <a name="arguments"></a>Argomenti
 
  *IF EXISTS*  
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level)).
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level)).
 
 Rimuove in modo condizionale il database solo se esiste già.
 
@@ -79,7 +79,7 @@ Dopo la rimozione di un database, è necessario eseguire il backup del [database
 La rimozione di un database comporta l'eliminazione del database da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e dei relativi file su disco utilizzati. Se il database o uno dei relativi file è offline quando viene rimosso, i file su disco non vengono eliminati. Questi file possono essere eliminati manualmente tramite Esplora risorse. Per rimuovere un database dal server corrente senza eliminare i file dal file system, usare [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).
 
 > [!WARNING]
-> Sarà possibile rimuovere un database con backup FILE_SNAPSHOT associati, ma i file del database con snapshot associati non verranno eliminati per evitare di invalidare i backup che fanno riferimento a tali file del database. Il file verrà troncato, ma non sarà eliminato fisicamente in modo da mantenere inalterati i backup FILE_SNAPSHOT. Per altre informazioni, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level).
+> Sarà possibile rimuovere un database con backup FILE_SNAPSHOT associati, ma i file del database con snapshot associati non verranno eliminati per evitare di invalidare i backup che fanno riferimento a tali file del database. Il file verrà troncato, ma non sarà eliminato fisicamente in modo da mantenere inalterati i backup FILE_SNAPSHOT. Per altre informazioni, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Si applica a**: da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level).
 
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

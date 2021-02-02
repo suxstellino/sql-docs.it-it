@@ -19,17 +19,17 @@ ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: c80562f844c096bd836d9db8f57ae408c6602d3d
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
-ms.translationtype: HT
+ms.openlocfilehash: 63425d2a96cffb585a5b36c0614ee06b1586bbf8
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196208"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237985"
 ---
 # <a name="add-persisted-log-buffer-to-a-database"></a>Aggiungere un buffer di log persistente a un database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Questo argomento descrive come aggiungere un buffer di log persistente a un database in [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] usando [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+Questo argomento descrive come aggiungere un buffer di log persistente a un database in [!INCLUDE[sqlv15](../../includes/sssql19-md.md)] usando [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="permissions"></a>Autorizzazioni
 

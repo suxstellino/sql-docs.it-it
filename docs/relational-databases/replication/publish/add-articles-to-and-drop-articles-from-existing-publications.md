@@ -21,12 +21,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 183619e1802b435fbc21c2b44e32848bf7e578de
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 7c3f54328d1c614f04f5f9fb9d2571d78f1b8733
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171903"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236643"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Aggiunta ed eliminazione di articoli a e da pubblicazioni esistenti
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "98171903"
  Come evidenziato sopra, in alcuni casi l'eliminazione di un articolo richiede che le sottoscrizioni vengano eliminate, ricreate e quindi sincronizzate. Per altre informazioni, vedere [Sottoscrivere le pubblicazioni](../../../relational-databases/replication/subscribe-to-publications.md) e [Sincronizzare i dati](../../../relational-databases/replication/synchronize-data.md).  
  
  > [!NOTE]
- > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** o versione successiva e **[!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] Service Pack 1** o versione successiva supportano l'eliminazione di un tabella mediante il comando DDL **DROP TABLE** per gli articoli che partecipano alla replica transazionale. Se il comando DLL DROP TABLE è supportato dalla pubblicazione, l'operazione DROP TABLE eliminerà la tabella dalla pubblicazione e dal database. L'agente di lettura log eseguirà un comando di pulizia per il database di distribuzione contenente la tabella eliminata ed eseguirà la pulizia dei metadati del server di pubblicazione. Se l'agente di lettura log non elabora tutti i record del log che fanno riferimento alla tabella eliminata, i nuovi comandi associati a tale tabella verranno ignorati. I record già elaborati verranno recapitati ai database di distribuzione. Possono essere applicati al database Sottoscrittore se l'agente di distribuzione li elabora prima che l'agente di lettura log esegua la pulizia degli articoli obsoleti (eliminati). L'impostazione **default** per tutte le pubblicazioni di replica transazionale non prevede il supporto del comando DDL DROP TABLE. L'articolo [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) contiene altri dettagli relativi a questo miglioramento.
+ > **[!INCLUDE[sssql14-md](../../../includes/sssql14-md.md)] Service Pack 2** o versione successiva e **[!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] Service Pack 1** o versione successiva supportano l'eliminazione di un tabella mediante il comando DDL **DROP TABLE** per gli articoli che partecipano alla replica transazionale. Se il comando DLL DROP TABLE è supportato dalla pubblicazione, l'operazione DROP TABLE eliminerà la tabella dalla pubblicazione e dal database. L'agente di lettura log eseguirà un comando di pulizia per il database di distribuzione contenente la tabella eliminata ed eseguirà la pulizia dei metadati del server di pubblicazione. Se l'agente di lettura log non elabora tutti i record del log che fanno riferimento alla tabella eliminata, i nuovi comandi associati a tale tabella verranno ignorati. I record già elaborati verranno recapitati ai database di distribuzione. Possono essere applicati al database Sottoscrittore se l'agente di distribuzione li elabora prima che l'agente di lettura log esegua la pulizia degli articoli obsoleti (eliminati). L'impostazione **default** per tutte le pubblicazioni di replica transazionale non prevede il supporto del comando DDL DROP TABLE. L'articolo [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) contiene altri dettagli relativi a questo miglioramento.
 
   
 ## <a name="see-also"></a>Vedere anche  

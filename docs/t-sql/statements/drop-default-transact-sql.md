@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 3a8084d0b934a5e80feac324ee637b96e96ef4e3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: bf1a262a80fdf78eaff96c4f1483403de40b3bf8
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99190494"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99232915"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
 
 ## <a name="arguments"></a>Argomenti
  *IF EXISTS*  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level)).  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level)).  
   
  Rimuove in modo condizionale l'impostazione predefinita solo se esiste già.  
   
@@ -79,7 +79,7 @@ IF EXISTS (SELECT name FROM sys.objects
 GO  
 ```  
   
- A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] è possibile usare la sintassi seguente.  
+ A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] è possibile usare la sintassi seguente.  
   
 ```sql  
 DROP DEFAULT IF EXISTS datedflt;  

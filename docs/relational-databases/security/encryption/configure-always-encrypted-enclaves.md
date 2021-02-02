@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 78c1769be6c0b54f290f90f2dee90dba5a409d99
-ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.openlocfilehash: 73a1c9f3a39ce51ce6ecc347af2e2eb0fb173fb6
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99075803"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237302"
 ---
 # <a name="configure-and-use-always-encrypted-with-secure-enclaves"></a>Configurare e usare Always Encrypted con enclave sicuri 
 
@@ -33,7 +33,7 @@ Per esercitazioni che illustrano come iniziare rapidamente a usare Always Encryp
 
 Prima di poter usare Always Encrypted con enclave sicure, è necessario configurare l'ambiente in modo da assicurare che l'enclave sicura sia disponibile per il database. È anche necessario configurare l'[attestazione dell'enclave](always-encrypted-enclaves.md#secure-enclave-attestation). 
 
-Il processo di configurazione dell'ambiente varia a seconda che si usi [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] o [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
+Il processo di configurazione dell'ambiente varia a seconda che si usi [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] o [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
 ### <a name="set-up-the-secure-enclave-and-attestation-in-ssnoversion-md"></a>Configurare l'enclave sicura e l'attestazione in [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]
 

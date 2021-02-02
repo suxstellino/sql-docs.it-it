@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f2aa24e3ebd335251ad2721444e9f9d8645ef221
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: e6e6dfd3092f4602f652af81e547b63fc1ddc3df
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534905"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236093"
 ---
 # <a name="configure-the-secure-enclave-in-sql-server"></a>Configurare l'enclave sicuro in SQL Server
 
@@ -27,7 +27,7 @@ Prima di poter usare [Always Encrypted con enclave sicure](always-encrypted-encl
 > [!NOTE]
 > Il ruolo responsabile della configurazione dell'enclave sicura è l'amministratore di database. Vedere [Ruoli e responsabilità per la configurazione dell'attestazione con HGS](always-encrypted-enclaves-host-guardian-service-plan.md#roles-and-responsibilities-when-configuring-attestation-with-hgs).
 
-Il tipo di enclave supportato per [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] è la sicurezza basata sulla virtualizzazione (VBS). Prima di configurare il tipo di enclave VBS, è consigliabile configurare l'attestazione con il servizio Sorveglianza host (HGS) per il computer che ospita l'istanza. Per iniziare a usare HGS, vedere [Pianificare l'attestazione del servizio Sorveglianza host](always-encrypted-enclaves-host-guardian-service-plan.md). La configurazione dell'attestazione abilita anche la sicurezza basata sulla virtualizzazione, necessaria per l'inizializzazione corretta di un'enclave VBS. Per altre informazioni, vedere [Verificare che sia in esecuzione la sicurezza basata sulla virtualizzazione](always-encrypted-enclaves-host-guardian-service-register.md#step-2-verify-virtualization-based-security-is-running).
+Il tipo di enclave supportato per [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] è la sicurezza basata sulla virtualizzazione (VBS). Prima di configurare il tipo di enclave VBS, è consigliabile configurare l'attestazione con il servizio Sorveglianza host (HGS) per il computer che ospita l'istanza. Per iniziare a usare HGS, vedere [Pianificare l'attestazione del servizio Sorveglianza host](always-encrypted-enclaves-host-guardian-service-plan.md). La configurazione dell'attestazione abilita anche la sicurezza basata sulla virtualizzazione, necessaria per l'inizializzazione corretta di un'enclave VBS. Per altre informazioni, vedere [Verificare che sia in esecuzione la sicurezza basata sulla virtualizzazione](always-encrypted-enclaves-host-guardian-service-register.md#step-2-verify-virtualization-based-security-is-running).
 
 Per istruzioni dettagliate su come configurare il tipo di enclave, vedere [Configurare il tipo di enclave per l'opzione di configurazione del server Always Encrypted](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md).
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c25772d3-61af-4aa7-b58b-a6f67a793e3d
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 6cfc65dfd4c960d9d56043990e6af3ae1c7f0130
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 20506b7953fff05c1836a803dcbbd067047035d2
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99186400"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236217"
 ---
 # <a name="drop-sequence-transact-sql"></a>DROP SEQUENCE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ DROP SEQUENCE [ IF EXISTS ] { database_name.schema_name.sequence_name | schema_n
 
 ## <a name="arguments"></a>Argomenti
  *IF EXISTS*  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level)).  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level)).  
   
  Rimuove in modo condizionale la sequenza solo se esiste già.  
   

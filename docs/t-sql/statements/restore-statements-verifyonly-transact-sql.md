@@ -24,12 +24,12 @@ ms.assetid: cba3b6a0-b48e-4c94-812b-5b3cbb408bd6
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: 723a349b3ff9dc7475411093ed1608a511f31429
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b76a49d34d0603d62ee7160bb2f4ef9c32d482a7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99209961"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237803"
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>Istruzioni RESTORE - VERIFYONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -110,7 +110,7 @@ FROM <backup_device> [ ,...n ]
 >  RESTORE VERIFYONLY non funziona su uno snapshot del database. Per verificare uno snapshot del database prima di una operazione di ripristino, è possibile eseguire DBCC CHECKDB.  
   
 > [!NOTE]  
->  Con i backup di snapshot, RESTORE VERIFYONLY conferma l'esistenza degli snapshot nei percorsi specificati nel file di backup. I backup di snapshot sono una nuova funzionalità di [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]. Per altre informazioni sul backup di snapshot, vedere [Backup di snapshot di file per i file di database in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+>  Con i backup di snapshot, RESTORE VERIFYONLY conferma l'esistenza degli snapshot nei percorsi specificati nel file di backup. I backup di snapshot sono una nuova funzionalità di [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. Per altre informazioni sul backup di snapshot, vedere [Backup di snapshot di file per i file di database in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
 ## <a name="security"></a>Sicurezza  
  Per un'operazione di backup è possibile specificare password per un set di supporti o un set di backup oppure per entrambi. Se è stata impostata una password per un set di supporti o un set di backup, la password o le password corrette devono essere specificate nell'istruzione RESTORE. Queste password impediscono operazioni di ripristino non autorizzate e l'aggiunta non autorizzata di set di backup ai supporti tramite gli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tuttavia, la password non impedisce la sovrascrittura dei supporti tramite l'opzione FORMAT dell'istruzione BACKUP.  

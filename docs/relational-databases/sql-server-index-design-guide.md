@@ -23,12 +23,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8e1c8af9fbd147c7a20ae773dc1797026240293
-ms.sourcegitcommit: 0576ce6d7c9c5514306a90e27fa621ef25825186
+ms.openlocfilehash: 57eb0bac3a794aaf3b7f84fc8cfb14d0207da1ae
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98575737"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99233260"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Architettura e guida per la progettazione degli indici di SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -750,7 +750,7 @@ Per altre informazioni sugli stati dei rowgroup, vedere [sys.dm_db_column_store_
 > La presenza di un numero eccessivo di rowgroup di piccole dimensioni riduce la qualità dell'indice columnstore. Un'operazione di riorganizzazione unisce i rowgroup più piccoli in base a un criterio di soglia interna, che determina come rimuovere le righe eliminate e combinare i rowgroup compressi. Dopo un'operazione merge, la qualità dell'indice risulterà migliore. 
 
 > [!NOTE]
-> A partire da [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], il motore di tuple viene aiutato da un'attività di unione in background, che comprime automaticamente i rowgroup delta aperti più piccoli che sono esistiti per un dato periodo di tempo (come determinato da una soglia interna) oppure unisce i rowgroup compressi da cui è stato eliminato un numero elevato di righe.      
+> A partire da [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], il motore di tuple viene aiutato da un'attività di unione in background, che comprime automaticamente i rowgroup delta aperti più piccoli che sono esistiti per un dato periodo di tempo (come determinato da una soglia interna) oppure unisce i rowgroup compressi da cui è stato eliminato un numero elevato di righe.      
 
 Ogni colonna dispone di alcuni dei relativi valori in ogni rowgroup. Questi valori sono denominati **segmenti di colonna**. Ogni rowgroup contiene un segmento di colonna per ogni colonna della tabella. Ogni colonna ha un segmento di colonna in ogni rowgroup.
 
@@ -799,15 +799,15 @@ Ogni partizione può avere più di un rowgroup differenziale. Quando l'indice co
 #### <a name="you-can-combine-columnstore-and-rowstore-indexes-on-the-same-table"></a>È possibile combinare indici columnstore e rowstore nella stessa tabella
 Un indice non cluster contiene una copia totale o parziale di tutte le righe e colonne della tabella sottostante. L'indice è definito sotto forma di una o più colonne della tabella e ha una condizione facoltativa che consente di filtrare le righe. 
 
-A partire da [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], è possibile creare un indice **columnstore non cluster aggiornabile in una tabella rowstore**. L'indice columnstore archivia una copia dei dati, pertanto è necessario spazio di archiviazione aggiuntivo. Tuttavia, i dati nell'indice columnstore verranno compressi fino a ottenere dimensioni minori rispetto a quanto richiesto per la tabella del rowstore.  In questo modo è possibile eseguire allo stesso tempo analisi sull'indice columnstore e transazioni sull'indice rowstore. Il columnstore viene aggiornato quando i dati nella tabella rowstore vengono modificati. In questo modo entrambi gli indici possono usare gli stessi dati.  
+A partire da [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], è possibile creare un indice **columnstore non cluster aggiornabile in una tabella rowstore**. L'indice columnstore archivia una copia dei dati, pertanto è necessario spazio di archiviazione aggiuntivo. Tuttavia, i dati nell'indice columnstore verranno compressi fino a ottenere dimensioni minori rispetto a quanto richiesto per la tabella del rowstore.  In questo modo è possibile eseguire allo stesso tempo analisi sull'indice columnstore e transazioni sull'indice rowstore. Il columnstore viene aggiornato quando i dati nella tabella rowstore vengono modificati. In questo modo entrambi gli indici possono usare gli stessi dati.  
   
-A partire da [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], è possibile avere **uno o più indici rowstore non cluster per un indice columnstore**. Ciò consente di eseguire ricerche efficienti all'interno delle tabelle del columnstore sottostante. Sono disponibili anche altre opzioni. È possibile, ad esempio, applicare un vincolo di chiave primaria tramite un vincolo UNIQUE nella tabella rowstore. Di conseguenza, poiché non è possibile inserire un valore non univoco nella tabella rowstore, SQL Server non può inserire il valore nel columnstore.  
+A partire da [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], è possibile avere **uno o più indici rowstore non cluster per un indice columnstore**. Ciò consente di eseguire ricerche efficienti all'interno delle tabelle del columnstore sottostante. Sono disponibili anche altre opzioni. È possibile, ad esempio, applicare un vincolo di chiave primaria tramite un vincolo UNIQUE nella tabella rowstore. Di conseguenza, poiché non è possibile inserire un valore non univoco nella tabella rowstore, SQL Server non può inserire il valore nel columnstore.  
  
 ### <a name="performance-considerations"></a>Considerazioni sulle prestazioni 
 
 -   La definizione degli indici columnstore non cluster supporta l'uso di una condizione filtrata. Per ridurre al minimo l'impatto sulle prestazioni conseguente all'aggiunta di un indice columnstore in una tabella OLTP, usare una condizione filtrata per creare un indice columnstore non cluster solo sui dati usati meno di frequente del carico di lavoro operativo. 
   
--   Una tabella in memoria può avere un solo indice columnstore. È possibile crearlo durante la creazione della tabella o aggiungerlo in un secondo momento con [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md). Prima di [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], solamente una tabella basata su disco poteva avere un indice columnstore. 
+-   Una tabella in memoria può avere un solo indice columnstore. È possibile crearlo durante la creazione della tabella o aggiungerlo in un secondo momento con [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md). Prima di [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], solamente una tabella basata su disco poteva avere un indice columnstore. 
 
 Per altre informazioni, vedere [Indici columnstore - Prestazioni delle query ](../relational-databases/indexes/columnstore-indexes-query-performance.md).
 

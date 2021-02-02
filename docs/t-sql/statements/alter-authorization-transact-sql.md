@@ -27,12 +27,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac7532630272d4bb702206686fd6c9db8e5c6e3b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9ffbdfc1fb808a10e32ec4eb0c294acea2249867
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99212206"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99233454"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -196,7 +196,7 @@ ALTER AUTHORIZATION ON
 |ENDPOINT|L'entità deve essere un account di accesso.|    
   
 ## <a name="alter-authorization-for-databases"></a><a name="AlterDB"></a> ALTER AUTHORIZATION per i database  
-**SI APPLICA A**: [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**SI APPLICA A**: [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 ### <a name="for-sql-server"></a>Per SQL Server:  
 **Requisiti per il nuovo proprietario:**    
 La nuova entità proprietario deve essere uno dei valori seguenti:  

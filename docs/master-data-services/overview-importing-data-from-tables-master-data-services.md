@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6374bdcc748ab528c4cb70c2db6387d3b55f6cb6
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: b5290d2e9650acc8ee540e572109b51b377e5235
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171533"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236582"
 ---
 # <a name="overview-importing-data-from-tables-master-data-services"></a>Panoramica: Importazione di dati da tabelle (Master Data Services)
 
@@ -50,7 +50,7 @@ ms.locfileid: "98171533"
      Per caricare i dati, si usano stored procedure di gestione temporanea oppure [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] .  
   
 > [!NOTE]  
->  In [!INCLUDE[ssSQL15](../includes/sssql16-md.md)]il supporto per i processi di gestione temporanea di [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] è deprecato.  
+>  In [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]il supporto per i processi di gestione temporanea di [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] è deprecato.  
   
 ## <a name="deactivating-and-deleting-members-mds"></a>Disattivazione ed eliminazione di membri (MDS)  
  La disattivazione implica che è possibile riattivare il membro. Se si riattiva un membro, i relativi attributi e l'appartenenza a gerarchie e raccolte vengono ripristinati. Tutte le transazioni precedenti rimangono intatte. Le transazioni di disattivazione sono visibili agli amministratori nell'area funzionale **Gestione versioni** di Gestione dati master.  

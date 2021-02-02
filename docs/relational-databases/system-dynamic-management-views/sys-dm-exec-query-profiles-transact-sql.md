@@ -21,12 +21,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b1f8aa494a01a8fc99fc48efc79a66b80458524
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4777dea76c24aaeab7f64a761c4d13b49c644af0
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161363"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235864"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -84,7 +84,7 @@ I contatori restituiti sono specifici per ogni operatore per ogni thread. I risu
   
 -   In caso di analisi parallela, questa DMV restituisce i contatori per ogni thread parallelo usato nell'analisi.
  
-A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1, l' *infrastruttura di profilatura delle statistiche di esecuzione delle query standard* è affiancata a un'infrastruttura di *profilatura delle statistiche di esecuzione delle query Lightweight*. `SET STATISTICS XML ON` e `SET STATISTICS PROFILE ON` utilizzano sempre l' *infrastruttura di profilatura delle statistiche di esecuzione delle query standard*. Per `sys.dm_exec_query_profiles` essere popolato, è necessario abilitare una delle infrastrutture di profilatura delle query. Per altre informazioni, vedere [Infrastruttura di profilatura query](../../relational-databases/performance/query-profiling-infrastructure.md).    
+A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1, l' *infrastruttura di profilatura delle statistiche di esecuzione delle query standard* è affiancata a un'infrastruttura di *profilatura delle statistiche di esecuzione delle query Lightweight*. `SET STATISTICS XML ON` e `SET STATISTICS PROFILE ON` utilizzano sempre l' *infrastruttura di profilatura delle statistiche di esecuzione delle query standard*. Per `sys.dm_exec_query_profiles` essere popolato, è necessario abilitare una delle infrastrutture di profilatura delle query. Per altre informazioni, vedere [Infrastruttura di profilatura query](../../relational-databases/performance/query-profiling-infrastructure.md).    
 
 >[!NOTE]
 > La query in fase di analisi deve essere avviata **dopo** l'abilitazione dell'infrastruttura di profilatura delle query, in modo che dopo l'avvio della query non venga generato alcun risultato `sys.dm_exec_query_profiles` . Per altre informazioni su come abilitare le infrastrutture di profilatura delle query, vedere [eseguire query sull'infrastruttura di profilatura](../../relational-databases/performance/query-profiling-infrastructure.md).

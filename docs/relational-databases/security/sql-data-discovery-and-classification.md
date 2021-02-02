@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.date: 06/10/2020
 ms.author: datrigan
 author: DavidTrigano
-ms.openlocfilehash: 59e47f64fe08b8e4069538e8b6154833a5ee00fb
-ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+ms.openlocfilehash: 57ddcd78bd05cda262c9e4d041562dc5c2dfc4b7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98813511"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236546"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Individuazione dati e classificazione SQL
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "98813511"
 La funzionalità Individuazione dati e classificazione costituisce un nuovo strumento incorporato in [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) per l'**individuazione**, la **classificazione**, l'**assegnazione di etichette** & **la creazione di report** di dati sensibili nei database.
 L'individuazione e la classificazione dei dati più sensibili, come i dati aziendali, finanziari, medici e così via, può avere un ruolo fondamentale nella protezione delle informazioni dell'organizzazione. Possono costituire l'infrastruttura per:
 * Contribuire a soddisfare gli standard per la privacy dei dati.
-* Controllare l'accesso e rafforzare la sicurezza di database o colonne contenenti dati altamente sensibili.
+* Monitoraggio dell'accesso a database/colonne contenenti dati altamente sensibili.
 
 > [!NOTE]
 > Individuazione dati e classificazione è una funzionalità **supportata per SQL Server 2012 e versioni successive e può essere usata con [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md) o versioni successive**. Per database SQL di Azure, vedere [Individuazione dati e classificazione nel database SQL di Azure](/azure/sql-database/sql-database-data-discovery-and-classification/).

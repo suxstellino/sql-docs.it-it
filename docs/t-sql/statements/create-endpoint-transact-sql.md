@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 066159f6f98ad7b7e8c525e329bf753b3aec3500
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6f92bac093c72ccf93f4db8f8251fe3b9b8027d1
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99186892"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99234277"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 
@@ -201,7 +201,7 @@ FOR DATABASE_MIRRORING (
  Facoltativamente, è possibile utilizzare l'argomento ALGORITHM per specificare la forma di crittografia utilizzata dall'endpoint, come descritto di seguito.  
   
  **AES**  
- Specifica che l'endpoint deve utilizzare l'algoritmo AES. Questo è l'impostazione predefinita in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive.  
+ Specifica che l'endpoint deve utilizzare l'algoritmo AES. Questo è l'impostazione predefinita in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive.  
   
  RC4  
  Specifica che l'endpoint deve utilizzare l'algoritmo RC4. Questa è l'impostazione predefinita fino a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  

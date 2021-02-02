@@ -21,12 +21,12 @@ ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0384c81a0ff80e9dda9c97d793c99d1ee8e28f54
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 79b0df20ec7c4db142593ed628f7cfa17974cf9f
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99184802"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236832"
 ---
 # <a name="sysdm_os_schedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,10 +62,10 @@ ms.locfileid: "99184802"
 |memory_object_address|**varbinary (8)**|Indirizzo di memoria dell'oggetto memoria dell'utilità di pianificazione. Non ammette i valori Null.|  
 |task_memory_object_address|**varbinary (8)**|Indirizzo di memoria dell'oggetto memoria dell'attività. Non ammette i valori Null. Per ulteriori informazioni, vedere [sys.dm_os_memory_objects &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Espone il quantum dell'utilità di pianificazione utilizzato da SQLOS.|  
-| total_cpu_usage_ms |**bigint**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive <br><br> CPU totale utilizzata dall'utilità di pianificazione come indicato dai thread di lavoro non preemptive. Non ammette i valori Null.|
+| total_cpu_usage_ms |**bigint**|**Si applica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive <br><br> CPU totale utilizzata dall'utilità di pianificazione come indicato dai thread di lavoro non preemptive. Non ammette i valori Null.|
 |total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Indica che la limitazione dipende dall' [obiettivo del livello di servizio](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective), sarà sempre 0 per le versioni non di Azure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ammette i valori Null.|
-|total_scheduler_delay_ms|**bigint**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive <br><br> Il tempo che intercorre tra un thread di lavoro e l'altro. Possono essere causati da processi di lavoro di tipo preemptive che ritardano la pianificazione del successivo thread di lavoro non preemptive o a causa dei thread di pianificazione del sistema operativo di altri processi. Non ammette i valori Null.|
-|ideal_workers_limit|**int**|**Si applica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e versioni successive <br><br> Il numero di ruoli di lavoro idealmente presenti nell'utilità di pianificazione. Se i thread di lavoro correnti superano il limite dovuto a un carico di attività sbilanciato, quando diventano inattivi, verranno eliminati. Non ammette i valori Null.|
+|total_scheduler_delay_ms|**bigint**|**Si applica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive <br><br> Il tempo che intercorre tra un thread di lavoro e l'altro. Possono essere causati da processi di lavoro di tipo preemptive che ritardano la pianificazione del successivo thread di lavoro non preemptive o a causa dei thread di pianificazione del sistema operativo di altri processi. Non ammette i valori Null.|
+|ideal_workers_limit|**int**|**Si applica a**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] e versioni successive <br><br> Il numero di ruoli di lavoro idealmente presenti nell'utilità di pianificazione. Se i thread di lavoro correnti superano il limite dovuto a un carico di attività sbilanciato, quando diventano inattivi, verranno eliminati. Non ammette i valori Null.|
 |pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   
 ## <a name="permissions"></a>Autorizzazioni

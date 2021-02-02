@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 85ecf2fbec4e3e35940862e9b6a71460fab781e9
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8e6e990cd4db15656ef8102713f0e51b685f5f30
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99102924"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99234882"
 ---
 # <a name="syssp_xtp_merge_checkpoint_files-transact-sql"></a>sys.sp_xtp_merge_checkpoint_files (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "99102924"
   
 ||  
 |-|  
-|**Nota**: questo stored procedure è deprecato in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] . Non è più necessario e non può essere usato, a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] .|  
+|**Nota**: questo stored procedure è deprecato in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] . Non è più necessario e non può essere usato, a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] .|  
   
 ## <a name="syntax"></a>Sintassi  
   

@@ -12,17 +12,17 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 71a245f6263b938cef7a3841b3570a3a9137a1db
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: a2dd5e112230540c519fad2b4926d70f374bbcfc
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172203"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236326"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replica in sottoscrittori di tabelle con ottimizzazione per la memoria
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Le tabelle con funzione di snapshot e sottoscrittori di replica transazionale, esclusa la replica transazionale peer-to-peer, possono essere configurate come tabelle ottimizzate per la memoria. Le altre configurazioni di replica non sono compatibili con le tabelle ottimizzate per la memoria. Questa funzionalità è disponibile a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)].  
+  Le tabelle con funzione di snapshot e sottoscrittori di replica transazionale, esclusa la replica transazionale peer-to-peer, possono essere configurate come tabelle ottimizzate per la memoria. Le altre configurazioni di replica non sono compatibili con le tabelle ottimizzate per la memoria. Questa funzionalità è disponibile a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].  
   
 ## <a name="two-configurations-are-required"></a>Sono necessarie due configurazioni  
   

@@ -22,12 +22,12 @@ ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89e98042c006c397ff84a7522b26be1716f5a254
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b3c5c23b2cdccf464ec86d88f50073143a979ca8
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99165043"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237117"
 ---
 # <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -216,14 +216,14 @@ ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }
  Le colonne devono essere di un tipo di dati idoneo.  
   
 ALGORITHM  
-**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Si applica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
 Deve essere **'AEAD_AES_256_CBC_HMAC_SHA_256'** .  
   
  Per altre informazioni sui vincoli della funzionalità, vedere [Always Encrypted &#40;Motore di database&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
   
    
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
- **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Si applica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifica una maschera dati dinamica. *mask_function* è il nome della funzione di maschera con i parametri appropriati. Sono disponibili le funzioni seguenti:  
   

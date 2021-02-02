@@ -7,12 +7,12 @@ ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 434345c505eaab389063fbc5b2c7fffc51708634
-ms.sourcegitcommit: af64e2b8d498af26b973e86db5c00f8d72991295
+ms.openlocfilehash: 56ac6b94c281cd97c53e290b5bc387131518bbcd
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98192998"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235912"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Note sulla versione di SQL Server 2019 in Linux
 
@@ -290,7 +290,7 @@ Le sezioni seguenti descrivono i problemi noti della versione GA (General Availa
           sudo systemctl restart mssql-server
           ```
 
-- I database di [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] in Windows che usano OLTP in memoria non possono essere ripristinati in SQL Server 2019 (15.x) in Linux. Per ripristinare un database di [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] che usa OLTP in memoria, aggiornare i database a [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], SQL Server 2017 o SQL Server 2019 in Windows prima di spostarli in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Linux tramite backup/ripristino o scollegamento/collegamento.
+- I database di [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] in Windows che usano OLTP in memoria non possono essere ripristinati in SQL Server 2019 (15.x) in Linux. Per ripristinare un database di [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] che usa OLTP in memoria, aggiornare i database a [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], SQL Server 2017 o SQL Server 2019 in Windows prima di spostarli in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Linux tramite backup/ripristino o scollegamento/collegamento.
 
 - L'autorizzazione utente **AMMINISTRAZIONE OPERAZIONI BULK** per il momento non è supportata in Linux.
 

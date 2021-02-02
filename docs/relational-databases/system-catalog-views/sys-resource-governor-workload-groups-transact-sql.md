@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: d89b9210d0da27b3b4d45e8f4d2652960cf0c1d4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d6d391ef9e6ed2139944246911bd47e46bc87bbc
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99183629"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236484"
 ---
 # <a name="sysresource_governor_workload_groups-transact-sql"></a>sys.resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "99183629"
 |max_dop|**int**|Massimo grado di parallelismo per il gruppo del carico di lavoro. Il valore predefinito, 0, utilizza le impostazioni globali. Non ammette i valori Null.<br /><br /> **Nodo:** Questa impostazione eseguirà l'override dell'opzione di query **MAXDOP**.|  
 |group_max_requests|**int**|Numero massimo di richieste concorrenti. Il valore predefinito, 0, non specifica alcun limite. Non ammette i valori Null.|  
 |pool_id|**int**|ID del pool di risorse utilizzato dal gruppo del carico di lavoro.|  
-|external_pool_id|**int**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive.<br /><br /> ID del pool di risorse esterne utilizzato dal gruppo del carico di lavoro.|  
+|external_pool_id|**int**|**Si applica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive.<br /><br /> ID del pool di risorse esterne utilizzato dal gruppo del carico di lavoro.|  
   
 ## <a name="remarks"></a>Commenti  
  La vista del catalogo visualizza i metadati memorizzati. Per visualizzare la configurazione in memoria, utilizzare la vista a gestione dinamica corrispondente [sys.dm_resource_governor_workload_groups &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md).  

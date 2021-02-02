@@ -20,12 +20,12 @@ ms.assetid: 0ea6a4d1-313e-4f70-b939-dd2cd570f6d6
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf265207773aa982904012df974773f7ea4746f0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: dd4bc13a7d1e6d980ceb391c7dd548bf71a5acd3
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99210470"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99233094"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 
@@ -48,7 +48,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ## <a name="arguments"></a>Argomenti
 
 `<algorithm>`  
-Identifica l'algoritmo di hash da utilizzare per eseguire l'hashing dell'input. Si tratta di un argomento obbligatorio in assenza di impostazioni predefinite. Le virgolette singole sono obbligatorie. A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], tutti gli algoritmi diversi da SHA2_256 e SHA2_512 sono deprecati.  
+Identifica l'algoritmo di hash da utilizzare per eseguire l'hashing dell'input. Si tratta di un argomento obbligatorio in assenza di impostazioni predefinite. Le virgolette singole sono obbligatorie. A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], tutti gli algoritmi diversi da SHA2_256 e SHA2_512 sono deprecati.  
   
 `@input`  
 Specifica una variabile contenente i dati di cui eseguire l'hashing. `@input` è di tipo **varchar**, **nvarchar** o **varbinary**.  
@@ -68,7 +68,7 @@ Specifica un'espressione che restituisce un carattere o una stringa binaria di c
 ## <a name="remarks"></a>Commenti  
 È consigliabile usare `CHECKSUM` o `BINARY_CHECKSUM` come alternative per calcolare un valore hash.
 
-Gli algoritmi MD2, MD4, MD5, SHA e SHA1 sono deprecati a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]. Usare invece SHA2_256 o SHA2_512. Gli algoritmi precedenti continueranno a funzionare, ma genereranno un evento Deprecation.
+Gli algoritmi MD2, MD4, MD5, SHA e SHA1 sono deprecati a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. Usare invece SHA2_256 o SHA2_512. Gli algoritmi precedenti continueranno a funzionare, ma genereranno un evento Deprecation.
 
 ## <a name="examples"></a>Esempi  
 ### <a name="return-the-hash-of-a-variable"></a>Restituire l'hash di una variabile  

@@ -14,12 +14,12 @@ ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 230a1a00d66f1839be7a8135ff9c45022f0a2511
-ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.openlocfilehash: b58c999fd74f7a899e7b700022f57b7171ed39b7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98765652"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99234713"
 ---
 # <a name="create-foreign-key-relationships"></a>Creare relazioni di chiave esterna
 
@@ -42,7 +42,7 @@ Per la creazione di una chiave esterna in una tabella esistente è richiesta l'a
 - I vincoli FOREIGN KEY possono fare riferimento a un'altra colonna nella stessa tabella. Questo tipo di vincolo viene definito autoreferenziale.
 - Un vincolo FOREIGN KEY specificato a livello di colonna può includere una sola colonna di riferimento. Il tipo di dati di tale colonna deve essere uguale al tipo di dati della colonna in cui viene definito il vincolo.
 - Un vincolo FOREIGN KEY specificato a livello di tabella deve includere lo stesso numero di colonne di riferimento di quelle presenti nell'elenco di colonne del vincolo. Il tipo di dati di ogni colonna di riferimento deve inoltre essere uguale a quello della colonna corrispondente nell'elenco di colonne.
-- [!INCLUDE[ssDE](../../includes/ssde-md.md)] non ha un limite predefinito per il numero di vincoli FOREIGN KEY che possono essere inclusi in una tabella che fanno riferimento ad altre tabelle. [!INCLUDE[ssDE](../../includes/ssde-md.md)] non limita inoltre il numero di vincoli FOREIGN KEY di proprietà di altre tabelle che fanno riferimento a una tabella specifica. Tuttavia, il numero effettivo di vincoli FOREIGN KEY che è possibile usare è limitato dalla configurazione hardware e dalla progettazione del database e dell'applicazione. Una tabella può fare riferimento a un massimo di 253 altre tabelle e colonne come chiavi esterne (riferimenti in uscita). [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive incrementa da 253 a 10.000 il limite per il numero di altre tabelle e colonne che possono fare riferimento alle colonne in una singola tabella (riferimenti in ingresso). (richiede almeno il livello di compatibilità 130). All'incremento vengono applicate le seguenti restrizioni:
+- [!INCLUDE[ssDE](../../includes/ssde-md.md)] non ha un limite predefinito per il numero di vincoli FOREIGN KEY che possono essere inclusi in una tabella che fanno riferimento ad altre tabelle. [!INCLUDE[ssDE](../../includes/ssde-md.md)] non limita inoltre il numero di vincoli FOREIGN KEY di proprietà di altre tabelle che fanno riferimento a una tabella specifica. Tuttavia, il numero effettivo di vincoli FOREIGN KEY che è possibile usare è limitato dalla configurazione hardware e dalla progettazione del database e dell'applicazione. Una tabella può fare riferimento a un massimo di 253 altre tabelle e colonne come chiavi esterne (riferimenti in uscita). [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive incrementa da 253 a 10.000 il limite per il numero di altre tabelle e colonne che possono fare riferimento alle colonne in una singola tabella (riferimenti in ingresso). (richiede almeno il livello di compatibilità 130). All'incremento vengono applicate le seguenti restrizioni:
 
   - I riferimenti di chiave esterna maggiori di 253 sono supportati per le operazioni DELETE e UPDATE DML. Le operazioni MERGE non sono supportate.
   - Una tabella con un riferimento di chiave esterna a se stessa è comunque limitata a 253 riferimenti di chiave esterna.

@@ -12,12 +12,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 54ffa0af033377f3647d57eead126a802e442d68
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2e37f8234a1b8ee2ab72c76a423ea72ac9d3f14a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99159470"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235825"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gestire la conservazione dei dati cronologici nelle tabelle temporali con controllo delle versioni di sistema
 
@@ -70,7 +70,7 @@ L'approccio con Stretch Database consente di estendere alcune o tutte le tabelle
 
 ### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>Uso della procedura guidata per l'estensione per estendere l'intera tabella di cronologia
 
-Il metodo più semplice per i principianti consiste nell'usare la procedura guidata per l'estensione per abilitare l'estensione per l'intero database e quindi selezionare la tabella di cronologia temporale all'interno della procedura guidata per l'estensione. Questo esempio presuppone che la tabella Department sia stata configurata come tabella temporale con controllo delle versioni di sistema in un database altrimenti vuoto. In [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]non è possibile fare clic con il pulsante destro del mouse sulla tabella di cronologia temporale stessa e scegliere Estendi.
+Il metodo più semplice per i principianti consiste nell'usare la procedura guidata per l'estensione per abilitare l'estensione per l'intero database e quindi selezionare la tabella di cronologia temporale all'interno della procedura guidata per l'estensione. Questo esempio presuppone che la tabella Department sia stata configurata come tabella temporale con controllo delle versioni di sistema in un database altrimenti vuoto. In [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]non è possibile fare clic con il pulsante destro del mouse sulla tabella di cronologia temporale stessa e scegliere Estendi.
 
 1. Fare clic con il pulsante destro del mouse sul database e scegliere **Attività**, quindi **Estendi** e infine **Abilitare** per avviare la procedura guidata.
 2. Nella finestra **Selezionare le tabelle** selezionare la casella di controllo della tabella di cronologia temporale e quindi fare clic su Avanti.

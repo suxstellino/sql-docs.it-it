@@ -11,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 38d44cc0c916c7e40e26b89196b21012f7b72499
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 4c6e97837d26e680f7f94bcdc60132127a11afe4
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170713"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237717"
 ---
 # <a name="sql-server-xtp-in-memory-oltp-performance-counters"></a>Contatori delle prestazioni XTP di SQL Server (OLTP in memoria)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce oggetti e contatori utilizzabili da Performance Monitor per il monitoraggio dell'attività OLTP in memoria. Gli oggetti e i contatori sono condivisi tra tutte le istanze di una determinata versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del computer, a partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
- In passato i nomi degli oggetti e dei contatori iniziavano con *XTP*, come in **XTP Cursors**. Ora, a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], i nomi adottano il modello seguente:  
+ In passato i nomi degli oggetti e dei contatori iniziavano con *XTP*, come in **XTP Cursors**. Ora, a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], i nomi adottano il modello seguente:  
   
 -   **XTP Cursors** *\<version>* **di SQL Server**  
   

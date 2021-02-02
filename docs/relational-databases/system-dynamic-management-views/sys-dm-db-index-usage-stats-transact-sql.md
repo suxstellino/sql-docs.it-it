@@ -21,12 +21,12 @@ ms.assetid: d06a001f-0f72-4679-bc2f-66fff7958b86
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5aa1d0b79ab6fbafad932e20bf8d3c46212d596f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b72a95ed752275c25be3d9fab307b9e066f5beb8
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99190612"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236100"
 ---
 # <a name="sysdm_db_index_usage_stats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "99190612"
   
  Quando viene utilizzato un indice per il quale non esiste alcuna riga, viene aggiunta una riga a **sys.dm_db_index_usage_stats**. All'aggiunta della riga, i contatori corrispondenti vengono inizialmente impostati su zero.  
   
- Durante l'aggiornamento a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , le voci in sys.dm_db_index_usage_stats vengono rimosse. A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] , le voci vengono mantenute come se fossero precedenti a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
+ Durante l'aggiornamento a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , le voci in sys.dm_db_index_usage_stats vengono rimosse. A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] , le voci vengono mantenute come se fossero precedenti a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
 ## <a name="permissions"></a>Autorizzazioni  
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   

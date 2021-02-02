@@ -26,12 +26,12 @@ ms.assetid: 1c2d7235-7b9b-4336-8f17-429e7d82c2c3
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c29b9781bcf8914839694357e6d0ad75acb3d50a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 438738baa1734e38a06eecebb6a2cfbc8a97f026
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99201135"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237004"
 ---
 # <a name="drop-procedure-transact-sql"></a>DROP PROCEDURE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,7 +58,7 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
 
 ## <a name="arguments"></a>Argomenti
  *IF EXISTS*  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level)).  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level)).  
   
  Rimuove in modo condizionale la procedura solo se esiste già.  
   
@@ -93,7 +93,7 @@ GO
 DROP PROCEDURE dbo.uspGetSalesbyMonth, dbo.uspUpdateSalesQuotes, dbo.uspGetSalesByYear;  
 ```  
   
- L'esempio seguente rimuove la stored procedure `dbo.uspMyProc` se esiste, ma non causa un errore se la procedura non esiste. Questa sintassi è nuova in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)].  
+ L'esempio seguente rimuove la stored procedure `dbo.uspMyProc` se esiste, ma non causa un errore se la procedura non esiste. Questa sintassi è nuova in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].  
   
 ```sql  
 DROP PROCEDURE IF EXISTS dbo.uspMyProc;  

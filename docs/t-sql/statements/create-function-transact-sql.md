@@ -41,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 36efaaa313748f2141b58642321ce9a09f9af6fe
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: bf80bb7b33dc28941791cd4fa6f09f384ee858f1
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99204948"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237309"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 
@@ -271,12 +271,12 @@ RETURNS return_data_type
 ## <a name="arguments"></a>Argomenti
 
 *OR ALTER*
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Modifica la funzione in modo condizionale solo se esiste già.
 
 > [!NOTE]
-> Sintassi [OR ALTER] facoltativa per CLR è disponibile a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 CU1.
+> Sintassi [OR ALTER] facoltativa per CLR è disponibile a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU1.
 
 *schema_name* Nome dello schema a cui appartiene la funzione definita dall'utente.
 

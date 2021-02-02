@@ -35,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc17166cc22c709d21763781764c7e02715a6629
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1572028c2aa575078392c34fca37fa8105e25661
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99202221"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236379"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST e CONVERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -138,7 +138,7 @@ Se il tipo di dati di *expression* è **float** o **real**, *style* può avere u
 |**0** (predefinito)|Al massimo 6 cifre. Usare questo valore nella notazione scientifica, quando è appropriato.|  
 |**1**|Sempre 8 cifre. Usare questo valore nella notazione scientifica.|  
 |**2**|Sempre 16 cifre. Usare questo valore nella notazione scientifica.|  
-|**3**|Sempre 17 cifre. Usare per la conversione senza perdita di dati. Con questo stile, è garantita la conversione di ogni float Distinct in una stringa di caratteri Distinct.<br /><br /> **Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**3**|Sempre 17 cifre. Usare per la conversione senza perdita di dati. Con questo stile, è garantita la conversione di ogni float Distinct in una stringa di caratteri Distinct.<br /><br /> **Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
 |**126, 128, 129**|Incluso per motivi di compatibilità con le versioni precedenti. Questi valori potrebbero essere deprecati in una versione futura.|  
   
 ## <a name="money-and-smallmoney-styles"></a>Stili money e smallmoney

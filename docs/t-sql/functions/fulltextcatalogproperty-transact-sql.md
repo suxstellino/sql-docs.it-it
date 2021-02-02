@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 9574923e4f210f89d3388a2b225d5ce936195e98
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d49757197a66a0af05a0115cf4b16d6d589acc13
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99192822"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237495"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Restituisce informazioni sulle proprietà del catalogo full-text in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+Restituisce informazioni sulle proprietà del catalogo full-text in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -71,7 +71,7 @@ Espressione che contiene il nome della proprietà di catalogo full-text. Nella t
 ## <a name="exceptions"></a>Eccezioni  
 Restituisce NULL in caso di errore o se un chiamante non ha l'autorizzazione necessaria per visualizzare l'oggetto.  
   
-In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] un utente può visualizzare solo i metadati delle entità a protezione diretta di cui è proprietario o per cui ha autorizzazioni. Di conseguenza, le funzioni predefinite di creazione dei metadati come FULLTEXTCATALOGPROPERTY possono restituire NULL se l'utente non ha alcuna autorizzazione per l'oggetto. Per altre informazioni, vedere [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md).  
+In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] un utente può visualizzare solo i metadati delle entità a protezione diretta di cui è proprietario o per cui ha autorizzazioni. Di conseguenza, le funzioni predefinite di creazione dei metadati come FULLTEXTCATALOGPROPERTY possono restituire NULL se l'utente non ha alcuna autorizzazione per l'oggetto. Per altre informazioni, vedere [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md).  
   
 ## <a name="remarks"></a>Osservazioni  
 FULLTEXTCATALOGPROPERTY ('_catalog\_name_','**IndexSize**') analizza solo i frammenti con stato 4 o 6, come descritto in [sys.fulltext_index_fragments](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md). Tali frammenti fanno parte dell'indice logico. Di conseguenza, la proprietà **IndexSize** restituisce solo le dimensioni dell'indice logico. 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: f31d18f53d7a97c4a44fc50fbdff64800d708308
-ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.openlocfilehash: 1b484ea7b300fe53983dd26c5f7644abbebd2ca2
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99076949"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236816"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Backup di snapshot di file per i file di database in Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "99076949"
   
  **Scaricare**  
   
--   Per scaricare [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], passare a  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** .  
+-   Per scaricare [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], passare a  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** .  
   
 -   Se si ha un account di Azure,  fare clic **[qui](https://azure.microsoft.com/services/virtual-machines/sql-server/)** per creare rapidamente una macchina virtuale in cui è già installato [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] .  
   

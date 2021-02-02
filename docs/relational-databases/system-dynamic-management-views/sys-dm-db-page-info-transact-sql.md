@@ -21,12 +21,12 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15'
-ms.openlocfilehash: 429f8049ef0b92168be5e3e0fc90c91e3d37224e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 10756b0297cdc731468ea8983c5378d5b380fef9
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472812"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236022"
 ---
 # <a name="sysdm_db_page_info-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
 
@@ -35,7 +35,7 @@ ms.locfileid: "97472812"
 Restituisce informazioni su una pagina in un database.  La funzione restituisce una riga che contiene le informazioni di intestazione della pagina, tra cui `object_id` , `index_id` e `partition_id` .  Questa funzione sostituisce l'uso di `DBCC PAGE` nella maggior parte dei casi.
 
 > [!NOTE]
-> `sys.dm_db_page_info` è attualmente supportato solo in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e versioni successive.
+> `sys.dm_db_page_info` è attualmente supportato solo in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] e versioni successive.
 
 
 ## <a name="syntax"></a>Sintassi   

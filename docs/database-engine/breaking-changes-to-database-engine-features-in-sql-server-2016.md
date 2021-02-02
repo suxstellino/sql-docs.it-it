@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ea6799570df43f5d49cadd93b98dc89528acacdd
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: f95b2c815fabdc4e4c0d7c544e8c8fb5ad96deef
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171053"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99233987"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>Modifiche che causano interruzioni apportate alle funzionalità del motore di database in SQL Server 2016
 
@@ -28,7 +28,7 @@ ms.locfileid: "98171053"
 
   Questo argomento descrive le modifiche che causano interruzioni apportate al [!INCLUDE[ssDE](../includes/ssde-md.md)] di [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] e nelle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Tali modifiche potrebbero interrompere il funzionamento di applicazioni, funzionalità o script basati su versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È possibile che questi problemi si verifichino quando viene effettuato un aggiornamento.  
   
-##  <a name="breaking-changes-in-sssql15"></a><a name="SQL15"></a> Modifiche di rilievo in [!INCLUDE[ssSQL15](../includes/sssql16-md.md)]  
+##  <a name="breaking-changes-in-sssql15-md"></a><a name="SQL15"></a> Modifiche di rilievo in [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]  
   
 -   La colonna *sample_ms* di `sys.dm_io_virtual_file_stats` è stata ampliata passando da un tipo di dati **int** a un tipo di dati **bigint**.  
   

@@ -21,12 +21,12 @@ ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c44ef469dfa60e7c4ac96386ab87812fab447555
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 58e1f2042f10d1b4f06482fdfb13f07cf5edfa3e
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99210286"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237706"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,8 +47,8 @@ ms.locfileid: "99210286"
 |**null_on_null_input**|**bit**|Modulo dichiarato per restituire un output NULL per ogni input NULL.|  
 |**execute_as_principal_id**|**Int**|ID dell'entità database EXECUTE AS.<br /><br /> Questo valore è NULL per impostazione predefinita e se viene utilizzato EXECUTE AS CALLER.<br /><br /> ID dell'entità specificata se EXECUTE AS SELF o EXECUTE AS \<principal> .<br /><br /> -2 = EXECUTE AS OWNER.|  
 |**uses_native_compilation**|**bit**|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].<br /><br /> 0 = non compilata in modo nativo<br /><br /> 1 = compilata in modo nativo<br /><br /> Il valore predefinito è 0.|  
-|**is_inlineable**|**bit**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] e versioni successive.<br/><br />Indica se il modulo è inline o meno. La Incorporabilità è basata sulle condizioni specificate [qui](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements).<br /><br /> 0 = non inline<br /><br /> 1 = è inline. <br /><br /> Per le funzioni definite dall'utente scalari, il valore sarà 1 se la funzione definita dall'utente è inline e 0 in caso contrario. Contiene sempre il valore 1 per funzioni con valori inline e 0 per tutti gli altri tipi di modulo.<br />|  
-|**inline_type**|**bit**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] e versioni successive.<br /><br />Indica se l'incorporamento è attualmente attivato per il modulo. <br /><br />0 = l'incorporamento è disattivato<br /><br /> 1 = l'incorporamento è attivato.<br /><br /> Per le funzioni UDF scalari, il valore sarà 1 se l'incorporamento è attivato (in modo esplicito o implicito). Il valore sarà sempre 1 per funzioni con valori inline e 0 per altri tipi di modulo.<br />|  
+|**is_inlineable**|**bit**|**Si applica a**: [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] e versioni successive.<br/><br />Indica se il modulo è inline o meno. La Incorporabilità è basata sulle condizioni specificate [qui](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements).<br /><br /> 0 = non inline<br /><br /> 1 = è inline. <br /><br /> Per le funzioni definite dall'utente scalari, il valore sarà 1 se la funzione definita dall'utente è inline e 0 in caso contrario. Contiene sempre il valore 1 per funzioni con valori inline e 0 per tutti gli altri tipi di modulo.<br />|  
+|**inline_type**|**bit**|**Si applica a**: [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] e versioni successive.<br /><br />Indica se l'incorporamento è attualmente attivato per il modulo. <br /><br />0 = l'incorporamento è disattivato<br /><br /> 1 = l'incorporamento è attivato.<br /><br /> Per le funzioni UDF scalari, il valore sarà 1 se l'incorporamento è attivato (in modo esplicito o implicito). Il valore sarà sempre 1 per funzioni con valori inline e 0 per altri tipi di modulo.<br />|  
 
   
 ## <a name="remarks"></a>Commenti  

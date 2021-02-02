@@ -22,17 +22,17 @@ ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d633ac65508c50895943b5604a704a5041510529
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d007bd92518d4ce5f898c400bad53f09d2e93642
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99211032"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237785"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Limita le righe restituite nel set di risultati di una query a un numero specificato o a una percentuale di righe in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Quando si usa TOP con la clausola ORDER BY, il set di risultati è limitato alle prime *N* righe ordinate. In caso contrario, TOP restituisce le prime *N* righe in un ordine non definito. Usare questa clausola per specificare il numero di righe restituito da un'istruzione SELECT. In alternativa, usare TOP per specificare le righe interessate da un'istruzione INSERT, UPDATE, MERGE o DELETE.  
+Limita le righe restituite nel set di risultati di una query a un numero specificato o a una percentuale di righe in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Quando si usa TOP con la clausola ORDER BY, il set di risultati è limitato alle prime *N* righe ordinate. In caso contrario, TOP restituisce le prime *N* righe in un ordine non definito. Usare questa clausola per specificare il numero di righe restituito da un'istruzione SELECT. In alternativa, usare TOP per specificare le righe interessate da un'istruzione INSERT, UPDATE, MERGE o DELETE.  
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

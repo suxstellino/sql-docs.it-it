@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: ef3d409ae656776b870119ccd14cb211cc16b32c
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
-ms.translationtype: HT
+ms.openlocfilehash: 72bf9910a86d66ac36cbebbb0be66f8a8df832e5
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125555"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235771"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Panoramica del ripristino e del recupero (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -179,9 +179,9 @@ Per ulteriori informazioni su Database Recovery Advisor, vedere i seguenti blog 
 -   [Recovery Advisor: Pagina relativa all'utilizzo di SSMS per creare/ripristinare backup divisi](/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 
 ## <a name="accelerated-database-recovery"></a><a name="adr"></a> Ripristino accelerato del database
-Il [ripristino accelerato del database](/azure/sql-database/sql-database-accelerated-database-recovery/) è disponibile in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Il ripristino accelerato del database consente di migliorare considerevolmente la disponibilità del database, in particolare in presenza di transazioni a esecuzione prolungata, riprogettando il [processo di recupero](#TlogAndRecovery) del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Un database in cui è abilitato il ripristino accelerato del database completa il processo di recupero in modo considerevolmente più veloce dopo un failover o una chiusura anomala. Se abilitato, il ripristino accelerato del database completa anche il rollback delle transazioni con esecuzione prolungata annullate in modo significativamente più veloce.
+Il [ripristino accelerato del database](/azure/sql-database/sql-database-accelerated-database-recovery/) è disponibile in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Il ripristino accelerato del database consente di migliorare considerevolmente la disponibilità del database, in particolare in presenza di transazioni a esecuzione prolungata, riprogettando il [processo di recupero](#TlogAndRecovery) del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Un database in cui è abilitato il ripristino accelerato del database completa il processo di recupero in modo considerevolmente più veloce dopo un failover o una chiusura anomala. Se abilitato, il ripristino accelerato del database completa anche il rollback delle transazioni con esecuzione prolungata annullate in modo significativamente più veloce.
 
-È possibile abilitare il ripristino accelerato del database per ogni database in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] usando la sintassi seguente:
+È possibile abilitare il ripristino accelerato del database per ogni database in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] usando la sintassi seguente:
 
 ```sql
 ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;

@@ -38,12 +38,12 @@ ms.assetid: 0b6f2b6f-3aa3-4767-943f-43df3c3c5cfd
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2e3556fcc55b1a236fdb59136ebe27dff0dada9
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 01343ee8d31f086781f09be35b81155f5b9090eb
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99181434"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236992"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -77,7 +77,7 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
  Il database SQL di Azure supporta il formato del nome in tre parti, nome_database.[nome_schema].nome_oggetto, quando nome_database è il database corrente oppure nome_database è tempdb e nome_oggetto inizia con #. Il database SQL di Azure non supporta i nomi composti da quattro parti.  
   
  *IF EXISTS*  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level)).  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level)).  
   
  Rimuove in modo condizionale la tabella solo se esiste già.  
   
@@ -123,7 +123,7 @@ DROP TABLE AdventureWorks2012.dbo.SalesPerson2 ;
 ```  
   
 ### <a name="c-dropping-a-temporary-table"></a>C. Eliminazione di una tabella temporanea  
- Nell'esempio seguente viene creata una tabella temporanea, ne viene controllata l'esistenza, quindi la tabella viene eliminata e viene eseguito un ulteriore controllo dell'esistenza. Questo esempio non usa la sintassi **IF EXISTS**, disponibile a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)].  
+ Nell'esempio seguente viene creata una tabella temporanea, ne viene controllata l'esistenza, quindi la tabella viene eliminata e viene eseguito un ulteriore controllo dell'esistenza. Questo esempio non usa la sintassi **IF EXISTS**, disponibile a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].  
   
 ```sql  
 CREATE TABLE #temptable (col1 INT);  
@@ -142,7 +142,7 @@ SELECT * FROM #temptable;
   
 ### <a name="d-dropping-a-table-using-if-exists"></a>D. Eliminazione di una tabella usando IF EXISTS  
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level)).  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level)).  
   
  Nell'esempio seguente viene creato un pool di risorse denominato T1. Quindi la seconda istruzione elimina la tabella. La terza istruzione non esegue alcuna azione perché la tabella è già stata eliminata, ma non produce un errore.  
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 0f685d3d6782aa003d36788757ed76bc41fdb2de
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a34af15094cdd70833c16b2e3b3bfa1ce0ca4fca
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99193736"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235958"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sys.dm_os_volume_stats (database_id, file_id)
 |**supports_sparse_files**|**tinyint**|Indica se il volume supporta i file sparse.  Non può essere null in Windows e restituisce null nel sistema operativo Linux.|  
 |**is_read_only**|**tinyint**|Indica se il volume è attualmente contrassegnato come di sola lettura. Non può essere null.|  
 |**is_compressed**|**tinyint**|Indica se il volume è attualmente compresso. Non può essere null in Windows e restituisce null nel sistema operativo Linux.|  
-|**incurs_seek_penalty**|**tinyint**|Indica il tipo di archiviazione che supporta questo volume. I valori possibili sono:<br /><br />0: nessun rigore di ricerca su questo volume, in genere quando il dispositivo di archiviazione è PMM o SSD<br /><br />1: ricerca di una penalità su questo volume, in genere quando il dispositivo di archiviazione è HDD<br /><br />2: non è possibile determinare il tipo di archiviazione quando il volume si trova in un percorso UNC o in condivisioni montate<br /><br />NULL: non è possibile determinare il tipo di archiviazione nel sistema operativo Linux<br /><br />**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] )|  
+|**incurs_seek_penalty**|**tinyint**|Indica il tipo di archiviazione che supporta questo volume. I valori possibili sono:<br /><br />0: nessun rigore di ricerca su questo volume, in genere quando il dispositivo di archiviazione è PMM o SSD<br /><br />1: ricerca di una penalità su questo volume, in genere quando il dispositivo di archiviazione è HDD<br /><br />2: non è possibile determinare il tipo di archiviazione quando il volume si trova in un percorso UNC o in condivisioni montate<br /><br />NULL: non è possibile determinare il tipo di archiviazione nel sistema operativo Linux<br /><br />**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] )|  
   
 ## <a name="security"></a>Sicurezza  
   

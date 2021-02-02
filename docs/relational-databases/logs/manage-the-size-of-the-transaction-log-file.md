@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e0d5c070d961e71711189b9b32ad12508812b277
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 699052eedf2a32faac9f3bf849f5f4aaa4c43b4c
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171543"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237696"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Gestire le dimensioni del file di log delle transazioni
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -97,7 +97,7 @@ Di seguito sono elencate alcune indicazioni di carattere generale relative all'u
   
       |Versione|Valori predefiniti|  
       |-------------|--------------------|  
-      |A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]|Dati 64 MB. File di log 64 MB.|  
+      |A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]|Dati 64 MB. File di log 64 MB.|  
       |A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Dati 1 MB. File di log 10%.|  
       |Prima di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Dati 10%. File di log 10%.|  
 

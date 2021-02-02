@@ -19,12 +19,12 @@ ms.assetid: 463da1f4-b4b6-45a3-9a95-ea1f99575542
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 304ce62512ef763c08ed3f19ee606f7faf050a3b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9f8ce697a414d095e91214626b4ae4f8e1e2a83b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99181486"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237917"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -82,7 +82,7 @@ Valore letterale Integer che specifica la precisione del valore **datetimeoffset
   
 L'argomento *fractions* dipende dall'argomento precision. Ad esempio, per un valore di precision pari a 7, ogni frazione rappresenta 100 nanosecondi, mentre per precision pari a 3, ogni frazione rappresenta un millisecondo. Per un valore di precision pari a zero, anche il valore di fractions deve essere zero. In caso contrario, `DATETIMEOFFSETFROMPARTS` genererà un errore.  
   
-Questa funzione supporta la comunicazione remota con i server [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e versioni successive. Non supporterà la comunicazione remota con i server con versioni precedenti a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Questa funzione può essere eseguita in modalità remota in server con [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] e versioni successive, ma non in server con versioni precedenti a [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)].  
   
 ## <a name="examples"></a>Esempi  
   

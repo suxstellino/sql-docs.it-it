@@ -12,12 +12,12 @@ ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6a0b60d8b690490074187d977d9bd636d88aea3
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 37827d1de9b99acb585762da094fd6cdaf905298
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172683"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235388"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Indici columnstore - Linee guida per il caricamento di dati
 
@@ -89,7 +89,7 @@ INSERT INTO <columnstore index>
 SELECT <list of columns> FROM <Staging Table>  
 ```  
   
- Il comando carica i dati nell'indice columnstore in modo analogo ai comandi bcp o bulk insert, ma in un unico batch. Se il numero di righe nella tabella di staging è < 102.400, le righe vengono caricate in un rowgroup delta, altrimenti possono essere caricate direttamente in un rowgroup compresso. Uno dei limiti principali era il fatto che l'operazione `INSERT` è a thread singolo. Per caricare i dati in parallelo era possibile creare più tabelle di staging o eseguire i comandi `INSERT`/`SELECT` con intervalli non sovrapposti di righe dalla tabella di staging. Questa limitazione è stata eliminata in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]. Il comando seguente carica i dati dalla tabella di staging in parallelo, ma è necessario specificare `TABLOCK`. Questo comportamento può sembrare in contraddizione con quanto affermato in precedenza con bulkload, ma la differenza principale è che il caricamento parallelo dei dati dalla tabella di staging viene eseguito nella stessa transazione.
+ Il comando carica i dati nell'indice columnstore in modo analogo ai comandi bcp o bulk insert, ma in un unico batch. Se il numero di righe nella tabella di staging è < 102.400, le righe vengono caricate in un rowgroup delta, altrimenti possono essere caricate direttamente in un rowgroup compresso. Uno dei limiti principali era il fatto che l'operazione `INSERT` è a thread singolo. Per caricare i dati in parallelo era possibile creare più tabelle di staging o eseguire i comandi `INSERT`/`SELECT` con intervalli non sovrapposti di righe dalla tabella di staging. Questa limitazione è stata eliminata in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. Il comando seguente carica i dati dalla tabella di staging in parallelo, ma è necessario specificare `TABLOCK`. Questo comportamento può sembrare in contraddizione con quanto affermato in precedenza con bulkload, ma la differenza principale è che il caricamento parallelo dei dati dalla tabella di staging viene eseguito nella stessa transazione.
   
 ```sql  
 INSERT INTO <columnstore index> WITH (TABLOCK) 

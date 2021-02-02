@@ -21,12 +21,12 @@ helpviewer_keywords:
 - dropping synonyms
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 807844102e78dc1a47370acec88d0c9624ea25d3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a156c4c5bda031b079df53fa3f3796d271b62a1b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99181217"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236207"
 ---
 # <a name="drop-synonym-transact-sql"></a>DROP SYNONYM (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
 
 ## <a name="arguments"></a>Argomenti
  *IF EXISTS*  
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level)).
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level)).
   
  Rimuove in modo condizionale il sinonimo solo se esiste già.  
   

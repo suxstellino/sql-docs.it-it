@@ -1,8 +1,8 @@
 ---
 description: DATETIMEFROMPARTS (Transact-SQL)
-title: DATETIMEFROMPARTS (Transact-SQL) | Microsoft Docs
+title: DATETIMEFROMPARTS (Transact-SQL)
 ms.custom: ''
-ms.date: 07/29/2017
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,16 +15,15 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - DATETIMEFROMPARTS function
-ms.assetid: 6008148b-bf75-4c98-9392-68a89fa0711c
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19c4ed44eddf76476bb517da2b47314eeac6de85
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8cc7cb964f1cd8b56cbb06aa5bccc97aef76a7b4
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99122570"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237912"
 ---
 # <a name="datetimefromparts-transact-sql"></a>DATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -69,7 +68,7 @@ Espressione Integer che specifica i millisecondi.
 ## <a name="remarks"></a>Osservazioni  
 `DATETIMEFROMPARTS` restituisce un valore di tipo **datetime** completamente inizializzato. `DATETIMEFROMPARTS` genererà un errore se almeno un argomento obbligatorio ha un valore non valido. `DATETIMEFROMPARTS` restituisce null se almeno un argomento obbligatorio ha un valore null.
   
-Questa funzione supporta la comunicazione remota con i server [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e versioni successive. Non supporterà la comunicazione remota con i server con versioni precedenti a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Questa funzione può essere eseguita in modalità remota in server con [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] e versioni successive, ma non in server con versioni precedenti a [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)].  
   
 ## <a name="examples"></a>Esempi  
   

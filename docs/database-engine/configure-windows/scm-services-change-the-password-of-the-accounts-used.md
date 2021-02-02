@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5b6dcc03-6cae-45d3-acef-6f85ca6d615f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 05b7ec62778370e2acf0c5b4b4d90d3f1a742d87
-ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.openlocfilehash: 6bb8def79d5fd606f210273d232491d858baa3cf
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98783103"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99233315"
 ---
 # <a name="scm-services---change-the-password-of-the-accounts-used"></a>Gestione configurazione SQL Server - Modificare la password degli account
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "98783103"
     >  Poiché Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è uno snap-in per il programma [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console e non un programma autonomo, Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene visualizzato come applicazione nelle versioni più recenti di Windows.  
     >   
     >  -   **Windows 10**:  
-    >          per aprire Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , nella **pagina iniziale** digitare SQLServerManager13.msc (per [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]). Per le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sostituire 13 con un numero inferiore. Se si fa clic su SQLServerManager13.msc, viene aperto Gestione configurazione. Per aggiungere Gestione configurazione alla pagina iniziale o alla barra delle applicazioni, fare clic con il pulsante destro del mouse su SQLServerManager13.msc e quindi scegliere **Apri percorso file**. In Esplora file di Windows fare clic con il pulsante destro del mouse su SQLServerManager13.msc e quindi scegliere **Aggiungi a Start** o **Aggiungi alla barra delle applicazioni**.  
+    >          per aprire Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , nella **pagina iniziale** digitare SQLServerManager13.msc (per [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]). Per le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sostituire 13 con un numero inferiore. Se si fa clic su SQLServerManager13.msc, viene aperto Gestione configurazione. Per aggiungere Gestione configurazione alla pagina iniziale o alla barra delle applicazioni, fare clic con il pulsante destro del mouse su SQLServerManager13.msc e quindi scegliere **Apri percorso file**. In Esplora file di Windows fare clic con il pulsante destro del mouse su SQLServerManager13.msc e quindi scegliere **Aggiungi a Start** o **Aggiungi alla barra delle applicazioni**.  
     > -   **Windows 8**:  
     >          Per aprire Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nell'icona promemoria **Cerca** in **App** digitare **SQLServerManage\<version>.msc**, ad esempio **SQLServerManager13.msc**, quindi premere **INVIO**.  
   

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 74960d25-83c2-4ad6-9318-098c348ea977
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7eaf6fc6fd7368abfd79b3a3f32ef59fa7d88744
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e17aa5f18ca303d27084859f4497fd8e090ee967
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99192185"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237863"
 ---
 # <a name="ogc-static-geometry-methods"></a>Metodi di geometria statici OGC
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sono supportati i metodi di geometria statici OGC (Open Geospatial Consortium).  
+  In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] sono supportati i metodi di geometria statici OGC (Open Geospatial Consortium).  
   
  Per ulteriori informazioni sulle specifiche OGC, vedere i seguenti argomenti:  
   

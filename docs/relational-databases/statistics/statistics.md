@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7800e75ee2b35b491053bbcbc2ef3c05e86e1939
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 89ebfbb70c7c50729ebbfb5de6a8551e00927bc6
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172783"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99233234"
 ---
 # <a name="statistics"></a>Statistiche
 
@@ -114,12 +114,12 @@ ORDER BY s.name;
     * Se la cardinalità della tabella è 500 o minore al momento della valutazione delle statistiche, l'aggiornamento avviene ogni 500 modifiche.
     * Se la cardinalità della tabella è maggiore di 500 al momento della valutazione delle statistiche, l'aggiornamento avviene ogni 500 modifiche + il 20%.
 
-* A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e con [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa una soglia di aggiornamento delle statiche dinamica decrescente, che si adatta al numero di righe nella tabella. Tale soglia viene calcolata come radice quadrata del prodotto di 1000 e della cardinalità della tabella corrente. Se ad esempio la tabella contiene 2 milioni di righe, il calcolo sarà sqrt(1000 * 2000000) = 44721,359. Con questa modifica, le statistiche sulle tabelle di grandi dimensioni vengono aggiornate più spesso. Tuttavia, se il livello di compatibilità di un database è minore di 130, viene applicata la soglia di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. 
+* A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e con [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa una soglia di aggiornamento delle statiche dinamica decrescente, che si adatta al numero di righe nella tabella. Tale soglia viene calcolata come radice quadrata del prodotto di 1000 e della cardinalità della tabella corrente. Se ad esempio la tabella contiene 2 milioni di righe, il calcolo sarà sqrt(1000 * 2000000) = 44721,359. Con questa modifica, le statistiche sulle tabelle di grandi dimensioni vengono aggiornate più spesso. Tuttavia, se il livello di compatibilità di un database è minore di 130, viene applicata la soglia di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. 
 
 > [!IMPORTANT]
-> In [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] fino a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive con [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 e inferiore abilitare il [flag di traccia 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) in modo che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usi una soglia di aggiornamento delle statistiche dinamica e decrescente.
+> In [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] fino a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive con [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 e inferiore abilitare il [flag di traccia 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) in modo che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usi una soglia di aggiornamento delle statistiche dinamica e decrescente.
 
-È possibile usare le indicazioni seguenti per abilitare il flag di traccia 2371 nell'ambiente precedente a [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]:
+È possibile usare le indicazioni seguenti per abilitare il flag di traccia 2371 nell'ambiente precedente a [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]:
 
  - Se non sono stati rilevati problemi di prestazioni a causa di statistiche non aggiornate, non è necessario abilitare questo flag di traccia.
  - Se si usano sistemi SAP, abilitare questo flag di traccia.  Per altre informazioni, vedere questo [blog](/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371).
@@ -297,7 +297,7 @@ Solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile c
  Operazioni quali la ricompilazione, la deframmentazione o la riorganizzazione di un indice non modificano la distribuzione dei dati. Non è quindi necessario aggiornare le statistiche in seguito all'esecuzione di operazioni [ALTER INDEX REBUILD](../../t-sql/statements/alter-index-transact-sql.md#rebuilding-indexes), [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md), [DBCC INDEXDEFRAG](../../t-sql/database-console-commands/dbcc-indexdefrag-transact-sql.md) o [ALTER INDEX REORGANIZE](../../t-sql/statements/alter-index-transact-sql.md#reorganizing-indexes). Query Optimizer aggiorna le statistiche in seguito alla ricompilazione di un indice in una tabella o una vista mediante ALTER INDEX REBUILD o DBCC DBREINDEX. Tale aggiornamento delle statistiche è tuttavia il risultato della ricostruzione dell'indice. L'aggiornamento delle statistiche non viene eseguito in Query Optimizer dopo operazioni DBCC INDEXDEFRAG o ALTER INDEX REORGANIZE. 
  
 > [!TIP]
-> A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 CU4, usare l'opzione PERSIST_SAMPLE_PERCENT di [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md) o [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md), per impostare e mantenere una percentuale di campionamento specifica per gli aggiornamenti delle statistiche successivi che non specificano in modo esplicito una percentuale di campionamento.
+> A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU4, usare l'opzione PERSIST_SAMPLE_PERCENT di [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md) o [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md), per impostare e mantenere una percentuale di campionamento specifica per gli aggiornamenti delle statistiche successivi che non specificano in modo esplicito una percentuale di campionamento.
 
 ### <a name="automatic-index-and-statistics-management"></a>Gestione automatica dell'indice e delle statistiche
 

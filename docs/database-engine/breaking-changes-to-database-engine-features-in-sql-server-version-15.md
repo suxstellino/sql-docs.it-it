@@ -15,14 +15,14 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017'
-ms.openlocfilehash: bdabf31b5963201014bc6f48f26136d820ef0b7a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: b22141c2a7e851bd354a2f1d2b05e754c8f191a2
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97483713"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99233939"
 ---
-# <a name="breaking-changes-to-database-engine-in-sssqlv15-md"></a>Modifiche che causano interruzioni apportate al motore di database in [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
+# <a name="breaking-changes-to-database-engine-in-sssql19-md"></a>Modifiche che causano interruzioni apportate al motore di database in [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]
 [!INCLUDE[sqlserver2019](../includes/applies-to-version/sqlserver2019.md)]
 
 In SQL Server 2019 non sono state introdotte modifiche che causano interruzioni.

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 6b0a49e257760e44398da7426933f6a9050a62f2
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8cf9c34360cfabff16dd4823738168b9611a90ba
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99160664"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235882"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "99160664"
 |stmt_start|**int**|Offset iniziale dell'istruzione SQL corrente per il valore di sql_handle specificato.|  
 |stmt_end|**int**|Offset finale dell'istruzione SQL corrente per il valore di sql_handle specificato.<br /><br /> -1 = L'istruzione corrente viene eseguita fino alla fine dei risultati restituiti dalla funzione fn_get_sql per il valore di sql_handle specificato.|  
 |request_id|**int**|ID della richiesta. Utilizzato per identificare le richieste in esecuzione in una sessione specifica.|
-|page_resource |**binario (8)** |**Si applica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> Rappresentazione esadecimale a 8 byte della risorsa della pagina se la `waitresource` colonna contiene una pagina. |  
+|page_resource |**binario (8)** |**Si applica a**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] <br /><br /> Rappresentazione esadecimale a 8 byte della risorsa della pagina se la `waitresource` colonna contiene una pagina. |  
   
 ## <a name="remarks"></a>Commenti  
  Se si dispone dell'autorizzazione VIEW SERVER STATE per il server, è possibile visualizzare tutte le sessioni in esecuzione nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In caso contrario, è possibile visualizzare solo la sessione corrente.  

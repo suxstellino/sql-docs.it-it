@@ -21,12 +21,12 @@ ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 31071c4fd89d6542b1d2bd87fc8f445a43c641b0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 20ad2ca8797dd9e3f094028422edef5b935cd2ae
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99135125"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237533"
 ---
 # <a name="sysdm_resource_governor_workload_groups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "99135125"
 |group_id|**int**|ID del gruppo del carico di lavoro. Non ammette i valori Null.|  
 |name|**sysname**|Nome del gruppo del carico di lavoro. Non ammette i valori Null.|  
 |pool_id|**int**|ID del pool di risorse. Non ammette i valori Null.|  
-|external_pool_id|**int**|**Si applica a**: a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] .<br /><br /> ID del pool di risorse esterne. Non ammette i valori Null.|  
+|external_pool_id|**int**|**Si applica a**: a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] .<br /><br /> ID del pool di risorse esterne. Non ammette i valori Null.|  
 |statistics_start_time|**datetime**|Ora di reimpostazione della raccolta di statistiche per il gruppo del carico di lavoro. Non ammette i valori Null.|  
 |total_request_count|**bigint**|Conteggio cumulativo delle richieste completate nel gruppo del carico di lavoro. Non ammette i valori Null.|  
 |total_queued_request_count|**bigint**|Conteggio cumulativo delle richieste messe in coda dopo che il limite di GROUP_MAX_REQUESTS è stato raggiunto. Non ammette i valori Null.|  
@@ -65,8 +65,8 @@ ms.locfileid: "99135125"
 |group_max_requests|**int**|Impostazione corrente per il numero massimo di richieste simultanee. Non ammette i valori Null.|  
 |max_dop|**int**|Massimo grado di parallelismo configurato per il gruppo del carico di lavoro. Il valore predefinito, 0, utilizza le impostazioni globali. Non ammette i valori Null.| 
 |effective_max_dop|**int**|**Si applica a**: a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .<br /><br />Massimo grado di parallelismo effettivo per il gruppo del carico di lavoro. Non ammette i valori Null.| 
-|total_cpu_usage_preemptive_ms|**bigint**|**Si applica a**: a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] .<br /><br />Tempo totale della CPU usato in modalità preemptive per la pianificazione del gruppo di carico di lavoro, misurato in ms. Non ammette i valori Null.<br /><br />Per eseguire codice esterno a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio stored procedure estese e query distribuite, è necessario che un thread venga eseguito esternamente al controllo dell'utilità di pianificazione in modalità non preemptive. A tale scopo, un thread di lavoro passa alla modalità preemptive.| 
-|request_max_memory_grant_percent_numeric|**float**|**Si applica a**: a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] .<br /><br />Impostazione corrente per la concessione massima di memoria, espressa in percentuale, per una singola richiesta. Non ammette i valori Null.| 
+|total_cpu_usage_preemptive_ms|**bigint**|**Si applica a**: a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] .<br /><br />Tempo totale della CPU usato in modalità preemptive per la pianificazione del gruppo di carico di lavoro, misurato in ms. Non ammette i valori Null.<br /><br />Per eseguire codice esterno a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio stored procedure estese e query distribuite, è necessario che un thread venga eseguito esternamente al controllo dell'utilità di pianificazione in modalità non preemptive. A tale scopo, un thread di lavoro passa alla modalità preemptive.| 
+|request_max_memory_grant_percent_numeric|**float**|**Si applica a**: a partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] .<br /><br />Impostazione corrente per la concessione massima di memoria, espressa in percentuale, per una singola richiesta. Non ammette i valori Null.| 
 |pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   
 ## <a name="remarks"></a>Commenti  

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 11bf83f9-0718-4238-a835-83d2eb14ae7b
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 6ca873146ac52c7a4825d7bb1ee1bf34ebd4e858
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a22856b7bbc61df5ccb9b47c2538eab4d0a0af85
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99199946"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237779"
 ---
 # <a name="drop-type-transact-sql"></a>DROP TYPE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
 
 ## <a name="arguments"></a>Argomenti
  *IF EXISTS*  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level)).  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] alla [versione corrente](/troubleshoot/sql/general/determine-version-edition-update-level)).  
   
  Rimuove in modo condizionale il tipo solo se esiste già.  
   

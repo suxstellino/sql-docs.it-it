@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 37bd2062d2066aea554f6b2e1b572edcdde8cdaa
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1df9583fb18c87693074769b099151281c6136f8
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99165034"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237055"
 ---
 # <a name="alter-table-index_option-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -137,7 +137,7 @@ ms.locfileid: "99165034"
 
  OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
 
-**Si applica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e versioni successive.
+**Si applica a**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] e versioni successive.
 
 Specifica se eseguire o meno l'ottimizzazione per la contesa di inserimento dell'ultima pagina. Il valore predefinito è OFF. Per altre informazioni, vedere le sezione [Chiavi sequenziali](./create-index-transact-sql.md#sequential-keys) della pagina CREATE INDEX.
  

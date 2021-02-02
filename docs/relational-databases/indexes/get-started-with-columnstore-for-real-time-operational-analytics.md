@@ -12,17 +12,17 @@ ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4e62692402f33bfc42957363794bad9a698b18bb
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: dbc0867b71cadb33b1eb9174132b2031134a72f0
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172763"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236943"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introduzione a columnstore per l'analisi operativa in tempo reale
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] introduce l'analisi operativa in tempo reale, cioè la possibilità di eseguire contemporaneamente analisi e carichi di lavoro OLTP nelle stesse tabelle di database. Oltre a eseguire analisi in tempo reale, è possibile eliminare la necessità di ETL e di un data warehouse.  
+  [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] introduce l'analisi operativa in tempo reale, cioè la possibilità di eseguire contemporaneamente analisi e carichi di lavoro OLTP nelle stesse tabelle di database. Oltre a eseguire analisi in tempo reale, è possibile eliminare la necessità di ETL e di un data warehouse.  
   
 ## <a name="real-time-operational-analytics-explained"></a>Descrizione dell'analisi operativa in tempo reale  
  In passato le aziende usavano sistemi separati per i carichi di lavoro operativi, ad esempio OLTP, e per quelli di analisi. Per questi sistemi, i processi di estrazione, trasformazione e caricamento (ETL) spostano regolarmente i dati dall'archivio operativo in un archivio di analisi. I dati di analisi sono vengono in genere archiviati in un data warehouse o data mart dedicato all'esecuzione di query di analisi. Anche se questa soluzione ha rappresentato lo standard, presentava tre problemi principali:  
