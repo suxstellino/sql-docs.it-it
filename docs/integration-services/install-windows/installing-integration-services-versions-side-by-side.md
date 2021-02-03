@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d57148134c727b03a30d75af415d1e2476dca32d
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
-ms.translationtype: HT
+ms.openlocfilehash: 039d11c252b6fb55c4fbe4e37d35003345a3c1d5
+ms.sourcegitcommit: e4b6357756a9c691b0441208a0058f7b8f3bea51
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88345997"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99510456"
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>Installazione side-by-side di versioni di Integration Services
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  È possibile installare   
-      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installazione side-by-side di Integration Services (SSIS) con versioni precedenti di SSIS. Questo argomento descrive alcune limitazioni delle installazioni side-by-side.  
+  È possibile installare [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) side-by-side con le versioni precedenti di SSIS. Questo argomento descrive alcune limitazioni delle installazioni side-by-side.  
   
 ## <a name="designing-and-maintaining-packages"></a>Progettazione e gestione dei pacchetti  
  Per progettare e gestire pacchetti destinati a SQL Server 2016, SQL Server 2014 o SQL Server 2012 usare SQL Server Data Tools (SSDT) per Visual Studio 2015. Per ottenere SSDT, vedere [Scaricare la versione più recente di SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).  
