@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: c7402c8dd0d2d85d38536a0bcfea3ce8cd780657
-ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
-ms.translationtype: HT
+ms.openlocfilehash: d933f9bdff4279b841522f8a0e09f66e01364630
+ms.sourcegitcommit: fa63019cbde76dd981b0c5a97c8e4d57e8d5ca4e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96900874"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99495756"
 ---
 # <a name="create-an-azure-data-studio-dashboard-extension"></a>Creare un'estensione di tipo dashboard di Azure Data Studio
 
@@ -37,7 +37,7 @@ Azure Data Studio si basa sullo stesso framework di Visual Studio Code, quindi l
 - [Node.js](https://nodejs.org) installato e disponibile in `$PATH`. Node.js include [npm](https://www.npmjs.com/), lo strumento di gestione dei pacchetti di Node.js, che viene usato per installare il generatore di estensioni.
 - [Visual Studio Code](https://code.visualstudio.com) per eseguire il debug dell'estensione.
 - [Estensione di debug](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug) di Azure Data Studio (facoltativo). L'estensione di debug consente di testare l'estensione senza dover creare il pacchetto e installarla in Azure Data Studio.
-- Assicurarsi che `azuredatastudio` sia nel percorso. Per Windows, assicurarsi di scegliere l'opzione **Aggiungi a PATH** in setup.exe. Per Mac o Linux, eseguire l'opzione **Installa il comando 'azuredatastudio' in PATH**.
+- Assicurarsi che `azuredatastudio` sia nel percorso. Per Windows, assicurarsi di scegliere l'opzione **Aggiungi a PATH** in setup.exe. Per Mac o Linux, eseguire il **comando install ' azuredatastudio ' nel percorso** dal riquadro comandi in Azure Data Studio.
 
 ## <a name="install-the-extension-generator"></a>Installare il generatore di estensioni
 

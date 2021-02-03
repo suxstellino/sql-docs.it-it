@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89ebfbb70c7c50729ebbfb5de6a8551e00927bc6
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 521904030d97213770d4a2310b51eaadc37d4e5d
+ms.sourcegitcommit: 05fc736e6b6b3a08f503ab124c3151f615e6faab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99233234"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99478586"
 ---
 # <a name="statistics"></a>Statistiche
 
@@ -44,12 +44,12 @@ ms.locfileid: "99233234"
  Ogni oggetto statistiche viene creato in un elenco di una o più colonne di tabella e include un *istogramma* in cui è visualizzata la distribuzione dei valori nella prima colonna. Negli oggetti statistiche su più colonne sono inoltre archiviate informazioni statistiche sulla correlazione dei valori tra le colonne. Queste statistiche sulla correlazione o *densità* derivano dal numero di righe distinte di valori di colonna. 
 
 #### <a name="histogram"></a><a name="histogram"></a> Istogramma  
-Un **istogramma** misura la frequenza di occorrenza per ogni valore distinto in un set di dati. Query Optimizer calcola un istogramma nei valori di colonna nella prima colonna chiave dell'oggetto statistiche, selezionando i valori di colonna tramite il campionamento statistico delle righe o un'analisi completa di tutte le righe della tabella o della vista. Se l'istogramma viene creato da un set campionato di righe, i totali archiviati per numero di righe e numero di valori distinct sono stime e non è necessario che siano numeri interi.
+Un **istogramma** misura la frequenza di occorrenza per ogni valore distinto in un set di dati. Query Optimizer calcola un istogramma sui valori della colonna nella prima colonna chiave dell'oggetto statistiche, selezionando i valori delle colonne tramite il campionamento statistico delle righe o eseguendo un'analisi completa di tutte le righe nella tabella o nella vista. Se l'istogramma viene creato da un set campionato di righe, i totali archiviati per numero di righe e numero di valori distinct sono stime e non è necessario che siano numeri interi.
 
 > [!NOTE]
 > <a name="frequency"></a> In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli istogrammi vengono creati solo per una singola colonna, ovvero la prima colonna nel set di colonne chiave dell'oggetto statistiche.
   
-Per creare l'istogramma, Query Optimizer ordina i valori di colonna, calcola il numero di valori che corrispondono a ogni valore distinct di colonna e quindi aggrega i valori di colonna in un massimo di 200 intervalli contigui dell'istogramma. Ogni intervallo dell'istogramma comprende un insieme di valori di colonna seguiti da un valore di colonna pari al limite superiore. Nell'insieme sono inclusi tutti i possibili valori di colonna compresi tra i valori limite, esclusi questi ultimi. Il minore tra i valori di colonna ordinati costituisce il limite superiore per il primo intervallo dell'istogramma.
+Per creare l'istogramma, Query Optimizer ordina i valori della colonna, calcola il numero di valori che corrispondono a ogni valore di colonna distinto, quindi aggrega i valori della colonna in un massimo di 200 passaggi dell'istogramma contigui. Ogni intervallo dell'istogramma comprende un insieme di valori di colonna seguiti da un valore di colonna pari al limite superiore. Nell'insieme sono inclusi tutti i possibili valori di colonna compresi tra i valori limite, esclusi questi ultimi. Il minore tra i valori di colonna ordinati costituisce il limite superiore per il primo intervallo dell'istogramma.
 
 Più in dettaglio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea l'**istogramma** dal set ordinato di valori di colonna in tre passaggi:
 
@@ -69,10 +69,10 @@ Per ogni passaggio dell'istogramma sopra citato:
   
 -   L'area a tinta unita a sinistra di *range_high_key* rappresenta l'intervallo dei valori di colonna e il numero medio di occorrenze di ogni valore (*average_range_rows*) di colonna. Il valore *average_range_rows* per il primo passaggio dell'istogramma è sempre 0.  
   
--   Le linee punteggiate rappresentano i valori campionati usati per stimare il numero complessivo dei valori distinti nell'intervallo (*distinct_range_rows*) e il numero complessivo dei valori nell'intervallo (*range_rows*). Query Optimizer usa *range_rows* e *distinct_range_rows* per calcolare *average_range_rows* e non archivia i valori campionati.   
+-   Le linee punteggiate rappresentano i valori campionati usati per stimare il numero complessivo dei valori distinti nell'intervallo (*distinct_range_rows*) e il numero complessivo dei valori nell'intervallo (*range_rows*). Query Optimizer utilizza *RANGE_ROWS* e *distinct_range_rows* per calcolare *average_range_rows* e non archivia i valori campionati.   
   
 #### <a name="density-vector"></a><a name="density"></a>Vettore di densità  
-La **densità** è rappresentata da informazioni sul numero di duplicati in una colonna o combinazione di colonne specifica e viene calcolata con la formula 1/(numero di valori distinti). Per ottimizzare le stime relative alla cardinalità per query che restituiscono più colonne della stessa tabella o vista indicizzata, Query Optimizer utilizza le densità. Man mano che la densità diminuisce, aumenta la selettività di un valore. Ad esempio, in una tabella che rappresenta automobili, molte automobili vengono prodotte dallo stesso costruttore, ma a ciascuna è assegnato un numero di identificazione univoco. Un indice basato sul numero di identificazione del veicolo è più selettivo rispetto all'indice basato sul produttore, perché il numero di identificazione del veicolo ha una densità minore rispetto al produttore. 
+La **densità** è rappresentata da informazioni sul numero di duplicati in una colonna o combinazione di colonne specifica e viene calcolata con la formula 1/(numero di valori distinti). Query Optimizer utilizza le densità per migliorare le stime della cardinalità per le query che restituiscono più colonne dalla stessa tabella o vista indicizzata. Man mano che la densità diminuisce, aumenta la selettività di un valore. Ad esempio, in una tabella che rappresenta automobili, molte automobili vengono prodotte dallo stesso costruttore, ma a ciascuna è assegnato un numero di identificazione univoco. Un indice basato sul numero di identificazione del veicolo è più selettivo rispetto all'indice basato sul produttore, perché il numero di identificazione del veicolo ha una densità minore rispetto al produttore. 
 
 > [!NOTE]
 > La frequenza è rappresentata dalle informazioni sull'occorrenza di ogni valore distinto nella prima colonna chiave dell'oggetto statistiche e viene calcolata con la formula conteggio delle righe * densità. Nelle colonne con valori univoci è possibile trovare una frequenza massima pari a 1.
@@ -108,22 +108,38 @@ ORDER BY s.name;
 ```  
   
 #### <a name="auto_update_statistics-option"></a>Opzione AUTO_UPDATE_STATISTICS  
- Quando l'opzione per l'aggiornamento automatico delle statistiche, [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics), è impostata su ON, Query Optimizer determina se le statistiche potrebbero non essere aggiornate, quindi ne esegue l'aggiornamento qualora vengano usate da una query. Le statistiche diventano obsolete in seguito a operazioni di inserimento, aggiornamento, eliminazione o unione che modificano la distribuzione dei dati nella tabella o nella vista indicizzata. Query Optimizer determina che le statistiche potrebbero non essere aggiornate contando il numero di modifiche apportate ai dati dopo l'ultimo aggiornamento delle statistiche e confrontando il numero di modifiche con una soglia basata sul numero di righe nella tabella o nella vista indicizzata.  
+ Quando l'opzione per l'aggiornamento automatico delle statistiche, [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics), è impostata su ON, Query Optimizer determina se le statistiche potrebbero non essere aggiornate, quindi ne esegue l'aggiornamento qualora vengano usate da una query. Questa azione è nota anche come ricompilazione statistica. Le statistiche diventano obsolete dopo le modifiche delle operazioni di inserimento, aggiornamento, eliminazione o unione modificano la distribuzione dei dati nella tabella o nella vista indicizzata. Query Optimizer determina se le statistiche potrebbero non essere aggiornate contando il numero di modifiche apportate alle righe dall'ultimo aggiornamento delle statistiche e confrontando il numero di modifiche di riga a una soglia. La soglia è basata sulla cardinalità della tabella, che può essere definita come il numero di righe nella tabella o nella vista indicizzata.  
   
-* Fino a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa una soglia basata sulla percentuale di righe modificate, indipendente dal numero di righe nella tabella. La soglia è:
-    * Se la cardinalità della tabella è 500 o minore al momento della valutazione delle statistiche, l'aggiornamento avviene ogni 500 modifiche.
-    * Se la cardinalità della tabella è maggiore di 500 al momento della valutazione delle statistiche, l'aggiornamento avviene ogni 500 modifiche + il 20%.
+- Fino a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , [!INCLUDE[ssde_md](../../includes/ssde_md.md)] utilizza una soglia di ricompilazione basata sul numero di righe nella tabella o nella vista indicizzata al momento della valutazione delle statistiche. La soglia è diversa se una tabella è temporanea o permanente.
 
-* A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e con [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa una soglia di aggiornamento delle statiche dinamica decrescente, che si adatta al numero di righe nella tabella. Tale soglia viene calcolata come radice quadrata del prodotto di 1000 e della cardinalità della tabella corrente. Se ad esempio la tabella contiene 2 milioni di righe, il calcolo sarà sqrt(1000 * 2000000) = 44721,359. Con questa modifica, le statistiche sulle tabelle di grandi dimensioni vengono aggiornate più spesso. Tuttavia, se il livello di compatibilità di un database è minore di 130, viene applicata la soglia di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. 
+  |Tipo di tabella.|Cardinalità tabella (*n*)|Soglia di ricompilazione (# modifiche)|
+  |-----------|-----------|-----------|
+  |Temporanea|*n* < 6|6|
+  |Temporanea|6 <= *n* <= 500|500|
+  |Permanente|*n* <= 500|500|
+  |Temporanea o permanente|*n* > 500|500 + (0,20 * *n*)|
+  
+  Se, ad esempio, la tabella contiene 20000 righe, il calcolo è `500 + (0.2 * 20,000) = 4,500` e le statistiche verranno aggiornate ogni 4.500 modifiche.
+
+- A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e con il [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] usa anche una soglia di ricompilazione statistica dinamica decrescente che viene modificata in base alla cardinalità della tabella al momento della valutazione delle statistiche. Con questa modifica, le statistiche sulle tabelle di grandi dimensioni vengono aggiornate più spesso. Tuttavia, se un database ha un livello di compatibilità inferiore a 130, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] vengono applicate le soglie.
+
+  |Tipo di tabella.|Cardinalità tabella (*n*)|Soglia di ricompilazione (# modifiche)|
+  |-----------|-----------|-----------|
+  |Temporanea|*n* < 6|6|
+  |Temporanea|6 <= *n* <= 500|500|
+  |Permanente|*n* <= 500|500|
+  |Temporanea o permanente|500 <= *n* <= 25.000|500 + (0,20 * *n*)|
+  |Temporanea o permanente|*n* > 25.000|SQRT (1000 * *n*)|
+
+  Se, ad esempio, la tabella contiene 2 milioni righe, il calcolo è `SQRT(1,000 * 2,000,000) = 44,721` e le statistiche verranno aggiornate ogni 44.721 modifiche.
 
 > [!IMPORTANT]
 > In [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] fino a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive con [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 e inferiore abilitare il [flag di traccia 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) in modo che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usi una soglia di aggiornamento delle statistiche dinamica e decrescente.
 
-È possibile usare le indicazioni seguenti per abilitare il flag di traccia 2371 nell'ambiente precedente a [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]:
+Sebbene sia consigliabile per tutti gli scenari, l'abilitazione del flag di traccia è facoltativa. Tuttavia, è possibile usare le linee guida seguenti per abilitare il flag di traccia 2371 nel pre- [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] ambiente:
 
- - Se non sono stati rilevati problemi di prestazioni a causa di statistiche non aggiornate, non è necessario abilitare questo flag di traccia.
- - Se si usano sistemi SAP, abilitare questo flag di traccia.  Per altre informazioni, vedere questo [blog](/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371).
- - Se è necessario affidarsi a un processo notturno per aggiornare le statistiche perché l'aggiornamento automatico attuale non viene attivato con una frequenza sufficiente, prendere in considerazione l'abilitazione del flag di traccia 2371 per ridurre la soglia.
+ - Se si è in un sistema SAP, abilitare questo flag di traccia. Per altre informazioni, vedere questo [blog](/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371).
+ - Se è necessario fare affidamento sul processo notturno per aggiornare le statistiche perché l'aggiornamento automatico corrente non viene attivato con frequenza sufficiente, provare ad abilitare il flag di traccia 2371 per regolare la soglia per la cardinalità della tabella.
   
 Query Optimizer controlla la presenza di statistiche non aggiornate prima di compilare una query e prima di eseguire un piano di query memorizzato nella cache. Prima di compilare una query, Query Optimizer usa le colonne, le tabelle e le viste indicizzate nel predicato di query per identificare le eventuali statistiche non aggiornate. Prima di eseguire un piano di query memorizzato nella cache, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifica che tale piano faccia riferimento alle statistiche aggiornate.  
   
@@ -131,9 +147,6 @@ L'opzione AUTO_UPDATE_STATISTICS si applica a oggetti statistiche creati per ind
  
 È possibile usare [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) per verificare accuratamente il numero di righe modificate in una tabella e decidere se si vogliono aggiornare manualmente le statistiche.
 
-
-
-  
 #### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC  
 L'opzione relativa all'aggiornamento asincrono delle statistiche, [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async), determina se Query Optimizer usa gli aggiornamenti sincroni o asincroni delle statistiche. L'opzione relativa all'aggiornamento asincrono delle statistiche è OFF per impostazione predefinita. Query Optimizer aggiorna quindi le statistiche in modo sincrono. L'opzione AUTO_UPDATE_STATISTICS_ASYNC si applica a oggetti statistiche creati per indici, colonne singole nei predicati di query e statistiche create con l'istruzione [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) .  
  
@@ -144,7 +157,7 @@ Gli aggiornamenti delle statistiche possono essere sincroni (impostazione predef
 
 * Con gli aggiornamenti sincroni delle statistiche, le query vengono sempre compilate ed eseguite con statistiche aggiornate. Quando le statistiche sono obsolete, Query Optimizer attende le statistiche aggiornate prima di compilare ed eseguire la query. 
 
-* Con gli aggiornamenti asincroni delle statistiche, le query vengono compilate con le statistiche esistenti anche se non sono aggiornate. Query Optimizer potrebbe scegliere un piano di query non ottimale se le statistiche non sono aggiornate al momento della compilazione della query. Le statistiche vengono in genere aggiornate subito dopo. L'uso di statistiche aggiornate offrirà vantaggi per le query compilate dopo il completamento degli aggiornamenti delle statistiche.   
+* Con gli aggiornamenti asincroni delle statistiche, le query vengono compilate con le statistiche esistenti anche se non sono aggiornate. Query Optimizer potrebbe scegliere un piano di query non ottimale se le statistiche non sono aggiornate al momento della compilazione della query. Le statistiche vengono in genere aggiornate subito dopo. Le query che vengono compilate dopo il completamento degli aggiornamenti delle statistiche possono trarre vantaggio dall'utilizzo delle statistiche aggiornate.   
 
 Utilizzare le statistiche sincrone quando si eseguono operazioni che modificano la distribuzione dei dati, quali il troncamento di una tabella o l'esecuzione di un inserimento bulk di una percentuale elevata di righe. Se non si aggiornano manualmente le statistiche dopo avere completato l'operazione, l'uso di statistiche sincrone garantisce che le statistiche vengano aggiornate prima di eseguire query sui dati modificati.  
   
@@ -157,12 +170,12 @@ Utilizzare le statistiche asincrone per ottenere tempi di risposta alle query pi
 > [!NOTE]
 > Le statistiche sulle tabelle temporanee locali vengono sempre aggiornate in modo sincrono indipendentemente dall'opzione AUTO_UPDATE_STATISTICS_ASYNC. Le statistiche sulle tabelle temporanee globali vengono aggiornate in modo sincrono o asincrono in base all'opzione AUTO_UPDATE_STATISTICS_ASYNC impostata per il database utente.
 
-L'aggiornamento asincrono delle statistiche viene eseguito da una richiesta in background. Quando è pronta per scrivere le statistiche aggiornate nel database, la richiesta tenta di acquisire un blocco di modifica dello schema sull'oggetto dei metadati delle statistiche. Se in una sessione diversa è già presente un blocco sullo stesso oggetto, l'aggiornamento asincrono delle statistiche viene bloccato fino a quando non è possibile acquisire il blocco di modifica dello schema. Analogamente, le sessioni che devono acquisire un blocco di stabilità dello schema sull'oggetto dei metadati delle statistiche per compilare una query possono essere bloccate dalla sessione di aggiornamento asincrono delle statistiche in background che include già o è in attesa di acquisire il blocco di modifica dello schema. Pertanto, per i carichi di lavoro con compilazioni di query molto frequenti e aggiornamenti frequenti delle statistiche, l'uso di statistiche asincrone può aumentare la probabilità di problemi di concorrenza dovuti al blocco.
+L'aggiornamento asincrono delle statistiche viene eseguito da una richiesta in background. Quando è pronta per scrivere le statistiche aggiornate nel database, la richiesta tenta di acquisire un blocco di modifica dello schema sull'oggetto dei metadati delle statistiche. Se in una sessione diversa è già presente un blocco sullo stesso oggetto, l'aggiornamento asincrono delle statistiche viene bloccato fino a quando non è possibile acquisire il blocco di modifica dello schema. Analogamente, le sessioni che devono acquisire un blocco di stabilità dello schema (SCH-S) sull'oggetto metadati Statistics per compilare una query potrebbero essere bloccate dalla sessione in background dell'aggiornamento asincrono delle statistiche, che è già in attesa di acquisire il blocco di modifica dello schema. Pertanto, per i carichi di lavoro con compilazioni di query molto frequenti e aggiornamenti frequenti delle statistiche, l'uso di statistiche asincrone può aumentare la probabilità di problemi di concorrenza dovuti al blocco.
 
-Nel database SQL di Azure e in Istanza gestita di SQL di Azure è possibile evitare potenziali problemi di concorrenza con l'aggiornamento asincrono delle statistiche se si abilita la [configurazione con ambito di database](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY. Con questa configurazione abilitata, la richiesta in background resterà in attesa di acquisire il blocco di modifica dello schema (Sch-M) in una coda separata con priorità bassa, consentendo ad altre richieste di continuare a compilare query con statistiche esistenti. Quando nessun'altra sessione mantiene un blocco sull'oggetto dei metadati delle statistiche, la richiesta in background acquisisce il blocco di modifica dello schema e aggiorna le statistiche. Nel caso improbabile in cui la richiesta in background non possa acquisire il blocco entro un periodo di timeout di diversi minuti, l'aggiornamento asincrono delle statistiche verrà interrotto e le statistiche non verranno aggiornate fino a quando non viene attivato un altro aggiornamento automatico delle statistiche o fino a quando le statistiche non vengono [aggiornate manualmente](update-statistics.md).
+In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] è possibile evitare potenziali problemi di concorrenza con l'aggiornamento asincrono delle statistiche se si Abilita la [configurazione con ambito database](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY. Con questa configurazione abilitata, la richiesta in background attenderà di acquisire il blocco di modifica dello schema (SCH-M) e di salvare in modo permanente le statistiche aggiornate in una coda separata con priorità bassa, consentendo ad altre richieste di continuare a compilare query con statistiche esistenti. Quando nessun'altra sessione mantiene un blocco sull'oggetto dei metadati delle statistiche, la richiesta in background acquisisce il blocco di modifica dello schema e aggiorna le statistiche. Nel caso improbabile in cui la richiesta in background non possa acquisire il blocco entro un periodo di timeout di diversi minuti, l'aggiornamento asincrono delle statistiche verrà interrotto e le statistiche non verranno aggiornate fino a quando non viene attivato un altro aggiornamento automatico delle statistiche o fino a quando le statistiche non vengono [aggiornate manualmente](update-statistics.md).
 
 > [!Note]
-> L'opzione di configurazione ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY con ambito database è ora disponibile nel database SQL di Azure e in Istanza gestita di SQL di Azure ed è pianificata per l'inclusione in SQL Server vNext. 
+> L'opzione di configurazione ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY database scoped è disponibile in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] ed è pianificata per essere inclusa in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
 
 #### <a name="incremental"></a>INCREMENTAL  
  Quando l'opzione INCREMENTAL di CREATE STATISTICS è impostata su ON, le statistiche create sono statistiche della partizione. Con l'impostazione OFF l'albero delle statistiche viene eliminato e le statistiche vengono ricalcolate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il valore predefinito è OFF. Questa impostazione esegue l'override della proprietà INCREMENTAL a livello di database. Per altre informazioni sulla creazione di statistiche incrementali, vedere [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md). Per altre informazioni sulla creazione automatica di statistiche della partizione, vedere [Proprietà database &#40;pagina Opzioni&#41;](../../relational-databases/databases/database-properties-options-page.md#automatic) e [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). 

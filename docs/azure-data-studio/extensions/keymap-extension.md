@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 127b163ff7f75b4c7ebeff37781f8a5670a47cf9
-ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
-ms.translationtype: HT
+ms.openlocfilehash: 369685672921a62f44bb81387db0b987aa2e44dc
+ms.sourcegitcommit: fa63019cbde76dd981b0c5a97c8e4d57e8d5ca4e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96900824"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99495753"
 ---
 # <a name="create-an-azure-data-studio-keymap-extension"></a>Creare un'estensione di tipo mappatura della tastiera di Azure Data Studio
 
@@ -37,7 +37,7 @@ Azure Data Studio si basa sullo stesso framework di Visual Studio Code, quindi l
 - [Node.js](https://nodejs.org) installato e disponibile in `$PATH`. Node.js include [npm](https://www.npmjs.com/), lo strumento di gestione dei pacchetti di Node.js, che viene usato per installare il generatore di estensioni.
 - [Visual Studio Code](https://code.visualstudio.com) per eseguire il debug dell'estensione.
 - [Estensione di debug](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug) di Azure Data Studio (facoltativo). In questo modo è possibile testare l'estensione senza dover creare il pacchetto e installarla in Azure Data Studio.
-- Assicurarsi che `azuredatastudio` sia nel percorso. Per Windows, assicurarsi di scegliere l'opzione `Add to Path` in setup.exe. Per Mac o Linux, eseguire l'opzione *Installa il comando 'azuredatastudio' in PATH*.
+- Assicurarsi che `azuredatastudio` sia nel percorso. Per Windows, assicurarsi di scegliere l'opzione `Add to Path` in setup.exe. Per Mac o Linux, eseguire il **comando install ' azuredatastudio ' nel percorso** dal riquadro comandi in Azure Data Studio.
 
 ## <a name="install-the-extension-generator"></a>Installare il generatore di estensioni
 
