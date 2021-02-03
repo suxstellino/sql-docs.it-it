@@ -1,7 +1,7 @@
 ---
 description: Point
 title: Punto | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 02/02/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e17822f4eb88a1103ab5a214249ec5db7146c74
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: bcbdda427a587e06bf1ad678939b8164178112dd
+ms.sourcegitcommit: 05fc736e6b6b3a08f503ab124c3151f615e6faab
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475332"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99478576"
 ---
 # <a name="point"></a>Point
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "97475332"
   
 ## <a name="examples"></a>Esempi  
 ### <a name="example-a"></a>Esempio A.
-L'esempio seguente illustra come creare un'istanza `geometry Point`che rappresenta il punto (3, 4) con un SRID pari a 0.  
+Nell'esempio seguente viene creata un'istanza del punto di geometria che rappresenta il punto (3, 4) con un SRID pari a 0.  
   
 ```sql  
 DECLARE @g geometry;  
@@ -41,7 +41,7 @@ SET @g = geometry::STGeomFromText('POINT (3 4)', 0);
 ```  
   
 ### <a name="example-b"></a>Esempio B.
-L'esempio seguente illustra come creare un'istanza `geometry``Point` che rappresenta il punto (3, 4) con un valore Z (innalzamento) pari a 7, un valore M (misura) pari a 2,5 e il valore SRID predefinito 0.  
+Nell'esempio seguente viene creata un'istanza del punto di geometria che rappresenta il punto (3, 4) con un valore Z (innalzamento) pari a 7, un valore M (misura) di 2,5 e l'identificatore SRID predefinito 0.  
   
 ```  
 DECLARE @g geometry;  
@@ -49,7 +49,7 @@ SET @g = geometry::Parse('POINT(3 4 7 2.5)');
 ```  
   
 ### <a name="example-c"></a>Esempio C.
-L'esempio seguente restituisce i valori X, Y, Z e M per l'istanza `geometry``Point`.  
+Nell'esempio seguente vengono restituiti i valori X, Y, Z e M per l'istanza del punto di geometria.  
   
 ```  
 SELECT @g.STX;  

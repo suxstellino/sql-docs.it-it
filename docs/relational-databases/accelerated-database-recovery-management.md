@@ -1,7 +1,7 @@
 ---
 description: Gestire il ripristino accelerato del database
 title: Gestire il ripristino accelerato del database | Microsoft Docs
-ms.date: 08/12/2019
+ms.date: 02/02/2021
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
@@ -13,12 +13,12 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15'
-ms.openlocfilehash: cfd5a901f38dacf9e17baff4d65363796ab3cd73
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: ca11bbae7f1bcc86c0891cc22d8a7a02b26fd46e
+ms.sourcegitcommit: fa63019cbde76dd981b0c5a97c8e4d57e8d5ca4e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236105"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99495779"
 ---
 # <a name="manage-accelerated-database-recovery"></a>Gestire il ripristino accelerato del database
 
@@ -118,7 +118,30 @@ L'archivio versioni permanente è considerato grande se le sue dimensioni sono s
 
    Le transazioni attive impediscono la pulizia dell'archivio versioni permanente.
 
-1. Se il database fa parte di un gruppo di disponibilità, controllare `secondary_low_water_mark`. Questo valore corrisponde a quello di `low_water_mark_for_ghosts` restituito da `sys.dm_hadr_database_replica_states`. Eseguire una query su `sys.dm_hadr_database_replica_states` per verificare se una delle repliche conserva questo valore perché anche in questo caso viene impedita la pulizia dell'archivio versioni permanente.
-1. Controllare `min_transaction_timestamp` (o `online_index_min_transaction_timestamp` se l'archivio versioni permanente online impedisce l'operazione) e quindi controllare in `sys.dm_tran_active_snapshot_database_transactions` la colonna `transaction_sequence_num` per individuare la sessione con la transazione snapshot precedente che impedisce la pulizia dell'archivio versioni permanente.
-1. Se non si applica alcuna delle opzioni precedenti, significa che la pulizia viene impedita da transazioni interrotte. Controllare gli orari di `aborted_version_cleaner_last_start_time` e `aborted_version_cleaner_last_end_time` più recenti per verificare se la pulizia della transazione interrotta è stata completata. Il valore di `oldest_aborted_transaction_id` aumenta dopo il completamento della pulizia della transazione interrotta.
-1. Se la transazione interrotta non è stata completata di recente, controllare se nel log degli errori sono presenti messaggi che segnalano problemi di tipo `VersionCleaner`.
+2. Se il database fa parte di un gruppo di disponibilità, controllare `secondary_low_water_mark`. Questo valore corrisponde a quello di `low_water_mark_for_ghosts` restituito da `sys.dm_hadr_database_replica_states`. Eseguire una query su `sys.dm_hadr_database_replica_states` per verificare se una delle repliche conserva questo valore perché anche in questo caso viene impedita la pulizia dell'archivio versioni permanente.
+3. Controllare `min_transaction_timestamp` (o `online_index_min_transaction_timestamp` se l'archivio versioni permanente online impedisce l'operazione) e quindi controllare in `sys.dm_tran_active_snapshot_database_transactions` la colonna `transaction_sequence_num` per individuare la sessione con la transazione snapshot precedente che impedisce la pulizia dell'archivio versioni permanente.
+4. Se non si applica alcuna delle opzioni precedenti, significa che la pulizia viene impedita da transazioni interrotte. Controllare gli orari di `aborted_version_cleaner_last_start_time` e `aborted_version_cleaner_last_end_time` più recenti per verificare se la pulizia della transazione interrotta è stata completata. Il valore di `oldest_aborted_transaction_id` aumenta dopo il completamento della pulizia della transazione interrotta.
+5. Se la transazione interrotta non è stata completata di recente, controllare se nel log degli errori sono presenti messaggi che segnalano problemi di tipo `VersionCleaner`.
+
+Usare la query di esempio seguente come supporto per la risoluzione dei problemi:
+
+```sql
+SELECT pvss.persistent_version_store_size_kb / 1024. / 1024 AS persistent_version_store_size_gb,
+       pvss.online_index_version_store_size_kb / 1024. / 1024 AS online_index_version_store_size_gb,
+       pvss.current_aborted_transaction_count,
+       pvss.aborted_version_cleaner_start_time,
+       pvss.aborted_version_cleaner_end_time,
+       dt.database_transaction_begin_time AS oldest_transaction_begin_time,
+       asdt.session_id AS active_transaction_session_id,
+       asdt.elapsed_time_seconds AS active_transaction_elapsed_time_seconds
+FROM sys.dm_tran_persistent_version_store_stats AS pvss
+LEFT JOIN sys.dm_tran_database_transactions AS dt
+ON pvss.oldest_active_transaction_id = dt.transaction_id
+   AND
+   pvss.database_id = dt.database_id
+LEFT JOIN sys.dm_tran_active_snapshot_database_transactions AS asdt
+ON pvss.min_transaction_timestamp = asdt.transaction_sequence_num
+   OR
+   pvss.online_index_min_transaction_timestamp = asdt.transaction_sequence_num
+WHERE pvss.database_id = DB_ID();
+```

@@ -9,16 +9,16 @@ ms.author: drskwier
 ms.reviewer: maghan, sstein
 ms.custom: ''
 ms.date: 06/25/2020
-ms.openlocfilehash: 4320873affdab74a31d1e666a84bc744b1c00385
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
-ms.translationtype: HT
+ms.openlocfilehash: 06021fc598165982156093c12c26434f06cbc422
+ms.sourcegitcommit: fa63019cbde76dd981b0c5a97c8e4d57e8d5ca4e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123357"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99495709"
 ---
 # <a name="build-and-publish-a-project"></a>Compilare e pubblicare un progetto
 
-Il processo di compilazione nell'estensione progetti di database SQL per Azure Data Studio consente la creazione di *pacchetti di applicazione livello dati* negli ambienti Windows, macOS e Linux. Il progetto può essere distribuito in un ambiente locale o cloud con il processo di pubblicazione.
+Il processo di compilazione nell'estensione di progetti di database SQL (anteprima) per Azure Data Studio consente la creazione di *dacpac* in ambienti Windows, MacOS e Linux. Il progetto può essere distribuito in un ambiente locale o cloud con il processo di pubblicazione.
 
 ## <a name="prerequisites"></a>Prerequisiti
 

@@ -9,16 +9,16 @@ ms.author: drskwier
 ms.reviewer: maghan, sstein
 ms.custom: ''
 ms.date: 08/07/2020
-ms.openlocfilehash: 060039496d5877951e5255fce5e6cac2321731c6
-ms.sourcegitcommit: 31f3405be08441471f441395f1d0f0017ebc0ad5
-ms.translationtype: HT
+ms.openlocfilehash: 1233b8319c4fbd893159ba88fbcd1c3401f05ce0
+ms.sourcegitcommit: fa63019cbde76dd981b0c5a97c8e4d57e8d5ca4e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94617929"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99495719"
 ---
 # <a name="build-a-database-project-from-command-line"></a>Compilare un progetto di database dalla riga di comando
 
-Anche se l'estensione Progetto di database SQL per Azure Data Studio fornisce un'interfaccia utente grafica per [compilare un progetto di database](sql-database-project-extension-build.md), è disponibile anche un'esperienza di compilazione da riga di comando per ambienti Windows, macOS e Linux. Questo articolo illustra la sintassi e i prerequisiti necessari per compilare un progetto SQL nel file DACPAC dalla riga di comando.
+Mentre l'estensione di progetto di database SQL (anteprima) per Azure Data Studio fornisce un'interfaccia utente grafica per la [compilazione di un progetto di database](sql-database-project-extension-build.md), è disponibile anche un'esperienza di compilazione da riga di comando per ambienti Windows, MacOS e Linux. Questo articolo illustra la sintassi e i prerequisiti necessari per compilare un progetto SQL nel file DACPAC dalla riga di comando.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
