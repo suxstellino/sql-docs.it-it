@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b0ff8cd92d090424bbf7a17315dc09dfb7b8a06f
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
-ms.translationtype: HT
+ms.openlocfilehash: 7a58a11e71c471bf02ca68ddaf4a416c3d9c554b
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934783"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075703"
 ---
 # <a name="configure-a-url--report-server-configuration-manager"></a>Configurare un URL (Gestione configurazione del server di report)
   Per usare [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] o il servizio Web ReportServer, è necessario configurare almeno un URL per ogni applicazione. La configurazione degli URL è obbligatoria se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è stato installato in modalità "solo file", ovvero se è stata selezionata l'opzione **Installa senza configurare il server** nella pagina Opzioni di installazione Server report dell'Installazione guidata. Se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è stato installato con la configurazione predefinita, gli URL sono già configurati per ogni applicazione.  
@@ -79,7 +79,7 @@ ms.locfileid: "91934783"
   
          `netstat -anp tcp`  
   
-    -   Per informazioni sulle assegnazioni di porta TCP e le differenze tra porte note (da 0 a 1023), porte registrate (da 1024 a 49151) e porte dinamiche o private (da 49152 a 65535), vedere l'articolo [Informazioni sull'assegnazione di porte TCP/IP](https://support.microsoft.com/kb/174904)nel sito Web del supporto tecnico Microsoft.  
+    -   Per informazioni sulle assegnazioni di porta TCP e le differenze tra porte note (da 0 a 1023), porte registrate (da 1024 a 49151) e porte dinamiche o private (da 49152 a 65535), vedere l'articolo [Informazioni sull'assegnazione di porte TCP/IP](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/174904)nel sito Web del supporto tecnico Microsoft.  
   
     -   Se si utilizza Windows Firewall, è necessario aprire la porta. Per istruzioni, vedere [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   

@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 5b86d0a8ee13a4190d45d8a82cc08dea949acf26
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 61d04579d3eab5a373ea00814bf708d5bb3267ba
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732001"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075993"
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>Esercitazione: Database Engine Tuning Advisor
 
@@ -44,7 +44,7 @@ In questa lezione verranno descritte le procedure per avviare l'utilità del pro
 ## <a name="requirements"></a>Requisiti  
 Questa esercitazione è destinata agli amministratori di database che non hanno familiarità con l'interfaccia utente grafica dello strumento Ottimizzazione guidata motore di database o con l'utilità del prompt dei comandi **dta** , ma che hanno tuttavia esperienza in merito ai concetti e alle strutture relativi ai database, quali indici e viste indicizzate.  
   
-È necessario installare [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , o una versione successiva, con i database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Per una maggiore sicurezza, i database di esempio non vengono installati per impostazione predefinita. Per installare i database di esempio, vedere la pagina [Installazione degli esempi e dei database di esempio di SQL Server](https://sqlserversamples.codeplex.com).  
+È necessario installare [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] con il [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database di esempio. Per una maggiore sicurezza, i database di esempio non vengono installati per impostazione predefinita. Per installare i database di esempio, vedere la pagina [Installazione degli esempi e dei database di esempio di SQL Server](https://sqlserversamples.codeplex.com).  
   
 ## <a name="after-you-finish-this-tutorial"></a>Al termine di questa esercitazione  
 Al termine di questa esercitazione, per ulteriori informazioni sullo strumento Ottimizzazione guidata motore di database, è possibile consultare gli argomenti seguenti:  

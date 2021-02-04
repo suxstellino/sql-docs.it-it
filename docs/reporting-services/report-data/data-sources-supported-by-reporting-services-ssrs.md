@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 34d5618950a96fd275a334dd78d914ee7e036c2f
-ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
-ms.translationtype: HT
+ms.openlocfilehash: 99866d19ed4c61429919074b8f437822976a3831
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96788392"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075303"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Origini dei dati supportate da Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recupera i dati di report dalle origini dati tramite un livello di dati modulare ed estensibile che usa estensioni per l'elaborazione dati. Per recuperare dati di report da un'origine dati, è necessario selezionare un'estensione per l'elaborazione dati che supporti il tipo di origine dati, la versione del software in esecuzione su di essa e la relativa piattaforma (32 bit o 64 bit [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]).  
@@ -182,7 +182,7 @@ Questa origine dati è stata deprecata. Usare il tipo di origine dati SQL Server
 ###  <a name="ole-db-data-processing-extension"></a><a name="OLEDBAll"></a> OLE DB Data Processing Extension  
  L'estensione per l'elaborazione dati OLE DB richiede la scelta di un ulteriore livello di provider di dati in base alla versione dell'origine dati da utilizzare nel report. Se non si seleziona un provider di dati specifico, verrà utilizzato uno predefinito. Scegliere un provider di dati specifico tramite la finestra di dialogo **Proprietà connessione** a cui è possibile accedere tramite il pulsante **Modifica** nelle finestre di dialogo Origine dati o Origine dati condivisa.  
   
- Per altre informazioni sulla finestra Progettazione query associata OLE DB, vedere [Interfaccia utente della finestra Progettazione query con interfaccia grafica](../../reporting-services/report-data/graphical-query-designer-user-interface.md). Per altre informazioni sul supporto specifico per i provider OLE DB, vedere [Visual Studio .NET Designer Tool Supports Specific OLE DB Providers](https://support.microsoft.com/default.aspx/kb/811241) (Visual Studio .NET Designer Tool supporta specifici provider OLE DB) nella Knowledge Base [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+ Per altre informazioni sulla finestra Progettazione query associata OLE DB, vedere [Interfaccia utente della finestra Progettazione query con interfaccia grafica](../../reporting-services/report-data/graphical-query-designer-user-interface.md). Per altre informazioni sul supporto specifico per i provider OLE DB, vedere [Visual Studio .NET Designer Tool Supports Specific OLE DB Providers](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/811241) (Visual Studio .NET Designer Tool supporta specifici provider OLE DB) nella Knowledge Base [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  [Torna alla tabella delle origini dati](#DataSourcesTable)  
   
@@ -203,7 +203,7 @@ Questa origine dati è stata deprecata. Usare il tipo di origine dati SQL Server
   
  I parametri senza nome dipendenti dalla posizione sono supportati. I parametri denominati non sono supportati da questa estensione. Per usare i parametri denominati, usare l'estensione per l'elaborazione dati [Oracle](#OracleClient) .  
   
- Per altre informazioni sulla configurazione di Oracle come origine dati, vedere [Come usare Reporting Services per configurare e accedere a un'origine dati Oracle](https://support.microsoft.com/kb/834305). Per altre informazioni sulla configurazione di autorizzazioni aggiuntive, vedere [Come aggiungere autorizzazioni per l'entità di sicurezza SERVIZIO DI RETE](https://support.microsoft.com/kb/870668) nella [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
+ Per altre informazioni sulla configurazione di Oracle come origine dati, vedere [Come usare Reporting Services per configurare e accedere a un'origine dati Oracle](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/834305). Per altre informazioni sulla configurazione di autorizzazioni aggiuntive, vedere [Come aggiungere autorizzazioni per l'entità di sicurezza SERVIZIO DI RETE](https://support.microsoft.com/kb/870668) nella [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
   
  [Torna alla tabella delle origini dati](#DataSourcesTable)  
   
@@ -240,7 +240,7 @@ Per installare gli strumenti client Oracle è possibile seguire questa procedura
 2.  Scaricare ODAC 12c Release 4 (12.1.0.2.4) per Windows (64 bit per il server, 32 bit per gli strumenti)
 3.  Installare il provider di dati per .NET 4
   
- I parametri denominati sono supportati da questa estensione. Per Oracle versione 11g o successiva, i parametri multivalore sono supportati. Per i parametri senza nome dipendenti dalla posizione, usare l'estensione per l'elaborazione dati OLE DB con il provider di dati [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB per Oracle. Per altre informazioni sulla configurazione di Oracle come origine dati, vedere [Come usare Reporting Services per configurare e accedere a un'origine dati Oracle](https://support.microsoft.com/kb/834305). Per altre informazioni sulla configurazione di autorizzazioni aggiuntive, vedere [Come aggiungere autorizzazioni per l'entità di sicurezza SERVIZIO DI RETE](https://support.microsoft.com/kb/870668) nella [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
+ I parametri denominati sono supportati da questa estensione. Per Oracle versione 11g o successiva, i parametri multivalore sono supportati. Per i parametri senza nome dipendenti dalla posizione, usare l'estensione per l'elaborazione dati OLE DB con il provider di dati [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB per Oracle. Per altre informazioni sulla configurazione di Oracle come origine dati, vedere [Come usare Reporting Services per configurare e accedere a un'origine dati Oracle](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/834305). Per altre informazioni sulla configurazione di autorizzazioni aggiuntive, vedere [Come aggiungere autorizzazioni per l'entità di sicurezza SERVIZIO DI RETE](https://support.microsoft.com/kb/870668) nella [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
   
  È possibile recuperare i dati da stored procedure con più parametri di input, tuttavia la stored procedure deve restituire un solo cursore di output. Per altre informazioni, vedere [Restituzione di risultati con i REF CURSOR Oracle](/dotnet/framework/data/adonet/retrieving-data-using-a-datareader#returning-results-with-oracle-ref-cursors) in "Recupero di dati tramite un oggetto DataReader".
   

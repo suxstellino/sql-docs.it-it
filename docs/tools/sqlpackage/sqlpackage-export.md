@@ -10,15 +10,15 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 12/11/2020
-ms.openlocfilehash: 8b6293359306006d7ed6402bf630919a947c6e53
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: e1a70d9b69306e4394bc726fd58a48923bb2a937
+ms.sourcegitcommit: 5ceafd29b8f22edb800cec150f0ccddea43313e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596389"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98983674"
 ---
 # <a name="sqlpackage-export-parameters-and-properties"></a>Parametri e proprietà di Export di SqlPackage
-L'azione Export di SqlPackage.exe esporta un database attivo da un database di SQL Server o SQL di Azure in un pacchetto BACPAC (file con estensione bacpac). Per impostazione predefinita, nel file bacpac verranno inclusi i dati di tutte le tabelle. Facoltativamente, è possibile specificare solo un subset di tabelle per cui esportare i dati. La convalida dell'azione Export garantisce la compatibilità del database SQL di Azure per il database di destinazione completo anche se viene specificato un subset di tabelle per l'esportazione. 
+Con l'azione SqlPackage.exe Export un database connesso viene esportato in un file BACPAC (con estensione bacpac). Per impostazione predefinita, nel file bacpac verranno inclusi i dati di tutte le tabelle. Facoltativamente, è possibile specificare solo un subset di tabelle per cui esportare i dati. La convalida dell'azione Export garantisce la compatibilità del database SQL di Azure per il database di destinazione completo anche se viene specificato un subset di tabelle per l'esportazione. 
 
 ## <a name="command-line-syntax"></a>Sintassi della riga di comando
 

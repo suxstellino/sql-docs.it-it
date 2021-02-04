@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 968de0f9cf8c95b13a67f3fb2b0f36e3d8c09ced
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
-ms.translationtype: HT
+ms.openlocfilehash: 74bf6f0da0daa0df248243ffbce505c75c55db5e
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91986113"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076323"
 ---
 # <a name="troubleshoot-server--database-connection-problems-with-reporting-services"></a>Risolvere i problemi di connessione al server e al database con Reporting Services
 Utilizzare questo argomento per la risoluzione dei problemi che si verificano durante la connessione a un server di report. In questo argomento vengono inoltre fornite informazioni sui messaggi di tipo "Errore imprevisto". Per altre informazioni sulla configurazione delle origini dati e di una connessione al server di report, vedere [Specificare le informazioni sulle credenziali e le connessioni per le origini dati dei report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) e [Configurare una connessione del database del server di report (Gestione configurazione del server di report)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## <a name="cannot-create-a-connection-to-data-source-datasourcename-rserroropeningconnection"></a>Impossibile creare una connessione all'origine dei dati "datasourcename". (rsErrorOpeningConnection)  
-Si tratta di un errore generico che si verifica quando il server di report non è in grado di aprire una connessione a un'origine dei dati esterna che fornisce dati a un report. Insieme a questo messaggio di errore viene visualizzato un altro messaggio di errore in cui viene indicata la causa sottostante. Insieme a **rsErrorOpeningConnection**possono essere visualizzati i messaggi di errore seguenti.  
+Si tratta di un errore generico che si verifica quando il server di report non è in grado di aprire una connessione a un'origine dei dati esterna che fornisce dati a un report. Insieme a questo messaggio di errore viene visualizzato un altro messaggio di errore in cui viene indicata la causa sottostante. Insieme a **rsErrorOpeningConnection** possono essere visualizzati i messaggi di errore seguenti.  
   
 ### <a name="login-failed-for-user-username"></a>Accesso non riuscito per l'utente 'UserName'  
 L'utente non dispone di autorizzazioni per accedere all'origine dei dati. Se si usa un database di SQL Server, verificare che l'utente disponga di un account di accesso valido per il database. Per altre informazioni su come creare un utente del database o un account di accesso di SQL Server, vedere [Creare un utente del database](../../relational-databases/security/authentication-access/create-a-database-user.md) e [Creare un account di accesso a SQL server](../../relational-databases/security/authentication-access/create-a-login.md).  
@@ -35,7 +35,7 @@ Quando ci si connette a SQL Server, è possibile che l'errore sia determinato da
 * Verificare che l'URL del server di report e la stringa di connessione al database del server di report siano corretti. Se Reporting Services o il motore di database è stato installato come un'istanza denominata, la stringa di connessione predefinita creata durante l'installazione includerà il nome dell'istanza. Se, ad esempio, è stata installata un'istanza predefinita di SQL Server Express with Advanced Services in un server denominato DEVSRV01, l'URL del portale Web sarà DEVSRV01\Reports$SQLEXPRESS. Il nome del server di database nella stringa di connessione, inoltre, sarà simile a DEVSRV01\SQLEXPRESS. Per altre informazioni sugli URL e le stringhe di connessione all'origine dati per SQL Server Express, vedere [Reporting Services in SQL Server Express with Advanced Services](/previous-versions/sql/sql-server-2008-r2/ms365166(v=sql.105)). Per verificare la stringa di connessione al database del server di report, avviare lo strumento di configurazione di Reporting Services e visualizzare la pagina Impostazioni database.  
   
 ### <a name="a-connection-cannot-be-made-ensure-that-the-server-is-running"></a>Impossibile stabilire la connessione. Verificare che il server sia in esecuzione.  
-Questo errore viene restituito dal provider ADOMD.NET e può verificarsi per vari motivi. Se il server è stato indicato come "localhost", provare a specificare invece il nome del server. L'errore può inoltre verificarsi se non è possibile allocare memoria alla nuova connessione. Per altre informazioni, vedere l' [articolo della Knowledge Base 912017 - FIX: Messaggio di errore quando ci si connette a un'istanza di SQL Server 2005 Analysis Services:](https://support.microsoft.com/kb/912017).  
+Questo errore viene restituito dal provider ADOMD.NET e può verificarsi per vari motivi. Se il server è stato indicato come "localhost", provare a specificare invece il nome del server. L'errore può inoltre verificarsi se non è possibile allocare memoria alla nuova connessione. Per altre informazioni, vedere l' [articolo della Knowledge Base 912017 - FIX: Messaggio di errore quando ci si connette a un'istanza di SQL Server 2005 Analysis Services:](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/912017).  
   
 Se il messaggio di errore indica anche che l'host è sconosciuto, significa che il server Analysis Services non è disponibile o rifiuta la connessione. Se il server Analysis Services è installato come istanza denominata in un computer remoto, potrebbe essere necessario eseguire il servizio SQL Server Browser per ottenere il numero di porta utilizzato da tale istanza.  
   
@@ -49,7 +49,7 @@ Per risolvere il problema, è possibile modificare la stringa di connessione per
 1. Avviare Gestione configurazione SQL Server.  
 2. Espandere **Configurazione di rete SQL Server**.  
 3. Selezionare **Protocolli per MSSQLSERVER**.  
-4. Fare clic con il pulsante destro del mouse su **TCP/IP**e selezionare **Abilita**.  
+4. Fare clic con il pulsante destro del mouse su **TCP/IP** e selezionare **Abilita**.  
 5. Selezionare **Servizi di SQL Server**.  
 6. Fare clic con il pulsante destro del mouse su **SQL Server (MSSQLSERVER**) e scegliere **Riavvia**.  
   
@@ -60,7 +60,7 @@ Non è possibile connettersi a \<your server name>. Il provider WMI per Reportin
   
 Per risolvere questo errore, è necessario reinstallare il software. Per tutti gli altri casi, per risolvere temporaneamente il problema è possibile connettersi al server di report tramite l'endpoint SOAP.  
   
-* Nella finestra di dialogo **Connetti al server** di Management Studio, in **Nome server**digitare l'URL del server di report. L'impostazione predefinita è `https://<your server name>/reportserver`. Oppure, se si usa SQL Server 2008 Express with Advanced Services, è `https://<your server name>/reportserver$sqlexpress`.  
+* Nella finestra di dialogo **Connetti al server** di Management Studio, in **Nome server** digitare l'URL del server di report. L'impostazione predefinita è `https://<your server name>/reportserver`. Oppure, se si usa SQL Server 2008 Express with Advanced Services, è `https://<your server name>/reportserver$sqlexpress`.  
   
 Per risolvere l'errore in modo che sia possibile eseguire la connessione mediante il provider WMI, è necessario eseguire il programma di installazione per ripristinare Reporting Services o reinstallare Reporting Services.  
   

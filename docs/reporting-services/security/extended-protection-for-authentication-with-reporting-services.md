@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 72e29a5be172bdf00f9c57358cbbaa1e9bae5a09
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: b13ca53aad69647aee5158d86de2cfb16ac04710
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98594824"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076103"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protezione estesa per l'autenticazione con Reporting Services
 
@@ -25,7 +25,7 @@ ms.locfileid: "98594824"
 SQL Server Reporting Services (SSRS) supporta e applica la protezione estesa abilitata nel sistema operativo e configurata in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per impostazione predefinita, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accetta le richieste che specificano l'autenticazione Negotiate o NTLM ed è pertanto in grado di usufruire del supporto della protezione estesa offerto dal sistema operativo e dalle funzionalità di protezione estesa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 > [!IMPORTANT]  
->  Per impostazione predefinita, Windows non abilita la protezione estesa. Per informazioni su come abilitare la protezione estesa in Windows, vedere [Protezione estesa per l'autenticazione](https://go.microsoft.com/fwlink/?LinkID=178431). Per garantire che l'autenticazione abbia esito positivo, è necessario che il sistema operativo e lo stack di autenticazione del client supportino entrambi la protezione estesa. Per i sistemi operativi meno recenti potrebbe essere necessario installare più aggiornamenti per ottenere un computer in grado di utilizzare appieno la protezione estesa. Per informazioni sugli ultimi sviluppi della protezione estesa, vedere la pagina relativa alle [informazioni aggiornate sulla protezione estesa](/previous-versions/sql/sql-server-2008/dd146365(v=sql.100)).  
+>  Per impostazione predefinita, Windows non abilita la protezione estesa. Per informazioni su come abilitare la protezione estesa in Windows, vedere [Protezione estesa per l'autenticazione](https://support.microsoft.com/topic/microsoft-security-advisory-extended-protection-for-authentication-7dd2ee6d-c2e9-3484-2d8e-466261d3f0c7). Per garantire che l'autenticazione abbia esito positivo, è necessario che il sistema operativo e lo stack di autenticazione del client supportino entrambi la protezione estesa. Per i sistemi operativi meno recenti potrebbe essere necessario installare più aggiornamenti per ottenere un computer in grado di utilizzare appieno la protezione estesa. Per informazioni sugli ultimi sviluppi della protezione estesa, vedere la pagina relativa alle [informazioni aggiornate sulla protezione estesa](/previous-versions/sql/sql-server-2008/dd146365(v=sql.100)).  
 
 ## <a name="reporting-services-extended-protection-overview"></a>Cenni preliminari sulla protezione estesa di Reporting Services
 

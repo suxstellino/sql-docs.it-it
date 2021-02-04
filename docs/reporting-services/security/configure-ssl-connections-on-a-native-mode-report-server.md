@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6d76229a17951c4b0bad35ee78e95a903bb590e3
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 0532c42a5bd080b7f686c1663c6f88d8066bc9ff
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98594957"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076263"
 ---
 # <a name="configure-tls-connections-on-a-native-mode-report-server"></a>Configurare connessioni TLS in un server di report in modalità nativa
 
@@ -86,7 +86,7 @@ ms.locfileid: "98594957"
   
  Le associazioni TLS sono una risorsa condivisa in Microsoft Windows. Le modifiche apportate da Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o da altri strumenti come Gestione IIS possono influire su altre applicazioni presenti nello stesso computer. Per modificare le associazioni è quindi consigliabile utilizzare lo stesso strumento adoperato per la creazione.  Ad esempio, se le associazioni TLS sono state create mediante Gestione configurazione, è consigliabile usare questo stesso strumento per gestirne il ciclo di vita. Lo stesso concetto vale per la creazione e la gestione delle associazioni mediante Gestione IIS. Se IIS viene installato nel computer prima di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è consigliabile esaminare la configurazione TLS in IIS prima di configurare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Se si rimuovono le associazioni TLS per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mediante Gestione configurazione del server di report, TLS potrebbe non funzionare più per i siti Web di un server in cui è in esecuzione Internet Information Services (IIS) o un altro server HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Gestione configurazione rimuove la chiave del Registro di sistema riportata di seguito: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443** Quando questa chiave del Registro di sistema viene rimossa, viene rimossa anche l'associazione TLS per IIS. Senza questa associazione, TLS non viene supportato per il protocollo HTTPS. Per diagnosticare questo problema, usare Gestione IIS o l'utilità della riga di comando HTTPCFG.exe. Per risolvere il problema, ripristinare l'associazione TLS per i siti Web tramite Gestione IIS. Per evitare questo problema in futuro, usare Gestione IIS per rimuovere le associazioni TLS e quindi usare Gestione IIS per ripristinare l'associazione per i siti Web desiderati. Per altre informazioni, vedere l'articolo della Knowledge Base [Mancato funzionamento di SSL dopo la rimozione di un'associazione SSL (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n).  
+ Se si rimuovono le associazioni TLS per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mediante Gestione configurazione del server di report, TLS potrebbe non funzionare più per i siti Web di un server in cui è in esecuzione Internet Information Services (IIS) o un altro server HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Gestione configurazione rimuove la chiave del Registro di sistema riportata di seguito: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443** Quando questa chiave del Registro di sistema viene rimossa, viene rimossa anche l'associazione TLS per IIS. Senza questa associazione, TLS non viene supportato per il protocollo HTTPS. Per diagnosticare questo problema, usare Gestione IIS o l'utilità della riga di comando HTTPCFG.exe. Per risolvere il problema, ripristinare l'associazione TLS per i siti Web tramite Gestione IIS. Per evitare questo problema in futuro, usare Gestione IIS per rimuovere le associazioni TLS e quindi usare Gestione IIS per ripristinare l'associazione per i siti Web desiderati. Per altre informazioni, vedere l'articolo della Knowledge Base [Mancato funzionamento di SSL dopo la rimozione di un'associazione SSL (https://support.microsoft.com/kb/956209/n)](https://web.archive.org/web/20150215042139/http://support.microsoft.com:80/kb/956209).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Autenticazione con il server di report](../../reporting-services/security/authentication-with-the-report-server.md)   

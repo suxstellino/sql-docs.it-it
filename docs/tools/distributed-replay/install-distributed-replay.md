@@ -11,12 +11,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 29c96381f9781df7cb1cbedb351cce1524f440fd
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 4909975e83ea4438d969685ed9b76ae9f02a5631
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642635"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99077079"
 ---
 # <a name="install-distributed-replay"></a>Installare Riesecuzione distribuita
 
@@ -31,7 +31,7 @@ ms.locfileid: "97642635"
 -   [Installare i componenti Riesecuzione distribuita tramite un file di configurazione](#bkmk_configuration_file)  
   
 ##  <a name="install-distributed-replay-from-the-installation-wizard"></a><a name="bkmk_wizard"></a> Installare Riesecuzione distribuita dall'Installazione guidata  
- Installare le funzionalità di Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'Installazione guidata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Quando si pianifica il percorso di installazione delle funzionalità, considerare gli aspetti seguenti:  
+ Installare le funzionalità di Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'Installazione guidata di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] . Quando si pianifica il percorso di installazione delle funzionalità, considerare gli aspetti seguenti:  
   
 -   Lo strumento di amministrazione può essere installato nello stesso computer del controller di Riesecuzione distribuita o in computer diversi.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "97642635"
 -   Dopo l'installazione, prima di avviare il servizio client Riesecuzione distribuita nei client è necessario che il servizio controller, ovvero il controller di Riesecuzione distribuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sia in esecuzione.  
   
 > [!NOTE]  
->  Per rimuovere o modificare le funzionalità di Riesecuzione distribuita, utilizzare la finestra **Programmi e funzionalità** di Windows nel **Pannello di controllo**. Selezionare [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nella finestra **Disinstalla o modifica programma** , quindi fare clic su **Rimuovi** per aprire l'Installazione guidata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Nella pagina **Seleziona funzionalità** selezionare le funzionalità di Riesecuzione distribuita che si desidera rimuovere.  
+>  Per rimuovere o modificare le funzionalità di Riesecuzione distribuita, utilizzare la finestra **Programmi e funzionalità** di Windows nel **Pannello di controllo**. Selezionare [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] nella finestra **Disinstalla o modifica programma** , quindi fare clic su **Rimuovi** per aprire l'Installazione guidata di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] . Nella pagina **Seleziona funzionalità** selezionare le funzionalità di Riesecuzione distribuita che si desidera rimuovere.  
   
  **Prerequisiti:**  
   
@@ -79,7 +79,7 @@ ms.locfileid: "97642635"
   
 #### <a name="to-install-distributed-replay-features"></a>Per installare le funzionalità di Riesecuzione distribuita  
   
-1.  Per avviare l'installazione di una qualsiasi funzionalità di Riesecuzione distribuita, avviare l'Installazione guidata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+1.  Per avviare l'installazione di una qualsiasi funzionalità di Riesecuzione distribuita, avviare l'Installazione guidata di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] .  
   
 2.  Nella pagina **Regole di supporto per l'installazione** sono riportati i problemi che si potrebbero verificare durante l'installazione dei file di supporto dell'installazione di SQL Server. Prima di continuare con l'installazione, è necessario correggere qualsiasi errore del supporto dell'installazione.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "97642635"
   
 4.  Nella pagina **Condizioni di licenza** leggere il contratto di licenza, quindi selezionare la casella di controllo per accettarne le condizioni. Per migliorare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è inoltre possibile abilitare l'opzione relativa all'utilizzo delle funzionalità e inviare report a [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
-5.  Nella pagina **File di supporto per l'installazione** fare clic su **Installa** per installare o aggiornare i file di supporto dell'installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+5.  Nella pagina **File di supporto per l'installazione** fare clic su **Installa** per installare o aggiornare i file di supporto dell'installazione di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 6.  Nella pagina **Impostazione ruolo** selezionare **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installazione funzionalità**, quindi fare clic su **Avanti** per passare alla pagina **Selezione funzionalità** .  
   

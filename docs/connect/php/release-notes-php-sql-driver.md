@@ -2,7 +2,7 @@
 title: Note sulla versione dei driver Microsoft per PHP
 description: Questa pagina elenca le variazioni in ogni versione dei driver Microsoft per PHP per SQL Server.
 ms.custom: ''
-ms.date: 09/11/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be2317f95adc1a94ee85805aecfaed37d05e875a
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
-ms.translationtype: HT
+ms.openlocfilehash: 2d62068af3e6ec4a8f2711a5c11ab1f01388be8e
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005724"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076303"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Note sulla versione dei driver Microsoft per PHP per SQL Server
 
@@ -39,6 +39,36 @@ TO  :  'release-notes-php-sql-driver.md'
 For any questions, ask GeneMi or CraigG.
 Thanks a lot.  2019-03-28  (DevO= 1467988)
 -->
+
+## <a name="59"></a>5.9
+
+![download scaricare il ](../../ssms/media/download-icon.png) tag di versione GitHub [pacchetto Windows](https://go.microsoft.com/fwlink/?linkid=?????) 
+ [(i pacchetti Linux e MacOS sono disponibili qui)](https://github.com/Microsoft/msphpsql/releases/tag/v5.9.0)
+
+### <a name="version-information"></a>Informazioni sulla versione
+
+- Numero di versione: 5.9.0<sup>1</sup>
+- Rilasciata: 29 gennaio 2021
+
+### <a name="whats-new-in-59"></a>Novità di 5,9
+
+| Nuovo elemento | Dettagli |
+| :------- | :------ |
+| Aggiunta del supporto per PHP 8,0. | &nbsp; |
+| Il supporto per PHP 7,2 è stato eliminato. | &nbsp; |
+| Aggiunta del supporto per Microsoft ODBC driver 17,7 su tutte le piattaforme. | &nbsp; |
+| Aggiunta del supporto per macOS Big Sur, Ubuntu 20,04, Ubuntu 20,10 ed alpine 3,12. | Alcuni richiedono il driver ODBC 17,5 o versione successiva. |
+| È stato rilasciato il supporto per macOS High Sierra, Debian 8 e Ubuntu 19,10. | &nbsp; |
+| Supporto per le impostazioni locali di GB18030. | &nbsp; |
+| ErrorInfo DOP esteso per includere messaggi ODBC aggiuntivi, se disponibili. | &nbsp; |
+| Supporto per la classificazione dei dati con informazioni sul rango. | Richiede SQL Server 2019 e il driver ODBC 17.4.2 o versione successiva. |
+| Aggiunta Azure Active Directory supporto per l'autenticazione dell'entità servizio. | Richiede il driver ODBC 17,7 o versione successiva. |
+| Miglioramento delle prestazioni quando si gestiscono numeri decimali come input o output e si rimuovono le conversioni non necessarie per i valori numerici. | &nbsp; |
+| Miglioramento delle prestazioni durante il recupero di numeri con buffer client. | &nbsp; |
+| Impostare timeout query senza usare TIMEOUT blocco, che consente di salvare un ulteriore viaggio nel server. | &nbsp; |
+| &nbsp; | &nbsp; |
+
+<sup>1</sup> questa versione richiede il driver ODBC 17.4.2 o versione successiva. In caso contrario, verrà visualizzato un avviso relativo alla mancata impostazione di un attributo. Questo avviso può essere eliminato quando si utilizza un driver ODBC meno recente. Se si usa SQLSRV, vedere [procedura: configurare la gestione degli errori e degli avvisi con il driver sqlsrv](https://docs.microsoft.com/sql/connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver). Se si utilizza PDO_SQLSRV, gli avvisi vengono eliminati per impostazione predefinita, ma possono essere registrati. Per informazioni dettagliate, controllare l' [attività di registrazione](https://docs.microsoft.com/sql/connect/php/logging-activity) .
 
 ## <a name="581"></a>5.8.1
 

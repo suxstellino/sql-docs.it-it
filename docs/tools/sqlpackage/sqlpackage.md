@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 11/4/2020
-ms.openlocfilehash: 8555a183dc1f888e6ae80b78999b5fc234b431cf
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: ef49071f97d255d98f8086b9ff329c77d7b4afad
+ms.sourcegitcommit: 5ceafd29b8f22edb800cec150f0ccddea43313e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98594413"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98983664"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -23,13 +23,13 @@ ms.locfileid: "98594413"
   
 - [Versione](#version): restituisce il numero di build dell'applicazione SqlPackage.  Aggiunto nella versione 18.6.
 
-- [Extract](sqlpackage-extract.md): crea un file snapshot del database con estensione dacpac da un database SQL Server o SQL di Azure attivo.  
+- [Extract](sqlpackage-extract.md): crea un file di applicazione livello dati (con estensione dacpac) che contiene lo schema o lo schema e i dati dell'utente da un database SQL connesso.  
   
 - [Publish](sqlpackage-publish.md): aggiorna in modo incrementale uno schema di database affinché corrisponda allo schema di un file di origine con estensione dacpac. Se il database non esiste nel server, viene creato durante l'operazione di pubblicazione. In caso contrario, verrà aggiornato un database esistente.  
   
-- [Export](sqlpackage-export.md): esporta un database attivo, inclusi lo schema del database e i dati utente, da un database SQL Server o SQL di Azure in un pacchetto BACPAC (file con estensione bacpac).  
+- [Export](sqlpackage-export.md): esporta un database SQL connesso, inclusi lo schema del database e i dati utente, in un file BACPAC (con estensione bacpac).  
   
-- [Import](sqlpackage-import.md): importa i dati di tabella e dello schema da un pacchetto BACPAC in un nuovo database utente in un'istanza di database SQL Server o SQL di Azure.  
+- [Import](sqlpackage-import.md): importa i dati dello schema e della tabella da un file BACPAC in un nuovo database utente.  
   
 - [DeployReport](sqlpackage-deploy-drift-report.md): crea un report XML delle modifiche che verrebbero effettuate da un'azione Publish.  
   

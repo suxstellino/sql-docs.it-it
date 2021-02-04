@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: a2ed61eb89deb29b22f82f39de4091f65be43cea
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 87294a8d20bf1c297c1629509a85cde7493b6ef5
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98595318"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076609"
 ---
 # <a name="before-installing-failover-clustering"></a>Operazioni preliminari all'installazione del clustering di failover
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "98595318"
   
 -   Installare i prerequisiti software. Prima di eseguire il programma di installazione per installare o effettuare l'aggiornamento a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], installare i prerequisiti riportati di seguito per ridurre il tempo di installazione. È possibile installare il software necessario in ogni nodo del cluster di failover, quindi riavviare i nodi prima di eseguire il programma di installazione.  
   
-    -   Windows PowerShell non viene installato più dal programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Windows PowerShell è un prerequisito per l'installazione dei componenti di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] e [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Se Windows PowerShell non è installato nel computer, è possibile abilitarlo seguendo le istruzioni disponibili nella pagina [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) .  
+    -   Windows PowerShell non viene installato più dal programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Windows PowerShell è un prerequisito per l'installazione dei componenti di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] e [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Se Windows PowerShell non è installato nel computer, è possibile abilitarlo seguendo le istruzioni disponibili nella pagina [Windows Management Framework](/powershell/scripting/windows-powershell/wmf/overview) .  
   
     -   .NET Framework 3.5 SP1 non viene più installato dal programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], tuttavia può essere richiesto durante l'istallazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in sistemi operativi Windows meno recenti. Per altre informazioni, vedere [Note sulla versione di](/previous-versions/sql/sql-server-15/dn169381(v=sql.15))[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
@@ -145,7 +145,7 @@ ms.locfileid: "98595318"
   
 -   Vedere [Considerazioni sulla sicurezza per un'installazione di SQL Server](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
--   Per abilitare l'autenticazione Kerberos con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [Come usare l'autenticazione Kerberos in SQL Server](https://support.microsoft.com/kb/319723) nella [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Knowledge Base.  
+-   Per abilitare l'autenticazione Kerberos con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [Come usare l'autenticazione Kerberos in SQL Server](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/319723) nella [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Knowledge Base.  
 
 -   Per l'istanza del cluster di failover di SQL Server è necessario che i nodi del cluster siano aggiunti a un dominio. **Non sono supportate** le configurazioni seguenti: 
     *   Istanza del cluster di failover di SQL Server in cluster di gruppi di lavoro. 

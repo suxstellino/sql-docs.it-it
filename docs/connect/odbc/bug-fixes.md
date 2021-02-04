@@ -2,7 +2,7 @@
 title: Elenco di bug risolti
 description: Questa pagina contiene un elenco dei bug risolti in ogni versione, a partire da Microsoft ODBC Driver 17 per SQL Server.
 ms.custom: ''
-ms.date: 04/24/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,16 +14,25 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: fb686e3c70723cf847853ad558f47cf37da23972
-ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
-ms.translationtype: HT
+ms.openlocfilehash: dcb4ec36406c44f51984ee5a8fc3afc2f0019a6e
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87544304"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076353"
 ---
 # <a name="list-of-bugs-fixed"></a>Elenco di bug risolti
 
 Questa pagina contiene un elenco dei bug risolti in ogni versione, a partire da [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+### <a name="bug-fixes-in-the-msconame-odbc-driver-177-for-ssnoversion"></a>Correzioni di bug nel [!INCLUDE[msCoName](../../includes/msconame_md.md)] driver ODBC 17,7 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Correzione della codifica dei caratteri delle colonne VARIANT in modalità nativa BCP
+- Correzione dell'impostazione di SQL_ATTR_PARAMS_PROCESSED_PTR in condizioni specifiche
+- Correzione di SQLDescribeParam in modalità FMTONLY per istruzioni contenenti commenti
+- Risolvere un problema relativo all'autenticazione federata quando si usa okta
+- Correzione di un utilizzo eccessivo della memoria nei sistemi a più processori
+- Correzione dell'autenticazione Azure AD per alcune varianti del database SQL di Azure
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-176-for-ssnoversion"></a>Correzioni di bug in [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.6 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

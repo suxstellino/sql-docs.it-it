@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: cheenamalhotra
 ms.author: v-chmalh
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 12b25a6e8d7b9a5ac77a198ab047150c94b745df
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: 7fdf55463bada69b93a657e7aff69bdabf0e8de0
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534503"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075983"
 ---
 # <a name="using-always-encrypted-with-the-microsoft-net-data-provider-for-sql-server"></a>Uso di Always Encrypted con il provider di dati Microsoft .NET per SQL Server
 
@@ -87,7 +87,7 @@ Per abilitare i calcoli dell'enclave per una connessione di database, è necessa
 - `Enclave Attestation URL` : specifica un URL di attestazione (un endpoint del servizio di attestazione). È necessario ottenere un URL di attestazione per l'ambiente dall'amministratore del servizio di attestazione.
 
   - Se si usa [!INCLUDE[ssnoversion-md](../../../includes/ssnoversion-md.md)] e il servizio Sorveglianza host (HGS), vedere [Determinare e condividere l'URL di attestazione HGS](../../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
-  - Se si usa [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] e il servizio Attestazione di Microsoft Azure, vedere [Determinare l'URL di attestazione per i criteri di attestazione](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy).
+  - Se si usa [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] e il servizio Attestazione di Microsoft Azure, vedere [Determinare l'URL di attestazione per i criteri di attestazione](/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sql-server-ver15#secure-enclave-attestation).
 
 Per un'esercitazione dettagliata, vedere [Esercitazione: Sviluppare un'applicazione .NET usando Always Encrypted con enclave sicuri](tutorial-always-encrypted-enclaves-develop-net-apps.md).
 

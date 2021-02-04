@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: reneye
 ms.author: v-reye
-ms.openlocfilehash: 4016f3eb5d725673b1e4149d43dc21d20cdc627f
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: 3970374537cc3491a0d8d624c3eccd31db0134e7
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534640"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076969"
 ---
 # <a name="using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver"></a>Uso di Always Encrypted con enclave sicuri con JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ Per abilitare i calcoli dell'enclave per una connessione di database, è necessa
 
 - **enclaveAttestationUrl:** -specifica un URL di attestazione (un endpoint del servizio di attestazione). È necessario ottenere un URL di attestazione per l'ambiente dall'amministratore del servizio di attestazione.
   - Se si usa [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] e il servizio Sorveglianza host (HGS), vedere [Determinare e condividere l'URL di attestazione HGS](../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
-  - Se si usa [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e il servizio Attestazione di Microsoft Azure, vedere [Determinare l'URL di attestazione per i criteri di attestazione](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy).
+  - Se si usa [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e il servizio Attestazione di Microsoft Azure, vedere [Determinare l'URL di attestazione per i criteri di attestazione](/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sql-server-ver15#secure-enclave-attestation).
 
 Gli utenti devono abilitare **columnEncryptionSetting** e impostare correttamente **entrambe** le proprietà della stringa di connessione sopra indicate per abilitare always Encrypted con enclave sicure da [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] .
 

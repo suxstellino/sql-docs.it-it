@@ -17,12 +17,12 @@ ms.author: maghan
 ms.reviewer: matteot, drskwier
 ms.custom: ''
 ms.date: 07/31/2019
-ms.openlocfilehash: 68546680f73674b416aa42d141c7ea5d2f8b51b7
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
-ms.translationtype: HT
+ms.openlocfilehash: 67ad8b940787f50f36ea6798282b651c290d4fca
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081910"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076203"
 ---
 # <a name="sql-server-powershell-provider"></a>Provider PowerShell per SQL Server
 
@@ -40,7 +40,7 @@ Attraverso i percorsi implementati dal provider di [!INCLUDE[ssNoVersion](../inc
 
 Nei prodotti in cui i dati o i modelli a oggetti possono essere rappresentati in una gerarchia, per esporre le gerarchie vengono utilizzati i provider Windows PowerShell. La gerarchia viene esposta utilizzando una struttura di unità e percorsi simile a quelle utilizzate dal file system di Windows.  
   
- Ciascun provider Windows PowerShell implementa una o più unità. Ciascuna unità è il nodo radice di una gerarchia di oggetti correlati. Il provider [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implementa un'unità SQLSERVER:. Nel provider viene inoltre definito un set di cartelle primarie per l'unità SQLSERVER:. Ogni cartella e le relative sottocartelle rappresentano il set di oggetti a cui è possibile accedere usando un modello SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects). Quando si seleziona una sottocartella in un percorso che inizia con una di queste cartelle principali, è possibile utilizzare i metodi del modello a oggetti associato per eseguire azioni sull'oggetto rappresentato dal nodo. Le cartelle di Windows PowerShell implementate dal provider [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] sono elencate nella tabella seguente:  
+ Ciascun provider Windows PowerShell implementa una o più unità. Ciascuna unità è il nodo radice di una gerarchia di oggetti correlati. Il provider [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implementa un'unità SQLSERVER:. Nel provider viene inoltre definito un set di cartelle primarie per l'unità SQLSERVER:. Ogni cartella e le relative sottocartelle rappresentano il set di oggetti a cui è possibile accedere usando un modello SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects). Quando si seleziona una sottocartella in un percorso che inizia con una di queste cartelle principali, è possibile utilizzare i metodi del modello a oggetti associato per eseguire azioni sull'oggetto rappresentato dal nodo. Le cartelle di Windows PowerShell implementate dal provider [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] sono elencate nella tabella seguente:  
   
 |Cartella|Spazio dei nomi del modello a oggetti di SQL Server|Oggetti|  
 |------------|---------------------------------------|-------------|  

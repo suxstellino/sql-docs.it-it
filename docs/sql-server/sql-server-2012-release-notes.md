@@ -13,12 +13,12 @@ ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016
-ms.openlocfilehash: fff3b6de7e2e83c535997194ca2622d9cd9e9595
-ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.openlocfilehash: 06294cb2dbf588ed5f7588d05ee5aa1c5af971bc
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98766175"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076073"
 ---
 # <a name="sql-server-2012-release-notes"></a>Note sulla versione di SQL Server 2012
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -192,7 +192,7 @@ Di seguito viene descritto il comportamento dell'installazione dei prerequisiti 
   
     -   Se si installa SQL Server 2012 in un computer con il sistema operativo Windows 7 SP1 o Windows Server 2008 R2 SP1, questo aggiornamento è già installato nel computer.  
   
--   Windows PowerShell 2.0 è un prerequisito per l'installazione dei componenti del motore di database di SQL Server 2012 e SQL Server Management Studio, tuttavia il programma di installazione di SQL Server non ne prevede più l'installazione. Se PowerShell 2.0 non è già installato nel computer, è possibile abilitarlo seguendo le istruzioni disponibili nella pagina [Framework di gestione Windows](https://support.microsoft.com/kb/968929) . La modalità per ottenere Windows PowerShell 2.0 dipende dal sistema operativo in esecuzione:  
+-   Windows PowerShell 2.0 è un prerequisito per l'installazione dei componenti del motore di database di SQL Server 2012 e SQL Server Management Studio, tuttavia il programma di installazione di SQL Server non ne prevede più l'installazione. Se PowerShell 2.0 non è già installato nel computer, è possibile abilitarlo seguendo le istruzioni disponibili nella pagina [Framework di gestione Windows](https://mskb.pkisolutions.com/kb/968929) . La modalità per ottenere Windows PowerShell 2.0 dipende dal sistema operativo in esecuzione:  
   
     -   Windows Server 2008: Windows PowerShell 1.0 è una funzionalità e può essere aggiunta. Vengono scaricate e installate le versioni di Windows PowerShell 2.0 (di fatto come patch del sistema operativo).  
   
