@@ -17,18 +17,18 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
-ms.openlocfilehash: 9188b822e7bf0e0024e6c6fcdbe81db7ea05002f
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
-ms.translationtype: HT
+ms.openlocfilehash: 2066f5a90f27b892827c1a36034a3f9e57f4f0ea
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037544"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250468"
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>Rimozione di un gruppo di server (SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-In questo argomento viene descritto come rimuovere un gruppo di server in Server registrati in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È possibile eliminare un gruppo di server in qualunque momento. Se il gruppo di server non è vuoto, qualunque server o gruppo di server incluso nel gruppo di server eliminato verrà eliminato. Prima di eliminare un gruppo di server, spostare in un nuovo gruppo di server eventuali server o gruppi di server da mantenere.  
+In questo argomento viene descritto come rimuovere un gruppo di server in Server registrati in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È possibile eliminare un gruppo di server in qualunque momento. Se il gruppo di server non è vuoto, qualunque server o gruppo di server incluso nel gruppo di server eliminato verrà eliminato. Prima di eliminare un gruppo di server, spostare in un nuovo gruppo di server eventuali server o gruppi di server da mantenere.  
   
 ##  <a name="SSMSProcedure"></a>  
   

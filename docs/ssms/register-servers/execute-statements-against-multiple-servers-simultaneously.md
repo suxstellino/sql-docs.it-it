@@ -15,18 +15,18 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/18/2016
-ms.openlocfilehash: 91a18087a9bf3f844988dec16e84a1cdbbfb1948
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
-ms.translationtype: HT
+ms.openlocfilehash: 1c5de69d2a4167d03dcc5ea5c34ed6f0262c4678
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037577"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250422"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously"></a>Eseguire simultaneamente istruzioni su più server
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-In questo argomento viene descritto come eseguire una query su più server contemporaneamente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]creando un gruppo di server locali, o un server di gestione centrale e uno o più gruppi di server, e uno o più server registrati all'interno dei gruppi, quindi eseguendo la query sul gruppo completo. 
+In questo argomento viene descritto come eseguire una query su più server contemporaneamente in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]creando un gruppo di server locali, o un server di gestione centrale e uno o più gruppi di server, e uno o più server registrati all'interno dei gruppi, quindi eseguendo la query sul gruppo completo. 
 
 I risultati restituiti dalla query possono essere riuniti in un unico riquadro dei risultati oppure possono essere restituiti in riquadri dei risultati separati. Il set di risultati può includere colonne aggiuntive per il nome del server e l'account di accesso usati dalla query in ciascun server. I server di gestione centrale e i server subordinati possono essere registrati solo tramite l'autenticazione di Windows. I server inclusi nei gruppi di server locali possono essere registrati tramite l'autenticazione di Windows o l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

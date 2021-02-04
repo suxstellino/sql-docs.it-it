@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: a596212e17e6fb273b9a6c4f5a2548aff1bc1e7f
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 12703b6b6103646cafdcf42a12837041c3b20567
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642842"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251390"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>Installare strumenti client in un cluster di failover di SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "97642842"
   
 3.  Prima che l'installazione continui, Controllo configurazione sistema verificherà lo stato del sistema del computer.  
   
-4.  Nella pagina **Tipo di installazione** fare clic su **Esegui una nuova installazione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** .  
+4.  Nella pagina **Tipo di installazione** fare clic su **Esegui una nuova installazione di [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]** .  
   
 5.  Nella pagina **Selezione funzionalità** selezionare gli strumenti che si vuole installare e attenersi alle istruzioni della restante parte del processo di installazione.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "97642842"
 3.  Per installare gli strumenti di gestione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] completi, eseguire il comando seguente: Setup.exe/q/Action=Install /Features=ADV_SSMS. Per altre informazioni sui valori dei parametri per le funzionalità, vedere [Installazione di SQL Server 2016 dal prompt dei comandi](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ### <a name="uninstalling-ssnoversion-client-tools"></a>Disinstallazione degli strumenti client di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
- Questi strumenti vengono visualizzati in Installazione applicazioni nel Pannello di controllo come **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** e possono essere rimossi dalla stessa posizione. Se si utilizza l'opzione per la rimozione dei nodi per disinstallare un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dal cluster di failover, non verranno contemporaneamente disinstallati i componenti client.  
+ Questi strumenti vengono visualizzati in Installazione applicazioni nel Pannello di controllo come **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]** e possono essere rimossi dalla stessa posizione. Se si utilizza l'opzione per la rimozione dei nodi per disinstallare un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dal cluster di failover, non verranno contemporaneamente disinstallati i componenti client.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  

@@ -2,7 +2,7 @@
 title: Uso di Always Encrypted con il driver JDBC
 description: Informazioni su come usare Always Encrypted nell'applicazione Java con il driver JDBC per SQL Server per crittografare i dati sensibili nel server.
 ms.custom: ''
-ms.date: 08/24/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 52fc716acb62ea82a6a29c1cceaa73a30cc93c44
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
-ms.translationtype: HT
+ms.openlocfilehash: a89deba9ed124587899bc915fa86ef74074ed761
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727506"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195275"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Uso di Always Encrypted con il driver JDBC
 
@@ -99,7 +99,7 @@ String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<p
 Il driver JDBC crea automaticamente un'istanza di un oggetto **SQLServerColumnEncryptionAzureKeyVaultProvider** quando queste credenziali sono presenti tra le proprietà di connessione.
 
 > [!IMPORTANT]
-> Le proprietà di connessione **keyVaultProviderClientId** e **keyVaultProviderClientKey** sono state deprecate a partire da v 8.4.1. Gli utenti sono invitati a usare **keyStoreAuthentication**, **KeyStorePrincipalId**e **KeyStoreSecret**.
+> Le proprietà di connessione **keyVaultProviderClientId** e **keyVaultProviderClientKey** sono state deprecate a partire da v 8.4.1. Gli utenti sono invitati a usare **keyStoreAuthentication**, **KeyStorePrincipalId** e **KeyStoreSecret**.
 
 #### <a name="jdbc-driver-version-prior-to-741"></a>Driver JDBC con versione precedente a 7.4.1
 
@@ -126,9 +126,9 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >
 >  [azure-sdk-for-java](https://github.com/Azure/azure-sdk-for-java)
 >
->  [azure-activedirectory-library-for-java libraries](https://github.com/AzureAD/azure-activedirectory-library-for-java)
+>  [librerie Microsoft-Authentication-Library-for-Java](https://github.com/AzureAD/microsoft-authentication-library-for-java)
 >
-> Per un esempio di come includere queste dipendenze in un progetto Maven, vedere [Scaricare le dipendenze ADAL4J e AKV con Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
+> Per un esempio di come includere queste dipendenze in un progetto Maven, vedere [scaricare le dipendenze MSAL4J e AKV con Apache Maven](https://github.com/microsoft/mssql-jdbc/wiki/Download-MSAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
 ### <a name="using-azure-key-vault-authentication-with-managed-identities"></a>Uso dell'autenticazione di Azure Key Vault con le identità gestite
 

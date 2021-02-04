@@ -16,18 +16,18 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/28/2016
-ms.openlocfilehash: 5b9c676b9c9bdef3f7172da60406239ba50f8c86
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
-ms.translationtype: HT
+ms.openlocfilehash: 9f34d85e6b26a8674ed0c05788299eb568e7080a
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037555"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250402"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>Registrazione di un server connesso (SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Questo argomento descrive come registrare un server connesso in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS). Tramite la registrazione del server è possibile salvare le informazioni di connessione per i server ai quali si accede di frequente. È possibile registrare un server prima della connessione o durate la connessione da Esplora oggetti.  Per visualizzare i server registrati in SSMS, selezionare **Visualizza**\\**Server registrati** dal menu.
+Questo argomento descrive come registrare un server connesso in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS). Tramite la registrazione del server è possibile salvare le informazioni di connessione per i server ai quali si accede di frequente. È possibile registrare un server prima della connessione o durate la connessione da Esplora oggetti.  Per visualizzare i server registrati in SSMS, selezionare **Visualizza**\\**Server registrati** dal menu.
   
  **Contenuto dell'articolo**  
   
@@ -57,7 +57,7 @@ Quando un utente si connette con un nome di accesso e una password da una connes
      > [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] Per altre informazioni, vedere [Scegliere una modalità di autenticazione](../../relational-databases/security/choose-an-authentication-mode.md).  
 
      -    **Nome utente**  
-Consente di visualizzare il nome utente utilizzato dalla connessione corrente. Questa opzione di sola lettura è disponibile solo se si è scelto di utilizzare l'autenticazione di Windows per la connessione. Per modificare il **Nome utente**connettersi al computer come utente diverso. 
+Consente di visualizzare il nome utente utilizzato dalla connessione corrente. Questa opzione di sola lettura è disponibile solo se si è scelto di utilizzare l'autenticazione di Windows per la connessione. Per modificare il **Nome utente** connettersi al computer come utente diverso. 
 
      -    **Accesso**  
 Immettere l'account di accesso da utilizzare per la connessione. Questa opzione è disponibile solo se si è scelto di utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la connessione.  

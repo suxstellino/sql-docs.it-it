@@ -15,12 +15,12 @@ helpviewer_keywords:
 - BCPColFmt method
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bfff1da26e499043206fc3f777e1bd9ba5902e44
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
-ms.translationtype: HT
+ms.openlocfilehash: 4806671e534faf347837333b0c667c396751aeef
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081860"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186295"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,9 +60,9 @@ HRESULT BCPColFmt(
   
 -   La lunghezza massima dei dati per ogni campo del file utente.  
   
--   La sequenza di byte di terminazione facoltativa per ogni campo<a href="#terminator_note"><sup>**1**</sup></a>.  
+-   La sequenza di byte di terminazione facoltativa per ogni campo <a href="#terminator_note"><sup>**1**</sup></a>.  
   
--   La lunghezza della sequenza di byte di terminazione facoltativa<a href="#terminator_note"><sup>**1**</sup></a>.  
+-   La lunghezza della sequenza di byte di terminazione facoltativa <a href="#terminator_note"><sup>**1**</sup></a>.  
   
 
 > [!IMPORTANT]

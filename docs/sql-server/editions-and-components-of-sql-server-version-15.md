@@ -1,5 +1,5 @@
 ---
-description: Edizioni e funzionalità supportate di [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
+description: Edizioni e funzionalità supportate di [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]
 title: Edizioni e funzionalità supportate di SQL Server 2019 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
@@ -34,18 +34,18 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: e0a8f226602ab41422715368fb12c13809fa6b40
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 9987384899eeb9087a938d8fd8e8b156ff8e1962
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477152"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236271"
 ---
-# <a name="editions-and-supported-features-of-sssqlv15-md"></a>Edizioni e funzionalità supportate di [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
+# <a name="editions-and-supported-features-of-sssql19-md"></a>Edizioni e funzionalità supportate di [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx](../includes/applies-to-version/sqlserver.md)]
 
-Questo argomento offre informazioni dettagliate sulle funzionalità supportate dalle diverse edizioni di [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)].
+Questo argomento offre informazioni dettagliate sulle funzionalità supportate dalle diverse edizioni di [!INCLUDE[sssql19-md](../includes/sssql19-md.md)].
 
 Per informazioni sulle versioni precedenti, vedere:
 
@@ -58,10 +58,10 @@ I requisiti di installazione variano in base alle esigenze dell'applicazione. Le
 
 Per le note sulla versione più recenti e informazioni sulle novità, vedere quanto segue:
 
-* [Note sulla versione di [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]](../sql-server/sql-server-version-15-release-notes.md)
+* [Note sulla versione di [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]](../sql-server/sql-server-version-15-release-notes.md)
 * [Novità di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-**Provare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: [scaricare [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] da Evaluation Center](https://www.microsoft.com//evalcenter/evaluate-sql-server)**
+**Provare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: [scaricare [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] da Evaluation Center](https://www.microsoft.com//evalcenter/evaluate-sql-server)**
 
 ## <a name="ssnoversion-editions"></a>Edizioni di[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]
 
@@ -103,8 +103,8 @@ Utilizzare le informazioni incluse nelle tabelle seguenti per determinare il set
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|In[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono inclusi componenti client e server per la creazione, la gestione e la distribuzione di report tabulari, matrice, grafici e in formato libero. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è inoltre una piattaforma estendibile che consente di sviluppare applicazioni di creazione di report.|
 |[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è un set di strumenti grafici e oggetti programmabili per lo spostamento, la copia e la trasformazione di dati. È incluso, inoltre, il componente [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) per [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].|
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) è la soluzione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per la gestione dei dati master. MDS può essere configurato per gestire qualsiasi dominio (prodotti, clienti, account) e può includere gerarchie, sicurezza granulare, transazioni, controllo delle versioni dei dati e regole business e un [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] che può essere utilizzato per gestire dati.|
-|Machine Learning Services (In-Database)|Machine Learning Services (In-Database) supporta soluzioni di Machine Learning distribuite e scalabili che usano origini dati aziendali. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016 era supportato il linguaggio R. [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] supporta R e Python.|
-|Machine Learning Server (Standalone)|Machine Learning Server (Standalone) supporta la distribuzione di soluzioni di Machine Learning distribuite e scalabili su più piattaforme che usano più origini dati aziendali, tra cui Linux e Hadoop. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016 era supportato il linguaggio R. [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] supporta R e Python.|
+|Machine Learning Services (In-Database)|Machine Learning Services (In-Database) supporta soluzioni di Machine Learning distribuite e scalabili che usano origini dati aziendali. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016 era supportato il linguaggio R. [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] supporta R e Python.|
+|Machine Learning Server (Standalone)|Machine Learning Server (Standalone) supporta la distribuzione di soluzioni di Machine Learning distribuite e scalabili su più piattaforme che usano più origini dati aziendali, tra cui Linux e Hadoop. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016 era supportato il linguaggio R. [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] supporta R e Python.|
 
 |Strumenti di gestione|Descrizione|
 |----------------------|-----------------|

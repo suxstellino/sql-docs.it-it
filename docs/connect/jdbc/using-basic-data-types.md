@@ -2,7 +2,7 @@
 title: Uso di tipi di dati di base JDBC
 description: Microsoft JDBC driver per SQL Server usa i tipi di dati JDBC di base per convertire i tipi di dati SQL Server in un formato che può essere riconosciuto da Java.
 ms.custom: ''
-ms.date: 08/24/2019
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3c26c3c065ddf415d966c8fd3613e284c3c7a2b6
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
-ms.translationtype: HT
+ms.openlocfilehash: 1c6f764fffca3408380da9c96227eb9d7bb4457c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806996"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195268"
 ---
 # <a name="using-basic-data-types"></a>Uso di tipi di dati di base
 
@@ -63,7 +63,7 @@ Nella tabella seguente sono elencati i mapping predefiniti tra i tipi di dati di
 | varchar            | VARCHAR                                            | string                       |
 | ntext       | VARCHAR                                            | string                       |
 | Xml                | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | string<br /><br /> SQLXML    |
-| sqlvariant         | SQLVARIANT                                         | Oggetto                       |
+| sqlvariant         | microsoft.sql.Types.SQL_VARIANT                    | Oggetto                       |
 | geometry           | VARBINARY                                          | byte[]                       |
 | geography          | VARBINARY                                          | byte[]                       |
   

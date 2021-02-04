@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: b499c7236391c7286c4a267c433ad991a963dab5
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: ced175a83c3229af6f9e2af166647dc8c0f41864
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98688923"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237591"
 ---
 # <a name="sqlcmd-utility"></a>Utilità sqlcmd
 
@@ -57,7 +57,7 @@ L'utilità usa ODBC per eseguire batch Transact-SQL.
 **[![Download sqlcmd per x64](../ssdt/media/download.png) Download di Microsoft Command Line Utilities 15 per SQL Server (x64) (2,6 MB)](https://go.microsoft.com/fwlink/?linkid=2142258)**
 <br>**[![Download sqlcmd per x86](../ssdt/media/download.png) Download di Microsoft Command Line Utilities 15 per SQL Server (x86) (2,3 MB)](https://go.microsoft.com/fwlink/?linkid=2142257)**
 
-Gli strumenti da riga di comando dipendono dalla disponibilità generale (GA), ma vengono rilasciati con il pacchetto di installazione per [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+Gli strumenti da riga di comando dipendono dalla disponibilità generale (GA), ma vengono rilasciati con il pacchetto di installazione per [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)].
 
 **Informazioni sulla versione**
 

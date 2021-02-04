@@ -11,18 +11,18 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 2e5b44b8acd2d1c46649203c482b8ed4370c0dcb
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
-ms.translationtype: HT
+ms.openlocfilehash: 877373506564d3e3d5d847fbcf5b4afb6c1e52cf
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036954"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250465"
 ---
 # <a name="change-a-server39s-registration-sql-server-management-studio"></a>Modificare la registrazione di un server (SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-In questo argomento viene illustrato come modificare la registrazione di un server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È possibile modificare le informazioni di connessione di un server registrato in qualsiasi momento.
+In questo argomento viene illustrato come modificare la registrazione di un server in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È possibile modificare le informazioni di connessione di un server registrato in qualsiasi momento.
 
 ## <a name="SSMSProcedure"></a>
 

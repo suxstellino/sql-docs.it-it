@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 4c230a793b81960b29e66813ba392eeb6395d5ee
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 40c1f3b925612611d1fe925f87bd2d4dd9d926c4
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642749"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251235"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Clustering su più subnet di SQL Server (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "97642749"
   
    
 ##  <a name="sql-server-multi-subnet-failover-cluster-two-nodes-two-subnets"></a><a name="VisualElement"></a> Clustering di failover su più subnet di SQL Server (due nodi, due subnet)  
- Nella figura seguente è illustrata un'istanza di cluster di failover (FCI) con due nodi e due subnet in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+ Nella figura seguente è illustrata un'istanza di cluster di failover (FCI) con due nodi e due subnet in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)].  
   
  ![Architettura con più subnet con MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.png "Architettura con più subnet con MultiSubnetFailover")  
   
@@ -67,7 +67,7 @@ ms.locfileid: "97642749"
 ##  <a name="client-recovery-latency-during-failover"></a><a name="DNS"></a> Latenza di recupero del client durante i failover  
  Una FCI su più subnet abilita per impostazione predefinita la risorsa cluster RegisterAllProvidersIP per il nome di rete. In una configurazione con più subnet, sia gli indirizzi IP online che offline del nome di rete verranno registrati sul server DNS. L'applicazione client recupera quindi tutti gli indirizzi IP registrati dal server DNS e tenta di connettersi agli indirizzi in sequenza o in parallelo. Ciò significa che il tempo di recupero del client nei failover con più subnet non dipende più dalle latenze di aggiornamento DNS. Per impostazione predefinita, il client prova gli indirizzi IP in sequenza. Quando il client utilizza il nuovo parametro **MultiSubnetFailover=True** facoltativo nella stringa di connessione, prova invece gli indirizzi IP simultaneamente e si connette al primo server che risponde. In questo modo è possibile ridurre la latenza di recupero del client quando si verificano i failover. Per altre informazioni, vedere [Connettività client Always On (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md) e [Creare o configurare un listener del gruppo di disponibilità (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
- Con librerie client legacy o provider di dati di terze parti non è possibile utilizzare il parametro **MultiSubnetFailover** nella stringa di connessione. Per assicurarsi che l'applicazione client funzioni in maniera ottimale con FCI su più subnet in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], provare a regolare il timeout di connessione nella stringa di connessione client di 21 secondi per ogni indirizzo IP aggiuntivo. In questo modo non si verifica il timeout del tentativo di riconnessione del client prima che siano stati scorsi tutti gli indirizzi IP nella FCI su più subnet.  
+ Con librerie client legacy o provider di dati di terze parti non è possibile utilizzare il parametro **MultiSubnetFailover** nella stringa di connessione. Per assicurarsi che l'applicazione client funzioni in maniera ottimale con FCI su più subnet in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)], provare a regolare il timeout di connessione nella stringa di connessione client di 21 secondi per ogni indirizzo IP aggiuntivo. In questo modo non si verifica il timeout del tentativo di riconnessione del client prima che siano stati scorsi tutti gli indirizzi IP nella FCI su più subnet.  
   
  Il periodo di timeout predefinito della connessione client per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio e **sqlcmd** è di 15 secondi.  
  

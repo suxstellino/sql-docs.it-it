@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - sqlsrv_fetch_array
 apitype: NA
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a9067a7ffa6bd6379fb9384b915d07cb64893467
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
-ms.translationtype: HT
+ms.openlocfilehash: 6e0df700729db03d2d0dd52ac5d0a251827db7d8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92080641"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195659"
 ---
 # <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -64,7 +64,7 @@ Per altre informazioni su questi valori, vedere [Specifica di un tipo di cursore
 ## <a name="return-value"></a>Valore restituito  
 Se viene recuperata una riga di dati, viene restituita una **matrice** . Se non sono presenti altre righe da recuperare, viene restituito **null** . Se si verifica un errore, viene restituito **false** .  
   
-In base al valore del parametro *$fetchType* , la **matrice** restituita può essere una **matrice**indicizzata numericamente, una **matrice**associativa o entrambe. Per impostazione predefinita, viene restituita una **matrice** con chiavi sia numeriche sia associative. Il tipo di dati di un valore nella matrice restituita corrisponderà al tipo di dati PHP predefinito. Per informazioni sui tipi di dati PHP predefiniti, vedere [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
+In base al valore del parametro *$fetchType* , la **matrice** restituita può essere una **matrice** indicizzata numericamente, una **matrice** associativa o entrambe. Per impostazione predefinita, viene restituita una **matrice** con chiavi sia numeriche sia associative. Il tipo di dati di un valore nella matrice restituita corrisponderà al tipo di dati PHP predefinito. Per informazioni sui tipi di dati PHP predefiniti, vedere [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
 ## <a name="remarks"></a>Osservazioni  
 Se viene restituita una colonna senza nome, la chiave associativa per l'elemento della matrice sarà una stringa vuota (""). Ad esempio, si consideri l'istruzione Transact-SQL seguente che inserisce un valore in una tabella di database e recupera la chiave primaria generata dal server:  
@@ -83,7 +83,7 @@ SELECT SCOPE_IDENTITY() AS PictureID
 Se un set di risultati contiene più colonne senza nome, alla chiave della stringa vuota ("") verrà assegnato il valore dell'ultima colonna senza nome.  
   
 ## <a name="associative-array-example"></a>Esempio di matrice associativa  
-L'esempio seguente recupera ciascuna riga di un set di risultati in forma di **matrice**associativa. Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
+L'esempio seguente recupera ciascuna riga di un set di risultati in forma di **matrice** associativa. Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  

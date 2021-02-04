@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 56cfc62709e24fc48704ed44b86a866b07a0b0ef
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 11e424ef4f32b91a7c4d65faf796335a3f7faf26
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642667"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251218"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Windows Server Failover Clustering con SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Un *cluster di failover WSFC* (Windows Server Failover Clustering) è un gruppo di server indipendenti usati congiuntamente per aumentare la disponibilità di applicazioni e servizi. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] vengono utilizzate le funzionalità e i servizi di WSFC per supportare le istanze del cluster di failover di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+  Un *cluster di failover WSFC* (Windows Server Failover Clustering) è un gruppo di server indipendenti usati congiuntamente per aumentare la disponibilità di applicazioni e servizi. [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] vengono utilizzate le funzionalità e i servizi di WSFC per supportare le istanze del cluster di failover di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
    
 ##  <a name="terms-and-definitions"></a><a name="TermsAndDefs"></a> Termini e definizioni  
@@ -76,7 +76,7 @@ ms.locfileid: "97642667"
  Per altre informazioni, vedere [Panoramica di Clustering di failover - Windows Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831579(v=ws.11))  
   
 ##  <a name="sql-server-always-on-technologies-and-wsfc"></a><a name="AlwaysOnWsfcTech"></a> Tecnologie AlwaysOn e WSFC di SQL Server  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *Always On* è una nuova soluzione per la disponibilità elevata e il ripristino di emergenza basata su WSFC. Le funzionalità Always On offrono soluzioni integrate e flessibili che aumentano la disponibilità delle applicazioni, garantiscono un migliore rendimento degli investimenti in componenti hardware e semplifica la distribuzione e la gestione della disponibilità elevata.  
+ [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] *Always On* è una nuova soluzione per la disponibilità elevata e il ripristino di emergenza basata su WSFC. Le funzionalità Always On offrono soluzioni integrate e flessibili che aumentano la disponibilità delle applicazioni, garantiscono un migliore rendimento degli investimenti in componenti hardware e semplifica la distribuzione e la gestione della disponibilità elevata.  
   
  Per le istanze di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e del cluster di failover AlwaysOn viene utilizzata la tecnologia della piattaforma WSFC che prevede la registrazione dei componenti come risorse cluster WSFC.  Le risorse correlate vengono combinate in un *ruolo*, che può essere reso dipendente dalle altre risorse del cluster WSFC. Il cluster WSFC può quindi rilevare e segnalare la necessità di riavviare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o di eseguirne automaticamente il failover a un altro nodo server del cluster WSFC.  
   

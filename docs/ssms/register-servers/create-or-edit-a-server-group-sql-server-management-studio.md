@@ -18,18 +18,18 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 00caef8ecdd73814d60ce2c98c65ba0fc4083379
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
-ms.translationtype: HT
+ms.openlocfilehash: c180d44cf3ea9a0c878168eba4257e880c1ba965
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037602"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250936"
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>Creare o modificare un gruppo di server (SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-In questo argomento viene illustrato come organizzare i server in Server registrati in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] creando gruppi di server e inserendoli all'interno dei gruppi. È possibile creare gruppi di server in Server registrati in qualsiasi momento oppure quando si esegue la registrazione dei server.  
+In questo argomento viene illustrato come organizzare i server in Server registrati in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] creando gruppi di server e inserendoli all'interno dei gruppi. È possibile creare gruppi di server in Server registrati in qualsiasi momento oppure quando si esegue la registrazione dei server.  
 
 ## <a name="SSMSProcedure"></a>
 
@@ -46,7 +46,7 @@ In questo argomento viene illustrato come organizzare i server in Server registr
 5. Nella casella **Selezionare un percorso per il nuovo gruppo di server** fare clic su un percorso, quindi su **Salva**.  
 
    > [!NOTE]
-   >  È anche possibile creare un nuovo gruppo di server nell'ambito della registrazione di un server facendo clic su **Nuovo gruppo**e inserendo le informazioni nella finestra di dialogo **Nuovo gruppo** .  
+   >  È anche possibile creare un nuovo gruppo di server nell'ambito della registrazione di un server facendo clic su **Nuovo gruppo** e inserendo le informazioni nella finestra di dialogo **Nuovo gruppo** .  
 
 ## <a name="see-also"></a>Vedere anche
 

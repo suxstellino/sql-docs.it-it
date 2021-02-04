@@ -2,7 +2,7 @@
 title: Uso del driver JDBC | Microsoft Docs
 description: In questa sezione viene fornita una guida introduttiva alla creazione di una connessione semplice a un database SQL Server usando Microsoft JDBC Driver per SQL Server.
 ms.custom: ''
-ms.date: 08/24/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e042e1604c9a59bc823272743ed675b682882c94
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
-ms.translationtype: HT
+ms.openlocfilehash: 6b3550536a3512315d511efc831adc27b35ec974
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042554"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195255"
 ---
 # <a name="using-the-jdbc-driver"></a>Uso del driver JDBC
 
@@ -27,6 +27,8 @@ Questa sezione include istruzioni introduttive per creare una connessione sempli
 ## <a name="choosing-the-right-jar-file"></a>Scelta del file JAR corretto
 
 Microsoft JDBC Driver fornisce diversi file JAR da usare in base alle impostazioni JRE (Java Runtime Environment) preferite, come illustrato di seguito:
+
+Microsoft JDBC driver 9,2 per SQL Server fornisce i file di libreria di classi **MSSQL-JDBC-9.2.0. jre8. jar**, **MSSQL-JDBC-9.2.0. jre11. jar** e **MSSQL-JDBC-9.2.0. JRE15. jar** .
 
 Microsoft JDBC Driver 8.4 per SQL Server fornisce i file della libreria di classi **mssql-jdbc-8.4.1.jre8.jar**, **mssql-jdbc-8.4.1.jre11.jar** e **mssql-jdbc-8.4.1.jre14.jar**.
 
@@ -68,7 +70,32 @@ Se si usa il driver JDBC 8.2, impostare il classpath per l'inclusione del file *
 
 Se si usa il driver JDBC 8.4, impostare il classpath per l'inclusione del file **mssql-jdbc-8.4.1.jre8.jar**, **mssql-jdbc-8.4.1.jre11.jar** o **mssql-jdbc-8.4.1.jre14.jar**.
 
+Se si usa il driver JDBC 9,2, impostare il classpath in modo da includere **MSSQL-JDBC-9.2.0. jre8. jar**, **MSSQL-JDBC-9.2.0. jre11. jar** o **MSSQL-JDBC-9.2.0. JRE15. jar**.
+
 Se nel classpath manca una voce per il file JAR necessario, un'applicazione genera l'eccezione comune `Class not found`.  
+
+### <a name="for-microsoft-jdbc-driver-92"></a>Per Microsoft JDBC driver 9,2
+
+I file **MSSQL-JDBC-9.2.0. jre8. jar**, **MSSQL-JDBC-9.2.0. jre11. jar** o **MSSQL-JDBC-9.2.0. JRE15. jar** vengono installati nei percorsi seguenti:
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-9.2.0.jre8.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-9.2.0.jre11.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-9.2.0.jre15.jar
+```
+
+Il frammento di codice seguente è un esempio di istruzione CLASSPATH usata per un'applicazione Windows:
+
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 9.2 for SQL Server\sqljdbc_9.2\enu\mssql-jdbc-9.2.0.jre11.jar`
+
+Il frammento di codice seguente è un esempio di istruzione CLASSPATH usata per un'applicazione Unix/Linux:
+
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_9.2/enu/mssql-jdbc-9.2.0.jre11.jar`
+
+Verificare che l'istruzione CLASSPATH contenga solo una [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] , ad esempio **MSSQL-JDBC-9.2.0. jre8. jar**, **MSSQL-JDBC-9.2.0. jre11. jar** o **MSSQL-JDBC-9.2.0. JRE15. jar**.
+
 
 ### <a name="for-microsoft-jdbc-driver-84"></a>Per Microsoft JDBC Driver 8.4
 
@@ -260,7 +287,7 @@ Servlet e JSP vengono eseguiti in un motore servlet/JSP, ad esempio Tomcat. Il c
   
 ### <a name="enterprise-java-beans"></a>Enterprise Java Beans  
 
-Le piattaforme Enterprise Java Beans (EJB) vengono eseguite in un contenitore EJB. I contenitori EJB provengono da vari fornitori. Le applet Java vengono eseguite in un browser ma scaricate da un server Web. Copiare il file sqljdbc.jar, sqljdbc4.jar o sqljdbc41.jar nella radice del server Web e specificare il nome del file JAR nella scheda di archiviazione HTML dell'applet, ad esempio `<applet ... archive=mssql-jdbc-***.jar>`.  
+Le piattaforme Enterprise Java Beans (EJB) vengono eseguite in un contenitore EJB. I contenitori EJB provengono da vari fornitori. Le applet Java vengono eseguite in un browser ma scaricate da un server Web. Copiare il file sqljdbc.jar, sqljdbc4.jar o sqljdbc41.jar nella radice del server Web e specificare il nome del file JAR nella scheda di archiviazione HTML dell'applet, ad esempio `<applet ... archive=mssql-jdbc-**_.jar>`.  
   
 ## <a name="making-a-simple-connection-to-a-database"></a>Creazione di una connessione semplice a un database
 
@@ -272,7 +299,7 @@ Quando viene caricato il driver, è possibile stabilire una connessione tramite 
 
 ```java
 String connectionUrl = "jdbc:sqlserver://localhost:1433;" +  
-   "databaseName=AdventureWorks;user=MyUserName;password=*****;";  
+   "databaseName=AdventureWorks;user=MyUserName;password=_****;";  
 Connection con = DriverManager.getConnection(connectionUrl);  
 ```
 

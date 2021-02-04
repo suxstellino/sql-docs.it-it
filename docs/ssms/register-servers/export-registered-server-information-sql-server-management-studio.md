@@ -17,18 +17,18 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 1c976735ddc6ce9e602969e06abc13b076a74144
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
-ms.translationtype: HT
+ms.openlocfilehash: a71bebde2525a18e062832aba064a4b9aecf7f3a
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037582"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250473"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>Esportare informazioni relative a server registrati (SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-In questo argomento viene illustrato come salvare ed esportare le informazioni relative a server registrati in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]e distribuirle ad altri dipendenti o server. È possibile utilizzare questa funzionalità di esportazione per ottenere un'interfaccia utente coerente su più computer.  
+In questo argomento viene illustrato come salvare ed esportare le informazioni relative a server registrati in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]e distribuirle ad altri dipendenti o server. È possibile utilizzare questa funzionalità di esportazione per ottenere un'interfaccia utente coerente su più computer.  
   
  L'esportazione e la successiva importazione dei file dei server registrati consente di configurare con facilità diversi computer con gli stessi server presenti in Server registrati. Ciò risulta utile quando si gestisce un numero elevato di server da computer distribuiti in diversi luoghi oppure quando si desidera configurare le impostazioni di connessione di base per un utente non esperto.  
   

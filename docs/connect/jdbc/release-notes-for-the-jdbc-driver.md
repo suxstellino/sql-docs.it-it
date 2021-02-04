@@ -2,7 +2,7 @@
 title: Note sulla versione per il driver JDBC
 description: Questo articolo elenca le versioni di Microsoft JDBC Driver per SQL Server. Per ogni versione sono elencate e descritte le modifiche.
 ms.custom: ''
-ms.date: 08/27/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,16 +11,71 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1bcbaee78dc7dcb0de053756aacfe2e1711679fe
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
-ms.translationtype: HT
+ms.openlocfilehash: 0ffc7d8e4090673f3fc8feb96aa3650d35361281
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005663"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99234857"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Note sulla versione per Microsoft JDBC Driver per SQL Server
 
 Questo articolo elenca le versioni del _driver Microsoft JDBC per SQL Server_. Per ogni versione sono elencate e descritte le modifiche.
+
+## <a name="92"></a><a id="92"></a> 9,2
+
+**[![Download ](../../ssms/media/download-icon.png) scaricare Microsoft JDBC Driver 9,2 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2153622)**  
+**[![Download ](../../ssms/media/download-icon.png) scaricare Microsoft JDBC Driver 9,2 per SQL Server (tar. gz)](https://go.microsoft.com/fwlink/?linkid=2153521)**  
+
+Numero di versione: 9.2.0 rilasciata: 29 gennaio 2021
+
+Se è necessario scaricare il driver in una lingua diversa da quella rilevata, è possibile usare questi collegamenti diretti.  
+Per il driver in un file ZIP: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40a)  
+Per il driver in un file tar.gz: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x40a)  
+
+### <a name="compliance"></a>Conformità
+
+| Modifica di conformità | Dettagli |
+| :---------------- | :------ |
+| Scaricare gli aggiornamenti più recenti per il driver JDBC 9,2. | &bull;&nbsp; [GitHub, 9.2.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v9.2.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Completamente conforme alla specifica API JDBC 4.2. | I file jar nel pacchetto 9,2 vengono denominati in base alla compatibilità delle versioni Java.<br/><br/>Ad esempio, il file MSSQL-JDBC-9.2.0. JRE15. jar del pacchetto 9,2 deve essere usato con Java 15. |
+| Compatibile con Java Development Kit (JDK) versione 15,0, 11,0 e 1,8. | Microsoft JDBC driver 9,2 per SQL Server è ora compatibile con Java Development Kit (JDK) versione 15,0, oltre a JDK 11,0 e 1,8. |
+| &nbsp; | &nbsp; |
+
+### <a name="releases"></a>Versioni
+
+Numero di versione: 9.2.0 rilasciata: 29 gennaio 2021
+
+### <a name="support-for-jdk-15"></a>Supporto per JDK 15
+
+Microsoft JDBC driver 9,2 per SQL Server è ora compatibile con Java Development Kit (JDK) versione 15,0, oltre a JDK 11,0 e 1,8.
+
+### <a name="added-support-for-azure-active-directory-interactive-authentication"></a>Aggiunta del supporto per Azure Active Directory autenticazione interattiva
+| Aggiunta del tipo di autenticazione | Dettagli |
+| :---------- | :------ |
+| Microsoft JDBC driver 9,2 per SQL Server supporta ora l'autenticazione per Azure Key Vault tramite l'autenticazione interattiva. | Vedere [connessione mediante l'autenticazione Azure Active Directory](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md). |
+| &nbsp; | &nbsp; |
+
+### <a name="added-support-for-azure-active-directory-service-principal-authentication"></a>Aggiunta del supporto per l'autenticazione Azure Active Directory entità servizio
+| Aggiunta del tipo di autenticazione | Dettagli |
+| :---------- | :------ |
+| Microsoft JDBC driver 9,2 per SQL Server supporta ora l'autenticazione per Azure Key Vault usando l'ID client e il segreto di un'identità dell'entità servizio. | Vedere [connessione mediante l'autenticazione Azure Active Directory](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md). |
+| &nbsp; | &nbsp; |
+
+### <a name="updated-azure-key-vault-library-to-use-modern-azure-key-vault-library"></a>Aggiornamento della libreria Azure Key Vault per l'uso della libreria di Azure Key Vault moderna
+| Modifiche della libreria per Azure Key Vault | Dettagli |
+| :------------------- | :------ |
+| Microsoft JDBC driver 9,2 ha eseguito la migrazione dalla libreria Azure Key Vault di generazione precedente e dalle librerie ADAL ai Azure Key Vault più moderni e agli equivalenti di Azure Identity. | **modifica delle dipendenze** Assicurarsi di aggiornare le dipendenze dell'applicazione se si sfruttano i vantaggi dell'autenticazione Azure Active Directory o Azure Key Vault. Vedere i requisiti di dipendenza quando si [utilizza il provider di Azure Key Vault](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md#working-with-the-azure-key-vault-provider) o l' [autenticazione Azure Active Directory](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md#working-with-azure-active-directory-authentication) |
+| &nbsp; | &nbsp; |
+
+### <a name="enabled-usebulkcopyforbatchinsert-for-non-azure-synapse-analytics-servers"></a>Abilitazione di useBulkCopyForBatchInsert per server di analisi sinapsi non di Azure
+| useBulkCopyForBatchInsert modifiche per i server non Azure sinapsi Analytics | Dettagli |
+| :------------------- | :------ |
+| Microsoft JDBC driver 9,2 consente ora l'API per la copia bulk per l'operazione di inserimento batch sui server di analisi sinapsi non di Azure. | Vedere [uso dell'API per la copia bulk per l'operazione di inserimento batch](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md). |
+| &nbsp; | &nbsp; |
+
+
+## <a name="previous-releases"></a>Versioni precedenti
 
 ## <a name="84"></a><a id="84"></a> 8.4
 
@@ -93,8 +148,6 @@ Microsoft JDBC Driver 8.4 per SQL Server è ora compatibile con Java Development
 | Autenticazione del certificato client | Dettagli |
 | :------------------- | :------ |
 | Microsoft JDBC Driver 8.4 per SQL Server ha aggiunto un nuovo metodo di autenticazione detto autenticazione del certificato client per gli scenari di loopback. | Vedere [Autenticazione del certificato client per scenari di loopback](../../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md). |
-
-## <a name="previous-releases"></a>Versioni precedenti
 
 ## <a name="82"></a><a id="82"></a> 8.2
 

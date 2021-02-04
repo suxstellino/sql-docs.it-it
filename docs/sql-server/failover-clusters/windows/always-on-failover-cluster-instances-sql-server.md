@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: a27efd6cb20a90bc1b3ce72a6e4cee74f74c3b61
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 722371558fe5d6f1a9a8a363322a28e7f89243f2
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98595228"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250387"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Istanze del cluster di failover Always On (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -156,7 +156,7 @@ ms.locfileid: "98595228"
 |**Descrizioni argomento**|**Argomento**|  
 |----------------------------|---------------|  
 |Descrive come installare e configurare una nuova istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Creare un nuovo cluster di failover di SQL Server &#40;programma di installazione&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
-|Descrive la modalità di aggiornamento a un cluster di failover di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .|[Aggiornare un'istanza del cluster di failover di SQL Server](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
+|Descrive la modalità di aggiornamento a un cluster di failover di [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] .|[Aggiornare un'istanza del cluster di failover di SQL Server](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
 |Descrive i concetti relativi al clustering di failover di Windows e fornisce collegamenti ad attività correlate al clustering di failover di Windows|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [Panoramica dei cluster di failover](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730692(v=ws.10))<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [Panoramica dei cluster di failover](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754482(v=ws.11))|  
 |Descrive le diversità tra il concetto di nodo in un'istanza del cluster di failover e di replica in un gruppo di disponibilità e le considerazioni per l'utilizzo di un'istanza del cluster di failover per ospitare una replica per un gruppo di disponibilità.|[Clustering di failover e gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   

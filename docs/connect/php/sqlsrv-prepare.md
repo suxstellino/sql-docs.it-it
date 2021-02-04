@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - sqlsrv_prepare
 apitype: NA
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 41fc8b3ae6185183b3d81988874b23ea926077e2
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
-ms.translationtype: HT
+ms.openlocfilehash: 566b5804a042e96bb18c37c5b4405178bd8899f0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081270"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201090"
 ---
 # <a name="sqlsrv_prepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -62,11 +62,11 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     |Elemento|Descrizione|  
     |-----------|---------------|  
     |*&$value*|Valore letterale o riferimento a una variabile PHP.|  
-    |*$direction*[facoltativo]|Una delle costanti **SQLSRV_PARAM_\*** seguenti usate per indicare la direzione del parametro: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Il valore predefinito è **SQLSRV_PARAM_IN**.<br /><br />Per altre informazioni sulle costanti PHP, vedere [Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
-    |*$phpType*[facoltativo]|Costante **SQLSRV_PHPTYPE_\*** che specifica il tipo di dati PHP del valore restituito.|  
-    |*$sqlType*[facoltativo]|Costante **SQLSRV_SQLTYPE_\*** che specifica il tipo di dati SQL Server del valore di input.|  
+    |*$direction*[facoltativo]|Una delle seguenti **SQLSRV_PARAM_ \* *_ costanti usate per indicare la direzione del parametro: _* SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Il valore predefinito è **SQLSRV_PARAM_IN**.<br /><br />Per altre informazioni sulle costanti PHP, vedere [Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$phpType*[facoltativo]|Una costante ** \* SQLSRV_PHPTYPE_* _ che specifica il tipo di dati php del valore restituito.|  
+    |_ $ SqlType * [facoltativo]|Una costante ** \* SQLSRV_SQLTYPE_* _ che specifica il tipo di dati SQL Server del valore di input.|  
   
-*$options* [FACOLTATIVO]: matrice associativa che imposta le <a name="properties">proprietà delle query</a>. Nella tabella seguente sono elencate le chiavi supportate e i valori corrispondenti:
+_ $ options * [facoltativo]: matrice associativa che imposta le <a name="properties">proprietà delle query</a>. Nella tabella seguente sono elencate le chiavi supportate e i valori corrispondenti:
 
 |Chiave|Valori supportati|Descrizione|  
 |-------|--------------------|---------------|  

@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f169f8a88c13cc6b12b060405285c963dd9524e3
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
-ms.translationtype: HT
+ms.openlocfilehash: fd76f7fb9da663c5768ec9d60679a14b797655fc
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988058"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250376"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Limiti della capacità di calcolo per edizione di SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
-  Questo articolo illustra i limiti della capacità di calcolo per diverse edizioni di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e le differenze in ambienti fisici e virtualizzati con processori dotati di Hyper-Threading.  
+  Questo articolo illustra i limiti della capacità di calcolo per diverse edizioni di [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] e le differenze in ambienti fisici e virtualizzati con processori dotati di Hyper-Threading.  
   
  ![Mapping per il calcolo dei limiti della capacità](../sql-server/media/compute-capacity-limits.gif "Mapping per il calcolo dei limiti della capacità")  
   
@@ -76,7 +76,7 @@ Ogni edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dispone 
   
 Questi limiti si applicano a una sola istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Rappresentano la capacità di calcolo massima che verrà utilizzata da una sola istanza. Non vincolano il server sul quale potrebbe essere distribuita l'istanza. In realtà la distribuzione di più istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sullo stesso server fisico è un modo efficiente per usare la capacità di calcolo di un server fisico con più socket e/o core di quelli consentiti dai limiti di capacità.  
   
-Nella tabella seguente vengono specificati i limiti della capacità di calcolo per una sola istanza di ogni edizione di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]:  
+Nella tabella seguente vengono specificati i limiti della capacità di calcolo per una sola istanza di ogni edizione di [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]:  
   
 |Edizione di[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Capacità di calcolo massima per una singola istanza ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacità di calcolo massima per una singola istanza (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  

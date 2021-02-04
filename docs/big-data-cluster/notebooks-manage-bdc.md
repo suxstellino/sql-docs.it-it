@@ -10,22 +10,22 @@ ms.date: 03/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9020f8745c22a9e6382b6538d5bf650c17e923e4
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
-ms.translationtype: HT
+ms.openlocfilehash: a526f4d1da472a8d5bae9c5bceb296978d24986b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196125"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235705"
 ---
 # <a name="manage-sql-server-big-data-clusters-with-azure-data-studio-notebooks"></a>Gestire cluster Big Data di SQL Server con notebook di Azure Data Studio
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] fornisce un'estensione per Azure Data Studio contenente alcuni notebook. Un notebook fornisce codice e documentazione che è possibile usare in Azure Data Studio per gestire cluster Big Data di SQL Server 2019.
+[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] fornisce un'estensione per Azure Data Studio contenente alcuni notebook. Un notebook fornisce codice e documentazione che è possibile usare in Azure Data Studio per gestire cluster Big Data di SQL Server 2019.
 
 Originariamente implementati come progetto open source, i [notebook](../azure-data-studio/notebooks/notebooks-guidance.md) sono stati successivamente integrati in [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md). È possibile usare markdown per testo nelle celle di testo e uno dei kernel disponibili per scrivere codice nelle celle di codice.
 
-È possibile usare notebook per distribuire cluster Big Data per [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+È possibile usare notebook per distribuire cluster Big Data per [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)].
 
 Oltre ai notebook, è possibile visualizzare anche una raccolta di notebook, denominata Jupyter Book. Un Jupyter Book costituisce un sommario per la consultazione di una raccolta di notebook, in modo da poter trovare facilmente il notebook necessario, ad esempio per risolvere un problema relativo a SQL Server o per visualizzare lo stato di un cluster.
 
@@ -34,7 +34,7 @@ Oltre ai notebook, è possibile visualizzare anche una raccolta di notebook, den
 Per l'apertura di un notebook sono necessari i prerequisiti seguenti:
 
 * La versione più recente di [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
-* L'estensione di [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], installata in Azure Data Studio
+* L'estensione di [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], installata in Azure Data Studio
 
 Oltre a questi prerequisiti, per distribuire cluster Big Data di SQL Server 2019, sono necessari anche:
 
@@ -48,9 +48,9 @@ Sono disponibili tre modi per accedere ai notebook per la risoluzione dei proble
 
 ### <a name="command-palette"></a>Riquadro comandi
 
-1. Selezionare **Visualizza** > **Riquadro comandi** .
+1. Selezionare **Visualizza** > **Riquadro comandi**.
 
-2. Immettere **Jupyter Books: SQL Server 2019 Guide** .
+2. Immettere **Jupyter Books: SQL Server 2019 Guide**.
 
 Si aprirà il viewlet dei Jupyter Book con il Book contenente il notebook per la risoluzione dei problemi relativi ai cluster Big Data di SQL Server.
 
@@ -58,7 +58,7 @@ Si aprirà il viewlet dei Jupyter Book con il Book contenente il notebook per la
 
 1. Dopo aver installato Azure Data Studio Insiders, connettersi all'istanza di un cluster Big Data di SQL Server.
 
-2. Dopo aver eseguito la connessione all'istanza, fare clic con il pulsante destro del mouse sul nome del server in **CONNESSIONI** e selezionare **Gestisci** .
+2. Dopo aver eseguito la connessione all'istanza, fare clic con il pulsante destro del mouse sul nome del server in **CONNESSIONI** e selezionare **Gestisci**.
 
 3. Nel dashboard selezionare **SQL Server Big Data Cluster** (Cluster Big Data di SQL Server). Selezionare **SQL Server 2019 guide** (Guida a SQL Server 2019) per aprire il Jupyter Book contenente i notebook necessari.
     ![Notebook Jupyter nel dashboard](media/manage-notebooks/jupyter-book-button.png)
@@ -71,7 +71,7 @@ Si aprirà il viewlet dei Jupyter Book con il Book contenente il notebook per la
 
 2. Aggiungere i dettagli dell'endpoint del controller.
 
-3. Dopo aver eseguito la connessione al controller, fare clic con il pulsante destro del mouse sull'endpoint e selezionare **Gestisci** .
+3. Dopo aver eseguito la connessione al controller, fare clic con il pulsante destro del mouse sull'endpoint e selezionare **Gestisci**.
 
 4. Al termine del caricamento del dashboard, selezionare **Risoluzione problemi** per aprire le guide alla risoluzione dei problemi del Jupyter Book.
 
@@ -91,7 +91,7 @@ Per modificare il cluster Big Data di SQL Server per un notebook:
 
    ![Fare clic sul menu "Associa a" sulla barra degli strumenti del notebook](./media/notebooks-how-to-manage/select-attach-to-1.png)
 
-2. Scegliere un server dal menu **Associa a** .
+2. Scegliere un server dal menu **Associa a**.
 
    ![Selezionare un server dal menu Associa a.](./media/notebooks-how-to-manage/select-attach-to-2.png)
 

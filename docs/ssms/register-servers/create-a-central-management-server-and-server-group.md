@@ -13,18 +13,18 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: a66f57b77b5d92bf39795533a29faacacdf01b95
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
-ms.translationtype: HT
+ms.openlocfilehash: 2db15f338336e015a7e73267113e43354256452f
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037614"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250951"
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>Creare un server di gestione centrale e un gruppo di server
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-In questo argomento viene illustrato come designare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come server di gestione centrale in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Nei server di gestione centrale è archiviato un elenco di istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] organizzato in uno o più gruppi di server di gestione centrale. Le azioni effettuate utilizzando un gruppo di server di gestione centrale hanno effetto su tutti i server inclusi nel gruppo. Tali azioni includono la connessione ai server tramite Esplora oggetti e l'esecuzione di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e criteri della gestione basata su criteri in più server contemporaneamente.  
+In questo argomento viene illustrato come designare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come server di gestione centrale in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Nei server di gestione centrale è archiviato un elenco di istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] organizzato in uno o più gruppi di server di gestione centrale. Le azioni effettuate utilizzando un gruppo di server di gestione centrale hanno effetto su tutti i server inclusi nel gruppo. Tali azioni includono la connessione ai server tramite Esplora oggetti e l'esecuzione di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e criteri della gestione basata su criteri in più server contemporaneamente.  
   
 > [!NOTE]  
 >  Le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] non possono essere definite come server di gestione centrale.  
@@ -59,25 +59,25 @@ In questo argomento viene illustrato come designare un'istanza di [!INCLUDE[ssNo
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]scegliere **Server registrati** dal menu **Visualizza**.  
   
-2.  In Server registrati espandere **Motore di database**, fare clic con il pulsante destro del mouse su **Server di gestione centrale**e quindi scegliere **Registra server di gestione centrale**.  
+2.  In Server registrati espandere **Motore di database**, fare clic con il pulsante destro del mouse su **Server di gestione centrale** e quindi scegliere **Registra server di gestione centrale**.  
   
 3.  Nella finestra di dialogo **Nuova registrazione server** selezionare dall'elenco a discesa di server l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che si desidera impostare come server di gestione centrale. È necessario utilizzare l'autenticazione di Windows per il server di gestione centrale.  
   
-4.  In **Server registrato**immettere un nome del server e una descrizione facoltativa.  
+4.  In **Server registrato** immettere un nome del server e una descrizione facoltativa.  
   
 5.  Nella scheda **Proprietà connessione** rivedere o modificare le proprietà di connessione e della rete. Per altre informazioni, vedere [Connettersi al server &#40;pagina Proprietà connessione&#41; Motore di database](../f1-help/connect-to-server-connection-properties-page-database-engine.md)  
   
-6.  Fare clic su **Test**per verificare la connessione.  
+6.  Fare clic su **Test** per verificare la connessione.  
   
 7.  Fare clic su **Salva**. L'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà visualizzata nella cartella **Server di gestione centrale** .  
   
 #### <a name="create-a-new-server-group-and-add-servers-to-the-group"></a>Creare un gruppo di server e aggiungere server al gruppo  
   
-1.  Da **Server registrati**espandere **Server di gestione centrale**. Fare clic con il pulsante destro del mouse sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aggiunta nella procedura precedente e scegliere **Nuovo gruppo di server**.  
+1.  Da **Server registrati** espandere **Server di gestione centrale**. Fare clic con il pulsante destro del mouse sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aggiunta nella procedura precedente e scegliere **Nuovo gruppo di server**.  
   
-2.  In **Proprietà nuovo gruppo di server**immettere un nome di gruppo e una descrizione facoltativa.  
+2.  In **Proprietà nuovo gruppo di server** immettere un nome di gruppo e una descrizione facoltativa.  
   
-3.  In **Server registrati**fare clic con il pulsante destro del mouse sul gruppo di server di gestione centrale, quindi scegliere **Nuova registrazione server**.  
+3.  In **Server registrati** fare clic con il pulsante destro del mouse sul gruppo di server di gestione centrale, quindi scegliere **Nuova registrazione server**.  
   
 4.  In Nuova registrazione server selezionare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Creare un nuovo server registrato &#40;SQL Server Management Studio&#41;](./create-a-new-registered-server-sql-server-management-studio.md). Aggiungere più server in base alle esigenze.  
   

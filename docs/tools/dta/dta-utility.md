@@ -21,12 +21,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/09/2017
-ms.openlocfilehash: a80c3fc49962ad4a67430163f81d00b37c05329b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 68efd346dad72b36e98f5ce0f0c659eed81c5966
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98169219"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236721"
 ---
 # <a name="dta-utility"></a>dta - utilità
 
@@ -184,7 +184,7 @@ dta -d AdventureWorks2012 ...
 [Indicazioni relative agli indici columnstore in Ottimizzazione guidata motore di database](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  
-|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive.|  
+|**Si applica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive.|  
 
   
  **-fk** _keep_existing_option_  
@@ -222,7 +222,7 @@ dta -d AdventureWorks2012 ...
  Specifica che Query Store deve essere usato come carico di lavoro. Vengono analizzati i primi 1.000 eventi di Query Store per i database selezionati in modo esplicito. Questo valore può essere modificato tramite l'opzione **-n**.  Per altre informazioni, vedere [Archivio query](../../relational-databases/performance/how-query-store-collects-data.md) e [Ottimizzazione del database tramite un carico di lavoro dell'archivio query](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
  ||  
 |-|  
-|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive.|  
+|**Si applica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive.|  
      
  **-if** _workload_file_  
  Specifica il percorso e il nome del file del carico di lavoro da utilizzare come input per l'ottimizzazione. Il file deve essere in formato trc (file di traccia di SQL Server Profiler), sql (file SQL) oppure log (file di traccia di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). È inoltre necessario specificare un file o una tabella del carico di lavoro.  
@@ -281,7 +281,7 @@ dta -iq -I 48
 In questo caso DTA userà Query Store come origine del carico di lavoro e considererà solo le query eseguite nelle ultime 48 ore.  
   ||  
 |-|  
-|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive.|  
+|**Si applica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive.|  
 
 
   

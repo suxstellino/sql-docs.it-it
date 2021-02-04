@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016
-ms.openlocfilehash: 58d9f3921500e2fd7fd1fa02046d4f89d67ccbeb
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: cc8adae5672f14e25e9094befd455ac6ee599850
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478792"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250989"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
 
@@ -29,7 +29,7 @@ ms.locfileid: "97478792"
 > [!IMPORTANT]  
 > In [Istanza gestita di SQL di Azure](/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita di SQL di Azure e SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è un servizio di Microsoft Windows per l'esecuzione di attività amministrative pianificate, denominate *processi* in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è un servizio di Microsoft Windows per l'esecuzione di attività amministrative pianificate, denominate *processi* in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
 
 ## <a name="benefits-of-sql-server-agent"></a><a name="Benefits"></a>Vantaggi di SQL Server Agent 
 
@@ -38,7 +38,7 @@ ms.locfileid: "97478792"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è in grado di eseguire un processo incluso in una pianificazione, in risposta a un evento specifico, oppure su richiesta. Se, ad esempio, l'esigenza è quella di eseguire il backup di tutti i server aziendali ogni sera in orario non lavorativo, è possibile automatizzare questa attività, Pianificare l'esecuzione del backup dal lunedì al venerdì dopo le 22.00. In caso di problemi durante l'operazione, SQL Server Agent potrà registrare l'evento e inviarne notifica all'utente.  
   
 > [!NOTE]  
-> Per impostazione predefinita, all'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il servizio [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Agent viene disabilitato, a meno che l'utente non scelga esplicitamente l'avvio automatico del servizio.  
+> Per impostazione predefinita, all'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il servizio [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Agent viene disabilitato, a meno che l'utente non scelga esplicitamente l'avvio automatico del servizio.  
   
 ## <a name="sql-server-agent-components"></a><a name="Components"></a>Componenti di SQL Server Agent  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilizza i componenti seguenti per definire le attività da eseguire, quando eseguirle e come fornire informazioni in merito alla riuscita o meno delle attività.  

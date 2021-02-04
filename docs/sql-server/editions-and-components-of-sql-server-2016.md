@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 80b93a4a55b6d12ee5177230b78447c21fc0cae8
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 49d32254b0faaf9dea2ae4c31f7e3548179e75a7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172533"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236612"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>Edizioni e funzionalità supportate di SQL Server 2016
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -142,7 +142,7 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
   
 <sup>1</sup> La licenza basata su Enterprise Edition con Server + Licenza CAL (Client Access License), non disponibile per nuovi contratti, è limitata a un massimo di 20 core per istanza di SQL Server. Non sono previsti limiti nel modello di licenza server basato su core. Per altre informazioni, vedere [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
-<sup>2</sup> Si applica a [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1 come parte della creazione di una superficie di attacco con programmabilità comune tra le edizioni. 
+<sup>2</sup> Si applica a [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1 come parte della creazione di una superficie di attacco con programmabilità comune tra le edizioni. 
 
 ##  <a name="rdbms-high-availability"></a><a name="RDBMSHA"></a> RDBMS High Availability  
   
@@ -195,7 +195,7 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 
 <sup>1</sup> Le dimensioni dati OLTP in memoria e la cache dei segmenti Columnstore sono limitate alla quantità di memoria specificata dall'edizione nella sezione Limiti di scalabilità. I gradi di parallelismo (DOP) massimi sono limitati. I gradi di parallelismo del processo (DOP) per una compilazione indice sono limitati a 2 DOP per l'edizione Standard e 1 DOP per le edizioni Web ed Express. Questo si riferisce agli indici columnstore creati tramite le tabelle basate su disco e le tabelle ottimizzate per la memoria.
 
-<sup>2</sup> Si applica a [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1 come parte della creazione di una superficie di attacco con programmabilità comune (CPSA, Common Programmability Surface Area) tra le edizioni. La distribuzione dell'aggregazione, la distribuzione dei predicati di stringa e le ottimizzazioni SIMD sono miglioramenti alla scalabilità di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition. Per altri dettagli, vedere [Indici columnstore - Novità](../relational-databases/indexes/columnstore-indexes-what-s-new.md). 
+<sup>2</sup> Si applica a [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1 come parte della creazione di una superficie di attacco con programmabilità comune (CPSA, Common Programmability Surface Area) tra le edizioni. La distribuzione dell'aggregazione, la distribuzione dei predicati di stringa e le ottimizzazioni SIMD sono miglioramenti alla scalabilità di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition. Per altri dettagli, vedere [Indici columnstore - Novità](../relational-databases/indexes/columnstore-indexes-what-s-new.md). 
 
 <sup>3</sup> Questa funzionalità non è inclusa nell'opzione di installazione LocalDB.
 
@@ -215,7 +215,7 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |Database indipendenti|Sì|Sì|Sì|Sì|Sì| 
 |Crittografia per backup|Sì|Sì|No|No|No|  
 
-<sup>1</sup> Si applica a [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1 come parte della creazione di una superficie di attacco con programmabilità comune tra le edizioni.      
+<sup>1</sup> Si applica a [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1 come parte della creazione di una superficie di attacco con programmabilità comune tra le edizioni.      
 
 ##  <a name="replication"></a><a name="Replication"></a> Replica  
   
@@ -276,7 +276,7 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
   
  <sup>1</sup> Per altre informazioni, vedere [Considerazioni sull'installazione di SQL Server tramite SysPrep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
  
-<sup>2</sup> Si applica a [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1 come parte della creazione di una superficie di attacco con programmabilità comune tra le edizioni.      
+<sup>2</sup> Si applica a [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1 come parte della creazione di una superficie di attacco con programmabilità comune tra le edizioni.      
   
 ##  <a name="development-tools"></a><a name="DevTools"></a> Development Tools  
   
@@ -314,7 +314,7 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 
 <sup>1</sup> La scalabilità orizzontale con più nodi di calcolo richiede un nodo head.
 
-<sup>2</sup> Si applica a [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1 come parte della creazione di una superficie di attacco con programmabilità comune tra le edizioni.     
+<sup>2</sup> Si applica a [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1 come parte della creazione di una superficie di attacco con programmabilità comune tra le edizioni.     
   
 ## <a name="integration-services"></a><a name="IS"></a> Integration Services
 
@@ -336,7 +336,7 @@ Per informazioni sulle funzionalità di Integration Services (SSIS) supportate d
 |Elaborazione di query parallela su tabelle e indici partizionati|Sì|No|No|No|No|   
 |Aggregazione batch globale|Sì|No|No|No|No| 
 
-<sup>1</sup> Si applica a [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1 come parte della creazione di una superficie di attacco con programmabilità comune tra le edizioni.     
+<sup>1</sup> Si applica a [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1 come parte della creazione di una superficie di attacco con programmabilità comune tra le edizioni.     
 
 ##  <a name="analysis-services"></a><a name="SSAS"></a> Analysis Services  
   

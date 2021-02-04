@@ -14,22 +14,22 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 35a255bb4df3779897ec40da29da9cc15f62ba1f
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
-ms.translationtype: HT
+ms.openlocfilehash: cbaf09a88e5856bfd5c8f36826d8894b947e3c0d
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037628"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250500"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>Opzioni (Esplora oggetti di SQL Server - pagina Generazione script)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
  Usare questa pagina per impostare le opzioni di scripting valide per i comandi seguenti dei menu di scelta rapida degli oggetti in **Esplora oggetti**:  
   
--   Comandi**Modifica** per tabelle e viste utente.  
+-   Comandi **Modifica** per tabelle e viste utente.  
   
 -   Comandi **Crea script<object> per** per oggetti creati dall'utente.  
   
--   Comandi**Modifica** per oggetti creati dall'utente.  
+-   Comandi **Modifica** per oggetti creati dall'utente.  
   
 -   Questa pagina consente inoltre di impostare i valori predefiniti per le opzioni di creazione di script per **Generazione guidata script di SQL Server**.  
   
@@ -151,7 +151,7 @@ Consente di includere nomi di vincoli generati dal sistema per applicare l'integ
 **Script per il tipo di motore di database**: gli script generati saranno destinati al [tipo di motore di database](/previous-versions/sql/sql-server-2014/ee642509(v=sql.120)) specificato.
 
 **Script per versione server**  
-Gli script saranno destinati alla versione specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non è possibile creare script per versioni precedenti per le nuove funzionalità di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Alcuni script creati per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] non possono essere eseguiti in server con una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o in un database con un' [impostazione del livello di compatibilità del database](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)precedente.  
+Gli script saranno destinati alla versione specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non è possibile creare script per versioni precedenti per le nuove funzionalità di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] . Alcuni script creati per [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] non possono essere eseguiti in server con una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o in un database con un' [impostazione del livello di compatibilità del database](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)precedente.  
 
 ## <a name="see-also"></a>Vedere anche  
 [Generazione di script (SQL Server Management Studio)](../scripting/generate-scripts-sql-server-management-studio.md)  

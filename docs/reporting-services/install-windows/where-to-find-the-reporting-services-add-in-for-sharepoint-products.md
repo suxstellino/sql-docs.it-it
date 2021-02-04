@@ -12,12 +12,12 @@ ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016'
-ms.openlocfilehash: c088a6cf0779c5c37c92d7ecd2ff93b2cda4ae46
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 6f0795c8a0404aa5096e357478209fbb259d8e13
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172153"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236197"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Posizione in cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint
 
@@ -26,12 +26,12 @@ Il componente aggiuntivo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
 > [!IMPORTANT]  
 >  Per un elenco delle combinazioni supportate del componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], di un server di report e di SharePoint, vedere [Combinazioni supportate di SharePoint, server Reporting Services e componente aggiuntivo &#40;SQL Server 2016&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
   
-##  <a name="sssql15-reporting-services-add-in-for-sharepoint-products"></a><a name="bkmk_sql16"></a> [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]Componente aggiuntivo Reporting Services per prodotti SharePoint  
+##  <a name="sssql16-md-reporting-services-add-in-for-sharepoint-products"></a><a name="bkmk_sql16"></a> [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]Componente aggiuntivo Reporting Services per prodotti SharePoint  
  Per scaricare e installare il componente aggiuntivo, vedere l'Area download [!INCLUDE[msCoName](../../includes/msconame-md.md)] :  
   
 -   [Componente aggiuntivo Microsoft® SQL Server 2016 Reporting Services per Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=52682)  
   
- La versione [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] del componente aggiuntivo è disponibile anche nell'Installazione guidata di [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] :  
+ La versione [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] del componente aggiuntivo è disponibile anche nell'Installazione guidata di [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] :  
   
 -   Nella pagina **Selezione funzionalità** dell'Installazione guidata selezionare **Componente aggiuntivo Reporting Services per prodotti SharePoint**.  
   
@@ -64,6 +64,6 @@ Nella versione SQL Server 2016 è possibile installare il componente aggiuntivo 
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[Impossibile esplorare pagine di SharePoint in area non predefinita dopo avere disinstallato il componente aggiuntivo di Reporting Services](https://support.microsoft.com/kb/2009212)  
+[Impossibile esplorare pagine di SharePoint in area non predefinita dopo avere disinstallato il componente aggiuntivo di Reporting Services](https://web.archive.org/web/20131006010947/http://support.microsoft.com:80/kb/2009212)  
 
 Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

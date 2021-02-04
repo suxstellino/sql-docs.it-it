@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 64352409e567c5854d348dce8e6545317b41bc01
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
-ms.translationtype: HT
+ms.openlocfilehash: 414b91a39f82b7d3de5822bc64bf829d8aee4c2f
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725822"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235699"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-controller-dashboard"></a>Gestire cluster Big Data con il dashboard del controller di SQL Server
 
@@ -28,7 +28,7 @@ Oltre ad **azdata** e al notebook relativo allo stato del cluster, c'è un altro
 Per avviare il notebook, sono necessari i prerequisiti seguenti:
 
 * Versione più recente di [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
-* [Estensione di [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] installata in Azure Data Studio](../azure-data-studio/data-virtualization-extension.md)
+* [Estensione di [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] installata in Azure Data Studio](../azure-data-studio/data-virtualization-extension.md)
 
 Oltre ai prerequisiti precedenti, il cluster Big Data di SQL Server 2019 richiede anche:
 

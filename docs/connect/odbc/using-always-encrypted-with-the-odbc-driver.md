@@ -2,19 +2,19 @@
 title: Uso di Always Encrypted con il driver ODBC
 description: Informazioni su come sviluppare applicazioni ODBC usando Always Encrypted e Microsoft ODBC Driver for SQL Server.
 ms.custom: ''
-ms.date: 01/15/2021
+ms.date: 01/29/2021
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: f066c8b1429a11b67cd6fc78fd93eaad1a6fc110
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: ab1b5b73ad1bd6ba02baa5ee31bb4be4b42bb63f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534710"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199007"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso di Always Encrypted con ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -74,7 +74,7 @@ A partire dalla versione 17.4, il driver supporta Always Encrypted con enclavi s
 - `<attestation URL>` : specifica un URL di attestazione (un endpoint del servizio di attestazione). È necessario ottenere un URL di attestazione per l'ambiente dall'amministratore del servizio di attestazione.
 
   - Se si usa [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] e il servizio Sorveglianza host (HGS), vedere [Determinare e condividere l'URL di attestazione HGS](../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
-  - Se si usa [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e il servizio Attestazione di Microsoft Azure, vedere [Determinare l'URL di attestazione per i criteri di attestazione](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy).
+  - Se si usa [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e il servizio Attestazione di Microsoft Azure, vedere [Determinare l'URL di attestazione per i criteri di attestazione](/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sql-server-ver15#secure-enclave-attestation).
 
 
 Esempi di stringhe di connessione che abilitano i calcoli enclave per una connessione al database:
@@ -279,6 +279,50 @@ while (SQL_SUCCEEDED(SQLFetch(hstmt)))
 }
 ```
 
+#### <a name="moneysmallmoney-encryption"></a>Crittografia Money/SmallMoney
+
+A partire dalla versione del driver 17,7 è possibile usare Always Encrypted con MONEY e SMALLMONEY. Tuttavia, esistono alcuni passaggi aggiuntivi da eseguire.
+Quando si inseriscono colonne MONEY o SMALLMONEY crittografate, usare uno dei tipi C seguenti:
+```
+SQL_C_CHAR
+SQL_C_WCHAR
+SQL_C_SHORT
+SQL_C_LONG
+SQL_C_FLOAT
+SQL_C_DOUBLE
+SQL_C_BIT
+SQL_C_TINYINT
+SQL_C_SBIGINT
+SQL_C_NUMERIC
+```
+
+e un tipo SQL di `SQL_NUMERIC` o `SQL_DOUBLE` (la precisione può andare persa quando si usa questo tipo).
+
+##### <a name="binding-the-variable"></a>Binding della variabile
+
+Quando si associa una variabile MONEY/SMALLMONEY in una colonna crittografata, è necessario impostare i campi del descrittore seguenti:
+
+```
+// n is the descriptor record of the MONEY/SMALLMONEY parameter
+// the type is assumed to be SMALLMONEY if isSmallMoney is true and MONEY otherwise
+
+SQLHANDLE ipd = 0;
+SQLGetStmtAttr(hStmt, SQL_ATTR_IMP_PARAM_DESC, (SQLPOINTER)&ipd, SQL_IS_POINTER, NULL);
+SQLSetDescField(ipd, n, SQL_CA_SS_SERVER_TYPE, isSmallMoney ? (SQLPOINTER)SQL_SS_TYPE_SMALLMONEY :
+                                                              (SQLPOINTER)SQL_SS_TYPE_MONEY, SQL_IS_INTEGER);
+                                                              
+                                                              
+// If the variable is bound as SQL_NUMERIC, additional descriptor fields have to be set
+// var is SQL_NUMERIC_STRUCT containing the value to be inserted
+
+SQLHDESC   hdesc = NULL;
+SQLGetStmtAttr(hStmt, SQL_ATTR_APP_PARAM_DESC, &hdesc, 0, NULL);
+SQLSetDescField(hdesc, n, SQL_DESC_PRECISION, (SQLPOINTER)(var.precision), 0);
+SQLSetDescField(hdesc, n, SQL_DESC_SCALE, (SQLPOINTER)(var.scale), 0);
+SQLSetDescField(hdesc, n, SQL_DESC_DATA_PTR, &var, 0);
+```
+
+
 #### <a name="avoiding-common-problems-when-querying-encrypted-columns"></a>Come evitare i problemi comuni quando si eseguono query su colonne crittografate
 
 Questa sezione descrive categorie di errori comuni che si verificano quando si eseguono query su colonne crittografate da applicazioni ODBC e contiene alcune linee guida su come correggere tali errori.
@@ -419,6 +463,8 @@ Il driver supporta l'autenticazione ad Azure Key Vault usando i seguenti tipi di
 
 - Identità gestita (17.5.2 +) - Assegnata dal sistema o dall'utente. Per altre informazioni, vedere [Identità gestite per le risorse di Azure](/azure/active-directory/managed-identities-azure-resources/).
 
+- Azure Key Vault Interactive (17,7 + driver Windows): con questo metodo, le credenziali vengono autenticate tramite Azure Active Directory con ID di accesso.
+
 Per consentire al driver di usare chiavi master della colonna archiviate in Azure Key Vault per la crittografia di colonna, usare le seguenti parole chiave costituite solo dalla stringa di connessione:
 
 |Tipo di credenziali|<code>KeyStoreAuthentication</code>|<code>KeyStorePrincipalId</code>|<code>KeyStoreSecret</code>|
@@ -426,6 +472,7 @@ Per consentire al driver di usare chiavi master della colonna archiviate in Azur
 |Nome utente/password| `KeyVaultPassword`|Nome entità utente|Password|
 |ID client/Segreto| `KeyVaultClientSecret`|ID client|Segreto|
 |Identità gestita|`KeyVaultManagedIdentity`|ID oggetto (facoltativo, solo per assegnata dall'utente)|(non specificato)|
+|AKV interattivo|`KeyVaultInteractive`|(non impostato)|(non impostato)|
 
 #### <a name="example-connection-strings"></a>Esempi di stringhe di connessione
 
@@ -455,10 +502,16 @@ DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity;KeyStorePrincipalId=<objectID>
 ```
 
+**AKV interattivo**
+
+```
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultInteractive;UID=<userID>;PWD=<password>
+```
+
 Non sono necessarie altre modifiche all'applicazione ODBC per usare Azure Key Vault per l'archiviazione di chiavi master della colonna.
 
 > [!NOTE]
-> Il driver contiene un elenco di endpoint AKV attendibili. A partire dalla versione del driver 17.5.2, questo elenco è configurabile: impostare la proprietà `AKVTrustedEndpoints` nel driver o nella chiave del Registro di sistema ODBCINST.INI o ODBC.INI di DSN (Windows) oppure nella sezione del file `odbcinst.ini` o `odbc.ini` (Linux/macOS) in un elenco delimitato da punti e virgola. L'impostazione nel sistema DSN ha la precedenza su un'impostazione nel driver. Se il valore inizia con un punto e virgola, estende l'elenco predefinito. In caso contrario, sostituisce l'elenco predefinito. L'elenco predefinito (fino alla versione 17.5) è `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`.
+> Il driver contiene un elenco di endpoint AKV attendibili. A partire dalla versione del driver 17.5.2, questo elenco è configurabile: impostare la proprietà `AKVTrustedEndpoints` nel driver o nella chiave del Registro di sistema ODBCINST.INI o ODBC.INI di DSN (Windows) oppure nella sezione del file `odbcinst.ini` o `odbc.ini` (Linux/macOS) in un elenco delimitato da punti e virgola. L'impostazione nel sistema DSN ha la precedenza su un'impostazione nel driver. Se il valore inizia con un punto e virgola, estende l'elenco predefinito. In caso contrario, sostituisce l'elenco predefinito. L'elenco predefinito (fino alla versione 17.5) è `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`. A partire da 17,7, l'elenco include anche `managedhsm.azure.net;managedhsm.azure.cn;managedhsm.usgovcloudapi.net;managedhsm.microsoftazure.de` .
 
 
 ### <a name="using-the-windows-certificate-store-provider"></a>Uso del provider per l'archivio certificati Windows
@@ -642,7 +695,7 @@ Per altre informazioni, vedere [Migrare dati sensibili protetti da Always Encryp
 |Nome|Descrizione|  
 |----------|-----------------|  
 |`ColumnEncryption`|I valori accettati sono `Enabled`/`Disabled`.<br>`Enabled`: abilita o disabilita la funzionalità Always Encrypted per la connessione.<br>`Disabled`: disabilita la funzionalità Always Encrypted per la connessione.<br>*protocollo di attestazione*,*URL di attestazione* : (versione 17,4 e successive) consente always Encrypted con l'enclave protetta usando il protocollo di attestazione specificato e l'URL di attestazione. <br><br>Il valore predefinito è `Disabled`.|
-|`KeyStoreAuthentication` | Valori validi: `KeyVaultPassword`, `KeyVaultClientSecret` |
+|`KeyStoreAuthentication` | Valori validi: `KeyVaultPassword` , `KeyVaultClientSecret` , `KeyVaultInteractive` |
 |`KeyStorePrincipalId` | Quando `KeyStoreAuthentication` = `KeyVaultPassword`, impostare questo valore su un nome dell'entità utente di Azure Active Directory valido. <br>Quando `KeyStoreAuthetication` = `KeyVaultClientSecret`, impostare questo valore su un ID client dell'applicazione di Azure Active Directory valido. |
 |`KeyStoreSecret` | Quando `KeyStoreAuthentication` = `KeyVaultPassword`,impostare questo valore sulla password per il nome utente corrispondente. <br>Quando `KeyStoreAuthentication` = `KeyVaultClientSecret`, impostare questo valore sul segreto dell'applicazione associato a un ID client dell'applicazione di Azure Active Directory valido. |
 

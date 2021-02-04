@@ -4,24 +4,23 @@ titleSuffix: SQL Server Profiler
 description: Esplorare le funzionalità di SQL Server Profiler. Risolvere i problemi usando questo strumento per creare tracce e analizzare e riprodurre i risultati delle tracce.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 05/01/2020
-ms.openlocfilehash: 3169f8fbbc86fc95a62631c0cc93d77b6a46b0a4
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 3066ac1b16a1a294955825dc35b40f422bd79df3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643413"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203542"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
 
- [!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] è un'interfaccia per la creazione e la gestione di tracce e per l'analisi e la riproduzione dei risultati di queste. Gli eventi vengono salvati in un file di traccia che può essere analizzato o usato successivamente per riprodurre una serie specifica di passaggi allo scopo di diagnosticare un problema.
 
@@ -46,7 +45,7 @@ ms.locfileid: "97643413"
 
 ## <a name="capture-and-replay-trace-data"></a>Acquisire e riprodurre i dati di traccia
 
-Nella tabella seguente vengono mostrate le funzionalità che si consiglia di usare in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per acquisire e riprodurre i dati di traccia.
+Nella tabella seguente vengono mostrate le funzionalità che si consiglia di usare in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] per acquisire e riprodurre i dati di traccia.
 
 ||||
 |-|-|-|

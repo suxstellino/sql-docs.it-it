@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: fa75cc2e8a120510edc711aafc37d268fec4dba7
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 9101f2cf26e797cc63a909a85c3eefa3fb083b4f
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642731"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251198"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Criteri di failover per istanze del cluster di failover
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  In un'istanza del cluster di failover (FCI, Failover Cluster Instance) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , solo un nodo può possedere il gruppo di risorse del cluster WSFC (Windows Server Failover Cluster) a un'ora specificata. Le richieste del client vengono servite tramite questo nodo nell'istanza FCI. In caso di errore e riavvio non eseguito, la proprietà del gruppo viene spostata in un altro nodo WSFC nell'istanza FCI. Questo processo viene chiamato failover. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aumenta l'affidabilità di rilevamento dell'errore e offre criteri di failover flessibili.  
+  In un'istanza del cluster di failover (FCI, Failover Cluster Instance) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , solo un nodo può possedere il gruppo di risorse del cluster WSFC (Windows Server Failover Cluster) a un'ora specificata. Le richieste del client vengono servite tramite questo nodo nell'istanza FCI. In caso di errore e riavvio non eseguito, la proprietà del gruppo viene spostata in un altro nodo WSFC nell'istanza FCI. Questo processo viene chiamato failover. [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] aumenta l'affidabilità di rilevamento dell'errore e offre criteri di failover flessibili.  
   
  Un'istanza FCI di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dipende dal servizio WSFC sottostante per il rilevamento del failover. Pertanto, due meccanismi determinano il comportamento del failover per l'istanza FCI: la prima è la funzionalità di WSFC nativa e la seconda è la funzionalità aggiunta dall'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
