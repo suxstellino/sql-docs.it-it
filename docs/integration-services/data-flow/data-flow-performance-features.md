@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1956aeb1fc5895eea47ef46eb093a1eea435078b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
-ms.translationtype: HT
+ms.openlocfilehash: 600ab1bce27f4fa53c2e25ae7562a870f2ccf6a6
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196438"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536355"
 ---
 # <a name="data-flow-performance-features"></a>Funzionalità delle prestazioni del flusso di dati
 
@@ -134,7 +134,7 @@ ms.locfileid: "92196438"
  Usare i suggerimenti inclusi in questa sezione per migliorare la prestazione delle trasformazioni Aggregazione, Ricerca fuzzy, Raggruppamento fuzzy, Ricerca, Merge Join e Dimensione a modifica lenta.  
   
 #### <a name="aggregate-transformation"></a>Trasformazione Aggregazione  
- La trasformazione Aggregazione include le proprietà **Keys**, **KeysScale**, **CountDistinctKeys**e **CountDistinctScale** . Queste proprietà migliorano le prestazioni in quanto consentono alla trasformazione di preallocare la quantità di memoria necessaria per i dati memorizzati nella cache. Se si conosce il numero esatto o approssimativo di gruppi che dovrebbero risultato da un'operazione **Group by** , impostare rispettivamente le proprietà **Keys** e **KeysScale** . Se si conosce il numero esatto o approssimativo di valori distinct che dovrebbero risultare da un'operazione **Distinct Count** , impostare rispettivamente le proprietà **CountDistinctKeys** e **CountDistinctScale** .  
+ La trasformazione Aggregazione include le proprietà **Keys**, **KeysScale**, **CountDistinctKeys** e **CountDistinctScale** . Queste proprietà migliorano le prestazioni in quanto consentono alla trasformazione di preallocare la quantità di memoria necessaria per i dati memorizzati nella cache. Se si conosce il numero esatto o approssimativo di gruppi che dovrebbero risultato da un'operazione **Group by** , impostare rispettivamente le proprietà **Keys** e **KeysScale** . Se si conosce il numero esatto o approssimativo di valori distinct che dovrebbero risultare da un'operazione **Distinct Count** , impostare rispettivamente le proprietà **CountDistinctKeys** e **CountDistinctScale** .  
   
  Se in un flusso di dati è necessario creare più aggregazioni, valutare l'opportunità di creare più aggregazioni che usano una singola trasformazione Aggregazione anziché creare più trasformazioni. Questo approccio consente prestazioni migliori quando un'aggregazione è un subset di un'altra aggregazione, in quanto la trasformazione può ottimizzare l'archiviazione interna ed eseguire l'analisi dei dati in ingresso una sola volta. Nel caso, ad esempio, di un'aggregazione che usa la clausola GROUP BY e l'aggregazione AVG, è possibile migliorare le prestazioni combinando clausola e aggregazione in una sola trasformazione. L'esecuzione di più aggregazioni all'interno di una trasformazione Aggregazione, tuttavia, comporta la serializzazione delle operazioni di aggregazione e può pertanto influire sulle prestazioni quando è necessario calcolare più aggregazioni indipendentemente.  
   
@@ -185,9 +185,9 @@ ms.locfileid: "92196438"
   
 -   Articolo tecnico relativo al [caricamento di 1 TB in 30 minuti con SSIS](/previous-versions/sql/sql-server-2008/dd537533(v=sql.100)), disponibile su msdn.microsoft.com  
   
--   Articolo tecnico relativo alle [10 principali procedure consigliate per SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=220818), disponibile su sqlcat.com  
+-   Articolo tecnico relativo alle [10 principali procedure consigliate per SQL Server Integration Services](https://techcommunity.microsoft.com/t5/datacat/top-10-sql-server-integration-services-best-practices/ba-p/305163), disponibile su sqlcat.com  
   
--   Articolo tecnico ed esempio relativo al [server di distribuzione di dati bilanciati di SSIS](https://go.microsoft.com/fwlink/?LinkId=220822), disponibile su sqlcat.com  
+-   Articolo tecnico ed esempio relativo al [server di distribuzione di dati bilanciati di SSIS](https://www.sqlshack.com/ssis-balanced-data-distributor-overview/), disponibile su sqlcat.com  
   
 -   Post del blog relativo alla [risoluzione dei problemi di prestazioni dei pacchetti SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/api-sample-oledb-source-and-oledb-destination/ba-p/387553)su blogs.msdn.com  
   
@@ -201,7 +201,7 @@ ms.locfileid: "92196438"
   
 -   Video, [Modelli di progettazione per prestazioni del servizio di integrazione di Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)su channel9.msdn.com.  
   
--   Presentazione relativa all' [utilizzo dei miglioramenti al motore del flusso di dati di SQL Server 2008 SSIS da parte di Microsoft IT](https://go.microsoft.com/fwlink/?LinkId=217660), su sqlcat.com.  
+-   Presentazione relativa all' [utilizzo dei miglioramenti al motore del flusso di dati di SQL Server 2008 SSIS da parte di Microsoft IT](https://channel9.msdn.com/Shows/TechNet+Radio/TechNet-Radio-How-Microsoft-IT-Leverages-SQL-Server-2008-SSIS-Dataflow-Engine-Enhancements), su sqlcat.com.  
   
 -   Video relativo al [server di distribuzione di dati bilanciati](/previous-versions/dn912438(v=msdn.10))sul sito technet.microsoft.com.  
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 146a75e907131d5faae03da46419b3b4137c01ca
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
-ms.translationtype: HT
+ms.openlocfilehash: 4ae905d868554c20948af3eb0191937382eff56f
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194873"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536377"
 ---
 # <a name="ado-net-destination"></a>Destinazione ADO NET
 
@@ -70,7 +70,7 @@ ms.locfileid: "92194873"
   
 2.  Nella scheda **Flusso di dati** fare doppio clic sulla destinazione ADO NET.  
   
-3.  In **Editor destinazione ADO NET**fare clic su **Gestione connessione**.  
+3.  In **Editor destinazione ADO NET** fare clic su **Gestione connessione**.  
   
 ### <a name="static-options"></a>Opzioni statiche  
  **Connection manager**  
@@ -98,7 +98,7 @@ ms.locfileid: "92194873"
   
  È possibile usare il provider di dati .NET per SQL Server (SqlClient) per connettersi a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
- Se si seleziona **Usa Inserimento bulk quando possibile**e si imposta l'opzione **Errore** su **Reindirizza riga**, il batch di dati che la destinazione reindirizza all'output degli errori può includere righe corrette. Per altre informazioni sulla gestione degli errori nelle operazioni bulk, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md). Per altre informazioni sull'opzione **Errore** , vedere [Editor destinazione ADO NET &#40;pagina Output degli errori&#41;]().  
+ Se si seleziona **Usa Inserimento bulk quando possibile** e si imposta l'opzione **Errore** su **Reindirizza riga**, il batch di dati che la destinazione reindirizza all'output degli errori può includere righe corrette. Per altre informazioni sulla gestione degli errori nelle operazioni bulk, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md). Per altre informazioni sull'opzione **Errore** , vedere [Editor destinazione ADO NET &#40;pagina Output degli errori&#41;]().  
   
 > [!NOTE]
 >  Se una tabella di origine SQL Server o Sybase include una colonna Identity, è necessario usare Esegui attività di SQL per abilitare IDENTITY_INSERT prima della destinazione ADO NET e per disabilitarla di nuovo in seguito. La proprietà della colonna Identity specifica un valore incrementale per la colonna. L'istruzione SET IDENTITY_INSERT consente l'inserimento di valori espliciti della tabella di origine nella colonna Identity della tabella di destinazione.  
@@ -111,7 +111,7 @@ ms.locfileid: "92194873"
 >  Per altre informazioni, vedere [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) e [IDENTITY &#40;proprietà&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
   
 ## <a name="external-resources"></a>Risorse esterne  
- Articolo tecnico relativo alla [modalità rapida di caricamento di dati nel database SQL di Azure](https://go.microsoft.com/fwlink/?LinkId=244333) nel sito Web sqlcat.com  
+ Articolo tecnico relativo alla [modalità rapida di caricamento di dati nel database SQL di Azure](https://techcommunity.microsoft.com/t5/datacat/loading-data-to-sql-azure-the-fast-way/ba-p/305066) nel sito Web sqlcat.com  
   
 ## <a name="ado-net-destination-editor-mappings-page"></a>Editor destinazione ADO NET (pagina Mapping)
   Utilizzare la pagina **Mapping** della finestra di dialogo **Editor destinazione ADO NET** per eseguire il mapping tra colonne di input e colonne di destinazione.  
@@ -146,7 +146,7 @@ ms.locfileid: "92194873"
   
 2.  Nella scheda **Flusso di dati** fare doppio clic sulla destinazione ADO NET.  
   
-3.  In **Editor destinazione ADO NET**fare clic su **Output errori**.  
+3.  In **Editor destinazione ADO NET** fare clic su **Output errori**.  
   
 ### <a name="options"></a>Opzioni  
  **Input o output**  
