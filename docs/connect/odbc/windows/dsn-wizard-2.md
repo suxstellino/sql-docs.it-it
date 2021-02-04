@@ -2,7 +2,7 @@
 description: Schermata 2 di Creazione guidata origine dati (driver ODBC per SQL Server)
 title: Schermata 2 di Creazione guidata origine dati (driver ODBC per SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/06/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-jizho2
-ms.openlocfilehash: d1e18939ab9d3f2e86452dd3f1847971157ca92c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: 749ba8963234955e4893a2c5197bcfd4c26f2584
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462210"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159554"
 ---
 # <a name="data-source-wizard-screen-2"></a>Creazione guidata origine dati - Schermata 2
 
@@ -49,6 +49,11 @@ Specifica che il driver esegue l'autenticazione SQL Server tramite la modalità 
 ### <a name="with-managed-identity-authentication"></a>Con autenticazione identità gestita
 
 Specifica che il driver esegue l'autenticazione SQL Server tramite l'identità gestita.
+
+### <a name="with-active-directory-service-principal-authentication"></a>Con Active Directory l'autenticazione basata su entità servizio
+
+Specifica che il driver esegue l'autenticazione per SQL Server usando un'entità servizio Azure Active Directory.
+
 
 ### <a name="login-id"></a>ID accesso
 

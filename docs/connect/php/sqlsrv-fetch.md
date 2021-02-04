@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - sqlsrv_fetch
 apitype: NA
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a5a640a1-6e7d-452e-8b66-850a4dc2ce89
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eeff60b0e5d685021300a2b2272ece8aa8264dd7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: 1ab164eb61bcde26862d47c544e366a296117e5a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487873"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99154385"
 ---
 # <a name="sqlsrv_fetch"></a>sqlsrv_fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
 > [!NOTE]  
 > Un'istruzione deve essere eseguita prima che sia possibile recuperare i risultati. Per informazioni sull'esecuzione di un'istruzione, vedere [sqlsrv_query](../../connect/php/sqlsrv-query.md) e [sqlsrv_execute](../../connect/php/sqlsrv-execute.md).  
   
-*row* [FACOLTATIVO]: uno dei valori seguenti, che specifica la riga a cui accedere in un set di risultati che usa un cursore scorrevole:  
+*Row* [facoltativo]: uno dei valori seguenti, che specifica la riga per accedere a un set di risultati che usa un cursore scorrevole:  
   
 -   SQLSRV_SCROLL_NEXT  
   

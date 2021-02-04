@@ -2,21 +2,21 @@
 title: PDOStatement::getColumnMeta
 description: Informazioni di riferimento sulle API per la funzione PDOStatement::getColumnMeta nel driver Microsoft PDO_SQLSRV per PHP per SQL Server.
 ms.custom: ''
-ms.date: 08/10/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b76e7c6201226c13ae057e8ac182b7ab0a9c6b13
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
-ms.translationtype: HT
+ms.openlocfilehash: c5793f486b43fe4c2d12ec9be004dbb2b3346020
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92082020"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179924"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -131,7 +131,64 @@ Se si modifica il frammento di codice precedente impostando `PDO::SQLSRV_ATTR_DA
 {"flags":0,"sqlsrv:decl_type":"date","native_type":"string","table":"","pdo_type":2,"name":"BirthDate","len":10,"precision":0}
 ```
 
-      
+## <a name="sensitivity-rank-using-a-predefined-set-of-values"></a>Rango di riservatezza usando un set predefinito di valori
+
+A partire da 5.9.0, i driver PHP hanno aggiunto il recupero del rango di classificazione quando si usa il driver ODBC 17.4.2 o versione successiva. L'utente può definire il rango quando si utilizza la [classificazione Aggiungi riservatezza](/sql/t-sql/statements/add-sensitivity-classification-transact-sql) per classificare qualsiasi colonna di dati. 
+
+Se, ad esempio, l'utente assegna `NONE` `LOW` rispettivamente e alla nascita e al SSN, la rappresentazione JSON viene visualizzata come segue:
+
+```
+{"0":{"Label":{"name":"Confidential Personal Data","id":""},"Information Type":{"name":"Birthdays","id":""},"rank":0},"rank":0}
+{"0":{"Label":{"name":"Highly Confidential - secure privacy","id":""},"Information Type":{"name":"Credentials","id":""},"rank":10},"rank":10}
+```
+
+Come illustrato nella [classificazione di riservatezza](/sql/relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql), i valori numerici delle classificazioni sono:
+
+```
+0 for NONE
+10 for LOW
+20 for MEDIUM
+30 for HIGH
+40 for CRITICAL
+```
+
+Di conseguenza, se invece di viene `RANK=NONE` definito dall'utente `RANK=CRITICAL` durante la classificazione della colonna di nascita, i metadati di classificazione saranno:
+
+```
+array(1) {
+  ["Data Classification"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["Label"]=>
+      array(2) {
+        ["name"]=>
+        string(26) "Confidential Personal Data"
+        ["id"]=>
+        string(0) ""
+      }
+      ["Information Type"]=>
+      array(2) {
+        ["name"]=>
+        string(9) "Birthdays"
+        ["id"]=>
+        string(0) ""
+      }
+      ["rank"]=>
+      int(40)
+    }
+    ["rank"]=>
+    int(40)
+  }
+}
+```
+
+La rappresentazione JSON aggiornata è illustrata di seguito:
+
+```
+{"0":{"Label":{"name":"Confidential Personal Data","id":""},"Information Type":{"name":"Birthdays","id":""},"rank":40},"rank":40}
+```
+
 ## <a name="see-also"></a>Vedere anche  
 [Classe PDOStatement](../../connect/php/pdostatement-class.md)
 

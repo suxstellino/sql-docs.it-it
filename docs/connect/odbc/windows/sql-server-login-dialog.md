@@ -2,7 +2,7 @@
 title: Finestra di dialogo Account di accesso di SQL Server (ODBC)
 description: La finestra di dialogo di accesso a SQL Server può essere visualizzata quando un'applicazione esegue una connessione ODBC senza specificare informazioni sufficienti per connettersi al database.
 ms.custom: ''
-ms.date: 03/21/2018
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-jizho2
-ms.openlocfilehash: 7c0a2be5961e4fab07941d999da1a2b2fe5f9dbe
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
-ms.translationtype: HT
+ms.openlocfilehash: 9a2ba6a75457b2c4742603368d153f5636d3b541
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87898805"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158221"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>Finestra di dialogo Account di accesso di SQL Server (ODBC)
 
@@ -41,6 +41,7 @@ Selezionare una delle modalità di autenticazione seguenti:
 - Autenticazione **integrata di Active Directory** con l'account dell'utente attualmente connesso
 - **Autenticazione interattiva di Active Directory** con ID di accesso
 - Autenticazione con **identità del servizio gestita** con identità gestita
+- Active Directory l'autenticazione basata su **entità servizio** con Azure Active Directory entità servizio
 
 Per altre informazioni sulle modalità di autenticazione, vedere la [schermata 2 della Creazione guidata origine dati](../../../connect/odbc/windows/dsn-wizard-2.md).
 
@@ -50,7 +51,7 @@ Se si utilizza una connessione trusted, è possibile specificare un nome dell'en
 
 ### <a name="login-id"></a>ID accesso
 
-Specifica l'ID di accesso di SQL Server o Azure Active Directory da usare per la connessione se **Modalità di autenticazione** è impostata su **SQL Server**, sulla **password di Active Directory**, sull'**autenticazione interattiva di Active Directory** o sull'**identità del servizio gestita**. In caso contrario, la casella **ID di accesso** è disabilitata.
+Specifica il SQL Server o Azure Active Directory ID di accesso da utilizzare per la connessione se la **modalità di autenticazione** è impostata su **SQL Server**, **Active Directory password**, **Active Directory identità del servizio gestita interattiva**, **Active Directory** o **entità servizio**. In caso contrario, la casella **ID di accesso** è disabilitata.
 
 ### <a name="password"></a>Password
 

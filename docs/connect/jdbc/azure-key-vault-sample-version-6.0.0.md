@@ -2,7 +2,7 @@
 description: Versione di esempio di Azure Key Vault 6.0.0
 title: Versione di esempio di Azure Key Vault 6.0.0 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f297d639eacf0405ce8cbaa52d35a4bfb3ae20c7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: 1bab23ffdf60f45d46fa22585297fe6da1d3307e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438503"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163642"
 ---
 # <a name="azure-key-vault-sample-version-600"></a>Versione di esempio di Azure Key Vault 6.0.0
 
@@ -23,7 +23,7 @@ ms.locfileid: "88438503"
 
 ## <a name="sample-application-using-azure-key-vault-feature"></a>Applicazione di esempio che usa la funzionalità Azure Key Vault
 
-Questa applicazione è eseguibile con il driver JDBC 6.0.0 e Azure Key Vault (versione 0.9.7), Adal4j (versione 1.3.0) e relative dipendenze.  Per risolvere le dipendenze sottostanti, è possibile aggiungere queste librerie al file POM del progetto, come descritto [qui](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
+Questa applicazione è eseguibile usando il driver JDBC 6.0.0, Azure-Keyvault (Version 0.9.7), Adal4j (Version 1.3.0) e le relative dipendenze. Le dipendenze sottostanti possono essere risolte aggiungendo queste librerie al file del modello a oggetti di Project (POM) del progetto. Per ulteriori informazioni sulle dipendenze delle funzionalità, vedere [dipendenze delle funzionalità di Microsoft JDBC driver per SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ```java
 import java.net.URISyntaxException;
@@ -226,7 +226,8 @@ public class AKV_600 {
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
+[Esempio di Azure Key Vault versione 9,2](../../connect/jdbc/azure-key-vault-sample-version-9.2.md)  
 [Versione di esempio di Azure Key Vault 7.0](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)  
 [Versione di esempio di Azure Key Vault 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)

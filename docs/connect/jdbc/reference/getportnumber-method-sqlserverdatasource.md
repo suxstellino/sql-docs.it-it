@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDataSource.getPortNumber
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: e5dc38d0-4340-4ad7-a56e-1d2a0f0fd846
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ded903bb6696c3dfefd51979d37605af899b6d6d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: cd52c4dcc92f230923215052f8a932e1eb18b147
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88435013"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99162535"
 ---
 # <a name="getportnumber-method-sqlserverdatasource"></a>Metodo getPortNumber (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public int getPortNumber()
  Il numero di porta è il numero di porta TCP/IP usato quando si apre una connessione socket a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se la proprietà portNumber non è impostata, il metodo getPortNumber restituisce il valore predefinito 1433.  
   
 > [!NOTE]  
->  Il metodo [setPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md) non esegue alcun controllo dell'intervallo sul valore di porta passato. È possibile passare numeri di porta non validi, ad esempio 99999, senza generare un errore.  
+>  Il metodo [setPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md) non esegue alcun controllo di intervallo sul valore di porta passato. È possibile passare numeri di porta non validi, ad esempio 99999, senza generare un errore.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

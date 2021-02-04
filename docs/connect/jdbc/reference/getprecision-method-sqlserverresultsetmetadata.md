@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerResultSetMetaData.getPrecision
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: de46c96e-6ad6-4946-883e-807123658500
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4c658d96cf3ce52e5a489961bc60e23b879778aa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: e90ef6dae87b52873bdda5de9f378305fb2a402c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88434943"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99162495"
 ---
 # <a name="getprecision-method-sqlserverresultsetmetadata"></a>Metodo getPrecision (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

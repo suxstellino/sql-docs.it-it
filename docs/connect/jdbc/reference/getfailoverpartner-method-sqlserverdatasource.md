@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDataSource.getFailoverPartner
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 885f927f-9c48-42e0-a7fb-fd936d2b8130
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 607f14bab8795ba3dfebd33e2c179f85897f210a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: b5084e93cbe03ef79e5858757bf8b627991d9902
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88436063"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163055"
 ---
 # <a name="getfailoverpartner-method-sqlserverdatasource"></a>Metodo getFailoverPartner (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public string getFailoverPartner()
 ## <a name="return-value"></a>Valore restituito  
  Valore **String** contenente il nome del partner di failover oppure Null se non ne è impostato alcuno.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il valore restituito da questo metodo riflette il nome del partner di failover impostato usando il metodo [setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md).  
   
 ## <a name="see-also"></a>Vedere anche  

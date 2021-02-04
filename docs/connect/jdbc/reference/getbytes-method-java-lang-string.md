@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerCallableStatement.getBytes (java.lang.String)
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 4d0dac7f-7f39-47a2-953e-80ab03688d82
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3301acbde3b79b8d4a679f41ba0f6ba05dc3c37a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: 26d08985bf3af6e12531a8bae274090ecfd927b5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88436953"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165569"
 ---
 # <a name="getbytes-method-javalangstring"></a>Metodo getBytes (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

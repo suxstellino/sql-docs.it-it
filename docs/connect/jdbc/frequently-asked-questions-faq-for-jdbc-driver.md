@@ -2,7 +2,7 @@
 title: Domande frequenti sul driver JDBC
 description: Questa pagina offre le risposte alle domande frequenti su Microsoft JDBC Driver per SQL Server.
 ms.custom: ''
-ms.date: 08/24/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f1fe92ec4216998d36826c518a5dce40c26253c0
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
-ms.translationtype: HT
+ms.openlocfilehash: 634bbd66e2ad00ccda3b60f6f2fccfea976d09b0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725462"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163620"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Domande frequenti sul driver JDBC
 
@@ -36,6 +36,15 @@ Vedere la pagina [Matrice di supporto di Microsoft JDBC Driver per SQL Server](.
 I file del driver JDBC disponibili nel repository GitHub per Microsoft JDBC Driver sono la parte fondamentale del driver JDBC e sono coperti dalla licenza open source elencata nel repository. I pacchetti del driver nella [pagina di download Microsoft](download-microsoft-jdbc-driver-for-sql-server.md) includono librerie aggiuntive per l'autenticazione integrata di Windows e per l'abilitazione delle transazioni XA con il driver JDBC. Queste librerie aggiuntive sono coperte dalla licenza inclusa nel pacchetto scaricabile.
 
 **Quali informazioni sono necessarie prima di aggiornare il driver?**  
+Microsoft JDBC driver 9,2 supporta le specifiche JDBC 4,2 e 4,3 (parzialmente) e include tre librerie di classi JAR nel pacchetto di installazione, come indicato di seguito:
+
+| JAR                        | Specifica JDBC            | Versione JDK |
+| -------------------------- | ----------------------------- | ----------- |
+| MSSQL-JDBC-9.2.0. JRE15. jar | JDBC 4.3 (parzialmente) e 4.2 | JDK 15,0    |
+| MSSQL-JDBC-9.2.0. jre11. jar | JDBC 4.3 (parzialmente) e 4.2 | JDK 11.0    |
+| MSSQL-JDBC-9.2.0. jre8. jar  | JDBC 4.2                      | JDK 8.0     |
+| &nbsp;                     | &nbsp;                        | &nbsp;      |
+
 Microsoft JDBC Driver 8.4 supporta le specifiche JDBC 4.2 e 4.3 (parzialmente) e include tre librerie di classi JAR nel pacchetto di installazione, come descritto di seguito:
 
 | JAR                        | Specifica JDBC            | Versione JDK |
