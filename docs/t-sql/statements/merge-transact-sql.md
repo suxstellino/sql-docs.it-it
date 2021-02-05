@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: XiaoyuMSFT
 ms.author: XiaoyuL
-ms.openlocfilehash: cbc1286bbbced3a546c1057433dba5bbc4289281
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 05040bac695ba00a016a21b53149496b5470a45c
+ms.sourcegitcommit: 6f4fb9cfd0cad06127a6328adc745e2ba7c191d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99199386"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99570472"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -236,14 +236,14 @@ Specifica il modello di corrispondenza del grafico. Per altre informazioni sugli
 >[!NOTE]
 > In Azure Synapse Analytics, il comando MERGE (anteprima) presenta le differenze seguenti rispetto a SQL Server e al database SQL di Azure.  
 > - Un'azione di aggiornamento di MERGE viene implementata come una coppia di azioni di eliminazione e inserimento. Il numero di righe interessate da un'azione di aggiornamento di MERGE include le righe eliminate e inserite. 
-> - Durante l'anteprima, il comando MERGE non funziona con le tabelle con vincoli UNIQUE.  Questo problema verrà presto risolto in una versione futura.
+> - Durante l'anteprima, le tabelle con colonne Identity non sono supportate dal comando sinapsi SQL MERGE. 
 > - In questa tabella viene descritto il supporto per le tabelle con tipi di distribuzione diversi:
 
 >|CLAUSOLA MERGE in Azure Synapse Analytics|Supporto della tabella di distribuzione TARGET| Supporto della tabella di distribuzione SOURCE|Commento|  
 >|-----------------|---------------|-----------------|-----------|  
->|**WHEN MATCHED**| HASH, ROUND_ROBIN, REPLICATE |Tutti i tipi di distribuzione||  
+>|**WHEN MATCHED**| Tutti i tipi di distribuzione |Tutti i tipi di distribuzione||  
 >|**NOT MATCHED BY TARGET**|HASH |Tutti i tipi di distribuzione|Usare UPDATE/DELETE FROM…JOIN per sincronizzare le due tabelle. |
->|**NOT MATCHED BY SOURCE**|Tutti i tipi di distribuzione|Tutti i tipi di distribuzione|Usare UPDATE/DELETE FROM…JOIN per sincronizzare le due tabelle.||  
+>|**NOT MATCHED BY SOURCE**|Tutti i tipi di distribuzione|Tutti i tipi di distribuzione|||  
 
 È necessario specificare almeno una delle tre clausole MATCHED, le quali possono essere tuttavia specificate in qualsiasi ordine. Non è possibile aggiornare una variabile più di una volta nella stessa clausola MATCHED.  
   

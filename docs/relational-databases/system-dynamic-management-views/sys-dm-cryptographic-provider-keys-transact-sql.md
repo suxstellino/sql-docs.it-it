@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5a8c1421-c56b-44b5-96e5-4f01782a0c7c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 9fcfeed749aea4fa18ac74ba4e78cc9dfa368828
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 508240f27248cb4cc618441948c40b72c9311398
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99196296"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552616"
 ---
 # <a name="sysdm_cryptographic_provider_keys-transact-sql"></a>sys.dm_cryptographic_provider_keys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,10 @@ ms.locfileid: "99196296"
   Restituisce le informazioni sulle chiavi fornite da un provider EKM (Extensible Key Management).  
 
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+
+> [!IMPORTANT]
+> Questa vista a gestione dinamica non è attualmente supportata dal connettore EKM SQL Server. Il team del prodotto SQL Server è a conoscenza di questo problema e verrà indirizzato in futuro.
+
 ## <a name="syntax"></a>Sintassi  
   
 ```  

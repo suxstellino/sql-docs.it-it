@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: f208b424272644f3d66146014401a1343f00e576
-ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
-ms.translationtype: HT
+ms.openlocfilehash: 398d8d1aaf626fdc65674ee1d5eb959951dcd5e2
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94674202"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552625"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Edizioni e funzionalità supportate di SQL Server 2019 in Linux
 
@@ -97,7 +97,7 @@ La versione Developer Edition continua a supportare un solo client per la [Riese
 |-------------|----------------|--------------|---------|------------------------|  
 |Log shipping|Sì|Sì|Sì|No|  
 |Compressione backup|Sì|Sì|No|No| 
-|Snapshot del database|Sì|No|No|No|
+|Snapshot del database|Sì|Sì|No|No|
 |Istanza del cluster di failover Always On<sup>1</sup>|Sì|Sì|No|No| 
 |Gruppi di disponibilità AlwaysOn<sup>2</sup>|Sì|No|No|No|
 |Gruppi di disponibilità di base<sup>3</sup>|No|Sì|No|No|

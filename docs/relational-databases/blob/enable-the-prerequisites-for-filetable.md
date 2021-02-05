@@ -12,12 +12,12 @@ ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 12e392d083b9b47e3330d8a95b6c2d199a146cea
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
-ms.translationtype: HT
+ms.openlocfilehash: d5e02aa025d65fd7f3db6d1f5bd8f43e44566ac9
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809918"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552664"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>Abilitazione dei prerequisiti per la tabella FileTable
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -148,7 +148,7 @@ GO
   
 -   Quando si collega o ripristina un database, l'operazione non riesce se il nuovo database include un valore per **DIRECTORY_NAME** già presente nell'istanza di destinazione. Specificare un valore univoco per **DIRECTORY_NAME** quando si chiama **CREATE DATABASE FOR ATTACH** o **RESTORE DATABASE**.  
   
--   Quando si aggiorna un database esistente a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il valore di **DIRECTORY_NAME** è Null.  
+-   Quando si aggiorna un database esistente, il valore di **DIRECTORY_NAME** è null.  
   
 -   Quando si abilita o disabilita l'accesso non transazionale a livello di database, l'operazione non verifica se è stato specificato il nome di directory o se questo è univoco.  
   

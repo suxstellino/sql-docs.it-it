@@ -17,12 +17,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 828218dcebe5f2e5ab6c0759083f497876dae6b2
-ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+ms.openlocfilehash: 739501f78f313f8fbff20d71cc63376a8da27343
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98813524"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552667"
 ---
 # <a name="row-level-security"></a>Sicurezza a livello di riga
 
@@ -302,7 +302,7 @@ Questo breve esempio crea tre utenti e una tabella esterna con sei righe. Vengon
 ### <a name="prerequisites"></a>Prerequisiti
 
 1. È necessario disporre di un pool SQL dedicato. Vedere [Creare un pool SQL dedicato](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
-1. Il server che ospita il pool SQL dedicato deve essere registrato in AAD ed è necessario avere un account di archiviazione di Azure con le autorizzazioni di collaboratore al BLOB di archiviazione. Seguire i passaggi [qui](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps).
+1. Il server che ospita il pool SQL dedicato deve essere registrato con AAD ed è necessario avere un account di archiviazione di Azure con le autorizzazioni di collaboratore dati del Blog di archiviazione. Seguire i passaggi [qui](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps).
 1. Creare un file system per l'account di archiviazione di Azure. Usare Storage Explorer per visualizzare l'account di archiviazione. Fare clic con il pulsante destro del mouse su contenitori e scegliere *Crea file system*.  
 
 Una volta soddisfatti i prerequisiti, creare tre account utente che dimostreranno le diverse funzionalità di accesso.

@@ -13,12 +13,12 @@ ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 630732f9f1d56292a72ddd180ee536008c4ecf83
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 04a4515467265456797fbff8f5dc0446748229ba
+ms.sourcegitcommit: 6f4fb9cfd0cad06127a6328adc745e2ba7c191d1
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475592"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99570469"
 ---
 # <a name="always-encrypted-cryptography"></a>Crittografia Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,9 @@ ms.locfileid: "97475592"
  La chiave CEK (Column Encryption Key, chiave di crittografia della colonna) è una chiave di crittografia del contenuto, ovvero una chiave usata per proteggere i dati, protetta da una chiave CMK.  
   
  Tutti i provider di archiviazione CMK di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] eseguono la crittografia delle chiavi CEK con riempimento RSA-OAEP. Il provider dell'archivio chiavi che supporta l'API Cryptography Next Generation (CNG) in .NET Framework ([classe SqlColumnEncryptionCngProvider](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncngprovider)) usa i parametri predefiniti specificati da RFC 8017 nella sezione A.2.1. Tali parametri predefiniti usano una funzione hash di SHA-1 e una funzione di generazione della maschera MGF1 con SHA-1. Tutti gli altri provider di archivi di chiavi usano SHA-256. 
-  
+
+Always Encrypted usa internamente i moduli di crittografia FIPS 140-2 convalidati. 
+
 ## <a name="data-encryption-algorithm"></a>Algoritmo di crittografia dei dati  
  La funzionalità Always Encrypted usa l'algoritmo **AEAD_AES_256_CBC_HMAC_SHA_256** per crittografare i dati nel database.  
   

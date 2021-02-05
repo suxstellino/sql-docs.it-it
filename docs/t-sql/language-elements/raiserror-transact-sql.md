@@ -30,12 +30,12 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ccb8c1e7f26102aa960ab720283debaceff2dd2c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e9892fe80ff3f29dca2ac46c99249fa603ab5528
+ms.sourcegitcommit: 6f4fb9cfd0cad06127a6328adc745e2ba7c191d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99203613"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99570485"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -132,7 +132,7 @@ RAISERROR ( { msg_str | @local_variable }
  Variabile di qualsiasi tipo di dati carattere valido contenente una stringa con la stessa formattazione di *msg_str*. *\@local_variable* deve essere di tipo **char** o **varchar** oppure deve supportare la conversione implicita in questi tipi di dati.  
   
  *severity*  
- Livello di gravità definito dall'utente associato al messaggio. Se si usa *msg_id* per generare un messaggio definito dall'utente creato tramite sp_addmessage, la gravità specificata in RAISERROR ha la priorità sulla gravità specificata in sp_addmessage.  
+ [Livello di gravità](../../relational-databases/errors-events/database-engine-error-severities.md) definito dall'utente associato a questo messaggio. Se si usa *msg_id* per generare un messaggio definito dall'utente creato tramite sp_addmessage, la gravità specificata in RAISERROR ha la priorità sulla gravità specificata in sp_addmessage.  
   
  I livelli di gravità da 0 a 18 possono essere specificati da qualsiasi utente, mentre i livelli di gravità da 19 a 25 possono essere specificati solo dai membri del ruolo predefinito del server sysadmin oppure dagli utenti che hanno l'autorizzazione ALTER TRACE. I livelli di gravità da 19 a 25 richiedono l'opzione WITH LOG. I livelli di gravità inferiori a 0 vengono interpretati come 0. I livelli di gravità superiori a 25 vengono interpretati come 25.  
   
