@@ -16,12 +16,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 668d1fda7e4b979e52377c03daaddb0cb2286cdd
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 87ed2882d8276b3a92add3349b73bf38fe821dc9
+ms.sourcegitcommit: 10ae200635b9e8554e6bc6f658125e1a80d4d5ae
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97462962"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99589305"
 ---
 # <a name="spatial-data-types-overview"></a>Panoramica dei tipi di dati spaziali
 
@@ -84,7 +84,7 @@ In un sistema ellissoidale, un poligono senza orientamento non ha significato o 
 
 L'interno del poligono in un sistema ellissoidale è definito dalla "regola della mano sinistra": se si immagina di camminare lungo l'anello di un poligono geografico, seguendo i punti nell'ordine in cui sono elencati, l'area a sinistra viene considerata come l'interno del poligono e l'area a destra come parte esterna del poligono.
 
-Quando il livello di compatibilità è uguale o minore di 100 in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , al tipo di dati **geography** si applicano le restrizioni seguenti:
+Quando il livello di compatibilità è uguale o minore di 100 in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] , al tipo di dati **geography** si applicano le restrizioni seguenti:
 
 - Ogni istanza **geography** deve adattarsi all'interno di un singolo emisfero. Non è possibile archiviare oggetti spaziali con dimensioni maggiori di un emisfero.
 
@@ -92,7 +92,7 @@ Quando il livello di compatibilità è uguale o minore di 100 in [!INCLUDE[ssCur
 
 - I metodi del tipo di dati **geography** che richiedono l'input di due istanze **geography** , ad esempio STIntersection(), STUnion(), STDifference() e STSymDifference(), restituiranno Null se i risultati dei metodi non si adattano a un singolo emisfero. Anche STBuffer() restituirà Null se l'output supera un singolo emisfero.  
 
-In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**FullGlobe** è un tipo speciale di Polygon che copre l'intero globo. Ha un'area, ma non ha bordi o vertici.  
+In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]**FullGlobe** è un tipo speciale di Polygon che copre l'intero globo. Ha un'area, ma non ha bordi o vertici.  
 
 ### <a name="outer-and-inner-rings-in-geography-data-type"></a>Anelli interni ed esterni nel tipo di dati `geography`
 
