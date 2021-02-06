@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: bf838f02-7186-4b33-b01e-361b0c02de1f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3e8edbc04cc3f55e867aaa4376f56b7d78715d5d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1fe941e7ffaa594daa11e11e72140b4ace07cd33
+ms.sourcegitcommit: c52a6aeb6fa6d7c3a86b3e84449361f4a0949ad0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99201592"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99623795"
 ---
 # <a name="mssqlserver_3452"></a>MSSQLSERVER_3452
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,8 +34,10 @@ ms.locfileid: "99201592"
 |Testo del messaggio|Durante il recupero del database '%.*ls' (%d) è stata rilevata una possibile inconsistenza dei valori Identity nella tabella con ID %d. Eseguire DBCC CHECKIDENT ('%.\*ls').|  
   
 ## <a name="explanation"></a>Spiegazione  
-Durante l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], nel processo di recupero dei valori Identity nel database è stata rilevata un'incoerenza tra i metadati.  
+
+Durante un aggiornamento o durante l'applicazione di un aggiornamento del servizio, il processo di recupero dei valori Identity nel database ha rilevato un'incoerenza nei metadati.  
   
-## <a name="user-action"></a>Azione dell'utente  
+## <a name="user-action"></a>Azione dell'utente
+
 Eseguire DBCC CHECKIDENT.  
   

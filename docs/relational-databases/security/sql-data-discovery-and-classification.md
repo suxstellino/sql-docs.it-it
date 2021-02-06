@@ -8,15 +8,15 @@ ms.service: sql-database
 ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
-ms.date: 06/10/2020
+ms.date: 02/05/2021
 ms.author: datrigan
 author: DavidTrigano
-ms.openlocfilehash: 57ddcd78bd05cda262c9e4d041562dc5c2dfc4b7
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 3b24c9accfd205057086a477a586b33218e532b6
+ms.sourcegitcommit: c52a6aeb6fa6d7c3a86b3e84449361f4a0949ad0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236546"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99623798"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Individuazione dati e classificazione SQL
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,14 +29,14 @@ L'individuazione e la classificazione dei dati più sensibili, come i dati azien
 > [!NOTE]
 > Individuazione dati e classificazione è una funzionalità **supportata per SQL Server 2012 e versioni successive e può essere usata con [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md) o versioni successive**. Per database SQL di Azure, vedere [Individuazione dati e classificazione nel database SQL di Azure](/azure/sql-database/sql-database-data-discovery-and-classification/).
 
-## <a name="overview"></a><a id="subheading-1"></a>Panoramica
+## <a name="overview"></a><a id="Overview"></a>Panoramica
 Individuazione dati & classificazione introduce un set di servizi, costituendo un nuovo paradigma SQL Information Protection mirato alla protezione dei dati, non solo al database:
 
 * **Individuazione e consigli**: il motore di classificazione esegue l'analisi del database e identifica le colonne che contengono dati potenzialmente sensibili. In seguito offre un modo semplice per verificare e applicare i consigli di classificazione appropriati, nonché per classificare manualmente le colonne.
 * **Assegnazione di etichette**: è possibile contrassegnare le colonne con etichette di classificazione di riservatezza in modo permanente.
 * **Visibilità**: è possibile visualizzare lo stato di classificazione del database in un report dettagliato che può essere stampato o esportato a scopo di controllo e conformità, nonché per altre esigenze.
 
-## <a name="discovering-classifying--labeling-sensitive-columns"></a><a id="subheading-2"></a>Individuazione, classificazione e assegnazione di etichette a colonne di dati sensibili
+## <a name="discovering-classifying--labeling-sensitive-columns"></a><a id="Discovering-classifying-labeling-sensitive-columns"></a>Individuazione, classificazione e assegnazione di etichette a colonne di dati sensibili
 Nella sezione seguente vengono descritti i passaggi per l'individuazione, la classificazione e l'assegnazione di etichette a colonne del database contenenti dati sensibili, nonché per visualizzare lo stato di classificazione corrente del database e per esportare report.
 
 La classificazione include due attributi di metadati:
@@ -91,7 +91,7 @@ La classificazione include due attributi di metadati:
 
     ![Screenshot che mostra il report di classificazione dei dati SQL.][10]
 
-## <a name="manage-information-protection-policy-with-ssms"></a><a id="subheading-3"></a>Gestire i criteri di Information Protection con SSMS
+## <a name="manage-information-protection-policy-with-ssms"></a><a id="Manage-information-protection-policy-with-SSMS"></a>Gestire i criteri di Information Protection con SSMS
 
 [SSMS 18.4](../../ssms/download-sql-server-management-studio-ssms.md) o versione successiva consente di gestire i criteri di Information Protection:
 
@@ -111,12 +111,9 @@ La classificazione include due attributi di metadati:
 > Il file dei criteri di Information Protection non è archiviato in SQL Server.
 > SSMS usa i criteri di Information Protection predefiniti. Se un criterio di Information Protection personalizzato non riesce, SSMS non è in grado di usare il criterio predefinito. La classificazione dei dati ha esito negativo. Per risolvere il problema, fare clic su **Ripristina criteri di Information Protection** per usare i criteri predefiniti e riabilitare la classificazione dei dati.
 
-## <a name="accessing-the-classification-metadata"></a><a id="subheading-4"></a>Accesso ai metadati di classificazione
+## <a name="accessing-the-classification-metadata"></a><a id="sAccessing-the-classification-metadata"></a>Accesso ai metadati di classificazione
 
-SQL Server 2019 introduce la [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md) vista del catalogo di sistema. Questa vista restituisce i tipi di informazioni e le etichette di riservatezza. 
-
-> [!NOTE]
-> Richiede l'autorizzazione **VIEW ANY SENSITIVITY CLASSIFICATION**. Per altre informazioni, vedere [Metadata Visibility Configuration](./metadata-visibility-configuration.md).
+SQL Server 2019 introduce la [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md) vista del catalogo di sistema. Questa vista restituisce i tipi di informazioni e le etichette di riservatezza.
 
 Per le istanze di SQL Server 2019, eseguire una query su `sys.sensitivity_classifications` per esaminare tutte le colonne classificate e le classificazioni corrispondenti. Ad esempio: 
 
@@ -140,8 +137,6 @@ Prima di SQL 2019 i metadati di classificazione per i tipi di informazioni e le 
 
 * `sys_information_type_name`
 * `sys_sensitivity_label_name`
-
-I metadati sono accessibili usando la vista del catalogo Proprietà estese [`sys.extended_properties`](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md).
 
 Per le istanze di SQL Server 2017 e versioni precedenti, l'esempio seguente restituisce tutte le colonne classificate e le classificazioni corrispondenti:
 
@@ -185,6 +180,14 @@ FROM
     ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
 ```
 
+## <a name="permissions"></a><a id="Permissions"></a>Autorizzazioni
+
+Nelle istanze SQL Server 2019, la classificazione di visualizzazione richiede l'autorizzazione **View any Sensitivity Classification** . Per altre informazioni, vedere [Metadata Visibility Configuration](./metadata-visibility-configuration.md).
+
+Prima di SQL Server 2019, è possibile accedere ai metadati utilizzando la vista del catalogo delle proprietà estese [`sys.extended_properties`](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md) .
+
+Per la gestione della classificazione è necessaria l'autorizzazione ALTER ANY SENSITIVity CLASSIFICAtion. L'autorizzazione ALTER ANY SENSITIVITY CLASSIFICATION è implicita nell'autorizzazione del database ALTER o nell'autorizzazione del server CONTROL SERVER.
+
 ## <a name="manage-classifications"></a><a id="subheading-5"></a>Gestire le classificazioni
 
 # <a name="t-sql"></a>[T-SQL](#tab/t-sql)
@@ -201,7 +204,7 @@ FROM
 - [Set-SqlSensitivityClassification](/powershell/module/sqlserver/Set-SqlSensitivityClassification)
 - [Remove-SqlSensitivityClassification](/powershell/module/sqlserver/Remove-SqlSensitivityClassification)
 
-## <a name="next-steps"></a><a id="subheading-6"></a>Passaggi successivi
+## <a name="next-steps"></a><a id="Next-steps"></a>Passaggi successivi
 
 Per database SQL di Azure, vedere [Individuazione dati e classificazione nel database SQL di Azure](/azure/azure-sql/database/data-discovery-and-classification-overview).
 
