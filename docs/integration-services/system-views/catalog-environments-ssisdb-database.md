@@ -11,19 +11,16 @@ ms.topic: language-reference
 ms.assetid: 7014c0e3-65dc-4a46-842e-4decf3737748
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 426199180acf6aafc609250638d00d1deb9231ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: d3c2915d6bb01059b514649a21a391c2561579ae
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495280"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835292"
 ---
 # <a name="catalogenvironments-ssisdb-database"></a>catalog.environments (database SSISDB)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Vengono visualizzati i dettagli relativi all'ambiente di tutti gli ambienti nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Negli ambienti sono contenute variabili che possono fare riferimento ai progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -37,7 +34,7 @@ ms.locfileid: "88495280"
 |created_by_name|**nvarchar(128)**|Nome dell'utente che ha creato l'ambiente.|  
 |created_time|**datetimeoffset**|Data e ora di creazione dell'ambiente.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  In questa vista viene visualizzata una riga per ogni ambiente nel catalogo. I nomi degli ambienti sono univoci solo per quanto riguarda la cartella in cui vengono individuati. Ad esempio, un ambiente denominato `E1` può esistere in più cartelle nel catalogo, ma ogni cartella può disporre solo di un ambiente denominato `E1`.  
   
 ## <a name="permissions"></a>Autorizzazioni  

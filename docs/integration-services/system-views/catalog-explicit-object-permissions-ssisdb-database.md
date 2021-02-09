@@ -11,21 +11,18 @@ ms.topic: language-reference
 ms.assetid: 49b09e0f-06e8-451f-b979-a0d91000bfe3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e7052caddf7087239e734d6474c4d829f13e9948
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: 63db338fa18e3efbf0739acca2c1b97ad388e985
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422085"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835208"
 ---
 # <a name="catalogexplicit_object_permissions-ssisdb-database"></a>catalog.explicit_object_permissions (database SSISDB)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-
-  Vengono visualizzate solo le autorizzazioni assegnate in modo esplicito all'utente.  
+ Vengono visualizzate solo le autorizzazioni assegnate in modo esplicito all'utente.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -36,7 +33,7 @@ ms.locfileid: "88422085"
 |is_deny|**bit**|Viene indicato se l'autorizzazione è stata negata o concessa. Quando il valore è `1`, l'autorizzazione è stata negata. In caso contrario, il valore è `0`.|  
 |grantor_id|**int**|ID dell'entità a cui è stata concessa l'autorizzazione.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  In questa vista vengono visualizzati i tipi di autorizzazione elencati nella tabella seguente:  
   
 |Valore di permission_type|Nome dell'autorizzazione|Descrizione dell'autorizzazione|Tipi di oggetti applicabili|  

@@ -11,19 +11,16 @@ ms.topic: language-reference
 ms.assetid: db299b45-557d-4c62-8e14-355cdb051f63
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c4082c0bbf428a96776ae18fece7333f0401a2b6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: d08a1df29dbea83704165122a16d8daaff110e76
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422075"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835214"
 ---
 # <a name="catalogextended_operation_info-ssisdb-database"></a>catalog.extended_operation_info (database SSISDB)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Vengono visualizzate le informazioni estese per tutte le operazioni nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -38,7 +35,7 @@ ms.locfileid: "88422075"
 |start_time|**datetimeoffset(7)**|Data e ora di inizio dell'operazione.|  
 |end_time|**datetimeoffset(7)**|Data e ora di fine della dell'operazione.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Una singola operazione può disporre di più righe di informazioni estese.  
   
 ## <a name="permissions"></a>Autorizzazioni  

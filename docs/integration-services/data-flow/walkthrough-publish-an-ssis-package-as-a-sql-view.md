@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d8a02e714f78f830da467cb35cf227d73e3a6277
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
-ms.translationtype: HT
+ms.openlocfilehash: 0a9c522bf292147852203fb9ac740e7103195b35
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194576"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835994"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Procedura dettagliata: Pubblicare un pacchetto SSIS come vista SQL
 
@@ -30,7 +30,7 @@ ms.locfileid: "92194576"
 ## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura dettagliata è necessario che nel computer sia installato il software seguente:  
   
-1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o versioni successive con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+1.  [!INCLUDE[ssNoVersion ](../../includes/ssnoversion-md.md)] con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
 2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).  
   
@@ -41,7 +41,7 @@ ms.locfileid: "92194576"
   
 2.  Creare un nuovo progetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-    1.  Fare clic su **File** nella barra dei menu, scegliere **Nuovo**e fare clic su **Progetto**.  
+    1.  Fare clic su **File** nella barra dei menu, scegliere **Nuovo** e fare clic su **Progetto**.  
   
     2.  Espandere **Business Intelligence** nel riquadro sinistro e fare clic su **Integration Services** nella visualizzazione albero.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "92194576"
   
     4.  Trascinare il componente **Origine OLE DB** dalla **Casella degli strumenti SSIS** nella **finestra di progettazione del flusso di dati**.  
   
-    5.  Configurare il componente per estrarre i dati dalla tabella **Dipendente** nel database **TestDB** . Selezionare **(locale).TestDB** per **Gestione connessione OLE DB**, **Tabella o vista** per **Modalità di accesso ai dati**e **[dbo].[Dipendente]** per **Nome tabella o vista**.  
+    5.  Configurare il componente per estrarre i dati dalla tabella **Dipendente** nel database **TestDB** . Selezionare **(locale).TestDB** per **Gestione connessione OLE DB**, **Tabella o vista** per **Modalità di accesso ai dati** e **[dbo].[Dipendente]** per **Nome tabella o vista**.  
   
          ![Destinazione flusso di dati - Connessione OLE DB](../../integration-services/data-flow/media/dsd-oledbconnectionmanager.jpg "Destinazione flusso di dati - Connessione OLE DB")  
   
@@ -133,7 +133,7 @@ ms.locfileid: "92194576"
   
         2.  Specificare se i dati devono essere crittografati prima di inviarli in rete (campo Crittografa). Vedere [Utilizzo della crittografia senza convalida](../../relational-databases/native-client/features/using-encryption-without-validation.md) per altre informazioni su questa impostazione e sull'impostazione TrustServerCertificate.  
   
-        3.  Specificare se è possibile usare un certificato server autofirmato quando è abilitata l'impostazione di crittografia (campo**TrustServerCertificate** ).  
+        3.  Specificare se è possibile usare un certificato server autofirmato quando è abilitata l'impostazione di crittografia (campo **TrustServerCertificate** ).  
   
         4.  Fare clic su **OK** per chiudere la finestra di dialogo **Impostazioni avanzate** .  
   
@@ -176,7 +176,7 @@ ms.locfileid: "92194576"
   
 1.  In SQL Server Management Studio espandere **Cataloghi di Integration Services**, **SSISDB**, la **cartella** in cui esiste il progetto SSIS, **Progetti**, il nodo del progetto e **Pacchetti**.  
   
-2.  Fare clic con il pulsante destro del mouse sul pacchetto SSIS e quindi fare clic su **Report**, scegliere **Report standard**e quindi fare clic su **Tutte le esecuzioni**.  
+2.  Fare clic con il pulsante destro del mouse sul pacchetto SSIS e quindi fare clic su **Report**, scegliere **Report standard** e quindi fare clic su **Tutte le esecuzioni**.  
   
 3.  Viene visualizzata l'esecuzione del pacchetto SSIS nel report.  
   
@@ -222,7 +222,7 @@ GO
     ```  
   
     > [!IMPORTANT]  
-    >  Se necessario, aggiornare il nome della cartella, il nome del progetto e il nome del pacchetto. Se la funzione OPENQUERY non riesce, in **SQL Server Management Studio**espandere **Oggetti server**, **Server collegati**, **Provider**, fare doppio clic sul provider **SSISOLEDB** e assicurarsi che l'opzione **Consenti in-process** sia abilitata.  
+    >  Se necessario, aggiornare il nome della cartella, il nome del progetto e il nome del pacchetto. Se la funzione OPENQUERY non riesce, in **SQL Server Management Studio** espandere **Oggetti server**, **Server collegati**, **Provider**, fare doppio clic sul provider **SSISOLEDB** e assicurarsi che l'opzione **Consenti in-process** sia abilitata.  
   
 2.  Creare una vista nel database **TestDB** per le finalità di questa procedura dettagliata eseguendo la query seguente.  
   

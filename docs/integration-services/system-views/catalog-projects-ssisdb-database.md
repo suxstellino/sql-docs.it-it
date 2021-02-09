@@ -11,19 +11,16 @@ ms.topic: language-reference
 ms.assetid: a6b595e1-5227-47ce-8ee2-a28c1e1d5645
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 874d4a89af11ab022ce2714334b9aefb506de1a6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: 1d23141832f90f458d484266468b7f76ffd29f75
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421995"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835192"
 ---
 # <a name="catalogprojects-ssisdb-database"></a>catalog.projects (database SSISDB)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Visualizza i dettagli per tutti i progetti visualizzati nel catalogo di **SSISDB**.  
   

@@ -11,19 +11,16 @@ ms.topic: language-reference
 ms.assetid: 45f5aacd-505a-443b-8fc2-c7929e78cff8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b76045d5f901fa1444fd016d1c7673f46170332d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: 1a6894bc1dee54ec5fa66014ed363409ebb150b6
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495332"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835282"
 ---
 # <a name="catalogenvironment_variables-ssisdb-database"></a>catalog.environment_variables (database SSISDB)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Vengono visualizzati i dettagli delle variabili di ambiente di tutti gli ambienti nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -33,7 +30,7 @@ ms.locfileid: "88495332"
 |environment_id|**bigint**|ID univoco dell'ambiente a cui è associata la variabile.|  
 |name|**sysname**|Nome della variabile di ambiente.|  
 |description|**nvarchar(1024)**|Descrizione della variabile di ambiente.|  
-|type|**nvarchar(128)**|Tipo di dati della variabile di ambiente.|  
+|tipo|**nvarchar(128)**|Tipo di dati della variabile di ambiente.|  
 |sensitive|**bit**|Quando il valore è `1`, la variabile è importante e viene crittografata quando viene archiviata. Quando il valore è `0`, la variabile non è importante e il valore viene archiviato non crittografato.|  
 |Valore|**sql_variant**|Valore della variabile di ambiente. Quando sensitive è `0`, viene visualizzato il valore non crittografato. Quando sensitive è `1`, viene visualizzato il valore **NULL**.|  
   
