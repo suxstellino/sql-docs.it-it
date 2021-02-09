@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: XiaoyuMSFT
 ms.author: XiaoyuL
-ms.openlocfilehash: 05040bac695ba00a016a21b53149496b5470a45c
-ms.sourcegitcommit: 6f4fb9cfd0cad06127a6328adc745e2ba7c191d1
+ms.openlocfilehash: 6b6610293bb78ef34ae5ca8b88f762c9ab4948e9
+ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99570472"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99978863"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -236,7 +236,7 @@ Specifica il modello di corrispondenza del grafico. Per altre informazioni sugli
 >[!NOTE]
 > In Azure Synapse Analytics, il comando MERGE (anteprima) presenta le differenze seguenti rispetto a SQL Server e al database SQL di Azure.  
 > - Un'azione di aggiornamento di MERGE viene implementata come una coppia di azioni di eliminazione e inserimento. Il numero di righe interessate da un'azione di aggiornamento di MERGE include le righe eliminate e inserite. 
-> - Durante l'anteprima, le tabelle con colonne Identity non sono supportate dal comando sinapsi SQL MERGE. 
+> - Durante l'anteprima, Esegui MERGE... Quando l'istruzione INSERT non corrispondente non è supportata per le tabelle con colonne IDENTITY.  
 > - In questa tabella viene descritto il supporto per le tabelle con tipi di distribuzione diversi:
 
 >|CLAUSOLA MERGE in Azure Synapse Analytics|Supporto della tabella di distribuzione TARGET| Supporto della tabella di distribuzione SOURCE|Commento|  

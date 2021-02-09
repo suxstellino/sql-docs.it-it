@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 2c82514c12ec3ba496e288454d87750e0c91a5f8
-ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
+ms.openlocfilehash: 5b59930023da1279e2db18d9e9fce4186c677f8d
+ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99835676"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99978583"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificare il database SQL di Azure o lo SKU Istanza gestita appropriato per il database locale
 
@@ -207,12 +207,15 @@ Per inserire le informazioni di provisioning e apportare modifiche alle raccoman
     - **Gruppo di risorse** : il gruppo di risorse in cui si desidera distribuire i database. Immettere un gruppo di risorse esistente.
     - **Region** (area): area in cui eseguire il provisioning dei database. Assicurarsi che la sottoscrizione supporti l'area di selezione.
     - **Nome del server** : il server di database SQL di Azure in cui si desidera distribuire i database. Se si immette un nome di server che non esiste, verrà creato.
-    - **Nome utente amministratore** : nome utente amministratore del server. Verificare che il nome di accesso soddisfi i requisiti seguenti: il nome dell'account di accesso non deve contenere un identificatore SQL o un nome di sistema tipico, ad esempio admin, Administrator, SA, root, dbmanager, loginmanager e così via, oppure un utente o un ruolo predefinito del database, ad esempio dbo, Guest, Public e così via. Il nome dell'account di accesso non deve includere caratteri non alfanumerici (inclusi gli spazi vuoti, caratteri Unicode) il nome dell'account di accesso non deve iniziare con numeri o simboli
+    - **Nome utente amministratore** : nome utente amministratore del server. Verificare che il nome di accesso soddisfi i requisiti seguenti:
+      - Il nome dell'account di accesso non deve contenere un identificatore SQL o un nome di sistema tipico, ad esempio admin, Administrator, SA, root, dbmanager, loginmanager e così via, oppure un utente o un ruolo predefinito del database, ad esempio dbo, Guest, Public e così via.
+      - Il nome dell'account di accesso non deve includere caratteri non alfanumerici, inclusi gli spazi vuoti e i caratteri Unicode.
+      - Il nome dell'account di accesso non deve iniziare con numeri o simboli.
 
-    - **Password amministratore** : password amministratore server. La password deve avere una lunghezza di almeno 8 caratteri.
-La lunghezza della password non deve superare i 128 caratteri.
-La password deve contenere caratteri di tre delle categorie seguenti: lettere maiuscole, lettere minuscole, numeri (0-9) e caratteri non alfanumerici (!, $, #, % e così via).
-La password non può contenere tutto o parte del nome dell'account di accesso. (Parte di un nome di account di accesso è definita come tre o più caratteri alfanumerici consecutivi).
+    - **Password amministratore** : password amministratore server. 
+      - La password deve avere una lunghezza di almeno 8 caratteri e non può contenere più di 128 caratteri.
+      - La password deve contenere caratteri di tre delle categorie seguenti: lettere maiuscole, lettere minuscole, numeri (0-9) e caratteri non alfanumerici (!, $, #, % e così via).
+      - La password non può contenere tutto o parte del nome dell'account di accesso. (Parte di un nome di account di accesso è definita come tre o più caratteri alfanumerici consecutivi).
 
 2. Esaminare i consigli per ogni database e modificare il piano tariffario, il livello di calcolo e le dimensioni massime dei dati in base alle esigenze. Assicurarsi di deselezionare i database di cui non si vuole eseguire il provisioning.
 
@@ -229,12 +232,15 @@ La password non può contenere tutto o parte del nome dell'account di accesso. (
     - **Gruppo di risorse** : il gruppo di risorse in cui si desidera distribuire i database. Immettere un gruppo di risorse esistente.
     - **Region** (area): area in cui eseguire il provisioning dei database. Assicurarsi che la sottoscrizione supporti l'area di selezione.
     - **Nome istanza** : istanza di Azure SQL istanza gestita cui si desidera eseguire la migrazione dei database. Il nome dell'istanza può contenere solo lettere minuscole, numeri è-', ma non può iniziare o terminare con '-' o contenere più di 63 caratteri.
-    - **Nome utente amministratore istanza** : nome utente amministratore istanza. Verificare che il nome di accesso soddisfi i requisiti seguenti: il nome dell'account di accesso non deve contenere un identificatore SQL o un nome di sistema tipico, ad esempio admin, Administrator, SA, root, dbmanager, loginmanager e così via, oppure un utente o un ruolo predefinito del database, ad esempio dbo, Guest, Public e così via. Il nome dell'account di accesso non deve includere caratteri non alfanumerici (inclusi gli spazi vuoti, caratteri Unicode) il nome dell'account di accesso non deve iniziare con numeri o simboli
+    - **Nome utente amministratore istanza** : nome utente amministratore istanza. Verificare che il nome di accesso soddisfi i requisiti seguenti:
+      - Il nome dell'account di accesso non deve contenere un identificatore SQL o un nome di sistema tipico, ad esempio admin, Administrator, SA, root, dbmanager, loginmanager e così via, oppure un utente o un ruolo predefinito del database, ad esempio dbo, Guest, Public e così via.
+      - Il nome dell'account di accesso non deve includere caratteri non alfanumerici, inclusi gli spazi vuoti e i caratteri Unicode.
+      - Il nome dell'account di accesso non deve iniziare con numeri o simboli.
 
-    - **Password amministratore istanza** : password amministratore istanza. La password deve avere una lunghezza di almeno 16 caratteri.
-La lunghezza della password non deve superare i 128 caratteri.
-La password deve contenere caratteri di tre delle categorie seguenti: lettere maiuscole, lettere minuscole, numeri (0-9) e caratteri non alfanumerici (!, $, #, % e così via).
-La password non può contenere tutto o parte del nome dell'account di accesso. (Parte di un nome di account di accesso è definita come tre o più caratteri alfanumerici consecutivi).
+    - **Password amministratore istanza** : password amministratore istanza. 
+      - La password deve avere una lunghezza di almeno 16 caratteri e non può contenere più di 128 caratteri.
+      - La password deve contenere caratteri di tre delle categorie seguenti: lettere maiuscole, lettere minuscole, numeri (0-9) e caratteri non alfanumerici (!, $, #, % e così via).
+      - La password non può contenere tutto o parte del nome dell'account di accesso. (Parte di un nome di account di accesso è definita come tre o più caratteri alfanumerici consecutivi).
 
     - **Nome VNET** : il nome VNET in cui deve essere eseguito il provisioning dell'istanza gestita. Immettere un nome di VNet esistente.
     - **Nome subnet** : il nome della subnet in cui deve essere eseguito il provisioning dell'istanza gestita. Immettere un nome di subnet esistente.

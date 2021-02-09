@@ -19,12 +19,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fef5768f72f45bf388ccd5878d56dc480371aecd
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
-ms.translationtype: HT
+ms.openlocfilehash: 5e2a52bcfa2e95aa364bbdf3079e2f8666f0e1e0
+ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646061"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99978790"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Esempi di importazione ed esportazione bulk di documenti XML (SQL Server)
 
@@ -36,7 +36,7 @@ ms.locfileid: "88646061"
 
 Per l'importazione bulk di dati da un file di dati a una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a una vista non partizionata, è possibile utilizzare quanto segue:  
   
-- utilità**bcp**  
+- utilità **bcp**  
    È possibile usare l'utilità **bcp** anche per esportare dati da qualunque posizione in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su cui sia possibile usare l'istruzione SELECT, incluse le viste partizionate.  
 
 - BULK INSERT  
@@ -46,7 +46,7 @@ Per l'importazione bulk di dati da un file di dati a una tabella di [!INCLUDE[ss
 Per ulteriori informazioni, vedere gli argomenti seguenti.
 - [Importare ed esportare dati per operazioni bulk usando l'utilità bcp (SQL Server).](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
 - [Importare dati per operazioni bulk usando BULK INSERT o OPENROWSET (BULK...)(SQL Server).](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
-- [Come importare XML in SQL Server con il componente di caricamento bulk XML.](https://support.microsoft.com/kb/316005)
+- [Come importare XML in SQL Server con il componente di caricamento bulk XML.](https://mskb.pkisolutions.com/kb/316005)
 - [Raccolte di XML Schema (SQL Server)](../xml/xml-schema-collections-sql-server.md)
   
 ## <a name="examples"></a>Esempi  
