@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 66384c27490bbc9d330f5f2d186bad1b4f4b97ee
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 07560faaa3fb3316864216859f79cd5e1b7ff950
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038863"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056836"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>Conversione di oggetti di database SAP ASE (SybaseToSQL)
 Dopo essersi connessi a SAP Adaptive Server Enterprise (ASE), connesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL e sono state impostate le opzioni di mapping di progetti e dati, è possibile convertire oggetti di database di SAP Adaptive Server Enterprise (ASE) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o oggetti di database SQL di Azure.  
@@ -31,7 +31,7 @@ Durante la conversione, SSMA stampa i messaggi di output nel riquadro di output 
 Prima di convertire gli oggetti, esaminare le opzioni di conversione del progetto nella finestra di dialogo **Impostazioni progetto** . Utilizzando questa finestra di dialogo è possibile impostare il modo in cui SSMA converte le funzioni e le variabili globali. Per ulteriori informazioni, vedere [Impostazioni progetto &#40;conversione&#41; &#40;&#41;SybaseToSQL ](../../ssma/sybase/project-settings-conversion-sybasetosql.md).  
   
 ## <a name="converting-ase-database-objects"></a>Conversione di oggetti di database ASE  
-Per convertire gli oggetti di database dell'ambiente del servizio app, selezionare prima gli oggetti da convertire e quindi fare in modo che SSMA esegua la conversione. Per visualizzare i messaggi di output durante la conversione, scegliere **output**dal menu **Visualizza** .  
+Per convertire gli oggetti di database dell'ambiente del servizio app, selezionare prima gli oggetti da convertire e quindi fare in modo che SSMA esegua la conversione. Per visualizzare i messaggi di output durante la conversione, scegliere **output** dal menu **Visualizza** .  
   
 **Per convertire gli oggetti dell'ambiente del servizio app in SQL Server o SQL Azure sintassi**  
   
@@ -156,5 +156,5 @@ Per ogni elemento che non è stato possibile convertire, è necessario determina
 ## <a name="next-steps"></a>Passaggi successivi  
 Il passaggio successivo del processo di migrazione consiste nel [caricare gli oggetti di database convertiti in SQL Server/SQL Azure (SybaseToSQL)](./loading-converted-database-objects-into-sql-server-sybasetosql.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Migrazione dei database SAP ASE a SQL Server-database SQL di Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

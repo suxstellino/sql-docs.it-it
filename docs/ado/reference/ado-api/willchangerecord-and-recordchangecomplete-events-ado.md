@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a713c39746db1d6a5317a4884ac0a2c5cbb23fc
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 93eabc24b65a00b44db15dcef5bdd7d1a6f3c17d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166273"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056126"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>Eventi WillChangeRecord e RecordChangeComplete (ADO)
 L'evento **WillChangeRecord** viene chiamato prima della modifica di uno o più record (righe) nel [Recordset](./recordset-object-ado.md) . L'evento **RecordChangeComplete** viene chiamato dopo la modifica di uno o più record.  

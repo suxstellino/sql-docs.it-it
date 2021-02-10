@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6fcca84f52f5a6b9b8c033c00980374a0c17d7be
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 6b3598ebd679a85b8965babccfee4fc3658a08b2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036685"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056606"
 ---
 # <a name="data-migration-settings-sybasetosql"></a>Impostazioni di migrazione dei dati (SybaseToSQL)
   
@@ -40,7 +40,7 @@ ms.locfileid: "92036685"
     -   Se questa casella di testo è deselezionata, i dati di cui viene eseguita la migrazione verranno aggiunti ai dati esistenti nel database di destinazione.  
   
 2.  **Usa selezione personalizzata:**  
-     Questa opzione consente all'utente di modificare l'istruzione **Select** presente. l'istruzione**SELECT** consente agli utenti di selezionare i dati da visualizzare nel database di destinazione.  
+     Questa opzione consente all'utente di modificare l'istruzione **Select** presente. l'istruzione **SELECT** consente agli utenti di selezionare i dati da visualizzare nel database di destinazione.  
   
     1.  Per impostazione predefinita, questa casella di testo è deselezionata.  
   

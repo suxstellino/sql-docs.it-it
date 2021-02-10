@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f6a17e8c-7a28-48d0-bded-76b9e0cf7639
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 61e170cd368771fc75c2c6e552d4465dfe51866c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f68e21972be70369d231ede6788be5d4b200b69d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166380"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056446"
 ---
 # <a name="type-property-ado-stream"></a>Proprietà Type (Stream - ADO)
 Indica il tipo di dati contenuti nel [flusso](./stream-object-ado.md) (binario o testo).  

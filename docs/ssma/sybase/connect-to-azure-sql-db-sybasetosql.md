@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3717cce895ca602a550d47ea5c569af4c80963a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 93d1901cd5701cbdea537b947aa93de64fe59661
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492314"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056716"
 ---
 # <a name="connect-to-azure-sql-database--sybasetosql"></a>Connettersi al database SQL di Azure (SybaseToSQL)
 Usare la finestra di dialogo Connetti a database SQL di Azure per connettersi al database di database SQL di Azure di cui si vuole eseguire la migrazione.  
   
-Per accedere a questa finestra di dialogo, scegliere **Connetti al database SQL di Azure**dal menu **file** . Se è già stata effettuata la connessione, il comando viene **riconnesso al database SQL di Azure.**  
+Per accedere a questa finestra di dialogo, scegliere **Connetti al database SQL di Azure** dal menu **file** . Se è già stata effettuata la connessione, il comando viene **riconnesso al database SQL di Azure.**  
   
 ## <a name="options"></a>Opzioni  
 **Nome server**  

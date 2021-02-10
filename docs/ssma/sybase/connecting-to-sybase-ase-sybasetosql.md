@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a45a2330-9175-4c9e-af38-ef920e350614
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2583ef86a84158e0398265799f90633de8c76d7f
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 7afb893d194b874da4cbb6482df4ba8a16e8c0a7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932362"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056866"
 ---
 # <a name="connecting-to-sap-ase-sybasetosql"></a>Connessione a SAP ASE (SybaseToSQL)
 
@@ -50,7 +50,7 @@ Quando ci si connette a un server adattivo, SSMA legge i metadati del database n
   
 **Per connettersi a Sybase ASE**
   
-1. Scegliere **Connetti a Sybase**dal menu **file** .  
+1. Scegliere **Connetti a Sybase** dal menu **file** .  
   
    Se in precedenza si è connessi a Sybase, il nome del comando verrà **riconnesso a Sybase**.  
   

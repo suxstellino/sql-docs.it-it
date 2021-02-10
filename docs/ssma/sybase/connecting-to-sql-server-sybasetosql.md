@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd368a1a-45b0-40e9-b4d3-5cdb48c26606
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2988f57c5d0e3162c9b6dc54d8a7371efcf5da05
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+ms.openlocfilehash: 5637ee7524758dc8d527946c69a2edc9af948d8d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870413"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056906"
 ---
 # <a name="connecting-to-sql-server-sybasetosql"></a>Connessione a SQL Server (SybaseToSQL)
 
@@ -71,7 +71,7 @@ Per connettersi al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
 
 6. Per una connessione protetta vengono aggiunti due controlli, ovvero le caselle di controllo **Encrypt connection** e **TrustServerCertificate** . La casella di controllo **TrustServerCertificate** è visibile solo quando è selezionata l'opzione **Crittografa connessione** . Quando la **connessione Encrypt** è selezionata (true) e **TrustServerCertificate** è deselezionata (false), il certificato SSL verrà convalidato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La convalida del certificato del server fa parte dell'handshake SSL e assicura che il server a cui si esegue la connessione sia quello corretto. Per garantire questo problema, è necessario installare un certificato sul lato client e sul lato server.
 
-7. Fare clic su **Connetti**.
+7. Fare clic su **Connect** (Connetti).
 
 > [!IMPORTANT]
 > Sebbene sia possibile connettersi a una versione successiva di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , rispetto alla versione scelta al momento della creazione del progetto di migrazione, la conversione degli oggetti di database è determinata dalla versione di destinazione del progetto e non dalla versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui si è connessi.

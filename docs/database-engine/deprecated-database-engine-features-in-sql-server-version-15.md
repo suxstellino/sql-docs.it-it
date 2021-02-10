@@ -15,12 +15,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
-ms.openlocfilehash: a2db458e13616c3796872f0ad9e07bfbd9ed16db
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: ac1d7a7f3db1be0d5d5875d52af52c22b75f672c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236616"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100057386"
 ---
 # <a name="deprecated-database-engine-features-in-sssql19-md"></a>Funzionalità del motore di database deprecate in [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]
 
