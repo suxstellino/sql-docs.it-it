@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 13b0775dd7a20d37e80eaddb39f649f65c43b129
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: f56976c9140cb4ac18c048d7d57d6949fc4ae74d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886178"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065160"
 ---
 # <a name="assess-an-apps-data-access-layer-with-data-migration-assistant"></a>Valutare il livello di accesso ai dati di un'app con Data Migration Assistant
 
@@ -104,7 +104,7 @@ Per abilitare questa valutazione, è stata introdotta di recente il Data Access 
 
 Ora, oltre a avere la prospettiva del database della migrazione, gli utenti hanno anche una visualizzazione dal punto di vista dell'applicazione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 * [Panoramica di Data Migration Assistant](../dma/dma-overview.md)
 * [Data Migration Assistant: impostazioni di configurazione](../dma/dma-configurationsettings.md)

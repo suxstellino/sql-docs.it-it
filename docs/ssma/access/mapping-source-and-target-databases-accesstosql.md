@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9e07c42e272728943f30198c8800c86aaa9443e3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 966ec1472737f0e4d67615d4e7eb65df01a52cf4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938160"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100059049"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>Mapping dei database di origine e di destinazione (AccessToSQL)
 Quando ci si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, è necessario specificare un database di destinazione per la migrazione. Se si dispone di più database di Access, è possibile eseguirne il mapping a più [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database (o schemi) o a più schemi nel database SQL di Azure connesso.  
   
 ## <a name="sql-server-or-azure-sql-database-schemas"></a>SQL Server o schemi del database SQL di Azure  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]i database utilizzano il concetto di schemi per separare gli oggetti all'interno di un database in gruppi logici. Ad esempio, un database di libreria può utilizzare tre schemi denominati **libri**, **audio**e **video** per separare gli oggetti book, audio e video tra loro. Per impostazione predefinita, il database di Access viene mappato al database **Master** e allo schema **dbo** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e al database connesso e allo schema **dbo** in SQL Azure.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i database utilizzano il concetto di schemi per separare gli oggetti all'interno di un database in gruppi logici. Ad esempio, un database di libreria può utilizzare tre schemi denominati **libri**, **audio** e **video** per separare gli oggetti book, audio e video tra loro. Per impostazione predefinita, il database di Access viene mappato al database **Master** e allo schema **dbo** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e al database connesso e allo schema **dbo** in SQL Azure.  
   
 A meno che non si Personalizza il mapping tra ogni database di Access e il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database e lo schema, SSMA eseguirà la migrazione di tutti gli schemi e i dati associati al database di Access al database predefinito mappato.  
   

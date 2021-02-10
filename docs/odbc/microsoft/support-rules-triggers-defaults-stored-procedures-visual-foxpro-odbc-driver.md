@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 56b1a2e50f26da8ce5ef581f8eda7c6a96afd741
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea801de44e1fce175ac549402e17b9fcc2e9f020
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449113"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061126"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Supporto di regole, trigger, valori predefiniti e stored procedure (driver ODBC Visual FoxPro)
 Non è possibile creare regole, trigger, valori predefiniti o stored procedure Visual FoxPro utilizzando il driver ODBC Visual FoxPro. Tuttavia, l'applicazione potrebbe interagire con regole, trigger, valori predefiniti o stored procedure esistenti durante l'inserimento, l'aggiornamento o l'eliminazione dei dati Visual FoxPro archiviati in un database.  
@@ -63,7 +63,7 @@ Non è possibile creare regole, trigger, valori predefiniti o stored procedure V
     :::column-end:::
 :::row-end:::
 
-## <a name="a"></a>Una  
+## <a name="a"></a>A  
 
 :::row:::
     :::column:::
@@ -111,7 +111,7 @@ Non è possibile creare regole, trigger, valori predefiniti o stored procedure V
     :::column-end:::
 :::row-end:::
 
-## <a name="b"></a>b  
+## <a name="b"></a>B  
 
 :::row:::
     :::column:::
@@ -199,8 +199,8 @@ Non è possibile creare regole, trigger, valori predefiniti o stored procedure V
     :::column-end:::
     :::column:::
         Comando DO  
-        FAI CASO... Comando ENDCASE  
-        ESEGUI... Comando ENDDO  
+        FAI CASO... Comando ENDCASE  
+        ESEGUI... Comando ENDDO  
         Funzione DOW ()  
         Funzione DTOC ()  
         Funzione DTOR ()  
@@ -243,7 +243,7 @@ Non è possibile creare regole, trigger, valori predefiniti o stored procedure V
         Funzione FLOOR ()  
         Scarica comando  
         Funzione FOR ()  
-        PER... Comando ENDFOR  
+        PER... Comando ENDFOR  
         Funzione FOUND ()  
     :::column-end:::
     :::column:::
@@ -290,7 +290,7 @@ Non è possibile creare regole, trigger, valori predefiniti o stored procedure V
 :::row:::
     :::column:::
         Funzione IDXCOLLATE ()  
-        SE... ENDIF (comando)  
+        SE... ENDIF (comando)  
         Funzione IIF ()  
         Funzione INDBC ()  
         INDEX (comando)  
@@ -473,7 +473,7 @@ Non è possibile creare regole, trigger, valori predefiniti o stored procedure V
 
 :::row:::
     :::column:::
-        ANALIZZA... Comando ENDSCAN  
+        ANALIZZA... Comando ENDSCAN  
         SCATTER (comando)  
         Funzione SEC ()  
         Funzione SECONDS ()  

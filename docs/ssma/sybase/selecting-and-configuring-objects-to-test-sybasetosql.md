@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c6bcddffdbb524e10a0686e6e9a82f4abcd30db8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a43c4d8b1448949725820d69c6489aff26770d98
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492143"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100060577"
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>Selezione e configurazione degli oggetti da testare (SybaseToSQL)
 In questo passaggio si selezionano gli oggetti da testare e si configurano le impostazioni per il confronto dei parametri di output delle procedure e delle funzioni, oltre ai valori restituiti dalle funzioni.  
@@ -38,14 +38,14 @@ Consente di abilitare l'utilizzo del parametro selezionato nel confronto dei ris
   
 -   Se si sceglie **true**, SSMA consentirà di confrontare il valore di output di questo parametro dopo l'esecuzione della procedura in Sybase con il valore corrispondente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   Se si sceglie**false**, il parametro verrà escluso dalla verifica dei risultati.  
+-   Se si sceglie **false**, il parametro verrà escluso dalla verifica dei risultati.  
   
 ### <a name="use-custom-scale"></a>Usare la scalabilità personalizzata  
 Per i parametri di tipo di dati numerico di lunghezza approssimativa e fissa, è possibile impostare una scala personalizzata per il confronto.  
   
 -   Se si sceglie **true**, i valori numerici verranno arrotondati in base al valore della **scala di confronto** prima che vengano confrontati.  
   
--   Se si sceglie**false**, il confronto numerico sarà esatto.  
+-   Se si sceglie **false**, il confronto numerico sarà esatto.  
   
 ### <a name="comparing-scale"></a>Confronto tra scala  
 Disponibile solo se l'opzione **Usa scala personalizzata** è impostata su **true**. Si tratta della precisione per il confronto numerico.  

@@ -24,12 +24,12 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: d19ed1ddfa2c64b653c02d887b9605ea132ae1bc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 53fbbd5a865594f46eacb75c9799b9c956efb2da
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938434"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100059042"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-database-accesstosql"></a>Collegamento di applicazioni di accesso a SQL Server-database SQL di Azure (AccessToSQL)
 Se si desidera utilizzare le applicazioni di accesso esistenti con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è possibile collegare le tabelle di accesso originali alle tabelle migrate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Il collegamento modifica il database di Access in modo che le query, i form, i report e le pagine di accesso ai dati usino i dati nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database di o SQL di Azure anziché i dati nel database di Access.  
@@ -49,7 +49,7 @@ Quando si collega una tabella di accesso a una [!INCLUDE[ssNoVersion](../../incl
   
 2.  Fare clic con il pulsante destro del mouse su **tabelle**, quindi scegliere **collega**.  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) per l'accesso esegue il backup della tabella di accesso originale e crea una tabella collegata.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per l'accesso esegue il backup della tabella di accesso originale e crea una tabella collegata.  
   
 Dopo aver collegato le tabelle, le tabelle in SSMA vengono visualizzate con un'icona di collegamento di piccole dimensioni. In Access, le tabelle vengono visualizzate con un'icona "collegata", che è un globo con una freccia che punta a essa.  
   
@@ -147,13 +147,13 @@ Recordset.LastModified
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>La funzionalità Hyperlink viene persa dopo la migrazione dei dati  
 **Motivo:** Dopo la migrazione dei dati, i collegamenti ipertestuali nelle colonne perdono la loro funzionalità e diventano semplici colonne **nvarchar (max)** .  
   
-**Soluzione:** nessuna.  
+**Risoluzione:** No.  
   
 ### <a name="some-sql-server-data-types-are-not-supported-by-access"></a>Alcuni tipi di dati SQL Server non sono supportati da Access  
 **Motivo:** Se successivamente si aggiornano le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelle o SQL Azure in modo che contengano tipi di dati non supportati da Access, non è possibile aprire la tabella in Access.  
   
 **Risoluzione:** È possibile definire una query di accesso che restituisce solo le righe con i tipi di dati supportati.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Migrazione dei database di Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

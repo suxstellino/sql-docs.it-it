@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: ''
-ms.openlocfilehash: 35465a761258fb5a7865e711e2809d740b9b9fee
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: 8688fa61a1ccaede3bd370e1d19ccd66531f5739
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496814"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100060936"
 ---
 # <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql"></a>DMACMD: consente di valutare la conformità di un SQL Server dati di migrazione ad Azure SQL 
 
@@ -89,7 +89,7 @@ Il contenuto dell'esempio `Assess-for-AzureSQLMI.xml` definisce gli elementi per
 Gli elementi XML passati a DMACMD sono definiti nella tabella seguente: 
 
 
-|**Elemento XML** |**Definizione**  |
+|**Elemento XML** |**Definition**  |
 |---------|---------|
 |`AssessmentName`|Nome della valutazione|
 |`AssessmentSourcePlatform`|Piattaforma SQL Server di origine. Il valore predefinito è `SqlOnPrem`.|

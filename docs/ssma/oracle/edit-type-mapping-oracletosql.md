@@ -11,12 +11,12 @@ ms.assetid: 7078b4ed-c779-4bf3-8db8-f9dcb3edd50f
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 7b90da225116a2221d5a2492e1b7e5bfdc33ab91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79da4985cef777225cbf805c103c782b512e2d5b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492395"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058668"
 ---
 # <a name="edit-type-mapping-oracletosql"></a>Modificare il mapping dei tipi (OracleToSQL)
 La finestra di dialogo **Modifica mapping tipi** consente di specificare la modalità di mapping dei tipi tra gli oggetti di database di origine e di destinazione.  
@@ -25,7 +25,7 @@ La finestra di dialogo **Modifica mapping tipi** consente di specificare la moda
   
 -   Quando si seleziona un database di origine o un oggetto di database, la scheda **mapping dei tipi** viene visualizzata a destra di Esplora metadati. Fare clic su **Aggiungi** per aggiungere un nuovo mapping dei tipi oppure fare clic su **modifica** per modificare un mapping dei tipi esistente.  
   
--   Scegliere **Impostazioni progetto** o **Impostazioni progetto predefinite**dal menu **strumenti** . Nella finestra di dialogo risultante selezionare **mapping dei tipi**. Fare clic su **Aggiungi** per aggiungere un nuovo mapping dei tipi oppure fare clic su **modifica** per modificare un mapping dei tipi esistente.  
+-   Scegliere **Impostazioni progetto** o **Impostazioni progetto predefinite** dal menu **strumenti** . Nella finestra di dialogo risultante selezionare **mapping dei tipi**. Fare clic su **Aggiungi** per aggiungere un nuovo mapping dei tipi oppure fare clic su **modifica** per modificare un mapping dei tipi esistente.  
   
 I mapping dei tipi specifici della tabella sostituiscono i mapping dei tipi di progetto e di database. I mapping specifici del database sostituiscono i mapping del progetto.  
   

@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016'
-ms.openlocfilehash: aa78f13b844a742374be212a06a5687a3a7f46fe
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 509e4fc7445371c57d0fed7208d556e53aa18fe8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99186888"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063036"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -371,7 +371,7 @@ Non è possibile specificare SIZE quando *os_file_name* è specificato come perc
 
 *size* corrisponde alle dimensioni iniziali del file.
 
-Se non si specifica *size* per il file primario, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa le dimensioni del file primario del database modello. Le dimensioni predefinite del modello corrispondono a 8 MB (a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) o a 1 MB (per le versioni precedenti). Se si specifica un file di dati o un file di log secondario senza specificare *size* per il file, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea un file di 8 MB (a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) o di 1 MB (per le versioni precedenti). Le dimensioni specificate per il file di dati primario devono essere uguali almeno alle dimensioni del file primario del database model.
+Se non si specifica *size* per il file primario, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa le dimensioni del file primario del database modello. Le dimensioni predefinite del modello corrispondono a 8 MB (a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) o a 1 MB (per le versioni precedenti). Se si specifica un file di dati o un file di log secondario senza specificare *size* per il file, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea un file di 8 MB (a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) o di 1 MB (per le versioni precedenti). Le dimensioni specificate per il file di dati primario devono essere uguali almeno alle dimensioni del file primario del database model.
 
 È possibile usare i suffissi per kilobyte (KB), megabyte (MB), gigabyte (GB) e terabyte (TB). Il valore predefinito è MB. Specificare un numero intero, ovvero non includere decimali. *Size* è un valore intero. Per i valori superiori a 2.147.483.647, usare le unità maggiori.
 
@@ -396,7 +396,7 @@ Se FILEGROWTH viene omesso, i valori predefiniti sono i seguenti:
 
 |Versione|Valori predefiniti|
 |-------------|--------------------|
-|Inizio [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]|Dati 64 MB. File di log 64 MB.|
+|Inizio [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]|Dati 64 MB. File di log 64 MB.|
 |Inizio [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Dati 1 MB. File di log 10%.|
 |Prima di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Dati 10%. File di log 10%.|
 

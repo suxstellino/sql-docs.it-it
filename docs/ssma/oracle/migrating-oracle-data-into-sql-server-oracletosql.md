@@ -14,12 +14,12 @@ ms.assetid: e23c5268-41ed-4e55-9fe7-a11376202a13
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 5b22dfee8112beb7419408dfc8a3dcadf53c631d
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: a63fcd49d37e47485ed82c3b75514b5c1b7d48cd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035164"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063326"
 ---
 # <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>Migrazione di dati Oracle a SQL Server (OracleToSQL)
 Una volta sincronizzati correttamente gli oggetti convertiti con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è possibile eseguire la migrazione dei dati da Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -42,7 +42,7 @@ Prima di eseguire la migrazione dei dati a [!INCLUDE[ssNoVersion](../../includes
   
 -   Per avviare la migrazione dei dati sul lato client, selezionare l'opzione **motore di migrazione dati lato client** nella finestra di dialogo **Impostazioni progetto** .  
   
--   In **Impostazioni progetto**viene impostata l'opzione **motore di migrazione dati lato client** .  
+-   In **Impostazioni progetto** viene impostata l'opzione **motore di migrazione dati lato client** .  
   
     > [!NOTE]  
     > Il **motore di migrazione dei dati lato client** si trova all'interno dell'applicazione SSMA e pertanto non dipende dalla disponibilità del pacchetto di estensione.  
@@ -56,7 +56,7 @@ Prima di eseguire la migrazione dei dati a [!INCLUDE[ssNoVersion](../../includes
 ## <a name="migrating-data-to-sql-server"></a>Migrazione dei dati a SQL Server  
 La migrazione dei dati è un'operazione di caricamento bulk che consente di spostare righe di dati da tabelle Oracle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelle nelle transazioni. Il numero di righe caricate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in ogni transazione viene configurato nelle impostazioni del progetto.  
   
-Per visualizzare i messaggi di migrazione, assicurarsi che il riquadro di output sia visibile. In caso contrario, scegliere **output**dal menu **Visualizza** .  
+Per visualizzare i messaggi di migrazione, assicurarsi che il riquadro di output sia visibile. In caso contrario, scegliere **output** dal menu **Visualizza** .  
   
 **Per eseguire la migrazione dei dati**  
   

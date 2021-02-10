@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 240aaad1-d65d-4dea-b60b-315cb1ac733d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 540f09b2fe8de23b9912dc695e0cf1c9c1d69b86
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d352399122a3c2b19258db5f084a87935bf70a98
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372777"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064372"
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>Utilizzo della console di SSMA per MySQL (MySQLToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per MySQL è ora accessibile tramite un'applicazione console nella riga di comando. I file script formano l'input per l'applicazione per l'esecuzione dei comandi. Come applicazione console, SSMA consente l'interazione a livello di script, riduce il ciclo di migrazione e ridimensiona il lavoro di migrazione.  

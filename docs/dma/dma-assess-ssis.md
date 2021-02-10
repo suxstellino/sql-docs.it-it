@@ -14,12 +14,12 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 20f216b920eb16651ca0d06a6b8090e431f8c592
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+ms.openlocfilehash: a893ad7e086abfdf0cc61c785ad6d93c3eeed184
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439405"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061526"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Eseguire una valutazione della migrazione di SQL Server Integration Services con Data Migration Assistant
 
@@ -42,7 +42,7 @@ Le istruzioni dettagliate seguenti consentono di eseguire la prima valutazione p
 
 1. Impostare il tipo di server di origine e destinazione.
 
-    Selezionare l'origine come **SQL Server**e impostare il tipo di server di destinazione come **database SQL di Azure** o **istanza gestita SQL di Azure**.
+    Selezionare l'origine come **SQL Server** e impostare il tipo di server di destinazione come **database SQL di Azure** o **istanza gestita SQL di Azure**.
 
 1. Fare clic su **Crea**.
 

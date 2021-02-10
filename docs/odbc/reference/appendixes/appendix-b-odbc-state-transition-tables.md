@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 67c14205590ccdf9d20a30f44c13aa2da5abbe8d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9bb65299be2778897b72303cccb99043a3b01406
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99212567"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061106"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Appendice B: Tabelle della transizione di stato ODBC
 Nelle tabelle di questa appendice viene illustrato il modo in cui le funzioni ODBC determinano transizioni degli Stati dell'ambiente, della connessione, dell'istruzione e del descrittore. Lo stato dell'ambiente, della connessione, dell'istruzione o del descrittore determina in genere quando è possibile chiamare le funzioni che utilizzano il tipo di handle corrispondente (ambiente, connessione, istruzione o descrittore). Gli Stati dell'ambiente, della connessione, dell'istruzione e del descrittore si sovrappongono approssimativamente come illustrato nelle illustrazioni seguenti. Ad esempio, l'esatta sovrapposizione degli Stati di connessione C5 e C6 e gli Stati di istruzione da S1 a S12 sono dipendenti dall'origine dati, perché le transazioni iniziano in momenti diversi in origini dati diverse e lo stato del descrittore D1i (descrittore allocato in modo implicito) dipende dallo stato di qualsiasi istruzione. Per una descrizione di ogni stato, vedere [transizioni di ambiente](../../../odbc/reference/appendixes/environment-transitions.md), [transizioni di connessione](../../../odbc/reference/appendixes/connection-transitions.md), [transizioni di istruzioni](../../../odbc/reference/appendixes/statement-transitions.md)e [transizioni di descrittori](../../../odbc/reference/appendixes/descriptor-transitions.md), più avanti in questa appendice.  

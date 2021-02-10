@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: fcd83cd6-a876-4b5f-996d-84b7c8706305
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4122e4d9deb354dded9e015f4ca4a8987cd6ff6d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 857f5be28651b86c474ccb7b0a1a692823da9df7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497671"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064251"
 ---
 # <a name="new-project-sybasetosql"></a>Nuovo progetto (SybaseToSQL)
-Utilizzare la finestra di dialogo **nuovo progetto** per creare un nuovo progetto SSMA. Per accedere alla finestra di dialogo **nuovo progetto** , scegliere **nuovo progetto**dal menu **file** .  
+Utilizzare la finestra di dialogo **nuovo progetto** per creare un nuovo progetto SSMA. Per accedere alla finestra di dialogo **nuovo progetto** , scegliere **nuovo progetto** dal menu **file** .  
   
 ## <a name="options"></a>Opzioni  
 **Nome**  

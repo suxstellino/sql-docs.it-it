@@ -20,12 +20,12 @@ ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15'
-ms.openlocfilehash: d0532579a372c264bf2477026d56275431610bf3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 425971304e516670bd15bfcdcc0a3b5777091cc8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99193929"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061602"
 ---
 # <a name="sysexternal_languages-transact-sql"></a>sys.external_languages (Transact-SQL)
 [!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]

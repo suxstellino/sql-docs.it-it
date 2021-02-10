@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: af24f2c4-5e86-4135-a4f3-a24faaeeefe7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5bf7a2ac886165fa4228f78394065124a05bb67a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0f5193218e5bd8d1725c6d887284c6473e15eef5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372387"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063166"
 ---
 # <a name="assessment-report-sybasetosql"></a>Report di valutazione (SybaseToSQL)
 La finestra report di valutazione Mostra i risultati della conversione degli oggetti di database nella [!INCLUDE[tsql](../../includes/tsql-md.md)] sintassi e consente inoltre di stimare la complessità e il costo dei progetti di migrazione.  
   
-Per accedere al report di valutazione, selezionare gli oggetti da convertire in Esplora metadati di origine, fare clic con il pulsante destro del mouse su **database**e quindi scegliere **Crea report**.  
+Per accedere al report di valutazione, selezionare gli oggetti da convertire in Esplora metadati di origine, fare clic con il pulsante destro del mouse su **database** e quindi scegliere **Crea report**.  
   
 ## <a name="options"></a>Opzioni  
 **Statistiche di conversione**  
@@ -43,5 +43,5 @@ Mostra il codice risultante della conversione [!INCLUDE[tsql](../../includes/tsq
 Per impostare o cancellare i segnalibri, fare clic sui numeri di riga. Utilizzare i pulsanti nella parte superiore del riquadro per spostarsi nel codice.  
   
 **riquadro Messaggi**  
-Mostra gli errori, gli avvisi e i messaggi informativi generati durante la creazione del report di valutazione. I messaggi sono raggruppati per numero. Per visualizzare il codice che ha causato l'errore, fare clic su **errore**, **avviso**o **informazioni**, espandere la categoria di messaggi e quindi fare clic su un messaggio.  
+Mostra gli errori, gli avvisi e i messaggi informativi generati durante la creazione del report di valutazione. I messaggi sono raggruppati per numero. Per visualizzare il codice che ha causato l'errore, fare clic su **errore**, **avviso** o **informazioni**, espandere la categoria di messaggi e quindi fare clic su un messaggio.  
   

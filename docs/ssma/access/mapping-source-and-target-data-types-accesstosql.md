@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 92ce9298b6d3752a4b60e98918404c2116423973
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: f5a725d0e2c6d9651884c399caabe2a8833826f3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988677"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100059050"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Mapping dei tipi di dati di origine e di destinazione (AccessToSQL)
 I tipi di database di Access variano a seconda dei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di database. Quando si converte gli oggetti di database di Access in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti, è necessario specificare come eseguire il mapping dei tipi di dati da Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È possibile accettare i mapping dei tipi di dati predefiniti oppure personalizzare i mapping come illustrato nelle procedure seguenti.  
@@ -40,7 +40,7 @@ Nella procedura riportata di seguito viene illustrato come eseguire il mapping d
   
 1.  Per personalizzare il mapping dei tipi di dati per l'intero progetto, aprire la finestra di dialogo **Impostazioni progetto** :  
   
-    1.  Scegliere **Impostazioni progetto**dal menu **strumenti** .  
+    1.  Scegliere **Impostazioni progetto** dal menu **strumenti** .  
   
     2.  Nel riquadro sinistro selezionare mapping dei **tipi**.  
   
@@ -64,7 +64,7 @@ Nella procedura riportata di seguito viene illustrato come eseguire il mapping d
   
         In questo modo è possibile personalizzare il mapping dei dati per valori più piccoli e più grandi dello stesso tipo di dati.  
   
-    4.  In **tipo di destinazione**selezionare il tipo di dati di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+    4.  In **tipo di destinazione** selezionare il tipo di dati di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
         Alcuni tipi richiedono una lunghezza del tipo di dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nella casella **Sostituisci con** , quindi fare clic su **OK**.  
   
@@ -78,7 +78,7 @@ Nella procedura riportata di seguito viene illustrato come eseguire il mapping d
   
         In questo modo è possibile personalizzare il mapping dei dati per valori più piccoli e più grandi dello stesso tipo di dati.  
   
-    4.  In **tipo di destinazione**selezionare il tipo di dati di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+    4.  In **tipo di destinazione** selezionare il tipo di dati di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
         Alcuni tipi richiedono una lunghezza del tipo di dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nella casella **Sostituisci con** , quindi fare clic su **OK**.  
   
@@ -86,7 +86,7 @@ Nella procedura riportata di seguito viene illustrato come eseguire il mapping d
   
     1.  Nel riquadro mapping dei tipi selezionare la riga nell'elenco mapping dei tipi che contiene il mapping del tipo di dati che si desidera rimuovere.  
   
-    2.  Scegliere **Rimuovi**.  
+    2.  Fare clic su **Rimuovi**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
 Il passaggio successivo del processo di migrazione consiste nel [convertire gli oggetti di database di Access in oggetti SQL Server](converting-access-database-objects-accesstosql.md)  

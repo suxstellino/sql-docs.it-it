@@ -10,18 +10,18 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
 ms.author: alexiva
-ms.openlocfilehash: 72c6797bfc8d673069cab41002a4a93596d7e5d9
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: 8d43e6a48746fbb1587327b430b67c6959731013
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779413"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064096"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Connettersi a Sybase (SybaseToSQL)
 
 Utilizzare la finestra di dialogo **Connetti a Sybase** per connettersi all'istanza di Sybase Adaptive Server Enterprise (ASE) di cui si desidera eseguire la migrazione.
 
-Per accedere a questa finestra di dialogo, scegliere **Connetti a Sybase**dal menu **file** . Se è già stata effettuata la connessione, il comando viene **riconnesso a Sybase**.
+Per accedere a questa finestra di dialogo, scegliere **Connetti a Sybase** dal menu **file** . Se è già stata effettuata la connessione, il comando viene **riconnesso a Sybase**.
 
 ## <a name="options"></a>Opzioni
 
@@ -54,7 +54,7 @@ Le stringhe di connessione sono costituite da coppie di nome e valore del parame
 
    |Impostazione|Parametro Sybase 12,5|Parametro Sybase 15|
    |-----------|-------------------------|-----------------------|
-   |Nome server|Server Name|Server|
+   |Nome server|Nome server|Server|
    |Porta|Indirizzo porta server|Porta|
    |Nome utente|ID utente|ID utente|
    |Password|Password|Password|
@@ -73,10 +73,10 @@ Le stringhe di connessione sono costituite da coppie di nome e valore del parame
    |Impostazione|Parametro Sybase 12.5/15|
    |-----------|-----------------------------|
    |Nome del driver|driver|
-   |Server Name|Server|
+   |Nome server|Server|
    |Nome utente|UID|
    |Password|Pwd|
-   |Numero della porta|Porta|
+   |Numero porta|Porta|
 
    Per Sybase ASE 12,5 o 15, una stringa di connessione di esempio è la seguente:
 
@@ -86,10 +86,10 @@ Le stringhe di connessione sono costituite da coppie di nome e valore del parame
 
    |Impostazione|Parametro Sybase 12.5/15|
    |-----------|-----------------------------|
-   |Server Name|Server|
+   |Nome server|Server|
    |Nome utente|UID|
    |Password|Pwd|
-   |Numero della porta|Porta|
+   |Numero porta|Porta|
 
    Di seguito è riportato un esempio della stringa di connessione per il provider ADO.NET:
 

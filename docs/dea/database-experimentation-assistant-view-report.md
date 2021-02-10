@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 017b7a1e06fca4a1f682050b99f8c8412b44aaf4
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d1666d4ba2279623065dd3c0d8faf5e0653de82e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951126"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065946"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Visualizzare i report di analisi in Database Experimentation Assistant
 
@@ -83,6 +83,6 @@ Nella prima pagina del report vengono visualizzate le informazioni sulla version
    > [!NOTE]
    > Se si sta analizzando l'evento esteso (. XEL), le informazioni sul piano di query non vengono raccolte per limitare le richieste di memoria nel computer dell'utente.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - Per informazioni su come generare un report di analisi da un prompt dei comandi, vedere [Run al prompt dei comandi](database-experimentation-assistant-run-command-prompt.md).

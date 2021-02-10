@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: b91385f587668b17bd9cde9f173cebacce48dc91
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 105f471afc10e03c8d6371aa22cce1f6e74ca8c1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489545"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065916"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Riprodurre una traccia in Database Experimentation Assistant
 
@@ -163,6 +163,6 @@ Questo problema è noto nella versione RTM di SQL Server 2017. Per ulteriori inf
   
 Il problema è stato risolto nell'aggiornamento cumulativo 1 più recente per SQL Server 2017. Scaricare la versione più recente dell' [aggiornamento cumulativo 1 per SQL Server 2017](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - Per creare un report di analisi che consenta di ottenere informazioni dettagliate sulle modifiche proposte, vedere [creare report](database-experimentation-assistant-create-report.md).

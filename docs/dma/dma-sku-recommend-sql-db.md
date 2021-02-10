@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 5b59930023da1279e2db18d9e9fce4186c677f8d
-ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
+ms.openlocfilehash: ffb47ee457a03315821fee863816d725f9691ac3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "99978583"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100062586"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificare il database SQL di Azure o lo SKU Istanza gestita appropriato per il database locale
 

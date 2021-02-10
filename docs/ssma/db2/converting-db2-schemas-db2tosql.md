@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b506f7ae063964bc1667b4425028cd35fbc9c91e
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: af91274d4e48ce99894316c730a58d68fd633242
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985122"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100062886"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Conversione di schemi DB2 (DB2ToSQL)
 Dopo la connessione a DB2, la connessione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e l'impostazione delle opzioni di mapping dei dati e del progetto, è possibile convertire gli oggetti di database DB2 in oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
@@ -44,7 +44,7 @@ Nella tabella seguente vengono indicati gli oggetti DB2 convertiti e gli oggetti
 |Istruzione SELECT|**SSMA Maps SELECT con le eccezioni seguenti:**<br /><br />Clausola data-Change-Table-Reference: parzialmente mappato, ma le tabelle finali non sono supportate<br /><br />Clausola di riferimento a tabella: parzialmente mappato, ma solo-tabella-riferimento, esterno-tabella-riferimento, analyze_table-espressione, raccolta-derivata-tabella, XMLTable-Expression non è mappata alla semantica di SQL Server<br /><br />Clausola period-Specification-non mappato.<br /><br />Clausola di gestione continua-non mappato.<br /><br />Clausola di correlazione tipizzata-non mappata.<br /><br />Clausola di accesso simultaneo-non mappato.|  
 |VALUEs-istruzione|Viene mappato.|  
 |Istruzione INSERT|Viene mappato.|  
-|Istruzione UPDATE|S**SMA Maps Update con le eccezioni seguenti:**<br /><br />Tabella-riferimento clausola-only-table-reference non è mappato alla semantica di SQL Server<br /><br />Clausola period: non è mappato.|  
+|Istruzione UPDATE|S **SMA Maps Update con le eccezioni seguenti:**<br /><br />Tabella-riferimento clausola-only-table-reference non è mappato alla semantica di SQL Server<br /><br />Clausola period: non è mappato.|  
 |Istruzione MERGE|**SSMA Maps MERGE con le eccezioni seguenti:**<br /><br />Singole occorrenze di e multiple di ogni clausola: viene eseguito il mapping alla semantica di SQL Server per le occorrenze limitate di ogni clausola<br /><br />Clausola SIGNAL: non esegue il mapping alla semantica SQL Server<br /><br />Clausole di aggiornamento ed eliminazione miste: non esegue il mapping alla semantica di SQL Server<br /><br />Clausola period-non viene mappata alla semantica SQL Server|  
 |Istruzione DELETE|**SSMA Maps DELETE con le eccezioni seguenti:**<br /><br />Tabella-riferimento clausola-only-table-reference non è mappato alla semantica di SQL Server<br /><br />Clausola period: non esegue il mapping alla semantica SQL Server|  
 |Livello di isolamento e tipo di blocco|Viene mappato.|  
@@ -67,7 +67,7 @@ Nella tabella seguente vengono indicati gli oggetti DB2 convertiti e gli oggetti
 |Istruzione WHILE|Viene mappato.|  
 |OTTENERE l'istruzione di diagnostica|**SSMA Maps GET Diagnostics con le eccezioni seguenti:**<br /><br />Viene eseguito il mapping di ROW_COUNT.<br /><br />Viene eseguito il mapping di DB2_RETURN_STATUS.<br /><br />Viene eseguito il mapping di MESSAGE_TEXT.<br /><br />DB2_SQL_NESTING_LEVEL: non esegue il mapping alla semantica di SQL Server<br /><br />DB2_TOKEN_STRING: non esegue il mapping alla semantica di SQL Server|  
 |Cursori|**SSMA esegue il mapping dei CURSORi con le eccezioni seguenti:**<br /><br />Istruzione ALLOCAte CURSOR-non viene mappata alla semantica SQL Server<br /><br />Istruzione ASSOCIATE LOCATORs: non esegue il mapping alla semantica di SQL Server<br /><br />Istruzione DECLARE CURSOR-la clausola restituzione non è mappata alla semantica di SQL Server<br /><br />Istruzione FETCH-mapping parziale. Le variabili come destinazione sono supportate solo. Il descrittore SQLDA non è mappato alla semantica di SQL Server|  
-|variables|Viene mappato.|  
+|Variabili|Viene mappato.|  
 |Eccezioni, gestori e condizioni|**SSMA esegue il mapping di "gestione delle eccezioni" con le eccezioni seguenti:**<br /><br />Gestori di uscita-mappati.<br /><br />Gestori di annullamento-mappati.<br /><br />Gestori continua-non è stato eseguito il mapping.<br /><br />Condizioni: non viene mappata alla semantica di SQL Server.|  
 |SQL dinamica|Non mappato.|  
 |Alias|Viene mappato.|  
@@ -81,7 +81,7 @@ Nella tabella seguente vengono indicati gli oggetti DB2 convertiti e gli oggetti
 |Controllo transazione|Non mappato.|  
   
 ## <a name="converting-db2-database-objects"></a>Conversione di oggetti di database DB2  
-Per convertire gli oggetti di database DB2, è necessario innanzitutto selezionare gli oggetti che si desidera convertire, quindi fare in modo che SSMA esegua la conversione. Per visualizzare i messaggi di output durante la conversione, scegliere **output**dal menu **Visualizza** .  
+Per convertire gli oggetti di database DB2, è necessario innanzitutto selezionare gli oggetti che si desidera convertire, quindi fare in modo che SSMA esegua la conversione. Per visualizzare i messaggi di output durante la conversione, scegliere **output** dal menu **Visualizza** .  
   
 **Per convertire gli oggetti DB2 in SQL Server sintassi**  
   

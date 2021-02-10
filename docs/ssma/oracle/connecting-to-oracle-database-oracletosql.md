@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Refreshing Oracle Metadata
 ms.assetid: e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6
 ms.author: alexiva
-ms.openlocfilehash: d6fc63d62e9761f167eb70165c6f9324f56253a8
-ms.sourcegitcommit: 38639b67a135ca1a50a8e38fa61a089efe90e3f1
+ms.openlocfilehash: 4354a4e2726151177c48c27ce37a74e5b4ac335e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454534"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058798"
 ---
 # <a name="connecting-to-oracle-database-oracletosql"></a>Connessione a un database Oracle (OracleToSQL)
 
@@ -92,12 +92,12 @@ Quando ci si connette a un database, SSMA legge i metadati del database e quindi
 
 **Per connettersi a Oracle**
 
-1. Scegliere **Connetti a Oracle**dal menu **file** .  
+1. Scegliere **Connetti a Oracle** dal menu **file** .  
    Se in precedenza è stata effettuata la connessione a Oracle, il nome del comando verrà **riconnesso a Oracle**.
   
 2. Nella casella **provider** selezionare **provider client Oracle** o **provider OLE DB**, a seconda del provider installato. Il valore predefinito è Oracle client.
 
-3. Nella casella **modalità** selezionare la modalità **standard**, la modalità **TNSNAME**o la **modalità stringa di connessione**.  
+3. Nella casella **modalità** selezionare la modalità **standard**, la modalità **TNSNAME** o la **modalità stringa di connessione**.  
    Utilizzare la modalità standard per specificare il nome e la porta del server. Utilizzare la modalità nome servizio per specificare manualmente il nome del servizio Oracle. Utilizzare la modalità stringa di connessione per fornire una stringa di connessione completa.
 
 4. Se si seleziona la **modalità standard**, fornire i valori seguenti:
@@ -137,7 +137,7 @@ I metadati relativi al database Oracle non vengono aggiornati automaticamente. I
 
 2. In Esplora metadati Oracle selezionare la casella di controllo accanto a ogni schema o oggetto di database che si desidera aggiornare.
 
-3. Fare clic con il pulsante destro del mouse su **schemi**oppure sul singolo schema o oggetto di database, quindi scegliere **Aggiorna da database**.  
+3. Fare clic con il pulsante destro del mouse su **schemi** oppure sul singolo schema o oggetto di database, quindi scegliere **Aggiorna da database**.  
    Se non si dispone di una connessione attiva, in SSMA viene visualizzata la finestra **di dialogo Connetti a Oracle in** cui è possibile connettersi.
 
 4. Nella finestra di dialogo Aggiorna da database specificare gli oggetti da aggiornare.
@@ -154,6 +154,6 @@ I metadati relativi al database Oracle non vengono aggiornati automaticamente. I
 
 Il passaggio successivo del processo di migrazione consiste nel [connettersi a un'istanza di SQL Server](connecting-to-sql-server-oracletosql.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Migrazione di database Oracle a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)
