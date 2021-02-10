@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a87d8080-a238-45e5-bc80-9a8625b3810f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 75970571be282042338ab7a5eb870a725af5e201
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 119a2394fba0b7558ee5a2975e07fccd76bd8ee9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169746"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051052"
 ---
 # <a name="open-method-ado-md"></a>Metodo Open (ADO MD)
 Recupera i risultati di una query multidimensionale e restituisce i risultati a un tipo di [cella](./cellset-object-ado-md.md).  

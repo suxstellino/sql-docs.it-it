@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5b977956-e252-4861-8425-f1aaf6b80130
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fcd72405c4f5fa25aca74261075ce0fdc67ce93f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 09b1f851dc73673d3cb10b6365c56628bdb1525b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164394"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050862"
 ---
 # <a name="uniquename-property-ado-md"></a>Proprietà UniqueName (ADO MD)
 Indica un nome non ambiguo per l'oggetto corrente.  

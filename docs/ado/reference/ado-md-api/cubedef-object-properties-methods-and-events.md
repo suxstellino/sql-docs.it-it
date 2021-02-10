@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5dac737a-b77e-47d3-9228-cd52b7a97b0a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e72487e099a58208448f1b581f93187432971eb6
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 05543dd7cb77928a65755bb9e367881e0d2cad4f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169910"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051202"
 ---
 # <a name="cubedef-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto CubeDef
 ## <a name="propertiescollections"></a>Proprietà/raccolte  

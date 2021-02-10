@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0ded43552086f814f9ea80fae65d6792e525d24b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 087b8bc6540fdfb3e504273ed2e02b71163088fa
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170446"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051822"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 Specifica le opzioni per l'apertura di un [record](./record-object-ado.md). Questi valori possono essere combinati usando o.  

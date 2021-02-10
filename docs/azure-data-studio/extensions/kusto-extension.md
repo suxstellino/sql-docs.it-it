@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 10/29/2020
-ms.openlocfilehash: 0c77b957f14401aec3130fa5fa4f78f0d34de9b5
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
-ms.translationtype: HT
+ms.openlocfilehash: 15b2dc331a1387039c79cbab164682f00981c591
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067203"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100052032"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Estensione Kusto (KQL) per Azure Data Studio (anteprima)
 
@@ -88,7 +88,7 @@ Per configurare un cluster di Esplora dati di Azure per la connessione, seguire 
 
 Ora che è stata configurata una connessione al cluster Esplora dati di Azure, è possibile eseguire una query sui database usando Kusto (KQL).
 
-Per creare una nuova scheda query è possibile selezionare **File > nuova query** , usare *CTRL+N* oppure fare clic con il pulsante destro del mouse sul database e selezionare **Nuova query**.
+Per creare una nuova scheda query è possibile selezionare **File > nuova query**, usare *CTRL+N* oppure fare clic con il pulsante destro del mouse sul database e selezionare **Nuova query**.
 
 Quando viene aperta la scheda della nuova query, immettere la query Kusto.
 

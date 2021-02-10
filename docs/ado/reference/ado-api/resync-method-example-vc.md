@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d34dfd26-9ca7-4c9c-a918-396f05fecca9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25a04fc923ea633706616cb771160d59f1b2e3ca
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6688f0e5681167f0637a259d0539f3327361120d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166633"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051582"
 ---
 # <a name="resync-method-example-vc"></a>Esempio del metodo Resync (VC++)
 In questo esempio viene illustrato l'utilizzo del metodo [Resync](./resync-method.md) per aggiornare i dati in un recordset statico.  

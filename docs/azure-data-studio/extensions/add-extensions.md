@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: ''
 ms.date: 10/03/2019
-ms.openlocfilehash: 2e2e76c436c02f2cbc5878228f1be2d57248816c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
-ms.translationtype: HT
+ms.openlocfilehash: 3cc965ffd169d53e59706ca4ba68f2bcdddb5aa9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123457"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100052121"
 ---
 # <a name="extend-the-functionality-of-azure-data-studio"></a>Estendere la funzionalità di Azure Data Studio
 
@@ -58,7 +58,7 @@ Per disinstallare un'estensione, fare clic sull'icona a forma di ingranaggio a d
 
 ### <a name="enable-an-extension"></a>Abilitare un'estensione
 
-Se un'estensione è stata disabilitata, sarà presente nella sezione **Disabilitate** dell'elenco di estensioni e contrassegnata come ***Disabilitata***. È possibile riabilitarla con i comandi **Abilita** o **Abilita (area di lavoro)** nel menu a discesa. Il **Riquadro comandi** consente anche di abilitare tutte le estensioni con i comandi **Estensioni: Enable All Extensions** (Abilita tutte le estensioni) ed **Estensioni: Enable All Extensions (Workspace)** (Abilita tutte le estensioni - Area di lavoro).
+Se un'estensione è stata disabilitata, sarà presente nella sezione **disabled** dell'elenco di estensioni e contrassegnata come **_disabled_*_. È possibile riabilitarla con i comandi _* Abilita** o **Abilita (area di lavoro)** nel menu a discesa. Il **Riquadro comandi** consente anche di abilitare tutte le estensioni con i comandi **Estensioni: Enable All Extensions** (Abilita tutte le estensioni) ed **Estensioni: Enable All Extensions (Workspace)** (Abilita tutte le estensioni - Area di lavoro).
 
 ![Abilitazione dell'estensione](media/add-extensions/extensions-enable.png)
 

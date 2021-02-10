@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.date: 10/29/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 988cac765a596b541d128b0b6190f6f228d95ee7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 561a0a4f1d45d78e0f2fd23d61aae67f6adb6ff7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401250"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100052742"
 ---
 # <a name="configure-tls-12-in-aps"></a>Configurare TLS 1,2 in APS
 
 Per proteggere i punti di sicurezza per usare solo TLS 1,2, è necessario disabilitare in modo esplicito altri protocolli in tutti gli host fisici e virtuali. Per disabilitare i protocolli è necessario modificare le impostazioni del registro di sistema. Per le modifiche del registro di sistema è necessario riavviare gli host virtuali e fisici.
 
 > [!WARNING]
-> In questa sezione, nei passaggi del metodo o dell'attività viene illustrata la modalità di modifica del Registro di sistema. Tuttavia, potrebbero verificarsi gravi problemi se si modifica in modo errato il registro di sistema che può causare la perdita di dati e richiedere la reinstallazione del sistema operativo. Si consiglia vivamente di eseguire il backup del registro di sistema prima di modificarlo. Successivamente, sarà possibile ripristinarlo in caso di problemi. Per ulteriori informazioni su come eseguire il backup e il ripristino del registro di sistema, fare clic sul seguente numero di articolo per visualizzarlo nella Microsoft Knowledge Base:<br>
+> Questa sezione, metodo o attività contiene procedure che spiegano come modificare il Registro di sistema. Tuttavia, potrebbero verificarsi gravi problemi se si modifica in modo errato il registro di sistema che può causare la perdita di dati e richiedere la reinstallazione del sistema operativo. Si consiglia vivamente di eseguire il backup del registro di sistema prima di modificarlo. In caso di problemi, sarà quindi possibile ripristinare il Registro di sistema. Per ulteriori informazioni su come eseguire il backup e il ripristino del registro di sistema, fare clic sul seguente numero di articolo per visualizzarlo nella Microsoft Knowledge Base:<br>
 [322756](https://support.microsoft.com/help/322756) come eseguire il backup e il ripristino del registro di sistema in Windows
 
 **Disabilitare**
