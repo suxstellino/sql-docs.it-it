@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 7001f188b00e70c2616e8c3592d7fa9e34147321
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 18428e87d1c769d10a4d1acbf0033c739db09d0d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419786"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017061"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>Configurare Riesecuzione distribuita per Database Experimentation Assistant
 
@@ -60,7 +60,7 @@ Per altre opzioni di configurazione, vedere [Configure riesecuzione distribuita]
 Questa configurazione è necessaria solo sul computer controller.
 
 1. Aprire dcomcnfg.exe.
-2. Espandere **computer Servizi componenti**  >  **Computers**  >  **computer locale**  >  **configurazione DCOM**.
+2. Espandere **computer Servizi componenti**  >    >  **computer locale**  >  **configurazione DCOM**.
 3. In **configurazione DCOM**, fare clic con il pulsante destro del mouse su **DReplayController** e quindi scegliere **proprietà**.
 4. Selezionare la scheda **Sicurezza**.
 5. In **autorizzazioni di esecuzione e attivazione** selezionare **Personalizza**, quindi fare clic su **modifica**.

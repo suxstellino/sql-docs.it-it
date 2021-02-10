@@ -31,12 +31,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 103731192f584a1cf81c972c4b43fa3673a49c58
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 37ea2f4896d68f4ae5a47b14025d54a344febdc0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99204297"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100016317"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opzioni di ALTER DATABASE SET (Transact-SQL)
 
@@ -327,9 +327,9 @@ CURRENT
 Esegue l'azione nel database corrente. `CURRENT` non è supportato per tutte le opzioni in tutti i contesti. In caso di errore di `CURRENT`, specificare il nome del database.
 
 **\<accelerated_database_recovery> ::=**      
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)])
 
-Abilita il [ripristino accelerato del database](../../relational-databases/accelerated-database-recovery-management.md) (ADR, Accelerated Database Recovery) per ogni database. Per impostazione predefinita, ADR è impostato su OFF in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Usando questa sintassi è possibile designare un filegroup specifico per i dati dell'archivio versioni permanente (PVS, Persistent Version Store). Se non è specificato alcun filegroup, per l'archivio versioni permanente viene usato il filegroup PRIMARY. Per altre informazioni ed esempi, vedere [Ripristino accelerato del database](../../relational-databases/accelerated-database-recovery-management.md).
+Abilita il [ripristino accelerato del database](../../relational-databases/accelerated-database-recovery-management.md) (ADR, Accelerated Database Recovery) per ogni database. Per impostazione predefinita, ADR è impostato su OFF in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]. Usando questa sintassi è possibile designare un filegroup specifico per i dati dell'archivio versioni permanente (PVS, Persistent Version Store). Se non è specificato alcun filegroup, per l'archivio versioni permanente viene usato il filegroup PRIMARY. Per altre informazioni ed esempi, vedere [Ripristino accelerato del database](../../relational-databases/accelerated-database-recovery-management.md).
 
 **\<auto_option> ::=**      
 Consente di controllare le opzioni automatiche.
@@ -432,7 +432,7 @@ Specifica che gli aggiornamenti delle statistiche per l'opzione AUTO_UPDATE_STAT
 Per altre informazioni su quando usare gli aggiornamenti delle statistiche sincroni o asincroni, vedere la sezione sulle opzioni relative alle statistiche in [Statistiche](../../relational-databases/statistics/statistics.md#statistics-options).
 
 <a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**      
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)])
 
 Abilita o disabilita l'opzione di `FORCE_LAST_GOOD_PLAN` [Ottimizzazione automatica](../../relational-databases/automatic-tuning/automatic-tuning.md).
 
@@ -557,12 +557,12 @@ OFF
 Imposta il database in modo che non venga crittografato.
 
 SUSPEND     
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])     
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)])     
 
 Consente di sospendere l'analisi della crittografia dopo l'abilitazione o la disabilitazione di Transparent Data Encryption oppure dopo la modifica della chiave di crittografia.
 
 RESUME     
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)])
 
 Consente di riprendere l'analisi della crittografia precedentemente sospesa.
 
@@ -738,7 +738,7 @@ Nome di directory compatibile con Windows. Il nome deve essere univoco in tutti 
 Vedere [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).
 
 **\<mixed_page_allocation_option> ::=**      
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])
 
 Controlla se il database può creare pagine iniziali usando un extent misto per le prime otto pagine di un indice o di una tabella.
 
@@ -764,7 +764,7 @@ Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguita la 
 L'impostazione corrente di questa opzione può essere determinata esaminando `is_parameterization_forced column` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
 <a name="query-store"></a> **\<query_store_options> ::=**      
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])
 
 ON | **OFF** [ ( FORCED )  ] | CLEAR [ ALL ]     
 Verifica se Query Store è abilitato nel database e controlla anche la rimozione dei contenuti di Query Store. Per altre informazioni, vedere [Scenari di utilizzo di Query Store](../../relational-databases/performance/query-store-usage-scenarios.md).
@@ -773,7 +773,7 @@ ON
 Abilita Query Store.
 
 OFF [ ( FORCED ) ]      
-Disabilita Query Store. OFF è il valore predefinito. FORCED è facoltativo. FORCED interrompe tutte le attività in background di Query Store e ignora lo scaricamento sincrono quando Query Store è disattivato. Determina la chiusura di Query Store nel minor tempo possibile. FORCED si applica a [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 CU14, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU21, [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 e build successive.
+Disabilita Query Store. OFF è il valore predefinito. FORCED è facoltativo. FORCED interrompe tutte le attività in background di Query Store e ignora lo scaricamento sincrono quando Query Store è disattivato. Determina la chiusura di Query Store nel minor tempo possibile. FORCED si applica a [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU14, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU21, [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU6 e build successive.
 
 > [!NOTE]  
 > Non è possibile disabilitare Query Store in database singolo [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e in un pool elastico. L'esecuzione di `ALTER DATABASE [database] SET QUERY_STORE = OFF` restituirà l'avviso `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
@@ -797,7 +797,7 @@ DATA_FLUSH_INTERVAL_SECONDS
 Determina la frequenza con cui i dati scritti in Query Store vengono salvati in modo permanente sul disco. Per ottimizzare le prestazioni, i dati raccolti da Query Store vengono scritti in modo asincrono sul disco. La frequenza con cui si verifica questo trasferimento asincrono viene configurata tramite l'argomento DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS è di tipo **bigint**. Il valore predefinito **900** (15 min).
 
 MAX_STORAGE_SIZE_MB     
-Determina lo spazio allocato a Query Store. MAX_STORAGE_SIZE_MB è di tipo **bigint**. Il valore predefinito è **100 MB** per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], il valore predefinito è **1 GB**.
+Determina lo spazio allocato a Query Store. MAX_STORAGE_SIZE_MB è di tipo **bigint**. Il valore predefinito è **100 MB** per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). A partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], il valore predefinito è **1 GB**.
 
 > [!NOTE]
 > Il limite `MAX_STORAGE_SIZE_MB` non è necessariamente applicato. Le dimensioni di archiviazione vengono controllate solo quando Query Store scrive i dati su disco. Questo intervallo viene impostato dall'opzione `DATA_FLUSH_INTERVAL_SECONDS` o dall'opzione **Intervallo di scaricamento dati** della finestra di dialogo Query Store di [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]. Il valore predefinito dell'intervallo è 900 secondi (o 15 minuti).
@@ -806,7 +806,7 @@ Determina lo spazio allocato a Query Store. MAX_STORAGE_SIZE_MB è di tipo **big
 
 > [!IMPORTANT]
 > Se si ritiene che per l'acquisizione del carico di lavoro siano necessari più di 10 GB di spazio su disco, è probabile che sia opportuno ripensare e ottimizzare il carico di lavoro in modo da riusare i piani di query (ad esempio, usando la [parametrizzazione forzata](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)) oppure modificare le configurazioni di Query Store.    
-> A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], è possibile impostare `QUERY_CAPTURE_MODE` su CUSTOM per un controllo aggiuntivo sui criteri di acquisizione delle query.
+> A partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] e in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], è possibile impostare `QUERY_CAPTURE_MODE` su CUSTOM per un controllo aggiuntivo sui criteri di acquisizione delle query.
 
 INTERVAL_LENGTH_MINUTES     
 Determina l'intervallo di tempo in base a cui vengono aggregati i dati delle statistiche di esecuzione di runtime in Query Store. Per ottimizzare l'utilizzo dello spazio, le statistiche di esecuzione di runtime nell'archivio di statistiche di runtime vengono aggregate in un intervallo di tempo fisso. L'intervallo di tempo predefinito viene configurato tramite l'argomento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES è di tipo **bigint**. Il valore predefinito è **60**.
@@ -829,16 +829,16 @@ Determina la modalità di acquisizione query attiva. Ogni modalità definisce cr
 > I cursori, le query all'interno delle stored procedure e le query compilate in modo nativo vengono sempre acquisiti quando la modalità di acquisizione query è impostata su ALL, AUTO o CUSTOM.
 
 ALL     
-Consente di acquisire tutte le query. **ALL** è il valore di configurazione predefinito per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]).
+Consente di acquisire tutte le query. **ALL** è il valore di configurazione predefinito per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]).
 
 AUTO     
-Consente di acquisire le query pertinenti in base al conteggio delle esecuzioni e al consumo delle risorse. Si tratta del valore di configurazione predefinito per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+Consente di acquisire le query pertinenti in base al conteggio delle esecuzioni e al consumo delle risorse. Si tratta del valore di configurazione predefinito per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 NONE     
 Consente di arrestare l'acquisizione di nuove query. Query Store continuerà a raccogliere le statistiche di compilazione e runtime per le query che sono già state acquisite. Usare con cautela questa configurazione perché si rischia di perdere query importanti.
 
 CUSTOM     
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)])
 
 Consente di controllare le opzioni QUERY_CAPTURE_POLICY.
 
@@ -859,7 +859,7 @@ OFF
 Non verranno acquisite informazioni sulle statistiche di attesa per ogni query.
 
 **\<query_capture_policy_option_list> :: =**      
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)])
 
 Controlla le opzioni dei criteri di acquisizione di Query Store. Ad eccezione di STALE_CAPTURE_POLICY_THRESHOLD, queste opzioni definiscono le condizioni OR che devono verificarsi perché le query vengano acquisite nel valore della soglia dei criteri di acquisizione non aggiornati definito.
 
@@ -945,7 +945,7 @@ Per altre informazioni sui messaggi di errore 823, 824 e 825, vedere:
 L'impostazione corrente di questa opzione può essere determinata esaminando la colonna `page_verify_option` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) o la proprietà `IsTornPageDetectionEnabled` della funzione [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
 **\<remote_data_archive_option> ::=**      
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])
 
 Abilita o disabilita Stretch Database per il database. Per ulteriori informazioni, vedere [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
@@ -1206,7 +1206,7 @@ OFF
 **\<target_recovery_time_option> ::=**      
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
-Specifica la frequenza di checkpoint indiretti per database singolo. A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], il valore predefinito per i nuovi database è **1 minuto**, a indicare che il database userà checkpoint indiretti. Per le versioni precedenti, il valore predefinito è 0, a indicare che il database userà checkpoint automatici la cui frequenza dipende dall'impostazione dell'intervallo di recupero dell'istanza del server. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di usare 1 minuto per la maggior parte dei sistemi.
+Specifica la frequenza di checkpoint indiretti per database singolo. A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], il valore predefinito per i nuovi database è **1 minuto**, a indicare che il database userà checkpoint indiretti. Per le versioni precedenti, il valore predefinito è 0, a indicare che il database userà checkpoint automatici la cui frequenza dipende dall'impostazione dell'intervallo di recupero dell'istanza del server. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di usare 1 minuto per la maggior parte dei sistemi.
 
 TARGET_RECOVERY_TIME **=** *target_recovery_time* { SECONDS | MINUTES }     
 *target_recovery_time*     
@@ -1400,7 +1400,7 @@ SET CHANGE_TRACKING = OFF;
 
 ### <a name="e-enabling-the-query-store"></a>E. Abilitazione di Archivio query
 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])
 
 L'esempio seguente abilita Query Store e configura i relativi parametri.
 
@@ -1440,7 +1440,7 @@ SET QUERY_STORE = ON
 
 ### <a name="g-enabling-the-query-store-with-custom-capture-policy-options"></a>G. Abilitazione di Query Store con opzioni dei criteri di acquisizione personalizzate
 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)])
 
 L'esempio seguente abilita Query Store e configura i relativi parametri.
 
@@ -1738,7 +1738,7 @@ L'impostazione di questa opzione su OFF non produce alcun effetto, a meno che AU
 Per altre informazioni su quando usare gli aggiornamenti delle statistiche sincroni o asincroni, vedere la sezione sulle opzioni relative alle statistiche in [Statistiche](../../relational-databases/statistics/statistics.md#statistics-options).
 
 <a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**      
-**Si applica a**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
+**Si applica a**: [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
 
 Controlla le opzioni automatiche per l'[ottimizzazione automatica](../../relational-databases/automatic-tuning/automatic-tuning.md).
 
@@ -1926,7 +1926,7 @@ Determina lo spazio allocato a Query Store. MAX_STORAGE_SIZE_MB è di tipo **big
 
 > [!IMPORTANT]
 > Se si ritiene che per l'acquisizione del carico di lavoro siano necessari più di 10 GB di spazio su disco, è probabile che sia opportuno ripensare e ottimizzare il carico di lavoro in modo da riusare i piani di query (ad esempio, usando la [parametrizzazione forzata](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)) oppure modificare le configurazioni di Query Store.    
-> A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], è possibile impostare `QUERY_CAPTURE_MODE` su CUSTOM per un controllo aggiuntivo sui criteri di acquisizione delle query.
+> A partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] e in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], è possibile impostare `QUERY_CAPTURE_MODE` su CUSTOM per un controllo aggiuntivo sui criteri di acquisizione delle query.
 
 INTERVAL_LENGTH_MINUTES     
 Determina l'intervallo di tempo in base a cui vengono aggregati i dati delle statistiche di esecuzione di runtime in Query Store. Per ottimizzare l'utilizzo dello spazio, le statistiche di esecuzione di runtime nell'archivio di statistiche di runtime vengono aggregate in un intervallo di tempo fisso. L'intervallo di tempo predefinito viene configurato tramite l'argomento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES è di tipo **bigint**. Il valore predefinito è **60**.
@@ -2178,7 +2178,7 @@ OFF
 È possibile determinare lo stato di questa opzione esaminando la colonna `is_recursive_triggers_on` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) o la proprietà `IsRecursiveTriggersEnabled` della funzione [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
 **\<target_recovery_time_option> ::=**      
-Specifica la frequenza di checkpoint indiretti per database singolo. A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], il valore predefinito per i nuovi database è 1 minuto, a indicare che il database userà checkpoint indiretti. Per le versioni precedenti, il valore predefinito è 0, a indicare che il database userà checkpoint automatici la cui frequenza dipende dall'impostazione dell'intervallo di recupero dell'istanza del server. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di usare 1 minuto per la maggior parte dei sistemi.
+Specifica la frequenza di checkpoint indiretti per database singolo. A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], il valore predefinito per i nuovi database è 1 minuto, a indicare che il database userà checkpoint indiretti. Per le versioni precedenti, il valore predefinito è 0, a indicare che il database userà checkpoint automatici la cui frequenza dipende dall'impostazione dell'intervallo di recupero dell'istanza del server. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di usare 1 minuto per la maggior parte dei sistemi.
 
 TARGET_RECOVERY_TIME **=** target_recovery_time { SECONDS | MINUTES }     
 *target_recovery_time*     
@@ -2609,7 +2609,7 @@ L'impostazione di questa opzione su OFF non produce alcun effetto, a meno che AU
 Per altre informazioni su quando usare gli aggiornamenti delle statistiche sincroni o asincroni, vedere la sezione "Opzioni relative alle statistiche nel database" in [Statistiche](../../relational-databases/statistics/statistics.md).
 
 <a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**      
-**Si applica a**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
+**Si applica a**: [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
 
 Abilita o disabilita l'opzione di `FORCE_LAST_GOOD_PLAN` [Ottimizzazione automatica](../../relational-databases/automatic-tuning/automatic-tuning.md).
 
@@ -2748,7 +2748,7 @@ Determina lo spazio allocato a Query Store. MAX_STORAGE_SIZE_MB è di tipo **big
 
 > [!IMPORTANT]
 > Se si ritiene che per l'acquisizione del carico di lavoro siano necessari più di 10 GB di spazio su disco, è probabile che sia opportuno ripensare e ottimizzare il carico di lavoro in modo da riusare i piani di query (ad esempio, usando la [parametrizzazione forzata](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)) oppure modificare le configurazioni di Query Store.    
-> A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], è possibile impostare `QUERY_CAPTURE_MODE` su CUSTOM per un controllo aggiuntivo sui criteri di acquisizione delle query.
+> A partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] e in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], è possibile impostare `QUERY_CAPTURE_MODE` su CUSTOM per un controllo aggiuntivo sui criteri di acquisizione delle query.
 
 INTERVAL_LENGTH_MINUTES     
 Determina l'intervallo di tempo in base a cui vengono aggregati i dati delle statistiche di esecuzione di runtime in Query Store. Per ottimizzare l'utilizzo dello spazio, le statistiche di esecuzione di runtime nell'archivio di statistiche di runtime vengono aggregate in un intervallo di tempo fisso. L'intervallo di tempo predefinito viene configurato tramite l'argomento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES è di tipo **bigint**. Il valore predefinito è **60**.
@@ -2999,7 +2999,7 @@ OFF
 È possibile determinare lo stato di questa opzione esaminando la colonna `is_recursive_triggers_on` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) o la proprietà `IsRecursiveTriggersEnabled` della funzione [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
 **\<target_recovery_time_option> ::=**      
-Specifica la frequenza di checkpoint indiretti per database singolo. A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], il valore predefinito per i nuovi database è **1 minuto**, a indicare che il database userà checkpoint indiretti. Per le versioni precedenti, il valore predefinito è 0, a indicare che il database userà checkpoint automatici la cui frequenza dipende dall'impostazione dell'intervallo di recupero dell'istanza del server. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di usare 1 minuto per la maggior parte dei sistemi.
+Specifica la frequenza di checkpoint indiretti per database singolo. A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], il valore predefinito per i nuovi database è **1 minuto**, a indicare che il database userà checkpoint indiretti. Per le versioni precedenti, il valore predefinito è 0, a indicare che il database userà checkpoint automatici la cui frequenza dipende dall'impostazione dell'intervallo di recupero dell'istanza del server. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di usare 1 minuto per la maggior parte dei sistemi.
 
 TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }     
 *target_recovery_time*     

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4eb4635aafa67d2b6c96f88580811c204ff73423
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a07224d352f059b8aad3709c6d4f9605c16696b5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990982"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029235"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Panoramica di Microsoft OLE DB Simple Provider
 Microsoft OLE DB Simple Provider (OSP) consente a ADO di accedere a tutti i dati per i quali un provider è stato scritto utilizzando [OLE DB Simple Provider (OSP) Toolkit](/previous-versions/windows/desktop/ms715822(v=vs.85)). I provider semplici sono destinati ad accedere alle origini dati che richiedono solo il supporto OLE DB fondamentale, ad esempio matrici in memoria o documenti XML.
@@ -66,7 +66,7 @@ Portfolio
          WebSite
 ```
 
- Il DSO XML utilizza l'euristica incorporata per convertire i nodi in un albero XML in capitoli in un **Recordset**gerarchico.
+ Il DSO XML utilizza l'euristica incorporata per convertire i nodi in un albero XML in capitoli in un **Recordset** gerarchico.
 
  Utilizzando queste euristiche predefinite, l'albero XML viene convertito in un **Recordset** gerarchico a due livelli nel formato seguente:
 
@@ -77,7 +77,7 @@ Shares, Symbol, Price, $Text
       Company Name, WebSite, $Text
 ```
 
- Si noti che i tag portfolio e info non sono rappresentati nel **Recordset**gerarchico. Per una spiegazione del modo in cui il DSO XML converte gli alberi XML in **Recordset**gerarchici, vedere le regole seguenti. La colonna $Text viene illustrata nella sezione seguente.
+ Si noti che i tag portfolio e info non sono rappresentati nel **Recordset** gerarchico. Per una spiegazione del modo in cui il DSO XML converte gli alberi XML in **Recordset** gerarchici, vedere le regole seguenti. La colonna $Text viene illustrata nella sezione seguente.
 
 ## <a name="rules-for-assigning-xml-elements-and-attributes-to-columns-and-rows"></a>Regole per l'assegnazione di elementi e attributi XML a colonne e righe
  Il DSO XML segue una procedura per l'assegnazione di elementi e attributi a colonne e righe nelle applicazioni con associazione a dati. XML viene modellato come albero con un tag che contiene l'intera gerarchia. Una descrizione XML di un libro, ad esempio, può contenere tag capitolo, tag figure e tag section. Al livello più alto, si tratta del tag Book, contenente il capitolo, la figura e la sezione dei sottoelementi. Quando il DSO XML esegue il mapping degli elementi XML a righe e colonne, i sottoelementi, non l'elemento di primo livello, vengono convertiti.
@@ -88,13 +88,13 @@ Shares, Symbol, Price, $Text
 
 -   Il nome della colonna corrisponde al nome del sottoelemento o dell'attributo, a meno che l'elemento padre non abbia un attributo e un sottoelemento con lo stesso nome, nel qual caso un "!" viene anteposto al nome della colonna del sottoelemento.
 
--   Ogni colonna è una colonna *semplice* che contiene valori scalari (in genere stringhe) o una colonna **Recordset** contenente **Recordset**figlio.
+-   Ogni colonna è una colonna *semplice* che contiene valori scalari (in genere stringhe) o una colonna **Recordset** contenente **Recordset** figlio.
 
 -   Le colonne corrispondenti agli attributi sono sempre semplici.
 
 -   Le colonne che corrispondono ai sottoelementi sono colonne del **Recordset** se il sottoelemento ha i propri sottoelementi o attributi (o entrambi) oppure il padre del sottoelemento ha più di un'istanza del sottoelemento come figlio. In caso contrario, la colonna è semplice.
 
--   Quando sono presenti più istanze di un sottoelemento (in padri diversi), la relativa colonna è **Recordset** una colonna recordset *se una delle istanze* implica una colonna **Recordset** ; la colonna è semplice solo se *tutte le* istanze implicano una colonna semplice.
+-   Quando sono presenti più istanze di un sottoelemento (in padri diversi), la relativa colonna è  una colonna recordset *se una delle istanze* implica una colonna **Recordset** ; la colonna è semplice solo se *tutte le* istanze implicano una colonna semplice.
 
 -   Tutti i **Recordset** hanno una colonna aggiuntiva denominata $text.
 
@@ -140,9 +140,9 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
  Per ulteriori informazioni sull'OLE DB provider semplice, vedere [compilazione di un provider semplice](/previous-versions/windows/desktop/ms721067(v=vs.85)).
 
 ## <a name="code-example"></a>Esempio di codice
- Il codice di Visual Basic seguente illustra l'apertura di un file XML arbitrario, la costruzione di un **Recordset**gerarchico e la scrittura ricorsiva di ogni record di ogni **Recordset** nella finestra di debug.
+ Il codice di Visual Basic seguente illustra l'apertura di un file XML arbitrario, la costruzione di un **Recordset** gerarchico e la scrittura ricorsiva di ogni record di ogni **Recordset** nella finestra di debug.
 
- Di seguito è riportato un semplice file XML che contiene le quotazioni azionarie. Il codice seguente usa questo file per costruire un **Recordset**gerarchico a due livelli.
+ Di seguito è riportato un semplice file XML che contiene le quotazioni azionarie. Il codice seguente usa questo file per costruire un **Recordset** gerarchico a due livelli.
 
 ```xml
 <portfolio>

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d8da5e3d5de1ac0ee3f3dfa1b0f989679af3cd1d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 04865a03bdb352d36e1ac3b445c7c0b4eb7c3da2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991012"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029295"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Panoramica di provider Microsoft OLE DB per Oracle
 > [!IMPORTANT]
@@ -58,7 +58,7 @@ MSDAORA
 > [!NOTE]
 >  Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, è necessario specificare **Trusted_Connection = Yes** o **Integrated Security = SSPI** anziché le informazioni relative a ID utente e password nella stringa di connessione.
 
-## <a name="provider-specific-connection-parameters"></a>Parametri di connessione specifici del provider
+## <a name="provider-specific-connection-parameters"></a>Parametri di connessione Provider-Specific
  Il provider supporta diversi parametri di connessione specifici del provider, oltre a quelli definiti da ADO. Come per le proprietà di connessione ADO, queste proprietà specifiche del provider possono essere impostate tramite la raccolta [Properties](../../reference/ado-api/properties-collection-ado.md) di una [connessione](../../reference/ado-api/connection-object-ado.md) o come parte di **ConnectionString**.
 
  Questi parametri sono descritti in modo completo nella Guida [di riferimento per programmatori OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)). L' [indice della proprietà dinamica ADO](../../reference/ado-api/ado-dynamic-property-index.md) fornisce un riferimento incrociato tra questi nomi di parametro e le proprietà OLE DB corrispondenti.

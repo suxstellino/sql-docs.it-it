@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e8c15738d7ad6fe93a1401636239369b3a87381
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 8d38a5d925bb90a85ccd41930bc5ef5ba49dfa94
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991802"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028685"
 ---
 # <a name="visual-c-extensions-header"></a>Intestazione delle estensioni di Visual C++
 La seguente intestazione, **icrsint. h**, descrive in dettaglio l'interfaccia che consente ai client di recuperare i campi da un **Recordset** in variabili definite in una classe derivata da **CADORecordBinding**. È necessario specificare una macro di associazione ADO per ogni campo a cui si intende accedere.  
@@ -58,16 +58,16 @@ enum ADOFieldStatusEnum
   
 typedef struct stADO_BINDING_ENTRY  
 {  
-   ULONG      ulOrdinal;  
-   WORD       wDataType;  
-   BYTE       bPrecision;  
-   BYTE       bScale;  
-   ULONG      ulSize;  
-   ULONG      ulBufferOffset;  
-   ULONG      ulStatusOffset;  
-   ULONG      ulLengthOffset;  
-   ULONG      ulADORecordBindingOffSet;  
-   BOOL       fModify;  
+   ULONG      ulOrdinal;  
+   WORD       wDataType;  
+   BYTE       bPrecision;  
+   BYTE       bScale;  
+   ULONG      ulSize;  
+   ULONG      ulBufferOffset;  
+   ULONG      ulStatusOffset;  
+   ULONG      ulLengthOffset;  
+   ULONG      ulADORecordBindingOffSet;  
+   BOOL       fModify;  
 } ADO_BINDING_ENTRY;  
   
 #define BEGIN_ADO_BINDING(cls) public: \  

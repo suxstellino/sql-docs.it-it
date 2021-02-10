@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dd484230ba2801abcb553fa8f9013dce53799b09
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 218303ca86738ce4fab8b944dec6d1bfe114cf30
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171556"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027551"
 ---
 # <a name="bookmark-property-ado"></a>Proprietà Bookmark (ADO)
 Indica un segnalibro che identifica in modo univoco il record corrente in un oggetto [Recordset](./recordset-object-ado.md) o imposta il record corrente in un oggetto **Recordset** sul record identificato da un segnalibro valido.  

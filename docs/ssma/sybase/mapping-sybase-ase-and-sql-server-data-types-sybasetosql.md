@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5a7e1ba17822d339e5ae40e6e6b5828191ce84ed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a8b2ba53ef5f3dcb895d217e2acef3acc15e8784
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463173"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017648"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Mapping dei tipi di dati di Sybase ASE e SQL Server (SybaseToSQL)
 I tipi di database di Sybase Adaptive Server Enterprise (ASE) differiscono da quelli di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o di database SQL di Azure. Quando si convertono oggetti di database dell'ambiente del servizio app in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti o SQL Azure, è necessario specificare come eseguire il mapping dei tipi di dati da ASE a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. È possibile accettare i mapping dei tipi di dati predefiniti oppure personalizzare i mapping, come illustrato nelle sezioni seguenti.  
@@ -38,7 +38,7 @@ Nella procedura riportata di seguito viene illustrato come eseguire il mapping d
   
 1.  Per personalizzare il mapping dei tipi di dati per l'intero progetto, aprire la finestra di dialogo **Impostazioni progetto** :  
   
-    1.  Scegliere **Impostazioni progetto**dal menu **strumenti** .  
+    1.  Scegliere **Impostazioni progetto** dal menu **strumenti** .  
   
     2.  Nel riquadro sinistro selezionare mapping dei **tipi**.  
   
@@ -52,15 +52,15 @@ Nella procedura riportata di seguito viene illustrato come eseguire il mapping d
   
 2.  Per aggiungere un nuovo mapping, eseguire le operazioni seguenti:  
   
-    1.  Scegliere **Aggiungi**.  
+    1.  Fare clic su **Aggiungi**.  
   
-    2.  In **tipo di origine**selezionare il tipo di dati dell'ambiente del servizio app da mappare.  
+    2.  In **tipo di origine** selezionare il tipo di dati dell'ambiente del servizio app da mappare.  
   
     3.  Se il tipo richiede una lunghezza, specificare la lunghezza minima dei dati per il mapping nella casella **da** e specificare la lunghezza massima dei dati per il mapping nella casella **a** .  
   
         In questo modo è possibile personalizzare il mapping dei dati per valori più piccoli e più grandi dello stesso tipo di dati.  
   
-    4.  In **tipo di destinazione**selezionare il tipo di dati di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
+    4.  In **tipo di destinazione** selezionare il tipo di dati di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
   
         Alcuni tipi richiedono una lunghezza del tipo di dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nella casella **Sostituisci con** .  
   
@@ -70,13 +70,13 @@ Nella procedura riportata di seguito viene illustrato come eseguire il mapping d
   
     1.  Fare clic su **Modifica**.  
   
-    2.  In **tipo di origine**selezionare il tipo di dati dell'ambiente del servizio app da mappare.  
+    2.  In **tipo di origine** selezionare il tipo di dati dell'ambiente del servizio app da mappare.  
   
     3.  Se il tipo richiede una lunghezza, specificare la lunghezza minima dei dati per il mapping nella casella **da** e specificare la lunghezza massima dei dati per il mapping nella casella **a** .  
   
         In questo modo è possibile personalizzare il mapping dei dati per valori più piccoli e più grandi dello stesso tipo di dati.  
   
-    4.  In **tipo di destinazione**selezionare il tipo di dati di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
+    4.  In **tipo di destinazione** selezionare il tipo di dati di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
   
         Alcuni tipi richiedono una lunghezza del tipo di dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nella casella **Sostituisci con** , quindi fare clic su **OK**.  
   
@@ -84,7 +84,7 @@ Nella procedura riportata di seguito viene illustrato come eseguire il mapping d
   
     1.  Selezionare la riga nell'elenco mapping dei tipi che contiene il mapping del tipo di dati che si desidera rimuovere.  
   
-    2.  Scegliere **Rimuovi**.  
+    2.  Fare clic su **Rimuovi**.  
   
         Non è possibile rimuovere i mapping ereditati. Tuttavia, i mapping ereditati vengono sottoposti a override da mapping personalizzati in un oggetto o una categoria di oggetti specifici.  
   

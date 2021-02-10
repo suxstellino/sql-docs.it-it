@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6a4e4fcec5217a9a9475f11d3a386c7436892ea6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c73122e5fe1b06fb44ad69219145972ef4009202
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724872"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029245"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Panoramica del provider Microsoft OLE DB Remoting
 Il provider Microsoft OLE DB Remoting consente a un utente locale in un computer client di richiamare i provider di dati in un computer remoto. Specificare i parametri del provider di dati per il computer remoto come se si trattasse di un utente locale nel computer remoto. Specificare quindi i parametri utilizzati dal provider remoto per accedere al computer remoto. È quindi possibile accedere al computer remoto come se si trattasse di un utente locale.
@@ -70,10 +70,10 @@ Debug.Print cn.Properties("Internet Timeout")
 cn.Properties("Internet Timeout") = 5000
 ```
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
  In ADO 2,0, il provider di OLE DB Remoting può essere specificato solo nel parametro *ActiveConnection* del metodo **Open** dell'oggetto [Recordset](../../reference/ado-api/recordset-object-ado.md) . A partire da ADO 2,1, il provider può anche essere specificato nel parametro *ConnectionString* del metodo **Open** dell'oggetto [Connection](../../reference/ado-api/connection-object-ado.md) .
 
- Equivalente di **RDS. ** La proprietà [SQL](../../reference/rds-api/sql-property.md) dell'oggetto datacontrollo non è disponibile. Viene invece utilizzato l'argomento di *origine* del metodo **Open** dell'oggetto [Recordset](../../reference/ado-api/recordset-object-ado.md) .
+ Equivalente di **RDS.** La proprietà [SQL](../../reference/rds-api/sql-property.md) dell'oggetto datacontrollo non è disponibile. Viene invece utilizzato l'argomento di *origine* del metodo **Open** dell'oggetto [Recordset](../../reference/ado-api/recordset-object-ado.md) .
 
  **Nota** Specifica di "...; Provider remoto = MS Remote;... " creerebbe uno scenario a quattro livelli. Gli scenari oltre i tre livelli non sono stati testati e non dovrebbero essere necessari.
 
@@ -83,11 +83,11 @@ cn.Properties("Internet Timeout") = 5000
 ```vb
 Dim rs as New ADODB.Recordset
 Dim cn as New ADODB.Connection
-cn.Open  "Provider=MS Remote;Data Source=pubs;" & _
+cn.Open  "Provider=MS Remote;Data Source=pubs;" & _
          "Remote Server=https://YourServer"
 rs.Open "SELECT * FROM authors", cn
-...                'Edit the recordset
-rs.UpdateBatch     'Equivalent of RDS SubmitChanges
+...                'Edit the recordset
+rs.UpdateBatch     'Equivalent of RDS SubmitChanges
 ...
 ```
 

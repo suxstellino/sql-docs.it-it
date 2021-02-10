@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bc04cce33d3a1170c01b604ef8b71ef82bc98fe2
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 87d9e159a9a97a0a929bec72d03118a927aad56e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991032"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029225"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Panoramica di Microsoft OLE DB provider per Microsoft Jet
 Il provider OLE DB per Microsoft Jet consente a ADO di accedere ai database Microsoft Jet.
@@ -53,7 +53,7 @@ Microsoft.Jet.OLEDB.4.0
 > [!NOTE]
 >  Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, è necessario specificare **Trusted_Connection = Yes** o **Integrated Security = SSPI** anziché le informazioni relative a ID utente e password nella stringa di connessione.
 
-## <a name="provider-specific-connection-parameters"></a>Parametri di connessione specifici del provider
+## <a name="provider-specific-connection-parameters"></a>Parametri di connessione Provider-Specific
  Il provider OLE DB per Microsoft Jet supporta diverse proprietà dinamiche specifiche del provider, oltre a quelle definite da ADO. Come per tutti gli altri parametri di **connessione** , possono essere impostati tramite la raccolta **Properties** dell'oggetto **Connection** o come parte della stringa di connessione.
 
  Nella tabella seguente sono elencate queste proprietà insieme al nome della proprietà OLE DB corrispondente tra parentesi.
@@ -81,7 +81,7 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB: timeout del comando ODBC (DBPROP_JETOLEDB_ODBCCOMMANDTIMEOUT)|Indica il numero di millisecondi prima del timeout di una query ODBC remota di Jet.|
 |Jet OLEDB: blocchi di pagina al blocco della tabella (DBPROP_JETOLEDB_PAGELOCKSTOTABLELOCK)|Indica il numero di pagine che devono essere bloccate all'interno di una transazione prima che Jet tenti di innalzare di livello il blocco a un blocco di tabella. Se questo valore è 0, il blocco non viene mai promosso.|
 |Jet OLEDB: timeout pagina (DBPROP_JETOLEDB_PAGETIMEOUT)|Indica il numero di millisecondi di attesa prima di controllare se la cache non è aggiornata con il file di database.|
-|Jet OLEDB: riciclare pagine con valori di lunga durata (DBPROP_JETOLEDB_RECYCLELONGVALUEPAGES)|Indica se Jet deve tentare di recuperare le pagine BLOB in modo aggressivo quando vengono liberate.|
+|Jet OLEDB: riciclo Long-Valued pagine (DBPROP_JETOLEDB_RECYCLELONGVALUEPAGES)|Indica se Jet deve tentare di recuperare le pagine BLOB in modo aggressivo quando vengono liberate.|
 |Jet OLEDB: percorso del registro di sistema (DBPROP_JETOLEDB_REGPATH)|Indica la chiave del registro di sistema di Windows che contiene i valori per il motore di database Jet.|
 |Jet OLEDB: Reimposta statistiche ISAM (DBPROP_JETOLEDB_RESETISAMSTATS)|Indica se il **Recordset** dello schema DBSCHEMA_JETOLEDB_ISAMSTATS deve reimpostare i contatori delle prestazioni dopo avere restituito le informazioni sulle prestazioni.|
 |Jet OLEDB: ritardo asincrono condiviso (DBPROP_JETOLEDB_SHAREDASYNCDELAY)|Indica la quantità massima di tempo, in millisecondi, con cui Jet può ritardare le scritture asincrone su disco quando il database viene aperto in modalità multiutente.|
@@ -89,7 +89,7 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB: modalità commit transazioni (DBPROP_JETOLEDB_TXNCOMMITMODE)|Indica se Jet scrive i dati su disco in modo sincrono o asincrono quando viene eseguito il commit di una transazione.|
 |Jet OLEDB: sincronizzazione commit utente (DBPROP_JETOLEDB_USERCOMMITSYNC)|Indica se le modifiche apportate alle transazioni vengono scritte in modalità sincrona o asincrona.|
 
-## <a name="provider-specific-recordset-and-command-properties"></a>Proprietà del comando e del recordset specifici del provider
+## <a name="provider-specific-recordset-and-command-properties"></a>Proprietà Provider-Specific recordset e comando
  Il provider Jet supporta inoltre diverse proprietà del **comando** e del **Recordset** specifiche del provider. Queste proprietà sono accessibili e impostate tramite la raccolta **Properties** dell'oggetto **Recordset** o **Command** . La tabella elenca il nome della proprietà ADO e il nome della proprietà OLE DB corrispondente tra parentesi.
 
 |Nome proprietà|Descrizione|
@@ -99,10 +99,10 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB: dimensioni cache cursore FAT (DBPROP_JETOLEDB_FATCURSORMAXROWS)|Indica il numero di righe da memorizzare nella cache quando si utilizza la memorizzazione nella cache delle righe dell'archivio dati remoto. Questo valore viene ignorato a meno che **Jet OLEDB: Abilita cursori Fat** è true.|
 |Jet OLEDB: incoerente (DBPROP_JETOLEDB_INCONSISTENT)|Indica se i risultati della query consentono aggiornamenti non coerenti.|
 |Jet OLEDB: granularità del blocco (DBPROP_JETOLEDB_LOCKGRANULARITY)|Indica se una tabella viene aperta utilizzando il blocco a livello di riga.|
-|Jet OLEDB: istruzione pass-through ODBC (DBPROP_JETOLEDB_ODBCPASSTHROUGH)|Indica che Jet deve passare il testo SQL in un oggetto **Command** al back-end invariato.|
+|Jet OLEDB: istruzione ODBC Pass-Through (DBPROP_JETOLEDB_ODBCPASSTHROUGH)|Indica che Jet deve passare il testo SQL in un oggetto **Command** al back-end invariato.|
 |Jet OLEDB: operazioni bulk parziali (DBPROP_JETOLEDB_BULKPARTIAL)|Indica il comportamento di Jet quando le operazioni DML SQL hanno esito negativo.|
-|Jet OLEDB: esecuzione bulk delle query pass-through (DBPROP_JETOLEDB_PASSTHROUGHBULKOP)|Indica se le query che non restituiscono un **Recordset** vengono passate senza modifiche all'origine dati.|
-|Jet OLEDB: stringa di connessione della query pass-through (DBPROP_JETOLEDB_ODBCPASSTHROUGHCONNECTSTRING)|Indica la stringa di connessione Jet utilizzata per la connessione a un archivio dati remoto. Questo valore viene ignorato a meno che **Jet OLEDB: istruzione pass-through ODBC** non sia true.|
+|Jet OLEDB: Bulk-Op di query pass-through (DBPROP_JETOLEDB_PASSTHROUGHBULKOP)|Indica se le query che non restituiscono un **Recordset** vengono passate senza modifiche all'origine dati.|
+|Jet OLEDB: stringa di connessione della query pass-through (DBPROP_JETOLEDB_ODBCPASSTHROUGHCONNECTSTRING)|Indica la stringa di connessione Jet utilizzata per la connessione a un archivio dati remoto. Questo valore viene ignorato a meno che **Jet OLEDB: ODBC Pass-Through istruzione** è true.|
 |Jet OLEDB: query archiviata (DBPROP_JETOLEDB_STOREDQUERY)|Indica se il testo del comando deve essere interpretato come una query archiviata anziché come comando SQL.|
 |Jet OLEDB: convalidare le regole sul set (DBPROP_JETOLEDB_VALIDATEONSET)|Indica se le regole di convalida Jet vengono valutate quando vengono impostati i dati della colonna o quando viene eseguito il commit delle modifiche nel database.|
 
@@ -112,7 +112,7 @@ Microsoft.Jet.OLEDB.4.0
  Il testo del comando nell'oggetto [comando](../../reference/ado-api/command-object-ado.md) usa il dialetto Microsoft Jet SQL. Nel testo del comando è possibile specificare query di restituzione di righe, query di azione e nomi di tabella. Tuttavia, le stored procedure non sono supportate e non devono essere specificate.
 
 ## <a name="recordset-behavior"></a>Comportamento del recordset
- Il motore di database di Microsoft Jet non supporta i cursori dinamici. Pertanto, il provider di OLE DB per Microsoft Jet non supporta il tipo di cursore **adLockDynamic** . Quando viene richiesto un cursore dinamico, il provider restituisce un cursore keyset e reimposta la proprietà [CursorType](../../reference/ado-api/cursortype-property-ado.md) per indicare il tipo di [Recordset](../../reference/ado-api/recordset-object-ado.md) restituito. Inoltre, se viene richiesto **un recordset** aggiornabile (**LockType** è **adLockOptimistic**, **adLockBatchOptimistic**o **adLockPessimistic**), il provider restituirà anche un cursore keyset e reimposta la proprietà **CursorType** .
+ Il motore di database di Microsoft Jet non supporta i cursori dinamici. Pertanto, il provider di OLE DB per Microsoft Jet non supporta il tipo di cursore **adLockDynamic** . Quando viene richiesto un cursore dinamico, il provider restituisce un cursore keyset e reimposta la proprietà [CursorType](../../reference/ado-api/cursortype-property-ado.md) per indicare il tipo di [Recordset](../../reference/ado-api/recordset-object-ado.md) restituito. Inoltre, se viene richiesto **un recordset** aggiornabile (**LockType** è **adLockOptimistic**, **adLockBatchOptimistic** o **adLockPessimistic**), il provider restituirà anche un cursore keyset e reimposta la proprietà **CursorType** .
 
 ## <a name="dynamic-properties"></a>Proprietà dinamiche
  Il provider OLE DB per Microsoft Jet inserisce diverse proprietà dinamiche nella raccolta **Properties** degli oggetti [Connection](../../reference/ado-api/connection-object-ado.md), [Recordset](../../reference/ado-api/recordset-object-ado.md)e [Command](../../reference/ado-api/command-object-ado.md) non aperti.
@@ -147,7 +147,7 @@ Microsoft.Jet.OLEDB.4.0
 |Dimensioni massime riga|DBPROP_MAXROWSIZE|
 |Dimensioni massime righe includono BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |Numero massimo di tabelle in SELECT|DBPROP_MAXTABLESINSELECT|
-|Mode|DBPROP_INIT_MODE|
+|Modalità|DBPROP_INIT_MODE|
 |Set di parametri multipli|DBPROP_MULTIPLEPARAMSETS|
 |Risultati multipli|DBPROP_MULTIPLERESULTS|
 |Più oggetti di archiviazione|DBPROP_MULTIPLESTORAGEOBJECTS|
@@ -169,11 +169,11 @@ Microsoft.Jet.OLEDB.4.0
 |Nome descrittivo provider|DBPROP_PROVIDERFRIENDLYNAME|
 |Provider Name|DBPROP_PROVIDERFILENAME|
 |Versione del provider|DBPROP_PROVIDERVER|
-|Origine dati di sola lettura|DBPROP_DATASOURCEREADONLY|
+|Read-Only origine dati|DBPROP_DATASOURCEREADONLY|
 |Conversioni di set di righe nel comando|DBPROP_ROWSETCONVERSIONSONCOMMAND|
 |Termine schema|DBPROP_SCHEMATERM|
 |Utilizzo dello schema|DBPROP_SCHEMAUSAGE|
-|Supporto SQL|DBPROP_SQLSUPPORT|
+|Supporto di SQL|DBPROP_SQLSUPPORT|
 |Archiviazione strutturata|DBPROP_STRUCTUREDSTORAGE|
 |Supporto sottoquery|DBPROP_SUBQUERIES|
 |Termine tabella|DBPROP_TABLETERM|
@@ -188,7 +188,7 @@ Microsoft.Jet.OLEDB.4.0
 |Nome della proprietà ADO|Nome della proprietà OLE DB|
 |-----------------------|--------------------------|
 |Ordine di accesso|DBPROP_ACCESSORDER|
-|Set di righe solo Accodamento|DBPROP_APPENDONLY|
+|Set di righe Append-Only|DBPROP_APPENDONLY|
 |Blocco di oggetti di archiviazione|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |Tipo di segnalibro|DBPROP_BOOKMARKTYPE|
 |Bookmarkable|DBPROP_IROWSETLOCATE|
@@ -227,7 +227,7 @@ Microsoft.Jet.OLEDB.4.0
 |Numero massimo di righe aperte|DBPROP_MAXOPENROWS|
 |Numero massimo di righe in sospeso|DBPROP_MAXPENDINGROWS|
 |Numero massimo di righe|DBPROP_MAXROWS|
-|Utilizzo della memoria|DBPROP_MEMORYUSAGE|
+|Utilizzo memoria|DBPROP_MEMORYUSAGE|
 |Granularità delle notifiche|DBPROP_NOTIFICATIONGRANULARITY|
 |Fasi di notifica|DBPROP_NOTIFICATIONPHASES|
 |Oggetti sottoposti a transazione|DBPROP_TRANSACTEDOBJECT|
@@ -266,7 +266,7 @@ Microsoft.Jet.OLEDB.4.0
 |Nome della proprietà ADO|Nome della proprietà OLE DB|
 |-----------------------|--------------------------|
 |Ordine di accesso|DBPROP_ACCESSORDER|
-|Set di righe solo Accodamento|DBPROP_APPENDONLY|
+|Set di righe Append-Only|DBPROP_APPENDONLY|
 |Blocco di oggetti di archiviazione|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |Tipo di segnalibro|DBPROP_BOOKMARKTYPE|
 |Bookmarkable|DBPROP_IROWSETLOCATE|

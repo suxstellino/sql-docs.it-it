@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3e479ca023efb704bf496c9ffaeaca2f1b6ba15
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f7d2204a2d91e862616713dbfee6eec3d6d3e8ba
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991042"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029305"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Panoramica di Microsoft OLE DB provider per il servizio di indicizzazione Microsoft
 Il provider Microsoft OLE DB per Microsoft Indexing Service fornisce l'accesso di sola lettura a livello di codice ai file system e ai dati web indicizzati dal servizio Microsoft Indexing. Le applicazioni ADO possono eseguire query SQL per recuperare il contenuto e le informazioni sulle proprietà del file.
@@ -104,7 +104,7 @@ MSIDXS
 |[Close](../../reference/ado-api/close-method-ado.md)|Sì|
 |[Elimina](../../reference/ado-api/delete-method-ado-recordset.md)|No|
 |[GetRows](../../reference/ado-api/getrows-method-ado.md)|Sì|
-|[Spostamento](../../reference/ado-api/move-method-ado.md)|Sì|
+|[Sposta](../../reference/ado-api/move-method-ado.md)|Sì|
 |[MoveFirst](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|
 |[NextRecordset](../../reference/ado-api/nextrecordset-method-ado.md)|Sì|
 |[Apri](../../reference/ado-api/open-method-ado-recordset.md)|Sì|

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59cb4cceb81861460fbcf7f079801b08319c76d9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f29f2462f19200e486b3ed7b5635048028f4bbcc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991202"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031043"
 ---
 # <a name="ado-programming-task-table"></a>Tabella delle attività di programmazione ADO
 Nella tabella seguente sono elencate le attività di programmazione contenute nella *Guida per programmatori ADO* e vengono forniti riferimenti per ogni attività. Questi riferimenti possono essere descrizioni testuali o esempi di codice in cui è possibile trovare informazioni sulla funzionalità ADO che esegue l'attività.

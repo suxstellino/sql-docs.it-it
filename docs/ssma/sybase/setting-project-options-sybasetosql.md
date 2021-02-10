@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: df912a5a58bdcfb2777177bddef80899f31f38c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa8e45af93faa4ef175d129487a1d655a6d02ead
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468715"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100030759"
 ---
 # <a name="setting-project-options-sybasetosql"></a>Impostazione delle opzioni del progetto (SybaseToSQL)
 Per ogni progetto SSMA, è possibile impostare le opzioni a livello di progetto. Queste opzioni specificano la conversione degli oggetti, il caricamento di oggetti, SQL Azure, l'interfaccia utente e le impostazioni di migrazione dei dati. Prima di convertire o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure o migrare i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, verificare che le opzioni di configurazione siano appropriate per il progetto.  
@@ -68,13 +68,13 @@ In SSMA è possibile configurare le impostazioni predefinite per tutti i progett
   
 **Per impostare le opzioni predefinite del progetto**  
   
-1.  Scegliere **Impostazioni progetto predefinite**dal menu **strumenti** .  
+1.  Scegliere **Impostazioni progetto predefinite** dal menu **strumenti** .  
   
 2.  Nella finestra di dialogo **Impostazioni progetto predefinite** utilizzare una delle procedure seguenti:  
   
     -   Selezionare il tipo di progetto di migrazione per il quale è necessario visualizzare o modificare le impostazioni dall'elenco a discesa della **versione di destinazione della migrazione** fare clic su generale nella parte inferiore del riquadro sinistro, quindi selezionare conversione o migrazione o SQL Azure.  
   
-    -   Per selezionare una modalità **predefinita**, nella casella di riepilogo a discesa **modalità** selezionare predefinito, **ottimistico**o **completo**.  
+    -   Per selezionare una modalità **predefinita**, nella casella di riepilogo a discesa **modalità** selezionare predefinito, **ottimistico** o **completo**.  
   
     -   Per specificare le impostazioni personalizzate, è sufficiente selezionare o immettere le nuove impostazioni o i nuovi valori.  
   
@@ -84,11 +84,11 @@ In SSMA è possibile configurare le impostazioni predefinite per tutti i progett
   
 **Per personalizzare le impostazioni per il progetto corrente**  
   
-1.  Scegliere **Impostazioni progetto**dal menu **strumenti** .  
+1.  Scegliere **Impostazioni progetto** dal menu **strumenti** .  
   
 2.  Nella finestra di dialogo **Impostazioni progetto** utilizzare una delle procedure seguenti:  
   
-    -   Per selezionare una modalità **predefinita**, nella casella di riepilogo a discesa **modalità** selezionare predefinito, **ottimistico**o **completo**.  
+    -   Per selezionare una modalità **predefinita**, nella casella di riepilogo a discesa **modalità** selezionare predefinito, **ottimistico** o **completo**.  
   
     -   Per specificare una modalità personalizzata, nella casella di riepilogo a discesa **modalità** selezionare **personalizzata**, selezionare un'opzione nel riquadro a sinistra, fare clic sull'impostazione o sul valore nel riquadro destro, quindi selezionare o immettere il nuovo valore o impostazione.  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f815c82b16ef31bc64e5524ec7114779b2ba3234
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 438b14f2a3fc0ffde38983610a10b1a9f5c46a1b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161654"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031303"
 ---
 # <a name="ado-dynamic-properties"></a>Proprietà dinamiche ADO
 È possibile aggiungere proprietà dinamiche alle raccolte [Properties](./properties-collection-ado.md) degli oggetti [Connection](./connection-object-ado.md), [Command](./command-object-ado.md)o [Recordset](./recordset-object-ado.md) . L'origine di queste proprietà è un provider di dati, ad esempio il [provider di OLE DB per SQL Server](../../guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), o un provider di servizi, ad esempio il [servizio Microsoft Cursor per OLE DB](../../guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Per ulteriori informazioni su una specifica proprietà dinamica, fare riferimento alla documentazione del provider di dati o del provider di servizi appropriato.  

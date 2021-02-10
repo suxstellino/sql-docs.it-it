@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04985c3972e9eaa1ec854102123c09c6a3fd8cde
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c03e1b792e23552252eb84fae9a71e693b3781c8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991642"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028066"
 ---
 # <a name="ado-objects-and-collections"></a>Oggetti e raccolte di ADO
 ADO è costituito dai nove oggetti seguenti e da quattro raccolte.  

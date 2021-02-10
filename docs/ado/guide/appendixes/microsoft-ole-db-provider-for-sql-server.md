@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a307a0de76ce1e74e3e1773a414fce93957572b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1b6a62e8946415cc9c1e869a173de43b98ba14f7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991002"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029255"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Panoramica del provider Microsoft OLE DB per SQL Server
 Il provider di OLE DB Microsoft per SQL Server, SQLOLEDB, consente a ADO di accedere a Microsoft SQL Server.
@@ -59,7 +59,7 @@ User ID=MyUserID;Password=MyPassword;"
 > [!NOTE]
 >  Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, è necessario specificare **Trusted_Connection = Yes** o **Integrated Security = SSPI** anziché le informazioni relative a ID utente e password nella stringa di connessione.
 
-## <a name="provider-specific-connection-parameters"></a>Parametri di connessione specifici del provider
+## <a name="provider-specific-connection-parameters"></a>Parametri di connessione Provider-Specific
  Il provider supporta diversi parametri di connessione specifici del provider, oltre a quelli definiti da ADO. Come per le proprietà di connessione ADO, queste proprietà specifiche del provider possono essere impostate tramite la raccolta [Properties](../../reference/ado-api/properties-collection-ado.md) di una [connessione](../../reference/ado-api/connection-object-ado.md) oppure possono essere impostate come parte di **ConnectionString**.
 
 |Parametro|Descrizione|
@@ -70,7 +70,7 @@ User ID=MyUserID;Password=MyPassword;"
 |Libreria di rete|Indica il nome della libreria di rete (DLL) utilizzata per comunicare con il SQL Server. Il nome non deve include il percorso o l'estensione di file DLL. Il valore predefinito è fornito dalla configurazione del client SQL Server.|
 |Usare la procedura per la preparazione|Determina se SQL Server crea stored procedure temporanee quando i comandi vengono preparati (mediante la proprietà **preparata** ).|
 |Conversione automatica|Indica se i caratteri OEM/ANSI vengono convertiti. Questa proprietà può essere impostata su **true** o **false**. Il valore predefinito è **True**. Se questa proprietà è impostata su **true**, SQLOLEDB esegue la conversione di caratteri OEM/ANSI quando le stringhe di caratteri multibyte vengono recuperate da o inviate a, il SQL Server. Se questa proprietà è impostata su **false**, SQLOLEDB non esegue la conversione di caratteri OEM/ANSI nei dati stringa di caratteri multibyte.|
-|Packet Size|Indica una dimensione del pacchetto di rete in byte. Il valore della proprietà dimensioni pacchetto deve essere compreso tra 512 e 32767. Le dimensioni predefinite del pacchetto di rete SQLOLEDB sono pari a 4096.|
+|Dimensione pacchetti|Indica una dimensione del pacchetto di rete in byte. Il valore della proprietà dimensioni pacchetto deve essere compreso tra 512 e 32767. Le dimensioni predefinite del pacchetto di rete SQLOLEDB sono pari a 4096.|
 |Nome dell'applicazione|Indica il nome dell'applicazione client.|
 |ID workstation|Stringa che identifica la workstation.|
 
@@ -112,7 +112,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
  Con SQL Server, ADO può utilizzare XML per l'input del **comando** e recuperare i risultati in formato flusso XML anziché negli oggetti **Recordset** . Per altre informazioni, vedere [uso dei flussi per l'input del comando](../data/command-streams.md) e [recupero di set di risultati nei flussi](../data/retrieving-resultsets-into-streams.md).
 
 ### <a name="accessing-sql_variant-data-using-mdac-27-mdac-28-or-windows-dac-60"></a>Accesso ai dati di sql_variant utilizzando MDAC 2,7, MDAC 2,8 o Windows DAC 6,0
- Microsoft SQL Server dispone di un tipo di dati denominato **sql_variant**. Analogamente al **DBTYPE_VARIANT**di OLE DB, il tipo di dati **sql_variant** può archiviare dati di tipi diversi. Tuttavia, esistono alcune differenze fondamentali tra **DBTYPE_VARIANT** e **sql_variant**. ADO gestisce anche i dati archiviati come valore di **sql_variant** in modo diverso rispetto alla gestione di altri tipi di dati. Nell'elenco seguente vengono descritti i problemi da considerare quando si accede a SQL Server dati archiviati in colonne di tipo **sql_variant**.
+ Microsoft SQL Server dispone di un tipo di dati denominato **sql_variant**. Analogamente al **DBTYPE_VARIANT** di OLE DB, il tipo di dati **sql_variant** può archiviare dati di tipi diversi. Tuttavia, esistono alcune differenze fondamentali tra **DBTYPE_VARIANT** e **sql_variant**. ADO gestisce anche i dati archiviati come valore di **sql_variant** in modo diverso rispetto alla gestione di altri tipi di dati. Nell'elenco seguente vengono descritti i problemi da considerare quando si accede a SQL Server dati archiviati in colonne di tipo **sql_variant**.
 
 -   In MDAC 2,7, MDAC 2,8 e Windows Data Access Components (Windows DAC) 6,0, il provider di OLE DB per SQL Server supporta il tipo di **sql_variant** . Il provider di OLE DB per ODBC non lo è.
 
@@ -122,7 +122,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 
 -   Più coercizioni dei tipi di dati determineranno tipi che non corrispondono. Ad esempio, se si assegna un **sql_variant** con un sottotipo di **GUID** a una **DBTYPE_VARIANT** , viene generato un sottotipo di **SAFEARRAY**(byte). La conversione di questo tipo di nuovo in un **sql_variant** comporterà un nuovo sottotipo di **Array**(byte).
 
--   I campi del **Recordset** che contengono **sql_variant** dati possono essere in modalità remota (con marshalling) o mantenuti solo se il **sql_variant** contiene sottotipi specifici. Se si tenta di eseguire la modalità remota o di rendere persistenti i dati con i sottotipi non supportati seguenti, verrà generato un errore di run-time (conversione non supportata) dal provider di persistenza Microsoft (MSPersist): **VT_VARIANT**, **VT_RECORD**, **VT_ILLEGAL**, **VT_UNKNOWN**, **VT_BSTR**e **VT_DISPATCH.**
+-   I campi del **Recordset** che contengono **sql_variant** dati possono essere in modalità remota (con marshalling) o mantenuti solo se il **sql_variant** contiene sottotipi specifici. Se si tenta di eseguire la modalità remota o di rendere persistenti i dati con i sottotipi non supportati seguenti, verrà generato un errore di run-time (conversione non supportata) dal provider di persistenza Microsoft (MSPersist): **VT_VARIANT**, **VT_RECORD**, **VT_ILLEGAL**, **VT_UNKNOWN**, **VT_BSTR** e **VT_DISPATCH.**
 
 -   Il provider OLE DB per SQL Server in MDAC 2,7, MDAC 2,8 e Windows DAC 6,0 include una proprietà dinamica denominata **Consenti varianti native** che, come suggerisce il nome, consentono agli sviluppatori di accedere al **sql_variant** nel formato nativo invece che a una **DBTYPE_VARIANT**. Se questa proprietà è impostata e un **Recordset** viene aperto con il motore di cursori client (**adUseClient**), la chiamata di **Recordset. Open** avrà esito negativo. Se questa proprietà è impostata e viene aperto un **Recordset** con cursori del server (**adUseServer come**), la chiamata di **Recordset. Open** avrà esito positivo, ma l'accesso a colonne di tipo **sql_variant** genererà un errore.
 
@@ -191,11 +191,11 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Nome descrittivo provider|DBPROP_PROVIDERFRIENDLYNAME|
 |Provider Name|DBPROP_PROVIDERFILENAME|
 |Versione del provider|DBPROP_PROVIDERVER|
-|Origine dati di sola lettura|DBPROP_DATASOURCEREADONLY|
+|Read-Only origine dati|DBPROP_DATASOURCEREADONLY|
 |Conversioni di set di righe nel comando|DBPROP_ROWSETCONVERSIONSONCOMMAND|
 |Termine schema|DBPROP_SCHEMATERM|
 |Utilizzo dello schema|DBPROP_SCHEMAUSAGE|
-|Supporto SQL|DBPROP_SQLSUPPORT|
+|Supporto di SQL|DBPROP_SQLSUPPORT|
 |Archiviazione strutturata|DBPROP_STRUCTUREDSTORAGE|
 |Supporto sottoquery|DBPROP_SUBQUERIES|
 |Termine tabella|DBPROP_TABLETERM|

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2fc73324160dd46a6d626c0db889a4213c9fc438
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c91fd13744afd106b2a0cb8e986d803f1b722c24
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167491"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025105"
 ---
 # <a name="execute-method-ado-connection"></a>Metodo Execute (Connection - ADO)
 Esegue la query, l'istruzione SQL, il stored procedure o il testo specifico del provider specificato.  

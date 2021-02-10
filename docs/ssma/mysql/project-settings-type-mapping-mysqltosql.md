@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a6f4bc99caceeb7011c932c86e636304941c459c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a2f3e077a93d90afccf05023e41f8e5f2ea6fabc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418487"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017321"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Impostazioni del progetto (mapping dei tipi) (MySQLToSQL)
 Le impostazioni del progetto di mapping dei tipi consentono di impostare i mapping dei tipi predefiniti per il progetto SSMA.  
@@ -34,7 +34,7 @@ Si tratta del tipo di dati MySQL, di cui è necessario eseguire il mapping al ti
 ##### <a name="target-type"></a>Tipo destinazione  
 Tipo di dati del database di destinazione per il tipo di dati MySQL specificato.  
   
-##### <a name="add"></a>Aggiunta  
+##### <a name="add"></a>Add  
 Fare clic su questo pulsante per aggiungere un tipo di dati all'elenco di mapping.  
   
 ##### <a name="edit"></a>Modifica  
@@ -101,7 +101,7 @@ La tabella seguente illustra il mapping predefinito tra i tipi di dati di origin
 |float [*.. 53]|float [53]|  
 |INT|INT|  
 |int [*... 255]|INT|  
-|integer|INT|  
+|numero intero|INT|  
 |intero [*... 255]|INT|  
 |longblob|varbinary(max)|  
 |longtext|nvarchar(max)|  
@@ -140,7 +140,7 @@ La tabella seguente illustra il mapping predefinito tra i tipi di dati di origin
 |real|float [53]|  
 |Real [*... 255] [ \* .. 30|numeric [*] [ \* ]|  
 |serial|bigint|  
-|smallint|smallint|  
+|SMALLINT|SMALLINT|  
 |smallint [*.. 255]|SMALLINT|  
 |text|nvarchar(max)|  
 |testo [0.. 1]|nvarchar [1]|  
@@ -150,7 +150,7 @@ La tabella seguente illustra il mapping predefinito tra i tipi di dati di origin
 |timestamp|Datetime|  
 |tinyblob|varbinary [255]|  
 |TINYINT|smallint|  
-|tinyint [*... 255]|smallint|  
+|tinyint [*... 255]|SMALLINT|  
 |tinytext|nvarchar [255]|  
 |bigint senza segno|bigint|  
 |bigint senza segno [*.. 255]|bigint|  
@@ -190,11 +190,11 @@ La tabella seguente illustra il mapping predefinito tra i tipi di dati di origin
 |varchar [0.. 1]|nvarchar [1]|  
 |varchar [2.. 4000]|nvarchar [*]|  
 |varchar [4001.. *]|nvarchar(max)|  
-|year|smallint|  
-|anno [2.. 2]|smallint|  
-|anno [4.. 4]|smallint|  
+|anno|SMALLINT|  
+|anno [2.. 2]|SMALLINT|  
+|anno [4.. 4]|SMALLINT|  
   
-##### <a name="add"></a>Aggiunta  
+##### <a name="add"></a>Add  
 Fare clic su questo pulsante per aggiungere un tipo di dati all'elenco di mapping.  
   
 ##### <a name="edit"></a>Modifica  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 408f93b0054709de09d5556be94371dd9adc472f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b12b01f0d1beeacac3862061718e71f1b650b51e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991762"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028676"
 ---
 # <a name="adding-records-using-addnew-method"></a>Aggiunta di record tramite il metodo AddNew
 Si tratta della sintassi di base del metodo **AddNew** :
@@ -31,9 +31,9 @@ Si tratta della sintassi di base del metodo **AddNew** :
 
  L'argomento *values* può essere un singolo valore o una matrice di valori per i campi nel nuovo record.
 
- In genere, quando si intende aggiungere un singolo record, si chiamerà il metodo **AddNew** senza argomenti. In particolare, si chiamerà **AddNew**; impostare il **valore** di ogni campo nel nuovo record; quindi chiamare **Update** o **UpdateBatch**o entrambi. È possibile assicurarsi che il **Recordset** supporti l'aggiunta di nuovi record utilizzando la proprietà **Supports** con la costante enumerata **adAddNew** .
+ In genere, quando si intende aggiungere un singolo record, si chiamerà il metodo **AddNew** senza argomenti. In particolare, si chiamerà **AddNew**; impostare il **valore** di ogni campo nel nuovo record; quindi chiamare **Update** o **UpdateBatch** o entrambi. È possibile assicurarsi che il **Recordset** supporti l'aggiunta di nuovi record utilizzando la proprietà **Supports** con la costante enumerata **adAddNew** .
 
- Il codice seguente usa questa tecnica per aggiungere un nuovo spedizioniere al **Recordset**di esempio. SQL Server fornisce automaticamente il valore del campo IDCorriere. Il codice non tenta pertanto di fornire un valore di campo per i nuovi record.
+ Il codice seguente usa questa tecnica per aggiungere un nuovo spedizioniere al **Recordset** di esempio. SQL Server fornisce automaticamente il valore del campo IDCorriere. Il codice non tenta pertanto di fornire un valore di campo per i nuovi record.
 
 ```
 'BeginAddNew1.1
@@ -48,5 +48,5 @@ End If
 'EndAddNew1.1
 ```
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
  Poiché questo codice utilizza un **Recordset** disconnesso con un cursore sul lato client in modalità batch, è necessario riconnettere il **Recordset** all'origine dati con un nuovo oggetto **connessione** prima di poter chiamare il metodo **UpdateBatch** per inviare le modifiche al database. Questa operazione viene eseguita facilmente usando la nuova funzione **GetNewConnection**.

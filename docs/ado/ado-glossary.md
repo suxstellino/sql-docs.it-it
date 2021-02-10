@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dd781612557faebd4b6eefb710ffad2379928aee
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3a79a16b0fe5f0514b2d90333fcbe99e8e5b5023
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980852"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031053"
 ---
 # <a name="ado-glossary-terms"></a>Termini di glossario ADO
 In questo argomento vengono definiti i termini rilevanti per ADO.
 
-## <a name="a"></a>Una
+## <a name="a"></a>A
  URL assoluto un URL completo che specifica il percorso di una risorsa che risiede in Internet o in una rete Intranet. Vedere anche *URL* e *URL relativo*.
 
  Componente COM in-process con registrazione automatica del controllo ActiveX che spesso dispone di un elemento visivo in fase di progettazione o in fase di esecuzione. I controlli ActiveX sono inoltre in grado di comunicare con un contenitore di documenti attivi, ad esempio Microsoft Internet Explorer.
@@ -103,7 +103,7 @@ In questo argomento vengono definiti i termini rilevanti per ADO.
 
  DCOM protocollo wire che consente ai componenti COM di comunicare direttamente tra loro attraverso una rete. Vedere anche *com*, *Component*.
 
- Istruzioni DDL (Data Definition Language) in SQL che definiscono, anziché modificare, i dati. Lo schema di un database viene creato o modificato con DDL. Ad esempio, **Create Table**, **create index**, **Grant**e **Revoke** sono istruzioni SQL DDL.
+ Istruzioni DDL (Data Definition Language) in SQL che definiscono, anziché modificare, i dati. Lo schema di un database viene creato o modificato con DDL. Ad esempio, **Create Table**, **create index**, **Grant** e **Revoke** sono istruzioni SQL DDL.
 
  il flusso predefinito è un flusso di testo o binario, rappresentato da un oggetto **flusso** , associato a oggetti **record** o **Recordset** quando si utilizzano determinati provider di OLE DB, ad esempio il provider Microsoft OLE DB per la pubblicazione Internet. Il flusso predefinito contiene in genere il contenuto di un file, ad esempio il codice HTML per la radice di un sito Web.
 
@@ -111,7 +111,7 @@ In questo argomento vengono definiti i termini rilevanti per ADO.
 
  Recordset disconnesso un oggetto **Recordset** in una cache del client che non dispone più di una connessione in tempo reale al server. Se per qualche motivo è necessario accedere di nuovo all'origine dati originale, ad esempio l'aggiornamento dei dati, è necessario ristabilire la connessione. Tuttavia, è ancora possibile accedere alle raccolte, alle proprietà e ai metodi di un **Recordset** disconnesso.
 
- DML (Data Manipulation Language) tali istruzioni in SQL che manipolano, anziché definire i dati. I valori di un database vengono selezionati e modificati con DML. Ad esempio, **Insert**, **Update**, **Delete**e **Select** sono istruzioni SQL DML.
+ DML (Data Manipulation Language) tali istruzioni in SQL che manipolano, anziché definire i dati. I valori di un database vengono selezionati e modificati con DML. Ad esempio, **Insert**, **Update**, **Delete** e **Select** sono istruzioni SQL DML.
 
  provider di origine del documento una classe speciale di provider che gestiscono cartelle e documenti. Quando un documento è rappresentato da un oggetto **record** o una cartella di documenti viene rappresentata da un oggetto **Recordset** , il provider di origine del documento popola gli oggetti con un set univoco di campi che descrivono le caratteristiche del documento, invece del documento effettivo. Vedere anche record di risorse.
 
@@ -120,7 +120,7 @@ In questo argomento vengono definiti i termini rilevanti per ADO.
  proprietà dinamica una proprietà specifica di un provider di dati o del servizio Cursor. La raccolta **Properties** di un oggetto viene popolata automaticamente con questi oggetti ("in modo dinamico"). Un oggetto non dispone di proprietà dinamiche fino a quando non viene connesso a un'origine dati tramite un provider di dati specifico. Vedere anche provider di dati, cursore.
 
 ## <a name="e"></a>E
- Enumerazione di un elenco di costanti denominate. I valori enumerati non devono essere univoci. Tuttavia, il nome di ogni valore deve essere univoco all'interno dell'ambito in cui è definita l'enumerazione. In ADO, le enumerazioni vengono utilizzate per il parametro numerico e i valori restituiti, per aggiungere significato al codice ADO e per schermare lo sviluppatore dai valori numerici (che potrebbero variare da una versione all'altra). Per aprire un **Recordset**statico, ad esempio, usare il valore enumerato **adOpenStatic** : `Recordset.Open ,,adOpenStatic`
+ Enumerazione di un elenco di costanti denominate. I valori enumerati non devono essere univoci. Tuttavia, il nome di ogni valore deve essere univoco all'interno dell'ambito in cui è definita l'enumerazione. In ADO, le enumerazioni vengono utilizzate per il parametro numerico e i valori restituiti, per aggiungere significato al codice ADO e per schermare lo sviluppatore dai valori numerici (che potrebbero variare da una versione all'altra). Per aprire un **Recordset** statico, ad esempio, usare il valore enumerato **adOpenStatic** : `Recordset.Open ,,adOpenStatic`
 
  Definito anche come *costante enumerata*. Vedere anche *Constant*.
 

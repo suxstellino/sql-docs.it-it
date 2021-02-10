@@ -9,12 +9,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 1809ea2c3f99528eb15518808e13387c519878da
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 30d51162b36d787e8976b2c6aa48e533fd476f8e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760766"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015061"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>Archiviare documenti JSON in SQL Server o nel database SQL
 SQL Server e il database SQL di Azure includono funzioni JSON native che consentono di analizzare i documenti JSON usando il linguaggio SQL standard. È possibile archiviare i documenti JSON in SQL Server o nel database SQL ed eseguire query sui dati JSON come in un database NoSQL. In questo articolo vengono descritte le opzioni per archiviare i documenti JSON in SQL Server o nel database SQL.

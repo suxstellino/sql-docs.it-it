@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 868731f7f7c88a2f6a26b5fab1670de8de96b1b3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1f1919f3524f05035a4376f30cf2e36ae731bdea
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990952"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028851"
 ---
 # <a name="using-ado-with-scripting-languages"></a>Uso di ADO con i linguaggi di scripting
 All'interno di un ambiente di scripting, ADO consente di esporre i dati tramite scripting lato server. In questo scenario, ADO, il provider OLE DB sottostante utilizzato e tutti gli altri componenti necessari per fare riferimento a un determinato archivio dati vengono installati in un server che esegue Internet Information Services (IIS). Utilizzando Active Server Pages (ASP), ADO è un componente a cui viene fatto riferimento in uno script in grado di generare codice HTML, ad esempio. Questo contenuto HTML può essere passato tramite HTTP a un Web browser client. Utilizzando lo scripting, la pagina Web può inviare azioni allo script sul lato server, consentendo di aggiornare, attraversare o visualizzare dati specifici.  

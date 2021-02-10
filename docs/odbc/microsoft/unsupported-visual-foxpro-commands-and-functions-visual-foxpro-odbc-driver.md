@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fd7b34f35ac0fcc747cb30fb35537a33cc5cd4a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4ac7f25709cf91e03f9ad8b15f9fb0026ee5e98
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471422"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015391"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>Comandi e funzioni Visual FoxPro non supportati (driver ODBC Visual FoxPro)
 Nella tabella seguente sono elencati i comandi e le funzioni di FoxPro che non sono supportati dal driver ODBC Visual FoxPro, ma sono supportati da Microsoft® Visual FoxPro®.  
@@ -33,34 +33,34 @@ Nella tabella seguente sono elencati i comandi e le funzioni di FoxPro che non s
 
 :::row:::
     :::column:::
-        !Comando (vedere eseguire &#124;.Comando  
-        #<a name="defineundef"></a>DEFINISCI... #UNDEF  
-        #<a name="ifendifpreprocessordirective"></a>IF... #ENDIF direttiva per il preprocessore  
-        #<a name="ifdef124ifndef"></a>IFDEF &#124; #IFNDEF  
-        #<a name="includepreprocessordirective"></a>INCLUDi direttiva per il preprocessore  
+        ! Comando (vedere eseguire &#124;. Comando  
+        #<a name="define--undef"></a>DEFINISCI... #UNDEF  
+        #<a name="if--endif-preprocessor-directive"></a>IF... #ENDIF direttiva per il preprocessore  
+        #<a name="ifdef-124-ifndef"></a>IFDEF &#124; #IFNDEF  
+        #<a name="include-preprocessor-directive"></a>INCLUDi direttiva per il preprocessore  
         Operatore di risoluzione dell'ambito::  
-        ?&#124;?Comando  
+        ? &#124;? Comando  
     :::column-end:::
     :::column:::
-        ???Comando  
-        @ ... BOX (comando)  
-        @ ... Comando CLASS  
-        @ ... Cancella comando  
-        @ ... Comando EDIT-Edit boxs  
-        @ ... Comando FILL  
-        @ ... Ottieni  
+        ??? Comando  
+        @ ... BOX (comando)  
+        @ ... Comando CLASS  
+        @ ... Cancella comando  
+        @ ... Comando EDIT-Edit boxs  
+        @ ... Comando FILL  
+        @ ... Ottieni  
     :::column-end:::
     :::column:::
-        @ ... Comando di MENU  
-        @ ... PROMPT dei comandi  
-        @ ... Comando SAY  
-        @ ... SCROLL (comando)  
-        @ ... A Command  
+        @ ... Comando di MENU  
+        @ ... PROMPT dei comandi  
+        @ ... Comando SAY  
+        @ ... SCROLL (comando)  
+        @ ... A Command  
         \ &#124; \\ \ comando  
     :::column-end:::
 :::row-end:::
 
-## <a name="a"></a>Una  
+## <a name="a"></a>A  
 
 :::row:::
     :::column:::
@@ -88,7 +88,7 @@ Nella tabella seguente sono elencati i comandi e le funzioni di FoxPro che non s
     :::column-end:::
 :::row-end:::
 
-## <a name="b"></a>b  
+## <a name="b"></a>B  
 
 :::row:::
     :::column:::
@@ -461,7 +461,7 @@ Funzione NUMLOCK ()
         Variabile di memoria di sistema _PPITCH  
         Variabile di memoria di sistema _PQUALITY  
         Variabile di memoria di sistema _PRETEXT  
-        PRINTJOB... Comando ENDPRINTJOB  
+        PRINTJOB... Comando ENDPRINTJOB  
     :::column-end:::
     :::column:::
         Funzione PRINTSTATUS ()  
@@ -527,7 +527,7 @@ QUIT-comando
         Variabile di memoria di sistema _RMARGIN  
         Comando RMDIR  
         ROW () (funzione)  
-        ESEGUIRE &#124;.Comando  
+        ESEGUIRE &#124;. Comando  
         Comando RUNSCRIPT  
     :::column-end:::
 :::row-end:::
@@ -658,7 +658,7 @@ QUIT-comando
 :::row:::
     :::column:::
         Variabile di memoria di sistema _TABS  
-        TESTO... Comando ENDTEXT  
+        TESTO... Comando ENDTEXT  
         Variabile di memoria di sistema _THROTTLE  
     :::column-end:::
     :::column:::
@@ -707,7 +707,7 @@ QUIT-comando
         Funzione WEXIST ()  
         Funzione WFONT ()  
         Variabile di memoria di sistema _WINDOWS  
-        CON... Comando ENDWITH  
+        CON... Comando ENDWITH  
     :::column-end:::
     :::column:::
         Variabile di memoria di sistema _WIZARD  

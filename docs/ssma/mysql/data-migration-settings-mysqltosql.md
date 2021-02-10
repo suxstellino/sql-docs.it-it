@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c396df4-5676-4f32-9c57-70d4f15f9b7a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3bc5427d17a8678e81ee148d247d743bda9d53ff
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: c7dcbafc23b4489289a77e780bfa5694f4caa485
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988717"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100016591"
 ---
 # <a name="data-migration-settings-mysqltosql"></a>Impostazioni di migrazione dei dati (MySQLToSQL)
   
@@ -40,7 +40,7 @@ ms.locfileid: "91988717"
     -   Se questa casella di testo è deselezionata, i dati di cui viene eseguita la migrazione verranno aggiunti ai dati esistenti nel database di destinazione.  
   
 2.  **Usa selezione personalizzata:**  
-     Questa opzione consente all'utente di modificare l'istruzione **Select** presente. l'istruzione**SELECT** consente agli utenti di selezionare i dati da visualizzare nel database di destinazione.  
+     Questa opzione consente all'utente di modificare l'istruzione **Select** presente. l'istruzione **SELECT** consente agli utenti di selezionare i dati da visualizzare nel database di destinazione.  
   
     1.  Per impostazione predefinita, questa casella di testo è deselezionata.  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f7116806c9c308257328cca001571b1a397a11c5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e0fd04633e9922368c77f0caae50f6d2b5fd292b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167259"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100020865"
 ---
 # <a name="getrows-method-example-vc"></a>Esempio del metodo GetRows (VC++)
 Questo esempio usa il metodo [GetRows](./getrows-method-ado.md) per recuperare un numero specificato di righe da un [Recordset](./recordset-object-ado.md) e per riempire una matrice con i dati risultanti. Il metodo **GetRows** restituirà un valore inferiore al numero di righe desiderato in due casi: se è stato raggiunto [EOF](./bof-eof-properties-ado.md) o se **GetRows** ha tentato di recuperare un record eliminato da un altro utente. La funzione restituisce **false** solo se si verifica il secondo caso. Per eseguire questa procedura, è necessaria la funzione GetRowsOK.  

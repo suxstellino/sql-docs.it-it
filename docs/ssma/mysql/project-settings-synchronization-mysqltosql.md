@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3ea89bcdf9b10fb50e74228a26bfcd5cead83aca
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f778b2bd361fab5ac1210005076692c813bb4b9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492384"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017311"
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>Impostazioni del progetto (sincronizzazione) (MySQLToSQL)
 Le **impostazioni del progetto** di sincronizzazione consentono di configurare la modalità di sincronizzazione degli oggetti di database MySQL con SQL Server oggetti di database.  
@@ -24,15 +24,15 @@ Le azioni predefinite specificano le impostazioni predefinite per l'aggiornament
   
 È possibile accedere a due diverse pagine di sincronizzazione che contengono le stesse impostazioni:  
   
--   Per specificare le impostazioni per tutti i progetti SSMA futuri, scegliere **Impostazioni DefaultProject**dal menu **strumenti** e quindi fare clic su **sincronizzazione** nella parte inferiore del riquadro sinistro.  
+-   Per specificare le impostazioni per tutti i progetti SSMA futuri, scegliere **Impostazioni DefaultProject** dal menu **strumenti** e quindi fare clic su **sincronizzazione** nella parte inferiore del riquadro sinistro.  
   
--   Per specificare le impostazioni per il progetto corrente, scegliere **Impostazioni progetto**dal menu **strumenti** , quindi fare clic su **Sincronizza** nella parte inferiore del riquadro sinistro.  
+-   Per specificare le impostazioni per il progetto corrente, scegliere **Impostazioni progetto** dal menu **strumenti** , quindi fare clic su **Sincronizza** nella parte inferiore del riquadro sinistro.  
   
 ## <a name="options"></a>Opzioni  
   
 ##### <a name="misc"></a>Varie  
   
-##### <a name="attempts"></a>Tenta  
+##### <a name="attempts"></a>Tentativi  
 Fornisce le informazioni sul numero di oggetti pass che devono essere caricati nel SQL Server. Il caricamento di oggetti in SQL Server viene in genere eseguito in più passaggi. Gli oggetti che non vengono caricati nel primo passaggio, ad esempio le chiavi esterne, potrebbero essere caricati correttamente nel passaggio successivo.  
   
 Per impostazione predefinita, il valore è 2.  
