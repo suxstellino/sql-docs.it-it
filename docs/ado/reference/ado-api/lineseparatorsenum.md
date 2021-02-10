@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0440b793-99c7-49a2-b3e2-ec5b1a7e3e60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 650094030696b905fb153f982ba6281eefd7ef4c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ac4c64692686a9c00db09d884e43669ebbf92be5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170902"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041851"
 ---
 # <a name="lineseparatorsenum"></a>LineSeparatorsEnum
 Specifica il carattere utilizzato come separatore di riga negli oggetti del [flusso](./stream-object-ado.md) di testo.  

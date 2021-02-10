@@ -12,12 +12,12 @@ author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 7a50504923a825a437ea4456a1bb9394cd0635db
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 931e013a84cd808d75a50edafdcf73d105f51827
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951326"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100045111"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant-sql-server"></a>Creazione di report di analisi in Database Experimentation Assistant (SQL Server)
 
@@ -67,7 +67,7 @@ L'utente che ha eseguito l'accesso a DEA deve disporre dei diritti di amministra
 |Possibili errori|Soluzione|  
 |---|---|  
 |Impossibile connettersi al database. Assicurarsi di disporre dei diritti sysadmin per l'analisi e la visualizzazione dei report.|È possibile che non si disponga dei diritti di accesso o di amministratore di ruolo per il server o il database. Verificare i diritti di accesso e riprovare.|  
-|Impossibile generare il **nome del report** sul **nome del server**del server. Per informazioni dettagliate, controllare il report del **nome del report** .|È possibile che non si disponga dei diritti sysadmin necessari per generare un nuovo report. Per visualizzare gli errori dettagliati, selezionare il report con errori e controllare i log in% temp% \\ dea.|  
+|Impossibile generare il **nome del report** sul **nome del server** del server. Per informazioni dettagliate, controllare il report del **nome del report** .|È possibile che non si disponga dei diritti sysadmin necessari per generare un nuovo report. Per visualizzare gli errori dettagliati, selezionare il report con errori e controllare i log in% temp% \\ dea.|  
 |L'utente corrente non dispone delle autorizzazioni necessarie per eseguire l'operazione. Assicurarsi di disporre dei diritti di amministratore di ruolo per l'esecuzione di tracce e l'analisi dei report.|Non si dispone dei diritti sysadmin necessari per generare un nuovo report.|  
 
 **D: non è possibile connettersi al computer che esegue SQL Server**
@@ -98,6 +98,6 @@ Se i dati non sono presenti, è possibile che i dati non siano stati copiati cor
 
 Altre domande o commenti e suggerimenti? Inviare commenti e suggerimenti tramite lo strumento DEA scegliendo l'icona smile nell'angolo in basso a sinistra.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - Per informazioni su come visualizzare il report di analisi, vedere [visualizzare i report](database-experimentation-assistant-view-report.md).

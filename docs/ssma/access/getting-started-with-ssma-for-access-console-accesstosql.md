@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1923323699282e40fcca8afa1a8079edd8163c09
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d39f130c2b2ff8edd95fb52a78b7865b5c6dc868
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426983"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044511"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>Introduzione con SSMA per la console di accesso (AccessToSQL)
 In questa sezione viene descritta la procedura per avviare e iniziare a usare l'applicazione console di accesso. Sono inoltre elencate le convenzioni usate in una tipica finestra di output della console di SSMA.  
@@ -55,7 +55,7 @@ Interpretazione dei colori dell'output della console nella tabella seguente:
   
 |Colore|Descrizione|  
 |---------|---------------|  
-|Rosso|Errore irreversibile durante l'esecuzione|  
+|Red|Errore irreversibile durante l'esecuzione|  
 |Grigio|Indicatore di data e ora, messaggio all'utente|  
 |White|Comandi file script, tipo di messaggio|  
 |Giallo|Avviso|  

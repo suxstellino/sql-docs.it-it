@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4b8f84909de05efc5d53b924eb298adcaab93d7f
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: b7653d131ca9f345353de46b2579735a527bca5a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985034"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044931"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Creazione di file di valori di variabile (AccessToSQL)
 Un file di valori di variabile è un file XML che include i valori dei parametri dei comandi, ad esempio il nome del server di origine o di destinazione, che cambiano di frequente tra le migrazioni del server. Quando si verifica un numero elevato di migrazioni di database, vengono creati più file di variabili per l'archiviazione del valore di ogni server di origine a cui viene fatto riferimento in un file di script Master con l'opzione **-v** nella riga di comando. Questo comportamento consente di mantenere i valori statici in pochi file di script con i valori delle variabili in più file variabili.  
@@ -94,5 +94,5 @@ L'utente può convalidare facilmente il proprio file di valori di variabile risp
 ## <a name="next-step"></a>Passaggio successivo  
 Il passaggio successivo per la gestione della console consiste nel [creare i file di connessione del Server &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Creazione dei file di connessione del server (accesso)](./creating-the-server-connection-files-accesstosql.md)  

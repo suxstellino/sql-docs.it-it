@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 20c47935963473b7b6aced7d6b3eed4a53afbeac
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 9d956167cd6a4cea41d9381996a0418b2cd5f4c3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987517"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044941"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>Creazione dei file di connessione del server (AccessToSQL)
 È possibile specificare le informazioni sul server nella sezione server del file script. Le informazioni sul server possono inoltre essere specificate in un file di connessione server separato. Il parametro della riga di comando per il file di connessione del server è `-c <serverconnectionfile>` . Se lo stesso ID server è presente in entrambi i file di connessione script e server, viene considerata la definizione del server nel file di script.  
@@ -67,5 +67,5 @@ L'utente può convalidare facilmente il file di connessione del server con il fi
 ## <a name="next-step"></a>Passaggio successivo  
 Il passaggio successivo per la gestione della console è [l'esecuzione della console SSMA &#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Esecuzione della console SSMA (accesso)](./executing-the-ssma-console-accesstosql.md)  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ac993a6d-0283-4823-8793-6b217677dfa3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 87960d05db8a12ebd7a8751f46c90a256ce73313
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c3945a348a40c9770334f00d119aa7e9564f8525
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463395"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042035"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-mysqltosql"></a>Caricamento di oggetti di database convertiti in SQL Server (MySQLToSQL)
 Dopo aver convertito i database MySQL in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, è possibile caricare gli oggetti di database risultanti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. È possibile fare in modo che SSMA crei gli oggetti oppure è possibile creare script per gli oggetti ed eseguire gli script manualmente. SSMA consente inoltre di aggiornare i metadati di destinazione con il contenuto effettivo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o il database SQL di Azure.  
@@ -62,7 +62,7 @@ Per salvare le definizioni [!INCLUDE[tsql](../../includes/tsql-md.md)] degli ogg
   
 **Per salvare oggetti come script**  
   
-1.  Dopo aver selezionato gli oggetti da salvare in uno script, fare clic con il pulsante destro del mouse su **database**e quindi scegliere **Salva come script**.  
+1.  Dopo aver selezionato gli oggetti da salvare in uno script, fare clic con il pulsante destro del mouse su **database** e quindi scegliere **Salva come script**.  
   
     È anche possibile creare script per singoli oggetti o categorie di oggetti facendo clic con il pulsante destro del mouse sull'oggetto o sulla cartella padre, quindi scegliendo **Salva come script**.  
   
@@ -73,13 +73,13 @@ Dopo aver salvato il SQL Server o SQL Azure le definizioni degli oggetti come un
   
 **Per modificare uno script**  
   
-1.  Scegliere **Apri**dal menu **file** Management Studio, quindi fare clic su **file**.  
+1.  Scegliere **Apri** dal menu **file** Management Studio, quindi fare clic su **file**.  
   
 2.  Nella finestra di dialogo Apri individuare e selezionare il file di script, quindi fare clic su **OK**.  
   
 3.  Modificare il file script utilizzando l'editor di query di. Per ulteriori informazioni sull'editor di query, vedere "comandi pratici e funzionalità dell'editor" in documentazione online di SQL Server.  
   
-4.  Per salvare lo script, scegliere **Salva**dal menu file.  
+4.  Per salvare lo script, scegliere **Salva** dal menu file.  
   
 ### <a name="running-scripts"></a>Esecuzione di script  
 È possibile eseguire uno script o singole istruzioni in SQL Server Management Studio.  

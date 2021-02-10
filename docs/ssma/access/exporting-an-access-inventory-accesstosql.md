@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 112452e9e6c31810dbf26d9aa1e7b36959c192d5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 10bff5f86bec26994c143195fcbb97aa30ba709e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488334"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044751"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Esportazione di un inventario di accesso (AccessToSQL)
 Se si dispone di più database di Access e non si è certi di quali eseguire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la migrazione, è possibile esportare un inventario di tutti i database di Access in un progetto. È quindi possibile esaminare ed eseguire una query sui metadati di inventario per determinare quali database e oggetti all'interno di tali database migrare. Questo inventario consente di trovare rapidamente risposte a domande, come le seguenti:  
@@ -70,7 +70,7 @@ Per ulteriori informazioni sulla creazione di progetti, vedere [creazione e gest
   
 **Per trovare e aggiungere database**  
   
-1.  Scegliere **trova database**dal menu **file** .  
+1.  Scegliere **trova database** dal menu **file** .  
   
 2.  Nella procedura guidata trova database immettere l'unità, il percorso del file o il percorso UNC in cui si desidera eseguire la ricerca. In alternativa, fare clic su **Sfoglia** per selezionare l'unità o la cartella di rete.  
   
@@ -99,7 +99,7 @@ Per ulteriori informazioni sull'aggiunta di database ai progetti, vedere [aggiun
   
 **Per eseguire la connessione a SQL Server**  
   
-1.  Scegliere **Connetti a SQL Server**dal menu **file** .  
+1.  Scegliere **Connetti a SQL Server** dal menu **file** .  
   
 2.  Nella finestra di dialogo connessione immettere o selezionare il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -113,7 +113,7 @@ Per ulteriori informazioni sull'aggiunta di database ai progetti, vedere [aggiun
   
 4.  Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è configurata in modo da accettare connessioni su una porta non predefinita, immettere il numero di porta utilizzato per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le connessioni nella casella **porta server** . Per l'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il numero di porta predefinito è 1433. Per le istanze denominate, SSMA tenta di ottenere il numero di porta dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizio browser.  
   
-5.  Nel menu a discesa **autenticazione** selezionare il tipo di autenticazione da utilizzare per la connessione. Per utilizzare l'account di Windows corrente, selezionare **autenticazione di Windows**. Per usare un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso, selezionare **SQL Server autenticazione**e quindi specificare un nome utente e una password.  
+5.  Nel menu a discesa **autenticazione** selezionare il tipo di autenticazione da utilizzare per la connessione. Per utilizzare l'account di Windows corrente, selezionare **autenticazione di Windows**. Per usare un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso, selezionare **SQL Server autenticazione** e quindi specificare un nome utente e una password.  
   
 Per ulteriori informazioni sulla connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere la pagina relativa [alla connessione a SQL Server &#40;AccessToSQL&#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md).  
   
@@ -136,7 +136,7 @@ Dopo aver esportato i metadati relativi ai database di Access, è possibile eseg
   
 **Per eseguire una query sui metadati**  
   
-1.  Dal menu **Start** scegliere **tutti i programmi**, **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005** o Microsoft ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008** o Microsoft ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012**, quindi fare clic su **SQL Server Management Studio**.  
+1.  Dal menu **Start** scegliere **tutti i programmi**, **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005** o Microsoft **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008** o Microsoft **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012**, quindi fare clic su **SQL Server Management Studio**.  
   
 2.  Nella finestra di dialogo **Connetti al server** verificare le impostazioni e quindi fare clic su **Connetti**.  
   

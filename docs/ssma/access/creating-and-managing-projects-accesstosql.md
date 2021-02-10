@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ee6cf3bea905b169503851efe375fd614c4589e9
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: ba2e567c5675e602cc80382d42adfcbb89bce90a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988197"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100045053"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>Creazione e gestione di progetti (AccessToSQL)
 Per eseguire la migrazione di database di Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, è necessario creare prima un progetto SSMA. Il progetto è un file contenente i metadati relativi ai database di Access a cui si desidera eseguire la migrazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, i metadati relativi all'istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure che riceveranno gli oggetti e i dati migrati, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informazioni di connessione e le impostazioni del progetto.  
@@ -33,7 +33,7 @@ SSMA contiene diverse opzioni per la conversione e la sincronizzazione degli ogg
   
 **Per esaminare le impostazioni predefinite del progetto**  
   
-1.  Scegliere **Impostazioni progetto predefinite**dal menu **strumenti** .  
+1.  Scegliere **Impostazioni progetto predefinite** dal menu **strumenti** .  
   
 2.  Selezionare il tipo di progetto nell'elenco a discesa della **versione di destinazione della migrazione** per cui visualizzare o modificare le impostazioni e quindi fare clic sulla scheda **generale** .  
   
@@ -43,7 +43,7 @@ SSMA contiene diverse opzioni per la conversione e la sincronizzazione degli ogg
   
 5.  Modificare le opzioni in modo necessario.  
   
-6.  Ripetere i passaggi precedenti per le pagine **migrazione**, **GUI**e **mapping dei tipi** .  
+6.  Ripetere i passaggi precedenti per le pagine **migrazione**, **GUI** e **mapping dei tipi** .  
   
     -   Per informazioni sulle opzioni di migrazione, vedere [Impostazioni progetto (migrazione)](./project-settings-migration-accesstosql.md).  
   
@@ -82,7 +82,7 @@ Quando si salva un progetto, SSMA Salva in modo permanente le impostazioni del p
   
 **Per salvare un progetto**  
   
--   Scegliere **Salva progetto**dal menu **file** .  
+-   Scegliere **Salva progetto** dal menu **file** .  
   
     Se i database all'interno del progetto sono stati modificati o non sono stati convertiti, SSMA richiede di salvare i metadati nel progetto. Salvando i metadati è possibile lavorare offline. Consente inoltre di inviare un file di progetto completo ad altre persone, incluso il personale del supporto tecnico. Se viene richiesto di salvare i metadati, procedere come segue:  
   
@@ -90,7 +90,7 @@ Quando si salva un progetto, SSMA Salva in modo permanente le impostazioni del p
   
         Il salvataggio dei metadati potrebbe richiedere diversi minuti. Se non si desidera salvare i metadati in questa fase, non selezionare alcuna casella di controllo.  
   
-    2.  Fare clic su **Save**.  
+    2.  Fare clic su **Salva**.  
   
         SSMA analizzerà gli schemi di accesso e salverà i metadati nel file di progetto.  
   
@@ -101,11 +101,11 @@ Quando si apre un progetto, questo viene disconnesso da [!INCLUDE[ssNoVersion](.
   
 1.  Usare una delle procedure seguenti:  
   
-    -   Scegliere **progetti recenti**dal menu **file** , quindi selezionare il progetto che si desidera aprire.  
+    -   Scegliere **progetti recenti** dal menu **file** , quindi selezionare il progetto che si desidera aprire.  
   
     -   Nel menu **file** selezionare **Apri progetto**, individuare il file di progetto. a2ssproj, selezionare il file e quindi fare clic su **Apri**.  
   
-2.  Per riconnettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , scegliere **Riconnetti a SQL Server**dal menu **file** .  
+2.  Per riconnettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , scegliere **Riconnetti a SQL Server** dal menu **file** .  
   
 3.  Per riconnettersi a SQL Azure, scegliere **Riconnetti a SQL Azure** dal menu **file** .  
   

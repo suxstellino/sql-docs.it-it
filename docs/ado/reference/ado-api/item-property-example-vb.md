@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e666705f64897baa769dd453cbbb962c883fe0b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 936c3b481d782c806346f5bb80e039066ddb92f1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167190"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041891"
 ---
 # <a name="item-property-example-vb"></a>Esempio della proprietà Item (VB)
-In questo esempio viene illustrato il modo in cui la proprietà [Item](./item-property-ado.md) accede ai membri di una raccolta. Nell'esempio viene aperta la tabella ***authors** _ del database _*_pubs_*_ con un comando con parametri.  
+In questo esempio viene illustrato il modo in cui la proprietà [Item](./item-property-ado.md) accede ai membri di una raccolta. Nell'esempio viene aperta la tabella ***authors** _ del database _ *_pubs_** con un comando con parametri.  
   
  È possibile accedere al parametro nel comando emesso sul database dalla raccolta [Parameters](./parameters-collection-ado.md) dell'oggetto [Command](./command-object-ado.md) in base all'indice e al nome. Ai campi del [Recordset](./recordset-object-ado.md) restituito viene quindi eseguito l'accesso dalla raccolta di [campi](./fields-collection-ado.md) di tale oggetto in base all'indice e al nome.  
   
@@ -63,7 +63,7 @@ Public Sub Main()
     Column(7) = "zip"  
     Column(8) = "contract"  
   
-    cmd.CommandText = "SELECT _ FROM Authors WHERE state = ?"  
+    cmd.CommandText = "SELECT * FROM Authors WHERE state = ?"  
     Set prm = cmd.CreateParameter("ItemXparm", adChar, adParamInput, 2, "CA")  
     cmd.Parameters.Append prm  
      ' set connection  

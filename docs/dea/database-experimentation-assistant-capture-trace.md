@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: e335170c97f18039767fab8bf0b8400ce9f9b45d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 9bc1dafd5242dc4be8a9a2947465ed48a01fcb8d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643761"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042421"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Acquisire una traccia in Database Experimentation Assistant
 
@@ -147,6 +147,6 @@ Di seguito sono riportati alcuni possibili errori che possono essere visualizzat
 
 Se vengono visualizzati altri errori con l'etichetta *codice errore SQL*, vedere [motore di database errori](../relational-databases/errors-events/database-engine-events-and-errors.md) per descrizioni dettagliate.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - Per informazioni su come configurare gli strumenti di Riesecuzione distribuita in SQL Server prima di riprodurre una traccia acquisita, vedere [configurare riesecuzione distribuita per database Experimentation Assistant](database-experimentation-assistant-configure-replay.md).

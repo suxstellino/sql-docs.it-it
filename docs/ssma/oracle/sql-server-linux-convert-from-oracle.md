@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
-ms.openlocfilehash: 1d28458896d4ae4806db1b0f705c5e33badddfb7
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fb21fdc7da82d6dae2390ddcf0884ea1e8ac8a58
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932752"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044391"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>Eseguire la migrazione di uno schema Oracle a SQL Server 2017 in Linux con il SQL Server Migration Assistant
 
@@ -77,9 +77,9 @@ Connettere quindi SSMA a Oracle.
 
 Utilizzare la procedura seguente per generare un report di migrazione.
 
-1. In **Oracle Metadata Explorer**espandere il nodo del server.
+1. In **Oracle Metadata Explorer** espandere il nodo del server.
 
-1. Espandere **schemi**, fare clic con il pulsante destro del mouse su **HR**e scegliere **Crea report**.
+1. Espandere **schemi**, fare clic con il pulsante destro del mouse su **HR** e scegliere **Crea report**.
 
    ![Creazione report di Oracle Metadata Explorer](./media/sql-server-linux-convert-from-oracle/CreateReport.png)
 
@@ -98,7 +98,7 @@ Scegliere quindi **Connetti a SQL Server** e immettere le informazioni di connes
 
 ## <a name="convert-schema"></a>Converti schema
 
-Fare clic con il pulsante destro del mouse su **HR** in **Oracle Metadata Explorer**e scegliere Converti schema.
+Fare clic con il pulsante destro del mouse su **HR** in **Oracle Metadata Explorer** e scegliere Converti schema.
 
 ![Converti schema](./media/sql-server-linux-convert-from-oracle/ConvertSchema.png)
 
@@ -116,7 +116,7 @@ Sincronizzare quindi il database.
 
 Il passaggio finale consiste nel migrare i dati.
 
-1. In **Oracle Metadata Explorer**fare clic con il pulsante destro del mouse su **HR**e selezionare **Migrate data**.
+1. In **Oracle Metadata Explorer** fare clic con il pulsante destro del mouse su **HR** e selezionare **Migrate data**.
 
 1. Per la fase di migrazione dei dati è necessario immettere nuovamente le credenziali Oracle e SQL Server.
 

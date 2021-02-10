@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 12c51ce9a3b4bdd83a1d1c4c7295f2ff438bc707
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: d8443eaceb150bd0cf2c936e44cb29fc2292f89c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987717"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042033"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Aggiunta e rimozione di file di database di Access (AccessToSQL)
 Per eseguire la migrazione dei dati di accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, è necessario aggiungere uno o più database di Access al progetto SSMA. Questi database devono essere Access 97 o versioni successive. Se si dispone di database di una versione precedente di Access, è necessario convertire i database in una versione più recente. A tale scopo, aprire e salvare i database in Access 97 o versioni successive prima di aggiungerli a SSMA.  
@@ -53,7 +53,7 @@ Se si desidera aggiungere uno o più database a un progetto SSMA e i file si tro
   
 **Per aggiungere singoli file di database**  
   
-1.  Scegliere **Aggiungi database**dal menu **file** .  
+1.  Scegliere **Aggiungi database** dal menu **file** .  
   
 2.  Nella finestra di dialogo **Apri** individuare la cartella che contiene il file o i file di database.  
   
@@ -64,7 +64,7 @@ Se si desidera aggiungere più database di Access da cartelle diverse a un proge
   
 **Per trovare e aggiungere database**  
   
-1.  Scegliere **trova database**dal menu **file** .  
+1.  Scegliere **trova database** dal menu **file** .  
   
 2.  Nella procedura guidata trova database immettere il nome dell'unità, il percorso del file o il percorso UNC in cui si desidera eseguire la ricerca. In alternativa, fare clic su **Sfoglia** per individuare l'unità o la cartella di rete.  
   
@@ -102,7 +102,7 @@ Dopo avere aggiunto un database di Access a un progetto, i metadati del progetto
   
 3.  Espandere **tabelle** e quindi selezionare una tabella.  
   
-    Si noti che vengono visualizzate quattro schede: **tabella**, **mapping dei tipi**, **proprietà**e **dati**.  
+    Si noti che vengono visualizzate quattro schede: **tabella**, **mapping dei tipi**, **proprietà** e **dati**.  
   
 4.  Espandere una tabella, espandere **chiavi**, quindi selezionare una chiave.  
   

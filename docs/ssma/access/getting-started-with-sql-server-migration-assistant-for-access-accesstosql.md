@@ -20,22 +20,22 @@ ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: d622396e9e650aa3e9fc1b3855e1dfc1634bc34e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: e05bc860ec1cc9f3703a1d1c17441c4e1ad3de15
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938810"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044621"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>Introduzione a SQL Server Migration Assistant per Access (AccessToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) per l'accesso consente di convertire rapidamente oggetti di database di Access in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti di database SQL di Azure, caricare gli oggetti risultanti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o nel database SQL di Azure ed eseguire la migrazione dei dati dall'accesso al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database SQL di Azure. Se necessario, è anche possibile collegare le tabelle di accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o alle tabelle del database SQL di Azure in modo da poter continuare a usare le applicazioni front-end di accesso esistenti con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o il database SQL di Azure.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per l'accesso consente di convertire rapidamente oggetti di database di Access in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti di database SQL di Azure, caricare gli oggetti risultanti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o nel database SQL di Azure ed eseguire la migrazione dei dati dall'accesso al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database SQL di Azure. Se necessario, è anche possibile collegare le tabelle di accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o alle tabelle del database SQL di Azure in modo da poter continuare a usare le applicazioni front-end di accesso esistenti con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o il database SQL di Azure.  
   
 Questo argomento introduce il processo di installazione e consente di acquisire familiarità con l'interfaccia utente di SSMA.  
   
 ## <a name="installing-ssma"></a>Installazione di SSMA  
 Per usare SSMA, è prima necessario installare il programma client di SSMA in un computer in grado di accedere ai database di cui si vuole eseguire la migrazione e all'istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o al database SQL di Azure. Per le istruzioni di installazione, vedere [installazione di SQL Server Migration Assistant per l'accesso &#40;&#41;AccessToSQL ](../../ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md).  
   
-Per avviare SSMA, fare clic sul pulsante **Start**, scegliere **tutti i programmi**, **SQL Server Migration Assistant per accesso**e quindi selezionare **SQL Server Migration Assistant per l'accesso**.  
+Per avviare SSMA, fare clic sul pulsante **Start**, scegliere **tutti i programmi**, **SQL Server Migration Assistant per accesso** e quindi selezionare **SQL Server Migration Assistant per l'accesso**.  
   
 ## <a name="using-ssma"></a>Uso di SSMA  
 Dopo l'installazione di SSMA, consente di acquisire familiarità con l'interfaccia utente di SSMA prima di utilizzare lo strumento per eseguire la migrazione dei database di Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o al database SQL di Azure. Il diagramma seguente illustra l'interfaccia utente di SSMA, tra cui le finestre di esplorazione dei metadati, i metadati, le barre degli strumenti, il riquadro di output e l'elenco errori.  
@@ -82,14 +82,14 @@ Esplora metadati di Access Mostra informazioni sui database di Access aggiunti a
 -   Collegare e scollegare l'accesso e le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelle.  
   
 #### <a name="sql-server-or-azure-sql-database-metadata-explorer"></a>SQL Server o Esplora metadati del database SQL di Azure  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in alternativa, Esplora metadati del database SQL di Azure Mostra informazioni su un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un database SQL di Azure. Quando ci si connette a un'istanza di o a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database SQL di Azure, SSMA recupera i metadati relativi a tale istanza e li archivia nel file di progetto.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in alternativa, Esplora metadati del database SQL di Azure Mostra informazioni su un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un database SQL di Azure. Quando ci si connette a un'istanza di o a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database SQL di Azure, SSMA recupera i metadati relativi a tale istanza e li archivia nel file di progetto.  
   
 È possibile usare l'SQL Server o Esplora metadati del database SQL di Azure per selezionare gli oggetti di database di Access convertiti e caricare (sincronizzare) tali oggetti nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o nel database SQL di Azure.  
   
 Per ulteriori informazioni, vedere [caricamento di oggetti di database convertiti in SQL Server](loading-converted-database-objects-into-sql-server-accesstosql.md).  
   
 ### <a name="metadata"></a>Metadati  
-A destra di ogni Esplora metadati sono presenti schede che descrivono l'oggetto selezionato. Se ad esempio si seleziona una tabella in Esplora metadati di Access, verranno visualizzate quattro schede: **tabella**, **mapping dei tipi**, **proprietà**e **dati**. Se si seleziona una tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Esplora metadati, verranno visualizzate tre schede: **tabella**, **SQL**e **dati**.  
+A destra di ogni Esplora metadati sono presenti schede che descrivono l'oggetto selezionato. Se ad esempio si seleziona una tabella in Esplora metadati di Access, verranno visualizzate quattro schede: **tabella**, **mapping dei tipi**, **proprietà** e **dati**. Se si seleziona una tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Esplora metadati, verranno visualizzate tre schede: **tabella**, **SQL** e **dati**.  
   
 La maggior parte delle impostazioni dei metadati è di sola lettura. Tuttavia, è possibile modificare i metadati seguenti:  
   
@@ -132,6 +132,6 @@ Il menu **Visualizza** include i comandi per abilitare o disabilitare la visibil
   
 -   Il riquadro Elenco errori Mostra messaggi di errore, di avviso e informativi in un elenco che è possibile ordinare.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Migrazione dei database di Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   
