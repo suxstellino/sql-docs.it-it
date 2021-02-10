@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83f3d5e9408180c4ff513f1457a2972a676fa726
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cfb6a2ede665c939aa5824810c692bdbe02df6c1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991742"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028373"
 ---
 # <a name="ado-errors"></a>Errori ADO
 La costante **ErrorValueEnum** descrive i valori di errore ADO. Per un elenco completo di queste costanti enumerate, inclusi i valori, vedere [Appendice B: errori ADO](../appendixes/appendix-b-ado-errors.md). In questa sezione vengono esaminati alcuni degli errori più interessanti e vengono illustrate alcune situazioni specifiche che possono sollevarle o soluzioni per risolvere il problema. Vengono elencate sia la costante **ErrorValueEnum** che il numero decimale positivo breve.
@@ -42,7 +42,7 @@ La costante **ErrorValueEnum** descrive i valori di errore ADO. Per un elenco co
 |**3420**|**adErrObjectNotSet**|Oggetto non più valido.|
 |**3421**|**adErrDataConversion**|L'applicazione usa un valore di tipo errato per l'operazione corrente. È possibile che sia stata fornita una stringa a un'operazione che prevede un flusso, ad esempio.|
 |**3704**|**adErrObjectClosed**|Operazione non consentita quando l'oggetto viene chiuso. La **connessione** o il **Recordset** è stato chiuso. Ad esempio, un'altra routine potrebbe avere chiuso un oggetto globale. È possibile evitare questo errore controllando la proprietà **state** prima di provare a eseguire un'operazione.|
-|**3705**|**adErrObjectOpen**|Operazione non consentita quando l'oggetto è aperto. Impossibile aprire un oggetto aperto. Non è possibile aggiungere campi a un **Recordset**aperto.|
+|**3705**|**adErrObjectOpen**|Operazione non consentita quando l'oggetto è aperto. Impossibile aprire un oggetto aperto. Non è possibile aggiungere campi a un **Recordset** aperto.|
 |**3706**|**adErrProviderNotFound**|Impossibile trovare il provider. Potrebbe non essere installato correttamente.<br /><br /> Il nome del provider potrebbe non essere specificato correttamente, il provider specificato potrebbe non essere installato nel computer in cui è in esecuzione il codice o l'installazione potrebbe essere danneggiata.|
 |**3707**|**adErrBoundToCommand**|Non è possibile modificare la proprietà **ActiveConnection** di un oggetto **Recordset** , che ha un oggetto **comando** come origine. L'applicazione ha tentato di assegnare un nuovo oggetto **connessione** a un **Recordset** che dispone di un oggetto **comando** come origine.|
 |**3708**|**adErrInvalidParamInfo**|L'oggetto **Parameter** è definito in modo errato. Sono state fornite informazioni incoerenti o incomplete.|
@@ -76,7 +76,7 @@ La costante **ErrorValueEnum** descrive i valori di errore ADO. Per un elenco co
 |**3736**|**adErrUnavailable**|Non è stato possibile completare l'operazione e lo stato non è disponibile. Il campo potrebbe non essere disponibile oppure l'operazione non è stata tentata. Un altro utente potrebbe aver modificato o eliminato il campo a cui si sta tentando di accedere.|
 |**3737**|**adErrURLNamedRowDoesNotExist**|Il record denominato da questo URL non esiste. Durante il tentativo di aprire un file utilizzando un oggetto **record** , il nome del file o il percorso del file non è stato digitato in modo errato.|
 |**3738**|**adErrDelResOutOfScope**|L'URL dell'oggetto da eliminare esula dall'ambito del record corrente.|
-|**3747**|**adErrCatalogNotSet**|Per l'operazione è necessario un **ParentCatalog**valido.|
+|**3747**|**adErrCatalogNotSet**|Per l'operazione è necessario un **ParentCatalog** valido.|
 |**3748**|**adErrCantChangeConnection**|La connessione è stata negata. La nuova connessione richiesta ha caratteristiche diverse rispetto a quella già in uso.|
 |**3749**|**adErrFieldsUpdateFailed**|Aggiornamento campi non riuscito. Per ulteriori informazioni, esaminare la proprietà **status** dei singoli oggetti Field. Questo errore può verificarsi in due situazioni: quando si modifica il valore di un oggetto **campo** nel processo di modifica o aggiunta di un record al database; e quando si modificano le proprietà dell'oggetto **campo** .<br /><br /> Aggiornamento del **record** o del **Recordset** non riuscito a causa di un problema con uno dei campi del record corrente. Enumerare la raccolta **Fields** e controllare la proprietà **status** di ogni campo per determinare la causa del problema.|
 |**3750**|**adErrDenyNotSupported**|Il provider non supporta le restrizioni di condivisione. È stato effettuato un tentativo di limitare la condivisione dei file e il provider non supporta il concetto.|

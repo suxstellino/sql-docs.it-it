@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: adc109b9-79f4-4946-a5eb-658e22e9a8a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: da143a7df2677618a290f121376e3399577d9aa7
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d56730ff9e9fae7a6d5a6ddc79aac8d95e17a1ca
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170981"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100020875"
 ---
 # <a name="getrowsoptionenum"></a>GetRowsOptionEnum
 Specifica il numero di record da recuperare da un [Recordset](./recordset-object-ado.md).  

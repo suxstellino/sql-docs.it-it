@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 17ba3712f1b644a0d80d890c405e8ead8267236c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 92c6e91ca49046561c24d7716dd5a3e152e686f5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372647"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017371"
 ---
 # <a name="project-settings-migration-mysqltosql"></a>Impostazioni del progetto (migrazione) (MySQLToSQL)
 La pagina Migrazione della finestra di dialogo **Impostazioni progetto** contiene impostazioni che consentono di personalizzare il modo in cui SSMA esegue la migrazione dei dati da MySQL a SQL Server.  
@@ -24,7 +24,7 @@ Il riquadro migrazione è disponibile nelle finestre di dialogo **Impostazioni p
   
 -   Per specificare le impostazioni per tutti i progetti SSMA, nel menu **strumenti** selezionare **Impostazioni progetto predefinite**, selezionare il tipo di progetto nell'elenco a discesa **versione destinazione di migrazione** di cui si desidera accedere alle impostazioni, fare clic su **generale** nella parte inferiore del riquadro sinistro, quindi fare clic su **migrazione**.  
   
--   Per specificare le impostazioni per il progetto corrente, scegliere **Impostazioni progetto**dal menu **strumenti** , fare clic su **generale** nella parte inferiore del riquadro sinistro, quindi fare clic su **migrazione**.  
+-   Per specificare le impostazioni per il progetto corrente, scegliere **Impostazioni progetto** dal menu **strumenti** , fare clic su **generale** nella parte inferiore del riquadro sinistro, quindi fare clic su **migrazione**.  
   
 ## <a name="options"></a>Opzioni  
   
@@ -65,7 +65,7 @@ Il riquadro migrazione è disponibile nelle finestre di dialogo **Impostazioni p
 |Termine|Definizione|  
 |--------|--------------|  
 |**Opzioni di migrazione dei dati estese**|Mostra le opzioni di migrazione dei dati aggiuntive per ogni tabella nella scheda Dettagli separata.<br /><br />**Modalità predefinita**: Nascondi<br /><br />**Modalità ottimistica**: Nascondi<br /><br />**Modalità completa**: Nascondi|  
-|**In errore**|Interrompe la migrazione dei dati quando si verifica un errore. Sono disponibili tre opzioni:<br /><br />**Interrompi migrazione:** Arresta l'operazione di migrazione dei dati<br /><br />**Vai alla tabella successiva:** Interrompe la migrazione dei dati alla tabella corrente e procede a quello successivo<br /><br />**Vai al batch successivo:** Interrompe la migrazione dei dati al batch corrente e procede a quello successivo<br /><br />**Modalità predefinita**: passare al batch successivo<br /><br />**Modalità ottimistica**: passare al batch successivo<br /><br />**Modalità completa**: passare al batch successivo|  
+|**In caso di errore**|Interrompe la migrazione dei dati quando si verifica un errore. Sono disponibili tre opzioni:<br /><br />**Interrompi migrazione:** Arresta l'operazione di migrazione dei dati<br /><br />**Vai alla tabella successiva:** Interrompe la migrazione dei dati alla tabella corrente e procede a quello successivo<br /><br />**Vai al batch successivo:** Interrompe la migrazione dei dati al batch corrente e procede a quello successivo<br /><br />**Modalità predefinita**: passare al batch successivo<br /><br />**Modalità ottimistica**: passare al batch successivo<br /><br />**Modalità completa**: passare al batch successivo|  
   
 ### <a name="parallel-data-migration"></a>Migrazione di dati paralleli  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 07e5747e11cf3393e51c66a24c4c6fd5e6ade887
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a83d37c301d34c273514e4d6eb0551bc86429bd4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991082"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029375"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Panoramica di Microsoft Data Shaping Service per OLE DB
 > [!IMPORTANT]
@@ -39,8 +39,8 @@ ms.locfileid: "88991082"
 
 |Nome proprietà dinamica|Descrizione|
 |---------------------------|-----------------|
-|**Nomi di riforme univoci**|Indica se sono consentiti oggetti **Recordset** con valori duplicati per le proprietà del nome di modifica della **forma** . Se questa proprietà dinamica è **true** e viene creato un nuovo **Recordset** con lo stesso nome di modifica della forma specificato dall'utente come **Recordset**esistente, il nome della nuova forma dell'oggetto **Recordset** viene modificato per renderlo univoco. Se questa proprietà è **false** e viene creato un nuovo **Recordset** con lo stesso nome di modifica della forma specificato dall'utente del **Recordset**esistente, entrambi gli oggetti **Recordset** avranno lo stesso nome di modifica della forma. Non è pertanto possibile modificare la forma di un **Recordset** purché siano presenti entrambi i recordset.<br /><br /> Il valore predefinito della proprietà è **false**.|
-|**provider di dati**|Indica il nome del provider che fornirà le righe da modellare. Questo valore può essere NONE se non viene utilizzato un provider per fornire righe.|
+|**Nomi di riforme univoci**|Indica se sono consentiti oggetti **Recordset** con valori duplicati per le proprietà del nome di modifica della **forma** . Se questa proprietà dinamica è **true** e viene creato un nuovo **Recordset** con lo stesso nome di modifica della forma specificato dall'utente come **Recordset** esistente, il nome della nuova forma dell'oggetto **Recordset** viene modificato per renderlo univoco. Se questa proprietà è **false** e viene creato un nuovo **Recordset** con lo stesso nome di modifica della forma specificato dall'utente del **Recordset** esistente, entrambi gli oggetti **Recordset** avranno lo stesso nome di modifica della forma. Non è pertanto possibile modificare la forma di un **Recordset** purché siano presenti entrambi i recordset.<br /><br /> Il valore predefinito della proprietà è **false**.|
+|**Provider di dati**|Indica il nome del provider che fornirà le righe da modellare. Questo valore può essere NONE se non viene utilizzato un provider per fornire righe.|
 
  È inoltre possibile impostare le proprietà dinamiche scrivibili specificandone i nomi come parole chiave nella stringa di connessione. Ad esempio, in Microsoft Visual Basic impostare la proprietà dinamica **provider di dati** su "MSDASQL" specificando:
 

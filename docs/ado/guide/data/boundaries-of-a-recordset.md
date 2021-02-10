@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c0df560a7a70dd46c4a846e3271b5b5ea10584e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f737ad11af65045a1d923f427c7487e4b751aaa8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991592"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028016"
 ---
 # <a name="boundaries-of-a-recordset"></a>Limiti di un recordset
 **Recordset** supporta le proprietà **BOF** e **EOF** per delineare rispettivamente l'inizio e la fine del set di dati. È possibile pensare a **BOF** e **EOF** come record "fantasma" posizionati all'inizio e alla fine del **Recordset**. Il conteggio di **BOF** e **EOF**, il **Recordset** di esempio è ora simile al seguente:  

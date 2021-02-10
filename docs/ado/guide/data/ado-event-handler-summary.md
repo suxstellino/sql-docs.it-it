@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ddec7c573c7d208d80fe05dc8f15ba2d0d02c428
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a447c149769d892149096c980b35e77e49de05da
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991722"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028363"
 ---
 # <a name="ado-connection-and-recordset-events"></a>Eventi di connessione ADO e recordset
 Due oggetti ADO possono generare eventi, ovvero l'oggetto [connessione](../../reference/ado-api/connection-object-ado.md) e l'oggetto [Recordset](../../reference/ado-api/recordset-object-ado.md) . La famiglia **ConnectionEvent** si riferisce alle operazioni sull'oggetto **Connection** e la famiglia **RecordsetEvent** riguarda le operazioni sull'oggetto **Recordset** .
 
 -   **Eventi di connessione**: gli eventi vengono generati quando viene avviata una transazione in una connessione, ne viene eseguito il commit o ne viene eseguito il rollback; Quando viene eseguito un [comando](../../reference/ado-api/command-object-ado.md) ; Quando viene generato un avviso durante un'operazione relativa a un **evento di connessione** ; oppure quando viene avviata o terminata una **connessione** .
 
--   **Eventi recordset**: gli eventi vengono emessi per operazioni di recupero asincrone e quando si navigano tra le righe di un oggetto **Recordset** , si modifica un campo in una riga di un **Recordset**, si modifica una riga in un **Recordset**, si apre un **Recordset** con un cursore sul lato server, si chiude un **Recordset**o si apportano modifiche nel **Recordset**.
+-   **Eventi recordset**: gli eventi vengono emessi per operazioni di recupero asincrone e quando si navigano tra le righe di un oggetto **Recordset** , si modifica un campo in una riga di un **Recordset**, si modifica una riga in un **Recordset**, si apre un **Recordset** con un cursore sul lato server, si chiude un **Recordset** o si apportano modifiche nel **Recordset**.
 
  Nelle tabelle seguenti vengono riepilogati gli eventi e le relative descrizioni.
 

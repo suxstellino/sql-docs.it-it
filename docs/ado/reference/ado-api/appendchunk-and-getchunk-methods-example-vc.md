@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 51aa99be-d5ca-46ac-8b3f-1b03ce4f0b2a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54e851bdba8add7b468c487732478c078908ce92
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 63b774bc54c070c6f15e9abbd26020807fa60bfa
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164825"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027655"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vc"></a>Esempio dei metodi AppendChunk e GetChunk (VC++)
 Questo esempio usa i metodi [AppendChunk](./appendchunk-method-ado.md) e [GetChunk](./getchunk-method-ado.md) per riempire un campo immagine con i dati di un altro record.  

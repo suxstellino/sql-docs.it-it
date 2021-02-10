@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 700f7aa4053a1e99bcae5cdabe01a5fc6c440258
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e815d834ffbab6276f4ee6a9069f1163ac9e4cd5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171318"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025638"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 Specifica il tipo di dati di un [campo](../../../ado/reference/ado-api/field-object.md), un [parametro](../../../ado/reference/ado-api/parameter-object.md)o una [proprietà](../../../ado/reference/ado-api/property-object-ado.md). L'indicatore del tipo di OLE DB corrispondente viene visualizzato tra parentesi nella colonna Descrizione della tabella seguente.  

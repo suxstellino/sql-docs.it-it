@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 906f895eade7120b57d401851a0e19203f943980
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b7ed585adcfc9542e3d396f2b0fd1a82d65cdcf4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991712"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028353"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>Creazione di istanze di eventi ADO: ADO e WFC
 ADO per Windows Foundation Classes (ADO/WFC) si basa sul modello di eventi ADO e presenta una Application Programming Interface semplificata. In generale, ADO/WFC intercetta gli eventi ADO, consolida i parametri dell'evento in una singola classe di evento e quindi chiama il gestore eventi.  
@@ -32,7 +32,7 @@ ADO per Windows Foundation Classes (ADO/WFC) si basa sul modello di eventi ADO e
     }  
     ```  
   
-2.  Definire un oggetto gestore per rappresentare il gestore eventi. Il tipo di dati dell'oggetto gestore deve essere **ConnectEventHandler** per un evento di tipo **ConnectionEvent**o **RecordsetEventHandler** per un evento di tipo **RecordsetEvent**. Ad esempio, scrivere il codice seguente per il gestore dell'evento **ConnectComplete** :  
+2.  Definire un oggetto gestore per rappresentare il gestore eventi. Il tipo di dati dell'oggetto gestore deve essere **ConnectEventHandler** per un evento di tipo **ConnectionEvent** o **RecordsetEventHandler** per un evento di tipo **RecordsetEvent**. Ad esempio, scrivere il codice seguente per il gestore dell'evento **ConnectComplete** :  
   
     ```  
     ConnectionEventHandler handler =   

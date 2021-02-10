@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 16b6c68c520291b0f9ae6613940832c0fa77af68
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 3207dc38dd777ee6ccc36e37e9b18414dbea085e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988167"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017528"
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-database-mysqltosql"></a>Migrazione dei dati MySQL in SQL Server-database SQL di Azure (MySQLToSQL)
 Dopo aver sincronizzato correttamente gli oggetti convertiti con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, è possibile eseguire la migrazione dei dati da MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
@@ -43,7 +43,7 @@ Prima di eseguire la migrazione dei dati a [!INCLUDE[ssNoVersion](../../includes
   
 -   Per avviare la migrazione dei dati sul lato client, selezionare l'opzione **motore di migrazione dati lato client** nella finestra di dialogo **Impostazioni progetto** .  
   
--   In **Impostazioni progetto**viene impostata l'opzione **motore di migrazione dati lato client** .  
+-   In **Impostazioni progetto** viene impostata l'opzione **motore di migrazione dati lato client** .  
   
     > [!NOTE]  
     > Il **motore di migrazione dei dati lato client** si trova all'interno dell'applicazione SSMA e pertanto non dipende dalla disponibilità del pacchetto di estensione.  
@@ -60,7 +60,7 @@ Prima di eseguire la migrazione dei dati a [!INCLUDE[ssNoVersion](../../includes
 ## <a name="migrating-data-to-sql-server-or-sql-azure"></a>Migrazione dei dati a SQL Server o SQL Azure  
 La migrazione dei dati è un'operazione di caricamento bulk che sposta le righe di dati dalle tabelle MySQL in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure tabelle nelle transazioni. Il numero di righe caricate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in ogni transazione viene configurato nelle impostazioni del progetto.  
   
-Per visualizzare i messaggi di migrazione, assicurarsi che il riquadro di output sia visibile. In caso contrario, scegliere **output**dal menu **Visualizza** .  
+Per visualizzare i messaggi di migrazione, assicurarsi che il riquadro di output sia visibile. In caso contrario, scegliere **output** dal menu **Visualizza** .  
   
 **Per eseguire la migrazione dei dati**  
   

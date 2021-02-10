@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4c2c4c093fec21723584538dfb5585a74e15c8fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7cdbc6ac65fa24f8130bc92c03b62145370bedea
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492434"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017421"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Impostazioni del progetto (conversione) (MySQLToSQL)
 La pagina conversione della finestra di dialogo **Impostazioni progetto** contiene impostazioni che consentono di personalizzare il modo in cui SSMA converte la sintassi di MySQL nella sintassi SQL Server o SQL Azure.  
@@ -24,7 +24,7 @@ Il riquadro conversione è disponibile nelle finestre di dialogo **Impostazioni 
   
 -   Utilizzare la finestra di dialogo **Impostazioni progetto predefinite** per impostare le opzioni di configurazione per tutti i progetti. Per accedere alle impostazioni di conversione, nel menu **strumenti** selezionare **Impostazioni progetto predefinite**, selezionare il tipo di progetto di migrazione per cui è necessario visualizzare le impostazioni/changed dall'elenco a discesa **versione destinazione migrazione** , fare clic su **generale** nella parte inferiore del riquadro a sinistra e quindi selezionare **conversione**.  
   
--   Per specificare le impostazioni per il progetto corrente, scegliere **Impostazioni progetto**dal menu **strumenti** , quindi fare clic su **generale** nella parte inferiore del riquadro a sinistra e quindi su **conversione**.  
+-   Per specificare le impostazioni per il progetto corrente, scegliere **Impostazioni progetto** dal menu **strumenti** , quindi fare clic su **generale** nella parte inferiore del riquadro a sinistra e quindi su **conversione**.  
   
 ## <a name="options"></a>Opzioni  
   

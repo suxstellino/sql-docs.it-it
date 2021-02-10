@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 08d945b101ac91300793920e3e01ea0a9619b372
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2174610e0747f984babae59c4b00d1245d763db2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991052"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029275"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Provider Microsoft OLE DB per Microsoft Active Directory Service
 Il provider ADSI (Active Directory Service Interfaces) consente a ADO di connettersi a servizi di directory eterogenei tramite ADSI. Ciò consente alle applicazioni ADO di accedere in sola lettura ai servizi directory di Microsoft Windows NT 4,0 e Microsoft Windows 2000, oltre a qualsiasi servizio di directory compatibile con LDAP e a servizi directory di Novell. ADSI si basa su un modello di provider, in modo che se è presente un nuovo provider che concede l'accesso a un'altra directory, l'applicazione ADO sarà in grado di accedervi facilmente. Il provider ADSI è a thread libero e il formato Unicode è abilitato.  
@@ -65,7 +65,7 @@ ADSDSOObject
 |*Radice*|Indica l'oggetto **ADsPath** da cui iniziare la ricerca (ovvero la radice della ricerca).|  
 |*Filter*|Indica il filtro di ricerca nel formato RFC 1960.|  
 |*Attributes (Attributi)*|Indica un elenco delimitato da virgole di attributi da restituire.|  
-|*Ambito*|Facoltativa. **Stringa** che specifica l'ambito della ricerca. Può essere uno dei valori seguenti:<br /><br /> -Base: Cerca solo l'oggetto di base (radice della ricerca).<br />-Unlivello-Cerca solo un livello.<br />-Subtree-Cerca nell'intero sottoalbero.|  
+|*Scope*|facoltativo. **Stringa** che specifica l'ambito della ricerca. Può essere uno dei seguenti:<br /><br /> -Base: Cerca solo l'oggetto di base (radice della ricerca).<br />-Unlivello-Cerca solo un livello.<br />-Subtree-Cerca nell'intero sottoalbero.|  
   
  Ad esempio:  
   
@@ -96,7 +96,7 @@ objectClass='user' AND objectCategory='Person'"
 |[AbsolutePosition](../../reference/ado-api/absoluteposition-property-ado.md)|lettura/scrittura|  
 |[ActiveConnection](../../reference/ado-api/activeconnection-property-ado.md)|Sola lettura|  
 |[BOF](../../reference/ado-api/bof-eof-properties-ado.md)|Sola lettura|  
-|[Creare un segnalibro](../../reference/ado-api/bookmark-property-ado.md)|lettura/scrittura|  
+|[Segnalibro](../../reference/ado-api/bookmark-property-ado.md)|lettura/scrittura|  
 |[CacheSize](../../reference/ado-api/cachesize-property-ado.md)|lettura/scrittura|  
 |[CursorLocation](../../reference/ado-api/cursorlocation-property-ado.md)|sempre **adUseServer come**|  
 |[CursorType](../../reference/ado-api/cursortype-property-ado.md)|sempre **adOpenStatic**|  
@@ -125,7 +125,7 @@ objectClass='user' AND objectCategory='Person'"
 |[Close](../../reference/ado-api/close-method-ado.md)|Sì|  
 |[Elimina](../../reference/ado-api/delete-method-ado-recordset.md)|No|  
 |[GetRows](../../reference/ado-api/getrows-method-ado.md)|Sì|  
-|[Spostamento](../../reference/ado-api/move-method-ado.md)|Sì|  
+|[Sposta](../../reference/ado-api/move-method-ado.md)|Sì|  
 |[MoveFirst](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|  
 |[MoveLast](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|  
 |[MoveNext](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|  

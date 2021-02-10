@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 61793ca158cee6d4143128eae7fdecf3722ae61e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c5156f48f17d2d389646f4f752033cf88faf83f8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171381"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025965"
 ---
 # <a name="createparameter-method-ado"></a>Metodo CreateParameter (ADO)
 Crea un nuovo oggetto [Parameter](./parameter-object.md) con le proprietà specificate.  

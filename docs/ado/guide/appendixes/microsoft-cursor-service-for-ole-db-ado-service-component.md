@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02eaad96593af153b1692beed4bcf846ff92ab7f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 12224a64ffa8d67b212deacd3bd8794d6519cfb9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991092"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029385"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Panoramica di Microsoft Cursor Service per OLE DB
 Il servizio Microsoft Cursor per OLE DB integra le funzioni di supporto del cursore dei provider di dati. Di conseguenza, l'utente percepisce una funzionalità relativamente uniforme di tutti i provider di dati.

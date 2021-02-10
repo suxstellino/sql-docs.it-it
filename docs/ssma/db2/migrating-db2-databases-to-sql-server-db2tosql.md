@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 14d2e655-af7e-4aa5-ba28-0e3d0d025518
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e31d4b1d31cb186276d8424f8c49450cb4ce9406
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+ms.openlocfilehash: 912f1ffd342517add68d1ce7f628251fc86dc6aa
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869529"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017701"
 ---
 # <a name="migrating-db2-databases-to-sql-server-db2tosql"></a>Migrazione di database DB2 a SQL Server (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per DB2 è un ambiente completo che consente di migrare rapidamente i database DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o al database SQL di Azure. Utilizzando SSMA per DB2, è possibile esaminare gli oggetti e i dati di database, valutare i database per la migrazione, eseguire la migrazione di oggetti di database al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database SQL di Azure e quindi eseguire la migrazione dei dati al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database SQL di Azure. Si noti che non è possibile eseguire la migrazione di schemi SYS e DB2 di sistema.  
