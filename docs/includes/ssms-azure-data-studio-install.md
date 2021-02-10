@@ -7,12 +7,12 @@ ms.topic: include
 author: markingmyname
 ms.author: maghan
 ms.date: 10/20/2020
-ms.openlocfilehash: b16d4b92f34aa7da885d908d6a20214736fa1cfd
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
-ms.translationtype: HT
+ms.openlocfilehash: 59258dd1ee69b88baa17ee3878066b31d9947536
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102676"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054431"
 ---
 > [!Important]
 > A partire da SQL Server Management Studio (SSMS) 18.7, Azure Data Studio viene installato automaticamente insieme a SSMS. Gli utenti di SQL Server Management Studio possono ora sfruttare le innovazioni e le funzionalità di Azure Data Studio. Azure Data Studio è uno strumento desktop multipiattaforma e open source per vari ambienti, sia nel cloud, che locali o ibridi.

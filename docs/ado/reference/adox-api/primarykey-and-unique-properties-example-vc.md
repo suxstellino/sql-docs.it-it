@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d51814a2-ff7d-48ed-b719-99776da2091a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 95b072f7a28cfc8c2722dd48ba73f021997a45e0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: caaf366a4737a52b6abb347621577a34c6f88f25
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164103"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053865"
 ---
 # <a name="primarykey-and-unique-properties-example-vc"></a>Esempio delle proprietà PrimaryKey e Unique (VC++)
 In questo esempio vengono illustrate le proprietà [PrimaryKey](./primarykey-property-adox.md) e [Unique](./unique-property-adox.md) di un [Indice](./index-object-adox.md). Il codice crea una nuova tabella con due colonne. Le proprietà **PrimaryKey** e **Unique** vengono usate per creare una colonna per la chiave primaria per la quale non sono consentiti valori duplicati.  
