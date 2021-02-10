@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d514c622-2c0d-4f41-80d2-66add4d113b1
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 30ead9bd1d01b26d6453672940a55dd09ad36577
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 06c58f68fff815ddfa40baf9d3e44aeaf68c84b9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463369"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067976"
 ---
 # <a name="legal-notice-mysqltosql"></a>Note legali (MySQLToSql)
 La presente documentazione, incluse le applicazioni di esempio in essa contenute, viene fornita a scopo esclusivamente informativo e senza alcuna garanzia, espressa o implicita. Le informazioni contenute nella presente documentazione, compresi indirizzi URL e altri riferimenti a siti Web Internet, sono soggette a modifiche senza preavviso. L'utente utilizza la presente documentazione a proprio rischio.  

@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74e4df5fc33b90ae9e455d566b41e6eae71408ac
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 45540a538982f75033f35ad759782317983dc958
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99187785"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100071815"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>Conversione non deterministica di stringhe di valori letterali data in valori DATE
 
@@ -60,7 +60,7 @@ SL_Polish
 
 SL_Croatian
 2018-10-28
-**_/
+***/
 ```
 
 
@@ -69,7 +69,7 @@ SL_Croatian
 
 - `SET DATEFORMAT dmy;`
 
-Il formato _ *dmy** qui sopra indica che la stringa della data di esempio '01-03-2018' viene interpretata come _il primo giorno del mese di marzo nell'anno 2018_.
+Il formato **dmy** qui sopra indica che la stringa della data di esempio '01-03-2018' viene interpretata come _il primo giorno del mese di marzo nell'anno 2018_.
 
 Se invece si specifica **mdy**, la stessa stringa '01-03-2018' significa _il terzo giorno del mese di gennaio 2018_.
 
@@ -115,10 +115,10 @@ MDY-Interpretation-of-input-format
 
 YMD-Interpretation--?--NotGuaranteed
 2018-12-09
-**_/
+***/
 ```
 
-Nell'esempio di codice precedente, l'esempio finale presenta una mancata corrispondenza tra il formato _ *ymd** e la stringa di input. Il terzo nodo della stringa di input rappresenta un valore numerico troppo grande per corrispondere a un giorno. Microsoft non garantisce la correttezza del valore di output con mancate corrispondenze di questo tipo.
+Nell'esempio di codice precedente, l'esempio finale presenta una mancata corrispondenza tra il formato **ymd** e la stringa di input. Il terzo nodo della stringa di input rappresenta un valore numerico troppo grande per corrispondere a un giorno. Microsoft non garantisce la correttezza del valore di output con mancate corrispondenze di questo tipo.
 
 #### <a name="convert-offers-explicit-codes-for-_deterministic_-control-of-date-formats"></a>CONVERT rende disponibili codici espliciti per il controllo _deterministico_ dei formati di data
 

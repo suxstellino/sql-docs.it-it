@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 48ca32fc-1830-4d1f-add7-480ba5ad02e8
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7cb317fc73f32a8795fe5ce4e5be9af776edf938
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1829101a62a3f2602e32b6e4d3535292a90a140d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454262"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069516"
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>Introduzione con SSMA per DB2 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per DB2 consente di convertire rapidamente gli schemi di database DB2 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schemi, caricare gli schemi risultanti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed eseguire la migrazione dei dati da DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -25,7 +25,7 @@ In questo argomento viene illustrato il processo di installazione e quindi viene
 ## <a name="installing-ssma"></a>Installazione di SSMA  
 Per utilizzare SSMA, è necessario innanzitutto installare il programma client SSMA in un computer in grado di accedere sia al database DB2 di origine sia all'istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Provider DB2 OLEDB nel computer che esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questi componenti supportano la migrazione dei dati e l'emulazione delle funzioni di sistema DB2. Per le istruzioni di installazione, vedere [installazione di SSMA per DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-db2tosql.md).  
   
-Per avviare SSMA, fare clic sul pulsante **Start**, scegliere **tutti i programmi**, ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant per db2**, quindi fare clic su ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant per DB2**.  
+Per avviare SSMA, fare clic sul pulsante **Start**, scegliere **tutti i programmi**, **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant per db2**, quindi fare clic su **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant per DB2**.  
   
 ## <a name="ssma-for-db2-user-interface"></a>Interfaccia utente di SSMA per DB2  
 Dopo l'installazione di SSMA, è possibile usare SSMA per eseguire la migrazione dei database DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Consente di acquisire familiarità con l'interfaccia utente di SSMA prima di iniziare. Il diagramma seguente illustra l'interfaccia utente per SSMA, tra cui Esplora metadati, metadati, barre degli strumenti, riquadro di output e riquadro elenco errori:  
@@ -60,7 +60,7 @@ DB2 Metadata Explorer Mostra informazioni sugli schemi DB2. Con Esplora metadati
 È possibile utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Esplora metadati per selezionare oggetti di database DB2 convertiti, quindi sincronizzare tali oggetti con l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ### <a name="metadata"></a>Metadati  
-A destra di ogni Esplora metadati sono presenti schede che descrivono l'oggetto selezionato. Se ad esempio si seleziona una tabella in DB2 Metadata Explorer, verranno visualizzate sei schede: **tabella**, **SQL**, **mapping dei tipi, report**, **Proprietà**e **dati**. La scheda **report** contiene informazioni solo dopo la creazione di un report che contiene l'oggetto selezionato. Se si seleziona una tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Esplora metadati, verranno visualizzate tre schede: **tabella**, **SQL**e **dati**.  
+A destra di ogni Esplora metadati sono presenti schede che descrivono l'oggetto selezionato. Se ad esempio si seleziona una tabella in DB2 Metadata Explorer, verranno visualizzate sei schede: **tabella**, **SQL**, **mapping dei tipi, report**, **Proprietà** e **dati**. La scheda **report** contiene informazioni solo dopo la creazione di un report che contiene l'oggetto selezionato. Se si seleziona una tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Esplora metadati, verranno visualizzate tre schede: **tabella**, **SQL** e **dati**.  
   
 La maggior parte delle impostazioni dei metadati è di sola lettura. Tuttavia, è possibile modificare i metadati seguenti:  
   
@@ -93,7 +93,7 @@ La tabella seguente illustra i menu SSMA.
 |----|-----------|  
 |**File**|Contiene i comandi per l'utilizzo di progetti, la connessione a DB2 e la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**Modifica**|Contiene i comandi per trovare e utilizzare il testo nelle pagine dei dettagli, ad esempio [!INCLUDE[tsql](../../includes/tsql-md.md)] la copia dal riquadro dettagli SQL. Contiene anche l'opzione **Gestisci segnalibri** , in cui sarà possibile visualizzare un elenco di segnalibri esistenti. È possibile utilizzare i pulsanti sul lato destro della finestra di dialogo per gestire i segnalibri.|  
-|**Visualizza**|Contiene il comando **Sincronizza Esplora metadati** . Che sincronizza gli oggetti tra Esplora metadati DB2 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Esplora metadati. Contiene anche i comandi per visualizzare e nascondere i riquadri di **output** e **Elenco errori** e i **layout** delle opzioni per gestire i layout.|  
+|**Visualizzazione**|Contiene il comando **Sincronizza Esplora metadati** . Che sincronizza gli oggetti tra Esplora metadati DB2 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Esplora metadati. Contiene anche i comandi per visualizzare e nascondere i riquadri di **output** e **Elenco errori** e i **layout** delle opzioni per gestire i layout.|  
 |**Strumenti**|Contiene i comandi per creare report ed eseguire la migrazione di oggetti e dati. Consente inoltre di accedere alle **Impostazioni globali** e alle finestre di dialogo **delle impostazioni del progetto** .|  
 |**?**|Consente di accedere alla guida di SSMA e alla finestra **di dialogo informazioni su** .|  
   

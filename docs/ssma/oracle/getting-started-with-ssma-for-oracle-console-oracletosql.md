@@ -14,12 +14,12 @@ ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: a403f515c057349c9717422f99b6de15aede566f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd87502c1eda3dc8d4caf4c654804b164f24f36f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463254"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068046"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Introduzione a SSMA per la console Oracle (OracleToSQL)
 In questa sezione viene descritta la procedura per avviare e iniziare a usare l'applicazione console Oracle. Sono inoltre elencate le convenzioni usate in una tipica finestra di output della console di SSMA.  
@@ -29,7 +29,7 @@ Per avviare l'applicazione console SSMA, attenersi alla procedura seguente:
   
 1.  Passare a **Start** e puntare a **tutti i programmi**.  
   
-2.  Fare clic sul collegamento del ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prompt dei comandi Migration Assistant per Oracle** .  
+2.  Fare clic sul collegamento del **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prompt dei comandi Migration Assistant per Oracle** .  
   
     Viene visualizzato il menu di utilizzo della console SSMA e, che consente di iniziare a `(/? Help)` usare l'applicazione console.  
   
@@ -59,7 +59,7 @@ Interpretazione dei colori dell'output della console nella tabella seguente:
   
 |Colore|Descrizione|  
 |---------|---------------|  
-|Rosso|Errore irreversibile durante l'esecuzione|  
+|Red|Errore irreversibile durante l'esecuzione|  
 |Grigio|Indicatore di data e ora, messaggio all'utente|  
 |White|Comandi file script, tipo di messaggio|  
 |Giallo|Avviso|  

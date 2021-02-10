@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1f4d616b964a1e9e9eed391e3386b16e9df54e44
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 66d1ce573f464f14e0b738fb4c461be031db64ba
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195533"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100070074"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>Impostazioni del progetto (conversione) (SybaseToSQL)
 
@@ -25,7 +25,7 @@ Il riquadro **conversione** è disponibile nelle finestre di dialogo **Impostazi
 
 - Se si desidera specificare le impostazioni per tutti i progetti SSMA, nel menu **strumenti** selezionare **Impostazioni progetto predefinite**, fare clic su **generale** nella parte inferiore del riquadro sinistro, quindi fare clic su **conversione**.
 
-- Per specificare le impostazioni per il progetto corrente, scegliere **Impostazioni progetto**dal menu **strumenti** , fare clic su **generale** nella parte inferiore del riquadro sinistro, quindi fare clic su **conversione**.
+- Per specificare le impostazioni per il progetto corrente, scegliere **Impostazioni progetto** dal menu **strumenti** , fare clic su **generale** nella parte inferiore del riquadro sinistro, quindi fare clic su **conversione**.
 
 ## <a name="miscellaneous-section"></a>Sezione varie
 
@@ -40,11 +40,11 @@ Usare questa impostazione per specificare il tipo di messaggio (avviso o errore)
 
 Quando si seleziona una modalità di conversione nella casella **modalità** , SSMA applica l'impostazione seguente:
 
-|Mode|valore|
+|Modalità|Valore|
 |-|-|
 |Predefinito|Converti e contrassegno con avviso|
 |Optimistic|Converti e contrassegno con avviso|
-|Completo|Contrassegno con errore|
+|Full|Contrassegno con errore|
 
 ### <a name="conversion-of-like-operator"></a>Conversione dell'operatore LIKE
 
@@ -55,11 +55,11 @@ Specifica se convertire gli `LIKE` operandi in modo che corrispondano al comport
   
 Quando si seleziona una modalità di conversione nella casella modalità, SSMA applica l'impostazione seguente:
 
-|Mode|valore|
+|Modalità|Valore|
 |-|-|
 |Predefinito|Conversione semplice|
 |Optimistic|Conversione semplice|
-|Completo|Cast a lunghezza fissa|
+|Full|Cast a lunghezza fissa|
 
 ### <a name="convert-or-cast-empty-strings-to-numeric-types"></a>CONVERTE o esegue il CAST di stringhe vuote in tipi numerici
 
@@ -70,11 +70,11 @@ Specifica come gestire stringhe vuote o vuote all'interno `CONVERT` di `CAST` es
 
 Quando si seleziona una modalità di conversione nella casella **modalità** , SSMA applica l'impostazione seguente:
 
-|Mode|valore|
+|Modalità|Valore|
 |-|-|
 |Predefinito|Conversione semplice|
 |Optimistic|Conversione semplice|
-|Completo|Stringa vuota come valore numerico zero|
+|Full|Stringa vuota come valore numerico zero|
 
 ### <a name="concatenation-of-null"></a>Concatenazione di valori NULL
 
@@ -85,11 +85,11 @@ Questa impostazione specifica come convertire la concatenazione di stringhe con 
 
 Quando si seleziona una modalità di conversione nella casella **modalità** , SSMA applica l'impostazione seguente:
 
-|Mode|valore|
+|Modalità|Valore|
 |-|-|
 |Predefinito|Mantieni sintassi corrente|
 |Optimistic|Mantieni sintassi corrente|
-|Completo|Wrapping con la funzione ISNULL|
+|Full|Wrapping con la funzione ISNULL|
 
 ### <a name="conversion-of-empty-strings"></a>Conversione di stringhe vuote
 
@@ -102,11 +102,11 @@ Per usare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportam
 
 Quando si seleziona una modalità di conversione nella casella **modalità** , SSMA applica l'impostazione seguente:
 
-|Mode|valore|
+|Modalità|Valore|
 |-|-|
 |Predefinito|Mantieni sintassi corrente|
 |Optimistic|Mantieni sintassi corrente|
-|Completo|Sostituisci tutte le espressioni stringa con lo spazio|
+|Full|Sostituisci tutte le espressioni stringa con lo spazio|
 
 ### <a name="convert-and-cast-binary-string-conversion"></a>CONVERTIRE e eseguire il CAST della conversione di stringhe binarie
 
@@ -121,11 +121,11 @@ Selezionare **Converti e contrassegna con avviso** per fare in modo che SSMA con
 
 Quando si seleziona una modalità di conversione nella casella **modalità** , SSMA applica l'impostazione seguente:
 
-|Mode|valore|
+|Modalità|Valore|
 |-|-|
 |Predefinito|Converti e contrassegno con avviso|
 |Optimistic|Conversione semplice|
-|Completo|Converti e Correggi|
+|Full|Converti e Correggi|
 
 ### <a name="dynamic-sql"></a>SQL dinamica
 
@@ -136,11 +136,11 @@ Usare questa impostazione per specificare il tipo di messaggio (avviso o errore)
 
 Quando si seleziona una modalità di conversione nella casella **modalità** , SSMA applica l'impostazione seguente:
 
-|Mode|valore|
+|Modalità|Valore|
 |-|-|
 |Predefinito|Converti e contrassegno con avviso|
 |Optimistic|Converti e contrassegno con avviso|
-|Completo|Contrassegno con errore|
+|Full|Contrassegno con errore|
 
 ### <a name="equality-check-conversion"></a>Conversione controllo di uguaglianza
 
@@ -151,11 +151,11 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /Azure SQL, se l' `
 
 Quando si seleziona una modalità di conversione nella casella **modalità** , SSMA applica l'impostazione seguente:
 
-|Mode|valore|
+|Modalità|Valore|
 |-|-|
 |Predefinito|Conversione semplice|
 |Optimistic|Conversione semplice|
-|Completo|Considera valori NULL|
+|Full|Considera valori NULL|
 
 ### <a name="format-strings"></a>Stringhe di formato
 
@@ -246,11 +246,11 @@ Quando SSMA rileva un `format_string` argomento, può compilare un valore letter
 
 Quando si seleziona una modalità di conversione nella casella **modalità** , SSMA applica l'impostazione seguente:
 
-|Mode|valore|
+|Modalità|Valore|
 |-|-|
 |Predefinito|Crea nuova stringa|
 |Optimistic|Crea nuova stringa|
-|Completo|Crea nuova variabile|
+|Full|Crea nuova variabile|
 
 ### <a name="insert-an-explicit-value-into-a-timestamp-column"></a>Inserire un valore esplicito in una colonna timestamp
 
@@ -261,11 +261,11 @@ Quando si seleziona una modalità di conversione nella casella **modalità** , S
 
 Quando si seleziona una modalità di conversione nella casella **modalità** , SSMA applica l'impostazione seguente:
 
-|Mode|valore|
+|Modalità|Valore|
 |-|-|
 |Predefinito|Escludi colonna|
 |Optimistic|Escludi colonna|
-|Completo|Contrassegno con errore|
+|Full|Contrassegno con errore|
 
 ### <a name="store-temporary-objects-defined-in-procedures"></a>Archiviare oggetti temporanei definiti nelle procedure
 
@@ -274,11 +274,11 @@ Questa impostazione specifica se le definizioni degli oggetti temporanei visuali
 - Selezionare **Sì** per archiviare i metadati.
 - Selezionare **No** se gli oggetti non devono essere archiviati.
 
-|Mode|valore|
+|Modalità|Valore|
 |-|-|
 |Predefinito|Sì|
 |Optimistic|Sì|
-|Completo|No|
+|Full|No|
 
 ### <a name="proxy-table-conversion"></a>Conversione di tabelle proxy
 
@@ -289,11 +289,11 @@ Specifica se le tabelle proxy dell'ambiente del servizio app vengono convertite 
 
 Quando si seleziona una modalità di conversione nella casella **modalità** , SSMA applica l'impostazione seguente:
 
-|Mode|valore|
+|Modalità|Valore|
 |-|-|
 |Predefinito|Contrassegno con errore|
 |Optimistic|Contrassegno con errore|
-|Completo|Contrassegno con errore|
+|Full|Contrassegno con errore|
 
 ### <a name="raiserror-base-message-number"></a>Numero del messaggio di base RAISERROR
 
@@ -312,11 +312,11 @@ Tenere presente quanto segue:
 
 Quando si seleziona una modalità di conversione nella casella **modalità** , SSMA applica l'impostazione seguente:
 
-|Mode|valore|
+|Modalità|Valore|
 |-|-|
 |Predefinito|30001|
 |Optimistic|30001|
-|Completo|30001|
+|Full|30001|
 
 ### <a name="system-objects"></a>Oggetti di sistema
 
@@ -327,11 +327,11 @@ Usare questa impostazione per specificare il tipo di messaggio (avviso o errore)
 
 Quando si seleziona una modalità di conversione nella casella **modalità** , SSMA applica l'impostazione seguente:
 
-|Mode|valore|
+|Modalità|Valore|
 |-|-|
 |Predefinito|Converti e contrassegno con avviso|
 |Optimistic|Converti e contrassegno con avviso|
-|Completo|Contrassegno con errore|
+|Full|Contrassegno con errore|
 
 ### <a name="unresolved-identifiers"></a>Identificatori non risolti
 
@@ -342,11 +342,11 @@ Usare questa impostazione per specificare il tipo di messaggio (avviso o errore)
 
 Quando si seleziona una modalità di conversione nella casella **modalità** , SSMA applica l'impostazione seguente:
 
-|Mode|valore|
+|Modalità|Valore|
 |-|-|
 |Predefinito|Converti e contrassegno con avviso|
 |Optimistic|Converti e contrassegno con avviso|
-|Completo|Contrassegno con errore|
+|Full|Contrassegno con errore|
 
 ## <a name="system-functions-section"></a>Sezione funzioni di sistema
 
@@ -359,11 +359,11 @@ In ASE `CHARINDEX` restituisce `NULL` solo se tutte le espressioni di input sono
 
 Quando si seleziona una modalità di conversione nella casella **modalità** , SSMA applica l'impostazione seguente:
 
-|Mode|valore|
+|Modalità|Valore|
 |-|-|
 |Predefinito|Mantieni sintassi corrente|
 |Optimistic|Mantieni sintassi corrente|
-|Completo|Replace (funzione)|
+|Full|Replace (funzione)|
   
 ### <a name="datalength-function"></a>DATALENGTH - funzione
 
@@ -374,11 +374,11 @@ Quando si seleziona una modalità di conversione nella casella **modalità** , S
 
 Quando si seleziona una modalità di conversione nella casella **modalità** , SSMA applica l'impostazione seguente:
 
-|Mode|valore|
+|Modalità|Valore|
 |-|-|
 |Predefinito|Mantieni sintassi corrente|
 |Optimistic|Mantieni sintassi corrente|
-|Completo|Replace (funzione)|
+|Full|Replace (funzione)|
 
 ### <a name="index_col-function"></a>INDEX_COL - funzione
 
@@ -387,11 +387,11 @@ L'ambiente del servizio app supporta un `user_id` argomento facoltativo per la `
 - Per usare il comportamento dell'ambiente del servizio app, selezionare **Converti funzione**. Se il codice contiene l' `user_id` argomento, SSMA visualizzerà un errore.
 - Per visualizzare un messaggio di errore ogni volta che `INDEX_COL` viene rilevato, selezionare **contrassegna con errore**. SSMA non convertirà i riferimenti alla funzione e contrassegnerà l'istruzione con i commenti degli errori.
 
-|Mode|valore|
+|Modalità|Valore|
 |-|-|
 |Predefinito|Contrassegno con errore|
 |Optimistic|Contrassegno con errore|
-|Completo|Contrassegno con errore|
+|Full|Contrassegno con errore|
 
 ### <a name="index_colorder-function"></a>Funzione INDEX_COLORDER
 
@@ -402,11 +402,11 @@ L'ambiente del servizio app supporta un `user_id` argomento facoltativo per la `
 
 Quando si seleziona una modalità di conversione nella casella **modalità** , SSMA applica l'impostazione seguente:
 
-|Mode|valore|
+|Modalità|Valore|
 |-|-|
 |Predefinito|Contrassegno con errore|
 |Optimistic|Contrassegno con errore|
-|Completo|Contrassegno con errore|
+|Full|Contrassegno con errore|
 
 ### <a name="left-and-right-functions"></a>Funzioni LEFT e RIGHT
 
@@ -417,11 +417,11 @@ Quando si seleziona una modalità di conversione nella casella **modalità** , S
 
 Quando si seleziona una modalità di conversione nella casella **modalità** , SSMA applica l'impostazione seguente:
 
-|Mode|valore|
+|Modalità|Valore|
 |-|-|
 |Predefinito|Mantieni sintassi corrente|
 |Optimistic|Mantieni sintassi corrente|
-|Completo|Replace (funzione)|
+|Full|Replace (funzione)|
 
 > [!NOTE]
 > Se il parametro length è un valore letterale e non un'espressione complessa, il valore length viene sempre sostituito con `NULL` indipendentemente dall'impostazione del progetto.
@@ -435,11 +435,11 @@ Quando si seleziona una modalità di conversione nella casella **modalità** , S
 
 Quando si seleziona una modalità di conversione nella casella **modalità** , SSMA applica l'impostazione seguente:
 
-|Mode|valore|
+|Modalità|Valore|
 |-|-|
 |Predefinito|Contrassegno con errore|
 |Optimistic|Contrassegno con errore|
-|Completo|Contrassegno con errore|
+|Full|Contrassegno con errore|
 
 **Modalità predefinita/ottimistica/completa:** Contrassegno con errore
 
@@ -452,11 +452,11 @@ Specifica se convertire la `PATINDEX` funzione in modo che corrisponda al compor
 
 Quando si seleziona una modalità di conversione nella casella **modalità** , SSMA applica l'impostazione seguente:
 
-|Mode|valore|
+|Modalità|Valore|
 |-|-|
 |Predefinito|Non utilizzare|
 |Optimistic|Non utilizzare|
-|Completo|Usa|
+|Full|Uso|
 
 ### <a name="replicate-function"></a>REPLICATE - funzione
 
@@ -467,11 +467,11 @@ La `REPLICATE` funzione ripete una stringa per il numero di volte specificato. N
 
 Quando si seleziona una modalità di conversione nella casella **modalità** , SSMA applica l'impostazione seguente:
 
-|Mode|valore|
+|Modalità|Valore|
 |-|-|
 |Predefinito|Replace (funzione)|
 |Optimistic|Replace (funzione)|
-|Completo|Replace (funzione)|
+|Full|Replace (funzione)|
 
 ### <a name="trim-ltrim-rtrim-function"></a>Funzione TRIM (LTRIM, RTRIM)
 
@@ -482,11 +482,11 @@ Questa impostazione specifica se sostituire le chiamate a `TRIM` `LTRIM` e `RTRI
 
 Quando si seleziona una modalità di conversione nella casella **modalità** , SSMA applica l'impostazione seguente:
 
-|Mode|valore|
+|Modalità|Valore|
 |-|-|
 |Predefinito|Replace (funzione)|
 |Optimistic|Replace (funzione)|
-|Completo|Replace (funzione)|
+|Full|Replace (funzione)|
 
 ### <a name="substring-function"></a>SUBSTRING - funzione
 
@@ -497,11 +497,11 @@ Nell'ambiente del servizio app, la funzione `SUBSTRING(expression, start, length
 
 Quando si seleziona una modalità di conversione nella casella **modalità** , SSMA applica l'impostazione seguente:
 
-|Mode|valore|
+|Modalità|Valore|
 |-|-|
 |Predefinito|Mantieni sintassi corrente|
 |Optimistic|Mantieni sintassi corrente|
-|Completo|Replace (funzione)|
+|Full|Replace (funzione)|
 
 ## <a name="tables-section"></a>Sezione Tables
 
@@ -509,11 +509,11 @@ Quando si seleziona una modalità di conversione nella casella **modalità** , S
 
 Crea una nuova chiave primaria nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella o SQL di Azure se una tabella di SAP ASE non ha una chiave primaria o un indice univoco.
 
-|Mode|valore|
+|Modalità|Valore|
 |-|-|
 |Predefinito|No|
 |Optimistic|No|
-|Completo|Sì|
+|Full|Sì|
 
 > [!NOTE]
 > Quando si è connessi a SQL di Azure, è **Sì** per impostazione predefinita.

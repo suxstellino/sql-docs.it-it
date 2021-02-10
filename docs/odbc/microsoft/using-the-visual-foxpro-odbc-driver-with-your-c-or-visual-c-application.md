@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: beb11a68-849e-4fe0-b217-d3722b1b1389
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d8e7dcbc0d14dfddb4aa8a2318d424dc6c7222e5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0aa73fdf7cf224dc1c7bff6ad162c5bb18e1d6b2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471293"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100070386"
 ---
 # <a name="use-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application"></a>Usare il driver ODBC Visual FoxPro con l'applicazione C o Visual C++
 L'applicazione C o C++ comunica con dati Visual FoxPro inviando un'istruzione [SQLExecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md) o [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) a Visual FoxPro. Questa istruzione può contenere quanto segue:  

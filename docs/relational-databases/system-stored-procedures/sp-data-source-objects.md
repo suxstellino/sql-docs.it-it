@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 4c76026dcd24572b4d52c6b82246e5293c22e713
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 7f3aa43750cebfbbac77e3807845f1ed154af1ed
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596690"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067216"
 ---
 # <a name="sp_data_source_objects-transact-sql"></a>sp_data_source_objects (Transact-SQL)
 
@@ -83,7 +83,7 @@ Questo parametro non viene usato ma può essere implementato in futuro.
 
 È necessaria l'autorizzazione ALTER ANY EXTERNAL DATA SOURCE.  
 
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 
 Per l'istanza di SQL Server deve essere installata la funzionalità di  [base](../../relational-databases/polybase/polybase-guide.md) .
 
@@ -113,7 +113,7 @@ Usare `sp_data_source_objects` e [`sp_data_source_table_columns`](sp-data-source
 
    Alcune versioni precedenti di MongoDB limitano la possibilità di elencare tutti i database per gli utenti di tipo amministratore. Gli utenti che non dispongono di questa autorizzazione possono ricevere errori di autenticazione che tentano di eseguire questa procedura con un valore null `@object_root_name` .
 
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
 
 ### <a name="sql-server"></a>SQL Server
 
@@ -237,7 +237,7 @@ EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
 | TABLE | "database". nazione | nazione | [database]. nazione |
 | TABLE | "database". ordini | orders | [database]. ordini |
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [sp_data_source_columns](./sp-data-source-table-columns.md)   
 - [CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)](../../t-sql/statements/create-external-table-as-select-transact-sql.md)

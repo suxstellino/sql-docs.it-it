@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2a56a003-3b0f-453a-963c-00c9e40933ec
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5512d7230b1b59add11e0d72efba232bb3770099
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 61e8cd99640b45cfdfd74de60beb2fcbd9393308
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320797"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069196"
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>Valutazione dei database MySQL per la conversione (MySQLToSQL)
 Prima di caricare oggetti ed eseguire la migrazione dei dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, è necessario determinare la complessità della migrazione e il tempo necessario per la migrazione. SSMA è in grado di creare un report di valutazione che mostra la percentuale di oggetti che verranno convertiti correttamente. SSMA consente inoltre di visualizzare i problemi specifici che provocano errori di conversione.  
@@ -31,7 +31,7 @@ Quando crea il report di valutazione, SSMA converte gli oggetti di database MySQ
   
 2.  Per omettere singoli oggetti, deselezionare le caselle di controllo accanto a tali oggetti.  
   
-3.  Fare clic con il pulsante destro del mouse su **schemi**e quindi scegliere **Crea report**.  
+3.  Fare clic con il pulsante destro del mouse su **schemi** e quindi scegliere **Crea report**.  
   
     Fare clic con il pulsante destro del mouse su un oggetto per analizzare i singoli oggetti. Selezionare quindi **Crea report**.  
   
@@ -56,7 +56,7 @@ La finestra report di valutazione contiene tre riquadri:
   
     -   Nell'area di destinazione viene visualizzato il codice convertito. Il testo rosso Mostra codice problematico e messaggi di errore.  
   
--   Il riquadro inferiore mostra i messaggi di conversione raggruppati per numero di messaggio. È possibile fare clic su **errori**, **avvisi**o **informazioni** per visualizzare le categorie di messaggi, quindi espandere un gruppo di messaggi. Fare clic su un singolo messaggio per selezionare l'oggetto nel riquadro a sinistra e visualizzare i dettagli nel riquadro di destra.  
+-   Il riquadro inferiore mostra i messaggi di conversione raggruppati per numero di messaggio. È possibile fare clic su **errori**, **avvisi** o **informazioni** per visualizzare le categorie di messaggi, quindi espandere un gruppo di messaggi. Fare clic su un singolo messaggio per selezionare l'oggetto nel riquadro a sinistra e visualizzare i dettagli nel riquadro di destra.  
   
 ## <a name="analyzing-conversion-problems-by-using-the-assessment-report"></a>Analisi dei problemi di conversione tramite il report di valutazione  
 Il riquadro statistiche di conversione Mostra le statistiche di conversione. Se la percentuale di una categoria è inferiore al 100%, è necessario determinare il motivo per cui la conversione non è riuscita.  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8d0631b35d2631e04cfad5c509d6084ba0a30aaf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e09a38ce70b4f144f6da324525a7fee925d586a9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497718"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100074472"
 ---
 # <a name="sql-modes-mysqltosql"></a>Modalità SQL (MySQLToSQL)
 SSMA per MySQL può funzionare in modalità SQL diverse e può applicare queste modalità in modo diverso per client diversi.  
@@ -24,11 +24,11 @@ Le modalità definiscono la sintassi SQL che MySQL deve supportare e il tipo di 
   
 ## <a name="sql-modes-grid"></a>Griglia modalità SQL:  
   
--   La griglia modalità SQL a livello di radice contiene le colonne seguenti: **nome della modalità SQL**, **modalità SQL caricate**e **modalità SQL valide**.  
+-   La griglia modalità SQL a livello di radice contiene le colonne seguenti: **nome della modalità SQL**, **modalità SQL caricate** e **modalità SQL valide**.  
   
--   Griglia modalità SQL alla categoria database, database, categoria tabella, categoria istruzioni, categoria viste, tabella, vista, funzioni, procedure, UDF e livello oggetto evento contiene le colonne seguenti: **nome modalità SQL**, **modalità SQL ereditate**e **modalità SQL valide**.  
+-   Griglia modalità SQL alla categoria database, database, categoria tabella, categoria istruzioni, categoria viste, tabella, vista, funzioni, procedure, UDF e livello oggetto evento contiene le colonne seguenti: **nome modalità SQL**, **modalità SQL ereditate** e **modalità SQL valide**.  
   
--   La griglia modalità SQL alla stored procedure, la funzione archiviata e il livello del trigger contengono le colonne seguenti: **nome della modalità SQL**,  **modalità SQL originali**e **modalità SQL valide**.  
+-   La griglia modalità SQL alla stored procedure, la funzione archiviata e il livello del trigger contengono le colonne seguenti: **nome della modalità SQL**,  **modalità SQL originali** e **modalità SQL valide**.  
   
 > [!NOTE]  
 > Le modalità gruppo verranno visualizzate in grassetto, sotto la colonna "nome modalità SQL".  

@@ -13,12 +13,12 @@ ms.assetid: 8b527a56-4e52-487a-9ac9-2320388e6d7d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 263d04b401146ce2975a810b084e4957f1daf718
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: df992d19ecb90ad78e060dccdfa5e2e015988477
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492403"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067729"
 ---
 # <a name="removing-ssma--for-oracle-components-oracletosql"></a>Rimozione di SSMA per i componenti Oracle (OracleToSQL)
 Al termine della migrazione dei database da Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , potrebbe essere necessario disinstallare i componenti di SSMA. È possibile disinstallare i componenti client in qualsiasi momento. Tuttavia, non è consigliabile disinstallare il pacchetto di estensione da a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] meno che i database migrati non usino più funzioni nello schema **ssma_oracle** del database **sysdb** .  
@@ -30,12 +30,12 @@ Al termine della migrazione dei database da Oracle a [!INCLUDE[ssNoVersion](../.
   
 1.  Nel Pannello di controllo aprire **Programmi e funzionalità**.  
   
-2.  Selezionare ** [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant per Oracle**e quindi fare clic su **Rimuovi**.  
+2.  Selezionare **[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant per Oracle** e quindi fare clic su **Rimuovi**.  
   
 3.  Per confermare che si vuole disinstallare SSMA, fare clic su **Sì**.  
   
 ## <a name="uninstalling-the-extension-pack"></a>Disinstallazione del pacchetto di estensione  
-Se si è certi che i database migrati non utilizzino oggetti nello schema **sysdb. ssma_oracle** , è possibile rimuovere il pacchetto di estensione utilizzando **Installazione applicazioni**.  
+Se si è certi che i database migrati non utilizzino oggetti nello schema di **sysdb.ssma_oracle** , è possibile rimuovere il pacchetto di estensione utilizzando **Installazione applicazioni**.  
   
 **Per disinstallare il pacchetto di estensione**  
   
@@ -55,7 +55,7 @@ Se si è certi che i database migrati non utilizzino oggetti nello schema **sysd
   
 7.  Nella pagina fine fare clic su **Esci**.  
   
-Dopo la disinstallazione, è possibile verificare che gli oggetti nello schema **sysdb. ssma_oracle** e possibilmente nell'intero database **sysdb** siano stati rimossi tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Tuttavia, se si usano altri prodotti SSMA, viene usato anche il database **sysdb** . Se il database esiste e si è certi che nessun altro database faccia riferimento a oggetti in questo database, è possibile scollegare il database.  
+Dopo la disinstallazione, è possibile verificare che gli oggetti nello schema **sysdb.ssma_oracle** e possibilmente l'intero database **sysdb** siano stati rimossi tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Tuttavia, se si usano altri prodotti SSMA, viene usato anche il database **sysdb** . Se il database esiste e si è certi che nessun altro database faccia riferimento a oggetti in questo database, è possibile scollegare il database.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Installazione di SSMA per il client Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  

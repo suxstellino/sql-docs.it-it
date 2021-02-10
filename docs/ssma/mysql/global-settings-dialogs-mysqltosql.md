@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6df20fbb-e92d-475f-a94d-aaf70b06eb9b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e902927b90ff868e8766b3eb1fe9839938dd8ece
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f4211de000b662794498532ba213a7a2439e8a27
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463416"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100070220"
 ---
 # <a name="global-settings-dialogs-mysqltosql"></a>Impostazioni globali (finestre di dialogo) (MySQLToSQL)
 Utilizzare la pagina finestre di dialogo della finestra di dialogo **Impostazioni globali** per specificare le impostazioni predefinite per l'azione e l'avviso dell'utente per SSMA.  

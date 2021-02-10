@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b4f4280509d2717f00090b4941c540444c184cd
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 807994f4a6e1f3c7b426c3a7c47ecdf7c152ea3b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99186809"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100070683"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -63,7 +63,7 @@ Crea un'origine dati esterna per le query PolyBase. Le origini dati esterne veng
 - Virtualizzazione dati e caricamento dati con [PolyBase][intro_pb]
 - Operazioni di caricamento bulk con `BULK INSERT` o `OPENROWSET`
 
-**Si applica a**: A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]
+**Si applica a**: A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]
 
 ## <a name="syntax"></a>Sintassi
 
@@ -91,13 +91,13 @@ Fornisce il protocollo di connettività e il percorso dell'origine dati esterna.
 
 | Origine dati esterna    | Prefisso della posizione | Percorso                                         | Posizioni supportate per prodotto/servizio |
 | ----------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
-| Cloudera o Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   | A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]                       |
-| Account di archiviazione di Azure (V2) | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]         Spazio dei nomi gerarchico **non** supportato |
-| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]              | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
-| Oracle                  | `oracle`        | `<server_name>[:port]`                                | A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
-| Teradata                | `teradata`      | `<server_name>[:port]`                                | A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
-| MongoDB o CosmosDB     | `mongodb`       | `<server_name>[:port]`                                | A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
-| ODBC                    | `odbc`          | `<server_name>[:port]`                                | A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] - Solo Windows        |
+| Cloudera o Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   | A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]                       |
+| Account di archiviazione di Azure (V2) | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]         Spazio dei nomi gerarchico **non** supportato |
+| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]              | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | A partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       |
+| Oracle                  | `oracle`        | `<server_name>[:port]`                                | A partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       |
+| Teradata                | `teradata`      | `<server_name>[:port]`                                | A partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       |
+| MongoDB o CosmosDB     | `mongodb`       | `<server_name>[:port]`                                | A partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       |
+| ODBC                    | `odbc`          | `<server_name>[:port]`                                | A partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] - Solo Windows        |
 | Operazioni bulk         | `https`         | `<storage_account>.blob.core.windows.net/<container>` | A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]                        |
 | Hub di Edge         | `edgehub`         | Non applicabile | EdgeHub è sempre locale nell'istanza di [SQL Edge di Azure](/azure/azure-sql-edge/overview/). Non è necessario, quindi, specificare un percorso o un valore di porta. Disponibile solo in SQL Edge di Azure.                      |
 | Kafka        | `kafka`         | `<Kafka IP Address>[:port]` | Disponibile solo in SQL Edge di Azure.                      |
@@ -115,7 +115,7 @@ Note aggiuntive e indicazioni utili per l'impostazione della posizione:
 
 - Il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] non verifica l'esistenza dell'origine dati esterna quando viene creato l'oggetto. Per eseguire la convalida, creare una tabella esterna usando l'origine dati esterna.
 - Per garantire una semantica di esecuzione di query coerente, usare la stessa origine dati esterna per tutte le tabelle quando si eseguono query su Hadoop.
-- È possibile usare il prefisso di posizione `sqlserver` per connettere [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] a un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] o ad Azure Synapse Analytics.
+- È possibile usare il prefisso di posizione `sqlserver` per connettere [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] a un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] o ad Azure Synapse Analytics.
 - Per la connessione tramite `ODBC` specificare `Driver={<Name of Driver>}`.
 - `wasbs` è facoltativo ma consigliato per l'accesso agli account di Archiviazione di Azure perché i dati verranno inviati tramite una connessione TLS/SSL sicura.
 - Le API `abfs` o `abfss` non sono supportate quando si accede agli account di Archiviazione di Azure.
@@ -160,7 +160,7 @@ Per creare credenziali con ambito database, vedere [CREATE DATABASE SCOPED CREDE
 Specifica il tipo dell'origine dati esterna da configurare. Questo parametro non è sempre obbligatorio.
 
 - Usare HADOOP quando l'origine dati esterna è Cloudera, Hortonworks o un account di Archiviazione di Azure.
-- Usare BLOB_STORAGE durante l'esecuzione di operazioni bulk da un account di Archiviazione di Azure usando [BULK INSERT][bulk_insert] o [OPENROWSET][openrowset] con [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
+- Usare BLOB_STORAGE durante l'esecuzione di operazioni bulk da un account di Archiviazione di Azure usando [BULK INSERT][bulk_insert] o [OPENROWSET][openrowset] con [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].
 
 > [!IMPORTANT]
 > Non impostare `TYPE` se si usa qualsiasi altra origine dati esterna.
@@ -212,7 +212,7 @@ Il token di firma di accesso condiviso di tipo `HADOOP` non è attualmente suppo
 
 `Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
 
-## <a name="examples-starting-with-sssql15"></a>Esempi (a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)])
+## <a name="examples-starting-with-sssql16-md"></a>Esempi (a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])
 
 > [!IMPORTANT]
 > Per informazioni su come installare e abilitare PolyBase, vedere [Installare PolyBase in Windows](../../relational-databases/polybase/polybase-installation.md)
@@ -314,7 +314,7 @@ WITH
   ) ;
 ```
 
-### <a name="f-create-external-data-source-to-reference-a-sql-server-named-instance-via-polybase-connectivity-sql-server-2019"></a>F. Creare un'origine dati esterna per fare riferimento a un'istanza denominata di SQL Server tramite la connettività PolyBase ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+### <a name="f-create-external-data-source-to-reference-a-sql-server-named-instance-via-polybase-connectivity-sql-server-2019"></a>F. Creare un'origine dati esterna per fare riferimento a un'istanza denominata di SQL Server tramite la connettività PolyBase ([!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)])
 
 Per creare un'origine dati esterna che faccia riferimento a un'istanza denominata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile usare CONNECTION_OPTIONS per specificare il nome dell'istanza. Nell'esempio seguente `WINSQL2019` è il nome host e `SQL2019` è il nome dell'istanza.
 
@@ -368,7 +368,7 @@ go
 
 ### <a name="i-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage"></a>I. Creare un'origine dati esterna per le operazioni bulk che recuperano i dati da Archiviazione di Azure
 
-**Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
+**Si applica a:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].
 Usare l'origine dati seguente per le operazioni bulk che usano [BULK INSERT][bulk_insert] o [OPENROWSET][openrowset]. Le credenziali devono impostare `SHARED ACCESS SIGNATURE` come identità, non devono includere il carattere `?` iniziale nel token di firma di accesso condiviso, devono avere almeno un'autorizzazione di lettura per il file da caricare (ad esempio `srt=o&sp=r`). Inoltre il periodo di scadenza deve essere valido (tutte le date sono in formato UTC). Per altre informazioni sulle firme di accesso condiviso, vedere [Uso delle firme di accesso condiviso][sas_token].
 
 ```sql

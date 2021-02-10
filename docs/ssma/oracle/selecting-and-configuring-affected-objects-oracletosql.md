@@ -14,12 +14,12 @@ ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 5cd9ca7c8789133fdbccc3367f3bda121d2499ed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b8256909a2ebc460da2dd2db826e809dd6dfb50c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418347"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067626"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Selezione e configurazione degli oggetti interessati (OracleToSQL)
 In questa pagina è possibile selezionare le tabelle e le chiavi esterne, che devono essere confrontate quando SSMA verifica i risultati dell'esecuzione per gli oggetti scelti nel passaggio precedente. Inoltre, è possibile personalizzare i parametri di verifica.  
@@ -36,7 +36,7 @@ La scheda tabella contiene la visualizzazione griglia della tabella selezionata.
   
 -   Tipo di dati  
   
--   Precisione  
+-   Precision  
   
 -   Scalabilità  
   
@@ -69,14 +69,14 @@ Determinare se questa colonna parteciperà alla verifica dei risultati del test.
   
 -   Se si sceglie **true**, SSMA consentirà di confrontare il contenuto di questa colonna dopo l'esecuzione del test in Oracle con il contenuto della colonna in SQL Server. 
   
--   Se si sceglie**false**, la colonna verrà esclusa dalla verifica dei risultati.  
+-   Se si sceglie **false**, la colonna verrà esclusa dalla verifica dei risultati.  
   
 ### <a name="use-custom-scale"></a>Usare la scalabilità personalizzata  
 Per le colonne con tipo di dati numerico, è possibile impostare una scala personalizzata per il confronto.  
   
 -   Se si sceglie **true**, i valori numerici verranno arrotondati in base al valore della **scala di confronto** prima che vengano confrontati.  
   
--   Se si sceglie**false**, il confronto numerico sarà esatto.  
+-   Se si sceglie **false**, il confronto numerico sarà esatto.  
   
 ### <a name="comparing-scale"></a>Confronto tra scala  
   

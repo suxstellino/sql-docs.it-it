@@ -14,12 +14,12 @@ ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 6f46d7714c9da54fde1105671c5be7b3ea090a48
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: cb932aeb30be643b260e3b1e0ce10fea22ffeb1a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987927"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067226"
 ---
 # <a name="user-interface-reference-accesstosql"></a>Guida di riferimento all'interfaccia utente (AccessToSQL)
 Questa sezione include gli argomenti della Guida per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per l'accesso.  
@@ -51,7 +51,7 @@ Questa sezione include gli argomenti della Guida per [!INCLUDE[ssNoVersion](../.
 |[Impostazioni progetto (SQL Azure)](./project-settings-azure-sql-db-accesstosql.md)|Utilizzare la pagina SQL Azure della finestra di dialogo **Impostazioni progetto** per specificare il suffisso del database e anche l'intervallo di timeout dell'heartbeat.|  
 |[Salva metadati &#40;AccessToSQL&#41;](../../ssma/access/save-metadata-accesstosql.md)|La finestra di dialogo **Salva metadati** viene visualizzata quando si salva un progetto privo di metadati.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Introduzione con SQL Server Migration Assistant per Access &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [Preparazione dei database di Access per la migrazione](preparing-access-databases-for-migration-accesstosql.md)  
 [Migrazione dei database di Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

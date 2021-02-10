@@ -11,12 +11,12 @@ ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 9d44b04aba4d1ea1fa437bbd3b957178b361a4db
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bc811575dd845be43aef7a9398d8b4fb3458db1b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418437"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067716"
 ---
 # <a name="running-test-cases-oracletosql"></a>Esecuzione di test case (OracleToSQL)
 Quando SSMA tester esegue un test case, esegue gli oggetti selezionati per il test e crea un report sui risultati della verifica. Se i risultati sono identici su entrambe le piattaforme, il test ha avuto esito positivo. La corrispondenza degli oggetti tra Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene determinata in base alle impostazioni di mapping dello schema per il progetto SSMA corrente.  
@@ -42,11 +42,11 @@ In questo passaggio SSMA tester crea oggetti ausiliari (tabelle, trigger e visua
   
 Si supponga che la tabella verificata sia denominata USER_TABLE. Per una tabella di questo tipo, vengono creati gli oggetti ausiliari seguenti in Oracle.  
   
-|Nome|Type|Descrizione|  
+|Nome|Tipo|Descrizione|  
 |-|-|-|  
 |USER_TABLE $ Trg|trigger|Attivare il controllo delle modifiche nella tabella verificata.|  
-|USER_TABLE $ AUD|tabella|Tabella in cui vengono salvate le righe eliminate e sovrascritte.|  
-|USER_TABLE $ AUDID|tabella|Tabella in cui vengono salvate le righe nuove e modificate.|  
+|USER_TABLE $ AUD|table|Tabella in cui vengono salvate le righe eliminate e sovrascritte.|  
+|USER_TABLE $ AUDID|table|Tabella in cui vengono salvate le righe nuove e modificate.|  
 |USER_TABLE|vista|Rappresentazione semplificata delle modifiche della tabella.|  
 |USER_TABLE $ NEW|vista|Rappresentazione semplificata delle righe inserite e sovrascritte.|  
 |USER_TABLE $ NEW_ID|vista|Identificazione delle righe inserite e modificate.|  
@@ -54,16 +54,16 @@ Si supponga che la tabella verificata sia denominata USER_TABLE. Per una tabella
   
 L'oggetto seguente viene creato nello schema della tabella verificata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Nome|Type|Descrizione|  
+|Nome|Tipo|Descrizione|  
 |-|-|-|  
 |USER_TABLE $ Trg|trigger|Attivare il controllo delle modifiche nella tabella verificata.|  
   
 E gli oggetti seguenti vengono creati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel database ssmatesterdb.  
   
-|Nome|Type|Descrizione|  
+|Nome|Tipo|Descrizione|  
 |-|-|-|  
-|USER_TABLE $ AUD|tabella|Tabella in cui vengono salvate le righe eliminate e sovrascritte.|  
-|USER_TABLE $ AudId|tabella|Tabella in cui vengono salvate le righe nuove e modificate.|  
+|USER_TABLE $ AUD|table|Tabella in cui vengono salvate le righe eliminate e sovrascritte.|  
+|USER_TABLE $ AudId|table|Tabella in cui vengono salvate le righe nuove e modificate.|  
 |USER_TABLE|vista|Rappresentazione semplificata delle modifiche della tabella.|  
 |USER_TABLE $ New|vista|Rappresentazione semplificata delle righe inserite e sovrascritte.|  
 |USER_TABLE $ new_id|vista|Identificazione delle righe inserite e modificate.|  

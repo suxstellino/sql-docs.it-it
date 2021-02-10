@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9ec1c1e8-a3e1-4e81-bf49-631f87daa209
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f03b7457d79c573806ffbda2b601f56d0f942a54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a2d119ac2c58d0bea25a6f21ba4bf97cb47a8421
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488202"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066366"
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>Impostazioni progetto (caricamento oggetti) (AccessToSQL)
 Le impostazioni del progetto caricamento oggetti consentono di configurare la modalità di sincronizzazione degli oggetti di database di Access con SQL Server oggetti di database.  
@@ -24,15 +24,15 @@ Le azioni predefinite specificano le impostazioni predefinite per l'aggiornament
   
 È possibile accedere a due diverse pagine di sincronizzazione che contengono le stesse impostazioni:  
   
--   Per specificare le impostazioni per tutti i progetti SSMA futuri, scegliere **Impostazioni DefaultProject**dal menu **strumenti** e quindi fare clic su **carica oggetti** nella parte inferiore del riquadro sinistro.  
+-   Per specificare le impostazioni per tutti i progetti SSMA futuri, scegliere **Impostazioni DefaultProject** dal menu **strumenti** e quindi fare clic su **carica oggetti** nella parte inferiore del riquadro sinistro.  
   
--   Per specificare le impostazioni per il progetto corrente, scegliere **Impostazioni progetto**dal menu **strumenti** , quindi fare clic su **carica oggetti** nella parte inferiore del riquadro sinistro.  
+-   Per specificare le impostazioni per il progetto corrente, scegliere **Impostazioni progetto** dal menu **strumenti** , quindi fare clic su **carica oggetti** nella parte inferiore del riquadro sinistro.  
   
 ## <a name="options"></a>Opzioni  
   
 ##### <a name="misc"></a>Varie  
   
-##### <a name="attempts"></a>Tenta  
+##### <a name="attempts"></a>Tentativi  
 Fornisce le informazioni sul numero di oggetti pass che devono essere caricati nel SQL Server. Il caricamento di oggetti in SQL Server viene in genere eseguito in più passaggi. Gli oggetti che non vengono caricati nel primo passaggio, ad esempio le chiavi esterne, potrebbero essere caricati correttamente nel passaggio successivo.  
   
 Per impostazione predefinita, il valore è 2.  

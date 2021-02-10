@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: fc7abeb4eec6d25e183db5ffcf1923185016b913
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b562e886bcb09eae4c02607f17eb7419b313a759
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492544"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100072035"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Impostazioni progetto (mapping dei tipi) (DB2ToSQL)
 La pagina mapping dei tipi della finestra di dialogo **Impostazioni progetto** contiene impostazioni che personalizzano il modo in cui SSMA converte i tipi di dati DB2 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati.  
@@ -24,17 +24,17 @@ La pagina mapping dei tipi è disponibile nelle finestre di dialogo **Impostazio
   
 -   Per specificare le impostazioni per tutti i progetti SSMA futuri, nel menu **strumenti** fare clic su **Impostazioni progetto predefinite**, selezionare tipo di progetto di migrazione per cui è necessario visualizzare o modificare le impostazioni dall'elenco a discesa **versione destinazione migrazione** e quindi fare clic su **mapping dei tipi** nella parte inferiore del riquadro sinistro.  
   
--   Per specificare le impostazioni per il progetto corrente, scegliere **Impostazioni progetto**dal menu **strumenti** e quindi fare clic su **mapping dei tipi** nella parte inferiore del riquadro sinistro.  
+-   Per specificare le impostazioni per il progetto corrente, scegliere **Impostazioni progetto** dal menu **strumenti** e quindi fare clic su **mapping dei tipi** nella parte inferiore del riquadro sinistro.  
   
 Per specificare le impostazioni per l'oggetto o la classe di oggetti correnti, usare la scheda **mapping dei tipi** nella finestra SSMA primaria.  
   
 ## <a name="options"></a>Opzioni  
 Nella tabella seguente vengono illustrate le opzioni della scheda **mapping dei tipi** :  
   
-**Tipo di origine**  
+**Tipo origine**  
 Tipo di dati DB2 mappato.  
   
-**Tipo di destinazione**  
+**Tipo destinazione**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Tipo di dati di destinazione per il tipo di dati DB2 specificato.  
   
 Vedere le tabelle nella sezione successiva per i mapping dei tipi SSMA predefiniti per DB2.  
@@ -76,7 +76,7 @@ La tabella seguente contiene il mapping del tipo di dati predefinito per gli arg
 |double precision|float [53]|  
 |float|float [53]|  
 |INT|INT|  
-|integer|INT|  
+|numero intero|INT|  
 |long|ntext|  
 |long raw|varbinary(max)|  
 |Long RAW [ \* .. 8000]<sup>\*</sup>|varbinary [ \* ]|  
@@ -95,10 +95,10 @@ La tabella seguente contiene il mapping del tipo di dati predefinito per gli arg
 |raw|varbinary(max)|  
 |real|float [53]|  
 |ROWID|UNIQUEIDENTIFIER|  
-|signtype|smallint|  
-|smallint|smallint|  
+|signtype|SMALLINT|  
+|SMALLINT|SMALLINT|  
 |string|ntext|  
-|timestamp|datetime2|  
+| timestamp|datetime2|  
 |timestamp con fuso orario locale|datetimeoffset|  
 |timestamp con fuso orario|datetimeoffset|  
 |UROWID|UNIQUEIDENTIFIER|  
@@ -138,7 +138,7 @@ La tabella seguente contiene il mapping dei tipi predefinito per le colonne.
 |float [ \* .. 53]|float [ \* ]|  
 |float [54.. \* ]|float [53]|  
 |INT|INT|  
-|integer|INT|  
+|numero intero|INT|  
 |long|ntext|  
 |long raw|varbinary(max)|  
 |Long RAW [ \* .. 8000]|varbinary [ \* ]|  
@@ -165,8 +165,8 @@ La tabella seguente contiene il mapping dei tipi predefinito per le colonne.
 |non elaborato [ \* .. \* ]|varbinary [ \* ]|  
 |real|float [53]|  
 |ROWID|UNIQUEIDENTIFIER|  
-|smallint|smallint|  
-|timestamp|datetime2|  
+|SMALLINT|SMALLINT|  
+| timestamp|datetime2|  
 |timestamp con fuso orario locale|datetimeoffset|  
 |timestamp con fuso orario locale [ \* .. \* ]|DateTimeOffset [ \* ]|  
 |timestamp con fuso orario|datetimeoffset|  
@@ -234,7 +234,7 @@ La tabella seguente contiene il mapping dei tipi predefinito per le variabili lo
 |nchar varying [ \* .. 4000]|nvarchar [ \* ]|  
 |variabile nchar [4001.. \* ]|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
-|Numero|float [53]|  
+|Number|float [53]|  
 |numero [ \* .. \* ]|numeric [ \* ]|  
 |numero [ \* .. \* ] [\*..\*]|numeric [ \* ] [ \* ]|  
 |Numeric|numerico [38] [0]|  
@@ -247,11 +247,11 @@ La tabella seguente contiene il mapping dei tipi predefinito per le variabili lo
 |non elaborato [8001.. \* ]|varbinary(max)|  
 |Real|float [53]|  
 |Rowid|UNIQUEIDENTIFIER|  
-|Signtype|smallint|  
-|Smallint|smallint|  
+|Signtype|SMALLINT|  
+|Smallint|SMALLINT|  
 |stringa [ \* .. 8000]|varchar [ \* ]|  
 |stringa [8001.. \* ]|ntext|  
-|timestamp|datetime2|  
+| timestamp|datetime2|  
 |timestamp con fuso orario locale|datetimeoffset|  
 |timestamp con fuso orario|datetimeoffset|  
 |timestamp con fuso orario locale [ \* .. \* ]|DateTimeOffset [ \* ]|  

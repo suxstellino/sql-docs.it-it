@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8c39bc03cb6a1da09c7be6aac41c18b9d3bbd871
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 2fc9bbd8092c98d21263d3972ab04d90888fcbae
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987527"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066408"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Impostazioni progetto (mapping dei tipi) (AccessToSQL)
 Le impostazioni del progetto di mapping dei tipi consentono di impostare i mapping dei tipi predefiniti per il progetto SSMA. È inoltre possibile specificare i mapping dei tipi per singoli oggetti di database. Per ulteriori informazioni, vedere [mapping di tipi di dati di origine e di destinazione](mapping-source-and-target-data-types-accesstosql.md).  
   
 Il mapping dei tipi è disponibile nelle finestre di dialogo **Impostazioni** progetto e **Impostazioni progetto predefinite** :  
   
--   Utilizzare la finestra di dialogo **Impostazioni progetto** per impostare le opzioni di configurazione per il progetto corrente. Per accedere alle impostazioni del mapping dei tipi, scegliere **Impostazioni progetto**dal menu **strumenti** e quindi fare clic su **mapping dei tipi** nel riquadro sinistro.  
+-   Utilizzare la finestra di dialogo **Impostazioni progetto** per impostare le opzioni di configurazione per il progetto corrente. Per accedere alle impostazioni del mapping dei tipi, scegliere **Impostazioni progetto** dal menu **strumenti** e quindi fare clic su **mapping dei tipi** nel riquadro sinistro.  
   
 -   Utilizzare la finestra di dialogo **Impostazioni progetto predefinite** per impostare le opzioni di configurazione per tutti i progetti. Per accedere alle impostazioni del mapping dei tipi, nel menu **strumenti** selezionare **Impostazioni progetto predefinite**, selezionare il tipo di progetto di migrazione per cui è necessario visualizzare le impostazioni/changed dall'elenco a discesa **versione destinazione migrazione** e quindi fare clic su **mapping dei tipi** nel riquadro sinistro.  
   

@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 399946496bbb649f84c9d539a9fe80f3f7919b31
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 33017262982effedd9fa85ea26818fdb7b2ae8ed
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372697"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068954"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>Connettersi a MySQL (MySQLToSQL)
 Usare la finestra di dialogo **Connetti a MySQL** per connettersi al database MySQL di cui si vuole eseguire la migrazione.  
   
-Per accedere a questa finestra di dialogo, scegliere **Connetti a MySQL**dal menu **file** . Se è già stata effettuata la connessione, il comando viene **riconnesso a MySQL**.  
+Per accedere a questa finestra di dialogo, scegliere **Connetti a MySQL** dal menu **file** . Se è già stata effettuata la connessione, il comando viene **riconnesso a MySQL**.  
   
 ## <a name="options"></a>Opzioni  
 **Provider**  
@@ -51,7 +51,7 @@ Immettere il nome utente e la password
   
 Se si desidera connettersi in modo sicuro a MySQL, utilizzare Secure Socket Layer (SSL) selezionando la casella di controllo **SSL** .  
   
-**Configurare un**  
+**Configurare**  
   
 Offre un'opzione per configurare la connessione a MySQL tramite Secure Socket Layer (SSL).  
   

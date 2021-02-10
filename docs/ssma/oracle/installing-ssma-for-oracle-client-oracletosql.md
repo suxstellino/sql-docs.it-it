@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d5d4903d-e296-4bbf-8780-63674c4d62d5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 939504092ef7ae9dc13bdcf829f6ea5e88ce59f9
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: 5bed1589c0852acc2d782028f6b9cc253301babe
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411270"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100073492"
 ---
 # <a name="installing-ssma-for-oracle-client-oracletosql"></a>Installazione di SSMA per il client Oracle (OracleToSQL)
 
@@ -36,7 +36,7 @@ SSMA è progettato per funzionare con Oracle 9 o versioni successive e tutte le 
 Prima di installare SSMA, verificare che il computer soddisfi i requisiti seguenti:
 
 - Windows 7 o versioni successive o Windows Server 2008 o versioni successive.
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3,1 o versione successiva.
+- [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3,1 o versione successiva.
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Versione 4.7.2 o successiva. È possibile ottenerlo dal [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882).
 - Connettività ai database Oracle di cui si desidera eseguire la migrazione.
 - Accesso a e autorizzazioni sufficienti per il computer che ospita l'istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o in [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] cui si eseguirà la migrazione di dati e oggetti di database. Per ulteriori informazioni, vedere [connessione a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md).
@@ -48,12 +48,12 @@ SSMA è un download Web. Per scaricare la versione più recente, vedere la [pagi
 
 Per installare il client di SSMA:
 
-1. Fare doppio clic su **SSMAforOracle_*n*. msi**, dove *n* è il numero di Build.
-2. Nella pagina di benvenuto fare clic su **Avanti**.
+1. Fare doppio clic su **SSMAforOracle_ *n*. msi**, dove *n* è il numero di Build.
+2. Nella pagina Benvenuti fare clic su **Avanti**.
 
    Se i prerequisiti non sono installati, verrà visualizzato un messaggio che indica che è necessario prima installare i componenti necessari. Assicurarsi di aver installato tutti i prerequisiti, quindi eseguire di nuovo il programma di installazione.  
 
-3. Leggere il contratto di licenza con l'utente finale. Se si accettano le condizioni, selezionare Accetto **il contratto**, quindi fare clic su **Avanti**.
+3. Leggere il contratto di licenza End-User. Se si accettano le condizioni, selezionare Accetto **il contratto**, quindi fare clic su **Avanti**.
 4. Nella pagina **Selezione tipo di installazione** fare clic su **tipico**.
 5. Nella pagina **pronto per l'installazione** è possibile abilitare o disabilitare la telemetria e i controlli di aggiornamento automatici ogni volta che viene avviato lo strumento. Fare clic su **Installa** per avviare l'installazione.
 
@@ -64,7 +64,7 @@ Il percorso di installazione predefinito è `C:\Program Files\Microsoft SQL Serv
 
 Oltre ai file di programma SSMA, è necessario installare anche SSMA per Oracle Extension Pack in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ulteriori informazioni, vedere [installazione dei componenti di SSMA su SQL Server](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Installazione di componenti SSMA in SQL Server](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)
 - [Migrazione di database Oracle a SQL Server](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)

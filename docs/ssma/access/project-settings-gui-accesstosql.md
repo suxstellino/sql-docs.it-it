@@ -10,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: e0f611ac-7b67-4245-8d1c-804c1c44c935
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 06cbbe7bbfd71483f2ac778b717758b91a4d8e2d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 42ea93836e695ca6d4c8cebfd86a5b71f5969dc8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488217"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066436"
 ---
 # <a name="project-settings-gui-accesstosql"></a>Impostazioni progetto (GUI) (AccessToSQL)
 Le impostazioni del progetto GUI consentono di configurare il modo in cui i dati vengono visualizzati nella scheda **dati** e se includere i report dei dati con i report di valutazione.  
   
 Il riquadro GUI è disponibile nelle finestre di dialogo **Impostazioni progetto** e **Impostazioni progetto predefinite** .  
   
--   Utilizzare la finestra di dialogo **Impostazioni progetto** per impostare le opzioni dell'interfaccia utente per il progetto corrente. Per accedere alle impostazioni dell'interfaccia utente grafica, scegliere **Impostazioni progetto**dal menu **strumenti** e quindi fare clic su **GUI** nella parte inferiore del riquadro sinistro.  
+-   Utilizzare la finestra di dialogo **Impostazioni progetto** per impostare le opzioni dell'interfaccia utente per il progetto corrente. Per accedere alle impostazioni dell'interfaccia utente grafica, scegliere **Impostazioni progetto** dal menu **strumenti** e quindi fare clic su **GUI** nella parte inferiore del riquadro sinistro.  
   
--   Utilizzare la finestra di dialogo **Impostazioni progetto predefinite** per impostare le opzioni dell'interfaccia utente per tutti i progetti. Per accedere alle impostazioni della GUI, scegliere **Impostazioni progetto predefinite**dal menu **strumenti** e quindi fare clic su **GUI** nella parte inferiore del riquadro sinistro.  
+-   Utilizzare la finestra di dialogo **Impostazioni progetto predefinite** per impostare le opzioni dell'interfaccia utente per tutti i progetti. Per accedere alle impostazioni della GUI, scegliere **Impostazioni progetto predefinite** dal menu **strumenti** e quindi fare clic su **GUI** nella parte inferiore del riquadro sinistro.  
   
 ## <a name="options"></a>Opzioni  
 **Numero massimo di righe per l'origine**  

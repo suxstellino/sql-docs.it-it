@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9a545233-1b0a-488a-a1ec-c33aa608dcc1
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cb0f25ce5063a22fb89d0afa8619b90d34a96f16
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79f359fa2a45db75fd48a6f9bbcbb774044c942a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426963"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100072255"
 ---
 # <a name="project-settingsloading-system-objects-db2tosql"></a>Impostazioni progetto (caricamento oggetti di sistema) (DB2ToSQL)
 La pagina caricamento oggetti di sistema della finestra di dialogo **Impostazioni progetto** consente di specificare quali oggetti di sistema DB2 SSMA vengono convertiti e caricati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -24,7 +24,7 @@ Il riquadro caricamento oggetti di sistema è disponibile nelle finestre di dial
   
 -   Per specificare le impostazioni per tutti i progetti SSMA, nel menu **strumenti** selezionare **Impostazioni progetto predefinite**, selezionare il tipo di progetto di migrazione per il quale le impostazioni devono essere visualizzate o modificate dall'elenco a discesa **versione destinazione migrazione** fare clic su **generale** nella parte inferiore del riquadro sinistro, quindi fare clic su **carica oggetti di sistema**.  
   
--   Per specificare le impostazioni per il progetto corrente, scegliere **Impostazioni progetto**dal menu **strumenti** , fare clic su **generale** nella parte inferiore del riquadro sinistro, quindi fare clic su **carica oggetti di sistema**.  
+-   Per specificare le impostazioni per il progetto corrente, scegliere **Impostazioni progetto** dal menu **strumenti** , fare clic su **generale** nella parte inferiore del riquadro sinistro, quindi fare clic su **carica oggetti di sistema**.  
   
 ## <a name="default-settings"></a>Impostazioni predefinite  
 La conversione di oggetti di sistema utilizza risorse di sistema e richiede tempo. Per migliorare le prestazioni, SSMA seleziona solo gli oggetti di sistema usati più di frequente, come illustrato nell'elenco seguente:  

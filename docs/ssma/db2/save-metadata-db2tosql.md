@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9a76083e-4902-449e-b125-7e9259fc37f7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0a8972f267c21fdd43b01a7316ddd199400733de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0362be657cfa46cacf81bb989caeefeb3948cd11
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463463"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100071885"
 ---
 # <a name="save-metadata-db2tosql"></a>Salva metadati (DB2ToSQL)
 La finestra di dialogo **Salva metadati** richiede di caricare i metadati nel progetto SSMA prima di salvarli. In questo modo è possibile disporre di un file di progetto completo che può essere utilizzato offline e inviato ad altri utenti, ad esempio il personale del supporto tecnico.  

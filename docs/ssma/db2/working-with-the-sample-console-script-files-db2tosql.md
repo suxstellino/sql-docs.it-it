@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5c3080c3-d074-4f99-a5f5-219ebeddc474
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d609900151e7ced05be4cc92e65c06270b6ef8a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e9c19e60d2b4b30724dc750f3a99a604334a2155
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426923"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069236"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>Uso dei file script della console di esempio (DB2ToSQL)
 Sono stati forniti alcuni file di esempio insieme al prodotto per il riferimento utente e l'utilizzo. In questa sezione viene descritto come personalizzare facilmente questi script in base alle esigenze dell'utente finale.  

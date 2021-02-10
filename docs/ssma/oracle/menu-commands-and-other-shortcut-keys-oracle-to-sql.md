@@ -11,12 +11,12 @@ ms.assetid: fc00e683-189e-4765-b280-84927d635126
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 76f088100ecdf0172cfb7403bffa4a1546113b6b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 9767d7c198bf9a256fcb6d206617d1a641c1334d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933272"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068726"
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>Comandi di menu e altri tasti di scelta rapida (OracleToSQL)
 Nelle sezioni seguenti vengono descritti i tasti di scelta rapida per accedere ai comandi di menu e ad altri tasti di scelta rapida utilizzati in diverse finestre di dialogo di SSMA per l'applicazione Oracle.  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d6bda2cad0761dbb53fcc4bb66d29829841f249d
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: e2eaa9daf9128b43ac061cad66e7e993882e43d7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87824039"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100070136"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>Installazione di SSMA per il client MySQL (MySQLToSQL)
 
@@ -38,7 +38,7 @@ SSMA per MySQL è progettato per funzionare con MySQL 4,1 o versioni successive 
 Prima di installare SSMA, verificare che il computer soddisfi i requisiti seguenti:
 
 - Windows 7 o versioni successive o Windows Server 2008 o versioni successive.
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3,1 o versione successiva.
+- [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3,1 o versione successiva.
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Versione 4.7.2 o successiva. È possibile ottenerlo dal [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882).
 - Driver MySQL ODBC 5,1 e connettività ai database MySQL di cui si vuole eseguire la migrazione. È possibile installare MySQL dal sito web MySQL. Per informazioni sulla connettività, vedere la pagina relativa [alla connessione a MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md).
 - Accesso a e autorizzazioni sufficienti per il computer che ospita l'istanza di destinazione di in cui verrà eseguita la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] migrazione di dati e oggetti di database. Per ulteriori informazioni, vedere [connessione a SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md).
@@ -51,12 +51,12 @@ SSMA è un download Web. Per scaricare la versione più recente, vedere la [pagi
 
 Per installare il client di SSMA:
 
-1. Fare doppio clic su **SSMAforMySQL_*n*. msi**, dove *n* è il numero di Build.
-2. Nella pagina di **benvenuto** fare clic su **Avanti**.
+1. Fare doppio clic su **SSMAforMySQL_ *n*. msi**, dove *n* è il numero di Build.
+2. Nella pagina **Benvenuti** fare clic su **Avanti**.
 
    Se i prerequisiti non sono installati, verrà visualizzato un messaggio che indica che è necessario prima installare i componenti necessari. Assicurarsi di aver installato tutti i prerequisiti prima di eseguire di nuovo il programma di installazione.
 
-3. Leggere il contratto di licenza con l'utente finale. Se si accettano le condizioni, selezionare Accetto **il contratto**, quindi fare clic su **Avanti**.
+3. Leggere il contratto di licenza End-User. Se si accettano le condizioni, selezionare Accetto **il contratto**, quindi fare clic su **Avanti**.
 4. Nella pagina **Selezione tipo di installazione** fare clic su **tipico**.
 5. Nella pagina **pronto per l'installazione** è possibile abilitare o disabilitare la telemetria e i controlli di aggiornamento automatici ogni volta che viene avviato lo strumento. Fare clic su **Installa** per avviare l'installazione.
 
@@ -65,6 +65,6 @@ Per installare il client di SSMA:
 
 Il percorso di installazione predefinito è `C:\Program Files\Microsoft SQL Server Migration Assistant for MySQL`.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Migrazione di database MySQL a SQL Server-database SQL di Azure](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  

@@ -11,12 +11,12 @@ ms.assetid: 12dbcd77-2b90-4fa1-9cf9-239231ea5773
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: fbc74e9129c642ea1b6655deb4e01ee04d92d0ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c6b19ddbe9ab7e1bf1e8f88f5c0c4262fa326c56
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480513"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068012"
 ---
 # <a name="global-settings-logging-oracletosql"></a>Impostazioni globali (registrazione) (OracleToSQL)
 Utilizzare la finestra di dialogo **Impostazioni globali** per specificare le impostazioni di registrazione per SSMA. Queste impostazioni vengono in genere modificate solo quando si utilizza il supporto tecnico.  
@@ -42,13 +42,13 @@ Le opzioni seguenti sono disponibili nel **livello messaggi**:
 |**TreeConverter**|Converte gli oggetti nei metadati di origine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadati.|  
 |**Tester**|Messaggi visualizzati quando si usa SSMA tester.|  
   
-Per ogni opzione in **livello messaggi**configurare uno dei seguenti livelli di registrazione per SSMA:  
+Per ogni opzione in **livello messaggi** configurare uno dei seguenti livelli di registrazione per SSMA:  
   
 |||  
 |-|-|  
 |**Errore irreversibile**|Consente di scrivere nel log solo messaggi di errore irreversibili.|  
 |**Error (Errore) (Error (Errore)e)**|Scrivi messaggi di errore irreversibili e di errore nel log.|  
-|**Warning**|Scrivere messaggi di errore, di avviso e di errore irreversibile nel log.|  
+|**Avviso**|Scrivere messaggi di errore, di avviso e di errore irreversibile nel log.|  
 |**Info**|Scrivere i messaggi di errore informativi, di avviso, di errore e di errore irreversibile nel log.|  
 |**Eseguire il debug**|Scrivere nel log tutti i messaggi, inclusi i messaggi di debug.|  
   

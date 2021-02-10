@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0579a5c477b9933b9937c1f003d3c7bbc056eae6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 32cf19b192fe67802ae44eaf9ce6e4ca891d02ae
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497790"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100072365"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Mapping dei tipi di dati DB2 e SQL Server (DB2ToSQL)
 I tipi di database DB2 sono diversi da quelli dei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di database. Quando si convertono oggetti di database DB2 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti, è necessario specificare come eseguire il mapping dei tipi di dati da DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È possibile accettare i mapping dei tipi di dati predefiniti oppure personalizzare i mapping, come illustrato nelle sezioni seguenti.  
@@ -35,7 +35,7 @@ Nella procedura seguente viene illustrato come eseguire il mapping dei tipi di d
   
 1.  Per personalizzare il mapping dei tipi di dati per l'intero progetto, aprire la finestra di dialogo **Impostazioni progetto** :  
   
-    1.  Scegliere **Impostazioni progetto**dal menu **strumenti** .  
+    1.  Scegliere **Impostazioni progetto** dal menu **strumenti** .  
   
     2.  Nel riquadro sinistro selezionare mapping dei **tipi**.  
   
@@ -49,15 +49,15 @@ Nella procedura seguente viene illustrato come eseguire il mapping dei tipi di d
   
 2.  Per aggiungere un nuovo mapping, eseguire le operazioni seguenti:  
   
-    1.  Scegliere **Aggiungi**.  
+    1.  Fare clic su **Aggiungi**.  
   
-    2.  In **tipo di origine**selezionare il tipo di dati DB2 da mappare.  
+    2.  In **tipo di origine** selezionare il tipo di dati DB2 da mappare.  
   
     3.  Se il tipo richiede una lunghezza, specificare la lunghezza minima dei dati per il mapping nella casella **da** e la lunghezza massima dei dati nella casella **a** .  
   
         In questo modo è possibile personalizzare il mapping dei dati per valori più piccoli e più grandi dello stesso tipo di dati.  
   
-    4.  In **tipo di destinazione**selezionare il tipo di dati di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+    4.  In **tipo di destinazione** selezionare il tipo di dati di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
         Alcuni tipi richiedono una lunghezza del tipo di dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nella casella **Sostituisci con** .  
   
@@ -67,13 +67,13 @@ Nella procedura seguente viene illustrato come eseguire il mapping dei tipi di d
   
     1.  Fare clic su **Modifica**.  
   
-    2.  In **tipo di origine**selezionare il tipo di dati DB2 da mappare.  
+    2.  In **tipo di origine** selezionare il tipo di dati DB2 da mappare.  
   
     3.  Se il tipo richiede una lunghezza, specificare la lunghezza minima dei dati per il mapping nella casella **da** e la lunghezza massima dei dati nella casella **a** .  
   
         In questo modo è possibile personalizzare il mapping dei dati per valori più piccoli e più grandi dello stesso tipo di dati.  
   
-    4.  In **tipo di destinazione**selezionare il tipo di dati di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+    4.  In **tipo di destinazione** selezionare il tipo di dati di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
         Alcuni tipi richiedono una lunghezza del tipo di dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nella casella **Sostituisci con** , quindi [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -81,7 +81,7 @@ Nella procedura seguente viene illustrato come eseguire il mapping dei tipi di d
   
     1.  Selezionare la riga nell'elenco mapping dei tipi che contiene il mapping del tipo di dati che si desidera rimuovere.  
   
-    2.  Scegliere **Rimuovi**.  
+    2.  Fare clic su **Rimuovi**.  
   
         Non è possibile rimuovere i mapping ereditati. Tuttavia, i mapping ereditati vengono sottoposti a override da mapping personalizzati in un oggetto o una categoria di oggetti specifici.  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a38808c64209edb094c986e63305707a0a834edb
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 48c111ab342d7410031851a5635fa73fe143b96b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823670"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100070196"
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>Installazione dei componenti di SSMA in SQL Server (MySQLToSql)
 
@@ -33,7 +33,7 @@ Inoltre, quando si esegue la migrazione dei dati a [!INCLUDE[ssNoVersion](../../
 
 Prima di installare i componenti di SSMA per MySQL server in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , verificare che il computer soddisfi i requisiti seguenti:
 
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3,1 o versione successiva.
+- [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3,1 o versione successiva.
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Versione 4.7.2 o successiva. È possibile ottenerlo dal [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882).
 - Il provider client MySQL e la connettività al database MySQL di cui si vuole eseguire la migrazione. È possibile installare i provider dal supporto del prodotto MySQL o dal sito web MySQL.
 - Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizio browser deve essere in esecuzione durante l'installazione. Viene utilizzato per popolare un elenco delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nell'installazione guidata di. È possibile disabilitare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizio browser dopo l'installazione.  
@@ -50,8 +50,8 @@ Prima di installare i componenti di SSMA per MySQL server in [!INCLUDE[ssNoVersi
 
 Per installare il pacchetto di estensione:
 
-1. Copiare SSMA per **SSMAforMySQLExtensionPack_*n*. msi**, dove *n* è il numero di build, nel computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
-2. Fare doppio clic su **SSMAforMySQLExtensionPack_*n*. msi**.
+1. Copiare SSMA per **SSMAforMySQLExtensionPack_ *n*. msi**, dove *n* è il numero di build, nel computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+2. Fare doppio clic su **SSMAforMySQLExtensionPack_ *n*. msi**.
 3. Nella finestra di dialogo di **benvenuto** fare clic su **Avanti**.
 4. Nella finestra di dialogo contratto di licenza con l' **utente finale** leggere il contratto di licenza. Se si accetta, selezionare l'opzione Accetto **il contratto** , quindi fare clic su **Avanti**.
 5. Nella finestra di dialogo **Scegli tipo di installazione** fare clic su **tipico**.
@@ -74,9 +74,9 @@ Per installare il pacchetto di estensione:
 
     Il database **sysdb** viene creato con le tabelle e le stored procedure necessarie per la migrazione dei dati (tramite il motore di migrazione dei dati sul lato server) in questo database.
 
-12. Per installare le utilità in un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , selezionare **Sì**e quindi fare clic su **Avanti**. In alternativa, fare clic su **No**per uscire dalla procedura guidata.
+12. Per installare le utilità in un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , selezionare **Sì** e quindi fare clic su **Avanti**. In alternativa, fare clic su **No** per uscire dalla procedura guidata.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Installazione di SSMA per il client MySQL](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)
 - [Migrazione di database MySQL a SQL Server-database SQL di Azure](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e183c885cc08f699926dc88838d8650be55b400b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 9847b7a709fe64f3fcb7fca92ce1f8a4003843e5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987877"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100070256"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Introduzione a SSMA per MySQL (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) per MySQL consente di convertire rapidamente gli schemi di database MySQL in SQL Server o negli schemi del database SQL di Azure, caricare gli schemi risultanti in SQL Server o nel database SQL di Azure ed eseguire la migrazione dei dati da MySQL a SQL Server o al database SQL di Azure.  
@@ -29,7 +29,7 @@ In questo argomento viene illustrato il processo di installazione e quindi viene
 ## <a name="installing-ssma"></a>Installazione di SSMA  
 Per usare SSMA, è prima necessario installare il programma client di SSMA in un computer in grado di accedere sia al database MySQL di origine sia all'istanza di destinazione di SQL Server o al database SQL di Azure. Installare quindi i provider MySQL (MySQL ODBC 5,1 driver (Trusted)) nel computer che esegue il programma client SSMA. Per le istruzioni di installazione, vedere [installazione di SSMA per MySQL &#40;MySqlToSql&#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)  
   
-Per avviare SSMA, fare clic sul pulsante **Start**, scegliere **tutti i programmi**, **SQL Server Migration Assistant per MySQL**e quindi fare clic su **SQL Server Migration Assistant per MySQL**.  
+Per avviare SSMA, fare clic sul pulsante **Start**, scegliere **tutti i programmi**, **SQL Server Migration Assistant per MySQL** e quindi fare clic su **SQL Server Migration Assistant per MySQL**.  
   
 ## <a name="ssma-for-mysql-user-interface"></a>SSMA per l'interfaccia utente di MySQL  
 Dopo aver installato e concesso in licenza SSMA, è possibile usare SSMA per eseguire la migrazione di database MySQL a SQL Server o al database SQL di Azure. Consente di acquisire familiarità con l'interfaccia utente di SSMA prima di iniziare. Il diagramma seguente illustra l'interfaccia utente per SSMA, tra cui Esplora metadati, metadati, barre degli strumenti, riquadro di output e riquadro elenco errori:  
@@ -76,7 +76,7 @@ SQL Server o Esplora metadati del database SQL di Azure Mostra informazioni su u
 Per altre informazioni, vedere [sincronizzazione (MySQL per SQL Server/database SQL di Azure)](./loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   
 ### <a name="metadata"></a>Metadati  
-A destra di ogni Esplora metadati sono presenti schede che descrivono l'oggetto selezionato. Ad esempio, se si seleziona una tabella in MySQL Metadata Explorer, verranno visualizzate nove schede: **Table**, **SQL**, **Type mapping**, **Data**, **Settings**, **CharSet mapping**, **SQL modes**, **Properties**e **report**. La scheda **report** contiene informazioni solo dopo la creazione di un report che contiene l'oggetto selezionato. Se si seleziona una tabella in SQL Server Esplora metadati, verranno visualizzate tre schede: **tabella**, **SQL** e **dati**.  
+A destra di ogni Esplora metadati sono presenti schede che descrivono l'oggetto selezionato. Ad esempio, se si seleziona una tabella in MySQL Metadata Explorer, verranno visualizzate nove schede: **Table**, **SQL**, **Type mapping**, **Data**, **Settings**, **CharSet mapping**, **SQL modes**, **Properties** e **report**. La scheda **report** contiene informazioni solo dopo la creazione di un report che contiene l'oggetto selezionato. Se si seleziona una tabella in SQL Server Esplora metadati, verranno visualizzate tre schede: **tabella**, **SQL** e **dati**.  
   
 La maggior parte delle impostazioni dei metadati è di sola lettura. Tuttavia, è possibile modificare i metadati seguenti:  
   
@@ -111,9 +111,9 @@ La tabella seguente illustra i menu SSMA.
 |**Menu**|**Descrizione**|  
 |**File**|Contiene i comandi per l'uso di progetti, la connessione a MySQL e la connessione a SQL Server o al database SQL di Azure.|  
 |**Modifica**|Contiene i comandi per trovare e utilizzare il testo nelle pagine dei dettagli. Per aprire la finestra di dialogo **Gestisci segnalibri** , nel menu Modifica fare clic su Gestisci segnalibri. Nella finestra di dialogo viene visualizzato un elenco di segnalibri esistenti. È possibile utilizzare i pulsanti sul lato destro della finestra di dialogo per gestire i segnalibri.|  
-|**Visualizza**|Contiene il comando **Sincronizza Esplora metadati** . Che sincronizza gli oggetti tra Esplora metadati MySQL e SQL Server o Esplora metadati del database SQL di Azure. Contiene anche i comandi per visualizzare e nascondere i riquadri di **output** e **Elenco errori** e i **layout** delle opzioni da gestire con i layout.|  
+|**Visualizzazione**|Contiene il comando **Sincronizza Esplora metadati** . Che sincronizza gli oggetti tra Esplora metadati MySQL e SQL Server o Esplora metadati del database SQL di Azure. Contiene anche i comandi per visualizzare e nascondere i riquadri di **output** e **Elenco errori** e i **layout** delle opzioni da gestire con i layout.|  
 |**Strumenti**|Contiene i comandi per la creazione di report, la conversione dello schema, l'aggiornamento dal database, la migrazione di oggetti e dati e il salvataggio come script. Consente inoltre di accedere alle impostazioni **globali,** alle impostazioni predefinite del progetto e alle finestre di dialogo **delle impostazioni del progetto** .|  
-|**Guida**|Consente di accedere alla guida di SSMA e alla finestra **di dialogo informazioni su** .|  
+|**?**|Consente di accedere alla guida di SSMA e alla finestra **di dialogo informazioni su** .|  
   
 ### <a name="output-pane-and-error-list-pane"></a>Riquadro di output e riquadro Elenco errori  
 Il menu **Visualizza** include i comandi per abilitare o disabilitare la visibilità del riquadro di output e del riquadro elenco errori:  

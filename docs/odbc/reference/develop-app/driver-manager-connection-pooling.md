@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4c3c2fecc26cf2d8bbf5d53598a7b28ce7db5612
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 8876696412360275fcf443a5543634c9ac537df6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195573"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100070336"
 ---
 # <a name="driver-manager-connection-pooling"></a>Pool di connessioni di Gestione driver
 Il pool di connessioni consente a un'applicazione di usare una connessione da un pool di connessioni che non devono essere ristabilite per ogni uso. Dopo che una connessione è stata creata e inserita in un pool, un'applicazione può riutilizzare tale connessione senza eseguire il processo completo di connessione.  
@@ -38,13 +38,13 @@ Il pool di connessioni consente a un'applicazione di usare una connessione da un
   
  Il pool di connessioni viene gestito da Gestione driver. Le connessioni vengono tracciate dal pool quando l'applicazione chiama **SQLConnect** o **SQLDriverConnect** e vengono restituite al pool quando l'applicazione chiama **Disconnect**. Le dimensioni del pool aumentano in modo dinamico, in base alle allocazioni di risorse richieste. Si riduce in base al timeout di inattività: se una connessione è inattiva per un periodo di tempo (non è stata usata in una connessione), viene rimossa dal pool. Le dimensioni del pool sono limitate solo dai vincoli di memoria e dai limiti del server.  
   
- Gestione driver determina se una connessione specifica in un pool deve essere utilizzata in base agli argomenti passati in **SQLConnect** o **SQLDriverConnect**e in base agli attributi di connessione impostati dopo l'allocazione della connessione.  
+ Gestione driver determina se una connessione specifica in un pool deve essere utilizzata in base agli argomenti passati in **SQLConnect** o **SQLDriverConnect** e in base agli attributi di connessione impostati dopo l'allocazione della connessione.  
   
  Quando Gestione driver esegue il pool di connessioni, deve essere in grado di determinare se una connessione funziona ancora prima di distribuire la connessione. In caso contrario, gestione driver continua a distribuire la connessione inattiva all'applicazione ogni volta che si verifica un errore di rete temporaneo. Un nuovo attributo di connessione è stato definito in ODBC 3 *. x*: SQL_ATTR_CONNECTION_DEAD. Si tratta di un attributo di connessione di sola lettura che restituisce SQL_CD_TRUE o SQL_CD_FALSE. Il valore SQL_CD_TRUE indica che la connessione è stata persa, mentre il valore SQL_CD_FALSE indica che la connessione è ancora attiva. (I driver conformi alle versioni precedenti di ODBC possono supportare anche questo attributo).  
   
  Un driver deve implementare questa opzione in modo efficiente oppure può compromettere le prestazioni del pool di connessioni. In particolare, una chiamata per ottenere questo attributo di connessione non deve causare un round trip al server. Un driver deve invece restituire solo l'ultimo stato noto della connessione. La connessione è inattiva se l'ultimo viaggio al server ha avuto esito negativo e non è morto se l'ultimo viaggio ha avuto esito positivo.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se una connessione è stata persa (segnalata tramite SQL_ATTR_CONNECTION_DEAD), gestione driver ODBC eliminerà tale connessione chiamando Disconnect nel driver. Le nuove richieste di connessione potrebbero non trovare una connessione utilizzabile nel pool. Infine, gestione driver potrebbe creare una nuova connessione, supponendo che il pool sia vuoto.  
   
  Per usare un pool di connessioni, un'applicazione esegue i passaggi seguenti:  

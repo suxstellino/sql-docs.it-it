@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: d73abd3a-80df-4293-b973-1723069db049
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: de3254b236dc03d7474aefe465aae91bef518f09
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 908aee9ddde0bb5ee2d2850ce5f164310953c0b8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372827"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069001"
 ---
 # <a name="connect-to-sql-server-mysqltosql"></a>Connettersi a SQL Server (MySQLToSQL)
-Utilizzare la finestra di dialogo **Connetti a SQL Server** per connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui si desidera eseguire la migrazione. Per accedere alla finestra di dialogo **Connetti a SQL Server** , scegliere **Connetti a SQL Server**dal menu **file** .  
+Utilizzare la finestra di dialogo **Connetti a SQL Server** per connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui si desidera eseguire la migrazione. Per accedere alla finestra di dialogo **Connetti a SQL Server** , scegliere **Connetti a SQL Server** dal menu **file** .  
   
 ## <a name="options"></a>Opzioni  
 **Nome server**  
@@ -45,7 +45,7 @@ Se si utilizza l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aute
 **Password**  
 Se si utilizza l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione di, immettere la password per l'account di accesso in tale istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se si utilizza l'autenticazione di Windows, questa opzione non è disponibile.  
   
-**Crittografa connessione**  
+**Encrypt Connection**  
 Se si desidera connettersi in modo sicuro a SQL Server, utilizzare la casella di controllo Crittografa connessione selezionando la casella di controllo **Crittografa connessione** .  
   
 **TrustServerCertificate**  

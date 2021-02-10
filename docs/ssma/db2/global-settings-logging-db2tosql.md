@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 632d71f69f164ea221f9d11604e6fb07528fd583
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c16a93a8354d6dbae410112bfcd494dafcbf293
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454205"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069483"
 ---
 # <a name="global-settings-logging-db2tosql"></a>Impostazioni globali (registrazione) (DB2ToSQL)
 Utilizzare la finestra di dialogo **Impostazioni globali** per specificare le impostazioni di registrazione per SSMA. Queste impostazioni vengono in genere modificate solo quando si utilizza il supporto tecnico.  
@@ -41,13 +41,13 @@ Le opzioni seguenti sono disponibili nel **livello messaggi**:
 |**TreeConverter**|Converte gli oggetti nei metadati di origine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadati.|  
 |**Tester**|Messaggi visualizzati quando si usa SSMA tester.|  
   
-Per ogni opzione in **livello messaggi**configurare uno dei seguenti livelli di registrazione per SSMA:  
+Per ogni opzione in **livello messaggi** configurare uno dei seguenti livelli di registrazione per SSMA:  
   
 |||  
 |-|-|  
 |**Errore irreversibile**|Consente di scrivere nel log solo messaggi di errore irreversibili.|  
 |**Error (Errore) (Error (Errore)e)**|Scrivi messaggi di errore irreversibili e di errore nel log.|  
-|**Warning**|Scrivere messaggi di errore, di avviso e di errore irreversibile nel log.|  
+|**Avviso**|Scrivere messaggi di errore, di avviso e di errore irreversibile nel log.|  
 |**Info**|Scrivere i messaggi di errore informativi, di avviso, di errore e di errore irreversibile nel log.|  
 |**Eseguire il debug**|Scrivere nel log tutti i messaggi, inclusi i messaggi di debug.|  
   

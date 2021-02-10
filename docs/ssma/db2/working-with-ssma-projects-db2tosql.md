@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f56387f8081ce14c68d355327c2829bf6e33c8cc
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+ms.openlocfilehash: 67c772195ea4b2a2ab29c08219f77d04a5d6833c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869479"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069316"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>Utilizzo dei progetti SSMA (DB2ToSQL)
 Per eseguire la migrazione dei database DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , creare innanzitutto un progetto SSMA. Il progetto è un file che contiene le informazioni seguenti:  
@@ -96,7 +96,7 @@ Quando si salva un progetto, SSMA mantiene le impostazioni del progetto e, facol
   
         Il salvataggio dei metadati potrebbe richiedere diversi minuti. Se non si desidera salvare ancora i metadati, non selezionare alcuna casella di controllo.  
   
-    2.  Fare clic sul pulsante **Salva** .  
+    2.  Fare clic sul pulsante **Salva**.  
   
         SSMA analizzerà gli schemi DB2 e salverà i metadati nel file di progetto.  
   

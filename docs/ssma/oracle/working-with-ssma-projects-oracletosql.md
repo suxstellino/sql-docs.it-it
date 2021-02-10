@@ -13,12 +13,12 @@ ms.assetid: ee5d94c0-c7a6-4779-bd32-729bdaf61e1b
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 1e8b211dc0a73ac6fd84515ce0153faa5ed7ae73
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 32a35ace86beea46d79f8eff1ea9a3ba094903fb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038875"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100073435"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>Uso dei progetti SSMA (OracleToSQL)
 Per eseguire la migrazione di database Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , creare innanzitutto un progetto SSMA. Il progetto è un file che contiene le informazioni seguenti:  
@@ -38,7 +38,7 @@ SSMA contiene diverse impostazioni per la conversione e il caricamento di oggett
   
 **Per esaminare le impostazioni predefinite del progetto**  
   
-1.  Scegliere **Impostazioni progetto predefinite**dal menu **strumenti** .  
+1.  Scegliere **Impostazioni progetto predefinite** dal menu **strumenti** .  
   
 2.  Selezionare il tipo di progetto nell'elenco a discesa della **versione di destinazione della migrazione** per cui sono necessarie le impostazioni da visualizzare o modificare e quindi fare clic sulla scheda **generale** .  
   
@@ -81,7 +81,7 @@ Per eseguire la migrazione dei dati da database Oracle a [!INCLUDE[ssNoVersion](
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
-    -   database SQL di Azure  
+    -   Database SQL di Azure  
   
 ## <a name="customizing-project-settings"></a>Personalizzazione delle impostazioni di progetto  
 Oltre a definire le impostazioni di progetto predefinite che si applicano a tutti i nuovi progetti SSMA, è possibile personalizzare le impostazioni per ogni progetto. Per ulteriori informazioni, vedere [impostazione delle opzioni del progetto &#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md).  
@@ -93,7 +93,7 @@ Quando si salva un progetto, SSMA mantiene le impostazioni del progetto e, facol
   
 **Per salvare un progetto**  
   
--   Scegliere **Salva progetto**dal menu **file** .  
+-   Scegliere **Salva progetto** dal menu **file** .  
   
     Se gli schemi del progetto sono stati modificati o non sono stati convertiti, SSMA richiede di caricare e salvare i metadati. Il caricamento e il salvataggio dei metadati consentiranno di lavorare offline. Consente inoltre di inviare un file di progetto completo ad altre persone, ad esempio il personale del supporto tecnico. Se viene richiesto di salvare i metadati, procedere come segue:  
   
@@ -101,7 +101,7 @@ Quando si salva un progetto, SSMA mantiene le impostazioni del progetto e, facol
   
         Il salvataggio dei metadati potrebbe richiedere diversi minuti. Se non si desidera salvare ancora i metadati, non selezionare alcuna casella di controllo.  
   
-    2.  Fare clic sul pulsante **Salva** .  
+    2.  Fare clic sul pulsante **Salva**.  
   
         SSMA analizzerà gli schemi Oracle e salverà i metadati nel file di progetto.  
   
@@ -112,13 +112,13 @@ Quando si apre un progetto, questo viene disconnesso da Oracle e da [!INCLUDE[ss
   
 1.  Usare una delle procedure seguenti:  
   
-    -   Scegliere **progetti recenti**dal menu **file** , quindi fare clic sul progetto che si desidera aprire.  
+    -   Scegliere **progetti recenti** dal menu **file** , quindi fare clic sul progetto che si desidera aprire.  
   
     -   Nel menu **file** selezionare **Apri progetto**, individuare il file di progetto. o2ssproj, selezionare il file e quindi fare clic su **Apri**.  
   
-2.  Per riconnettersi a Oracle, scegliere **Riconnetti a Oracle**dal menu **file** .  
+2.  Per riconnettersi a Oracle, scegliere **Riconnetti a Oracle** dal menu **file** .  
   
-3.  Per riconnettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , scegliere **Riconnetti a SQL Server**dal menu **file** .  
+3.  Per riconnettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , scegliere **Riconnetti a SQL Server** dal menu **file** .  
   
 ## <a name="next-step"></a>passaggio successivo  
 Il passaggio successivo del processo di migrazione consiste nel [connettersi a Oracle database (OracleToSQL)](./connecting-to-oracle-database-oracletosql.md).  

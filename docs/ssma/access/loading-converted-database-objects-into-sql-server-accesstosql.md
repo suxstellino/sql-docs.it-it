@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 4e854eee-b10c-4f0b-9d9e-d92416e6f2ba
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 41a1613a879579e809c8fd6a85d5c9b58c7b2b9c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4fb81a05cebfaa1a2c59f7e2b90d8289412e140a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472576"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100071121"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-accesstosql"></a>Caricamento di oggetti di database convertiti in SQL Server (AccessToSQL)
 Dopo la conversione degli oggetti di database di Access in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, è possibile caricare gli oggetti di database risultanti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. È possibile fare in modo che SSMA crei gli oggetti oppure è possibile creare script per gli oggetti ed eseguire gli script manualmente. SSMA consente inoltre di aggiornare i metadati di destinazione con il contenuto effettivo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o il database SQL di Azure.  
@@ -107,7 +107,7 @@ Dopo aver salvato le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d
   
 **Per modificare uno script**  
   
-1.  Scegliere [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Apri** dal menu **File**e quindi fare clic su **File**.  
+1.  Scegliere [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Apri** dal menu **File** e quindi fare clic su **File**.  
   
 2.  Nella finestra di dialogo **Apri** individuare e selezionare il file di script, quindi fare clic su **OK**.  
   
@@ -115,7 +115,7 @@ Dopo aver salvato le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d
   
     Per ulteriori informazioni sull'editor di query, vedere "comandi pratici e funzionalità dell'editor" nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione online di.  
   
-4.  Per salvare lo script, scegliere **Salva**dal menu file.  
+4.  Per salvare lo script, scegliere **Salva** dal menu file.  
   
 ### <a name="running-scripts"></a>Esecuzione di script  
 È possibile eseguire uno script o singole istruzioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  

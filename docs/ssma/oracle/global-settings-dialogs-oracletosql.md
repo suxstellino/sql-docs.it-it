@@ -11,12 +11,12 @@ ms.assetid: 43989355-cebf-4d8b-ba3d-fa8546e70230
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 0a0b888c594a46543f3cdec8e9c70bf9b511ed91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b399f44fda5e9ec8cda0edf6c7e198157b4f516d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463193"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068862"
 ---
 # <a name="global-settings-dialogs--oracletosql"></a>Impostazioni globali (finestre di dialogo) (OracleToSQL)
 Utilizzare la pagina finestre di dialogo della finestra di dialogo **Impostazioni globali** per specificare le impostazioni predefinite per l'azione e l'avviso dell'utente per SSMA.  

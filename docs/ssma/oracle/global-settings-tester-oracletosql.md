@@ -11,17 +11,17 @@ ms.assetid: 4acc0f2a-85ba-4c99-856a-89030f5c418e
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 789d2cbb22e03053ab8f03e0bdd50b6383ea788e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3b8a5871ae12f9408700153afa4f429a4865514
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320397"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067938"
 ---
 # <a name="global-settings-tester-oracletosql"></a>Impostazioni globali (tester) (OracleToSQL)
 Utilizzare la pagina tester della finestra di dialogo **Impostazioni globali** per specificare le impostazioni per SSMA tester.  
   
-Per accedere alle impostazioni del tester, scegliere **Impostazioni globali**dal menu **strumenti** e fare clic su **tester** nella parte inferiore del riquadro sinistro.  
+Per accedere alle impostazioni del tester, scegliere **Impostazioni globali** dal menu **strumenti** e fare clic su **tester** nella parte inferiore del riquadro sinistro.  
   
 ## <a name="options"></a>Opzioni  
 **Analisi oggetto testabile**  

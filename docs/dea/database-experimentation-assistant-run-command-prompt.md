@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: c7443ed363a4968415b651e460bbc4f69cb7415b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0e52cf31a94f2fd63f92305b80f7f7ae049c2809
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951106"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066446"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>Esegui Database Experimentation Assistant al prompt dei comandi
 
@@ -28,7 +28,7 @@ Questo articolo descrive come acquisire una traccia in Database Experimentation 
    >
    > `Deacmd.exe -o <operation> --help`
    >
-   > Il nome dell'operazione è obbligatorio. le operazioni valide sono **Analysis**, **StartCapture**e **StopCapture**.
+   > Il nome dell'operazione è obbligatorio. le operazioni valide sono **Analysis**, **StartCapture** e **StopCapture**.
 
 ## <a name="start-a-new-workload-capture-by-using-the-dea-command"></a>Avviare una nuova acquisizione del carico di lavoro tramite il comando DEA
 
@@ -132,6 +132,6 @@ Quando si analizzano le tracce usando il comando DEA, è possibile usare le opzi
 | --Abu | URL BLOB per un'istanza con chiave SAS |
 | --BBU | URL BLOB per l'istanza B con chiave SAS |
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - Per ulteriori informazioni sull'utilizzo di DEA, vedere [Panoramica di database Experimentation Assistant](database-experimentation-assistant-overview.md).

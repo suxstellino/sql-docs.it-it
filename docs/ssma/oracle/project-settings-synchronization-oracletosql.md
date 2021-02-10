@@ -11,12 +11,12 @@ ms.assetid: e223fb7d-05ec-4fa5-8973-d845c33a23dd
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 6b27143bca2e5b2a2ef9d844fc5f2fc8208734a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ff0869f3219eb21d079be062203f20e4602217c5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492389"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067776"
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>Impostazioni del progetto (sincronizzazione) (OracleToSQL)
 La pagina sincronizzazione della finestra di dialogo **Impostazioni progetto** contiene impostazioni che consentono di personalizzare il modo in cui SSMA carica e aggiorna gli oggetti di database, ad esempio tabelle e stored procedure, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -25,12 +25,12 @@ Le opzioni predefinite delle azioni specificano le impostazioni predefinite per 
   
 È possibile accedere a due diverse pagine di sincronizzazione che contengono le stesse impostazioni:  
   
--   Per specificare le impostazioni per tutti i progetti SSMA futuri, scegliere **Impostazioni progetto predefinite**dal menu **strumenti** , quindi fare clic su **Sincronizza** nella parte inferiore del riquadro sinistro.  
+-   Per specificare le impostazioni per tutti i progetti SSMA futuri, scegliere **Impostazioni progetto predefinite** dal menu **strumenti** , quindi fare clic su **Sincronizza** nella parte inferiore del riquadro sinistro.  
   
--   Per specificare le impostazioni per il progetto corrente, scegliere **Impostazioni progetto**dal menu **strumenti** , quindi fare clic su **Sincronizza** nella parte inferiore del riquadro sinistro.  
+-   Per specificare le impostazioni per il progetto corrente, scegliere **Impostazioni progetto** dal menu **strumenti** , quindi fare clic su **Sincronizza** nella parte inferiore del riquadro sinistro.  
   
 ## <a name="miscellaneous-options"></a>Opzioni varie  
-**Tenta**  
+**Tentativi**  
 Specifica il numero di tentativi che SSMA deve eseguire quando carica gli oggetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Gli oggetti che non vengono caricati nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tentativo corrente verranno ritentati fino a quando SSMA non raggiunge il numero massimo di tentativi nel processo di sincronizzazione corrente. Il valore predefinito impostato è **2**  
   
 ## <a name="synchronization-for-oracle-options"></a>Sincronizzazione per le opzioni Oracle  

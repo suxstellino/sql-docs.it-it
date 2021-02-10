@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c8f03fa27bf8c49cfeef06246c47996860c932ba
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 2f5f97b55b4d357c2caa2314c993806c61f51e07
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988648"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066676"
 ---
 # <a name="migration-wizard-accesstosql"></a>Migrazione guidata (AccessToSQL)
 La migrazione guidata consente di eseguire la migrazione di uno o più database dall'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Utilizzando la procedura guidata, si creerà un progetto, si aggiungeranno database al progetto, si selezionano gli oggetti di cui eseguire la migrazione e ci si connetterà a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Sarà inoltre possibile convertire, caricare ed eseguire la migrazione di schemi e dati di accesso. Facoltativamente, è possibile collegare le tabelle di accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure tabelle.  
@@ -44,7 +44,7 @@ Per impostazione predefinita, SSMA avvierà la migrazione guidata quando si avvi
 La pagina Crea nuovo progetto consente di immettere il nome del file di progetto, il percorso e il tipo di progetto di migrazione (la versione di destinazione SQL Server utilizzata per la migrazione). Per ulteriori informazioni, vedere [nuovo progetto (SSMA)](./new-project-ssma-accesstosql.md)  
   
 ## <a name="add-access-databases-page"></a>Pagina Aggiungi database di accesso  
-Nella pagina Aggiungi database di accesso è possibile aggiungere uno o più database di Access al progetto. È possibile aggiungere singoli database facendo clic su **Aggiungi database**, quindi selezionando i database dalla finestra **Apri** . In alternativa, è possibile trovare i database usando il pulsante **trova database** . Per altre informazioni, vedere gli argomenti seguenti:  
+Nella pagina Aggiungi database di accesso è possibile aggiungere uno o più database di Access al progetto. È possibile aggiungere singoli database facendo clic su **Aggiungi database**, quindi selezionando i database dalla finestra **Apri** . In alternativa, è possibile trovare i database usando il pulsante **trova database** . Per altre informazioni, vedere i seguenti argomenti:  
   
 -   [Aggiunta e rimozione di file di database di Access](adding-and-removing-access-database-files-accesstosql.md)  
   

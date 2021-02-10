@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0246bd83bb7ca75d464452b5b430fbef1bbf128b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d7f3f46a58fccafa68164d9335c66df10c5b7487
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935837"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068896"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>Connessione a MySQL (MySQLToSQL)
 Per eseguire la migrazione di database MySQL a SQL Server o SQL Azure, è necessario connettersi al database MySQL di cui si vuole eseguire la migrazione. Quando si esegue la connessione, SSMA ottiene i metadati relativi a tutti gli schemi MySQL e quindi li Visualizza nel riquadro MySQL Metadata Explorer. SSMA archivia le informazioni sul server di database, ma non archivia le password.  
@@ -54,7 +54,7 @@ Quando ci si connette a un database, SSMA legge i metadati del database e quindi
   
     Utilizzare la modalità standard per specificare il nome e la porta del server.  
   
-4.  In **modalità standard**specificare i valori seguenti:  
+4.  In **modalità standard** specificare i valori seguenti:  
   
     1.  Nella casella **nome server** immettere il nome del server MySQL. Nella casella **porta server** immettere il numero di porta che deve essere 3306. Si tratta della porta predefinita.  
   
@@ -95,7 +95,7 @@ I metadati relativi al database MySQL non vengono aggiornati automaticamente. I 
   
 2.  In MySQL Metadata Explorer selezionare la casella di controllo accanto a ogni schema o oggetto di database che si desidera aggiornare.  
   
-3.  Fare clic con il pulsante destro del mouse su **schemi**oppure sul singolo schema o oggetto di database, quindi scegliere **Aggiorna da database**.  
+3.  Fare clic con il pulsante destro del mouse su **schemi** oppure sul singolo schema o oggetto di database, quindi scegliere **Aggiorna da database**.  
   
     Se non si dispone di una connessione attiva, SSMA visualizzerà la finestra **di dialogo Connetti a MySQL in** modo che sia possibile connettersi.  
   

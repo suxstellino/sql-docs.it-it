@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 99ab880b69d2c06d462ed42ca0a2529ba6bf7bc2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9e9086feb8adcb64ba1a24191e91028fc870d488
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372117"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069921"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Impostazioni del progetto (mapping dei tipi) (SybaseToSQL)
 La pagina mapping dei tipi della finestra di dialogo **Impostazioni progetto** contiene impostazioni che personalizzano il modo in cui SSMA converte i tipi di dati di Sybase Adaptive Server Enterprise (ASE) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati.  
@@ -24,13 +24,13 @@ La pagina mapping dei tipi è disponibile nelle finestre di dialogo **Impostazio
   
 -   Per specificare le impostazioni di mapping dei tipi per tutti i progetti SSMA futuri, nel menu **strumenti** selezionare **Impostazioni progetto predefinite**, selezionare il tipo di progetto di migrazione per il quale è necessario visualizzare o modificare le impostazioni dall'elenco a discesa **versione destinazione migrazione** e quindi selezionare **mapping dei tipi** nella parte inferiore del riquadro sinistro.  
   
--   Per specificare le impostazioni per il progetto corrente, scegliere **Impostazioni progetto**dal menu **strumenti** , quindi selezionare mapping dei **tipi** nella parte inferiore del riquadro sinistro.  
+-   Per specificare le impostazioni per il progetto corrente, scegliere **Impostazioni progetto** dal menu **strumenti** , quindi selezionare mapping dei **tipi** nella parte inferiore del riquadro sinistro.  
   
 ## <a name="options"></a>Opzioni  
-**Tipo di origine**  
+**Tipo origine**  
 Tipo di dati ASE mappato.  
   
-**Tipo di destinazione**  
+**Tipo destinazione**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Tipo di dati di destinazione per il tipo di dati ASE specificato.  
   
 Vedere la tabella nella sezione seguente per il mapping dei tipi predefiniti di SSMA per Sybase.  
@@ -63,7 +63,7 @@ La tabella seguente contiene il mapping dei tipi predefinito tra l'ambiente del 
 |**carattere variabile [8001... \* ]**|**ntext**|  
 |**Char [ \* .. 8000]**|**Char [ \* ]**|  
 |**Char [8001.. \* ;]**|**ntext**|  
-|**carattere**|**char**|  
+|**character**|**char**|  
 |**character varying**|**varchar**|  
 |**carattere variabile [ \* .. 8000]**|**varchar [ \* ]**|  
 |**variazione di caratteri [8001.. \* ]**|**ntext**|  

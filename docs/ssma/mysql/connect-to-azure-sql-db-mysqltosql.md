@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cf3112f6b431fae9149df76464ed576f89a51dd1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 44f97ee6686bbe61a90e5fccf2cfb165e7e97cf0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454133"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069052"
 ---
 # <a name="connect-to-azure-sql-database-mysqltosql"></a>Connettersi al database SQL di Azure (MySQLToSQL)
 Usare la finestra di dialogo Connetti a SQL Azure per connettersi al database nel database SQL di Azure di cui si vuole eseguire la migrazione.  
   
-Per accedere a questa finestra di dialogo, scegliere **Connetti a SQL Azure**dal menu **file** . Se è già stata effettuata la connessione, il comando viene **riconnesso a SQL Azure.**  
+Per accedere a questa finestra di dialogo, scegliere **Connetti a SQL Azure** dal menu **file** . Se è già stata effettuata la connessione, il comando viene **riconnesso a SQL Azure.**  
   
 ## <a name="options"></a>Opzioni  
 **Nome server**  

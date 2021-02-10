@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e89edc66dee92fb74071de952e056d99c91cbf12
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 209b49e3719400b92a5425bdd680d8bed548e285
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985017"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100072475"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>Caricamento di oggetti di database convertiti in SQL Server (DB2ToSQL)
 Una volta convertiti gli schemi DB2 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è possibile caricare gli oggetti di database risultanti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È possibile fare in modo che SSMA crei gli oggetti oppure è possibile creare script per gli oggetti ed eseguire gli script manualmente. SSMA consente inoltre di aggiornare i metadati di destinazione con il contenuto effettivo del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
@@ -62,7 +62,7 @@ Per salvare le definizioni [!INCLUDE[tsql](../../includes/tsql-md.md)] degli ogg
   
 **Per salvare oggetti come script**  
   
-1.  Dopo aver selezionato gli oggetti da salvare in uno script, fare clic con il pulsante destro del mouse su **database**e quindi scegliere **Salva come script**.  
+1.  Dopo aver selezionato gli oggetti da salvare in uno script, fare clic con il pulsante destro del mouse su **database** e quindi scegliere **Salva come script**.  
   
     È anche possibile creare script per singoli oggetti o categorie di oggetti facendo clic con il pulsante destro del mouse sull'oggetto o sulla cartella padre, quindi scegliendo **Salva come script**.  
   
@@ -73,7 +73,7 @@ Dopo aver salvato le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d
   
 **Per modificare uno script**  
   
-1.  Scegliere [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Apri** dal menu **File**e quindi fare clic su **File**.  
+1.  Scegliere [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Apri** dal menu **File** e quindi fare clic su **File**.  
   
 2.  Nella finestra di dialogo **Apri** selezionare il file di script, quindi fare clic su OK.
   
@@ -81,14 +81,14 @@ Dopo aver salvato le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d
   
     Per ulteriori informazioni sull'editor di query, vedere "comandi pratici e funzionalità dell'editor" nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione online di.  
   
-4.  Per salvare lo script, scegliere **Salva**dal menu file.  
+4.  Per salvare lo script, scegliere **Salva** dal menu file.  
   
 ### <a name="running-scripts"></a>Esecuzione di script  
 È possibile eseguire uno script o singole istruzioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 **Per eseguire uno script**  
   
-1.  Scegliere [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Apri** dal menu **File**e quindi fare clic su **File**.  
+1.  Scegliere [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Apri** dal menu **File** e quindi fare clic su **File**.  
   
 2.  Nella finestra di dialogo **Apri** selezionare il file di script, quindi [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
