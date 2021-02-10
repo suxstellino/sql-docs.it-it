@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d424e1fdcfaa64d57e8e9c1628f00ebab25f6446
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: babc7e08a399643781ec2293f2dd9f214e3ad48c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169585"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050502"
 ---
 # <a name="append-method-adox-procedures"></a>Metodo Append (raccolta Procedures ADOX)
 Aggiunge un nuovo oggetto [procedura](./procedure-object-adox.md) alla raccolta [Procedures](./procedures-collection-adox.md) .  

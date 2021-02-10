@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: a8379e10e8c3e3af64381e9a4536b253e203964e
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
-ms.translationtype: HT
+ms.openlocfilehash: 1362e6a5ccd6152a1cb2597076d25c2da4149fd0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725125"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048231"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>Creare ed eseguire un notebook Kusto (KQL) (anteprima)
 
@@ -44,7 +44,7 @@ Questa procedura illustra come creare un file di notebook in Azure Data Studio:
 
 3. Selezionare *Kusto* per il **Kernel**. Verificare che il menu **Collega a** sia impostato sul nome del cluster e sul database. Per questo articolo viene usato il cluster help.kusto.windows.net con i dati del database di esempio.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/set-kusto-kernel.png" alt-text="Apri notebook":::
+   :::image type="content" source="media/notebooks-kusto-kernel/set-kusto-kernel.png" alt-text="Imposta Kernel e Connetti a":::
 
 È possibile salvare il notebook usando il comando **Salva** o **Salva con nome** del menu **File**.
 
@@ -56,14 +56,14 @@ Per modificare la connessione Kusto per un notebook:
 
 1. Selezionare il menu **Collega a** dalla barra degli strumenti del notebook e quindi selezionare **Cambia connessione**.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-select-attach-to-change-connections.png" alt-text="Apri notebook":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-select-attach-to-change-connections.png" alt-text="modificare le connessioni":::
 
    > [!Note]
    > Verificare che sia inserito il valore del database. Per i notebook di Kusto è necessario specificare il database.
 
 2. A questo punto è possibile selezionare un server di connessione recente oppure immettere i dettagli della nuova connessione per la connessione.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-change-connection-cluster.png" alt-text="Apri notebook":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-change-connection-cluster.png" alt-text="Selezionare un cluster diverso":::
 
    > [!Note]
    > Specificare il nome del cluster senza `https://`.
@@ -76,7 +76,7 @@ Ad esempio:
 
 1. Aggiungere una nuova cella di codice selezionando il comando **+Codice** sulla barra degli strumenti.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="Apri notebook":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="Blocco di codice kernel Kusto":::
 
 2. Copiare e incollare l'esempio seguente nella cella e selezionare **Esegui cella**. In questo esempio vengono eseguite query sui dati StormEvents per un tipo di evento specifico.
 
@@ -85,7 +85,7 @@ Ad esempio:
     | where EventType == "Waterspout"
    ```
 
-   :::image type="content" source="media/notebooks-kusto-kernel/run-kusto-notebook-cell.png" alt-text="Apri notebook":::
+   :::image type="content" source="media/notebooks-kusto-kernel/run-kusto-notebook-cell.png" alt-text="Esegui cella":::
 
 ## <a name="save-the-result-or-show-chart"></a>Salvare il risultato o visualizzare il grafico
 
@@ -102,7 +102,7 @@ Se si esegue uno script che restituisce un risultato, è possibile salvare il ri
     | limit 10
 ```
 
-:::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="Apri notebook":::
+:::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="Salva risultato":::
 
 ## <a name="known-issues"></a>Problemi noti
 

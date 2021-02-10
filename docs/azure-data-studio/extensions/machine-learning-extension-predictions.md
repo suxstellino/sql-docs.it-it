@@ -9,12 +9,12 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 06/09/2020
-ms.openlocfilehash: 2b68f15f69d3efb0a773022e87615d298da07706
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
-ms.translationtype: HT
+ms.openlocfilehash: 6da9918b4ebb3ed571d82d23c123c8e477741c0b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725157"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048541"
 ---
 # <a name="make-predictions-with-machine-learning-extension-for-azure-data-studio-preview"></a>Eseguire stime con l'estensione Machine Learning per Azure Data Studio (anteprima)
 
@@ -35,7 +35,7 @@ Attenersi alla procedura seguente per usare un modello ONNX per eseguire stime.
 
 1. Selezionare **Make predictions** (Esegui stime).
 
-1. Se viene richiesto di installare **onnxruntime**, **mlflow**e **mlflow-dbstore**, selezionare **Sì**.
+1. Se viene richiesto di installare **onnxruntime**, **mlflow** e **mlflow-dbstore**, selezionare **Sì**.
 
 1. Scegliere la posizione in cui si trova il modello e selezionare **Avanti**. È possibile usare:
     - **Modelli importati**. Scegliere questa opzione per usare un modello già archiviato nel database. Scegliere il **database** e la **tabella** in cui si trova il modello, selezionare il modello che si vuole usare e selezionare **Avanti**.

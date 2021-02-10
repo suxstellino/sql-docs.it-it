@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 06/01/2020
-ms.openlocfilehash: 8137ca8f37254bab94dfaae6d9c8072c293a81ff
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
-ms.translationtype: HT
+ms.openlocfilehash: 6b8632f9ff5c07cb23a296b98a5933639abee4d1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243390"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048141"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Esercitazione: Aggiungere il widget di esempio per le *cinque query più lente* al dashboard del database
 
@@ -26,11 +26,11 @@ Questa esercitazione illustra il processo di aggiunta di uno dei widget di esemp
 > * Visualizzare i dettagli sulle query più lente del database
 > * Visualizzare i piani di esecuzione query per le query lente
 
-Azure Data Studio include diversi widget di informazioni dettagliate predefiniti. Questa esercitazione illustra come aggiungere il widget *query-data-store-db-insight* , ma i passaggi sono fondamentalmente gli stessi per aggiungere qualsiasi widget.
+Azure Data Studio include diversi widget di informazioni dettagliate predefiniti. Questa esercitazione illustra come aggiungere il widget *query-data-store-db-insight*, ma i passaggi sono fondamentalmente gli stessi per aggiungere qualsiasi widget.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Per questa esercitazione è necessario il database di SQL Server o il database SQL di Azure *TutorialDB*. Per creare il database *TutorialDB* , completare uno degli argomenti di avvio rapido seguenti:
+Per questa esercitazione è necessario il database di SQL Server o il database SQL di Azure *TutorialDB*. Per creare il database *TutorialDB*, completare uno degli argomenti di avvio rapido seguenti:
 
 * [Connettersi ed eseguire query in SQL Server con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
@@ -42,7 +42,7 @@ Il widget in questo esempio richiede l'abilitazione di *Query Store*.
 
 1. Fare clic con il pulsante destro del mouse sul database **TutorialDB** nella barra laterale **SERVER** e scegliere **Nuova query**.
 
-2. Incollare l'istruzione Transact-SQL seguente nell'editor di query e fare clic su **Esegui** :
+2. Incollare l'istruzione Transact-SQL seguente nell'editor di query e fare clic su **Esegui**:
 
    ```sql
     ALTER DATABASE TutorialDB SET QUERY_STORE = ON
@@ -58,7 +58,7 @@ Per aggiungere il *widget per le query lente* al dashboard, modificare l'imposta
 
    ![Comando Apri impostazioni utente](./media/tutorial-qds-sql-server/open-user-settings.png)
 
-3. Digitare *dashboard* nella casella di ricerca di impostazioni e individuare **dashboard.database.widgets** , quindi fare clic su *Modifica in settings.json*.
+3. Digitare *dashboard* nella casella di ricerca di impostazioni e individuare **dashboard.database.widgets**, quindi fare clic su *Modifica in settings.json*.
 
    ![Ricerca impostazioni](./media/tutorial-qds-sql-server/search-settings.png)
 
@@ -100,7 +100,7 @@ Per aggiungere il *widget per le query lente* al dashboard, modificare l'imposta
 
 5. Premere **CTRL + S** per salvare le **Impostazioni utente** modificate.
 
-6. Aprire il *dashboard del database* passando a **TutorialDB** nella barra laterale **SERVER** , fare clic con il pulsante destro del mouse e scegliere **Gestisci**.
+6. Aprire il *dashboard del database* passando a **TutorialDB** nella barra laterale **SERVER**, fare clic con il pulsante destro del mouse e scegliere **Gestisci**.
 
    ![Apertura del dashboard](./media/tutorial-qds-sql-server/insight-open-dashboard.png)
 
@@ -120,9 +120,9 @@ Per aggiungere il *widget per le query lente* al dashboard, modificare l'imposta
 
 ## <a name="view-the-query-plan"></a>Visualizzare il piano di query
 
-1. Fare clic con il pulsante destro del mouse sul database **TutorialDB** , quindi scegliere *Gestisci*.
+1. Fare clic con il pulsante destro del mouse sul database **TutorialDB**, quindi scegliere *Gestisci*.
 
-2. Dal *widget per le query lente* : per visualizzare informazioni aggiuntive per un widget di informazioni dettagliate, fare clic sui puntini di sospensione ( **...** ) in alto a destra e selezionare **Esegui query**.
+2. Dal *widget per le query lente*: per visualizzare informazioni aggiuntive per un widget di informazioni dettagliate, fare clic sui puntini di sospensione ( **...** ) in alto a destra e selezionare **Esegui query**.
 
     ![Eseguire la query](media/tutorial-qds-sql-server/run-query.png)
 
@@ -147,7 +147,7 @@ In questa esercitazione sono state illustrate le procedure per:
 > * Visualizzare i dettagli sulle query più lente del database
 > * Visualizzare i piani di esecuzione query per le query lente
 
-Per informazioni su come abilitare il widget di informazioni dettagliate di esempio per lo **spazio utilizzato dalle tabelle** , completare l'esercitazione successiva:
+Per informazioni su come abilitare il widget di informazioni dettagliate di esempio per lo **spazio utilizzato dalle tabelle**, completare l'esercitazione successiva:
 
 > [!div class="nextstepaction"]
 > [Abilitare il widget di informazioni dettagliate di esempio sullo spazio utilizzato dalle tabelle](tutorial-table-space-sql-server.md)

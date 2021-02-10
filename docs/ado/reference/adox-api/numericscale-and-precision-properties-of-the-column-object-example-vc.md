@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 69653366-ebd7-4ff6-a654-761772223b0c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 34af2be89d8253ca0a777ff509936ed896748a7d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b8923ad7ea8adb0de769af264f39eb031c4c6d46
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169305"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049921"
 ---
 # <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>Esempio delle proprietà NumericScale e Precision dell'oggetto Column (VC++)
 In questo esempio vengono illustrate le proprietà [NumericScale](./numericscale-property-adox.md) e [Precision](./precision-property-adox.md) dell'oggetto [Column](./column-object-adox.md) . Questo codice Visualizza il relativo valore per la tabella **Order Details** del database *Northwind* .  

@@ -9,12 +9,12 @@ ms.date: 12/13/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
-ms.openlocfilehash: 2989be74f4c180d07a6270a8ba5f685460780fbd
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 18bec3d694985e15b1ae2d813fddf2f378c9d78a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243475"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049107"
 ---
 # <a name="configure-polybase-in-parallel-data-warehouse-to-access-external-data-in-hadoop"></a>Configurare la polibase in parallelo data warehouse per accedere ai dati esterni in Hadoop
 
@@ -49,7 +49,7 @@ Per prima cosa, configurare gli APS per l'uso del provider Hadoop specifico.
 
 2. Riavviare l'area APS usando la pagina stato del servizio nel [Configuration Manager Appliance](launch-the-configuration-manager.md).
   
-## <a name="enable-pushdown-computation"></a><a id="pushdown"></a> Abilitare il calcolo con distribuzione  
+## <a name="enable-pushdown-computation"></a><a id="pushdown"></a> Abilita calcolo distribuzione  
 
 Per migliorare le prestazioni delle query, abilitare il calcolo con distribuzione nel cluster Hadoop:  
   
@@ -278,7 +278,7 @@ Per eseguire query sui dati nell'origine dati Hadoop, è necessario definire una
 
 PolyBase è adatto per assolvere a una triplice funzione:  
   
-- Query ad hoc su tabelle esterne.  
+- Esecuzione di query ad hoc su tabelle esterne.  
 - Importazione di dati.  
 - Esportazione di dati.  
 
@@ -286,7 +286,7 @@ Le query seguenti forniscono esempi con dati fittizi di sensori di auto.
 
 ### <a name="ad-hoc-queries"></a>Query ad hoc  
 
-La query ad hoc seguente unisce i dati relazionali con i dati Hadoop. Seleziona i clienti che hanno un ritmo più veloce di 35 mph, associando i dati dei clienti strutturati archiviati in APS con i dati del sensore auto archiviati in Hadoop.  
+La query ad-hoc seguente crea un join relazionale con dati Hadoop. Seleziona i clienti che hanno un ritmo più veloce di 35 mph, associando i dati dei clienti strutturati archiviati in APS con i dati del sensore auto archiviati in Hadoop.  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -316,7 +316,7 @@ from Insured_Customers INNER JOIN
 ON Insured_Customers.CustomerKey = SensorD.CustomerKey  
 ```  
 
-### <a name="exporting-data"></a>Esportazione dei dati  
+### <a name="exporting-data"></a>Esportazione di dati  
 
 La query seguente esporta i dati da APS a Hadoop. Può essere usato per archiviare dati relazionali in Hadoop, mentre è comunque possibile eseguire query su di esso.
 

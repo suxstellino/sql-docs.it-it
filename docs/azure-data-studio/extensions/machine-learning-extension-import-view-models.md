@@ -9,12 +9,12 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 06/09/2020
-ms.openlocfilehash: 26570d8b2ca1ac80ce2a6923dc3778154cb345ec
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
-ms.translationtype: HT
+ms.openlocfilehash: 3f55f793391e408d96b8c6d07a31c7e790d54853
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91137027"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048531"
 ---
 # <a name="import-or-view-models-with-machine-learning-extension-for-azure-data-studio-preview"></a>Importare o visualizzare modelli con l'estensione Machine Learning per Azure Data Studio (anteprima)
 
@@ -35,7 +35,7 @@ Attenersi alla procedura seguente per visualizzare i modelli ONNX archiviati nel
 
 1. Selezionare **Import or view models** (Importa o visualizza modelli).
 
-1. Se viene richiesto di installare **onnxruntime**, **mlflow**e **mlflow-dbstore**, selezionare **Sì**.
+1. Se viene richiesto di installare **onnxruntime**, **mlflow** e **mlflow-dbstore**, selezionare **Sì**.
 
 1. Selezionare il **database**  e la **tabella** in cui sono archiviati i modelli.
 
@@ -47,7 +47,7 @@ Attenersi alla procedura seguente per importare un modello ONNX nel database.
 
 1. Selezionare **Import or view models** (Importa o visualizza modelli).
 
-1. Se viene richiesto di installare **onnxruntime**, **mlflow**e **mlflow-dbstore**, selezionare **Sì**.
+1. Se viene richiesto di installare **onnxruntime**, **mlflow** e **mlflow-dbstore**, selezionare **Sì**.
 
 1. Selezionare **Import models** (Importa modelli).
 

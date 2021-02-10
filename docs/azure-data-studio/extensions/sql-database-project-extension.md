@@ -9,12 +9,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 12/15/2020
-ms.openlocfilehash: 7b52827de249153adc54d148ead5d93a015d152d
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
-ms.translationtype: HT
+ms.openlocfilehash: b49359ea35a5fbd0f8ffd51606c0ae17f14c9eac
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97559093"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048405"
 ---
 # <a name="sql-database-projects-extension-preview"></a>Estensione progetti di database SQL (anteprima)
 

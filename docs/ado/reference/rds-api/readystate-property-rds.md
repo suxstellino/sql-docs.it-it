@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce3cc80262b44ed824b61ddcd56631d15c5cfc65
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a70a2f7fc26e83b21cdb85edb3ddf4a664785d30
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99168813"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049211"
 ---
 # <a name="readystate-property-rds"></a>Proprietà ReadyState (Servizi Desktop remoto)
 Indica lo stato di un oggetto [DataControl](./datacontrol-object-rds.md) quando recupera i dati nell'oggetto [Recordset](../ado-api/recordset-object-ado.md) .  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 94f1ac93-e778-4a40-a85e-94bce5316ac7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6d271d175081ab5131573a9923a0f5dfe06a36e4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4ba7cd56544e1bb7a171e864b908a7ffdacbf093
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164074"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049801"
 ---
 # <a name="procedures-delete-method-example-vb"></a>Esempio del metodo Delete di Procedures (VB)
 Nel codice seguente viene illustrato come eliminare una stored procedure utilizzando il metodo [Delete](./delete-method-adox-collections.md) della raccolta [Procedures](./procedures-collection-adox.md) .  

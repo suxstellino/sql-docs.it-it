@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76d8a6e9-bc6c-4ea0-8e7a-2bae5ed06650
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2a845eef1d48dd8a41d1499104908db9ba10be0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a321c84beb8277f05b0779a540a72b6a82b87933
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169058"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049541"
 ---
 # <a name="cancelupdate-method-rds"></a>Metodo CancelUpdate (Servizi Desktop remoto)
 Annulla tutte le modifiche apportate alla riga corrente o nuova di un oggetto [Recordset](../ado-api/recordset-object-ado.md) .  
