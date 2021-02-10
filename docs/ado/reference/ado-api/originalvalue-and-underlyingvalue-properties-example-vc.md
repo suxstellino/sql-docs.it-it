@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 33a74ff761e6c1be0761fcabf149564b6d5bf4be
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 96edc866e6f48e6aa2676a9bbf5d81fd91fcbfd4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166942"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041251"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>Esempio di proprietà OriginalValue e UnderlyingValue (VC + +)
 In questo esempio vengono illustrate le proprietà [OriginalValue](./originalvalue-property-ado.md) e [UnderlyingValue](./underlyingvalue-property.md) visualizzando un messaggio se i dati sottostanti di un record sono stati modificati durante un aggiornamento batch del [Recordset](./recordset-object-ado.md) .  

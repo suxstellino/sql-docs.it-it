@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c39faffc0626cf5cec3837368b13b3df6f5a2a3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d767d67b395275c38562b69ccdc349ecd5faa4c6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170332"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040681"
 ---
 # <a name="save-and-open-methods-example-vc"></a>Esempio di metodi Save e Open (VC + +)
 Questi tre esempi illustrano il modo in cui i metodi [Save](./save-method.md) e **Open** possono essere usati insieme.  

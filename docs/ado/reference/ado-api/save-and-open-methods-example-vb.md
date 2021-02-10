@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c76d26032d9986cba52442d62bb7ef8c10db5419
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0eafd067cdad9c107c591d09b5b5f50fdc6bc501
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166608"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040691"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Esempio dei metodi Save e Open (VB)
 Questi tre esempi illustrano il modo in cui i metodi [Save](./save-method.md) e [Open](./open-method-ado-recordset.md) possono essere usati insieme.  
   
  Si supponga che si stia procedendo a un viaggio di lavoro e che si voglia eseguire una tabella da un database. Prima di procedere, è possibile accedere ai dati come [Recordset](./recordset-object-ado.md) e salvarli in un modulo trasportabile. Quando si arriva alla destinazione, si accede al **Recordset** come **Recordset** locale disconnesso. Apportare modifiche al **Recordset** e quindi salvarlo di nuovo. Infine, quando si torna a casa, si esegue nuovamente la connessione al database e la si aggiorna con le modifiche apportate in viaggio.  
   
- Per prima cosa, accedere alla tabella **_authors_* _ e salvarla.  
+ Per prima cosa, accedere alla tabella ***authors*** e salvarla.  
   
 ```  
 'BeginSaveVB  
@@ -85,7 +85,7 @@ End Sub
 'EndSaveVB  
 ```  
   
- A questo punto, si è arrivati alla destinazione. Si accederà alla tabella _*_authors_*_ come un recordset locale e disconnesso * *. È necessario disporre del provider **MSPersist** nel computer in uso per accedere al file salvato a:\Pubs.xml.  
+ A questo punto, si è arrivati alla destinazione. Si accederà alla tabella ***authors** _ come un recordset * * locale e disconnesso * *. È necessario disporre del provider **MSPersist** nel computer in uso per accedere al file salvato a:\Pubs.xml.  
   
 ```  
 Attribute VB_Name = "Save"  

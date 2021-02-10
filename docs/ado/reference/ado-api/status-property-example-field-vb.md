@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 69e80f025c29e379495507447ef78af5bcc8868f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 706be79c9a910a8f6f5df5635acf0d5f0ad3a8c6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166462"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040441"
 ---
 # <a name="status-property-example-field-vb"></a>Esempio della proprietà Status (Field) (VB)
 Nell'esempio seguente viene aperto un documento da una cartella di lettura/scrittura utilizzando il [provider di pubblicazione Internet](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). La proprietà [status](./status-property-ado-field.md) di un [oggetto campo](./field-object.md) del [record](./record-object-ado.md) verrà prima impostata su **adFieldPendingInsert**, quindi verrà aggiornata in **adFieldOK**.  

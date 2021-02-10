@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu
 ms.custom: seodec18
 ms.date: 08/26/2020
-ms.openlocfilehash: 0cd248b323ebc6176dbad37f578da1c08141281b
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
-ms.translationtype: HT
+ms.openlocfilehash: bd4d3c12ea7a56ceddec0ad23f7276a4be4b9f40
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283752"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100039961"
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>Esercitazione: Creare un widget di informazioni dettagliate personalizzato
 

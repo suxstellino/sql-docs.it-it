@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: e2c200bc57bc62a54a9850e85e13b9c9f15c49f0
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
-ms.translationtype: HT
+ms.openlocfilehash: 1c91b067ff8396968b2d26c57bf5f78d4f5d4181
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243380"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100039931"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---azure-data-studio"></a>Esercitazione: Usare l'editor Transact-SQL per creare oggetti di database - Azure Data Studio
 
@@ -30,7 +30,7 @@ In questa esercitazione si apprenderà come usare [!INCLUDE[name-sos-short](../i
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Per questa esercitazione è necessario il database di SQL Server o il database SQL di Azure *TutorialDB*. Per creare il database *TutorialDB* , completare uno degli argomenti di avvio rapido seguenti:
+Per questa esercitazione è necessario il database di SQL Server o il database SQL di Azure *TutorialDB*. Per creare il database *TutorialDB*, completare uno degli argomenti di avvio rapido seguenti:
 
 - [Connettersi ed eseguire query in SQL Server con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 - [Connettersi ed eseguire query nel database SQL di Azure con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
@@ -40,7 +40,7 @@ Per questa esercitazione è necessario il database di SQL Server o il database S
 
 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] fornisce un widget di ricerca per trovare rapidamente gli oggetti di database. Nell'elenco dei risultati è disponibile un menu di scelta rapida per le attività comuni relative all'oggetto selezionato, ad esempio la *Modifica dati* per una tabella.
 
-1. Aprire la barra laterale SERVER ( **CTRL +G** ), espandere **Database** e selezionare **TutorialDB**. 
+1. Aprire la barra laterale SERVER (**CTRL +G**), espandere **Database** e selezionare **TutorialDB**. 
 
 1. Aprire il *dashboard TutorialDB* facendo clic con il pulsante destro del mouse su **TutorialDB** e scegliendo **Gestisci** dal menu di scelta rapida:
 
@@ -68,7 +68,7 @@ Azure Data Studio offre molti frammenti di codice T-SQL predefiniti per la creaz
 
    ![Screenshot che mostra l'editor di query con codice SQL digitato nell'editor e l'opzione sqlCreateStoredProcedure evidenziata.](./media/tutorial-sql-editor/snippet-list.png)
 
-3. Il frammento di codice per la creazione di stored procedure ha due campi impostati per la modifica rapida, *StoredProcedureName* e *SchemaName*. Selezionare *StoredProcedureName* , fare clic con il pulsante destro del mouse e scegliere **Cambia tutte le occorrenze**. A questo punto, digitare *getCustomer* e tutte le voci *StoredProcedureName* cambiano in *getCustomer*.
+3. Il frammento di codice per la creazione di stored procedure ha due campi impostati per la modifica rapida, *StoredProcedureName* e *SchemaName*. Selezionare *StoredProcedureName*, fare clic con il pulsante destro del mouse e scegliere **Cambia tutte le occorrenze**. A questo punto, digitare *getCustomer* e tutte le voci *StoredProcedureName* cambiano in *getCustomer*.
 
    ![Screenshot che mostra l'editor di query con l'opzione Cambia tutte le occorrenze evidenziata.](./media/tutorial-sql-editor/snippet.png)
 
@@ -177,7 +177,7 @@ Azure Data Studio consente di visualizzare la definizione di un oggetto usando l
    GO
    ```
 
-8. Per creare la stored procedure *setCustomer* , premere **F5**.
+8. Per creare la stored procedure *setCustomer*, premere **F5**.
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>Salvare i risultati della query come JSON per testare la stored procedure setCustomer
 
@@ -225,7 +225,7 @@ In questa esercitazione sono state illustrate le procedure per:
 > * Visualizzare i dettagli degli oggetti di database usando Visualizza definizione e Vai a definizione
 
 
-Per informazioni su come abilitare il widget per le **cinque query più lente** , completare l'esercitazione successiva:
+Per informazioni su come abilitare il widget per le **cinque query più lente**, completare l'esercitazione successiva:
 
 > [!div class="nextstepaction"]
 > [Abilitare il widget di informazioni dettagliate di esempio sulle query lente](tutorial-qds-sql-server.md)

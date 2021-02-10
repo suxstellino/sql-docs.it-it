@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 29a02992-64be-4fcd-be13-445cba205893
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3164dcc61165171ff0d1c33956f152bcb65f33b1
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 265b5a1c0e435bb9eef9fedd5b28f5db2e4a7258
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170738"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041491"
 ---
 # <a name="numericscale-property-ado"></a>Proprietà NumericScale (ADO)
 Indica la scala dei valori numerici in un [parametro](./parameter-object.md) o in un oggetto [campo](./field-object.md) .  
