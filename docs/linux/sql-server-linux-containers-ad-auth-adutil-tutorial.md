@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 318fb046adc25cc2ff485b14974bb756e586162b
-ms.sourcegitcommit: 18e2f0706e03d0b2b6324845244fbafaa077a8dd
-ms.translationtype: HT
+ms.openlocfilehash: a3fc97f34a8d75557abb9ed5b46745dde93fe77d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97103309"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033971"
 ---
 # <a name="tutorial-configure-active-directory-authentication-with-sql-server-on-linux--containers"></a>Esercitazione: Configurare l'autenticazione di Active Directory con contenitori di SQL Server in Linux
 

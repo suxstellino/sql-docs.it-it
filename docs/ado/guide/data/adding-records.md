@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b833bc78a75d09c8f58ae12532f446ec94a097e0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b39a0920d9816837b6d737df00e6bb4560358356
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991752"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033401"
 ---
 # <a name="adding-records-to-a-recordset"></a>Aggiunta di record a un recordset
-Utilizzare il metodo **AddNew** per creare e inizializzare un nuovo record in un **Recordset**esistente. È possibile utilizzare il metodo **Supports** con un valore **CursorOptionEnum** di **adAddNew** per verificare se è possibile aggiungere record all'oggetto **Recordset** corrente.
+Utilizzare il metodo **AddNew** per creare e inizializzare un nuovo record in un **Recordset** esistente. È possibile utilizzare il metodo **Supports** con un valore **CursorOptionEnum** di **adAddNew** per verificare se è possibile aggiungere record all'oggetto **Recordset** corrente.
 
  Dopo aver chiamato il metodo **AddNew** , il nuovo record diventa il record corrente e rimane aggiornato dopo la chiamata al metodo **Update** . Se l'oggetto **Recordset** non supporta i segnalibri, potrebbe non essere possibile accedere al nuovo record dopo lo spostamento in un altro record. Pertanto, a seconda del tipo di cursore, potrebbe essere necessario chiamare il metodo **Requery** per rendere accessibile il nuovo record.
 

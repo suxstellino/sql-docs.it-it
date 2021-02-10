@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d6001863-7733-4c32-817f-081e48587fa1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d4f1db51d54b69bf42fe185d30b78df57b89df39
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c01178c70a0e6a9e049f9fcfbc0a584fa5fa7ef0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980432"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032743"
 ---
 # <a name="issuing-commands-to-the-underlying-data-provider"></a>Invio di comandi al provider di dati sottostante
 Qualsiasi comando che non inizia con SHAPE viene passato al provider di dati. Equivale a emettere un comando SHAPE nel formato "SHAPE {provider Command}". Questi comandi *non* devono produrre un **Recordset**. Ad esempio, "SHAPE {DROP TABLE MyTable} è un comando Shape perfettamente valido, presupponendo che il provider di dati supporti DROP TABLE.  

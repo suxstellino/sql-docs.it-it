@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3896ec0e36fb5416d97cf3e6e6ad8409843cae3a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ddc69b4d66266732d784f0546a52a222f5fe23ec
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164637"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034801"
 ---
 # <a name="comparebookmarks-method-example-vb"></a>Esempio del metodo CompareBookmarks (VB)
 Questo esempio illustra il metodo [CompareBookmarks](./comparebookmarks-method-ado.md) . Il valore relativo dei segnalibri è raramente necessario, a meno che un particolare segnalibro non sia in qualche modo speciale.  
   
- Designare una riga casuale di un [Recordset](./recordset-object-ado.md) derivato dalla tabella ***authors** _ come destinazione di una ricerca. Visualizzare quindi la posizione di ogni riga relativa a tale destinazione.  
+ Designare una riga casuale di un [Recordset](./recordset-object-ado.md) derivato dalla tabella ***authors*** come destinazione di una ricerca. Visualizzare quindi la posizione di ogni riga relativa a tale destinazione.  
   
 ```  
 'BeginCompareBookmarksVB  
@@ -59,7 +59,7 @@ Public Sub Main()
   
      ' Open recordset as a static cursor type recordset  
     Set rstAuthors = New ADODB.Recordset  
-    strSQLAuthors = "SELECT _ FROM Authors"  
+    strSQLAuthors = "SELECT * FROM Authors"  
     rstAuthors.Open strSQLAuthors, Cnxn, adOpenStatic, adLockReadOnly, adCmdText  
   
     count = rstAuthors.RecordCount  

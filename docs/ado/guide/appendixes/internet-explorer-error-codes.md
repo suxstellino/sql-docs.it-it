@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 71aed2a5-4c8a-41db-a869-37db4d07a5a9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9a45a80374d323d8c9efde3833eae2b23ef323a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 64710f6561f8523b705c4f0c25991106bb99fb73
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991122"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029445"
 ---
 # <a name="internet-explorer-error-codes-for-remote-data-service"></a>Codici di errore di Internet Explorer per Remote Data Service
 Nella tabella seguente sono elencati i codici di errore di Microsoft® Internet Explorer correlati all'utilizzo del servizio dati remoto. La conversione decimale positiva dei due byte bassi, la conversione decimale negativa del codice di errore completo e i valori esadecimali vengono visualizzati.

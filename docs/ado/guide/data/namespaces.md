@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03d70d1e5df026e13e23c9759462f53114f4d2af
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6a7657e9758ebaa3507a35aef65d6a077e4dcf35
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980262"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032673"
 ---
 # <a name="namespaces"></a>Spazi dei nomi
 Il formato di persistenza XML in ADO utilizza i quattro spazi dei nomi seguenti.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il formato di persistenza XML in ADO utilizza i quattro spazi dei nomi seguenti.  
   
 |Prefisso|Descrizione|  

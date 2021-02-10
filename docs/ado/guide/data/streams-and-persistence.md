@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60e006733fd8ef5bd958328420ab43c1cbabc50e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1b554afa949acea4f816ce66e92e897477c2fe00
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979422"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032423"
 ---
 # <a name="streams-and-persistence"></a>Flussi e persistenza
-L' [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto recordset [Salva](../../../ado/reference/ado-api/save-method.md) il metodo archivia o rende *permanente*un **Recordset** in un file e il metodo [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) ripristina il **Recordset** da tale file.  
+L' [](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto recordset [Salva](../../../ado/reference/ado-api/save-method.md) il metodo archivia o rende *permanente* un **Recordset** in un file e il metodo [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) ripristina il **Recordset** da tale file.  
   
  Con ADO 2,7 o versioni successive, i metodi Save e **Open** possono **salvare** in modo permanente un **Recordset** anche in un oggetto [Stream](../../../ado/reference/ado-api/stream-object-ado.md) . Questa funzionalità è particolarmente utile quando si utilizzano Remote Data Service (RDS) e Active Server Pages (ASP).  
   
@@ -101,7 +101,7 @@ Set rs = nothing
 ```  
   
 ## <a name="scenario-4"></a>Scenario 4  
- In questo scenario, il codice ASP scrive il contenuto del **Recordset** in formato ADTG nel client. Il [servizio Microsoft Cursor per OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) può utilizzare questi dati per creare un **Recordset**disconnesso.  
+ In questo scenario, il codice ASP scrive il contenuto del **Recordset** in formato ADTG nel client. Il [servizio Microsoft Cursor per OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) può utilizzare questi dati per creare un **Recordset** disconnesso.  
   
  Una nuova proprietà di RDS [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md), [URL](../../../ado/reference/rds-api/url-property-rds.md), punta alla pagina ASP che genera il **Recordset**. Ciò significa che è possibile ottenere un oggetto **Recordset** senza servizi desktop remoto usando l'oggetto [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) sul lato server o l'utente che scrive un oggetto business. In questo modo, il modello di programmazione RDS viene semplificato in modo significativo.  
   

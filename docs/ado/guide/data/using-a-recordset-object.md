@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01c630d8-eb35-4bd0-a99f-7c0f85316cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9f75190ae5375b357d6baba93aac7aa2959e188
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 44fc7a242887419ba3013113632c8d1acd2a3337
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979102"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032303"
 ---
 # <a name="using-a-recordset-object"></a>Uso di un oggetto Recordset
 In alternativa, è possibile utilizzare **Recordset. Open** per stabilire in modo implicito una connessione ed eseguire un comando su tale connessione in un'unica operazione. Ad esempio, in Visual Basic:  

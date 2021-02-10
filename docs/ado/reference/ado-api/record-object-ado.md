@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b6064030bd26ab6abb0bb003b2fcf26e72c4f24d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 48fa1fcb993531f8644b931f216f9b38ed427282
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166744"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100020360"
 ---
 # <a name="record-object-ado"></a>Oggetto Record (ADO)
 Rappresenta una riga di un [Recordset](./recordset-object-ado.md) o del provider di dati oppure un oggetto restituito da un provider di dati semistrutturato, ad esempio un file o una directory.  

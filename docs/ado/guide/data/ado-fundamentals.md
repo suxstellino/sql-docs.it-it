@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dedb841f9889d71da89107766ff26e3f870d1193
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: fdf7580f3a04a15fd75fb6d2c7712a694dfd2175
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991662"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033761"
 ---
 # <a name="ado-fundamentals"></a>Nozioni fondamentali su ADO
 ADO fornisce agli sviluppatori un modello a oggetti logico e potente per accedere a livello di codice, modificare e aggiornare i dati da un'ampia gamma di origini dati tramite OLE DB interfacce di sistema. L'utilizzo più comune di ADO consiste nell'eseguire una query su una tabella o tabelle in un database relazionale, recuperare e visualizzare i risultati in un'applicazione e, forse, consentire agli utenti di apportare e salvare le modifiche ai dati. Di seguito sono riportate altre attività:  
@@ -49,7 +49,7 @@ ADO fornisce agli sviluppatori un modello a oggetti logico e potente per acceder
   
 -   Binding dei campi di database ai componenti in grado di riconoscere i dati.  
   
--   Creazione di **Recordset**disconnessi e remoti.  
+-   Creazione di **Recordset** disconnessi e remoti.  
   
  ADO espone un'ampia gamma di opzioni e impostazioni per fornire tale flessibilità. Pertanto, è importante adottare un approccio metodico per apprendere come usare ADO in un'applicazione, suddividendo ognuno degli obiettivi in parti gestibili.  
   

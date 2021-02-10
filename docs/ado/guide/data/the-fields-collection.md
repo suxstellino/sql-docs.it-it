@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 45bad5289a33b5b1f76807f1f7a9da62044dafc2
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7dee12a0cdb274f58bb3dc79fddeb057e4913e81
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979382"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032413"
 ---
 # <a name="the-fields-collection"></a>Raccolta Fields
 La raccolta **Fields** è una delle raccolte intrinseche di ADO. Una raccolta è un set ordinato di elementi a cui è possibile fare riferimento come unità. Per ulteriori informazioni sulle raccolte ADO, vedere [il modello a oggetti ADO](../../../ado/guide/data/ado-objects-and-collections.md).  
   
- La raccolta **Fields** contiene un oggetto **Field** per ogni campo (colonna) nel **Recordset**. Analogamente a tutte le raccolte ADO, dispone di proprietà **count** e **Item** , oltre ai metodi **Append** e **Refresh** . Dispone inoltre di metodi **CancelUpdate**, **Delete**, **Resync**e **Update** , che non sono disponibili per altre raccolte ADO.  
+ La raccolta **Fields** contiene un oggetto **Field** per ogni campo (colonna) nel **Recordset**. Analogamente a tutte le raccolte ADO, dispone di proprietà **count** e **Item** , oltre ai metodi **Append** e **Refresh** . Dispone inoltre di metodi **CancelUpdate**, **Delete**, **Resync** e **Update** , che non sono disponibili per altre raccolte ADO.  
   
 ## <a name="examining-the-fields-collection"></a>Esame della raccolta Fields  
  Si consideri la raccolta **Fields** del **Recordset** di esempio introdotto in questa sezione. Il **Recordset** di esempio è derivato dall'istruzione SQL  
@@ -58,7 +58,7 @@ SELECT ProductID, ProductName, UnitPrice FROM Products WHERE CategoryID = 7
  Se la proprietà **count** è zero, nella raccolta non sono presenti oggetti.  
   
 ## <a name="getting-to-the-field"></a>Recupero del campo  
- Come per qualsiasi raccolta ADO, la proprietà **Item** è la proprietà predefinita della raccolta. Restituisce il singolo oggetto **Field** specificato dal nome o dall'indice passato. Pertanto, le istruzioni seguenti sono equivalenti per il **Recordset**di esempio:  
+ Come per qualsiasi raccolta ADO, la proprietà **Item** è la proprietà predefinita della raccolta. Restituisce il singolo oggetto **Field** specificato dal nome o dall'indice passato. Pertanto, le istruzioni seguenti sono equivalenti per il **Recordset** di esempio:  
   
 ```  
 objField = objRecordset.Fields.Item("ProductID")  
@@ -75,7 +75,7 @@ objField = objRecordset.Fields(0)
 ## <a name="adding-fields-to-a-recordset"></a>Aggiunta di campi a un recordset  
  Il metodo **Append** viene utilizzato per aggiungere campi a un **Recordset**.  
   
- È possibile utilizzare il metodo **Append** per costruire un **Recordset** a livello di codice senza aprire una connessione a un'origine dati. Si verificherà un errore di run-time se il metodo **Append** viene chiamato sulla raccolta **Fields** di un **Recordset** aperto o su un **Recordset** in cui è stata impostata la proprietà **ActiveConnection** . È possibile aggiungere campi solo a un **Recordset** che non è aperto e non è ancora stato connesso a un'origine dati. Tuttavia, per specificare i valori per i **campi**appena accodati, è necessario innanzitutto aprire il **Recordset** .  
+ È possibile utilizzare il metodo **Append** per costruire un **Recordset** a livello di codice senza aprire una connessione a un'origine dati. Si verificherà un errore di run-time se il metodo **Append** viene chiamato sulla raccolta **Fields** di un **Recordset** aperto o su un **Recordset** in cui è stata impostata la proprietà **ActiveConnection** . È possibile aggiungere campi solo a un **Recordset** che non è aperto e non è ancora stato connesso a un'origine dati. Tuttavia, per specificare i valori per i **campi** appena accodati, è necessario innanzitutto aprire il **Recordset** .  
   
  Gli sviluppatori spesso hanno bisogno di una posizione per archiviare temporaneamente alcuni dati o desiderano che alcuni dati fungano da un server, in modo che possa partecipare a data binding in un'interfaccia utente. ADO (insieme al [servizio Microsoft Cursor per OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)) consente allo sviluppatore di compilare un oggetto **Recordset** vuoto specificando le informazioni sulle colonne e chiamando **Open**. Nell'esempio seguente vengono aggiunti tre nuovi campi a un nuovo oggetto **Recordset** . Il **Recordset** viene quindi aperto, vengono aggiunti due nuovi record e il **Recordset** viene salvato in modo permanente in un file. Per ulteriori informazioni sulla persistenza dei **Recordset** , vedere [aggiornamento e persistenza dei dati](../../../ado/guide/data/updating-and-persisting-data.md).  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 51a87e91-c9d9-4e49-af47-79cce2c4cfe0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd54db0b75b6b4e35333ea74ea3a84683e09545a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b7d0e9eef28942ad53a234811b2ee061e9685a1a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171148"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034141"
 ---
 # <a name="execute-requery-and-clear-methods-example-jscript"></a>Esempio di metodi Execute, Requery e Clear (JScript)
 Questo esempio illustra il metodo **Execute** quando viene eseguito da un oggetto [Command](../../../ado/reference/ado-api/command-object-ado.md) e da un oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . USA anche il metodo [Requery](../../../ado/reference/ado-api/requery-method.md) per recuperare i dati correnti in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e il metodo [Clear](../../../ado/reference/ado-api/clear-method-ado.md) per cancellare il contenuto della raccolta [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) . La raccolta **Errors** è accessibile tramite l'oggetto **Connection** della proprietà [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Denominare il file **ExecuteJS. asp**.  

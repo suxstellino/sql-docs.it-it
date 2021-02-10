@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9082a8f6f32db01913437607dc12bb8758f7b93f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a720fe06f661eb8a978ac2caedc1049b4cef7b62
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167681"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035221"
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>Esempio di metodi CopyRecord, CopyTo e SaveToFile (VB)
 In questo esempio viene illustrato come creare copie di un file utilizzando oggetti [flusso](./stream-object-ado.md) o [record](./record-object-ado.md) . Viene eseguita una copia in una cartella Web per la pubblicazione su Internet. Altri metodi e proprietà visualizzati includono il [tipo di flusso](./type-property-ado-stream.md), **aperto**, [LoadFromFile](./loadfromfile-method-ado.md)e il [record aperto](./open-method-ado-record.md).  

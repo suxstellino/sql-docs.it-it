@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24941f8fbf2aedb5fb61cea176ef26d3172012cc
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 836c1e0091166485f68c04226c632e9999038469
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991282"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033114"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>Creazione di recordset gerarchici
-Nell'esempio seguente viene illustrato come costruire un recordset gerarchico senza un'origine dati sottostante utilizzando la grammatica di data shaping per definire le colonne per i **Recordset**padre, figlio e nipote.  
+Nell'esempio seguente viene illustrato come costruire un recordset gerarchico senza un'origine dati sottostante utilizzando la grammatica di data shaping per definire le colonne per i **Recordset** padre, figlio e nipote.  
   
- Per costruire un **Recordset**gerarchico, è necessario specificare il [servizio di Data Shaping Microsoft per OLE DB (provider di servizi ADO)](../appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape) ed è possibile specificare un valore provider di dati None nel parametro della stringa di connessione del metodo [Open](../../reference/ado-api/open-method-ado-connection.md) dell'oggetto [Connection](../../reference/ado-api/connection-object-ado.md) . Per ulteriori informazioni, vedere [provider richiesti per la definizione dei dati](./required-providers-for-data-shaping.md).  
+ Per costruire un **Recordset** gerarchico, è necessario specificare il [servizio di Data Shaping Microsoft per OLE DB (provider di servizi ADO)](../appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape) ed è possibile specificare un valore provider di dati None nel parametro della stringa di connessione del metodo [Open](../../reference/ado-api/open-method-ado-connection.md) dell'oggetto [Connection](../../reference/ado-api/connection-object-ado.md) . Per ulteriori informazioni, vedere [provider richiesti per la definizione dei dati](./required-providers-for-data-shaping.md).  
   
 ```  
 Dim cn As New ADODB.Connection  

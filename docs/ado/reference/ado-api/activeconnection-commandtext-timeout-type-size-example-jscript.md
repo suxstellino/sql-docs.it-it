@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ea74e2a3-c965-43aa-9076-26a084b48ad8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b44f41b589e813e79e6a66e2736dbafc9d1c4e52
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9363e10227ad258cc1533619930d882e0c0ac0d3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99159929"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031563"
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-jscript"></a>Esempio di proprietà ActiveConnection, CommandText, CommandTimeout, CommandType, Size e Direction (JScript)
 In questo esempio vengono usate le proprietà [ActiveConnection](./activeconnection-property-ado.md), [CommandText](./commandtext-property-ado.md), [CommandTimeout](./commandtimeout-property-ado.md), [CommandType](./commandtype-property-ado.md), [size](./size-property-ado-parameter.md)e [Direction](./direction-property.md) per eseguire un stored procedure. Tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **ActiveConnectionJS. asp**.  

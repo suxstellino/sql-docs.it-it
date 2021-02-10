@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 91fe315304cc2be0ccfb8c638665ce699c75e248
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 55eaf3798ee8d14a776da14010b4b6617d0e2723
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980172"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032653"
 ---
 # <a name="operation-of-parameterized-commands"></a>Funzionamento dei comandi con parametri
-Se si utilizza un **Recordset**figlio di grandi dimensioni, in particolare rispetto alle dimensioni del **Recordset**padre, ma è necessario accedere solo a pochi capitoli figlio, potrebbe risultare più efficiente utilizzare un comando con parametri.  
+Se si utilizza un **Recordset** figlio di grandi dimensioni, in particolare rispetto alle dimensioni del **Recordset** padre, ma è necessario accedere solo a pochi capitoli figlio, potrebbe risultare più efficiente utilizzare un comando con parametri.  
   
- Un *comando senza parametri* recupera l'intero **Recordset**padre e figlio, aggiunge una colonna del capitolo all'elemento padre e quindi assegna un riferimento al capitolo figlio correlato per ogni riga padre.  
+ Un *comando senza parametri* recupera l'intero **Recordset** padre e figlio, aggiunge una colonna del capitolo all'elemento padre e quindi assegna un riferimento al capitolo figlio correlato per ogni riga padre.  
   
- Un *comando con parametri* recupera l'intero **Recordset**padre, ma recupera solo il **Recordset** del capitolo quando si accede alla colonna del capitolo. Questa differenza nella strategia di recupero può produrre vantaggi significativi a livello di prestazioni.  
+ Un *comando con parametri* recupera l'intero **Recordset** padre, ma recupera solo il **Recordset** del capitolo quando si accede alla colonna del capitolo. Questa differenza nella strategia di recupero può produrre vantaggi significativi a livello di prestazioni.  
   
  Ad esempio, è possibile specificare quanto segue:  
   
@@ -45,13 +45,13 @@ SHAPE {SELECT * FROM customer}
   
 1.  Il *comando padre* viene eseguito e restituisce un **Recordset** padre dalla tabella Customers.  
   
-2.  Una colonna del capitolo viene aggiunta al **Recordset**padre.  
+2.  Una colonna del capitolo viene aggiunta al **Recordset** padre.  
   
-3.  Quando si accede alla colonna del capitolo di una riga padre, il *comando figlio* viene eseguito usando il valore di customer. cust_id come valore del parametro.  
+3.  Quando si accede alla colonna del capitolo di una riga padre, il *comando figlio* viene eseguito usando il valore della Customer.cust_id come valore del parametro.  
   
-4.  Tutte le righe nel set di righe del provider di dati creato nel passaggio 3 vengono utilizzate per popolare il **Recordset**figlio. In questo esempio, si tratta di tutte le righe della tabella Orders in cui il cust_id è uguale al valore di Customer. cust_id. Per impostazione predefinita, il **Recordset**figlio verrà memorizzato nella cache del client fino a quando non vengono rilasciati tutti i riferimenti al **Recordset** padre. Per modificare questo comportamento, impostare le **righe figlio della cache** della [proprietà dinamica](../../reference/ado-api/ado-dynamic-property-index.md) **Recordset** su **false**.  
+4.  Tutte le righe nel set di righe del provider di dati creato nel passaggio 3 vengono utilizzate per popolare il **Recordset** figlio. In questo esempio, si tratta di tutte le righe della tabella Orders in cui la cust_id è uguale al valore di customer.cust_id. Per impostazione predefinita, il **Recordset** figlio verrà memorizzato nella cache del client fino a quando non vengono rilasciati tutti i riferimenti al **Recordset** padre. Per modificare questo comportamento, impostare le **righe figlio della cache** della [proprietà dinamica](../../reference/ado-api/ado-dynamic-property-index.md) **Recordset** su **false**.  
   
-5.  Un riferimento alle righe figlio recuperate, ovvero il capitolo del **Recordset**figlio, viene inserito nella colonna capitolo della riga corrente del **Recordset**padre.  
+5.  Un riferimento alle righe figlio recuperate, ovvero il capitolo del **Recordset** figlio, viene inserito nella colonna capitolo della riga corrente del **Recordset** padre.  
   
 6.  I passaggi 3-5 vengono ripetuti quando si accede alla colonna del capitolo di un'altra riga.  
   

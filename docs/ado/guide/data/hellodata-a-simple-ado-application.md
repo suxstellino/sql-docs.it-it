@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bec2b55f7daee865489c3f32e1ee70e53b9102a6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ec46ed0f94ffe9bd50d0576ab7b3855011bcf775
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980632"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033161"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: applicazione ADO semplice
 Questa semplice applicazione illustra le quattro operazioni ADO principali: recupero, analisi, modifica e aggiornamento dei dati. Queste operazioni vengono eseguite sul database di esempio Northwind incluso in Microsoft® SQL Server. Per concentrarsi sulle nozioni di base di ADO e per impedire confusione del codice, la gestione degli errori nell'esempio è minima.  
@@ -45,17 +45,17 @@ Questa semplice applicazione illustra le quattro operazioni ADO principali: recu
   
 |Tipo di controllo|Proprietà|Valore|  
 |------------------|--------------|-----------|  
-|Form|Name|Form1|  
+|Form|Nome|Form1|  
 ||Altezza|6500|  
 ||Larghezza|6500|  
-|DataGrid di MS|Name|grdDisplay1|  
-|TextBox|Name|txtDisplay1|  
+|DataGrid di MS|Nome|grdDisplay1|  
+|TextBox|Nome|txtDisplay1|  
 ||Multiline|true|  
-|Pulsante di comando|Name|cmdGetData|  
-||Sottotitolo|Get Data|  
-|Pulsante di comando|Name|cmdExamineData|  
-||Sottotitolo|Esaminare i dati|  
-|Pulsante di comando|Name|cmdEditData|  
-||Sottotitolo| Modifica dei dati|  
-|Pulsante di comando|Name|cmdUpdateData|  
-||Sottotitolo|Dati di aggiornamento|
+|Pulsante di comando|Nome|cmdGetData|  
+||Didascalia|Get Data|  
+|Pulsante di comando|Nome|cmdExamineData|  
+||Didascalia|Esaminare i dati|  
+|Pulsante di comando|Nome|cmdEditData|  
+||Didascalia| Modifica dei dati|  
+|Pulsante di comando|Nome|cmdUpdateData|  
+||Didascalia|Dati di aggiornamento|

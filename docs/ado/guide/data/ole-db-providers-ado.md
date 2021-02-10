@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25eea144ab0f9301f79a74773258cf399802af9d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7e70762a2cbaa6e2dd3d8d91b824591799605748
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980182"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032663"
 ---
 # <a name="ole-db-providers-ado"></a>Provider OLE DB (ADO)
 OLE DB definisce un set di interfacce COM che consentono alle applicazioni di accedere in modo uniforme ai dati archiviati in origini dati diverse. Questo approccio consente a un'origine dati di condividere i dati attraverso le interfacce che supportano la quantità di funzionalità DBMS appropriate per l'origine dati. Per impostazione predefinita, l'architettura a prestazioni elevate di OLE DB si basa sull'utilizzo di un modello di servizi flessibile basato su componenti. Anziché avere un numero prescritto di livelli intermedi tra l'applicazione e i dati, OLE DB richiede solo il numero di componenti necessari per eseguire una determinata attività.  
   
- Si supponga, ad esempio, che un utente desideri eseguire una query. Esaminare gli scenari seguenti:  
+ Si supponga, ad esempio, che un utente desideri eseguire una query. Prendere in considerazione gli scenari seguenti:  
   
 -   I dati si trovano in un database relazionale per il quale esiste attualmente un driver ODBC ma non un provider di OLE DB nativo: l'applicazione utilizza ADO per comunicare con il provider OLE DB per ODBC, che quindi carica il driver ODBC appropriato. Il driver passa l'istruzione SQL al sistema DBMS, che recupera i dati.  
   

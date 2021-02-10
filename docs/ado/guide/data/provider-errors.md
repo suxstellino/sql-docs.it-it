@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b31f530bafd69d59c98893cc2ead29039372dea9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a13bcc83c360533b1137af69b688221157dc0dc0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979982"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032608"
 ---
 # <a name="provider-errors"></a>Errori del provider
 Quando si verifica un errore del provider, viene restituito un errore di run-time di-2147467259. Quando viene visualizzato questo errore, controllare la raccolta di **errori** dell'oggetto **connessione** attivo, che conterrà uno o più errori che descrivono cosa si è verificato.  
@@ -30,7 +30,7 @@ Quando si verifica un errore del provider, viene restituito un errore di run-tim
 ## <a name="the-ado-errors-collection"></a>Raccolta di errori ADO  
  Poiché una particolare operazione ADO può produrre più errori del provider, ADO espone una raccolta di oggetti Error tramite l'oggetto **Connection** . Questa raccolta non contiene oggetti se un'operazione termina correttamente e contiene uno o più oggetti **Error** se si è verificato un errore e il provider ha generato uno o più errori. Esaminare ogni oggetto errore per determinare la corretta origine dell'errore.  
   
- Al termine della gestione degli errori che si sono verificati, è possibile cancellare la raccolta chiamando il metodo **Clear** . È particolarmente importante deselezionare esplicitamente la raccolta **Errors** prima di chiamare il metodo **Resync**, **UpdateBatch**o **CancelBatch** su un oggetto **Recordset** , il metodo **Open** su un oggetto **Connection** o impostare la proprietà **Filter** per un oggetto **Recordset** . Deselezionando la raccolta in modo esplicito, è possibile essere certi che gli oggetti **Error** della raccolta non vengano lasciati da un'operazione precedente.  
+ Al termine della gestione degli errori che si sono verificati, è possibile cancellare la raccolta chiamando il metodo **Clear** . È particolarmente importante deselezionare esplicitamente la raccolta **Errors** prima di chiamare il metodo **Resync**, **UpdateBatch** o **CancelBatch** su un oggetto **Recordset** , il metodo **Open** su un oggetto **Connection** o impostare la proprietà **Filter** per un oggetto **Recordset** . Deselezionando la raccolta in modo esplicito, è possibile essere certi che gli oggetti **Error** della raccolta non vengano lasciati da un'operazione precedente.  
   
  Alcune operazioni possono generare avvisi oltre agli errori. Gli avvisi sono rappresentati anche da oggetti **Error** nella raccolta **Errors** . Quando un provider aggiunge un avviso alla raccolta, non genera un errore di run-time. Controllare la proprietà **count** della raccolta **Errors** per determinare se un avviso è stato generato da una determinata operazione. Se il conteggio è uno o più, un oggetto **Error** è stato aggiunto alla raccolta. Non appena si è determinato che la raccolta **Errors** contiene errori o avvisi, è possibile scorrere la raccolta e recuperare le informazioni su ogni oggetto **Error** che contiene. Nell'esempio di Visual Basic breve seguente viene illustrato quanto segue:  
   
@@ -76,7 +76,7 @@ End Function
   
  L'oggetto **errore** ADO è molto simile all'oggetto Visual Basic **Err** standard. Le relative proprietà descrivono l'errore che si è verificato. Oltre al numero dell'errore, si ricevono anche due informazioni correlate. La proprietà **NativeError** contiene un numero di errore specifico per il provider in uso. Nell'esempio precedente, il provider è il provider di OLE DB Microsoft per SQL Server, quindi **NativeError** conterrà errori specifici per SQL Server. La proprietà **SQLSTATE** include un codice di cinque lettere che descrive un errore in un'istruzione SQL.  
   
-## <a name="event-related-errors"></a>Errori correlati agli eventi  
+## <a name="event-related-errors"></a>Errori Event-Related  
  L'oggetto **Error** viene usato anche quando si verificano errori correlati agli eventi. È possibile determinare se si è verificato un errore nel processo che ha generato un evento ADO controllando l'oggetto **errore** passato come parametro di evento.  
   
  Se l'operazione che provoca un evento viene conclusa correttamente, il parametro *adStatus* del gestore eventi verrà impostato su *adStatusOK*. D'altra parte, se l'operazione che ha generato l'evento ha avuto esito negativo, il parametro *adStatus* è impostato su *adStatusErrorsOccurred*. In tal caso, il parametro *perror* conterrà un oggetto **Error** che descrive l'errore.

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: eded7e8c-a25f-46a6-bc2b-32d89a54d1bc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb59e82c6ac76499087af5ccd66567216a112399
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7db68ddefc57b99db29c46ba6e386f09332c76c6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991702"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033381"
 ---
 # <a name="ado-event-instantiation-by-language"></a>Creazione di istanze di eventi ADO per linguaggio
 Ogni linguaggio di programmazione crea istanze di eventi ADO in modo diverso. Tutti gli esempi seguenti creano un gestore dell'evento **ConnectComplete** .  

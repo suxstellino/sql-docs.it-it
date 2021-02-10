@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: be4eda13-d4e4-4d6b-bb0d-3310b0a96fc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a6975e606544ddc05a838fa0238d95132c13bf1
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d111bac142126b8d5c4d9ec14616c91a18e70d4f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171073"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100024627"
 ---
 # <a name="fieldenum"></a>FieldEnum
 Specifica i campi speciali a cui viene fatto riferimento nella raccolta di [campi](./fields-collection-ado.md) di un oggetto [record](./record-object-ado.md) .  
