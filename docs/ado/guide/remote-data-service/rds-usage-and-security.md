@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 657250e54c9ea3564e826f2113a94625027fc4a1
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1664f953533b46a356f2bab7a601c82662807abe
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724892"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031863"
 ---
 # <a name="rds-usage-and-security"></a>Utilizzo e sicurezza per RDS
 Utilizzare le informazioni contenute in questa sezione per configurare il server e utilizzare RDS rapidamente. In questa sezione sono inclusi i passaggi di configurazione specifici che potrebbero essere necessari per l'implementazione di Servizi Desktop remoto, vengono descritte alcune delle principali relazioni tra Servizi Desktop remoto e altre tecnologie e viene facilitata l'identificazione delle soluzioni ai problemi che potrebbero verificarsi durante la configurazione di una soluzione Servizi Desktop remoto.  

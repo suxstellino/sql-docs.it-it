@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b39e62f1d7fc55c2d58b382677efa41e4df784a3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2f8fa6b7a3fb898d425d439b11b42451d42ac17a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991342"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033231"
 ---
 # <a name="editing-data"></a>Modifica dei dati
 È stato illustrato come usare ADO per connettersi a un'origine dati, eseguire un comando, ottenere i risultati in un oggetto **Recordset** e spostarsi all'interno del **Recordset**. Questa sezione è incentrata sulla successiva operazione ADO fondamentale: modifica dei dati.  

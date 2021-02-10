@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f581b2c4b4861c852a9e5a24aec5a219ee098f4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8335b09bbb7fa044492d1a080b34084be7860a5a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167318"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033918"
 ---
 # <a name="find-method-ado"></a>Metodo Find (ADO)
 Esegue la ricerca di un [Recordset](./recordset-object-ado.md) per la riga che soddisfa i criteri specificati. Facoltativamente, è possibile specificare la direzione della ricerca, la riga iniziale e l'offset dalla riga iniziale. Se i criteri vengono soddisfatti, la posizione della riga corrente viene impostata sul record trovato; in caso contrario, la posizione viene impostata sull'estremità (o inizio) del **Recordset**.  

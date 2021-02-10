@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 431ff25d49c4a45055d796aba98f229564872a4e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2dcd54dfb8ba5797588c615f987830dcb8aa5736
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978642"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032183"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Panoramica di schemi e dati multidimensionali
 ## <a name="understanding-multidimensional-schemas"></a>Informazioni sugli schemi multidimensionali  
@@ -82,7 +82,7 @@ Hamburg, Munich, Stuttgart}
   
  I membri possono essere consolidati in una o più gerarchie per dimensione. Si consideri una dimensione temporale in cui sono disponibili due modi per eseguire il rollup a livello di anno dal livello giorni:  
   
- In questo esempio viene illustrata anche un'altra caratteristica: alcuni membri del livello della settimana della gerarchia di anno-settimana non vengono visualizzati in alcun livello della gerarchia Year-Quarter. Pertanto, una gerarchia non deve includere tutti i membri di una dimensione.  
+ In questo esempio viene illustrata anche un'altra caratteristica: alcuni membri del livello settimana della gerarchia di Year-Week non vengono visualizzati in alcun livello della gerarchia di Year-Quarter. Pertanto, una gerarchia non deve includere tutti i membri di una dimensione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modello a oggetti ADO MD](../../reference/ado-md-api/ado-md-object-model.md)   

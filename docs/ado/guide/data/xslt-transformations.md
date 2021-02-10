@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a704245d166b0d53cb7ed17e6a5f8cdfa32d9447
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 75a29504d0d19300f8137959be150670f71e8b5b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978802"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032204"
 ---
 # <a name="xslt-transformations"></a>Trasformazioni XSLT
 XSLT può essere applicato al codice XML generato per trasformarlo in un altro formato. La comprensione del formato XML in ADO facilita lo sviluppo di modelli XSLT in grado di trasformarli in un formato più semplice e intuitivo.  
   
  Si sa, ad esempio, che ogni riga del recordset viene salvata come elemento z:Row all'interno dell'elemento RS: data. Analogamente, ogni campo del recordset viene salvato come una coppia attributo-valore per questo elemento.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È possibile applicare lo script XSLT seguente al codice XML illustrato nella sezione precedente per trasformarlo in una tabella HTML da visualizzare nel browser:  
   
 ```  

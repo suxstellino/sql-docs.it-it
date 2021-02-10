@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4451b3e733fa593a0c2c3c0f1d48ba4d24c697de
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2448e853f6c5e98a415f4a85228027465ea7192f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167632"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034501"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>Esempio di proprietà CursorType, LockType e EditMode (VB)
 In questo esempio viene illustrata l'impostazione delle proprietà [CursorType](./cursortype-property-ado.md) e [LockType](./locktype-property-ado.md) prima di aprire un [Recordset](./recordset-object-ado.md). Mostra anche il valore della proprietà [EditMode](./editmode-property.md) in varie condizioni. Per eseguire questa procedura, è necessaria la funzione EditModeOutput.  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc36f0ab059bb7b605b02316008a969411663a8d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7f60d32ccd968c39da4fcea3978a46389e49ae49
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991302"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033211"
 ---
 # <a name="event-parameters"></a>Parametri evento
-Ogni gestore eventi dispone di un parametro status che controlla il gestore eventi. Per gli eventi completi, questo parametro viene usato anche per indicare l'esito positivo o negativo dell'operazione che ha generato l'evento. La maggior parte degli eventi completi dispone inoltre di un parametro error per fornire informazioni sugli errori che potrebbero essersi verificati e uno o più parametri oggetto che fanno riferimento agli oggetti ADO utilizzati per eseguire l'operazione. Ad esempio, l'evento [ExecuteComplete](../../reference/ado-api/executecomplete-event-ado.md) include i parametri oggetto per il **comando**, il **Recordset**e gli oggetti **connessione** associati all'evento. Nell'esempio seguente Microsoft® Visual Basic®, è possibile visualizzare gli oggetti pCommand, pRecordset e pConnection che rappresentano gli oggetti **Command**, **Recordset**e **Connection** usati dal metodo **Execute** .  
+Ogni gestore eventi dispone di un parametro status che controlla il gestore eventi. Per gli eventi completi, questo parametro viene usato anche per indicare l'esito positivo o negativo dell'operazione che ha generato l'evento. La maggior parte degli eventi completi dispone inoltre di un parametro error per fornire informazioni sugli errori che potrebbero essersi verificati e uno o più parametri oggetto che fanno riferimento agli oggetti ADO utilizzati per eseguire l'operazione. Ad esempio, l'evento [ExecuteComplete](../../reference/ado-api/executecomplete-event-ado.md) include i parametri oggetto per il **comando**, il **Recordset** e gli oggetti **connessione** associati all'evento. Nell'esempio seguente Microsoft® Visual Basic®, è possibile visualizzare gli oggetti pCommand, pRecordset e pConnection che rappresentano gli oggetti **Command**, **Recordset** e **Connection** usati dal metodo **Execute** .  
   
 ```  
 Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _  
@@ -39,7 +39,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  Ad eccezione dell'oggetto **Error** , gli stessi parametri vengono passati agli eventi di. In questo modo è possibile esaminare tutti gli oggetti che verranno utilizzati nell'operazione in sospeso e determinare se l'operazione deve essere consentita per il completamento.  
   
- Alcuni gestori di eventi hanno un parametro *reason* , che fornisce informazioni aggiuntive sui motivi per cui si è verificato l'evento. Ad esempio, gli eventi **WillMove** e **MoveComplete** possono verificarsi a causa di uno dei metodi di navigazione (**MoveNext**, **MovePrevious**e così via) chiamati o come risultato di una riesecuzione della query.  
+ Alcuni gestori di eventi hanno un parametro *reason* , che fornisce informazioni aggiuntive sui motivi per cui si è verificato l'evento. Ad esempio, gli eventi **WillMove** e **MoveComplete** possono verificarsi a causa di uno dei metodi di navigazione (**MoveNext**, **MovePrevious** e così via) chiamati o come risultato di una riesecuzione della query.  
   
 ## <a name="status-parameter"></a>Parametro status  
  Quando viene chiamata la routine del gestore eventi, il parametro *status* viene impostato su uno dei valori seguenti.  
@@ -52,7 +52,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  Se si determina nel caso in cui l'operazione deve continuare, lasciare invariato il parametro *status* . Tuttavia, se il parametro di stato in ingresso non è stato impostato su **adStatusCantDeny**, è possibile annullare l'operazione in sospeso cambiando *lo stato* in **adStatusCancel**. Quando si esegue questa operazione, l'evento completo associato all'operazione ha il relativo parametro *status* impostato su **adStatusErrorsOccurred**. L'oggetto **Error** passato all'evento complete conterrà il valore **adErrOperationCancelled**.  
   
- Se non si desidera più elaborare un evento, è possibile impostare *lo stato* su **adStatusUnwantedEvent** e l'applicazione non riceverà più la notifica dell'evento. Tuttavia, tenere presente che alcuni eventi possono essere generati per più di un motivo. In tal caso, è necessario specificare **adStatusUnwantedEvent** per ogni motivo possibile. Ad esempio, per interrompere la ricezione di notifiche di eventi **RecordChange** in sospeso, è necessario impostare il parametro *status* su **adStatusUnwantedEvent** per **adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**e **adRsnFirstChange** non appena si verificano.  
+ Se non si desidera più elaborare un evento, è possibile impostare *lo stato* su **adStatusUnwantedEvent** e l'applicazione non riceverà più la notifica dell'evento. Tuttavia, tenere presente che alcuni eventi possono essere generati per più di un motivo. In tal caso, è necessario specificare **adStatusUnwantedEvent** per ogni motivo possibile. Ad esempio, per interrompere la ricezione di notifiche di eventi **RecordChange** in sospeso, è necessario impostare il parametro *status* su **adStatusUnwantedEvent** per **adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete** e **adRsnFirstChange** non appena si verificano.  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  

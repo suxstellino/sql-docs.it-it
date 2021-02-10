@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13aeddcf9a826cff5caa33172f785f2e42747a3f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f625a4f96aa5ec083057af4118315d9df494530e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979752"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032543"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>Recupero di set di risultati nei flussi
 Anziché ricevere i risultati nell'oggetto **Recordset** tradizionale, ADO può invece recuperare i risultati della query in un flusso. Per contenere questi risultati, è possibile usare l'oggetto **flusso** ADO o altri oggetti che supportano l'interfaccia com **IStream** , ad esempio gli oggetti **richiesta** e **risposta** ASP. Un uso di questa funzionalità è quello di recuperare i risultati in formato XML. Con SQL Server, ad esempio, i risultati XML possono essere restituiti in diversi modi, ad esempio utilizzando la clausola FOR XML con una query SQL SELECT o utilizzando una query XPath.  
   
- Per ricevere i risultati della query in formato flusso anziché in un **Recordset**, è necessario specificare la costante **adExecuteStream** da **ExecuteOptionEnum** come parametro del metodo **Execute** di un oggetto **Command** . Se il provider supporta questa funzionalità, i risultati verranno restituiti in un flusso al momento dell'esecuzione. Potrebbe essere necessario specificare proprietà aggiuntive specifiche del provider prima dell'esecuzione del codice. Ad esempio, con il provider di Microsoft OLE DB per SQL Server, è necessario specificare proprietà come il **flusso di output** nella raccolta **Properties** dell'oggetto **Command** . Per ulteriori informazioni sulle proprietà dinamiche specifiche di SQL Server correlate a questa funzionalità, vedere Proprietà correlate a XML nel documentazione online di SQL Server.  
+ Per ricevere i risultati della query in formato flusso anziché in un **Recordset**, è necessario specificare la costante **adExecuteStream** da **ExecuteOptionEnum** come parametro del metodo **Execute** di un oggetto **Command** . Se il provider supporta questa funzionalità, i risultati verranno restituiti in un flusso al momento dell'esecuzione. Potrebbe essere necessario specificare proprietà aggiuntive specifiche del provider prima dell'esecuzione del codice. Ad esempio, con il provider di Microsoft OLE DB per SQL Server, è necessario specificare proprietà come il **flusso di output** nella raccolta **Properties** dell'oggetto **Command** . Per ulteriori informazioni sulle proprietà dinamiche specifiche di SQL Server correlate a questa funzionalità, vedere Proprietà XML-Related nel documentazione online di SQL Server.  
   
 ## <a name="for-xml-query-example"></a>PER XML Query esempio  
  Nell'esempio seguente viene scritto in VBScript nel database Northwind:  
@@ -157,7 +157,7 @@ FOR XML [RAW|AUTO|EXPLICIT]
 SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO  
 ```  
   
- Il comando può essere specificato in una stringa, come illustrato in precedenza, assegnato a **CommandText**o sotto forma di query modello XML assegnata a **CommandStream**. Per altre informazioni sulle query di modelli XML, vedere [flussi di comandi](../../../ado/guide/data/command-streams.md) in ADO o uso di flussi per l'input del comando nella documentazione online di SQL Server.  
+ Il comando può essere specificato in una stringa, come illustrato in precedenza, assegnato a **CommandText** o sotto forma di query modello XML assegnata a **CommandStream**. Per altre informazioni sulle query di modelli XML, vedere [flussi di comandi](../../../ado/guide/data/command-streams.md) in ADO o uso di flussi per l'input del comando nella documentazione online di SQL Server.  
   
  Come query modello XML, la query FOR XML viene visualizzata come segue:  
   
@@ -179,5 +179,5 @@ adoCmd.Execute , , adExecuteStream
 Response.write "</XML>"  
 ```  
   
-### <a name="remarks"></a>Osservazioni  
+### <a name="remarks"></a>Commenti  
  A questo punto, il codice XML è stato trasmesso al browser client ed è pronto per essere visualizzato. Questa operazione viene eseguita utilizzando VBScript sul lato client per associare il documento XML a un'istanza del DOM e scorrere in ciclo ogni nodo figlio per compilare un elenco di prodotti in HTML.

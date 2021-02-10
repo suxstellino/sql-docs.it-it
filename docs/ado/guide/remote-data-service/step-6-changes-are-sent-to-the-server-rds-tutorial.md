@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9929177baaf1efd486cb9f628034158b370badc7
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: d6a769a22a86e145727079af6fc067b1552f2bbf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722862"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031713"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Passaggio 6: Le modifiche vengono inviate al server (esercitazione su RDS)
 Se l'oggetto **Recordset** viene modificato, tutte le modifiche, ovvero le righe aggiunte, modificate o eliminate, possono essere inviate nuovamente al server.  
   
 > [!NOTE]
->  Il comportamento predefinito di RDS può essere richiamato in modo implicito con gli oggetti ADO e il provider Microsoft OLE DB Remoting. Le query possono restituire **Recordset**s e i **Recordset**modificati possono aggiornare l'origine dati. Questa esercitazione non richiama Servizi Desktop remoto con gli oggetti ADO, ma questo è il modo in cui verrebbe eseguita l'operazione:  
+>  Il comportamento predefinito di RDS può essere richiamato in modo implicito con gli oggetti ADO e il provider Microsoft OLE DB Remoting. Le query possono restituire **Recordset** s e i **Recordset** modificati possono aggiornare l'origine dati. Questa esercitazione non richiama Servizi Desktop remoto con gli oggetti ADO, ma questo è il modo in cui verrebbe eseguita l'operazione:  
   
 ```vb
 Dim rs as New ADODB.Recordset  

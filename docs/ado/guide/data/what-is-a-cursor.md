@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3090e38507a73d00edbe3bd1cb85e408c88fdba1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 915d41f78de6c789c82bca3d729aa2c28ff26f27
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978922"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032263"
 ---
 # <a name="what-is-a-cursor"></a>Informazioni sui cursori
 Nei database relazionali le operazioni vengono eseguite su set di righe completi. Il set di righe restituito da un'istruzione SELECT include tutte le righe che soddisfano le condizioni specificate nella clausola WHERE dell'istruzione. Il set di righe completo restituito dall'istruzione è noto come set di risultati. Le applicazioni, in particolare quelle interattive e online, non possono sempre funzionare in modo efficace con l'intero set di risultati come unità. In tali applicazioni deve essere pertanto disponibile un meccanismo per l'elaborazione di una riga singola o di un blocco di righe di dimensioni ridotte. I cursori sono un'estensione dei set di risultati che implementano appunto tale meccanismo.  

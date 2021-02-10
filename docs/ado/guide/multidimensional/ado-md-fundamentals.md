@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f6a20d9f-c1ab-474c-b9f3-82277e2a126d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b8f213968a55d32cb306891362d6bad9f2fd12cf
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7634d32b35eef7d0289ef778bee9646a050e8755
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978662"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032193"
 ---
 # <a name="ado-md-fundamentals"></a>Nozioni fondamentali su ADO MD
 Microsoft® ActiveX® Data Objects (multidimensionale) (ADO MD) consente di accedere facilmente ai dati multidimensionali da linguaggi quali Microsoft Visual Basic® Microsoft Visual C++. ADO MD estende Microsoft ActiveX® Data Objects (ADO) per includere gli oggetti specifici di dati multidimensionali, ad esempio gli oggetti [CubeDef](../../reference/ado-md-api/cubedef-object-ado-md.md) e [cellt](../../reference/ado-md-api/cellset-object-ado-md.md) . Con ADO MD è possibile esplorare uno schema multidimensionale, eseguire una query su un cubo e recuperare i risultati.  

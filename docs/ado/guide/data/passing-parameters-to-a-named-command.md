@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6de01bb420a7e2c5fadd2970064d5e84d22328b3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 11fa07dd7af4512f8b7f41917d2778fecd6584ce
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980142"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032643"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>Passaggio di parametri a un comando con nome
 Proprio come il risultato del comando viene passato come variabile *out* del comando denominato, i parametri per un comando con parametri possono essere passati come *nelle* variabili al comando denominato.  

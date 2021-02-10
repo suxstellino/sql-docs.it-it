@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d234732b90fdd89b6f0e41efe1762bb3a99ddde2
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: dccdb22981bb1662cd50da1e28db8fa0a2ce47d6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724852"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032048"
 ---
 # <a name="address-book-command-buttons"></a>Pulsanti di comando di Address Book
 L'applicazione Address Book include i pulsanti di comando seguenti:  
@@ -63,7 +63,7 @@ End Sub
 ```  
   
 ## <a name="update-profile-button"></a>Pulsante Aggiorna profilo  
- Se si fa clic sul pulsante **Aggiorna profilo** , viene attivata la subroutine Update_OnClick VBScript, che esegue il Servizi Desktop remoto [. ](../../reference/rds-api/datacontrol-object-rds.md) Metodi dell'oggetto DataControl ( `DC1` ) [SubmitChanges](../../reference/rds-api/submitchanges-method-rds.md) e [Refresh](../../reference/rds-api/refresh-method-rds.md) .  
+ Se si fa clic sul pulsante **Aggiorna profilo** , viene attivata la subroutine Update_OnClick VBScript, che esegue il Servizi Desktop remoto [.](../../reference/rds-api/datacontrol-object-rds.md) Metodi dell'oggetto DataControl ( `DC1` ) [SubmitChanges](../../reference/rds-api/submitchanges-method-rds.md) e [Refresh](../../reference/rds-api/refresh-method-rds.md) .  
   
 ```vb
 Sub Update_OnClick  

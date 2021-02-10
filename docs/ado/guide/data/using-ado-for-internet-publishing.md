@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 774ff9b0728d362822c72047b573ab9def944d18
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f7affce9c8596b9155f691ccf2ef61f9f0eca35d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979035"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032273"
 ---
 # <a name="using-ado-for-internet-publishing"></a>Uso di ADO per Internet Publishing
 [Il Provider OLE DB per Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) Mostra un esempio specifico di accesso ai dati eterogenei con ADO. Sebbene gli esempi in questa sezione siano specifici dell'utilizzo del provider di pubblicazione Internet, i principi illustrati dovrebbero essere simili quando si utilizza ADO con altri provider per dati eterogenei, ad esempio un provider per un archivio di posta elettronica.  
@@ -32,7 +32,7 @@ ms.locfileid: "88979035"
  Per ulteriori informazioni sull'utilizzo degli URL, vedere [URL assoluto e relativo](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="record-fields"></a>Campi di record  
- La differenza tra dati eterogenei e dati omogenei consiste nel fatto che per il primo, ogni riga di dati, o **record**, può avere un set di colonne o **campi**diverso. Per i dati omogenei, ogni riga ha lo stesso set di colonne. Per ulteriori informazioni sui campi specifici del provider di pubblicazione Internet, vedere [record e campi aggiuntivi forniti dal provider](../../../ado/guide/data/records-and-provider-supplied-fields.md).  
+ La differenza tra dati eterogenei e dati omogenei consiste nel fatto che per il primo, ogni riga di dati, o **record**, può avere un set di colonne o **campi** diverso. Per i dati omogenei, ogni riga ha lo stesso set di colonne. Per ulteriori informazioni sui campi specifici del provider di pubblicazione Internet, vedere [record e Provider-Supplied campi aggiuntivi](../../../ado/guide/data/records-and-provider-supplied-fields.md).  
   
 ### <a name="appending-new-fields"></a>Aggiunta di nuovi campi  
  Diversi oggetti ADO sono stati migliorati per interagire con gli oggetti **record** e **flusso** .  

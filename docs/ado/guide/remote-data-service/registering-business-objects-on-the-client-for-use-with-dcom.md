@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 75a21910-607f-463a-ae18-a17130dafb7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 51f71b24c1917a05255e2e1ceddd64096971f487
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 708a59b8c931b723c8f4142f036849da4965fc13
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91723182"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031823"
 ---
 # <a name="registering-business-objects-on-the-client-for-use-with-dcom"></a>Registrazione degli oggetti business sul client per l'uso con DCOM
 Per gli oggetti business personalizzati è necessario assicurarsi che il lato client sia in grado di eseguire il mapping del nome del programma (ProgId) a un identificatore (CLSID) che può essere utilizzato su DCOM. Per questo motivo, il ProgID dell'oggetto DCOM deve trovarsi nel registro di sistema sul lato client ed eseguire il mapping all'ID classe dell'oggetto business sul lato server. Per gli altri protocolli supportati (HTTP, HTTPS e in-process), questa operazione non è necessaria.  

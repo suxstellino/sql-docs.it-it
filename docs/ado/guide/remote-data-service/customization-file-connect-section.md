@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c4350cb9aad6e2ef1d9381cffb6e05b13d09c43c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 0b3508479d6d52799f286421c1bb2c67683088f9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724782"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032013"
 ---
 # <a name="customization-file-connect-section"></a>Sezione sulla connessione del file di personalizzazione
 Il comportamento predefinito del gestore è negare tutte le connessioni. La sezione **Connect** specifica le eccezioni al comportamento. Se, ad esempio, tutte le sezioni di **connessione** sono assenti o vuote, per impostazione predefinita non è possibile effettuare alcuna connessione.  
@@ -52,7 +52,7 @@ connectionString
   
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 |Parte|Descrizione|  
 |----------|-----------------|  

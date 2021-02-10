@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2b307c89d5e4a25d6963ef100083015ffe6ce74
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 8421340798a308204a0961340e06216f3b0cb24a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724922"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031893"
 ---
 # <a name="rds-programming-model-in-detail"></a>Informazioni dettagliate sul modello di programmazione RDS
 Di seguito sono riportati gli elementi chiave del modello di programmazione RDS:  
@@ -29,7 +29,7 @@ Di seguito sono riportati gli elementi chiave del modello di programmazione RDS:
   
 -   RDS. DataControl  
   
--   Event  
+-   Evento  
   
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](/dotnet/framework/wcf/).  
@@ -65,7 +65,7 @@ Di seguito sono riportati gli elementi chiave del modello di programmazione RDS:
   
  **RDS. L'oggetto DataControl** dispone inoltre di metodi propri per lo spostamento, l'ordinamento e il filtro delle righe dell'oggetto **Recordset** associato. Questi metodi sono simili, ma non uguali ai metodi dell'oggetto **Recordset** ADO.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventi  
  RDS supporta due dei propri eventi, indipendenti dal modello di eventi ADO. L'evento [onReadyStateChange](../../reference/rds-api/onreadystatechange-event-rds.md) viene chiamato ogni volta che **RDS. DataControl** [ReadyState](../../reference/rds-api/readystate-property-rds.md) proprietà modificata, in modo che venga inviata una notifica quando un'operazione asincrona è stata completata, terminata o si è verificato un errore. L'evento [OnError](../../reference/rds-api/onerror-event-rds.md) viene chiamato ogni volta che si verifica un errore, anche se l'errore si verifica durante un'operazione asincrona.  
   
 > [!NOTE]

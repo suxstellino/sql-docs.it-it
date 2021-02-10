@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a8ffeab33125b3b13ca5725125654bd3ed1f822
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4e64608adc461534a30630a6b8b8d29d0478544a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978842"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032253"
 ---
 # <a name="working-with-recordsets"></a>Utilizzo dei recordset
 L'oggetto **Recordset** dispone di funzionalità predefinite che consentono di riorganizzare l'ordine dei dati nel set di risultati, di cercare un record specifico in base ai criteri forniti dall'utente e anche di ottimizzare le operazioni di ricerca usando gli indici. Se queste funzionalità sono disponibili per l'uso dipendono dal provider e in alcuni casi, ad esempio quella della proprietà [index](../../../ado/reference/ado-api/index-property.md) , ovvero la struttura dell'origine dati stessa.  
@@ -34,7 +34,7 @@ L'oggetto **Recordset** dispone di funzionalità predefinite che consentono di r
   
  Se si imposta la proprietà **Sort** su una stringa vuota, le righe vengono reimpostate sull'ordine originale ed eliminano gli indici temporanei. Gli indici esistenti non verranno eliminati.  
   
- Si supponga che un **Recordset** contenga tre campi denominati *FirstName*, *middleInitial*e *LastName*. Impostare la proprietà **Sort** sulla stringa " `lastName DESC, firstName ASC` ", che ordina il **Recordset** in base al cognome in ordine decrescente e quindi in base al nome in ordine crescente. Il secondo iniziale viene ignorato.  
+ Si supponga che un **Recordset** contenga tre campi denominati *FirstName*, *middleInitial* e *LastName*. Impostare la proprietà **Sort** sulla stringa " `lastName DESC, firstName ASC` ", che ordina il **Recordset** in base al cognome in ordine decrescente e quindi in base al nome in ordine crescente. Il secondo iniziale viene ignorato.  
   
  Nessun campo a cui viene fatto riferimento in una stringa di criteri di ordinamento può essere denominato "ASC" o "DESC" perché tali nomi sono in conflitto con le parole chiave **ASC** e **desc**. Assegnare un alias a un campo con un nome in conflitto usando la parola chiave **As** nella query che restituisce il **Recordset**.  
   
@@ -63,7 +63,7 @@ L'oggetto **Recordset** dispone di funzionalità predefinite che consentono di r
  Gli asterischi possono essere utilizzati solo alla fine di una stringa di criteri o insieme sia all'inizio che alla fine di una stringa di criteri, come illustrato in precedenza. Non è possibile usare l'asterisco come carattere jolly (' * Str ') o carattere jolly incorporato (' \* s'). Verrà generato un errore.  
   
 ### <a name="seek-and-index"></a>Seek e index  
- Utilizzare il metodo **Seek** insieme alla proprietà **index** se il provider sottostante supporta indici nell'oggetto **Recordset** . Utilizzare il metodo [Supports](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** per determinare se il provider sottostante supporta **Seek**e il metodo **Supports (adIndex)** per determinare se il provider supporta gli indici. Ad esempio, il [provider di OLE DB per Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) supporta la **ricerca** e l' **Indice**.  
+ Utilizzare il metodo **Seek** insieme alla proprietà **index** se il provider sottostante supporta indici nell'oggetto **Recordset** . Utilizzare il metodo [Supports](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** per determinare se il provider sottostante supporta **Seek** e il metodo **Supports (adIndex)** per determinare se il provider supporta gli indici. Ad esempio, il [provider di OLE DB per Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) supporta la **ricerca** e l' **Indice**.  
   
  Se **Seek** non trova la riga desiderata, non si verifica alcun errore e la riga viene posizionata alla fine del **Recordset**. Impostare la proprietà **index** sull'indice desiderato prima di eseguire questo metodo.  
   
@@ -74,7 +74,7 @@ L'oggetto **Recordset** dispone di funzionalità predefinite che consentono di r
 ## <a name="filtering-the-results"></a>Filtro dei risultati  
  Il metodo **Find** limita la ricerca al contenuto di un campo. Il metodo **Seek** richiede un indice e presenta anche altre limitazioni. Se è necessario eseguire la ricerca in più campi che non sono la base di un indice o se il provider non supporta gli indici, è possibile limitare i risultati utilizzando la proprietà **Filter** dell'oggetto **Recordset** .  
   
- Utilizzare la proprietà **Filter** per schermare selettivamente i record in un oggetto **Recordset** . Il **Recordset** filtrato diventa il cursore corrente, il che significa che i record che non soddisfano i criteri di **filtro** non sono disponibili nel **Recordset** fino a quando il **filtro** non viene rimosso. Sono interessate anche altre proprietà che restituiscono valori basati sul cursore corrente, ad esempio **AbsolutePosition**, **AbsolutePage**, **RecordCount**e **PageCount**. Questo perché impostando la proprietà **Filter** su un valore specifico, il record corrente verrà spostato nel primo record che soddisfa il nuovo valore.  
+ Utilizzare la proprietà **Filter** per schermare selettivamente i record in un oggetto **Recordset** . Il **Recordset** filtrato diventa il cursore corrente, il che significa che i record che non soddisfano i criteri di **filtro** non sono disponibili nel **Recordset** fino a quando il **filtro** non viene rimosso. Sono interessate anche altre proprietà che restituiscono valori basati sul cursore corrente, ad esempio **AbsolutePosition**, **AbsolutePage**, **RecordCount** e **PageCount**. Questo perché impostando la proprietà **Filter** su un valore specifico, il record corrente verrà spostato nel primo record che soddisfa il nuovo valore.  
   
  La proprietà **Filter** accetta un argomento VARIANT. Questo valore rappresenta uno dei tre metodi per l'utilizzo della proprietà **Filter** : una stringa di criteri, una costante **FilterGroupEnum** o una matrice di segnalibri. Per ulteriori informazioni, vedere filtro con una stringa di criteri, filtro con una costante e filtro con segnalibri più avanti in questo argomento.  
   
@@ -93,7 +93,7 @@ L'oggetto **Recordset** dispone di funzionalità predefinite che consentono di r
 -   *Value* è il valore con cui si confronteranno i valori dei campi (ad esempio,,, `'Smith'` `#8/24/95#` `12.345` o `$50.00` ). Usare le virgolette singole (') con le stringhe e i segni di cancelletto ( `#` ) con le date. Per i numeri, è possibile usare separatori decimali, simboli del dollaro e notazione scientifica. Se *operator* è **simile a**, *value* può utilizzare caratteri jolly. Solo l'asterisco ( \* ) e il segno di percentuale (%) i caratteri jolly sono consentiti e devono essere l'ultimo carattere della stringa. Il *valore* non può essere null.  
   
     > [!NOTE]
-    >  Per includere virgolette singole (') nel *valore*del filtro, usare due virgolette singole per rappresentarne una. Ad esempio, per filtrare in modo da essere impostata su *Malley*, la stringa di criteri deve essere `"col1 = 'O''Malley'"` . Per includere virgolette singole sia all'inizio che alla fine del valore del filtro, racchiudere la stringa nei segni di cancelletto (#). Ad esempio, per applicare un filtro su *"1"*, la stringa di criteri deve essere `"col1 = #'1'#"` .  
+    >  Per includere virgolette singole (') nel *valore* del filtro, usare due virgolette singole per rappresentarne una. Ad esempio, per filtrare in modo da essere impostata su *Malley*, la stringa di criteri deve essere `"col1 = 'O''Malley'"` . Per includere virgolette singole sia all'inizio che alla fine del valore del filtro, racchiudere la stringa nei segni di cancelletto (#). Ad esempio, per applicare un filtro su *"1"*, la stringa di criteri deve essere `"col1 = #'1'#"` .  
   
  Non esiste alcuna precedenza tra **and** e **or**. Le clausole possono essere raggruppate tra parentesi. Tuttavia, non è possibile raggruppare le clausole unite da un oggetto **o** , quindi unire il gruppo a un'altra clausola con e, come indicato di seguito.  
   
@@ -110,11 +110,11 @@ L'oggetto **Recordset** dispone di funzionalità predefinite che consentono di r
  In una clausola **like** è possibile usare un carattere jolly all'inizio e alla fine del modello (ad esempio, `LastName Like '*mit*'` ) o solo alla fine del pattern (ad esempio, `LastName Like 'Smit*'` ).  
   
 ### <a name="filtering-with-a-constant"></a>Filtraggio con una costante  
- Per filtrare i **Recordset**sono disponibili le costanti seguenti.  
+ Per filtrare i **Recordset** sono disponibili le costanti seguenti.  
   
 |Costante|Descrizione|  
 |--------------|-----------------|  
-|**adFilterAffectedRecords**|Filtri per la visualizzazione dei soli record interessati dall'ultima chiamata a **Delete**, **Resync**, **UpdateBatch**o **CancelBatch** .|  
+|**adFilterAffectedRecords**|Filtri per la visualizzazione dei soli record interessati dall'ultima chiamata a **Delete**, **Resync**, **UpdateBatch** o **CancelBatch** .|  
 |**adFilterConflictingRecords**|Filtri per la visualizzazione dei record che non hanno superato l'ultimo aggiornamento batch.|  
 |**adFilterFetchedRecords**|Filtri per la visualizzazione dei record nella cache corrente, ovvero i risultati dell'ultima chiamata per recuperare record dal database.|  
 |**adFilterNone**|Rimuove il filtro corrente e ripristina tutti i record per la visualizzazione.|  
@@ -125,7 +125,7 @@ L'oggetto **Recordset** dispone di funzionalità predefinite che consentono di r
  `Attribute VB_Name = "modExaminingData"`  
   
 ### <a name="filtering-with-bookmarks"></a>Filtraggio con segnalibri  
- Infine, è possibile passare una matrice Variant di segnalibri alla proprietà **Filter** . Il cursore risultante conterrà solo i record il cui segnalibro è stato passato alla proprietà. Nell'esempio di codice seguente viene creata una matrice di segnalibri dai record di un **Recordset** con "B" nel campo *ProductName* . Passa quindi la matrice alla proprietà **Filter** e visualizza le informazioni sul **Recordset**filtrato risultante.  
+ Infine, è possibile passare una matrice Variant di segnalibri alla proprietà **Filter** . Il cursore risultante conterrà solo i record il cui segnalibro è stato passato alla proprietà. Nell'esempio di codice seguente viene creata una matrice di segnalibri dai record di un **Recordset** con "B" nel campo *ProductName* . Passa quindi la matrice alla proprietà **Filter** e visualizza le informazioni sul **Recordset** filtrato risultante.  
   
 ```  
 'BeginFilterBkmk  
@@ -162,7 +162,7 @@ Loop
   
  Il record corrente di un clone appena creato è impostato originariamente sul primo record. Il puntatore di record corrente in un **Recordset** clonato non è sincronizzato con l'originale o viceversa. È possibile spostarsi in modo indipendente in ogni **Recordset**.  
   
- Le modifiche apportate a un oggetto **Recordset** sono visibili in tutti i relativi cloni indipendentemente dal tipo di cursore. Tuttavia, dopo l'esecuzione di [Requery](../../../ado/reference/ado-api/requery-method.md) sul **Recordset**originale, i cloni non verranno più sincronizzati con quello originale.  
+ Le modifiche apportate a un oggetto **Recordset** sono visibili in tutti i relativi cloni indipendentemente dal tipo di cursore. Tuttavia, dopo l'esecuzione di [Requery](../../../ado/reference/ado-api/requery-method.md) sul **Recordset** originale, i cloni non verranno più sincronizzati con quello originale.  
   
  La chiusura del **Recordset** originale non comporta la chiusura delle copie, né la chiusura di una copia chiude l'originale o una delle altre copie.  
   

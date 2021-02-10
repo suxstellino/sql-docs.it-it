@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6d761b781e7de4225f51fb3600ac467015a0c274
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f2c62c8b12435ec70166b66416f343fa835f6158
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722722"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032609"
 ---
 # <a name="writing-your-own-customized-handler"></a>Scrittura di un gestore personalizzato
 È possibile scrivere un gestore personalizzato se si è un amministratore del server IIS che desidera il supporto per Servizi Desktop remoto predefinito, ma maggiore controllo sulle richieste e sui diritti di accesso degli utenti.  
@@ -44,17 +44,17 @@ ms.locfileid: "91722722"
   
  ***query***  di  Testo del comando per eseguire una query.  
   
- ***PPRS***  Puntatore in cui deve essere restituito il **Recordset** .  
+ ***PPRS** _ il puntatore in cui deve essere restituito _ *Recordset**.  
   
 ## <a name="reconnect-method"></a>Metodo di riconnessione  
- Questo metodo aggiorna l'origine dati. Viene creato un nuovo oggetto [Connection](../../reference/ado-api/connection-object-ado.md) e il **Recordset**specificato viene collegato.  
+ Questo metodo aggiorna l'origine dati. Viene creato un nuovo oggetto [Connection](../../reference/ado-api/connection-object-ado.md) e il **Recordset** specificato viene collegato.  
   
 ### <a name="arguments"></a>Argomenti  
  ***conn***  Stringa di connessione.  
   
  ***argomenti***  Argomenti per il gestore.  
   
- ***pRS*** richieste pull  Oggetto **Recordset** .  
+ ***pRS** _ un oggetto _ *Recordset**.  
   
 ## <a name="msdfhdlidl"></a>msdfhdl. idl  
  Si tratta della definizione dell'interfaccia per **IDataFactoryHandler** che viene visualizzata nel file **msdfhdl. idl** .  
