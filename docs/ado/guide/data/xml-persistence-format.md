@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2da0090b9e06a9df7692a27242a08303174f51aa
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3a1a1b832f9e34cbf99e5fd01c424bf54c50c3bc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978832"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036721"
 ---
 # <a name="xml-persistence-format"></a>Formato di persistenza XML
 ADO usa la codifica UTF-8 per il flusso XML che rende permanente.  
   
  Il formato XML ADO è suddiviso in due sezioni, una sezione dello schema seguita dalla sezione Data. Di seguito è riportato un esempio di file XML per la tabella Shippers del database Northwind. Le varie parti del codice XML sono illustrate dopo l'esempio.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"   

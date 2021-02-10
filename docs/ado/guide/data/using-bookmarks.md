@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 34fc17275609dbf08ffa02a1bc89902c904cac85
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f07ad3e4f5dc69da31a74af96842b1c8aab97eda
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979040"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036771"
 ---
 # <a name="using-bookmarks"></a>Uso dei segnalibri
 Spesso è utile tornare direttamente a un record specifico dopo aver spostato il **Recordset** senza dover scorrere ogni record e confrontare i valori. Se, ad esempio, si tenta di cercare un record utilizzando il metodo **Find** , ma la ricerca non restituisce alcun record, si viene posizionati automaticamente a una delle estremità del **Recordset**. Se il provider li supporta, è possibile usare i segnalibri per contrassegnare il posto prima di usare il metodo **Find** , in modo da poter tornare al percorso. Un segnalibro è un valore di tipo **Variant** che identifica in modo univoco un record in un oggetto **Recordset** .  
@@ -49,4 +49,4 @@ End If
   
  Il metodo [Supports](../../../ado/reference/ado-api/supports-method.md) viene trattato in modo più dettagliato in un secondo momento.  
   
- Ad eccezione del caso di **Recordset**clonati, i segnalibri sono univoci per il **Recordset** in cui sono stati creati, anche se viene usato lo stesso comando. Ciò significa che non è possibile utilizzare un **segnalibro** ottenuto da un **Recordset** per spostarsi nello stesso record in un secondo **Recordset** aperto con lo stesso comando.
+ Ad eccezione del caso di **Recordset** clonati, i segnalibri sono univoci per il **Recordset** in cui sono stati creati, anche se viene usato lo stesso comando. Ciò significa che non è possibile utilizzare un **segnalibro** ottenuto da un **Recordset** per spostarsi nello stesso record in un secondo **Recordset** aperto con lo stesso comando.

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 52f8e379-812a-4db8-9210-94458926301c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 395a81108e3ceaed99ad8ccf1fbab29831dd116d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2e966c3570ce8f9589ede5f60fca1fc0fa70bbac
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979892"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037091"
 ---
 # <a name="recordset-dynamic-properties-in-xml"></a>Proprietà dinamiche dei recordset in XML
 Le seguenti proprietà specifiche del provider recordset (dal motore di cursore client) sono attualmente rese permanente nel formato XML:  

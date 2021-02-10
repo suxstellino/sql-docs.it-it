@@ -1,6 +1,6 @@
 ---
 description: Oggetto di data binding di Address Book
-title: Oggetto di associazione dati di Address Book | Microsoft Docs
+title: Oggetto Data-Binding Rubrica | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f5c98370ebb1a1b16e09e900455888d0c201905
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 91489445aef2034ed273a6d13cc5d6ae02b7f519
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721572"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036591"
 ---
 # <a name="address-book-data-binding-object"></a>Oggetto di data binding di Address Book
 L'applicazione Rubrica usa il Servizi Desktop remoto [. Oggetto DataControl](../../reference/rds-api/datacontrol-object-rds.md) per associare i dati dal database SQL Server a un oggetto visivo, in questo caso una tabella DHTML, nella pagina HTML del client dell'applicazione. La logica del programma VBScript basata sugli eventi utilizza [RDS. DataControl](../../reference/rds-api/datacontrol-object-rds.md) per:  
@@ -53,11 +53,11 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|***CLASSID***|Numero univoco a 128 bit che identifica il tipo di oggetto incorporato nel sistema. Questo identificatore viene mantenuto nel registro di sistema del computer locale. (Per gli ID di classe di Servizi Desktop remoto **. Oggetto DataControl** , vedere [RDS. Oggetto DataControl](../../reference/rds-api/datacontrol-object-rds.md).)|  
+|***ClassID** _|Numero univoco a 128 bit che identifica il tipo di oggetto incorporato nel sistema. Questo identificatore viene mantenuto nel registro di sistema del computer locale. (Per gli ID di classe di _ *RDS. Oggetto DataControl**, vedere [RDS. Oggetto DataControl](../../reference/rds-api/datacontrol-object-rds.md).)|  
 |***ID***|Definisce un identificatore a livello di documento per l'oggetto incorporato usato per identificarlo nel codice.|  
   
 ## <a name="rdsdatacontrol-tag-parameters"></a>RDS. Parametri dei tag DataControl  
- Nella tabella seguente vengono descritti i parametri specifici di Servizi Desktop remoto **. Oggetto DataControl** . (Per un elenco completo di Servizi Desktop remoto **. ** Parametri dell'oggetto DataControl e quando implementarli, vedere [RDS. Oggetto DataControl](../../reference/rds-api/datacontrol-object-rds.md).)  
+ Nella tabella seguente vengono descritti i parametri specifici di Servizi Desktop remoto **. Oggetto DataControl** . (Per un elenco completo di Servizi Desktop remoto **.** Parametri dell'oggetto DataControl e quando implementarli, vedere [RDS. Oggetto DataControl](../../reference/rds-api/datacontrol-object-rds.md).)  
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  

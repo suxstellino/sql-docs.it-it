@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6508e4e9-e33a-4dad-b340-5d632fd78a91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 417d03c66209a44110aff8d0c8e71845119049f1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3cbeb2bf63414f1b07912dcc0a4cc5b78ec3656e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979182"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036912"
 ---
 # <a name="updating-data"></a>Aggiornamento dei dati
 Il comportamento e le funzionalità degli aggiornamenti dipendono in gran parte dalla modalità di aggiornamento (tipo di blocco), dal tipo di cursore e dalla posizione del cursore.  

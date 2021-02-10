@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c826b9b5-0d78-43a2-8174-5844db62a93c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5073aa8334f1f86689085ec87dc5a5d9c832fd44
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d2d99315d0cef54709d8c5313f2961dc0e43cfe7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978602"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036641"
 ---
 # <a name="programming-with-ado-md"></a>Programmazione con ADO MD
 Per utilizzare ADO MD con lo strumento di sviluppo, è necessario stabilire un riferimento alla libreria dei tipi di ADO MD. La descrizione della libreria ADO MD è Microsoft ActiveX Data Objects (multidimensionale). Il nome del file della libreria ADO MD è msadomd.dll e l'ID del programma (ProgID) è "ADOMD". Per ulteriori informazioni su come stabilire i riferimenti alle librerie, vedere la documentazione dello strumento di sviluppo.  

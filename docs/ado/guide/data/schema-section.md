@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1f294e9c0258f1cc9d108d1eb9a47087b456ca8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 346957b2b060bf990cf77bfe7784f67b13a37c37
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979722"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037011"
 ---
 # <a name="schema-section"></a>Sezione dello schema
 La sezione schema è obbligatoria. Come illustrato nell'esempio precedente, ADO scrive i metadati dettagliati su ogni colonna per mantenere la semantica dei valori dei dati il più possibile per l'aggiornamento. Tuttavia, per caricare nel codice XML, ADO richiede solo i nomi delle colonne e il set di righe a cui appartengono. Di seguito è riportato un esempio di uno schema minimo:  
@@ -99,7 +99,7 @@ La sezione schema è obbligatoria. Come illustrato nell'esempio precedente, ADO 
  Analogamente, poiché nell'esempio precedente non è definito alcun alias `CompanyName` , è `CompanyName` necessario utilizzarlo in modo coerente in tutto il documento.  
   
 ## <a name="data-types"></a>Tipi di dati  
- È possibile applicare un tipo di dati a una colonna con l'attributo dt: Type. Per la guida definitiva ai tipi XML consentiti, vedere la sezione relativa ai tipi di dati della [specifica W3C XML-Data](http://www.w3.org/TR/1998/NOTE-XML-data/). È possibile specificare un tipo di dati in due modi: specificare l'attributo dt: Type direttamente nella definizione di colonna oppure utilizzare il costrutto s:DataType come elemento annidato della definizione di colonna. Ad esempio:  
+ È possibile applicare un tipo di dati a una colonna con l'attributo dt: Type. Per la guida definitiva ai tipi XML consentiti, vedere la sezione relativa ai tipi di dati della [specifica W3C XML-Data](http://www.w3.org/TR/1998/NOTE-XML-data/). È possibile specificare un tipo di dati in due modi: specificare l'attributo dt: Type direttamente nella definizione di colonna oppure utilizzare il costrutto s:DataType come elemento annidato della definizione di colonna. Ad esempio,  
   
 ```  
 <s:AttributeType name="Phone" >  

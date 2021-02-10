@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2ae54835836fecdfbf3b026fe9e6a701a5602d3d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1c0872f20754d093020ece2830d389de32f09032
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991542"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037741"
 ---
 # <a name="command-streams"></a>Flussi di comandi
 ADO ha sempre supportato l'input del comando in formato stringa specificato dalla proprietà **CommandText** . In alternativa, con ADO 2,7 o versioni successive, è anche possibile usare un flusso di informazioni per l'input del comando assegnando il flusso alla proprietà **CommandStream** . È possibile assegnare un oggetto **flusso** ADO o qualsiasi oggetto che supporti l'interfaccia **IStream** com.  
@@ -64,7 +64,7 @@ Set adoCmd  = Server.CreateObject("ADODB.Command"")
 adoCmd.CommandStream = adoStreamQuery  
 ```  
   
- Specificare il **dialetto**della lingua del comando, che indica il modo in cui il Provider di SQL Server OLE DB deve interpretare il flusso di comandi. Dialetto specificato da un GUID specifico del provider:  
+ Specificare il **dialetto** della lingua del comando, che indica il modo in cui il Provider di SQL Server OLE DB deve interpretare il flusso di comandi. Dialetto specificato da un GUID specifico del provider:  
   
 ```  
 adoCmd.Dialect = "{5D531CB2-E6Ed-11D2-B252-00C04F681B71}"  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b62e392325306bc358283874f4638077d8a4178
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 458a0f051e9bbf21c04b0c84125a1c438693f00d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991632"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037837"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Funzioni di aggregazione, funzione CALC e parola chiave NEW
 Data Shaping supporta le funzioni seguenti. Il nome assegnato al capitolo contenente la colonna da operare è l' *alias del capitolo*.  
@@ -30,13 +30,13 @@ Data Shaping supporta le funzioni seguenti. Il nome assegnato al capitolo conten
   
 |Funzioni di aggregazione|Descrizione|  
 |-------------------------|-----------------|  
-|SUM (*Chapter-alias*.* Nome colonna*)|Calcola la somma di tutti i valori nella colonna specificata.|  
-|AVG (*Chapter-alias*.* Nome colonna*)|Calcola la media di tutti i valori nella colonna specificata.|  
-|MAX (*alias di capitolo*.* Nome colonna*)|Calcola il valore massimo nella colonna specificata.|  
-|MIN (*Chapter-alias*.* Nome colonna*)|Calcola il valore minimo nella colonna specificata.|  
-|COUNT (*alias capitolo*[.* Nome colonna*])|Conta il numero di righe nell'alias specificato. Se viene specificata una colonna, nel conteggio vengono incluse solo le righe per le quali la colonna è non null.|  
-|STDEV (*Chapter-alias*.* Nome colonna*)|Calcola la deviazione standard nella colonna specificata.|  
-|ANY (*alias del capitolo*.* Nome colonna*)|Valore della colonna specificata. ANY presenta un valore stimabile solo quando il valore della colonna è lo stesso per tutte le righe del capitolo.<br /><br /> **Nota** Se la colonna non contiene lo stesso valore per tutte le righe nel capitolo, il comando SHAPE restituisce arbitrariamente uno dei valori in modo che corrisponda al valore della funzione ANY.|  
+|SUM (*Chapter-alias*.*Nome colonna*)|Calcola la somma di tutti i valori nella colonna specificata.|  
+|AVG (*Chapter-alias*.*Nome colonna*)|Calcola la media di tutti i valori nella colonna specificata.|  
+|MAX (*alias di capitolo*.*Nome colonna*)|Calcola il valore massimo nella colonna specificata.|  
+|MIN (*Chapter-alias*.*Nome colonna*)|Calcola il valore minimo nella colonna specificata.|  
+|COUNT (*alias capitolo*[.*Nome colonna*])|Conta il numero di righe nell'alias specificato. Se viene specificata una colonna, nel conteggio vengono incluse solo le righe per le quali la colonna è non null.|  
+|STDEV (*Chapter-alias*.*Nome colonna*)|Calcola la deviazione standard nella colonna specificata.|  
+|ANY (*alias del capitolo*.*Nome colonna*)|Valore della colonna specificata. ANY presenta un valore stimabile solo quando il valore della colonna è lo stesso per tutte le righe del capitolo.<br /><br /> **Nota** Se la colonna non contiene lo stesso valore per tutte le righe nel capitolo, il comando SHAPE restituisce arbitrariamente uno dei valori in modo che corrisponda al valore della funzione ANY.|  
   
 |Espressione calcolata|Descrizione|  
 |---------------------------|-----------------|  
@@ -44,7 +44,7 @@ Data Shaping supporta le funzioni seguenti. Il nome assegnato al capitolo conten
   
 |NUOVA parola chiave|Descrizione|  
 |-----------------|-----------------|  
-|NUOVO *tipo di campo* [(*width* &#124; *scale* &#124; *Precision* &#124; *Error* [, *scale* &#124; *Error*])]|Aggiunge al **Recordset**una colonna vuota del tipo specificato.|  
+|NUOVO *tipo di campo* [(*width* &#124; *scale* &#124; *Precision* &#124; *Error* [, *scale* &#124; *Error*])]|Aggiunge al **Recordset** una colonna vuota del tipo specificato.|  
   
  Il *tipo di campo* passato con la parola chiave New può essere uno dei tipi di dati seguenti.  
   

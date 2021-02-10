@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a4265124c2f86870d84ee703d228d5a760c4735
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: fd88799bce8f3b8a0842c9f2d2752eac062dc4b2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979992"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037181"
 ---
 # <a name="preparing-and-executing-commands"></a>Preparazione ed esecuzione di comandi
 I comandi sono istruzioni rilasciate a un provider per eseguire alcune operazioni sull'origine dati sottostante. Un'istruzione SQL, ad esempio, è un comando per Microsoft SQL provider di dati. In ADO, i comandi vengono in genere rappresentati dagli oggetti **Command** , sebbene sia possibile emettere semplici comandi tramite oggetti **connessione** o **Recordset** .  
@@ -28,7 +28,7 @@ I comandi sono istruzioni rilasciate a un provider per eseguire alcune operazion
  Oltre a usare gli oggetti **Command** , è possibile usare il metodo **Execute** sull'oggetto **Connection** o il metodo **Open** nell'oggetto **Recordset** per emettere un comando ed eseguirlo. Tuttavia, è consigliabile usare un oggetto **Command** se è necessario riutilizzare un comando nel codice o se è necessario passare informazioni dettagliate sui parametri con il comando. Questi scenari sono trattati in modo più dettagliato più avanti in questa sezione.  
   
 > [!NOTE]
->  Un determinato **comando**può restituire un set di risultati come flusso binario o come singolo **record** anziché come **Recordset**, se è supportato dal provider. Inoltre, alcuni **comandi**non hanno lo scopo di restituire alcun set di risultati, ad esempio una query SQL Update. In questa sezione verrà descritto lo scenario più comune, tuttavia, ovvero l'esecuzione di **comandi**che restituiscono risultati come oggetto **Recordset** . Per ulteriori informazioni sulla restituzione dei risultati in **record**s o **Stream**s, vedere [record e flussi](../../../ado/guide/data/records-and-streams.md).  
+>  Un determinato **comando** può restituire un set di risultati come flusso binario o come singolo **record** anziché come **Recordset**, se è supportato dal provider. Inoltre, alcuni **comandi** non hanno lo scopo di restituire alcun set di risultati, ad esempio una query SQL Update. In questa sezione verrà descritto lo scenario più comune, tuttavia, ovvero l'esecuzione di **comandi** che restituiscono risultati come oggetto **Recordset** . Per ulteriori informazioni sulla restituzione dei risultati in **record** s o **Stream** s, vedere [record e flussi](../../../ado/guide/data/records-and-streams.md).  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

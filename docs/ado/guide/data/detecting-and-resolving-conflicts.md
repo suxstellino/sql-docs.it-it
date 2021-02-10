@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a28fa775c834725504075907f09dc00e95bce1ee
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4c92b847b95aacd5cf642c9646f4618dc5986abf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991392"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037631"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Rilevamento e risoluzione di conflitti
 Se si sta lavorando con il recordset in modalità immediata, è possibile che si verifichino problemi di concorrenza. D'altra parte, se l'applicazione usa l'aggiornamento in modalità batch, è possibile che un utente possa modificare un record prima che vengano salvate le modifiche apportate da un altro utente che modifica lo stesso record. In tal caso, si desidera che l'applicazione gestisca normalmente il conflitto. Potrebbe essere necessario che l'ultima persona invii un aggiornamento al server "WINS". In alternativa, è possibile consentire all'utente più recente di decidere quale aggiornamento deve avere la precedenza, offrendogli una scelta tra i due valori in conflitto.  
   
  In ogni caso, ADO fornisce le proprietà UnderlyingValue e OriginalValue dell'oggetto Field per gestire questi tipi di conflitti. Utilizzare queste proprietà in combinazione con il metodo di risincronizzazione e la proprietà Filter del recordset.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Quando ADO rileva un conflitto durante un aggiornamento batch, viene aggiunto un avviso alla raccolta Errors. Pertanto, è consigliabile controllare sempre gli errori immediatamente dopo la chiamata a BatchUpdate e, se li si trova, iniziare a testare il presupposto che si sia verificato un conflitto. Il primo passaggio consiste nell'impostare la proprietà Filter sul recordset uguale a adFilterConflictingRecords. Questo limita la visualizzazione del recordset solo ai record in conflitto. Se la proprietà RecordCount è uguale a zero dopo questo passaggio, si sa che l'errore è stato generato da qualcosa di diverso da un conflitto.  
   
  Quando si chiama BatchUpdate, ADO e il provider generano istruzioni SQL per eseguire aggiornamenti sull'origine dati. Tenere presente che alcune origini dati presentano limitazioni sui tipi di colonne che è possibile utilizzare in una clausola WHERE.  

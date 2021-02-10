@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 17ce1263-5897-452a-9ea5-c7f96b33df65
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 35c2376031e96a19c4a761a9826e47be2306518e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 031d819e2c8eed63b9b8ff42aa58fb8e998a4273
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991332"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037501"
 ---
 # <a name="editing-existing-records"></a>Modifica di record esistenti
 Per modificare i record esistenti, passare alla riga che si desidera modificare e modificare la proprietà **value** dei campi che si desidera modificare. Per ulteriori informazioni sulla proprietà **value** dell'oggetto **campo** , vedere [analisi dei dati](./examining-data.md). A seconda del tipo di cursore, si utilizzerà **Update** o **UpdateBatch** per restituire le modifiche all'origine dati. Per ulteriori informazioni, vedere [aggiornamento e salvataggio permanente dei dati](./updating-and-persisting-data.md).  

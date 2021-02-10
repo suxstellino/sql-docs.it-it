@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 86789dbce8ab86035f815f36f8eff369b55401a3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f9a2ad809efbc847a2dfaf2292a15c1c7376e9b2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980102"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037211"
 ---
 # <a name="persisting-data"></a>Persistenza dei dati
 Il computer portatile, ad esempio l'utilizzo di computer portatili, ha generato la necessità di applicazioni che possono essere eseguite sia in stato connesso che in stato disconnesso. ADO ha aggiunto il supporto a questo scopo, offrendo allo sviluppatore la possibilità di salvare un **Recordset** del cursore client su disco e di ricaricarlo in un secondo momento.  
@@ -30,9 +30,9 @@ Il computer portatile, ad esempio l'utilizzo di computer portatili, ha generato 
   
 -   In **viaggio:** Quando si acquisisce l'applicazione in viaggio, è fondamentale fornire la possibilità di apportare modifiche e aggiungere nuovi record che possono essere riconnessi al database in un secondo momento e di cui è stato eseguito il commit.  
   
--   **Ricerche aggiornate raramente:** Spesso in un'applicazione, le tabelle vengono utilizzate come ricerche, ad esempio le tabelle delle imposte di stato. Vengono aggiornati raramente e sono di sola lettura. Anziché rileggere i dati dal server ogni volta che l'applicazione viene avviata, l'applicazione può semplicemente caricare i dati da un **Recordset**salvato in locale.  
+-   **Ricerche aggiornate raramente:** Spesso in un'applicazione, le tabelle vengono utilizzate come ricerche, ad esempio le tabelle delle imposte di stato. Vengono aggiornati raramente e sono di sola lettura. Anziché rileggere i dati dal server ogni volta che l'applicazione viene avviata, l'applicazione può semplicemente caricare i dati da un **Recordset** salvato in locale.  
   
- Per salvare e caricare **Recordset**in ADO, utilizzare i metodi **Recordset. Save** e **Recordset. Open (,,,, ADCMDFILE)** sull'oggetto **Recordset** ADO.  
+ Per salvare e caricare **Recordset** in ADO, utilizzare i metodi **Recordset. Save** e **Recordset. Open (,,,, ADCMDFILE)** sull'oggetto **Recordset** ADO.  
   
  È possibile utilizzare il metodo **Save del recordset per salvare** in modo permanente il **Recordset** ADO in un file su disco. È anche possibile salvare un **Recordset** in un oggetto **flusso** ADO. Gli oggetti **flusso** vengono descritti più avanti nella guida. Successivamente, è possibile usare il metodo **Open** per riaprire il **Recordset** quando si è pronti a usarlo. Per impostazione predefinita, ADO salva il **Recordset** nel formato proprietario Microsoft Advanced Data TABLEGRAM (ADTG). Questo formato binario viene specificato usando il valore **PersistFormatEnum di adPersistADTG** . In alternativa, è possibile scegliere di salvare il **Recordset** come XML usando invece **adPersistXML**. Per ulteriori informazioni sul salvataggio dei recordset come XML, vedere la pagina relativa [alla permanenza dei record in formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md).  
   
@@ -113,7 +113,7 @@ Destination, PersistFormat
 'EndPersist  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  In questa sezione vengono trattati gli argomenti seguenti.  
   
 -   [Altre informazioni sulla persistenza dei recordset](../../../ado/guide/data/more-about-recordset-persistence.md)  

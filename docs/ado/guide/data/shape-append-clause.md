@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 11d2c02d24753460f90452ddd6cc6b1e1589b80b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7c6d62d410e6709c93ad6e3d04db627f14f091a1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979622"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036991"
 ---
 # <a name="shape-append-clause"></a>Clausola APPEND di Shape
-La clausola SHAPE Command APPEND Accoda una colonna o colonne a un **Recordset**. Spesso queste colonne sono colonne del capitolo, che fanno riferimento a un **Recordset**figlio.  
+La clausola SHAPE Command APPEND Accoda una colonna o colonne a un **Recordset**. Spesso queste colonne sono colonne del capitolo, che fanno riferimento a un **Recordset** figlio.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,7 +44,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
 -   Parola chiave TABLE, seguita dal nome di una tabella nel provider di dati.  
   
  *parent-alias*  
- Alias facoltativo che fa riferimento al **Recordset**padre.  
+ Alias facoltativo che fa riferimento al **Recordset** padre.  
   
  *Elenco colonne*  
  Uno o più degli elementi seguenti:  
@@ -65,18 +65,18 @@ SHAPE [parent-command [[AS] parent-alias]]
    [, ... ]  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  *recordset figlio*  
  -   Comando del provider racchiuso tra parentesi graffe (" {} ") che restituisce un oggetto **Recordset** . Il comando viene emesso al provider di dati sottostante e la relativa sintassi dipende dai requisiti del provider. Si tratta in genere del linguaggio SQL, sebbene ADO non richieda un linguaggio di query specifico.  
   
 -   Un altro comando Shape incorporato tra parentesi.  
   
--   Nome di un **Recordset**con forma esistente.  
+-   Nome di un **Recordset** con forma esistente.  
   
 -   Parola chiave TABLE, seguita dal nome di una tabella nel provider di dati.  
   
  *alias figlio*  
- Alias che fa riferimento al **Recordset**figlio.  
+ Alias che fa riferimento al **Recordset** figlio.  
   
  *colonna padre*  
  Colonna nel **Recordset** restituita dal *comando padre.*  

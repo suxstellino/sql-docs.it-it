@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 41652f73868380d4902c7c6815a7ee53868c0969
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 36344c8b8c03677ac3b0ae25db097917d8d10d2a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724862"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036801"
 ---
 # <a name="using-a-connection-object"></a>Uso di un oggetto Connection
 Prima di aprire un oggetto **connessione** , è necessario definire determinate informazioni sull'origine dati e il tipo di connessione. La maggior parte di queste informazioni viene mantenuta dal parametro *ConnectionString* del [metodo Open](../../../ado/reference/ado-api/open-method-ado-connection.md) nell'oggetto **Connection** o dalla [proprietà ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) nell'oggetto **Connection** . Una stringa di connessione è costituita da un elenco di coppie argomento/valore separate da punti e virgola, con i valori racchiusi tra virgolette singole. Ad esempio:  

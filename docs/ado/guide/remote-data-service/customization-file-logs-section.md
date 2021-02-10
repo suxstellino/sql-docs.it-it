@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc65c6d9ad0b97f6d7f98a26fec173fc0fd630c3
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 34485c91a20b8c5df668e5eddd11e442418844a9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724772"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036531"
 ---
 # <a name="customization-file-logs-section"></a>Sezione Logs del file di personalizzazione
 La sezione **logs** contiene una voce del file di log che specifica il nome di un file che registra errori durante il funzionamento della **DataFactory**.  
@@ -37,7 +37,7 @@ FileName
   
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 |Parte|Descrizione|  
 |----------|-----------------|  

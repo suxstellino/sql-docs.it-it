@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2d0130d00c86830614242363914105605031ef4
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: bf3a704b26e35c77d9ba7ba059978091002cc424
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979432"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036940"
 ---
 # <a name="the-field-object"></a>Oggetto Field
 Ogni oggetto **campo** corrisponde in genere a una colonna in una tabella di database. Tuttavia, un **campo** può anche rappresentare un puntatore a un altro **Recordset**, denominato capitolo. Le eccezioni, ad esempio le colonne del capitolo, verranno descritte più avanti in questa guida.  
@@ -31,7 +31,7 @@ Ogni oggetto **campo** corrisponde in genere a una colonna in una tabella di dat
   
 -   Consente di visualizzare o modificare i dati nel campo utilizzando la proprietà **value** . **Value** è la proprietà predefinita dell'oggetto **Field** .  
   
--   Restituire le caratteristiche di base di un campo utilizzando le proprietà **Type**, **Precision**e **NumericScale** .  
+-   Restituire le caratteristiche di base di un campo utilizzando le proprietà **Type**, **Precision** e **NumericScale** .  
   
 -   Restituisce la dimensione dichiarata di un campo tramite la proprietà **DefinedSize** .  
   
@@ -44,7 +44,7 @@ Ogni oggetto **campo** corrisponde in genere a una colonna in una tabella di dat
  Risolvere le discrepanze nei valori di campo durante l'aggiornamento batch usando le proprietà **OriginalValue** e **UnderlyingValue** , se il provider supporta gli aggiornamenti in batch.  
   
 ## <a name="describing-a-field"></a>Descrizione di un campo  
- Gli argomenti seguenti illustrano le proprietà dell'oggetto [campo](../../../ado/reference/ado-api/field-object.md) che rappresentano le informazioni che descrivono l'oggetto **campo** stesso, ovvero i metadati relativi al campo. Queste informazioni possono essere utilizzate per determinare gran parte dello schema del **Recordset**. Queste proprietà includono **Type**, **DefinedSize** e **ActualSize**, **Name**e **NumericScale** e **Precision**.  
+ Gli argomenti seguenti illustrano le proprietà dell'oggetto [campo](../../../ado/reference/ado-api/field-object.md) che rappresentano le informazioni che descrivono l'oggetto **campo** stesso, ovvero i metadati relativi al campo. Queste informazioni possono essere utilizzate per determinare gran parte dello schema del **Recordset**. Queste proprietà includono **Type**, **DefinedSize** e **ActualSize**, **Name** e **NumericScale** e **Precision**.  
   
 ### <a name="discovering-the-data-type"></a>Individuazione del tipo di dati  
  La proprietà **Type** indica il tipo di dati del campo. Le costanti enumerate del tipo di dati supportate da ADO sono descritte in [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) nella Guida *di riferimento per programmatori ADO*.  
@@ -64,7 +64,7 @@ Ogni oggetto **campo** corrisponde in genere a una colonna in una tabella di dat
  Per modificare i dati in un campo, impostare la proprietà **value** su un nuovo valore del tipo corretto. Il tipo di cursore deve supportare gli aggiornamenti per modificare il contenuto di un campo. La convalida del database non viene eseguita in modalità batch, quindi è necessario verificare la presenza di errori quando si chiama **UpdateBatch** in un caso di questo tipo. Alcuni provider supportano anche le proprietà **UnderlyingValue** e **OriginalValue** dell'oggetto **campo** ADO per facilitare la risoluzione dei conflitti quando si tenta di eseguire gli aggiornamenti in batch. Per informazioni dettagliate su come risolvere tali conflitti, vedere [modifica di dati](../../../ado/guide/data/editing-data.md).  
   
 > [!NOTE]
->  Impossibile impostare i valori dei **campi del recordset** quando si aggiungono nuovi **campi** a un **Recordset**. È invece possibile aggiungere nuovi **campi** a un **Recordset**chiuso. Il **Recordset** deve quindi essere aperto e solo i valori possono essere assegnati a questi **campi**.  
+>  Impossibile impostare i valori dei **campi del recordset** quando si aggiungono nuovi **campi** a un **Recordset**. È invece possibile aggiungere nuovi **campi** a un **Recordset** chiuso. Il **Recordset** deve quindi essere aperto e solo i valori possono essere assegnati a questi **campi**.  
   
 ### <a name="getting-more-field-information"></a>Recupero di altre informazioni sui campi  
  Gli oggetti ADO hanno due tipi di proprietà: incorporata e dinamica. Fino a questo punto, sono state illustrate solo le proprietà predefinite dell'oggetto **Field** .  
