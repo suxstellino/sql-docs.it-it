@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 968a4205a12e9f6ff36c3bff512cf41ae60ca469
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: eab778d35ac9d5f1b5cefa4fdd7001a4772dc56d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167349"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035071"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 Specifica lo [stato](./status-property-ado-field.md) di un [oggetto campo](./field-object.md).  
   
- I valori ** \* adFieldPending* indicano l'operazione che ha causato l'impostazione dello stato e possono essere combinati con altri valori di stato.  
+ I **valori \* adFieldPending** indicano l'operazione che ha causato l'impostazione dello stato e possono essere combinati con altri valori di stato.  
   
 |Costante|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
-|_ *adFieldAlreadyExists**|26|Indica che il campo specificato esiste già.|  
+|**adFieldAlreadyExists**|26|Indica che il campo specificato esiste già.|  
 |**adFieldBadStatus**|12|Indica che un valore di stato non valido è stato inviato da ADO al provider OLE DB. Le possibili cause includono un provider OLE DB 1,0 o 1,1 o una combinazione non corretta di [valore](./value-property-ado.md) e [stato](./status-property-ado-field.md).|  
 |**adFieldCannotComplete**|20|Indica che il server dell'URL specificato da [source](./source-property-ado-record.md) non è riuscito a completare l'operazione.|  
 |**adFieldCannotDeleteSource**|23|Indica che durante un'operazione di spostamento un albero o un sottoalbero è stato spostato in una nuova posizione, ma non è stato possibile eliminare l'origine.|  

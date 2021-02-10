@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3077d0b6-42d6-4f10-8e5d-42e6204f1109
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e4cafeaf590c07ec52153a2932de3e105e26950
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 7129254d609e1bd80853ccf5008527bfbf938c30
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91723102"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036381"
 ---
 # <a name="running-business-objects-in-component-services"></a>Esecuzione di oggetti business nei Servizi componenti
 > [!IMPORTANT]
@@ -31,7 +31,7 @@ ms.locfileid: "91723102"
 -   Gli oggetti business creati come file con estensione dll possono essere utilizzati tramite IIS e quindi anche tramite HTTP. Possono inoltre essere utilizzati su DCOM solo tramite Servizi componenti o tramite Microsoft Transaction Server, se si utilizza Windows NT. Le dll degli oggetti business dovranno essere registrate nel computer server IIS per accedervi tramite IIS. Per informazioni su come configurare una DLL per l'esecuzione su DCOM, vedere la sezione relativa all' [Abilitazione di una dll per l'esecuzione su DCOM](./enabling-a-dll-to-run-on-dcom.md).  
   
 > [!NOTE]
->  Quando gli oggetti business nel livello intermedio vengono implementati come componenti di Servizi componenti tramite **GetObjectContext**, **secomplete**e **SetAbort**, gli oggetti business possono utilizzare i servizi componenti (o MTS, se si utilizzano gli oggetti di contesto di Windows NT) per mantenere lo stato tra più chiamate del client. Questo scenario è possibile con DCOM, che in genere viene implementato tra client attendibili e server in una rete Intranet. In questo caso, il Servizi Desktop remoto [. L'oggetto DataSpace](../../reference/rds-api/dataspace-object-rds.md) e il metodo [CreateObject](../../reference/rds-api/createobject-method-rds.md) sul lato client vengono sostituiti dall'oggetto del contesto di transazione e dal metodo **CreateInstance** , forniti dall'interfaccia **ITransactionContext** e implementati da Servizi componenti.  
+>  Quando gli oggetti business nel livello intermedio vengono implementati come componenti di Servizi componenti tramite **GetObjectContext**, **secomplete** e **SetAbort**, gli oggetti business possono utilizzare i servizi componenti (o MTS, se si utilizzano gli oggetti di contesto di Windows NT) per mantenere lo stato tra più chiamate del client. Questo scenario è possibile con DCOM, che in genere viene implementato tra client attendibili e server in una rete Intranet. In questo caso, il Servizi Desktop remoto [. L'oggetto DataSpace](../../reference/rds-api/dataspace-object-rds.md) e il metodo [CreateObject](../../reference/rds-api/createobject-method-rds.md) sul lato client vengono sostituiti dall'oggetto del contesto di transazione e dal metodo **CreateInstance** , forniti dall'interfaccia **ITransactionContext** e implementati da Servizi componenti.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Nozioni fondamentali su RDS](./rds-fundamentals.md)

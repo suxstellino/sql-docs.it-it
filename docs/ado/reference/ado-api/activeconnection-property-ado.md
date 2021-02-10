@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: efcb376c9ad27dff5a0c85d73f70ae4000385e3d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 318bb7478bdbc6f3b4007f788045438cdb91dfe3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99159234"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035921"
 ---
 # <a name="activeconnection-property-ado"></a>Proprietà ActiveConnection (ADO)
 Indica a quale oggetto [connessione](./connection-object-ado.md) appartiene attualmente il [comando](./command-object-ado.md), il [Recordset](./recordset-object-ado.md)o l'oggetto [record](./record-object-ado.md) specificato.  

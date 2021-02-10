@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 560c5968b3343f2553bc117ebbbdcf06938cc49f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 6453043514657b03e72eeea032451f647f6c2eec
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722952"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036091"
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Passaggio 5: L'oggetto DataControl viene reso utilizzabile (esercitazione su RDS)
 L'oggetto **Recordset** restituito è disponibile per l'utilizzo. È possibile esaminarla, spostarla o modificarla come per qualsiasi altro **Recordset**. Gli elementi che è possibile eseguire con il **Recordset** dipendono dall'ambiente in uso. Visual Basic e Visual C++ hanno controlli visivi che possono usare un **Recordset** direttamente o indirettamente con l'ausilio di un controllo di abilitazione dei dati.  
@@ -28,7 +28,7 @@ L'oggetto **Recordset** restituito è disponibile per l'utilizzo. È possibile e
   
  Se, ad esempio, si visualizza una pagina Web in Microsoft Internet Explorer, è possibile che si desideri visualizzare i dati dell'oggetto **Recordset** in un controllo visivo. I controlli visivi in una pagina Web non possono accedere direttamente a un oggetto **Recordset** . Tuttavia, possono accedere all'oggetto **Recordset** tramite [RDS. DataControl](../../reference/rds-api/datacontrol-object-rds.md). **RDS. DataControl** diventa utilizzabile da un controllo visivo quando la relativa proprietà [SourceRecordset](../../reference/rds-api/recordset-sourcerecordset-properties-rds.md) è impostata sull'oggetto **Recordset** .  
   
- Il parametro **dataSrc** dell'oggetto controllo visivo deve essere impostato su **RDS. DataControl**e la relativa proprietà **dataFld** impostata su un campo oggetto **Recordset** (colonna).  
+ Il parametro **dataSrc** dell'oggetto controllo visivo deve essere impostato su **RDS. DataControl** e la relativa proprietà **dataFld** impostata su un campo oggetto **Recordset** (colonna).  
   
  In questa esercitazione, impostare la proprietà **SourceRecordset** :  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fc5e30aef0162ecc2ffe9016e14fdfa36644aca5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 76f3311a622abbd249aa942e1ebdbda33ad06966
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724882"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036421"
 ---
 # <a name="registering-a-custom-business-object"></a>Registrazione di un oggetto business personalizzato
 Per avviare correttamente un oggetto business personalizzato (file con estensione dll o exe) tramite il server Web, è necessario immettere il ProgID dell'oggetto business nel registro di sistema, come illustrato in questa procedura. Questa funzionalità RDS protegge la sicurezza del server Web eseguendo solo file eseguibili approvati.  
@@ -37,8 +37,8 @@ Per avviare correttamente un oggetto business personalizzato (file con estension
   
 2.  Digitare **Regedit** e fare clic su **OK**.  
   
-3.  Nell'editor del registro di sistema passare alla chiave del registro di sistema **\system\currentcontrolset\services\w3svc\parameters\adclaunch HKEY_LOCAL_MACHINE** .  
+3.  Nell'editor del registro di sistema passare alla chiave del registro di sistema **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch** .  
   
-4.  Selezionare la chiave **ADCLaunch** , scegliere **nuovo** dal menu **modifica**e quindi fare clic su **chiave**.  
+4.  Selezionare la chiave **ADCLaunch** , scegliere **nuovo** dal menu **modifica** e quindi fare clic su **chiave**.  
   
 5.  Digitare il ProgID dell'oggetto business personalizzato e premere **invio**. Lasciare vuota la voce **valore** .

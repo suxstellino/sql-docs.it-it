@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 45cf9d5bc72178e5ab56264e9f5ec3475f00eef1
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: feb9d7d691c69cefb17054c6162caa5e803da1b0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171602"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035701"
 ---
 # <a name="adorecordconstruction-interface"></a>Interfaccia ADORecordConstruction
 L'interfaccia **ADORecordConstruction** viene utilizzata per costruire un oggetto **record** ADO da un oggetto OLE DB **Row** in un'applicazione C/C++.  

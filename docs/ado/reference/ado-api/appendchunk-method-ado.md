@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7abcebce9f587260d7147745ab99c2b4cecc78a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 937f70d50abb1422f069d555695744c26639dccf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167878"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035601"
 ---
 # <a name="appendchunk-method-ado"></a>Metodo AppendChunk (ADO)
 Accoda i dati a un [campo](./field-object.md)di dati di testo o binario di grandi dimensioni o a un oggetto [Parameter](./parameter-object.md) .  

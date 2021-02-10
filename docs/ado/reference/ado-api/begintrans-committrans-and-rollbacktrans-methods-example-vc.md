@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4ac19647-73e7-4edf-9913-25c8fd927e36
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fab3def044f0e8b250be717d63e9ed716db52ca0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2961ae94d1818c5519493b4bb3f7325e8dd981eb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167844"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035471"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>Esempio di metodi BeginTrans, CommitTrans e RollbackTrans (VC + +)
-Questo esempio Mostra come modificare il tipo di libro di tutti i libri di psicologia nella tabella ***titles** _ del database. Dopo che il metodo [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) ha avviato una transazione che isola tutte le modifiche apportate alla tabella _*_titles_*_ , il metodo [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) Salva le modifiche. È possibile utilizzare il metodo [rollback](./begintrans-committrans-and-rollbacktrans-methods-ado.md) per annullare le modifiche salvate tramite il metodo [Update](./update-method.md) .  
+Questo esempio Mostra come modificare il tipo di libro di tutti i libri di psicologia nella tabella ***titles** _ del database. Dopo che il metodo [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) ha avviato una transazione che isola tutte le modifiche apportate alla tabella _ *_titles_**, il metodo [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) Salva le modifiche. È possibile utilizzare il metodo [rollback](./begintrans-committrans-and-rollbacktrans-methods-ado.md) per annullare le modifiche salvate tramite il metodo [Update](./update-method.md) .  
   
 ## <a name="example"></a>Esempio  
   
@@ -76,7 +76,7 @@ void BeginTransX() {
    // Define ADO object pointers, initialize pointers on define.  These are in the ADODB::  namespace.  
    _RecordsetPtr rstTitles = NULL;  
    _ConnectionPtr pConnection = NULL;  
-   char _ token1, * token2;  
+   char * token1, * token2;  
   
    // Define Other Variables  
    HRESULT hr = S_OK;    

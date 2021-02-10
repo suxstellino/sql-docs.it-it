@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 409b3f8b-0ced-4867-acbe-b245dcdf6702
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0550e12f67538e9872797031146a34c83a0ec87f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 8e36c60e0c3e56ab0c159c362e98c2280e6c5426
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721362"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036391"
 ---
 # <a name="running-the-address-book-sql-script"></a>Esecuzione dello script SQL per Address Book
 > [!IMPORTANT]
@@ -43,7 +43,7 @@ ms.locfileid: "91721362"
   
 1.  Fare clic sul pulsante **Start**, scegliere **programmi**, quindi **Microsoft SQL Server 6,5**. Fare clic su **SQL Enterprise Manager**.  
   
-2.  Scegliere **strumento query SQL**dal menu **strumenti** .  
+2.  Scegliere **strumento query SQL** dal menu **strumenti** .  
   
 3.  Fare clic su **carica script SQL** e passare a c:\Platform SDK\Samples\DataAccess\RDS\AddressBook.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "91721362"
   
 6.  Fare clic sul pulsante **Esegui query** (la freccia verde sulla barra degli strumenti) o su **F5**.  
   
-7.  Al termine dell'esecuzione, chiudere le finestre **query**, **Query Analyzer**e **Enterprise Manager** .  
+7.  Al termine dell'esecuzione, chiudere le finestre **query**, **Query Analyzer** e **Enterprise Manager** .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esecuzione dell'applicazione di esempio Address Book](./running-the-address-book-sample-application.md)
