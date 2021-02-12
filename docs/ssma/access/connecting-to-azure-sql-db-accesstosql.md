@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f910e9c07bf4318419714b97e4f4db742c913753
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+ms.openlocfilehash: 4f31b2e46312e89830d977ca0ce61ad07572c875
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869459"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076272"
 ---
 # <a name="connecting-to-azure-sql-database-accesstosql"></a>Connessione al database SQL di Azure (AccessToSQL)
 
@@ -68,7 +68,7 @@ Per connettersi al [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]:
 
 6. SSMA consiglia la connessione crittografata a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] .
 
-7. Fare clic su **Connetti**.
+7. Fare clic su **Connect** (Connetti).
   
 Se non sono presenti database in [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] , è possibile creare il primo database usando l'opzione **Crea database di Azure** visualizzata facendo clic sul pulsante **Sfoglia** .
 

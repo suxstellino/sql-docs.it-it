@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 6b68cb2b2ff3712502ef4e0862fe71ad78705d7c
-ms.sourcegitcommit: c52a6aeb6fa6d7c3a86b3e84449361f4a0949ad0
+ms.openlocfilehash: 1e8f65eda04b3ff50474730df36d28a959cc5d6b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99623761"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100075922"
 ---
 # <a name="tutorial-configure-active-directory-authentication-with-sql-server-on-linux-using-adutil"></a>Esercitazione: Configurare l'autenticazione di Active Directory con SQL Server in Linux usando adutil
 

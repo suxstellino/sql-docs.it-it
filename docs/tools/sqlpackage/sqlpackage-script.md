@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 12/4/2020
-ms.openlocfilehash: cffeb28f69fe93bb69cfdafd0afa98ef663e6ef8
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
-ms.translationtype: HT
+ms.openlocfilehash: ffd92afe2a5e57b4c039ead2dd5fee6e2a23be0a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577842"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100060926"
 ---
 # <a name="sqlpackage-script-parameters-and-properties"></a>Parametri e proprietà di Script di SqlPackage
 L'azione Script di SqlPackage.exe consente di creare uno script di aggiornamento incrementale Transact-SQL tramite cui viene aggiornato lo schema di un database di destinazione affinché corrisponda allo schema di un database di origine. 
@@ -77,7 +77,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|Specifica se tentare l'azione indipendentemente dalle piattaforme SQL Server incompatibili.
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|Non bloccare il movimento di dati in una tabella con sicurezza a livello di riga se questa proprietà è impostata su true. L'impostazione predefinita è false.
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|Esegue il backup del database prima di distribuire qualsiasi modifica.
-|**/p:**|BlockOnPossibleDataLoss=(BOOLEAN 'True')|Specifica che se esiste una possibilità di perdita di dati derivante dall'operazione di pubblicazione, l'episodio di pubblicazione deve essere interrotto.
+|**/p:**|BlockOnPossibleDataLoss=(BOOLEAN 'True')| Specifica che l'operazione verrà terminata durante il passaggio di convalida dello schema se le modifiche dello schema risultante potrebbero causare una perdita di dati, ad esempio a causa della riduzione della precisione dei dati o di una modifica del tipo di dati che richiede un'operazione cast. Il valore predefinito ( `True` ) fa sì che l'operazione venga terminata indipendentemente dal fatto che il database di destinazione contenga dati.  Un'esecuzione con un `False` valore per BlockOnPossibleDataLoss può comunque avere esito negativo durante l'esecuzione del piano di distribuzione se i dati sono presenti nella destinazione che non possono essere convertiti nel nuovo tipo di colonna. |
 |**/p:**|BlockWhenDriftDetected=(BOOLEAN 'True')|Specifica se bloccare l'aggiornamento di un database il cui schema non corrisponde più alla relativa registrazione o di cui è stata annullata la registrazione.
 |**/p:**|CommandTimeout=(INT32 '60')|Specifica il timeout del comando in secondi quando si eseguono query in SQL Server.
 |**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|Specifica se devono essere impostate come commento le dichiarazioni delle variabili SETVAR nello script di pubblicazione generato. È possibile scegliere questo approccio quando si desidera specificare i valori nella riga di comando durante la pubblicazione mediante uno strumento quale SQLCMD.EXE.

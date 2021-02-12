@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 573e673e-a194-4cb2-9aba-aaac6e1a225c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0646fc033f73134a4dfcba62e574ba08e378b9cc
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 17121feedda919034ed8c2ee40fec8b06321d131
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91984877"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078249"
 ---
 # <a name="data-migration-settings-db2tosql"></a>Impostazioni di migrazione dei dati (DB2ToSQL)
   
@@ -40,7 +40,7 @@ ms.locfileid: "91984877"
     -   Se questa casella di testo è deselezionata, i dati di cui viene eseguita la migrazione verranno aggiunti ai dati esistenti nel database di destinazione.  
   
 2.  **Usa selezione personalizzata:**  
-     Questa opzione consente all'utente di modificare l'istruzione **Select** presente. l'istruzione**SELECT** consente agli utenti di selezionare i dati da visualizzare nel database di destinazione.  
+     Questa opzione consente all'utente di modificare l'istruzione **Select** presente. l'istruzione **SELECT** consente agli utenti di selezionare i dati da visualizzare nel database di destinazione.  
   
     1.  Per impostazione predefinita, questa casella di testo è deselezionata.  
   

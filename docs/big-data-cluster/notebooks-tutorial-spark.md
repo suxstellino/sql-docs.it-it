@@ -9,12 +9,12 @@ ms.date: 03/30/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6961dd76f35316dbd3923bb24849011a20f184c0
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
-ms.translationtype: HT
+ms.openlocfilehash: 6996e2b9b7705511fc13d479e39e9436a5e054f3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793738"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044103"
 ---
 # <a name="run-a-sample-notebook-using-spark"></a>Eseguire un notebook di esempio con Spark
 
@@ -53,11 +53,11 @@ Questa procedura illustra come aprire il file del notebook in Azure Data Studio:
 
 1. In Azure Data Studio connettersi all'istanza master del cluster Big Data. Per altre informazioni, vedere [Connettersi a un cluster Big Data](connect-to-big-data-cluster.md).
 
-1. Fare doppio clic sulla connessione del gateway HDFS/Spark nella finestra **Server** . Selezionare quindi **Open Notebook** (Apri notebook).
+1. Fare doppio clic sulla connessione del gateway HDFS/Spark nella finestra **Server**. Selezionare quindi **Open Notebook** (Apri notebook).
 
    ![Apri notebook](media/notebook-tutorial-spark/azure-data-studio-open-notebook.png)
 
-1. Attendere che il **kernel** e il contesto di destinazione **(Connetti a** ) siano popolati. Impostare il **kernel** su **PySpark3** e l'opzione **Connetti a** sull'indirizzo IP dell'endpoint del cluster Big Data.
+1. Attendere che il **kernel** e il contesto di destinazione **(Connetti a**) siano popolati. Impostare il **kernel** su **PySpark3** e l'opzione **Connetti a** sull'indirizzo IP dell'endpoint del cluster Big Data.
 
    ![Imposta Kernel e Connetti a](media/notebook-tutorial-spark/set-kernel-and-attach-to.png)
 

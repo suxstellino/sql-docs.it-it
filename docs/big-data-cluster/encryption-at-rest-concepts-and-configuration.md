@@ -10,12 +10,12 @@ ms.date: 10/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: de0bc20d7551e8d42c5dc1463fada6ffcbb6a0fd
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
-ms.translationtype: HT
+ms.openlocfilehash: df878f94c2ed6338ae28cbff156460ffdef87826
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257151"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046661"
 ---
 # <a name="encryption-at-rest-concepts-and-configuration-guide"></a>Concetti sulla crittografia dei dati inattivi e guida alla configurazione
 
@@ -28,14 +28,14 @@ In cluster Big Data di SQL Server i dati vengono archiviati nelle due posizioni 
 
 Per poter crittografare in modo trasparente i dati in cluster Big Data di SQL Server, è possibile adottare due approcci:
 
-* __Crittografia dei volumi__ . Questo approccio è supportato dalla piattaforma Kubernetes ed è la procedura consigliata per le distribuzioni di cluster Big Data. Questa guida non illustra la crittografia dei volumi. Leggere la documentazione relativa all'appliance o alla piattaforma Kubernetes per informazioni su come crittografare correttamente i volumi usati per cluster Big Data di SQL Server.
-* __Crittografia a livello di applicazione__ . Questa architettura si riferisce alla crittografia dei dati da parte dell'applicazione che gestisce i dati prima che vengano scritti su disco. Nel caso in cui i volumi siano esposti, per un utente malintenzionato sarebbe impossibile ripristinare gli elementi dati in un'altra posizione, a meno che il sistema di destinazione non sia stato configurato con le stesse chiavi di crittografia. 
+* __Crittografia dei volumi__. Questo approccio è supportato dalla piattaforma Kubernetes ed è la procedura consigliata per le distribuzioni di cluster Big Data. Questa guida non illustra la crittografia dei volumi. Leggere la documentazione relativa all'appliance o alla piattaforma Kubernetes per informazioni su come crittografare correttamente i volumi usati per cluster Big Data di SQL Server.
+* __Crittografia a livello di applicazione__. Questa architettura si riferisce alla crittografia dei dati da parte dell'applicazione che gestisce i dati prima che vengano scritti su disco. Nel caso in cui i volumi siano esposti, per un utente malintenzionato sarebbe impossibile ripristinare gli elementi dati in un'altra posizione, a meno che il sistema di destinazione non sia stato configurato con le stesse chiavi di crittografia. 
 
 Il set di funzionalità di crittografia dei dati inattivi in cluster Big Data di SQL Server supporta lo scenario principale della crittografia a livello di applicazione per i componenti SQL Server e HDFS.
 
 Sono incluse le funzionalità riportate di seguito:
 
-* __Crittografia dei dati inattivi gestita dal sistema__ . Questa funzionalità è disponibile in CU8.
+* __Crittografia dei dati inattivi gestita dal sistema__. Questa funzionalità è disponibile in CU8.
 * __Crittografia dei dati inattivi gestita dall'utente (BYOK)__ , integrando sia provider di chiavi gestiti dal servizio sia provider esterni. Attualmente sono supportate solo le chiavi create dall'utente e gestite dal servizio.
 
 ## <a name="key-definitions"></a>Definizioni chiave
@@ -49,9 +49,9 @@ Si tratta di un servizio ospitato nel controller, responsabile della gestione de
 * Gestione dei certificati TDE di SQL Server.
 
 La funzionalità seguente non è attualmente supportata:
-* *Supporto per il controllo delle versioni delle chiavi* . 
+* *Supporto per il controllo delle versioni delle chiavi*. 
 
-Nella parte restante del documento si userà __BDC KMS__ per fare riferimento a questo servizio. Anche il termine __BDC__ viene usato per fare riferimento alla piattaforma di computing __di cluster Big Data di SQL Server__ .
+Nella parte restante del documento si userà __BDC KMS__ per fare riferimento a questo servizio. Anche il termine __BDC__ viene usato per fare riferimento alla piattaforma di computing __di cluster Big Data di SQL Server__.
 
 ### <a name="system-managed-keys-and-certificates"></a>Chiavi e certificati gestiti dal sistema
 
@@ -98,7 +98,7 @@ Il set di funzionalità introduce il __servizio del controller BDC KMS__ che off
 
 La crittografia dei dati inattivi di cluster Big Data di SQL Server è una funzionalità gestita dal servizio e, a seconda del percorso di distribuzione, può richiedere passaggi aggiuntivi.
 
-Durante le __nuove distribuzioni di cluster Big Data di SQL Server__ (CU8 e versioni successive), la __crittografia dei dati inattivi verrà abilitata e configurata per impostazione predefinita__ . Ciò significa che:
+Durante le __nuove distribuzioni di cluster Big Data di SQL Server__ (CU8 e versioni successive), la __crittografia dei dati inattivi verrà abilitata e configurata per impostazione predefinita__. Ciò significa che:
 
 * Il componente KMS BDC verrà distribuito nel controller e genererà un set predefinito di chiavi e certificati.
 * SQL Server verrà distribuito con TDE abilitato e i certificati verranno installati dal controller.
@@ -106,7 +106,7 @@ Durante le __nuove distribuzioni di cluster Big Data di SQL Server__ (CU8 e vers
 
 Vengono applicati i requisiti e i comportamenti predefiniti descritti nella sezione precedente.
 
-Se si __aggiorna il cluster a CU8__ , __leggere attentamente la sezione successiva__ .
+Se si __aggiorna il cluster a CU8__, __leggere attentamente la sezione successiva__.
 
 ### <a name="upgrading-to-cu8"></a>Aggiornamento a CU8
 
@@ -117,14 +117,14 @@ Nei cluster esistenti il processo di aggiornamento non impone la crittografia su
 
 * __SQL Server__
 
-    1. __Istanza master di SQL Server__ . Il processo di aggiornamento non ha effetto sui database dell'istanza master né sui certificati TDE. È tuttavia consigliabile eseguire il backup dei database e dei certificati TDE installati manualmente prima di avviare il processo di aggiornamento. È anche consigliabile archiviare tali elementi all'esterno del cluster BDC di SQL Server.
-    1. __Pool di calcolo e di archiviazione__ . Questi database sono gestiti dal sistema, sono volatili e vengono ricreati e crittografati automaticamente durante l'aggiornamento del cluster.
-    1. __Pool di dati__ . L'aggiornamento non ha effetti sui database nella parte dei pool di dati nelle istanze di SQL Server.
+    1. __Istanza master di SQL Server__. Il processo di aggiornamento non ha effetto sui database dell'istanza master né sui certificati TDE. È tuttavia consigliabile eseguire il backup dei database e dei certificati TDE installati manualmente prima di avviare il processo di aggiornamento. È anche consigliabile archiviare tali elementi all'esterno del cluster BDC di SQL Server.
+    1. __Pool di calcolo e di archiviazione__. Questi database sono gestiti dal sistema, sono volatili e vengono ricreati e crittografati automaticamente durante l'aggiornamento del cluster.
+    1. __Pool di dati__. L'aggiornamento non ha effetti sui database nella parte dei pool di dati nelle istanze di SQL Server.
 
 * __HDFS__
 
-    1. __HDFS__ . Il processo di aggiornamento non interessa i file e le cartelle HDFS al di fuori delle zone di crittografia.
-    1. __Le zone di crittografia non vengono configurate__ . Il componente del servizio di gestione delle chiavi Hadoop non viene configurato per usare il servizio BDC KMS. Per configurare e abilitare la funzionalità delle zone di crittografia HDFS dopo l'aggiornamento, seguire la sezione successiva.
+    1. __HDFS__. Il processo di aggiornamento non interessa i file e le cartelle HDFS al di fuori delle zone di crittografia.
+    1. __Le zone di crittografia non vengono configurate__. Il componente del servizio di gestione delle chiavi Hadoop non viene configurato per usare il servizio BDC KMS. Per configurare e abilitare la funzionalità delle zone di crittografia HDFS dopo l'aggiornamento, seguire la sezione successiva.
 
 ### <a name="enable-hdfs-encryption-zones-after-upgrade"></a>Abilitare le zone di crittografia HDFS dopo l'aggiornamento
 

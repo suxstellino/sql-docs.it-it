@@ -9,12 +9,12 @@ ms.topic: how-to
 author: bluefooted
 ms.author: pamela
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af2caf850d3f7facb61a7484c5af44e4ba785fa3
-ms.sourcegitcommit: 5f9d682924624fe1e1a091995cd3a673605a4e31
+ms.openlocfilehash: 67f6fe5f8c1577142ac2356a070a954f94b856f1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98860914"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100075015"
 ---
 # <a name="diagnose-and-resolve-latch-contention-on-sql-server"></a>Diagnosticare e risolvere una contesa di latch in SQL Server
 
@@ -89,16 +89,16 @@ Usare l'oggetto **SQL Server:Latches** e i contatori associati in Monitor presta
 
 SQL Server tiene traccia delle informazioni cumulative sull'attesa, a cui è possibile accedere usando la vista DMW *sys.dm_os_wait_stats*. SQL Server usa tre tipi di attesa latch definiti dal corrispondente "wait_type" nella vista DMV *sys.dm_os_wait_stats*:
 
-* **Latch di buffer (BUF):** usato per garantire la coerenza delle pagine di indice e di dati per gli oggetti utente. Vengono usati anche per proteggere l'accesso alle pagine di dati usate da SQL Server per gli oggetti di sistema. Ad esempio, le pagine che gestiscono le allocazioni sono protette da latch di buffer, incluse le pagine PFS (Page Free Space), GAM (Global Allocation Map), SGAM (Shared Global Allocation Map) e IAM (Index Allocation Map). I latch di buffer sono indicati in *sys.dm_os_wait_stats* con *wait_type* **PAGELATCH\_\** _.
+* **Latch di buffer (BUF):** usato per garantire la coerenza delle pagine di indice e di dati per gli oggetti utente. Vengono usati anche per proteggere l'accesso alle pagine di dati usate da SQL Server per gli oggetti di sistema. Ad esempio, le pagine che gestiscono le allocazioni sono protette da latch di buffer, incluse le pagine PFS (Page Free Space), GAM (Global Allocation Map), SGAM (Shared Global Allocation Map) e IAM (Index Allocation Map). I latch di buffer vengono segnalati in *sys.dm_os_wait_stats* con *wait_type* **PAGELATCH\_\*** .
 
-_ **Latch non di buffer (non-BUF):** usato per garantire la coerenza di qualsiasi struttura in memoria diversa dalle pagine del pool di buffer. Le attese di latch non di buffer saranno indicate come *wait_type* **LATCH\_\** _.
+* **Latch non di buffer (non-BUF):** usato per garantire la coerenza di qualsiasi struttura in memoria diversa dalle pagine del pool di buffer. Le attese di latch non di buffer verranno segnalate come *wait_type* **LATCH\_\*** .
 
-_ **Latch di I/O:** un subset di latch di buffer che garantisce la coerenza delle stesse strutture protette dai latch di buffer quando queste strutture richiedono il caricamento nel pool di buffer con un'operazione di I/O. I latch di I/O impediscono a un altro thread di caricare la stessa pagina nel pool di buffer con un latch non compatibile. È associato a un *wait_type* **PAGEIOLATCH\_\** _.
+* **Latch di I/O:** un subset di latch di buffer che garantisce la coerenza delle stesse strutture protette dai latch di buffer quando queste strutture richiedono il caricamento nel pool di buffer con un'operazione di I/O. I latch di I/O impediscono a un altro thread di caricare la stessa pagina nel pool di buffer con un latch non compatibile. È associato a un *wait_type* **PAGEIOLATCH\_\*** .
 
    > [!NOTE]
    > Se si osserva un numero elevato di attese PAGEIOLATCH, significa che SQL Server è in attesa del sottosistema di I/O. Anche se una certa quantità di attese PAGEIOLATCH è un comportamento normale e previsto, se il tempo medio delle attese PAGEIOLATCH è costantemente superiore a 10 millisecondi (ms), è consigliabile determinare per quale motivo il sottosistema di I/O è sotto pressione.
 
-Se quando si esamina le viste a gestione dinamica _sys.dm_os_wait_stats* si rilevano latch non di buffer, è necessario esaminare *sys.dm_os_latch_waits* per ottenere il dettaglio delle informazioni cumulative sull'attesa per i latch non di buffer. Tutte le attese latch di buffer rientrano nella classe latch BUFFER, mentre le rimanenti vengono usate per classificare i latch non di buffer.
+Se durante l'esame della vista DMV *sys.dm_os_wait_stats* si riscontrano latch non di buffer, è necessario esaminare *sys.dm_os_latch_waits* per ottenere il dettaglio delle informazioni cumulative sull'attesa per i latch non di buffer. Tutte le attese latch di buffer rientrano nella classe latch BUFFER, mentre le rimanenti vengono usate per classificare i latch non di buffer.
 
 ## <a name="symptoms-and-causes-of-sql-server-latch-contention"></a>Sintomi e cause della contesa di latch di SQL Server
 

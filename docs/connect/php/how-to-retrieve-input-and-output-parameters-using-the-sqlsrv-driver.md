@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8ce35c6c0b3025a328c71de657fd1e89358379be
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
-ms.translationtype: HT
+ms.openlocfilehash: 33eb988309b6105818e150010dd44627efaced4b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680686"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046125"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>Procedura: Recuperare i parametri di input e output usando il driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

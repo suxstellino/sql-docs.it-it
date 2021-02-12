@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 04f6f0adb61a0bb7ccf33e3705a4a32b9ed9d69e
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 38385657de137e9e13bf03f7a4209be1303452d3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988227"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076078"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Conversione di oggetti di database di Access (AccessToSQL)
 Dopo aver aggiunto i database di Access e aver effettuato la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, SSMA Visualizza i metadati per l'accesso e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli oggetti di database SQL di Azure. È ora possibile selezionare Access Database Objects, quindi convertire gli schemi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure schemi.  
@@ -56,9 +56,9 @@ Nella tabella seguente vengono illustrati gli oggetti di accesso che vengono con
   
 |Oggetto Access|Oggetto SQL Server risultante|  
 |-----------------|-------------------------------|  
-|tabella|tabella|  
+|table|table|  
 |colonna|colonna|  
-|index|index|  
+|indice|indice|  
 |chiave esterna|chiave esterna|  
 |query|vista<br /><br />La maggior parte delle query SELECT viene convertita in viste. Non viene eseguita la migrazione di altre query, ad esempio query di aggiornamento.<br /><br />Le query SELECT che accettano parametri non vengono convertite, né query tra tabulazioni.|  
 |report|non convertito|  
@@ -72,7 +72,7 @@ Nella tabella seguente vengono illustrati gli oggetti di accesso che vengono con
 |chiave primaria|chiave primaria|  
   
 ## <a name="converting-access-objects"></a>Conversione di oggetti Access  
-Per convertire gli oggetti di database di Access, è necessario innanzitutto selezionare gli oggetti che si desidera convertire, quindi fare in modo che SSMA esegua la conversione. Per visualizzare i messaggi di output durante la conversione, scegliere **output**dal menu **Visualizza** .  
+Per convertire gli oggetti di database di Access, è necessario innanzitutto selezionare gli oggetti che si desidera convertire, quindi fare in modo che SSMA esegua la conversione. Per visualizzare i messaggi di output durante la conversione, scegliere **output** dal menu **Visualizza** .  
   
 **Per selezionare e convertire gli oggetti di database di Access in SQL Server o SQL Azure sintassi**  
   

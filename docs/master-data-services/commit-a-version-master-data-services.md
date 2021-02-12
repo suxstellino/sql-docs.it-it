@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 27564141f1f0f4c90a08449cbd9cffd7cea9dae0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b9ce54f5dee22833b2b53f5c66414f6d5be4c5c0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430073"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272802"
 ---
 # <a name="commit-a-version-master-data-services"></a>Eseguire il commit di una versione (Master Data Services)
 
@@ -44,7 +44,7 @@ ms.locfileid: "88430073"
   
 1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], fare clic su **Gestione versioni**.  
   
-2.  Nella pagina **Gestisci versioni** scegliere **Convalida versione**nella barra dei menu.  
+2.  Nella pagina **Gestisci versioni** scegliere **Convalida versione** nella barra dei menu.  
   
 3.  Nella pagina **Convalida versione** selezionare il modello e la versione di cui si vuole eseguire il commit.  
   

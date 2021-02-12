@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 835b09b5-eb42-47ea-b46e-e115d4d6461f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: bc7bec3f7f4ce358ccbb725e039208f574ae7aae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d9a4c8ea82558598700f5ae18121335c4a181f6b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472564"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078852"
 ---
 # <a name="global-settings-logging-accesstosql"></a>Impostazioni globali (registrazione) (AccessToSQL)
 Utilizzare la finestra di dialogo **Impostazioni globali** per specificare le impostazioni di registrazione per SSMA. Queste impostazioni vengono in genere modificate solo quando si utilizza il supporto tecnico.  
@@ -40,13 +40,13 @@ Le opzioni seguenti sono disponibili nel **livello messaggi**:
 |**Sincronizzazione**|Carica gli oggetti di database di origine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**TreeConverter**|Converte gli oggetti nei metadati di origine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadati.|  
   
-Per ogni opzione in **livello messaggi**configurare uno dei seguenti livelli di registrazione per SSMA:  
+Per ogni opzione in **livello messaggi** configurare uno dei seguenti livelli di registrazione per SSMA:  
   
 |||  
 |-|-|  
 |**Errore irreversibile**|Consente di scrivere nel log solo messaggi di errore irreversibili.|  
 |**Error (Errore) (Error (Errore)e)**|Scrivi messaggi di errore irreversibili e di errore nel log.|  
-|**Warning**|Scrivere messaggi di errore, di avviso e di errore irreversibile nel log.|  
+|**Avviso**|Scrivere messaggi di errore, di avviso e di errore irreversibile nel log.|  
 |**Info**|Scrivere i messaggi di errore informativi, di avviso, di errore e di errore irreversibile nel log.|  
 |**Eseguire il debug**|Scrivere nel log tutti i messaggi, inclusi i messaggi di debug.|  
   

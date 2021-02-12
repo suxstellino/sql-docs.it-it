@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 87cdbd49-a0c9-4b00-8a93-34188b18d11a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3a7932d79c414fb79dfc29074c1b8a5888c85827
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 898b55146317a09b43b1b4df63a22a9a74882ee9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418507"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100074632"
 ---
 # <a name="removing-the-ssma-for-mysql-components-mysqltosql"></a>Rimozione dei componenti di SSMA per MySQL (MySQLToSql)
-Al termine della migrazione dei database da MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , potrebbe essere necessario disinstallare i componenti di SSMA. È possibile disinstallare i componenti client in qualsiasi momento. Tuttavia, se si disinstalla il pacchetto di estensione da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , SSMA non supporterà più la migrazione dei dati da MySQL al database di destinazione (SQL Server/SQL Azure) utilizzando il motore di migrazione dei dati sul lato server.  
+Al termine della migrazione dei database da MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , potrebbe essere necessario disinstallare i componenti di SSMA. È possibile disinstallare i componenti client in qualsiasi momento. Tuttavia, se si disinstalla il pacchetto di estensione da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , SSMA non supporterà più la migrazione dei dati da MySQL al database di destinazione (SQL Server/SQL Azure) usando il motore di migrazione dei dati Server-Side.  
   
 ## <a name="uninstalling-the-ssma-for-mysql-client"></a>Disinstallazione di SSMA per il client MySQL  
 È possibile disinstallare SSMA utilizzando **Installazione applicazioni**.  
@@ -30,7 +30,7 @@ Al termine della migrazione dei database da MySQL a [!INCLUDE[ssNoVersion](../..
   
 1.  Nel Pannello di controllo aprire **Programmi e funzionalità**.  
   
-2.  Selezionare **Microsoft SQL Server Migration Assistant per MySQL**e quindi fare clic su **Rimuovi**.  
+2.  Selezionare **Microsoft SQL Server Migration Assistant per MySQL** e quindi fare clic su **Rimuovi**.  
   
 3.  Per confermare che si vuole disinstallare SSMA, fare clic su **Sì**.  
   
@@ -41,7 +41,7 @@ Al termine della migrazione dei database da MySQL a [!INCLUDE[ssNoVersion](../..
   
 1.  Nel Pannello di controllo aprire **Programmi e funzionalità**.  
   
-2.  Selezionare **Microsoft SQL Server Migration Assistant per MySQL Extension Pack**e quindi fare clic su **Rimuovi**.  
+2.  Selezionare **Microsoft SQL Server Migration Assistant per MySQL Extension Pack** e quindi fare clic su **Rimuovi**.  
   
 3.  Per confermare che si vuole disinstallare il pacchetto di estensione, fare clic su **Sì**.  
   
@@ -55,7 +55,7 @@ Al termine della migrazione dei database da MySQL a [!INCLUDE[ssNoVersion](../..
   
 7.  Nella pagina fine fare clic su **Esci**.  
   
-Al termine del processo di disinstallazione, è possibile verificare che gli oggetti nello schema **sysdb. ssma_MySQL** e possibilmente l'intero database **sysdb** siano stati rimossi tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Tuttavia, se si usano altri prodotti SSMA, viene usato anche il database **sysdb** . Se il database esiste e si è certi che nessun altro database fa riferimento agli oggetti in questo database, è possibile scollegare il database.  
+Al termine del processo di disinstallazione, è possibile verificare che gli oggetti nello schema **sysdb.ssma_MySQL** e possibilmente l'intero database **sysdb** siano stati rimossi tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Tuttavia, se si usano altri prodotti SSMA, viene usato anche il database **sysdb** . Se il database esiste e si è certi che nessun altro database fa riferimento agli oggetti in questo database, è possibile scollegare il database.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Installazione di SSMA per il client MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  

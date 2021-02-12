@@ -16,12 +16,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 2347297adfbc9d4df88c7df32fffefa4990010d8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: HT
+ms.openlocfilehash: 414a6eb4f6e63d2bb0c02e831f60ebcff97dc590
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895822"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018031"
 ---
 # <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Procedura: Usare il confronto schema per confrontare definizioni di database diverse
 
@@ -63,13 +63,13 @@ Nella procedura seguente viene confrontato lo schema di un progetto di database 
   
 6.  Fare clic sul pulsante **Confronta** nella barra degli strumenti della finestra **Confronto schema** per avviare il processo di confronto.  
   
-    Al termine del confronto, le differenze strutturali tra il progetto e il database verranno visualizzate nel riquadro dei **risultati**nella parte superiore della finestra. Per impostazione predefinita, nei risultati del confronto tutte le differenze sono raggruppate in base all'azione (ad esempio, Elimina, Modifica o Aggiungi). Nel riquadro dei **risultati**viene visualizzata una riga per ogni oggetto di database che presenta differenze tra le definizioni di database. Ogni riga identifica l'oggetto nello schema di origine o di destinazione (o entrambi) e l'azione che verrà intrapresa sullo schema di destinazione per rendere l'oggetto di destinazione uguale a quello di origine.  Se un oggetto è stato sottoposto a refactoring e rinominato o spostato in un nuovo schema, i nomi di origine e di destinazione sono differenti e il nome dell'origine verrà visualizzato in carattere grassetto per evidenziare la differenza.  
+    Al termine del confronto, le differenze strutturali tra il progetto e il database verranno visualizzate nel riquadro dei **risultati** nella parte superiore della finestra. Per impostazione predefinita, nei risultati del confronto tutte le differenze sono raggruppate in base all'azione (ad esempio, Elimina, Modifica o Aggiungi). Nel riquadro dei **risultati** viene visualizzata una riga per ogni oggetto di database che presenta differenze tra le definizioni di database. Ogni riga identifica l'oggetto nello schema di origine o di destinazione (o entrambi) e l'azione che verrà intrapresa sullo schema di destinazione per rendere l'oggetto di destinazione uguale a quello di origine.  Se un oggetto è stato sottoposto a refactoring e rinominato o spostato in un nuovo schema, i nomi di origine e di destinazione sono differenti e il nome dell'origine verrà visualizzato in carattere grassetto per evidenziare la differenza.  
   
     Per impostazione predefinita, gli oggetti uguali in entrambi gli schemi o non supportati per l'aggiornamento (ad esempio, oggetti predefiniti) risultano nascosti nell'elenco dei risultati.  È possibile fare clic sui pulsanti di filtro appropriati nella barra degli strumenti per visualizzare questi oggetti.  
   
     Per modificare la preferenza di raggruppamento, fare clic sull'elenco a discesa **Risultati del gruppo** nella barra degli strumenti.  Selezionare **Tipo** per raggruppare i risultati per tipo di oggetto (ad esempio, per tabelle, viste o stored procedure).  
   
-7.  Individuare la tabella `Products` nel gruppo `Tables`. Fare clic sulla riga e notare che le definizioni di origine e di destinazione della tabella sono visualizzate nel riquadro **Definizioni di oggetto** con le differenze evidenziate. È inoltre possibile espandere la riga della tabella `Products` nel riquadro dei **risultati**per controllare gli elementi specifici della tabella che risultano differenti.  
+7.  Individuare la tabella `Products` nel gruppo `Tables`. Fare clic sulla riga e notare che le definizioni di origine e di destinazione della tabella sono visualizzate nel riquadro **Definizioni di oggetto** con le differenze evidenziate. È inoltre possibile espandere la riga della tabella `Products` nel riquadro dei **risultati** per controllare gli elementi specifici della tabella che risultano differenti.  
   
 8.  Per impostazione predefinita, tutte le differenze vengono incluse nell'ambito dell'azione Aggiorna destinazione. È possibile escludere le differenze che non si desidera sincronizzare. A tale scopo, deselezionare l'opzione nella colonna **Azione** al centro di ogni riga. In alternativa, fare clic con il pulsante destro del mouse su una riga nel riquadro Schema e selezionare **Escludi**. Si noti che la riga viene immediatamente disabilitata. Al momento di aggiornare il database di destinazione, questa riga non verrà considerata per le modifiche in sospeso.  
   

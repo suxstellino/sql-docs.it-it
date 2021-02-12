@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8f427312-4c09-4c8b-b9f9-8b235557a74b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cc8148f2e24c7007c75309da407a188ec6c908ca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c6ebbfc619b94fcdb36acb4ac1fe7b9d3b0c33bf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "92257703"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272442"
 ---
 # <a name="connect-to-an-mds-repository-mds-add-in-for-excel"></a>Connettersi a un repository MDS (componente aggiuntivo MDS per Excel)
 
@@ -48,7 +48,7 @@ ms.locfileid: "92257703"
   
 7.  Facoltativamente, fare clic su **Test** per verificare la connessione. Una conferma o un finestra di dialogo di errore viene visualizzata. Fare clic su **OK** per chiuderla.  
   
-8.  Fare clic su **Connetti**. Viene visualizzato il riquadro **Master Data Services** .  
+8.  Fare clic su **Connect** (Connetti). Viene visualizzato il riquadro **Master Data Services** .  
   
 ## <a name="next-steps"></a>Passaggi successivi  
   

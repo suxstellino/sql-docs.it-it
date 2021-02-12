@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1ed5267303ad37d76b571c676b2010e8f04c8a09
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
-ms.translationtype: HT
+ms.openlocfilehash: fab863f46d1b5707359c64577e6cffde4a6e2ea2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79509807"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063337"
 ---
 # <a name="report-server-namespace-management-methods"></a>Metodi di gestione dello spazio dei nomi del server di report
   Il servizio Web di gestione del server report include metodi che è possibile utilizzare per gestire report, cartelle e risorse nel database del server di report.  

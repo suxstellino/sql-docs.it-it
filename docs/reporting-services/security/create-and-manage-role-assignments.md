@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3b7b88e9342c818645e0a9e1430cc5fe5c9400c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: e1be919afaea2693329ae6fe957fb6fc5ff3357f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468990"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015201"
 ---
 # <a name="create-and-manage-role-assignments"></a>Creare e gestire assegnazioni di ruolo
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 46ebada7-db36-4ae9-b7ae-baa4b854b237
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cd447b77c39ff0d65c238998822dcb13faaaa43c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6e246b187565802d335931e50e973f9e2960fdee
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492564"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076052"
 ---
 # <a name="data-migration-report-db2tosql"></a>Report di migrazione dei dati (DB2ToSQL)
 Viene visualizzata la finestra di dialogo **report migrazione dati** dopo la migrazione dei dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -36,7 +36,7 @@ Numero di righe di dati nella tabella di origine.
 **Numero di righe migrate correttamente**  
 Il numero di righe di dati di cui è stata eseguita la migrazione alla tabella di destinazione.  
   
-**Rapporto**  
+**Proporzioni**  
 Percentuale di righe migrate correttamente.  
   
 **Dettagli**  

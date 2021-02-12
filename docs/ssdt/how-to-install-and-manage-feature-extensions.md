@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: 19bdca4ab4b380d5a971078eb8e264cb409caa7c
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
-ms.translationtype: HT
+ms.openlocfilehash: c469770ab64401498b35038f7b20e6f245793804
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97559083"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100020744"
 ---
 # <a name="how-to-install-and-manage-feature-extensions"></a>Procedura: Installare e gestire le estensioni delle funzionalità
 

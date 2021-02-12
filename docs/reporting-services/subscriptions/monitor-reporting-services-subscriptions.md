@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 05ee90e9ccbf781e0145665b8f1dd06ca2fb8d45
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
-ms.translationtype: HT
+ms.openlocfilehash: 6631325809a468aed4e7c7fd00cf71aedecc7ba0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396088"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042059"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Monitorare le sottoscrizioni di Reporting Services
   È possibile monitorare le sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dall'interfaccia utente, da Windows PowerShell o dai file di log. Le opzioni disponibili per il monitoraggio dipendono dalla modalità del server di report in esecuzione.  

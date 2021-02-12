@@ -40,12 +40,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 126a649f2555b2a66ba7ce4378378ff9e401f6fc
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
-ms.translationtype: HT
+ms.openlocfilehash: 99552883fb06c01a862ddc973ff3747d11a89ee8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987227"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100079552"
 ---
 # <a name="database-project-settings"></a>Impostazioni del progetto di database
 
@@ -176,7 +176,7 @@ Nella pagina delle proprietà **Compilazione SQLCLR** sono contenute le impostaz
   
 #### <a name="to-specify-a-build-configuration-for-a-solution"></a>Per specificare una configurazione della compilazione per una soluzione  
   
-1.  In **Esplora soluzioni**fare clic sul nodo della soluzione per la quale si vuole specificare una configurazione della compilazione.  
+1.  In **Esplora soluzioni** fare clic sul nodo della soluzione per la quale si vuole specificare una configurazione della compilazione.  
   
 2.  Scegliere **Configuration Manager** dal menu **Compila**. Verrà visualizzata finestra di dialogo **Gestione configurazione**.  
   
@@ -220,7 +220,7 @@ Inoltre, la pubblicazione sulla riga di comando consente di eseguire l'override 
 |---------|-----------------|---------------|  
 |Azione di avvio|nessuno|Consente di specificare uno script o un programma esterno da eseguire durante il debug del progetto in uso.|  
 |Stringa di connessione di destinazione|Data Source=(localdb)\\*NomeSoluzione*;Initial Catalog=*NomeProgettoDatabase*;Integrated Security=True;Pooling=False;Connect Timeout=30|Consente di specificare le informazioni di connessione per il server di database da utilizzare come destinazione per la configurazione della compilazione specificata. La stringa di connessione predefinita si trova in un'istanza del database locale di SQL Server creata dinamicamente e in un database.|  
-|Distribuisci proprietà database|Sì|Consente di specificare se le impostazioni DatabaseProerties.DatabaseProperties vengono distribuite o aggiornate quando si distribuisce il progetto di database.|  
+|Distribuisci proprietà database|Sì|Specifica se le impostazioni DatabaseProperties. DatabaseProperties vengono distribuite o aggiornate quando si distribuisce il progetto di database.|  
 |Ricrea sempre database|No|Consente di specificare se eliminare e ricreare il database anziché eseguire un aggiornamento incrementale. Può essere necessario selezionare questa casella di controllo se, ad esempio, si vuole eseguire gli unit test del database per una distribuzione pulita del database. Se questa casella di controllo è deselezionata, il database esistente verrà aggiornato, non eliminato e ricreato.|  
 |Blocca distribuzione incrementale in caso di perdita di dati|Sì|Consente di specificare se la distribuzione viene arrestata nel caso in cui un aggiornamento possa provocare una perdita di dati. Se viene selezionata questa casella di controllo, le modifiche che causerebbero una perdita di dati comportano l'arresto della distribuzione e la visualizzazione di un errore, pertanto i dati non vengono persi. Ad esempio la distribuzione viene arrestata se una colonna `varchar(50)` viene modificata in `varchar(30)`.<br /><br />**NOTA** La distribuzione viene bloccata solo se le tabelle in cui può verificarsi la perdita di dati contengono dati. Se non si perde alcun dato, la distribuzione continua.|  
 |Esegui istruzioni DROP su oggetti nel database di destinazione ma non nel progetto|No|Consente di specificare se gli oggetti presenti nel database di destinazione, ma non nel progetto di database, devono essere eliminati come parte dello script di distribuzione. È possibile escludere alcuni file nel progetto per rimuoverli temporaneamente dallo script di compilazione. Tuttavia, potrebbe essere necessario lasciare le versioni esistenti di tali oggetti nel database di destinazione. Questa casella di controllo non ha effetto se è selezionata la casella di controllo **Ricrea sempre database**, perché il database verrà eliminato.|  

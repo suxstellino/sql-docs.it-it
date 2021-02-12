@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cc1b9b6cd36d12e39823cb0915e6fe7b5af4d7bc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25023eb11f9968f9edc3e7159f32252b0a116291
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461860"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272682"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>Creare un attributo di file (Master Data Services)
 
@@ -92,6 +92,6 @@ ms.locfileid: "88461860"
 12. Fare clic su **Salva**.
 
 ## <a name="see-also"></a>Vedere anche
- [Attributi &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md) [modificare un nome di attributo e un tipo di dati &#40;Master Data Services](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)&#41;[creare un attributo basato su dominio &#40;](../master-data-services/create-a-domain-based-attribute-master-data-services.md) Master Data Services&#41;[creare un attributo di testo &#40;](../master-data-services/create-a-text-attribute-master-data-services.md) Master Data Services&#41;
+ [Attributi &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md) [modificare un nome di attributo e un tipo di dati &#40;Master Data Services](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)&#41;[creare un Domain-Based attributo](../master-data-services/create-a-domain-based-attribute-master-data-services.md) &#40;Master Data Services&#41;[creare un attributo di testo &#40;](../master-data-services/create-a-text-attribute-master-data-services.md) Master Data Services&#41;
 
 

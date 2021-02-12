@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
-ms.openlocfilehash: 344e5f35e35202b6a44a4932db8a27424fdb8753
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: f7d4c2e2408bbcc78c0ea74f0d50bd4e0599b826
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471802"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069782"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>Architettura di estendibilità nelle estensioni di linguaggio di SQL Server
 
@@ -38,15 +38,15 @@ Qualsiasi linguaggio esterno supportato può essere eseguito chiamando una store
 
 L'architettura è progettata in modo tale che il codice esterno viene eseguito in un processo separato da SQL Server, ma con componenti che gestiscono internamente la catena di richieste di dati e operazioni in SQL Server. 
   
-  ***Architettura dei componenti in Windows:** _
+  ***Architettura dei componenti in Windows:***
 
   ![Architettura dei componenti in Windows](../media/generic-architecture-windows.png "Architettura dei componenti in Windows")
   
-  _*_Architettura dei componenti in Linux:_*_
+  ***Architettura dei componenti in Linux:***
   
   ![Architettura dei componenti in Linux](../media/generic-architecture-linux.png "Architettura dei componenti in Linux")
   
-I componenti includono un servizio _ *Launchpad** usato per richiamare i runtime esterni (ad esempio Java) e la logica specifica della libreria per il caricamento di interpreti e librerie.
+I componenti includono un servizio **Launchpad** usato per richiamare i runtime esterni (ad esempio Java) e la logica specifica della libreria per il caricamento di interpreti e librerie.
 
 <a name="launchpad"></a>
 

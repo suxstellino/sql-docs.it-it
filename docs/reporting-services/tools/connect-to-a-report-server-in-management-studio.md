@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 027d3bb67c087f119c3848a2d81ac0875b138db3
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
-ms.translationtype: HT
+ms.openlocfilehash: 735c7805d1deba9861a6e51249acf9928d97db7c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934848"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076782"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Eseguire la connessione a un server di report in Management Studio
 
@@ -80,7 +80,7 @@ ms.locfileid: "91934848"
 
 3. Fare clic con il pulsante destro del mouse su **Reporting Services** e quindi scegliere **Nuovo** > **Registrazione server**. Verrà visualizzata la finestra di dialogo **Nuova registrazione server** .
 
-4. In **Nome server**immettere un valore. Il valore da specificare dipende dalla modalità del server:
+4. In **Nome server** immettere un valore. Il valore da specificare dipende dalla modalità del server:
 
     - Per un server di report in modalità nativa, digitare il nome dell'istanza relativa. I nomi delle istanze del server di report si basano sui nomi delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per impostazione predefinita, il nome di un'istanza locale del server di report è il nome del computer. Se il server di report è installato come istanza denominata, usare la sintassi seguente per specificare il server: *\<servername>[\\<nomeistanza\>]* .
 

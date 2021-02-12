@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 410b2674f407018b895ed84781bedf5fa8766feb
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
-ms.translationtype: HT
+ms.openlocfilehash: a055bd1f8de41686e1c3477e3e4810e78d6b5025
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364393"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018311"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>Procedura: Creare oggetti di database tramite Progettazione tabelle
 
@@ -53,9 +53,9 @@ Il nuovo nodo **SQL Server** in **Esplora oggetti di SQL Server** non solo è vi
     CREATE TABLE [dbo].[Suppliers]  
     ```  
   
-4.  Fare clic sulla riga vuota nella Griglia colonne per aggiungere una nuova colonna alla tabella.  Immettere **CompanyName** per il campo **Nome** , **nvarchar (128)** per **Tipo di dati** e deselezionare il campo **Consenti valori Null**. Quando si esce dai campi, si noti che il riquadro di script viene immediatamente aggiornato.  
+4.  Fare clic sulla riga vuota nella Griglia colonne per aggiungere una nuova colonna alla tabella.  Immettere **CompanyName** per il campo **Nome**, **nvarchar (128)** per **Tipo di dati** e deselezionare il campo **Consenti valori Null**. Quando si esce dai campi, si noti che il riquadro di script viene immediatamente aggiornato.  
   
-5.  Aggiungere un'altra colonna. Immettere **Address** per il campo **Name** , **nvarchar (MAX)** per **Tipo di dati** e deselezionare il campo **Consenti valori Null**.  
+5.  Aggiungere un'altra colonna. Immettere **Address** per il campo **Name**, **nvarchar (MAX)** per **Tipo di dati** e deselezionare il campo **Consenti valori Null**.  
   
     > [!WARNING]  
     > Se si modificano gli oggetti da un database connesso, non salvarli nell'unità locale. Per salvare correttamente le modifiche nel database, seguire i passaggi indicati nella prossima procedura [Procedura: Aggiornare un database connesso con Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
