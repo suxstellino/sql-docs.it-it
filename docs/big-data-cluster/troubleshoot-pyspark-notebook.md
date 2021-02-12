@@ -9,12 +9,12 @@ ms.date: 06/01/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d631a74bc71c814a70ef0ecfa33485ee4631ccd4
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
-ms.translationtype: HT
+ms.openlocfilehash: 02ac9f72b7cd688cd38bdc5e785732e8b97bc2dc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257076"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100043401"
 ---
 # <a name="troubleshoot-pyspark-notebook"></a>Risolvere i problemi del notebook `pyspark`
 
@@ -127,7 +127,7 @@ Questa procedura per la risoluzione dei problemi richiede:
 
 1. Controllare l'ID applicazione e i singoli log del contenitore e application_master.
 
-   :::image type="content" source="media/troubleshoot-pyspark-notebook/15-hadoop-dashboard.png" alt-text="Cella con errore":::
+   :::image type="content" source="media/troubleshoot-pyspark-notebook/15-hadoop-dashboard.png" alt-text="Controllare l'ID applicazione":::
 
 1. Esaminare i log applicazioni YARN.
 
@@ -165,7 +165,7 @@ Questa procedura per la risoluzione dei problemi richiede:
 
 1. Esaminare l'interfaccia utente di Spark.
 
-   :::image type="content" source="media/troubleshoot-pyspark-notebook/30-spark-ui.png" alt-text="Cella con errore":::
+   :::image type="content" source="media/troubleshoot-pyspark-notebook/30-spark-ui.png" alt-text="Interfaccia utente di Spark":::
 
    Eseguire il drill-down nelle attività delle fasi alla ricerca di errori.
 

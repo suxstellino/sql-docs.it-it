@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 93eecfd3ffb66be1a1758f3265bf91a5842a4abc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
-ms.translationtype: HT
+ms.openlocfilehash: e0b1b313671b93fd62fb61d6a244590cf6a62086
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80342801"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100014841"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Generazione di feed di dati dai report (Generatore report e SSRS)
 
@@ -77,13 +77,13 @@ ms.locfileid: "80342801"
  `<updated>2009-05-08T23:09:58Z</updated>`  
   
 ### <a name="data-section"></a>Sezione di dati  
- La sezione di dati dei feed di dati contiene un elemento \<**voce**> per ogni riga nel set di righe bidimensionale generato dall'estensione per il rendering Atom.  
+ La sezione Data dei feed di dati contiene un \<**entry**> elemento per ogni riga del set di righe bidimensionale generato dall'estensione per il rendering Atom.  
   
  Nel diagramma seguente viene mostrato un report che usa gruppi e totali.  
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../../reporting-services/report-builder/media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- Il seguente codice XML mostra un elemento \<**voce**> del report specifico di un feed di dati. Si noti che l'elemento \<**voce**> include i totali delle vendite e degli ordini per il gruppo, nonché i totali delle vendite e degli ordini per tutti i gruppi. L'elemento \<**voce**> include tutti i valori sul report.  
+ Nel codice XML seguente viene illustrato un \<**entry**> elemento del report in un feed di dati. Si noti che l' \<**entry**> elemento include i totali delle vendite e degli ordini per il gruppo e i totali delle vendite e degli ordini per tutti i gruppi. L' \<**entry**> elemento include tutti i valori nel report.  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   
@@ -116,7 +116,7 @@ ms.locfileid: "80342801"
   
  I nomi degli elementi del report vengono impostati in modo predefinito sui nomi degli elementi del linguaggio RDL degli elementi del report e, spesso, non sono intuitivi o facili da ricordare. Ad esempio, il nome predefinito della prima matrice presente in un report è Tablix 1. I feed di dati usano questi nomi.  
   
- Per rendere più semplice l'uso del feed di dati, è possibile sfruttare la proprietà DataElementName dell'area dati per fornire nomi descrittivi. Se si fornisce un valore per DataElementName, il sottoelemento del feed di dati \<**d**> lo userà al posto del nome dell'area dati predefinito. Ad esempio se il nome predefinito di un'area dati è Tablix1 e DataElementName viene impostato su SalesByTerritoryYear, il sottoelemento \<**d**> nel feed di dati userà SalesByTerritoryYear. Se le aree dati dispongono di due feed di dati come il report matrice descritto in precedenza, i nomi usati nei feed di dati sono SalesByTerritoryYear _Territory e SalesByTerritoryYear _Year.  
+ Per rendere più semplice l'uso del feed di dati, è possibile sfruttare la proprietà DataElementName dell'area dati per fornire nomi descrittivi. Se si specifica un valore per DataElementName, il sottoelemento feed di dati utilizzerà il valore \<**d**> anziché il nome dell'area dati predefinita. Se, ad esempio, il nome predefinito di un'area dati è Tablix1 e DataElementName è impostato su SalesByTerritoryYear, \<**d**> nel feed di dati viene utilizzato SalesByTerritoryYear. Se le aree dati dispongono di due feed di dati come il report matrice descritto in precedenza, i nomi usati nei feed di dati sono SalesByTerritoryYear _Territory e SalesByTerritoryYear _Year.  
   
  Se si confrontano i dati mostrati sul report e i dati del feed di dati, è possibile notare alcune differenze. I report spesso mostrano dati numerici formattati e relativi all'ora/data, mentre il feed di dati contiene dati non formattati.  
   

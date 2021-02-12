@@ -9,12 +9,12 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e56de1b76dc456a57f721378518d2942822cec20
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
-ms.translationtype: HT
+ms.openlocfilehash: d739ea03838dedb3999291eb37f5da09431680a6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92358839"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049097"
 ---
 # <a name="azdata-app-template"></a>azdata app template
 

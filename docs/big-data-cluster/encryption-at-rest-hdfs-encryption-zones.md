@@ -9,12 +9,12 @@ ms.date: 10/19/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 904b07913a63e226e5e45876f2fc520226411223
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
-ms.translationtype: HT
+ms.openlocfilehash: bfcc348595a645eca3b1150ae39e7c777f4e192a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92199591"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046761"
 ---
 # <a name="sql-server-big-data-clusters-hdfs-encryption-zones-usage-guide"></a>Guida all'uso delle zone di crittografia HDFS in cluster Big Data di SQL Server
 
@@ -22,7 +22,7 @@ ms.locfileid: "92199591"
 
 Questa guida illustra come usare le funzionalità di crittografia dei dati inattivi di cluster Big Data di SQL Server per crittografare le cartelle HDFS usando le zone di crittografia.
 
-Si noti che esiste già una zona di crittografia predefinita montata in __```/securelake```__ che può essere usata immediatamente. È stata creata con una chiave a 256 bit generata dal sistema denominata __securelakekey__ . Questa chiave può essere usata per creare zone di crittografia aggiuntive.
+Si noti che esiste già una zona di crittografia predefinita montata in __```/securelake```__ che può essere usata immediatamente. È stata creata con una chiave a 256 bit generata dal sistema denominata __securelakekey__. Questa chiave può essere usata per creare zone di crittografia aggiuntive.
 
 ## <a name="prerequisites"></a><a id="prereqs"></a> Prerequisiti
 
@@ -45,7 +45,7 @@ Seguire le [istruzioni di connessione ad Active Directory ](active-directory-con
    hdfs dfs -mkdir -p /user/zone/folder
    ```
 
-1. Eseguire il comando di creazione della zona di crittografia per crittografare la cartella usando la chiave __securelakekey__ .
+1. Eseguire il comando di creazione della zona di crittografia per crittografare la cartella usando la chiave __securelakekey__.
 
    ```console
    hdfs crypto -createZone -keyName securelakekey -path /user/zone/folder

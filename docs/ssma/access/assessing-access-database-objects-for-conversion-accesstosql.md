@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6bf9144249bc8707bce9c812da19a07bacc43c68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 07adac4e991afd70b70a5f087a881f1933baaae1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418607"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076422"
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>Valutazione degli oggetti di database di Access per la conversione (AccessToSQL)
 Prima di caricare oggetti e migrare i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, è necessario determinare la quantità di migrazione che avrà esito positivo e il tempo necessario per la conversione. SSMA è in grado di creare un report di valutazione che mostra la percentuale di oggetti convertiti correttamente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure stime della sintassi e del tempo per l'esecuzione della migrazione. SSMA consente inoltre di visualizzare i problemi specifici che hanno causato errori di conversione.  
@@ -38,7 +38,7 @@ Quando crea un report di valutazione, SSMA converte gli oggetti di database di A
   
 2.  Per omettere singoli oggetti, deselezionare le caselle di controllo accanto agli oggetti che non si desidera valutare.  
   
-3.  Fare clic con il pulsante destro del mouse su **database**e quindi scegliere **Crea report**.  
+3.  Fare clic con il pulsante destro del mouse su **database** e quindi scegliere **Crea report**.  
   
     È anche possibile analizzare singoli oggetti facendo clic con il pulsante destro del mouse su un oggetto e scegliendo **Crea report**.  
   

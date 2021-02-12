@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ed3719a2fa24c7f7306b91cf8d422808d5fcea27
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: d7e24258e61412584b7364f8dae7d07a1581727b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772891"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100043542"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Esercitazione: Inserire dati in un pool di dati di SQL Server con Transact-SQL
 

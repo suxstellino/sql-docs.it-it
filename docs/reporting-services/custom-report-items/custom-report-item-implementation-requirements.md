@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cfacd816-00d6-4a3d-be72-1bba6f7f6886
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 245164c763cf25ba22389f180acda9535147c721
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
-ms.translationtype: HT
+ms.openlocfilehash: 95f33dde355621aecea3a67376b1d28f67b88cdc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80216972"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100062076"
 ---
 # <a name="custom-report-item-implementation-requirements"></a>Requisiti per l'implementazione di elementi dei report personalizzati
   In questo argomento vengono illustrati i prerequisiti per lo sviluppo e la distribuzione di elementi dei report personalizzati.  

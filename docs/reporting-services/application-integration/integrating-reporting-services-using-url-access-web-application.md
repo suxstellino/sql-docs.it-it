@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 731ed382c029fb2115c4351d306bf5b33d294a48
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
-ms.translationtype: HT
+ms.openlocfilehash: f2df0e4bd2a78b52fcf08587ffed2eff219282b1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79198518"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100074882"
 ---
 # <a name="integrating-reporting-services-using-url-access---web-application"></a>Integrazione di Reporting Services tramite l'accesso con URL - Applicazione Web
   L'accesso con URL in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è progettato in maniera specifica per consentire l'accesso ai singoli report in una rete. Questo tipo di accesso è ottimale per l'integrazione delle funzionalità di visualizzazione e navigazione del report in un'applicazione Web personalizzata. Per utilizzare l'accesso con URL nelle applicazioni Web, è possibile:  

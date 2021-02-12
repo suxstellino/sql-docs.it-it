@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f8848fb3d8d474083e0ce1a10b7d355a2e4b886e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
-ms.translationtype: HT
+ms.openlocfilehash: d91904f4d91941549582d8d7c578dcc4682f23f4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87928632"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100014737"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>Pubblicare e ripubblicare parti del report (Generatore report e SSRS)
   Le parti di report sono elementi impaginati pubblicati separatamente in un server di report e che possono essere riusati in altri report impaginati. È possibile pubblicare una parte del report con le impostazioni predefinite in un percorso predefinito o modificare i metadati della parte del report, ad esempio il nome e la descrizione, e salvarla altrove in un server di report. Il salvataggio può avvenire anche in un sito di SharePoint integrato con un server di report, se si dispone delle opportune autorizzazioni.  

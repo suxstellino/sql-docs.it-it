@@ -10,12 +10,12 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e549a8005144e85a20cf613ff6695d11f7ff030f
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
-ms.translationtype: HT
+ms.openlocfilehash: 34592d9a6cb3db8bde5a2a25098314fd9ace1208
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378400"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100039481"
 ---
 # <a name="manage-big-data-clusters-bdc-the-cluster-with-notebooks"></a>Gestire i cluster Big Data con i notebook
 
@@ -67,15 +67,15 @@ Un set di notebook per eseguire un notebook per la gestione dei certificati nei 
 |CER023 - Creare un certificato master|Questo notebook crea un certificato per l'endpoint master.|
 |CER030 - Firmare il certificato del proxy di gestione con la CA generata|Questo notebook firma il certificato creato usando **CER020 - Creare un certificato per il proxy di gestione** con il certificato CA radice generato, creato usando **CER001 - Generare un certificato CA radice** o **CER003 - Caricare un certificato CA radice esistente**|
 |CER031 - Firmare il certificato Knox con la CA generata|Questo notebook firma il certificato creato usando **CER021 - Creare un certificato Knox** con il certificato CA radice generato, creato usando **CER001 - Generare un certificato CA radice** o **CER003 - Caricare un certificato CA radice esistente**|
-|CER032 - Firmare il certificato App-Proxy con la CA generata|Questo notebook firma il certificato creato usando **CER022 - Creare un certificato App Proxy** con il certificato CA radice generato, creato usando **CER001 - Generare un certificato CA radice** o **CER003 - Caricare un certificato CA radice esistente** .|
-|CER033 - Firmare il certificato master con la CA generata|Questo notebook firma il certificato creato usando **CER023 - Creare un certificato master** con il certificato CA radice generato, creato usando **CER001 - Generare un certificato CA radice** o **CER003 - Caricare un certificato CA radice esistente** .|
-|CER040 - Installare un certificato del proxy di gestione firmato|Questo notebook viene installato nel cluster Big Data il certificato firmato usando **CER030 - Firmare il certificato del proxy di gestione con la CA generata** .|
-|CER041 - Installare il certificato Knox firmato|Questo notebook installa nel cluster Big Data il certificato firmato usando **CER031 - Firmare il certificato Knox con la CA generata** .|
-|CER042 - Installare il certificato App-Proxy firmato|Questo notebook installa nel cluster Big Data il certificato firmato usando **CER032 - Firmare il certificato App-Proxy con la CA generata** .|
-|CER043 - Installare il certificato Controller firmato|Questo notebook installa nel cluster Big Data il certificato firmato usando **CER034 - Firmare il certificato Controller con la CA radice del cluster** . Si noti che alla fine del notebook il pod controller e tutti i pod che usano PolyBase (i pod del pool master e del pool di calcolo) verranno riavviati per caricare i nuovi certificati.|
+|CER032 - Firmare il certificato App-Proxy con la CA generata|Questo notebook firma il certificato creato usando **CER022 - Creare un certificato App Proxy** con il certificato CA radice generato, creato usando **CER001 - Generare un certificato CA radice** o **CER003 - Caricare un certificato CA radice esistente**.|
+|CER033 - Firmare il certificato master con la CA generata|Questo notebook firma il certificato creato usando **CER023 - Creare un certificato master** con il certificato CA radice generato, creato usando **CER001 - Generare un certificato CA radice** o **CER003 - Caricare un certificato CA radice esistente**.|
+|CER040 - Installare un certificato del proxy di gestione firmato|Questo notebook viene installato nel cluster Big Data il certificato firmato usando **CER030 - Firmare il certificato del proxy di gestione con la CA generata**.|
+|CER041 - Installare il certificato Knox firmato|Questo notebook installa nel cluster Big Data il certificato firmato usando **CER031 - Firmare il certificato Knox con la CA generata**.|
+|CER042 - Installare il certificato App-Proxy firmato|Questo notebook installa nel cluster Big Data il certificato firmato usando **CER032 - Firmare il certificato App-Proxy con la CA generata**.|
+|CER043 - Installare il certificato Controller firmato|Questo notebook installa nel cluster Big Data il certificato firmato usando **CER034 - Firmare il certificato Controller con la CA radice del cluster**. Si noti che alla fine del notebook il pod controller e tutti i pod che usano PolyBase (i pod del pool master e del pool di calcolo) verranno riavviati per caricare i nuovi certificati.|
 |CER050 - Attendere che il cluster Big Data torni integro|Il notebook resterà in attesa fino a quando il cluster Big Data non tornerà a uno stato integro, dopo che il pod Controller e i pod che usano PolyBase sono stati riavviati per caricare i nuovi certificati.|
 |CER100 - Configurare il cluster con certificati autofirmati|Questo notebook genera una nuova autorità di certificazione radice nel cluster Big Data e crea nuovi certificati per ogni endpoint (gli endpoint sono: Gestione, Gateway, App-Proxy e Controller). Firmare ogni nuovo certificato con la nuova CA radice generata, ad eccezione del certificato Controller, firmato con la CA radice del cluster esistente, quindi installare ogni certificato nel cluster Big Data. Scaricare la nuova CA radice generata nell'archivio certificati Autorità di certificazione radice disponibile nell'elenco locale del computer. Tutti i certificati autofirmati generati verranno archiviati nel pod Controller in test_cert_store_root.|
-|CER101 - Configurare il cluster con certificati autofirmati usando la CA radice esistente|Questo notebook userà una CA radice generata esistente nel cluster Big Data (caricata con **CER003** ) e creerà nuovi certificati per ogni endpoint (Gestione, Gateway, App-Proxy e Controller), quindi firmerà ogni nuovo certificato con la nuova CA radice generata, ad eccezione del certificato Controller (firmato con la CA radice del cluster esistente), e installerà ogni certificato nel cluster Big Data. Tutti i certificati autofirmati generati verranno archiviati nel pod Controller in test_cert_store_root. Al termine di questo notebook, tutti gli accessi https:// al cluster Big Data da questo computer (e tutti i computer che installano la nuova CA radice) verranno visualizzati come protetti. Il capitolo dello strumento di esecuzione del notebook garantisce che i processi cron creati (OPR003) per eseguire App-Deploy installeranno la CA radice del cluster per consentire di ottenere in modo sicuro i token JWT e il file swagger.json.|
+|CER101 - Configurare il cluster con certificati autofirmati usando la CA radice esistente|Questo notebook userà una CA radice generata esistente nel cluster Big Data (caricata con **CER003**) e creerà nuovi certificati per ogni endpoint (Gestione, Gateway, App-Proxy e Controller), quindi firmerà ogni nuovo certificato con la nuova CA radice generata, ad eccezione del certificato Controller (firmato con la CA radice del cluster esistente), e installerà ogni certificato nel cluster Big Data. Tutti i certificati autofirmati generati verranno archiviati nel pod Controller in test_cert_store_root. Al termine di questo notebook, tutti gli accessi https:// al cluster Big Data da questo computer (e tutti i computer che installano la nuova CA radice) verranno visualizzati come protetti. Il capitolo dello strumento di esecuzione del notebook garantisce che i processi cron creati (OPR003) per eseguire App-Deploy installeranno la CA radice del cluster per consentire di ottenere in modo sicuro i token JWT e il file swagger.json.|
 
 ## <a name="backup-and-restore-from-big-data-cluster-bdc"></a>Eseguire il backup e il ripristino dal cluster Big Data
 

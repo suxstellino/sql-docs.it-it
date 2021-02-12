@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b6c0280e54fab14c4a3f76f75a4639dad99a0635
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
-ms.translationtype: HT
+ms.openlocfilehash: 4b8638e0c9a958e8f5dd6b6039540e8492555b03
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91933564"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100074832"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Distribuire la web part Visualizzatore report di SQL Server Reporting Services in un sito di SharePoint
 
@@ -29,7 +29,7 @@ Usare le istruzioni seguenti per distribuire manualmente il pacchetto di soluzio
 
 > [!IMPORTANT]
 > A partire dalla versione "15.X.X.X" è possibile installare ReportViewerWebPart side-by-side con le applicazioni di servizio condiviso in modalità integrata SharePoint per Reporting Services esistenti.
-> Con questo aggiornamento della soluzione WSP sono stati introdotti nuovi file. La soluzione precedente deve quindi essere ritirata e il nuovo file .wsp ridistribuito usando i cmdlet Uninstall-SPSolution e Install-SPSolution, rispettivamente.
+> Con questo aggiornamento della soluzione WSP sono stati introdotti nuovi file. La soluzione precedente deve quindi essere ritirata e il nuovo file WSP ridistribuito usando i cmdlet Uninstall-SPSolution e Install-SPSolution, rispettivamente.
 >
 
 **Versioni supportate di SharePoint Server:**

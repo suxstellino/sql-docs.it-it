@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a62e0e1c47cd6df4d2d5e4f28b35294af694a824
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
-ms.translationtype: HT
+ms.openlocfilehash: 8be94f5ae47a7b7545cd553299673c823993402a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "87243272"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100062986"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lezione 1: Creazione di un database di esempio del Sottoscrittore
 
@@ -26,9 +26,9 @@ In questa lezione si presuppone che si usi [!INCLUDE[ssManStudioFull_md](../incl
   
 1.  Avviare [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]e stabilire una connessione a un'istanza di [!INCLUDE[ssDEnoversion_md](../includes/ssdenoversion-md.md)].  
   
-2.  Fare clic con il pulsante destro del mouse su Database, quindi scegliere **Nuovo database** .  
+2.  Fare clic con il pulsante destro del mouse su Database, quindi scegliere **Nuovo database**.  
   
-3.  Nella finestra di dialogo Nuovo database, in **Nome database** digitare *Subscribers* . 
+3.  Nella finestra di dialogo Nuovo database, in **Nome database** digitare *Subscribers*. 
 4. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 5.  Fare clic sul pulsante **Nuova query** sulla barra degli strumenti.  

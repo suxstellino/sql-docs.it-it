@@ -9,12 +9,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 48dde8000274ea74df1c6095714b54669c5becdd
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
-ms.translationtype: HT
+ms.openlocfilehash: 2a79c82f2c3fd443d7237fc3b0a1f7c51102bceb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257291"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048016"
 ---
 # <a name="deploy-sql-server-big-data-cluster-in-active-directory-mode"></a>Distribuire un cluster Big Data di SQL Server in modalità Active Directory
 
@@ -50,9 +50,9 @@ Per l'integrazione di Active Directory sono necessari i parametri seguenti. Aggi
 - `security.activeDirectory.domainControllerFullyQualifiedDns`: elenco di nomi di dominio completi del controller di dominio. Il nome di dominio completo contiene il nome computer/host del controller di dominio. Se sono presenti più controller di dominio, è possibile fornirne un elenco qui. Esempio: `HOSTNAME.CONTOSO.LOCAL`.
 
   > [!IMPORTANT]
-  > Quando più controller di dominio gestiscono un dominio, usare il controller di dominio primario (PDC) come prima voce nell'elenco `domainControllerFullyQualifiedDns` della configurazione di sicurezza. Per ottenere il nome del PDC, digitare `netdom query fsmo` al prompt dei comandi e quindi premere **INVIO** .
+  > Quando più controller di dominio gestiscono un dominio, usare il controller di dominio primario (PDC) come prima voce nell'elenco `domainControllerFullyQualifiedDns` della configurazione di sicurezza. Per ottenere il nome del PDC, digitare `netdom query fsmo` al prompt dei comandi e quindi premere **INVIO**.
 
-- `security.activeDirectory.realm` **Parametro facoltativo** : nella maggior parte dei casi, l'area di autenticazione è uguale al nome di dominio. Per i casi in cui non sono uguali, usare questo parametro per definire il nome dell'area di autenticazione, ad esempio `CONTOSO.LOCAL`. Il valore specificato per questo parametro deve essere completo.
+- `security.activeDirectory.realm` **Parametro facoltativo**: nella maggior parte dei casi, l'area di autenticazione è uguale al nome di dominio. Per i casi in cui non sono uguali, usare questo parametro per definire il nome dell'area di autenticazione, ad esempio `CONTOSO.LOCAL`. Il valore specificato per questo parametro deve essere completo.
 
   > [!IMPORTANT]
   > Attualmente l'integrazione applicativa dei dati non supporta una configurazione in cui il nome di dominio di Active Directory è diverso dal nome **NETBIOS** del dominio di Active Directory.
@@ -77,7 +77,7 @@ Per informazioni dettagliate su come aggiornare i gruppi di AD per queste impost
   >Creare questi gruppi in AD prima che venga avviata la distribuzione. Se l'ambito per uno di questi gruppi di AD è locale al dominio, la distribuzione non riesce.
 
   >[!IMPORTANT]
-  >Se gli utenti del dominio hanno un numero elevato di appartenenze ai gruppi, è consigliabile modificare i valori per l'impostazione del gateway `httpserver.requestHeaderBuffer` (il valore predefinito è `8192`) e l'impostazione HDFS `hadoop.security.group.mapping.ldap.search.group.hierarchy.levels` (il valore predefinito è `10`), usando il file di configurazione della distribuzione *bdc.json* personalizzato. Si tratta di una procedura consigliata per evitare i timeout di connessione al gateway e/o le risposte HTTP con un codice di stato 431 ( *Campi intestazione richiesta troppo grandi* ). Di seguito è riportata una sezione del file di configurazione che mostra come definire i valori di queste impostazioni e indica i valori consigliati per un numero maggiore di appartenenze ai gruppi:
+  >Se gli utenti del dominio hanno un numero elevato di appartenenze ai gruppi, è consigliabile modificare i valori per l'impostazione del gateway `httpserver.requestHeaderBuffer` (il valore predefinito è `8192`) e l'impostazione HDFS `hadoop.security.group.mapping.ldap.search.group.hierarchy.levels` (il valore predefinito è `10`), usando il file di configurazione della distribuzione *bdc.json* personalizzato. Si tratta di una procedura consigliata per evitare i timeout di connessione al gateway e/o le risposte HTTP con un codice di stato 431 (*Campi intestazione richiesta troppo grandi*). Di seguito è riportata una sezione del file di configurazione che mostra come definire i valori di queste impostazioni e indica i valori consigliati per un numero maggiore di appartenenze ai gruppi:
 
 ```json
 {
@@ -89,7 +89,7 @@ Per informazioni dettagliate su come aggiornare i gruppi di AD per queste impost
                 "spec": {
                     "replicas": 1,
                     "endpoints": [{...}],
-                    "settings": {
+                    "settings": {
                         "gateway-site.gateway.httpserver.requestHeaderBuffer": "65536"
                     }
                 }
@@ -113,9 +113,9 @@ Per informazioni dettagliate su come aggiornare i gruppi di AD per queste impost
   >[!IMPORTANT]
   >Creare i gruppi specificati per le impostazioni di seguito in Active Directory prima che venga avviata la distribuzione. Se l'ambito per uno di questi gruppi di AD è locale al dominio, la distribuzione non riesce.
 
-- `security.activeDirectory.appOwners` **Parametro facoltativo** : elenco dei gruppi di AD che hanno le autorizzazioni necessarie per creare, eliminare ed eseguire qualsiasi applicazione. L'elenco può includere gruppi di AD che hanno come ambito gruppi globali o universali. Non possono essere gruppi locali di dominio.
+- `security.activeDirectory.appOwners` **Parametro facoltativo**: elenco dei gruppi di AD che hanno le autorizzazioni necessarie per creare, eliminare ed eseguire qualsiasi applicazione. L'elenco può includere gruppi di AD che hanno come ambito gruppi globali o universali. Non possono essere gruppi locali di dominio.
 
-- `security.activeDirectory.appReaders` **Parametro facoltativo** : elenco dei gruppi di AD che hanno le autorizzazioni necessarie per eseguire qualsiasi applicazione. L'elenco può includere gruppi di AD che hanno come ambito gruppi globali o universali. Non possono essere gruppi locali di dominio.
+- `security.activeDirectory.appReaders` **Parametro facoltativo**: elenco dei gruppi di AD che hanno le autorizzazioni necessarie per eseguire qualsiasi applicazione. L'elenco può includere gruppi di AD che hanno come ambito gruppi globali o universali. Non possono essere gruppi locali di dominio.
 
 La tabella seguente mostra il modello di autorizzazione per la gestione delle applicazioni:
 
@@ -128,7 +128,7 @@ La tabella seguente mostra il modello di autorizzazione per la gestione delle ap
 |   appOwner           | azdata app delete  |
 |   appOwner, appReader| azdata app run     |
 
-- `security.activeDirectory.subdomain`: **Parametro facoltativo** : questo parametro è stato introdotto in SQL Server 2019 CU5 per supportare la distribuzione di più cluster Big Data nello stesso dominio. Usando questa impostazione, è possibile specificare nomi DNS diversi per ogni cluster Big Data distribuito. Se il valore di questo parametro non è specificato nella sezione relativa ad Active Directory del file `control.json`, per impostazione predefinita verrà usato il nome del cluster Big Data (uguale al nome dello spazio dei nomi Kubernetes) per calcolare il valore dell'impostazione del sottodominio. 
+- `security.activeDirectory.subdomain`: **Parametro facoltativo**: questo parametro è stato introdotto in SQL Server 2019 CU5 per supportare la distribuzione di più cluster Big Data nello stesso dominio. Usando questa impostazione, è possibile specificare nomi DNS diversi per ogni cluster Big Data distribuito. Se il valore di questo parametro non è specificato nella sezione relativa ad Active Directory del file `control.json`, per impostazione predefinita verrà usato il nome del cluster Big Data (uguale al nome dello spazio dei nomi Kubernetes) per calcolare il valore dell'impostazione del sottodominio. 
 
   >[!NOTE]
   >Il valore passato tramite l'impostazione del sottodominio non è un nuovo dominio di Active Directory, ma solo un dominio DNS usato dal cluster BDC internamente.
@@ -138,7 +138,7 @@ La tabella seguente mostra il modello di autorizzazione per la gestione delle ap
 
   Per altri dettagli sulla distribuzione di più cluster Big Data nello stesso dominio di Active Directory, vedere [Concetto: distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in modalità Active Directory](active-directory-deployment-background.md).
 
-- `security.activeDirectory.accountPrefix`: **Parametro facoltativo** : questo parametro è stato introdotto in SQL Server 2019 CU5 per supportare la distribuzione di più cluster Big Data nello stesso dominio. Questa impostazione garantisce l'univocità dei nomi degli account per vari servizi dei cluster Big Data, che devono essere diversi tra due cluster. La personalizzazione del nome del prefisso dell'account è facoltativa. Per impostazione predefinita, come prefisso dell'account viene usato il nome del sottodominio. Se il nome del sottodominio supera i 12 caratteri, come prefisso dell'account vengono usati i primi 12 caratteri del nome del sottodominio.  
+- `security.activeDirectory.accountPrefix`: **Parametro facoltativo**: questo parametro è stato introdotto in SQL Server 2019 CU5 per supportare la distribuzione di più cluster Big Data nello stesso dominio. Questa impostazione garantisce l'univocità dei nomi degli account per vari servizi dei cluster Big Data, che devono essere diversi tra due cluster. La personalizzazione del nome del prefisso dell'account è facoltativa. Per impostazione predefinita, come prefisso dell'account viene usato il nome del sottodominio. Se il nome del sottodominio supera i 12 caratteri, come prefisso dell'account vengono usati i primi 12 caratteri del nome del sottodominio.  
 
   >[!NOTE]
   >Active Directory impone il limite di 20 caratteri per i nomi degli account. Il cluster BDC deve usare 8 caratteri per distinguere pod e StatefulSet. Rimangono così al massimo 12 caratteri per il prefisso dell'account.

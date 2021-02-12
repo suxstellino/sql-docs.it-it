@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 64dcaf2c-1af5-4937-8ff7-98f1ec3b367e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d3c799f70e0b3df67096e1e6ca2e3a17bcc11572
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
-ms.translationtype: HT
+ms.openlocfilehash: 6ca390146b560e8de105661097637a42ff3ddfea
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80216936"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061926"
 ---
 # <a name="custom-report-items"></a>Elementi dei report personalizzati
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è disponibile un set completo di strumenti per la compilazione e la pubblicazione di report aziendali, la gestione di sicurezza e sottoscrizioni e l'estensione della funzionalità di report tramite un'API completa. I report vengono definiti utilizzando un linguaggio XML denominato Report Definition Language (RDL). RDL offre un set di istruzioni che descrivono le informazioni relative al layout e alle query e i tipi di elementi per un report. È possibile estendere RDL scrivendo un elemento del report personalizzato. Tale elemento è costituito da un componente runtime, che viene chiamato dal componente Elaborazione report in fase di esecuzione, e da un componente della fase di progettazione, che rende disponibile l'elemento del report personalizzato in Progettazione report.  

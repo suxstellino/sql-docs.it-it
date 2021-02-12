@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b0fa25f3951ab33001f84f7f44bd4617659a81ae
-ms.sourcegitcommit: 7791bd2ba339edc5cd2078a6537c8f6bfe72a19b
+ms.openlocfilehash: 7102f8cd25e3d0bdc2176308cb749b8d73290e0a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98564431"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100060596"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Aggiungere la web part Visualizzatore di report di SQL Server Reporting Services in una pagina di SharePoint
 

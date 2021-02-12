@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 33b5663e7693de8c031f2b39c0436a771920be56
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 82f5d7eef228326f0dba9b194b87bffce4bb5eff
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372367"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078232"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>Installazione dei componenti di SSMA in SQL Server (SybaseToSQL)
 
@@ -23,7 +23,7 @@ Oltre all'installazione di SSMA, per l'utilizzo della migrazione dei dati sul la
 
 ## <a name="ssma-for-sybase-extension-pack"></a>SSMA per Sybase Extension Pack
 
-Il pacchetto di estensione SSMA aggiunge i database **sysdb** e **ssmatesterdb_syb**all'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il database **sysdb** contiene le tabelle e le stored procedure necessarie per eseguire la migrazione dei dati. Il database **ssmatester_syb** contiene lo schema **ssma_sybase_utilities**, in cui vengono creati gli oggetti (tabelle, trigger, viste) usati dal componente SSMA tester.
+Il pacchetto di estensione SSMA aggiunge i database **sysdb** e **ssmatesterdb_syb** all'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il database **sysdb** contiene le tabelle e le stored procedure necessarie per eseguire la migrazione dei dati. Il database **ssmatester_syb** contiene lo schema **ssma_sybase_utilities**, in cui vengono creati gli oggetti (tabelle, trigger, viste) usati dal componente SSMA tester.
 
 Inoltre, quando si esegue la migrazione dei dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , SSMA crea [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processi di Agent quando viene utilizzato il motore di migrazione dei dati lato server per la migrazione dei dati.
 
@@ -49,9 +49,9 @@ Prima di installare SSMA per i componenti del Server Sybase in [!INCLUDE[ssNoVer
 
 Per installare il pacchetto di estensione:
 
-1. Copiare **SSMAforSybaseExtensionPack_*n*. msi**, dove *n* è il numero di build, nel computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
-2. Fare doppio clic su **SSMAforSybaseExtensionPack_*n*. msi**.
-3. Nella pagina di **benvenuto** fare clic su **Avanti**.
+1. Copiare **SSMAforSybaseExtensionPack_ *n*. msi**, dove *n* è il numero di build, nel computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+2. Fare doppio clic su **SSMAforSybaseExtensionPack_ *n*. msi**.
+3. Nella pagina **Benvenuti** fare clic su **Avanti**.
 4. Nella pagina **contratto di licenza con l'utente finale** leggere il contratto di licenza. Se si accetta, selezionare l'opzione Accetto **il contratto** , quindi fare clic su **Avanti**.
 5. Nella pagina **Selezione tipo di installazione** fare clic su **tipico**.
 6. Nella pagina **Pronto per l'installazione**, fare clic su **Installa**.
@@ -75,11 +75,11 @@ Per installare il pacchetto di estensione:
 
     Se è selezionata l'opzione **Installa database tester** , verrà creato il database **ssmatesterdb_syb** .
 
-12. Al termine dell'installazione, verrà visualizzato un messaggio in cui viene chiesto se si desidera installare il database Utilities in un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , selezionare **Sì**e quindi fare clic su **Avanti**. per uscire dalla procedura guidata, selezionare **No** , quindi scegliere **Esci**.
+12. Al termine dell'installazione, verrà visualizzato un messaggio in cui viene chiesto se si desidera installare il database Utilities in un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , selezionare **Sì** e quindi fare clic su **Avanti**. per uscire dalla procedura guidata, selezionare **No** , quindi scegliere **Esci**.
 
 ### <a name="sql-server-database-objects"></a>Oggetti di database SQL Server
 
-Dopo aver installato il pacchetto di estensione, viene visualizzata una tabella **ssma_syb. bcp_migration_packages** nel database **sysdb** . Vengono inoltre visualizzate le stored procedure seguenti:
+Dopo aver installato il pacchetto di estensione, viene visualizzata una tabella **ssma_syb. bcp _migration_packages** nel database **sysdb** . Vengono inoltre visualizzate le stored procedure seguenti:
 
 - `bcp_clean_migration_data`
 - `bcp_ensure_message_table`
@@ -110,7 +110,7 @@ Le istruzioni seguenti forniscono i passaggi di installazione di base per l'inst
 3. Nella pagina Selezione funzionalità selezionare i provider di dati ODBC, OLE DB e ADO.NET.
 4. Verificare le funzionalità selezionate, quindi fare clic su **fine** per installare il provider di dati.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Installazione di SSMA per il client Sybase](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)
 - [Migrazione di database Sybase ASE a SQL Server-database SQL di Azure](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)

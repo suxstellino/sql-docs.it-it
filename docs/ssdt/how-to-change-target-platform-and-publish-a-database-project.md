@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c5ee0b9febeec7da287e26a40adcb6910b80991d
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
-ms.translationtype: HT
+ms.openlocfilehash: 8a5a9cec35620f408182af3df75702eb85ce4e27
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987217"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018461"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Procedura: Modificare la piattaforma di destinazione e pubblicare un progetto di database
 
@@ -55,7 +55,7 @@ In SSDT, l'esecuzione di questa attività risulta semplice poiché viene presa i
   
 3.  Nella finestra di dialogo **Database di pubblicazione** fare clic su **Modifica** per modificare la connessione al database di destinazione.  
   
-4.  Nella finestra di dialogo **Proprietà connessione** immettere il nome dell'istanza di SQL Server e le credenziali per l'autenticazione. In **Connessione al database**immettere **NewTrade**. In questo modo si tenterà di pubblicare il progetto di database in uno nuovo database. È inoltre possibile scegliere un database esistente in cui eseguire la pubblicazione. Se si sceglie il database esistente **TradeDev**, ad esempio, tutte le modifiche apportate agli oggetti (come script) nel progetto **TradeDev** offline verranno propagate nel database **TradeDev** attivo.  
+4.  Nella finestra di dialogo **Proprietà connessione** immettere il nome dell'istanza di SQL Server e le credenziali per l'autenticazione. In **Connessione al database** immettere **NewTrade**. In questo modo si tenterà di pubblicare il progetto di database in uno nuovo database. È inoltre possibile scegliere un database esistente in cui eseguire la pubblicazione. Se si sceglie il database esistente **TradeDev**, ad esempio, tutte le modifiche apportate agli oggetti (come script) nel progetto **TradeDev** offline verranno propagate nel database **TradeDev** attivo.  
   
     Se si dispone dell'autorizzazione per apportare tutte le modifiche al database in cui si desidera pubblicare, premere il pulsante **Pubblica** . Se tuttavia non di dispone dell'accesso in scrittura a un database di produzione, è possibile fare clic sul pulsante **Genera script** per produrre uno script di pubblicazione Transact\-SQL, che può essere passato a un amministratore di database. L'amministratore di database può quindi eseguire lo script per aggiornare il server di produzione in modo che lo schema sia sincronizzato con il progetto di database.  
   
@@ -63,7 +63,7 @@ In SSDT, l'esecuzione di questa attività risulta semplice poiché viene presa i
   
 6.  Inoltre, è possibile salvare le impostazioni di pubblicazione in un profilo affinché sia possibile riutilizzare le stesse impostazioni per operazioni di pubblicazione future. A tale scopo, fare clic sul pulsante **Salva profilo con nome** nella finestra di dialogo **Database di pubblicazione** . In futuro, è possibile fare clic sul pulsante **Carica profilo** quando si desidera ricaricare le impostazioni esistenti.  
   
-7.  Si notino i messaggi nella finestra **Operazioni degli strumenti dati** . Fare clic sul collegamento "Visualizza anteprima" a destra di **Creazione anteprima di pubblicazione...** In tal modo verrà aperta l'anteprima report della distribuzione. Se la piattaforma di destinazione del progetto non è identica al server di database in cui viene pubblicato il progetto, SSDT genererà un avviso in questo report.  Se, ad esempio, la piattaforma di destinazione del progetto è Microsoft SQL Server 2012 e si prova a pubblicare il progetto in un'istanza del server SQL Server 2008 R2, verrà visualizzato il seguente avviso nella finestra di**output**:  
+7.  Si notino i messaggi nella finestra **Operazioni degli strumenti dati** . Fare clic sul collegamento "Visualizza anteprima" a destra di **Creazione anteprima di pubblicazione...** In tal modo verrà aperta l'anteprima report della distribuzione. Se la piattaforma di destinazione del progetto non è identica al server di database in cui viene pubblicato il progetto, SSDT genererà un avviso in questo report.  Se, ad esempio, la piattaforma di destinazione del progetto è Microsoft SQL Server 2012 e si prova a pubblicare il progetto in un'istanza del server SQL Server 2008 R2, verrà visualizzato il seguente avviso nella finestra di **output**:  
   
 **Un progetto in cui si specifica Microsoft SQL Server 2012 come piattaforma di destinazione può riscontrare problemi di compatibilità con SQL Server 2008**    Se in tale progetto sono incluse entità (ad esempio, un oggetto Sequence) introdotte in Microsoft SQL Server 2012, l'operazione di pubblicazione non verrà completata.  
   

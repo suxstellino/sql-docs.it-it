@@ -7,12 +7,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: c6f2a0989cb13253ef4a6a26e013a6b8c7a84ded
-ms.sourcegitcommit: f888ac94c7b5f6b6f138ab75719dadca04e8284a
-ms.translationtype: HT
+ms.openlocfilehash: 2fb25ca30a3b55bfcedb470addad8680f4914e2f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93294380"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063293"
 ---
 # <a name="configure-sql-assessment-on-an-azure-arc-enabled-sql-server-instance"></a>Configurare Valutazione SQL in un'istanza di SQL Server con abilitazione di Azure Arc
 
@@ -43,7 +43,7 @@ Valutazione SQL offre un meccanismo per valutare la configurazione di SQL Server
 2. Selezionare il tipo di account. Se è disponibile un account del servizio gestito, sarà possibile avviare Valutazione SQL direttamente dal portale. Specificare il nome dell'account.
 
 > [!NOTE]
-> Se si specifica un *account del servizio gestito* verrà attivato il pulsante **Configure SQL Assessment** (Configura Valutazione SQL) per avviare la valutazione dal portale distribuendo una *CustomScriptExtension*. Poiché è possibile distribuire una sola *CustomScriptExtension* alla volta, l'estensione dello script per Valutazione SQL verrà automaticamente rimossa dopo l'esecuzione. Se nel computer di hosting è già stata distribuita una *CustomScriptExtension* , il pulsante **Configure SQL Assessment** (Configura Valutazione SQL) non verrà attivato.
+> Se si specifica un *account del servizio gestito* verrà attivato il pulsante **Configure SQL Assessment** (Configura Valutazione SQL) per avviare la valutazione dal portale distribuendo una *CustomScriptExtension*. Poiché è possibile distribuire una sola *CustomScriptExtension* alla volta, l'estensione dello script per Valutazione SQL verrà automaticamente rimossa dopo l'esecuzione. Se nel computer di hosting è già stata distribuita una *CustomScriptExtension*, il pulsante **Configure SQL Assessment** (Configura Valutazione SQL) non verrà attivato.
 
 3. Se si vuole modificare l'impostazione predefinita, specificare una directory di lavoro nel computer della raccolta dati. Per impostazione predefinita si usa `C:\sql_assessment\work_dir`. Durante la raccolta e l'analisi, i dati vengono archiviati temporaneamente in tale cartella. Se la cartella non esiste, viene creata automaticamente.
 
@@ -52,9 +52,9 @@ Valutazione SQL offre un meccanismo per valutare la configurazione di SQL Server
 > [!div class="mx-imgBorder"]
    > [ ![Screenshot che mostra la distribuzione di CustomScriptExtension.](media/assess/sql-assessment-custom-script-deployment.png) ](media/assess/sql-assessment-custom-script-deployment.png#lightbox)
 
-5. Se si preferisce avviare Valutazione SQL dal computer di destinazione, fare clic su **Scarica script di configurazione del dispositivo** , copiare lo script scaricato nel computer di destinazione ed eseguire uno dei blocchi di codice seguenti in un'istanza di amministrazione di **powershell.exe** :
+5. Se si preferisce avviare Valutazione SQL dal computer di destinazione, fare clic su **Scarica script di configurazione del dispositivo**, copiare lo script scaricato nel computer di destinazione ed eseguire uno dei blocchi di codice seguenti in un'istanza di amministrazione di **powershell.exe**:
 
-   * _Account di dominio_ :  verrà richiesto di specificare account utente e password.
+   * _Account di dominio_:  verrà richiesto di specificare account utente e password.
 
       ```powershell
       Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force

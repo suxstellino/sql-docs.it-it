@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1aca4a83bb117624fdfd5a090c9caab2ff4b7efd
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
-ms.translationtype: HT
+ms.openlocfilehash: 8eecb8ce351fd067d944daf4fdd7fc9ee811341f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529162"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076652"
 ---
 # <a name="delivery-extensions-overview"></a>Cenni preliminari sulle estensioni per il recapito
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] consente agli utenti di creare e pubblicare report che dopo la creazione e la pubblicazione possono essere recapitati in diverse posizioni. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] include inoltre diverse estensioni per il recapito e un'API di recapito tramite cui gli sviluppatori possono creare estensioni per il recapito aggiuntive per estendere ulteriormente le funzionalità di recapito in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

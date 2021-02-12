@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 7b5bc161cc66aa904ed63e67bbc5f2ff4695168f
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
-ms.translationtype: HT
+ms.openlocfilehash: 6b0eaf98f4d10c08548e898c261a489ad71f0ff4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987937"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100016731"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Procedura dettagliata: Creazione ed esecuzione di uno unit test di SQL Server
 
@@ -232,7 +232,7 @@ Per completare questa procedura dettagliata, è necessario essere in grado di co
   
 2.  In **Modelli installati** selezionare il nodo **SQL Server** e quindi selezionare **Progetto di database di SQL Server**.  
   
-3.  In **Nome**digitare **SimpleUnitTestDB**.  
+3.  In **Nome** digitare **SimpleUnitTestDB**.  
   
 4.  Se non è già selezionata, selezionare la casella di controllo **Crea directory per soluzione** .  
   
@@ -246,7 +246,7 @@ Per completare questa procedura dettagliata, è necessario essere in grado di co
   
 2.  Fare clic su **Avanti** dopo aver letto la pagina di benvenuto.  
   
-3.  Fare clic su **Sfoglia**e accedere alla directory in cui è stato salvato il file con estensione SQL.  
+3.  Fare clic su **Sfoglia** e accedere alla directory in cui è stato salvato il file con estensione SQL.  
   
 4.  Fare doppio clic sul file con estensione SQL e fare clic su **Fine**.  
   
@@ -259,7 +259,7 @@ Per completare questa procedura dettagliata, è necessario essere in grado di co
   
 #### <a name="to-examine-the-resulting-project"></a>Per esaminare il progetto risultante  
   
-1.  In **Esplora soluzioni**esaminare i file di script che sono stati importati nel progetto.  
+1.  In **Esplora soluzioni** esaminare i file di script che sono stati importati nel progetto.  
   
 2.  In **Esplora oggetti di SQL Server** esaminare il database nel nodo Progetti.  
   
@@ -274,22 +274,22 @@ Per impostazione predefinita, quando si preme F5 il database viene distribuito (
   
 2.  Fare clic con il pulsante destro del mouse su una delle stored procedure e selezionare **Crea unit test** per visualizzare la finestra di dialogo **Crea unit test**.  
   
-3.  Selezionare le caselle di controllo delle cinque stored procedure: **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder**e **Sales.uspShowOrderDetails**.  
+3.  Selezionare le caselle di controllo delle cinque stored procedure: **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder** e **Sales.uspShowOrderDetails**.  
   
 4.  Nell'elenco a discesa **Progetto** selezionare **Crea nuovo progetto di test Visual C#** .  
   
 5.  Accettare i nomi predefiniti per il progetto e la classe e fare clic su **OK**.  
   
-6.  In **Esegui unit test utilizzando la connessione dati seguente**della finestra di dialogo relativa alla configurazione di test specificare una connessione al database distribuito precedentemente in questa procedura dettagliata. Ad esempio, se venisse usato il percorso di distribuzione predefinito, ossia il database LocalDB, si farebbe clic su **Nuova connessione** e si specificherebbe **(LocalDB)\Projects**. Successivamente, scegliere il nome del database. Quindi fare clic su OK per chiudere la finestra di dialogo **Proprietà connessione** .  
+6.  In **Esegui unit test utilizzando la connessione dati seguente** della finestra di dialogo relativa alla configurazione di test specificare una connessione al database distribuito precedentemente in questa procedura dettagliata. Ad esempio, se venisse usato il percorso di distribuzione predefinito, ossia il database LocalDB, si farebbe clic su **Nuova connessione** e si specificherebbe **(LocalDB)\Projects**. Successivamente, scegliere il nome del database. Quindi fare clic su OK per chiudere la finestra di dialogo **Proprietà connessione** .  
   
     > [!NOTE]  
     > Se è necessario testare viste o stored procedure con autorizzazioni limitate, è in genere consigliabile specificare la connessione appropriata in questo passaggio. Per convalidare il test è quindi opportuno specificare la connessione secondaria con autorizzazioni più ampie. Se si dispone di una connessione secondaria, è consigliabile aggiungere il relativo utente al progetto di database e creare un account di accesso per l'utente in questione nello script pre-distribuzione.  
   
 7.  Nella sezione **Distribuzione** della finestra di dialogo relativa alla configurazione di test selezionare la casella di controllo **Distribuisci automaticamente il progetto di database prima dell'esecuzione degli unit test** .  
   
-8.  In **Progetto di database**fare clic su **SimpleUnitTestDB.sqlproj**.  
+8.  In **Progetto di database** fare clic su **SimpleUnitTestDB.sqlproj**.  
   
-9. In **Configurazione distribuzione**fare clic su **Debug**.  
+9. In **Configurazione distribuzione** fare clic su **Debug**.  
   
     È anche possibile generare dati di test come parte degli unit test di SQL Server. Per questa procedura dettagliata, tale passaggio verrà ignorato in quanto i dati verranno creati dai test.  
   

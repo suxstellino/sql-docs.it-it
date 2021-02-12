@@ -11,12 +11,12 @@ ms.author: maghan
 ms.reviewer: drskwier, sstein
 ms.custom: seo-lt-2019
 ms.date: 09/18/2019
-ms.openlocfilehash: 97200a4dfdaebeb77703fe420267557a3d5ad9d7
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
-ms.translationtype: HT
+ms.openlocfilehash: 5e4b7e4926265a1d6358b95bba4fae7b63ae016f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035907"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066056"
 ---
 # <a name="get-diagnostic-data-after-a-sql-server-management-studio-ssms-crash"></a>Ottenere dati di diagnostica dopo un arresto anomalo di SQL Server Management Studio (SSMS)
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 16c21dec-6b46-4497-9a0c-1b0f2b6ab8fc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6fb059d867a7a3448e5a842929df48ad009f2518
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
-ms.translationtype: HT
+ms.openlocfilehash: 55160717791f4d14a7f008725710f725069cd6d4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79198478"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100022108"
 ---
 # <a name="report-server-web-service"></a>servizio Web ReportServer
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di accedere alle funzionalità complete del server di report tramite il servizio Web ReportServer. Il servizio Web ReportServer è un servizio Web XML con un'API SOAP. Il servizio usano SOAP su HTTP e funge da interfaccia di comunicazione tra i programmi client e il server di report. Il servizio Web fornisce due endpoint, uno per l'esecuzione dei report e uno per la gestione dei report, con metodi che espongono le funzionalità del server di report e consentono di creare strumenti personalizzati per qualsiasi parte del ciclo di vita del report.  

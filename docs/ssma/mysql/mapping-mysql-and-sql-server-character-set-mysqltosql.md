@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7782a8853e1b17ecba0950e647d1335758b998af
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 13b2accd6b4dc2ba2bbd8c9c1e6db312650d2d62
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935280"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077622"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Mapping dei set di caratteri MySQL e SQL Server (MySQLToSQL)
 È possibile specificare il set di caratteri (charset) per i tipi di dati carattere MySQL, le espressioni e i valori letterali.  
@@ -54,7 +54,7 @@ Il mapping del set di caratteri varia a seconda dei livelli di nodo, ovvero:
 > [!NOTE]  
 > La scheda selezionata per modificare il mapping del set di caratteri contiene tre pulsanti, indipendentemente dal mapping dei diversi livelli di nodo.  
 >   
-> ovvero:  
+> Ad esempio:  
 >   
 > 1.  **Applica:** Applica le modifiche apportate dall'utente, abilitato solo quando il mapping del set di caratteri è stato modificato e non è ancora stato salvato.  
 > 2.  **Annulla:** Annulla le modifiche apportate dall'utente. Il pulsante viene abilitato quando il mapping del set di caratteri viene modificato ma non salvato.  
@@ -103,7 +103,7 @@ Il mapping del set di caratteri varia a seconda dei livelli di nodo, ovvero:
     |utf8|UTF-8 Unicode|NCHAR/NVARCHAR (impostazione predefinita)|  
     |ucs2|UCS-2 Unicode|NCHAR/NVARCHAR (impostazione predefinita)|  
     |CP866|DOS russo|CHAR/VARCHAR (impostazione predefinita)|  
-    |keybcs2|DOS Kamenicky ceco-slovacco|CHAR/VARCHAR (impostazione predefinita)|  
+    |keybcs2|Czech-Slovak DOS Kamenicky|CHAR/VARCHAR (impostazione predefinita)|  
     |macce|Mac centrale Europa|CHAR/VARCHAR (impostazione predefinita)|  
     |macro|Mac occidentale Europa|CHAR/VARCHAR (impostazione predefinita)|  
     |CP852|Europa centrale (DOS)|CHAR/VARCHAR (impostazione predefinita)|  

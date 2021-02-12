@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
-ms.openlocfilehash: 2d62bb52d114c819dbd7de7e9244d50c27bcf248
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 263979480f9cb4d4326560f0bb8bae5157cf777f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471772"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100072742"
 ---
 # <a name="how-to-call-the-java-runtime-in-sql-server-language-extensions"></a>Come chiamare il runtime Java nelle estensioni del linguaggio di SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]

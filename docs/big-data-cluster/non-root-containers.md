@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e74e08146ea4c92f23ba17816738122147150e7b
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
-ms.translationtype: HT
+ms.openlocfilehash: 52a24c1dbe2a239450b440c07de1a7852f9c627a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257121"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046041"
 ---
 # <a name="non-root-big-data-clusters-containers"></a>Contenitori non ROOT di cluster Big Data
 
@@ -31,7 +31,7 @@ Leggere [questo white paper tecnico](https://aka.ms/sql-bdc-openshift-security) 
 > È consigliabile eseguire il cluster con l'impostazione non ROOT predefinita. Se si vuole ripristinare il comportamento precedente alla versione CU5 e all'interno del cluster BDC sono presenti contenitori eseguiti come utente `root`, è possibile usare il nuovo commutatore di funzionalità `allowRunAsRoot` e disattivare il comportamento predefinito. È possibile specificare questa impostazione solo in fase di distribuzione. A tale scopo, specificare l'impostazione nella sezione `security` del file di configurazione della distribuzione `control.json`:
 
 ```json
- "security": {
+ "security": {
   …
     "allowRunAsRoot": true,
   …

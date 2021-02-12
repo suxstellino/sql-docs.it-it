@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 04bba43a-7bed-4d3c-bb62-8e9ab2adf9e3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ce8afd47260ebc402f3d93cd191529eb7640f99d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb8c8994b9fb2804816663801612f5085eeedce4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488275"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100075092"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>Comandi di menu e altri tasti di scelta rapida (AccessToSQL)
 Le sezioni seguenti descrivono le scelte rapide da tastiera per accedere ai comandi di menu e ad altri tasti di scelta rapida usati in varie finestre di dialogo di SSMA per l'applicazione Access.  

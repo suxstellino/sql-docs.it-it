@@ -12,12 +12,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 810010b70a50f51c29b34b917af90127233d622c
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
-ms.translationtype: HT
+ms.openlocfilehash: 5983d00806f895d8112ac111312309cf93aa48ee
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987797"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063496"
 ---
 # <a name="running-sql-server-unit-tests"></a>Esecuzione di unit test di SQL Server
 

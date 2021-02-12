@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 852b4947-a090-4e54-8555-5a503945ceab
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 34873835231c122f3d086c3490be2bab7a684925
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
-ms.translationtype: HT
+ms.openlocfilehash: f3dfb2b1f3806d9e00e309b45ebf90182c83cab5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79198533"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100021757"
 ---
 # <a name="web-service-authentication"></a>Autenticazione del servizio Web
   Per autenticare le chiamate effettuate al servizio Web ReportServer, è possibile utilizzare l'autenticazione di Windows o l'autenticazione di base. Qualsiasi client che effettua richieste SOAP al server di report deve implementare la parte client di uno dei protocolli di autenticazione supportati. Se si usa [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], è possibile usare le classi HTTP di codice gestito per implementare l'autenticazione. L'utilizzo di queste API semplifica l'invio delle informazioni di autenticazione insieme alle richieste SOAP.  

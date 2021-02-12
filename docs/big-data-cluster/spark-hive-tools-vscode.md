@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6474b863e5078b94da5dc79c1c1a7f90b3faf761
-ms.sourcegitcommit: e120899c5e72ce3108d1e459703ccd2ea6a84a5b
-ms.translationtype: HT
+ms.openlocfilehash: f89450293597c28afb8db519f1c06d9d0b566046
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97353712"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100043481"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>Inviare processi Spark nel cluster Big Data di SQL Server in Visual Studio Code
 

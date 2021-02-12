@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4a4a2d97-4c10-43a9-8298-ef5a820ea549
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c11cfc1213e70bf362185a63883b8e84282696ca
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
-ms.translationtype: HT
+ms.openlocfilehash: 1b52b2f8285175c082c83b01fc9b59332ec2fb5d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80216367"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100023501"
 ---
 # <a name="preventing-invalid-requests"></a>Metodi per evitare le richieste non valide
   È possibile impedire la generazione di alcuni tipi di eccezioni analizzando il flusso dell'applicazione e assicurandosi che le richieste inviate al server di report siano valide. Nelle applicazioni che consentono agli utenti di aggiungere o aggiornare il nome di un report, un'origine dati o un altro elemento del server di report, è necessario convalidare il testo che un utente potrebbe immettere. È sempre necessario verificare se sono presenti caratteri riservati prima di inviare la richiesta a un server di report. Usare istruzioni **if** condizionali o altri costrutti logici nel codice per avvisare l'utente che non sono state soddisfatte le condizioni necessarie per l'invio delle richieste al server di report.  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 78ebc356c31dcd32c650d0b04e78c20939e1cabb
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 8a8f6182e4579d30cfcb4a8102a439bb7b12c7a6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466632"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100071144"
 ---
 # <a name="integrating-reporting-services-using-soap---web-application"></a>Integrazione di Reporting Services tramite SOAP - Applicazione Web
   È possibile accedere alle funzionalità complete del server di report tramite l'API SOAP di Reporting Services. L'API SOAP è un servizio Web e, in quanto tale, è possibile accedervi in modo semplice per fornire caratteristiche di creazione di report aziendali alle applicazioni aziendali personalizzate. È possibile accedere al servizio Web ReportServer da un'applicazione Web nello stesso modo in cui si accede all'API SOAP da un'applicazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Usando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], è possibile generare una classe proxy che espone le proprietà e i metodi del servizio Web ReportServer e consente di usare un'infrastruttura e strumenti familiari per compilare applicazioni aziendali basate sulla tecnologia [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

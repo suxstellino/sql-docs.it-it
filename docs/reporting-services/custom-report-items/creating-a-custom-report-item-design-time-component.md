@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 237d056f8b42570fcab375330a9eb3172eb11758
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 1b5ccf62185045dc8d3efaccfe00e26a01f01a9d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596958"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015661"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Creazione di un componente dell'elemento del report personalizzato per la fase di progettazione
   Un componente dell'elemento del report personalizzato per la fase di progettazione è un controllo che può essere utilizzato nell'ambiente Progettazione report di Visual Studio. Il componente dell'elemento del report personalizzato per la fase di progettazione fornisce un'area di progettazione attivata in grado di accettare operazioni di trascinamento della selezione, integrazione con il Visualizzatore proprietà di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] e la possibilità di fornire editor di proprietà personalizzati.  

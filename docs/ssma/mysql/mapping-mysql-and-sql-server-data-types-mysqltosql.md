@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0df267807ff824cebac580fb3454d63de8dfe31b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7024f944030714e7aa2431815e326b1be5be701
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463384"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077202"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>Mapping dei tipi di dati MySQL e SQL Server (MySQLToSQL)
 I tipi di database MySQL sono diversi da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o dai tipi di database SQL di Azure. Quando si convertono oggetti di database MySQL in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti o SQL Azure, è necessario specificare come eseguire il mapping dei tipi di dati da MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. È possibile accettare i mapping dei tipi di dati predefiniti oppure personalizzare i mapping come illustrato nelle procedure seguenti.  
@@ -37,7 +37,7 @@ Quando si visualizza la scheda **mapping dei tipi** in SSMA, lo sfondo è codifi
   
     Nelle procedure riportate di seguito viene illustrato come eseguire il mapping dei tipi di dati a livello di progetto, database o oggetto di database:  
   
-    1.  Per personalizzare il mapping dei tipi di dati per l'intero progetto, aprire la finestra di dialogo **Impostazioni progetto** . Scegliere **Impostazioni progetto**dal menu strumenti.  
+    1.  Per personalizzare il mapping dei tipi di dati per l'intero progetto, aprire la finestra di dialogo **Impostazioni progetto** . Scegliere **Impostazioni progetto** dal menu strumenti.  
   
         Nel riquadro sinistro selezionare mapping dei **tipi**. Il grafico del mapping dei tipi e i pulsanti vengono visualizzati nel riquadro di destra.  
   
@@ -53,11 +53,11 @@ Quando si visualizza la scheda **mapping dei tipi** in SSMA, lo sfondo è codifi
   
     3.  Se il tipo richiede una lunghezza, specificare le lunghezze minime e massime dei dati per il mapping selezionando le caselle di controllo **da** e **a** e quindi immettendo i valori.  
   
-    4.  In questo modo è possibile personalizzare il mapping dei dati per valori più piccoli e più grandi dello stesso tipo di dati. In **tipo di destinazione**selezionare il tipo di dati SQL Server o SQL Azure di destinazione.  
+    4.  In questo modo è possibile personalizzare il mapping dei dati per valori più piccoli e più grandi dello stesso tipo di dati. In **tipo di destinazione** selezionare il tipo di dati SQL Server o SQL Azure di destinazione.  
   
         1.  Alcuni tipi richiedono una lunghezza del tipo di dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nella casella **Sostituisci con** , quindi fare clic su **OK**.  
   
-        2.  Alcuni tipi richiedono una **precisione** e una **scala**del tipo di dati di destinazione. Se necessario, immettere la nuova precisione e la scala nella casella **Sostituisci con** , quindi fare clic su **OK**.  
+        2.  Alcuni tipi richiedono una **precisione** e una **scala** del tipo di dati di destinazione. Se necessario, immettere la nuova precisione e la scala nella casella **Sostituisci con** , quindi fare clic su **OK**.  
   
 -   **Per modificare un mapping dei tipi, eseguire le operazioni seguenti:**  
   
@@ -67,17 +67,17 @@ Quando si visualizza la scheda **mapping dei tipi** in SSMA, lo sfondo è codifi
   
     3.  Se il tipo richiede una lunghezza, specificare le lunghezze minime e massime dei dati per il mapping selezionando le caselle di controllo **da** e **a** e quindi immettendo i valori.  
   
-    In questo modo è possibile personalizzare il mapping dei dati per valori più piccoli e più grandi dello stesso tipo di dati. In **tipo di destinazione**selezionare il tipo di dati SQL Server o SQL Azure di destinazione.  
+    In questo modo è possibile personalizzare il mapping dei dati per valori più piccoli e più grandi dello stesso tipo di dati. In **tipo di destinazione** selezionare il tipo di dati SQL Server o SQL Azure di destinazione.  
   
     -  Alcuni tipi richiedono una lunghezza del tipo di dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nella casella **Sostituisci con** , quindi fare clic su **OK**.  
   
-    -  Alcuni tipi richiedono una **precisione** e una **scala**del tipo di dati di destinazione. Se necessario, immettere la nuova precisione e la scala nella casella **Sostituisci con** , quindi fare clic su **OK**.  
+    -  Alcuni tipi richiedono una **precisione** e una **scala** del tipo di dati di destinazione. Se necessario, immettere la nuova precisione e la scala nella casella **Sostituisci con** , quindi fare clic su **OK**.  
   
 -   **Per rimuovere un mapping dei tipi di dati, eseguire le operazioni seguenti:**  
   
     1.  Nel riquadro mapping dei tipi selezionare la riga nell'elenco mapping dei tipi che contiene il mapping del tipo di dati che si desidera rimuovere.  
   
-    2.  Scegliere **Rimuovi**.  
+    2.  Fare clic su **Rimuovi**.  
   
 ## <a name="next-step"></a>passaggio successivo  
 Il passaggio successivo del processo di migrazione consiste nel [creare un report di valutazione](assessing-mysql-databases-for-conversion-mysqltosql.md) o [convertire gli oggetti di database MySQL in SQL Server o SQL Azure sintassi](converting-mysql-databases-mysqltosql.md). Se si crea un report, gli oggetti MySQL vengono convertiti automaticamente durante la valutazione.  

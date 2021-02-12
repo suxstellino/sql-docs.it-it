@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 793430d548053b8d4c1cbf8dd07dd4e7d691c6d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 129f33320e337847454f22c685eedc77931d1464
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468743"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077662"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Selezione e configurazione degli oggetti interessati (SybaseToSQL)
 In questa pagina è possibile selezionare le tabelle e le chiavi esterne, che devono essere confrontate quando SSMA verifica i risultati dell'esecuzione per gli oggetti scelti nel passaggio precedente. Inoltre, è possibile personalizzare i parametri di verifica.  
@@ -34,7 +34,7 @@ La scheda tabella contiene la visualizzazione griglia della tabella selezionata.
   
 -   Tipo di dati  
   
--   Precisione  
+-   Precision  
   
 -   Scalabilità  
   

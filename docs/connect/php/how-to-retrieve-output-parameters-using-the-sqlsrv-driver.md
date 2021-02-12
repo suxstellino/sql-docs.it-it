@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6b23f80859a572ea8bb3f96a0460d0f5eba0183a
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
-ms.translationtype: HT
+ms.openlocfilehash: 6f0e165c04e303a5cb65046b013df8814bfbf515
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410959"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100038367"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Procedura: Recuperare i parametri di output mediante il driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

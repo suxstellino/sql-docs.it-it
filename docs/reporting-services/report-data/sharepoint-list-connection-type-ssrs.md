@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 369f8962752bcdc67c407b561400138f3c179abe
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
-ms.translationtype: HT
+ms.openlocfilehash: 7bb6380e168c1e4bddefab539354d80bf14805c6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935327"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033471"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Tipo di connessione dell'elenco SharePoint (SSRS)
 
@@ -36,7 +36,7 @@ Usare le informazioni presenti in questo argomento per compilare un'origine dati
   
  Nelle tabelle seguenti viene illustrato il comportamento di recupero delle credenziali per l'estensione dell'elenco SharePoint, quando ci si connette a un elenco SharePoint di una farm locale e a un elenco SharePoint remoto.  
   
- La**Tabella 1** è indicata per i report distribuiti in un sito Windows SharePoint legacy. Un sito Windows legacy supporta solo Kerberos, NTLM e l'autenticazione basata su moduli (FBA, Forms Based Authentication). La**tabella 2** è indicata per i report distribuiti in un sito di SharePoint basato sulle attestazioni.  
+ La **Tabella 1** è indicata per i report distribuiti in un sito Windows SharePoint legacy. Un sito Windows legacy supporta solo Kerberos, NTLM e l'autenticazione basata su moduli (FBA, Forms Based Authentication). La **tabella 2** è indicata per i report distribuiti in un sito di SharePoint basato sulle attestazioni.  
   
  **Tabella 1**  
   

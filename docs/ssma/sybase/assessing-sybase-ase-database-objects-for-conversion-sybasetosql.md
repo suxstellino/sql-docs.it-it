@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: eb996b7c-1eef-4f73-b5e6-2fa6faf7336c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6e8bd25b8529f09896cbec2ec31578375a015f2a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0926c350d02bf2cdbb5ae7fe4fdefbda3ef6863
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372628"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077222"
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>Valutazione degli oggetti di database SAP ASE per la conversione (SybaseToSQL)
 Prima di caricare oggetti e migrare i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o in Azure SQL, è necessario determinare la complessità della migrazione e il tempo necessario. SSMA è in grado di creare un report di valutazione che mostra la percentuale di oggetti e procedure che verranno convertiti correttamente in [!INCLUDE[tsql](../../includes/tsql-md.md)] . SSMA consente inoltre di visualizzare i problemi specifici che possono causare errori di conversione.  
@@ -29,7 +29,7 @@ Quando si crea questo report di valutazione, SSMA converte gli oggetti di databa
   
 2.  Per omettere singoli oggetti, deselezionare le caselle di controllo accanto agli oggetti che non si desidera valutare.  
   
-3.  Fare clic con il pulsante destro del mouse su **database**e quindi scegliere **Crea report**.  
+3.  Fare clic con il pulsante destro del mouse su **database** e quindi scegliere **Crea report**.  
   
     È anche possibile analizzare singoli oggetti facendo clic con il pulsante destro del mouse su un oggetto e quindi scegliendo **Crea report**.  
   
@@ -52,7 +52,7 @@ La finestra report di valutazione contiene tre riquadri:
     -   L'area di origine Mostra il codice sorgente dell'oggetto selezionato nel riquadro sinistro. Le aree evidenziate mostrano codice sorgente problematico.  
     -   Nell'area di destinazione viene visualizzato il codice convertito. Il testo rosso Mostra codice problematico e messaggi di errore.  
   
--   Il riquadro inferiore mostra i messaggi di conversione raggruppati per numero di messaggio. Selezionare **errori**, **avvisi**o **informazioni** per visualizzare le categorie di messaggi, quindi espandere un gruppo di messaggi. Fare clic su un singolo messaggio per selezionare l'oggetto nel riquadro a sinistra e quindi visualizzare i dettagli nel riquadro di destra.  
+-   Il riquadro inferiore mostra i messaggi di conversione raggruppati per numero di messaggio. Selezionare **errori**, **avvisi** o **informazioni** per visualizzare le categorie di messaggi, quindi espandere un gruppo di messaggi. Fare clic su un singolo messaggio per selezionare l'oggetto nel riquadro a sinistra e quindi visualizzare i dettagli nel riquadro di destra.  
   
 ## <a name="analyze-conversion-problems-by-using-the-assessment-report"></a>Analizzare i problemi di conversione tramite il report di valutazione  
 I **riquadri delle statistiche di conversione** mostrano le statistiche di conversione. Se la percentuale di una categoria è inferiore al 100%, è necessario determinare il motivo per cui la conversione non è riuscita.  
