@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8e91315b5ec79c136b4d84a7fbc36a707cc3d82f
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
-ms.translationtype: HT
+ms.openlocfilehash: 9d475edb720d329d5fb52f7bd75c055fc3a8494a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257301"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100047941"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-clusters"></a>Come distribuire un'app in cluster Big Data di SQL Server
 
@@ -36,10 +36,10 @@ Le applicazioni vengono distribuite e gestite usando [!INCLUDE [azure-data-cli-a
 
 Sono supportati i tipi seguenti di app:
 
-- **Python** : uno dei linguaggi di programmazione generali più diffuso tra diversi utenti, ad esempio ingegneri dei dati, scienziati dei dati o tecnici DevOps, supporta vari scenari, ad esempio data wrangling, automazione e creazione di prototipi. In una certa misura, è anche molto usato per programmare applicazioni di livello aziendale usate insieme a framework di sviluppo Web, ad esempio Flask e Django, per soddisfare requisiti aziendali diversi.  
-- **R** : un altro linguaggio di programmazione comune per ingegneri e scienziati dei dati. Rispetto a Python, R è un linguaggio di programmazione specifico soprattutto per l'elaborazione statistica e la grafica.  
+- **Python**: uno dei linguaggi di programmazione generali più diffuso tra diversi utenti, ad esempio ingegneri dei dati, scienziati dei dati o tecnici DevOps, supporta vari scenari, ad esempio data wrangling, automazione e creazione di prototipi. In una certa misura, è anche molto usato per programmare applicazioni di livello aziendale usate insieme a framework di sviluppo Web, ad esempio Flask e Django, per soddisfare requisiti aziendali diversi.  
+- **R**: un altro linguaggio di programmazione comune per ingegneri e scienziati dei dati. Rispetto a Python, R è un linguaggio di programmazione specifico soprattutto per l'elaborazione statistica e la grafica.  
 - **SQL Server Integration Services (SSIS)** : soluzioni di integrazione dei dati a prestazioni elevate per la compilazione e il debug di pacchetti ETL. Usa il formato di file del pacchetto DTSX (Data Transformation Services), vale a dire un formato di file basato su XML che archivia le istruzioni per elaborare la migrazione dei dati tra database e l'integrazione di origini dati esterne.   
-- **MLeap** : è un formato di serializzazione comune e contiene tutti gli elementi necessari per eseguire e serializzare le pipeline SparkML e altri elementi che possono essere caricati in fase di esecuzione per elaborare le attività di assegnazione del punteggio ML in near real-time o vicino ai dati.  
+- **MLeap**: è un formato di serializzazione comune e contiene tutti gli elementi necessari per eseguire e serializzare le pipeline SparkML e altri elementi che possono essere caricati in fase di esecuzione per elaborare le attività di assegnazione del punteggio ML in near real-time o vicino ai dati.  
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -48,7 +48,7 @@ Sono supportati i tipi seguenti di app:
 
 ## <a name="capabilities"></a>Capabilities
 
-In SQL Server 2019 è possibile creare, eliminare, descrivere, inizializzare, elencare, eseguire e aggiornare l'applicazione. La tabella seguente descrive i comandi per la distribuzione di applicazioni che è possibile usare con **azdata** .
+In SQL Server 2019 è possibile creare, eliminare, descrivere, inizializzare, elencare, eseguire e aggiornare l'applicazione. La tabella seguente descrive i comandi per la distribuzione di applicazioni che è possibile usare con **azdata**.
 
 |Comando |Descrizione |
 |:---|:---|

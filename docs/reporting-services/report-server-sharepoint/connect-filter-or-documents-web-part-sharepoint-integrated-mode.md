@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ed8aa919129d8ece0d0618fdd14f6309080a812d
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
-ms.translationtype: HT
+ms.openlocfilehash: 0e58600c502aa6ebb0a031480ab5bb66f48833ca
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935085"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100074852"
 ---
 # <a name="connect-filter-or-documents-web-part-with-a-reporting-services-report-viewer-web-part"></a>Connettere una web part Filtro o Documenti con una web part Visualizzatore di report di Reporting Services
 
@@ -28,7 +28,7 @@ Se si usa un prodotto SharePoint è possibile creare un dashboard o una pagina w
 
  La web part Filtro si usa per inviare valori a uno o più parametri in un report. Per usare una web part Filtro è necessario che per il report siano stati definiti parametri compatibili con i valori, i tipi di dati e il formato inviati dalla web part.  
   
- La web part Documenti è associata alla raccolta documenti del sito principale. Per visualizzare, aggiungere o rimuovere elementi dalla raccolta Documenti, fare clic su **Visualizza tutto il contenuto del sito**. In Raccolte fare clic su **Documenti**. Per gestire gli elementi della raccolta Documenti, è possibile usare i menu **Nuovo**, **Carica**e **Azioni** .  
+ La web part Documenti è associata alla raccolta documenti del sito principale. Per visualizzare, aggiungere o rimuovere elementi dalla raccolta Documenti, fare clic su **Visualizza tutto il contenuto del sito**. In Raccolte fare clic su **Documenti**. Per gestire gli elementi della raccolta Documenti, è possibile usare i menu **Nuovo**, **Carica** e **Azioni** .  
   
 ## <a name="connect-a-filter-web-part"></a>Connettere una web part Filtro
   

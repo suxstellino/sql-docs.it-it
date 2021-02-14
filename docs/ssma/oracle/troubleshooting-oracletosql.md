@@ -11,12 +11,12 @@ ms.assetid: 1dfd6ebb-9fcc-4588-8052-7b8219602132
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 30983c2468a4e0f4a2969084c9043cff48c6bfe9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 00172de644c54b76907fafb5978bf89be22fdaeb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480390"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078742"
 ---
 # <a name="troubleshooting-oracletosql"></a>Risoluzione dei problemi (OracleToSQL)
 Non è insolito che si verifichino problemi di migrazione a metà dell'esecuzione di comandi o script della console.  
@@ -27,7 +27,7 @@ Gli errori di risolvibili possono essere correlati a:
   
 2.  Procedura  
   
-3.  Visualizza  
+3.  Visualizzazione  
   
 4.  Trigger  
   

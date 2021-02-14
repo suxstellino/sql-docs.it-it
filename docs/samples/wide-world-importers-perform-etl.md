@@ -10,12 +10,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1dfba407449b9517af2ed899f49387732c48353b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce9cd8ee5a4153cb1d744d505a26b400497b460b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718522"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354054"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>Flusso di lavoro ETL WideWorldImportersDW
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -40,10 +40,10 @@ Successivamente, una serie di attività flusso di dati carica ogni dimensione. Q
 - SQL Server 2016 (o versione successiva) con i database WideWorldImporters e WideWorldImportersDW (nello stesso o in istanze diverse di SQL Server)
 - SQL Server Management Studio
 - SQL Server 2016 Integration Services
-  - Assicurarsi di creare un catalogo Integration Services. Per creare un catalogo Integration Services, in SQL Server Management Studio Esplora oggetti fare clic con il pulsante destro del mouse su **Integration Services**e quindi scegliere **Aggiungi catalogo**. Lasciare le opzioni predefinite. Viene richiesto di abilitare SQLCLR e specificare una password.
+  - Assicurarsi di creare un catalogo Integration Services. Per creare un catalogo Integration Services, in SQL Server Management Studio Esplora oggetti fare clic con il pulsante destro del mouse su **Integration Services** e quindi scegliere **Aggiungi catalogo**. Lasciare le opzioni predefinite. Viene richiesto di abilitare SQLCLR e specificare una password.
 
 
-## <a name="download"></a>Download
+## <a name="download"></a>Scarica
 
 Per la versione più recente dell'esempio, vedere [Wide-World-Importers-Release](https://go.microsoft.com/fwlink/?LinkID=800630). Scaricare il file di pacchetto *ETL. ispac Integration Services giornaliero* .
 
@@ -53,8 +53,8 @@ Per il codice sorgente per ricreare il database di esempio, vedere [Wide-World-I
 
 1. Distribuire il pacchetto di Integration Services:
    1. In Esplora risorse aprire il pacchetto *ETL. ispac giornaliero* . Viene avviata la distribuzione guidata SQL Server Integration Services.
-   2. In **Seleziona origine**seguire le impostazioni predefinite per la distribuzione del progetto, con il percorso che punta al pacchetto *ETL. ispac giornaliero* .
-   3. In **Selezione destinazione**immettere il nome del server che ospita il catalogo Integration Services.
+   2. In **Seleziona origine** seguire le impostazioni predefinite per la distribuzione del progetto, con il percorso che punta al pacchetto *ETL. ispac giornaliero* .
+   3. In **Selezione destinazione** immettere il nome del server che ospita il catalogo Integration Services.
    4. Selezionare un percorso nel catalogo Integration Services, ad esempio, in una nuova cartella denominata *wideworldimporters*.
    5. Selezionare **Distribuisci** per terminare la procedura guidata.
 
@@ -63,7 +63,7 @@ Per il codice sorgente per ricreare il database di esempio, vedere [Wide-World-I
    2. Immettere un nome, ad esempio *WIDEWORLDIMPORTERS ETL*.
    3. Aggiungere un **passaggio di processo** del tipo **SQL Server Integration Services pacchetto**.
    4. Selezionare il server in cui è presente il catalogo Integration Services, quindi selezionare il pacchetto *ETL giornaliero* .
-   5. In **Configuration**  >  **gestioni connessioni**di configurazione assicurarsi che le connessioni all'origine e alla destinazione siano configurate correttamente. Il valore predefinito è la connessione all'istanza locale.
+   5. In   >  **gestioni connessioni** di configurazione assicurarsi che le connessioni all'origine e alla destinazione siano configurate correttamente. Il valore predefinito è la connessione all'istanza locale.
    6. Selezionare **OK** per creare il processo.
 
 3. Eseguire o pianificare il processo.

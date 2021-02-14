@@ -17,18 +17,18 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017'
-ms.openlocfilehash: 5d9f07f96f83767a84f7ee0128d674f4ab955eed
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: e14f354812c99b9ed3e8be86734e3cb8e07db751
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170853"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489475"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Funzionalità del motore di database deprecate in SQL Server 2017
 
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 
-  In questo argomento verranno descritte le funzionalità deprecate di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ancora disponibili in [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]. È consigliabile non usare le funzionalità deprecate nelle nuove applicazioni.  
+  In questo argomento verranno descritte le funzionalità deprecate di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ancora disponibili in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. È consigliabile non usare le funzionalità deprecate nelle nuove applicazioni.  
   
 Quando una funzionalità è contrassegnata come deprecata significa che:
 
@@ -46,7 +46,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 ```
 
 > [!NOTE]
-> Questo elenco è identico all'elenco [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]. Non sono presenti funzionalità nuove o deprecate del motore di database annunciate per [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)].
+> Questo elenco è identico all'elenco [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]. Non sono presenti funzionalità nuove o deprecate del motore di database annunciate per [!INCLUDE[sssql17-md](../includes/sssql17-md.md)].
 
 ## <a name="features-deprecated-in-the-next-version-of-sql-server"></a>Funzionalità deprecate nella prossima versione di SQL Server
 

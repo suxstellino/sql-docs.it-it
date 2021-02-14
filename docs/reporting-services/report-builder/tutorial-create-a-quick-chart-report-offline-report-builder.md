@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 41e26cbdeaa794ebae01371207d7ff7847619dc2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
-ms.translationtype: HT
+ms.openlocfilehash: 2f7fb9781583a56a2765f066462e62717c1d32d6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290748"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100070551"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Esercitazione: Creare un report grafico rapido offline (Generatore report)
 
@@ -189,7 +189,7 @@ ms.locfileid: "80290748"
 15. Per visualizzare il grafico a torta effettivo, fare clic su **Esegui** nella scheda **Home** della barra multifunzione.  
  
 ##  <a name="after-you-run-the-wizard"></a><a name="AfterWizard"></a> Al termine della procedura guidata  
- Dopo aver terminato la creazione del report del grafico a torta, è possibile modificarlo nel modo desiderato. Nella scheda **Esegui** della barra multifunzione fare clic su **Progettazione**per continuare a modificarlo.  
+ Dopo aver terminato la creazione del report del grafico a torta, è possibile modificarlo nel modo desiderato. Nella scheda **Esegui** della barra multifunzione fare clic su **Progettazione** per continuare a modificarlo.  
   
 ## <a name="make-the-chart-bigger"></a>Ingrandire il grafico  
  Potrebbe essere necessario ingrandire il grafico a torta. 
@@ -221,7 +221,7 @@ L'area di progettazione viene ingrandita man mano che viene trascinata.
  Per altre informazioni sulla personalizzazione di etichette e legende dei grafici, vedere [Visualizzare i valori in percentuale in un grafico a torta &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) e [Modificare il testo di un elemento legenda &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
   
 ##  <a name="whats-next"></a><a name="WhatsNext"></a> Operazioni successive  
- Al termine della creazione del primo report in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], provare a eseguire le altre esercitazioni e iniziare a creare report basati su dati personalizzati. Per eseguire [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] è necessario avere l'autorizzazione di accesso alle origini dati, ad esempio ai database, con una *stringa di connessione*che stabilisce l'effettiva connessione all'origine dati. L'amministratore di sistema disporrà di queste informazioni e potrà procedere alla configurazione.  
+ Al termine della creazione del primo report in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], provare a eseguire le altre esercitazioni e iniziare a creare report basati su dati personalizzati. Per eseguire [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] è necessario avere l'autorizzazione di accesso alle origini dati, ad esempio ai database, con una *stringa di connessione* che stabilisce l'effettiva connessione all'origine dati. L'amministratore di sistema disporrà di queste informazioni e potrà procedere alla configurazione.  
   
  Per eseguire le altre esercitazioni, è necessario avere il nome di un'istanza di SQL Server e di credenziali sufficienti per l'accesso in sola lettura a qualsiasi database. L'amministratore di sistema potrà fornire i dati necessari.  
   

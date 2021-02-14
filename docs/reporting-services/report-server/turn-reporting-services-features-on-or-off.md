@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 86bc7c0352e7bf2447628a143a5c1732b132a412
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
-ms.translationtype: HT
+ms.openlocfilehash: c6b42238a081adbd40f9756fb3d2fb8871e1d7cc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891371"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100023336"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Abilitare o disabilitare le funzionalità di Reporting Services
   È possibile disabilitare le funzionalità del server di report non utilizzate come parte di una strategia di blocco per ridurre la superficie di attacco di un server di report di produzione. Nella maggior parte dei casi, è consigliabile eseguire le funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] simultaneamente in modo da poter utilizzare tutte le funzionalità disponibili in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Tuttavia, a seconda del modello di distribuzione, è possibile disabilitare le funzionalità che non sono necessarie. Ad esempio, è possibile abilitare solo l'elaborazione in background se tutte le operazioni di elaborazione dei report vengono configurate come operazioni pianificate. Analogamente, se si vuole che la generazione di report venga eseguita solo in modo interattivo e su richiesta, è possibile eseguire solo il servizio Web ReportServer.  
@@ -74,7 +74,7 @@ ms.locfileid: "91891371"
   
 1.  Aprire il file RsReportServer.config in un editor di testo. Per altre informazioni, vedere [Modificare un file di configurazione di Reporting Services&#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
-2.  Per abilitare l'elaborazione e il recapito pianificati dei report, impostare **IsSchedulingService**, **IsNotificationService**e **IsEventService** su **true**:  
+2.  Per abilitare l'elaborazione e il recapito pianificati dei report, impostare **IsSchedulingService**, **IsNotificationService** e **IsEventService** su **true**:  
   
     ```  
     <IsSchedulingService>true</IsSchedulingService>  
@@ -82,7 +82,7 @@ ms.locfileid: "91891371"
     <IsEventService>true</IsEventService>  
     ```  
   
-3.  Per disabilitare l'elaborazione e il recapito pianificati dei report, impostare **IsSchedulingService**, **IsNotificationService**e **IsEventService** su **false**:  
+3.  Per disabilitare l'elaborazione e il recapito pianificati dei report, impostare **IsSchedulingService**, **IsNotificationService** e **IsEventService** su **false**:  
   
     ```  
     <IsSchedulingService>false</IsSchedulingService>  

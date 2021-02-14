@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2f9cbaaca472c6b63d0196cb2f751e28b184e206
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
-ms.translationtype: HT
+ms.openlocfilehash: 7506b3b57d81187269c26fae3cafc2d3cdbc6628
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868393"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100348625"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Esercitazione: Preparare SQL Server per la replica: server di pubblicazione, server di distribuzione, sottoscrittore
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -76,9 +76,9 @@ In questa sezione vengono creati gli account di Windows per l'esecuzione degli a
   
 1. Nel server di pubblicazione fare clic su **Gestione computer** in **Strumenti di amministrazione** nel Pannello di controllo.  
   
-2. In **Utilità di sistema**espandere **Utenti e gruppi locali**.  
+2. In **Utilità di sistema** espandere **Utenti e gruppi locali**.  
   
-3. Fare clic con il pulsante destro del mouse su **Utenti**e quindi selezionare **Nuovo utente**.  
+3. Fare clic con il pulsante destro del mouse su **Utenti** e quindi selezionare **Nuovo utente**.  
      
 4. Immettere **repl_snapshot** nella casella **Nome utente**, specificare la password e altre informazioni pertinenti e quindi selezionare **Crea** per creare l'account repl_snapshot: 
 
@@ -94,9 +94,9 @@ In questa sezione vengono creati gli account di Windows per l'esecuzione degli a
   
 1. Nel sottoscrittore aprire **Gestione computer** in **Strumenti di amministrazione** nel Pannello di controllo.  
   
-2. In **Utilità di sistema**espandere **Utenti e gruppi locali**.  
+2. In **Utilità di sistema** espandere **Utenti e gruppi locali**.  
   
-3. Fare clic con il pulsante destro del mouse su **Utenti**e quindi selezionare **Nuovo utente**.  
+3. Fare clic con il pulsante destro del mouse su **Utenti** e quindi selezionare **Nuovo utente**.  
   
 4. Immettere **repl_distribution** nella casella **Nome utente**, specificare la password e altre informazioni pertinenti e quindi selezionare **Crea** per creare l'account repl_distribution.  
   

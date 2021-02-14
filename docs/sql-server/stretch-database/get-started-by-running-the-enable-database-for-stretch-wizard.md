@@ -22,12 +22,12 @@ ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b9356ae3c4783df003233c4db7ab4bbaf9501a2d
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
-ms.translationtype: HT
+ms.openlocfilehash: 74435746bc2ef72741cf25a610cb37d4ac1893b4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523952"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100080992"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Avviare la procedura guidata Abilitare il database per l'estensione
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "92523952"
   
 1.  In Esplora oggetti di SQL Server Management Studio selezionare il database per il quale abilitare l'estensione.  
   
-2.  Fare clic con il pulsante destro del mouse e selezionare **Attività** , **Estendi** e quindi **Abilita** per avviare la procedura guidata.  
+2.  Fare clic con il pulsante destro del mouse e selezionare **Attività**, **Estendi** e quindi **Abilita** per avviare la procedura guidata.  
   
 ##  <a name="introduction"></a><a name="Intro"></a> Introduzione  
  Esaminare lo scopo della procedura guidata e i prerequisiti.  
@@ -69,7 +69,7 @@ Le tabelle con un numero elevato di righe vengono visualizzate nella parte super
 |**Nome**|Specifica il nome della tabella nel database.|  
 |(nessun titolo)|Un simbolo in questa colonna può rappresentare un avviso che non impedisce l'abilitazione della tabella selezionata per l'estensione. Può rappresentare anche un problema che impedisce l'abilitazione della tabella selezionata per l'estensione, ad esempio perché la tabella usa un tipo di dati non supportato. Passare il mouse sul simbolo per visualizzare una descrizione comando con altre informazioni. Per altre informazioni, vedere [Limitazioni di Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md).|  
 |**Estesa**|Indica se la tabella è già abilitata per l'estensione.|  
-|**Migrazione**|È possibile eseguire la migrazione di un'intera tabella ( **Intera tabella** ) oppure specificare un filtro in una colonna esistente nella tabella. Per usare una funzione di filtro diversa per selezionare le righe di cui eseguire la migrazione, eseguire l'istruzione ALTER TABLE per specificare la funzione di filtro dopo aver chiuso la procedura guidata. Per altre informazioni sulla funzione di filtro, vedere [Select rows to migrate by using a filter function (Selezionare le righe di cui eseguire la migrazione usando una funzione di filtro)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Per altre informazioni su come applicare la funzione, vedere [Enable Stretch Database for a table (Abilitare Estensione database per una tabella)](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) o [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).|  
+|**Migrazione**|È possibile eseguire la migrazione di un'intera tabella (**Intera tabella**) oppure specificare un filtro in una colonna esistente nella tabella. Per usare una funzione di filtro diversa per selezionare le righe di cui eseguire la migrazione, eseguire l'istruzione ALTER TABLE per specificare la funzione di filtro dopo aver chiuso la procedura guidata. Per altre informazioni sulla funzione di filtro, vedere [Select rows to migrate by using a filter function (Selezionare le righe di cui eseguire la migrazione usando una funzione di filtro)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Per altre informazioni su come applicare la funzione, vedere [Enable Stretch Database for a table (Abilitare Estensione database per una tabella)](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) o [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).|  
 |**prime righe**|Consente di specificare il numero di righe nella tabella.|  
 |**Dimensioni (KB)**|Specifica le dimensioni della tabella in KB.|  
   
@@ -138,7 +138,7 @@ Se si vuole usare un tipo diverso di funzione di filtro per selezionare le righe
   
         2.  Selezionare il metodo di autenticazione.  
   
-            -   Se si seleziona **Autenticazione di SQL Server** , specificare un account di accesso di amministratore e la relativa password.  
+            -   Se si seleziona **Autenticazione di SQL Server**, specificare un account di accesso di amministratore e la relativa password.  
   
             -   Selezionare **Autenticazione integrata di Active Directory** per usare un account del servizio federato per SQL Server per comunicare con il server Azure remoto. Se il server selezionato non è integrato con Azure Active Directory, questa opzione non viene visualizzata.
   

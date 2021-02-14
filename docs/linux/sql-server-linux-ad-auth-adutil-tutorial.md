@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 1e8f65eda04b3ff50474730df36d28a959cc5d6b
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: e1e14db6e55ca4af4f76220c0e3f377c38e41165
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100075922"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100351869"
 ---
 # <a name="tutorial-configure-active-directory-authentication-with-sql-server-on-linux-using-adutil"></a>Esercitazione: Configurare l'autenticazione di Active Directory con SQL Server in Linux usando adutil
 
@@ -70,9 +70,10 @@ Nel computer host Linux usare i comandi seguenti per installare adutil-preview.
 
 ### <a name="ubuntu"></a>Ubuntu
 
-1. Registrare il repository Microsoft per Ubuntu.
+1. Importare le chiavi GPG del repository pubblico e quindi registrare il repository Microsoft Ubuntu.
 
     ```bash
+    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
     sudo curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
     ```
 

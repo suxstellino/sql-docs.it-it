@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 52a6055a3b3c79c08622d89b2931a48eedd14d76
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
-ms.translationtype: HT
+ms.openlocfilehash: ebbce2708647e15b68ec497cfadd0af2c7c5b154
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84548053"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100074692"
 ---
 # <a name="configure-the-web-portal"></a>Configurare il portale Web
 
@@ -85,7 +85,7 @@ Per altre informazioni sul file di configurazione, vedere [Modificare un file di
 
 4. Selezionare **Impostazioni sito**.
 
-5. Nella scheda **Generale** sostituire **SQL Server Reporting Services**con un nome diverso in **Nome** .
+5. Nella scheda **Generale** sostituire **SQL Server Reporting Services** con un nome diverso in **Nome** .
 
 6. Selezionare **Applica**.
 

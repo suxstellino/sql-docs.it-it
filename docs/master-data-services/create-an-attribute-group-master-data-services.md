@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ffe84797d519961ab26e6d43fb48a5c4c2dd3e13
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3d2e129bdd1a995fb5d0092bc15136ca9e1726f9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461834"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100348088"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>Creare un gruppo di attributi (Master Data Services)
 
@@ -54,7 +54,7 @@ ms.locfileid: "88461834"
   
      Se il gruppo di attributi è per le raccolte, selezionare **Raccolta** dall'elenco a discesa **Tipo di membro** .  
   
-6.  Fare clic su **Gruppi di foglie**, **Gruppi consolidati**o **Gruppi di raccolte** per creare rispettivamente un gruppo di attributi per membri foglia, membri consolidati o raccolte.  
+6.  Fare clic su **Gruppi di foglie**, **Gruppi consolidati** o **Gruppi di raccolte** per creare rispettivamente un gruppo di attributi per membri foglia, membri consolidati o raccolte.  
   
 7.  Nella casella **Nome** digitare un nome per il gruppo di attributi. Si tratta del nome visualizzato nella scheda in **Visualizzatore**.  
   

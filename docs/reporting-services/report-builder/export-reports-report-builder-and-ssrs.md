@@ -8,12 +8,12 @@ ms.technology: report-builder
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a97450563aa62e7b8179b7c5a0d2bead5f156f1b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
-ms.translationtype: HT
+ms.openlocfilehash: d82c6f45d6cd8e4e35735291433d3e054afe5481
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80342921"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100024107"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>Esportare report (Generatore Report e SSRS)
 

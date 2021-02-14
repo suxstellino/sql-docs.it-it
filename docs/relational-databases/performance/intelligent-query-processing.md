@@ -12,12 +12,12 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83f19187abd2395ef453e59508b2404a7b10a728
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 40a2ba2ff9e3955c09a8d8529a67ec3275e17222
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97469192"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338964"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Elaborazione di query intelligenti nei database SQL
 
@@ -43,13 +43,13 @@ La tabella seguente illustra nel dettaglio tutte le funzionalità di elaborazion
 | **Funzionalità di elaborazione di query intelligenti** | **Supportata in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]** | **Supportata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** |**Descrizione** |
 | ---------------- | ------- | ------- | ---------------- |
 | [Join adattivi (modalità batch)](#batch-mode-adaptive-joins) | Sì, nel livello di compatibilità 140| Sì, a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] nel livello di compatibilità 140|I join adattivi selezionano in modo dinamico un tipo di join in fase di esecuzione in base alle righe di input effettive.|
-| [Count Distinct approssimato](#approximate-query-processing) | Sì| Sì, a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|Consente di offrire il COUNT DISTINCT approssimativo per gli scenari Big Data con il vantaggio di prestazioni elevate mantenendo basso il footprint di memoria. |
-| [Modalità batch per rowstore](#batch-mode-on-rowstore) | Sì, nel livello di compatibilità 150| Sì, a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] nel livello di compatibilità 150|Consente di specificare la modalità batch per i carichi di lavoro del data warehouse relazionale associati alla CPU senza richiedere gli indici columnstore.  | 
+| [Count Distinct approssimato](#approximate-query-processing) | Sì| Sì, a partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]|Consente di offrire il COUNT DISTINCT approssimativo per gli scenari Big Data con il vantaggio di prestazioni elevate mantenendo basso il footprint di memoria. |
+| [Modalità batch per rowstore](#batch-mode-on-rowstore) | Sì, nel livello di compatibilità 150| Sì, a partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] nel livello di compatibilità 150|Consente di specificare la modalità batch per i carichi di lavoro del data warehouse relazionale associati alla CPU senza richiedere gli indici columnstore.  | 
 | [Esecuzione interleaved](#interleaved-execution-for-mstvfs) | Sì, nel livello di compatibilità 140| Sì, a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] nel livello di compatibilità 140|Consente di usare la cardinalità effettiva della funzione con valori di tabella con istruzioni multiple rilevata nella prima compilazione invece di una stima fissa.|
 | [Feedback delle concessioni di memoria (modalità batch)](#batch-mode-memory-grant-feedback) | Sì, nel livello di compatibilità 140| Sì, a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] nel livello di compatibilità 140|Se una query in modalità batch contiene operazioni che eseguono lo spill su disco, aggiungere altra memoria per le esecuzioni consecutive. Se una query comporta uno spreco di oltre il 50% della memoria allocata, ridurre il margine di concessione di memoria per le esecuzioni consecutive.|
-| [Feedback delle concessioni di memoria (modalità riga)](#row-mode-memory-grant-feedback) | Sì, nel livello di compatibilità 150| Sì, a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] nel livello di compatibilità 150|Se una query in modalità riga contiene operazioni che eseguono lo spill su disco, aggiungere altra memoria per le esecuzioni consecutive. Se una query comporta uno spreco di oltre il 50% della memoria allocata, ridurre il margine di concessione di memoria per le esecuzioni consecutive.|
-| [Inlining di funzioni definite dall'utente scalari](#scalar-udf-inlining) | No | Sì, a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] nel livello di compatibilità 150|Le funzioni definite dall'utente scalari vengono trasformate in espressioni relazionali equivalenti che vengono rese inline nella query chiamante, ottenendo spesso significativi miglioramenti delle prestazioni.|
-| [Compilazione posticipata delle variabili di tabella](#table-variable-deferred-compilation) | Sì, nel livello di compatibilità 150| Sì, a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] nel livello di compatibilità 150|Consente di usare la cardinalità effettiva della variabile tabella rilevata nella prima compilazione invece di una stima fissa.|
+| [Feedback delle concessioni di memoria (modalità riga)](#row-mode-memory-grant-feedback) | Sì, nel livello di compatibilità 150| Sì, a partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] nel livello di compatibilità 150|Se una query in modalità riga contiene operazioni che eseguono lo spill su disco, aggiungere altra memoria per le esecuzioni consecutive. Se una query comporta uno spreco di oltre il 50% della memoria allocata, ridurre il margine di concessione di memoria per le esecuzioni consecutive.|
+| [Inlining di funzioni definite dall'utente scalari](#scalar-udf-inlining) | No | Sì, a partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] nel livello di compatibilità 150|Le funzioni definite dall'utente scalari vengono trasformate in espressioni relazionali equivalenti che vengono rese inline nella query chiamante, ottenendo spesso significativi miglioramenti delle prestazioni.|
+| [Compilazione posticipata delle variabili di tabella](#table-variable-deferred-compilation) | Sì, nel livello di compatibilità 150| Sì, a partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] nel livello di compatibilità 150|Consente di usare la cardinalità effettiva della variabile tabella rilevata nella prima compilazione invece di una stima fissa.|
 
 ## <a name="batch-mode-adaptive-joins"></a>Join adattivi in modalità batch
 La funzionalità di join adattivo in modalità batch consente di rimandare a **dopo** la scansione del primo input la scelta tra l'[esecuzione di un metodo hash join e l'esecuzione di un metodo join a cicli annidati](../../relational-databases/performance/joins.md), usando un singolo piano memorizzato nella cache. L'operatore Join adattivo definisce una soglia che viene usata per stabilire quando passare a un piano Cicli annidati. Durante l'esecuzione il piano può pertanto passare a una strategia di join più efficace.
@@ -128,7 +128,7 @@ L'hint per la query USE HINT ha la precedenza rispetto una configurazione con am
 
 ## <a name="row-mode-memory-grant-feedback"></a>Feedback delle concessioni di memoria in modalità riga
 
-**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 Il feedback delle concessioni di memoria in modalità riga estende la funzionalità di feedback delle concessioni di memoria in modalità batch adattando le dimensioni delle concessioni di memoria sia per gli operatori in modalità batch che per quelli in modalità riga.  
 
@@ -136,7 +136,7 @@ Per abilitare i commenti sulla concessione di memoria in modalità riga in [!INC
 
 L'attività di feedback delle concessioni di memoria in modalità riga sarà visibile tramite l'XEvent **memory_grant_updated_by_feedback**. 
 
-Con i feedback sulla concessione di memoria in modalità riga, verranno visualizzati due nuovi attributi di piano di query per i piani di post esecuzione effettivi **_IsMemoryGrantFeedbackAdjusted_* _ e _*_LastRequestedMemory_*_, che vengono aggiunti all'elemento XML per i piani di query _MemoryGrantInfo*. 
+A partire dal feedback delle concessioni di memoria in modalità riga, vengono visualizzati due nuovi attributi del piano di query per i piani post-esecuzione effettivi: ***IsMemoryGrantFeedbackAdjusted** _ e _*_LastRequestedMemory_*_, che vengono aggiunti all'elemento XML del piano di query _MemoryGrantInfo *. 
 
 *LastRequestedMemory* mostra la memoria concessa in kilobyte (KB) dall'esecuzione della query precedente. L'attributo *IsMemoryGrantFeedbackAdjusted* consente di controllare lo stato dei commenti sulla concessione di memoria per l'istruzione all'interno di un piano di esecuzione query effettivo. I valori esposti in questo attributo sono i seguenti:
 
@@ -279,7 +279,7 @@ L'hint per la query USE HINT ha la precedenza rispetto una configurazione con am
 
 ## <a name="table-variable-deferred-compilation"></a>Compilazione posticipata delle variabili di tabella
 
-**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 **La compilazione posticipata delle variabili di tabella** migliora la qualità del piano e le prestazioni generali per le query che fanno riferimento a variabili di tabella. Durante l'ottimizzazione e la compilazione iniziale del piano, questa funzionalità propagherà le stime della cardinalità basate sui conteggi effettivi delle righe di variabili di tabella. Queste informazioni esatte sui conteggi delle righe verranno quindi usate per ottimizzare le operazioni del piano a valle.
 
@@ -333,7 +333,7 @@ OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
 
 ## <a name="scalar-udf-inlining"></a>Inlining di funzioni definite dall'utente scalari
 
-**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)])
 
 L'inlining di funzioni definite dall'utente scalari trasforma automaticamente le [funzioni definite dall'utente scalari](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) in espressioni relazionali e le incorpora nella query SQL chiamante. Questa trasformazione migliora le prestazioni dei carichi di lavoro che sfruttano le funzioni definite dall'utente scalari. L'inlining di funzioni definite dall'utente scalari facilita l'ottimizzazione basata sui costi delle operazioni all'interno delle funzioni definite dall'utente. I risultati sono efficienti, orientati ai set e paralleli, al contrario dei piani di esecuzione seriale iterativi e poco efficienti. Questa funzionalità è abilitata per impostazione predefinita nel livello di compatibilità del database 150.
 
@@ -341,7 +341,7 @@ Per altre informazioni, vedere [Inlining di funzioni definite dall'utente scalar
 
 ## <a name="approximate-query-processing"></a>Elaborazione delle query approssimativa
 
-**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 L'elaborazione delle query approssimativa è una nuova famiglia di funzionalità, che aggrega set di dati di grandi dimensioni in cui la velocità di risposta è più importante della precisione assoluta. Un esempio è il calcolo di **COUNT(DISTINCT())** su 10 miliardi di righe, per la visualizzazione in un dashboard. In questo caso, la precisione assoluta non è importante, ma la velocità di risposta è fondamentale. La nuova funzione di aggregazione **APPROX_COUNT_DISTINCT** restituisce il numero approssimativo di valori univoci non Null in un gruppo.
 
@@ -349,7 +349,7 @@ Per altre informazioni, vedere [APPROX_COUNT_DISTINCT (Transact-SQL)](../../t-sq
 
 ## <a name="batch-mode-on-rowstore"></a>Modalità batch per rowstore 
 
-**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 La modalità batch per rowstore abilita l'esecuzione in modalità batch per i carichi di lavoro analitici senza richiedere indici columnstore.  Questa funzionalità supporta l'esecuzione in modalità batch e i filtri bitmap per gli heap su disco e gli indici con albero B. La modalità batch per rowstore abilita il supporto per tutti gli operatori esistenti abilitati alla modalità batch.
 

@@ -15,12 +15,12 @@ ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016
-ms.openlocfilehash: 773162660a1d64f37ee225a14b7a260640104594
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 1d0af8d38957286080b6e01c4ed73149ee43bc36
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97479602"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272332"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>Finestra di dialogo Proprietà sottoscrizione di replica di SQL Server 
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

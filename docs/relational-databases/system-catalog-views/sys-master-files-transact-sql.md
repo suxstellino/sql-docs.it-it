@@ -21,12 +21,12 @@ ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1cfe105e765fbdafc1c4e61e0c340b3db44ed095
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 59258c52e24e5b9d85f9096d6eb2d24fa3d48df3
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99191361"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489455"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -69,6 +69,9 @@ ms.locfileid: "99191361"
   
 > [!NOTE]  
 >  In caso di eliminazione o ricompilazione di indici di grandi dimensioni oppure di eliminazione o troncamento di tabelle di grandi dimensioni, in [!INCLUDE[ssDE](../../includes/ssde-md.md)] le deallocazioni di pagine effettive e i relativi blocchi associati vengono posticipati fino all'esecuzione del commit della transazione. Le operazioni di eliminazione posticipate non rendono immediatamente disponibile lo spazio allocato. I valori restituiti da sys.master_files subito dopo l'eliminazione o il troncamento di un oggetto di grandi dimensioni possono pertanto non riflettere l'effettivo spazio su disco disponibile.  
+
+> [!NOTE]  
+>  Per tempdb, view sys.master_files Mostra le dimensioni iniziali del database tempdb. I valori vengono utilizzati come modello per la creazione di tempdb all'avvio del SQL Server. Quindi, quando il database tempdb cresce, non viene riflesso nella visualizzazione. Per ottenere le dimensioni correnti dei file tempdb, eseguire una query su `tempdb.sys.database_files` .
   
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni minime necessarie per visualizzare la riga corrispondente sono CREATE DATABASE, ALTER ANY DATABASE o VIEW ANY DEFINITION.  

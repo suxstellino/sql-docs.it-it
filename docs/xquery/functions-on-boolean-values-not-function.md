@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db4fbd8e78827ff8818f74e83bf9f2d8ca8d0d39
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f857a8f107b26500bb324584d7d7853e09bbb735
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753599"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353307"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>Funzioni su valori booleani - not 
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ fn:not($arg as item()*) as xs:boolean
  *$arg*  
  Una sequenza di elementi per i quali esiste un valore booleano effettivo.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
 ### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>R. Utilizzo della funzione XQuery not () per individuare i modelli di prodotto le cui descrizioni del catalogo non includono l' \<Specifications> elemento.  

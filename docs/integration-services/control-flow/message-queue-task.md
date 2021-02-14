@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 28d2bac4024f067f4c3eb07318a47ef0d91fd171
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
-ms.translationtype: HT
+ms.openlocfilehash: e39187e32afbcf72bf1eb950f18d5f21cef38211
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194283"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100348307"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
 
@@ -56,9 +56,9 @@ ms.locfileid: "92194283"
 ## <a name="message-types"></a>Tipi di messaggi  
  Per configurare i tipi di messaggi disponibili per l'attività Message Queue, procedere nel modo seguente:  
   
--   Il tipo di messaggio**File di dati** specifica che il messaggio è contenuto in un file. Per quanto riguarda la ricezione dei messaggi, è possibile configurare l'attività in modo da salvare il file, sovrascrivere un file esistente e specificare il pacchetto da cui l'attività può ricevere messaggi.  
+-   Il tipo di messaggio **File di dati** specifica che il messaggio è contenuto in un file. Per quanto riguarda la ricezione dei messaggi, è possibile configurare l'attività in modo da salvare il file, sovrascrivere un file esistente e specificare il pacchetto da cui l'attività può ricevere messaggi.  
   
--   Il tipo di messaggio**Stringa** specifica che il messaggio è una stringa. Per quanto riguarda la ricezione dei messaggi, è possibile configurare l'attività in modo da confrontare la stringa ricevuta con una stringa definita dall'utente ed eseguire un'azione che dipende dal risultato del confronto. Il confronto tra le stringhe può essere esatto, con o senza distinzione tra maiuscole e minuscole oppure utilizzare una sottostringa.  
+-   Il tipo di messaggio **Stringa** specifica che il messaggio è una stringa. Per quanto riguarda la ricezione dei messaggi, è possibile configurare l'attività in modo da confrontare la stringa ricevuta con una stringa definita dall'utente ed eseguire un'azione che dipende dal risultato del confronto. Il confronto tra le stringhe può essere esatto, con o senza distinzione tra maiuscole e minuscole oppure utilizzare una sottostringa.  
   
 -   **Messaggio stringa in variabile** specifica che l'origine del messaggio è una stringa che viene inviata a una variabile di destinazione. È possibile configurare l'attività in modo da confrontare la stringa ricevuta con una stringa definita dall'utente, utilizzando un confronto esatto, senza distinzione tra maiuscole e minuscole o tra sottostringhe. Questo tipo di messaggio è disponibile solo quando l'attività riceve messaggi.  
   

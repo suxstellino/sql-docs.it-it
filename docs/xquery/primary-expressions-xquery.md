@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c1186623b334d3eea465c632bc23ec58ba231ba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2f474aae3e764224bec01830b42766216a27bc9d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765612"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339952"
 ---
 # <a name="primary-expressions-xquery"></a>Espressioni primarie (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "85765612"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza XML versione 1.0 come base per l'analisi.  
   
-### <a name="examples"></a>Esempi  
+### <a name="examples"></a>Esempio  
  Negli esempi seguenti viene illustrato l'utilizzo dei valori letterali, nonché dei riferimenti a entità e di carattere.  
   
  Il codice restituisce un errore, in quanto i caratteri `<'` e `'>` hanno un significato speciale:  

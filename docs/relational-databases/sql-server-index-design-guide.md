@@ -23,12 +23,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57eb0bac3a794aaf3b7f84fc8cfb14d0207da1ae
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: d7a1f83563e3ae103fa683bbe604926f40982d06
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99233260"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100352711"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Architettura e guida per la progettazione degli indici di SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,7 @@ In questa guida vengono illustrati i tipi di indici seguenti:
 -   Hash
 -   Non cluster ottimizzati per la memoria
 
-Per informazioni sugli indici XML, vedere [Panoramica degli indici XML](../relational-databases/xml/xml-indexes-sql-server.md).
+Per informazioni sugli indici XML, vedere [Cenni preliminari](../relational-databases/xml/xml-indexes-sql-server.md) sugli indici XML e [indici XML selettivi (SXI)](../relational-databases/xml/selective-xml-indexes-sxi.md).
 
 Per informazioni sugli indici spaziali, vedere [Panoramica degli indici spaziali](../relational-databases/spatial/spatial-indexes-overview.md).
 

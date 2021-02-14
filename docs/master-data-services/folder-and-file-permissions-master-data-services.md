@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0d06fb6aaacdac159ab9241209c862e22758e999
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5877e1837d0f132a3a4bc8b2cd36a46f3c331311
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88388827"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344783"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>Autorizzazioni per file e cartelle [Master Data Services]
 
@@ -32,7 +32,7 @@ ms.locfileid: "88388827"
  Le autorizzazioni della cartella di **Microsoft SQL Server** , della cartella di **Master Data Services** e della maggior parte delle sottocartelle e dei file sono ereditate dalla cartella padre specificata nel programma di installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Se si sceglie il percorso di installazione predefinito, la cartella padre dalla quale vengono ereditate le autorizzazioni è *unità*:\Programmi. Nella tabella seguente vengono descritte le autorizzazioni predefinite per la cartella **Programmi**.  
   
 > [!NOTE]  
->  Se si modificano le autorizzazioni predefinite di **Programmi**o si sceglie un percorso di installazione diverso, le autorizzazioni di cartelle e file di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] vengono ereditate dalla relativa cartella padre e possono essere diverse rispetto a quelle descritte nella tabella seguente.  
+>  Se si modificano le autorizzazioni predefinite di **Programmi** o si sceglie un percorso di installazione diverso, le autorizzazioni di cartelle e file di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] vengono ereditate dalla relativa cartella padre e possono essere diverse rispetto a quelle descritte nella tabella seguente.  
   
 ###### <a name="program-files-default-permissions"></a>Autorizzazioni predefinite di Programmi  
   
@@ -40,7 +40,7 @@ ms.locfileid: "88388827"
 |---------------------------|-----------------|  
 |CREATOR OWNER|Autorizzazioni speciali|  
 |SYSTEM|Autorizzazioni speciali|  
-|Amministratori|Autorizzazioni speciali|  
+|Administrators|Autorizzazioni speciali|  
 |Utenti|Lettura ed esecuzione, Visualizzazione contenuto cartella, Lettura|  
 |TrustedInstaller|Visualizzazione contenuto cartella, Autorizzazioni speciali|  
   
@@ -52,7 +52,7 @@ ms.locfileid: "88388827"
 |Nome di gruppo o di account|Autorizzazioni|  
 |---------------------------|-----------------|  
 |SYSTEM|Modifica, Lettura ed esecuzione, Visualizzazione contenuto cartella, Lettura, Scrittura|  
-|Amministratori|Modifica, Lettura ed esecuzione, Visualizzazione contenuto cartella, Lettura, Scrittura|  
+|Administrators|Modifica, Lettura ed esecuzione, Visualizzazione contenuto cartella, Lettura, Scrittura|  
 |MDS_ServiceAccounts|Modifica, Lettura ed esecuzione, Visualizzazione contenuto cartella, Lettura, Scrittura|  
   
 ###### <a name="webconfig-permissions"></a>Autorizzazioni di Web.config  
@@ -60,7 +60,7 @@ ms.locfileid: "88388827"
 |Nome di gruppo o di account|Autorizzazioni|  
 |---------------------------|-----------------|  
 |SYSTEM|Controllo completo, Modifica, Lettura ed esecuzione, Lettura, Scrittura|  
-|Amministratori|Controllo completo, Modifica, Lettura ed esecuzione, Lettura, Scrittura|  
+|Administrators|Controllo completo, Modifica, Lettura ed esecuzione, Lettura, Scrittura|  
 |MDS_ServiceAccounts|Lettura ed esecuzione, Lettura|  
   
  Per altre informazioni sul contenuto del file Web.config di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vedere [Guida di riferimento alla configurazione Web &#40;Master Data Services&#41;](../master-data-services/web-configuration-reference-master-data-services.md).  

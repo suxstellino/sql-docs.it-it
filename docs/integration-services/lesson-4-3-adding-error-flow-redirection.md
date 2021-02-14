@@ -11,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: daade3348f7384ed83365923bf94af7b211d6422
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
-ms.translationtype: HT
+ms.openlocfilehash: ac63d922423bcbb9c0c7f513d34a5834b3f0c1b3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88457131"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352027"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>Lezione 4-3: Aggiungere il reindirizzamento del flusso degli errori
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 09edac79bf52c2826436ecdfdf25b0db342f4aeb
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
-ms.translationtype: HT
+ms.openlocfilehash: a1da6b96aea93feaacdb5384716ef6cd0ab82a06
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363563"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489405"
 ---
 # <a name="contained-database-collations"></a>Regole di confronto dei database indipendenti
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -122,7 +122,7 @@ END;
   
  Le regole di confronto del database vengono mantenute, ma utilizzate solo come regole di confronto predefinite per i dati utente. Per impostazione predefinita, le regole di confronto del database sono uguali a quelle del modello, ma possono essere modificate dall'utente tramite un comando **CREATE** o **ALTER DATABASE** come con i database non indipendenti.  
   
- Nella clausola **COLLATE**è disponibile una nuova parola chiave, **CATALOG_DEFAULT** . che viene utilizzata come collegamento alle regole di confronto correnti per i metadati nei database indipendenti e non indipendenti. Vale a dire che, in un database non indipendente, la parola chiave **CATALOG_DEFAULT** restituirà le regole di confronto del database correnti, poiché i metadati vengono confrontati nelle regole di confronto del database. In un database indipendente questi due valori potrebbero essere diversi, in quanto l'utente può modificare le regole di confronto del database in modo che non corrispondano alle regole di confronto del catalogo.  
+ Nella clausola **COLLATE** è disponibile una nuova parola chiave, **CATALOG_DEFAULT** . che viene utilizzata come collegamento alle regole di confronto correnti per i metadati nei database indipendenti e non indipendenti. Vale a dire che, in un database non indipendente, la parola chiave **CATALOG_DEFAULT** restituirà le regole di confronto del database correnti, poiché i metadati vengono confrontati nelle regole di confronto del database. In un database indipendente questi due valori potrebbero essere diversi, in quanto l'utente può modificare le regole di confronto del database in modo che non corrispondano alle regole di confronto del catalogo.  
   
  Nella tabella seguente viene riepilogato il comportamento di vari oggetti sia nei database non indipendenti che in quelli indipendenti:  
   
@@ -136,7 +136,7 @@ END;
 |Etichette Goto|Regole di confronto di istanza|COLLATE|  
 |Nomi di cursori|Regole di confronto di istanza|COLLATE|  
   
- Se si usa una tabella temporanea nell'esempio precedentemente descritto, è possibile osservare che questo comportamento delle regole di confronto elimina l'esigenza di una clausola **COLLATE** esplicita nella maggior parte degli usi delle tabelle temporanee. In un database indipendente questo codice ora viene eseguito senza errori, anche se le regole di confronto di database e istanza sono diverse:  
+ Nell'esempio di tabella temporanea descritto in precedenza, si noterà che questo comportamento delle regole di confronto Elimina la necessità di una clausola **COLLATE** esplicita nella maggior parte degli usi della tabella temporanea. In un database indipendente questo codice ora viene eseguito senza errori, anche se le regole di confronto di database e istanza sono diverse:  
   
 ```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
@@ -156,7 +156,7 @@ JOIN #T2
   
 -   Il comportamento delle regole di confronto per un batch viene determinato dal database in cui inizia il batch.  
   
- Si noti che questa decisione avviene prima dell'esecuzione di qualsiasi comando, incluso un comando **USE**iniziale. Ciò significa che se un batch inizia in un database indipendente, ma il primo comando è **USE** su un database non indipendente, per il batch verrà comunque usato il comportamento delle regole di confronto indipendenti. In questo caso, un riferimento a una variabile, ad esempio, può avere più risultati possibili:  
+ Si noti che questa decisione avviene prima dell'esecuzione di qualsiasi comando, incluso un comando **USE** iniziale. Ciò significa che se un batch inizia in un database indipendente, ma il primo comando è **USE** su un database non indipendente, per il batch verrà comunque usato il comportamento delle regole di confronto indipendenti. In questo caso, un riferimento a una variabile, ad esempio, può avere più risultati possibili:  
   
 -   Il riferimento può trovare esattamente una corrispondenza. In questo caso il riferimento funzionerà senza errori.  
   

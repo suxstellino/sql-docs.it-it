@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4cf54be2376dede022b0f6905e21685184a6b122
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
-ms.translationtype: HT
+ms.openlocfilehash: dab7b82e27ba57974a4bdb8e679164f6316ecd4a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934756"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067126"
 ---
 # <a name="create-a-native-mode-report-server-database-report-server-configuration-manager"></a>Creare un database del server di report in modalità nativa (Gestione configurazione del server di report)
 

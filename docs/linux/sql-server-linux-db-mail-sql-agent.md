@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: tbd
-ms.openlocfilehash: 92306aa0c6fa28b2cd094e85f439d654605483b6
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
-ms.translationtype: HT
+ms.openlocfilehash: 882ab5c8bff2acd7c93cc8cbeeba135152ce76ed
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088981"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100348175"
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Avvisi di Posta elettronica database e di posta elettronica con SQL Agent in Linux
 

@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 521904030d97213770d4a2310b51eaadc37d4e5d
-ms.sourcegitcommit: 05fc736e6b6b3a08f503ab124c3151f615e6faab
+ms.openlocfilehash: 996ae78401e57e538ef2835ec107a2cc5400741a
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99478586"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100352469"
 ---
 # <a name="statistics"></a>Statistiche
 
@@ -128,10 +128,9 @@ ORDER BY s.name;
   |Temporanea|*n* < 6|6|
   |Temporanea|6 <= *n* <= 500|500|
   |Permanente|*n* <= 500|500|
-  |Temporanea o permanente|500 <= *n* <= 25.000|500 + (0,20 * *n*)|
-  |Temporanea o permanente|*n* > 25.000|SQRT (1000 * *n*)|
+  |Temporanea o permanente|*n* >= 500|MIN (500 + (0,20 * *n*), sqrt (1000 * *n*)) |
 
-  Se, ad esempio, la tabella contiene 2 milioni righe, il calcolo è `SQRT(1,000 * 2,000,000) = 44,721` e le statistiche verranno aggiornate ogni 44.721 modifiche.
+  Se, ad esempio, la tabella contiene 2 milioni righe, il calcolo è il minimo di `500 + (0.20 * 2,000,000) = 400,500` e `SQRT(1,000 * 2,000,000) = 44,721` . Ciò significa che le statistiche verranno aggiornate ogni 44.721 di modifiche.
 
 > [!IMPORTANT]
 > In [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] fino a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive con [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 e inferiore abilitare il [flag di traccia 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) in modo che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usi una soglia di aggiornamento delle statistiche dinamica e decrescente.

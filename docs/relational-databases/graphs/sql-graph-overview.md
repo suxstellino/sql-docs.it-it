@@ -16,15 +16,15 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 846f37923f8388e15663c56a4f724984a1a2588f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8c7dfeaa67e0ede78b0a891409be3211e1fa8d2e
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480172"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100351422"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Elaborazione di grafi con SQL Server e il database SQL di Azure
-[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre funzionalità di database a grafo per modellare relazioni molti-a-molti. Le relazioni tra grafi sono integrate in [!INCLUDE[tsql-md](../../includes/tsql-md.md)] e ricevono i vantaggi derivanti dall'utilizzo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come sistema di gestione di database di base.
 
@@ -43,12 +43,12 @@ Un database relazionale può ottenere qualsiasi elemento di un database Graph. T
 -    L'applicazione dispone di relazioni molti-a-molti complesse. Quando l'applicazione si evolve, vengono aggiunte nuove relazioni.
 -    È necessario analizzare relazioni e dati interconnessi.
 
-## <a name="graph-features-introduced-in-sssqlv14"></a>Caratteristiche del grafo introdotte in [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-sssql17"></a>Caratteristiche del grafo introdotte in [!INCLUDE[sssql17](../../includes/sssql17-md.md)] 
 Si sta iniziando ad aggiungere estensioni di grafo a SQL Server per semplificare l'archiviazione e l'esecuzione di query sui dati del grafo. Le funzionalità seguenti sono state introdotte nella prima versione. 
 
 
 ### <a name="create-graph-objects"></a>Creare oggetti Graph
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)] le estensioni consentiranno agli utenti di creare tabelle node o Edge. Sia i nodi che i bordi possono avere proprietà associate. Poiché i nodi e i bordi vengono archiviati come tabelle, tutte le operazioni supportate nelle tabelle relazionali sono supportate nella tabella Node o Edge. Esempio:  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] le estensioni consentiranno agli utenti di creare tabelle node o Edge. Sia i nodi che i bordi possono avere proprietà associate. Poiché i nodi e i bordi vengono archiviati come tabelle, tutte le operazioni supportate nelle tabelle relazionali sono supportate nella tabella Node o Edge. Ecco un esempio:  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;

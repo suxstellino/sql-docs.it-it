@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0c2f275fe85c7813a64790f864b462aa3bfc6775
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: e909388212b30942be2d11d53991f7e8d8756b35
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812399"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339076"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Account di accesso, utenti e ruoli di database (Master Data Services)
 
@@ -40,14 +40,14 @@ ms.locfileid: "85812399"
   
 ## <a name="msdb-users"></a>Utenti di msdb  
   
-|Utente|Descrizione|  
+|User|Descrizione|  
 |----------|-----------------|  
 |**mds_clr_user**|Non usato. Esegue il mapping a mds_dlp_login.|  
 |**mds_email_user**|Utilizzato per le notifiche.<br /><br /> - Esegue il mapping a mds_email_login.<br /><br /> - È un membro del ruolo DatabaseMailUserRole.|  
   
 ## <a name="master-data-services-database-users"></a>Utenti del database Master Data Services  
   
-|Utente|Descrizione|  
+|User|Descrizione|  
 |----------|-----------------|  
 |**mds_email_user**|Utilizzato per le notifiche.<br /><br /> - Dispone dell'autorizzazione SELECT per lo schema mdm.<br /><br /> - Dispone dell'autorizzazione EXECUTE per il tipo di tabella mdm.MemberGetCriteria definito dall'utente.<br /><br /> - Dispone dell'autorizzazione EXECUTE per la stored procedure mdm.udpNotificationQueueActivate.|  
 |**mds_schema_user**|È proprietario degli schemi mdm e mdq. Lo schema predefinito è mdm.<br /><br /> Non disporre di un account di accesso di cui è stato eseguito il mapping.|  

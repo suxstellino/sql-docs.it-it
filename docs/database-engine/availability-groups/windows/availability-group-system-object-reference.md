@@ -10,12 +10,12 @@ ms.topic: reference
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 340fcfa12f3432a09821132f44e8d58672be8198
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: f712ec1fe11f5c975695f15e2d6d6bf4efdf4af5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97640972"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341535"
 ---
 # <a name="always-on-availability-group-system-object-reference"></a>Informazioni di riferimento sugli oggetti di sistema per i gruppi di disponibilità Always On
 

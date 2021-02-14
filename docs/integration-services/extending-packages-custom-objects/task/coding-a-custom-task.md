@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cb19c86987b9a9477df0462c5e3223da537e676f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: f336a5969e608d1f2647b02679e87da0a65c1bad
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430503"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100348223"
 ---
 # <a name="coding-a-custom-task"></a>Scrittura del codice di un'attività personalizzata
 
@@ -162,7 +162,7 @@ End Class
  Questa sezione descrive come usare il metodo **Execute** ereditato e sottoposto a override dalle attività. Vengono inoltre illustrate varie modalità con cui fornire informazioni sui risultati dell'esecuzione dell'attività.  
   
 ### <a name="execute-method"></a>Metodo Execute  
- Le attività contenute in un pacchetto vengono eseguite quando il runtime di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] chiama il relativo metodo **Execute**. Le attività implementano la logica di business e le funzionalità principali in questo metodo e forniscono i risultati dell'esecuzione inviando messaggi, restituendo un valore dall'enumerazione <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> ed eseguendo l'override della proprietà **get** della proprietà**ExecutionValue**.  
+ Le attività contenute in un pacchetto vengono eseguite quando il runtime di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] chiama il relativo metodo **Execute**. Le attività implementano la logica di business e le funzionalità principali in questo metodo e forniscono i risultati dell'esecuzione inviando messaggi, restituendo un valore dall'enumerazione <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> ed eseguendo l'override della proprietà **get** della proprietà **ExecutionValue**.  
   
  La classe di base [Microsoft.SqlServer.Dts.Runtime.Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task) specifica un'implementazione predefinita del metodo <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>. Le attività personalizzate eseguono l'override di questo metodo per definire le funzionalità di runtime. L'oggetto <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> esegue il wrapping dell'attività, isolandola dal motore di runtime e dagli altri oggetti nel pacchetto. A causa di questo isolamento, l'ordine di esecuzione dell'attività è indipendente dalla relativa posizione nel pacchetto e l'attività viene eseguita solo quando viene chiamata dal runtime. Questa architettura consente di evitare i problemi che possono verificarsi quando le attività modificano il pacchetto durante l'esecuzione. L'attività dispone di accesso agli altri oggetti del pacchetto solo tramite gli oggetti forniti come parametri nel metodo <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>. Questi parametri consentono alle attività di generare eventi, scrivere voci nel log eventi, accedere alla raccolta di variabili e integrare le connessioni a origini dati nelle transazioni, mantenendo allo stesso tempo l'isolamento necessario per garantire la stabilità e l'affidabilità del pacchetto.  
   

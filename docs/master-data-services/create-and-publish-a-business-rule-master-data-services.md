@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 39fdd6cebd0c27ec4a27a4543129a659bcdb22a3
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: fbdb07d5a9bbff92b98fca913e2fcf142a1cbe6c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813043"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339089"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Creare e pubblicare una regola business (Master Data Services)
 
@@ -46,7 +46,7 @@ ms.locfileid: "85813043"
   
 5.  Nell'elenco a discesa **Tipi di membri** selezionare un tipo di membro a cui applicare la regola di business.  
   
-6.  Scegliere **Aggiungi**.  
+6.  Fare clic su **Aggiungi**.  
   
 7.  Nella casella **Nome** digitare un nome per la regola business.  
   
@@ -103,10 +103,10 @@ ms.locfileid: "85813043"
 ## <a name="grid-columns"></a>Colonne della griglia  
  Per ogni regola business creata viene aggiunta alla griglia una riga con sei colonne. Di seguito sono elencate le colonne.  
   
-|Name|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |Stato|Quando si fa clic su **Salva** , viene visualizzata l'immagine seguente che indica che la regola di business è in fase di aggiornamento.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> Se si verificano errori durante la creazione o la modifica di una regola business, viene visualizzata l'immagine seguente.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> Se lo stato è OK, viene visualizzata l'immagine seguente.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
-|Name|Nome della regola business.|  
+|Nome|Nome della regola business.|  
 |Descrizione|Descrizione della regola business.|  
 |Stato della regola di business|Uno degli stati seguenti della regola business: Regola non definita, Attiva, Esclusa, Modifiche in sospeso, Esclusione in sospeso ed Eliminazione in sospeso.|  
 |Esclusione|Specifica se la regola business è esclusa.|  
