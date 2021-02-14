@@ -1,7 +1,7 @@
 ---
 description: Attività e autorizzazioni - Attività a livello di elemento
 title: Attività a livello di elemento | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 02/04/2021
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -11,14 +11,17 @@ helpviewer_keywords:
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a6ff9b1cef9a4ee7edf5b71d669416921330e5d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: 82101577abe86914aff2ac1d5296d7dc176a60b0
+ms.sourcegitcommit: 6f4fb9cfd0cad06127a6328adc745e2ba7c191d1
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492574"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99570435"
 ---
 # <a name="tasks-and-permissions---item-level-tasks"></a>Attività e autorizzazioni - Attività a livello di elemento
+  
+  [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+  
   Un'attività a livello di elemento è una raccolta di autorizzazioni correlate a un report, una cartella, un modello di report, una risorsa o un'origine dati condivisa. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include anche attività a livello di sistema applicabili all'intero sito del server di report. Per altre informazioni, vedere [Attività a livello di sistema](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md). Per ulteriori informazioni sulle attività e le autorizzazioni in generale, vedere [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md).  
   
 > [!NOTE]  
@@ -31,10 +34,12 @@ ms.locfileid: "88492574"
   
 |Attività|Applicabile all'elemento|Autorizzazioni|  
 |----------|---------------------|-----------------|  
+|Aggiungere commenti sui report<br />(SSRS 2017 e versioni successive, Server di report di Power BI)|Report|Lettura di proprietà<br /><br /> Crea Commenti<br /><br /> Elimina commenti<br /><br /> Leggi Commenti<br /><br /> Aggiornare i commenti|  
 |Utilizzo di report|Report|Lettura di contenuto<br /><br /> Lettura delle definizioni dei report<br /><br /> Lettura di proprietà|  
 |Utilizzo di report|Set di dati condivisi|Lettura di contenuto<br /><br /> Lettura delle definizioni dei report<br /><br /> Lettura di proprietà|  
 |Creazione di report collegati|Report|Creazione di collegamenti<br /><br /> Lettura di proprietà|  
 |Gestione di tutte le sottoscrizioni|Report|Lettura di proprietà<br /><br /> Lettura di qualsiasi sottoscrizione<br /><br /> Creazione di qualsiasi sottoscrizione<br /><br /> Eliminazione di qualsiasi sottoscrizione<br /><br /> Aggiornamento di qualsiasi sottoscrizione|  
+|Gestisci commenti<br />(SSRS 2017 e versioni successive, Server di report di Power BI)|Report|Lettura di proprietà<br /><br />Elimina tutti i commenti|  
 |Gestire le origini dati|Cartelle|Creazione di origini dei dati|  
 |Gestire le origini dati|Origini dati|Aggiornamento di proprietà<br /><br /> Eliminazione del contenuto di aggiornamento<br /><br /> Lettura di proprietà|  
 |Gestione di cartelle|Cartelle|Creazione cartella<br /><br /> Eliminazione delle proprietà di aggiornamento<br /><br /> Lettura di proprietà|  
@@ -52,8 +57,8 @@ ms.locfileid: "88492574"
 |Visualizzazione di origini dei dati|Origini dati|Lettura di contenuto<br /><br /> Lettura di proprietà|  
 |Visualizzazione di cartelle|Cartelle|Lettura di proprietà<br /><br /> Esecuzione e visualizzazione<br /><br /> Visualizzazione della cronologia dei report|  
 |Visualizzazione di modelli|Modelli di report|Lettura di proprietà<br /><br /> Lettura di contenuto<br /><br /> Lettura di origini dei dati|  
-|Visualizzazione di report|Report|Lettura di contenuto<br /><br /> Lettura di proprietà|  
-|Visualizzazione di report|Set di dati condivisi|Lettura di contenuto<br /><br /> Lettura di proprietà|  
+|Visualizzare i report|Report|Lettura di contenuto<br /><br /> Lettura di proprietà|  
+|Visualizzare i report|Set di dati condivisi|Lettura di contenuto<br /><br /> Lettura di proprietà|  
 |Visualizzare le risorse|Risorse|Lettura di contenuto<br /><br /> Lettura di proprietà|  
 |Visualizzare le risorse|Parti del report|Lettura di contenuto<br /><br /> Lettura di proprietà|  
   

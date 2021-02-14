@@ -2,7 +2,7 @@
 description: sys.dm_exec_function_stats (Transact-SQL)
 title: sys.dm_exec_function_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2019
+ms.date: 02/10/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
@@ -19,17 +19,17 @@ ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 788596936cf6ce9c8d2ca0a618b441fcbd0f7624
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: be2d102b81bf5535354b99cc3405d50a0bf94915
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099791"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100342980"
 ---
 # <a name="sysdm_exec_function_stats-transact-sql"></a>sys.dm_exec_function_stats (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-  Restituisce statistiche sulle prestazioni aggregate per le funzioni memorizzate nella cache. La vista restituisce una riga per ogni piano di funzioni memorizzato nella cache e la durata della riga è purché la funzione rimanga memorizzata nella cache. Quando una funzione viene rimossa dalla cache, la riga corrispondente viene eliminata da questa visualizzazione. A questo punto, viene generato un evento di traccia SQL di Performance Statistics simile a **sys.dm_exec_query_stats**. Restituisce informazioni sulle funzioni scalari, incluse le funzioni in memoria e le funzioni scalari CLR. Non restituisce informazioni sulle funzioni con valori di tabella.  
+  Restituisce statistiche sulle prestazioni aggregate per le funzioni memorizzate nella cache. La vista restituisce una riga per ogni piano di funzioni memorizzato nella cache e la durata della riga è purché la funzione rimanga memorizzata nella cache. Quando una funzione viene rimossa dalla cache, la riga corrispondente viene eliminata da questa visualizzazione. A questo punto, viene generato un evento di traccia SQL di Performance Statistics simile a **sys.dm_exec_query_stats**. Restituisce informazioni sulle funzioni scalari, incluse le funzioni in memoria e le funzioni scalari CLR. Non restituisce informazioni sulle funzioni con valori di tabella e sulle funzioni scalari che sono inline con l' [incorporamento UDF scalare](../../relational-databases/user-defined-functions/scalar-udf-inlining.md).
   
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene filtrata.  
   
@@ -76,12 +76,12 @@ ms.locfileid: "98099791"
 ## <a name="permissions"></a>Autorizzazioni  
 
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
-Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in pool elastici, il `Server admin` o un `Azure Active Directory admin` account è obbligatorio. Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.   
+Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in pool elastici, è necessario l'account [amministratore del server](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) o l'account [amministratore Azure Active Directory](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) . Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.   
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituite informazioni sulle prime dieci funzioni identificate in base al tempo medio trascorso.  
   
-```  
+```sql  
 SELECT TOP 10 d.object_id, d.database_id, OBJECT_NAME(object_id, database_id) 'function name',   
     d.cached_time, d.last_execution_time, d.total_elapsed_time,  
     d.total_elapsed_time/d.execution_count AS [avg_elapsed_time],  

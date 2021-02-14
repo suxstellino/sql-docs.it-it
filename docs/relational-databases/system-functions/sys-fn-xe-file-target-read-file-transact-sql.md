@@ -23,12 +23,12 @@ ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a592609cce6805105e61679e54857312e6296b6f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: daa5c2bb81ea9f89ebf415e242e881732ad08389
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99187371"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100338100"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -76,7 +76,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |event_data|**nvarchar(max)**|Contenuto dell'evento in formato XML. Non ammette i valori Null.|  
 |file_name|**nvarchar(260)**|Nome del file che contiene l'evento. Non ammette i valori Null.|  
 |file_offset|**bigint**|Offset del blocco nel file che contiene l'evento. Non ammette i valori Null.|  
-|timestamp_utc|**datetime2**|**SI APPLICA A**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Data e ora (fuso orario UTC) dell'evento. Non ammette i valori Null.|  
+|timestamp_utc|**datetime2**|**SI APPLICA A**: [!INCLUDE[sssql17](../../includes/sssql17-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Data e ora (fuso orario UTC) dell'evento. Non ammette i valori Null.|  
 
   
 ## <a name="remarks"></a>Commenti  

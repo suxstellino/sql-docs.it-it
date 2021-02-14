@@ -9,12 +9,12 @@ ms.date: 11/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b24a83e1647b0e32aff3ce19ad69a0fdc9405b0e
-ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
-ms.translationtype: HT
+ms.openlocfilehash: 760fc7070f0673f61a28cd126be0c6542ac4ee93
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94632941"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100039863"
 ---
 # <a name="tutorial-deploy-sql-server-big-data-clusters-in-ad-mode-on-azure-kubernetes-services-aks"></a>Esercitazione: Distribuire cluster Big Data di SQL Server in modalità AD nei servizi Azure Kubernetes (AKS)
 

@@ -21,12 +21,12 @@ ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 632774ffbb7d5ba451d59166e147f9e3e3f6221c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 185e4f53346d61ec3d53462fec3797b50f20d4c5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99205839"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338761"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT - autorizzazioni per database (Transact-SQL)
 
@@ -125,11 +125,11 @@ Un database è un'entità a protezione diretta contenuta nel server padre nella 
 |ALTER ANY DATABASE DDL TRIGGER|ALTER|CONTROL SERVER|
 |ALTER ANY DATABASE EVENT NOTIFICATION|ALTER|ALTER ANY EVENT NOTIFICATION|
 |ALTER ANY DATABASE EVENT SESSION<br />**Si applica a**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|ALTER|ALTER ANY EVENT SESSION|
-|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|
+|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **Si applica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|
 |ALTER ANY DATASPACE|ALTER|CONTROL SERVER|
 |ALTER ANY EXTERNAL DATA SOURCE|ALTER|CONTROL SERVER|
 |ALTER ANY EXTERNAL FILE FORMAT|ALTER|CONTROL SERVER|
-|ALTER ANY EXTERNAL LIBRARY <br /> **Si applica a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].|CONTROL|CONTROL SERVER |
+|ALTER ANY EXTERNAL LIBRARY <br /> **Si applica a**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].|CONTROL|CONTROL SERVER |
 |ALTER ANY FULLTEXT CATALOG|ALTER|CONTROL SERVER|
 |ALTER ANY MASK|CONTROL|CONTROL SERVER|
 |ALTER ANY MESSAGE TYPE|ALTER|CONTROL SERVER|
@@ -149,7 +149,7 @@ Un database è un'entità a protezione diretta contenuta nel server padre nella 
 |CONNECT REPLICATION|CONTROL|CONTROL SERVER|
 |CONTROL|CONTROL|CONTROL SERVER|
 |CREATE AGGREGATE|ALTER|CONTROL SERVER|
-|CREATE ANY EXTERNAL LIBRARY <br /> **Si applica a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].|CONTROL|CONTROL SERVER |
+|CREATE ANY EXTERNAL LIBRARY <br /> **Si applica a**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].|CONTROL|CONTROL SERVER |
 |CREATE ASSEMBLY|ALTER ANY ASSEMBLY|CONTROL SERVER|
 |CREATE ASYMMETRIC KEY|ALTER ANY ASYMMETRIC KEY|CONTROL SERVER|
 |CREATE CERTIFICATE|ALTER ANY CERTIFICATE|CONTROL SERVER|
@@ -177,7 +177,7 @@ Un database è un'entità a protezione diretta contenuta nel server padre nella 
 |DELETE|CONTROL|CONTROL SERVER|
 |EXECUTE|CONTROL|CONTROL SERVER|
 |EXECUTE ANY EXTERNAL SCRIPT <br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)].|CONTROL|CONTROL SERVER|
-|EXECUTE EXTERNAL SCRIPT <br /> **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)].|EXECUTE ANY EXTERNAL SCRIPT|CONTROL SERVER|
+|EXECUTE EXTERNAL SCRIPT <br /> **Si applica a**: [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)].|EXECUTE ANY EXTERNAL SCRIPT|CONTROL SERVER|
 |INSERT|CONTROL|CONTROL SERVER|
 |KILL DATABASE CONNECTION<br />**Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|ALTER ANY CONNECTION|
 |REFERENCES|CONTROL|CONTROL SERVER|

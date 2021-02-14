@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ece2afa5381b2692c3cb3b99358fc02891e75e97
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: f09f731b2d8838c5cdcd4ea9861666c9d89cacf0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644312"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100342351"
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>Stabilire una sessione di mirroring del database tramite autenticazione di Windows
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

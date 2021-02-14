@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a13d9eb18fae38ef85c182576fe50ed3be6f4d38
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
-ms.translationtype: HT
+ms.openlocfilehash: 56c22120fb08b538b845647f1a2300c22e17d017
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529467"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042212"
 ---
 # <a name="deploying-a-rendering-extension"></a>Distribuzione di un'estensione per il rendering
   Dopo avere scritto e compilato l'estensione per il rendering del report [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in una libreria di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], è necessario renderla individuabile dal server di report e da Progettazione report. A tale scopo, copiare l'estensione nella directory appropriata e aggiungere voci ai file di configurazione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] appropriati.  
@@ -57,7 +57,7 @@ ms.locfileid: "84529467"
     </Extensions>  
     ```  
   
-4.  Aggiungere una voce per l'estensione per il rendering. La voce deve includere un elemento con valori per **Name** e **Type**e deve essere simile a quanto riportato di seguito:  
+4.  Aggiungere una voce per l'estensione per il rendering. La voce deve includere un elemento con valori per **Name** e **Type** e deve essere simile a quanto riportato di seguito:  
   
     ```  
     <Extension Name="My Rendering Extension Name" Type="CompanyName.ExtensionName.MyRenderingProvider, AssemblyName" />  

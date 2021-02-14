@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cd1ad3437f02b0c0df834d3a16365140d9638798
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: d8801c1a4f7387f1ff5bc815b45897d5a4f68fdb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487750"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340781"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Ruoli Integration Services (servizio SSIS)
 
@@ -69,10 +69,10 @@ ms.locfileid: "88487750"
 -   La colonna **ownersid** include l'ID di sicurezza (SID) univoco dell'utente che ha creato il pacchetto. Questa colonna definisce pertanto il proprietario del pacchetto.  
   
 ### <a name="permissions"></a>Autorizzazioni  
- Per impostazione predefinita, le autorizzazioni dei ruoli predefiniti a livello di database **db_ssisadmin** e **db_ssisoperator** e l'ID di sicurezza univoco dell'utente che ha creato il pacchetto si applicano al ruolo lettura per il pacchetto, mentre le autorizzazioni del ruolo **db_ssisadmin** e l'ID di sicurezza univoco dell'utente che ha creato il pacchetto si applicano al ruolo scrittura. Per disporre dell'accesso in lettura per il pacchetto, l'utente deve essere membro del ruolo **db_ssisadmin**, **db_ssisltduser**o **db_ssisoperator** . Per disporre dell'accesso in scrittura, l'utente deve essere membro del ruolo **db_ssisadmin** .  
+ Per impostazione predefinita, le autorizzazioni dei ruoli predefiniti a livello di database **db_ssisadmin** e **db_ssisoperator** e l'ID di sicurezza univoco dell'utente che ha creato il pacchetto si applicano al ruolo lettura per il pacchetto, mentre le autorizzazioni del ruolo **db_ssisadmin** e l'ID di sicurezza univoco dell'utente che ha creato il pacchetto si applicano al ruolo scrittura. Per disporre dell'accesso in lettura per il pacchetto, l'utente deve essere membro del ruolo **db_ssisadmin**, **db_ssisltduser** o **db_ssisoperator** . Per disporre dell'accesso in scrittura, l'utente deve essere membro del ruolo **db_ssisadmin** .  
   
 ### <a name="access-to-packages"></a>Accesso ai pacchetti  
- I ruoli predefiniti del database funzionano congiuntamente ai ruoli definiti dall'utente, ovvero i ruoli creati dall'utente in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e usati per l'assegnazione di autorizzazioni ai pacchetti. Per poter accedere a un pacchetto, un utente deve essere membro del ruolo definito dall'utente e del ruolo predefinito del database di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] appropriato. Se, ad esempio, gli utenti sono membri del ruolo definito dall'utente **AuditUsers** assegnato a un pacchetto, per poter accedere in lettura al pacchetto devono essere membri anche del ruolo **db_ssisadmin**, **db_ssisltduser**o **db_ssisoperator** .  
+ I ruoli predefiniti del database funzionano congiuntamente ai ruoli definiti dall'utente, ovvero i ruoli creati dall'utente in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e usati per l'assegnazione di autorizzazioni ai pacchetti. Per poter accedere a un pacchetto, un utente deve essere membro del ruolo definito dall'utente e del ruolo predefinito del database di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] appropriato. Se, ad esempio, gli utenti sono membri del ruolo definito dall'utente **AuditUsers** assegnato a un pacchetto, per poter accedere in lettura al pacchetto devono essere membri anche del ruolo **db_ssisadmin**, **db_ssisltduser** o **db_ssisoperator** .  
   
  Se non si assegna alcun ruolo definito dall'utente ai pacchetti, l'accesso verrà determinato dai ruoli predefiniti a livello di database.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "88487750"
   
 2.  Scegliere **Esplora oggetti** dal menu **Visualizza** .  
   
-3.  Nella barra degli strumenti di Esplora oggetti fare clic su **Connetti**e quindi su **Motore di database**.  
+3.  Nella barra degli strumenti di Esplora oggetti fare clic su **Connetti** e quindi su **Motore di database**.  
   
 4.  Nella finestra di dialogo **Connetti al server** specificare un nome di server e selezionare una modalità di autenticazione. Per specificare il server locale, è possibile digitare un punto (.), (locale) o **localhost** .  
   
@@ -138,7 +138,7 @@ ms.locfileid: "88487750"
 ## <a name="package-roles-dialog-box-ui-reference"></a><a name="roles_dialog"></a> Riferimento all'interfaccia utente della finestra di dialogo Ruoli pacchetto
   Usare la finestra di dialogo **Ruoli pacchetto** , disponibile in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], per specificare i ruoli a livello di database che dispongono dell'accesso in lettura al pacchetto e quelli che dispongono dell'accesso in scrittura. I ruoli a livello di database si applicano solo ai pacchetti archiviati nel database  **msdb** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- I ruoli elencati nella finestra di dialogo sono quelli attualmente disponibili nel database di sistema **msdb** . Se non viene selezionato alcun ruolo, viene applicato il ruolo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] predefinito. Per impostazione predefinita, il ruolo lettura include **db_ssisadmin**, **db_ssisoperator**e l'utente che ha creato il pacchetto. Gli utenti membri di uno di questi ruoli o creatori dei pacchetti possono enumerare, visualizzare, esportare ed eseguire i pacchetti. Per impostazione predefinita, il ruolo scrittura include **db_ssisadmin** e l'utente che ha creato il pacchetto. L'utente membro di questo ruolo e il creatore dei pacchetti possono importare, eliminare e modificare i pacchetti.  
+ I ruoli elencati nella finestra di dialogo sono quelli attualmente disponibili nel database di sistema **msdb** . Se non viene selezionato alcun ruolo, viene applicato il ruolo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] predefinito. Per impostazione predefinita, il ruolo lettura include **db_ssisadmin**, **db_ssisoperator** e l'utente che ha creato il pacchetto. Gli utenti membri di uno di questi ruoli o creatori dei pacchetti possono enumerare, visualizzare, esportare ed eseguire i pacchetti. Per impostazione predefinita, il ruolo scrittura include **db_ssisadmin** e l'utente che ha creato il pacchetto. L'utente membro di questo ruolo e il creatore dei pacchetti possono importare, eliminare e modificare i pacchetti.  
   
  La colonna **ownersid** nella tabella **sysssispackages** include l'ID di sicurezza (SID) univoco dell'utente che ha creato il pacchetto.  
   

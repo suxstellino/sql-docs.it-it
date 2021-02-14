@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f6fadf3bed15869ccd3d3307dcfe8b70c53d5310
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3ad92315e20ae314fb9a22ddea1241f379ecc90f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737873"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341926"
 ---
 # <a name="functions-on-string-values---concat"></a>Funzioni su valori stringa - concat
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +41,13 @@ fn:concat ($string as xs:string?
  *$string*  
  Stringa facoltativa per la concatenazione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La funzione richiede almeno due argomenti. Se un argomento è costituito da una sequenza vuota, viene considerato come stringa di lunghezza zero.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caratteri supplementari (coppie di surrogati)  
  Il comportamento delle coppie di surrogati nelle funzioni XQuery dipende dal livello di compatibilità del database e, in alcuni casi, dall'URI dello spazio dei nomi predefinito per le funzioni. Per ulteriori informazioni, vedere la sezione "funzioni XQuery sono compatibili con i surrogati" nell'argomento [modifiche di rilievo apportate alle funzionalità di motore di database in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Vedere anche [livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [regole di confronto e supporto Unicode](../relational-databases/collations/collation-and-unicode-support.md).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database di esempio AdventureWorks.  
   
 ### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>R. Utilizzo della funzione XQuery concat() per la concatenazione di stringhe  

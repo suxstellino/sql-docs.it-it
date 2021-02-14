@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1bd54d3fdf90447dbbf8b35a96c6b454ca6c4e56
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+ms.openlocfilehash: 59583057641bb167aae197dd9fae3bf6e5833302
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869564"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076192"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>Connessione a SQL Server (AccessToSQL)
 
@@ -78,7 +78,7 @@ Per connettersi al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
 
 6. Per la connessione sicura vengono aggiunti due controlli, la casella di controllo **Crittografa connessione** e la casella di controllo **TrustServerCertificate** . È visibile solo quando è selezionata la casella di controllo **Crittografa connessione** **TrustServerCertificate** . Quando la **connessione Encrypt** è selezionata (true) e **TrustServerCertificate** è deselezionata (false), convaliderà il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] certificato SSL. La convalida del certificato del server fa parte dell'handshake SSL e assicura che il server a cui si esegue la connessione sia quello corretto. Per garantire questo problema, è necessario installare un certificato sul lato client e sul lato server.
 
-7. Fare clic su **Connetti**.
+7. Fare clic su **Connect** (Connetti).
 
 > [!IMPORTANT]
 > Sebbene sia possibile connettersi a una versione successiva di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , rispetto alla versione scelta al momento della creazione del progetto di migrazione, la conversione degli oggetti di database è determinata dalla versione di destinazione del progetto e non dalla versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui si è connessi.

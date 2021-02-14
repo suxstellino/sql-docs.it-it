@@ -20,20 +20,20 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: AndreasWolter
 ms.author: anwolter
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b40dbcfc25bcc3b86868228fe5646c4318ed830c
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: b716f1daa936aa700bd28984ba71d0e9bfc1d2df
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172223"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100341697"
 ---
 # <a name="permissions-database-engine"></a>Autorizzazioni (Motore di database)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Ogni entità a protezione diretta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone di autorizzazioni associate che possono essere concesse a un'entità. Le autorizzazioni in [!INCLUDE[ssDE](../../includes/ssde-md.md)] vengono gestite a livello di server assegnate agli account di accesso e ai ruoli del server e a livello di database assegnate agli utenti e ai ruoli del database. Il modello per il [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ha lo stesso sistema di autorizzazioni del database, ma le autorizzazioni a livello di server non saranno disponibili. Questo argomento contiene l'elenco completo delle autorizzazioni. Per un'implementazione tipica delle autorizzazioni, vedere [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
-Il numero totale di autorizzazioni per [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] è 248. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] contiene 254 autorizzazioni. La maggior parte delle autorizzazioni si applica a tutte le piattaforme, mentre alcune non si applicano a tutte le piattaforme. Ad esempio, non è possibile concedere le autorizzazioni a livello di server per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e alcune autorizzazioni possono essere usate solo in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
-Le nuove autorizzazioni verranno introdotte gradualmente con la nuova versione. [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] contiene 238 autorizzazioni. [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] contiene 230 autorizzazioni. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] contiene 219 autorizzazioni. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] contiene 214 autorizzazioni. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] contiene 195 autorizzazioni. L'argomento [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) specifica gli argomenti nuovi nelle versioni recenti.
+Il numero totale di autorizzazioni per [!INCLUDE[ssSQLv15_md](../../includes/sssql19-md.md)] è 248. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] contiene 254 autorizzazioni. La maggior parte delle autorizzazioni si applica a tutte le piattaforme, mentre alcune non si applicano a tutte le piattaforme. Ad esempio, non è possibile concedere le autorizzazioni a livello di server per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e alcune autorizzazioni possono essere usate solo in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+Le nuove autorizzazioni verranno introdotte gradualmente con la nuova versione. [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] contiene 238 autorizzazioni. [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] contiene 230 autorizzazioni. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] contiene 219 autorizzazioni. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] contiene 214 autorizzazioni. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] contiene 195 autorizzazioni. L'argomento [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) specifica gli argomenti nuovi nelle versioni recenti.
 
 Una volta comprese le autorizzazioni, applicare le autorizzazioni a livello di server agli account di accesso e le autorizzazioni a livello di database agli utenti con le istruzioni [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOCARE](../../t-sql/statements/revoke-transact-sql.md)e [DENY](../../t-sql/statements/deny-transact-sql.md) . Ad esempio:   
 ```sql
@@ -158,25 +158,25 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 |DATABASE|ALTER ANY ASSEMBLY|ALAS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ASYMMETRIC KEY|ALAK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY CERTIFICATE|ALCF|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY COLUMN ENCRYPTION KEY|ALCK<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla versione corrente), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY COLUMN MASTER KEY|ALCM<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla versione corrente), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY COLUMN ENCRYPTION KEY|ALCK<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] alla versione corrente), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY COLUMN MASTER KEY|ALCM<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] alla versione corrente), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY CONTRACT|ALSC|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
 |DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Si applica a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|ALTER ANY EVENT SESSION|  
-|DATABASE|ALTER ANY DATABASE SCOPED CONFIGURATION|ALDC<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla versione corrente), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY DATABASE SCOPED CONFIGURATION|ALDC<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] alla versione corrente), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY EXTERNAL DATA SOURCE|AEDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY EXTERNAL FILE FORMAT|AEFF|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY MASK|AAMK<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla versione corrente), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY MASK|AAMK<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] alla versione corrente), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY REMOTE SERVICE BINDING|ALSB|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla versione corrente), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] alla versione corrente), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|MODIFICARE LE CLASSIFICAZIONI DI SENSIBILITÀ|ALSP<br />Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], da SQL Server 2019 (15.x) fino alla versione corrente, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|DATABASE|CONTROL SERVER|
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
@@ -215,7 +215,7 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
 |DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
-|DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla versione corrente).|SERVER|CONTROL SERVER|  
+|DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] alla versione corrente).|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
 |DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Si applica solo a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Usare ALTER ANY CONNECTION in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
@@ -223,10 +223,10 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
 |DATABASE|SUBSCRIBE QUERY NOTIFICATIONS|SUQN|SERVER|CONTROL SERVER|  
 |DATABASE|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
-|DATABASE|UNMASK|UMSK<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla versione corrente), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|UNMASK|UMSK<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] alla versione corrente), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|UPDATE|UP|SERVER|CONTROL SERVER|  
-|DATABASE|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION|VWCK<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla versione corrente), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|VIEW SERVER STATE|  
-|DATABASE|VIEW ANY COLUMN MASTER KEY DEFINITION|vWCM<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] alla versione corrente), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|VIEW SERVER STATE|  
+|DATABASE|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION|VWCK<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] alla versione corrente), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|VIEW SERVER STATE|  
+|DATABASE|VIEW ANY COLUMN MASTER KEY DEFINITION|vWCM<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] alla versione corrente), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|VIEW SERVER STATE|  
 |DATABASE|VIEW DATABASE STATE|VWDS|SERVER|VIEW SERVER STATE|  
 |DATABASE|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |DATABASE SCOPED CREDENTIAL|ALTER|AL|DATABASE|CONTROL|

@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 59c98e39bccbb6d4f74ddb5e9494e7fc4bced3eb
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
-ms.translationtype: HT
+ms.openlocfilehash: 5e3905a3ded61ac6ef99f9ada4e94ffaab77a36c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985077"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100016681"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Procedura dettagliata: Estendere la compilazione del progetto del database per generare statistiche del modello
 
@@ -93,7 +93,7 @@ Per creare un collaboratore alla compilazione, è necessario effettuare le attiv
   
 4.  Selezionare la voce **System.ComponentModel.Composition** e fare clic su **OK**.  
   
-5.  Aggiungere i riferimenti SQL richiesti: fare clic con il pulsante destro del mouse sul nodo del progetto e scegliere **Aggiungi riferimento**. Fare clic sul pulsante **Sfoglia** . Passare alla cartella **C:\Programmi (x86)\Microsoft SQL Server\110\DAC\Bin**. Scegliere le voci **Microsoft.SqlServer.Dac.dll**, **Microsoft.SqlServer.Dac.Extensions.dll**e **Microsoft.Data.Tools.Schema.Sql.dll** , quindi fare clic su **OK**.  
+5.  Aggiungere i riferimenti SQL richiesti: fare clic con il pulsante destro del mouse sul nodo del progetto e scegliere **Aggiungi riferimento**. Fare clic sul pulsante **Sfoglia** . Passare alla cartella **C:\Programmi (x86)\Microsoft SQL Server\110\DAC\Bin**. Scegliere le voci **Microsoft.SqlServer.Dac.dll**, **Microsoft.SqlServer.Dac.Extensions.dll** e **Microsoft.Data.Tools.Schema.Sql.dll** , quindi fare clic su **OK**.  
   
     Iniziare quindi ad aggiungere codice alla classe.  
   

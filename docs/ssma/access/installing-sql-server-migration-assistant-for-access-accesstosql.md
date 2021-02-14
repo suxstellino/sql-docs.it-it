@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1313699a3d82e0dbced8469f251a0a105f296246
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 3e34f70a41816dcf9a6009f8b38feb016f409a3a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985237"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078962"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>Installazione di SQL Server Migration Assistant per Access (AccessToSQL)
 
@@ -54,7 +54,7 @@ SSMA è un download Web. Per scaricare la versione più recente, vedere la [pagi
 
 Per installare SSMA:
   
-1. Fare doppio clic su **SSMAforAccess_*n*. msi**, dove *n* è il numero di Build.
+1. Fare doppio clic su **SSMAforAccess_ *n*. msi**, dove *n* è il numero di Build.
 2. Nella pagina Benvenuti fare clic su **Avanti**.
 
    Se i prerequisiti non sono installati, viene visualizzato un messaggio che indica che è necessario prima installare i componenti necessari. Assicurarsi di aver installato tutti i prerequisiti, quindi eseguire di nuovo il programma di installazione.
@@ -80,7 +80,7 @@ Se si vuole eseguire l'aggiornamento a una versione successiva di SSMA per l'acc
 
 Se si apre un progetto creato in una versione precedente di SSMA per l'accesso, SSMA potrebbe chiedere se si vuole convertire il progetto nella versione più recente. Fare clic su **Sì** per usare il progetto nella versione più recente di SSMA.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Preparazione dei database di Access per la migrazione](preparing-access-databases-for-migration-accesstosql.md)
 - [Migrazione dei database di Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)

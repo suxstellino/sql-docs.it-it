@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 1f1523cde32af2c4a01b7b2838cb0293797afcdb
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c7a91729430078f5913d5f4d83ca75015c50ac15
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724634"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339907"
 ---
 # <a name="install-data-quality-services"></a>Installare Data Quality Services
 
@@ -66,7 +66,7 @@ ms.locfileid: "91724634"
 ##  <a name="data-quality-services-installation-tasks"></a><a name="DQSInstallation"></a> Attività di installazione di Data Quality Services  
  Per installare i componenti di DQS, è necessario utilizzare il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] . Quando si esegue il programma di installazione di SQL Server, è necessario scorrere una serie di pagine dell'Installazione guidata per selezionare le opzioni appropriate in base ai requisiti di cui si dispone. Nella tabella seguente sono elencate solo le pagine dell'Installazione guidata le cui opzioni selezionate influiscono sull'installazione di DQS:  
   
-|Pagina|Operazione|  
+|Pagina|Azione|  
 |----------|------------|  
 |Selezione caratteristiche|Selezionare:<br /><br /> **Data Quality Services** in **Servizi motore di database** per installare [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]. <br />Se si seleziona la casella di controllo **Data Quality Services** , il programma di installazione di SQL Server copierà il file di installazione DQSInstaller.exe nella directory dell'istanza di SQL Server del computer. È necessario eseguire questo file dopo aver completato l'installazione di SQL Server per *completare* l'installazione di [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . Inoltre, è necessario eseguire alcuni passaggi aggiuntivi per configurare [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] prima che sia possibile utilizzarlo. Per altre informazioni, vedere [Attività post-installazione](#PostInstallationTasks).<br /><br /> **Client Data Quality** per installare [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)].<br /><br /> Consigliabile **Strumenti di gestione-completa** in **strumenti di gestione-di base** per installare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Fornisce un'interfaccia utente grafica per gestire l'istanza di SQL Server e supporta l'utente nell'esecuzione di attività aggiuntive di postinstallazione elencate nella sezione successiva.|  
 |Configurazione del motore di database|Per aggiungere l'account utente di Windows al ruolo predefinito del server sysadmin, fare clic su **Aggiungi utente corrente** . Questa operazione è richiesta per poter eseguire il file DQSInstaller.exe in un secondo momento per completare l'installazione di [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] .|  

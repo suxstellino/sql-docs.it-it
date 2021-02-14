@@ -11,12 +11,12 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
-ms.openlocfilehash: 6638144576d56a0225f03021f7cf8226643a45ab
-ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
-ms.translationtype: HT
+ms.openlocfilehash: 0cb62f9c1e32c71e982d74eb5fc868fb64020b76
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2020
-ms.locfileid: "97771583"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042811"
 ---
 # <a name="example-demonstrating-use-of-azure-key-vault-provider-with-always-encrypted"></a>Esempio che illustra l'uso del provider Azure Key Vault con Always Encrypted
 

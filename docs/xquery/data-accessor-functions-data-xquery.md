@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a5d0940f6e182d477d2c0660f4c93aaa9fedeb6f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e20c00d93082994cd5dc230bfe1b4356b3ed031
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85643550"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338502"
 ---
 # <a name="data-accessor-functions---data-xquery"></a>Funzioni di accesso dati - data (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
  *$arg*  
  Sequenza di elementi per i quali verranno restituiti i valori tipizzati.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Per i valori tipizzati sono valide le osservazioni seguenti:  
   
 -   Il valore tipizzato di un valore atomico è il valore atomico.  
@@ -76,7 +76,7 @@ set @x = ''
 select @x.query('data(<SomeNode>value</SomeNode>)')  
 ```  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
 ### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>R. Utilizzo della funzione XQuery data() per estrarre il valore tipizzato di un nodo  

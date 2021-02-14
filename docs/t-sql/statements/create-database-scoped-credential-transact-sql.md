@@ -23,12 +23,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1b9a9c27b80d702706d0b6bf1d7e7b3cb7d1d09b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2bb17115cb016e13f0ef20f8bd4ace4edf5c214a
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99192726"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "100270499"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -56,7 +56,7 @@ WITH IDENTITY = 'identity_name'
 IDENTITY **='** _identity\_name_ **'** specifica il nome dell'account da usare per la connessione all'esterno del server. Per l'importazione di un file dall'archiviazione BLOB di Azure usando una chiave condivisa, il nome dell'identità deve essere `SHARED ACCESS SIGNATURE`. Per caricare dati in Azure Synapse Analytics è possibile usare qualsiasi valore valido per l'identità. Per altre informazioni sulle firme di accesso condiviso, vedere [Uso delle firme di accesso condiviso](/azure/storage/storage-dotnet-shared-access-signature-part-1). Quando si usa Kerberos (Windows Active Directory o MIT KDC), non usare il nome di dominio nell'argomento IDENTITY. Usare semplicemente il nome dell'account.
 
 > [!IMPORTANT]
-> I connettori ODBC SQL, Oracle, Teradata e MongoDB per PolyBase supportano solo l'autenticazione di base e non l'autenticazione Kerberos.
+> L'unica origine dati esterna di base che supporta l'autenticazione Kerberos è Hadoop. Tutte le altre origini dati esterne (SQL Server, Oracle, Teradata, MongoDB, ODBC generico) supportano solo l'autenticazione di base.
 
 > [!NOTE]
 > WITH IDENTITY non è obbligatoria se il contenitore dell'archiviazione BLOB di Azure è abilitato per l'accesso anonimo. Per un esempio di query nell'archiviazione BLOB di Azure, vedere [Importazione in una tabella da un file archiviato in Archiviazione BLOB di Azure](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage).

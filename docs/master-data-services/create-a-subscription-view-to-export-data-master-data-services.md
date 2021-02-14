@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 381d089aa124f44161b3fd5f1102f7377719f142
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 4181704586d8a0316567ba4548ccd263d4117d79
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812766"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272602"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Creare una vista sottoscrizioni per esportare i dati (Master Data Services)
 
@@ -48,7 +48,7 @@ ms.locfileid: "85812766"
   
 5.  Selezionare un modello dall'elenco **Modello** .  
   
-6.  Selezionare **Includi membri eliminati temporaneamente**per includere nella vista i membri eliminati temporaneamente.  
+6.  Selezionare **Includi membri eliminati temporaneamente** per includere nella vista i membri eliminati temporaneamente.  
   
 7.  Selezionare **Versione** o **Flag versione** in **Opzioni versione**, quindi selezionare una voce nell'elenco corrispondente.  
   
@@ -69,13 +69,13 @@ ms.locfileid: "85812766"
 |Colonna|Descrizione|  
 |------------|-----------------|  
 |Stato|Stato della vista.<br /><br /> Quando si fa clic su **Salva**, viene visualizzata l' ![icona di aggiornamento dell'immagine di stato](../master-data-services/media/mds-statusicon-updating.png "Icona per lo stato di aggiornamento") , che indica che la vista è in fase di aggiornamento.<br /><br /> Se si verificano errori durante la creazione o la modifica di una visualizzazione, viene visualizzata l'immagine ![icona di stato errore](../master-data-services/media/mds-statusicon-error.png "Icona per lo stato di errore") .<br /><br /> In caso contrario, lo stato è OK e viene visualizzata l'immagine ![icona di stato OK](../master-data-services/media/mds-statusicon-ok.png "Icona per lo stato OK") .|  
-|Name|Nome della vista sottoscrizioni.|  
+|Nome|Nome della vista sottoscrizioni.|  
 |Modello|Nome del modello.|  
-|Version|Nome della versione.|  
+|Versione|Nome della versione.|  
 |Flag versione|Nome del flag di versione.|  
 |Gerarchia derivata|Nome della gerarchia derivata.|  
 |Entità|Nome dell'entità.|  
-|Format|Specifica il tipo di dati nella vista.|  
+|Formato|Specifica il tipo di dati nella vista.|  
 |Level|Specifica il numero di livelli nella vista, che viene usato solo per i formati di vista di livello esplicito o derivato|  
 |Includi membri eliminati|Indica se nella vista sono inclusi i membri eliminati temporaneamente.|  
   

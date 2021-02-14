@@ -47,12 +47,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77b06b7bd905aa706dbb84153742a0906399806e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2ec8737d01b52db828dbe95cd1252d8913128c90
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99204195"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339311"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 
@@ -293,7 +293,7 @@ LOB_COMPACTION = OFF
 -   Non è necessario eseguire l'operazione REORGANIZE per spostare i rowgroup differenziali CLOSED in rowgroup compressi. Il processo del motore di tuple in background viene attivato periodicamente per comprimere i rowgroup differenziali CLOSED. È consigliabile usare REORGANIZE, quando il motore di tuple è in ritardo. Con REORGANIZE è possibile comprimere i rowgroup in modo più aggressivo.  
 -   Per comprimere tutti i rowgroup OPEN e CLOSED, vedere l'opzione `REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS)` in questa sezione.  
   
-Per gli indici columnstore in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire dalla versione [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) e nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], l'operazione REORGANIZE esegue online le ottimizzazioni di deframmentazione aggiuntive seguenti:  
+Per gli indici columnstore in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire dalla versione [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) e nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], l'operazione REORGANIZE esegue online le ottimizzazioni di deframmentazione aggiuntive seguenti:  
   
 -   Rimuove fisicamente le righe da un rowgroup quando più del 10% delle righe è stato eliminato in modo logico. I byte eliminati vengono recuperati sui supporti fisici. Ad esempio, se in un rowgroup compresso di 1 milione di righe 100.000 righe sono state eliminate, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rimuoverà le righe eliminate e ricomprimerà il rowgroup con 900.000 righe. Esegue il salvataggio nell'archiviazione rimuovendo le righe eliminate.  
   
@@ -304,7 +304,7 @@ Per gli indici columnstore in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = { ON | **OFF** } )  
  Si applica agli indici columnstore. 
 
- **Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ **Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 COMPRESS_ALL_ROW_GROUPS consente di forzare i rowgroup differenziali OPEN o CLOSED nel columnstore. Con questa opzione, non è necessario ricompilare l'indice columnstore per svuotare i rowgroup differenziali.  Grazie a questa opzione e ad altre funzionalità di deframmentazione per la rimozione e l'unione, nella maggior parte dei casi non è più necessario ricompilare l'indice.    
 
@@ -410,7 +410,7 @@ Se è specificato **ON**, le statistiche create sono statistiche per partizione.
  Per un indice XML o spaziale, è supportata solo l'opzione `ONLINE = OFF` e se ONLINE è impostata su ON viene generato un errore.  
   
 > [!IMPORTANT]
-> Le operazioni sugli indici online sono disponibili solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) e [Edizioni e funzionalità supportate per SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
+> Le operazioni sugli indici online sono disponibili solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) e [Edizioni e funzionalità supportate per SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
  ON  
  I blocchi di tabella a lungo termine non vengono mantenuti per la durata dell'operazione sugli indici. Durante la fase principale dell'operazione viene mantenuto solo un blocco preventivo condiviso (IS, Intent Shared) sulla tabella di origine. In questo modo, le query o gli aggiornamenti relativi alla tabella e agli indici sottostanti possono continuare. All'inizio dell'operazione viene mantenuto brevemente un blocco condiviso (S) sull'oggetto di origine. Al termine dell'operazione, se è in corso la creazione di un indice non cluster, viene mantenuto un blocco S sull'origine per un periodo di tempo molto breve. Se è in corso la creazione o l'eliminazione online di un indice cluster o la ricompilazione di un indice cluster o non cluster, viene acquisito un blocco di modifica dello schema (SCH-M). L'opzione ONLINE non può essere impostata su ON quando viene creato un indice per una tabella temporanea locale.  
@@ -481,7 +481,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
 
  OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Specifica se eseguire o meno l'ottimizzazione per la contesa di inserimento dell'ultima pagina. Il valore predefinito è OFF. Per altre informazioni, vedere le sezione [Chiavi sequenziali](./create-index-transact-sql.md#sequential-keys) della pagina CREATE INDEX.
 
@@ -512,7 +512,7 @@ Specifica se eseguire o meno l'ottimizzazione per la contesa di inserimento dell
   
 COMPRESSION_DELAY **=** { **0** |*duration [Minutes]* }  
 
-**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)])  
+**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])  
   
  Per una tabella basata su disco, il ritardo indica il numero minimo di minuti in cui un rowgroup differenziale deve rimanere nello stato CLOSED nel rowgroup differenziale prima che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo comprima nel rowgroup compresso. Poiché le tabelle basate su disco non tengono traccia delle ore di inserimento e aggiornamento per le singole righe, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applica il ritardo ai rowgroup differenziali nello stato CLOSED.  
   
@@ -835,7 +835,7 @@ CREATE TABLE cci_target (
 CREATE CLUSTERED COLUMNSTORE INDEX idxcci_cci_target ON cci_target;  
 ```  
   
- Usare l'opzione TABLOCK per inserire righe in parallelo. A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], l'operazione INSERT INTO può essere eseguita in parallelo quando si usa TABLOCK.  
+ Usare l'opzione TABLOCK per inserire righe in parallelo. A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], l'operazione INSERT INTO può essere eseguita in parallelo quando si usa TABLOCK.  
   
 ```sql  
 INSERT INTO cci_target WITH (TABLOCK) 
@@ -875,7 +875,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. Comprimere tutti i rowgroup differenziali OPEN e CLOSED nel columnstore  
- **Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+ **Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
  Il comando REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = ON ) comprime tutti i rowgroup differenziali OPEN e CLOSED nel columnstore come rowgroup compresso. In questo modo i deltastore vengono svuotati e tutte le righe vengono forzate per essere compresse nel columnstore. Si tratta di un'operazione utile soprattutto dopo aver eseguito numerose operazioni di inserimento, in quanto tali operazioni archiviano le righe in uno o più rowgroup delta.  
   
@@ -893,10 +893,10 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ### <a name="d-defragment-a-columnstore-index-online"></a>D. Deframmentare un indice columnstore online  
  Non si applica a: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
- A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], REORGANIZE non solo comprime i rowgroup differenziali nel columnstore, ma esegue anche la deframmentazione online. In primo luogo, riduce le dimensioni del columnstore rimuovendo fisicamente le righe quando oltre il 10% delle righe in un rowgroup è stato eliminato.  Poi combina i rowgroup per formare rowgroup di dimensioni più grandi che contengono fino a 1.024.576 righe per rowgroup.  Tutti i rowgroup modificati vengono nuovamente compressi.  
+ A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], REORGANIZE non solo comprime i rowgroup differenziali nel columnstore, ma esegue anche la deframmentazione online. In primo luogo, riduce le dimensioni del columnstore rimuovendo fisicamente le righe quando oltre il 10% delle righe in un rowgroup è stato eliminato.  Poi combina i rowgroup per formare rowgroup di dimensioni più grandi che contengono fino a 1.024.576 righe per rowgroup.  Tutti i rowgroup modificati vengono nuovamente compressi.  
   
 > [!NOTE]
-> A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], la ricompilazione di un indice columnstore non è più necessaria nella maggior parte dei casi perché REORGANIZE rimuove fisicamente le righe eliminate e unisce i rowgroup. L'opzione COMPRESS_ALL_ROW_GROUPS forza tutti i rowgroup differenziali OPEN o CLOSED nel columnstore. Questo risultato era ottenibile prima solo con una ricompilazione. L'operazione REORGANIZE viene eseguita online e in background in modo che le query non siano interrotte quando l'operazione è in esecuzione.  
+> A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], la ricompilazione di un indice columnstore non è più necessaria nella maggior parte dei casi perché REORGANIZE rimuove fisicamente le righe eliminate e unisce i rowgroup. L'opzione COMPRESS_ALL_ROW_GROUPS forza tutti i rowgroup differenziali OPEN o CLOSED nel columnstore. Questo risultato era ottenibile prima solo con una ricompilazione. L'operazione REORGANIZE viene eseguita online e in background in modo che le query non siano interrotte quando l'operazione è in esecuzione.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -908,7 +908,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;
 Si applica a: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])   
   
 > [!TIP]
-> A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] è consigliabile usare ALTER INDEX REORGANIZE anziché l'istruzione ALTER INDEX REBUILD.  
+> A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] è consigliabile usare ALTER INDEX REORGANIZE anziché l'istruzione ALTER INDEX REBUILD.  
   
 > [!NOTE]
 > In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] l'operazione REORGANIZE viene usata solo per comprimere i rowgroup CLOSED nel columnstore. L'unico modo per eseguire operazioni di deframmentazione e forzare tutti i rowgroup differenziali nel columnstore consiste nella ricompilazione dell'indice.  
@@ -946,7 +946,7 @@ SELECT * FROM sys.column_store_row_groups;
 ### <a name="f-rebuild-a-partition-of-a-clustered-columnstore-index-offline"></a>F. Ricompilare una partizione di un indice columnstore cluster offline  
  **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
  
- Usare ALTER INDEX REBUILD con l'opzione partizione per ricompilare una partizione di un indice columnstore cluster di grandi dimensioni. In questo esempio viene ricompilata la partizione 12. A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], è consigliabile sostituire REBUILD con REORGANIZE.  
+ Usare ALTER INDEX REBUILD con l'opzione partizione per ricompilare una partizione di un indice columnstore cluster di grandi dimensioni. In questo esempio viene ricompilata la partizione 12. A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], è consigliabile sostituire REBUILD con REORGANIZE.  
   
 ```sql  
 ALTER INDEX cci_fact3   

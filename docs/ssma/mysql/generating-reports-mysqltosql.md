@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 58cc5fc2f06419293b58fa6a38d6d75a8f750897
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: e0fb362926b88d65ed8b1959059e43465ce587f9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987887"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078222"
 ---
 # <a name="generating-reports-mysqltosql"></a>Generazione di report (MySQLToSQL)
 I report di determinate attività eseguite usando i comandi vengono generati nella console di SSMA a livello di albero degli oggetti.  
   
 Utilizzare la procedura seguente per generare report:  
   
-1.  Specificare il parametro **Write-Summary-Report-to** . Il report correlato viene archiviato come nome file (se specificato) o nella cartella specificata. Il nome del file è predefinito dal sistema come indicato nella tabella seguente, dove ** &lt; n &gt; ** è il numero di file univoco che incrementa con una cifra a ogni esecuzione dello stesso comando.  
+1.  Specificare il parametro **Write-Summary-Report-to** . Il report correlato viene archiviato come nome file (se specificato) o nella cartella specificata. Il nome del file è predefinito dal sistema come indicato nella tabella seguente, dove **&lt; n &gt;** è il numero di file univoco che incrementa con una cifra a ogni esecuzione dello stesso comando.  
   
     I report Vis-à-Vis sono i seguenti:  
   
@@ -83,7 +83,7 @@ Utilizzare la procedura seguente per generare report:
 ```  
   
 ### <a name="synchronize-target"></a>sincronizzazione-destinazione:  
-Il comando **Synchronize-target** dispone del parametro **Report-Errors-to** , che specifica il percorso del report degli errori per l'operazione di sincronizzazione. Quindi, un file in base al nome **TargetSynchronizationReport &lt; n &gt; . Il codice XML** viene creato nel percorso specificato, dove ** &lt; n &gt; ** è il numero di file univoco che incrementa con una cifra a ogni esecuzione dello stesso comando.  
+Il comando **Synchronize-target** dispone del parametro **Report-Errors-to** , che specifica il percorso del report degli errori per l'operazione di sincronizzazione. Quindi, un file in base al nome **TargetSynchronizationReport &lt; n &gt; . Il codice XML** viene creato nel percorso specificato, dove **&lt; n &gt;** è il numero di file univoco che incrementa con una cifra a ogni esecuzione dello stesso comando.  
   
 **Nota:** Se viene specificato il percorso della cartella, il parametro ' Report-Errors-to ' diventa un attributo facoltativo per il comando ' Synchronize-target '.  
   
@@ -111,7 +111,7 @@ Il comando **Synchronize-target** dispone del parametro **Report-Errors-to** , c
 -   script di errore  
   
 ### <a name="refresh-from-database"></a>aggiornamento da database:  
-Il comando **Refresh-from-database** presenta un parametro **Report-Errors-to** , che specifica la posizione della segnalazione errori per l'operazione di aggiornamento. Quindi, un file in base al nome **SourceDBRefreshReport &lt; n &gt; . Il codice XML** viene creato nel percorso specificato, dove ** &lt; n &gt; ** è il numero di file univoco che incrementa con una cifra a ogni esecuzione dello stesso comando.  
+Il comando **Refresh-from-database** presenta un parametro **Report-Errors-to** , che specifica la posizione della segnalazione errori per l'operazione di aggiornamento. Quindi, un file in base al nome **SourceDBRefreshReport &lt; n &gt; . Il codice XML** viene creato nel percorso specificato, dove **&lt; n &gt;** è il numero di file univoco che incrementa con una cifra a ogni esecuzione dello stesso comando.  
   
 **Nota:** Se viene specificato il percorso della cartella, il parametro ' Report-Errors-to ' diventa un attributo facoltativo per il comando ' Synchronize-target '.  
   

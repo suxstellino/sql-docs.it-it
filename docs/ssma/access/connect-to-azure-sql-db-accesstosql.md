@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 15882852544113881b52f3641e0c85ec684add22
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 57fadc47d241658b96f2d9a7087bcb174d72dcce
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418567"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076312"
 ---
 # <a name="connect-to-azure-sql-database-accesstosql"></a>Connettersi al database SQL di Azure (AccessToSQL)
 Usare la finestra di dialogo Connetti a SQL Azure per connettersi al database nel database SQL di Azure di cui si vuole eseguire la migrazione.  
   
-Per accedere a questa finestra di dialogo, scegliere **Connetti a SQL Azure**dal menu **file** . Se è già stata effettuata la connessione, il comando viene **riconnesso a SQL Azure.**  
+Per accedere a questa finestra di dialogo, scegliere **Connetti a SQL Azure** dal menu **file** . Se è già stata effettuata la connessione, il comando viene **riconnesso a SQL Azure.**  
   
 ## <a name="options"></a>Opzioni  
 **Nome server**  

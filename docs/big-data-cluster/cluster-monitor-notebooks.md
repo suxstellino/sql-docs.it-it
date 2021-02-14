@@ -10,18 +10,18 @@ ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 516b1bb461e5927ff52f0cee79e48d9945e6da21
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
-ms.translationtype: HT
+ms.openlocfilehash: bc370b42f247c4b8e57c5628feaae7385ba1502d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378443"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100039374"
 ---
 # <a name="monitoring-cluster-with-notebooks"></a>Monitoraggio del cluster con i notebook
 
 Questa pagina è un indice dei notebook per i cluster Big Data di SQL Server. I notebook eseguibili (con estensione ipynb) sono progettati per facilitare il monitoraggio dei cluster Big Data in SQL Server 2019.
 
-Ogni notebook è progettato per cercare le proprie dipendenze. Un comando **Run all cells** (Esegui tutte le celle) viene completato oppure genera un'eccezione un suggerimento di collegamento ipertestuale a un altro notebook che risolverà la dipendenza mancante. Seguire il collegamento ipertestuale di suggerimento al notebook successivo, scegliere **Run all cells** (Esegui tutte le celle) e, al termine, tornare al notebook originale e scegliere di nuovo **Run all cells** (Esegui tutte le celle).
+Ogni notebook è progettato per cercare le proprie dipendenze. Un comando **Run all cells** (Esegui tutte le celle) viene eseguito correttamente oppure genera un'eccezione con un hint con collegamento ipertestuale a un altro notebook per risolvere la dipendenza mancante. Seguire il collegamento ipertestuale dell'hint al notebook successivo, scegliere **Run all cells** (Esegui tutte le celle) e, al termine, tornare al notebook originale e scegliere di nuovo **Run all cells** (Esegui tutte le celle).
 
 Se vengono installate tutte le dipendenze, ma il comando **Run all cells** (Esegui tutte le celle) ha esito negativo, ciascun notebook analizzerà i risultati e, laddove possibile, produrrà un suggerimento di collegamento ipertestuale a un altro notebook da cui ottenere un aiuto nella risoluzione del problema.
 
