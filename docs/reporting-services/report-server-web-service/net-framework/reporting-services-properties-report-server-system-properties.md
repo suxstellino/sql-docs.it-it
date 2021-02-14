@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ecb90d65a011e5bb00c66f5f6ccd32ab4be663ee
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
-ms.translationtype: HT
+ms.openlocfilehash: 17cfa96da435821c4f4dbba0f2493570f1ddcf27
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79509633"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063647"
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Proprietà di Reporting Services - Proprietà di sistema del server di report
   I nomi di proprietà di sistema seguenti sono riservati. Non è possibile creare proprietà definite dall'utente con lo stesso nome. È possibile leggere o modificare numerose di queste proprietà utilizzando i metodi del servizio Web.  
@@ -28,7 +28,7 @@ ms.locfileid: "79509633"
 |--------------|-----------------|  
 |SiteName|Nome del sito del server di report visualizzato nell'interfaccia utente. Il valore predefinito è **Microsoft Report Server**. Questa proprietà può essere una stringa vuota. La lunghezza massima è di 8.000 caratteri.|  
 |SystemSnapshotLimit|Numero massimo di snapshot archiviati per un report. I valori validi sono compresi tra **-1** e **2**,**147**,**483**,**647**. Se il valore è **-1**, non vi sono limiti per gli snapshot.|  
-|SystemReportTimeout|Valore di timeout  predefinito per l'elaborazione dei report, espresso in secondi, per tutti i report gestiti nello spazio dei nomi del server di report. È possibile eseguire l'override del valore a livello di report. Se questa proprietà è impostata, il server di report tenta di arrestare l'elaborazione di un report quando scade il tempo specificato. I valori validi sono compresi tra **-1** e **2**,**147**,**483**,**647**. Se il valore è **-1**durante l'elaborazione non si verifica alcun timeout dei report nello spazio dei nomi. Il valore predefinito è **1800**.|  
+|SystemReportTimeout|Valore di timeout  predefinito per l'elaborazione dei report, espresso in secondi, per tutti i report gestiti nello spazio dei nomi del server di report. È possibile eseguire l'override del valore a livello di report. Se questa proprietà è impostata, il server di report tenta di arrestare l'elaborazione di un report quando scade il tempo specificato. I valori validi sono compresi tra **-1** e **2**,**147**,**483**,**647**. Se il valore è **-1** durante l'elaborazione non si verifica alcun timeout dei report nello spazio dei nomi. Il valore predefinito è **1800**.|  
 |UseSessionCookies|Indica se il server di report deve utilizzare cookie di sessione per le comunicazioni con i browser dei client. Il valore predefinito è **true**.|  
 |SessionTimeout|Intervallo, in secondi, durante il quale una sessione rimane attiva. Il valore predefinito è **600**.|  
 |EnableMyReports|Indica se la caratteristica Report personali è abilitata. Un valore **true** indica che la caratteristica è abilitata.|  

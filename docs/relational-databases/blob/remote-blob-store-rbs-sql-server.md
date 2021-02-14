@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bfd234025664e7508d7d9cf942ff81a216b447a2
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 89a79b07977d8fec2e2dd6f2a8b9acd9cea0ba5e
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171753"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100343159"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Archivio Blob remoto (RBS) (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "98171753"
 
 | Versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] | Percorso download RBS |
 |:---|:---|
-| [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] | [[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833) |
+| [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] | [[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833) |
 | [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] | [[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992) |
-| [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] | [[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] Pagina di download di RBS](https://go.microsoft.com/fwlink/?linkid=2109005) |
+| [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] | [[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] Pagina di download di RBS](https://go.microsoft.com/fwlink/?linkid=2109005) |
 | &nbsp; | &nbsp; |
   
  
@@ -72,7 +72,7 @@ ms.locfileid: "98171753"
 ### <a name="credential-store-symmetric-key"></a>Chiave simmetrica dell'archivio delle credenziali  
  Se il provider richiede la configurazione e l'uso di un segreto archiviato nell'archivio delle credenziali, RBS usa una chiave simmetrica per crittografare i segreti del provider, utilizzabile da un client per ottenere l'autorizzazione per l'archivio BLOB del provider.  
   
--   RBS 2016 usa una chiave simmetrica **AES_128** . [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] non consente la creazione di nuove chiavi **TRIPLE_DES** , se non per motivi di compatibilità con le versioni precedenti. Per altre informazioni, vedere [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md).  
+-   RBS 2016 usa una chiave simmetrica **AES_128** . [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] non consente la creazione di nuove chiavi **TRIPLE_DES** , se non per motivi di compatibilità con le versioni precedenti. Per altre informazioni, vedere [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md).  
   
 -   RBS 2014 e le versioni precedenti usano un archivio di credenziali che contiene i segreti crittografati con l'algoritmo per chiavi simmetriche **TRIPLE_DES** , ora obsoleto. Se si usa ancora **TRIPLE_DES**, [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di migliorare la sicurezza seguendo i passaggi descritti in questo argomento per adottare un metodo di crittografia più sicuro per la chiave.  
   

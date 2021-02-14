@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0945ffa8845c901662acb29c3ed04826870d0ae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ef2625be70c2af44f4a45ba00302b3d26afc101d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722605"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339946"
 ---
 # <a name="path-expressions---specifying-predicates"></a>Espressioni di percorso - Specifica predicati
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "85722605"
   
 -   Un test del nodo. Per altre informazioni, vedere [specifica del test di nodo in un passaggio dell'espressione di percorso](../xquery/path-expressions-specifying-node-test.md).  
   
--   Zero o più predicati Operazione facoltativa.  
+-   Zero o più predicati Questo indirizzo è facoltativo.  
   
  Il predicato facoltativo rappresenta la terza parte del passo dell'asse in un'espressione di percorso.  
   
@@ -161,7 +161,7 @@ WHERE ProductModelID=7
   
 3.  Se il valore dell'espressione predicato è un valore semplice booleano, il valore di verità del predicato è uguale al valore dell'espressione predicato.  
   
-     Ad esempio, la query seguente viene specificata in base a una variabile di tipo **XML**che include un'istanza XML, l'istanza XML del sondaggio del cliente. La query recupera i clienti con figli. In questa query, corrisponde a \<HasChildren> 1 \</HasChildren> .  
+     Ad esempio, la query seguente viene specificata in base a una variabile di tipo **XML** che include un'istanza XML, l'istanza XML del sondaggio del cliente. La query recupera i clienti con figli. In questa query, corrisponde a \<HasChildren> 1 \</HasChildren> .  
   
     ```  
     declare @x xml  

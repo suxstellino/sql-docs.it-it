@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ed19a835b6df605a6ec735a8063a192ea32148fd
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 4a9734dd4efd2f4dcedd539218a0a7d989211749
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034834"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353279"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>Funzioni su nodi - namespace-uri
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ fn:namespace-uri($arg as node()?) as xs:string
   
 -   Se *$arg* è un nodo elemento o attributo il cui expanded-QName non è in uno spazio dei nomi, la funzione restituisce la stringa di lunghezza zero  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
 ### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>R. Recupero dell'URI dello spazio dei nomi di un nodo specifico  

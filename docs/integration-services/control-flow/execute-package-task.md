@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ab1215ca58f64c6e28f78e423bdee5a66b4c46b2
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
-ms.translationtype: HT
+ms.openlocfilehash: 8251f2ff30fafff584b4f56fe93a9b7423ea412b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725932"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352081"
 ---
 # <a name="execute-package-task"></a>Attività Esegui pacchetto
 
@@ -49,7 +49,7 @@ ms.locfileid: "91725932"
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include attività per l'esecuzione delle operazioni del flusso di lavoro, ad esempio l'esecuzione di eseguibili e file batch. Per altre informazioni, vedere [Attività Esegui processo](../../integration-services/control-flow/execute-process-task.md).  
   
 ## <a name="running-packages"></a>Esecuzione di pacchetti  
- L'attività Esegui pacchetto consente di eseguire i pacchetti figlio contenuti nello stesso progetto in cui è contenuto il pacchetto padre. Per selezionare un pacchetto figlio dal progetto, impostare la proprietà **ReferenceType** su **Riferimento al progetto**e quindi impostare la proprietà **PackageNameFromProjectReference** .  
+ L'attività Esegui pacchetto consente di eseguire i pacchetti figlio contenuti nello stesso progetto in cui è contenuto il pacchetto padre. Per selezionare un pacchetto figlio dal progetto, impostare la proprietà **ReferenceType** su **Riferimento al progetto** e quindi impostare la proprietà **PackageNameFromProjectReference** .  
   
 > [!NOTE]  
 >  L'opzione **ReferenceType** è di sola lettura e viene impostata su **Riferimento esterno** se il progetto in cui è contenuto il pacchetto non è stato convertito nel modello di distribuzione del progetto. [Distribuire progetti e pacchetti di Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
@@ -64,7 +64,7 @@ ms.locfileid: "91725932"
   
  Talvolta può essere tuttavia necessario che l'esito dei pacchetti padre e figlio venga determinato come per una singola unità oppure si desidera evitare l'overhead di un processo aggiuntivo. Se ad esempio un processo figlio non riesce e nel processo padre la fase successiva dell'elaborazione dipende dal completamento del processo figlio, è preferibile eseguire il pacchetto figlio nello stesso processo del pacchetto padre.  
   
- Per impostazione predefinita, la proprietà ExecuteOutOfProcess dell'attività Esegui pacchetto è impostata su **False**e il pacchetto figlio viene eseguito nello stesso processo del pacchetto padre. Se si imposta questa proprietà su **True**, il pacchetto figlio viene eseguito in un processo separato. In questo modo è possibile che l'avvio del pacchetto figlio sia rallentato. Inoltre, se si imposta la proprietà su **True**, non è possibile eseguire il debug del pacchetto in un'installazione di soli strumenti. È necessario installare [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Per altre informazioni, vedere [Installazione di Integration Services](../../integration-services/install-windows/install-integration-services.md).  
+ Per impostazione predefinita, la proprietà ExecuteOutOfProcess dell'attività Esegui pacchetto è impostata su **False** e il pacchetto figlio viene eseguito nello stesso processo del pacchetto padre. Se si imposta questa proprietà su **True**, il pacchetto figlio viene eseguito in un processo separato. In questo modo è possibile che l'avvio del pacchetto figlio sia rallentato. Inoltre, se si imposta la proprietà su **True**, non è possibile eseguire il debug del pacchetto in un'installazione di soli strumenti. È necessario installare [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Per altre informazioni, vedere [Installazione di Integration Services](../../integration-services/install-windows/install-integration-services.md).  
   
 ## <a name="extending-transactions"></a>Estensione delle transazioni  
  Poiché la transazione utilizzata dal pacchetto padre può essere estesa al pacchetto figlio, è possibile eseguire in un'unica operazione il commit o il rollback di tutte le operazioni eseguite dai due pacchetti. È ad esempio possibile eseguire il commit o il rollback degli inserimenti nel database eseguiti dal pacchetto padre a seconda dell'esito degli inserimenti nel database eseguiti dal pacchetto figlio e viceversa. Per altre informazioni, vedere [Transazioni ereditate](../integration-services-transactions.md).  
@@ -165,7 +165,7 @@ ms.locfileid: "91725932"
  Se il pacchetto figlio è protetto con password, specificare la password del pacchetto figlio oppure fare clic sul pulsante con i puntini di sospensione (...) per creare una nuova password per il pacchetto figlio.  
   
  **ExecuteOutOfProcess**  
- Specificare se il pacchetto figlio viene eseguito nel processo del pacchetto padre o in un processo a parte. Per impostazione predefinita, la proprietà ExecuteOutOfProcess dell'attività Esegui pacchetto è impostata su **False**e il pacchetto figlio viene eseguito nello stesso processo del pacchetto padre. Se si imposta questa proprietà su **True**, il pacchetto figlio viene eseguito in un processo separato. In questo modo è possibile che l'avvio del pacchetto figlio sia rallentato. Inoltre, se la proprietà viene impostata su **True**, non è possibile eseguire il debug del pacchetto in un'installazione di soli strumenti, ma è necessario installare il prodotto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per altre informazioni, vedere [Installazione di Integration Services](../../integration-services/install-windows/install-integration-services.md).  
+ Specificare se il pacchetto figlio viene eseguito nel processo del pacchetto padre o in un processo a parte. Per impostazione predefinita, la proprietà ExecuteOutOfProcess dell'attività Esegui pacchetto è impostata su **False** e il pacchetto figlio viene eseguito nello stesso processo del pacchetto padre. Se si imposta questa proprietà su **True**, il pacchetto figlio viene eseguito in un processo separato. In questo modo è possibile che l'avvio del pacchetto figlio sia rallentato. Inoltre, se la proprietà viene impostata su **True**, non è possibile eseguire il debug del pacchetto in un'installazione di soli strumenti, ma è necessario installare il prodotto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per altre informazioni, vedere [Installazione di Integration Services](../../integration-services/install-windows/install-integration-services.md).  
   
 #### <a name="referencetype-dynamic-options"></a>Opzioni dinamiche relative a ReferenceType  
   

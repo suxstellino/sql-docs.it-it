@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 16bffa4040e1a5068f83e9f68da981ed4aa0d7f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1c171dab70a909edb197f5a498d2207bcb2e555b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730734"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352325"
 ---
 # <a name="xml-construction-xquery"></a>Costruzione di strutture XML (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -547,7 +547,7 @@ test
 ### <a name="other-direct-xml-constructors"></a>Altri costruttori XML diretti  
  I costruttori per le istruzioni di elaborazione e i commenti XML utilizzano la stessa sintassi del costrutto XML corrispondente. Sono inoltre supportati costruttori calcolati per i nodi di testo, ma vengono utilizzati principalmente nel linguaggio XML DML per la costruzione di nodi di testo.  
   
- **Nota** Per un esempio di utilizzo di un costruttore di nodo di testo esplicito, vedere l'esempio specifico in [insert &#40;&#41;DML XML ](../t-sql/xml/insert-xml-dml.md).  
+ **Nota** Per un esempio di utilizzo di un costruttore di nodo di testo esplicito, vedere l'esempio specifico in [insert &#40;&#41;DML XML](../t-sql/xml/insert-xml-dml.md).  
   
  Nella query seguente il costrutto XML include un elemento, due attributi, un commento e un'istruzione di elaborazione. Si noti che una virgola viene utilizzata prima della> di <`FirstLocation` , perché viene costruita una sequenza.  
   

@@ -21,12 +21,12 @@ ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b93b6ddc2d3343bd1d34fc97cff4c5d95e2634f8
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: df49c9e0c270629fdf00a9ac4ab19804e6a3d9c0
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99199862"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100352920"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,11 +55,11 @@ ms.locfileid: "99199862"
 |durability|**tinyint**|**SI APPLICA A**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Di seguito sono indicati i valori possibili:<br /><br /> 0 = SCHEMA_AND_DATA<br /><br /> 1 = SCHEMA_ONLY<br /><br /> Il valore predefinito è 0.|  
 |durability_desc|**nvarchar(60)**|**SI APPLICA A**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Di seguito sono indicati i valori possibili:<br /><br /> SCHEMA_ONLY<br /><br /> SCHEMA_AND_DATA<br /><br /> Il valore di SCHEMA_AND_DATA indica che la tabella è durevole e in memoria. SCHEMA_AND_DATA è il valore predefinito per le tabelle con ottimizzazione per la memoria. Il valore di SCHEMA_ONLY indica che i dati della tabella non verranno resi persistenti al riavvio del database con gli oggetti con ottimizzazione per la memoria.|  
 |is_memory_optimized|**bit**|**SI APPLICA A**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Di seguito sono indicati i valori possibili:<br /><br /> 0 = senza ottimizzazione per la memoria.<br /><br /> 1 = con ottimizzazione per la memoria.<br /><br /> Il valore predefinito è 0.<br /><br /> Le tabelle con ottimizzazione per la memoria sono tabelle utente in memoria, il cui schema è persistente su disco in modo analogo ad altre tabelle utente. È possibile accedere alle tabelle con ottimizzazione per la memoria da stored procedure compilate in modo nativo.|  
-|temporal_type|**tinyint**|**SI APPLICA A**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive e [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Valore numerico che rappresenta il tipo di tabella:<br /><br /> 0 = NON_TEMPORAL_TABLE<br /><br /> 1 = HISTORY_TABLE<br /><br /> 2 = SYSTEM_VERSIONED_TEMPORAL_TABLE|  
-|temporal_type_desc|**nvarchar(60)**|**SI APPLICA A**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive e [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Descrizione testuale del tipo di tabella:<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
-|history_table_id|**int**|**SI APPLICA A**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive e [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Quando temporal_type IN (2,4) restituisce object_id della tabella che gestisce i dati cronologici; in caso contrario, restituisce NULL.|  
-|is_remote_data_archive_enabled|**bit**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive e [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> Indica se la tabella è abilitata per l'estensione.<br /><br /> 0 = la tabella non è abilitata per l'estensione.<br /><br /> 1 = la tabella è abilitata per l'estensione.<br /><br /> Per ulteriori informazioni, vedere [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
-|is_external|**bit**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] .<br /><br /> Indica che la tabella è una tabella esterna.<br /><br /> 0 = la tabella non è una tabella esterna.<br /><br /> 1 = la tabella è una tabella esterna.| 
+|temporal_type|**tinyint**|**SI APPLICA A**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive e [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Valore numerico che rappresenta il tipo di tabella:<br /><br /> 0 = NON_TEMPORAL_TABLE<br /><br /> 1 = HISTORY_TABLE<br /><br /> 2 = SYSTEM_VERSIONED_TEMPORAL_TABLE|  
+|temporal_type_desc|**nvarchar(60)**|**SI APPLICA A**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive e [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Descrizione testuale del tipo di tabella:<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
+|history_table_id|**int**|**SI APPLICA A**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive e [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Quando temporal_type IN (2,4) restituisce object_id della tabella che gestisce i dati cronologici; in caso contrario, restituisce NULL.|  
+|is_remote_data_archive_enabled|**bit**|**Si applica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive e [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> Indica se la tabella è abilitata per l'estensione.<br /><br /> 0 = la tabella non è abilitata per l'estensione.<br /><br /> 1 = la tabella è abilitata per l'estensione.<br /><br /> Per ulteriori informazioni, vedere [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
+|is_external|**bit**|**Si applica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] .<br /><br /> Indica che la tabella è una tabella esterna.<br /><br /> 0 = la tabella non è una tabella esterna.<br /><br /> 1 = la tabella è una tabella esterna.| 
 |history_retention_period|**int**|**Si applica a**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Valore numerico che rappresenta la durata del periodo di memorizzazione della cronologia temporale in unità specificate con history_retention_period_unit. |  
 |history_retention_period_unit|**int**|**Si applica a**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Valore numerico che rappresenta il tipo di unità del periodo di memorizzazione della cronologia temporale. <br /><br />-1: INFINITO <br /><br />3: GIORNO <br /><br />4: SETTIMANA <br /><br />5: MESE <br /><br />6: ANNO |  
 |history_retention_period_unit_desc|**nvarchar (10)**|**Si applica a**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Descrizione testuale del tipo di unità del periodo di memorizzazione della cronologia temporale. <br /><br />INFINITE <br /><br />DAY <br /><br />WEEK <br /><br />MONTH <br /><br />YEAR |  
@@ -84,7 +84,7 @@ GO
   
 Nell'esempio seguente viene illustrato il modo in cui i dati temporali correlati possono essere esposti.  
    
-**SI APPLICA A**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] e versioni successive e [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].
+**SI APPLICA A**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive e [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].
   
 ```  
 SELECT T1.object_id, T1.name as TemporalTableName, SCHEMA_NAME(T1.schema_id) AS TemporalTableSchema,  

@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 7a73a233a84d532f55dc61797f44e5d39013722f
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
-ms.translationtype: HT
+ms.openlocfilehash: f603b138773ea76fe73ea3d6929ece535779e23c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067341"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100351997"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Esercitazione: Distribuire ed eseguire un pacchetto di SQL Server Integration Services (SSIS) in Azure
 
@@ -52,7 +52,7 @@ Ecco i due aspetti più importanti da ricordare. Questi passaggi sono descritti 
 
 1. Aprire SQL Server Management Studio.
 
-2. **Connettersi al server**. Immettere le informazioni seguenti nella finestra di dialogo **Connetti al server** :
+2. **Connettersi al server**. Immettere le informazioni seguenti nella finestra di dialogo **Connetti al server**:
 
    | Impostazione       | Valore consigliato | Descrizione | 
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -91,7 +91,7 @@ Per altre informazioni sulla distribuzione di pacchetti e sulla distribuzione gu
 
 2. Nella pagina **Seleziona origine** selezionare il progetto SSIS esistente da distribuire.
     -   Per distribuire un file di distribuzione del progetto creato, selezionare **File distribuzione progetto** e immettere il percorso al file con estensione ispac.
-    -   Per distribuire un progetto che si trova in un catalogo SSIS, selezionare **Catalogo di Integration Services** , quindi immettere il nome del server e il percorso del progetto nel catalogo. In questo passaggio è possibile ridistribuire solo i progetti che risiedono in SSISDB ospitato da SQL Server.
+    -   Per distribuire un progetto che si trova in un catalogo SSIS, selezionare **Catalogo di Integration Services**, quindi immettere il nome del server e il percorso del progetto nel catalogo. In questo passaggio è possibile ridistribuire solo i progetti che risiedono in SSISDB ospitato da SQL Server.
     -   Selezionare **Avanti** per visualizzare la pagina **Seleziona destinazione**.
   
 3.  Nella pagina **Seleziona destinazione** selezionare la destinazione per il progetto.
@@ -105,7 +105,7 @@ Per altre informazioni sulla distribuzione di pacchetti e sulla distribuzione gu
     -   Fare clic su **Distribuisci** per avviare il processo di distribuzione.
 
     > [!NOTE]
-    > Se viene visualizzato il messaggio di errore **Nessun agente di lavoro attivo. (provider di dati SqlClient .Net)** , assicurarsi che il runtime di integrazione SSIS di Azure sia in esecuzione. Questo errore si verifica se si tenta di eseguire la distribuzione mentre il runtime di integrazione SSIS di Azure è arrestato.
+    > Se viene visualizzato il messaggio di errore **Nessun agente di lavoro attivo. (provider di dati SqlClient .Net)**, assicurarsi che il runtime di integrazione SSIS di Azure sia in esecuzione. Questo errore si verifica se si tenta di eseguire la distribuzione mentre il runtime di integrazione SSIS di Azure è arrestato.
 
 5.  Al termine del processo di distribuzione viene visualizzata la pagina **Risultati**. Questa pagina consente di visualizzare l'esito positivo o negativo di ogni azione.
     -   Se l'azione ha avuto esito negativo, selezionare **Non riuscito** nella colonna **Risultato** per visualizzare una spiegazione dell'errore.
@@ -182,15 +182,15 @@ Write-Host "All done."
 
 2. Fare clic con il pulsante destro del mouse e selezionare **Esegui** per aprire la finestra di dialogo **Esegui pacchetto**.
 
-3.  Nella finestra di dialogo **Esegui pacchetto** configurare l'esecuzione del pacchetto usando le impostazioni delle schede **Parametri** , **Gestioni connessioni** e **Avanzate**.
+3.  Nella finestra di dialogo **Esegui pacchetto** configurare l'esecuzione del pacchetto usando le impostazioni delle schede **Parametri**, **Gestioni connessioni** e **Avanzate**.
 
 4.  Selezionare **OK** per eseguire il pacchetto.
 
 ## <a name="monitor-the-running-package-in-ssms"></a>Monitorare il pacchetto in esecuzione in SSMS
 
-Per visualizzare lo stato delle operazioni di Integration Services attualmente in esecuzione nel server Integration Services, ad esempio distribuzione, convalida ed esecuzione dei pacchetti, usare la finestra di dialogo **Operazioni attive** di SSMS. Per aprire la finestra di dialogo **Operazioni attive** , fare clic con il pulsante destro del mouse su **SSISDB** , quindi selezionare **Operazioni attive**.
+Per visualizzare lo stato delle operazioni di Integration Services attualmente in esecuzione nel server Integration Services, ad esempio distribuzione, convalida ed esecuzione dei pacchetti, usare la finestra di dialogo **Operazioni attive** di SSMS. Per aprire la finestra di dialogo **Operazioni attive**, fare clic con il pulsante destro del mouse su **SSISDB**, quindi selezionare **Operazioni attive**.
 
-È anche possibile selezionare un pacchetto in Esplora oggetti, fare clic con il pulsante destro del mouse e selezionare **Report** , quindi **Report standard** e infine **Tutte le esecuzioni**.
+È anche possibile selezionare un pacchetto in Esplora oggetti, fare clic con il pulsante destro del mouse e selezionare **Report**, quindi **Report standard** e infine **Tutte le esecuzioni**.
 
 Per altre informazioni su come monitorare i pacchetti in esecuzione in SQL Server Management Studio, vedere [Esecuzione di pacchetti e altre operazioni di monitoraggio](../performance/monitor-running-packages-and-other-operations.md).
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1a0b9cf43331e45d4aa1253fe5ad4b90d0bbea92
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6dcaa7bbbd5674c6db3b6d8ec5185cc31e890707
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775458"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352310"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery e tipizzazione statica
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "85775458"
   
  I sottotipi vengono definiti in base alle regole di sottotipizzazione per l'utilizzo della derivazione per restrizione o per estensione di XML Schema. Ad esempio, un tipo S è un sottotipo del tipo T se tutti i valori di tipo S sono anche istanze del tipo T.  
   
- Inoltre, tutti i valori interi sono anche valori decimali, basati sulla gerarchia dei tipi di XML Schema. Tuttavia, non tutti i valori decimali sono valori interi. Pertanto, un valore intero è un sottotipo di un valore decimale ma non viceversa. Ad esempio, l' **+** operazione consente solo valori di determinati tipi, ad esempio i tipi numerici **xs: integer**, **xs: Decimal**, **xs: float**e **xs: Double**. Se vengono passati valori di altri tipi, ad esempio **xs: String**, l'operazione genera un errore di tipo. Questo processo viene chiamato tipizzazione forte. È possibile convertire in modo implicito valori di altri tipi, ad esempio il tipo atomico utilizzato per indicare istanze XML non tipizzate, in un valore di un tipo accettato dall'operazione. Questo processo viene chiamato tipizzazione debole.  
+ Inoltre, tutti i valori interi sono anche valori decimali, basati sulla gerarchia dei tipi di XML Schema. Tuttavia, non tutti i valori decimali sono valori interi. Pertanto, un valore intero è un sottotipo di un valore decimale ma non viceversa. Ad esempio, l' **+** operazione consente solo valori di determinati tipi, ad esempio i tipi numerici **xs: integer**, **xs: Decimal**, **xs: float** e **xs: Double**. Se vengono passati valori di altri tipi, ad esempio **xs: String**, l'operazione genera un errore di tipo. Questo processo viene chiamato tipizzazione forte. È possibile convertire in modo implicito valori di altri tipi, ad esempio il tipo atomico utilizzato per indicare istanze XML non tipizzate, in un valore di un tipo accettato dall'operazione. Questo processo viene chiamato tipizzazione debole.  
   
  Se è necessario dopo una conversione implicita, il controllo dei tipi statici garantisce che solo i valori dei tipi consentiti con la cardinalità corretta vengano passati a un'operazione. Per "String" + 1, riconosce che il tipo statico di "String" è **xs: String**. Poiché non si tratta di un tipo consentito per l' **+** operazione, viene generato un errore di tipo.  
   

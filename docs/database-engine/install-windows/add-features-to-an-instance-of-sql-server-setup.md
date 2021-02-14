@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/07/2019
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: a8a0e3db546f4a74e1ec9bcc3c6312d8ca848777
-ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
-ms.translationtype: HT
+ms.openlocfilehash: 2f756136657d20a694cbaa2263500624eeaf8c27
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97975497"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100347871"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>Aggiungere funzionalità a un'istanza di SQL Server (programma di installazione)
 

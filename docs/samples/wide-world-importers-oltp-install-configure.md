@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9868b414d627c7ea98504120432c0c3a662d463b
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 588597398c11b9b374bdecd272162fe82053cd8f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956552"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354081"
 ---
 # <a name="installation-and-configuration"></a>Installazione e configurazione
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ Istruzioni per l'installazione e la configurazione del database OLTP Wide World 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (o versione successiva) o il [database SQL di Azure](https://azure.microsoft.com/services/sql-database/). Per la versione completa dell'esempio, usare SQL Server Evaluation/Developer/Enterprise Edition.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Per ottenere risultati ottimali, usare la versione di giugno 2016 o successiva.
 
-## <a name="download"></a>Download
+## <a name="download"></a>Scarica
 
 La versione più recente dell'esempio:
 
@@ -48,7 +48,7 @@ Per ripristinare un backup in un'istanza di SQL Server, è possibile usare Manag
 1. Aprire SQL Server Management Studio e connettersi all'istanza di SQL Server di destinazione.
 2. Fare clic con il pulsante destro del mouse sul nodo **database** e selezionare **Ripristina database**.
 3. Selezionare **Device (dispositivo** ) e fare clic sul pulsante **...**
-4. Nella finestra di dialogo **Seleziona dispositivi di backup**fare clic su **Aggiungi**, passare al backup del database nel file System del server e selezionare il backup. Fare clic su **OK**.
+4. Nella finestra di dialogo **Seleziona dispositivi di backup** fare clic su **Aggiungi**, passare al backup del database nel file System del server e selezionare il backup. Fare clic su **OK**.
 5. Se necessario, modificare il percorso di destinazione per i file di dati e di log nel riquadro **file** . Si noti che è consigliabile inserire i file di dati e di log in unità diverse.
 6. Fare clic su **OK**. Verrà avviato il ripristino del database. Al termine, il database WideWorldImporters verrà installato nell'istanza di SQL Server.
 

@@ -22,12 +22,12 @@ ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9037aaefe27cd50deb9b61af423a8074ab86f65
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 401636f25e34c3c76faed1cc73fc54b9e2b911bf
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99204810"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489345"
 ---
 # <a name="sysdm_db_tuning_recommendations-transact-sql"></a>\_indicazioni sull'ottimizzazione del database sys.dm \_ \_ (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -85,6 +85,8 @@ Il documento JSON nella `state` colonna contiene il motivo per cui viene descrit
 | `VerificationForcedQueryRecompile`| La query viene ricompilata perché non esiste un miglioramento significativo delle prestazioni. |
 | `PlanForcedByUser`| L'utente ha forzato manualmente il piano utilizzando [sp_query_store_force_plan &#40;procedura&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) . Il motore di database non applica la raccomandazione se l'utente ha deciso in modo esplicito di forzare un piano. |
 | `PlanUnforcedByUser` | L'utente non ha forzato manualmente il piano utilizzando [sp_query_store_unforce_plan &#40;procedura&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md) . Poiché l'utente ha ripristinato in modo esplicito il piano consigliato, il motore di database continuerà a utilizzare il piano corrente e genererà una nuova raccomandazione se si verifica una regressione del piano in futuro. |
+| `UserForcedDifferentPlan` | L'utente ha forzato manualmente un piano diverso utilizzando [sp_query_store_force_plan &#40;procedura&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) . Il motore di database non applica la raccomandazione se l'utente ha deciso in modo esplicito di forzare un piano. |
+| `TempTableChanged` | Una tabella temporanea utilizzata nel piano è stata modificata. |
 
  La statistica della colonna dettagli non Mostra le statistiche del piano di runtime (ad esempio, il tempo di CPU corrente). I dettagli della raccomandazione vengono presi al momento del rilevamento della regressione e descrivono il motivo per cui è stata [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identificata la regressione delle prestazioni. Utilizzare `regressedPlanId` e `recommendedPlanId` per eseguire query [query Store viste del catalogo](../../relational-databases/performance/how-query-store-collects-data.md) per individuare le statistiche esatte del piano di Runtime.
 
@@ -178,7 +180,7 @@ Per altre informazioni sulle funzioni JSON che possono essere usate per eseguire
 È richiesta l' `VIEW SERVER STATE` autorizzazione in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] .   
 Richiede l' `VIEW DATABASE STATE` autorizzazione per il database in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .   
 
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Ottimizzazione automatica](../../relational-databases/automatic-tuning/automatic-tuning.md)   
  [sys.database_automatic_tuning_options &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)   
  [sys.database_query_store_options &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   

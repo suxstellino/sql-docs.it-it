@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7f4baf9f3ef626f5e2dcdc62092afaf1e586df33
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: f277ecb0d3f0cc3a2e4cc62d3feff954e7c22327
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196095"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100348879"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Guida di riferimento alla configurazione Web (Master Data Services)
 
@@ -35,7 +35,7 @@ ms.locfileid: "92196095"
 |**connectionStrings**|Elemento ASP.NET. Per altre informazioni, vedere [Elemento connectionStrings (schema delle impostazioni ASP.NET)](/previous-versions/dotnet/netframework-4.0/bf7sd233(v=vs.100)) in MSDN Library.|  
 |**System. Web**|Elemento ASP.NET. Per altre informazioni, vedere [Elemento system.web (schema delle impostazioni ASP.NET)](/previous-versions/dotnet/netframework-4.0/dayb112d(v=vs.100)) in MSDN Library.|  
 |**avvio**|Elemento .NET Framework. Per ulteriori informazioni, vedere l' [ \<startup> elemento](/dotnet/framework/configure-apps/file-schema/startup/startup-element) in MSDN Library.|  
-|**Runtime**|Elemento .NET Framework. Per ulteriori informazioni, vedere l' [ \<runtime> elemento](/dotnet/framework/configure-apps/file-schema/runtime/runtime-element) in MSDN Library.|  
+|**runtime**|Elemento .NET Framework. Per ulteriori informazioni, vedere l' [ \<runtime> elemento](/dotnet/framework/configure-apps/file-schema/runtime/runtime-element) in MSDN Library.|  
 |**system.codedom**|Elemento .NET Framework. Per ulteriori informazioni, vedere l' [ \<system.codedom> elemento](/dotnet/framework/configure-apps/file-schema/compiler/system-codedom-element) in MSDN Library.|  
 |**System. Web. Extensions**|Elemento ASP.NET. Per altre informazioni, vedere [Elemento system.web.extensions (schema delle impostazioni ASP.NET)](/previous-versions/dotnet/netframework-4.0/bb546044(v=vs.100)) in MSDN Library.|  
 |**system.webServer**|Gruppo di sezioni che contiene gli elementi IIS. Per altre informazioni, vedere [system.webServer Section Group \[IIS 7 Settings Schema\]](/previous-versions/iis/settings-schema/ms689429(v=vs.90)) (Gruppo di sezioni system.webServer (schema delle impostazioni IIS 7)) in MSDN Library.|  

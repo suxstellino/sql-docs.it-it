@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e7de4ccd0a7bba950767d9d9028e4635a10ee25d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0cd4a68b21ae23b60c2bea5618308c0d13300cab
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759466"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353271"
 ---
 # <a name="type-casting-rules-in-xquery"></a>Regole del cast dei tipi in XQuery
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "85759466"
   
 -   Per un tipo primitivo predefinito è possibile eseguire il cast a un altro tipo primitivo predefinito, in base alle regole indicate nella tabella.  
   
--   Per un tipo primitivo è possibile eseguire il cast a qualsiasi tipo derivato da tale tipo primitivo. Ad esempio, è possibile eseguire il cast da **xs: Decimal** a **xs: integer**o da **xs: Decimal** a **xs: Long**.  
+-   Per un tipo primitivo è possibile eseguire il cast a qualsiasi tipo derivato da tale tipo primitivo. Ad esempio, è possibile eseguire il cast da **xs: Decimal** a **xs: integer** o da **xs: Decimal** a **xs: Long**.  
   
 -   Per un tipo derivato è possibile eseguire il cast a qualsiasi tipo che rappresenti un predecessore corrispondente nella gerarchia di tipi, fino al relativo tipo di base primitivo predefinito. Ad esempio, è possibile eseguire il cast da **xs: token** a **xs: normalizedString** o a **xs: String**.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "85759466"
   
  Non sono supportati i tipi di cast seguenti:  
   
--   Cast a/da tipi elenco, Sono inclusi sia i tipi di elenco definiti dall'utente sia i tipi di elenco incorporati, ad esempio **xs: IDREFS**, **xs: Entities**e **xs: NMTOKENS**.  
+-   Cast a/da tipi elenco, Sono inclusi sia i tipi di elenco definiti dall'utente sia i tipi di elenco incorporati, ad esempio **xs: IDREFS**, **xs: Entities** e **xs: NMTOKENS**.  
   
 -   Il cast a o da **xs: QName** non è supportato.  
   

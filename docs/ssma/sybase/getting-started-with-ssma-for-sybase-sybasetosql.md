@@ -10,22 +10,22 @@ ms.topic: conceptual
 ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cd6e32470673a87a410530298972b251d2807e4b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2ed1698af612a3bd960b7c16011dc4f95e33f61a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931811"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078862"
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>Introduzione con SSMA per SAP ASE (SybaseToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) per SAP ASE consente di convertire rapidamente gli schemi di database SAP Adaptive Server Enterprise (ASE) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o negli schemi del database SQL di Azure, caricare gli schemi risultanti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o nel database SQL di Azure ed eseguire la migrazione dei dati da SAP ASE a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o al database SQL di Azure.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per SAP ASE consente di convertire rapidamente gli schemi di database SAP Adaptive Server Enterprise (ASE) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o negli schemi del database SQL di Azure, caricare gli schemi risultanti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o nel database SQL di Azure ed eseguire la migrazione dei dati da SAP ASE a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o al database SQL di Azure.  
   
 In questo argomento viene illustrato il processo di installazione e quindi viene illustrato come acquisire familiarità con l'interfaccia utente di SSMA.  
   
 ## <a name="installing-and-licensing-ssma"></a>Installazione e gestione delle licenze SSMA  
 Per usare SSMA, è prima necessario installare il programma client SSMA in un computer in grado di accedere sia all'istanza di origine di SAP ASE sia all'istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o al database SQL di Azure. Per usare la migrazione dei dati sul lato server, è necessario installare il pacchetto di estensione e almeno uno dei provider SAP ASE (OLE DB o ADO.NET) nel computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questi componenti supportano la migrazione dei dati e l'emulazione delle funzioni di sistema di SAP ASE. Per le istruzioni di installazione, vedere [installazione di SSMA per SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md).  
   
-Per avviare SSMA, fare clic sul pulsante **Start**, scegliere **tutti i programmi**, ** [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant per Sybase**, quindi selezionare ** [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant per Sybase**. La prima volta che si avvia SSMA, viene visualizzata una finestra di dialogo di gestione delle licenze. È necessario concedere in licenza SSMA utilizzando un Windows Live ID prima di poter utilizzare SSMA. Le istruzioni per la gestione delle licenze sono incluse nelle istruzioni di installazione nell'argomento [installazione di SSMA per Sybase Client &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md) .  
+Per avviare SSMA, fare clic sul pulsante **Start**, scegliere **tutti i programmi**, **[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant per Sybase**, quindi selezionare **[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant per Sybase**. La prima volta che si avvia SSMA, viene visualizzata una finestra di dialogo di gestione delle licenze. È necessario concedere in licenza SSMA utilizzando un Windows Live ID prima di poter utilizzare SSMA. Le istruzioni per la gestione delle licenze sono incluse nelle istruzioni di installazione nell'argomento [installazione di SSMA per Sybase Client &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md) .  
   
 ## <a name="ssma-for-sap-ase-user-interface"></a>SSMA per l'interfaccia utente di SAP ASE  
 Dopo aver installato e concesso in licenza SSMA, è possibile usare SSMA per eseguire la migrazione dei database SAP ASE a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o al database SQL di Azure. Consente di acquisire familiarità con l'interfaccia utente di SSMA prima di iniziare. Il diagramma seguente illustra l'interfaccia utente per SSMA, tra cui Esplora metadati, metadati, barre degli strumenti, riquadro di output e riquadro elenco errori:  
@@ -57,14 +57,14 @@ Con Sybase Metadata Explorer è possibile eseguire le attività seguenti:
 -   Selezionare gli oggetti per la migrazione dei dati, quindi eseguire la migrazione dei dati da tali oggetti a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o al database SQL di Azure. Per altre informazioni, vedere [migrazione dei dati di SAP ASE in SQL Server-database SQL di Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md).  
   
 #### <a name="sql-server-or-sql-azure-metadata-explorer"></a>SQL Server o SQL Azure Esplora metadati  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in alternativa, SQL Azure Esplora metadati Mostra informazioni su un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database SQL di Azure. Quando ci si connette a un'istanza di o a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database SQL di Azure, SSMA recupera i metadati relativi a tale istanza e li archivia nel file di progetto.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in alternativa, SQL Azure Esplora metadati Mostra informazioni su un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database SQL di Azure. Quando ci si connette a un'istanza di o a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database SQL di Azure, SSMA recupera i metadati relativi a tale istanza e li archivia nel file di progetto.  
   
 È possibile usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure Esplora metadati per selezionare gli oggetti di database SAP ASE convertiti e quindi caricare (sincronizzare) tali oggetti nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o nel database SQL di Azure.  
   
 Per ulteriori informazioni, vedere [caricamento di oggetti di database convertiti in SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/loading-converted-database-objects-into-sql-server-sybasetosql.md).  
   
 ### <a name="metadata"></a>Metadati  
-A destra di ogni Esplora metadati sono presenti schede che descrivono l'oggetto selezionato. Se ad esempio si seleziona una tabella in Sybase Metadata Explorer, verranno visualizzate sei schede: **tabella**, **SQL**, **mapping dei tipi**, **dati**, **Proprietà**e **report**. La scheda **report** contiene informazioni solo dopo la creazione di un report contenente l'oggetto selezionato. Se si seleziona una tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure Esplora metadati, verranno visualizzate tre schede: **tabella**, **SQL**e **dati**.  
+A destra di ogni Esplora metadati sono presenti schede che descrivono l'oggetto selezionato. Se ad esempio si seleziona una tabella in Sybase Metadata Explorer, verranno visualizzate sei schede: **tabella**, **SQL**, **mapping dei tipi**, **dati**, **Proprietà** e **report**. La scheda **report** contiene informazioni solo dopo la creazione di un report contenente l'oggetto selezionato. Se si seleziona una tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure Esplora metadati, verranno visualizzate tre schede: **tabella**, **SQL** e **dati**.  
   
 La maggior parte delle impostazioni dei metadati è di sola lettura. Tuttavia, è possibile modificare i metadati seguenti:  
   
@@ -109,6 +109,6 @@ Il menu **Visualizza** include i comandi per abilitare o disabilitare la visibil
   
 -   Il riquadro Elenco errori Mostra messaggi di errore, di avviso e informativi in un elenco che è possibile ordinare.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Migrazione dei database SAP ASE a SQL Server-database SQL di Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
 [Informazioni di riferimento sull'interfaccia utente &#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4db2e08ebda6b4f3b34eaceb79eb29fe1b94601e
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: ef35b92932cd4e55b47e2f75a16825f14202a815
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813085"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272642"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Creare un pacchetto di distribuzione di modelli tramite MDSModelDeploy
 
@@ -71,13 +71,13 @@ ms.locfileid: "85813085"
   
     -   Se MDS non è stato installato nel percorso predefinito, cercare MDSModelDeploy.exe nel computer locale.  
   
-3.  Facoltativa. Visualizzare le opzioni e la Guida.  
+3.  facoltativo. Visualizzare le opzioni e la Guida.  
   
     -   Per visualizzare tutte le opzioni disponibili, digitare `MDSModelDeploy` e premere Invio.  
   
     -   Per visualizzare la Guida per un'opzione, digitare quanto segue, dove *OptionName* è il nome dell'opzione: `MDSModelDeploy help OptionName`.  
   
-4.  Facoltativa. Se sono disponibili più applicazioni Web, determinare il nome del servizio in cui verrà eseguita la distribuzione digitando questo comando e premendo INVIO:  
+4.  facoltativo. Se sono disponibili più applicazioni Web, determinare il nome del servizio in cui verrà eseguita la distribuzione digitando questo comando e premendo INVIO:  
   
     ```  
     MDSModelDeploy listservices  
@@ -85,7 +85,7 @@ ms.locfileid: "85813085"
   
      Verrà restituito un elenco di valori, ad esempio `MDS1, Default Web Site, MDS`. Il primo valore di questo elenco, in questo caso `MDS1`, è necessario per distribuire il modello.  
   
-5.  Per creare un pacchetto contenente oggetti modello e dati, digitare quanto segue, dove *ModelName*, *VersionName*, *ServiceName*e *PackageName* sono rispettivamente i nomi del modello, della versione, del servizio e del file di output con estensione pkg:  
+5.  Per creare un pacchetto contenente oggetti modello e dati, digitare quanto segue, dove *ModelName*, *VersionName*, *ServiceName* e *PackageName* sono rispettivamente i nomi del modello, della versione, del servizio e del file di output con estensione pkg:  
   
     ```  
     MDSModelDeploy createpackage -model ModelName -version VersionName -service ServiceName -package PackageName -includedata  
@@ -93,7 +93,7 @@ ms.locfileid: "85813085"
   
      Se non si vuole includere dati, non usare le opzioni `-version` e `-includedata` .  
   
-6.  Premere Invio. Al termine della creazione del pacchetto, verrà visualizzato un messaggio "Operazione MDSModelDeploy completata".  
+6.  Premi INVIO. Al termine della creazione del pacchetto, verrà visualizzato un messaggio "Operazione MDSModelDeploy completata".  
   
 ## <a name="next-steps"></a>Passaggi successivi  
   

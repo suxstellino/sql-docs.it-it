@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c8d602417a7423655ef5800d081432499d2761aa
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
-ms.translationtype: HT
+ms.openlocfilehash: 58d7a46df8eb6580961d54e02f3ee6b0c57ee32f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891691"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100059326"
 ---
 # <a name="moving-report-server-databases-to-another-computer-ssrs-native-mode"></a>Spostamento di database del server di report in un altro computer (modalità nativa SSRS)
 
@@ -58,7 +58,7 @@ ms.locfileid: "91891691"
   
 8.  Fare clic su **Aggiungi** per selezionare i file con estensione mdf e ldf del database del server di report che si desidera collegare. Ripetere il passaggio per il database temporaneo del server di report.  
   
-9. Dopo avere collegato i database, verificare che **RSExecRole** sia un ruolo del database nel database del server di report e nel database temporaneo. Il ruolo**RSExecRole** deve disporre delle autorizzazioni di selezione, inserimento, aggiornamento, eliminazione e riferimento nelle tabelle del database del server di report e delle autorizzazioni di esecuzione nelle stored procedure. Per altre informazioni, vedere [Creare RSExecRole](../../reporting-services/security/create-the-rsexecrole.md).  
+9. Dopo avere collegato i database, verificare che **RSExecRole** sia un ruolo del database nel database del server di report e nel database temporaneo. Il ruolo **RSExecRole** deve disporre delle autorizzazioni di selezione, inserimento, aggiornamento, eliminazione e riferimento nelle tabelle del database del server di report e delle autorizzazioni di esecuzione nelle stored procedure. Per altre informazioni, vedere [Creare RSExecRole](../../reporting-services/security/create-the-rsexecrole.md).  
   
 10. Avviare lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e connettersi al server di report.  
   

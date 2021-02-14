@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e78a045c3dd7127df8c692120ff140892594fb0c
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
-ms.translationtype: HT
+ms.openlocfilehash: 9920430615d8391ef069078272ed8abbfcef6a00
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518931"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063596"
 ---
 # <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>Procedura: Aggiungere condizioni di test a unit test di SQL Server
 

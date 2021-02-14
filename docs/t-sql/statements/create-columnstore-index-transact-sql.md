@@ -30,12 +30,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0dfd8d7a49649b1be5e5f12d90c64eafa146ce44
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 47759238673fa5e88c02421e27d0e12177072605
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99192785"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100347039"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "99192785"
 Convertire una tabella rowstore in un indice columnstore cluster o creare un indice columnstore non cluster. Usare un indice columnstore per eseguire in modo efficiente un'analisi operativa in tempo reale per un carico di lavoro OLTP o per migliorare la compressione dei dati e le prestazioni delle query per i carichi di lavoro di data warehousing.  
   
 > [!NOTE]
-> A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] è possibile creare la tabella come indice columnstore cluster.   Non è più necessario creare prima una tabella rowstore e quindi convertirla in un indice columnstore cluster.  
+> A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] è possibile creare la tabella come indice columnstore cluster.   Non è più necessario creare prima una tabella rowstore e quindi convertirla in un indice columnstore cluster.  
 
 > [!TIP]
 > Per informazioni sulle linee guida di progettazione degli indici, vedere [Guida per la progettazione di indici di SQL Server](../../relational-databases/sql-server-index-design-guide.md).
@@ -120,10 +120,10 @@ Alcune opzioni non sono disponibili in tutte le versioni del motore di database.
 
 |Opzione| CLUSTERED | NONCLUSTERED |
 |---|---|---|
-| COMPRESSION_DELAY | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] |
-| DATA_COMPRESSION | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] | 
-| ONLINE | [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] |
-| WHERE - clausola | N/D | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] |
+| COMPRESSION_DELAY | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] |
+| DATA_COMPRESSION | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] | 
+| ONLINE | [!INCLUDE[ssSQLv15_md](../../includes/sssql19-md.md)] | [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] |
+| WHERE - clausola | N/D | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] |
 
 Tutte le opzioni sono disponibili nel database SQL di Azure.
 
@@ -355,13 +355,13 @@ Le opzioni SET nella colonna Valore obbligatorio sono richieste ogni volta che s
 -   TINYINT  
 -   bit  
 -   nvarchar [ ( *n* ) ] 
--   nvarchar(max)  (Si applica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e ai livelli Premium e Standard (S3 e successive) e a tutti i livelli di offerte VCore, solo in indici columnstore cluster)   
+-   nvarchar(max)  (Si applica a [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] e ai livelli Premium e Standard (S3 e successive) e a tutti i livelli di offerte VCore, solo in indici columnstore cluster)   
 -   nchar [ ( *n* ) ]  
 -   varchar [ ( *n* ) ]  
--   nvarchar(max)  (Si applica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e ai livelli Premium e Standard (S3 e successive) e a tutti i livelli di offerte VCore, solo in indici columnstore cluster)
+-   nvarchar(max)  (Si applica a [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] e ai livelli Premium e Standard (S3 e successive) e a tutti i livelli di offerte VCore, solo in indici columnstore cluster)
 -   char [ ( *n* ) ]  
 -   varbinary [ ( *n* ) ] 
--   varbinary (max)  (Si applica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e al database SQL di Azure a livello Premium e Standard (S3 e successive) e a tutti i livelli di offerte VCore, solo in indici columnstore cluster)
+-   varbinary (max)  (Si applica a [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] e al database SQL di Azure a livello Premium e Standard (S3 e successive) e a tutti i livelli di offerte VCore, solo in indici columnstore cluster)
 -   binary [ ( *n* ) ]  
 -   uniqueidentifier (si applica a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive)
   
@@ -369,7 +369,7 @@ Se la tabella sottostante ha una colonna con un tipo di dati non supportato per 
   
 **Le colonne che usano uno qualsiasi dei tipi di dati seguenti non possono essere incluse in un indice columnstore:**
 -   ntext, testo e immagine  
--   nvarchar(max), varchar(max) e varbinary(max) (si applica a [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], alle versioni precedenti e agli indici columnstore non cluster) 
+-   nvarchar(max), varchar(max) e varbinary(max) (si applica a [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], alle versioni precedenti e agli indici columnstore non cluster) 
 -   rowversion (e timestamp)  
 -   sql_variant  
 -   Tipi CLR (tipi spaziali e hierarchyid)  
@@ -383,11 +383,11 @@ Se la tabella sottostante ha una colonna con un tipo di dati non supportato per 
 -   Non può essere modificato usando l'istruzione **ALTER INDEX**. Per modificare l'indice non cluster, è invece necessario eliminare e ricreare l'indice columnstore. È possibile usare **ALTER INDEX** per disabilitare e ricompilare un indice columnstore.  
 -   Non può essere creato usando la parola chiave **INCLUDE**.  
 -   Impossibile includere le parole chiave **ASC** o **DESC** per l'ordinamento dell'indice. Gli indici columnstore vengono ordinati in base agli algoritmi di compressione. L'ordinamento comporta molti dei vantaggi a livello di prestazioni.  
--   Impossibile includere colonne LOB (Large Object) di tipo nvarchar(max), varchar(max) e varbinary(max) in indici columnstore non cluster. Solo gli indici columnstore cluster supportano i tipi LOB, a partire dalla versione [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e nel database SQL di Azure configurato ai livelli Premium e Standard (S3 e successive) e a tutti i livelli di offerte VCore. Si noti che le versioni precedenti non supportano i tipi LOB negli indici columnstore cluster e non cluster.
+-   Impossibile includere colonne LOB (Large Object) di tipo nvarchar(max), varchar(max) e varbinary(max) in indici columnstore non cluster. Solo gli indici columnstore cluster supportano i tipi LOB, a partire dalla versione [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] e nel database SQL di Azure configurato ai livelli Premium e Standard (S3 e successive) e a tutti i livelli di offerte VCore. Si noti che le versioni precedenti non supportano i tipi LOB negli indici columnstore cluster e non cluster.
 
 
 > [!NOTE]  
-> A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], è possibile creare un indice columnstore non cluster in una vista indicizzata.  
+> A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], è possibile creare un indice columnstore non cluster in una vista indicizzata.  
 
 
  **Non è possibile combinare gli indici columnstore con le funzionalità seguenti:**  
@@ -453,7 +453,7 @@ GO
 ```  
   
 ### <a name="c-handle-nonclustered-indexes-when-converting-a-rowstore-table-to-a-columnstore-index"></a>C. Gestire gli indici non cluster durante la conversione di una tabella rowstore in un indice columnstore.  
- Questo esempio illustra come gestire gli indici non cluster durante la conversione di una tabella rowstore in un indice columnstore. In realtà, a partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] non è richiesta alcuna azione speciale. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definisce e ricompila automaticamente gli indici non cluster nel nuovo indice columnstore cluster.  
+ Questo esempio illustra come gestire gli indici non cluster durante la conversione di una tabella rowstore in un indice columnstore. In realtà, a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] non è richiesta alcuna azione speciale. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definisce e ricompila automaticamente gli indici non cluster nel nuovo indice columnstore cluster.  
   
  Per eliminare gli indici non cluster, usare l'istruzione DROP INDEX prima di creare l'indice columnstore. L'opzione DROP_EXISTING elimina solo l'indice cluster che viene convertito. Non elimina gli indici non cluster.  
   
@@ -582,7 +582,7 @@ ON MyFactTable;
  Sono disponibili due modi per ricompilare l'indice columnstore cluster per intero. È possibile usare CREATE CLUSTERED COLUMNSTORE INDEX o [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) e l'opzione REBUILD. Entrambi i metodi raggiungono gli stessi risultati.  
   
 > [!NOTE]  
-> A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], usare `ALTER INDEX...REORGANIZE` anziché ricompilare con i metodi descritti in questo esempio.  
+> A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], usare `ALTER INDEX...REORGANIZE` anziché ricompilare con i metodi descritti in questo esempio.  
   
 ```sql  
 --Determine the Clustered Columnstore Index name of MyDimTable.  

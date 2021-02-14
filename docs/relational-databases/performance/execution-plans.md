@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: fee5c2f4f1d8a286830f4e1fdefdb1043964a726
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
-ms.translationtype: HT
+ms.openlocfilehash: 9007a29a613f1fea6891af33b66e69d98f2058b2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96505225"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100355260"
 ---
 # <a name="execution-plans"></a>Piani di esecuzione
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,9 +46,9 @@ Il piano di esecuzione di una query è costituito dalla definizione degli elemen
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ha tre opzioni di visualizzazione dei piani di esecuzione:        
-> -  **_[Piano di esecuzione stimato](../../relational-databases/performance/display-the-estimated-execution-plan.md)_* _: il piano compilato generato da Query Optimizer in base alle stime. Si tratta del piano di query memorizzato nella cache dei piani.        
-> -  _*_ [Piano di esecuzione effettivo](../../relational-databases/performance/display-an-actual-execution-plan.md) _*_ : il piano compilato più il [contesto di esecuzione](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). Diventa disponibile _*dopo il completamento dell'esecuzione della query**. Include le informazioni di runtime effettivo, ad esempio gli avvisi relativi all'esecuzione o, nelle versioni più recenti del [!INCLUDE[ssde_md](../../includes/ssde_md.md)], il tempo trascorso e il tempo CPU usato durante l'esecuzione.         
-> -  **_[Statistiche sulle query dinamiche](../../relational-databases/performance/live-query-statistics.md)_ *_: il piano compilato più il contesto di esecuzione. Sono disponibili per le _* query in esecuzione** e vengono aggiornate ogni secondo. Sono incluse informazioni di runtime, ad esempio il numero effettivo di righe che passano attraverso gli [operatori](../../relational-databases/showplan-logical-and-physical-operators-reference.md), il tempo trascorso e lo stato della query stimato.
+> -  ***[Piano di esecuzione stimato](../../relational-databases/performance/display-the-estimated-execution-plan.md)***: il piano compilato generato da Query Optimizer in base alle stime. Si tratta del piano di query memorizzato nella cache dei piani.        
+> -  Il ***[piano di esecuzione effettivo](../../relational-databases/performance/display-an-actual-execution-plan.md)** _ è il piano compilato più il relativo [contesto di esecuzione](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). Diventa disponibile _*dopo il completamento dell'esecuzione della query**. Include le informazioni di runtime effettivo, ad esempio gli avvisi relativi all'esecuzione o, nelle versioni più recenti del [!INCLUDE[ssde_md](../../includes/ssde_md.md)], il tempo trascorso e il tempo CPU usato durante l'esecuzione.         
+> -  ***[Live query Statistics](../../relational-databases/performance/live-query-statistics.md)** _ è il piano compilato più il relativo contesto di esecuzione. È disponibile per le esecuzioni di query _ * in-Flight * * e viene aggiornata ogni secondo. Sono incluse informazioni di runtime, ad esempio il numero effettivo di righe che passano attraverso gli [operatori](../../relational-databases/showplan-logical-and-physical-operators-reference.md), il tempo trascorso e lo stato della query stimato.
 
 > [!TIP]
 > Per altre informazioni sull'elaborazione delle query e sui piani di esecuzione delle query, vedere le sezioni [Ottimizzazione delle istruzioni SELECT](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements) e [Memorizzazione nella cache e riutilizzo del piano di esecuzione](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse) della Guida sull'architettura di elaborazione delle query.
