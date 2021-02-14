@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 26fd74dc-d02f-40f7-aeb3-50ce05e9e6b9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2f0f85904b4541ed478664f5f39e19cc309cf9a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
-ms.translationtype: HT
+ms.openlocfilehash: 24009d6b4e7d1fbfe107d16b828f16454dff7bc0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80217030"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064526"
 ---
 # <a name="initializing-custom-assembly-objects"></a>Inizializzazione di oggetti assembly personalizzati
   In alcuni casi, potrebbe essere necessario inizializzare valori di proprietà e campi nelle classi di assembly personalizzate quando si crea un'istanza di tali classi. In genere, è necessario inizializzare le classi personalizzate con i valori disponibili nelle raccolte di oggetti globali del report. A tale scopo, è possibile eseguire l'override del metodo **OnInit** dell'oggetto **Code** di un report. Per accedere al metodo **OnInit**, usare l'elemento **Code** della definizione del report. Esistono due tecniche per inizializzare i valori di proprietà o campi delle classi in un assembly personalizzato che si prevede di usare nel report: È possibile dichiarare e creare una nuova istanza della classe usando **OnInit** oppure è possibile chiamare un metodo disponibile pubblicamente usando **OnInit**.  

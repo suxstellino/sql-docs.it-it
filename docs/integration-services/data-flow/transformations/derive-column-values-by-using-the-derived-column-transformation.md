@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 30708e4bfb6dc21aa3f110a74754600aa3492b0e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: 06ecff11e6fc32ad59e6457ec2404292a9c22955
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88348417"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353726"
 ---
 # <a name="derive-column-values-with-the-derived-column-transformation"></a>Derivare i valori di colonna con la trasformazione Colonna derivata
 
@@ -53,7 +53,7 @@ ms.locfileid: "88348417"
   
      Se si è scelto di usare una nuova colonna, nella finestra di dialogo **Editor trasformazione Colonna derivata** viene valutata l'espressione e viene assegnato un tipo di dati alla colonna, a seconda del tipo di dati, della lunghezza, della precisione, della scala e della tabella codici.  
   
-8.  Se si usa una nuova colonna, selezionare un tipo di dati nell'elenco **Tipo di dati** . A seconda del tipo di dati selezionato, aggiornare facoltativamente i valori nelle colonne **Lunghezza**, **Precisione**, **Scala**e **Tabella codici** . I metadati delle colonne esistenti non possono essere modificati.  
+8.  Se si usa una nuova colonna, selezionare un tipo di dati nell'elenco **Tipo di dati** . A seconda del tipo di dati selezionato, aggiornare facoltativamente i valori nelle colonne **Lunghezza**, **Precisione**, **Scala** e **Tabella codici** . I metadati delle colonne esistenti non possono essere modificati.  
   
 9. Facoltativamente, modificare i valori nella colonna **Nome colonna derivata** .  
   

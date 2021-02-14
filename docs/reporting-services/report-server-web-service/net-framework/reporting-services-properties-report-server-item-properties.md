@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b368b02ebfe37e63b4d02e6e69d6eed2bdb831ea
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
-ms.translationtype: HT
+ms.openlocfilehash: 4d4db0c4bdef91630cd2bf20b215f7a6b26d714b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934589"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063659"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Proprietà di Reporting Services - Proprietà degli elementi del server di report
   Le proprietà degli elementi sono proprietà specifiche degli elementi del database del server di report. Tali elementi includono report, report collegati, cartelle, risorse, modelli e origini dati.  

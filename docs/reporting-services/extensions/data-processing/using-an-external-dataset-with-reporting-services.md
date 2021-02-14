@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 30bb74d7da5ef5e68c4e6229cfd307760d03711c
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
-ms.translationtype: HT
+ms.openlocfilehash: f34dee113abaf59f54db5983d39353bb45fc0641
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84530012"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100060946"
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Utilizzo di un set di dati esterno con Reporting Services
   L'oggetto **DataSet** è fondamentale per il supporto di scenari di dati disconnessi e distribuiti con [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. L'oggetto **DataSet** è una rappresentazione di dati residente in memoria che offre un modello di programmazione relazionale coerente indipendentemente dall'origine dati. Questo oggetto può essere utilizzato con più origini dati diverse, con dati XML o per gestire i dati locali dell'applicazione. L'oggetto **DataSet** rappresenta un set di dati completo, che include tabelle correlate, vincoli e relazioni tra le tabelle. Grazie alla versatilità dell'oggetto **DataSet** nell'archiviazione e nell'esposizione dei dati, i dati possono spesso essere elaborati e trasformati in un oggetto **DataSet** prima della creazione di qualsiasi report con tali dati.  
   
- Con le estensioni per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], è possibile integrare qualsiasi oggetto**DataSet** personalizzato creato dalle applicazioni esterne. A tale scopo, è possibile creare un'estensione per l'elaborazione dati personalizzata in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] che funga da ponte tra l'oggetto**DataSet** e il server di report. La maggior parte del codice per l'elaborazione di questo oggetto**DataSet** è inclusa nella classe **DataReader** creata.  
+ Con le estensioni per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], è possibile integrare qualsiasi oggetto **DataSet** personalizzato creato dalle applicazioni esterne. A tale scopo, è possibile creare un'estensione per l'elaborazione dati personalizzata in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] che funga da ponte tra l'oggetto **DataSet** e il server di report. La maggior parte del codice per l'elaborazione di questo oggetto **DataSet** è inclusa nella classe **DataReader** creata.  
   
  Il primo passaggio nell'esposizione dell'oggetto **DataSet** nel server di report consiste nell'implementare un metodo specifico del provider nella classe **DataReader** che consente di popolare un oggetto **DataSet**. Nell'esempio seguente viene illustrato come caricare dati statici in un oggetto **DataSet** usando un metodo specifico del provider nella classe **DataReader**.  
   

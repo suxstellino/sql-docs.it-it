@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 96240f605762be382065268fa39198baeeaaa53f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2207dcce2787fb6f51668e777b01ce345d1f33ba
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717171"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344663"
 ---
 # <a name="path-expressions---specifying-axis"></a>Espressioni di percorso - Specifica asse
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -46,9 +46,9 @@ ms.locfileid: "85717171"
   
 |Asse|Descrizione|  
 |----------|-----------------|  
-|**child**|Restituisce gli elementi figlio del nodo di contesto.|  
+|**figlio**|Restituisce gli elementi figlio del nodo di contesto.|  
 |**descendant**|Restituisce tutti i discendenti del nodo di contesto.|  
-|**padre**|Restituisce l'elemento padre del nodo di contesto.|  
+|**parent**|Restituisce l'elemento padre del nodo di contesto.|  
 |**attributo**|Restituisce gli attributi del nodo di contesto.|  
 |**auto**|Restituisce il nodo di contesto stesso.|  
 |**descendant-or-self**|Restituisce il nodo di contesto e tutti i relativi discendenti.|  
@@ -57,7 +57,7 @@ ms.locfileid: "85717171"
   
  L'espressione di percorso relativo `child::root/child::Location/attribute::LocationID` include tre passi. I primi due passi specificano ognuno un asse `child`, mentre il terzo passo specifica l'asse `attribute`. Quando viene eseguito sui documenti XML delle istruzioni di produzione nella tabella **Production. ProductModel** , l'espressione restituisce l' `LocationID` attributo del \<Location> nodo elemento figlio dell' \<root> elemento.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Gli esempi di query in questo argomento vengono specificati per le colonne di tipo **XML** nel database **AdventureWorks** .  
   
 ### <a name="a-specifying-a-child-axis"></a>R. Definizione di un asse child  

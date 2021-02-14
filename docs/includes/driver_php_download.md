@@ -1,1 +1,1 @@
-![Download](../ssms/media/download-icon.png)[Scaricare il driver PHP](../connect/php/download-drivers-php-sql-server.md)
+![Download](../ssms/media/download-icon.png)[scaricare il driver php](../connect/php/download-drivers-php-sql-server.md)

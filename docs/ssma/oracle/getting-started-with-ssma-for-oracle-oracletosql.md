@@ -14,22 +14,22 @@ ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 7ee753bd032cb8ad69f472888a99cc53cc5760d9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ce9d4908113daddf51707b4b7a80c4085defc228
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934902"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076722"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>Introduzione a SSMA per Oracle (OracleToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) per Oracle consente di convertire rapidamente gli schemi di database Oracle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schemi, caricare gli schemi risultanti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed eseguire la migrazione dei dati da Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per Oracle consente di convertire rapidamente gli schemi di database Oracle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schemi, caricare gli schemi risultanti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed eseguire la migrazione dei dati da Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 In questo argomento viene illustrato il processo di installazione e quindi viene illustrato come acquisire familiarità con l'interfaccia utente di SSMA.  
   
 ## <a name="installing-ssma"></a>Installazione di SSMA  
 Per utilizzare SSMA, è necessario innanzitutto installare il programma client SSMA in un computer in grado di accedere sia al database Oracle di origine che all'istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È quindi necessario installare un pacchetto di estensione e almeno uno dei provider Oracle (OLE DB o [!INCLUDE[vstecado](../../includes/vstecado_md.md)] ) nel computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questi componenti supportano la migrazione dei dati e l'emulazione di funzioni di sistema Oracle. Per le istruzioni di installazione, vedere [installazione di SSMA per Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md).  
   
-Per avviare SSMA, fare clic sul pulsante **Start**, scegliere **tutti i programmi**, ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant per oracle**e quindi fare clic su ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant per Oracle**.  
+Per avviare SSMA, fare clic sul pulsante **Start**, scegliere **tutti i programmi**, **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant per oracle** e quindi fare clic su **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant per Oracle**.  
   
 ## <a name="ssma-for-oracle-user-interface"></a>SSMA per l'interfaccia utente di Oracle  
 Dopo l'installazione di SSMA, è possibile utilizzare SSMA per eseguire la migrazione dei database Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Consente di acquisire familiarità con l'interfaccia utente di SSMA prima di iniziare. Il diagramma seguente illustra l'interfaccia utente per SSMA, tra cui Esplora metadati, metadati, barre degli strumenti, riquadro di output e riquadro elenco errori:  
@@ -59,14 +59,14 @@ In Oracle Metadata Explorer vengono visualizzate informazioni sugli schemi Oracl
 -   Selezionare tabelle per la migrazione dei dati, quindi eseguire la migrazione dei dati da tali tabelle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ulteriori informazioni, vedere [migrazione di dati Oracle in SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-data-into-sql-server-oracletosql.md).  
   
 #### <a name="sql-server-metadata-explorer"></a>Esplora metadati SQL Server  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Esplora metadati Mostra informazioni su un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando ci si connette a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , SSMA recupera i metadati relativi a tale istanza e li archivia nel file di progetto.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Esplora metadati Mostra informazioni su un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando ci si connette a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , SSMA recupera i metadati relativi a tale istanza e li archivia nel file di progetto.  
   
 È possibile utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Esplora metadati per selezionare oggetti di database Oracle convertiti, quindi sincronizzare tali oggetti con l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 Per ulteriori informazioni, vedere [caricamento di oggetti di database convertiti in SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/loading-converted-database-objects-into-sql-server-oracletosql.md).  
   
 ### <a name="metadata"></a>Metadati  
-A destra di ogni Esplora metadati sono presenti schede che descrivono l'oggetto selezionato. Se ad esempio si seleziona una tabella in Oracle Metadata Explorer, verranno visualizzate sei schede: **tabella**, **SQL**, **mapping dei tipi, report**, **Proprietà**e **dati**. La scheda **report** contiene informazioni solo dopo la creazione di un report che contiene l'oggetto selezionato. Se si seleziona una tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Esplora metadati, verranno visualizzate tre schede: **tabella**, **SQL**e **dati**.  
+A destra di ogni Esplora metadati sono presenti schede che descrivono l'oggetto selezionato. Se ad esempio si seleziona una tabella in Oracle Metadata Explorer, verranno visualizzate sei schede: **tabella**, **SQL**, **mapping dei tipi, report**, **Proprietà** e **dati**. La scheda **report** contiene informazioni solo dopo la creazione di un report che contiene l'oggetto selezionato. Se si seleziona una tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Esplora metadati, verranno visualizzate tre schede: **tabella**, **SQL** e **dati**.  
   
 La maggior parte delle impostazioni dei metadati è di sola lettura. Tuttavia, è possibile modificare i metadati seguenti:  
   

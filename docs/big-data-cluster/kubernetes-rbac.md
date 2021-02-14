@@ -9,12 +9,12 @@ ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 315752ffc775aa1db1970e3fef5c807e0f8e1708
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
-ms.translationtype: HT
+ms.openlocfilehash: a379b2bd1bb0e1992d70e1c86ae93163f6c02201
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257132"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046441"
 ---
 # <a name="kubernetes-rbac-model--impact-on-users-and-service-accounts-managing-bdc"></a>Modello di controllo degli accessi in base al ruolo di Kubernetes e impatto sugli utenti e sugli account del servizio che gestiscono i cluster Big Data
 
@@ -33,7 +33,7 @@ Il cluster BDC usa gli account del servizio (ad esempio `sa-mssql-controller` o 
 4. Crea un ruolo `<namespaced>-admin` con autorizzazioni complete per lo spazio dei nomi o il progetto ma non con autorizzazioni a livello di cluster.
 5. Crea un'assegnazione di tale account del servizio al ruolo.
 
-Una volta completati questi passaggi, viene effettuato il provisioning dei pod del piano di controllo e l'account del servizio distribuisce la parte restante del cluster Big Data.  
+Una volta completati questi passaggi, viene effettuato il provisioning dei pod del piano di controllo e l'account del servizio distribuisce la parte restante del cluster Big Data.  
 
 Di conseguenza, l'utente che esegue la distribuzione deve avere le autorizzazioni per:
 
@@ -93,11 +93,11 @@ L'account del servizio, il ruolo del cluster e l'associazione del ruolo del clus
 È possibile personalizzare queste impostazioni nella sezione relativa alla sicurezza del file di configurazione della distribuzione `control.json`:
 
 ```json
-  "security": {
-    …
-    "allowNodeMetricsCollection": false,
-    "allowPodMetricsCollection": false
-  }
+  "security": {
+    …
+    "allowNodeMetricsCollection": false,
+    "allowPodMetricsCollection": false
+  }
 ```
 
 Se queste impostazioni sono impostate su `false`, il flusso di lavoro di distribuzione del cluster BDC non tenterà di creare l'account del servizio, il ruolo del cluster e l'associazione per Telegraf.
@@ -105,7 +105,7 @@ Se queste impostazioni sono impostate su `false`, il flusso di lavoro di distrib
 ## <a name="default-service-account-usage-from-within-a-bdc-pod"></a>Uso dell'account del servizio predefinito dall'interno di un pod BDC
 
 Per un modello di sicurezza più rigoroso, SQL Server 2019 CU5 ha disabilitato il montaggio tramite le credenziali predefinite per l'account del servizio Kubernetes predefinito nei pod BDC. Questo vale per le distribuzioni nuove e aggiornate in CU5 o versioni successive.
-Il token delle credenziali all'interno dei pod può essere usato per accedere al server API Kubernetes e il livello di autorizzazioni dipende dalle impostazioni dei criteri di autorizzazione Kubernetes. Se sono presenti casi d'uso specifici che richiedono il ripristino del comportamento precedente di CU5, in CU6 verrà introdotta una nuova opzione della funzionalità in modo che sia possibile attivare il montaggio automatico solo in fase di distribuzione. L'operazione può essere eseguita usando il file di distribuzione della configurazione control.json e impostando *automountServiceAccountToken* su *true* . Eseguire questo comando per aggiornare questa impostazione nel file di configurazione personalizzato *control.json* usando [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]: 
+Il token delle credenziali all'interno dei pod può essere usato per accedere al server API Kubernetes e il livello di autorizzazioni dipende dalle impostazioni dei criteri di autorizzazione Kubernetes. Se sono presenti casi d'uso specifici che richiedono il ripristino del comportamento precedente di CU5, in CU6 verrà introdotta una nuova opzione della funzionalità in modo che sia possibile attivare il montaggio automatico solo in fase di distribuzione. L'operazione può essere eseguita usando il file di distribuzione della configurazione control.json e impostando *automountServiceAccountToken* su *true*. Eseguire questo comando per aggiornare questa impostazione nel file di configurazione personalizzato *control.json* usando [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]: 
 
 ``` bash
 azdata bdc config replace -c custom-bdc/control.json -j "$.security.automountServiceAccountToken=true"

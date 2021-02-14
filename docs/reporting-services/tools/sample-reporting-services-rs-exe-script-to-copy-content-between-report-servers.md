@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4f7bd6f5bb5e0adafd46ca887733195ae9960203
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
-ms.translationtype: HT
+ms.openlocfilehash: 6857459a67d8441d42035080f31896c75c996905
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988615"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077557"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Script di esempio rs.exe di Reporting Services per la copia di contenuto tra server di report
 
@@ -54,7 +54,7 @@ Lo script può essere utilizzato per copiare il contenuto tra server di report n
 |Cronologia|**No**|**No**||  
 |Impostazioni di cronologia|Sì|Sì|Viene eseguita la migrazione delle impostazioni di cronologia, ma NON dei dettagli della cronologia.|  
 |Pianificazioni|Sì|Sì|Per eseguire la migrazione delle pianificazioni, è necessario che SQL Server Agent sia in esecuzione nel server di destinazione. Se SQL Server Agent non è in esecuzione nel server di destinazione, viene visualizzato un messaggio di errore simile a questo:<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service isn't running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service isn't running. This operation requires the SQL Agent service.`|  
-|Ruoli e criteri di sistema|Sì|Sì|Per impostazione predefinita, lo script non copia lo schema di autorizzazioni personalizzate da un server a un altro. In base al comportamento predefinito, gli elementi vengono copiati nel server di destinazione con il flag "inherit parent permissions" impostato su TRUE. Se si desidera che le autorizzazioni per singoli elementi vengano copiate dallo script, utilizzare l'opzione SECURITY.<br /><br /> Se i server di origine e destinazione **non sono nella stessa modalità del server di report**, ad esempio sono rispettivamente in modalità nativa e in modalità SharePoint, e si usa l'opzione SECURITY, lo script tenterà di eseguire il mapping dei ruoli e dei gruppi predefiniti in base al confronto riportato nell'articolo [Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md). I ruoli e i gruppi personalizzati non vengono copiati nel server di destinazione.<br /><br /> Quando lo script copia tra server **nella stessa modalità**e si usa l'opzione SECURITY, lo script crea nuovi ruoli (modalità nativa) o gruppi (modalità SharePoint) nel server di destinazione.<br /><br /> Se esiste già un ruolo nel server di destinazione, lo script genera un messaggio di errore simile al seguente e continua la migrazione degli altri elementi. Al completamento dello script, verificare che i ruoli nel server di destinazione siano configurati per soddisfare le esigenze specifiche. Ruoli di cui si esegue la migrazione: 8 elementi trovati.<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> Per altre informazioni, vedere [Concedere l'accesso utente a un server di report](../../reporting-services/security/grant-user-access-to-a-report-server.md)<br /><br /> **Nota:** se un utente esistente nel server di origine non esiste nel server di destinazione, lo script non può applicare le assegnazioni dei ruoli nel server di destinazione; lo script non può applicare le assegnazioni dei ruoli anche se si usa l'opzione SECURITY.|  
+|Ruoli e criteri di sistema|Sì|Sì|Per impostazione predefinita, lo script non copia lo schema di autorizzazioni personalizzate da un server a un altro. In base al comportamento predefinito, gli elementi vengono copiati nel server di destinazione con il flag "inherit parent permissions" impostato su TRUE. Se si desidera che le autorizzazioni per singoli elementi vengano copiate dallo script, utilizzare l'opzione SECURITY.<br /><br /> Se i server di origine e destinazione **non sono nella stessa modalità del server di report**, ad esempio sono rispettivamente in modalità nativa e in modalità SharePoint, e si usa l'opzione SECURITY, lo script tenterà di eseguire il mapping dei ruoli e dei gruppi predefiniti in base al confronto riportato nell'articolo [Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md). I ruoli e i gruppi personalizzati non vengono copiati nel server di destinazione.<br /><br /> Quando lo script copia tra server **nella stessa modalità** e si usa l'opzione SECURITY, lo script crea nuovi ruoli (modalità nativa) o gruppi (modalità SharePoint) nel server di destinazione.<br /><br /> Se esiste già un ruolo nel server di destinazione, lo script genera un messaggio di errore simile al seguente e continua la migrazione degli altri elementi. Al completamento dello script, verificare che i ruoli nel server di destinazione siano configurati per soddisfare le esigenze specifiche. Ruoli di cui si esegue la migrazione: 8 elementi trovati.<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> Per altre informazioni, vedere [Concedere l'accesso utente a un server di report](../../reporting-services/security/grant-user-access-to-a-report-server.md)<br /><br /> **Nota:** se un utente esistente nel server di origine non esiste nel server di destinazione, lo script non può applicare le assegnazioni dei ruoli nel server di destinazione; lo script non può applicare le assegnazioni dei ruoli anche se si usa l'opzione SECURITY.|  
 |Origine dati condivisa|Sì|Sì|Lo script non sovrascrive gli elementi esistenti nel server di destinazione. Se nel server di destinazione esiste già un elemento con lo stesso nome, viene visualizzato un messaggio di errore simile a questo:<br /><br /> `Migrating DataSource: /Data Sources/Aworks2012_oltp ... FAILURE:The item '/Data Sources/Aworks2012_oltp' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Data Source s/Aworks2012_oltp' already exists.`<br /><br /> Le credenziali **NON** sono copiate come parte dell'origine dati. Dopo la migrazione degli elementi di contenuto, aggiornare le informazioni sulle credenziali nel server di destinazione.|  
 |Set di dati condiviso|Sì|Sì|| 
 |Cartella|Sì|Sì|Lo script non sovrascrive gli elementi esistenti nel server di destinazione. Se nel server di destinazione esiste già un elemento con lo stesso nome, viene visualizzato un messaggio di errore simile a questo:<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  
@@ -103,7 +103,7 @@ Lo script può essere utilizzato per copiare il contenuto tra server di report n
   
  **Esempio di base, da server di report in modalità nativa a server di report in modalità nativa:**  
   
- Nell'esempio seguente viene eseguita la migrazione del contenuto da **Sourceserver** in modalità nativa a **Targetserver**in modalità nativa.  
+ Nell'esempio seguente viene eseguita la migrazione del contenuto da **Sourceserver** in modalità nativa a **Targetserver** in modalità nativa.  
   
  `rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p password -v ts="https://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"`  
   
@@ -215,7 +215,7 @@ Lo script può essere utilizzato per copiare il contenuto tra server di report n
 ##  <a name="more-examples"></a><a name="bkmk_more_examples"></a> Altri esempi  
   
 ###  <a name="native-mode-report-server-to-native-mode-report-server"></a><a name="bkmk_native_2_native"></a> Da server di report in modalità nativa a server di report in modalità nativa  
- Nell'esempio seguente viene eseguita la migrazione del contenuto da **Sourceserver** in modalità nativa a **Targetserver**in modalità nativa.  
+ Nell'esempio seguente viene eseguita la migrazione del contenuto da **Sourceserver** in modalità nativa a **Targetserver** in modalità nativa.  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p password -v ts="https://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"  
@@ -257,7 +257,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/_vti_bin/report
 ###  <a name="native-mode-to-native-mode---azure-virtual-machine"></a><a name="bkmk_native_to_native_Azure_vm"></a> Da modalità nativa a modalità nativa - macchina virtuale di Azure  
  Nell'esempio seguente viene eseguita la migrazione del contenuto:  
   
--   Da un server di report **SourceServer**in modalità nativa.  
+-   Da un server di report **SourceServer** in modalità nativa.  
   
 -   A un server di report **TargetServer** in modalità nativa in cui viene eseguita una macchina virtuale Azure. **TargetServer** non viene unito al dominio di **SourceServer** e **User2** è un amministratore di **TargetServer** nella macchina virtuale Azure.  
   

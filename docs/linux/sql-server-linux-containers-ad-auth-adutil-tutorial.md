@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: a3fc97f34a8d75557abb9ed5b46745dde93fe77d
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 61f03a3d1175e5d38952c3e9e578a025c474188a
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100033971"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "100273112"
 ---
 # <a name="tutorial-configure-active-directory-authentication-with-sql-server-on-linux--containers"></a>Esercitazione: Configurare l'autenticazione di Active Directory con contenitori di SQL Server in Linux
 
@@ -86,9 +86,10 @@ Nel computer host Linux usare i comandi seguenti per installare adutil-preview i
 
 ### <a name="ubuntu"></a>Ubuntu
 
-1. Registrare il repository Microsoft per Ubuntu.
+1. Importare le chiavi GPG del repository pubblico e quindi registrare il repository Microsoft Ubuntu.
 
     ```bash
+    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
     sudo curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
     ```
 
@@ -101,6 +102,7 @@ Nel computer host Linux usare i comandi seguenti per installare adutil-preview i
 1. Eseguire il comando seguente per installare adutil-preview. `ACCEPT_EULA=Y` accetta il contratto di licenza di anteprima per adutil. Il contratto di licenza è disponibile nel percorso `/usr/share/adutil/`.
 
     ```bash
+    sudo apt-get update
     sudo ACCEPT_EULA=Y apt-get install -y adutil-preview
     ```
 

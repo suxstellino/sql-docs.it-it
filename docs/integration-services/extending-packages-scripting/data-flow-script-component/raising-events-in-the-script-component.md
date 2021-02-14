@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bb389073-e1d0-4794-8d29-c8b293b6a5e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 812a2db47243f48d13dd2adf6f5b8098046f1c40
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
-ms.translationtype: HT
+ms.openlocfilehash: 7881dcb05fb615b4045efb505a164496e7a8ef5f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92193071"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354955"
 ---
 # <a name="raising-events-in-the-script-component"></a>Generazione di eventi nel componente script
 

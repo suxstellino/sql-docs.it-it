@@ -10,12 +10,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d9dc40928fddda2708a23a7fc927627cf0e9450d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 991f001ea8fd43298cefe1f9ba542472de6935ef
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718573"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354091"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catalogo di database WideWorldImporters
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ Questi schemi vengono utilizzati per le applicazioni esterne che non possono acc
 
 |SCHEMA|Descrizione|
 |-----------------------------|---------------------|
-|Website|Tutti gli accessi al database dal sito Web della società sono tramite questo schema.|
+|Sito Web|Tutti gli accessi al database dal sito Web della società sono tramite questo schema.|
 |Report|Tutti gli accessi al database da Reporting Services report si riferiscono a questo schema.|
 |PowerBI|Tutti gli accessi al database dal dashboard Power BI tramite il gateway aziendale sono tramite questo schema.|
 
@@ -68,7 +68,7 @@ Dettagli dei parametri e delle persone (utenti e contatti), insieme alle tabelle
 |Tabella|Descrizione|
 |-----------------------------|---------------------|
 |SystemParameters|Contiene parametri configurabili a livello di sistema.|
-|People|Contiene i nomi utente, le informazioni di contatto, per tutti gli utenti che usano l'applicazione e per gli utenti che hanno a che fare con le organizzazioni del cliente. Sono inclusi il personale, i clienti, i fornitori e altri contatti. Per gli utenti a cui è stata concessa l'autorizzazione a utilizzare il sistema o il sito Web, le informazioni includono i dettagli di accesso.|
+|Persone|Contiene i nomi utente, le informazioni di contatto, per tutti gli utenti che usano l'applicazione e per gli utenti che hanno a che fare con le organizzazioni del cliente. Sono inclusi il personale, i clienti, i fornitori e altri contatti. Per gli utenti a cui è stata concessa l'autorizzazione a utilizzare il sistema o il sito Web, le informazioni includono i dettagli di accesso.|
 |Cities|Nel sistema sono archiviati molti indirizzi, per gli utenti, per gli indirizzi di recapito dell'organizzazione cliente, per gli indirizzi di ritiro dei fornitori e così via. Ogni volta che viene archiviato un indirizzo, in questa tabella è presente un riferimento a una città. Esiste anche una posizione spaziale per ogni città.|
 |StateProvinces|Le città fanno parte di Stati o province. Questa tabella contiene i dettagli di questi elementi, inclusi i dati spaziali che descrivono i limiti di ogni stato o provincia.|
 |Paesi|Stati o province fanno parte di paesi. Questa tabella contiene i dettagli di questi elementi, inclusi i dati spaziali che descrivono i limiti di ogni paese.|

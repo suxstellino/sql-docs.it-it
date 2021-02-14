@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 5096ecd27f6ba9d5d06dd4efd322a42e3218a0bd
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 70128430c6ea0943605bd29f00597d51dee71d86
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466602"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077752"
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>Installazione e configurazione di WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -51,7 +51,7 @@ Per ripristinare un backup in un'istanza di SQL Server, è possibile usare Manag
 5. Se necessario, modificare il percorso di destinazione per i file di dati e di log nel riquadro **file** . Si noti che è consigliabile inserire i file di dati e di log in unità diverse.
 6. Fare clic su **OK**. Verrà avviato il ripristino del database. Al termine, il database WideWorldImporters verrà installato nell'istanza di SQL Server.
 
-### <a name="azure-sql-database"></a>database SQL di Azure
+### <a name="azure-sql-database"></a>Database SQL di Azure
 
 Per importare un BACPAC in un nuovo database SQL, è possibile usare Management Studio.
 

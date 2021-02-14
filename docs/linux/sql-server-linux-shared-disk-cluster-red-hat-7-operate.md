@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: 639e88a96ac639d20a6190bffeed75d46495aa51
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
-ms.translationtype: HT
+ms.openlocfilehash: 272bc33012e37c58f6a3f8ea0ed51f1c216d716f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785072"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346275"
 ---
 # <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>Gestire un'istanza del cluster di failover RHEL per SQL Server
 
@@ -41,10 +41,10 @@ Per altre informazioni sulla configurazione del cluster, sulle opzioni degli age
 
 ## <a name="failover-cluster-manually"></a><a name = "failManual"></a> Effettuare il failover manuale del cluster
 
-Il comando `resource move` crea un vincolo che forza l'avvio della risorsa nel nodo di destinazione.  Dopo l'esecuzione del comando `move`, l'esecuzione di `clear` per la risorsa rimuoverà il vincolo e sarà possibile spostare nuovamente la risorsa o effettuare il failover automatico della risorsa. 
+Il comando `resource move` crea un vincolo che forza l'avvio della risorsa nel nodo di destinazione.    Dopo l'esecuzione del comando `move`, l'esecuzione di `clear` per la risorsa rimuoverà il vincolo e sarà possibile spostare nuovamente la risorsa o effettuare il failover automatico della risorsa. 
 
 ```bash
-sudo pcs resource move <sqlResourceName> <targetNodeName>  
+sudo pcs resource move <sqlResourceName> <targetNodeName>  
 sudo pcs resource clear <sqlResourceName> 
 ```
 
@@ -60,7 +60,7 @@ sudo pcs resource clear mssqlha
 Visualizzare lo stato corrente del cluster:
 
 ```bash
-sudo pcs status  
+sudo pcs status  
 ```
 
 Visualizzare lo stato in tempo reale del cluster e delle risorse:
@@ -183,7 +183,7 @@ Visualizzare i log degli agenti delle risorse in `/var/log/cluster/corosync.log`
     L'esempio seguente aggiunge un nodo denominato **vm3** al cluster.
 
     ```bash
-    sudo pcs    cluster auth  
+    sudo pcs    cluster auth  
     sudo pcs    cluster start 
     ```
 
@@ -192,7 +192,7 @@ Visualizzare i log degli agenti delle risorse in `/var/log/cluster/corosync.log`
 Per rimuovere un nodo da un cluster, eseguire il comando seguente:
 
 ```bash
-sudo pcs    cluster node remove <nodeName>  
+sudo pcs    cluster node remove <nodeName>  
 ```
 
 ## <a name="change-the-frequency-of-sqlservr-resource-monitoring-interval"></a>Modificare la frequenza dell'intervallo di monitoraggio della risorsa sqlservr
@@ -226,7 +226,7 @@ Un esempio di output del quorum di Pacemaker integro è:
 
 ```
 Cluster name: MyAppSQL 
-Last updated: Wed Oct 31 12:00:00 2016  Last change: Wed Oct 31 11:00:00 2016 by root via crm_resource on sqlvmnode1 
+Last updated: Wed Oct 31 12:00:00 2016  Last change: Wed Oct 31 11:00:00 2016 by root via crm_resource on sqlvmnode1 
 Stack: corosync 
 Current DC: sqlvmnode1  (version 1.1.13-10.el7_2.4-44eb2dd) - partition with quorum 
 3 nodes and 1 resource configured 

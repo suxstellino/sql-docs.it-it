@@ -122,6 +122,8 @@
           href: notebooks/notebooks-kusto-kernel.md
         - name: Usare Kqlmagic
           href: notebooks/notebooks-kqlmagic.md
+        - name: USA parametrizzazione
+          href: notebooks/notebooks-parameterization.md
     - name: Distribuzione
       items:
         - name: Distribuire il database SQL di Azure

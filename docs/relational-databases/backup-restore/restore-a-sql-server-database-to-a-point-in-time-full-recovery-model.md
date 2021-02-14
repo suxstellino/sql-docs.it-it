@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 4038ba678af8635f3ac2bd12f68c818a61e2c87f
-ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.openlocfilehash: 86f23acdc6dd82210c5747915d78aafc2344fc6b
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99075634"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100348106"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Ripristino di un database di SQL Server fino a un punto specifico all'interno di un backup (modello di recupero con registrazione completa)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -156,7 +156,7 @@ ms.locfileid: "99075634"
   
 3.  Ripristinare l'ultimo backup del database differenziale, se presente, senza recuperare il database (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  Applicare ogni backup del log delle transazioni nella stessa sequenza di creazione, specificando l'ora in cui si intende arrestare il ripristino del log (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT **=**_time_**,** RECOVERY).  
+4.  Applicare ogni backup del log delle transazioni nella stessa sequenza in cui sono stati creati, specificando l'ora in cui si intende arrestare il ripristino del log (Restore database *database_name* da <backup_device> con STOPAT **=** _Time_ **,** Recovery).  
   
     > [!NOTE]  
     >  Le opzioni RECOVERY e STOPAT. Se il backup del log delle transazioni non contiene i dati corrispondenti all'ora richiesta, ad esempio se l'ora specificata è successiva al periodo di tempo gestito dal log delle transazioni, viene generato un messaggio di avviso e il database non viene recuperato.  

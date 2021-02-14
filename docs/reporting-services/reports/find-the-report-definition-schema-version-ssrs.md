@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fd43fb3dba83ab3821b1b670468e7849faac2044
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
-ms.translationtype: HT
+ms.openlocfilehash: f3e656d797f876fdd40ab1904f153a332673f504
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79510142"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069456"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>Individuare la versione dello schema di definizione del report (SSRS)
 
@@ -44,7 +44,7 @@ Un file di definizione del report specifica lo spazio dei nomi RDL per la versio
   
 3.  Nel riquadro **Modelli** fare clic su **Report**.  
   
-4.  In **Nome**digitare un nome di report o accettare il nome predefinito.  
+4.  In **Nome** digitare un nome di report o accettare il nome predefinito.  
   
 5.  Scegliere **Aggiungi**. Progettazione report apre un nuovo report vuoto nella visualizzazione della struttura.  
   

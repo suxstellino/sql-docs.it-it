@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 289483df5c80b4524a281e62b4d63147b6f61bb0
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
-ms.translationtype: HT
+ms.openlocfilehash: bf68742926ef0f26c5a12a5d001ea9b14f9b199c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91986837"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100080094"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Creare e gestire sottoscrizioni per server di report in modalità SharePoint
   È possibile creare sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per il recapito di report da un'applicazione Web di SharePoint integrata con un server di report in modalità SharePoint. Le sottoscrizioni possono recapitare report a una raccolta documenti o a una cartella di file oppure come messaggio di posta elettronica. Questo argomento fornisce un riepilogo dei requisiti e dei passaggi necessari per la creazione di una sottoscrizione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -73,21 +73,21 @@ ms.locfileid: "91986837"
   
 3.  Fare clic su **Aggiungi sottoscrizione**.  
   
-4.  In **Estensione per il recapito**selezionare **Raccolta documenti di SharePoint**.  
+4.  In **Estensione per il recapito** selezionare **Raccolta documenti di SharePoint**.  
   
-5.  In **Raccolta documenti**selezionare una raccolta nello stesso sito.  
+5.  In **Raccolta documenti** selezionare una raccolta nello stesso sito.  
   
-6.  In **Opzioni file**specificare il nome di file e il titolo del documento che verrà creato dalla sottoscrizione.  
+6.  In **Opzioni file** specificare il nome di file e il titolo del documento che verrà creato dalla sottoscrizione.  
   
-7.  In **Formato di output**selezionare il formato dell'applicazione.  
+7.  In **Formato di output** selezionare il formato dell'applicazione.  
   
      L'impostazione predefinita è MHTML (archivio Web), che produce un file HTML autonomo, ma non mantiene le funzionalità interattive eventualmente presenti nel report originale.  
   
-8.  In **Opzioni sovrascrittura**specificare un'opzione che determina se sovrascrivere i file durante i recapiti successivi. Se si desidera mantenere i file recapitati in precedenza, selezionare l'opzione per **creare un file con nome univoco**. Per creare il nome di file univoco, ai nomi dei nuovi file viene automaticamente aggiunto un numero.  
+8.  In **Opzioni sovrascrittura** specificare un'opzione che determina se sovrascrivere i file durante i recapiti successivi. Se si desidera mantenere i file recapitati in precedenza, selezionare l'opzione per **creare un file con nome univoco**. Per creare il nome di file univoco, ai nomi dei nuovi file viene automaticamente aggiunto un numero.  
   
-9. In **Evento di recapito**specificare una pianificazione o un evento che determina l'esecuzione della sottoscrizione. È possibile creare una pianificazione personalizzata, selezionare una pianificazione condivisa, se disponibile, oppure eseguire la sottoscrizione ogni volta che vengono aggiornati i dati per un report eseguito con i dati di uno snapshot. Per altre informazioni sulle pianificazione e l'elaborazione dei dati, vedere [Impostare le opzioni di elaborazione &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
+9. In **Evento di recapito** specificare una pianificazione o un evento che determina l'esecuzione della sottoscrizione. È possibile creare una pianificazione personalizzata, selezionare una pianificazione condivisa, se disponibile, oppure eseguire la sottoscrizione ogni volta che vengono aggiornati i dati per un report eseguito con i dati di uno snapshot. Per altre informazioni sulle pianificazione e l'elaborazione dei dati, vedere [Impostare le opzioni di elaborazione &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
-10. Se si sta creando una sottoscrizione per un report con parametri, specificare in **Parametri**i valori da utilizzare con il report durante l'elaborazione della sottoscrizione. La sezione dei parametri non è visibile in questa pagina se il report selezionato non contiene parametri. Per altre informazioni sui parametri, vedere [Impostare i parametri per un report pubblicato &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
+10. Se si sta creando una sottoscrizione per un report con parametri, specificare in **Parametri** i valori da utilizzare con il report durante l'elaborazione della sottoscrizione. La sezione dei parametri non è visibile in questa pagina se il report selezionato non contiene parametri. Per altre informazioni sui parametri, vedere [Impostare i parametri per un report pubblicato &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
 ###  <a name="to-create-a-subscription-for-shared-folder-delivery"></a><a name="bkmk_subscription_for_sharedfolder"></a> Per creare una sottoscrizione per il recapito a una cartella condivisa  
   
@@ -97,23 +97,23 @@ ms.locfileid: "91986837"
   
 3.  Fare clic su **Aggiungi sottoscrizione**.  
   
-4.  In **Estensione per il recapito**selezionare **Condivisione file di Windows**.  
+4.  In **Estensione per il recapito** selezionare **Condivisione file di Windows**.  
   
-5.  In **Nome file**immettere il nome del file da creare nella cartella condivisa.  
+5.  In **Nome file** immettere il nome del file da creare nella cartella condivisa.  
   
-6.  In **Percorso**immettere un percorso di cartella in formato UNC (Uniform Naming Convention), includendo anche il nome di rete del computer. Non includere barre rovesciate finali nel percorso della cartella. È ad esempio possibile utilizzare un percorso quale `\\ComputerName01\Public\MyReports`, dove Public e MyReports sono cartelle condivise.  
+6.  In **Percorso** immettere un percorso di cartella in formato UNC (Uniform Naming Convention), includendo anche il nome di rete del computer. Non includere barre rovesciate finali nel percorso della cartella. È ad esempio possibile utilizzare un percorso quale `\\ComputerName01\Public\MyReports`, dove Public e MyReports sono cartelle condivise.  
   
-7.  In **Formato di rendering**selezionare il formato di applicazione per il report.  
+7.  In **Formato di rendering** selezionare il formato di applicazione per il report.  
   
-8.  In **Modalità scrittura**selezionare **Nessuna**, **Incremento automatico**o **Sovrascrivi**. Tali opzioni determinano se sovrascrivere o meno i file durante i recapiti successivi. Se si desidera conservare i file recapitati in precedenza, selezionare **Incremento automatico**. Per creare il nome di file univoco, ai nomi dei nuovi file viene automaticamente aggiunto un numero. Se si sceglie **Nessuna**il report non verrà recapitato se nel percorso di destinazione esiste già un file con lo stesso nome.  
+8.  In **Modalità scrittura** selezionare **Nessuna**, **Incremento automatico** o **Sovrascrivi**. Tali opzioni determinano se sovrascrivere o meno i file durante i recapiti successivi. Se si desidera conservare i file recapitati in precedenza, selezionare **Incremento automatico**. Per creare il nome di file univoco, ai nomi dei nuovi file viene automaticamente aggiunto un numero. Se si sceglie **Nessuna** il report non verrà recapitato se nel percorso di destinazione esiste già un file con lo stesso nome.  
   
-9. In **Estensione file**selezionare **True** per aggiungere un'estensione del nome di file che corrisponde al formato di file dell'applicazione oppure False per creare il file senza estensione.  
+9. In **Estensione file** selezionare **True** per aggiungere un'estensione del nome di file che corrisponde al formato di file dell'applicazione oppure False per creare il file senza estensione.  
   
-10. In **Nome utente** e **Password**immettere le credenziali di un account dotato di autorizzazioni di scrittura per la cartella condivisa.  
+10. In **Nome utente** e **Password** immettere le credenziali di un account dotato di autorizzazioni di scrittura per la cartella condivisa.  
   
-11. In **Evento di recapito**specificare una pianificazione o un evento che determina l'esecuzione della sottoscrizione. È possibile creare una pianificazione personalizzata, selezionare una pianificazione condivisa, se disponibile, oppure eseguire la sottoscrizione ogni volta che vengono aggiornati i dati per un report eseguito con i dati di uno snapshot. Per altre informazioni sulle pianificazione e l'elaborazione dei dati, vedere [Impostare le opzioni di elaborazione &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
+11. In **Evento di recapito** specificare una pianificazione o un evento che determina l'esecuzione della sottoscrizione. È possibile creare una pianificazione personalizzata, selezionare una pianificazione condivisa, se disponibile, oppure eseguire la sottoscrizione ogni volta che vengono aggiornati i dati per un report eseguito con i dati di uno snapshot. Per altre informazioni sulle pianificazione e l'elaborazione dei dati, vedere [Impostare le opzioni di elaborazione &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
-12. Se si sta creando una sottoscrizione per un report con parametri, specificare in **Parametri**i valori da utilizzare con il report durante l'elaborazione della sottoscrizione. Per altre informazioni sui parametri, vedere [Impostare i parametri per un report pubblicato &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
+12. Se si sta creando una sottoscrizione per un report con parametri, specificare in **Parametri** i valori da utilizzare con il report durante l'elaborazione della sottoscrizione. Per altre informazioni sui parametri, vedere [Impostare i parametri per un report pubblicato &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
 ###  <a name="to-create-a-subscription-for-report-server-e-mail-delivery"></a><a name="bkmk_subscription_for_email"></a> Per creare una sottoscrizione per il recapito tramite posta elettronica del server di report  
   
@@ -123,21 +123,21 @@ ms.locfileid: "91986837"
   
 3.  Fare clic su **Aggiungi sottoscrizione**.  
   
-4.  In **Estensione per il recapito**selezionare **Posta elettronica**.  
+4.  In **Estensione per il recapito** selezionare **Posta elettronica**.  
   
-5.  In **Opzioni recapito**specificare l'indirizzo di posta elettronica a cui inviare il report.  
+5.  In **Opzioni recapito** specificare l'indirizzo di posta elettronica a cui inviare il report.  
   
 6.  Facoltativamente è possibile modificare la riga Oggetto. La riga Oggetto utilizza alcuni parametri predefiniti che acquisiscono il nome del report, oltre alla data e all'ora dell'elaborazione. Tali parametri sono gli unici parametri predefiniti che è possibile utilizzare. I parametri sono segnaposto che personalizzano il testo visualizzato nella riga Oggetto, ma possono essere sostituiti con testo statico.  
   
 7.  Scegliere **Includi collegamento al report** se si desidera includere l'URL di un report nel corpo del messaggio.  
   
-8.  In **Contenuto report**specificare se si desidera includere il report effettivo nel corpo del messaggio.  
+8.  In **Contenuto report** specificare se si desidera includere il report effettivo nel corpo del messaggio.  
   
      Il formato di rendering e il browser determinano se il report verrà incorporato o allegato. Se il browser supporta HTML 4.0 e MHTML e si sceglie il formato di rendering archivio Web, il report verrà incorporato nel messaggio. Con tutti gli altri formati di rendering (CSV, PDF e così via), il report verrà recapitato come allegato. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non esegue la verifica delle dimensioni dell'allegato né di quelle del messaggio prima dell'invio del report. Se l'allegato o il messaggio supera il limite massimo consentito dal server di posta elettronica, il report non verrà recapitato. Se il report è di grandi dimensioni, è consigliabile selezionare una delle altre opzioni di recapito, ad esempio la notifica o l'invio dell'URL.  
   
-9. In **Evento di recapito**specificare una pianificazione o un evento che determina l'esecuzione della sottoscrizione. È possibile creare una pianificazione personalizzata, selezionare una pianificazione condivisa, se disponibile, oppure eseguire la sottoscrizione ogni volta che vengono aggiornati i dati per un report eseguito con i dati di uno snapshot. Per altre informazioni sulle pianificazione e l'elaborazione dei dati, vedere [Impostare le opzioni di elaborazione &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
+9. In **Evento di recapito** specificare una pianificazione o un evento che determina l'esecuzione della sottoscrizione. È possibile creare una pianificazione personalizzata, selezionare una pianificazione condivisa, se disponibile, oppure eseguire la sottoscrizione ogni volta che vengono aggiornati i dati per un report eseguito con i dati di uno snapshot. Per altre informazioni sulle pianificazione e l'elaborazione dei dati, vedere [Impostare le opzioni di elaborazione &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
-10. Se si sta creando una sottoscrizione per un report con parametri, specificare in **Parametri**i valori da utilizzare con il report durante l'elaborazione della sottoscrizione. Per altre informazioni sui parametri, vedere [Impostare i parametri per un report pubblicato &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
+10. Se si sta creando una sottoscrizione per un report con parametri, specificare in **Parametri** i valori da utilizzare con il report durante l'elaborazione della sottoscrizione. Per altre informazioni sui parametri, vedere [Impostare i parametri per un report pubblicato &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
 ###  <a name="to-view-or-modify-a-subscription"></a><a name="bkmk_to_modify_subscription"></a> Per visualizzare o modificare una sottoscrizione  
   

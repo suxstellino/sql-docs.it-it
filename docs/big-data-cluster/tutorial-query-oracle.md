@@ -9,12 +9,12 @@ ms.date: 10/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 48d7fb0f41446fa54f1376a9a84f7dbff7017960
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
-ms.translationtype: HT
+ms.openlocfilehash: 670ab5046c1904fee16f6c0271c49e2a4ecd72fe
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196085"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100045636"
 ---
 # <a name="tutorial-query-oracle-from-sql-server-big-data-cluster"></a>Esercitazione: Eseguire una query in Oracle da un cluster Big Data di SQL Server
 
@@ -59,7 +59,7 @@ Questa procedura consente di creare in Oracle una tabella semplice denominata `I
     CREATE INDEX INV_ITEM ON HR.INVENTORY(INV_ITEM);
     ```
 
-1. Importare nella tabella il contenuto del file **inventory.csv** . Questo file è stato creato a partire dagli script di creazione di esempio disponibili nella sezione [Prerequisiti](#prereqs).
+1. Importare nella tabella il contenuto del file **inventory.csv**. Questo file è stato creato a partire dagli script di creazione di esempio disponibili nella sezione [Prerequisiti](#prereqs).
 
 ## <a name="create-an-external-data-source"></a>Creare un'origine dati esterna
 
@@ -67,7 +67,7 @@ Il primo passaggio prevede la creazione di un'origine dati esterna in grado di a
 
 1. In Azure Data Studio connettersi all'istanza master di SQL Server del cluster Big Data. Per altre informazioni, vedere [Connettersi all'istanza master di SQL Server](connect-to-big-data-cluster.md#master).
 
-1. Fare doppio clic sulla connessione nella finestra **Server** per visualizzare il dashboard del server per l'istanza master di SQL Server. Selezionare **Nuova query** .
+1. Fare doppio clic sulla connessione nella finestra **Server** per visualizzare il dashboard del server per l'istanza master di SQL Server. Selezionare **Nuova query**.
 
    ![Query dell'istanza master di SQL Server](./media/tutorial-query-oracle/sql-server-master-instance-query.png)
 
@@ -98,7 +98,7 @@ Oracle supporta l'autenticazione proxy per fornire il controllo di accesso con g
 
 Un utente proxy può essere configurato in modo che abbia accesso limitato rispetto all'utente rappresentato. Ad esempio, è possibile consentire a un utente proxy di connettersi usando un ruolo del database specifico dell'utente rappresentato. L'identità dell'utente che si connette al database Oracle tramite l'utente proxy viene mantenuta nella connessione, anche se più utenti si connettono tramite l'autenticazione proxy. Questo consente a Oracle di applicare il controllo di accesso e di controllare le azioni intraprese per conto dell'utente effettivo.
 
-Se lo scenario richiede l'uso di un utente proxy Oracle, __sostituire i passaggi 4 e 5 precedenti con i seguenti__ .
+Se lo scenario richiede l'uso di un utente proxy Oracle, __sostituire i passaggi 4 e 5 precedenti con i seguenti__.
 
 4. Creare le credenziali con ambito database per connettersi al server Oracle. Specificare le credenziali di utente proxy Oracle appropriate al server Oracle nell'istruzione seguente.
 

@@ -10,12 +10,12 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5efb20db2b0f5e3d3509715a8711ce32414fa9ee
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
-ms.translationtype: HT
+ms.openlocfilehash: a8609fbe12e6218d328528dd5577bf1a40167162
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378410"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100047781"
 ---
 # <a name="gathering-and-analyzing-logs-in-the-cluster-with-notebooks"></a>Raccolta e analisi dei log nel cluster con i notebook
 

@@ -9,12 +9,12 @@ ms.date: 03/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ad3cc263ea81b9e3bda5cb34ea27cfabba1ae716
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 1df5bfe16ca1d64e3d748923796d521c95aacc78
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730708"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100039571"
 ---
 # <a name="resources-deployed-with-big-data-cluster"></a>Risorse distribuite in un cluster Big Data
 

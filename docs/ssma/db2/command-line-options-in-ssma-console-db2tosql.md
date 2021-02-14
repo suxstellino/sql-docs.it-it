@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3dfef8a72c8c578b468ebcf34372e603579d13ed
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: f35275c7643d41702227f7fc6ef4f41ab4fd8a0b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987437"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100081662"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>Opzioni della riga di comando nella console SSMA (DB2ToSQL)
 Microsoft offre un'affidabile serie di opzioni della riga di comando per l'esecuzione e il controllo delle attività SSMA. Le sezioni seguenti illustrano in dettaglio lo stesso.  

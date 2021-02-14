@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc7e46cf13da66476b53d68d5f2ea02fb29a69a5
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 67f29ef6d47de5cc14cb248d20a243053857c9e9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172103"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353638"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Database di esempio per OLTP in memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "98172103"
   
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]  
+-   [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]  
   
 -   Per il test delle prestazioni, un server con specifiche simili all'ambiente di produzione. Per questo particolare esempio sono necessari almeno 16 GB di memoria disponibili per SQL Server. Per linee guida generali sull'hardware per OLTP in memoria, vedere il post di blog seguente: [Considerazioni sull'hardware per OLTP in memoria in SQL Server 2014](blog-hardware-in-memory-oltp.md)
 
@@ -142,25 +142,25 @@ ms.locfileid: "98172103"
   
 -   *Vincoli predefiniti*. Sono supportati per le tabelle ottimizzate per la memoria; inoltre, la migrazione della maggior parte di questi vincoli è stata eseguita senza apportarvi variazioni. Tuttavia, nella tabella originale Sales.SalesOrderHeader sono contenuti due vincoli predefiniti tramite cui viene recuperata la data corrente per le colonne OrderDate e ModifiedDate. In un carico di lavoro di elaborazione dell'ordine a velocità effettiva elevata con molta concorrenza, qualsiasi risorsa globale può diventare un punto di contesa. L'ora di sistema è un esempio di risorsa globale e si è notato che può costituire un collo di bottiglia quando si esegue un carico di lavoro di OLTP in memoria con ordini vendita, in particolare se l'ora di sistema deve essere recuperata per più colonne nell'intestazione degli ordini di vendita, nonché per i dettagli degli ordini di vendita. In questo esempio il problema è stato risolto recuperando l'ora di sistema solo una volta per ogni ordine vendita inserito e il valore in questione viene utilizzato per le colonne di tipo datetime in SalesOrderHeader_inmem e in SalesOrderDetail_inmem, nella stored procedure Sales.usp_InsertSalesOrder_inmem.  
   
--   *Tipi definiti dall'utente (UDT) alias*: nella tabella originale vengono usati due UDT alias, dbo.OrderNumber e dbo.AccountNumber, rispettivamente per le colonne PurchaseOrderNumber e AccountNumber. [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] non supporta il tipo di dati alias definito dall'utente per le tabelle ottimizzate per la memoria, pertanto le nuove tabelle usano rispettivamente i tipi di dati di sistema nvarchar(25) e nvarchar(15).  
+-   *Tipi definiti dall'utente (UDT) alias*: nella tabella originale vengono usati due UDT alias, dbo.OrderNumber e dbo.AccountNumber, rispettivamente per le colonne PurchaseOrderNumber e AccountNumber. [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] non supporta il tipo di dati alias definito dall'utente per le tabelle ottimizzate per la memoria, pertanto le nuove tabelle usano rispettivamente i tipi di dati di sistema nvarchar(25) e nvarchar(15).  
   
 -   *Colonne che ammettono i valori Null nelle chiavi di indice* . Nella tabella originale la colonna SalesPersonID ammette i valori Null, mentre nelle nuove tabelle non ammette i valori Null e prevede un vincolo predefinito con valore (-1). La circostanza è dovuta al fatto che gli indici nelle tabelle ottimizzate per la memoria non possono disporre di colonne che ammettono i valori Null nella chiave di indice; -1 è un surrogato di NULL in questo caso.  
   
--   *Colonne calcolate*. Le colonne calcolate SalesOrderNumber e TotalDue vengono omesse, poiché in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] non sono supportate colonne calcolate nelle tabelle ottimizzate per la memoria. La nuova vista Sales.vSalesOrderHeader_extended_inmem riflette le colonne SalesOrderNumber e TotalDue. Pertanto, può essere utilizzata qualora queste colonne fossero necessarie.  
+-   *Colonne calcolate*. Le colonne calcolate SalesOrderNumber e TotalDue vengono omesse, poiché in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] non sono supportate colonne calcolate nelle tabelle ottimizzate per la memoria. La nuova vista Sales.vSalesOrderHeader_extended_inmem riflette le colonne SalesOrderNumber e TotalDue. Pertanto, può essere utilizzata qualora queste colonne fossero necessarie.  
 
-    - **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, le colonne calcolate sono supportate in indici e tabelle ottimizzate per la memoria.
+    - **Si applica a:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.  
+A partire da [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1, le colonne calcolate sono supportate in indici e tabelle ottimizzate per la memoria.
 
   
--   In [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] sono supportati i *vincoli di chiave esterna* per le tabelle ottimizzate per la memoria, ma solo se anche le tabelle di riferimento sono ottimizzate per la memoria. Le chiavi esterne che fanno riferimento a tabelle migrate in altre tabelle ottimizzate per la memoria sono mantenute nelle tabelle migrate, mentre le altre chiavi esterne vengono omesse.  Inoltre, SalesOrderHeader_inmem è una tabella attiva nel carico di lavoro di esempio e i vincoli di chiavi esterne comportano un'ulteriore elaborazione per tutte le operazioni DML, in quanto sono necessarie ricerche in tutte le altre tabelle a cui viene fatto riferimento in questi vincoli. Pertanto, si presuppone che l'applicazione garantisca l'integrità referenziale per la tabella Sales.SalesOrderHeader_inmem e questa integrità non venga convalidata quando vengono inserite le righe.  
+-   In [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] sono supportati i *vincoli di chiave esterna* per le tabelle ottimizzate per la memoria, ma solo se anche le tabelle di riferimento sono ottimizzate per la memoria. Le chiavi esterne che fanno riferimento a tabelle migrate in altre tabelle ottimizzate per la memoria sono mantenute nelle tabelle migrate, mentre le altre chiavi esterne vengono omesse.  Inoltre, SalesOrderHeader_inmem è una tabella attiva nel carico di lavoro di esempio e i vincoli di chiavi esterne comportano un'ulteriore elaborazione per tutte le operazioni DML, in quanto sono necessarie ricerche in tutte le altre tabelle a cui viene fatto riferimento in questi vincoli. Pertanto, si presuppone che l'applicazione garantisca l'integrità referenziale per la tabella Sales.SalesOrderHeader_inmem e questa integrità non venga convalidata quando vengono inserite le righe.  
   
--   *Rowguid* . La colonna rowguid viene omessa. Anche se uniqueidentifier è il supporto per le tabelle ottimizzate per la memoria, l'opzione ROWGUIDCOL non è supportata in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]. Le colonne di questo tipo vengono in genere utilizzate per la replica di tipo merge o per le tabelle con colonne FILESTREAM. Nell'esempio sono escluse entrambe.  
+-   *Rowguid* . La colonna rowguid viene omessa. Anche se uniqueidentifier è il supporto per le tabelle ottimizzate per la memoria, l'opzione ROWGUIDCOL non è supportata in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. Le colonne di questo tipo vengono in genere utilizzate per la replica di tipo merge o per le tabelle con colonne FILESTREAM. Nell'esempio sono escluse entrambe.  
   
  Sales.SalesOrderDetail  
   
 -   *Vincoli predefiniti*: analogamente a SalesOrderHeader, non viene eseguita la migrazione del vincolo predefinito per cui sono richieste data/ora del sistema. L'inserimento della data/ora di sistema corrente verrà eseguito dalla stored procedure tramite cui vengono inseriti gli ordini di vendita al primo inserimento.  
   
--   *Colonne calcolate*: la migrazione della colonna calcolata LineTotal non è stata eseguita poiché le colonne di questo tipo non sono supportate con le tabelle ottimizzate per la memoria in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]. Per accedere a questa colonna, usare la vista Sales.vSalesOrderDetail_extended_inmem.  
+-   *Colonne calcolate*: la migrazione della colonna calcolata LineTotal non è stata eseguita poiché le colonne di questo tipo non sono supportate con le tabelle ottimizzate per la memoria in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. Per accedere a questa colonna, usare la vista Sales.vSalesOrderDetail_extended_inmem.  
   
 -   *Rowguid* . La colonna rowguid viene omessa. Per informazioni dettagliate, vedere la descrizione della tabella SalesOrderHeader.  
   

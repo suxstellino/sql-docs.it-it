@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dff6d19b-765c-4df9-afff-9a0e7be9b91b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c1a4d3014286618639b045f5028935368321a3a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6aa035be000fbbda12a7205c33925daf656c3da0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753583"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345019"
 ---
 # <a name="functions-on-nodes---number"></a>Funzioni su nodi - number
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ fn:number($arg as node()?) as xs:double?
  *$arg*  
  Nodo per il quale verrà restituito un valore numerico.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se *$arg* viene omesso, viene restituito il valore numerico del nodo di contesto, convertito in un valore Double. In SQL Server, **FN: Number ()** senza un argomento può essere usato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi ([ ]). Ad esempio, l'espressione seguente restituisce l' `ROOT` elemento <>.  
   
 ```  
@@ -51,7 +51,7 @@ select @x.query('/ROOT[number()=111]')
   
  Se il valore del nodo non è una rappresentazione lessicale valida di un tipo semplice numerico, come definito in **XML Schema Part 2: Datatypes, W3C Recommendation**, la funzione restituisce una sequenza vuota. NaN non è supportato.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
 ### <a name="a-using-the-number-xquery-function-to-retrieve-the-numeric-value-of-an-attribute"></a>R. Utilizzo della funzione XQuery number() per recuperare il valore numerico di un attributo  

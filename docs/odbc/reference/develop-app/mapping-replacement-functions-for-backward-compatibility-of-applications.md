@@ -19,25 +19,25 @@ helpviewer_keywords:
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7cba29b0dda2b0d4533444fd3fa8b83eaaeae7a9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e4c31d523a9fb50dd45bf8ab56c551d3830b0861
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461413"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100082162"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Mapping di funzioni di sostituzione per la compatibilità con le versioni precedenti delle applicazioni
 Un'applicazione ODBC *3. x* che utilizza Gestione driver ODBC *3. x* funzionerà con un driver ODBC *2. x* , purché non vengano utilizzate nuove funzionalità. Le funzionalità duplicate e le modifiche comportamentali, tuttavia, influiscono sulla modalità di funzionamento dell'applicazione ODBC *3. x* su un driver ODBC *2. x* . Quando si utilizza un driver ODBC *2.* x, gestione driver esegue il mapping delle seguenti funzioni ODBC *3. x* , che hanno sostituito una o più funzioni ODBC *2. x* , nelle funzioni ODBC *2. x* corrispondenti.  
   
 |Funzione ODBC *3. x*|Funzione ODBC *2. x*|  
 |-------------------------|-------------------------|  
-|**SQLAllocHandle**|**SQLAllocEnv**, **SQLAllocConnect**o **SQLAllocStmt**|  
+|**SQLAllocHandle**|**SQLAllocEnv**, **SQLAllocConnect** o **SQLAllocStmt**|  
 |**SQLBulkOperations**|**SQLSetPos**|  
 |**SQLColAttribute**|**SQLColAttributes**|  
 |**SQLEndTran**|**SQLTransact**|  
 |**SQLFetch**|**SQLExtendedFetch**|  
 |**SQLFetchScroll**|**SQLExtendedFetch**|  
-|**SQLFreeHandle**|**SQLFreeEnv**, **SQLFreeConnect**o **SQLFreeStmt**|  
+|**SQLFreeHandle**|**SQLFreeEnv**, **SQLFreeConnect** o **SQLFreeStmt**|  
 |**SQLGetConnectAttr**|**SQLGetConnectOption**|  
 |**SQLGetDiagRec**|**SQLError**|  
 |**SQLGetStmtAttr**|**SQLGetStmtOption**[1]|  
@@ -47,7 +47,7 @@ Un'applicazione ODBC *3. x* che utilizza Gestione driver ODBC *3. x* funzionerà
  [1] è possibile che vengano eseguite anche altre azioni, a seconda dell'attributo richiesto.  
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
- Gestione driver esegue il mapping a **SQLAllocEnv**, **SQLAllocConnect**o **SQLAllocStmt**, in base alle esigenze. La chiamata seguente a **SQLAllocHandle**:  
+ Gestione driver esegue il mapping a **SQLAllocEnv**, **SQLAllocConnect** o **SQLAllocStmt**, in base alle esigenze. La chiamata seguente a **SQLAllocHandle**:  
   
 ```  
 SQLAllocHandle(HandleType, InputHandle, OutputHandlePtr);  
@@ -85,7 +85,7 @@ SQLBulkOperations(hstmt, Operation);
   
 4.  Se l'argomento Operation è SQL_ADD, l'applicazione deve chiamare **SQLBindCol** per associare i dati da inserire. Non è possibile chiamare **SQLSetDescField** o **SQLSetDescRec** per associare i dati da inserire.  
   
-5.  Se l'argomento Operation è SQL_ADD e il numero di righe da inserire non corrisponde a quello delle dimensioni correnti del set di righe, è necessario chiamare **SQLSetStmtAttr** per impostare l'attributo dell'istruzione SQL_ATTR_ROW_ARRAY_SIZE sul numero di righe da inserire prima di chiamare **SQLBulkOperations**. Per ripristinare le dimensioni del set di righe precedenti, l'applicazione deve impostare l'attributo dell'istruzione SQL_ATTR_ROW_ARRAY_SIZE prima della chiamata a **SQLFetch**, **SQLFetchScroll**o **SQLSetPos** .  
+5.  Se l'argomento Operation è SQL_ADD e il numero di righe da inserire non corrisponde a quello delle dimensioni correnti del set di righe, è necessario chiamare **SQLSetStmtAttr** per impostare l'attributo dell'istruzione SQL_ATTR_ROW_ARRAY_SIZE sul numero di righe da inserire prima di chiamare **SQLBulkOperations**. Per ripristinare le dimensioni del set di righe precedenti, l'applicazione deve impostare l'attributo dell'istruzione SQL_ATTR_ROW_ARRAY_SIZE prima della chiamata a **SQLFetch**, **SQLFetchScroll** o **SQLSetPos** .  
   
 ## <a name="sqlcolattribute"></a>SQLColAttribute  
  Gestione driver esegue il mapping a **SQLColAttributes**. La chiamata seguente a **SQLColAttribute**:  
@@ -193,7 +193,7 @@ SQLFetchScroll(StatementHandle, FetchOrientation, FetchOffset);
 -   Se *RC* è uguale a SQL_SUCCESS o SQL_SUCCESS_WITH_INFO e se *FetchOrientation* è uguale a SQL_FETCH_BOOKMARK e *FetchOffset* è diverso da 0, gestione driver invia un avviso, SQLSTATE 01S10 (tentativo di recupero tramite un offset di segnalibro, valore di offset ignorato) e restituisce SQL_SUCCESS_WITH_INFO.  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
- Gestione driver esegue il mapping a **SQLFreeEnv**, **SQLFreeConnect**o **SQLFreeStmt** in base alle esigenze. La chiamata seguente a **SQLFreeHandle**:  
+ Gestione driver esegue il mapping a **SQLFreeEnv**, **SQLFreeConnect** o **SQLFreeStmt** in base alle esigenze. La chiamata seguente a **SQLFreeHandle**:  
   
 ```  
 SQLFreeHandle(HandleType, Handle);  
@@ -293,7 +293,7 @@ SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, StringLengthP
     SQLGetStmtOption (hstmt, fOption, pvParam);  
     ```  
   
-     dove *HSTMT*, *fOption*e *pvParam* verranno impostati rispettivamente sui valori di *statementHandle*, *attribute*e *ValuePtr*. *BufferLength* e *StringLengthPtr* vengono ignorati.  
+     dove *HSTMT*, *fOption* e *pvParam* verranno impostati rispettivamente sui valori di *statementHandle*, *attribute* e *ValuePtr*. *BufferLength* e *StringLengthPtr* vengono ignorati.  
   
 ## <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
  Gestione driver esegue il mapping a **SQLSetConnectOption**. La chiamata seguente a **SQLSetConnectAttr**:  
@@ -316,7 +316,7 @@ SQLSetConnectAttr(ConnectionHandle, Attribute, ValuePtr, StringLength);
     SQLSetConnectOption (hdbc, fOption, vParam);  
     ```  
   
-     dove *HDBC*, *fOption*e *parametro vParam* verranno impostati rispettivamente sui valori di *connectionHandle*, *attribute*e *ValuePtr*. *StringLengthPtr* viene ignorato.  
+     dove *HDBC*, *fOption* e *parametro vParam* verranno impostati rispettivamente sui valori di *connectionHandle*, *attribute* e *ValuePtr*. *StringLengthPtr* viene ignorato.  
   
 > [!NOTE]  
 >  La possibilità di impostare gli attributi di istruzione a livello di connessione è stata deprecata. Gli attributi di istruzione non devono mai essere impostati a livello di connessione da un'applicazione ODBC *3. x* .  
@@ -380,7 +380,7 @@ SQLSetStmtAttr(StatementHandle, Attribute, ValuePtr, StringLength);
     SQLSetStmtOption (hstmt, fOption, vParam);  
     ```  
   
-     dove *HSTMT*, *fOption*e *parametro vParam* verranno impostati rispettivamente sui valori di *statementHandle*, *attribute*e *ValuePtr*. L'argomento *StringLength* viene ignorato.  
+     dove *HSTMT*, *fOption* e *parametro vParam* verranno impostati rispettivamente sui valori di *statementHandle*, *attribute* e *ValuePtr*. L'argomento *StringLength* viene ignorato.  
   
      Se un driver ODBC *2. x* supporta le opzioni per le istruzioni specifiche del driver e delle stringhe di caratteri, un'applicazione ODBC *3. x* deve chiamare **SQLSetStmtOption** per impostare tali opzioni.  
   
