@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 03c9c90f1c9382c85141853ff19cc5d76b40f093
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
-ms.translationtype: HT
+ms.openlocfilehash: 7313fbc789b37cf326d55566c1f087f80b4929df
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115938"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100351943"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configurare un gruppo di disponibilità Always On di SQL Server per la disponibilità elevata in Linux
 
@@ -178,8 +178,8 @@ Eseguire **solo uno** degli script seguenti:
          FAILOVER_MODE = EXTERNAL,
          SEEDING_MODE = AUTOMATIC
       ),
-      N'node2' WITH ( 
-         ENDPOINT_URL = N'tcp://node2:5022', 
+      N'node2' WITH ( 
+         ENDPOINT_URL = N'tcp://node2:5022', 
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
          FAILOVER_MODE = EXTERNAL,
          SEEDING_MODE = AUTOMATIC
@@ -211,7 +211,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 [!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
 >[!IMPORTANT]
->Dopo aver creato il gruppo di disponibilità, è necessario configurare l'integrazione con uno strumento per la gestione di cluster come Pacemaker per la disponibilità elevata. Per una configurazione di scalabilità in lettura con gruppi di disponibilità, a partire da [!INCLUDE [SQL Server version](../includes/sssqlv14-md.md)], non è necessario configurare un cluster.
+>Dopo aver creato il gruppo di disponibilità, è necessario configurare l'integrazione con uno strumento per la gestione di cluster come Pacemaker per la disponibilità elevata. Per una configurazione di scalabilità in lettura con gruppi di disponibilità, a partire da [!INCLUDE [SQL Server version](../includes/sssql17-md.md)], non è necessario configurare un cluster.
 
 Se si è seguita la procedura descritta in questo documento, si ha un gruppo di disponibilità non ancora configurato in cluster. Il passaggio successivo consiste nell'aggiungere il cluster. Questa configurazione è valida per gli scenari di scalabilità in lettura/bilanciamento del carico, ma non è completa per la disponibilità elevata. Per ottenere la disponibilità elevata, è necessario aggiungere il gruppo di disponibilità come risorsa cluster. Vedere [Passaggi successivi](#next-steps) per le istruzioni. 
 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 58e9bf0ee719e650d8e7a5b8270fbe9f638b559d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e650bd924e893b21cbc6b154887d9cd6e66565b9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92257928"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352776"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>Finestra di dialogo Filtro (componente aggiuntivo MDS per Excel)
 
@@ -24,7 +24,7 @@ ms.locfileid: "92257928"
 
   Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]usare la finestra di dialogo **Filtro** per limitare l'elenco di dati gestiti da MDS prima di caricarlo in Excel.  
   
- Questa finestra di dialogo contiene tre sezioni: **Colonne**, **Righe**e **Riepilogo**.  
+ Questa finestra di dialogo contiene tre sezioni: **Colonne**, **Righe** e **Riepilogo**.  
   
 ## <a name="columns"></a>Colonne  
  Usare la sezione **Colonne** per determinare quali attributi (colonne) visualizzare in Excel.  
@@ -49,7 +49,7 @@ ms.locfileid: "92257928"
 |Aggiornare il riepilogo|Quando si usano set di dati di grandi dimensioni, fare clic per aggiornare la sezione **Riepilogo** con i dettagli sulla quantità di dati che verrà caricata.|  
 |Add|Quando si fa clic su un attributo nella sezione **Colonne** , quindi su **Aggiungi**, un attributo viene aggiunto all'elenco di filtri.|  
 |Rimuovi tutto|Rimuove tutti i filtri dall'elenco.|  
-|Rimuovere|Rimuove il filtro selezionato dall'elenco.|  
+|Rimuovi|Rimuove il filtro selezionato dall'elenco.|  
   
 ## <a name="summary"></a>Riepilogo  
  Usare la sezione **Riepilogo** per visualizzare i dettagli sulla quantità di dati che verrà caricata, prima di caricarla.  

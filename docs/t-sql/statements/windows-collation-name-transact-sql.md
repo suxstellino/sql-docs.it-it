@@ -19,12 +19,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f1cb7d2ed959701d28ccf253904d7793a4771b4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2fa047e5ef018109352972f3ae139c6eff2c1b93
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99206898"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100349957"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows_collation_name (Transact-SQL)
 
@@ -75,12 +75,12 @@ Omettendo questa opzione si specifica che la distinzione Kana non è rilevante. 
 Omettendo questa opzione si specifica che la distinzione di larghezza non è rilevante. **WS** specifica che la distinzione di larghezza è rilevante.
 
 *VariationSelectorSensitivity*  
-- **Si applica a**: A partire da [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+- **Si applica a**: A partire da [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] 
 
 - Omettendo questa opzione si specifica che il selettore di variazione non è rilevante, **VSS** specifica che il selettore di variazione è rilevante.
 
 **UTF8**  
-- **Si applica a**: A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+- **Si applica a**: A partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]   
 
 - Specifica la codifica UTF-8 da usare per i tipi di dati idonei. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
 
