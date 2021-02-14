@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ded91465a2a9c7b5a0e8ddcdc219b2af5a84395e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 44ac691a0fe9cb4b513a2f9b435457c699c7e3e9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935353"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076076"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Mapping tra database MySQL e schemi di SQL Server (MySQLToSQL)
 Per impostazione predefinita, SSMA per MySQL esegue la migrazione di tutti gli oggetti in uno schema MySQL in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database SQL di Azure o denominato per lo schema. Tuttavia, è possibile personalizzare il mapping tra gli schemi MySQL e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o il database SQL di Azure.  
@@ -26,7 +26,7 @@ Per impostazione predefinita, SSMA per MySQL esegue la migrazione di tutti gli o
 ## <a name="mysql-and-sql-server-or-sql-azure-schemas"></a>Schemi MySQL e SQL Server o SQL Azure  
 Il concetto di MySQL di uno schema viene mappato al concetto di SQL Server di un database e di uno dei relativi schemi. SSMA fa riferimento alla combinazione SQL Server di database e schema come schema.  
   
-Il concetto di MySQL di uno schema viene mappato al concetto di SQL Server di un database e di uno dei relativi schemi. Ad esempio, MySQL potrebbe avere uno schema denominato **HR**. Un'istanza di SQL Server potrebbe disporre di un database denominato **HR**e all'interno di tale database sono schemi. Uno schema è lo schema **dbo** (o Owner database). Per impostazione predefinita, viene eseguito il mapping di MySQL schema **HR** al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database e allo schema **HR. dbo**. SSMA fa riferimento alla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinazione di database e schema come schema.  
+Il concetto di MySQL di uno schema viene mappato al concetto di SQL Server di un database e di uno dei relativi schemi. Ad esempio, MySQL potrebbe avere uno schema denominato **HR**. Un'istanza di SQL Server potrebbe disporre di un database denominato **HR** e all'interno di tale database sono schemi. Uno schema è lo schema **dbo** (o Owner database). Per impostazione predefinita, viene eseguito il mapping di MySQL schema **HR** al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database e allo schema **HR. dbo**. SSMA fa riferimento alla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinazione di database e schema come schema.  
   
 È possibile modificare il mapping tra gli schemi MySQL e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure.  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3735f53eac6101d2cc02568d1ea6fa789df50512
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
-ms.translationtype: HT
+ms.openlocfilehash: fc9beaae557b81ae65e4fd63a22f5696b4f78052
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935393"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015311"
 ---
 # <a name="create-the-rsexecrole"></a>Creare RSExecRole
 
@@ -62,7 +62,7 @@ ms.locfileid: "91935393"
   
 7.  Fare clic con il pulsante destro del mouse su **Ruoli del database**, quindi scegliere **Nuovo ruolo database**. Verrà visualizzata la pagina **Ruolo del database - Nuovo**.  
   
-8.  In **Nome ruolo**digitare **RSExecRole**.  
+8.  In **Nome ruolo** digitare **RSExecRole**.  
   
 9. In **Proprietario** digitare **dbo**.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "91935393"
   
 19. Nella colonna **Concedi** della riga **Esegui** selezionare la casella di controllo.  
   
-20. Ripetere il passaggio per ognuna delle stored procedure rimanenti. A**RSExecRole** devono essere concesse le autorizzazioni di esecuzione per tutte le tre stored procedure.  
+20. Ripetere il passaggio per ognuna delle stored procedure rimanenti. A **RSExecRole** devono essere concesse le autorizzazioni di esecuzione per tutte le tre stored procedure.  
 
 21. Al termine selezionare **OK**.  
   

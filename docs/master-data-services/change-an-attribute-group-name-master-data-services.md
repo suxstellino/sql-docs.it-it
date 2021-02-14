@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d7fab1a8f16c51d52e32c0147a85ab6ef08cd821
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1ef8ddfdf5444683ebef8ffd82042cd6e83951cf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461938"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272862"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>Modificare il nome di un gruppo di attributi (Master Data Services)
 
@@ -43,7 +43,7 @@ ms.locfileid: "88461938"
   
 4.  Fare clic su **Gruppi di attributi**.  
   
-5.  Nella pagina **Gestisci gruppi di attributi** selezionare il tipo di membro nell'elenco a discesa **Tipi di membri** per espandere **Foglia**, **Consolidato**o **Raccolta**, a seconda del tipo di gruppo che si vuole aggiornare.  
+5.  Nella pagina **Gestisci gruppi di attributi** selezionare il tipo di membro nell'elenco a discesa **Tipi di membri** per espandere **Foglia**, **Consolidato** o **Raccolta**, a seconda del tipo di gruppo che si vuole aggiornare.  
   
 6.  Fare clic sul nome del gruppo di attributi da aggiornare e quindi scegliere **Modifica**.  
   

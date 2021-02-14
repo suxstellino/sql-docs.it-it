@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.custom: ''
 ms.date: 11/10/2020
-ms.openlocfilehash: 30205befcdd9da78f4f9a3f002ddd398f49abc55
-ms.sourcegitcommit: d681796e8c012eca2d9629d3b816749e9f50f868
+ms.openlocfilehash: 31b0dedb8544cc6752eac8a9934aa92d74d424ee
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98005386"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100081872"
 ---
 # <a name="sp_data_source_table_columns-transact-sql"></a>sp_data_source_table_columns (Transact-SQL)
 
@@ -101,7 +101,7 @@ DECLARE @table_location NVARCHAR(400) = N'[database].[schema].[table]';
 EXEC sp_data_source_table_columns @data_source, @table_location
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Introduzione a PolyBase](../polybase/polybase-guide.md)
 - [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)

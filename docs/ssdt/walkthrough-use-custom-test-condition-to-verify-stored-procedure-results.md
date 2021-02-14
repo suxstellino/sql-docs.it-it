@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 738ff14a43dd473abeab0c02ef206417675a7fb9
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
-ms.translationtype: HT
+ms.openlocfilehash: d434df88cae0a5fb28add27cc9785e659f059ced
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987695"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042491"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Procedura dettagliata: Uso di una condizione di test personalizzata per verificare i risultati di una stored procedure
 
@@ -351,7 +351,7 @@ Nella prossima esercitazione verrà illustrato come copiare le informazioni sull
   
 Copiare il file di assembly **ColumnCountCondition.dll** dalla directory di output nella directory %Programmi%\Microsoft Visual Studio <Version>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions.  
   
-Per impostazione predefinita, il percorso del file DLL compilato è *PercorsoSoluzione*\\*PercorsoProgetto*\bin\Debug o *PercorsoSoluzione*\\*PercorsoProgetto*bin\Release.  
+Per impostazione predefinita, il percorso del file DLL compilato è *PercorsoSoluzione*\\*PercorsoProgetto*\bin\Debug o *PercorsoSoluzione*\\*PercorsoProgetto* bin\Release.  
   
 Nella prossima esercitazione verrà illustrato come avviare una nuova sessione di Visual Studio e creare un progetto di database. Per avviare una nuova sessione di Visual Studio e creare un progetto di database:  
   

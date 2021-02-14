@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 593c36c193b95d1484f3d478018992ea130d5417
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bddb9d2329c20203aca602e7aec37f235c4b6850
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418637"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077672"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Accedere agli schemi di inventario (AccessToSQL)
 Nelle sezioni seguenti vengono descritte le tabelle create da SSMA quando si esportano gli schemi di accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -98,7 +98,7 @@ I metadati della colonna vengono esportati nella tabella **SSMA_Access_Inventory
 |**DataType**|**nvarchar(4000)**|Tipo di dati di accesso della colonna, ad esempio **testo** o **Long**.|  
 |**IsAutoIncrement**|**bit**|Specifica se la colonna incrementa automaticamente i valori integer. Se il valore è 1, i numeri interi vengono incrementati automaticamente.|  
 |**Ordinale**|**smallint**|Ordine della colonna nella tabella, a partire da zero.|  
-|**DefaultValue**|**nvarchar(4000)**|Valore predefinito della colonna.|  
+|**DefaultValue**|**nvarchar(4000)**|Il valore predefinito per la colonna.|  
 |**ValidationRule**|**nvarchar(4000)**|Regola utilizzata per convalidare i dati aggiunti o aggiornati nella colonna.|  
   
 ## <a name="indexes"></a>Indici  

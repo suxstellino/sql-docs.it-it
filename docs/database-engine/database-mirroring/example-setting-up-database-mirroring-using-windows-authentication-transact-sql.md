@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 128fb94e9e99315a0a8f9d24067fc863467fb349
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 50b27862389c0977abcfe5072534043458bd5b3b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641726"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100342308"
 ---
 # <a name="example-configure-database-mirroring-using-windows-authentication-transact-sql"></a>Esempio: Configurare il mirroring del database usando l'autenticazione di Windows (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

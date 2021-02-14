@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: fa97b4a86fd4275b12f784ce40d6d03139e3d52e
-ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.openlocfilehash: 6e4eb6f9cf7b58a18f42d0b99531084d7fb2cd59
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99213583"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100343361"
 ---
 Ogni gruppo di disponibilità include solo una replica primaria, che consente operazioni di lettura e scrittura. Per modificare la replica primaria, è possibile effettuare il failover. In un gruppo di disponibilità tipico, gestione cluster automatizza il processo di failover. In un gruppo di disponibilità con tipo di cluster NONE, il processo di failover è manuale.
 

@@ -9,12 +9,12 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9d0fd133bc447c1a99a83ab7411cb2d2af543629
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
-ms.translationtype: HT
+ms.openlocfilehash: 199bff19ef24626f3ff55a1d10f123183674e571
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92358667"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100052562"
 ---
 # <a name="azdata-arc-sql"></a>azdata arc sql
 

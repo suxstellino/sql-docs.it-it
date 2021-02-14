@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a4881fc4710ba56439eb98b5b196af93247c11f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7457341a5489485973869e46c2ba721b86352217
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768155"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345011"
 ---
 # <a name="functions-on-string-values---substring"></a>Funzioni su valori stringa - substring
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ fn:substring($sourceString as xs:string?,
  *$length*  
  Numero di caratteri da recuperare (facoltativo). Se non è specificato, vengono restituiti tutti i caratteri dalla posizione specificata in *$startingLoc* fino alla fine della stringa.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La versione della funzione con tre argomenti restituisce i caratteri di `$sourceString` il cui operatore di posizione `$p` è soggetto alla regola seguente:  
   
  `fn:round($startingLoc) <= $p < fn:round($startingLoc) + fn:round($length)`  
@@ -69,7 +69,7 @@ fn:substring($sourceString as xs:string?,
   
  SQL Server consente *$startingLoc* e *$length* la sequenza vuota, perché la sequenza vuota è un possibile valore in seguito a errori dinamici di cui è stato eseguito il mapping a ().  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
   
 ### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>R. Utilizzo della funzione XQuery substring() per recuperare le descrizioni parziali del modello del prodotto disponibili nell'elemento Summary  

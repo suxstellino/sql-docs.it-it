@@ -15,18 +15,18 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15
-ms.openlocfilehash: 8d116fbf036540337bef9d0b21bb66f79017bfd2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 5e2dd566b0c5842636619c8331bfc88378dc4f84
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464502"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350867"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining di funzioni definite dall'utente scalari
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Questo articolo presenta l'inlining di funzioni definite dall'utente scalari, una delle funzionalità incluse nel gruppo di funzionalità di [elaborazione di query intelligenti](../../relational-databases/performance/intelligent-query-processing.md). Questa funzionalità migliora le prestazioni delle query che chiamano funzioni definite dall'utente scalari in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]).
+Questo articolo presenta l'inlining di funzioni definite dall'utente scalari, una delle funzionalità incluse nel gruppo di funzionalità di [elaborazione di query intelligenti](../../relational-databases/performance/intelligent-query-processing.md). Questa funzionalità migliora le prestazioni delle query che chiamano funzioni definite dall'utente scalari in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sssql19](../../includes/sssql19-md.md)]).
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>Funzioni definite dall'utente scalari T-SQL
 Le funzioni definite dall'utente (UDF) implementate in [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituiscono un unico valore di dati sono dette funzioni definite dall'utente scalari T-SQL. Le funzioni definite dall'utente T-SQL consentono di riusare e modulare il codice in più query [!INCLUDE[tsql](../../includes/tsql-md.md)] in modo elegante. Alcuni calcoli (ad esempio regole business complesse) sono più facili da esprimere nella forma imperativa delle funzioni definite dall'utente. Le funzioni definite dall'utente consentono di creare una logica complessa senza richiedere l'esperienza necessaria per la scrittura di query SQL complesse. Per altre informazioni sulle funzioni definite dall'utente, vedere [Creare funzioni definite dall'utente (motore di database)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).
@@ -174,13 +174,13 @@ A seconda della complessità della logica della funzione definita dall'utente, i
 
 <sup>3</sup> Le funzioni intrinseche i cui risultati dipendono dall'ora di sistema corrente sono dipendenti dall'ora. Un esempio di funzione con effetti collaterali può essere costituito da una funzione intrinseca in grado di aggiornare uno stato globale interno. Tali funzioni restituiscono risultati diversi ogni volta che vengono chiamate, a seconda dello stato interno.
 
-<sup>4</sup> Restrizione aggiunta in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2
+<sup>4</sup> Restrizione aggiunta in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU2
 
-<sup>5</sup> Restrizione aggiunta in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4
+<sup>5</sup> Restrizione aggiunta in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU4
 
-<sup>6</sup> Restrizione aggiunta in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5
+<sup>6</sup> Restrizione aggiunta in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU5
 
-<sup>7</sup> Restrizione aggiunta in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6
+<sup>7</sup> Restrizione aggiunta in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU6
 
 > [!NOTE]
 > Per informazioni sulle correzioni e sulle modifiche più recenti dell'inlining di funzioni definite dall'utente scalari di T-SQL in scenari di idoneità all'inlining, vedere l'articolo della Knowledge Base: [CORREZIONE: Problemi relativi all'inlining di funzioni definite dall'utente scalari in SQL Server 2019](https://support.microsoft.com/help/4538581).
@@ -283,7 +283,7 @@ Come descritto in questo articolo, l'inlining di una funzione definita dall'uten
 1. Gli hint di join a livello di query possono non essere più validi, poiché l'inlining può introdurre nuovi join. È necessario usare hint di join locale.
 1. Non è possibile indicizzare le viste che fanno riferimento a funzioni definite dall'utente scalari. Se è necessario creare un indice per tali viste, disabilitare l'inlining per le funzioni definite dall'utente interessate.
 1. Con l'inlining di funzioni definite dall'utente possono presentarsi alcune differenze nel comportamento del [Dynamic Data Masking](../security/dynamic-data-masking.md). In determinate situazioni (a seconda della logica della funzione definita dall'utente), l'inlining può essere più conservativo rispetto alla maschera delle colonne di output. Negli scenari in cui le colonne a cui si fa riferimento in una funzione definita dall'utente non sono colonne di output, queste non vengono mascherate. 
-1. Se una funzione definita dall'utente fa riferimento a funzioni predefinite, ad esempio `SCOPE_IDENTITY()`, `@@ROWCOUNT` o `@@ERROR`, il valore restituito dalla funzione predefinita cambierà con l'inlining. Questa modifica nel comportamento è dovuta al fatto che l'inlining modifica l'ambito delle istruzioni all'interno della funzione definita dall'utente. A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2, l'inlining è bloccato se la funzione definita dall'utente fa riferimento a determinate funzioni intrinseche (ad esempio, `@@ROWCOUNT`).
+1. Se una funzione definita dall'utente fa riferimento a funzioni predefinite, ad esempio `SCOPE_IDENTITY()`, `@@ROWCOUNT` o `@@ERROR`, il valore restituito dalla funzione predefinita cambierà con l'inlining. Questa modifica nel comportamento è dovuta al fatto che l'inlining modifica l'ambito delle istruzioni all'interno della funzione definita dall'utente. A partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU2, l'inlining è bloccato se la funzione definita dall'utente fa riferimento a determinate funzioni intrinseche (ad esempio, `@@ROWCOUNT`).
 
 ## <a name="see-also"></a>Vedere anche
 [Creare funzioni definite dall'utente (motore di database)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   

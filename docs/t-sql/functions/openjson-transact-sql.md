@@ -18,12 +18,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: chadam
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017
-ms.openlocfilehash: 7cf19093bb9e98dc0806bae16cbf8c9e0428db10
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b29315567520dff0d4700aeb476279bf6cfe24b7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99210699"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100340646"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
@@ -109,7 +109,7 @@ SELECT * FROM OpenJson(@json);
 
 Espressione di percorso JSON facoltativa che fa riferimento a un oggetto o a una matrice all'interno di *jsonExpression*. **OPENJSON** esegue la ricerca nel testo JSON nella posizione specificata e analizza solo il frammento cui viene fatto riferimento. Per altre informazioni, vedere [Espressioni di percorso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).
 
-In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e nel [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] è possibile specificare una variabile come valore di *path*.
+In [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] e nel [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] è possibile specificare una variabile come valore di *path*.
   
 L'esempio seguente restituisce un oggetto nidificato tramite la specifica di *path*:  
 

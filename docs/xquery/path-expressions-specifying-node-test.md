@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aaad5923695e6cb8e98e2c7f40fa2bb9a044a7ce
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 578d10bc078edf886eb7980c3b7a099c99ef59a5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915547"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338545"
 ---
 # <a name="path-expressions---specifying-node-test"></a>Espressioni di percorso - Specifica test di nodo
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -108,7 +108,7 @@ child::comment()
   
  Analogamente, `/child::ProductDescription/child::Features/child::comment()` Recupera i nodi di commento figlio del nodo \<Features> elemento figlio del \<ProductDescription> nodo elemento.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Negli esempi seguenti vengono confrontati il nome di nodo e il tipo di nodo.  
   
 ### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>R. Risultati della definizione del nome di nodo e del tipo di nodo come test di nodo in un'espressione di percorso  

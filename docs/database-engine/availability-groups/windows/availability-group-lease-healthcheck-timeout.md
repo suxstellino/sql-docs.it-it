@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: ''
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 4eb5140f5b15543699f82d9a1b98f595db25d969
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 787a683eb0fc666eff8f3c72519bbba149dafe96
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100058416"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100340809"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Funzionamento e linee guida per i timeout lease, cluster e controllo integrità per i gruppi di disponibilità Always On 
 
@@ -98,7 +98,7 @@ I valori di ritardo (delay) determinano il tempo tra gli heartbeat del servizio 
 Per elencare tutti i valori cluster correnti, in qualsiasi nodo del cluster di destinazione aprire un terminale PowerShell con privilegi elevati. Eseguire il comando seguente:
 
 ```PowerShell
- Get-Cluster | fl \
+ Get-Cluster | fl *
 ``` 
 
 Per aggiornare uno di questi valori, eseguire il comando seguente in un terminale PowerShell con privilegi elevati:
@@ -125,6 +125,8 @@ Il meccanismo lease è controllato da un valore singolo specifico per ogni grupp
 
    A seconda della configurazione del gruppo di disponibilità, possono essere disponibili risorse aggiuntive per listener, dischi condivisi, condivisioni di file e così via. Queste risorse non richiedono alcuna configurazione aggiuntiva. 
 
+> [!NOTE]  
+>  Il nuovo valore della proprietà' LeaseTimeout ' verrà applicato dopo che la risorsa viene portata offline e riportata online.
    
 ### <a name="health-check-values"></a>Valori del controllo integrità 
 
