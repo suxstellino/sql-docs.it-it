@@ -25,12 +25,13 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: XiaoyuMSFT
 ms.author: XiaoyuL
-ms.openlocfilehash: 6b6610293bb78ef34ae5ca8b88f762c9ab4948e9
-ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||  azure-sqldw-latest
+ms.openlocfilehash: 6bb1014c22353826b6e4429726d4d28549cc274a
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "99978863"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489335"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -100,7 +101,8 @@ MERGE
   
 <clause_search_condition> ::=  
     <search_condition> 
-```  
+```
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ```syntaxsql
@@ -117,9 +119,9 @@ MERGE
     [ WHEN NOT MATCHED BY SOURCE [ AND <clause_search_condition> ]  
         THEN <merge_matched> ] [ ...n ]
     [ OPTION ( <query_hint> [ ,...n ] ) ]
-;  -- The semi-colon is required, or the query will return syntax  error. 
+;  -- The semi-colon is required, or the query will return a syntax error. 
 ```
- 
+
 ## <a name="arguments"></a>Argomenti
 
 WITH \<common_table_expression>  
@@ -236,7 +238,9 @@ Specifica il modello di corrispondenza del grafico. Per altre informazioni sugli
 >[!NOTE]
 > In Azure Synapse Analytics, il comando MERGE (anteprima) presenta le differenze seguenti rispetto a SQL Server e al database SQL di Azure.  
 > - Un'azione di aggiornamento di MERGE viene implementata come una coppia di azioni di eliminazione e inserimento. Il numero di righe interessate da un'azione di aggiornamento di MERGE include le righe eliminate e inserite. 
+
 > - Durante l'anteprima, Esegui MERGE... Quando l'istruzione INSERT non corrispondente non è supportata per le tabelle con colonne IDENTITY.  
+
 > - In questa tabella viene descritto il supporto per le tabelle con tipi di distribuzione diversi:
 
 >|CLAUSOLA MERGE in Azure Synapse Analytics|Supporto della tabella di distribuzione TARGET| Supporto della tabella di distribuzione SOURCE|Commento|  
@@ -257,8 +261,7 @@ MERGE è una parola chiave completamente riservata se il livello di compatibilit
   
 Non usare l'istruzione **MERGE** quando si usa la replica di aggiornamento in coda. **MERGE** e il trigger per l'aggiornamento in coda non sono compatibili. Sostituire l'istruzione **MERGE** con un'istruzione INSERT o UPDATE.  
 
-
-## <a name="trigger-implementation"></a>Implementazione dei trigger
+## <a name="trigger-implementation"></a>Implementazione di trigger
 
 Per ogni azione di inserimento, aggiornamento o eliminazione specificata nell'istruzione MERGE, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono attivati i trigger AFTER corrispondenti definiti nella tabella di destinazione, senza garantire l'ordine di attivazione dei trigger per le azioni. I trigger definiti per la stessa azione rispettano l'ordine specificato dall'utente. Per altre informazioni sull'impostazione dell'ordine di attivazione dei trigger, vedere [Specifica dei primi e degli ultimi trigger](../../relational-databases/triggers/specify-first-and-last-triggers.md).  
   
@@ -285,7 +288,7 @@ Per migliorare le prestazioni delle istruzioni MERGE, si consiglia di attenersi 
 
 Tali indici garantiscono l'univocità delle chiavi di join e l'ordinamento dei dati contenuti nelle tabelle. Le prestazioni delle query risultano migliorate poiché Query Optimizer non deve eseguire alcuna ulteriore elaborazione della convalida per individuare e aggiornare righe duplicate né è necessario eseguire operazioni di ordinamento aggiuntive.
 
-### <a name="join-best-practices"></a>Procedure consigliate per l'operatore JOIN
+### <a name="join-best-practices"></a>Procedure consigliate di JOIN
 
 Per migliorare le prestazioni delle istruzioni MERGE e garantire che vengano ottenuti risultati corretti, si consiglia di attenersi alle linee guida relative ai join seguenti:
 
@@ -346,7 +349,7 @@ Per migliorare le prestazioni del processo di merge di tipo bulk, si consiglia d
 
 Queste linee guida garantiscono che le chiavi di join siano univoche e che l'ordinamento dei dati nel file di origine corrisponda alla tabella di destinazione. Le prestazioni delle query risultano migliorate poiché non sono necessarie ulteriori operazioni di ordinamento né vengono richieste copie dei dati non necessarie.
 
-### <a name="measuring-and-diagnosing-merge-performance"></a>Misurazione e diagnosi delle prestazioni delle istruzioni MERGE
+### <a name="measuring-and-diagnosing-merge-performance"></a>Misurazione e diagnosi delle prestazioni di MERGE
 
 Per effettuare la misurazione e la diagnosi delle prestazioni delle istruzioni MERGE, sono disponibili le caratteristiche seguenti.
 
