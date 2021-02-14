@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: 6c27959422023c0407d7abe3a1219c6a242bae7f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 85365639565eaf42ca1bf23825016a08ef8f50bf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97469072"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100081342"
 ---
 # <a name="use-the-external-table-wizard-with-odbc-data-sources"></a>Usare la procedura guidata Tabella esterna con origini dati ODBC
 

@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan, sstein
 ms.custom: seo-lt-2019
 ms.date: 11/03/2020
-ms.openlocfilehash: ea5ae3f9fa941e723d3bdf10de0ec900310cc28d
-ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
-ms.translationtype: HT
+ms.openlocfilehash: f7a11c952fa20b720ad37abc204c7dbb31f0e96f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93328781"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058606"
 ---
 # <a name="workaround-to-enable-copying-from-find-and-replace-window"></a>Soluzione alternativa per abilitare la copia dalla finestra Trova e sostituisci
 

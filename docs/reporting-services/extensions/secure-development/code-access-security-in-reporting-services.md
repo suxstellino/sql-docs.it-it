@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b17b8c6e3506d31e7576c2e0f5f155a9da597c7d
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
-ms.translationtype: HT
+ms.openlocfilehash: dccf6bacfaf431cb69ba4ec8dc031f4e817f4650
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529398"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065296"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Sicurezza dall'accesso di codice in Reporting Services
   La sicurezza dall'accesso di codice si basa su tre concetti principali, ovvero evidenza, gruppi di codice e set di autorizzazione denominati. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] i componenti Gestione report, Progettazione report e server di report dispongono ognuno di un file di criteri che configura la sicurezza dall'accesso di codice per assembly personalizzati ed estensioni per i dati, il recapito, il rendering e di sicurezza. Nelle sezioni seguenti viene fornita una panoramica sulla sicurezza dall'accesso di codice. Per altre informazioni sugli argomenti trattati in questa sezione, vedere la sezione relativa al modello dei criteri di sicurezza nella documentazione di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK.  

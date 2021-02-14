@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fb78185693d455428de22021d133a63eb13c543
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: d8a30c9fe99378aa06ebf9bfc69dca24ab09028a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431013"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352100"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Editor attività Profiling dati (pagina Generale)
 
@@ -41,7 +41,7 @@ ms.locfileid: "88431013"
   
 2.  Nella scheda **Flusso di controllo** fare doppio clic sull'attività Profiling dati.  
   
-3.  In **Editor attività Profiling dati**fare clic su **Generale**.  
+3.  In **Editor attività Profiling dati** fare clic su **Generale**.  
   
 ## <a name="data-profiling-options"></a>Opzioni di profiling dei dati  
  **Timeout**  

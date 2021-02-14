@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 2abb12c7df083de7e19148729cb64e16b96d528d
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
-ms.translationtype: HT
+ms.openlocfilehash: 5f8d17fa156cd144a87b2dc387564cd93556d8da
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988237"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077192"
 ---
 # <a name="analyze-script-performance"></a>Analizzare le prestazioni degli script
 
@@ -26,7 +26,7 @@ Inoltre, è consigliabile risolvere determinati problemi di prestazioni analizza
 ## <a name="using-client-statistics"></a>Utilizzo delle statistiche client  
 Quando si esegue uno script o una query nell'Editor Transact\-SQL, si può scegliere di raccogliere statistiche client, ad esempio statistiche temporali, della rete e del profilo dell'applicazione per l'esecuzione. Tale metrica consente di misurare l'efficienza dello script o di effettuare un benchmark di script differenti.  
   
-Per attivare o disattivare la raccolta di statistiche client, quando l'Editor Transact\-SQL è aperto, nel menu**Dati** scegliere **Editor Transact\-SQL**, fare clic su **Impostazioni di esecuzione**, quindi su **Includi statistiche client**. In alternativa, fare clic sul pulsante **Includi statistiche client** (il quinto da destra) nella barra degli strumenti dell'Editor Transact\-SQL o fare clic con il pulsante destro del mouse sull'Editor Transact\-SQL e selezionare**Impostazioni di esecuzione** e **Includi statistiche client**. Si noti che per raggruppare le statistiche per una query, è necessario abilitare questa funzionalità prima di eseguirla.  
+Per attivare o disattivare la raccolta di statistiche client, quando l'Editor Transact\-SQL è aperto, nel menu **Dati** scegliere **Editor Transact\-SQL**, fare clic su **Impostazioni di esecuzione**, quindi su **Includi statistiche client**. In alternativa, fare clic sul pulsante **Includi statistiche client** (il quinto da destra) nella barra degli strumenti dell'Editor Transact\-SQL o fare clic con il pulsante destro del mouse sull'Editor Transact\-SQL e selezionare **Impostazioni di esecuzione** e **Includi statistiche client**. Si noti che per raggruppare le statistiche per una query, è necessario abilitare questa funzionalità prima di eseguirla.  
   
 Se le statistiche client sono state abilitate, la scheda **Statistiche** viene visualizzata accanto alla scheda **Messaggio** durante l'esecuzione della query. Se sono state invece disabilitate, la scheda **Statistiche** non compare. Le statistiche delle successive esecuzioni delle query vengono elencate insieme ai valori medi.  
   

@@ -14,12 +14,12 @@ ms.assetid: a8ae33b2-1883-4785-922b-ea0e31c0b37a
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 37d75a6454388c19caaa483d83cc5f6a230dab30
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 4b315b0b26f771a2e215f03e1abcfeb5f829e86b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934761"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100080802"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>Caricamento di oggetti di database convertiti in SQL Server (OracleToSQL)
 Una volta convertiti gli schemi Oracle in SQL Server, è possibile caricare gli oggetti di database risultanti in SQL Server. È possibile fare in modo che SSMA crei gli oggetti oppure è possibile creare script per gli oggetti ed eseguire gli script manualmente. SSMA consente inoltre di aggiornare i metadati di destinazione con il contenuto effettivo del database SQL Server.  
@@ -47,7 +47,7 @@ Per utilizzare SSMA per creare SQL Server oggetti di database, selezionare gli o
   
 3.  Dopo aver selezionato gli oggetti da elaborare in SQL Server Esplora metadati, fare clic con il pulsante destro del mouse su **database**, quindi scegliere **Sincronizza con database**.  
   
-    È inoltre possibile sincronizzare singoli oggetti o categorie di oggetti facendo clic con il pulsante destro del mouse sull'oggetto o la relativa cartella padre, quindi scegliendo **Sincronizza con database**.  
+    È inoltre possibile sincronizzare singoli oggetti o categorie di oggetti facendo clic con il pulsante destro del mouse sull'oggetto o la relativa cartella padre, quindi scegliendo  **Sincronizza con database**.  
   
     Successivamente, SSMA visualizzerà la finestra di dialogo **Sincronizza con database, in** cui è possibile visualizzare due gruppi di elementi. Sul lato sinistro, SSMA Mostra gli oggetti di database selezionati rappresentati in un albero. Sul lato destro è possibile visualizzare un albero che rappresenta gli stessi oggetti nei metadati SSMA. È possibile espandere l'albero facendo clic sul pulsante a destra o a sinistra. La direzione della sincronizzazione viene visualizzata nella colonna azione posizionata tra i due alberi.  
   
@@ -66,7 +66,7 @@ Per salvare le definizioni [!INCLUDE[tsql](../../includes/tsql-md.md)] degli ogg
   
 **Per salvare oggetti come script**  
   
-1.  Dopo aver selezionato gli oggetti da salvare in uno script, fare clic con il pulsante destro del mouse su **database**e quindi scegliere **Salva come script**.  
+1.  Dopo aver selezionato gli oggetti da salvare in uno script, fare clic con il pulsante destro del mouse su **database** e quindi scegliere **Salva come script**.  
   
     È anche possibile creare script per singoli oggetti o categorie di oggetti facendo clic con il pulsante destro del mouse sull'oggetto o sulla cartella padre, quindi scegliendo **Salva come script**.  
   
@@ -77,7 +77,7 @@ Dopo aver salvato le definizioni degli oggetti SQL Server come uno o più script
   
 **Per modificare uno script**  
   
-1.  Scegliere [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Apri** dal menu **File**e quindi fare clic su **File**.  
+1.  Scegliere [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Apri** dal menu **File** e quindi fare clic su **File**.  
   
 2.  Nella finestra di dialogo **Apri** selezionare il file di script, quindi fare clic su OK.
   
@@ -85,14 +85,14 @@ Dopo aver salvato le definizioni degli oggetti SQL Server come uno o più script
   
     Per ulteriori informazioni sull'editor di query, vedere "comandi pratici e funzionalità dell'editor" in documentazione online di SQL Server.  
   
-4.  Per salvare lo script, scegliere **Salva**dal menu file.  
+4.  Per salvare lo script, scegliere **Salva** dal menu file.  
   
 ### <a name="running-scripts"></a>Esecuzione di script  
 È possibile eseguire uno script o singole istruzioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 **Per eseguire uno script**  
   
-1.  Scegliere [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Apri** dal menu **File**e quindi fare clic su **File**.  
+1.  Scegliere [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Apri** dal menu **File** e quindi fare clic su **File**.  
   
 2.  Nella finestra di dialogo **Apri** selezionare il file di script e quindi fare clic su OK.  
   

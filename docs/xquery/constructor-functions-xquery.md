@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56dd5919565d1cbb7d0b95ae4476aef9140cecd0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0cc1fe3f4f36191a04973c759474f55a8356abda
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773712"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349328"
 ---
 # <a name="constructor-functions-xquery"></a>Funzioni costruttore (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -44,8 +44,8 @@ TYP($atomicvalue as xdt:anyAtomicType?
  *TYP*  
  Qualsiasi tipo XSD predefinito.  
   
-## <a name="remarks"></a>Osservazioni  
- Le funzioni costruttore sono supportate per i tipi atomici XSD di base e derivati. Tuttavia, i sottotipi di **xs: Duration**, che include **xdt: yearMonthDuration e xdt: dayTimeDuration**e **xs: QName**, **xs: NMTOKEN**e **xs: Notation** non sono supportati. Sono inoltre disponibili i tipi atomici definiti dall'utente contenuti nelle raccolte di schemi associate, a condizione che siano derivati direttamente o indirettamente dai tipi seguenti.  
+## <a name="remarks"></a>Commenti  
+ Le funzioni costruttore sono supportate per i tipi atomici XSD di base e derivati. Tuttavia, i sottotipi di **xs: Duration**, che include **xdt: yearMonthDuration e xdt: dayTimeDuration** e **xs: QName**, **xs: NMTOKEN** e **xs: Notation** non sono supportati. Sono inoltre disponibili i tipi atomici definiti dall'utente contenuti nelle raccolte di schemi associate, a condizione che siano derivati direttamente o indirettamente dai tipi seguenti.  
   
 #### <a name="supported-base-types"></a>Tipi di base supportati  
  Di seguito sono elencati i tipi di base supportati:  
@@ -135,7 +135,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
   
 -   Se l'argomento è un valore letterale di un altro tipo, l'espressione verrà valutata in fase di compilazione. Quando il valore non soddisfa i vincoli di tipo, viene restituita la sequenza vuota.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>R. Utilizzo della funzione XQuery dateTime() per recuperare descrizioni di prodotto non recenti  

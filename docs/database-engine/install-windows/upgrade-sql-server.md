@@ -13,17 +13,17 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 3e5bdb3488708bfd4c4e6463b1f87bda580c8fd4
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: 5019205027168dc2ebd1e429087924c59f7a17d0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170133"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353831"
 ---
 # <a name="upgrade-sql-server"></a>Eseguire l'aggiornamento di SQL Server
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
  
- È possibile aggiornare le istanze di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ss2016](../../includes/sssql16-md.md)] o [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)] direttamente a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per passare a SQL Server 2019 da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], è necessario eseguire un aggiornamento side-by-side o una migrazione, poiché non esiste un'area di sovrapposizione con un sistema operativo principale supportato. Prima di avviare il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], leggere gli articoli seguenti relativi al processo di aggiornamento e alle note sulla versione.  
+ È possibile aggiornare le istanze di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ss2016](../../includes/sssql16-md.md)] o [!INCLUDE[ss2017](../../includes/sssql17-md.md)] direttamente a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per passare a SQL Server 2019 da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], è necessario eseguire un aggiornamento side-by-side o una migrazione, poiché non esiste un'area di sovrapposizione con un sistema operativo principale supportato. Prima di avviare il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], leggere gli articoli seguenti relativi al processo di aggiornamento e alle note sulla versione.  
   
    - Per informazioni sull'aggiornamento da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], vedere [Aggiornamento da SQL Server 2005](../../sql-server/end-of-support/sql-server-end-of-life-overview.md).  
    - [Note sulla versione di SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md) 

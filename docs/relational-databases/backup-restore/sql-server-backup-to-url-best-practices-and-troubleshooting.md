@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: dc7532aaead7b2257755f2db689c2cbbbd05d3c3
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 6620e688dcd8094bbc5b27bfbb540a2e7d3b1585
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97639161"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100348835"
 ---
 # <a name="sql-server-back-up-to-url-best-practices-and-troubleshooting"></a>Procedure consigliate e risoluzione dei problemi per il backup di SQL Server nell'URL
 
@@ -44,6 +44,8 @@ ms.locfileid: "97639161"
 -   L'utilizzo dell'opzione `WITH COMPRESSION` durante il backup consente di ridurre i costi di archiviazione e quelli delle transazioni di archiviazione. Inoltre, tramite questa opzione è possibile diminuire il tempo necessario per completare il processo di backup.  
 
 - Impostare gli argomenti `MAXTRANSFERSIZE` e `BLOCKSIZE` come consigliato in [Backup di SQL Server nell'URL](./sql-server-backup-to-url.md).
+
+- SQL Server è indipendente dal tipo di ridondanza di archiviazione utilizzata. Il backup nei BLOB di pagine e nei BLOB in blocchi è supportato per ogni ridondanza di archiviazione (LRS\ZRS\GRS\RA-GRS\RA-GZRS\etc.).
   
 ## <a name="handling-large-files"></a>Gestione di file di grandi dimensioni  
   
@@ -155,15 +157,27 @@ CREATE CREDENTIAL <credential name> WITH IDENTITY = 'mystorageaccount'
 , SECRET = '<storage access key>' ;  
 ```  
   
-Le credenziali esistono, ma all'account di accesso utilizzato per eseguire il comando di backup non sono associate autorizzazioni per accedere alle credenziali. Usare un account di accesso nel ruolo **db_backupoperator** con autorizzazioni **_Modifica qualsiasi credenziale_* _.  
+Le credenziali esistono, ma all'account di accesso utilizzato per eseguire il comando di backup non sono associate autorizzazioni per accedere alle credenziali. Usare un account di accesso nel ruolo **db_backupoperator** con autorizzazioni **_ALTER ANY CREDENTIAL_** .  
   
 Verificare il nome dell'account di archiviazione e i valori di chiave. Le informazioni archiviate nelle credenziali devono corrispondere ai valori delle proprietà dell'account di archiviazione di Azure usati nelle operazioni di backup e ripristino.  
   
-  
+
+**400 (richiesta non valida) errori**
+
+Utilizzando SQL Server 2012 è possibile che si verifichi un errore durante l'esecuzione di un backup simile al seguente:
+
+```
+Backup to URL received an exception from the remote endpoint. Exception Message: 
+The remote server returned an error: (400) Bad Request..
+```
+
+Questo problema è causato dalla versione TLS supportata dall'account di archiviazione di Azure. Modifica della versione supportata di TLS o uso della soluzione alternativa elencata in [KB4017023](https://support.microsoft.com/en-us/topic/kb4017023-sql-server-2012-2014-or-2016-backup-to-microsoft-azure-blob-storage-service-url-isn-t-compatible-for-tls-1-2-e9ef6124-fc05-8128-86bc-f4f4f5ff2b78).
+
+
 ## <a name="proxy-errors"></a>Errori del proxy  
  Se si utilizzano server proxy per accedere a Internet, è possibile che si verifichino i problemi indicati di seguito:  
   
- _ *Limitazione delle richieste di connessione da parte dei server proxy**  
+ **Limitazione della connessione da server proxy**  
   
  Nei server proxy possono essere presenti impostazioni che limitano il numero di connessioni al minuto. Il backup su URL è un processo multithread e pertanto può superare il limite. In questo caso, il server proxy termina la connessione. Per risolvere il problema, modificare le impostazioni del proxy in modo che non venga utilizzato in SQL Server. Di seguito sono riportati alcuni esempi di tipi o messaggi di errore visualizzati nel log degli errori:  
   

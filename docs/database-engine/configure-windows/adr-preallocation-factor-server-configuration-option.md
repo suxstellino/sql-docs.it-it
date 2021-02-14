@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ADR Preallocation Factor
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4e53c7c9d0d128c1697a301fc013469f5ac34c00
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 9469b5de278c01b7b256ee348380ebd1ae19cde4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85698182"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100347460"
 ---
 # <a name="adr-preallocation-factor-configuration-option"></a>Opzione di configurazione ADR Preallocation Factor
 

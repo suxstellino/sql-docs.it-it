@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d1a59104b8becec2edd8b4b15c28e13e19011a4b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 704cac94b48fe172eaa6a972cdd6c49bad1601fe
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036824"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344929"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Funzioni correlate a elementi QName - expanded-QName
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   È possibile modificare o confrontare i valori di tipo QName esistenti. Confronta, ad esempio, `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` il valore dell'elemento <`e`> con il QName restituito dalla funzione **expanded-QName ()** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
   
 ### <a name="a-replacing-a-qname-type-node-value"></a>R. Sostituzione di un valore di nodo di tipo QName  

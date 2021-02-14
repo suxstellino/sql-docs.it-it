@@ -20,12 +20,12 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: ea8f2b873b8990a00bc61cd8ce45c192feefaaa5
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
-ms.translationtype: HT
+ms.openlocfilehash: 09738de0caf9b7da5fcf3bec7c413d53d5d46981
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869410"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100351189"
 ---
 # <a name="linked-servers-database-engine"></a>Server collegati (Motore di database)
 
@@ -57,7 +57,7 @@ ms.locfileid: "91869410"
   
 Un *provider OLE DB* è una DLL in grado di gestire un'origine dei dati specifica e interagire con essa. Un' *origine dei dati OLE DB* identifica lo specifico database a cui è possibile accedere con OLE DB. Anche se le origini dei dati su cui si eseguono query tramite definizioni di server collegati sono in genere database, esistono provider OLE DB per un'ampia gamma di file e formati di file, quali file di testo, dati di fogli di calcolo e risultati di ricerche di contenuto full-text.  
   
-A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], [Microsoft OLE DB Driver per SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) (PROGID: MSOLEDBSQL) è il provider OLE DB predefinito. Nelle versioni precedenti il [provider OLE DB di SQL Server Native Client (SQLNCLI)](../../relational-databases/native-client/sql-server-native-client.md) (PROGID: SQLNCLI11) è il provider OLE DB predefinito.
+A partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], [Microsoft OLE DB Driver per SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) (PROGID: MSOLEDBSQL) è il provider OLE DB predefinito. Nelle versioni precedenti il [provider OLE DB di SQL Server Native Client (SQLNCLI)](../../relational-databases/native-client/sql-server-native-client.md) (PROGID: SQLNCLI11) è il provider OLE DB predefinito.
   
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le query distribuite sono progettate per funzionare con qualsiasi provider OLE DB che implementi le interfacce OLE DB necessarie. Tuttavia, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stato testato rispetto al provider OLE DB predefinito.  
@@ -92,7 +92,7 @@ Per gestire le definizioni dei server collegati è possibile utilizzare stored p
   
 -   Eliminare la definizione di un server collegato eseguendo **sp_dropserver**. Questa stored procedure può essere utilizzata anche per rimuovere un server remoto.  
   
-Per definire i server collegati è inoltre possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. In Esplora oggetti fare clic con il pulsante destro del mouse su **Oggetti server**, scegliere **Nuovo**e quindi **Server collegato**. Per eliminare la definizione di un server collegato, è possibile fare clic con il pulsante destro del mouse sul nome del server collegato e scegliere **Elimina**.  
+Per definire i server collegati è inoltre possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. In Esplora oggetti fare clic con il pulsante destro del mouse su **Oggetti server**, scegliere **Nuovo** e quindi **Server collegato**. Per eliminare la definizione di un server collegato, è possibile fare clic con il pulsante destro del mouse sul nome del server collegato e scegliere **Elimina**.  
   
  Quando si esegue una query distribuita su un server collegato, per ogni origine dei dati su cui viene eseguita la query specificare un nome di tabella completo in quattro parti. Questo nome composto da quattro parti deve essere nel formato _nome\_server\_collegato.catalog_ **.** _schema_ **.** _nome\_oggetto_.  
   

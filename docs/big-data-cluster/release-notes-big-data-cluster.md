@@ -9,12 +9,12 @@ ms.date: 01/13/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e10beb2ef41881312e4871021bb2595e52731262
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 75b3b483a9e7744bb35b50ff30649b3257e14285
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596606"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046187"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Note sulla versione dei cluster Big Data di SQL Server 2019
 
@@ -200,6 +200,30 @@ SQL Server 2019 General Distribution Release 1 (GDR1): introduce la disponibilit
 [!INCLUDE [sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
 
 ## <a name="known-issues"></a>Problemi noti
+
+### <a name="partial-loss-of-logs-collected-in-elasticsearch-upon-rollback"></a>Perdita parziale dei log raccolti in ElasticSearch al rollback
+
+- **Versioni interessate**: i cluster esistenti quando un aggiornamento non riuscito a CU9 genera un rollback o genera un downgrade a una versione precedente.
+
+- **Problema e conseguenze** per i clienti: la versione del software usata per la ricerca elastica è stata aggiornata con CU9 e la nuova versione non è compatibile con le versioni precedenti del formato/metadati dei log. Se il componente ElasticSearch viene aggiornato correttamente, ma viene attivato un rollback successivo, i log raccolti tra l'aggiornamento ElasticSearch e il rollback verranno persi definitivamente. Se si esegue un downgrade a una versione precedente di BDC (scelta non consigliata), i log archiviati in ElasticSearch andranno persi. Si noti che se l'utente eseguirà di nuovo l'aggiornamento a CU9, i dati verranno ripristinati.
+
+- **Soluzione alternativa**: se necessario, è possibile risolvere i problemi usando i log raccolti tramite il `azdata bdc debug copy-logs` comando.
+
+### <a name="missing-pods-and-container-metrics"></a>Baccelli mancanti e metriche del contenitore
+
+- **Versioni interessate**: cluster esistenti e nuovi al momento dell'aggiornamento a CU9
+
+- **Problema e conseguenze** per i clienti: in seguito all'aggiornamento della versione di Telegraf usata per i componenti di monitoraggio dell'integrazione applicativa dei dati in CU9, quando si aggiorna il cluster alla versione CU9, si noterà che i pod e le metriche del contenitore non vengono raccolti. Questo perché è necessaria una risorsa aggiuntiva nella definizione del ruolo del cluster usato per Telegraf come risultato dell'aggiornamento software. Se l'utente che distribuisce il cluster o esegue l'aggiornamento non dispone di autorizzazioni sufficienti, la distribuzione o l'aggiornamento procede con un avviso e ha esito positivo, ma le metriche del nodo & Pod non verranno raccolte.
+
+- **Soluzione alternativa**: è possibile chiedere a un amministratore di creare o aggiornare il ruolo e l'account del servizio corrispondente (prima o dopo la distribuzione/aggiornamento) e i dati BDC li utilizzeranno. [Questo articolo](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) descrive come creare gli artefatti necessari.
+
+### <a name="issuing-azdata-bdc-copy-logs-does-not-result-in-logs-being-copied"></a>L'emissione non `azdata bdc copy-logs` comporta la copia dei log
+
+- **Versioni interessate**: [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] versione *20.0.0*
+
+- **Problema e conseguenze per i clienti**: l'implementazione del comando *Copy-logs* presuppone `kubectl` che lo strumento client versione 1,15 o successiva sia installato nel computer client da cui viene emesso il comando. Se `kubectl` si usa la versione 1,14, il comando *azdata BDC debug Copy-logs* verrà completato senza errori, ma i log non vengono copiati. Quando viene eseguito con il flag *--debug* , è possibile visualizzare questo errore nell'output: *source ' .' non è valido*.
+
+- **Soluzione alternativa**: installare lo `kubectl` strumento versione 1,15 o successiva nello stesso computer client ed eseguire di nuovo il `azdata bdc copy-logs` comando. Vedere [qui](deploy-big-data-tools.md) le istruzioni su come installare `kubectl`.
 
 ### <a name="msdtc-capabilities-can-not-be-enabled-for-sql-server-master-instance-running-within-bdc"></a>Non è possibile abilitare le funzionalità MSDTC per l'istanza master di SQL Server in esecuzione all'interno di BDC
 

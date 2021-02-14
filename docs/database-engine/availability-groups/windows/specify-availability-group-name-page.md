@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: f5171195bb3d275eb170330565cd9f90531dc0c6
-ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.openlocfilehash: 82671e390d67faf6a7059a0d4c267dd744b5a936
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98783402"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100352569"
 ---
 # <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Pagina Specificare le opzioni del gruppo di disponibilità per un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "98783402"
 
    * **EXTERNAL**
       
-      Usarlo quando il gruppo di disponibilità è ospitato in un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gestita da una tecnologia di cluster esterna per la disponibilità elevata e il ripristino di emergenza, ad esempio Pacemaker in Linux. Si applica a [!INCLUDE[sssqlv14](../../../includes/sssqlv14-md.md)] e versioni successive.
+      Usarlo quando il gruppo di disponibilità è ospitato in un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gestita da una tecnologia di cluster esterna per la disponibilità elevata e il ripristino di emergenza, ad esempio Pacemaker in Linux. Si applica a [!INCLUDE[sssql14](../../../includes/sssql17-md.md)] e versioni successive.
 
    * **NONE**
       
-      Usarlo quando il gruppo di disponibilità è ospitato in un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che non è gestita da una tecnologia di cluster per la scalabilità in lettura e il bilanciamento del carico. Si applica a [!INCLUDE[sssqlv14](../../../includes/sssqlv14-md.md)] e versioni successive. 
+      Usarlo quando il gruppo di disponibilità è ospitato in un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che non è gestita da una tecnologia di cluster per la scalabilità in lettura e il bilanciamento del carico. Si applica a [!INCLUDE[sssql14](../../../includes/sssql17-md.md)] e versioni successive. 
  
    **Rilevamento dell'integrità a livello di database** Selezionare questa casella per abilitare l'opzione di rilevamento di integrità a livello di database (DB_FAILOVER) per il gruppo di disponibilità. Il rilevamento dell'integrità del database avvisa quando un database non è più nello stato online, quando si verifica un errore, e attiverà il failover automatico del gruppo di disponibilità. Vedere [Opzione di failover del rilevamento di integrità del database AlwaysOn in SQL Server](sql-server-always-on-database-health-detection-failover-option.md).
 

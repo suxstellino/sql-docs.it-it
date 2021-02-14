@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1171740ae04b4fc03609659fa27a711bf36fa6f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d877c75223c42a8dff3a9a4c4615975a136cd6b4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775456"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352330"
 ---
 # <a name="xqueries-involving-order"></a>Query XQuery che implicano l'ordinamento
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -247,7 +247,7 @@ where ProductModelID=7
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [&#40;di dati XML SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [Dati XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
  [Costrutto XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
   

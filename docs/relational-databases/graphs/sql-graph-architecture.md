@@ -15,15 +15,15 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f167741a2064020cfbc7fdc43e881a74609e4ac6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ab08692b1e221e589cc6283e2800a695044f79b7
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480162"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100351408"
 ---
 # <a name="sql-graph-architecture"></a>Architettura di SQL Graph  
-[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
 
 Informazioni sull'architettura di SQL Graph. Conoscere le nozioni di base renderà più semplice la comprensione di altri articoli di SQL Graph.
  

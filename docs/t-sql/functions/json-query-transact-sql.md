@@ -18,12 +18,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: chadam
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017
-ms.openlocfilehash: 505d8d6ef00b7d864b0c20fe983de384baa01787
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f5f81325f27a37f1e6d30ea7c8fb6bdb5dad096b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99165004"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100337991"
 ---
 # <a name="json_query-transact-sql"></a>JSON_QUERY (Transact-SQL)
 
@@ -51,7 +51,7 @@ JSON_QUERY ( expression [ , path ] )
  *path*  
  Percorso JSON che specifica l'oggetto o la matrice da estrarre.
 
-In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e nel [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] è possibile specificare una variabile come valore di *path*.
+In [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] e nel [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] è possibile specificare una variabile come valore di *path*.
 
 Il percorso JSON può specificare la modalità lax o strict per l'analisi. Se non si specifica la modalità di analisi, la modalità predefinita è lax. Per altre informazioni, vedere [Espressioni di percorso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
 

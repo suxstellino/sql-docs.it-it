@@ -12,12 +12,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 ms.reviewer: maghan
-ms.openlocfilehash: d3fd592913164d92851ca738090de9dd200df66f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
-ms.translationtype: HT
+ms.openlocfilehash: 2bc717a0dc59c0d880e7095e18a0c97432519e56
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91719302"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346577"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Attività Azure Data Lake Analytics
 
@@ -73,7 +73,7 @@ La configurazione del processo specifica le proprietà di invio dei processi U-S
 - **AnalyticsUnits:** specifica il numero di unità di analisi del processo U-SQL.
 - **Priority:** specifica la priorità del processo U-SQL. È possibile impostare questa proprietà su un valore compreso tra 0 e 1000. A un numero minore corrisponde una priorità più alta.
 - **RuntimeVersion:** specifica la versione di runtime di Data Lake Analytics del processo U-SQL. Per impostazione predefinita, l'opzione è impostata su "default". In genere non è necessario modificare questa proprietà.
-- **Synchronous:** valore booleano che specifica se l'attività attende o meno il completamento dell'esecuzione del processo. Se il valore è impostato su true, l'attività viene contrassegnata come **riuscita**dopo il completamento del processo. Se il valore è impostato su false, l'attività verrà contrassegnata come **riuscita**al termine della fase di preparazione del processo.
+- **Synchronous:** valore booleano che specifica se l'attività attende o meno il completamento dell'esecuzione del processo. Se il valore è impostato su true, l'attività viene contrassegnata come **riuscita** dopo il completamento del processo. Se il valore è impostato su false, l'attività verrà contrassegnata come **riuscita** al termine della fase di preparazione del processo.
 
   |valore|Descrizione|
   |-----------|-----------------|

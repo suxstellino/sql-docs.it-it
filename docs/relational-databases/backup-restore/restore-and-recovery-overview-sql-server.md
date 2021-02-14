@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 72bf9910a86d66ac36cbebbb0be66f8a8df832e5
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: edc2a92b260e85c2de1ff5b4fc1758748643d174
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99235771"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346761"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Panoramica del ripristino e del recupero (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,11 +56,11 @@ ms.locfileid: "99235771"
 |scenario di ripristino|Nel modello di recupero con registrazione minima|Nel modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk|  
 |----------------------|---------------------------------|----------------------------------------------|  
 |ripristino di database completo|Si tratta della strategia di ripristino standard. Un ripristino di database completo può comportare semplicemente il ripristino e il recupero di un backup completo del database. In alternativa, tale tipo di ripristino può comportare il ripristino di un backup completo del database seguito dal ripristino e dal recupero di un backup differenziale.<br /><br /> Per altre informazioni, vedere [Ripristini di database completi &#40;modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md).|Si tratta della strategia di ripristino standard. Un ripristino di database completo comporta il ripristino di un backup completo del database e, facoltativamente, di un backup differenziale, se disponibile, seguito dal ripristino di tutti i successivi backup del log, in sequenza. Il ripristino di database completo viene completato tramite il recupero dell'ultimo backup del log e il suo ripristino (RESTORE WITH RECOVERY).<br /><br /> Per altre informazioni, vedere [Ripristini di database completi &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).|  
-|Ripristino di file * *\** _|Consente di ripristinare uno o più file di sola lettura danneggiati senza ripristinare l'intero database. È disponibile solo se il database contiene almeno un filegroup di sola lettura.|Consente di ripristinare uno o più file, senza ripristinare l'intero database. Può essere eseguito mentre il database è offline oppure, per alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mentre il database rimane online. Durante un'operazione di ripristino del file, i filegroup che includono i file che vengono ripristinati sono sempre offline.|  
+|File restore **\***|Consente di ripristinare uno o più file di sola lettura danneggiati senza ripristinare l'intero database. È disponibile solo se il database contiene almeno un filegroup di sola lettura.|Consente di ripristinare uno o più file, senza ripristinare l'intero database. Può essere eseguito mentre il database è offline oppure, per alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mentre il database rimane online. Durante un'operazione di ripristino del file, i filegroup che includono i file che vengono ripristinati sono sempre offline.|  
 |Ripristino di pagine|Non applicabile|Consente di ripristinare una o più pagine danneggiate. Può essere eseguito mentre il database è offline oppure, per alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mentre il database rimane online. Durante un'operazione di ripristino della pagina, le pagine che vengono ripristinate sono sempre offline.<br /><br /> Perché la pagina sia aggiornata rispetto al file di log corrente, è necessario che sia disponibile una catena non interrotta di backup del log, fino al file di log corrente, e che i backup vengano tutti applicati.<br /><br /> Per altre informazioni, vedere [Ripristinare pagine &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md).|  
-|Ripristino a fasi _*\**_|Consente di ripristinare e recuperare il database in varie fasi a livello di filegroup, partendo dal filegroup primario e da tutti i filegroup secondari di lettura/scrittura.|Consente di ripristinare e recuperare il database in varie fasi a livello di filegroup, partendo dal filegroup primario.<br /><br /> Per altre informazioni, vedere [Ripristini a fasi &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)|  
+|Ripristino a fasi **\***|Consente di ripristinare e recuperare il database in varie fasi a livello di filegroup, partendo dal filegroup primario e da tutti i filegroup secondari di lettura/scrittura.|Consente di ripristinare e recuperare il database in varie fasi a livello di filegroup, partendo dal filegroup primario.<br /><br /> Per altre informazioni, vedere [Ripristini a fasi &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)|  
   
- _*\**_ Il ripristino online è supportato solo nell'edizione Enterprise.  
+ **\*** Il ripristino in linea è supportato solo nell'Enterprise Edition.  
 
 ### <a name="steps-to-restore-a-database"></a>Passaggi per ripristinare un database
 Per ripristinare un file, il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] esegue due passaggi: 
@@ -87,7 +87,7 @@ Per ripristinare un database, il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 
 -   Se in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si esegue un'operazione di ripristino del file o della pagina, è possibile mantenere online altri dati del database durante l'operazione di ripristino.  
 
 ## <a name="recovery-and-the-transaction-log"></a><a name="TlogAndRecovery"></a> Ripristino e log delle transazioni
-Per la maggior parte degli scenari di ripristino è necessario applicare un backup del log delle transazioni e consentire al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] di eseguire il _ *processo di ripristino** affinché il database diventi disponibile online. Il recupero è il processo che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa per avviare ogni database in uno stato coerente a livello di transazione o in uno stato originario.
+Per la maggior parte degli scenari di ripristino, è necessario applicare un backup del log delle transazioni e consentire al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] di eseguire il **processo di recupero** affinché il database sia disponibile online. Il recupero è il processo che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa per avviare ogni database in uno stato coerente a livello di transazione o in uno stato originario.
 
 Se si verifica un errore o una chiusura anomala, è possibile che il database sia in un stato in cui alcune modifiche ai database non siano state scritte dalla cache del buffer ai file di dati e che transazioni incomplete abbiano apportato modifiche al file di dati. Quando viene avviata un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], viene eseguito un recupero di ogni database che comprende tre fasi, sulla base dell'ultimo [checkpoint del database](../../relational-databases/logs/database-checkpoints-sql-server.md):
 
@@ -117,9 +117,9 @@ Le informazioni sullo stato di avanzamento di ogni fase di recupero del database
 |Ripristino di pagine * *\** _|Supporto completo.|In casi specifici._ *\*\** *|No.|  
 |Ripristino a fasi (a livello di filegroup) * *\** _|Supporto completo.|In casi specifici._ *\*\** *|Disponibile solo per i file secondari di sola lettura.|  
   
- * *\** _ Disponibile solo nell'edizione Enterprise di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ **\*** Disponibile solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
- _ *\*\** * Per le condizioni necessarie, vedere [Restrizioni relative al ripristino in base al modello di recupero con registrazione minima](#RMsimpleScenarios) più avanti in questo argomento.  
+ **\*\*** Per le condizioni necessarie, vedere la sezione relativa alle [Restrizioni relative al ripristino in base al modello di recupero con registrazione minima](#RMsimpleScenarios)più avanti in questo argomento.  
   
 > [!IMPORTANT]  
 > Indipendentemente dal modello di recupero di un database, un backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può essere ripristinato da una versione di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] precedente a quella usata per creare il backup.  

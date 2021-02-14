@@ -12,12 +12,12 @@ ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
 author: MightyPen
 ms.author: genemi
 monikerRange: =sql-server-2016
-ms.openlocfilehash: 95f920fc8648ed646f1056c9d334ee831651f5e2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: a5038368e66524324fb0189b2f1b06e0b374e41a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465372"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100353691"
 ---
 # <a name="migrating-computed-columns"></a>Migrazione di colonne calcolate
 
@@ -25,7 +25,7 @@ ms.locfileid: "97465372"
 
 Le colonne calcolate non sono supportate nelle tabelle ottimizzate per la memoria. Tuttavia, è possibile simulare una colonna calcolata.
 
-A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], le colonne calcolate sono supportate in indici e tabelle ottimizzate per la memoria.
+A partire da [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], le colonne calcolate sono supportate in indici e tabelle ottimizzate per la memoria.
 
 Valutare la necessità di rendere persistenti le colonne calcolate quando si esegue la migrazione delle tabelle basate su disco nelle tabelle ottimizzate per la memoria. Le diverse caratteristiche di prestazioni delle tabelle ottimizzate per la memoria e delle stored procedure compilate in modo nativo possono annullare la necessità della persistenza.  
   

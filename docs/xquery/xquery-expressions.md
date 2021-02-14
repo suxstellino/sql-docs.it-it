@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a6150940-4d1c-4bff-a8f9-eda667fc45eb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0144663029fb4e2a000eda590c85ee97d349dab6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 43890e5162643781079c8c9bd3e4c2d4cd093b94
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917952"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352781"
 ---
 # <a name="xquery-expressions"></a>Espressioni XQuery
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "86917952"
  [Espressioni di confronto &#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)  
  Descrive le espressioni di confronto supportate da XQuery, ovvero le espressioni di confronto generali, per il confronto di valori, per il confronto di nodi e per il confronto dell'ordine dei nodi.  
   
- [Espressioni logiche &#40;&#41;XQuery](../xquery/logical-expressions-xquery.md)  
+ [Espressioni logiche &#40;&#41;XQuery ](../xquery/logical-expressions-xquery.md)  
  Viene descritto il supporto XQuery per gli **operatori and e** **or** logici.  
   
  [Costrutto XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
@@ -60,7 +60,7 @@ ms.locfileid: "86917952"
  [Espressioni condizionali &#40;XQuery&#41;](../xquery/conditional-expressions-xquery.md)  
  Viene descritto il supporto XQuery per l'istruzione Conditional **if-then-else** .  
   
- [Espressioni quantificate &#40;&#41;XQuery](../xquery/quantified-expressions-xquery.md)  
+ [Espressioni quantificate &#40;&#41;XQuery ](../xquery/quantified-expressions-xquery.md)  
  Descrive i quantificatori esistenziali e universali in XQuery.  
   
  [Espressioni SequenceType &#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md)  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b790b0f733a862f93249ecf85490d914e8e8d3b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: af9b942b8fb2cf6b1d0838327d5e32d278068146
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500564"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352976"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Impostazione delle proprietà per il componente aggiuntivo Master Data Services per Excel
 
@@ -30,7 +30,7 @@ ms.locfileid: "88500564"
   
 |Scheda e sezione|Impostazione|Descrizione|  
 |-|-|-|  
-|Impostazioni: Server di pubblicazione|Mostra la finestra di dialogo **Pubblicazione e annotazione** durante la pubblicazione|Selezionare questa opzione per visualizzare la finestra di dialogo **Pubblicazione e annotazione** dopo avere fatto clic su **Pubblica**e consentire di immettere una sola annotazione per tutte le modifiche o un'annotazione per ogni modifica.<br /><br /> Deselezionare questa opzione per specificare che il processo Pubblica è iniziato senza visualizzare la finestra di dialogo **Pubblicazione e annotazione** . Non si avrà la possibilità di immettere un'annotazione.|  
+|Impostazioni: Server di pubblicazione|Mostra la finestra di dialogo **Pubblicazione e annotazione** durante la pubblicazione|Selezionare questa opzione per visualizzare la finestra di dialogo **Pubblicazione e annotazione** dopo avere fatto clic su **Pubblica** e consentire di immettere una sola annotazione per tutte le modifiche o un'annotazione per ogni modifica.<br /><br /> Deselezionare questa opzione per specificare che il processo Pubblica è iniziato senza visualizzare la finestra di dialogo **Pubblicazione e annotazione** . Non si avrà la possibilità di immettere un'annotazione.|  
 |Impostazioni: Versione|Selezione della versione|Selezionare la versione dei dati master che saranno caricati nel componente aggiuntivo di Excel. I possibili valori sono i seguenti:<br /><br /> **Nessuno** per fare in modo che la versione non venga impostata automaticamente su alcuna versione<br /><br /> **Meno recente** per impostare come valore predefinito la versione meno recente **Più recente** per impostare come valore predefinito la versione più recente.|  
 |Impostazioni: Registrazione|Abilita registrazione dettagliata|Consente la registrazione per il processo di caricamento dei dati master da MDS nel componente aggiuntivo di Excel, così che il risultato di ogni comando nel servizio venga registrato.|  
 |Impostazioni: dati di telemetria|Attiva la raccolta dati di telemetria|Attivare la telemetria per migliorare la qualità, l'affidabilità e le prestazioni del componente aggiuntivo [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] per Excel.|  

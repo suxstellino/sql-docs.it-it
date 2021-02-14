@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b37eeff2ffcee5b8b2434e096783916af30b17a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fdebb93459b9519eb6495054908208de610e8222
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914623"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352788"
 ---
 # <a name="xqueries-involving-hierarchy"></a>Esecuzione di query XQuery che coinvolgono gerarchie
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -116,7 +116,7 @@ WHERE ContactID = 1
   
  `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Nozioni fondamentali su XQuery](../xquery/xquery-basics.md)   
  [Costrutto XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
  [Dati XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2be9caff295a41dbb79c1062d2a3f132ea93141c
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: b3e42d4e173dddf2042a16fa1b32decb0cb3013a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812834"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100347772"
 ---
 # <a name="add-a-user-master-data-services"></a>Aggiungere un utente (Master Data Services)
 
@@ -38,7 +38,7 @@ ms.locfileid: "85812834"
   
 2.  Nella pagina **Utenti** fare clic su **Aggiungi utenti**.  
   
-3.  Digitare il nome dell'utente preceduto dal nome di dominio Active Directory o dal nome del computer server, come in user_name di *dominio* \\ *user_name* o *computer \ user_name*.  
+3.  Digitare il nome dell'utente preceduto dal nome di dominio Active Directory o dal nome del computer server, come in user_name di *dominio* \\  o *computer \ user_name*.  
   
 4.  Facoltativamente, fare clic su **Controlla nomi**.  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d3de498043b5be0e6ad71a9e32b5abbc6db7ab21
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3227ef69915e606f514b5ecf36e5f1656db733e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88343227"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340278"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>Autorizzazioni per modelli e membri sovrapposte (Master Data Services)
 
@@ -32,7 +32,7 @@ ms.locfileid: "88343227"
   
 -   **Nega** esegue l'override di tutte le altre autorizzazioni.  
   
--   L'autorizzazione di**amministratore** al livello del modello esegue l'override di tutte le altre autorizzazioni e viene modificata nell'autorizzazione di accesso All (CRUD) ai livelli secondari.  
+-   L'autorizzazione di **amministratore** al livello del modello esegue l'override di tutte le altre autorizzazioni e viene modificata nell'autorizzazione di accesso All (CRUD) ai livelli secondari.  
   
 -   Un'autorizzazione di accesso valida interseca le autorizzazioni per membri e attributi.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "88343227"
   
  Nella scheda **Membri gerarchia** il nodo della sottocategoria Mountain Bikes in una gerarchia derivata dispone dell'autorizzazione **Aggiorna** .  
   
- Risultato: in **Esplora**l'utente dispone dell'autorizzazione **Aggiorna** per tutti i valori di attributo per tutti i membri nel nodo Mountain Bike. Tutti gli altri membri e attributi sono nascosti.  
+ Risultato: in **Esplora** l'utente dispone dell'autorizzazione **Aggiorna** per tutti i valori di attributo per tutti i membri nel nodo Mountain Bike. Tutti gli altri membri e attributi sono nascosti.  
   
  ![mds_conc_overlap_model_example_1](../master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   
@@ -60,7 +60,7 @@ ms.locfileid: "88343227"
   
  Nella scheda **Membri gerarchia** al nodo della sottocategoria Mountain Bikes in una gerarchia derivata è stata assegnata in modo esplicito l'autorizzazione **Lettura** .  
   
- Risultato: in **Esplora**l'utente ha l'autorizzazione **Lettura** per i valori dell'attributo Subcategory per i membri del nodo Mountain Bikes. Tutti gli altri membri e attributi sono nascosti.  
+ Risultato: in **Esplora** l'utente ha l'autorizzazione **Lettura** per i valori dell'attributo Subcategory per i membri del nodo Mountain Bikes. Tutti gli altri membri e attributi sono nascosti.  
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
@@ -71,7 +71,7 @@ ms.locfileid: "88343227"
   
  Nella scheda **Membri gerarchia** alla sottocategoria Mountain Bikes in una gerarchia derivata è stata assegnata in modo esplicito l'autorizzazione **Aggiorna** .  
   
- Risultato: in **Esplora**l'utente ha l'autorizzazione **Lettura** per i valori di attributo. Tutti gli altri membri e attributi sono nascosti.  
+ Risultato: in **Esplora** l'utente ha l'autorizzazione **Lettura** per i valori di attributo. Tutti gli altri membri e attributi sono nascosti.  
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   

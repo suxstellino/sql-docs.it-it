@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 320b572f-bd5b-4055-95a6-dec5718c0041
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7433ab9f3bd6bcadda324db1a5907f4d83040575
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f245b613c3e5e32fd2d4cc8eb09e969719ab1762
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720007"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100347912"
 ---
 # <a name="numeric-values-functions---round"></a>Funzioni per valori numerici - round
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -47,14 +47,14 @@ fn:round ( $arg as numeric?) as numeric?
  *$arg*  
  Numero al quale viene applicata la funzione.  
   
-## <a name="remarks"></a>Osservazioni  
- Se il tipo di *$arg* è uno dei tre tipi numerici di base, **xs: float**, **xs: Double**o **xs: Decimal**, il tipo restituito è uguale al tipo di *$arg* . Se il tipo di *$arg* è un tipo derivato da uno dei tipi numerici, il tipo restituito è il tipo numerico di base.  
+## <a name="remarks"></a>Commenti  
+ Se il tipo di *$arg* è uno dei tre tipi numerici di base, **xs: float**, **xs: Double** o **xs: Decimal**, il tipo restituito è uguale al tipo di *$arg* . Se il tipo di *$arg* è un tipo derivato da uno dei tipi numerici, il tipo restituito è il tipo numerico di base.  
   
- Se l'input per le funzioni **FN: floor**, **FN: Ceiling**o **FN: Round** è **xdt: untypedAtomic**, dati non tipizzati, viene eseguito il cast implicito a **xs: Double**.  
+ Se l'input per le funzioni **FN: floor**, **FN: Ceiling** o **FN: Round** è **xdt: untypedAtomic**, dati non tipizzati, viene eseguito il cast implicito a **xs: Double**.  
   
  Qualsiasi altro tipo di dati genera un errore statico.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
  È possibile utilizzare l'esempio funzionante nella [funzione ceiling (XQuery)](../xquery/numeric-values-functions-ceiling.md) per la funzione XQuery **round ()** . È sufficiente sostituire la funzione **Ceiling ()** nella query con la funzione **round ()** .  

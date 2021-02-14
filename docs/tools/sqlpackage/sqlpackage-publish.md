@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 12/11/2020
-ms.openlocfilehash: e2c163114485bb9449779d076aad6de68c295bfa
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
-ms.translationtype: HT
+ms.openlocfilehash: 84fdd99b00de38b88b1a21963c4565e5c3b27ea7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577843"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100081452"
 ---
 # <a name="sqlpackage-publish-parameters-properties-and-sqlcmd-variables"></a>Parametri, proprietà e variabili SQLCMD per Publish di SqlPackage
 L'operazione di pubblicazione tramite SqlPackage.exe consente di aggiornare in modo incrementale lo schema di un database di destinazione affinché corrisponda alla struttura di un database di origine. La pubblicazione di un pacchetto di distribuzione contenente dati utente per tutte le tabelle o solo per un subset di tabelle comporta l'aggiornamento dei dati di tabella oltre allo schema. La distribuzione dei dati sovrascrive lo schema e i dati nelle tabelle esistenti del database di destinazione. La distribuzione dei dati non modifica lo schema e i dati esistenti nel database di destinazione per le tabelle non incluse nel pacchetto di distribuzione.  
@@ -82,7 +82,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|Specifica se tentare l'azione indipendentemente dalle piattaforme SQL Server incompatibili.|
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|Non bloccare il movimento di dati in una tabella con sicurezza a livello di riga se questa proprietà è impostata su true. L'impostazione predefinita è false.|
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|Esegue il backup del database prima di distribuire qualsiasi modifica.|
-|**/p:**|BlockOnPossibleDataLoss=(BOOLEAN 'True')|Specifica che se esiste una possibilità di perdita di dati derivante dall'operazione di pubblicazione, l'episodio di pubblicazione deve essere interrotto.|
+|**/p:**|BlockOnPossibleDataLoss=(BOOLEAN 'True')| Specifica che l'operazione verrà terminata durante il passaggio di convalida dello schema se le modifiche dello schema risultante potrebbero causare una perdita di dati, ad esempio a causa della riduzione della precisione dei dati o di una modifica del tipo di dati che richiede un'operazione cast. Il valore predefinito ( `True` ) fa sì che l'operazione venga terminata indipendentemente dal fatto che il database di destinazione contenga dati.  Un'esecuzione con un `False` valore per BlockOnPossibleDataLoss può comunque avere esito negativo durante l'esecuzione del piano di distribuzione se i dati sono presenti nella destinazione che non possono essere convertiti nel nuovo tipo di colonna. |
 |**/p:**|BlockWhenDriftDetected=(BOOLEAN 'True')|Specifica se bloccare l'aggiornamento di un database il cui schema non corrisponde più alla relativa registrazione o di cui è stata annullata la registrazione.|
 |**/p:**|CommandTimeout=(INT32 '60')|Specifica il timeout del comando in secondi quando si eseguono query in SQL Server.|
 |**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|Specifica se devono essere impostate come commento le dichiarazioni delle variabili SETVAR nello script di pubblicazione generato. È possibile scegliere questo approccio quando si desidera specificare i valori nella riga di comando durante la pubblicazione mediante uno strumento quale SQLCMD.EXE.|

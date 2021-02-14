@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83f744f2b9361a81afada82245bf2d4265cea833
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dd2be5cf246bd625e63c31975effa59fb1b919d0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923648"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345036"
 ---
 # <a name="context-functions---position-xquery"></a>Funzioni di contesto - position (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ fn:position() as xs:integer
 ## <a name="remarks"></a>Osservazioni  
  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , **FN: position ()** può essere usato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi ([ ]). I confronti basati su tale funzione non riducono la cardinalità durante l'interferenza dei tipi statici.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
   
 ### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>R. Utilizzo della funzione XQuery position() per recuperare le prime due caratteristiche del prodotto  

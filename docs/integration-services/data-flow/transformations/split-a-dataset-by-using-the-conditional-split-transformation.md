@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aa38530f0cddfd8518e114b15dda86e5fd51f297
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: 2deebc6e6c730be90264bf7f0f3586f56b3d1546
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495659"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350996"
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>Divisione di un set di dati tramite la trasformazione Suddivisione condizionale
 
@@ -41,7 +41,7 @@ ms.locfileid: "88495659"
   
 5.  Fare doppio clic sulla trasformazione Suddivisione condizionale.  
   
-6.  Nella finestra di dialogo **Editor trasformazione Suddivisione condizionale**compilare le espressioni da usare come condizioni trascinando variabili, colonne, funzioni e operatori nella colonna **Condizione** della griglia. In alternativa, digitare l'espressione nella colonna **Condizione** .  
+6.  Nella finestra di dialogo **Editor trasformazione Suddivisione condizionale** compilare le espressioni da usare come condizioni trascinando variabili, colonne, funzioni e operatori nella colonna **Condizione** della griglia. In alternativa, digitare l'espressione nella colonna **Condizione** .  
   
     > [!NOTE]  
     >  È possibile utilizzare una stessa variabile o colonna in più espressioni.  

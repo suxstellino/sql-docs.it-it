@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c0b96fbd075ed2b2f79ca8b92d09e2d2782d77dc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4824cd52001305a05c00e197e8c4140598267d4f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922323"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349339"
 ---
 # <a name="comparison-expressions-xquery"></a>Espressioni di confronto (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "86922323"
   
 |Operatore|Descrizione|  
 |--------------|-----------------|  
-|=|Uguale|  
+|=|Uguale a|  
 |!=|Diverso da|  
 |\<|Minore di|  
 |>|Maggiore di|  
@@ -221,9 +221,9 @@ ProductModelID       Result
   
  I confronti eseguiti, basati sull'ordine dei nodi all'interno del documento, sono i seguenti:  
   
--   `<<`: L' **operando 1** precede l' **operando 2** nell'ordine del documento.  
+-   `<<` : L' **operando 1** precede l' **operando 2** nell'ordine del documento.  
   
--   `>>`: L' **operando 1** segue l' **operando 2** nell'ordine del documento.  
+-   `>>` : L' **operando 1** segue l' **operando 2** nell'ordine del documento.  
   
  La query seguente restituisce true se la descrizione del catalogo dei prodotti ha l' \<Warranty> elemento visualizzato prima dell' \<Maintenance> elemento nell'ordine del documento per un determinato prodotto.  
   
@@ -241,7 +241,7 @@ where ProductModelID=19
   
  Dalla query precedente si noti quanto segue:  
   
--   Il metodo **value ()** del tipo di dati **XML**viene utilizzato nella query.  
+-   Il metodo **value ()** del tipo di dati **XML** viene utilizzato nella query.  
   
 -   Il risultato booleano della query viene convertito in **nvarchar (10)** e restituito.  
   

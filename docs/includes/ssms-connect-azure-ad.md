@@ -5,12 +5,12 @@ ms.topic: include
 author: markingmyname
 ms.author: maghan
 ms.reviewer: drskwier
-ms.openlocfilehash: 1f2c00b7b9d4afb16c389783c835bd36fdf82cc8
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
-ms.translationtype: HT
+ms.openlocfilehash: 72d66f57f11c45592362887cb14a1d6bf38bec27
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603296"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100351694"
 ---
 > [!NOTE]
 > A partire da dicembre 2021, le versioni di SSMS precedenti alla 18.6 non eseguiranno più l'autenticazione tramite Azure Active Directory con MFA.

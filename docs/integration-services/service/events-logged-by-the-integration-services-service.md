@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a9897a33c986a78061d18b06ba76db7685e5fb3a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: 45612ea0bfdbda2b27e6cac8b4deb1e302eb9298
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487694"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346556"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Eventi registrati dal servizio Integration Services
 
@@ -82,7 +82,7 @@ ms.locfileid: "88487694"
   
 ### <a name="to-view-service-events-for-integration-services-in-windows-event-viewer"></a>Per visualizzare gli eventi del servizio per Integration Services in Windows nel Visualizzatore eventi  
   
-1.  Nel **Pannello di controllo**fare clic su **Strumenti di amministrazione**nella visualizzazione classica oppure su **Prestazioni e manutenzione** e quindi su **Strumenti di amministrazione**nella visualizzazione per categorie.  
+1.  Nel **Pannello di controllo** fare clic su **Strumenti di amministrazione** nella visualizzazione classica oppure su **Prestazioni e manutenzione** e quindi su **Strumenti di amministrazione** nella visualizzazione per categorie.  
   
 2.  Fare clic su **Visualizzatore eventi**.  
   

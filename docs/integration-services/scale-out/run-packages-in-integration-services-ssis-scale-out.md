@@ -11,12 +11,12 @@ ms.author: haoqian
 ms.reviewer: maghan
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: 8de8aeb3b41c8ae44020c0cb0d4cca656ee96418
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
-ms.translationtype: HT
+ms.openlocfilehash: 13f9a386b6ab60280edf2d8b494721dd233b042a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522943"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100347410"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Eseguire pacchetti nel servizio Integration Services (SSIS) Scale Out
 
@@ -58,7 +58,7 @@ Dopo aver distribuito i pacchetti nel server Integration Services, è possibile 
 
 4. Eseguire i pacchetti e visualizzare i report.
 
-    Fare clic su **OK** per avviare le esecuzioni dei pacchetti. Per visualizzare il report di esecuzione relativo a un pacchetto, fare clic con il pulsante destro del pacchetto in Esplora oggetti, fare clic su **Report**, **Tutte le esecuzioni**e trovare l'esecuzione.
+    Fare clic su **OK** per avviare le esecuzioni dei pacchetti. Per visualizzare il report di esecuzione relativo a un pacchetto, fare clic con il pulsante destro del pacchetto in Esplora oggetti, fare clic su **Report**, **Tutte le esecuzioni** e trovare l'esecuzione.
     
 ## <a name="run-packages-with-stored-procedures"></a><a name="stored_proc"></a> Eseguire i pacchetti con le stored procedure
 

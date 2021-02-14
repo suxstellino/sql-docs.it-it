@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: d7503049f0ea68b38206764eb3163a5a80a0b2d7
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
-ms.translationtype: HT
+ms.openlocfilehash: 598c75f5ef502d1679bd8ed7f17cb44c0f536abc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518921"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063536"
 ---
 # <a name="how-to-build-and-deploy-to-a-local-database"></a>Procedura: Compilare e distribuire in un database locale
 
@@ -47,7 +47,7 @@ In Microsoft SQL Server 2012 è disponibile un'istanza del server su richiesta l
     select * from dbo.GetProductsBySupplier(1)  
     ```  
   
-7.  Nel riquadro **Messaggio** viene mostrato (0 righe interessate), mentre nel riquadro dei **risultati**non viene restituita alcuna riga. Questa situazione si verifica perché si esegue una query sul database locale anziché sul database connesso in cui sono contenuti effettivamente i dati real.  
+7.  Nel riquadro **Messaggio** viene mostrato (0 righe interessate), mentre nel riquadro dei **risultati** non viene restituita alcuna riga. Questa situazione si verifica perché si esegue una query sul database locale anziché sul database connesso in cui sono contenuti effettivamente i dati real.  
   
     È possibile confermare questa condizione facendo clic sul pulsante destro del mouse sulla tabella **Products** in questo database **TradeDev** locale e selezionando **Visualizza dati**. Si noti che la tabella è vuota.  
   
@@ -75,5 +75,5 @@ In Microsoft SQL Server 2012 è disponibile un'istanza del server su richiesta l
     select * from dbo.GetProductsBySupplier(1)  
     ```  
   
-9. Nel riquadro dei **risultati**sotto il riquadro Editor Transact\-SQL si noterà che sono state restituite le righe Apples e Potato Chips della tabella `Products`.  
+9. Nel riquadro dei **risultati** sotto il riquadro Editor Transact\-SQL si noterà che sono state restituite le righe Apples e Potato Chips della tabella `Products`.  
   

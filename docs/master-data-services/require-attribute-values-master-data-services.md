@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 74893d2d64a6de182206313a3d227c3a7db2f1de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8e863605632b82b18f0dbe824fd45adbeaf22274
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456749"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353770"
 ---
 # <a name="require-attribute-values-master-data-services"></a>Richiedere valori di attributo (Master Data Services)
 
@@ -49,7 +49,7 @@ ms.locfileid: "88456749"
   
 5.  Nell'elenco a discesa **Tipi di membri** selezionare un tipo di membro a cui applicare la regola di business.  
   
-6.  Scegliere **Aggiungi**.  
+6.  Fare clic su **Aggiungi**.  
   
 7.  Nella casella **Nome** digitare un nome per la regola business.  
   

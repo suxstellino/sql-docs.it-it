@@ -19,17 +19,17 @@ ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7b30279b49a21bbc50492b5a17224fe42d0b335
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: f4ac369f42fccd251cffb5b06f3603f8349f857a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171233"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100351218"
 ---
 # <a name="columnstore-indexes-overview"></a>Indici columnstore: Panoramica
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Gli indici columnstore rappresentano lo standard per l'archiviazione di tabelle dei fatti di data warehousing di grandi dimensioni e per l'esecuzione di query su queste tabelle. Questo indice usa l'archiviazione dei dati basata su colonne e l'elaborazione di query per ottenere miglioramenti fino a 10 volte per le prestazioni delle query nel data warehouse rispetto all'archiviazione tradizionale orientata alle righe. È anche possibile migliorare fino a 10 volte la compressione dei dati rispetto alla dimensione dei dati non compressi. A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1, gli indici columnstore consentono l'analisi operativa, rendendo possibile l'esecuzione di analisi in tempo reale ad alte prestazioni su carichi di lavoro transazionali.  
+Gli indici columnstore rappresentano lo standard per l'archiviazione di tabelle dei fatti di data warehousing di grandi dimensioni e per l'esecuzione di query su queste tabelle. Questo indice usa l'archiviazione dei dati basata su colonne e l'elaborazione di query per ottenere miglioramenti fino a 10 volte per le prestazioni delle query nel data warehouse rispetto all'archiviazione tradizionale orientata alle righe. È anche possibile migliorare fino a 10 volte la compressione dei dati rispetto alla dimensione dei dati non compressi. A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1, gli indici columnstore consentono l'analisi operativa, rendendo possibile l'esecuzione di analisi in tempo reale ad alte prestazioni su carichi di lavoro transazionali.  
   
 Informazioni su uno scenario correlato:  
   
@@ -60,11 +60,11 @@ Un rowgroup da cui sono stati eliminati tutti i dati passa dallo stato COMPRESSE
 
 > [!TIP]
 > La presenza di un numero eccessivo di rowgroup di piccole dimensioni riduce la qualità dell'indice columnstore. Fino a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], è necessaria un'operazione di riorganizzazione per unire i rowgroup COMPRESSED più piccoli in base a un criterio di soglia interna, che determina come rimuovere le righe eliminate e combinare i rowgroup compressi.    
-> A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], un'attività di unione in background funziona anche per unire i rowgroup COMPRESSED da cui è stato eliminato un numero elevato di righe.     
+> A partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], un'attività di unione in background funziona anche per unire i rowgroup COMPRESSED da cui è stato eliminato un numero elevato di righe.     
 > Dopo l'unione di rowgroup di dimensioni minori, è necessario migliorare la qualità dell'indice. 
 
 > [!NOTE]
-> A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], il motore di tuple viene aiutato da un'attività di unione in background, che comprime automaticamente i rowgroup delta OPEN più piccoli che sono esistiti per un dato periodo di tempo (come determinato da una soglia interna) oppure unisce i rowgroup COMPRESSED da cui è stato eliminato un numero elevato di righe. Ciò migliora la qualità dell'indice columnstore nel tempo.         
+> A partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], il motore di tuple viene aiutato da un'attività di unione in background, che comprime automaticamente i rowgroup delta OPEN più piccoli che sono esistiti per un dato periodo di tempo (come determinato da una soglia interna) oppure unisce i rowgroup COMPRESSED da cui è stato eliminato un numero elevato di righe. Ciò migliora la qualità dell'indice columnstore nel tempo.         
 
 #### <a name="column-segment"></a>segmento di colonna
 Un segmento di colonna è una colonna di dati all'interno del rowgroup.  
@@ -91,7 +91,7 @@ Quando un rowgroup delta è stato compresso, il rowgroup delta esistente passa a
 Per altre informazioni sugli stati dei rowgroup, vedere [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md). 
 
 > [!NOTE]
-> A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], il motore di tuple viene aiutato da un'attività di unione in background, che comprime automaticamente i rowgroup delta OPEN più piccoli che sono esistiti per un dato periodo di tempo (come determinato da una soglia interna) oppure unisce i rowgroup COMPRESSED da cui è stato eliminato un numero elevato di righe. Ciò migliora la qualità dell'indice columnstore nel tempo.         
+> A partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], il motore di tuple viene aiutato da un'attività di unione in background, che comprime automaticamente i rowgroup delta OPEN più piccoli che sono esistiti per un dato periodo di tempo (come determinato da una soglia interna) oppure unisce i rowgroup COMPRESSED da cui è stato eliminato un numero elevato di righe. Ciò migliora la qualità dell'indice columnstore nel tempo.         
   
 #### <a name="deltastore"></a>Deltastore
 Un indice columnstore può includere più di un rowgroup differenziale. Tutti i rowgroup differenziali sono denominati collettivamente deltastore.   
@@ -109,7 +109,7 @@ Un indice columnstore non cluster consente l'analisi operativa in tempo reale, d
 L'esecuzione in modalità batch è un metodo di elaborazione delle query con cui le query elaborano più righe contemporaneamente. L'esecuzione in modalità batch è strettamente integrata nel formato di archiviazione columnstore, per il quale è ottimizzata. L'esecuzione in modalità batch talvolta è detta esecuzione *basata su vettore* o *vettorizzata*. Le query sugli indici columnstore usano l'esecuzione in modalità batch, che migliora le prestazioni delle query in genere da due a quattro volte. Per altre informazioni, vedere [Guida sull'architettura di elaborazione delle query](../query-processing-architecture-guide.md#execution-modes). 
   
 ##  <a name="why-should-i-use-a-columnstore-index"></a><a name="benefits"></a> Perché usare un indice columnstore?  
-Un indice columnstore può garantire un livello di compressione dei dati molto elevato, in genere di 10 volte, riducendo in modo significativo i costi di archiviazione del data warehouse. Per l'analisi, gli indici columnstore offrono anche prestazioni decisamente migliori rispetto agli indici BTree e rappresentano il formato di archiviazione di dati preferito per i carichi di lavoro di analisi e data warehousing. A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]è possibile usare gli indici columnstore per l'analisi in tempo reale del carico di lavoro operativo.  
+Un indice columnstore può garantire un livello di compressione dei dati molto elevato, in genere di 10 volte, riducendo in modo significativo i costi di archiviazione del data warehouse. Per l'analisi, gli indici columnstore offrono anche prestazioni decisamente migliori rispetto agli indici BTree e rappresentano il formato di archiviazione di dati preferito per i carichi di lavoro di analisi e data warehousing. A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]è possibile usare gli indici columnstore per l'analisi in tempo reale del carico di lavoro operativo.  
   
 Ecco perché gli indici columnstore sono così rapidi:  
   
@@ -134,9 +134,9 @@ Gli indici rowstore offrono prestazioni ottimali con le query che eseguono la ri
 Gli indici columnstore garantiscono prestazioni notevolmente elevate per le query analitiche su grandi quantità di dati, soprattutto per le tabelle di grandi dimensioni. Usare gli indici columnstore per i carichi di lavoro di data warehousing e analisi, soprattutto sulle tabelle dei fatti, poiché in genere questi carichi di lavoro richiedono scansioni complete delle tabelle anziché ricerche all'interno di queste.  
   
 ### <a name="can-i-combine-rowstore-and-columnstore-on-the-same-table"></a>È possibile combinare indici rowstore e columnstore nella stessa tabella?  
-Sì. A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], è possibile creare un indice columnstore non cluster aggiornabile in una tabella rowstore. L'indice columnstore archivia una copia delle colonne selezionate. È quindi necessario spazio aggiuntivo per questi dati, ma la compressione applicata ai dati selezionati è in media di 10 volte. È possibile eseguire allo stesso tempo analisi sull'indice columnstore e transazioni sull'indice rowstore. Il columnstore viene aggiornato quando i dati nella tabella rowstore vengono modificati. In questo modo entrambi gli indici possono usare gli stessi dati.  
+Sì. A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], è possibile creare un indice columnstore non cluster aggiornabile in una tabella rowstore. L'indice columnstore archivia una copia delle colonne selezionate. È quindi necessario spazio aggiuntivo per questi dati, ma la compressione applicata ai dati selezionati è in media di 10 volte. È possibile eseguire allo stesso tempo analisi sull'indice columnstore e transazioni sull'indice rowstore. Il columnstore viene aggiornato quando i dati nella tabella rowstore vengono modificati. In questo modo entrambi gli indici possono usare gli stessi dati.  
   
-A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], è possibile avere uno o più indici rowstore non cluster su un indice columnstore ed eseguire ricerche efficienti in tabelle nel columnstore sottostante. Sono disponibili anche altre opzioni. È possibile, ad esempio, applicare un vincolo di chiave primaria tramite un vincolo UNIQUE nella tabella rowstore. Dato che non è possibile inserire un valore non univoco nella tabella rowstore, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può inserire il valore nel columnstore.  
+A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], è possibile avere uno o più indici rowstore non cluster su un indice columnstore ed eseguire ricerche efficienti in tabelle nel columnstore sottostante. Sono disponibili anche altre opzioni. È possibile, ad esempio, applicare un vincolo di chiave primaria tramite un vincolo UNIQUE nella tabella rowstore. Dato che non è possibile inserire un valore non univoco nella tabella rowstore, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può inserire il valore nel columnstore.  
   
 ## <a name="metadata"></a>Metadati  
 Tutte le colonne di un indice columnstore vengono archiviate nei metadati come colonne incluse. L'indice columnstore non contiene colonne chiave.  
@@ -205,11 +205,11 @@ Quando si crea una tabella con l'istruzione `CREATE TABLE` è possibile creare l
   
 |Attività|Argomenti di riferimento|Note|  
 |----------|----------------------|-----------|  
-|Creare una tabella come columnstore.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]è possibile creare la tabella come indice columnstore cluster. Non è necessario creare prima una tabella rowstore e quindi convertirla in columnstore.|  
-|Creare una tabella in memoria con un indice columnstore.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] è possibile creare una tabella in memoria ottimizzata con un indice columnstore. L'indice columnstore può anche essere aggiunto dopo aver creato la tabella, usando la sintassi `ALTER TABLE ADD INDEX`.|  
+|Creare una tabella come columnstore.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]è possibile creare la tabella come indice columnstore cluster. Non è necessario creare prima una tabella rowstore e quindi convertirla in columnstore.|  
+|Creare una tabella in memoria con un indice columnstore.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] è possibile creare una tabella in memoria ottimizzata con un indice columnstore. L'indice columnstore può anche essere aggiunto dopo aver creato la tabella, usando la sintassi `ALTER TABLE ADD INDEX`.|  
 |Convertire una tabella rowstore in un columnstore.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Convertire un heap o un albero binario esistente o in un columnstore. Gli esempi illustrano come gestire gli indici esistenti e il nome dell'indice quando si esegue questa conversione.|  
 |Convertire una tabella columnstore in un rowstore.|[CREATE CLUSTERED INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md#d-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index) oppure [Convertire una tabella columnstore di nuovo in un heap rowstore](../../t-sql/statements/create-columnstore-index-transact-sql.md#e-convert-a-columnstore-table-back-to-a-rowstore-heap) |Di solito non è necessario eseguire questa conversione, ma talvolta potrebbe presentarsene la necessità. Gli esempi illustrano come convertire un columnstore in un heap o in un indice cluster.|  
-|Creare un indice columnstore per una tabella rowstore.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Una tabella rowstore può avere un solo indice columnstore. A partire da [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]l'indice columnstore può avere una condizione di filtro. Gli esempi illustrano la sintassi di base.|  
+|Creare un indice columnstore per una tabella rowstore.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Una tabella rowstore può avere un solo indice columnstore. A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]l'indice columnstore può avere una condizione di filtro. Gli esempi illustrano la sintassi di base.|  
 |Creare indici ad alte prestazioni per l'analisi operativa.|[Introduzione a columnstore per l'analisi operativa in tempo reale](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|Descrive come creare indici columnstore e BTree complementari in modo che le query OLTP usino gli indici BTree e le query di analisi usino gli indici columnstore.|  
 |Creare indici columnstore efficienti per il data warehousing.|[Indici columnstore per il data warehousing](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Descrive come usare gli indici BTree con le tabelle columnstore per creare query di data warehousing ad alte prestazioni.|  
 |Usare un indice BTree per imporre un vincolo di chiave primaria per un indice columnstore.|[Indici columnstore per il data warehousing](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Illustra come combinare indici BTree e columnstore per imporre vincoli di chiave primaria per l'indice columnstore.|  

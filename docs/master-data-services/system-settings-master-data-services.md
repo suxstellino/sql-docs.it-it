@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3f95aed9433ea58f14c183d4de008e5df6642926
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 75033975cf0f06f7f21c75edbacd40349ddc5ad1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92258096"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100343590"
 ---
 # <a name="system-settings-master-data-services"></a>Impostazioni di sistema (Master Data Services)
 
@@ -66,7 +66,7 @@ ms.locfileid: "92258096"
   
 |Impostazione di Gestione configurazione|Impostazione di sistema|Descrizione|  
 |-----------------------------------|--------------------|-----------------|  
-|**Copia solo versioni con commit**|**CopyOnlyCommittedVersion**|In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]determina se gli utenti possono copiare le versioni dei modelli con stato **Commit eseguito**oppure le versioni con qualsiasi stato. Il valore predefinito è **Sì** o **1**per indicare che gli utenti possono copiare solo le versioni con stato **Commit eseguito** . Sostituire con **No** o **2** per consentire agli utenti di copiare tutte le versioni.|  
+|**Copia solo versioni con commit**|**CopyOnlyCommittedVersion**|In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]determina se gli utenti possono copiare le versioni dei modelli con stato **Commit eseguito** oppure le versioni con qualsiasi stato. Il valore predefinito è **Sì** o **1** per indicare che gli utenti possono copiare solo le versioni con stato **Commit eseguito** . Sostituire con **No** o **2** per consentire agli utenti di copiare tutte le versioni.|  
   
  Per altre informazioni, vedere [Versioni &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md).  
   

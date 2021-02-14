@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb0b853b83fc65d8faddc341f9f0249debc2d2c1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a92b26642f5759044233d5d63b5a432ee5fe426c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915267"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352845"
 ---
 # <a name="type-system-xquery"></a>Sistema di tipi (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "86915267"
   
 -   Valore tipizzato e valore stringa di un nodo.  
   
--   La [funzione dati &#40;&#41;XQuery](../xquery/data-accessor-functions-data-xquery.md) e la [funzione stringa &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md).  
+-   La [funzione dati &#40;&#41;XQuery ](../xquery/data-accessor-functions-data-xquery.md) e la [funzione stringa &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md).  
   
 -   Individuazione di una corrispondenza per il tipo di sequenza restituito da un'espressione.  
   
@@ -69,7 +69,7 @@ WHERE ProductModelID=7
   
 -   Non è possibile utilizzarli per la creazione di una raccolta di XML Schema. Questi tipi vengono utilizzati nel sistema di tipi XQuery e vengono utilizzati per [XQuery e tipizzazione statica](../xquery/xquery-and-static-typing.md). È possibile eseguire il cast ai tipi atomici, ad esempio **xdt: untypedAtomic**, nello spazio dei nomi **xdt** .  
   
--   Quando si esegue una query su codice XML non tipizzato, il tipo statico e dinamico dei nodi elemento è **xdt: non tipizzato**e il tipo di valori di attributo è **xdt: untypedAtomic**. Il risultato di un metodo **query ()** genera codice XML non tipizzato. Ciò significa che i nodi XML vengono restituiti rispettivamente come **xdt: untyped** e **xdt: untypedAtomic**.  
+-   Quando si esegue una query su codice XML non tipizzato, il tipo statico e dinamico dei nodi elemento è **xdt: non tipizzato** e il tipo di valori di attributo è **xdt: untypedAtomic**. Il risultato di un metodo **query ()** genera codice XML non tipizzato. Ciò significa che i nodi XML vengono restituiti rispettivamente come **xdt: untyped** e **xdt: untypedAtomic**.  
   
 -   I tipi **xdt: dayTimeDuration** e **xdt: yearMonthDuration** non sono supportati.  
   

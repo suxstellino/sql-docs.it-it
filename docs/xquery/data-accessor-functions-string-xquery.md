@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d4c0dee40eb08aac425f93570c98fc88d32bcc60
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c334f2f78ae79b9a1af3a268728d6fcc5454f05
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730968"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100351081"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>Funzioni di accesso dati - string (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ fn:string($arg as item()?) as xs:string
  *$arg*  
  È un nodo o un valore atomico.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 -   Se *$arg* è la sequenza vuota, viene restituita la stringa di lunghezza zero.  
   
@@ -52,7 +52,7 @@ fn:string($arg as item()?) as xs:string
   
 -   In questa implementazione, **FN: String ()** senza un argomento può essere usato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi ([ ]).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
 ### <a name="a-using-the-string-function"></a>R. Utilizzo della funzione string  
