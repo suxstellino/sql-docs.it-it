@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a4eeffe-8379-4744-ad44-c27d8c8ac9a8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1e1fb93c02edc21cceae90470c35a99d17748c6c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5a7b08744e0b1ed8a80859cf81e02079f0e454ac
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500590"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338976"
 ---
 # <a name="delete-a-version-master-data-services"></a>Eliminare una versione (Master Data Services)
 
@@ -51,7 +51,7 @@ ms.locfileid: "88500590"
     EXEC [mdm].[udpVersionDelete] @Version_ID='version_ID'  
     ```  
   
-6.  Consente di eseguire la query.  
+6.  Eseguire la query.  
   
     > [!NOTE]  
     >  Può essere necessario attendere alcuni minuti prima che l'applicazione Web rifletta la modifica.  

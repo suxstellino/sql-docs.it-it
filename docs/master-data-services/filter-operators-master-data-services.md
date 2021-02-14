@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 15e1e6e068f9bacc00cdb77df5fb2e916fb5dbac
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 10ccda2cf25a98a21f9ab2e3d343c6b0566d279f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92190795"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272542"
 ---
 # <a name="filter-operators-master-data-services"></a>Operatori di filtro (Master Data Services)
 
@@ -32,7 +32,7 @@ ms.locfileid: "92190795"
 |Nome del controllo|Descrizione|  
 |------------------|-----------------|  
 |**È uguale a**|Restituisce i valori di attributo che corrispondono esattamente ai criteri specificati. Ad esempio, per filtrare in base a **Mountain-100**, è necessario digitare **Mountain-100**.|  
-|**È diverso da**|Restituisce i valori di attributo che non corrispondono esattamente ai criteri specificati. I criteri di filtro devono corrispondere esattamente al valore di attributo che si desidera omettere dai risultati. Ad esempio, per omettere i risultati che corrispondono a **Mountain-100**, è necessario digitare **Mountain-100**.<br /><br /> <br /><br /> Nota: quando si applica una condizione di filtro con una clausola "È diverso da" su un attributo, un membro per il quale l'attributo è NULL supererà la condizione di filtro e verrà restituito se SET ANSI_NULLS è impostato su ON nelle impostazioni del database. Per arrestare questo comportamento, disattivare SET ANSI_NULLS nelle impostazioni del database. Quando l'opzione SET ANSI_NULLS è impostata su OFF, dai confronti di tutti i dati con un valore Null verrà restituito TRUE, se il valore dei dati è NULL, con il risultato che il membro non supera la clausola "È diverso da". Per altre informazioni, vedere [SET ANSI_NULLS &#40;Transact-SQL&#41;](../t-sql/statements/set-ansi-nulls-transact-sql.md).|  
+|**Non è uguale a**|Restituisce i valori di attributo che non corrispondono esattamente ai criteri specificati. I criteri di filtro devono corrispondere esattamente al valore di attributo che si desidera omettere dai risultati. Ad esempio, per omettere i risultati che corrispondono a **Mountain-100**, è necessario digitare **Mountain-100**.<br /><br /> <br /><br /> Nota: quando si applica una condizione di filtro con una clausola "È diverso da" su un attributo, un membro per il quale l'attributo è NULL supererà la condizione di filtro e verrà restituito se SET ANSI_NULLS è impostato su ON nelle impostazioni del database. Per arrestare questo comportamento, disattivare SET ANSI_NULLS nelle impostazioni del database. Quando l'opzione SET ANSI_NULLS è impostata su OFF, dai confronti di tutti i dati con un valore Null verrà restituito TRUE, se il valore dei dati è NULL, con il risultato che il membro non supera la clausola "È diverso da". Per altre informazioni, vedere [SET ANSI_NULLS &#40;Transact-SQL&#41;](../t-sql/statements/set-ansi-nulls-transact-sql.md).|  
 |**È simile a**|Consente di utilizzare l'operatore LIKE di Transact-SQL per filtrare i risultati. Per altre informazioni, vedere la sezione [LIKE &#40;Transact-SQL&#41;](../t-sql/language-elements/like-transact-sql.md) nella documentazione online di SQL Server.|  
 |**Non è simile a**|Consente di utilizzare l'operatore NOT di Transact-SQL per filtrare i risultati. Per altre informazioni, vedere la sezione [NOT &#40;Transact-SQL&#41;](../t-sql/language-elements/not-transact-sql.md) nella documentazione online di SQL Server.|  
 |**È maggiore di**|Restituisce i valori di attributo che sono maggiori dei criteri specificati. Ad esempio, per restituire i valori di attributo che iniziano con una lettera maggiore di **F**, digitare **F**.|  

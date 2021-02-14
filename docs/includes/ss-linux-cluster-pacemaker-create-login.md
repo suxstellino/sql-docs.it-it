@@ -1,4 +1,4 @@
-1. **In tutte le istanze di SQL Server creare un account di accesso server per Pacemaker** . Il codice Transact-SQL seguente crea un account di accesso:
+1. **In tutte le istanze di SQL Server creare un account di accesso server per Pacemaker**. Il codice Transact-SQL seguente crea un account di accesso:
 
    ```Transact-SQL
    USE [master]
@@ -10,7 +10,7 @@
 
   Al momento della creazione del gruppo di disponibilità, l'utente Pacemaker richiederà le autorizzazioni ALTER, CONTROL e VIEW DEFINITION per il gruppo di disponibilità, dopo che è stato creato, ma prima che vi vengano aggiunti nodi.
 
-1. **In tutte le istanze di SQL Server salvare le credenziali per l'account di accesso di SQL Server** .
+1. **In tutte le istanze di SQL Server salvare le credenziali per l'account di accesso di SQL Server**.
 
    ```bash
    echo 'pacemakerLogin' >> ~/pacemaker-passwd

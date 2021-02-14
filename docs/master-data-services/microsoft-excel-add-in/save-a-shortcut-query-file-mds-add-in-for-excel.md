@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b0ba147e5c784376f9bca1585bab99444c2d9378
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4014e6ad6306756c42022d5ac3db5fc4856e789e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92257848"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340384"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>Salvare un file di query collegamento (componente aggiuntivo MDS per Excel)
 
@@ -33,7 +33,7 @@ ms.locfileid: "92257848"
   
 1.  Nel gruppo **Salva e invia** fare clic sulla freccia sotto **Salva query** e fare clic su **Salva come query**.  
   
-2.  Facoltativa. Per rinominare la query, fare clic sulla freccia sotto **Salva query** e fare clic su **Gestisci query**. Selezionare la query e fare clic su **Rinomina**.  
+2.  facoltativo. Per rinominare la query, fare clic sulla freccia sotto **Salva query** e fare clic su **Gestisci query**. Selezionare la query e fare clic su **Rinomina**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 04007ee3165838669fd1b0faefdcb20d09940af7
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
-ms.translationtype: HT
+ms.openlocfilehash: 353acdd28f3611bcc387bd4122ca377a2d8d0ca5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192472"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346865"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Processi di SQL Server Agent per i pacchetti
 
@@ -97,7 +97,7 @@ ms.locfileid: "92192472"
   
     4.  Fare clic con il pulsante destro del mouse su SSISDB, scegliere Report, Report standard e quindi fare clic su Tutte le esecuzioni.  
   
-    5.  Nel report **Tutte le esecuzioni** individuare l'ID esecuzione nella colonna **ID** . Fare clic su **Panoramica**, **Tutti i messaggi**o **Prestazioni di esecuzione** per visualizzare informazioni sull'esecuzione di questo pacchetto.  
+    5.  Nel report **Tutte le esecuzioni** individuare l'ID esecuzione nella colonna **ID** . Fare clic su **Panoramica**, **Tutti i messaggi** o **Prestazioni di esecuzione** per visualizzare informazioni sull'esecuzione di questo pacchetto.  
   
     Per altre informazioni sui report Panoramica, Tutti i messaggi e Prestazioni di esecuzione, vedere [Report per il server Integration Services](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
 
@@ -189,12 +189,12 @@ ms.locfileid: "92192472"
     |**Logging**|Associare un provider di log all'esecuzione del pacchetto.<br /><br /> **Provider di log SSIS per file di testo**<br /> Scrive le voci di log in file di testo ASCII<br /><br /> **Provider di log SSIS per SQL Server**<br /> Scrive le voci di log nella tabella sysssislog nel database MSDB.<br /><br /> **Provider di log SSIS per SQL Server Profiler**<br /> Scrive tracce che è possibile visualizzare utilizzando SQL Server Profiler.<br /><br /> **Provider di log SSIS per il registro eventi di Windows**<br /> Scrive voci di log nel log applicazioni nel registro eventi di Windows.<br /><br /> **Provider di log SSIS per file XML**<br /> Scrive file di log in un file XML.<br /><br /> Per il file di testo, il file XML e i provider di log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler, si selezionano gestioni connessione file contenute nel pacchetto. Per il provider di log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , si seleziona una gestione connessione OLE DB contenuta nel pacchetto.<br /><br /> Questa opzione corrisponde all'opzione **/Logger** per **dtexec**.|  
     |**Imposta valori**|Eseguire l'override dell'impostazione delle proprietà di un pacchetto. Nella casella **Proprietà** immettere i valori nelle colonne **Percorso proprietà** e **Valore** . Dopo avere immesso valori per una proprietà, viene visualizzata una riga vuota nella casella **Proprietà** che consente di immettere valori per un'altra proprietà.<br /><br /> Per rimuovere una proprietà dalla casella Proprietà, fare clic sulla riga e quindi su **Rimuovi**.<br /><br /> È possibile trovare il percorso della proprietà con una delle operazioni seguenti:<br /><br /> -Copiare il percorso della proprietà dal file di configurazione XML (\*.dtsconfig). Il percorso è elencato nella sezione Configurazione del file, come valore dell'attributo Path. Di seguito è riportato un esempio del percorso per la proprietà MaximumErrorCount: \Package.Properties[MaximumErrorCount]<br /><br /> -Eseguire la **Configurazione guidata pacchetto** e copiare i percorsi delle proprietà dalla pagina finale **Completamento procedura guidata** . È possibile annullare la procedura guidata.|  
     |**Verifica**|**Esegui solo pacchetti firmati**<br /> Indica se la firma del pacchetto è controllata. Se il pacchetto non è firmato o se la firma non è valida, il pacchetto ha esito negativo. Questa opzione corrisponde all'opzione **/VerifySigned** per **dtexec**.<br /><br /> **Verifica build pacchetto**<br /> Indica se il numero di build del pacchetto viene verificato rispetto al numero di build immesso nella casella **Compilazione** accanto all'opzione. Se i numeri non corrispondono, il pacchetto non verrà eseguito. Questa opzione corrisponde all'opzione **/VerifyBuild** per **dtexec**.<br /><br /> **Verifica ID pacchetto**<br /> Indica se il GUID del pacchetto viene verificato, confrontandolo con l'ID pacchetto immesso nella casella **ID pacchetto** accanto all'opzione. Questa opzione corrisponde all'opzione **/VerifyPackageID** per **dtexec**.<br /><br /> **Verifica ID versione**<br /> Indica se il GUID della versione del pacchetto viene verificato, confrontandolo con l'ID versione immesso nella casella **ID versione** accanto all'opzione. Questa opzione corrisponde all'opzione **/VerifyVersionID** per **dtexec**.|  
-    |**Riga di comando**|Modificare le opzioni della riga di comando per dtexec. Per ulteriori informazioni sulle opzioni, vedere [dtexec Utility](../../integration-services/packages/dtexec-utility.md).<br /><br /> **Ripristina opzioni originali**<br /> Utilizzare le opzioni della riga di comando impostate nelle schede **Pacchetto**, **Configurazioni**, **File di comando**, **Origini dati**, **Opzioni di esecuzione**, **Registrazione**, **Imposta valori**e **Verifica** della finestra di dialogo **Proprietà set processo** .<br /><br /> **Modificare il comando manualmente**<br /> Digitare opzioni della riga di comando aggiuntive nella casella **Riga di comando** .<br /><br /> Prima di fare clic su **OK** per salvare le modifiche apportate al passaggio di processo, è possibile rimuovere tutte le opzioni aggiuntive digitate nella casella **Riga di comando** facendo clic su **Ripristina opzioni originali**.<br /><br /> **\*\* Suggerimento \*\*** È possibile copiare la riga di comando in una finestra del prompt dei comandi, aggiungere `dtexec`ed eseguire il pacchetto dalla riga di comando. Si tratta di un modo semplice per generare il testo della riga di comando.|  
+    |**Riga di comando**|Modificare le opzioni della riga di comando per dtexec. Per ulteriori informazioni sulle opzioni, vedere [dtexec Utility](../../integration-services/packages/dtexec-utility.md).<br /><br /> **Ripristina opzioni originali**<br /> Utilizzare le opzioni della riga di comando impostate nelle schede **Pacchetto**, **Configurazioni**, **File di comando**, **Origini dati**, **Opzioni di esecuzione**, **Registrazione**, **Imposta valori** e **Verifica** della finestra di dialogo **Proprietà set processo** .<br /><br /> **Modificare il comando manualmente**<br /> Digitare opzioni della riga di comando aggiuntive nella casella **Riga di comando** .<br /><br /> Prima di fare clic su **OK** per salvare le modifiche apportate al passaggio di processo, è possibile rimuovere tutte le opzioni aggiuntive digitate nella casella **Riga di comando** facendo clic su **Ripristina opzioni originali**.<br /><br /> **\*\* Suggerimento \*\*** È possibile copiare la riga di comando in una finestra del prompt dei comandi, aggiungere `dtexec`ed eseguire il pacchetto dalla riga di comando. Si tratta di un modo semplice per generare il testo della riga di comando.|  
   
 9. Scegliere **OK** per salvare le impostazioni e chiudere la finestra di dialogo **Nuovo passaggio di processo** .  
   
     > [!NOTE]
-    > Per i pacchetti archiviati nel **Catalogo SSIS**il pulsante **OK** è disabilitato se è presente un parametro o un'impostazione della proprietà di gestione connessione non risolto. Un'impostazione non risolta si verifica quando si usa un valore contenuto in una variabile di ambiente server per impostare il parametro o la proprietà e si verifica una delle condizioni seguenti:  
+    > Per i pacchetti archiviati nel **Catalogo SSIS** il pulsante **OK** è disabilitato se è presente un parametro o un'impostazione della proprietà di gestione connessione non risolto. Un'impostazione non risolta si verifica quando si usa un valore contenuto in una variabile di ambiente server per impostare il parametro o la proprietà e si verifica una delle condizioni seguenti:  
     >   
     >  La casella di controllo **Ambiente** nella scheda **Configurazione** non è selezionata.  
     >   

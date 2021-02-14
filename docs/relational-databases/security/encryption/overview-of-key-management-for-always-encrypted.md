@@ -12,12 +12,12 @@ ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: be7a5c94f5de63f343a8c529f8a824e13177923c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 234f6233e2f6b024e6ad74a82f403e3df7db9a05
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97467302"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340182"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Panoramica della gestione delle chiavi per Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -27,10 +27,10 @@ Per proteggere i dati,[Always Encrypted](../../../relational-databases/security/
 
 Quando si parla di chiavi e di gestione delle chiavi Always Encrypted, è importante comprendere la differenza tra le chiavi crittografiche vere e proprie e gli oggetti metadati che *descrivono* le chiavi. I termini **chiave di crittografia della colonna** e **chiave master della colonna** vengono usati per fare riferimento alle chiavi crittografiche vere e proprie, mentre i termini **metadati della chiave di crittografia della colonna** e **metadati della chiave master della colonna** vengono usati per fare riferimento alle *descrizioni* delle chiavi Always Encrypted nel database.
 
-- Le ***chiavi di crittografia della colonna** _ sono chiavi di crittografia contenuto usate per crittografare i dati. Come suggerito dal nome, le chiavi di crittografia della colonna sono usate per crittografare i dati nelle colonne del database. Per crittografare una o più colonne è possibile usare la stessa chiave di crittografia della colonna oppure più chiavi, a seconda dei requisiti dell'applicazione. Le chiavi di crittografia della colonna sono a loro volta crittografate. Nel database sono archiviati solo i valori crittografati delle chiavi di crittografia della colonna, all'interno dei metadati delle chiavi di crittografia della colonna stesse. I metadati delle chiavi di crittografia della colonna sono archiviati nelle viste del catalogo [sys.column_encryption_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) e [sys.column_encryption_key_values (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) . Le chiavi di crittografia della colonna usate con l'algoritmo AES-256 sono lunghe 256 bit.
+- Le ***chiavi di crittografia della colonna*** sono chiavi di crittografia contenuto usate per crittografare i dati. Come suggerito dal nome, le chiavi di crittografia della colonna sono usate per crittografare i dati nelle colonne del database. Per crittografare una o più colonne è possibile usare la stessa chiave di crittografia della colonna oppure più chiavi, a seconda dei requisiti dell'applicazione. Le chiavi di crittografia della colonna sono a loro volta crittografate. Nel database sono archiviati solo i valori crittografati delle chiavi di crittografia della colonna, all'interno dei metadati delle chiavi di crittografia della colonna stesse. I metadati delle chiavi di crittografia della colonna sono archiviati nelle viste del catalogo [sys.column_encryption_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) e [sys.column_encryption_key_values (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) . Le chiavi di crittografia della colonna usate con l'algoritmo AES-256 sono lunghe 256 bit.
 
 
-- Le _*_chiavi master della colonna_*_ proteggono le chiavi usate per crittografare le chiavi di crittografia della colonna. Le chiavi master della colonna devono essere archiviate in un archivio chiavi attendibile, ad esempio l'archivio certificati Windows, l'insieme di credenziali delle chiavi di Azure o un modulo di sicurezza hardware. Il database contiene solo i metadati relativi alle chiavi master della colonna (il tipo di archivio chiavi e la posizione). I metadati delle chiavi master della colonna sono archiviati nella vista del catalogo [sys.column_master_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md) .  
+- Le ***chiavi master della colonna*** proteggono le chiavi usate per crittografare le chiavi di crittografia della colonna. Le chiavi master della colonna devono essere archiviate in un archivio chiavi attendibile, ad esempio l'archivio certificati Windows, l'insieme di credenziali delle chiavi di Azure o un modulo di sicurezza hardware. Il database contiene solo i metadati relativi alle chiavi master della colonna (il tipo di archivio chiavi e la posizione). I metadati delle chiavi master della colonna sono archiviati nella vista del catalogo [sys.column_master_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md) .  
 
 È importante notare che i metadati delle chiavi nel sistema del database non contengono chiavi master della colonna o chiavi di crittografia della colonna sotto forma di testo non crittografato. Il database contiene solo informazioni sul tipo e sulla posizione delle chiavi master della colonna e i valori crittografati delle chiavi di crittografia della colonna. Ciò significa che le chiavi in testo non crittografato non sono mai esposte al sistema di database. Questo garantisce che i dati protetti con Always Encrypted sono al sicuro anche se il sistema di database viene compromesso. Per assicurarsi che il sistema del database non possa accedere alle chiavi in testo non crittografato, eseguire gli strumenti di gestione delle chiavi in un computer diverso da quello che ospita il database. Per i dettagli, vedere la sezione [Considerazioni sulla sicurezza per la gestione delle chiavi](#security-considerations-for-key-management) più avanti.
 
@@ -42,7 +42,7 @@ Poiché il database contiene solo dati crittografati (all'interno di colonne pro
 
 Il processo di gestione delle chiavi può essere suddiviso nelle attività di alto livello seguenti:
 
-- _ *Provisioning della chiave** - Creazione delle chiavi fisiche in un archivio chiavi attendibile, ad esempio nell'archivio certificati Windows, in Azure Key Vault o in un modulo di sicurezza hardware, crittografia delle chiavi di crittografia della colonna con le chiavi master della colonna e creazione dei metadati per entrambi i tipi di chiavi nel database.
+- **Provisioning della chiave** : creazione delle chiavi fisiche in un archivio chiavi attendibile, ad esempio nell'archivio certificati Windows, nell'insieme di credenziali delle chiavi di Azure o in un modulo di sicurezza hardware, crittografia delle chiavi di crittografia della colonna con le chiavi master della colonna e creazione dei metadati per entrambi i tipi di chiavi nel database.
 
 - **Rotazione delle chiavi** : sostituzione periodica di una chiave esistente con una nuova. Può essere necessario ruotare una chiave se questa è stata compromessa oppure per conformità ai criteri e alle normative dell'organizzazione che impongono la rotazione delle chiavi crittografiche. 
 

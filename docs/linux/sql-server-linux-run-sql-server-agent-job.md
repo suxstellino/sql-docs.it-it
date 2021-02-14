@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: 61790d066d6cdf0d3e2a520cca740823b78fc6dc
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
-ms.translationtype: HT
+ms.openlocfilehash: bc52f0a2052d0b9abd1700e92af3a30c0e02bad2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92524046"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346446"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Creare ed eseguire processi di SQL Server Agent in Linux
 
@@ -60,7 +60,7 @@ Per usare SQL Server Agent in Linux, è necessario abilitare prima SQL Server Ag
 
 ## <a name="create-a-sample-database"></a>Creare un database di esempio
 
-Seguire questa procedura per creare un database di esempio denominato **SampleDB** . Questo database viene usato per il processo di backup giornaliero.
+Seguire questa procedura per creare un database di esempio denominato **SampleDB**. Questo database viene usato per il processo di backup giornaliero.
 
 1. Nel computer Linux aprire una sessione del terminale Bash.
 
@@ -78,7 +78,7 @@ Seguire questa procedura per creare un database di esempio denominato **SampleDB
 
 ## <a name="create-a-job-with-transact-sql"></a>Creare un processo con Transact-SQL
 
-La procedura seguente crea un processo di SQL Server Agent in Linux con i comandi di Transact-SQL. Il processo esegue un backup giornaliero del database di esempio **SampleDB** .
+La procedura seguente crea un processo di SQL Server Agent in Linux con i comandi di Transact-SQL. Il processo esegue un backup giornaliero del database di esempio **SampleDB**.
 
 > [!TIP]
 > È possibile usare qualsiasi client T-SQL per eseguire questi comandi. In Linux, ad esempio, è possibile usare [sqlcmd](sql-server-linux-setup-tools.md) o [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md). Da un server Windows remoto è anche possibile eseguire query in SQL Server Management Studio (SSMS) o usare l'interfaccia utente per la gestione dei processi, descritta nella sezione successiva.
@@ -155,7 +155,7 @@ La procedura seguente crea un processo di SQL Server Agent in Linux con i comand
 
 1. Avviare SSMS in Windows e connettersi all'istanza di SQL Server in Linux. Per altre informazioni, vedere [Gestire SQL Server in Linux con SSMS](sql-server-linux-manage-ssms.md).
 
-1. Verificare di aver creato un database di esempio denominato **SampleDB** .
+1. Verificare di aver creato un database di esempio denominato **SampleDB**.
 
    <img src="./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-0.png" alt="Create a SampleDB database" style="width: 550px;"/>
 

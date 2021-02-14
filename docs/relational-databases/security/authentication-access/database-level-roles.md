@@ -39,22 +39,22 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 268aafa5b95bed4c9e2687fef430aa4a972ea2c7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 86560767d969ef5ee7da97c989da7558421f0302
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97463162"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344409"
 ---
 # <a name="database-level-roles"></a>Ruoli a livello di database
 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Per una facile gestione delle autorizzazioni dei database, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornisce diversi *ruoli* rappresentanti entità di sicurezza all'interno delle quali sono raggruppate altre entità. I ruoli sono analoghi ai ***gruppi** _ nel sistema operativo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. L'ambito delle autorizzazioni dei ruoli a livello di database è l'intero database.  
+  Per una facile gestione delle autorizzazioni dei database, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornisce diversi *ruoli* rappresentanti entità di sicurezza all'interno delle quali sono raggruppate altre entità. I ruoli sono analoghi ai ***gruppi*** nel sistema operativo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. L'ambito delle autorizzazioni dei ruoli a livello di database è l'intero database.  
 
 Per aggiungere e rimuovere utenti a un ruolo del database, usare le opzioni `ADD MEMBER` e `DROP MEMBER` dell'istruzione [ALTER ROLE](../../../t-sql/statements/alter-role-transact-sql.md) . [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] e Azure Synapse non supportano l'uso di `ALTER ROLE`. Usare invece le stored procedure [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) e [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) .
   
- Esistono due tipi di ruoli a livello di database: i _ruoli predefiniti del database*, che sono predefiniti nel database, e i *ruoli del database definiti dall'utente*, che possono essere creati.  
+ Esistono due tipi di ruoli a livello di database: i *ruoli predefiniti del database* , che sono predefiniti nel database, e i *ruoli del database definiti dall'utente* , che possono essere creati.  
   
  I ruoli predefiniti del database vengono definiti a livello di database e sono presenti in ogni database. I membri del ruolo del database **db_owner** possono gestire l'appartenenza ai ruoli predefiniti del database. Nel database msdb sono presenti anche alcuni ruoli predefiniti del database per scopi specifici.  
   

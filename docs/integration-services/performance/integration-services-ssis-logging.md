@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cee8ccf62e9ec8a6497d3515e85b7aeff8f0b479
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: 8ac0f913188b23b85548f87a4f458d1c2b754d15
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457143"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100347456"
 ---
 # <a name="integration-services-ssis-logging"></a>Registrazione di Integration Services (SSIS)
 
@@ -386,7 +386,7 @@ ms.locfileid: "88457143"
 ## <a name="enable-logging-for-package-execution-on-the-ssis-server"></a><a name="server_logging"></a> Abilitare la registrazione per l'esecuzione del pacchetto nel Server SSIS
   Questo argomento descrive come impostare o modificare il livello di registrazione per un pacchetto quando si esegue un pacchetto che è stato distribuito nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Il livello di registrazione impostato quando si esegue il pacchetto sostituisce il livello di registrazione del pacchetto configurato in fase di progettazione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Vedere [Abilitare la registrazione di pacchetti in SQL Server Data Tools](#ssdt) per altre informazioni.  
   
- In **Proprietà server**di SQL Server, nella proprietà **Server logging level** (Livello di registrazione del server), è possibile selezionare un livello di registrazione predefinito per l'intero server. È possibile scegliere uno dei livelli di registrazione predefiniti descritti in questo argomento oppure è possibile selezionare un livello di registrazione personalizzato esistente. Il livello di registrazione selezionato viene applicato per impostazione predefinita a tutti i pacchetti distribuiti nel catalogo SSIS. Si applica anche per impostazione predefinita a un passaggio del processo di SQL Agent che esegue un pacchetto SSIS.  
+ In **Proprietà server** di SQL Server, nella proprietà **Server logging level** (Livello di registrazione del server), è possibile selezionare un livello di registrazione predefinito per l'intero server. È possibile scegliere uno dei livelli di registrazione predefiniti descritti in questo argomento oppure è possibile selezionare un livello di registrazione personalizzato esistente. Il livello di registrazione selezionato viene applicato per impostazione predefinita a tutti i pacchetti distribuiti nel catalogo SSIS. Si applica anche per impostazione predefinita a un passaggio del processo di SQL Agent che esegue un pacchetto SSIS.  
   
  È anche possibile specificare il livello di registrazione per un singolo pacchetto con uno dei metodi indicati di seguito. In questo argomento viene illustrato il primo metodo.  
   

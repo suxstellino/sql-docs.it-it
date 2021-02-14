@@ -11,12 +11,12 @@ ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 52fb350d3dcf06cb215a723cb9c98402d44f0d21
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b4e080aeb3bb52a5b0562e63f4bda1a19fb9fe94
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320897"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078882"
 ---
 # <a name="creating-script-files-accesstosql"></a>Creazione di file di script (AccessToSQL)
 Il primo passaggio prima di avviare l'applicazione console SSMA consiste nel creare il file di script e, se necessario, creare il file di valore della variabile e il file di connessione del server.  
@@ -394,6 +394,6 @@ L'utente può convalidare facilmente il proprio file di script in base al file d
 ## <a name="next-step"></a>Passaggio successivo
 Il passaggio successivo per la gestione della console consiste nella [creazione di file di valori di variabile &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Creazione di file di valori di variabile &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   

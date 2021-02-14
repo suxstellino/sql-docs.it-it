@@ -15,12 +15,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: e61f723ddbc3010cc705c076675b731482fdee6b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
-ms.translationtype: HT
+ms.openlocfilehash: c8a836f1a8daf2b4b6a9d5b76156191799013484
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171843"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341709"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoraggio delle prestazioni con Query Store
 
@@ -31,7 +31,7 @@ La funzionalità Archivio query di [!INCLUDE[ssNoVersion](../../includes/ssnover
 Per informazioni sul funzionamento di Query Store nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] di Azure, vedere [Uso di Query Store nel database SQL di Azure](best-practice-with-the-query-store.md#Insight).
 
 > [!IMPORTANT]
-> Se si usa Query Store per informazioni dettagliate sui carichi di lavoro Just-In-Time in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], prevedere l'installazione delle correzioni di scalabilità delle prestazioni in [KB 4340759](https://support.microsoft.com/help/4340759) appena possibile.
+> Se si usa Query Store per informazioni dettagliate sui carichi di lavoro Just-In-Time in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], prevedere l'installazione delle correzioni di scalabilità delle prestazioni in [KB 4340759](https://support.microsoft.com/help/4340759) appena possibile.
 
 ## <a name="enabling-the-query-store"></a><a name="Enabling"></a> Abilitazione di Archivio query
 
@@ -645,7 +645,7 @@ Se si usa **sp_query_store_force_plan** , è possibile forzare solo piani che so
 
 #### <a name="a-namectp23-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> Supporto dell'uso forzato del piano per cursori fast forward e statici
 
-A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e database SQL di Azure (tutti i modelli di distribuzione), Query Store consente di forzare i piani di esecuzione query per i cursori API e [!INCLUDE[tsql](../../includes/tsql-md.md)] Fast Forward e statici. A tale scopo, è possibile usare `sp_query_store_force_plan` o i report di Query Store di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+A partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] e database SQL di Azure (tutti i modelli di distribuzione), Query Store consente di forzare i piani di esecuzione query per i cursori API e [!INCLUDE[tsql](../../includes/tsql-md.md)] Fast Forward e statici. A tale scopo, è possibile usare `sp_query_store_force_plan` o i report di Query Store di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
 ### <a name="remove-plan-forcing-for-a-query"></a>Rimuovere l'utilizzo forzato del piano per una query
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a870cdbd9a90fefe29088892f278446479665de7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f4fd85737d1a7cdc981576f624a2a403f0eb19ee
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753629"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341950"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>Contesto delle espressioni e valutazione delle query (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "85753629"
   
      Tutte le associazioni di spazi dei nomi vengono risolte durante l'inizializzazione del contesto statico.  
   
--   Se si esegue una query su una colonna o una variabile **XML** tipizzata, i componenti della raccolta XML Schema associata alla colonna o alla variabile vengono importati nel contesto statico. Per altre informazioni, vedere [confrontare dati XML tipizzati con dati XML non tipizzati](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
+-   Se si esegue una query su una colonna o una variabile **XML** tipizzata, i componenti della raccolta XML Schema associata alla colonna o alla variabile vengono importati nel contesto statico. Per altre informazioni, vedere [Confrontare dati XML tipizzati con dati XML non tipizzati](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
 -   Per ogni tipo atomico presente negli schemi importati, nel contesto statico viene inoltre resa disponibile una funzione di cast, Questo è illustrato nell'esempio seguente. In questo esempio viene specificata una query su una variabile **XML** tipizzata. La raccolta di XML Schema associata alla variabile definisce un tipo atomico, myType. Corrispondente a questo tipo, una funzione di cast, **MyType ()**, è disponibile durante l'analisi statica. L'espressione della query (`ns:myType(0)`) restituisce un valore di tipo myType.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "85753629"
 ### <a name="implementation-restrictions"></a>Limitazioni di implementazione  
  Di seguito sono elencate le limitazioni correlate al contesto dinamico:  
   
--   Le funzioni di contesto di **data e ora correnti** , **FN: Current-date**, **FN: Current-time**e **FN: Current-DateTime**, non sono supportate.  
+-   Le funzioni di contesto di **data e ora correnti** , **FN: Current-date**, **FN: Current-time** e **FN: Current-DateTime**, non sono supportate.  
   
 -   Il **fuso orario implicito** è fisso a UTC + 0 e non può essere modificato.  
   

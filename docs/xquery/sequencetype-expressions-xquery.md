@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 909d3cb49879a94c466e58f83997e32c468d9df8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0627d892733f84cb4a8d1b5cf80ad65d9c09f824
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85643360"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100335847"
 ---
 # <a name="sequencetype-expressions-xquery"></a>Espressioni SequenceType (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "85643360"
 Expression instance of SequenceType[Occurrence indicator]  
 ```  
   
- Si noti che l'operatore,, `instance of` `Occurrence indicator` specifica la cardinalità, il numero di elementi nella sequenza risultante. Se non viene specificato, si presuppone una cardinalità 1. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è supportato solo l'indicatore di occorrenza punto interrogativo (**?)** . **?** l'indicatore di occorrenza indica che `Expression` può restituire zero o un elemento. Se il **?** l'indicatore di occorrenza è specificato `instance of` . restituisce true se il `Expression` tipo corrisponde a quello specificato `SequenceType` , indipendentemente dal fatto che `Expression` restituisca una sequenza Singleton o vuota.  
+ Si noti che l'operatore,, `instance of` `Occurrence indicator` specifica la cardinalità, il numero di elementi nella sequenza risultante. Se non viene specificato, si presuppone una cardinalità 1. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è supportato solo l'indicatore di occorrenza punto interrogativo (**?)** . Il quantificatore **?** l'indicatore di occorrenza indica che `Expression` può restituire zero o un elemento. Se il **?** l'indicatore di occorrenza è specificato `instance of` . restituisce true se il `Expression` tipo corrisponde a quello specificato `SequenceType` , indipendentemente dal fatto che `Expression` restituisca una sequenza Singleton o vuota.  
   
  Se il **?** l'indicatore di occorrenza non è specificato `sequence of` . restituisce true solo quando il `Expression` tipo corrisponde all' `Type` oggetto specificato e `Expression` restituisce un singleton.  
   
@@ -110,7 +110,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Per altre informazioni, vedere [confrontare dati XML tipizzati con dati XML non tipizzati](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
+ Per altre informazioni, vedere [Confrontare dati XML tipizzati con dati XML non tipizzati](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
  L'espressione usetheBoolean seguente esegue una query `instance of` per determinare se l'attributo LocationID è di tipo xs: integer:  
   
@@ -313,7 +313,7 @@ select @x.query(' declare namespace CustOrders="Customers";
   
 -   Le sequenze complete, ad esempio `(1,2) instance of xs:integer*`, non sono supportate.  
   
--   Quando si utilizza un form del tipo di sequenza **Element ()** che specifica un nome di tipo, ad esempio `element(ElementName, TypeName)` , il tipo deve essere qualificato con un punto interrogativo (?). Ad esempio, `element(Title, xs:string?)` indica che l'elemento potrebbe essere null. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]non supporta il rilevamento della fase di esecuzione della proprietà **xsi: nil** tramite `instance of` .  
+-   Quando si utilizza un form del tipo di sequenza **Element ()** che specifica un nome di tipo, ad esempio `element(ElementName, TypeName)` , il tipo deve essere qualificato con un punto interrogativo (?). Ad esempio, `element(Title, xs:string?)` indica che l'elemento potrebbe essere null. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non supporta il rilevamento della fase di esecuzione della proprietà **xsi: nil** tramite `instance of` .  
   
 -   Se il valore in `Expression` viene da un elemento o un attributo tipizzato come unione, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] può identificare solo il tipo primitivo dal quale deriva il tipo di valore, non il tipo derivato. Se, ad esempio, <`e1`> viene definito con un tipo statico (XS: integer | xs: String), il codice seguente restituirà false.  
   
@@ -375,13 +375,13 @@ select @x.query('xs:date("2000-01-01Z")')
   
 #### <a name="implementation-limitations"></a>Limitazioni di implementazione  
   
--   Le espressioni XQuery **typeswitch**, **castable**e **Treat** non sono supportate.  
+-   Le espressioni XQuery **typeswitch**, **castable** e **Treat** non sono supportate.  
   
 -   **cast as** richiede un punto interrogativo (?) dopo il tipo atomico.  
   
 -   **xs: QName** non è supportato come tipo per il cast. In alternativa **, usare expanded-QName** .  
   
--   **xs: date**, **xs: Time**e **xs: DateTime** richiedono un fuso orario, indicato da Z.  
+-   **xs: date**, **xs: Time** e **xs: DateTime** richiedono un fuso orario, indicato da Z.  
   
      La query seguente ha esito negativo, perché il fuso orario non è specificato.  
   

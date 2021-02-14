@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: e1a2fe365ff2cf40e1dd7e08e113a586e7c2b666
-ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.openlocfilehash: 571cf683c8d905cfb499624cbd05dc40efe94b86
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98783518"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100344647"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Prerequisiti, restrizioni e consigli per i gruppi di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -263,7 +263,7 @@ ms.locfileid: "98783518"
   
 -   **Nome univoco del gruppo di disponibilità:**  Ogni nome di gruppo di disponibilità deve essere univoco in WSFC. La lunghezza massima consentita per il nome del gruppo di disponibilità è 128 caratteri.  
   
--   **Repliche di disponibilità:**  Ogni gruppo di disponibilità supporta una replica primaria e fino a otto repliche secondarie. È possibile eseguire tutte le repliche in modalità con commit asincrono oppure fino a un massimo di tre in modalità con commit sincrono (una replica primaria con due repliche secondarie sincrone).  
+-   **Repliche di disponibilità:**  Ogni gruppo di disponibilità supporta una replica primaria e fino a otto repliche secondarie. Tutte le repliche possono essere eseguite in modalità con commit asincrono oppure fino a cinque possono essere eseguite in modalità con commit sincrono (una replica primaria con due repliche secondarie sincrone).  
   
 -   **Numero massimo di gruppi di disponibilità e database di disponibilità per computer:** il numero effettivo di database e gruppi di disponibilità che è possibile creare in un computer (macchina virtuale o computer fisico) dipende dall'hardware e dal carico di lavoro, tuttavia non esiste un limite imposto. Microsoft ha testato un massimo di 10 gruppi di disponibilità e 100 database per computer fisico, ma non si tratta di un limite vincolante. A seconda delle specifiche hardware del server e del carico di lavoro, è possibile inserire un numero maggiore di database e di gruppi di disponibilità in un'istanza di SQL Server. I segnali di sistemi di overload possono includere, a titolo esemplificativo, l'esaurimento del thread di lavoro, tempi di risposta lenti per visualizzazioni di sistema del gruppo di disponibilità e DMV e/o dump del sistema dispatcher bloccati. Assicurarsi di testare completamente l'ambiente con un carico di lavoro simile a quello di produzione per assicurare che possa gestire capacità di carico di lavoro di picco all'interno del contratto sul livello di servizio dell'applicazione. Per i contratti sul livello di servizio occorre considerare il carico in condizioni di errore e i tempi di risposta previsti.  
   

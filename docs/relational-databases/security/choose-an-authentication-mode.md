@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ffe53e3f7819a2ca9bdd8adc9cb3db66aad57371
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: ebcf99ad025477a562f2a050eb1c2c3f3f63e12f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627586"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344399"
 ---
 # <a name="choose-an-authentication-mode"></a>Scegliere una modalità di autenticazione
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "85627586"
   
 2.  Nella finestra di dialogo **Esegui** digitare **secpol.msc**, quindi fare clic su **OK**.  
   
-3.  Nell'applicazione **Impostazioni sicurezza locale** espandere **Impostazioni di sicurezza**e **Criteri account**, quindi fare clic su **Criteri password**.  
+3.  Nell'applicazione **Impostazioni sicurezza locale** espandere **Impostazioni di sicurezza** e **Criteri account**, quindi fare clic su **Criteri password**.  
 
      I criteri password sono descritti nel riquadro dei risultati.  
   

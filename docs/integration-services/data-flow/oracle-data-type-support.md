@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2193c93ff55ed38ff5c629072109036306bb72c6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: 8ef719fc0fe41120fe42d324beb563b06bb81060
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430773"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100343217"
 ---
 # <a name="microsoft-connector-for-oracle-data-type-support"></a>Supporto per i tipi di dati di Connettore Microsoft per Oracle
 
@@ -41,13 +41,13 @@ Nella tabella seguente vengono illustrati i tipi di dati di Oracle Database e il
 |CLOB|DT_TEXT|I tipi di dati CLOB, NCLOB e BLOB sono supportati solo in modalità array, non in modalità di caricamento rapido.|
 |NCLOB|DT_NTEXT||
 |BLOB|DT_IMAGE||
-|UROWID|Non Supportato||
-|REF|Non Supportato||
-|BFILE|Non Supportato||
-|LONG|Non Supportato||
-|LONG RAW|Non Supportato||
-|ROWID|Non Supportato||
-|Tipo definito dall'utente (tipo di oggetto, VARRAY, tabella annidata)|Non Supportato||
+|UROWID|Non supportato||
+|REF|Non supportato||
+|BFILE|Non supportato||
+|LONG|Non supportato||
+|LONG RAW|Non supportato||
+|ROWID|Non supportato||
+|Tipo definito dall'utente (tipo di oggetto, VARRAY, tabella annidata)|Non supportato||
 
 ## <a name="next-steps"></a>Passaggi successivi
 

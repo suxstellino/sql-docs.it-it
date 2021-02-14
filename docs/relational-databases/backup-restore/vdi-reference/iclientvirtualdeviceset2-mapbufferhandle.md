@@ -9,12 +9,12 @@ ms.technology: backup-restore
 ms.topic: reference
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 70f6d117fd7a0349f2da2e03ff2603eaf55898fe
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
-ms.translationtype: HT
+ms.openlocfilehash: 28ce82433b718bc98c6a27e66385b97996fe65a0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96128964"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100347219"
 ---
 # <a name="iclientvirtualdeviceset2mapbufferhandle-vdi"></a>IClientVirtualDeviceSet2::MapBufferHandle (VDI)
 

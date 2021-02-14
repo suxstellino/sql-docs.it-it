@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5eff7f5f2db1d1b155b94818083ddad11f23890e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f87125b2c72ac5c8242965dcb3d0407a4a15614c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456715"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340226"
 ---
 # <a name="reserved-words-master-data-services"></a>Parole riservate (Master Data Services)
 
@@ -78,7 +78,7 @@ ms.locfileid: "88456715"
 -   **Version_ID**  
   
 ##  <a name="members"></a><a name="members"></a> Membri  
- Per i membri, non è possibile usare **MDMMemberStatus**, **MDMUnused**o **ROOT** per il valore di attributo **Code** .  
+ Per i membri, non è possibile usare **MDMMemberStatus**, **MDMUnused** o **ROOT** per il valore di attributo **Code** .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md)  

@@ -21,12 +21,12 @@ ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 9c97ee3e1f268553a828e035498b203c8fa1e747
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 14a7dce61b50ced328c103ec88973e9bf7b18c7d
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97438946"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100345245"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -160,6 +160,8 @@ Come prerequisito per la creazione di una tabella esterna, l'amministratore dell
  Le operazioni DML (Data Manipulation Language) non sono supportate per le tabelle esterne. Ad esempio, non è possibile usare le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] UPDATE, INSERT o DELETE per modificare i dati esterni.
 
  CREATE TABLE, DROP TABLE, CREATE STATISTICS, DROP STATISTICS, CREATE VIEW e DROP VIEW sono le uniche operazioni DDL (Data Definition Language) consentite per le tabelle esterne.
+
+ Non è possibile creare tabelle esterne per il pool SQL senza server in una posizione in cui sono presenti dati. Per riutilizzare un percorso utilizzato per archiviare i dati, il percorso deve essere eliminato manualmente in ADLS.
 
  PolyBase può utilizzare al massimo 33.000 file per cartella durante l'esecuzione di 32 query PolyBase simultanee. Questo numero massimo include i file e le sottocartelle presenti in ogni cartella HDFS. Se il livello di concorrenza è inferiore a 32, un utente può eseguire le query PolyBase sulle cartelle in HDFS che contengono più di 33.000 file. Per gli utenti di Hadoop e PolyBase, è consigliabile usare percorsi brevi per i file e non più di 30.000 file per ogni cartella HDFS. Quando si fa riferimento a troppi file, si verifica un'eccezione di memoria insufficiente in JVM.
 
