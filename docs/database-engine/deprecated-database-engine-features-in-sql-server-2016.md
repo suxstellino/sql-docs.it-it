@@ -1,9 +1,9 @@
 ---
-title: Funzionalità del motore di database deprecate | Microsoft Docs
+title: Funzionalità di motore di database deprecate
 titleSuffix: SQL Server 2016
 description: Informazioni sulle funzionalità del motore di database deprecate ancora disponibili in SQL Server 2016 (13.x), ma che non devono essere usate nelle nuove applicazioni.
 ms.custom: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 02/11/2021
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -13,20 +13,19 @@ helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
-ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2e46ade314bf0218344b682c7b75762de3f10396
-ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
+ms.openlocfilehash: 518b29507e7992b267922e09c97bf98b1657205d
+ms.sourcegitcommit: c83c17e44b5e1e3e2a3b5933c2a1c4afb98eb772
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99552646"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100525162"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Funzionalità del Motore di database deprecate in SQL Server 2016
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
 
-In questo argomento verranno descritte le funzionalità deprecate di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ancora disponibili in [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]. È consigliabile non usare le funzionalità deprecate nelle nuove applicazioni.  
+Questo articolo descrive le funzionalità deprecate [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ancora disponibili in [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] . È consigliabile non usare le funzionalità deprecate nelle nuove applicazioni.  
   
 Quando una funzionalità è contrassegnata come deprecata significa che:
 -  La funzionalità è solo in modalità manutenzione. Non verranno apportate nuove modifiche, incluse quelle correlate all'interoperabilità con le nuove funzionalità.
@@ -37,7 +36,7 @@ Per [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], vedere [Funzionalità del
 
 È possibile monitorare l'utilizzo delle funzionalità deprecate tramite il contatore delle prestazioni [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :Funzionalità deprecate e gli eventi di traccia. Per altre informazioni, vedere [Usare oggetti di SQL Server](../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
-Il valore di questi contatori è disponibile anche tramite l'istruzione seguente:  
+Il valore di questi contatori è disponibile anche eseguendo l'istruzione seguente:  
   
 ```sql  
 SELECT * FROM sys.dm_os_performance_counters   
@@ -67,6 +66,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Livelli di compatibilità|sp_dbcmptlevel|ALTER DATABASE ... SET COMPATIBILITY_LEVEL. Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|sp_dbcmptlevel|80|  
 |Livelli di compatibilità|Livello di compatibilità 110 e 120 del database.|Pianificare l'aggiornamento del database e dell'applicazione per una versione successiva. Microsoft continuerà tuttavia a supportare per quanto possibile le applicazioni certificate in qualsiasi livello di compatibilità del database supportato al fine di facilitare gli aggiornamenti. Per informazioni sui livelli di compatibilità supportati, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Livello di compatibilità 110 del database<br /><br /> Livello di compatibilità 120 del database||  
 |XML|Generazione schema XDR inline|La direttiva XMLDATA all'opzione FOR XML è deprecata. Utilizzare la generazione XSD in caso di modalità RAW e AUTO. Non sono disponibili sostituzioni per la direttiva XMLDATA in modalità EXPLICIT.|XMLDATA|181|  
+|XML|sys.sp_db_selective_xml_index|ALTER INDEX … DISABLE<BR><BR>Per altre informazioni, vedere [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md).|[sys.sp_db_selective_xml_index](../relational-databases/system-stored-procedures/sp-db-selective-xml-index-transact-sql.md)|
 |Backup e ripristino|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE o LOG TO TAPE|235|  
 |Backup e ripristino|sp_addumpdevice'**tape**'|sp_addumpdevice'**disk**'|ADDING TAPE DEVICE|236|  
 |Backup e ripristino|sp_helpdevice|sys.backup_devices|sp_helpdevice|100|  
@@ -175,4 +175,4 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzionalità del motore di database non più usate in SQL Server 2016](./discontinued-database-engine-functionality-in-sql-server.md)     
- [Funzionalità del motore di database deprecate in SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)
+ [Funzionalità del motore di database deprecate in SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)  

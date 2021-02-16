@@ -24,12 +24,12 @@ ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e08263f14e21ac87059b1ecaaddbc0f74d57d9f
-ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
+ms.openlocfilehash: b8f28c1d2aaa3e1e1e431feaf265d7b1bc22f9d9
+ms.sourcegitcommit: c83c17e44b5e1e3e2a3b5933c2a1c4afb98eb772
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100489385"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100525194"
 ---
 # <a name="data-compression"></a>Compressione dei dati
 
@@ -81,7 +81,7 @@ Quando si utilizza la compressione di riga e di pagina, tenere presente le consi
 -   Le tabelle in cui era implementato il formato di archiviazione vardecimal in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] mantengono questa impostazione anche dopo l'aggiornamento. È possibile applicare la compressione di riga a una tabella che utilizza il formato di archiviazione vardecimal. Tuttavia, poiché la compressione di riga è un superset del formato di archiviazione vardecimal, non è necessario mantenere quest'ultimo. Quando si utilizza il formato di archiviazione vardecimal con la compressione di riga, per i valori decimali non si ottiene alcun miglioramento in termini di compressione. Sebbene sia possibile inoltre applicare la compressione di pagina a una tabella per cui è implementato il formato di archiviazione vardecimal, per le colonne che utilizzano tale formato probabilmente non è possibile ottenere compressione aggiuntiva.  
   
     > [!NOTE]  
-    > Tutte le versioni supportate di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] supportano il formato di archiviazione vardecimal. Tuttavia, poiché la compressione a livello di riga consente di ottenere gli stessi obiettivi, il formato di archiviazione vardecimal è deprecato. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+    > Tutte le versioni supportate di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] supportano il formato di archiviazione vardecimal. Tuttavia, poiché la compressione dei dati raggiunge gli stessi obiettivi, il formato di archiviazione vardecimal è deprecato. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## <a name="columnstore-and-columnstore-archive-compression"></a>Compressione dell'archivio columnstore e columnstore  
 

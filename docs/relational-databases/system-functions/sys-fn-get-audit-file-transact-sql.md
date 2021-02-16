@@ -22,12 +22,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: e0e6692a24371b91b57ad2269ec48c43db1e1a8c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 013586570ce43b8270ae2613c05ced8bc9bdc48b
+ms.sourcegitcommit: c83c17e44b5e1e3e2a3b5933c2a1c4afb98eb772
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99206074"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100525215"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -52,11 +52,11 @@ fn_get_audit_file ( file_pattern,
     
     Questo argomento deve includere sia un percorso (lettera di unità o condivisione di rete) che un nome di file, che può includere un carattere jolly. È possibile utilizzare un singolo asterisco (*) per raccogliere più file da un set di file di controllo. Ad esempio:  
   
-    -   **\<path>\\\** _: Raccoglie tutti i file di controllo nel percorso specificato.  
+    -   **\<path>\\\*** -Raccoglie tutti i file di controllo nel percorso specificato.  
   
-    -   _* \<path> \LoginsAudit_{Guid} * * _-raccoglie tutti i file di controllo con il nome e la coppia GUID specificati.  
+    -   **\<path> \ LOGINSAUDIT_ {GUID}***: raccoglie tutti i file di controllo con il nome e la coppia GUID specificati.  
   
-    -   _* \<path> \LoginsAudit_{GUID} _00_29384. sqlaudit * *-raccoglie un file di controllo specifico.  
+    -   **\<path> \ LOGINSAUDIT_ {GUID} _00_29384. sqlaudit** : raccoglie un file di controllo specifico.  
   
  - **Database SQL di Azure**:
  
@@ -115,7 +115,7 @@ fn_get_audit_file ( file_pattern,
 | server_principal_name | **sysname** | Account di accesso corrente. Ammette i valori Null. |  
 | server_principal_sid | **varbinary** | SID dell'account di accesso corrente. Ammette i valori Null. |  
 | session_id | **smallint** | ID della sessione in cui si è verificato l'evento. Non ammette i valori Null. |  
-| session_server_principal_name | **sysname** | Entità server per la sessione. Ammette i valori Null. |  
+| session_server_principal_name | **sysname** | Entità server per la sessione. Ammette i valori Null. Restituisce l'identità dell'account di accesso originale connesso all'istanza di SQL Server nel caso in cui siano presenti commutazioni di contesto esplicite o implicite.|  
 | istruzione | **nvarchar(4000)** | Istruzione TSQL, se esiste. Ammette i valori Null. Se non applicabile, viene restituito NULL. |  
 | riuscito | **bit** | Indica se l'azione che ha generato l'evento è riuscita. Non ammette i valori Null. Per tutti gli eventi diversi dagli eventi di accesso, riporta solo l'esito del controllo dell'autorizzazione, non l'operazione.<br /> 1 = esito positivo<br /> 0 = esito negativo |
 | target_database_principal_id | **int** | Entità database su cui viene eseguita un'operazione GRANT/DENY/REVOKE. Non ammette i valori Null. Se non applicabile, restituisce 0. |  
