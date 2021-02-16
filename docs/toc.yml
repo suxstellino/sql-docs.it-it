@@ -5320,7 +5320,7 @@ items:
                         href: relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md
                   - name: Replica transazionale
                     href: relational-databases/replication/administration/enhance-transactional-replication-performance.md
-              - name: Sicurezza
+              - name: Security
                 items:
                   - name: Database di distribuzione
                     href: relational-databases/replication/security/secure-the-distributor.md
@@ -12528,6 +12528,8 @@ items:
                 href: relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md
               - name: sys.dm_db_missing_index_group_stats
                 href: relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md
+              - name: sys.dm_db_missing_index_group_stats_query
+                href: relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-query-transact-sql.md
           - name: I/O
             href: relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md
             items:
