@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: feb85bc9b14169c862447c8465ce47c4637b5c32
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
-ms.translationtype: HT
+ms.openlocfilehash: 64b8416375cdc61c43e8799b33891096858a79f7
+ms.sourcegitcommit: 059722ff78a6061b801807416b312ae9f721ec7d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195021"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100636718"
 ---
 # <a name="move-user-databases"></a>Spostare database utente
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,19 +48,19 @@ ms.locfileid: "92195021"
 ## <a name="planned-relocation-procedure"></a>Procedura di rilocazione pianificata  
  Per spostare un file di dati o di log nell'ambito di una rilocazione pianificata, eseguire la procedura seguente:  
   
-1.  Eseguire l'istruzione seguente.  
+1.  Per ogni file che si desidera spostare, eseguire l'istruzione seguente.  
+  
+    ```  
+    ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name, FILENAME = 'new_path\os_file_name' );  
+    ```  
+  
+2.  Eseguire l'istruzione seguente.  
   
     ```  
     ALTER DATABASE database_name SET OFFLINE;  
     ```  
   
-2.  Spostare il file o i file nella nuova posizione.  
-  
-3.  Per ogni file che si desidera spostare, eseguire l'istruzione seguente.  
-  
-    ```  
-    ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name, FILENAME = 'new_path\os_file_name' );  
-    ```  
+3.  Spostare il file o i file nella nuova posizione.  
   
 4.  Eseguire l'istruzione seguente.  
   

@@ -19,12 +19,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 148f93b43f704686b3083954cb3d7353f33a16e0
-ms.sourcegitcommit: c6cc0b669b175ae290cf5b08952010661ebd03c3
+ms.openlocfilehash: 5c074add532e55209c8fc304a98da686cec60aab
+ms.sourcegitcommit: 059722ff78a6061b801807416b312ae9f721ec7d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100530862"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100636730"
 ---
 # <a name="create-indexed-views"></a>Creazione di viste indicizzate
 
@@ -159,8 +159,8 @@ Tutti gli indici di una vista vengono eliminati con la rimozione della vista. Tu
 
 Per creare la vista, è necessario che l'utente disponga dell'autorizzazione **Create View** per il database e dell'autorizzazione **ALTER** per lo schema in cui viene creata la vista. Se la tabella di base risiede in uno schema diverso, l'autorizzazione **References** per la tabella è obbligatoria come minimo. Se l'utente che crea l'indice è diverso da quello degli utenti che hanno creato la vista, per la creazione dell'indice è necessario che l'autorizzazione **ALTER** per la vista sia obbligatoria (coperta da ALTER sullo schema).
 
-    > [!NOTE]  
-    > Indexes can only be created on views which have the same owner as the referenced table or tables. This is also called an intact **ownership-chain** between the view and the table(s). Typically, when table and view reside within the same schema, the same schema-owner applies to all objects within the schema. But it is possible that individual objects have different explicit owners. The column **principal_id** in sys.tables contains a value if the owner is different from the schema-owner.
+> [!NOTE]  
+> Gli indici possono essere creati solo su viste con lo stesso proprietario della tabella o delle tabelle a cui si fa riferimento. Questa operazione è detta anche **catena di proprietà** intatta tra la vista e la tabella o le tabelle. In genere, quando la tabella e la vista risiedono all'interno dello stesso schema, lo stesso proprietario dello schema si applica a tutti gli oggetti all'interno dello schema. Pertanto, è possibile creare una vista e non essere il proprietario della vista. D'altra parte, è anche possibile che i singoli oggetti all'interno di uno schema dispongano di proprietari espliciti diversi. La colonna **principal_id** in sys. Tables contiene un valore se il proprietario è diverso dal proprietario dello schema.
 
 
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL
