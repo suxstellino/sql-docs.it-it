@@ -443,6 +443,8 @@ items:
                 href: big-data-cluster/spark-hive-tools-vscode.md
               - name: Usare il server cronologia Spark esteso
                 href: big-data-cluster/spark-history-server.md
+              - name: Gestire le librerie
+                href: big-data-cluster/spark-install-packages.md
           - name: Risolvere problemi
             items:
               - name: Risolvere i problemi relativi a Kubernetes
@@ -5320,7 +5322,7 @@ items:
                         href: relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md
                   - name: Replica transazionale
                     href: relational-databases/replication/administration/enhance-transactional-replication-performance.md
-              - name: Security
+              - name: Sicurezza
                 items:
                   - name: Database di distribuzione
                     href: relational-databases/replication/security/secure-the-distributor.md

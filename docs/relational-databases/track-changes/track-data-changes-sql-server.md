@@ -21,16 +21,16 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b38293d4b60168028a5669a9f5dd2e01ccbde012
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 9c5f6c8b611dcc86fcd514ae425edc6f45a7657f
+ms.sourcegitcommit: 8bdb5a51f87a6ff3b94360555973ca0cd0b6223f
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466752"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100549397"
 ---
 # <a name="track-data-changes-sql-server"></a>Rilevare le modifiche ai dati (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] offre due funzionalità che consentono di tener traccia delle modifiche ai dati in un database: [Change Data Capture](#Capture) e [Rilevamento modifiche](#Tracking). Tali funzionalità consentono alle applicazioni di determinare le modifiche DML (operazioni di inserimento, aggiornamento ed eliminazione) apportate alle tabelle utente in un database. Change Data Capture e Rilevamento modifiche possono essere abilitati sullo stesso database, non sono richieste considerazioni speciali. Per le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano Change Data Capture e Rilevamento modifiche, vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Il rilevamento delle modifiche è supportato dal [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Change Data Capture è supportato solo in SQL Server e in Istanza gestita di SQL di Azure.
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] offre due funzionalità che consentono di tener traccia delle modifiche ai dati in un database: [Change Data Capture](#Capture) e [Rilevamento modifiche](#Tracking). Tali funzionalità consentono alle applicazioni di determinare le modifiche DML (operazioni di inserimento, aggiornamento ed eliminazione) apportate alle tabelle utente in un database. Change Data Capture e Rilevamento modifiche possono essere abilitati sullo stesso database, non sono richieste considerazioni speciali. Per le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano Change Data Capture e Rilevamento modifiche, vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Il rilevamento delle modifiche è supportato dal [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]. Change Data Capture è supportato solo in SQL Server e in Istanza gestita di SQL di Azure.
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>Vantaggi dall'utilizzo di Change Data Capture o Rilevamento modifiche  
  Un importante requisito per l'efficienza di alcune applicazioni è costituito dalla possibilità di eseguire query relative a dati che sono stati modificati in un database. In genere, per determinare le modifiche apportate ai dati, gli sviluppatori di applicazioni devono implementare un metodo di rilevamento personalizzato utilizzando una combinazione di trigger, colonne di tipo timestamp e tabelle aggiuntive. La creazione di queste applicazioni comporta in genere molte operazioni di implementazione e rende necessari aggiornamenti di schemi, provocando spesso un elevato overhead delle prestazioni.  
