@@ -523,6 +523,8 @@ items:
                     href: azdata/reference/reference-azdata-bdc-endpoint.md
                   - name: bdc gateway
                     href: azdata/reference/reference-azdata-bdc-gateway.md
+                  - name: impostazioni del gateway BDC
+                    href: azdata/reference/reference-azdata-bdc-gateway-settings.md
                   - name: bdc gateway status
                     href: azdata/reference/reference-azdata-bdc-gateway-status.md
                   - name: bdc hdfs
@@ -533,6 +535,8 @@ items:
                     href: azdata/reference/reference-azdata-bdc-hdfs-key.md
                   - name: bdc hdfs mount
                     href: azdata/reference/reference-azdata-bdc-hdfs-mount.md
+                  - name: impostazioni HDFS BDC
+                    href: azdata/reference/reference-azdata-bdc-hdfs-settings.md
                   - name: bdc hdfs status
                     href: azdata/reference/reference-azdata-bdc-hdfs-status.md
                   - name: impostazioni di integrazione applicativa dei dati
@@ -543,12 +547,16 @@ items:
                     href: azdata/reference/reference-azdata-bdc-spark-batch.md
                   - name: bdc spark session
                     href: azdata/reference/reference-azdata-bdc-spark-session.md
+                  - name: impostazioni Spark di integrazione applicativa dei dati
+                    href: azdata/reference/reference-azdata-bdc-spark-settings.md
                   - name: bdc spark statement
                     href: azdata/reference/reference-azdata-bdc-spark-statement.md
                   - name: bdc spark status
                     href: azdata/reference/reference-azdata-bdc-spark-status.md
                   - name: bdc sql
                     href: azdata/reference/reference-azdata-bdc-sql.md
+                  - name: Impostazioni SQL BDC
+                    href: azdata/reference/reference-azdata-bdc-sql-settings.md
                   - name: bdc status
                     href: azdata/reference/reference-azdata-bdc-status.md
   - name: Continuità aziendale
