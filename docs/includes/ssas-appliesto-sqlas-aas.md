@@ -4,11 +4,11 @@ ms.service: analysis-services
 ms.topic: include
 ms.date: 06/06/2019
 ms.author: owend
-ms.openlocfilehash: b0abbb1473fa63942bffe2ef243d21f6edee5f6c
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
-ms.translationtype: HT
+ms.openlocfilehash: ccd9bab43e0732508eb3db189b957ec8fe7b04fc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92438825"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341179"
 ---
 **SI APPLICA A:** :::image type="icon" source="media/yes-icon.png":::SQL Server Analysis Services :::image type="icon" source="media/yes-icon.png":::Azure Analysis Services :::image type="icon" source="media/no-icon.png":::Power BI Premium

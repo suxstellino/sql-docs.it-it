@@ -15,12 +15,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 4afa4261a652930862d0d9fd5128ad7e7c1353cc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 281fd59192deeedbc32d7e543fdb95875929801d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732146"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100342087"
 ---
 # <a name="create-element-dta"></a>Create - elemento (DTA)
 
@@ -52,7 +52,7 @@ Contiene informazioni su indici, statistiche o strutture heap in una configurazi
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|[Elemento Recommendation &#40;DTA&#41;](../../tools/dta/recommendation-element-dta.md)|  
-|**Elementi figlio**|[Elemento Index &#40;DTA&#41;](../../tools/dta/index-element-dta.md)<br /><br /> Elemento**Statistics** . Per informazioni, vedere l' [XML Schema dell'Ottimizzazione guidata motore di database](https://schemas.microsoft.com/sqlserver/)<br /><br /> Elemento**Heap** . Per informazioni, vedere l' [XML Schema dell'Ottimizzazione guidata motore di database](https://schemas.microsoft.com/sqlserver/)|  
+|**Elementi figlio**|[Elemento Index &#40;DTA&#41;](../../tools/dta/index-element-dta.md)<br /><br /> Elemento **Statistics** . Per informazioni, vedere l' [XML Schema dell'Ottimizzazione guidata motore di database](https://schemas.microsoft.com/sqlserver/)<br /><br /> Elemento **Heap** . Per informazioni, vedere l' [XML Schema dell'Ottimizzazione guidata motore di database](https://schemas.microsoft.com/sqlserver/)|  
   
 ## <a name="remarks"></a>Osservazioni  
  Questo elemento appartiene al nome **CreateTypecomplexType** nell'XML Schema dell'Ottimizzazione guidata motore di database. Viene utilizzato per creare indici, statistiche e strutture heap per una configurazione specificata dall'utente. Non confondere l'elemento **Create** con altri tipi che possono essere usati per creare viste (**CreateViewType**) o partizionamenti (**CreatePType**). Per informazioni su questi altri tipi di elemento [Create](https://schemas.microsoft.com/sqlserver/) , vedere l' **XML Schema dell'Ottimizzazione guidata motore di database** .  

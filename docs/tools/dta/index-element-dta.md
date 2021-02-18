@@ -15,12 +15,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 4151e138347ad09f8e32dbd0f96e8e7a9a5ff83e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: e6d7337e2215a95979f86cfc94cb7105587e6947
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732092"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340585"
 ---
 # <a name="index-element-dta"></a>Index - elemento (DTA)
 
@@ -70,7 +70,7 @@ Contiene informazioni su un indice che si desidera creare o eliminare per una co
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|[Elemento Create &#40;DTA&#41;](../../tools/dta/create-element-dta.md)<br /><br /> Elemento **Drop**. Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.|  
-|**Elementi figlio**|[Elemento Name per Index &#40;DTA&#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Elemento Column per Index &#40;DTA&#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> Elemento**PartitionScheme** . Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.<br /><br /> Elemento**PartitionColumn** . Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.<br /><br /> [Elemento Filegroup per Index &#40;DTA&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> Elemento**NumberOfReferences** . Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.<br /><br /> Elemento**PercentUsage** . Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.|  
+|**Elementi figlio**|[Elemento Name per Index &#40;DTA&#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Elemento Column per Index &#40;DTA&#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> Elemento **PartitionScheme** . Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.<br /><br /> Elemento **PartitionColumn** . Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.<br /><br /> [Elemento Filegroup per Index &#40;DTA&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> Elemento **NumberOfReferences** . Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.<br /><br /> Elemento **PercentUsage** . Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.|  
   
 ## <a name="example"></a>Esempio  
  Per un esempio di questo elemento, vedere [Esempio di file di input XML con configurazione specificata dall'utente &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  

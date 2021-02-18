@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: sstein, mikeray
 ms.custom: contperf-fy21q2
 ms.date: 12/15/2020
-ms.openlocfilehash: 519b60f63da38192e2196014e0ea7820dafd5491
-ms.sourcegitcommit: 8a8c89b0ff6d6dfb8554b92187aca1bf0f8bcc07
-ms.translationtype: HT
+ms.openlocfilehash: 92160da1da48fc107be98354250e4c580cb51155
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97619232"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350589"
 ---
 # <a name="quickstart-connect-and-query-a-sql-server-instance-using-sql-server-management-studio-ssms"></a>Avvio rapido: Connettersi a un'istanza di SQL Server ed eseguire query con SQL Server Management Studio (SSMS)
 
@@ -48,8 +48,8 @@ Questo articolo illustra come seguire i passaggi seguenti:
     |   Impostazione   |   Valori consigliati   |   Descrizione   |
     |--------------|-----------------------|-----------------|
     | **Tipo di server** | Motore di database | In **Tipo di server** selezionare **Motore di database** (in genere l'opzione predefinita). |
-    | **Nome server** | Nome completo del server | Per **Nome server** immettere il nome dell'istanza di SQL Server (è anche possibile usare *localhost* come nome del server se ci si connette in locale). Se NON si usa l'istanza predefinita ***MSSQLSERVER** _ è necessario immettere il nome del server e il nome dell'istanza. </br> </br> Se non si sa come determinare il nome dell'istanza di SQL Server, vedere [Suggerimenti e consigli per l'uso di SSMS](../tutorials/ssms-tricks.md#find-sql-server-instance-name). |
-    | _ *Autenticazione** | Autenticazione di Windows </br> </br> Autenticazione di SQL Server | L'autenticazione di Windows viene impostata come predefinita. </br> </br> È anche possibile usare l'**autenticazione di SQL Server** per la connessione. Tuttavia, se si seleziona **Autenticazione di SQL Server**, sono necessari un nome utente e una password. </br> </br> Per altre informazioni sui tipi di autenticazione, vedere [Connetti al server (motore di database)](../f1-help/connect-to-server-database-engine.md). |
+    | **Nome server** | Nome completo del server | Per **Nome server** immettere il nome dell'istanza di SQL Server (è anche possibile usare *localhost* come nome del server se ci si connette in locale). Se non si usa l'istanza predefinita- ***MSSQLSERVER*** , è necessario immettere il nome del server e il nome dell'istanza. </br> </br> Se non si sa come determinare il nome dell'istanza di SQL Server, vedere [Suggerimenti e consigli per l'uso di SSMS](../tutorials/ssms-tricks.md#find-sql-server-instance-name). |
+    | **autenticazione** | Autenticazione di Windows </br> </br> Autenticazione di SQL Server | L'autenticazione di Windows viene impostata come predefinita. </br> </br> È anche possibile usare l'**autenticazione di SQL Server** per la connessione. Tuttavia, se si seleziona **Autenticazione di SQL Server**, sono necessari un nome utente e una password. </br> </br> Per altre informazioni sui tipi di autenticazione, vedere [Connetti al server (motore di database)](../f1-help/connect-to-server-database-engine.md). |
     | **Accesso** | ID utente dell'account server | ID utente dell'account server usato per accedere al server. Un account di accesso è obbligatorio quando si usa l'**autenticazione di SQL Server**. |
     | **Password** | Password dell'account server | Password dell'account server usato per accedere al server. Una password è obbligatoria quando si usa l'**autenticazione di SQL Server**. |
 

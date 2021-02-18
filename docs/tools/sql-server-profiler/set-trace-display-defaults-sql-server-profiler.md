@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 9a1e746b4f418c23e22dafc6c07b211c188b8a13
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 96e420bbca08ca14af89614fa28c35e7b3f78dbb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726875"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345751"
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>Impostare i valori predefiniti per la visualizzazione delle tracce (SQL Server Profiler)
 
@@ -31,9 +31,9 @@ In questo argomento viene descritta la procedura per l'impostazione delle opzion
   
 2.  Nella finestra di dialogo **Opzioni generali** fare clic su **Scegli carattere**.  
   
-3.  Nella finestra di dialogo **Carattere** selezionare il **Tipo di carattere**, lo **Stile**e le **Dimensioni** che [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] utilizzerà per la visualizzazione delle tracce.  
+3.  Nella finestra di dialogo **Carattere** selezionare il **Tipo di carattere**, lo **Stile** e le **Dimensioni** che [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] utilizzerà per la visualizzazione delle tracce.  
   
-4.  Fare clic su **OK**per applicare le impostazioni e chiudere la finestra di dialogo **Tipo di carattere** .  
+4.  Fare clic su **OK** per applicare le impostazioni e chiudere la finestra di dialogo **Tipo di carattere** .  
   
 5.  Nella finestra di dialogo **Opzioni generali** selezionare **Visualizza valori di data e ora in base alle impostazioni internazionali** per configurare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per l'utilizzo delle impostazioni internazionali configurate per il sistema operativo nella visualizzazione delle tracce.  
   

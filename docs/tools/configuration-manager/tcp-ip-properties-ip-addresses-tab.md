@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8824963894b70412ff4525f25b40de7ed53ccd3b
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
-ms.translationtype: HT
+ms.openlocfilehash: 56055b7d3537413398980579342884ab6a58c142
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901059"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345087"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Proprietà TCP/IP
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88901059"
   
  Il motore di database può restare in attesa su più porte sullo stesso indirizzo IP. Elencare le porte separandole con una virgola, nel formato 1433,1500,1501. La lunghezza massima del campo è 2047 caratteri.  
   
- Per configurare un unico indirizzo IP per l'attesa su più porte è inoltre necessario impostare il parametro **Attesa su tutti** su **No**nella **scheda Protocolli** della finestra di dialogo **Proprietà TCP/IP** . Per altre informazioni, vedere "Procedura: Configurare il motore di database per l'attesa su più porte TCP" nella documentazione online di SQL Server.  
+ Per configurare un unico indirizzo IP per l'attesa su più porte è inoltre necessario impostare il parametro **Attesa su tutti** su **No** nella **scheda Protocolli** della finestra di dialogo **Proprietà TCP/IP** . Per altre informazioni, vedere "Procedura: Configurare il motore di database per l'attesa su più porte TCP" nella documentazione online di SQL Server.  
   
 ## <a name="adding-or-removing-ip-addresses"></a>Aggiunta o rimozione di indirizzi IP  
  Gestione configurazione SQL Server visualizza gli indirizzi IP disponibili al momento dell'installazione di SQL Server. Aggiungendo o modificando schede di rete, alla scadenza di un indirizzo IP assegnato dinamicamente, quando si riconfigura la struttura della rete o quando si sposta fisicamente il computer, ad esempio quando un computer portatile si connette alla rete in un edificio diverso, gli indirizzi IP disponibili cambiano. Per modificare un indirizzo IP, modificare la casella **Indirizzo IP** e quindi riavviare SQL Server.  

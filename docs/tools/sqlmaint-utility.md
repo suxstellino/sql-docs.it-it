@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3d6e9aff189018cf140ac3a39593e11e69241e4e
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
-ms.translationtype: HT
+ms.openlocfilehash: c822bd2acbd92bcfd9b3008c78c3ccef244f3c88
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332258"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338550"
 ---
 # <a name="sqlmaint-utility"></a>utilità sqlmaint
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
-  L'utilità**sqlmaint** consente di eseguire un set specifico di operazioni di manutenzione in uno o più database. Usare l'utilità **sqlmaint** per eseguire controlli DBCC, backup di un database e del relativo log delle transazioni, aggiornare statistiche e ricompilare indici. Tutte le attività di manutenzione dei database generano un report che può essere inviato a un file di testo, un file HTML o un account di posta elettronica specificato. **sqlmaint** esegue i piani di manutenzione dei database creati con le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per eseguire i piani di manutenzione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dal prompt dei comandi, usare l' [utilità dtexec](../integration-services/packages/dtexec-utility.md).  
+  L'utilità **sqlmaint** consente di eseguire un set specifico di operazioni di manutenzione in uno o più database. Usare l'utilità **sqlmaint** per eseguire controlli DBCC, backup di un database e del relativo log delle transazioni, aggiornare statistiche e ricompilare indici. Tutte le attività di manutenzione dei database generano un report che può essere inviato a un file di testo, un file HTML o un account di posta elettronica specificato. **sqlmaint** esegue i piani di manutenzione dei database creati con le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per eseguire i piani di manutenzione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dal prompt dei comandi, usare l' [utilità dtexec](../integration-services/packages/dtexec-utility.md).  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../includes/ssnotedepnextavoid-md.md)] Usare invece la funzionalità di pianificazione della manutenzione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per altre informazioni sui piani di manutenzione, vedere [Piani di manutenzione](../relational-databases/maintenance-plans/maintenance-plans.md).  
@@ -106,7 +106,7 @@ number[minutes | hours | days | weeks | months]
  Specifica l'identificatore univoco globale (GUID, Globally Unique Identifier) del piano di manutenzione del database definito utilizzando Creazione guidata piano di manutenzione database. L'unica informazione del piano usata da **sqlmaint** è l'elenco dei database. Le attività di manutenzione specificate negli altri parametri di **sqlmaint** vengono applicate a questo elenco di database. Questo valore deve corrispondere al valore plan_id di msdb.dbo.sysdbmaintplans.  
   
  **-Rpt** _text_file_  
- Specifica il percorso completo e il nome del file in cui deve essere generato il report. Il report viene visualizzato anche sullo schermo. Il report gestisce informazioni sulla versione tramite l'aggiunta di una data al nome del file. La data viene inserita alla fine del nome file ma prima del punto, in formato _*yyyyMMddhhmm*. *yyyy* = anno, *MM* = mese, *dd* = giorno, *hh* = ora, *mm* = minuto.  
+ Specifica il percorso completo e il nome del file in cui deve essere generato il report. Il report viene visualizzato anche sullo schermo. Il report gestisce informazioni sulla versione tramite l'aggiunta di una data al nome del file. La data viene inserita alla fine del nome file ma prima del punto, in formato _ *yyyyMMddhhmm*. *yyyy* = anno, *MM* = mese, *dd* = giorno, *hh* = ora, *mm* = minuto.  
   
  Se si esegue l'utilità alle 10.23 del 1° dicembre 1996 e il valore di *text_file* è:  
   
@@ -126,7 +126,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  Specifica l'operatore al quale il report generato viene inviato tramite SQL Mail.  
   
  **-HtmlRpt** _html_file_  
- Specifica il percorso completo e il nome del file in cui generare il report HTML. **sqlmaint** aggiunge al nome file una stringa nel formato _*yyyyMMddhhmm* , in modo analogo a quanto avviene per il parametro **-Rpt** .  
+ Specifica il percorso completo e il nome del file in cui generare il report HTML. **sqlmaint** aggiunge al nome file una stringa nel formato _ *yyyyMMddhhmm* , in modo analogo a quanto avviene per il parametro **-Rpt** .  
   
  Quando si accede a un server remoto con *sqlmaint* , è necessario specificare il nome UNC completo del file per **html_file** .  
   
@@ -213,7 +213,7 @@ dbname_log_yyyymmddhhmm.BAK
  Indica che il supporto di backup è un nastro.  
   
  **-BkUpOnlyIfClean**  
- Specifica che il backup viene eseguito solo se i controlli **-Ck** specificati non rilevano problemi con i dati. Le azioni di manutenzione vengono eseguite nella stessa sequenza in cui sono indicate nel prompt dei comandi. Specificare i parametri **-CkDB**, **-CkDBNoIdx**, **-CkAl**, **-CkAlNoIdx**, **-CkTxtAl**o **-CkCat** prima dei parametri **-BkUpDB**/ **-BkUpLog** se si intende specificare anche **- BkUpOnlyIfClean**, oppure il backup verrà eseguito a prescindere dal fatto che il controllo abbia segnalato problemi.  
+ Specifica che il backup viene eseguito solo se i controlli **-Ck** specificati non rilevano problemi con i dati. Le azioni di manutenzione vengono eseguite nella stessa sequenza in cui sono indicate nel prompt dei comandi. Specificare i parametri **-CkDB**, **-CkDBNoIdx**, **-CkAl**, **-CkAlNoIdx**, **-CkTxtAl** o **-CkCat** prima dei parametri **-BkUpDB**/ **-BkUpLog** se si intende specificare anche **- BkUpOnlyIfClean**, oppure il backup verrà eseguito a prescindere dal fatto che il controllo abbia segnalato problemi.  
   
  **-VrfyBackup**  
  Specifica l'esecuzione dell'istruzione RESTORE VERIFYONLY al termine del backup.  
@@ -236,7 +236,7 @@ dbname_log_yyyymmddhhmm.BAK
   
 -   Una delle azioni di manutenzione ha esito negativo.  
   
--   **-CkDB**, **-CkDBNoIdx**, **-CkAl**, **-CkAlNoIdx**, **-CkTxtAl**o **-CkCat** rileva problemi con i dati.  
+-   **-CkDB**, **-CkDBNoIdx**, **-CkAl**, **-CkAlNoIdx**, **-CkTxtAl** o **-CkCat** rileva problemi con i dati.  
   
 -   Si verifica un errore generale.  
   

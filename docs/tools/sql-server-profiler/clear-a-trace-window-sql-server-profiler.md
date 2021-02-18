@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: d954095346814d208b27c44b4e91825a58742578
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: d717e5e802f29a09f563e7a62e11dc723b3fe6a3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774914"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349439"
 ---
 # <a name="clear-a-trace-window-sql-server-profiler"></a>Cancellare il contenuto di una finestra di traccia (SQL Server Profiler)
 
@@ -28,7 +28,7 @@ ms.locfileid: "85774914"
   
 1.  Selezionare la finestra di traccia di cui si desidera cancellare il contenuto.  
   
-2.  Scegliere **Cancella contenuto finestra di traccia**dal menu **Modifica**.  
+2.  Scegliere **Cancella contenuto finestra di traccia** dal menu **Modifica**.  
   
      Il contenuto della finestra di traccia verrà cancellato. Se la tabella o il file di traccia è stato salvato, il contenuto della tabella o del file rimarrà invariato.  
   

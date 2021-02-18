@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: d261cbabe0e5bdb22db537a10ef259b9b9d39e6c
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
-ms.translationtype: HT
+ms.openlocfilehash: 10d32bb3267e79f4f97ce7a4832c1a999751904c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489911"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353517"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lezione 2: Uso di Ottimizzazione guidata motore di database
 

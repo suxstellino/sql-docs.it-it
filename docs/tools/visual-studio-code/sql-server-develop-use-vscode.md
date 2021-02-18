@@ -8,12 +8,12 @@ ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 author: markingmyname
 ms.author: maghan
 ms.date: 10/28/2019
-ms.openlocfilehash: d0726366cab5728038c5b1fd2bbe6681115337d4
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
-ms.translationtype: HT
+ms.openlocfilehash: fdb3d5e695824117def89347da883a0a7a5d7a9c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714109"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340547"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts"></a>Usare Visual Studio Code per creare ed eseguire script Transact-SQL
 

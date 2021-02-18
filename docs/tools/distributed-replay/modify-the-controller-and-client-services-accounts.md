@@ -11,12 +11,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 4c8a0f29addf80905ef6edaf5920e479fbaa48e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 22d126dae4356bd6830c801369375b8705e37b37
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85681161"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349526"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>Modificare gli account dei servizi controller e client
 
@@ -26,7 +26,7 @@ In questo argomento verrà illustrato come modificare gli account dei servizi cl
   
 ### <a name="to-start-or-stop-the-distributed-replay-services-using-computer-management"></a>Per avviare o arrestare i servizi client Riesecuzione distribuita tramite Gestione computer  
   
-1.  Nel computer in cui sono installati i servizi di ridistribuzione distribuita digitare **dcomcnfg**al prompt dei comandi.  
+1.  Nel computer in cui sono installati i servizi di ridistribuzione distribuita digitare **dcomcnfg** al prompt dei comandi.  
   
 2.  Fare doppio clic su **Servizi**, scorrere verso il basso e fare clic con il pulsante destro del mouse su Riesecuzione distribuita **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \<service name>** , quindi scegliere **Avvia** o **Arresta**.  
   
@@ -60,7 +60,7 @@ In questo argomento verrà illustrato come modificare gli account dei servizi cl
   
     1.  Arrestare il servizio controller di Riesecuzione distribuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-    2.  Nel computer controller in cui è installato il servizio controller, digitare **dcomcnfg**al prompt dei comandi.  
+    2.  Nel computer controller in cui è installato il servizio controller, digitare **dcomcnfg** al prompt dei comandi.  
   
     3.  Nella finestra **Servizi componenti** passare a **Radice console -> Servizi componenti -> Computer -> Risorse del computer -> Config DCOM ->DReplayController**.  
   

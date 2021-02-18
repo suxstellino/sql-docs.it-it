@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: abc9fccd9c81f26b872a991c05a2d653384ad123
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
-ms.translationtype: HT
+ms.openlocfilehash: 0d4b3a2e75a00e3688ec53c5e64e6ab7727375a2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036914"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341045"
 ---
 # <a name="registered-servers-f1-help"></a>Guida sensibile al contesto di Server registrati
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "92036914"
  ## <a name="reporting-services-new-or-edit-server-registration-general-tab"></a>Nuova registrazione server o Modifica proprietà registrazione server in Reporting Services (scheda Generale) 
   Utilizzare questa scheda per specificare le opzioni per la registrazione di un'istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Per accedere a questa pagina, in Server registrati fare clic su **Reporting Services** sulla barra degli strumenti **Server registrati** , fare clic con il pulsante destro del mouse su qualsiasi gruppo di server registrati, ad esempio **Reporting Services**, scegliere **Nuovo**e quindi fare clic su **Nuova registrazione server**.  
+ Per accedere a questa pagina, in Server registrati fare clic su **Reporting Services** sulla barra degli strumenti **Server registrati** , fare clic con il pulsante destro del mouse su qualsiasi gruppo di server registrati, ad esempio **Reporting Services**, scegliere **Nuovo** e quindi fare clic su **Nuova registrazione server**.  
   
 ### <a name="options"></a>Opzioni  
  **Tipo di server**  
@@ -80,7 +80,7 @@ ms.locfileid: "92036914"
  
   Utilizzare questa scheda per specificare le opzioni per la registrazione di un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
- Per accedere a questa pagina, in Server registrati fare clic su **Analysis Services** sulla barra degli strumenti Server registrati, fare clic con il pulsante destro del mouse su un gruppo di server registrati, ad esempio **Analysis Services**, scegliere **Nuovo**e quindi fare clic su **Registrazione server**.  
+ Per accedere a questa pagina, in Server registrati fare clic su **Analysis Services** sulla barra degli strumenti Server registrati, fare clic con il pulsante destro del mouse su un gruppo di server registrati, ad esempio **Analysis Services**, scegliere **Nuovo** e quindi fare clic su **Registrazione server**.  
   
 ### <a name="options"></a>Opzioni  
  **Tipo di server**  
@@ -114,7 +114,7 @@ ms.locfileid: "92036914"
  
  Utilizzare questa scheda per specificare le opzioni di registrazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- Per accedere a questa pagina, in Server registrati fare clic su **Integration Services** sulla barra degli strumenti **Server registrati** , fare clic con il pulsante destro del mouse su qualsiasi gruppo di server registrati, scegliere **Nuovo**e quindi fare clic su **Registrazione server**.  
+ Per accedere a questa pagina, in Server registrati fare clic su **Integration Services** sulla barra degli strumenti **Server registrati** , fare clic con il pulsante destro del mouse su qualsiasi gruppo di server registrati, scegliere **Nuovo** e quindi fare clic su **Registrazione server**.  
   
 ### <a name="options"></a>Opzioni  
  **Tipo di server**  

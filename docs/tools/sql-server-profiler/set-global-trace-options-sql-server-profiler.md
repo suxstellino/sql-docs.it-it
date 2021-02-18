@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 65f9f3c32da239c7ae6f41dfbe74b7ee8bb9ce41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 0394038ecd114f30c1a32005e126a4aa20b548a2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726857"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345810"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>Impostare opzioni di traccia globali (SQL Server Profiler)
 
@@ -29,7 +29,7 @@ In questo argomento viene illustrato come impostare opzioni applicabili a tutte 
   
 1.  Scegliere **Opzioni** dal menu **Strumenti**.  
   
-2.  Nella finestra di dialogo **Opzioni generali**fare clic su **Scegli carattere**per modificare le opzioni di visualizzazione e fare clic su **OK**.  
+2.  Nella finestra di dialogo **Opzioni generali** fare clic su **Scegli carattere** per modificare le opzioni di visualizzazione e fare clic su **OK**.  
   
 3.  Facoltativamente, selezionare l'opzione **Avvia traccia non appena viene stabilita una connessione**.  
   
@@ -45,7 +45,7 @@ In questo argomento viene illustrato come impostare opzioni applicabili a tutte 
   
 6.  Se si desidera, impostare le opzioni di riproduzione:  
   
-    -   L'opzione**Numero predefinito di thread di riproduzione** consente di controllare il numero di thread del processore da usare durante la riproduzione. Un numero elevato di thread consente un completamento più rapido della riproduzione, ma provoca la riduzione delle prestazioni del server durante la riproduzione. L'impostazione consigliata è **4**. Nella tabella seguente sono elencate le opzioni disponibili:  
+    -   L'opzione **Numero predefinito di thread di riproduzione** consente di controllare il numero di thread del processore da usare durante la riproduzione. Un numero elevato di thread consente un completamento più rapido della riproduzione, ma provoca la riduzione delle prestazioni del server durante la riproduzione. L'impostazione consigliata è **4**. Nella tabella seguente sono elencate le opzioni disponibili:  
   
         |Valore|Descrizione|  
         |-----------|-----------------|  
@@ -53,7 +53,7 @@ In questo argomento viene illustrato come impostare opzioni applicabili a tutte 
         |**4**|Valore predefinito.|  
         |**255**|Valore massimo. L'impostazione di un valore massimo comporta una riduzione delle prestazioni degli altri processi.|  
   
-    -   L'opzione**Intervallo di attesa predefinito Health Monitor (sec)** consente di impostare la quantità di tempo massima in secondi per cui un altro processo può essere bloccato da parte di un thread di riproduzione. Nella tabella riportata di seguito vengono illustrati i valori consentiti.  
+    -   L'opzione **Intervallo di attesa predefinito Health Monitor (sec)** consente di impostare la quantità di tempo massima in secondi per cui un altro processo può essere bloccato da parte di un thread di riproduzione. Nella tabella riportata di seguito vengono illustrati i valori consentiti.  
   
         |Valore|Descrizione|  
         |-----------|-----------------|  
@@ -61,7 +61,7 @@ In questo argomento viene illustrato come impostare opzioni applicabili a tutte 
         |**3600**|Valore predefinito. Sono consentiti processi di blocco che non superano **3600** secondi, ovvero un'ora.|  
         |**86400**|Valore massimo. Sono consentiti processi di blocco che non superano **86400** secondi, ovvero un giorno.|  
   
-    -   L'opzione**Intervallo di polling predefinito Health Monitor (sec)** consente di impostare la frequenza del polling dei thread di riproduzione per i processi di blocco. Nella tabella riportata di seguito vengono illustrati i valori consentiti.  
+    -   L'opzione **Intervallo di polling predefinito Health Monitor (sec)** consente di impostare la frequenza del polling dei thread di riproduzione per i processi di blocco. Nella tabella riportata di seguito vengono illustrati i valori consentiti.  
   
         |Valore|Descrizione|  
         |-----------|-----------------|  

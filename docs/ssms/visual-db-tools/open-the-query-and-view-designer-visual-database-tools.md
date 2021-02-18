@@ -16,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: ea9bd06205846401d4e6bd65690f0af4e34bdf63
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
-ms.translationtype: HT
+ms.openlocfilehash: 23cbda571b0112018c1da7165bb19e5f67e6bd4e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067350"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344088"
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>Aprire Progettazione query e Progettazione viste (Visual Database Tools)
 
@@ -45,7 +45,7 @@ Progettazione query e Progettazione viste viene aperto quando si apre la definiz
   
 1.  In Esplora oggetti, fare clic con il pulsante destro del mouse sulla vista da aprire e selezionare **Progetta** o **Apri vista**.  
   
-    Se si sceglie **Progetta** , i riquadri di Progettazione query e Progettazione viste verranno visualizzati in base alle opzioni selezionate nella finestra di dialogo **Opzioni** . Se invece si sceglie **Apri vista** , per impostazione predefinita verrà visualizzato solo il riquadro Risultati.  
+    Se si sceglie **Progetta**, i riquadri di Progettazione query e Progettazione viste verranno visualizzati in base alle opzioni selezionate nella finestra di dialogo **Opzioni** . Se invece si sceglie **Apri vista**, per impostazione predefinita verrà visualizzato solo il riquadro Risultati.  
   
 ### <a name="to-open-the-query-and-view-designer-for-an-existing-query"></a>Per aprire Progettazione query e Progettazione viste per una query esistente  
   

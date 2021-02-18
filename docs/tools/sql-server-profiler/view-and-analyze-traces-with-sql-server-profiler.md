@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: c806d55867c63c273bd528ecafc4419d31fde7e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: b95380a4a99e525cc97588b2051d1812c6e2d34a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722628"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338639"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>Visualizzare e analizzare le tracce con SQL Server Profiler
 
@@ -33,7 +33,7 @@ Utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per vis
  È possibile configurare il formato di visualizzazione della data e dell'ora di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per semplificare l'analisi delle tracce.  
   
 ## <a name="troubleshooting-data"></a>Risoluzione dei problemi relativi ai dati  
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]consente di risolvere i problemi relativi ai dati raggruppando le tracce o i file di traccia in base alle colonne di dati **Duration**, **CPU**, **Reads**o **Writes** . I dati che possono essere inclusi nella risoluzione dei problemi corrispondono a query con prestazioni insufficienti o che generano un numero estremamente elevato di operazioni di letture logiche.  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]consente di risolvere i problemi relativi ai dati raggruppando le tracce o i file di traccia in base alle colonne di dati **Duration**, **CPU**, **Reads** o **Writes** . I dati che possono essere inclusi nella risoluzione dei problemi corrispondono a query con prestazioni insufficienti o che generano un numero estremamente elevato di operazioni di letture logiche.  
   
  È possibile isolare informazioni aggiuntive salvando le tracce in tabelle e utilizzando istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] per eseguire query nei dati di evento. Ad esempio, per individuare gli eventi **SQL:BatchCompleted** per i quali il tempo di attesa è stato eccessivo, eseguire quanto segue:  
   
@@ -48,18 +48,18 @@ AND     CPU < (Duration * 1000)
 >  Il server indica la durata di un evento in microsecondi (10^-6 secondi) e la quantità di tempo della CPU usato dall'evento in millisecondi (10^-3 secondi). Nell'interfaccia utente grafica di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] il valore della colonna **Duration** viene visualizzato in millisecondi. Tuttavia, quando si salva una traccia in un file o in una tabella di database, il valore della colonna **Duration** viene scritto in microsecondi.  
   
 ## <a name="displaying-object-names-when-viewing-traces"></a>Visualizzazione dei nomi degli oggetti durante la visualizzazione delle tracce  
- Per visualizzare il nome di un oggetto invece dell'identificatore dell'oggetto, ovvero**Object ID**, è necessario acquisire le colonne di dati **Server Name** e **Database ID** insieme alla colonna di dati **Object Name** .  
+ Per visualizzare il nome di un oggetto invece dell'identificatore dell'oggetto, ovvero **Object ID**, è necessario acquisire le colonne di dati **Server Name** e **Database ID** insieme alla colonna di dati **Object Name** .  
   
- Se si sceglie di basare il raggruppamento sulla colonna di dati **Object ID** assicurarsi di eseguire innanzitutto il raggruppamento in base alle colonne di dati **Server Name** e **Database ID** e quindi in base alla colonna di dati **Object ID** . . Analogamente, se si sceglie di basare il raggruppamento sulla colonna di dati **Index ID** , assicurarsi di eseguire innanzitutto il raggruppamento in base alle colonne di dati **Server Name**, **Database ID**e **Object ID** e quindi in base alle colonne di dati **Index ID** . È necessario attenersi a tale ordine durante il raggruppamento, poiché gli ID di oggetto e di indice non sono univoci nei server e nei database e negli oggetti relativi agli ID degli indici.  
+ Se si sceglie di basare il raggruppamento sulla colonna di dati **Object ID** assicurarsi di eseguire innanzitutto il raggruppamento in base alle colonne di dati **Server Name** e **Database ID** e quindi in base alla colonna di dati **Object ID** . . Analogamente, se si sceglie di basare il raggruppamento sulla colonna di dati **Index ID** , assicurarsi di eseguire innanzitutto il raggruppamento in base alle colonne di dati **Server Name**, **Database ID** e **Object ID** e quindi in base alle colonne di dati **Index ID** . È necessario attenersi a tale ordine durante il raggruppamento, poiché gli ID di oggetto e di indice non sono univoci nei server e nei database e negli oggetti relativi agli ID degli indici.  
   
 ## <a name="finding-specific-events-within-a-trace"></a>Individuazione di eventi specifici in una traccia  
  Per individuare e raggruppare gli eventi in una traccia, eseguire la procedura seguente:  
   
 1.  Creare la traccia.  
   
-    -   Nella definizione della traccia includere le colonne di dati **Event Class**, **ClientProcessID**e **Start Time** oltre alle altre colonne di dati che si desidera acquisire. Per altre informazioni, vedere [Creare una traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md).  
+    -   Nella definizione della traccia includere le colonne di dati **Event Class**, **ClientProcessID** e **Start Time** oltre alle altre colonne di dati che si desidera acquisire. Per altre informazioni, vedere [Creare una traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md).  
   
-    -   Raggruppare i dati acquisiti in base alla colonna di dati **Event Class**e salvare la traccia in un file o in una tabella. Per raggruppare i dati acquisiti, fare clic su **Organizza colonne** nella scheda **Selezione eventi** della finestra di dialogo Proprietà traccia. Per altre informazioni, vedere [Organizzare le colonne visualizzate in una traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md).  
+    -   Raggruppare i dati acquisiti in base alla colonna di dati **Event Class** e salvare la traccia in un file o in una tabella. Per raggruppare i dati acquisiti, fare clic su **Organizza colonne** nella scheda **Selezione eventi** della finestra di dialogo Proprietà traccia. Per altre informazioni, vedere [Organizzare le colonne visualizzate in una traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md).  
   
     -   Avviare la traccia e quindi arrestarla quando è trascorso l'intervallo di tempo appropriato o dopo l'acquisizione di un determinato numero di eventi.  
   
@@ -71,11 +71,11 @@ AND     CPU < (Duration * 1000)
   
 3.  Visualizzare gli eventi nel contesto.  
   
-    -   Visualizzare le proprietà della traccia ed eseguire il raggruppamento in base alla colonna di dati **ClientProcessID**anziché alla colonna di dati **Event Class** .  
+    -   Visualizzare le proprietà della traccia ed eseguire il raggruppamento in base alla colonna di dati **ClientProcessID** anziché alla colonna di dati **Event Class** .  
   
-    -   Espandere il nodo di ogni ID di processo client che si desidera visualizzare. Eseguire una ricerca manuale nella traccia oppure usare il comando **Trova** per individuare i valori **Start Time**degli eventi desiderati, annotati in precedenza. Gli eventi vengono visualizzati in ordine cronologico con gli altri eventi che appartengono a ogni ID processo client selezionato. Ad esempio, gli eventi **Deadlock** e **Deadlock Chain**, acquisiti all'interno della traccia, vengono visualizzati immediatamente dopo gli eventi **SQL:BatchStarting**all'interno dell'ID processo client espanso.  
+    -   Espandere il nodo di ogni ID di processo client che si desidera visualizzare. Eseguire una ricerca manuale nella traccia oppure usare il comando **Trova** per individuare i valori **Start Time** degli eventi desiderati, annotati in precedenza. Gli eventi vengono visualizzati in ordine cronologico con gli altri eventi che appartengono a ogni ID processo client selezionato. Ad esempio, gli eventi **Deadlock** e **Deadlock Chain**, acquisiti all'interno della traccia, vengono visualizzati immediatamente dopo gli eventi **SQL:BatchStarting** all'interno dell'ID processo client espanso.  
   
- È possibile utilizzare la stessa tecnica per individuare eventuali eventi raggruppati. Dopo avere trovato gli eventi desiderati, raggrupparli in base a **ClientProcessID**, **ApplicationName**o a un'altra classe di evento, per visualizzare le attività correlate in ordine cronologico.  
+ È possibile utilizzare la stessa tecnica per individuare eventuali eventi raggruppati. Dopo avere trovato gli eventi desiderati, raggrupparli in base a **ClientProcessID**, **ApplicationName** o a un'altra classe di evento, per visualizzare le attività correlate in ordine cronologico.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare una traccia salvata &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/view-a-saved-trace-transact-sql.md)   

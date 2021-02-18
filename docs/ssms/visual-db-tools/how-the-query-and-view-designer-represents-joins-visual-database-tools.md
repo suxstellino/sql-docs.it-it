@@ -15,12 +15,12 @@ ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: a1d8686e1502fab121e49abed19f8f01488d22b7
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
-ms.translationtype: HT
+ms.openlocfilehash: 11b6399adb28a81f5364e6073a6fb0fde757ffe7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439355"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338052"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Rappresentazione di join in Progettazione query e Progettazione viste (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +60,7 @@ Un join può essere rappresentato in vari modi all'interno di un'istruzione SQL.
   
 Le opzioni della sintassi per il join di tabelle comprendono:  
   
--   **Qualificatore JOIN per la clausola FROM** .   Le parole chiave INNER e OUTER specificano il tipo di join. La sintassi è quella standard per ANSI 92 SQL.  
+-   **Qualificatore JOIN per la clausola FROM**.   Le parole chiave INNER e OUTER specificano il tipo di join. La sintassi è quella standard per ANSI 92 SQL.  
   
     Se, ad esempio, si esegue il join delle tabelle `publishers` e `pub_info` in base alla colonna `pub_id` di ciascuna tabella, l'istruzione SQL risultante potrebbe essere simile alla seguente:  
   
@@ -72,7 +72,7 @@ Le opzioni della sintassi per il join di tabelle comprendono:
   
     Se si crea un outer join, verranno utilizzate le parole LEFT OUTER o RIGHT OUTER al posto di INNER.  
   
--   **Clausola WHERE che confronta colonne di entrambe le tabelle** .   La clausola WHERE viene utilizzata quando il database non supporta la sintassi JOIN oppure in caso di immissione manuale. Se il join viene creato nella clausola WHERE, nella clausola FROM saranno indicati i nomi di entrambe le tabelle.  
+-   **Clausola WHERE che confronta colonne di entrambe le tabelle**.   La clausola WHERE viene utilizzata quando il database non supporta la sintassi JOIN oppure in caso di immissione manuale. Se il join viene creato nella clausola WHERE, nella clausola FROM saranno indicati i nomi di entrambe le tabelle.  
   
     Ad esempio, la seguente istruzione esegue il join delle tabelle `publishers` e `pub_info` .  
   

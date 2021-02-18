@@ -15,12 +15,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 557501bb02cdb3a0b29c1f9654b5414bff6134b5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: bb7d075fba09db4de518018f29190cb0c351bf27
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785972"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100335974"
 ---
 # <a name="file-element-dta"></a>Elemento File (DTA)
 
@@ -45,7 +45,7 @@ Specifica il file del carico di lavoro. Un carico di lavoro è un set di istruzi
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|Usare il tipo di dati **string** per specificare il percorso della directory del file del carico di lavoro. Ad esempio:<br /><br /> `<File>C:\Tuning\tun.sql</File>`<br /><br /> Si noti che il limite della lunghezza viene forzato dal server.|  
 |**Valore predefinito**|No.|  
-|**Occorrenza**|Obbligatorio una sola volta se non viene specificato un altro tipo di carico di lavoro. È necessario specificare un elemento figlio **EventString**, **File**o **Database** per l'elemento padre **Workload** , ma è possibile utilizzare un solo tipo. Se ad esempio si specifica un carico di lavoro con l'elemento **File** , non sarà possibile specificare anche un carico di lavoro con l'elemento **Database** nello stesso file di input XML.|  
+|**Occorrenza**|Obbligatorio una sola volta se non viene specificato un altro tipo di carico di lavoro. È necessario specificare un elemento figlio **EventString**, **File** o **Database** per l'elemento padre **Workload** , ma è possibile utilizzare un solo tipo. Se ad esempio si specifica un carico di lavoro con l'elemento **File** , non sarà possibile specificare anche un carico di lavoro con l'elemento **Database** nello stesso file di input XML.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   

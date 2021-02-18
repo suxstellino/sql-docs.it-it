@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: afd34354290134d0973c1105a902b96c4bbdd706
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: d9bfe9ec4f81ca61bacbb4dc3526ea5b7a1a87f7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470002"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272962"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>Esercitazione: Sviluppo SQL per data scientist R
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -25,7 +25,7 @@ Una combinazione di codice R, dati [!INCLUDE[ssNoVersion](../../includes/ssnover
 
 Questo esempio può essere esteso a tutti i tipi di problemi della vita reale, ad esempio alla previsione delle risposte dei clienti alle campagne di vendita o alla stima delle spese o della partecipazione a eventi. Poiché il modello può essere richiamato da una stored procedure, è possibile incorporarlo facilmente in un'applicazione.
 
-Poiché la procedura dettagliata è pensata per far conoscere [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] agli sviluppatori R, R viene usato il più possibile. Ciò non significa però che R sia necessariamente lo strumento migliore per ogni attività. In molti casi, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe offrire prestazioni migliori, in particolare in attività quali l'aggregazione dei dati e la progettazione delle funzionalità.  Tali attività possono trarre vantaggio dalle nuove funzionalità di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], ad esempio gli indici columnstore con ottimizzazione per la memoria. Le ottimizzazioni possibili vengono evidenziate man mano.
+Poiché la procedura dettagliata è pensata per far conoscere [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] agli sviluppatori R, R viene usato il più possibile. Ciò non significa però che R sia necessariamente lo strumento migliore per ogni attività. In molti casi, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe offrire prestazioni migliori, in particolare in attività quali l'aggregazione dei dati e la progettazione delle funzionalità.  Tali attività possono trarre vantaggio dalle nuove funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio gli indici columnstore con ottimizzazione per la memoria. Le ottimizzazioni possibili vengono evidenziate man mano.
 
 ## <a name="prerequisites"></a>Prerequisiti
 

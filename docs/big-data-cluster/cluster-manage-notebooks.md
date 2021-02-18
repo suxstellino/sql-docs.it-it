@@ -10,12 +10,12 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 34592d9a6cb3db8bde5a2a25098314fd9ace1208
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 3af391b2fe6a2c104a4854afdb57b4dc5eb95029
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100039481"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489175"
 ---
 # <a name="manage-big-data-clusters-bdc-the-cluster-with-notebooks"></a>Gestire i cluster Big Data con i notebook
 
@@ -31,7 +31,7 @@ Se vengono installate tutte le dipendenze, ma il comando **Run all cells** (Eseg
 Questa sezione contiene un set di notebook utili per l'installazione e la disinstallazione degli strumenti da riga di comando e dei pacchetti necessari per gestire i cluster Big Data di SQL Server.
 
 |Nome |Descrizione |
-|---|---|---|---|
+|---|---|
 |SOP010 - Aggiornare un cluster Big Data|Usare questo notebook per aggiornare un cluster Big Data con azdata. |
 |SOP012 - Installare unixodbc per Mac|Usare questo notebook quando si verificano errori durante l'uso di Brew per installare ODBC per SQL Server.|
 |SOP036 - Installare l'interfaccia della riga di comando di kubectl|Usare questo notebook per installare l'interfaccia della riga di comando di kubectl indipendentemente dal sistema operativo.|
@@ -49,13 +49,24 @@ Questa sezione contiene un set di notebook utili per l'installazione e la disins
 |SOP064 - Disinstallare l'interfaccia della riga di comando di azdata (tramite la gestione pacchetti)|Usare questo notebook per disinstallare l'interfaccia della riga di comando di azdata (tramite la gestione pacchetti).|
 |SOP069 - Installare ODBC per SQL Server|Usare questo notebook per installare il driver ODBC poiché alcuni sottocomandi in azdata richiedono il driver ODBC di SQL Server.|
 
+## <a name="encryption-at-rest-utilities-on-big-data-cluster-bdc"></a>Utilità di crittografia dei dati inattivi in un cluster di Big Data (BDC)
+
+Questa sezione contiene un set di notebook utili per la gestione delle funzionalità di crittografia dei dati inattivi in BDC.
+
+|Nome |Descrizione |
+|---|---|
+|SOP0124-elenca le chiavi per la crittografia dei componenti inattivi|Usare questo notebook per elencare tutte le chiavi di HDFS.|
+|SOP0128-Abilita le zone di crittografia HDFS nei cluster di Big Data|Usare questo notebook per abilitare le zone di crittografia HDFS durante l'aggiornamento a CU8 da CU6 o precedenti. Non richiesto per le nuove distribuzioni di CU8 + o durante l'aggiornamento a CU9.|
+|SOP0125-Elimina la chiave per la crittografia dei componenti inattivi|Usare questo notebook per eliminare le chiavi della zona di crittografia HDFS. __Attenzione!__|
+|SOP0126-chiavi di backup per la crittografia dei componenti inattivi|Usare questo notebook per eseguire il backup delle chiavi della zona di crittografia HDFS.|
+|SOP0127-ripristinare le chiavi per la crittografia dei componenti inattivi|Usare questo notebook per ripristinare le chiavi della zona di crittografia HDFS.|
 
 ## <a name="managing-certificates-on-big-data-clusters-bdc"></a>Gestione dei certificati nel cluster Big Data
 
 Un set di notebook per eseguire un notebook per la gestione dei certificati nei cluster di Big Data.
 
 |Nome |Descrizione |
-|---|---|---|---|
+|---|---|
 |CER001 - Generare un certificato CA radice|Generare un certificato CA radice. Può essere utile usare un certificato CA radice per tutti i cluster non di produzione in ogni ambiente, in quanto questa tecnica riduce il numero di certificati CA radice che devono essere caricati nei client che si connettono a questi cluster. |
 |CER002 - Scaricare il certificato CA radice esistente|Usare questo notebook per scaricare un certificato CA radice generato da un cluster.|
 |CER003 - Caricare il certificato CA radice esistente|CER003 - Caricare il certificato CA radice esistente.|

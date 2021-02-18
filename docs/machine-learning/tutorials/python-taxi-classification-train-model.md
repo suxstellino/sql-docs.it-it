@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
-ms.openlocfilehash: 7f7b7a22376cba31a54f5682e041e225cb15760c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 22e857ae1cf84ae30e5965015df6dffcc148800a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470342"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338270"
 ---
 # <a name="python-tutorial-train-and-save-a-python-model-using-t-sql"></a>Esercitazione su Python: Eseguire il training e il salvataggio di un modello Python usando T-SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]

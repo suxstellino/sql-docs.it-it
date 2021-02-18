@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 96a5cedb061cc2d862c21a766694b8bede2e502b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 20252994f90032293730335dda1f6dd689133497
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789936"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353430"
 ---
 # <a name="replay-a-transact-sql-script-sql-server-profiler"></a>Riprodurre uno script Transact-SQL (SQL Server Profiler)
 
@@ -27,11 +27,11 @@ Quando si desidera provare possibili soluzioni a un problema di prestazioni, è 
   
 ### <a name="to-replay-a-transact-sql-script"></a>Per riprodurre uno script Transact-SQL  
   
-1.  Scegliere **Apri** dal menu **File**e quindi **File script**.  
+1.  Scegliere **Apri** dal menu **File** e quindi **File script**.  
   
 2.  Selezionare il file script [!INCLUDE[tsql](../../includes/tsql-md.md)] che si desidera aprire. Verificare che lo script [!INCLUDE[tsql](../../includes/tsql-md.md)] contenga gli eventi necessari per la riproduzione. Per altre informazioni, vedere [Requisiti per la riproduzione](../../tools/sql-server-profiler/replay-requirements.md).  
   
-3.  Scegliere **Avvia** dal menu **Riproduci**e connettersi al server in cui si vuole riprodurre lo script.  
+3.  Scegliere **Avvia** dal menu **Riproduci** e connettersi al server in cui si vuole riprodurre lo script.  
   
 4.  Nella finestra di dialogo **Configurazione riproduzione** verificare le impostazioni e quindi fare clic su **OK**.  
   

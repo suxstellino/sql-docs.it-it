@@ -11,12 +11,12 @@ ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e07f558163cd7b028f318d3df66c4a1ae16af84b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
-ms.translationtype: HT
+ms.openlocfilehash: 375f351c1d80e957fba29f81b9d2afc423c222ad
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988051"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100336098"
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>Disinstallare PowerPivot per SharePoint
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "91988051"
   
 2.  Selezionare **Rimuovi funzionalità, servizi, applicazioni e soluzioni** , quindi fare clic su **OK**.  
   
-3.  È possibile espandere completamente la finestra. Nella parte inferiore della finestra dovrebbe essere disponibile una barra contenente i comandi **Convalida**, **Esegui**ed **Esci** .  
+3.  È possibile espandere completamente la finestra. Nella parte inferiore della finestra dovrebbe essere disponibile una barra contenente i comandi **Convalida**, **Esegui** ed **Esci** .  
   
 4.  Esaminare ogni azione nell'elenco attività per capirne lo scopo.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "91988051"
   
 6.  Fare clic su **Convalida** per controllare la validità di ogni azione. Se **Convalida** non è disponibile, significa che tutte le azioni sono valide per il sistema.  
   
-7.  Fare clic su **Esegui** per eseguire tutte le azioni valide per questa attività. L'opzione**Esegui** è disponibile solo dopo il superamento del controllo di convalida. Quando fa clic su **Esegui** viene visualizzato il seguente messaggio di avviso, in cui si ricorda che le azioni vengono elaborate in modalità batch: "Tutte le impostazioni di configurazione che sono contrassegnate come valide nello strumento verranno applicate alla farm di SharePoint. Continuare?"  
+7.  Fare clic su **Esegui** per eseguire tutte le azioni valide per questa attività. L'opzione **Esegui** è disponibile solo dopo il superamento del controllo di convalida. Quando fa clic su **Esegui** viene visualizzato il seguente messaggio di avviso, in cui si ricorda che le azioni vengono elaborate in modalità batch: "Tutte le impostazioni di configurazione che sono contrassegnate come valide nello strumento verranno applicate alla farm di SharePoint. Continuare?"  
   
 8.  Per continuare, scegliere **Sì** .  
   
@@ -153,7 +153,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 ##  <a name="step-5-verify-uninstall"></a><a name="verify"></a>Passaggio 5: Verificare la disinstallazione  
   
-1.  In **Gestisci servizi nel server**di Amministrazione centrale connettersi al server da cui è stato disinstallato [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint.  
+1.  In **Gestisci servizi nel server** di Amministrazione centrale connettersi al server da cui è stato disinstallato [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint.  
   
 2.  -   Se è stato disinstallato [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013, verificare che **Servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] di SQL Server** non sia più presente nell'elenco.  
   
@@ -161,11 +161,11 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 3.  Dopo la disinstallazione dell'ultimo server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint nella farm, eseguire le operazioni seguenti:  
   
-    1.  In Gestione applicazioni verificare in **Gestisci applicazioni di servizio**che l'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] non sia più presente nell'elenco.  
+    1.  In Gestione applicazioni verificare in **Gestisci applicazioni di servizio** che l'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] non sia più presente nell'elenco.  
   
-    2.  In Impostazioni sistema verificare in **Gestisci funzionalità farm**che Funzionalità di integrazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] non sia più presente nella pagina. In **Gestisci soluzioni farm**verificare che le soluzioni [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] non siano più presenti nella pagina.  
+    2.  In Impostazioni sistema verificare in **Gestisci funzionalità farm** che Funzionalità di integrazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] non sia più presente nella pagina. In **Gestisci soluzioni farm** verificare che le soluzioni [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] non siano più presenti nella pagina.  
   
-    3.  In **Configura registrazione diagnostica** e **Configura raccolta dati di utilizzo e integrità**di Monitoraggio verificare che gli eventi e le categorie di eventi [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] non siano più visualizzati.  
+    3.  In **Configura registrazione diagnostica** e **Configura raccolta dati di utilizzo e integrità** di Monitoraggio verificare che gli eventi e le categorie di eventi [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] non siano più visualizzati.  
   
     4.  In Impostazioni generali applicazione verificare che **Dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** non sia più presente nella pagina.  
   

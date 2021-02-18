@@ -13,12 +13,12 @@ ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 0b758a04f81dffc31844af91933a544960f6ba2d
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
-ms.translationtype: HT
+ms.openlocfilehash: 5dd6604f4fb82a502402d74cb15c0a0744f82e0e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037528"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350459"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>Creazione di relazioni tra tabelle in un diagramma (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "92037528"
   
 3.  Verranno visualizzate due finestre di dialogo: **Relazione chiavi esterne** e **Tabelle e colonne**, quest'ultima visualizzata in primo piano.  
   
-4.  Il **nome relazione** è assegnato dal sistema nel formato FK_*localtable*\_*foreigntable*. È possibile modificare questo valore.  
+4.  Il **nome relazione** è assegnato dal sistema nel formato FK_ *localtable*\_*foreigntable*. È possibile modificare questo valore.  
   
 5.  Verificare che in **Tabella di chiave primaria** sia specificata la tabella corretta.  
   

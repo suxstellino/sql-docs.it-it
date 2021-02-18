@@ -10,18 +10,18 @@ ms.author: maghan
 ms.reviewer: matteot, drskwier
 ms.custom: ''
 ms.date: 10/14/2020
-ms.openlocfilehash: d15d859239aa9ea36f0885218d3469489f28a9b2
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
-ms.translationtype: HT
+ms.openlocfilehash: cca82925c95b360bff522bc813798485628d4382
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006087"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339041"
 ---
 # <a name="manage-tab-completion-with-sql-server-powershell"></a>Gestire il completamento alla pressione del tasto TAB (SQL Server PowerShell)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Gli snap-in PowerShell di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] introducono tre variabili (**$SqlServerMaximumTabCompletion**, **$SqlServerMaximumChildItems**e **$SqlServerIncludeSystemObjects**) per controllare il completamento alla pressione del tasto TAB di Windows PowerShell. Il completamento alla pressione del tasto TAB consente di ridurre la digitazione restituendo tabelle di elementi i cui nomi iniziano con la stringa che si sta digitando.  
+Gli snap-in PowerShell di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] introducono tre variabili (**$SqlServerMaximumTabCompletion**, **$SqlServerMaximumChildItems** e **$SqlServerIncludeSystemObjects**) per controllare il completamento alla pressione del tasto TAB di Windows PowerShell. Il completamento alla pressione del tasto TAB consente di ridurre la digitazione restituendo tabelle di elementi i cui nomi iniziano con la stringa che si sta digitando.  
 
 [!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 

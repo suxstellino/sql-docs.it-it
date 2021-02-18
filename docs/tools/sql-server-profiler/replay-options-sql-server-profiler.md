@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: bbeda6af1316bacd6b0cca561a989f5e9bd966c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: af342941ca797d9054492e59a5004096f901bf69
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789910"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353369"
 ---
 # <a name="replay-options-sql-server-profiler"></a>Opzioni di riproduzione (SQL Server Profiler)
 
@@ -63,7 +63,7 @@ Prima di riprodurre una traccia acquisita con [!INCLUDE[ssSqlProfiler](../../inc
  Riproduce il numero di SPID selezionato nell'elenco.  
   
  **Limite di tempo per la riproduzione**  
- Riproduce la traccia in base ai valori **Ora di inizio** e **Ora di fine**specificati.  
+ Riproduce la traccia in base ai valori **Ora di inizio** e **Ora di fine** specificati.  
   
  **Intervallo di attesa Health Monitor**  
  Imposta il periodo di tempo per il quale è consentita l'esecuzione di un processo prima che venga terminato da Health Monitor.  

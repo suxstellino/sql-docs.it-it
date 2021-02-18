@@ -5,16 +5,16 @@ description: Descrizione dei pod generalmente distribuiti in un cluster Big Data
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 03/30/2020
+ms.date: 02/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1df5bfe16ca1d64e3d748923796d521c95aacc78
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 20f31d6cbf4bcdbbdc666b50dea626f79e298db1
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100039571"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343934"
 ---
 # <a name="resources-deployed-with-big-data-cluster"></a>Risorse distribuite in un cluster Big Data
 
@@ -181,18 +181,7 @@ I servizi gateway forniscono il gateway Knox a Spark, HDFS, [Yarn](https://hadoo
 
 ## <a name="open-source-container-references"></a>Riferimenti a contenitori open source
 
-Alcuni contenitori sono sviluppati da progetti open source. Per informazioni sui contenitori open source usati, vedere:
-
-- [Elasticsearch](https://www.elastic.co/)
-- [Kibana](https://www.elastic.co/kibana)
-- [InfluxDB](https://www.influxdata.com)
-- [Grafana](https://grafana.com/)
-- [Fluent Bit](https://docs.fluentbit.io/manual/about/what-is-fluent-bit)
-- [HDFS DataNode](concept-storage-pool.md)
-- [HDFS NameNode](https://cwiki.apache.org/confluence/display/HADOOP2/NameNode) 
-- [Spark](configure-spark-hdfs.md)
-- [ZooKeeper](https://kubernetes.io/docs/tutorials/stateful-application/zookeeper/) 
-
+Per per progetti e versioni Open Source specifici, vedere informazioni di [riferimento sul software open source](reference-open-source-software.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

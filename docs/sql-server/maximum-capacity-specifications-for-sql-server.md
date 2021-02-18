@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: b4f0e4ed75e992095cff1f9ae315e3036ba7ef90
-ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.openlocfilehash: c0d0da7b2f74eb9dacdef390ede2cdd34d0356fa
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98766229"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100336023"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Specifiche di capacità massima per SQL Server
 
@@ -56,7 +56,7 @@ La tabella seguente indica le dimensioni e i numeri massimi dei diversi oggetti 
 |Byte per ogni chiave esterna|900||
 |Byte per ogni chiave primaria|900||
 |Byte per ogni riga|8\.060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta l'archiviazione dei dati di overflow della riga che consente di spostare colonne di lunghezza variabile all'esterno delle righe. Nel record principale viene archiviata solo una radice di 24 byte per le colonne di lunghezza variabile spostate all'esterno delle righe. Questa funzionalità consente un limite che è effettivamente superiore rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Supporto per righe di grandi dimensioni](../relational-databases/pages-and-extents-architecture-guide.md#large-row-support).|
-|Byte per ogni riga nelle tabelle ottimizzate per la memoria|8\.060|A partire da [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] le tabelle ottimizzate per la memoria supportano l'archiviazione all'esterno delle righe. Le colonne a lunghezza variabile vengono spostate all'esterno delle righe se le dimensioni massime di tutte le colonne nella tabella superano 8060 byte. Questa azione è una decisione in fase di compilazione. Per le colonne archiviate all'esterno delle righe viene archiviato un solo riferimento a 8 byte. Per altre informazioni, vedere [Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).|
+|Byte per ogni riga nelle tabelle ottimizzate per la memoria|8\.060|A partire da [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] le tabelle ottimizzate per la memoria supportano l'archiviazione all'esterno delle righe. Le colonne a lunghezza variabile vengono spostate all'esterno delle righe se le dimensioni massime di tutte le colonne nella tabella superano 8060 byte. Questa azione è una decisione in fase di compilazione. Per le colonne archiviate all'esterno delle righe viene archiviato un solo riferimento a 8 byte. Per altre informazioni, vedere [Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).|
 |Byte nel testo di origine di una stored procedure|Minore delle dimensioni batch o 250 MB||
 |Byte per ogni colonna `varchar(max) `, `varbinary(max)`, `xml`, `text` o `image`|2^31-1||
 |Caratteri per ogni colonna `ntext` o `nvarchar(max)`|2^30-1||
@@ -83,7 +83,7 @@ La tabella seguente indica le dimensioni e i numeri massimi dei diversi oggetti 
 |Riferimenti alla tabella della chiave esterna per ogni tabella|In uscita = 253. In ingresso = 10.000.|Per informazioni sulle restrizioni, vedere [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md).|
 |Lunghezza di identificatore (in caratteri)|128||
 |Istanze per ogni computer|50 istanze in un server autonomo.<br /><br />25 istanze del cluster di failover quando si usano dischi di cluster condivisi come archiviazione.<br/><br/>50 istanze del cluster di failover con condivisioni file SMB come opzione di archiviazione.||
-|Indici per ogni tabella ottimizzata per la memoria|999 avvio [!INCLUDE[ssSQL17](../includes/ssSQL17-md.md)] e in [!INCLUDE[ssSDSFull](../includes/ssSDSFull-md.md)]<br/>8 in [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] e [!INCLUDE[ssSQL15](../includes/sssql16-md.md)]||
+|Indici per ogni tabella ottimizzata per la memoria|999 avvio [!INCLUDE[ssSQL17](../includes/ssSQL17-md.md)] e in [!INCLUDE[ssSDSFull](../includes/ssSDSFull-md.md)]<br/>8 in [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] e [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]||
 |Lunghezza di una stringa contenente istruzioni SQL (dimensioni batch)|65.536 (dimensioni del pacchetto di rete)|Le dimensioni del pacchetto di rete indicano le dimensioni dei pacchetti TDS (Tabular Data Stream) usati per le comunicazioni tra le applicazioni e il [!INCLUDE[ssDE](../includes/ssde-md.md)] relazionale. La dimensione predefinita del pacchetto è 4 KB e viene controllata dall'opzione di configurazione delle dimensioni del pacchetto di rete.|
 |Blocchi per ogni connessione|Numero massimo di blocchi per ogni server||
 |Blocchi per ogni istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Limitato solo dalla memoria|Questo valore si riferisce all'allocazione di blocchi statici. I blocchi dinamici sono limitati solo dalla memoria.|

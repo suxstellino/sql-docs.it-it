@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: matteot, drskwier
 ms.custom: ''
 ms.date: 10/14/2020
-ms.openlocfilehash: a3f2ab659d77e1b06cb69905971d3954e2eb76da
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
-ms.translationtype: HT
+ms.openlocfilehash: e0aa284247d778706b739eae0c6bab18061b73dc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005472"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340822"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>Codificare e decodificare identificatori di SLQ Server
 

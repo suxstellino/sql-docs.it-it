@@ -4,21 +4,23 @@ titleSuffix: SQL Server big data clusters
 description: Informazioni su come personalizzare la distribuzione di un cluster Big Data con file di configurazione compilati nello strumento di gestione azdata.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: rajmera3
+ms.date: 02/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d983b4d0d7cfb02a587675984fdc42c54bf9f0ec
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: ffb41a559c6f262fe6d25a50c51b6e6553a2a7b8
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100047201"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343921"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Configurare le impostazioni di distribuzione per risorse e servizi cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+> [!Note]
+> I cluster di Big Data versione CU9 + hanno il supporto per la funzionalità di gestione della configurazione. Questa funzionalità consente le configurazioni post-distribuzione e offre maggiore visibilità e configurabilità del cluster. Le versioni CU8 e Lower non dispongono di questa funzionalità e le configurazioni possono essere eseguite solo in fase di distribuzione.
 
 Partendo da un set predefinito di profili di configurazione integrati nello strumento di gestione [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], è possibile modificare facilmente le impostazioni predefinite per soddisfare al meglio i requisiti del carico di lavoro del cluster Big Data. La struttura dei file di configurazione permette di aggiornare in modo granulare le impostazioni per ogni servizio della risorsa.
 
@@ -28,6 +30,9 @@ Guardare questo video di 13 minuti per una panoramica della configurazione di cl
 
 > [!TIP]
 > Per informazioni dettagliate su come distribuire servizi a disponibilità elevata, fare riferimento agli articoli su come configurare la **disponibilità elevata** per componenti cruciali come l'[istanza master di SQL Server](deployment-high-availability.md) o il nodo [NameNode di HDFS](deployment-high-availability-hdfs-spark.md).
+
+> [!TIP]
+> Per informazioni sulle impostazioni configurabili, vedere l'articolo relativo alle [proprietà di configurazione dei cluster di SQL Server Big Data](reference-config-bdc-overview.md) . Per le versioni CU8 o Lower, fare riferimento [SQL Server proprietà di configurazione dell'istanza master-versione pre CU9](reference-config-master-instance.md) per le configurazioni disponibili per le proprietà di configurazione SQL Server istanza master e [Apache Spark & Apache Hadoop (HDFS)](reference-config-spark-hadoop.md) per le proprietà Apache Spark e Hadoop.
 
 È anche possibile impostare configurazioni a livello di risorsa o aggiornare le configurazioni per tutti i servizi in una risorsa. Ecco un riepilogo della struttura per `bdc.json`:
 

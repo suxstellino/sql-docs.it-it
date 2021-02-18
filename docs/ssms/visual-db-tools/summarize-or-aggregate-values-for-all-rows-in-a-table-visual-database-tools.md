@@ -14,12 +14,12 @@ ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 4c554f781aa8f6c8f6003de76f5dfe0979f77c85
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: 88c4808e8418c248f54c9da8966306020fbb72f0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88312927"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350427"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>Riepilogo o aggregazione di valori per tutte le righe di una tabella (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +59,7 @@ Quando si crea un singolo valore di aggregazione per tutte le righe di una tabel
   
     Verrà assegnato automaticamente un alias di colonna alla colonna di cui si effettua il riepilogo. Tale alias può essere sostituito con un alias più significativo. Per altre informazioni dettagliate, vedere [Creazione di alias di colonna &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
   
-4.  Nella colonna della griglia **Group By** selezionare la funzione di aggregazione appropriata, ad esempio **Sum**, **Avg**, **Min**, **Max**, **Count**. Per aggregare solo le righe univoche nel set di risultati, scegliere una funzione di aggregazione con l'opzione DISTINCT, ad esempio **Min Distinct**. Non scegliere **Group By**, **Expression**o **Where**, in quanto tali opzioni non sono applicabili per l'aggregazione di tutte le righe.  
+4.  Nella colonna della griglia **Group By** selezionare la funzione di aggregazione appropriata, ad esempio **Sum**, **Avg**, **Min**, **Max**, **Count**. Per aggregare solo le righe univoche nel set di risultati, scegliere una funzione di aggregazione con l'opzione DISTINCT, ad esempio **Min Distinct**. Non scegliere **Group By**, **Expression** o **Where**, in quanto tali opzioni non sono applicabili per l'aggregazione di tutte le righe.  
   
     Il nome della colonna nell'istruzione del [riquadro SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) verrà sostituito con la funzione di aggregazione specificata in Progettazione query e Progettazione viste. L'istruzione SQL, ad esempio, può essere analoga alla seguente:  
   

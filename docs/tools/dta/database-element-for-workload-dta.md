@@ -15,12 +15,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 9e7fb311c95568bbbaf1b752791441754b61056a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: c772a91b39917acd3e009009c44123fc31510eca
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732125"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100342015"
 ---
 # <a name="database-element-for-workload-dta"></a>Elemento Database per Workload (DTA)
 
@@ -44,7 +44,7 @@ Specifica il database in cui è contenuta la tabella di traccia del carico di la
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|No.|  
 |**Valore predefinito**|No.|  
-|**Occorrenza**|Obbligatorio una sola volta se non viene specificato un altro tipo di carico di lavoro. È necessario specificare un elemento figlio **EventString**, **File**o **Database** per l'elemento padre **Workload** , ma è possibile utilizzare un solo tipo. Se ad esempio si specifica un carico di lavoro con l'elemento **Database** , non sarà possibile specificare anche un carico di lavoro con l'elemento **File** nello stesso file di input XML.|  
+|**Occorrenza**|Obbligatorio una sola volta se non viene specificato un altro tipo di carico di lavoro. È necessario specificare un elemento figlio **EventString**, **File** o **Database** per l'elemento padre **Workload** , ma è possibile utilizzare un solo tipo. Se ad esempio si specifica un carico di lavoro con l'elemento **Database** , non sarà possibile specificare anche un carico di lavoro con l'elemento **File** nello stesso file di input XML.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   

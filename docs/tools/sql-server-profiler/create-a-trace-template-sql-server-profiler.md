@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: af272f50f281a8c3a564913cfb91be8abcab2898
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 453989e908808e0444807bcfb9dd817b3f79c436
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774868"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349360"
 ---
 # <a name="create-a-trace-template-sql-server-profiler"></a>Creare un modello di traccia (SQL Server Profiler)
 
@@ -26,13 +26,13 @@ ms.locfileid: "85774868"
   
 ### <a name="to-create-a-trace-template"></a>Per creare un modello di traccia  
   
-1.  Scegliere **Modelli** dal menu **File**e quindi fare clic su **Nuovo modello**.  
+1.  Scegliere **Modelli** dal menu **File** e quindi fare clic su **Nuovo modello**.  
   
 2.  Nella finestra di dialogo **Proprietà modello di traccia** selezionare il tipo di server nell'elenco **Tipo server**.  
   
 3.  Nella casella **Nome nuovo modello** immettere un nome per il modello.  
   
-4.  Facoltativamente, selezionare la casella di controllo **Basa il nuovo modello sul seguente modello esistente**e quindi fare clic su un modello nell'elenco.  
+4.  Facoltativamente, selezionare la casella di controllo **Basa il nuovo modello sul seguente modello esistente** e quindi fare clic su un modello nell'elenco.  
   
      Tutti gli eventi, le colonne di dati e i filtri vengono impostati inizialmente come specificato nel modello selezionato.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "85774868"
   
 6.  Nella scheda **Selezione eventi** aggiungere, rimuovere o modificare eventi, colonne di dati o filtri.  
   
-7.  Nella scheda **Selezione eventi**usare il controllo griglia per aggiungere o rimuovere eventi e colonne di dati dal file di traccia, nel modo seguente:  
+7.  Nella scheda **Selezione eventi** usare il controllo griglia per aggiungere o rimuovere eventi e colonne di dati dal file di traccia, nel modo seguente:  
   
     -   Per aggiungere un evento, espandere la categoria di eventi appropriata nella colonna **Eventi** e quindi selezionare il nome dell'evento.  
   

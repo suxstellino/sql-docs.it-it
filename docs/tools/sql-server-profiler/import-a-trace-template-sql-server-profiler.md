@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: d9e40c9c50486f7967b60d51910273c382606713
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 4b62d790b0d6602265b69976388621c374f1ddf8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643445"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345055"
 ---
 # <a name="import-a-trace-template-sql-server-profiler"></a>Importare un modello di traccia (SQL Server Profiler)
 

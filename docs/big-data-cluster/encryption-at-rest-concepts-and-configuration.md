@@ -10,12 +10,12 @@ ms.date: 10/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: df878f94c2ed6338ae28cbff156460ffdef87826
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 69749c0da2a5f7ef672a4673b5bc857898e9964f
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100046661"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489185"
 ---
 # <a name="encryption-at-rest-concepts-and-configuration-guide"></a>Concetti sulla crittografia dei dati inattivi e guida alla configurazione
 
@@ -29,9 +29,9 @@ In cluster Big Data di SQL Server i dati vengono archiviati nelle due posizioni 
 Per poter crittografare in modo trasparente i dati in cluster Big Data di SQL Server, è possibile adottare due approcci:
 
 * __Crittografia dei volumi__. Questo approccio è supportato dalla piattaforma Kubernetes ed è la procedura consigliata per le distribuzioni di cluster Big Data. Questa guida non illustra la crittografia dei volumi. Leggere la documentazione relativa all'appliance o alla piattaforma Kubernetes per informazioni su come crittografare correttamente i volumi usati per cluster Big Data di SQL Server.
-* __Crittografia a livello di applicazione__. Questa architettura si riferisce alla crittografia dei dati da parte dell'applicazione che gestisce i dati prima che vengano scritti su disco. Nel caso in cui i volumi siano esposti, per un utente malintenzionato sarebbe impossibile ripristinare gli elementi dati in un'altra posizione, a meno che il sistema di destinazione non sia stato configurato con le stesse chiavi di crittografia. 
+* __Crittografia a livello di applicazione__. Questa architettura si riferisce alla crittografia dei dati da parte dell'applicazione che gestisce i dati prima che vengano scritti su disco. Nel caso in cui i volumi siano esposti, per un utente malintenzionato sarebbe impossibile ripristinare gli elementi dati in un'altra posizione, a meno che il sistema di destinazione non sia stato configurato con le stesse chiavi di crittografia.
 
-Il set di funzionalità di crittografia dei dati inattivi in cluster Big Data di SQL Server supporta lo scenario principale della crittografia a livello di applicazione per i componenti SQL Server e HDFS.
+Il __set di funzionalità di crittografia dei dati inattivi di SQL Server cluster di Big Data__ supporta lo scenario principale della __crittografia a livello di applicazione__ per i componenti __SQL Server__ e __HDFS__ .
 
 Sono incluse le funzionalità riportate di seguito:
 
@@ -48,9 +48,6 @@ Si tratta di un servizio ospitato nel controller, responsabile della gestione de
 * Compatibilità del servizio di gestione delle chiavi Hadoop. Viene usato come servizio di gestione delle chiavi per il componente HDFS nel cluster Big Data.
 * Gestione dei certificati TDE di SQL Server.
 
-La funzionalità seguente non è attualmente supportata:
-* *Supporto per il controllo delle versioni delle chiavi*. 
-
 Nella parte restante del documento si userà __BDC KMS__ per fare riferimento a questo servizio. Anche il termine __BDC__ viene usato per fare riferimento alla piattaforma di computing __di cluster Big Data di SQL Server__.
 
 ### <a name="system-managed-keys-and-certificates"></a>Chiavi e certificati gestiti dal sistema
@@ -65,9 +62,9 @@ Chiavi e certificati forniti dall'utente che devono essere gestiti tramite il se
 
 Soluzioni di chiavi esterne compatibili con il servizio BDC KMS per la delega esterna. Questa funzionalità non è attualmente supportata.
 
-## <a name="encryption-at-rest-on-sql-server-big-data-clusters-cu8"></a>Crittografia dei dati inattivi in cluster Big Data di SQL Server CU8
+## <a name="encryption-at-rest-on-sql-server-big-data-clusters"></a>Crittografia dei dati inattivi nei cluster SQL Server Big Data
 
-I cluster Big Data di SQL Server CU8 sono la versione iniziale del set di funzionalità per la crittografia dei dati inattivi. Leggere attentamente questo documento per valutare completamente lo scenario.
+Leggere attentamente questo documento per valutare completamente lo scenario.
 
 Il set di funzionalità introduce il __servizio del controller BDC KMS__ che offre chiavi e certificati gestiti dal sistema per la crittografia dei dati inattivi sia in SQL Server che in HDFS. Tali chiavi e certificati sono gestiti dal servizio. Questa documentazione offre informazioni operative su come interagire con il servizio.
 
@@ -80,7 +77,7 @@ Il set di funzionalità introduce il __servizio del controller BDC KMS__ che off
 * I database con provisioning BDC dell'istanza master e i database utente non vengono crittografati automaticamente. Gli amministratori di database possono usare il certificato installato per crittografare qualsiasi database.
 * Il pool di calcolo e il pool di archiviazione vengono crittografati automaticamente usando il certificato generato dal sistema.
 * La crittografia dei pool di dati, anche se tecnicamente possibile tramite i comandi `EXECUTE AT` di T-SQL, non è consigliata e non è attualmente supportata. Usare questa tecnica per crittografare i database dei pool di dati potrebbe non essere efficace e la crittografia potrebbe non essere eseguita allo stato desiderato. Si crea anche un percorso di aggiornamento incompatibile per le versioni successive.
-* Al momento non esiste una rotazione del certificato. Sono supportate la decrittografia e la crittografia con un nuovo certificato usando i comandi T-SQL, se non sono presenti distribuzioni a disponibilità elevata.
+* La rotazione della chiave SQL Server viene eseguita utilizzando i comandi amministrativi T-SQL standard. Per istruzioni complete, vedere [la Guida all'uso di SQL Server cluster di Big Data Transparent Data Encryption (Transparent Data Encryption)](encryption-at-rest-sql-server-tde.md) .
 * Il monitoraggio della crittografia avviene tramite le DMV standard di SQL Server per TDE.
 * Sono supportati il backup e il ripristino di un database abilitato per TDE nel cluster.
 * La disponibilità elevata è supportata. Se un database nell'istanza primaria di SQL Server viene crittografato, verrà crittografata anche tutta la replica secondaria del database.
@@ -91,12 +88,20 @@ Il set di funzionalità introduce il __servizio del controller BDC KMS__ che off
 * Nel servizio di gestione delle chiavi Hadoop viene effettuato il provisioning di una chiave generata dal sistema. Il nome della chiave è `securelakekey`. In CU8 la chiave predefinita è di 256 bit. È supportata la crittografia AES a 256 bit.
 * Viene eseguito il provisioning di una zona di crittografia predefinita usando la chiave generata dal sistema precedente in un percorso denominato `/securelake`.
 * Gli utenti possono creare chiavi e zone di crittografia aggiuntive usando le istruzioni specifiche disponibili in questa guida. Gli utenti possono scegliere le dimensioni della chiave (128, 192 o 256) durante la creazione della chiave.
-* La rotazione della chiave sul posto per HDFS non è possibile in CU8. In alternativa, è possibile spostare i dati da una zona di crittografia a un'altra usando Distcp.
+* La rotazione della chiave delle zone di crittografia HDFS viene eseguita usando azdata. Per istruzioni complete, vedere la [Guida all'uso di SQL Server cluster di Big data per le aree di crittografia HDFS](encryption-at-rest-hdfs-encryption-zones.md) .
 * Non è supportato il montaggio per la suddivisione in livelli HDFS su una zona di crittografia.
 
-## <a name="configuration-guide"></a>Guida alla configurazione
+## <a name="encryption-at-rest-administration"></a>Amministrazione della crittografia di Rest
 
-La crittografia dei dati inattivi di cluster Big Data di SQL Server è una funzionalità gestita dal servizio e, a seconda del percorso di distribuzione, può richiedere passaggi aggiuntivi.
+L'elenco seguente contiene le funzionalità di amministrazione per la crittografia dei inattivi
+
+* [SQL Server](encryption-at-rest-sql-server-tde.md) gestione di Transparent Data Encryption viene eseguita utilizzando i comandi T-SQL standard.
+* Le [zone di crittografia HDFS](encryption-at-rest-hdfs-encryption-zones.md) e la gestione delle chiavi HDFS vengono eseguite usando i comandi azdata.
+* Le seguenti funzionalità di amministrazione vengono eseguite utilizzando [notebook operativi](cluster-manage-notebooks.md):
+    - Backup e ripristino della chiave HDFS
+    - Eliminazione della chiave HDFS
+
+## <a name="configuration-guide"></a>Guida alla configurazione
 
 Durante le __nuove distribuzioni di cluster Big Data di SQL Server__ (CU8 e versioni successive), la __crittografia dei dati inattivi verrà abilitata e configurata per impostazione predefinita__. Ciò significa che:
 
@@ -106,14 +111,11 @@ Durante le __nuove distribuzioni di cluster Big Data di SQL Server__ (CU8 e vers
 
 Vengono applicati i requisiti e i comportamenti predefiniti descritti nella sezione precedente.
 
-Se si __aggiorna il cluster a CU8__, __leggere attentamente la sezione successiva__.
+__Se si esegue una nuova distribuzione di SQL Server BDC CU8 o si esegue l'aggiornamento direttamente a CU9, non sono necessari altri passaggi__.
 
-### <a name="upgrading-to-cu8"></a>Aggiornamento a CU8
+### <a name="upgrade-scenarios"></a>Scenari di aggiornamento
 
-   > [!CAUTION]
-   > Prima di eseguire l'aggiornamento a cluster Big Data di SQL Server CU8, eseguire un backup completo dei dati.
-
-Nei cluster esistenti il processo di aggiornamento non impone la crittografia sui dati utente e non configura le zone di crittografia HDFS. Questo comportamento è dovuto alla progettazione. Considerare quanto segue per ogni componente:
+Nei cluster esistenti, il processo di aggiornamento non impone la nuova crittografia o la nuova crittografia sui dati utente che non sono già stati crittografati. Questo comportamento è dovuto alla progettazione. Considerare quanto segue per ogni componente:
 
 * __SQL Server__
 
@@ -124,17 +126,31 @@ Nei cluster esistenti il processo di aggiornamento non impone la crittografia su
 * __HDFS__
 
     1. __HDFS__. Il processo di aggiornamento non interessa i file e le cartelle HDFS al di fuori delle zone di crittografia.
-    1. __Le zone di crittografia non vengono configurate__. Il componente del servizio di gestione delle chiavi Hadoop non viene configurato per usare il servizio BDC KMS. Per configurare e abilitare la funzionalità delle zone di crittografia HDFS dopo l'aggiornamento, seguire la sezione successiva.
 
-### <a name="enable-hdfs-encryption-zones-after-upgrade"></a>Abilitare le zone di crittografia HDFS dopo l'aggiornamento
+### <a name="upgrading-to-cu9-from-cu8-or-earlier"></a>Aggiornamento a CU9 da CU8 o versioni precedenti
 
-Se il cluster è stato aggiornato a CU8 (`azdata upgrade`) e si vogliono abilitare le zone di crittografia HDFS, eseguire le azioni seguenti.
+Non sono necessari altri passaggi.
+
+### <a name="upgrading-to-cu8-from-cu6-or-earlier"></a>Aggiornamento a CU8 da CU6 o versioni precedenti
+
+   > [!CAUTION]
+   > Prima di eseguire l'aggiornamento a cluster Big Data di SQL Server CU8, eseguire un backup completo dei dati.
+
+
+__Le zone di crittografia non vengono configurate__. Il componente del servizio di gestione delle chiavi Hadoop non viene configurato per usare il servizio BDC KMS. Per configurare e abilitare la funzionalità zone di crittografia HDFS dopo l'aggiornamento, seguire le istruzioni della sezione successiva.
+
+#### <a name="enable-hdfs-encryption-zones-after-upgrade-to-cu8"></a>Abilitare le zone di crittografia HDFS dopo l'aggiornamento a CU8
+
+Se il cluster è stato aggiornato a CU8 ( `azdata upgrade` ) e si vuole abilitare le zone di crittografia HDFS sono disponibili due opzioni:
+
+* Esecuzione del Azure Data Studio [notebook operativo](cluster-manage-notebooks.md) denominato __SOP0128: Abilita le zone di crittografia HDFS nei cluster di Big Data__ per eseguire la configurazione.
+* Esecuzione di script come descritto sotto.
 
 Requisiti:
 
 - Cluster integrato di [Active Directory](active-directory-prerequisites.md).
 
-- [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] configurato e connesso al cluster in modalità AD.
+- [!INCLUDE[azdata](../includes/azure-data-cli-azdata.md)] configurato e connesso al cluster in modalità AD.
 
 Attenersi alla procedura seguente per riconfigurare il cluster con il supporto delle zone di crittografia.
 

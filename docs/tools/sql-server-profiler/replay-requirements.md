@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: d5fa4964a2ffb0d62777c25aa0d0c6ef205ee94b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 9105e4d7c28b003c191d5a9794717496d07eb0f5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789934"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353359"
 ---
 # <a name="replay-requirements"></a>Requisiti per la riproduzione
 
@@ -116,7 +116,7 @@ Per riprodurre dati di traccia con [!INCLUDE[ssSqlProfiler](../../includes/sssql
   
 -   È consigliabile che gli ID di database nella destinazione e nell'origine siano uguali. In caso contrario, tuttavia, è possibile trovare una corrispondenza in base a **DatabaseName** , se presente nella traccia.  
   
--   È necessario che il database predefinito per ogni account di accesso incluso nella traccia sia impostato (nella destinazione) sul database di destinazione corrispondente. Si supponga ad esempio che la traccia da riprodurre includa attività per l'account di accesso **Fred**nel database **Fred_Db** nell'origine. Quindi nella destinazione il database predefinito per l'account **Fred**deve essere impostato sul database corrispondente a **Fred_Db** , anche se il nome del database è diverso. Per impostare il database predefinito dell'account di accesso, usare la stored procedure di sistema **sp_defaultdb** .  
+-   È necessario che il database predefinito per ogni account di accesso incluso nella traccia sia impostato (nella destinazione) sul database di destinazione corrispondente. Si supponga ad esempio che la traccia da riprodurre includa attività per l'account di accesso **Fred** nel database **Fred_Db** nell'origine. Quindi nella destinazione il database predefinito per l'account **Fred** deve essere impostato sul database corrispondente a **Fred_Db** , anche se il nome del database è diverso. Per impostare il database predefinito dell'account di accesso, usare la stored procedure di sistema **sp_defaultdb** .  
   
  La riproduzione degli eventi associati ad account di accesso mancanti o non corretti genera errori di riproduzione, ma l'operazione non viene interrotta.  
   

@@ -34,12 +34,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 9987384899eeb9087a938d8fd8e8b156ff8e1962
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 98b630f4471d35259db609a5bf1740ff96b8d604
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236271"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100336174"
 ---
 # <a name="editions-and-supported-features-of-sssql19-md"></a>Edizioni e funzionalità supportate di [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]
 
@@ -108,7 +108,7 @@ Utilizzare le informazioni incluse nelle tabelle seguenti per determinare il set
 
 |Strumenti di gestione|Descrizione|
 |----------------------|-----------------|
-|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) è un ambiente integrato per l'accesso, la configurazione, la gestione, l'amministrazione e lo sviluppo di componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. SSMS consente l'uso di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a sviluppatori e amministratori con qualsiasi livello di esperienza. La versione più recente di SSMS aggiorna SMO, che include l'[API SQL Assessment](../tools/sql-assessment-api/sql-assessment-api-overview.md).<br /><br/> Scaricare e installare <br />[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] da [Scaricare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)|
+|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) è un ambiente integrato per l'accesso, la configurazione, la gestione, l'amministrazione e lo sviluppo di componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. SSMS consente l'uso di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a sviluppatori e amministratori con qualsiasi livello di esperienza. La versione più recente di SSMS Aggiorna SMO, che include l' [API valutazione SQL](../tools/sql-assessment-api/sql-assessment-api-overview.md).<br /><br/> Scaricare e installare <br />[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] da [Scaricare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)|
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Gestione configurazione|Gestione configurazione[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] offre funzionalità di base per la gestione della configurazione dei servizi di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , dei protocolli server, dei protocolli client e degli alias per i client.|
 |[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] offre un'interfaccia utente grafica per il monitoraggio di un'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)] o di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|
 |Ottimizzazione guidata[!INCLUDE[ssDE](../includes/ssde-md.md)]|Ottimizzazione guidata[!INCLUDE[ssDE](../includes/ssde-md.md)] consente di creare set di indici, viste indicizzate e partizioni ottimali.|

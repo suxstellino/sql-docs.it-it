@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: b833f87e092260d38649c464fd4b09c6e43899d0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 31771ddc584d72dee2b3c859b349dd5752e4d4d5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774950"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349453"
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>Analizzare query con risultati SHOWPLAN in SQL Server Profiler
 
@@ -30,7 +30,7 @@ ms.locfileid: "85774950"
   
 -   Con il comando **Estrai eventi di SQL Server** del menu **File** .  
   
--   Facendo clic con il pulsante destro del mouse su un evento specifico e scegliendo **Estrai dati eventi**per estrarre e salvare singoli eventi.  
+-   Facendo clic con il pulsante destro del mouse su un evento specifico e scegliendo **Estrai dati eventi** per estrarre e salvare singoli eventi.  
   
 ## <a name="showplan-events"></a>Eventi Showplan  
  Nella tabella seguente sono elencati e descritti gli eventi di traccia Showplan.  

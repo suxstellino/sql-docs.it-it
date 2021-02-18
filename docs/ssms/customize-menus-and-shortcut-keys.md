@@ -20,12 +20,12 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 242dc262053aefe5a95e6e65d99ae98965491e55
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
-ms.translationtype: HT
+ms.openlocfilehash: 9e8e6bc470b522ad27ff6e61d5383bbf6a87bd61
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034922"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344197"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personalizzare i menu e i tasti di scelta rapida
 
@@ -107,7 +107,7 @@ Un tasto di scelta rapida consente di scegliere un comando di menu o un pulsante
   
 4.  Premere TAB per passare all'elenco **Controlli** e usare i tasti di direzione per selezionare il pulsante che si vuole modificare.  
   
-5.  Premere **ALT+M**per selezionare **Modifica selezione**.  
+5.  Premere **ALT+M** per selezionare **Modifica selezione**.  
   
 6.  Premere TAB per passare alla casella **Name** del menu di scelta rapida e digitare un nome da assegnare al pulsante sulla barra degli strumenti, anteponendo una e commerciale (&) alla lettera che si vuole usare come tasto di scelta rapida.  
   
@@ -153,7 +153,7 @@ Un tasto di scelta rapida consente di scegliere un comando di menu o un pulsante
   
 3.  Nella casella **Comandi** trascinare **Nuovo menu** sulla barra dei menu e rilasciarlo nel punto in cui si vuole visualizzare il nuovo menu.  
   
-4.  Fare clic con il pulsante destro del mouse su **Nuovo menu**e digitare un nome per il menu nella casella **Nome** .  
+4.  Fare clic con il pulsante destro del mouse su **Nuovo menu** e digitare un nome per il menu nella casella **Nome** .  
   
 5.  Nella finestra di dialogo **Personalizza** selezionare una categoria, ad esempio **File**, e selezionare un comando, ad esempio **Apri file**. Trascinare il comando nel nuovo menu. Nel momento in cui si passa il mouse sul menu, quest'ultimo si espanderà. Trascinare il comando nel menu espanso.  
   

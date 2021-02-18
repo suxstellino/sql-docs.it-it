@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 5231ec1526b1f019355f659ac58233c1f31005f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: dc2171ea2aaf418eae0fa277a8f4144dc4e7ca9d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789960"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345039"
 ---
 # <a name="modify-a-filter-sql-server-profiler"></a>Modificare un filtro (SQL Server Profiler)
 
@@ -27,13 +27,13 @@ Per limitare il numero di eventi raccolti da una traccia, è possibile aggiunger
   
 ### <a name="to-modify-a-filter"></a>Per modificare un filtro  
   
-1.  In [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]aprire il modello del filtro di traccia da modificare. Scegliere **Modelli** dal menu **File**e quindi fare clic su **Modifica modello**.  
+1.  In [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]aprire il modello del filtro di traccia da modificare. Scegliere **Modelli** dal menu **File** e quindi fare clic su **Modifica modello**.  
   
 2.  Nella scheda **Generale** della finestra di dialogo **Proprietà modello di traccia** selezionare un modello nell'elenco **Seleziona nome modello** .  
   
 3.  Fare clic sulla scheda **Selezione eventi** .  
   
-     La scheda **Selezione eventi** contiene un controllo griglia, ovvero una tabella che include tutte le classi di evento tracciabili. La tabella contiene una riga per ogni classe di evento. Le classi di evento possono differire leggermente a seconda del tipo e della versione del server cui si è connessi. Le classi di eventi sono identificate nella colonna **Eventi**della griglia e sono raggruppate per categoria di eventi. Nelle altre colonne sono elencate le colonne di dati che possono essere restituite per ogni classe di evento.  
+     La scheda **Selezione eventi** contiene un controllo griglia, ovvero una tabella che include tutte le classi di evento tracciabili. La tabella contiene una riga per ogni classe di evento. Le classi di evento possono differire leggermente a seconda del tipo e della versione del server cui si è connessi. Le classi di eventi sono identificate nella colonna **Eventi** della griglia e sono raggruppate per categoria di eventi. Nelle altre colonne sono elencate le colonne di dati che possono essere restituite per ogni classe di evento.  
   
 4.  Fare clic su **Filtri colonne**.  
   

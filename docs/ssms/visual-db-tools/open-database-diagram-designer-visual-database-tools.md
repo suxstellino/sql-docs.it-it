@@ -16,12 +16,12 @@ ms.assetid: 9427c418-1e2f-464f-8a6c-9109f053e832
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: b25c138d9943120c8c375d6ed55bb0c034d93cec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: 63e1561aa85afe7d439554db051e0c7a7c07e8a7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479995"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339816"
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>Apertura di Progettazione diagrammi di database (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ Per accedere a Progettazione diagrammi di database, aprire un diagramma nuovo o 
   
 1.  In Esplora oggetti fare clic con il pulsante destro del mouse sul nodo dei diagrammi di database.  
   
-2.  Scegliere **Nuovo diagramma database**dal menu di scelta rapida.  
+2.  Scegliere **Nuovo diagramma database** dal menu di scelta rapida.  
   
 3.  Nella finestra di dialogo **Aggiungi tabella** selezionare le tabelle da usare nel diagramma.  
   
@@ -46,7 +46,7 @@ Per accedere a Progettazione diagrammi di database, aprire un diagramma nuovo o 
   
 1.  In Esplora oggetti, fare clic con il pulsante destro del mouse sul diagramma nel nodo dei diagrammi di database.  
   
-2.  Scegliere **Progetta diagramma di database**dal menu di scelta rapida.  
+2.  Scegliere **Progetta diagramma di database** dal menu di scelta rapida.  
   
 3.  Il menu **Diagramma di database** verrà aggiunto al menu principale e il diagramma verrà aperto nel riquadro di progettazione.  
   
