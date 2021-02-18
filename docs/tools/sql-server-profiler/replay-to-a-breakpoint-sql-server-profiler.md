@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 5c8be9d32a60d44007d3e7c20b0b7da8fdb087c6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: cf65d528ca2f141e9af161a602ff6f9e56aacd68
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789898"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353346"
 ---
 # <a name="replay-to-a-breakpoint-sql-server-profiler"></a>Riprodurre fino a un punto di interruzione (SQL Server Profiler)
 
@@ -43,7 +43,7 @@ In questo argomento viene illustrato come impostare i punti di interruzione in u
   
      Ripetere il passaggio per impostare più punti di interruzione.  
   
-3.  Scegliere **Avvia** dal menu **Riproduci**e quindi connettersi al server in cui si vuole riprodurre la traccia.  
+3.  Scegliere **Avvia** dal menu **Riproduci** e quindi connettersi al server in cui si vuole riprodurre la traccia.  
   
 4.  Nella finestra di dialogo **Configurazione riproduzione** verificare le impostazioni e quindi fare clic su **OK**.  
   

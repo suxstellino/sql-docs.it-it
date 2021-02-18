@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 7a4e10b437f60c8f6b1f80ed76017591fc22686d
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 7a00c8196a3a20d17f07c215b8d0d0f1c3ffd84e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98597266"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352457"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -204,7 +204,7 @@ Nella tabella riportata di seguito sono elencati i servizi e le porte da cui pot
  Per ulteriori informazioni sulla porta 135, consultare i riferimenti seguenti:  
   
 -   [Panoramica dei servizi e requisiti per le porte di rete per il sistema server Windows](https://support.microsoft.com/kb/832017)   
--   [Troubleshooting RPC Endpoint Mapper errors using the Windows Server 2003 Support Tools from the product CD](https://support.microsoft.com/kb/839880)  
+-   [Troubleshooting RPC Endpoint Mapper errors using the Windows Server 2003 Support Tools from the product CD](https://mskb.pkisolutions.com/kb/839880)  
 -   [Remote procedure call (RPC)](/previous-versions/ms950395(v=msdn.10))    
 -   [Configurazione dell'allocazione delle porte dinamiche RPC perché funzionino con i firewall](https://support.microsoft.com/kb/154596/)  
   

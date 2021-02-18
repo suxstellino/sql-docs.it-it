@@ -29,12 +29,12 @@ ms.reviewer: v-daenge
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: 454e3ab08735bf806aa8ba6327d992ce96c07f78
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 87aa8b901c24839aa23b75a318b7a47e3d52f40e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236261"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349973"
 ---
 # <a name="bcp-utility"></a>Utilità bcp
 
@@ -71,7 +71,7 @@ Il nuovo BCP supporta l'autenticazione di Azure AD e include anche il supporto d
 
 Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019
 
-Per questo componente sono necessari sia [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) che [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md).
+Per questo componente sono necessari sia [Windows Installer 4.5](https://windows-installer.soft32.com/) che [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md).
 
 Per controllare la versione di BCP, eseguire il comando `bcp /v` e verificare che sia in uso la versione 15.0.2000.5 o successiva.
 

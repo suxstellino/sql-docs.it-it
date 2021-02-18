@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: af98af52bfe6416c489be821fa2d8b27092fac27
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
-ms.translationtype: HT
+ms.openlocfilehash: 349b8f5bd757e623b79b043d14ce9de91c34e942
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918365"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341981"
 ---
 # <a name="sqllogship-application"></a>Applicazione sqllogship
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **-restore** _secondary_id_  
  Esegue un'operazione di ripristino nel server secondario specificato per il database o i database secondari, corrispondenti all'ID secondario specificato tramite *secondary_id*. Per ottenere questo ID è possibile usare la stored procedure **sp_help_log_shipping_secondary_database** .  
   
- Tutti i file di backup nella directory di destinazione creati dopo il punto di ripristino più recente vengono ripristinati nel database o nei database secondari. L'applicazione **sqllogship** elimina quindi tutti i file di backup meno recenti in base al periodo di conservazione dei file. La cronologia per l'operazione di ripristino viene poi registrata dall'applicazione nel server secondario e nel server di monitoraggio. L'applicazione esegue infine **sp_cleanup_log_shipping_history**che elimina le informazioni sulla cronologia meno recenti in base al periodo di conservazione.  
+ Tutti i file di backup nella directory di destinazione creati dopo il punto di ripristino più recente vengono ripristinati nel database o nei database secondari. L'applicazione **sqllogship** elimina quindi tutti i file di backup meno recenti in base al periodo di conservazione dei file. La cronologia per l'operazione di ripristino viene poi registrata dall'applicazione nel server secondario e nel server di monitoraggio. L'applicazione esegue infine **sp_cleanup_log_shipping_history** che elimina le informazioni sulla cronologia meno recenti in base al periodo di conservazione.  
   
  **-verboselevel** _level_  
  Specifica il livello di messaggi aggiunti alla cronologia di log shipping. *level* può essere uno dei valori interi seguenti:  
@@ -77,7 +77,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  L'applicazione **sqllogship** , SqlLogShip.exe, è installata nella directory x:\Program Files\Microsoft SQL Server\130\Tools\Binn.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- **sqllogship** usa l'autenticazione di Windows. L'account con autenticazione di Windows utilizzato per l'esecuzione del comando deve disporre delle autorizzazioni di accesso alle directory di Windows e delle autorizzazioni per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Il requisito dipende dal fatto che il comando **sqllogship** specifichi l'opzione **-backup**, **-copy**oppure **-restore** .  
+ **sqllogship** usa l'autenticazione di Windows. L'account con autenticazione di Windows utilizzato per l'esecuzione del comando deve disporre delle autorizzazioni di accesso alle directory di Windows e delle autorizzazioni per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Il requisito dipende dal fatto che il comando **sqllogship** specifichi l'opzione **-backup**, **-copy** oppure **-restore** .  
   
 |Opzione|Accesso alla directory|Autorizzazioni|  
 |------------|----------------------|-----------------|  

@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 2dd83d35238e74908614c2aaed96e3bc8a11180f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 2727aa7ed5e95881e21eddb73a94ddef97795c08
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774757"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353410"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>Organizzare le colonne visualizzate in una traccia (SQL Server Profiler)
 
@@ -25,7 +25,7 @@ ms.locfileid: "85774757"
 
  È possibile raggruppare le colonne di dati di una traccia selezionando **Organizza colonne** nella tabella di traccia o nella finestra di dialogo **Proprietà file di traccia** oppure durante la definizione della traccia. Il raggruppamento delle colonne di dati semplifica l'analisi dell'output della traccia di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Per altre informazioni, vedere [Visualizzare e analizzare le tracce con SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
   
- L'opzione**Organizza colonne** consente di raggruppare gli eventi di traccia oppure di raggrupparli e aggregarli in base alle colonne di dati selezionate.  
+ L'opzione **Organizza colonne** consente di raggruppare gli eventi di traccia oppure di raggrupparli e aggregarli in base alle colonne di dati selezionate.  
   
 -   Per raggruppare unicamente gli eventi di traccia, selezionare più colonne di dati per il raggruppamento. In questo caso, nella finestra della traccia gli eventi saranno raggruppati in base ai valori delle colonne di dati selezionate per il raggruppamento. L'esempio seguente mostra come viene visualizzata la griglia della finestra di traccia se per il raggruppamento vengono selezionate le colonne di dati **Duration** e **StartTime** . I valori della colonna **Duration** vengono visualizzati in ordine crescente, seguiti dai valori della colonna **StartTime** .  
   

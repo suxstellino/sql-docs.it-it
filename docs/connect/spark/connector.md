@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rajmera3
 ms.author: raajmera
 ms.reviewer: mikeray
-ms.openlocfilehash: 15a4bdb66ea87f85337540adfec4b5e175b1c55b
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 2cc921b7aa1acaf99da8a632dc8e3996d648682c
+ms.sourcegitcommit: 059722ff78a6061b801807416b312ae9f721ec7d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100058126"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100636700"
 ---
 # <a name="apache-spark-connector-sql-server--azure-sql"></a>Connettore Apache Spark: SQL Server e Azure SQL
 
@@ -25,7 +25,14 @@ Questa libreria contiene il codice sorgente per il connettore Apache Spark per S
 
 [Apache Spark](https://spark.apache.org/) è un motore di analisi unificato per l'elaborazione di dati su larga scala.
 
-È possibile ottenere il connettore da [Maven](https://search.maven.org/search?q=spark-mssql-connector). Per importare il connettore, usare la coordinata `com.microsoft.azure:spark-mssql-connector:<latest version>`. È anche possibile creare il connettore dall'origine o scaricare il file con estensione jar dalla sezione Release in GitHub. Per informazioni aggiornate sul connettore, vedere il [repository GitHub del connettore SQL Spark](https://github.com/microsoft/sql-spark-connector).
+Sono disponibili due versioni del connettore tramite Maven, una versione compatibile con 2.4.5 e una versione compatibile con 3.0.0. Entrambe le versioni sono disponibili [qui](https://search.maven.org/search?q=spark-mssql-connector) e possono essere importate usando le coordinate seguenti:
+
+| Connettore | Coordinata Maven |
+| --------- | ------------------ |
+| Informazioni sul connettore compatibile con Spark 2.4.5 | `com.microsoft.azure:spark-mssql-connector:1.0.1` |
+| Informazioni sul connettore compatibile con Spark 3.0.0 | `com.microsoft.azure:spark-mssql-connector_2.12_3.0:1.0.0-alpha` |
+
+È anche possibile creare il connettore dall'origine o scaricare il file con estensione jar dalla sezione Release in GitHub. Per informazioni aggiornate sul connettore, vedere il [repository GitHub del connettore SQL Spark](https://github.com/microsoft/sql-spark-connector).
 
 ## <a name="supported-features"></a>Funzionalità supportate
 
@@ -37,8 +44,8 @@ Questa libreria contiene il codice sorgente per il connettore Apache Spark per S
 
 | Componente                            | Versioni supportate              |
 |--------------------------------------|---------------------------------|
-| Apache Spark                         | 2.4.5 (Spark 3.0 non è supportato) |
-| Scala                                | 2,11                            |
+| Apache Spark                         | 2.4.5, 3.0.0 |
+| Scala                                | 2,11, 2,12                            |
 | Microsoft JDBC Driver per SQL Server | 8.2                             |
 | Microsoft SQL Server                 | SQL Server 2008 o versione successiva        |
 | Database SQL di Azure                  | Supportato                       |

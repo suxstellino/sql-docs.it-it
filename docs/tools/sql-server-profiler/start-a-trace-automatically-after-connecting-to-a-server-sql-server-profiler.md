@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 75200101105cc77a8b1dc7304c0333ab2727960d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 1acad3d3f747d46edf9c0db5a31bb89904df3e97
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734176"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353322"
 ---
 # <a name="start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler"></a>Avviare una traccia automaticamente dopo la connessione a un server (SQL Server Profiler)
 
@@ -32,7 +32,7 @@ In questo argomento viene descritta la procedura per l'avvio automatico delle tr
 2.  Selezionare la casella di controllo **Avvia traccia non appena viene stabilita una connessione** .  
   
 > [!NOTE]  
->  Se l'opzione **Avvia traccia non appena viene stabilita una connessione**è selezionata, la finestra di dialogo **Proprietà traccia**non viene visualizzata e viene invece avviata la traccia. Per modificare le proprietà della traccia è necessario disabilitare questa impostazione.  
+>  Se l'opzione **Avvia traccia non appena viene stabilita una connessione** è selezionata, la finestra di dialogo **Proprietà traccia** non viene visualizzata e viene invece avviata la traccia. Per modificare le proprietà della traccia è necessario disabilitare questa impostazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
