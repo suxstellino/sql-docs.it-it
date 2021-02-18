@@ -8889,6 +8889,8 @@ items:
                 href: ssms/configure-login-auditing-sql-server-management-studio.md
               - name: Abilitare la copia dalla finestra Trova e sostituisci
                 href: ssms/troubleshoot/enable-copying-find-replace-window.md
+              - name: Abilitare le schede per lo spostamento
+                href: ssms/troubleshoot/workaround-move-tabs.md
               - name: Risolvere problemi
                 items:
                   - name: Ottenere il dump completo della memoria
