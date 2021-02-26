@@ -9,12 +9,12 @@ ms.date: 02/11/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 40cda27b33c982fd8f533994c991c9d681bb936a
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: 210787512ea3ded5aaab660c8973482bb13c2ff4
+ms.sourcegitcommit: 6c93282cce1216dac327cb28848a3ab4d51b776e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100343499"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "100646363"
 ---
 # <a name="open-source-software-reference"></a>Informazioni di riferimento sul software open source
 
@@ -40,7 +40,7 @@ La tabella seguente illustra i progetti open source in uso a partire da [!INCLUD
 | [Livio](https://livy.apache.org/) |0.6.0|0.7.0|
 | [opendistro-elasticsearch-sicurezza](https://www.elastic.co/what-is/elastic-stack-security) | 1.0.0.1 | 1.10.1.0 |
 | [Openresty (Nginx)](https://openresty.org/) | 1.15.8 | 1.17.8.2 |
-| [Spark](configure-spark-hdfs.md) |2.4.6 +|3.0.1|
+| [Spark](configure-spark-hdfs.md) |2.4.6 +|2.4.10|
 | [Telegraf](https://docs.influxdata.com/telegraf/) | 1.10.3 | 1.16.1 |
 | [ZooKeeper](https://cwiki.apache.org/confluence/display/zookeeper) |3.5.8|3.6.2
 

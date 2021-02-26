@@ -1,7 +1,7 @@
 ---
-title: Contatori delle prestazioni MSRS 2016 oggetti prestazioni in modalità SharePoint | Microsoft Docs
+title: Contatori delle prestazioni MSRS 2016 modalità SharePoint, oggetti prestazioni | Microsoft Docs
 description: Informazioni sui contatori delle prestazioni per gli oggetti prestazioni MSRS 2016 Web Service SharePoint Mode e MSRS 2016 Windows Service SharePoint Mode.
-ms.date: 02/12/2021
+ms.date: 02/17/2021
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -17,15 +17,15 @@ ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016'
-ms.openlocfilehash: 2f6b23afa1dcbb79452279397dae289d7084a1f6
-ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
+ms.openlocfilehash: cfa6fbdf2a4f834accd2ec197a8933371a5a6501
+ms.sourcegitcommit: 6c93282cce1216dac327cb28848a3ab4d51b776e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100489395"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "100646343"
 ---
-# <a name="performance-counters-msrs-2016-sharepoint-mode-performance-objects"></a>Contatori delle prestazioni MSRS 2016 oggetti prestazioni in modalità SharePoint
-  Questo argomento descrive i contatori delle prestazioni per gli oggetti prestazioni **MSRS 2016 Web Service SharePoint Mode** e **MSRS 2016 Windows Service SharePoint Mode** che fanno parte di una [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] distribuzione in modalità SharePoint.  
+# <a name="performance-counters-msrs-2016-sharepoint-mode-performance-objects"></a>Contatori delle prestazioni MSRS 2016 modalità SharePoint, oggetti prestazioni
+  Questo argomento descrive i contatori delle prestazioni per gli oggetti prestazioni **MSRS 2016 Web Service SharePoint Mode** e **MSRS 2016 Windows Service SharePoint Mode** che fanno parte di un SQL Server 2016 Reporting Services la distribuzione in modalità SharePoint.  
   
 > [!NOTE]  
 >  Tramite questi oggetti prestazioni vengono monitorati gli eventi nel server di report locale. Se si esegue un server di report in una distribuzione con scalabilità orizzontale, i conteggi si applicano al server corrente e non all'intera distribuzione con scalabilità orizzontale.  

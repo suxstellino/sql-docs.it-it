@@ -1,7 +1,7 @@
 ---
-title: Contatori delle prestazioni MSRS 2016 servizio Web, oggetti prestazioni | Microsoft Docs
+title: Contatori delle prestazioni MSRS 2016 modalità nativa, oggetti prestazioni | Microsoft Docs
 description: Informazioni sui contatori delle prestazioni per gli oggetti prestazioni MSRS 2016 Web Service e MSRS 2016 Windows Service.
-ms.date: 02/12/2021
+ms.date: 02/17/2021
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -17,15 +17,15 @@ ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016'
-ms.openlocfilehash: 1e596957646d1d5f272f85208dfbe1cbdf1c65d2
-ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
+ms.openlocfilehash: 1a6704706a152073cdfa1367aed5c0d194834bec
+ms.sourcegitcommit: 6c93282cce1216dac327cb28848a3ab4d51b776e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100489355"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "100646333"
 ---
-# <a name="performance-counters-msrs-2016-web-service-performance-objects"></a>Contatori delle prestazioni MSRS 2016 servizio Web, oggetti prestazioni
-  Questo argomento descrive i contatori delle prestazioni per gli oggetti prestazioni **MSRS 2016 Web Service** e **MSRS 2016 Windows Service** . Questi oggetti fanno parte di una distribuzione in modalità nativa di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] .  
+# <a name="performance-counters-msrs-2016-native-mode-performance-objects"></a>Contatori delle prestazioni MSRS 2016 modalità nativa, oggetti prestazioni
+  Questo argomento descrive i contatori delle prestazioni per gli oggetti prestazioni **MSRS 2016 Web Service** e **MSRS 2016 Windows Service** . Questi oggetti fanno parte di un SQL Server 2016 Reporting Services la distribuzione in modalità nativa.  
   
 > [!NOTE]  
 >  Tramite questi oggetti prestazioni vengono monitorati gli eventi nel server di report locale. Se si esegue un server di report in una distribuzione con scalabilità orizzontale, i conteggi si applicano al server corrente e non alla distribuzione con scalabilità orizzontale.  
