@@ -1,5 +1,5 @@
 ---
-title: Espressioni di query e Uniform Resource Name | Microsoft Docs
+title: Espressioni di query e Uniform Resource Name
 description: Informazioni sulle espressioni di query, che enumerano uno o più oggetti in una gerarchia del modello a oggetti, e sugli URN (Uniform Resource Name), che identificano in modo univoco un singolo oggetto.
 ms.prod: sql
 ms.technology: sql-server-powershell
@@ -8,22 +8,21 @@ helpviewer_keywords:
 - query expressions
 - unique resource names
 - URN
-ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot, drskwier
 ms.custom: ''
 ms.date: 10/14/2020
-ms.openlocfilehash: ea6bb90e43c66160463cdfa0229826b3a7013762
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: e1955201f60f58c6513928c7185dbbdad16cf445
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "100338233"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101839482"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Espressioni di query e Uniform Resource Name
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 I modelli SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) e gli snap-in PowerShell per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usano due tipi di stringhe di espressione simili alle espressioni XPath. Le espressioni di query sono stringhe che specificano un set di criteri utilizzato per enumerare uno o più oggetti in una gerarchia del modello a oggetti. Un Unique Resource Name (URN) è un tipo specifico di stringa di espressione di query che identifica un singolo oggetto in modo univoco.  
 
