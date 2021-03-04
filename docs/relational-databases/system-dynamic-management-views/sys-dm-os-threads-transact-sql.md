@@ -21,12 +21,12 @@ ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99577571a63cd3a97e8d91b457bfad18eed5bd3d
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: bd05ea40dd38053b30e75323e888689fc903f8f1
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100344365"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837197"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "100344365"
 ## <a name="permissions"></a>Autorizzazioni
 
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
-Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in pool elastici, è necessario l'account [amministratore del server](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) o l'account [amministratore Azure Active Directory](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) . Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.   
+Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in pool elastici, è necessario l'account [amministratore del server](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) o l'account [amministratore Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) . Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.   
 
 ## <a name="notes-on-linux-version"></a>Note sulla versione di Linux
 
@@ -93,6 +93,3 @@ SELECT *
   [sys.dm_os_workers &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)   
  [SQL Server viste a gestione dinamica relative al sistema operativo &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
-  
-
-

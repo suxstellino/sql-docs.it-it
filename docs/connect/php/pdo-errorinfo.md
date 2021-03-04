@@ -11,12 +11,12 @@ ms.topic: reference
 ms.assetid: 9d5481d5-13bc-4388-b3aa-78676c0fc709
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 46b57275d92f4eb6acb64c276e3b34ea67efb429
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 62ad5c26342ce03d3098d5a835776d193df4b88c
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99202031"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837233"
 ---
 # <a name="pdoerrorinfo"></a>PDO::errorInfo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -130,14 +130,14 @@ pdo_sqlsrv.report_additional_errors = 0
 
 ## <a name="warnings-and-errors"></a>Avvisi ed errori
 
-A partire da 5.9.0, gli avvisi ODBC non verranno più registrati come errori. Ovvero, i [codici di errore](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes) con prefisso "01" vengono registrati come avvisi. In altre parole, se l'utente vuole registrare solo gli errori, aggiornare il php.ini come segue:
+A partire da 5.9.0, gli avvisi ODBC non verranno più registrati come errori. Ovvero, i [codici di errore](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md) con prefisso "01" vengono registrati come avvisi. In altre parole, se l'utente vuole registrare solo gli errori, aggiornare il php.ini come segue:
 
 ```
 [pdo_sqlsrv]  
 pdo_sqlsrv.log_severity = 1
 ```
 
-In questo caso, il file di log non conterrà alcun messaggio di avviso. Verificare il funzionamento della [registrazione](https://docs.microsoft.com/sql/connect/php/logging-activity#logging-activity-using-the-pdo_sqlsrv-driver) per PDO_SQLSRV gli utenti.
+In questo caso, il file di log non conterrà alcun messaggio di avviso. Verificare il funzionamento della [registrazione](./logging-activity.md#logging-activity-using-the-pdo_sqlsrv-driver) per PDO_SQLSRV gli utenti.
 
 ## <a name="see-also"></a>Vedere anche  
 [Classe PDO](../../connect/php/pdo-class.md)

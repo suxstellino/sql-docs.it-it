@@ -21,12 +21,12 @@ ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3bd179dd4660ce82e6629619c92e0e0e8e429bc1
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: f7ab67b6e9364f95156d9e13a9183ffd06384080
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100342956"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837686"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "100342956"
 ## <a name="permissions"></a>Autorizzazioni  
 
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
-Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in pool elastici, è necessario l'account [amministratore del server](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) o l'account [amministratore Azure Active Directory](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) . Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.   
+Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in pool elastici, è necessario l'account [amministratore del server](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) o l'account [amministratore Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) . Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.   
     
 ## <a name="remarks"></a>Commenti  
  **sys.dm_exec_query_optimizer_info** contiene le proprietà (contatori) seguenti. Tutti i valori di occorrenza sono cumulativi e vengono impostati su 0 al riavvio del sistema. Tutti i valori dei campi valori vengono impostati su NULL al riavvio del sistema. Tutti i valori delle colonne valori che specificano una media utilizzano il valore di occorrenza della stessa riga del denominatore nel calcolo della media. Tutte le ottimizzazioni delle query vengono misurate quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determina le modifiche apportate **dm_exec_query_optimizer_info**, incluse le query generate dall'utente e dal sistema. L'esecuzione di un piano già memorizzato nella cache non comporta la modifica dei valori in **dm_exec_query_optimizer_info**, ma solo le ottimizzazioni sono significative.  
@@ -132,6 +132,3 @@ SELECT (SELECT CAST (occurrence AS float) FROM sys.dm_exec_query_optimizer_info 
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funzioni e viste a gestione dinamica relative all'esecuzione &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
-  
-
-

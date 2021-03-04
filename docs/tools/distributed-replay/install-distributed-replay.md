@@ -3,20 +3,19 @@ title: Installare Riesecuzione distribuita
 titleSuffix: SQL Server Distributed Replay
 description: Questo articolo descrive i modi in cui è possibile installare Riesecuzione distribuita, ovvero usando l'Installazione guidata, la finestra del prompt dei comandi o un file di configurazione.
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
-ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: fc4c971d62ac4a54a786b426ea8f7855882fa0c2
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 1dfe3a196af914c8cbba177256b41b9da454025b
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100345922"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101838089"
 ---
 # <a name="install-distributed-replay"></a>Installare Riesecuzione distribuita
 
@@ -24,35 +23,36 @@ ms.locfileid: "100345922"
 
 È possibile disinstallare Riesecuzione distribuita in tre modi diversi:  
   
--   [Installare Riesecuzione distribuita dall'Installazione guidata](#bkmk_wizard)  
+- [Installare Riesecuzione distribuita dall'Installazione guidata](#bkmk_wizard)  
   
--   [Installare Riesecuzione distribuita dal prompt dei comandi](#bkmk_command_prompt)  
+- [Installare Riesecuzione distribuita dal prompt dei comandi](#bkmk_command_prompt)  
   
--   [Installare i componenti Riesecuzione distribuita tramite un file di configurazione](#bkmk_configuration_file)  
+- [Installare i componenti Riesecuzione distribuita tramite un file di configurazione](#bkmk_configuration_file)  
   
 ##  <a name="install-distributed-replay-from-the-installation-wizard"></a><a name="bkmk_wizard"></a> Installare Riesecuzione distribuita dall'Installazione guidata  
- Installare le funzionalità di Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'Installazione guidata di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] . Quando si pianifica il percorso di installazione delle funzionalità, considerare gli aspetti seguenti:  
+
+Installare le funzionalità di Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'Installazione guidata di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] . Quando si pianifica il percorso di installazione delle funzionalità, considerare gli aspetti seguenti:  
   
--   Lo strumento di amministrazione può essere installato nello stesso computer del controller di Riesecuzione distribuita o in computer diversi.  
+- Lo strumento di amministrazione può essere installato nello stesso computer del controller di Riesecuzione distribuita o in computer diversi.  
   
--   In ogni ambiente di Riesecuzione distribuita può essere presente un solo controller.  
+- In ogni ambiente di Riesecuzione distribuita può essere presente un solo controller.  
   
--   Il servizio client può essere installato al massimo in 16 computer (fisici o virtuali).  
+- Il servizio client può essere installato al massimo in 16 computer (fisici o virtuali).  
   
--   Nel computer che esegue il controller di Riesecuzione distribuita è possibile installare una sola istanza del servizio client. Se nell'ambiente di Riesecuzione distribuita sarà presente più di un client, si sconsiglia di installare il servizio client nello stesso computer del controller, poiché tale operazione potrebbe causare la diminuzione della velocità complessiva di Riesecuzione distribuita.  
+- Nel computer che esegue il controller di Riesecuzione distribuita è possibile installare una sola istanza del servizio client. Se nell'ambiente di Riesecuzione distribuita sarà presente più di un client, si sconsiglia di installare il servizio client nello stesso computer del controller, poiché tale operazione potrebbe causare la diminuzione della velocità complessiva di Riesecuzione distribuita.  
   
--   Per gli scenari di test delle prestazioni, non si consiglia di installare lo strumento di amministrazione, ovvero il servizio controller di Riesecuzione distribuita, o il servizio client nell'istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'installazione di tutte queste caratteristiche nel server di destinazione deve essere limitata al test funzionale per la compatibilità dell'applicazione.  
+- Per gli scenari di test delle prestazioni, non si consiglia di installare lo strumento di amministrazione, ovvero il servizio controller di Riesecuzione distribuita, o il servizio client nell'istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'installazione di tutte queste caratteristiche nel server di destinazione deve essere limitata al test funzionale per la compatibilità dell'applicazione.  
   
--   Dopo l'installazione, prima di avviare il servizio client Riesecuzione distribuita nei client è necessario che il servizio controller, ovvero il controller di Riesecuzione distribuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sia in esecuzione.  
+- Dopo l'installazione, prima di avviare il servizio client Riesecuzione distribuita nei client è necessario che il servizio controller, ovvero il controller di Riesecuzione distribuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sia in esecuzione.  
   
 > [!NOTE]  
 >  Per rimuovere o modificare le funzionalità di Riesecuzione distribuita, utilizzare la finestra **Programmi e funzionalità** di Windows nel **Pannello di controllo**. Selezionare [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] nella finestra **Disinstalla o modifica programma** , quindi fare clic su **Rimuovi** per aprire l'Installazione guidata di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] . Nella pagina **Seleziona funzionalità** selezionare le funzionalità di Riesecuzione distribuita che si desidera rimuovere.  
   
  **Prerequisiti:**  
   
--   Verificare che i computer che si desidera utilizzare dispongano dei requisiti descritti nell'argomento [Requisiti relativi a Riesecuzione distribuita](../../tools/distributed-replay/distributed-replay-requirements.md).  
+- Verificare che i computer che si desidera utilizzare dispongano dei requisiti descritti nell'argomento [Requisiti relativi a Riesecuzione distribuita](../../tools/distributed-replay/distributed-replay-requirements.md).  
   
--   Prima di iniziare questa procedura, è necessario creare gli account utente di dominio in cui verranno eseguiti i servizi controller e client. È consigliabile che tali account non siano membri del gruppo Administrators di Windows. Per altre informazioni, vedere la sezione Account utente e di servizio nell'argomento [Sicurezza di Distributed Replay](../../tools/distributed-replay/distributed-replay-security.md) .  
+- Prima di iniziare questa procedura, è necessario creare gli account utente di dominio in cui verranno eseguiti i servizi controller e client. È consigliabile che tali account non siano membri del gruppo Administrators di Windows. Per altre informazioni, vedere la sezione Account utente e di servizio nell'argomento [Sicurezza di Distributed Replay](../../tools/distributed-replay/distributed-replay-security.md) .  
   
     > [!NOTE]  
     >  Se lo strumento di amministrazione, il servizio controller e il servizio client sono in esecuzione nello stesso computer è possibile utilizzare gli account utente locali.  
@@ -61,7 +61,7 @@ ms.locfileid: "100345922"
   
  Presupponendo che vengano utilizzati i percorsi dei file predefiniti e un'installazione standard, la directory di base si trova in C:\Programmi\Microsoft SQL Server. In tale directory, i file binari e gli assembly vengono installati nei percorsi seguenti:  
   
--   In un sistema a 32 bit:  
+- In un sistema a 32 bit:  
   
      [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Strumenti  
   
@@ -69,7 +69,7 @@ ms.locfileid: "100345922"
   
      \<Share Feature Directory>\Tools\\(directory della funzionalità condivisa alternativa specificata dall'utente)  
   
--   In un sistema a 64 bit:  
+- In un sistema a 64 bit:  
   
      C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86)\130\Tools  
   
@@ -93,23 +93,23 @@ ms.locfileid: "100345922"
   
 7.  Nella pagina **Selezione funzionalità** specificare le funzionalità che si desidera installare.  
   
-    -   Per installare lo strumento di amministrazione, selezionare **Strumenti di gestione - Di base**.  
+    - Per installare lo strumento di amministrazione, selezionare **Strumenti di gestione - Di base**.  
   
-    -   Per installare il servizio controller, selezionare **Controller di Riesecuzione distribuita**.  
+    - Per installare il servizio controller, selezionare **Controller di Riesecuzione distribuita**.  
   
-    -   Per installare il servizio client, selezionare **Client Riesecuzione distribuita**.  
+    - Per installare il servizio client, selezionare **Client Riesecuzione distribuita**.  
   
      **Importante**: quando si configura il controller di Riesecuzione distribuita, è possibile specificare uno o più account utente da usare per eseguire i servizi client di Riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:  
   
-    -   Account utente di dominio  
+    - Account utente di dominio  
   
-    -   Account utente locale creato dall'utente  
+    - Account utente locale creato dall'utente  
   
-    -   Amministratore  
+    - Amministratore  
   
-    -   Account virtuale e account del servizio gestito  
+    - Account virtuale e account del servizio gestito  
   
-    -   Servizi di rete, Servizi locali e Sistema  
+    - Servizi di rete, Servizi locali e Sistema  
   
      Gli account di gruppo (locale o dominio) e gli altri account predefiniti (come Everyone) non sono accettati.  
   
@@ -188,9 +188,9 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
   
  Il programma di installazione supporta l'utilizzo del file di configurazione solo tramite la riga di comando. L'ordine di elaborazione dei parametri durante l'utilizzo del file di configurazione viene indicato di seguito:  
   
--   Il file di configurazione sovrascrive le impostazioni predefinite in un pacchetto.  
+- Il file di configurazione sovrascrive le impostazioni predefinite in un pacchetto.  
   
--   I valori della riga di comando sovrascrivono quelli presenti nel file di configurazione.  
+- I valori della riga di comando sovrascrivono quelli presenti nel file di configurazione.  
   
  Per ulteriori informazioni su come utilizzare un file di configurazione, vedere [Installare SQL Server 2016 tramite un file di configurazione](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md).  
   
@@ -205,7 +205,7 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
   
 #### <a name="to-install-distributed-replay-using-the-configuration-file"></a>Per installare i componenti Riesecuzione distribuita tramite il file di configurazione  
   
--   Eseguire l'installazione tramite il prompt dei comandi e specificare il file ConfigurationFile.ini utilizzando il parametro ConfigurationFile.  
+- Eseguire l'installazione tramite il prompt dei comandi e specificare il file ConfigurationFile.ini utilizzando il parametro ConfigurationFile.  
   
  **Sintassi di esempio**  
   

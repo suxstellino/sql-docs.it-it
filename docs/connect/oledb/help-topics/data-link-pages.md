@@ -5,17 +5,17 @@ ms.custom: ''
 ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.reviewer: ''
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: 52089c92af76611fe8ab60b53dc7cf2848fb31c5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e3a7367daa776da3641c1b9a506f8f8335ce05d9
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99195311"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837483"
 ---
 # <a name="universal-data-link-udl-configuration"></a>Configurazione di UDL (Universal Data Link)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ Nella scheda Connessione, specifica del provider, vengono visualizzate solo le p
 |Opzione|Descrizione|
 |---   |---        |
 |Selezionare o immettere il nome di un server|Selezionare un nome di server dall'elenco a discesa oppure digitare il percorso del server in cui si trova il database a cui si desidera accedere. La selezione del database nel server è un'azione distinta. Aggiornare l'elenco facendo clic su "Aggiorna".
-|Immettere le informazioni per l'accesso al server|Da questo elenco a discesa è possibile selezionare le opzioni di autenticazione seguenti: <ul><li>`Windows Authentication:` Autenticazione per SQL Server con le credenziali dell'account di Windows dell'utente attualmente connesso.</li><li>`SQL Server Authentication:` Autenticazione con ID di accesso e password.</li><li>`Active Directory - Integrated:` Autenticazione integrata con un'identità di Azure Active Directory. Questa modalità può essere usata anche per l'autenticazione di Windows per SQL Server.</li><li>`Active Directory - Password:` Autenticazione di ID utente e password con un'identità di Azure Active Directory.</li><li>`Active Directory - Universal with MFA support:` Autenticazione interattiva con un'identità di Azure Active Directory. Questa modalità supporta l'autenticazione a più fattori (MFA) di Azure.</li><li>`Active Directory - Service Principal:` Autenticazione con entità servizio di Azure Active Directory. Il **nome utente** deve essere impostato sull'ID applicazione (client). La **password** deve essere impostata sul segreto client dell'applicazione.</li></ul>|
+|Immettere le informazioni per l'accesso al server|Da questo elenco a discesa è possibile selezionare le opzioni di autenticazione seguenti: <ul><li>`Windows Authentication:` Autenticazione per SQL Server con le credenziali dell'account di Windows dell'utente attualmente connesso.</li><li>`SQL Server Authentication:` Autenticazione con ID di accesso e password.</li><li>`Active Directory - Integrated:` Autenticazione integrata con un'identità di Azure Active Directory. Questa modalità può essere usata anche per l'autenticazione di Windows per SQL Server.</li><li>`Active Directory - Password:` Autenticazione di ID utente e password con un'identità di Azure Active Directory.</li><li>`Active Directory - Universal with MFA support:` Autenticazione interattiva con un'identità di Azure Active Directory. Questa modalità supporta Azure Active Directory Multi-Factor Authentication (multi-factor authentication).</li><li>`Active Directory - Service Principal:` Autenticazione con entità servizio di Azure Active Directory. Il **nome utente** deve essere impostato sull'ID applicazione (client). La **password** deve essere impostata sul segreto client dell'applicazione.</li></ul>|
 |SPN server|Se si utilizza una connessione trusted, è possibile specificare un nome dell'entità servizio (SPN) per il server.|
 |Nome utente|Digitare l'ID utente da usare per l'autenticazione quando si accede all'origine dati.|
 |Password|Digitare la password da usare per l'autenticazione quando si accede all'origine dati.|

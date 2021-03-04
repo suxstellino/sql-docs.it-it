@@ -2,7 +2,7 @@
 title: 'Passaggio 3: Connessione a SQL tramite pyodbc'
 description: Il passaggio 3 è un modello di prova che illustra come è possibile connettersi a SQL Server usando Python e pyODBC. Gli esempi di base illustrano la selezione e l'inserimento dei dati.
 ms.custom: ''
-ms.date: 03/01/2020
+ms.date: 03/02/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 26cbdea53547f30a59dc6953d7bf68bddc712164
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
-ms.translationtype: HT
+ms.openlocfilehash: 808cb17d29362e76fdcc69171b21c9ffffd5c1ed
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88807040"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837128"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>Passaggio 3: Modello di verifica per la connessione a SQL tramite pyodbc
 
 Questo esempio è un modello di verifica. Il codice di esempio è semplificato per maggiore chiarezza e non rappresenta necessariamente le procedure consigliate da Microsoft.  
 
-Per iniziare, eseguire lo script di esempio seguente. Creare un file denominato test.py e aggiungere ogni frammento di codice man mano che si procede. 
+Per iniziare, eseguire lo script di esempio seguente. Creare un file denominato test.py e aggiungere ogni frammento di codice man mano che si procede.
 
 ```
 > python test.py
@@ -43,13 +43,11 @@ cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';
 cursor = cnxn.cursor()
 
 ```  
-  
-  
+
 ## <a name="run-query"></a>Esegui query  
   
 Per recuperare un set di risultati di una query sul database SQL è possibile usare la funzione cursor.execute. Questa funzione accetta una query e restituisce un set di risultati su cui è possibile eseguire l'iterazione tramite cursor.fetchone()
-  
-  
+
 ```python
 #Sample select query
 cursor.execute("SELECT @@version;") 
@@ -62,28 +60,23 @@ while row:
   
 ## <a name="insert-a-row"></a>Inserire una riga  
   
-In questo esempio viene mostrato come eseguire un'istruzione [INSERT](../../../t-sql/statements/insert-transact-sql.md) in modo sicuro e come passare i parametri. I parametri proteggono l'applicazione dagli [attacchi SQL injection](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
-  
-  
+In questo esempio viene mostrato come eseguire un'istruzione [INSERT](../../../t-sql/statements/insert-transact-sql.md) in modo sicuro e come passare i parametri. I parametri proteggono l'applicazione dagli [attacchi SQL injection](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).
+
 ```python
 #Sample insert query
-cursor.execute("""
+count = cursor.execute("""
 INSERT INTO SalesLT.Product (Name, ProductNumber, StandardCost, ListPrice, SellStartDate) 
 VALUES (?,?,?,?,?)""",
-'SQL Server Express New 20', 'SQLEXPRESS New 20', 0, 0, CURRENT_TIMESTAMP) 
+'SQL Server Express New 20', 'SQLEXPRESS New 20', 0, 0, CURRENT_TIMESTAMP).rowcount
 cnxn.commit()
-row = cursor.fetchone()
-
-while row: 
-    print('Inserted Product key is ' + str(row[0]))
-    row = cursor.fetchone()
+print('Rows inserted: ' + str(count))
 ```  
 
 ## <a name="azure-active-directory-and-the-connection-string"></a>Azure Active Directory e la stringa di connessione
 
 pyODBC usa Microsoft ODBC Driver for SQL Server.
 Se la versione del driver ODBC è 17.1 o successiva, è possibile usare la modalità interattiva di Azure Active Directory del driver ODBC tramite pyODBC.
-L'opzione interattiva funziona se Python e pyODBC consentono al driver ODBC di visualizzare la finestra di dialogo. L'opzione è disponibile solo nel sistema operativo Windows. 
+L'opzione interattiva funziona se Python e pyODBC consentono al driver ODBC di visualizzare la finestra di dialogo. L'opzione è disponibile solo nel sistema operativo Windows.
 
 ### <a name="example-connection-string-for-azure-active-directory-interactive-authentication"></a>Stringa di connessione di esempio per l'autenticazione interattiva di Azure Active Directory
 

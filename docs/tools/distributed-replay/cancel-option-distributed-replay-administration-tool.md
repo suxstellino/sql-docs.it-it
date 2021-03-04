@@ -2,22 +2,21 @@
 title: Strumento di amministrazione dell'opzione Cancel
 titleSuffix: SQL Server Distributed Replay
 description: Questo articolo descrive l'opzione della riga di comando cancel e la sintassi dello strumento di amministrazione Riesecuzione distribuita di SQL Server.
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
-ms.assetid: fea376de-307a-4b45-b7e2-37df88f3681a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aa67b10652f381091f8415311480ee005f4cdc02
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 21d1d74439b41a6e36287fef957c6c2df24aa1c1
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100345929"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101836926"
 ---
 # <a name="cancel-option-distributed-replay-administration-tool"></a>Opzione cancel (strumento di amministrazione Distributed Replay)
 
@@ -36,7 +35,7 @@ Lo strumento di amministrazione Riesecuzione distribuita di [!INCLUDE[msCoName](
 dreplay cancel [-m controller] [-q]   
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parametri
  **-m** *controller*  
  Nome computer del controller. È possibile utilizzare "`localhost`" o "`.`" per fare riferimento al computer locale.  
   

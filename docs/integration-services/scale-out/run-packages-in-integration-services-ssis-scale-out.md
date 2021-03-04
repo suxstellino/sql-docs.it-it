@@ -6,17 +6,17 @@ ms.date: 12/13/2017
 ms.prod: sql
 ms.technology: integration-services
 ms.topic: conceptual
-author: haoqian
+author: HaoQian-MS
 ms.author: haoqian
 ms.reviewer: maghan
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: 13f9a386b6ab60280edf2d8b494721dd233b042a
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 25f550f711364760de9cc07608b46532cfa34219
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100347410"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101839011"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Eseguire pacchetti nel servizio Integration Services (SSIS) Scale Out
 
@@ -125,6 +125,9 @@ Per impostare nuovamente la modalità di esecuzione predefinita sulla modalità 
 
 ## <a name="run-package-in-sql-server-agent-job"></a><a name="sql_agent"></a>Eseguire un pacchetto in un processo di SQL Server Agent
 In un processo di SQL Server Agent è possibile eseguire un pacchetto SSIS come un passaggio del processo. Per eseguire il pacchetto in Scale Out, impostare la modalità di esecuzione predefinita su **Scale Out**. Dopo aver impostato la modalità di esecuzione predefinita su **Scale Out**, i pacchetti nei processi di SQL Server Agent verranno eseguiti in modalità Scale Out.
+
+> [!NOTE]
+> Non è possibile arrestare Scale Out esecuzione del pacchetto annullando il processo di SQL Server Agent. Per arrestare Scale Out esecuzione, è consigliabile utilizzare il stored procedure catalog.stop_operation o utilizzare il riquadro **operazioni attive** . 
 
 ## <a name="next-steps"></a>Passaggi successivi
 -   [Risoluzione dei problemi di scalabilità orizzontale](troubleshooting-scale-out.md)

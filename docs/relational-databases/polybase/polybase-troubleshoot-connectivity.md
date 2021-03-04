@@ -11,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016'
-ms.openlocfilehash: 0734f0a8163486ab46ef8143966a24adee35194d
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: c1957724f028283c2e3aa6377604726f0c307add
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100079422"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101838048"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Risolvere i problemi di connettività di PolyBase Kerberos
 
@@ -207,7 +207,7 @@ Se è stato eseguito lo strumento e le proprietà del file del percorso di desti
 | javax.security.auth.login.LoginException<br> Checksum non è riuscita |L'entità servizio dell'amministratore esiste, ma la password non è valida. |
 | Native config name: C:\Windows\krb5.ini<br>Caricamento dalla configurazione nativa | Questa messaggio indica che krb5LoginModule di Java ha rilevato configurazioni client personalizzate nel computer. Controllare le impostazioni client personalizzate perché possono essere la causa del problema. |
 | javax.security.auth.login.LoginException<br>java.lang.IllegalArgumentException<br>Illegal principal name admin_user@CONTOSO.COM: org.apache.hadoop.security.authentication.util.KerberosName$NoMatchingRule: No rules applied to admin_user@CONTOSO.COM | Aggiungere la proprietà "hadoop.security.auth_to_local" a core-site.xml con le regole appropriate in base al cluster Hadoop. |
-| java.net.ConnectException<br>Tentativo di accesso esterno del file System nell'URI: hdfs://10.193.27.230:8020<br>Call From IAAS16981207/10.107.0.245 to 10.193.27.230:8020 failed on connection exception | L'autenticazione per il KDC è riuscita, ma non è stato possibile accedere al nodo del nome Hadoop. Controllare l'IP e la porta del nodo del nome. Verificare che il firewall sia disabilitato in Hadoop. |
+| java.net.ConnectException<br>Tentativo di accesso esterno del file System nell'URI: hdfs://10.193.27.230:8020<br>Call From IAAS16981207/10.107.0.245 to 10.193.27.230:8020 failed on connection exception |    L'autenticazione per il KDC è riuscita, ma non è stato possibile accedere al nodo del nome Hadoop. Controllare l'IP e la porta del nodo del nome. Verificare che il firewall sia disabilitato in Hadoop. |
 | java.io.FileNotFoundException<br>File inesistente: /test/data.csv |    L'autenticazione è riuscita, ma il percorso specificato non esiste. Controllare il percorso o eseguire prima un test con la radice "/" . |
 
 ## <a name="debugging-tips"></a>Suggerimenti per il debug
@@ -256,4 +256,5 @@ Se si riscontrano ancora problemi ad accedere a Kerberos, attenersi alla procedu
 [Blog sull'integrazione di PolyBase con Cloudera usando l'autenticazione di Active Directory](/archive/blogs/microsoftrservertigerteam/integrating-polybase-with-cloudera-using-active-directory-authentication)  
 [Guida di Cloudera per la configurazione di Kerberos per CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
 [Guida di Hortonworks per la configurazione di Kerberos per HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)  
-[Risoluzione dei problemi di PolyBase](polybase-troubleshooting.md)
+[Risoluzione dei problemi di base](polybase-troubleshooting.md)   
+[Errori di polibase e possibili soluzioni](polybase-errors-and-possible-solutions.md)   

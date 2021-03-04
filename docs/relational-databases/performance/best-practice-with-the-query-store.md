@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83985f8cb34b9efa8485f9827dd9692a38f91a65
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: c8379a2e1c18ea5da82abda5ad25dee47679a742
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "100344796"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837781"
 ---
 # <a name="best-practices-with-query-store"></a>Procedure consigliate per Query Store
 
@@ -441,7 +441,7 @@ I flag di traccia globali 7745 e 7752 possono essere usati per migliorare la dis
 
 Query Store in una replica geografica attiva secondaria del database SQL di Azure sarà una copia di sola lettura dell'attività nella replica primaria. 
 
-Evitare la partecipazione alla replica geografica di livelli di database SQL di Azure non corrispondenti. Un database secondario deve avere dimensioni di calcolo uguali o molto simili al database primario ed essere incluso nello stesso livello di servizio del database primario. Cercare il tipo di attesa HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO in [sys.dm_db_wait_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database), che indica la limitazione della frequenza del log delle transazioni nella replica primaria a causa del ritardo del database secondario.
+Evitare la partecipazione alla replica geografica di livelli di database SQL di Azure non corrispondenti. Un database secondario deve avere dimensioni di calcolo uguali o molto simili al database primario ed essere incluso nello stesso livello di servizio del database primario. Cercare il tipo di attesa HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO in [sys.dm_db_wait_stats](../system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md), che indica la limitazione della frequenza del log delle transazioni nella replica primaria a causa del ritardo del database secondario.
 
 Per altre informazioni sulla stima e la configurazione delle dimensioni del database SQL di Azure secondario della replica geografica attiva, vedere [Configurazione del database secondario](/azure/azure-sql/database/active-geo-replication-overview#configuring-secondary-database).
 

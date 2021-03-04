@@ -2,7 +2,7 @@
 title: Connessione con sqlcmd
 description: Informazioni su come usare l'utilità sqlcmd con Microsoft ODBC Driver for SQL Server in Linux e macOS.
 ms.custom: ''
-ms.date: 06/22/2020
+ms.date: 02/24/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5d69f1a19e0494b7426eebbac7d8732794f90be8
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
-ms.translationtype: HT
+ms.openlocfilehash: 216f78615ca049d3e97134cb14831d9a5e6afd32
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987907"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837362"
 ---
 # <a name="connecting-with-sqlcmd"></a>Connessione con sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -57,6 +57,12 @@ Nella versione corrente, sono disponibili le opzioni seguenti:
 - -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage] Specifica le tabelle codici di input e output. Il numero specificato per codepage è un valore numerico che indica una tabella codici di Linux installata.
 (disponibile dalla versione 17.5.1.1)
 
+- -G questa opzione viene usata dal client durante la connessione al database SQL o a Azure sinapsi Analytics per specificare che l'utente deve essere autenticato usando l'autenticazione Azure Active Directory. Questa opzione imposta la variabile di scripting SQLCMDUSEAAD = true di sqlcmd . L'opzione-G richiede almeno sqlcmd versione 17,6. Per determinare la versione, eseguire sqlcmd-?.
+
+> [!IMPORTANT]
+> L' `-G` opzione si applica solo al database SQL di Azure e ad Azure sinapsi Analytics.
+> L'autenticazione integrata di AAD non è attualmente supportata in Linux o macOS. Per l'autenticazione integrata di AAD è necessario [Microsoft ODBC driver 17 for SQL Server](../download-odbc-driver-for-sql-server.md) versione 17.6.1 o successiva e un [ambiente Kerberos configurato](using-integrated-authentication.md#configure-kerberos)correttamente.
+
 - -h *numero_di_righe* Specifica il numero di righe da stampare tra le intestazioni delle colonne.  
   
 - -H Specifica il nome di una workstation.  
@@ -85,7 +91,7 @@ Specificare sempre **-M** in caso di connessione al listener di un gruppo di dis
   
 - -N Crittografa la connessione.  
   
-- -o *file_output*Identifica il file che riceve l'output di `sqlcmd`.  
+- -o *file_output* Identifica il file che riceve l'output di `sqlcmd`.  
   
 - -p Stampa le statistiche delle prestazioni per ogni set di risultati.  
   
@@ -123,6 +129,10 @@ Specifica l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.m
 - -y *variable_length_type_display_width* Imposta la variabile di scripting di `sqlcmd` `SQLCMDMAXFIXEDTYPEWIDTH`.
   
 - -Y *fixed_length_type_display_width* Imposta la variabile di scripting di `sqlcmd` `SQLCMDMAXVARTYPEWIDTH`.
+
+- -z *password* Modifica la password.  
+  
+- -Z *password* Modifica la password ed esce.  
 
 
 ## <a name="available-commands"></a>Comandi disponibili
@@ -195,10 +205,6 @@ Eseguire `sqlcmd` e usare `c.sql` come file di input:
     sqlcmd -S<...> -P<..> -U<..> -I c.sql  
 ```
 
-- -z *password* Modifica la password.  
-  
-- -Z *password* Modifica la password ed esce.  
-
 ## <a name="unavailable-commands"></a>Comandi non disponibili
 
 Nella versione corrente non sono disponibili i comandi seguenti:  
@@ -221,7 +227,7 @@ Per l'elenco delle voci supportate dal driver, vedere [Parole chiave e attributi
 
 In un DSN, solo la voce DRIVER è obbligatoria, ma per connettersi a un server remoto, `sqlcmd` o `bcp` richiede un valore nell'elemento SERVER. Se l'elemento SERVER è vuoto o non è presente nel DSN, `sqlcmd` e `bcp` proveranno a connettersi all'istanza predefinita nel sistema locale.
 
-Quando si usa bcp nei sistemi Windows, [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] e versioni precedenti richiedono il driver SQL Native Client 11 (sqlncli11.dll), mentre [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] e versioni successive richiedono Microsoft ODBC Driver 17 for SQL Server (msodbcsql17.dll).  
+Quando si usa bcp nei sistemi Windows, [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] e versioni precedenti richiedono il driver SQL Native Client 11 (sqlncli11.dll), mentre [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] e versioni successive richiedono Microsoft ODBC Driver 17 for SQL Server (msodbcsql17.dll).  
 
 Se è specificata la stessa opzione sia nel DSN che nella riga di comando di `sqlcmd` o di `bcp`, l'opzione della riga di comando sostituisce il valore usato nel DSN. Se ad esempio il DSN include una voce DATABASE e la riga di comando di `sqlcmd` include **-d**, viene usato il valore passato a **-d**. Se si specifica **Trusted_Connection=yes** nel DNS, viene usata l'autenticazione Kerberos e il nome utente ( **-U**) e la password ( **-P**), se specificati, vengono ignorati.
 

@@ -5,18 +5,18 @@ ms.custom: ''
 ms.date: 07/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ''
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ''
 author: peterbae
 ms.author: v-hyba
-ms.openlocfilehash: bfc8816c30020669918b3632f94e289524097537
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: 168034034e5f2abe53bd47029b99fa78c250336b
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438443"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101836968"
 ---
 # <a name="client-certificate-authentication-for-loopback-scenarios"></a>Autenticazione del certificato client per scenari di loopback
 
@@ -44,7 +44,7 @@ clientKey=<file_location>
 ```
 Specifica il percorso del file di chiave privata. Se il file di chiave privata è protetto da password, è necessario specificare la parola chiave della password. Il percorso del file può essere relativo o assoluto.
 
-* clientKeyPassword: stringa di password facoltativa fornita per accedere alla chiave privata del file clientkey.
+* clientKeyPassword: stringa di password facoltativa fornita per accedere alla chiave privata del file clientkey vuoto.
 
 Questa funzionalità è supportata ufficialmente solo per gli scenari di autenticazione del loopback per Linux SQL Server 2019 e versioni successive.
 

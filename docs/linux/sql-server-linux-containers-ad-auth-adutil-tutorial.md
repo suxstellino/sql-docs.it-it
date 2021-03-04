@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 61f03a3d1175e5d38952c3e9e578a025c474188a
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: c82362cf9a3d73d1bd9a7c714957e222ad15af18
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "100273112"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837632"
 ---
 # <a name="tutorial-configure-active-directory-authentication-with-sql-server-on-linux--containers"></a>Esercitazione: Configurare l'autenticazione di Active Directory con contenitori di SQL Server in Linux
 
@@ -158,13 +158,13 @@ Per abilitare l'autenticazione di Active Directory nei contenitori di SQL Server
 2. Usando lo strumento adutil, creare il nuovo utente che verrà usato come account AD con privilegi da SQL Server.
 
    ```bash
-   adutil user create --name sqluser -distname CN=sqluser,CN=Users,DC=CONTOSO,DC=COM --password 'P@ssw0rd'
+   adutil user create --name sqluser --distname CN=sqluser,CN=Users,DC=CONTOSO,DC=COM --password 'P@ssw0rd'
    ```
 
     > [!NOTE]
     > È possibile specificare le password in uno dei tre modi seguenti:
     >
-    > - Flag password: password \<password\>
+    > - Flag password: --password \<password\>
     > - Variabili di ambiente: `ADUTIL_ACCOUNT_PWD`
     > - Input interattivo
     >

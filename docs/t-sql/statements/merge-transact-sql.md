@@ -2,7 +2,7 @@
 description: MERGE (Transact-SQL)
 title: MERGE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/20/2019
+ms.date: 02/27/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
@@ -26,12 +26,12 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: XiaoyuMSFT
 ms.author: XiaoyuL
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||  azure-sqldw-latest
-ms.openlocfilehash: 6bb1014c22353826b6e4429726d4d28549cc274a
-ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
+ms.openlocfilehash: c7b388649cf7ca535d5d81eb2d05cf4f0a27d373
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100489335"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101838962"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -238,16 +238,84 @@ Specifica il modello di corrispondenza del grafico. Per altre informazioni sugli
 >[!NOTE]
 > In Azure Synapse Analytics, il comando MERGE (anteprima) presenta le differenze seguenti rispetto a SQL Server e al database SQL di Azure.  
 > - Un'azione di aggiornamento di MERGE viene implementata come una coppia di azioni di eliminazione e inserimento. Il numero di righe interessate da un'azione di aggiornamento di MERGE include le righe eliminate e inserite. 
-
 > - Durante l'anteprima, Esegui MERGE... Quando l'istruzione INSERT non corrispondente non è supportata per le tabelle con colonne IDENTITY.  
-
 > - In questa tabella viene descritto il supporto per le tabelle con tipi di distribuzione diversi:
-
+>
 >|CLAUSOLA MERGE in Azure Synapse Analytics|Supporto della tabella di distribuzione TARGET| Supporto della tabella di distribuzione SOURCE|Commento|  
 >|-----------------|---------------|-----------------|-----------|  
 >|**WHEN MATCHED**| Tutti i tipi di distribuzione |Tutti i tipi di distribuzione||  
 >|**NOT MATCHED BY TARGET**|HASH |Tutti i tipi di distribuzione|Usare UPDATE/DELETE FROM…JOIN per sincronizzare le due tabelle. |
 >|**NOT MATCHED BY SOURCE**|Tutti i tipi di distribuzione|Tutti i tipi di distribuzione|||  
+
+>[!IMPORTANT]
+> In Azure sinapsi Analytics il comando MERGE, attualmente in anteprima, può, in determinate condizioni, lasciare la tabella di destinazione in uno stato incoerente, con righe inserite nella distribuzione non corretta, causando query successive che restituiscono risultati errati in alcuni casi. Questo problema può verificarsi quando vengono soddisfatte queste due condizioni:
+>
+> - L'istruzione T-SQL MERGE è stata eseguita su una tabella di destinazione con distribuzione HASH nel database SQL di Azure sinapsi.
+> - La tabella di destinazione dell'Unione include indici secondari o vincoli UNIQUE.
+>
+> Fino a quando la correzione non è disponibile, evitare di usare il comando MERGE in tabelle di destinazione distribuite con HASH con indici secondari o vincoli univoci.  Il supporto della funzionalità di MERGE può anche essere temporaneamente disabilitato nei database con tabelle con distribuzione HASH con vincoli UNIQUE o indici secondari.      
+>
+> Un promemoria importante, le funzionalità di anteprima sono destinate solo ai test e non devono essere usate in istanze di produzione o dati di produzione. Se i dati sono importanti, conserva anche una copia dei dati di test.
+> 
+> Per verificare quali tabelle hash distribuite in un database non possono funzionare con MERGE a causa di questo problema, eseguire questa istruzione
+>```sql
+> select a.name, c.distribution_policy_desc, b.type from sys.tables a join sys.indexes b
+> on a.object_id = b.object_id
+> join
+> sys.pdw_table_distribution_properties c
+> on a.object_id = c.object_id
+> where b.type = 2 and c.distribution_policy_desc = 'HASH'
+> ```
+> 
+> Per verificare se una tabella di destinazione con distribuzione hash per l'Unione è interessata da questo problema, attenersi alla procedura seguente per esaminare se le tabelle contengono righe in una distribuzione non corretta.  Se viene restituito ' No Need for repair ', questa tabella non è interessata.  
+>
+>```sql
+> if object_id('[check_table_1]', 'U') is not null
+> drop table [check_table_1]
+> go
+> if object_id('[check_table_2]', 'U') is not null
+> drop table [check_table_2]
+> go
+>
+> create table [check_table_1] with(distribution = round_robin) as
+> select <DISTRIBUTION_COLUMN> as x from <MERGE_TARGET_TABLE> group by <DISTRIBUTION_COLUMN>;
+> go
+>
+> create table [check_table_2] with(distribution = hash(x)) as
+> select x from [check_table_1];
+>go
+>
+> if not exists(select top 1 * from (select <DISTRIBUTION_COLUMN> as x from <MERGE_TARGET_TABLE> except select x from 
+> [check_table_2]) as tmp)
+> select 'no need for repair' as result
+> else select 'needs repair' as result
+> go
+>
+> if object_id('[check_table_1]', 'U') is not null
+> drop table [check_table_1]
+> go
+> if object_id('[check_table_2]', 'U') is not null
+> drop table [check_table_2]
+> go
+>```
+>Per ripristinare le tabelle interessate, eseguire queste istruzioni per copiare tutte le righe della tabella precedente in una nuova tabella.
+>```sql
+> if object_id('[repair_table_temp]', 'U') is not null
+> drop table [repair_table_temp];
+> go
+> if object_id('[repair_table]', 'U') is not null
+> drop table [repair_table];
+> go
+> create table [repair_table_temp] with(distribution = round_robin) as select * from <MERGE_TARGET_TABLE>;
+> go
+>
+> -- [repair_table] will hold the repaired table generated from <MERGE_TARGET_TABLE>
+> create table [repair_table] with(distribution = hash(<DISTRIBUTION_COLUMN>)) as select * from [repair_table_temp];
+> go
+>if object_id('[repair_table_temp]', 'U') is not null
+> drop table [repair_table_temp];
+> go
+> ```   
 
 È necessario specificare almeno una delle tre clausole MATCHED, le quali possono essere tuttavia specificate in qualsiasi ordine. Non è possibile aggiornare una variabile più di una volta nella stessa clausola MATCHED.  
   

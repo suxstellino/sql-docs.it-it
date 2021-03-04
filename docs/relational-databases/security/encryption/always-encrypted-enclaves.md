@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: e84635c1f32396e033841c546dafc1796624d5ab
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: cbec7eb15ed8acad746e3fcb2013ee8100bcdd26
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99237091"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837701"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted con enclave sicuri
 
@@ -46,7 +46,7 @@ Durante l'elaborazione dell'istruzione, sia i dati che le chiavi di crittografia
 
 In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] Always Encrypted con enclave sicuri usa gli enclave di memoria sicuri di tipo [sicurezza basata su virtualizzazione](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) in Windows, noti anche come enclave in modalità protetta virtuale o VSM.
 
-In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], Always Encrypted con enclave sicure usa le enclave [Intel Software Guard Extensions (Intel SGX)](https://itpeernetwork.intel.com/microsoft-azure-confidential-computing/). Intel SGX è una tecnologia ambientale di esecuzione attendibile basata su hardware supportata nei database che usano la configurazione hardware della [serie DC](https://docs.microsoft.com/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series).
+In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], Always Encrypted con enclave sicure usa le enclave [Intel Software Guard Extensions (Intel SGX)](https://itpeernetwork.intel.com/microsoft-azure-confidential-computing/). Intel SGX è una tecnologia ambientale di esecuzione attendibile basata su hardware supportata nei database che usano la configurazione hardware della [serie DC](/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series).
 
 ## <a name="secure-enclave-attestation"></a>Attestazione delle enclave sicure
 
@@ -56,7 +56,7 @@ Il processo di verifica dell'enclave è chiamato **attestazione dell'enclave** e
 
 Il processo di attestazione per le enclave sicure con sicurezza basata su virtualizzazione in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] è l'[attestazione di runtime di System Guard di Windows Defender](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/), che richiede il servizio Sorveglianza host come servizio di attestazione. 
 
-L'attestazione delle enclave di Intel SGX nel [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] richiede l'[attestazione di Microsoft Azure](https://docs.microsoft.com/azure/attestation/overview).
+L'attestazione delle enclave di Intel SGX nel [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] richiede l'[attestazione di Microsoft Azure](/azure/attestation/overview).
 
 > [!NOTE]
 > [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] non supporta l'attestazione di Microsoft Azure. Il servizio Sorveglianza host è l'unica soluzione di attestazione supportata per le enclave con sicurezza basata su virtualizzazione in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)].
@@ -167,7 +167,7 @@ Occorre tenere presenti queste considerazioni specifiche:
   - Se il database include indici sulle colonne abilitate per l'enclave con crittografia casuale, assicurarsi di abilitare il [ripristino accelerato del database](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) nel database prima di creare un backup del database. Il ripristino accelerato del database garantirà che il database, inclusi gli indici, sarà immediatamente disponibile dopo il ripristino del database. Per altre informazioni, vedere [Ripristino del database](#database-recovery).
   
 - **Database SQL di Azure**
-  - Quando si configura la [replica geografica attiva](https://docs.microsoft.com/azure/azure-sql/database/active-geo-replication-overview), verificare che un database secondario supporti le enclave sicure, se il database primario le supporta.
+  - Quando si configura la [replica geografica attiva](/azure/azure-sql/database/active-geo-replication-overview), verificare che un database secondario supporti le enclave sicure, se il database primario le supporta.
 
 Sia in SQL Server che nel database SQL di Azure, quando si esegue la migrazione del database tramite un file con estensione bacpac, è necessario accertarsi di eliminare tutti gli indici per le colonne abilitate per l'enclave con crittografia casuale prima di creare il file con estensione bacpac.
 

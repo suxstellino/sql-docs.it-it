@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4f53290d9b9a1ecd161ef02161f29c172297a93f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
-ms.translationtype: HT
+ms.openlocfilehash: 4e918602b3793d95d6192a832f110500454ee8a5
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727418"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837374"
 ---
 # <a name="using-integrated-authentication"></a>Uso dell'autenticazione integrata
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -107,7 +107,7 @@ Di seguito è indicata la sintassi usata per i nomi SPN nella stringa di conness
   
 ## <a name="authenticating-a-linux-or-macos-computer-with-active-directory"></a>Autenticazione di un computer Linux o macOS con Active Directory
 
-Per configurare Kerberos, immettere dati nel file `krb5.conf`. `krb5.conf` è in `/etc/` ma è possibile fare riferimento a un altro file tramite la sintassi, ad esempio `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`. Di seguito è riportato un file `krb5.conf` di esempio:  
+<a name="configure-kerberos"></a>Per configurare Kerberos, immettere i dati nel `krb5.conf` file. `krb5.conf` è in `/etc/` ma è possibile fare riferimento a un altro file tramite la sintassi, ad esempio `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`. Di seguito è riportato un file `krb5.conf` di esempio:  
   
 ```  
 [libdefaults]  

@@ -33,12 +33,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5a6fd7131b63741a82c120e1e0b222405865a9d
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 505cda4f226945cd8788e777b8ac1ea35a3aa47e
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99237182"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837728"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -210,7 +210,10 @@ Clausola OUTPUT
  Se i valori dell'elenco di valori non sono nello stesso ordine delle colonne della tabella o se non è disponibile un valore per ogni colonna della tabella, è necessario usare *column_list* per specificare in modo esplicito la colonna in cui vengono archiviati i valori inseriti.  
   
  È possibile utilizzare il costruttore di riga di [!INCLUDE[tsql](../../includes/tsql-md.md)], denominato anche costruttore di valori di tabella, per specificare più righe in una singola istruzione INSERT. Il costruttore di riga è costituito da una singola clausola VALUES con più elenchi di valori racchiusi tra parentesi e separati da una virgola. Per altre informazioni, vedere [Costruttore di valori di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md).  
-  
+
+> [!NOTE]  
+> In Azure sinapsi Analytics i valori di inserimento possono essere solo valori letterali costanti o riferimenti a variabili. Per inserire un valore non letterale, impostare una variabile su un valore non costante e inserire la variabile.
+
  DEFAULT  
  Forza il caricamento nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] del valore predefinito di una colonna. Se per la colonna non è disponibile alcun valore predefinito e la colonna ammette valori NULL, viene inserito un valore NULL. Per una colonna definita con tipo di dati **timestamp**, viene inserito il valore timestamp successivo. DEFAULT non è un valore valido per una colonna Identity.  
   

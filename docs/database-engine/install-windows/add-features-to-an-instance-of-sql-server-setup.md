@@ -8,27 +8,29 @@ helpviewer_keywords:
 - feature adding [SQL Server]
 - " SQL Server, features"
 - adding features to  SQL Server
-ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 author: cawrites
 ms.author: chadam
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 09/07/2019
+ms.date: 02/05/2021
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 2f756136657d20a694cbaa2263500624eeaf8c27
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: b8b520e3c5f44342970881e3e67b3dbf95ce9853
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100347871"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837575"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>Aggiungere funzionalità a un'istanza di SQL Server (programma di installazione)
 
 [!INCLUDE [ SQL Server - Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-Questo articolo offre una procedura dettagliata per aggiungere funzionalità a un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Alcuni componenti o servizi di SQL Server sono specifici di un'istanza di SQL Server. Essi sono anche noti come specifici dell'istanza. Condividono la stessa versione dell'istanza che li ospita e vengono utilizzati esclusivamente per quell'istanza. È possibile aggiungere i componenti specifici dell'istanza a un'istanza di SQL Server, insieme ai componenti condivisi, se non sono già installati. Per un elenco delle funzionalità supportate dalle edizioni di SQL Server, vedere [Edizioni e funzionalità supportate per SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md) o [SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md).
+Questo articolo offre una procedura dettagliata per aggiungere funzionalità a un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Alcuni componenti o servizi di SQL Server sono specifici di un'istanza di SQL Server. Essi sono anche noti come specifici dell'istanza. Condividono la stessa versione dell'istanza che li ospita e vengono utilizzati esclusivamente per quell'istanza. È possibile aggiungere i componenti in grado di riconoscere istanze a un'istanza SQL Server, insieme ai componenti condivisi di, se non sono già installati. Per un elenco delle funzionalità supportate dalle diverse edizioni di SQL Server, vedere [edizioni e funzionalità supportate di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md) o [SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md).
 
 Per aggiungere funzionalità a un'istanza di SQL Server dal prompt dei comandi, vedere [Installare SQL Server dal prompt dei comandi](./install-sql-server-from-the-command-prompt.md).
+
+> [!CAUTION]
+> L'aggiunta di funzionalità a un'installazione esistente di SQL Server installerà le funzionalità a livello di versione del supporto di installazione di, che potrebbero essere dietro le altre funzionalità di SQL Server. Questo può causare un comportamento imprevisto o errori. Seguire sempre il completamento del programma di installazione di SQL Server portando la nuova funzionalità allo stesso livello di versione. Installare i Service Pack (SPs), gli aggiornamenti cumulativi (CUs) e/o le versioni di distribuzione generale (GDR) in base alle esigenze. Per determinare la versione delle funzionalità aggiunte a un'installazione di SQL Server, vedere [determinare la versione, l'edizione e il livello di aggiornamento di SQL Server e i relativi componenti](https://docs.microsoft.com/troubleshoot/sql/general/determine-version-edition-update-level).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -38,7 +40,7 @@ Prima di continuare, vedere gli articoli in [Pianificazione di un'installazione 
 > Per le installazioni locali è necessario eseguire il programma di installazione come amministratore. Se si installa SQL Server da una condivisione remota, è necessario usare un account di dominio che abbia le autorizzazioni di lettura per la condivisione remota.  
   
 > [!NOTE]
-> Quando si aggiungono funzionalità a un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], le impostazioni delle segnalazioni relative all'utilizzo delle funzionalità esistenti vengono applicate alle funzionalità aggiunte. Per modificare queste impostazioni, usare lo strumento **Segnalazione errori e utilizzo funzionalità di SQL Server**, disponibile nel menu **Strumenti di configurazione** di SQL Server.
+> Quando si aggiungono funzionalità a un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], le impostazioni delle segnalazioni relative all'utilizzo delle funzionalità esistenti vengono applicate alle funzionalità aggiunte. Per modificare queste impostazioni, usare lo strumento **segnalazione errori e utilizzo** funzionalità di SQL Server nel menu SQL Server **strumenti di configurazione** .
 
 ## <a name="procedures"></a>Procedure
 
@@ -156,3 +158,4 @@ Configurare l'installazione di SQL Server
 - [Ripristinare un'installazione non riuscita di SQL Server 2016](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)
 - [Eseguire l'aggiornamento a SQL Server usando l'Installazione guidata &#40;programma di installazione&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 - [Installare SQL Server dal prompt dei comandi](./install-sql-server-from-the-command-prompt.md)
+- [Ultimi aggiornamenti per SQL Server](latest-updates-for-microsoft-sql-server.md)

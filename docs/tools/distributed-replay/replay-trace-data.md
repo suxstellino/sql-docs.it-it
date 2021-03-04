@@ -2,25 +2,25 @@
 title: Riprodurre i dati di traccia
 titleSuffix: SQL Server Distributed Replay
 description: Con la funzionalità Riesecuzione distribuita di SQL Server, usare l'opzione di riproduzione dello strumento di amministrazione per avviare la fase di riproduzione dell'evento della riesecuzione distribuita.
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
-ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4035d5faf74365939e2696dd83a13b1b512e84b0
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 3f8a09d9580f6ff4fd06fc23ab0b5fa20cdc4835
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100349531"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101838902"
 ---
 # <a name="replay-trace-data"></a>Riproduzione di dati di traccia
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   È possibile avviare una riproduzione distribuita con la funzionalità Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dopo aver preparato i dati di traccia di input. Per altre informazioni, vedere [Preparazione dei dati di traccia di input](../../tools/distributed-replay/prepare-the-input-trace-data.md).  
   
  Usare l'opzione **replay** dello strumento di amministrazione per avviare la fase di riproduzione dell'evento della riesecuzione distribuita. Questa fase è costituita da due parti: il recapito dei dati di traccia e l'avvio e la sincronizzazione della riproduzione distribuita.  

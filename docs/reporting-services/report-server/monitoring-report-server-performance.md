@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: deae632ce9305b58b72e24e1a57507f9f4c5ee89
-ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
+ms.openlocfilehash: f24b3bb19150271532561d691a1ed1f4c89dfbc5
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100489435"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101838088"
 ---
 # <a name="monitoring-report-server-performance"></a>Monitoraggio delle prestazioni del server di report
 
@@ -68,13 +68,13 @@ SQL Server 2016 Reporting Services include gli oggetti prestazione seguenti:
   
 -   **ReportServer:Service** e **ReportServerSharePoint:Service** per il monitoraggio degli eventi correlati ad HTTP e per la gestione della memoria. Questi contatori sono specifici di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e consentono di tenere traccia degli eventi correlati ad HTTP per il server di report, ad esempio richieste, connessioni e tentativi di accesso. Questo oggetto prestazione, inoltre, include contatori correlati alla gestione della memoria.  
   
- Se sono presenti più istanze del server di report in uno stesso computer, è possibile scegliere se monitorare le istanze insieme o separatamente. Scegliere quali istanze includere quando si aggiunge un contatore. Per ulteriori informazioni sull'utilizzo di performance monitor (Perfmon. msc) e sull'aggiunta di contatori, vedere la [!INCLUDE[msCoName](../../includes/msconame-md.md)] documentazione del prodotto [Windows Performance Monitor](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249(v=ws.11)) .  
+ Se sono presenti più istanze del server di report in uno stesso computer, è possibile scegliere se monitorare le istanze insieme o separatamente. Scegliere quali istanze includere quando si aggiunge un contatore. Per ulteriori informazioni sull'utilizzo di performance monitor (Perfmon. msc) e sull'aggiunta di contatori, vedere la [!INCLUDE[msCoName](../../includes/msconame-md.md)] documentazione del prodotto [Windows Performance Monitor](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249(v=ws.11)) .  
   
 ## <a name="other-performance-counters"></a>Altri contatori delle prestazioni  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]I contatori delle prestazioni personalizzati sono disponibili solo per gli oggetti prestazioni Reporting Services elencati sopra. Gli oggetti prestazioni .NET Framework seguenti forniscono dati di monitoraggio delle prestazioni aggiuntivi per il server di report.
  
  > [!NOTE]
- > Server di report di Power BI e SQL Server Reporting Services 2017 e versioni successive non includono Reporting Services oggetti prestazione. Sono disponibili [.NET Framework contatori delle prestazioni](https://docs.microsoft.com/dotnet/framework/debug-trace-profile/performance-counters) per fornire il monitoraggio delle prestazioni per il server di report. 
+ > Server di report di Power BI e SQL Server Reporting Services 2017 e versioni successive non includono Reporting Services oggetti prestazione. Sono disponibili [.NET Framework contatori delle prestazioni](/dotnet/framework/debug-trace-profile/performance-counters) per fornire il monitoraggio delle prestazioni per il server di report. 
  
 |Oggetto prestazione|Note|  
 |------------------------|-----------|  
@@ -98,4 +98,3 @@ SQL Server 2016 Reporting Services include gli oggetti prestazione seguenti:
  [Configurare la memoria disponibile per applicazioni del server di report](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
  [Server di report di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Strumenti di Reporting Services](../../reporting-services/tools/reporting-services-tools.md)  
-  

@@ -13,12 +13,12 @@ ms.assetid: 8cf27be1-e66d-4735-a428-9ab4b33af4f5
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 444691b0ec7196c2dcb09426b7e7cb3063445826
-ms.sourcegitcommit: 0bee2b4392d50151c3839a937371588cc2ce2d3e
+ms.openlocfilehash: ce49303d14dc92811b383349c7fa8d74202ab8ea
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98669128"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101836938"
 ---
 # <a name="tables-and-columns-dialog-box-visual-database-tools"></a>Finestra di dialogo Tabelle e colonne (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,5 +47,4 @@ Elenca le colonne della tabella selezionata nell'elenco **Tabella chiave esterna
 > Le colonne selezionate per la chiave esterna devono avere lo stesso tipo di dati delle colonne primarie a cui corrispondono. In ogni chiave deve esistere un numero uguale di colonne. Se ad esempio la chiave primaria della tabella sul lato primario della relazione è composta da due colonne, ognuna di queste colonne dovrà corrispondere a una colonna della tabella sul lato chiave esterna della relazione.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Procedura: creare relazioni tra tabelle](https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)  
-  
+[Procedura: creare relazioni tra tabelle](../../relational-databases/tables/create-foreign-key-relationships.md)  

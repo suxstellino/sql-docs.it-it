@@ -4,18 +4,17 @@ description: Informazioni su come controllare il completamento alla pressione de
 ms.prod: sql
 ms.technology: sql-server-powershell
 ms.topic: conceptual
-ms.assetid: 6296848a-890f-4ad3-8d9f-92ed6a79aa00
 author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot, drskwier
 ms.custom: ''
 ms.date: 10/14/2020
-ms.openlocfilehash: cca82925c95b360bff522bc813798485628d4382
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 4fd55fc24889e84757fb1d78f5e9cd5c8dbb7212
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100339041"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101838018"
 ---
 # <a name="manage-tab-completion-with-sql-server-powershell"></a>Gestire il completamento alla pressione del tasto TAB (SQL Server PowerShell)
 

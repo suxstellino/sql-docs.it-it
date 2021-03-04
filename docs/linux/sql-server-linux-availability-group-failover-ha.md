@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 52fbeee33dd992f4916f33a1545b59265a8b47f9
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 863278eacebc4b405a4a44e72c4318e950d0cc1d
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100345649"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837672"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Failover di un gruppo di disponibilità Always On in Linux
 
@@ -50,17 +50,18 @@ Per eseguire manualmente il failover di una risorsa del gruppo di disponibilità
 - **Esempio di RHEL/Ubuntu**
 
    ```bash
-   sudo pcs resource move ag_cluster-master nodeName2 --master
+   sudo pcs resource move ag_cluster-master nodeName2 --master --lifetime=30S
    ```
 
 - **Esempio di SLES**
 
    ```bash
-   crm resource migrate ag_cluster nodeName2
+   crm resource migrate ag_cluster nodeName2 --lifetime=30S
    ```
 
 >[!IMPORTANT]
->Dopo il failover manuale di una risorsa, è necessario rimuovere un vincolo di posizione che è stato aggiunto automaticamente.
+>Quando si usa l'opzione--Lifetime, il vincolo location creato per spostare la risorsa è di natura temporanea ed è valido per 30 secondi nell'esempio precedente.
+>Si noti che il vincolo temporaneo non viene cancellato automaticamente e può essere visualizzato nell'elenco di vincoli, ma come vincolo scaduto. I vincoli scaduti non influiscono sul comportamento di failover del cluster pacemaker. Se non si usa l'opzione--Lifetime durante lo spostamento della risorsa, è necessario rimuovere un vincolo location aggiunto automaticamente come indicato di seguito.
 
 #### <a name="step-2-remove-the-location-constraint"></a><a name="removeLocConstraint"> </a> Passaggio 2. Rimuovere il vincolo di posizione
 

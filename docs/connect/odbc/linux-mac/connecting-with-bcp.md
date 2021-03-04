@@ -2,7 +2,7 @@
 title: Connessione a bcp
 description: Informazioni su come usare l'utilità bcp con Microsoft ODBC Driver for SQL Server in Linux e macOS.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 02/24/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b66ebab16bc26beec9ef9cd8699f53e75d36d478
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
-ms.translationtype: HT
+ms.openlocfilehash: f8bff2d5d9892d709885d0888e36ca042aa72242
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727437"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837396"
 ---
 # <a name="connecting-with-bcp"></a>Connessione a bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -64,7 +64,7 @@ Specifica il database al quale connettersi.
 - -d  
 Indica che il valore passato all'opzione -S di `bcp` deve essere interpretato come nome dell'origine dati (DSN). Per altre informazioni, vedere "Supporto di DSN in sqlcmd e bcp" in [Connessione con sqlcmd](connecting-with-sqlcmd.md).  
   
-- -e *file_errori*Specifica il percorso completo di un file di errori usato per archiviare le eventuali righe che l'utilità `bcp` non è in grado di trasferire dal file al database.  
+- -e *file_errori* Specifica il percorso completo di un file di errori usato per archiviare le eventuali righe che l'utilità `bcp` non è in grado di trasferire dal file al database.  
   
 - -E  
 Usa i valori Identity per la colonna Identity nel file di dati importato.  
@@ -74,7 +74,14 @@ Specifica il percorso completo di un file di formato.
   
 - -F *first_row*  
 Specifica il numero della prima riga da esportare da una tabella o da importare da un file di dati.  
-  
+
+- -G  
+Questa opzione viene usata dal client durante la connessione al database SQL di Azure o ad Azure Synapse Analytics per specificare che l'utente deve essere autenticato tramite l'autenticazione di Azure Active Directory. L'opzione-G richiede almeno la versione bcp 17,6. Per determinare la versione, eseguire bcp-v.
+
+> [!IMPORTANT]
+> L' `-G` opzione si applica solo al database SQL di Azure e ad Azure sinapsi Analytics.
+> L'autenticazione integrata di AAD non è attualmente supportata in Linux o macOS. Per l'autenticazione integrata di AAD è necessario [Microsoft ODBC driver 17 for SQL Server](../download-odbc-driver-for-sql-server.md) versione 17.6.1 o successiva e un [ambiente Kerberos configurato](using-integrated-authentication.md#configure-kerberos)correttamente.
+
 - -k  
 Specifica che durante l'operazione il valore delle colonne vuote deve essere Null, ovvero che non verranno inseriti valori predefiniti in tali colonne.  
   

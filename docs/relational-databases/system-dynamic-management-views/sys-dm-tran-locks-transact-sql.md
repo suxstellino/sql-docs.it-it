@@ -21,12 +21,12 @@ ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00783bffefd33038d079280c50983b9dfe03393f
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: 95dfd0be129d7f6116ef92fbe54d7869af45fca1
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100340067"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837968"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "100340067"
   
 ## <a name="permissions"></a>Autorizzazioni
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
-Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in pool elastici, è necessario l'account [amministratore del server](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) o l'account [amministratore Azure Active Directory](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) . Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.   
+Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in pool elastici, è necessario l'account [amministratore del server](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) o l'account [amministratore Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) . Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.   
  
 ## <a name="remarks"></a>Commenti  
  Uno stato di richiesta concessa indica che un blocco è stato concesso per una risorsa al richiedente. Una richiesta in attesa indica che la richiesta non è stata ancora concessa. La colonna **request_status** restituisce i tipi di richieste in attesa seguenti:  
@@ -389,4 +389,4 @@ GO
 [sys.dm_tran_database_transactions &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)      
 [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
 [Funzioni e viste a gestione dinamica relative alle transazioni &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)      
-[Oggetto Locks di SQL Server](../../relational-databases/performance-monitor/sql-server-locks-object.md)      
+[Oggetto Locks di SQL Server](../../relational-databases/performance-monitor/sql-server-locks-object.md)

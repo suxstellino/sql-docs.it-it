@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b59fc811c5bdfa122b306e9522bae97faa37e451
-ms.sourcegitcommit: 059722ff78a6061b801807416b312ae9f721ec7d
+ms.openlocfilehash: 952e8d393733c62f60c5b6792b422d22417ddede
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100636716"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837941"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>File di dati di SQL Server in Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -112,7 +112,7 @@ Per altre informazioni, vedere [Gestire l'accesso in lettura anonimo a contenito
   
 ###  <a name="limitations"></a><a name="bkmk_Limitations"></a> Limitazioni  
   
-- A causa delle caratteristiche di prestazioni dei carichi di lavoro SQL Server, SQL Server i file di dati vengono implementati come BLOB di pagine nell'archivio BLOB di Azure. Altri tipi di archiviazione BLOB, ad esempio BLOB in blocchi o [Azure Data Lake storage](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction) , non sono supportati.
+- A causa delle caratteristiche di prestazioni dei carichi di lavoro SQL Server, SQL Server i file di dati vengono implementati come BLOB di pagine nell'archivio BLOB di Azure. Altri tipi di archiviazione BLOB, ad esempio BLOB in blocchi o [Azure Data Lake storage](/azure/storage/blobs/data-lake-storage-introduction) , non sono supportati.
 
 - Nella versione corrente di questa funzionalità, l'archiviazione dei dati **FileStream** in Archiviazione di Azure non è supportata. È possibile archiviare dati **FileStream** in un database contenente anche file di dati archiviati in Archiviazione di Azure, ma tutti i file di dati FileStream devono essere archiviati in un archivio locale.  Poiché i dati FileStream devono risiedere in un archivio locale, non possono essere spostati tra computer usando Archiviazione di Azure. È quindi consigliabile continuare a usare le [tecniche tradizionali](../../relational-databases/blob/move-a-filestream-enabled-database.md) per spostare i dati associati a FileStream tra computer diversi.  
   

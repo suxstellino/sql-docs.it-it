@@ -2,7 +2,7 @@
 title: Domande frequenti sul driver JDBC
 description: Questa pagina offre le risposte alle domande frequenti su Microsoft JDBC Driver per SQL Server.
 ms.custom: ''
-ms.date: 01/29/2021
+ms.date: 02/26/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 634bbd66e2ad00ccda3b60f6f2fccfea976d09b0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 71c5e88db1bbc0c1b8d6698930c503a1134bac7d
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99163620"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837101"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Domande frequenti sul driver JDBC
 
@@ -40,9 +40,9 @@ Microsoft JDBC driver 9,2 supporta le specifiche JDBC 4,2 e 4,3 (parzialmente) e
 
 | JAR                        | Specifica JDBC            | Versione JDK |
 | -------------------------- | ----------------------------- | ----------- |
-| MSSQL-JDBC-9.2.0. JRE15. jar | JDBC 4.3 (parzialmente) e 4.2 | JDK 15,0    |
-| MSSQL-JDBC-9.2.0. jre11. jar | JDBC 4.3 (parzialmente) e 4.2 | JDK 11.0    |
-| MSSQL-JDBC-9.2.0. jre8. jar  | JDBC 4.2                      | JDK 8.0     |
+| MSSQL-JDBC-9.2.1. JRE15. jar | JDBC 4.3 (parzialmente) e 4.2 | JDK 15,0    |
+| MSSQL-JDBC-9.2.1. jre11. jar | JDBC 4.3 (parzialmente) e 4.2 | JDK 11.0    |
+| MSSQL-JDBC-9.2.1. jre8. jar  | JDBC 4.2                      | JDK 8.0     |
 | &nbsp;                     | &nbsp;                        | &nbsp;      |
 
 Microsoft JDBC Driver 8.4 supporta le specifiche JDBC 4.2 e 4.3 (parzialmente) e include tre librerie di classi JAR nel pacchetto di installazione, come descritto di seguito:

@@ -4,20 +4,19 @@ titleSuffix: SQL Server Distributed Replay
 description: Questo articolo descrive l'opzione della riga di comando replay e la sintassi dello strumento di amministrazione Riesecuzione distribuita di SQL Server, che avvia la fase di riproduzione dell'evento.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
-ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: fa147de01aaa2e70615aff9e0e4ec248aa4769c7
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: bd32ddc849672ae6c014735bb618f57fed73c49c
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100354487"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837766"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>Opzione replay (strumento di amministrazione Distributed Replay)
 

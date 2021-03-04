@@ -11,12 +11,12 @@ ms.topic: reference
 ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8767da09f84be9c557238643e16c925756e0bede
-ms.sourcegitcommit: c52a6aeb6fa6d7c3a86b3e84449361f4a0949ad0
+ms.openlocfilehash: bbfddcbf39dbbba3b63c6853ea7700e6a27a4614
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99623781"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837220"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -133,7 +133,7 @@ Se si modifica il frammento di codice precedente impostando `PDO::SQLSRV_ATTR_DA
 
 ## <a name="sensitivity-rank-using-a-predefined-set-of-values"></a>Rango di riservatezza usando un set predefinito di valori
 
-A partire da 5.9.0, i driver PHP hanno aggiunto il recupero del rango di classificazione quando si usa il driver ODBC 17.4.2 o versione successiva. L'utente può definire il rango quando si utilizza la [classificazione Aggiungi riservatezza](/sql/t-sql/statements/add-sensitivity-classification-transact-sql) per classificare qualsiasi colonna di dati. 
+A partire da 5.9.0, i driver PHP hanno aggiunto il recupero del rango di classificazione quando si usa il driver ODBC 17.4.2 o versione successiva. L'utente può definire il rango quando si utilizza la [classificazione Aggiungi riservatezza](../../t-sql/statements/add-sensitivity-classification-transact-sql.md) per classificare qualsiasi colonna di dati. 
 
 Se, ad esempio, l'utente assegna `NONE` `LOW` rispettivamente e alla nascita e al SSN, la rappresentazione JSON viene visualizzata come segue:
 
@@ -142,7 +142,7 @@ Se, ad esempio, l'utente assegna `NONE` `LOW` rispettivamente e alla nascita e a
 {"0":{"Label":{"name":"Highly Confidential - secure privacy","id":""},"Information Type":{"name":"Credentials","id":""},"rank":10},"rank":10}
 ```
 
-Come illustrato nella [classificazione di riservatezza](/sql/relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql), i valori numerici delle classificazioni sono:
+Come illustrato nella [classificazione di riservatezza](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md), i valori numerici delle classificazioni sono:
 
 ```
 0 for NONE
@@ -192,4 +192,4 @@ La rappresentazione JSON aggiornata è illustrata di seguito:
 ## <a name="see-also"></a>Vedere anche  
 [Classe PDOStatement](../../connect/php/pdostatement-class.md)
 
-[PDO](https://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)

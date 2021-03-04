@@ -61,12 +61,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14c663264dc05f403f12e9cad390cd0ef52f17c1
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 465ab4089b18cb38852152e298d56a844ec706ac
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "100348504"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101838594"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -714,7 +714,7 @@ Per altre informazioni, vedere [Funzionamento delle operazioni sugli indici onli
 > [!NOTE]
 > Le operazioni sugli indici online sono disponibili solo in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) e [Edizioni e funzionalità supportate per SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 
-MOVE TO { _partition\_scheme\_name_ **(** _column\_name_ [ 1 **,** ... *n*] **)**  | *filegroup* |  **"** default **"** }  
+Sposta in { _\_ \_ nome schema di partizione_**(**_\_ nome colonna_ [,... *n* ] **)**  |  *filegroup*  |  **"** default **"** }  
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifica una posizione in cui spostare le righe di dati attualmente presenti a livello foglia nell'indice cluster. La tabella viene spostata nella nuova posizione. Questa opzione è valida solo per i vincoli che creano un indice cluster.

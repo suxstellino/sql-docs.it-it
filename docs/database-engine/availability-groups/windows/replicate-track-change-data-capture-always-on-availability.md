@@ -2,7 +2,7 @@
 title: Replica, rilevamento modifiche, Change Data Capture e gruppi di disponibilità
 description: Informazioni sull'interoperabilità della replica, il rilevamento delle modifiche e Change Data Capture quando vengono usati con i gruppi di disponibilità Always On di SQL Server.
 ms.custom: seo-lt-2019
-ms.date: 08/21/2018
+ms.date: 02/23/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: availability-groups
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: f82db97e9b818ecca6682cf6778850dab8a238c1
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 1ee6a097a60930064ee23389d1d54e965336e3d7
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100344557"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837694"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replica, rilevamento modifiche e Change Data Capture per i gruppi di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,18 +42,18 @@ ms.locfileid: "100344557"
 ###  <a name="general-changes-to-replication-agents-to-support-availability-groups"></a><a name="Changes"></a> Modifiche generali apportate agli agenti di replica per supportare i gruppi di disponibilità  
  Tre agenti di replica sono stati modificati per supportare la funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Gli agenti di lettura log, snapshot e di merge sono stati modificati in modo da eseguire query sul database di distribuzione per il server di pubblicazione reindirizzato e usare il nome del listener del gruppo di disponibilità restituito, se è stato dichiarato un server di pubblicazione reindirizzato, per connettersi al server di pubblicazione del database.  
   
- Per impostazione predefinita, quando gli agenti eseguono una query sul database di distribuzione per determinare se il server di pubblicazione originale è stato reindirizzato, l'appropriatezza del database di destinazione o del reindirizzamento corrente verrà verificata prima che l'host reindirizzato venga restituito all'agente. Questo è il comportamento consigliato. Tuttavia, se l'avvio dell'agente si verifica molto frequentemente, l'overhead associato alla stored procedure di convalida può essere ritenuto troppo costoso. Una nuova opzione della riga di comando, *BypassPublisherValidation*, è stata aggiunta agli agenti di lettura log, snapshot e di merge. Quando viene usata l'opzione, il server di pubblicazione reindirizzato viene restituito immediatamente all'agente e l'esecuzione della stored procedure di convalida viene ignorata.  
+ Per impostazione predefinita, quando gli agenti eseguono una query sul database di distribuzione per determinare se il server di pubblicazione originale è stato reindirizzato, l'appropriatezza del database di destinazione o del reindirizzamento corrente verrà verificata prima che l'host reindirizzato venga restituito all'agente. Questo è il comportamento consigliato. Tuttavia, se l'avvio dell'agente si verifica molto frequentemente, l'overhead associato alla stored procedure di convalida può essere ritenuto troppo costoso. È stata aggiunta una nuova opzione della riga di comando, *BypassPublisherValidation*, agli agenti di lettura log, snapshot e merge. Quando viene usata l'opzione, il server di pubblicazione reindirizzato viene restituito immediatamente all'agente e l'esecuzione della stored procedure di convalida viene ignorata.  
   
  Gli errori restituiti dalla stored procedure di convalida vengono registrati nei log della cronologia degli agenti. Gli errori con gravità maggiore o uguale a 16 causeranno l'interruzione degli agenti. Gli agenti includono ora alcune funzionalità per effettuare nuovi tentativi in modo da gestire la disconnessione prevista da un database pubblicato in caso di failover su un nuovo database primario.  
   
 #### <a name="log-reader-agent-modifications"></a>Modifiche all'agente di lettura log  
- L'agente di lettura log include le modifiche riportate di seguito.  
+ L'agente di lettura log presenta le modifiche seguenti.  
   
 -   **Coerenza dei database replicati**  
   
      Quando un database pubblicato è membro di un gruppo di disponibilità, per impostazione predefinita tramite la lettura log non vengono elaborati record di log che non sono già stati finalizzati in tutte le repliche secondarie del gruppo di disponibilità. In questo modo, viene garantito che al failover tutte le righe replicate a un sottoscrittore siano anche presenti nel nuovo database primario.  
   
-     Se nel server di pubblicazione sono disponibili solo due repliche di disponibilità, una primaria e una secondaria, e si verifica un failover, la replica primaria originale rimane inattiva perché l'agente di lettura log non procede finché tutti i database secondari non saranno riportati online o finché le repliche secondarie in cui si è verificato l'errore non verranno rimosse dal gruppo di disponibilità. L'agente di lettura log, che attualmente viene eseguito nel database secondario, non procederà poiché tramite AlwaysOn non è possibile finalizzare le eventuali modifiche in nessun database secondario. Per consentire all'agente di lettura log di procedere e mantenere la funzionalità di ripristino di emergenza, rimuovere la replica primaria originale dal gruppo di disponibilità usando ALTER AVAILABITY GROUP <nome_gruppo> REMOVE REPLICA. Successivamente, aggiungere una nuova replica secondaria al gruppo di disponibilità.  
+     Quando il server di pubblicazione dispone solo di due repliche di disponibilità, una primaria e una secondaria, e si verifica un failover, la replica primaria originale rimane inattiva perché la lettura log non viene spostata fino a quando tutti i database secondari non vengono riportate online o finché le repliche secondarie non riuscite non vengono rimosse dal gruppo di disponibilità. L'agente di lettura log, che ora è in esecuzione nel database secondario, non procederà poiché Always On non è in grado di completare le modifiche apportate a un database secondario. Per consentire all'analizzatore di log di procedere ulteriormente e avere ancora la capacità di ripristino di emergenza, rimuovere la replica primaria originale dal gruppo di disponibilità usando ALTER AVAILABITY GROUP <group_name> REMOVE REPLICA. Successivamente, aggiungere una nuova replica secondaria al gruppo di disponibilità.  
   
 -   **Flag di traccia 1448**  
   
@@ -109,7 +109,7 @@ ms.locfileid: "100344557"
     ```  
   
     > [!NOTE]  
-    >  È consigliabile creare i processi per tutte le possibili destinazioni di failover prima del failover e contrassegnarli come disabilitati finché la replica di disponibilità in un host non diventa la nuova replica primaria. È inoltre necessario disabilitare i processi CDC in esecuzione nel database primario precedente quando il database locale diventa un database secondario. Per disabilitare e abilitare i processi, usare l'opzione *\@enabled* di [sp_update_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md). Per altre informazioni sulla creazione di processi CDC, vedere [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).  
+    >  È necessario creare i processi nella nuova replica primaria dopo il failover. I processi CDC in esecuzione nel database primario precedente devono essere disabilitati quando il database locale diventa un database secondario. Pubblicare questo messaggio se la replica diventa di nuovo primaria, è necessario riabilitare i processi CDC sulla replica. Per disabilitare e abilitare i processi, usare l'opzione *\@enabled* di [sp_update_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md). Per altre informazioni sulla creazione di processi CDC, vedere [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).  
   
 -   **Aggiunta di ruoli CDC a una replica di database primario AlwaysOn**  
   
@@ -207,9 +207,9 @@ Se Change Data Capture deve essere disabilitato in un database che fa parte di u
   
 |Replica|Editore|Database di distribuzione|Sottoscrittore|  
 |-|-|-|-|  
-|**Transazionale**|Sì<br /><br /> Nota: non è incluso il supporto per la replica transazionale bidirezionale e reciproca.|Sì|sì| 
+|**Transazionale**|Sì<br /><br /> Nota: non è incluso il supporto per la replica transazionale bidirezionale e reciproca.|Sì|Sì| 
 |**P2P**|No|No|No|  
-|**Merge**|sì|No|No|  
+|**Merge**|Sì|No|No|  
 |**Snapshot**|Sì|No|Sì|
   
  **Non è supportato l'uso del database di distribuzione con il mirroring del database.  

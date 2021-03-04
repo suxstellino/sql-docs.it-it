@@ -8,12 +8,12 @@ ms.date: 06/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 0c95b3a843cbec0e703efea846b9c80f99b9dc41
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: ce07fb02a81b4e44375d80f643713b9a0b62d80d
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100346237"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101838998"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Limitazioni e problemi noti di SSIS in Linux
 
@@ -94,7 +94,7 @@ Le attività di piano di manutenzione seguenti sono supportate in Linux:
 | Componente | Limitazioni |
 |------------|---|
 | Origine e destinazione ADO.NET | Supporta solo il provider di dati SQLClient. |
-| Origine e destinazione file flat | Supporta solo i percorsi di file di tipo Windows, ai quali viene applicata la regola di mapping del percorso predefinito. Ad esempio, `D:\home\ssis\travel.csv` diventa `/home/ssis/travel.csv`. |
+| Origine e destinazione file flat | 1. supportano solo i percorsi di file di tipo Windows a cui viene applicata la regola di mapping del percorso predefinito. Ad esempio, `D:\home\ssis\travel.csv` diventa `/home/ssis/travel.csv`. 2. La condivisione file di Azure montata in Red Hat 7 non è supportata. |
 | Origine OData | Supporta solo l'autenticazione di base. |
 | Origine e destinazione ODBC | Supporta i driver ODBC Unicode a 64 bit in Linux. Dipende dalla gestione driver UnixODBC in Linux. |
 | Origine e destinazione OLE DB | Supporta solo SQL Server Native Client 11.0 e Provider Microsoft OLE DB per SQL Server. |
@@ -118,7 +118,7 @@ Le attività di piano di manutenzione seguenti sono supportate in Linux:
 - Merge Join
 - Multicast
 - Pivot
-- Conteggio righe
+- Row Count
 - Dimensione a modifica lenta
 - Ordina
 - Ricerca termini
