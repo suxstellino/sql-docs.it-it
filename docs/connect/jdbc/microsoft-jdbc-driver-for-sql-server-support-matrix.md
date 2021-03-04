@@ -2,7 +2,7 @@
 title: Matrice di supporto di Microsoft JDBC Driver per SQL Server
 description: Questa pagina contiene i criteri relativi al ciclo di vita e alla matrice del supporto di Microsoft JDBC Driver per SQL Server.
 ms.custom: ''
-ms.date: 01/29/2021
+ms.date: 02/26/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 21b977b950babad552246925d78878c08cd36af3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2fb84ce512cca3e87f0ec108698928caa2934122
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99163605"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101835361"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Matrice di supporto di Microsoft JDBC Driver per SQL Server
 
@@ -34,7 +34,7 @@ I seguenti driver Microsoft JDBC Driver sono supportati fino alla data di fine d
   
 |Nome del driver|Versione del pacchetto driver|JAR applicabili|Fine del supporto Mainstream|
 |-|-|-|-|  
-|Microsoft JDBC driver 9,2 per SQL Server|9.2|MSSQL-JDBC-9.2.0. JRE15. jar<br> MSSQL-JDBC-9.2.0. jre11. jar<br> MSSQL-JDBC-9.2.0. jre8. jar|29 gennaio 2026|
+|Microsoft JDBC driver 9,2 per SQL Server|9.2|MSSQL-JDBC-9.2.1. JRE15. jar<br> MSSQL-JDBC-9.2.1. jre11. jar<br> MSSQL-JDBC-9.2.1. jre8. jar|29 gennaio 2026|
 |Microsoft JDBC Driver 8.4 per SQL Server|8.4|mssql-jdbc-8.4.1.jre14.jar<br> mssql-jdbc-8.4.1.jre11.jar<br> mssql-jdbc-8.4.1.jre8.jar|31 luglio 2025|
 |Microsoft JDBC Driver 8.2 per SQL Server|8.2|mssql-jdbc-8.2.2.jre13.jar<br> mssql-jdbc-8.2.2.jre11.jar<br> mssql-jdbc-8.2.2.jre8.jar|31 gennaio 2025|
 |Microsoft JDBC Driver 7.4 per SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|31 luglio 2024|

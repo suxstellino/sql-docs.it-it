@@ -4,28 +4,28 @@ description: Aggiornare manualmente `AZDATA_PASSWORD`
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 12/19/2019
+ms.date: 03/01/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7fe856ae92c198d44ed0b11d1d2ce808e87fb4eb
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 062e574772c2a44b78772da4a979c81ed3deb959
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100039681"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101836258"
 ---
 # <a name="manually-update-azdata_password"></a>Aggiornare `AZDATA_PASSWORD` manualmente
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Indipendentemente dal fatto che il cluster stia funzionando con l'integrazione Active Directory, durante la distribuzione viene impostato `AZDATA_PASSWORD`. Offre un'autenticazione di base per il controller del cluster e l'istanza master. In questo documento viene descritto come aggiornare manualmente `AZDATA_PASSWORD`.
+Se il funziona o meno [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)] con Active Directory integrazione, `AZDATA_PASSWORD` viene impostato durante la distribuzione. Offre un'autenticazione di base per il controller del cluster e l'istanza master. In questo documento viene descritto come aggiornare manualmente `AZDATA_PASSWORD`.
 
 ## <a name="change-azdata_password-for-controller"></a>Modificare `AZDATA_PASSWORD` per il controller
 
 Se il cluster funziona in modalità non Active Directory, aggiornare la password del gateway Apache Knox seguendo questa procedura:
 
-1. Ottenere le credenziali SQL Server del controller eseguendo questi comandi:
+1. Ottenere le credenziali del controller eseguendo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] i comandi seguenti:
 
    a. Eseguire questo comando come amministratore di Kubernetes:
 
@@ -61,7 +61,7 @@ Se il cluster funziona in modalità non Active Directory, aggiornare la password
 
 1. Crittografare la nuova password complessa usando `hexsalt`:
 
-   Per praticità, viene messo a disposizione uno strumento predefinito `pbkdf2` per crittografare la password. Scaricare l'app .NET Core appropriata per la piattaforma per [`pbkdf2`](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/security/password-hashing/pbkdf2/prebuilt-binaries).
+   Per praticità, viene messo a disposizione uno strumento predefinito `pbkdf2` per crittografare la password. Scaricare l'app .NET Core appropriata per la piattaforma per [`pbkdf2`](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/security/password-hashing/pbkdf2/prebuilt-binaries) .
 
    L'app è indipendente e non richiede prerequisiti, ad esempio i runtime .NET. Per crittografare la password, eseguire:
 
@@ -72,7 +72,7 @@ Se il cluster funziona in modalità non Active Directory, aggiornare la password
 
 1. Aggiornare la password nella tabella users:
 
-   ```SQL
+   ```sql
    UPDATE [auth].[users] SET password = 'J2y4E4dhlgwHOaRr3HKiiVAKBfjuGDyYmzn88VXmrzM=' WHERE username = '<username>'
    ```
 
@@ -85,3 +85,151 @@ Se il cluster funziona in modalità non Active Directory, aggiornare la password
    ```sql
    ALTER LOGIN <AZDATA_USERNAME> WITH PASSWORD = 'newPassword'
    ```
+
+## <a name="manually-updating-password-for-grafana-and-kibana"></a>Aggiornamento manuale della password per Grafana e Kibana
+
+Dopo aver seguito i passaggi per aggiornare AZDATA_PASSWORD, si noterà che [Grafana](app-monitor.md) e [Kibana](cluster-logging-kibana.md) accettano ancora la vecchia password. Questo perché Grafana e Kibana non hanno visibilità sul nuovo segreto Kubernetes. È necessario aggiornare manualmente la password per Grafana e Kibana separatamente.
+
+## <a name="update-grafana-password"></a>Aggiornare la password di Grafana
+
+Seguire queste opzioni per aggiornare manualmente la password per [Grafana](app-monitor.md).
+
+1. L'utilità htpasswd è obbligatoria. È possibile installarlo in qualsiasi computer client.
+    
+    #### <a name="for-ubuntu"></a>[Per Ubuntu](#tab/ubuntu): 
+    ```bash
+    sudo apt install apache2-utils
+    ```
+    
+    #### <a name="for-rhel"></a>[Per RHEL](#tab/rhel): 
+    ```bash
+    sudo yum install httpd-tools
+    ```
+    
+    ---
+
+2. Genera la nuova password. 
+    
+    ```bash
+    htpasswd -nbs <username> <password>
+    admin:{SHA}<secret>
+    ```
+    
+    Sostituire i valori per/ <username/> ,/ <password/> ,/ <secret/> in base alle esigenze, ad esempio:
+    
+    ```bash
+    htpasswd -nbs admin Test@12345
+    admin:{SHA}W/5VKRjIzjusUJ0ih0gHyEPjC/s=
+    ```
+
+3. Codificare ora la password:
+    
+    ```bash
+    echo "admin:{SHA}W/5VKRjIzjusUJ0ih0gHyEPjC/s=" | base64
+    ```             
+    
+    Mantenere la stringa Base64 di output per un momento successivo.
+    
+4. Modificare quindi mgmtproxy-Secret:
+    
+    ```bash
+    kubectl edit secret -n mssql-cluster mgmtproxy-secret
+    ```
+         
+5. Aggiornare il controller-login-htpasswd con la nuova stringa Base64 della password codificata generata in precedenza:
+    
+    ```console
+    # Please edit the object below. Lines beginning with a '#' will be ignored,
+    # and an empty file will abort the edit. If an error occurs while saving this file will be
+    # reopened with the relevant failures.
+    #
+    apiVersion: v1
+    data:
+       controller-login-htpasswd: <base64 string from before>
+       mssql-internal-controller-password: <password>
+       mssql-internal-controller-username: <username>
+    ```         
+
+6. Identificare ed eliminare il Pod mgmtproxy. 
+     
+    Se necessario, identificare il nome del mgmtproxy prod.
+    
+    #### <a name="for-windows"></a>[Per Windows](#tab/windows): 
+    In un server Windows è possibile utilizzare quanto segue:
+    
+    ```bash 
+    kubectl get pods -n <namespace> -l app=mgmtproxy
+    ```
+    
+    #### <a name="for-linux"></a>[Per Linux](#tab/linux): 
+    In Linux è possibile usare gli elementi seguenti:
+    
+    ```bash
+    kubectl get pods -n <namespace> | grep 'mgmtproxy'
+    ```
+    
+    ---
+    
+    Rimuovere il Pod mgmtproxy:
+    ```bash
+    kubectl delete pod mgmtproxy-xxxxx -n mssql-clutser
+    ```
+
+7. Attendere che il Pod mgmtproxy torni online e che il dashboard di Grafana venga avviato.  
+ 
+    L'attesa non è significativa e il pod dovrebbe essere online entro pochi secondi. Per controllare lo stato del Pod è possibile usare lo stesso `get pods` comando usato nel passaggio precedente. 
+    Se viene visualizzato lo stato pronto per il Pod mgmtproxy, usare kubectl per descrivere il pod:
+    
+    ```bash
+    kubectl describe pods mgmtproxy-xxxxx  -n <namespace>
+    ```
+    
+    Per la risoluzione dei problemi e l'ulteriore raccolta dei log, usare il comando dell'interfaccia della riga di comando di Azure `[azdata bdc debug copy-logs](../azdata/reference/reference-azdata-bdc-debug.md)`
+    
+8. A questo punto, accedere a Grafana con la nuova password. 
+
+
+## <a name="update-the-kibana-password"></a>Aggiornare la password di Kibana
+
+Seguire queste opzioni per aggiornare manualmente la password per [Kibana](cluster-logging-kibana.md).
+
+> [!NOTE]
+> Il browser Microsoft Edge precedente non è compatibile con Kibana, è necessario usare il browser basato su cromo perimetrale per visualizzare correttamente il dashboard. Quando si caricano i dashboard usando un browser non supportato, viene visualizzata una pagina vuota. vedere [browser supportati per Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
+
+1. Aprire l'URL Kibana.
+    
+    È possibile trovare l'URL dell'endpoint del servizio Kibana dall'interno di [Azure Data Studio](manage-with-controller-dashboard#controller-dashboard)oppure usare il comando **azdata** seguente:
+    
+    ```azurecli
+    azdata login
+    azdata bdc endpoint list -e logsui -o table
+    ```
+    
+    ad esempio https://11.111.111.111:30777/kibana/app/kibana#/discover
+
+2. Nel riquadro sinistro fare clic sull'opzione **sicurezza** .
+    
+    ![Screenshot del menu nel riquadro a sinistra di Kibana, con l'opzione di sicurezza scelta](\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-1.jpg)
+
+3. Nella pagina sicurezza fare clic su **database utente interno** sotto i backend di autenticazione dell'intestazione.
+
+    ![Screenshot della pagina sicurezza con la casella database utente interno scelta.](\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-2.jpg)
+
+4. A questo punto, verrà visualizzato l'elenco degli utenti nel database degli utenti interni dell'intestazione. Utilizzare questa pagina per aggiungere, modificare e rimuovere gli utenti per l'accesso all'endpoint Kibana. Per l'utente che necessita della password aggiornata, fare clic sul pulsante **modifica** nella parte destra dell'utente.
+
+    ![Screenshot della pagina del database utente interno. Nell'elenco di utenti, per l'utente KubeAdmin, viene scelto il pulsante modifica.](\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-3.jpg)
+
+5. Immettere la nuova password due volte e fare clic su **Submit (Invia**):
+
+    ![Screenshot del modulo di modifica interno dell'utente. È stata immessa una nuova password nei campi password e Ripeti password.](\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-4.jpg)
+
+6. Chiudere il browser e riconnettersi all'URL Kibana usando la password aggiornata.
+
+> [!Note]
+> Dopo aver eseguito l'accesso con la nuova password, se vengono visualizzate pagine vuote in Kibana, disconnettersi manualmente usando l'opzione Disconnetti nell'angolo superiore destro e accedere di nuovo.
+
+## <a name="see-also"></a>Vedi anche
+
+* [azdata BDC (interfaccia della riga di comando di Azure Data)](../../sql/azdata/reference/reference-azdata-bdc.md) 
+* [Monitorare le applicazioni con azdata e il dashboard Grafana](app-monitor.md)  
+* [Estrarre i log del cluster con il dashboard di Kibana](cluster-logging-kibana.md)  

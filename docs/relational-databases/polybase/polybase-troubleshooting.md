@@ -1,26 +1,28 @@
 ---
-title: Monitorare e risolvere i problemi relativi a PolyBase | Microsoft Docs
-description: Per risolvere i problemi relativi a PolyBase, usare queste viste e DMV. Visualizzare il piano di query di PolyBase, monitorare i nodi in un gruppo di PolyBase e configurare la disponibilità elevata di Hadoop Name Node.
-ms.date: 04/23/2019
+title: Monitorare e risolvere i problemi relativi a PolyBase
+description: Per risolvere i problemi di polibase, usare queste viste e DMV. Visualizzare il piano di query di polibase, monitorare i nodi in un gruppo di base e configurare la disponibilità elevata del nodo nome Hadoop.
+ms.date: 02/17/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
+dev_langs:
+- TSQL
+- XML
 f1_keywords:
 - PolyBase, monitoring
 - PolyBase, performance monitoring
 helpviewer_keywords:
 - PolyBase, troubleshooting
-ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016'
-ms.openlocfilehash: 5945f88320f01f6ce431bea79483528bf8dbeb64
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 5306f392623bebdb08d17b704e12b06c5ce9e8fa
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100351749"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101835306"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>Monitorare e risolvere i problemi relativi a PolyBase
 
@@ -171,7 +173,7 @@ Per eseguire il monitoraggio e risolvere i problemi relativi alle query di PolyB
    ORDER BY total_elapsed_time DESC;  
    ```  
 
-## <a name="to-view-the--polybase-query-plan-to-be-changed"></a>Per visualizzare il piano di query di PolyBase (da modificare) 
+## <a name="to-view-the-polybase-query-plan-to-be-changed"></a>Per visualizzare il piano di query di base (da modificare) 
 
 1. In SSMS abilitare **Includi piano di esecuzione effettivo** (CTRL+M) ed eseguire la query.
 
@@ -256,12 +258,37 @@ Dopo aver configurato un set di computer come appartenenti al gruppo con scalabi
 
 PolyBase non interagisce con i servizi Name Node HA come Zookeeper o Knox. Tuttavia, esiste una soluzione alternativa comprovata che può essere usata per realizzare la funzionalità.
 
-Soluzione alternativa: usare il nome DNS per reindirizzare le connessioni al Name Node attivo. A questo scopo, è necessario assicurarsi che l'origine dati esterna utilizzi un nome DNS per comunicare con il Name Node. Quando si verifica un failover del Name Node, è necessario modificare l'indirizzo IP associato al nome DNS utilizzato nella definizione dell'origine dati esterna. Ciò reindirizza tutte le nuove connessioni al Name Node corretto. Le connessioni esistenti avranno esito negativo quando si verifica il failover. Per automatizzare questo processo, un "heartbeat" può eseguire il ping del Name Node attivo. Se si verifica un errore di heartbeat, si può presupporre che si sia verificato un failover e si può passare automaticamente all'indirizzo IP secondario.
+Soluzione alternativa: utilizzare il nome DNS per reindirizzare le connessioni al Name Node attivo. A questo scopo, è necessario assicurarsi che l'origine dati esterna utilizzi un nome DNS per comunicare con il Name Node. Quando si verifica un failover del Name Node, è necessario modificare l'indirizzo IP associato al nome DNS utilizzato nella definizione dell'origine dati esterna. Ciò reindirizza tutte le nuove connessioni al Name Node corretto. Le connessioni esistenti avranno esito negativo quando si verifica il failover. Per automatizzare questo processo, un "heartbeat" può eseguire il ping del Name Node attivo. Se si verifica un errore di heartbeat, si può presupporre che si sia verificato un failover e si può passare automaticamente all'indirizzo IP secondario.
+
+## <a name="log-file-locations"></a>Percorsi dei file di log
+
+Nei server Windows, i log si trovano nel percorso della directory di installazione, per impostazione predefinita: C:\Programmi\Microsoft SQL Server\MSSQLnn.InstanceName\MSSQL\Log\Polybase\.
+
+Nei server Linux i log si trovano per impostazione predefinita in/var/opt/MSSQL/log/polybase.
+
+File di log di spostamento dati di base:  
+- <INSTANCENAME>_ <SERVERNAME> _Dms_errors. log 
+- <INSTANCENAME>_ <SERVERNAME> _Dms_movement. log 
+
+File di log del servizio del motore di base:  
+- <INSTANCENAME>_ <SERVERNAME> _DWEngine_errors. log 
+- <INSTANCENAME>_ <SERVERNAME> _DWEngine_movement. log 
+- <INSTANCENAME>_ <SERVERNAME> _DWEngine_server. log 
+
+In Windows, file di log Java di base:
+- <SERVERNAME> Database. log DMS
+- <SERVERNAME>_DWEngine_polybase. log
+ 
+In Linux, file di log Java di base:
+- /var/opt/MSSQL-Extensibility/hdfs_bridge/log/hdfs_bridge_pdw. log
+- /var/opt/MSSQL-Extensibility/hdfs_bridge/log/hdfs_bridge_dms. log
+
 
 ## <a name="error-messages-and-possible-solutions"></a>Messaggi di errore e possibili soluzioni
 
-Per risolvere gli errori delle tabelle esterne, vedere il blog di Murshed Zaman [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](/archive/blogs/sqlcat/polybase-setup-errors-and-possible-solutions "Errori di installazione di PolyBase e possibili soluzioni").
+Per gli scenari di risoluzione dei problemi comuni, vedere [errori di base e soluzioni possibili](polybase-errors-and-possible-solutions.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Risolvere i problemi di connettività di PolyBase Kerberos](polybase-troubleshoot-connectivity.md)
+[Risolvere i problemi di connettività Kerberos di base](polybase-troubleshoot-connectivity.md)   
+[Errori di polibase e possibili soluzioni](polybase-errors-and-possible-solutions.md)   

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 2f87ae98424eef3f6aeadca1f11da6d9d1f2b403
-ms.sourcegitcommit: 8bdb5a51f87a6ff3b94360555973ca0cd0b6223f
+ms.openlocfilehash: acbe6e9241f003f100bedc3fd01d297fb91e8141
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100549387"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101836672"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Istanze del cluster di failover Always On (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -129,7 +129,7 @@ ms.locfileid: "100549387"
  Un'istanza del cluster di failover è costituita da un set di server fisici (nodi) con configurazioni hardware simili e configurazioni software identiche, tra cui la versione del sistema operativo e il livello della patch e la versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , il livello della patch, i componenti e il nome dell'istanza. La configurazione del software identica è necessaria assicurarsi che l'istanza del cluster di failover possa essere totalmente funzionale quando si verifica un errore tra i nodi.  
   
  Gruppo di risorse WSFC  
- Un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene eseguita in un gruppo di risorse WSFC. Ogni nodo nel gruppo di risorse gestisce una copia sincronizzata delle impostazioni di configurazione e delle chiavi del Registro di sistema del checkpoint per assicurare la funzionalità completa dell'istanza del cluster di failover dopo un failover e solo un nodo per volta (il nodo attivo) possiede nel cluster il gruppo di risorse. Il servizio WSFC gestisce il cluster del server, la configurazione del quorum, i criteri del failover e le operazioni del failover, nonché il nome di rete virtuale e gli indirizzi IP virtuali per l'istanza del cluster di failover. In caso di errore (hardware, del sistema operativo, dell'applicazione o del servizio) o di un aggiornamento pianificato, la proprietà del gruppo di risorse viene spostata a un altro nodo dell'istanza del cluster di failover. Il numero di nodi supportati in un gruppo di risorse WSFC dipende dall'edizione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Inoltre, lo stesso cluster WSFC può eseguire più istanze del cluster di failover (più gruppi di risorse), a seconda della capacità hardware, ad esempio CPU, memoria e numero di dischi.  
+ Un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene eseguita in un gruppo di risorse WSFC. Ogni nodo nel gruppo di risorse gestisce una copia sincronizzata delle impostazioni di configurazione e delle chiavi del Registro di sistema del checkpoint per assicurare la funzionalità completa dell'istanza del cluster di failover dopo un failover e solo un nodo per volta (il nodo attivo) possiede nel cluster il gruppo di risorse. Il servizio WSFC gestisce il cluster del server, la configurazione del quorum, i criteri del failover e le operazioni del failover, nonché il nome di rete virtuale e gli indirizzi IP virtuali per l'istanza del cluster di failover. In caso di errore (errori hardware, errori del sistema operativo, errori dell'applicazione o del servizio) o di un aggiornamento pianificato, la proprietà del gruppo di risorse viene spostata in un altro nodo dell'istanza FCI. Il numero di nodi supportati in un gruppo di risorse WSFC dipende dall'edizione in uso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Inoltre, lo stesso cluster WSFC può eseguire più istanze del cluster di failover (più gruppi di risorse), a seconda della capacità hardware, ad esempio CPU, memoria e numero di dischi.  
   
  Binari di SQL Server  
  I file binari del prodotto sono installati in locale in ogni nodo dell'istanza del cluster di failover, come avviene per le installazioni autonome di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Tuttavia, durante l'avvio, i servizi non vengono avviati automaticamente, ma gestiti dal servizio WSFC.  
