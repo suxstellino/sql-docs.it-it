@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 68228106bcd2620cb684bd61efec353fdb49585c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: HT
+ms.openlocfilehash: abdd25c6166b40436584a1260d4b1b09d40900c4
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884832"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186065"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Scrittura di eventi di controllo di SQL Server nel registro di sicurezza  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 In un ambiente con sicurezza elevata il registro di sicurezza di Windows rappresenta la posizione appropriata per la scrittura di eventi che registrano l'accesso agli oggetti. Sono supportati altre posizioni di controllo che tuttavia sono più soggette alla manomissione.  
   
- La scrittura dei controlli del server [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel registro di sicurezza di Windows prevede due requisiti fondamentali:  
+ Per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la scrittura dei controlli del server nel registro di sicurezza di Windows sono necessari tre requisiti principali:  
   
 -   È necessario configurare l'impostazione di controllo dell'accesso agli oggetti per l'acquisizione degli eventi. Lo strumento dei criteri di controllo (`auditpol.exe`) espone varie impostazioni di criteri secondari nella categoria **controllo dell'accesso agli oggetti** . Per consentire il controllo dell'accesso agli oggetti in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , configurare l'impostazione **generata dall'applicazione** .  
 -   L'account in cui viene eseguito il servizio di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve disporre dell'autorizzazione **generazione controlli di sicurezza** per scrivere nel registro di sicurezza di Windows. Per impostazione predefinita, gli account LOCAL SERVICE e NETWORK SERVICE dispongono di questa autorizzazione. Questo passaggio non è obbligatorio se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene eseguito in uno di questi account.  
@@ -80,7 +80,7 @@ I criteri di controllo di Windows possono influire sul controllo di [!INCLUDE[ss
   
 5.  Nella scheda **Impostazioni di sicurezza locali** fare clic su **Aggiungi utente o gruppo**.  
   
-6.  Nella finestra di dialogo **Seleziona utenti, computer o gruppi** digitare il nome dell'account utente, ad esempio **dominio1\utente1** , quindi fare clic su **OK**oppure su **Avanzate** e cercare l'account.  
+6.  Nella finestra di dialogo **Seleziona utenti, computer o gruppi** digitare il nome dell'account utente, ad esempio **dominio1\utente1** , quindi fare clic su **OK** oppure su **Avanzate** e cercare l'account.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

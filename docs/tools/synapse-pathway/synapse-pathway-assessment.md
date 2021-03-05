@@ -4,24 +4,24 @@ description: Eseguire una conversione del codice data warehouse con il percorso 
 author: anshul82-ms
 ms.author: anrampal
 ms.prod: sql
-ms.technology: Azure Synapse Pathway
+ms.technology: tools-other
 ms.topic: tutorial
 ms.date: 03/02/2021
 monikerRange: =azure-sqldw-latest
 ms.custom: template-tutorial
-ms.openlocfilehash: b76fecf9a8a7eafc84a1b9eebd746287dddf3af9
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 74f98ad652a58f70cd75ef60556bf0464fd5d7c7
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101839220"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186356"
 ---
 # <a name="tutorial-to-perform-your-first-code-translation-with-azure-synapse-pathway-preview"></a>Esercitazione per eseguire la prima traduzione del codice con l'anteprima del percorso sinapsi di Azure
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
 Azure sinapsi pathway Preview introduce il supporto per la conversione di schemi, tabelle, viste, funzioni e così via da **Netezza**, **fiocco di neve** e **Microsoft SQL Server** nel codice di reclamo T-SQL che automatizza la migrazione ad Azure sinapsi Analytics.
 
-Per altre informazioni, vedere [Panoramica dell'anteprima del percorso delle sinapsi di Azure](azure-synapse-pathway-overview).
+Per altre informazioni, vedere [Panoramica dell'anteprima del percorso delle sinapsi di Azure](azure-synapse-pathway-overview.md).
 
 In questa esercitazione verranno illustrate le procedure per:
 
@@ -45,17 +45,17 @@ Per completare questa esercitazione, verificare di aver installato il [percorso 
     > Solo i file con estensione SQL possono essere forniti come origine di input. Se l'utente fornisce DDL, script DML nel file con estensione txt, lo strumento non effettuerà alcuna conversione.
 
 1. Quando si converte il codice Netezza in Azure sinapsi Analytics, scegliere IBM Netezza nell'elenco a discesa tipo di traduzione.
-  ![Input di valutazione della sinapsi di Azure.](./media/perform-assessment/assessment-input.png)
+  ![Input di valutazione della sinapsi di Azure.](./media/synapse-pathway-assessment/assessment-input.png)
 
 1. Per selezionare la directory di output, selezionare Sfoglia per specificare il percorso in cui verrà generato l'output.
- ![Directory di output della sinapsi di Azure.](./media/perform-assessment/output-directory.png)
+ ![Directory di output della sinapsi di Azure.](./media/synapse-pathway-assessment/output-directory.png)
 
 1. Selezionare **translate (Converti** ) per avviare la traduzione
 
 ## <a name="view-results"></a>Visualizzare i risultati
 
 1. La durata della valutazione dipende dal numero di database aggiunti e dalle dimensioni dello schema di ogni database. I risultati vengono visualizzati per ogni database non appena sono disponibili.
- ![Report di valutazione della sinapsi di Azure.](./media/perform-assessment/assessment-report.png)
+ ![Report di valutazione della sinapsi di Azure.](./media/synapse-pathway-assessment/assessment-report-rendering.png)
 
 1. Quando si seleziona Visualizza risultati, verrà visualizzata la directory di output specificata nel passaggio precedente e i file script tradotti verranno visualizzati in base alla struttura della directory di input.
 

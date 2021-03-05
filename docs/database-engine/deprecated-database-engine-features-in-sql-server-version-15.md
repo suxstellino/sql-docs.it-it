@@ -15,12 +15,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
-ms.openlocfilehash: b6a8b2edf94d74720836e02589ec8e1270f38dac
-ms.sourcegitcommit: c83c17e44b5e1e3e2a3b5933c2a1c4afb98eb772
+ms.openlocfilehash: 4e322ff478e9ccdc031882e7c3b5b18fd8506e42
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "100525166"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186468"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2019-15x"></a>Funzionalità del motore di database deprecate in SQL Server 2019 (15. x)
 
@@ -35,9 +35,9 @@ ms.locfileid: "100525166"
 
 Quando una funzionalità è contrassegnata come deprecata significa che:
 
-- La funzionalità è solo in modalità manutenzione. Non verranno apportate nuove modifiche, incluse quelle correlate all'interoperabilità con le nuove funzionalità.
-- Microsoft si impegna a non rimuovere una funzionalità deprecata dalle versioni future per semplificare gli aggiornamenti. Tuttavia, in rare situazioni, una funzionalità potrebbe essere rimossa in modo permanente da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se ne limita le innovazioni future.
-- Per i nuovi progetti di sviluppo, non è consigliabile usare funzionalità deprecate.      
+- La funzionalità è solo in modalità manutenzione. Non verrà apportata alcuna nuova modifica, inclusi quelli relativi all'interoperabilità tra le nuove funzionalità.
+- Microsoft si impegna a non rimuovere una funzionalità deprecata dalle versioni future per semplificare gli aggiornamenti. In rare situazioni, tuttavia, è possibile scegliere di interrompere definitivamente (rimuovere) la funzionalità da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se limita le innovazioni future.
+- Per le nuove attività di sviluppo, non usare le funzionalità deprecate. Per aplications esistenti, pianificare la modifica delle applicazioni che attualmente usano queste funzionalità il prima possibile.     
 
 È possibile monitorare l'utilizzo delle funzionalità deprecate tramite il [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contatore delle prestazioni oggetto funzionalità deprecate oppure gli `deprecation_announcement` `deprecation_final_support` eventi estesi ed. Per altre informazioni, vedere [Usare oggetti di SQL Server](../relational-databases/performance-monitor/use-sql-server-objects.md).  
 

@@ -1,5 +1,6 @@
 ---
-title: sp_pdw_database_encryption_regenerate_system_keys (Azure sinapsi Analytics) | Microsoft Docs
+title: sp_pdw_database_encryption_regenerate_system_keys (analisi delle sinapsi di Azure)
+description: Usare **sp_pdw_database_encryption_regenerate_system_keys** per ruotare il certificato e la chiave di crittografia del database per i database interni crittografati quando è abilitata la funzionalità Transparent Data Encryption nell'appliance.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,18 +13,18 @@ author: ronortloff
 ms.author: rortloff
 ms.reviewer: ''
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 3d7a4efb9a629938b6cfc7d48c990351bc2a5cbc
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 2c6474944be4ef9911f30ed49947e1a0e959a456
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100271778"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186398"
 ---
 # <a name="sp_pdw_database_encryption_regenerate_system_keys-azure-synapse-analytics"></a>sp_pdw_database_encryption_regenerate_system_keys (analisi delle sinapsi di Azure)
 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Usare **sp_pdw_database_encryption_regenerate_system_keys** per ruotare il certificato e la chiave di crittografia del database per i database interni crittografati quando è abilitata la funzionalità Transparent Data Encryption nell'appliance. incluso `tempdb`. Questa operazione avrà esito positivo solo se si abilita Transparent Data Encryption.  
+Usare **sp_pdw_database_encryption_regenerate_system_keys** per ruotare il certificato e la chiave di crittografia del database per i database interni crittografati quando è abilitata la funzionalità Transparent Data Encryption nell'appliance. incluso `tempdb`. Questa operazione avrà esito positivo solo se si abilita Transparent Data Encryption.  
   
 ## <a name="syntax"></a>Sintassi  
   

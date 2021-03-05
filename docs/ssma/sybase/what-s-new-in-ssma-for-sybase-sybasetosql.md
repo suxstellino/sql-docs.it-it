@@ -10,16 +10,23 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: e63eea932696ca0304443722b40518017ae43485
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 4bae03f2283dae9256c89f2e89ae190e30bee0fb
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100065046"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186429"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Novità di SSMA per SAP ASE (SybaseToSQL)
 
 Questo articolo elenca SQL Server Migration Assistant (SSMA) per le modifiche di SAP ASE (in precedenza SSMA per Sybase) in ogni versione.
+
+## <a name="ssma-v817"></a>SSMA v 8.17
+
+La versione 8.17 di SSMA per SAP ASE contiene le modifiche seguenti:
+
+* Aggiungere il supporto per le colonne calcolate
+* Aggiornare i report di valutazione HTML per utilizzare l'editor moderno per visualizzare il testo SQL
 
 ## <a name="ssma-v816"></a>SSMA v 8.16
 

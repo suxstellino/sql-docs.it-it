@@ -3,7 +3,7 @@ title: Funzionalità del motore di database deprecate in SQL Server 2017 | Micro
 titleSuffix: SQL Server 2019
 description: Informazioni sulle funzionalità del motore di database deprecate ancora disponibili in SQL Server 2017 (14.x), ma che non devono essere usate nelle nuove applicazioni.
 ms.custom: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 03/03/2021
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -17,24 +17,23 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017'
-ms.openlocfilehash: e14f354812c99b9ed3e8be86734e3cb8e07db751
-ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
+ms.openlocfilehash: e3b27292b817d0ec0bf22afcc1e8eaab61864e82
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100489475"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186444"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Funzionalità del motore di database deprecate in SQL Server 2017
 
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 
-  In questo argomento verranno descritte le funzionalità deprecate di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ancora disponibili in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. È consigliabile non usare le funzionalità deprecate nelle nuove applicazioni.  
+  Questo articolo descrive le funzionalità deprecate [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ancora disponibili in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] . È consigliabile non usare le funzionalità deprecate nelle nuove applicazioni.  
   
 Quando una funzionalità è contrassegnata come deprecata significa che:
-
-- La funzionalità è solo in modalità manutenzione. Non verranno apportate nuove modifiche, incluse quelle correlate all'interoperabilità con le nuove funzionalità.
-- Microsoft si impegna a non rimuovere una funzionalità deprecata dalle versioni future per semplificare gli aggiornamenti. Tuttavia, in rare situazioni, una funzionalità potrebbe essere rimossa in modo permanente da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se ne limita le innovazioni future.
-- Per i nuovi progetti di sviluppo, non è consigliabile usare funzionalità deprecate.      
+- La funzionalità è solo in modalità manutenzione. Non verrà apportata alcuna nuova modifica, inclusi quelli relativi all'interoperabilità tra le nuove funzionalità.
+- Microsoft si impegna a non rimuovere una funzionalità deprecata dalle versioni future per semplificare gli aggiornamenti. In rare situazioni, tuttavia, è possibile scegliere di interrompere definitivamente (rimuovere) la funzionalità da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se limita le innovazioni future.
+- Per le nuove attività di sviluppo, non usare le funzionalità deprecate. Per le applicazioni esistenti, pianificare la modifica delle applicazioni che attualmente utilizzano queste funzionalità il prima possibile.     
 
 È possibile monitorare l'utilizzo delle funzionalità deprecate tramite il contatore delle prestazioni [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :Funzionalità deprecate e gli eventi di traccia. Per altre informazioni, vedere [Usare oggetti di SQL Server](../relational-databases/performance-monitor/use-sql-server-objects.md).  
 
@@ -49,8 +48,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 > Questo elenco è identico all'elenco [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]. Non sono presenti funzionalità nuove o deprecate del motore di database annunciate per [!INCLUDE[sssql17-md](../includes/sssql17-md.md)].
 
 ## <a name="features-deprecated-in-the-next-version-of-sql-server"></a>Funzionalità deprecate nella prossima versione di SQL Server
-
-Le funzionalità seguenti del motore di database di SQL Server sono deprecate nella versione successiva di SQL Server. Non usare queste funzionalità in un nuovo progetto di sviluppo e modificare non appena possibile le applicazioni in cui sono attualmente implementate. Il valore **Nome funzionalità** viene visualizzato negli eventi di traccia come ObjectName e nei contatori delle prestazioni e in `sys.dm_os_performance_counters` come nome dell'istanza. Il valore **ID funzionalità** viene visualizzato negli eventi di traccia come ID dell'oggetto.
+Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] funzionalità seguenti non saranno supportate in una versione futura di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Non usare queste funzionalità in un nuovo progetto di sviluppo e modificare non appena possibile le applicazioni in cui sono attualmente implementate. Il valore **Nome funzionalità** viene visualizzato negli eventi di traccia come ObjectName e nei contatori delle prestazioni e in `sys.dm_os_performance_counters` come nome dell'istanza. Il valore **ID funzionalità** viene visualizzato negli eventi di traccia come ID dell'oggetto.
 
 ### <a name="back-up-and-restore"></a>Backup e ripristino
 
@@ -62,7 +60,7 @@ Le funzionalità seguenti del motore di database di SQL Server sono deprecate ne
 
 | Funzionalità deprecata | Sostituzione | Nome funzionalità | ID funzionalità |
 |--------------------|-------------|--------------|------------|
-Eseguire l'aggiornamento dalla versione 100 (SQL Server 2008 e SQL Server 2008 R2). | Quando una versione di SQL Server non viene più [supportata](/lifecycle/products/?products=sql-server), il livello di compatibilità del database associato viene contrassegnato come deprecato. Microsoft continua tuttavia a supportare per quanto possibile le applicazioni certificate in qualsiasi livello di compatibilità del database supportato al fine di facilitare gli aggiornamenti. Per informazioni sui livelli di compatibilità supportati, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md). | Livello di compatibilità del database: 100 | 108 |
+Aggiornamento dalla versione 100 ([!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]). | Quando una [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] versione non è più [supportata](/lifecycle/products/?products=sql-server), il livello di compatibilità del database associato è contrassegnato come deprecato. Microsoft continua tuttavia a supportare per quanto possibile le applicazioni certificate in qualsiasi livello di compatibilità del database supportato al fine di facilitare gli aggiornamenti. Per informazioni sui livelli di compatibilità supportati, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md). | Livello di compatibilità del database: 100 | 108 |
 
 ### <a name="database-objects"></a>Oggetti di database
 

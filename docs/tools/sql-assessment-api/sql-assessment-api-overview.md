@@ -8,13 +8,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 1/25/2021
-ms.openlocfilehash: 19328956cab5d7c5e449e48d99bbfda1b999ca6f
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 3/3/2021
+ms.openlocfilehash: 7e55abe0d02a9f9deffffdaa7639d911faad1fa3
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100067119"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102185748"
 ---
 # <a name="sql-assessment-api"></a>API Valutazione SQL
 
@@ -24,9 +24,13 @@ L'API Valutazione SQL è utile quando ci si vuole assicurare che la configurazio
 
 L'API può essere usata per valutare:
  
-* Istanza gestita di database SQL di Azure e SQL Server le versioni 2012 e successive.
+* SQL Server in Macchine virtuali di Azure
 
-* SQL in sistemi basati su Linux.
+* Istanza gestita di database SQL di Azure
+
+* SQL Server 2012 e versioni successive
+
+* SQL in sistemi basati su Linux
 
 L'API viene usata anche dall'estensione SQL Server assessment per Azure Data Studio (ADS).
 

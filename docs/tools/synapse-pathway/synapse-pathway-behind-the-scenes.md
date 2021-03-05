@@ -2,19 +2,19 @@
 title: Anteprima del percorso sinapsi di Azure in background.
 description: Approfondimento tecnico sul modo in cui il percorso sinapsi di Azure converte il codice.
 author: anshul82-ms
-ms.author: anrampal.
+ms.author: anrampal
 ms.prod: sql
-ms.technology: Azure Synapse Pathway
+ms.technology: tools-other
 ms.topic: conceptual
 ms.date: 03/02/2021
 monikerRange: =azure-sqldw-latest
 ms.custom: template-concept
-ms.openlocfilehash: dbd362e53b5bfcd916c53e90d6f66c8fb44f0374
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 9f23aa23ef40ee7df5ad601b73ad526df7bcf0da
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101839209"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186303"
 ---
 # <a name="azure-synapse-pathway-preview-behind-the-scenes"></a>Anteprima dei percorsi delle sinapsi di Azure
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
@@ -23,7 +23,7 @@ L'obiettivo del percorso della sinapsi di Azure è mantenere lo scopo funzionale
 
 Ogni fase conserva e aumenta la conoscenza dell'origine, inclusi i metadati specifici dell'origine, per garantire la massima qualità della traduzione.
 
- ![Percorso delle sinapsi di Azure.](./media/technical-deep-dive/behind-the-scene.png)
+ ![Percorso delle sinapsi di Azure.](./media/synapse-pathway-behind-the-scenes/behind-the-scene.png)
 
 ## <a name="stage-1--lexing-and-parsing"></a>Fase 1: Lexing e analisi
 
@@ -49,7 +49,7 @@ Azure sinapsi SQL definisce la funzione assoluta come:
 ABS ( numeric_expression )  
 ```
 
-In questo semplice caso, il percorso sinapsi comprende che la conversione in sinapsi SQL da float a numeric è una [conversione](../../t-sql/functions/cast-and-convert-transact-sql?view=azure-sqldw-latest#implicit-conversions) implicita e non richiede ulteriori operazioni di cast del tipo. Conversione di codice semplice, pulita ed efficace.
+In questo semplice caso, il percorso sinapsi comprende che la conversione in sinapsi SQL da float a numeric è una [conversione](../../t-sql/functions/cast-and-convert-transact-sql.md?view=azure-sqldw-latest&preserve-view=true#implicit-conversions) implicita e non richiede ulteriori operazioni di cast del tipo. Conversione di codice semplice, pulita ed efficace.
 
 La conservazione di queste metainformazioni sulle istruzioni e sui frammenti di origine consente le differenze strutturali tra le piattaforme, conversioni nella logica di rifiuto esplicito per i predicati della condizione di ricerca in una clausola WHERE, ad esempio.
 

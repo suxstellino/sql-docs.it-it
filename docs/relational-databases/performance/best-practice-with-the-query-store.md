@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c8379a2e1c18ea5da82abda5ad25dee47679a742
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 85c9a992660b63f70d2193acd114e7b07d3c1092
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837781"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186498"
 ---
 # <a name="best-practices-with-query-store"></a>Procedure consigliate per Query Store
 
@@ -434,7 +434,7 @@ I flag di traccia globali 7745 e 7752 possono essere usati per migliorare la dis
 > Se si usa Query Store per informazioni dettagliate sui carichi di lavoro just-in-time in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], prevedere l'installazione dei miglioramenti della scalabilità delle prestazioni in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU2 ([KB 4340759](https://support.microsoft.com/help/4340759)) appena possibile. Senza questi miglioramenti, quando il database è sottoposto a carichi di lavoro intensivi, può verificarsi una contesa di spinlock e le prestazioni del server possono risultare rallentate. In particolare, è possibile che si verifichi una contesa significativa sullo spinlock `QUERY_STORE_ASYNC_PERSIST` o `SPL_QUERY_STORE_STATS_COOKIE_CACHE`. Applicato questo miglioramento, Query Store non provocherà più contese di spinlock.
 
 > [!IMPORTANT]
-> Se si usa Query Store per informazioni dettagliate sui carichi di lavoro just-in-time in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]), prevedere l'installazione del miglioramento della scalabilità delle prestazioni in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU15, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22 e [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU8 appena possibile. Senza questo miglioramento, quando il database è sottoposto a carichi di lavoro ad hoc pesanti, Query Store può usare una quantità elevata di memoria e le prestazioni del server possono risultare rallentate. Applicato questo miglioramento, Query Store impone limiti interni alla quantità di memoria che può essere usata dai vari componenti e può modificare automaticamente la modalità di operazione in sola lettura finché non viene restituita memoria sufficiente a [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Si noti che i limiti di memoria interni di Query Store non sono documentati perché sono soggetti a modifiche.  
+> Se si usa Query Store per informazioni dettagliate sul carico di lavoro JIT in (da a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ), pianificare l'installazione del miglioramento della scalabilità delle prestazioni in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU15, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU23 e [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU9 il prima possibile. Senza questo miglioramento, quando il database è sottoposto a carichi di lavoro ad hoc pesanti, Query Store può usare una quantità elevata di memoria e le prestazioni del server possono risultare rallentate. Applicato questo miglioramento, Query Store impone limiti interni alla quantità di memoria che può essere usata dai vari componenti e può modificare automaticamente la modalità di operazione in sola lettura finché non viene restituita memoria sufficiente a [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Si noti che i limiti di memoria interni di Query Store non sono documentati perché sono soggetti a modifiche.  
 
 
 ## <a name="using-query-store-in-azure-sql-database-active-geo-replication"></a><a name="geosyncreplicas"></a> Uso di Query Store nella replica geografica attiva del database SQL di Azure

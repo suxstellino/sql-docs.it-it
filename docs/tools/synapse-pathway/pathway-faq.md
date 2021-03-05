@@ -6,17 +6,17 @@ ms.author: anrampal
 ms.topic: overview
 ms.date: 03/02/2021
 ms.prod: sql
-ms.technology: Azure Synapse Pathway
+ms.technology: tools-other
 monikerRange: =azure-sqldw-latest
 ms.custom: template-overview
-ms.openlocfilehash: 345346d2161800810ba3d07667b831107f70b215
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 8352fb6a70c54ede61d544a147f970237404c9f5
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101839194"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186328"
 ---
-# <a name="azure-synapse-pathway-preview"></a>Anteprima del percorso della sinapsi di Azure
+# <a name="azure-synapse-pathway-preview-faq"></a>Domande frequenti sull'anteprima del percorso sinapsi di Azure
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
 In questa guida sono disponibili le domande più frequenti sull'anteprima dei percorsi delle sinapsi di Azure.
@@ -58,7 +58,9 @@ R. Poiché è possibile eseguire il percorso sinapsi nell'ambiente locale, non v
 
 R. Il percorso delle sinapsi di Azure è attualmente in fase di **Anteprima**.   Il supporto per il percorso sinapsi è disponibile tramite il canale di supporto Microsoft. È possibile aumentare il ticket nei portali portale di Azure o standard (in genere il supporto locale).
 
-> [!NOTE] Come per qualsiasi altro servizio di Azure, tutti i servizi in anteprima sono idonei per il supporto, solo senza contratti di servizio.
+
+> [!NOTE] 
+> Come per qualsiasi altro servizio di Azure, tutti i servizi in anteprima sono idonei per il supporto, solo senza contratti di servizio.
 
 <!-- ### Troubleshooting and optimization
 

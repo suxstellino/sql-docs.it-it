@@ -1,21 +1,22 @@
 ---
 title: Panoramica dell'anteprima del percorso sinapsi di Azure
 description: Il percorso delle sinapsi di Azure è uno strumento per eseguire la migrazione di una data warehouse ad Azure sinapsi Analytics.
+author: anshul82-ms
 ms.author: anrampal
 ms.topic: overview
 ms.date: 03/02/2021
 ms.prod: sql
-ms.technology: Azure Synapse Pathway
+ms.technology: tools-other
 monikerRange: =azure-sqldw-latest
 ms.custom: template-overview
-ms.openlocfilehash: d7289d2bfe099dad7bbc91ccd5060797f7aad997
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 5e3844f6e63fafca5137a646ff4c02edbc7105b8
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101839230"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102185923"
 ---
-# <a name="azure-synapse-pathway-preview"></a>Anteprima del percorso della sinapsi di Azure
+# <a name="azure-synapse-pathway-preview-overview"></a>Panoramica dell'anteprima del percorso sinapsi di Azure
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
 Poiché i clienti considerano la modernizzazione dei sistemi data warehouse, uno dei blocchi critici che affrontano è la traduzione del codice SQL. Il codice esistente viene scritto e ottimizzato per il sistema corrente, ma deve essere ottimizzato per il nuovo sistema a cui viene eseguita la migrazione.
@@ -32,7 +33,7 @@ Per tradurre questo codice SQL critico, i clienti devono riscrivere manualmente 
 
 Il **percorso delle sinapsi di Azure** consente di eseguire l'aggiornamento a una piattaforma di data warehouse moderna automatizzando la conversione del codice del data warehouse esistente. Si tratta di uno strumento gratuito, intuitivo e facile da usare che consente di automatizzare la conversione del codice e di velocizzare la migrazione ad Azure sinapsi Analytics.
 
- ![Panoramica del percorso della sinapsi di Azure.](./media/pathway-overview/synapse-pathway-overview.png) 
+ ![Panoramica del percorso della sinapsi di Azure.](./media/azure-synapse-pathway-overview/pathway-overview.png) 
 
 Il percorso sinapsi converte le istruzioni DDL (Data Definition Language) e DML (Data Manipulation Language) in un linguaggio conforme a T-SQL compatibile con SQL sinapsi di Azure.
 
@@ -47,7 +48,7 @@ Per installare il percorso sinapsi, controllare il [download del percorso sinaps
 ## <a name="supported-sources"></a>Origini supportate
 
 Il percorso delle sinapsi di Azure supporta la conversione del codice di database, schemi e tabelle per le origini seguenti:
-- **IBM Netezza** 
+- **IBM Netezza**
 - **Microsoft SQL Server**
 - **Snowflake**
 
@@ -59,5 +60,3 @@ Per altre informazioni sul percorso delle sinapsi di Azure, vedere la [pagina de
 
 - [Eseguire la prima traduzione con un percorso di sinapsi di Azure](synapse-pathway-assessment.md)
 - Blog di annuncio-annuncio [del percorso delle sinapsi di Azure: sovralimentare il data warehouse migrazione-Microsoft Tech Community](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/announcing-azure-synapse-pathway-turbocharge-your-data-warehouse/ba-p/2176630)
-
-

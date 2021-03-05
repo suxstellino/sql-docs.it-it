@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 87ac1c0759264b00567d5edc2cd9f22727fdd0fa
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 4139b8b53a50aa58329f6a5a5c490d99ee9f0524
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "100353863"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186256"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Abilitare connessioni crittografate al motore di database
 
@@ -71,7 +71,7 @@ L'abilitazione della crittografia TLS contribuisce alla sicurezza del traffico d
  Il client deve essere in grado di verificare la proprietà del certificato utilizzato dal server. Se il client dispone del certificato chiave pubblica dell'autorità di certificazione che ha firmato il certificato del server, non sono necessarie ulteriori operazioni di configurazione. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sono inclusi i certificati chiave pubblica di numerose autorità di certificazione. Se il certificato del server è stato firmato da un'autorità di certificazione pubblica o privata per la quale il client non dispone del certificato chiave pubblica, è necessario installare il certificato chiave pubblica dell'autorità di certificazione che ha firmato il certificato del server.  
   
 > [!NOTE]  
-> Per utilizzare la crittografia in un cluster di failover, è necessario installare il certificato server con il nome DNS completo del server virtuale in tutti i nodi del cluster di failover. Ad esempio, con un cluster costituito da due nodi, denominati rispettivamente **_test1.\_\<your company>\*.com*** e **_test2.\_\<your company>\*.com***, e un server virtuale denominato *_virtsql_*_, è necessario installare un certificato per _ *_virtsql.\_\<your company>\*.com*** in entrambi i nodi. È possibile impostare il valore dell'opzione **ForceEncryption** nella casella della proprietà **Protocolli per virtsql** di **Configurazione di rete SQL Server** su **Sì**.
+> Per utilizzare la crittografia in un cluster di failover, è necessario installare il certificato server con il nome DNS completo del server virtuale in tutti i nodi del cluster di failover. Ad esempio, se si dispone di un cluster a due nodi, con nodi denominati ***test1. \* \<your company> \* . com*** e **_test2. \_ \<your company> \* . com * * * e si dispone di un server virtuale denominato **_Virtsql_*_, è necessario installare un certificato per _ *_virtsql. \_ \<your company> \** com ** in entrambi i nodi. È possibile impostare il valore dell'opzione **ForceEncryption** nella casella della proprietà **Protocolli per virtsql** di **Configurazione di rete SQL Server** su **Sì**.
 
 > [!NOTE]
 > Se si creano connessioni crittografate per un indicizzatore di Ricerca di Azure a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in una macchina virtuale di Azure, vedere [Configurare una connessione da un indicizzatore di Ricerca di Azure a SQL Server in una VM Azure](/azure/search/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers). 
@@ -85,6 +85,9 @@ Affinché un certificato TLS venga caricato da [!INCLUDE[ssNoVersion](../../incl
 - L'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve avere l'autorizzazione necessaria per accedere al certificato TLS.
 
 - L'ora di sistema corrente deve essere successiva al valore della proprietà **Valido dal** del certificato e antecedente al valore della proprietà **Valido fino a** del certificato.
+
+> [!NOTE]  
+> La validità del certificato viene valutata quando ci si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con connessioni client avviate specificando l'opzione di crittografia su true, a meno che non sia sottoposto a override dall'impostazione del certificato del server attendibile. 
 
 - Il certificato deve essere destinato all'autenticazione del server. Per questa operazione è necessario impostare la proprietà **Utilizzo chiavi avanzato** del certificato su **Autenticazione server (1.3.6.1.5.5.7.3.1)** .
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - deprecation [SQL Server], feature list
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 518b29507e7992b267922e09c97bf98b1657205d
-ms.sourcegitcommit: c83c17e44b5e1e3e2a3b5933c2a1c4afb98eb772
+ms.openlocfilehash: e4227e17c9b8f3319e771d7de9d93fefddbaa487
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "100525162"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186121"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Funzionalità del Motore di database deprecate in SQL Server 2016
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -28,9 +28,9 @@ ms.locfileid: "100525162"
 Questo articolo descrive le funzionalità deprecate [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ancora disponibili in [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] . È consigliabile non usare le funzionalità deprecate nelle nuove applicazioni.  
   
 Quando una funzionalità è contrassegnata come deprecata significa che:
--  La funzionalità è solo in modalità manutenzione. Non verranno apportate nuove modifiche, incluse quelle correlate all'interoperabilità con le nuove funzionalità.
--  Microsoft si impegna a non rimuovere una funzionalità deprecata dalle versioni future per semplificare gli aggiornamenti. Tuttavia, in rare situazioni, una funzionalità potrebbe essere rimossa in modo permanente da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se ne limita le innovazioni future.
--  Per i nuovi progetti di sviluppo, non è consigliabile usare funzionalità deprecate.      
+- La funzionalità è solo in modalità manutenzione. Non verrà apportata alcuna nuova modifica, inclusi quelli relativi all'interoperabilità tra le nuove funzionalità.
+- Microsoft si impegna a non rimuovere una funzionalità deprecata dalle versioni future per semplificare gli aggiornamenti. In rare situazioni, tuttavia, è possibile scegliere di interrompere definitivamente (rimuovere) la funzionalità da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se limita le innovazioni future.
+- Per le nuove attività di sviluppo, non usare le funzionalità deprecate. Per aplications esistenti, pianificare la modifica delle applicazioni che attualmente usano queste funzionalità il prima possibile.     
 
 Per [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], vedere [Funzionalità del motore di database deprecate in SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md).
 
@@ -44,7 +44,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 ```  
   
 ## <a name="features-deprecated-in-the-next-version-of-sql-server"></a>Funzionalità deprecate nella prossima versione di SQL Server
- Le funzionalità riportate di seguito di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] non saranno supportate nella prossima versione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Non usare queste funzionalità in un nuovo progetto di sviluppo e modificare non appena possibile le applicazioni in cui sono attualmente implementate. Il valore **Nome funzionalità** viene visualizzato negli eventi di traccia come ObjectName e nei contatori delle prestazioni e in `sys.dm_os_performance_counters` come nome dell'istanza. Il valore **ID funzionalità** viene visualizzato negli eventi di traccia come ID dell'oggetto.  
+ Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] funzionalità seguenti non saranno supportate in una versione futura di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Non usare queste funzionalità in un nuovo progetto di sviluppo e modificare non appena possibile le applicazioni in cui sono attualmente implementate. Il valore **Nome funzionalità** viene visualizzato negli eventi di traccia come ObjectName e nei contatori delle prestazioni e in `sys.dm_os_performance_counters` come nome dell'istanza. Il valore **ID funzionalità** viene visualizzato negli eventi di traccia come ID dell'oggetto.  
   
 |Category|Funzionalità deprecata|Sostituzione|Nome funzionalità|ID funzionalità|  
 |--------------|------------------------|-----------------|------------------|----------------|  
