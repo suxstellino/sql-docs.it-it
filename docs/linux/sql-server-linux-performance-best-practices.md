@@ -8,12 +8,12 @@ ms.date: 01/19/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 652db6f752f8bf46ad2b7d4779063c79359e3a33
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 42638520dd0d7391a10217dc7f7fdd2ce708189f
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100350945"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247499"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Procedure consigliate per le prestazioni e linee guida per la configurazione per SQL Server in Linux
 
@@ -51,7 +51,7 @@ mdadm --create --verbose /dev/md2 --level=raid0 --chunk=64K --raid-devices=2 /de
 
 #### <a name="disk-partitioning-and-configuration-recommendations"></a>Suggerimenti sulla configurazione e sul partizionamento del disco
 
-Per SQL Server, è consigliabile usare le configurazioni RAID. Il file System distribuito e la larghezza dello stripe devono corrispondere alla geometria RAID. Di seguito è riportato un esempio di XFS basato sul file System per un volume di log. 
+Per SQL Server, è consigliabile usare le configurazioni RAID. Il file System distribuito e la larghezza dello stripe devono corrispondere alla geometria RAID. Di seguito è riportato un esempio di XFS basato sul file System per un volume di log.
 
 ```bash
 # Creating a log volume, using 6 devices, in RAID 10 configuration with 64KB stripes
@@ -71,8 +71,9 @@ realtime =none                   extsz=4096   blocks=0, rtextents=0
 ```
 
 La matrice di log è un RAID-10 a 6 unità con striping 64K. Come si può notare:
-   1. "BLKS", 16 * 4096 BLK size = 64K, corrisponde alla dimensione della striscia. 
-   2. "SWidth = 48 BLKS", sWidth/= 3, che corrisponde al numero di unità dati nella matrice, escluse le unità di parità. 
+
+- "BLKS", 16 * 4096 BLK size = 64K, corrisponde alla dimensione della striscia.
+- "SWidth = 48 BLKS", sWidth/= 3, che corrisponde al numero di unità dati nella matrice, escluse le unità di parità.
 
 #### <a name="file-system-configuration-recommendation"></a>Raccomandazione sulla configurazione del file system
 
@@ -216,7 +217,7 @@ La tabella seguente fornisce suggerimenti per le impostazioni del disco:
 | Impostazione | valore | Ulteriori informazioni |
 |---|---|---|
 | `readahead` del disco | 4096 | Vedere il comando `blockdev` |
-| impostazioni sysctl | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness = 1 | Vedere il comando **sysctl** |
+| impostazioni sysctl | kernel.sched_min_granularity_ns = 15 milioni<br/>kernel.sched_wakeup_granularity_ns = 2 milioni<br/>vm.dirty_ratio = 80<br/>vm.dirty_background_ratio = 3<br/>vm.swappiness = 1 | Vedere il comando **sysctl** |
 
 **Descrizione:**
 
@@ -274,117 +275,117 @@ L'uso del profilo **mssql** di **_Tuned_ *_ configura l'opzione _* transparent_h
 
 #### <a name="network-setting-recommendations"></a>Indicazioni sulle impostazioni di rete
 
-Analogamente ai requisiti di archiviazione e CPU, sono disponibili raccomandazioni specifiche per la rete, elencate di seguito per riferimento. Non tutte le impostazioni indicate di seguito sono disponibili in schede di rete diverse. Per informazioni aggiuntive su ognuna di queste opzioni, vedere e consultare i fornitori di schede di interfaccia di rete. Eseguire il test e la configurazione negli ambienti di sviluppo prima di applicarli negli ambienti di produzione. Le opzioni indicate di seguito sono illustrate con esempi e i comandi usati sono specifici del tipo di scheda di interfaccia di rete e del fornitore. 
+Analogamente ai requisiti di archiviazione e CPU, sono disponibili raccomandazioni specifiche per la rete, elencate di seguito per riferimento. Non tutte le impostazioni indicate di seguito sono disponibili in schede di rete diverse. Per informazioni aggiuntive su ognuna di queste opzioni, vedere e consultare i fornitori di schede di interfaccia di rete. Eseguire il test e la configurazione negli ambienti di sviluppo prima di applicarli negli ambienti di produzione. Le opzioni indicate di seguito sono illustrate con esempi e i comandi usati sono specifici del tipo di scheda di interfaccia di rete e del fornitore.
 
 1. Configurazione delle dimensioni del buffer della porta di rete: nell'esempio seguente la scheda di interfaccia di rete è denominata ' eth0', che è una NIC basata su Intel. Per la scheda di interfaccia di rete basata su Intel, le dimensioni del buffer consigliate sono 4KB (4096). Verificare i valori massimi predefiniti e configurarli usando i comandi di esempio illustrati di seguito:
 
- ```bash
-         #To check the pre-set maximums please run the command, example NIC name used here is:"eth0"
-         ethtool -g eth0
-         #command to set both the rx(recieve) and tx (transmit) buffer size to 4 KB. 
-         ethtool -G eth0 rx 4096 tx 4096
-         #command to check the value is properly configured is:
-         ethtool -g eth0
-  ```
+   ```bash
+            #To check the pre-set maximums please run the command, example NIC name used here is:"eth0"
+            ethtool -g eth0
+            #command to set both the rx(recieve) and tx (transmit) buffer size to 4 KB. 
+            ethtool -G eth0 rx 4096 tx 4096
+            #command to check the value is properly configured is:
+            ethtool -g eth0
+   ```
 
 2. Abilitare i frame Jumbo: prima di abilitare i frame Jumbo, verificare che tutti i commutiri di rete, i router e qualsiasi altro elemento essenziale nel percorso dei pacchetti di rete tra i client e SQL Server supportino i frame Jumbo. Solo in questo modo, l'abilitazione di frame Jumbo può migliorare le prestazioni. Dopo aver abilitato i frame Jumbo, connettersi a SQL Server e modificare le dimensioni del pacchetto di rete in 8060 usando `sp_configure` come illustrato di seguito:
 
-```bash
-         #command to set jumbo frame to 9014 for a Intel NIC named eth0 is
-         ifconfig eth0 mtu 9014
-         #verify the setting using the command:
-         ip addr | grep 9014
-```
+   ```bash
+            #command to set jumbo frame to 9014 for a Intel NIC named eth0 is
+            ifconfig eth0 mtu 9014
+            #verify the setting using the command:
+            ip addr | grep 9014
+   ```
 
-```sql
-         sp_configure 'network packet size' , '8060'
-         go
-         reconfigure with override
-         go
-```
+   ```sql
+            sp_configure 'network packet size' , '8060'
+            go
+            reconfigure with override
+            go
+   ```
 
 3. Per impostazione predefinita, è consigliabile impostare la porta per la coesistenza di IRQ RX/TX adattiva, il che significa che il recapito degli interrupt verrà regolato per migliorare la latenza quando la frequenza dei pacchetti è bassa e migliorare la velocità effettiva quando la frequenza dei pacchetti è Si noti che questa impostazione potrebbe non essere disponibile in tutte le diverse infrastrutture di rete, quindi esaminare l'infrastruttura di rete esistente e verificare che sia supportata. L'esempio seguente è per la scheda di interfaccia di rete denominata "eth0", che è una scheda di interfaccia di rete basata su Intel:
 
-```bash
-         #command to set the port for adaptive RX/TX IRQ coalescing
-         echtool -C eth0 adaptive-rx on
-         echtool -C eth0 adaptive-tx on
-         #confirm the setting using the command:
-         ethtool -c eth0
-```
+   ```bash
+            #command to set the port for adaptive RX/TX IRQ coalescing
+            echtool -C eth0 adaptive-rx on
+            echtool -C eth0 adaptive-tx on
+            #confirm the setting using the command:
+            ethtool -c eth0
+   ```
 
-> [!NOTE]
-> Per un comportamento prevedibile per ambienti a prestazioni elevate, ad esempio gli ambienti per il benchmarking, disabilitare la coalesone di IRQ RX/TX adattiva e quindi impostare in modo specifico la coalesone dell'interrupt RX/TX. Vedere i comandi di esempio per disabilitare la coalesone di IRQ RX/TX, quindi impostare in modo specifico i valori:
+   > [!NOTE]
+   > Per un comportamento prevedibile per ambienti a prestazioni elevate, ad esempio gli ambienti per il benchmarking, disabilitare la coalesone di IRQ RX/TX adattiva e quindi impostare in modo specifico la coalesone dell'interrupt RX/TX. Vedere i comandi di esempio per disabilitare la coalesone di IRQ RX/TX, quindi impostare in modo specifico i valori:
 
-```bash
-         #commands to disable adaptive RX/TX IRQ coalescing
-         echtool -C eth0 adaptive-rx off
-         echtool -C eth0 adaptive-tx off
-         #confirm the setting using the command:
-         ethtool -c eth0
-         #Let us set the rx-usecs parameter which specify how many microseconds after at least 1 packet is received before generating an interrupt, and the [irq] parameters are the corresponding delays in updating the #status when the interrupt is disabled. For Intel bases NICs below are good values to start with:
-         ethtool -C eth0 rx-usecs 100 tx-frames-irq 512
-         #confirm the setting using the command:
-         ethtool -c eth0
-```
+   ```bash
+            #commands to disable adaptive RX/TX IRQ coalescing
+            echtool -C eth0 adaptive-rx off
+            echtool -C eth0 adaptive-tx off
+            #confirm the setting using the command:
+            ethtool -c eth0
+            #Let us set the rx-usecs parameter which specify how many microseconds after at least 1 packet is received before generating an interrupt, and the [irq] parameters are the corresponding delays in updating the #status when the interrupt is disabled. For Intel bases NICs below are good values to start with:
+            ethtool -C eth0 rx-usecs 100 tx-frames-irq 512
+            #confirm the setting using the command:
+            ethtool -c eth0
+   ```
 
 4. Si consiglia anche RSS (Receive-Side Scaling) abilitato e, per impostazione predefinita, la combinazione del lato RX e TX delle code RSS. Esistono scenari specifici in cui, quando si lavora con supporto tecnico Microsoft, la disabilitazione di RSS ha migliorato anche le prestazioni. Testare questa impostazione negli ambienti di test prima di applicarla negli ambienti di produzione. Il comando di esempio illustrato di seguito è per Intel NIC.
 
-```bash
-         #command to get pre-set maximums
-         ethtool -l eth0 
-         #note the pre-set "Combined" maximum value. let's consider for this example, it is 8.
-         #command to combine the queues with the value reported in the pre-set "Combined" maximum value:
-         ethtool -L eth0 combined 8
-         #you can verify the setting using the command below
-         ethtool -l eth0
-```
+   ```bash
+            #command to get pre-set maximums
+            ethtool -l eth0 
+            #note the pre-set "Combined" maximum value. let's consider for this example, it is 8.
+            #command to combine the queues with the value reported in the pre-set "Combined" maximum value:
+            ethtool -L eth0 combined 8
+            #you can verify the setting using the command below
+            ethtool -l eth0
+   ```
 
 5. Uso dell'affinità IRQ della porta NIC. Per ottenere le prestazioni previste mediante la modifica dell'affinità IRQ, prendere in considerazione alcuni parametri importanti, ad esempio la gestione Linux della topologia del server, dello stack del driver NIC, delle impostazioni predefinite e dell'impostazione di irqbalance. Le ottimizzazioni delle impostazioni delle affinità IRQ della porta NIC vengono eseguite con le informazioni sulla topologia del server, disabilitando il irqbalance e usando le impostazioni specifiche del fornitore NIC. Di seguito è riportato un esempio di infrastruttura di rete specifica di Mellanox che consente di spiegare la configurazione. Si noti che i comandi cambiano in base all'ambiente. Per ulteriori informazioni, contattare il fornitore della scheda di interfaccia di rete:
 
-```bash
-         #disable irqbalance or get a snapshot of the IRQ settings and force the daemon to exit
-         systemctl disable irqbalance.service
-         #or
-         irqbalance --oneshot
+   ```bash
+            #disable irqbalance or get a snapshot of the IRQ settings and force the daemon to exit
+            systemctl disable irqbalance.service
+            #or
+            irqbalance --oneshot
 
-         #download the Mellanox mlnx_tuning_scripts tarball, https://www.mellanox.com/sites/default/files/downloads/tools/mlnx_tuning_scripts.tar.gz and extract it
-         tar -xvf mlnx_tuning_scripts.tar.gz
-         # be sure, common_irq_affinity.sh is executable. if not, 
-         # chmod +x common_irq_affinity.sh       
+            #download the Mellanox mlnx_tuning_scripts tarball, https://www.mellanox.com/sites/default/files/downloads/tools/mlnx_tuning_scripts.tar.gz and extract it
+            tar -xvf mlnx_tuning_scripts.tar.gz
+            # be sure, common_irq_affinity.sh is executable. if not, 
+            # chmod +x common_irq_affinity.sh       
 
-         #display IRQ affinity for Mellanox NIC port; e.g eth0
-         ./show_irq_affinity.sh eth0
+            #display IRQ affinity for Mellanox NIC port; e.g eth0
+            ./show_irq_affinity.sh eth0
 
-         #optimize for best throughput performance
-         ./mlnx_tune -p HIGH_THROUGHPUT
+            #optimize for best throughput performance
+            ./mlnx_tune -p HIGH_THROUGHPUT
 
-         #set hardware affinity to the NUMA node hosting physically the NIC and its port
-         ./set_irq_affinity_bynode.sh `\cat /sys/class/net/eth0/device/numa_node` eth0
+            #set hardware affinity to the NUMA node hosting physically the NIC and its port
+            ./set_irq_affinity_bynode.sh `\cat /sys/class/net/eth0/device/numa_node` eth0
 
-         #verify IRQ affinity
-         ./show_irq_affinity.sh eth0
+            #verify IRQ affinity
+            ./show_irq_affinity.sh eth0
 
-         #add IRQ coalescing optimizations
-         ethtool -C eth0 adaptive-rx off
-         ethtool -C eth0 adaptive-tx off
-         ethtool -C eth0  rx-usecs 750 tx-frames-irq 2048
+            #add IRQ coalescing optimizations
+            ethtool -C eth0 adaptive-rx off
+            ethtool -C eth0 adaptive-tx off
+            ethtool -C eth0  rx-usecs 750 tx-frames-irq 2048
 
-         #verify the settings
-         ethtool -c eth0
-```
+            #verify the settings
+            ethtool -c eth0
+   ```
 
 6. Una volta apportate le modifiche precedenti, verificare la velocità della scheda di interfaccia di rete per assicurarsi che corrisponda alla previsione usando il comando seguente:
 
-```bash
-         ethtool eth0 | grep -i Speed
-```
+   ```bash
+            ethtool eth0 | grep -i Speed
+   ```
 
 #### <a name="additional-advanced-kernelos-configuration"></a>Configurazione aggiuntiva avanzata del kernel/sistema operativo
 
-1. Per ottimizzare le prestazioni di I/O di archiviazione, è consigliabile usare la pianificazione a più code di Linux per i dispositivi a blocchi, che rende le prestazioni a livello di blocco facilmente scalabili in base alle unità SSD e ai sistemi multicore. Controllare nella documentazione se è abilitata per impostazione predefinita nelle distribuzioni di Linux. Nella maggior parte degli altri casi, viene abilitata avviando il kernel con **scsi_mod.use_blk_mq=y**, ma la documentazione della distribuzione di Linux in uso potrebbe contenere indicazioni aggiuntive. Ciò è coerente con il kernel di Linux upstream.
+- Per ottimizzare le prestazioni di I/O di archiviazione, è consigliabile usare la pianificazione a più code di Linux per i dispositivi a blocchi, che rende le prestazioni a livello di blocco facilmente scalabili in base alle unità SSD e ai sistemi multicore. Controllare nella documentazione se è abilitata per impostazione predefinita nelle distribuzioni di Linux. Nella maggior parte degli altri casi, viene abilitata avviando il kernel con **scsi_mod.use_blk_mq=y**, ma la documentazione della distribuzione di Linux in uso potrebbe contenere indicazioni aggiuntive. Ciò è coerente con il kernel di Linux upstream.
 
-1. Poiché Multipath I/O viene spesso usato per le distribuzioni di SQL Server, è consigliabile configurare anche la destinazione Multipath del mapper dispositivi per l'uso dell'infrastruttura `blk-mq` abilitando l'opzione di avvio del kernel **dm_mod.use_blk_mq=y**. Il valore predefinito è `n` (disabilitato). Questa impostazione, quando i dispositivi SCSI sottostanti usano `blk-mq`, riduce l'overhead dei blocchi a livello di mapper dispositivi. Per indicazioni aggiuntive su come configurarla, vedere la documentazione della distribuzione di Linux in uso.
+- Poiché Multipath I/O viene spesso usato per le distribuzioni di SQL Server, è consigliabile configurare anche la destinazione Multipath del mapper dispositivi per l'uso dell'infrastruttura `blk-mq` abilitando l'opzione di avvio del kernel **dm_mod.use_blk_mq=y**. Il valore predefinito è `n` (disabilitato). Questa impostazione, quando i dispositivi SCSI sottostanti usano `blk-mq`, riduce l'overhead dei blocchi a livello di mapper dispositivi. Per indicazioni aggiuntive su come configurarla, vedere la documentazione della distribuzione di Linux in uso.
 
 #### <a name="configure-swapfile"></a>Configurare un file di scambio
 

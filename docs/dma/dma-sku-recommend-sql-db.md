@@ -1,6 +1,6 @@
 ---
 title: Identificare lo SKU del database SQL di Azure appropriato per il database locale (Data Migration Assistant) | Microsoft Docs
-description: Informazioni su come usare Data Migration Assistant per identificare lo SKU del database SQL di Azure appropriato per il database locale
+description: Informazioni su come usare Data Migration Assistant per identificare il database SQL di Azure appropriato o lo SKU di Azure SQL Istanza gestita per il database locale
 ms.custom: ''
 ms.date: 05/06/2019
 ms.prod: sql
@@ -14,29 +14,23 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: ffb47ee457a03315821fee863816d725f9691ac3
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: b29815876d804f387ce31754c960e80f9db99434
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100062586"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247165"
 ---
-# <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificare il database SQL di Azure o lo SKU Istanza gestita appropriato per il database locale
+# <a name="identify-the-right-azure-sql-database-or-sql-managed-instance-sku-for-your-on-premises-database"></a>Identificare il database SQL di Azure o lo SKU di SQL Istanza gestita appropriato per il database locale
 
-La migrazione dei database nel cloud può essere complessa, soprattutto quando si cerca di selezionare la migliore destinazione di database di Azure e lo SKU per il database. Il nostro obiettivo con il database Migration Assistant (DMA) è aiutare a rispondere a queste domande e rendere più semplice l'esperienza di migrazione del database fornendo queste raccomandazioni per gli SKU in un output intuitivo.
+La migrazione dei database nel cloud può essere complessa, soprattutto quando si cerca di selezionare il migliore database SQL di Azure o la destinazione SQL Istanza gestita e lo SKU per il database. Il nostro obiettivo con il database Migration Assistant (DMA) è aiutare a rispondere a queste domande e rendere più semplice l'esperienza di migrazione del database fornendo queste raccomandazioni per gli SKU in un output intuitivo.
 
-Questo articolo è incentrato sulla funzionalità di raccomandazioni dello SKU del database SQL di Azure DMA. Il database SQL di Azure e Azure SQL Istanza gestita hanno diverse opzioni di distribuzione, tra cui:
 
-- Database singolo
-- Pool elastici
-- database SQL
-
-La funzionalità consigli SKU consente di identificare sia il database singolo del database SQL di Azure, sia lo SKU di SQL Istanza gestita di Azure in base ai contatori delle prestazioni raccolti dai computer che ospitano i database. La funzionalità fornisce consigli relativi al piano tariffario, al livello di calcolo e alle dimensioni massime dei dati, oltre ai costi stimati al mese. Offre inoltre la possibilità di eseguire il provisioning bulk di database singoli e istanze gestite per tutti i database consigliati.
-
-> [!NOTE]
-> Questa funzionalità è attualmente disponibile solo tramite l'interfaccia della riga di comando (CLI).
+La funzionalità raccomandazioni SKU consente di identificare il database SQL di Azure minimo consigliato o lo SKU di Azure SQL Istanza gestita in base ai contatori delle prestazioni raccolti dai computer che ospitano i database. La funzionalità fornisce consigli relativi al piano tariffario, al livello di calcolo e alle dimensioni massime dei dati, oltre ai costi stimati al mese. Offre inoltre la possibilità di eseguire il provisioning bulk di database singoli e istanze gestite per tutti i database consigliati. Questa funzionalità è attualmente disponibile solo tramite l'interfaccia della riga di comando (CLI).
 
 Di seguito sono riportate le istruzioni che consentono di determinare le raccomandazioni dello SKU e di effettuare il provisioning di singoli database o istanze gestite in Azure tramite DMA.
+
+[!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
 
 ## <a name="prerequisites"></a>Prerequisiti
 

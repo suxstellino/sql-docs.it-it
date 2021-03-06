@@ -15,19 +15,20 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c88a289e21e7cd70980763474e82b7dd6cbd49c2
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 300d88b66c2105235ab04ff616d9fcf81b24e944
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489518"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247337"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Eseguire una valutazione della migrazione di SQL Server con Data Migration Assistant
 
 Le istruzioni dettagliate seguenti consentono di eseguire la prima valutazione per la migrazione a SQL Server locali, SQL Server in esecuzione in una macchina virtuale di Azure o un database SQL di Azure usando Data Migration Assistant.
 
-   > [!NOTE]
-   > Data Migration Assistant v 5.0 introduce il supporto per l'analisi della connettività del database e delle query SQL incorporate nel codice dell'applicazione. Per altre informazioni, vedere il post di Blog relativo [all'uso di Data Migration Assistant per valutare il livello di accesso ai dati di un'applicazione](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430).
+Data Migration Assistant v 5.0 introduce il supporto per l'analisi della connettività del database e delle query SQL incorporate nel codice dell'applicazione. Per altre informazioni, vedere il post di Blog relativo [all'uso di Data Migration Assistant per valutare il livello di accesso ai dati di un'applicazione](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430).
+
+[!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
 
 ## <a name="create-an-assessment"></a>Creare una valutazione
 

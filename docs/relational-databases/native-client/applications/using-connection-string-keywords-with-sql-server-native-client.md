@@ -1,8 +1,8 @@
 ---
-title: Uso di parole chiave per le stringhe di connessione
+title: Utilizzo delle parole chiave delle stringhe di connessione
 description: Alcune API SQL Server Native Client utilizzano stringhe di connessione per specificare gli attributi di connessione. Le stringhe di connessione sono coppie parola chiave/valore.
 ms.custom: ''
-ms.date: 08/01/2016
+ms.date: 03/05/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: native-client
@@ -18,12 +18,12 @@ ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbe28b09c88f63e6e0a9a764fea3da17feb3d1f0
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8abbefef4c13cf0006b80f24771a06cc067a6324
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97463422"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247457"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>Utilizzo delle parole chiave delle stringhe di connessione con SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -279,7 +279,7 @@ ms.locfileid: "97463422"
   
  **Nota** Nella stringa di connessione la proprietà "Vecchia password" imposta SSPROP_AUTH_OLD_PASSWORD, ovvero la password corrente (probabilmente scaduta) che non è disponibile tramite una proprietà della stringa del provider.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Compilazione di applicazioni con SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

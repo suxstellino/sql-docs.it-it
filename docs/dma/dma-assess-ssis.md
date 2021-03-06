@@ -14,12 +14,12 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a893ad7e086abfdf0cc61c785ad6d93c3eeed184
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: e32a7334ecef7531311ead57332f9b7e4d7f6322
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100061526"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247311"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Eseguire una valutazione della migrazione di SQL Server Integration Services con Data Migration Assistant
 
@@ -35,6 +35,8 @@ Per valutare SQL Server pacchetti di Integration Services (SSIS), è necessario 
 ## <a name="performance-assessments"></a>Valutazioni delle prestazioni
 
 Le istruzioni dettagliate seguenti consentono di eseguire la prima valutazione per la migrazione di pacchetti di SQL Server Integration Service (SSIS) nel database SQL di Azure o in Azure SQL Istanza gestita, usando Data Migration Assistant.
+
+[!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
 
 ## <a name="create-an-assessment"></a>Creare una valutazione
 

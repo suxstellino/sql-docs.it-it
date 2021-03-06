@@ -2918,7 +2918,7 @@
           href: ../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md
         - name: Guide alle funzionalità
           items:
-            - name: Parole chiave delle stringhe di connessione e nomi delle origini dati (DSN)
+            - name: Connessione da Linux o macOS
               href: ../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md
             - name: Traccia di accesso ai dati con il driver ODBC in Linux e macOS
               href: ../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md

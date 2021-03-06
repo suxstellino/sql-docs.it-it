@@ -1,5 +1,5 @@
 ---
-title: Connessione con ODBC
+title: Connessione da Linux o macOS
 description: Informazioni su come creare una connessione a un database da Linux o macOS usando Microsoft ODBC Driver for SQL Server.
 ms.custom: ''
 ms.date: 09/10/2020
@@ -9,20 +9,19 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
-- data source names
-- connection string keywords
-- DSNs
+- connect to linux
+- configure odbc.ini
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8bc808e2e25a1f421712f6146fd13e8f6adafac3
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
-ms.translationtype: HT
+ms.openlocfilehash: d1bdbcbb34be9cbfa075ead7e1cd03ec813a5d9d
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727438"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247303"
 ---
-# <a name="connecting-to-sql-server"></a>Connessione a SQL Server
+# <a name="connecting-from-linux-or-macos"></a>Connessione da Linux o macOS
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -66,7 +65,7 @@ Per connettersi a un'istanza denominata tramite una porta statica, usare <b>Serv
 In alternativa, è possibile aggiungere le informazioni del DSN in un file di modello ed eseguire il comando seguente per aggiungere tali informazioni a `~/.odbc.ini`:
  - **odbcinst -i -s -f** _template_file_  
 
-Per la documentazione completa sui file INI e `odbcinst`, vedere la [documentazione di unixODBC](http://www.unixodbc.org/odbcinst.html). Per le voci del file `odbc.ini` specifiche del driver ODBC per SQL Server, vedere [Parole chiave e attributi per stringhe di connessione e DSN](../dsn-connection-string-attribute.md) per le voci supportate in Linux e macOS.
+Per la documentazione completa sui file ini e `odbcinst` , vedere la [documentazione di unixODBC](http://www.unixodbc.org/odbcinst.html). Per le voci del file `odbc.ini` specifiche del driver ODBC per SQL Server, vedere [Parole chiave e attributi per stringhe di connessione e DSN](../dsn-connection-string-attribute.md) per le voci supportate in Linux e macOS.
 
 È possibile verificare che il driver funzioni usando `isql` per testare la connessione oppure usare questo comando:
  - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>**  
