@@ -18,12 +18,12 @@ ms.author: vanto
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/10/2020
-ms.openlocfilehash: 95bfeb321f43fb860bbbeecb32ac18ec221e5067
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 86513345502531da670b870b5ecf70de9270f18f
+ms.sourcegitcommit: ece104654ac14e10d32e59f45916fa944665f4df
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99194687"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102474905"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
 
@@ -93,15 +93,15 @@ Il modulo che viene firmato o controfirmato e il certificato o la chiave asimmet
 ## <a name="countersignatures"></a>Controfirme  
  In caso di esecuzione di un modulo con segno, le firme verranno aggiunte temporaneamente al token SQL, tuttavia verranno perse se il modulo esegue un altro modulo o termina l'esecuzione. Una controfirma è uno speciale tipo di firma che da sola non concede autorizzazioni, tuttavia consente il mantenimento delle firme create dallo stesso certificato o dalla stessa chiave asimmetrica per la durata della chiamata eseguita all'oggetto controfirmato.  
   
- Si supponga, ad esempio, che l'utente Alice chiami la routine ProcSelectT1ForAlice, che chiama la routine procSelectT1, che esegue la selezione dalla tabella T1. Alice dispone dell'autorizzazione EXECUTE su ProcSelectT1ForAlice e procSelectT1, ma non dell'autorizzazione SELECT su T1 e nell'intera catena non sono coinvolti concatenamenti delle proprietà. Alice non può accedere alla tabella T1, né direttamente né tramite l'utilizzo di ProcSelectT1ForAlice e procSelectT1. Poiché si vuole che Alice usi sempre ProcSelectT1ForAlice per l'accesso, non si concederà l'autorizzazione per eseguire procSelectT1. Ecco come ottenere questo risultato  
+ Si supponga, ad esempio, che l'utente Alice chiami la routine ProcForAlice, che chiama la routine ProcSelectT1, che seleziona dalla tabella T1. Alice dispone dell'autorizzazione EXECUTE per ProcForAlice e ProcSelectT1, ma non dispone dell'autorizzazione SELECT per T1 e non è necessario alcun concatenamento della proprietà nell'intera catena. Alice non può accedere alla tabella T1, né direttamente né tramite l'uso di ProcForAlice e ProcSelectT1. Poiché si vuole che Alice usi sempre ProcForAlice per l'accesso, non si vuole concedere l'autorizzazione per l'esecuzione di ProcSelectT1. Ecco come ottenere questo risultato  
   
--   Se si firma procSelectT1, in modo che procSelectT1 possa accedere a T1, Alice può richiamare direttamente procSelectT1 senza dover chiamare ProcSelectT1ForAlice.  
+-   Se si firma ProcSelectT1, in modo che ProcSelectT1 possa accedere a T1, Alice può richiamare direttamente ProcSelectT1 e non deve chiamare ProcForAlice.  
   
--   Si potrebbe negare ad Alice l'autorizzazione EXECUTE su procSelectT1, ma in questo modo non sarebbe in grado di chiamare procSelectT1 tramite ProcSelectT1ForAlice.
+-   È possibile negare ad Alice l'autorizzazione EXECUTE per ProcSelectT1, ma Alice non sarebbe in grado di chiamare ProcSelectT1 tramite ProcForAlice.
   
--   Firmare ProcSelectT1ForAlice non funzionerebbe, in quanto la firma andrebbe persa nella chiamata a procSelectT1.  
+-   La firma di ProcForAlice non funzionerebbe da sola, perché la firma andrebbe persa nella chiamata a ProcSelectT1.  
   
-Se invece si controfirma procSelectT1 con lo stesso certificato usato per firmare ProcSelectT1ForAlice, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrà mantenere la firma attraverso la catena di chiamate e consentirà l'accesso a T1. Se Alice prova a chiamare direttamente procSelectT1, non potrà accedere a T1, poiché la controfirma non concede diritti. Nell'esempio C di seguito viene mostrato l'uso di [!INCLUDE[tsql](../../includes/tsql-md.md)] per l'esempio proposto.  
+Tuttavia, da controfirma ProcSelectT1 con lo stesso certificato usato per firmare ProcForAlice, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la firma viene mantenuta nella catena di chiamate e consentirà l'accesso a T1. Se Alice tenta di chiamare direttamente ProcSelectT1, non può accedere a T1, perché controfirma non concede alcun diritto. Nell'esempio C di seguito viene mostrato l'uso di [!INCLUDE[tsql](../../includes/tsql-md.md)] per l'esempio proposto.  
   
 ## <a name="permissions"></a>Autorizzazioni  
 
@@ -211,42 +211,42 @@ BEGIN
     SELECT * FROM T1;  
 END;  
 GO  
-GRANT EXECUTE ON procSelectT1 to public;  
+GRANT EXECUTE ON ProcSelectT1 to public;  
   
 -- Create special procedure for accessing T1  
-CREATE PROCEDURE  procSelectT1ForAlice AS  
+CREATE PROCEDURE  ProcForAlice AS  
 BEGIN  
    IF USER_ID() <> USER_ID('Alice')  
     BEGIN  
         PRINT 'Only Alice can use this.';  
         RETURN  
     END  
-   EXEC procSelectT1;  
+   EXEC ProcSelectT1;  
 END;  
 GO;  
-GRANT EXECUTE ON procSelectT1ForAlice TO PUBLIC;  
+GRANT EXECUTE ON ProcForAlice TO PUBLIC;  
   
 -- Verify procedure works for a sysadmin user  
-EXEC procSelectT1ForAlice;  
+EXEC ProcForAlice;  
   
 -- Alice still can't use the procedure yet  
 EXECUTE AS LOGIN = 'Alice';  
-    EXEC procSelectT1ForAlice;  
+    EXEC ProcForAlice;  
 REVERT;  
   
 -- Sign procedure to grant it SELECT permission  
-ADD SIGNATURE TO procSelectT1ForAlice BY CERTIFICATE csSelectT   
+ADD SIGNATURE TO ProcForAlice BY CERTIFICATE csSelectT   
 WITH PASSWORD = 'SimplePwd01';  
   
--- Counter sign proc_select_t, to make this work  
-ADD COUNTER SIGNATURE TO procSelectT1 BY CERTIFICATE csSelectT   
+-- Counter sign ProcSelectT1, to make this work  
+ADD COUNTER SIGNATURE TO ProcSelectT1 BY CERTIFICATE csSelectT   
 WITH PASSWORD = 'SimplePwd01';  
   
 -- Now the proc works.   
--- Note that calling procSelectT1 directly still doesn't work  
+-- Note that calling ProcSelectT1 directly still doesn't work  
 EXECUTE AS LOGIN = 'Alice';  
-    EXEC procSelectT1ForAlice;  
-    EXEC procSelectT1;  
+    EXEC ProcForAlice;  
+    EXEC ProcSelectT1;  
 REVERT;  
   
 -- Cleanup  

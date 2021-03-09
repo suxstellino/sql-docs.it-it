@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5bcff7203d3bf9e224d6557c4c2af6a47fb0af12
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 92cca7d688f954fc8e832f4bc0e68f105c024202
+ms.sourcegitcommit: ece104654ac14e10d32e59f45916fa944665f4df
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100047271"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102474885"
 ---
 # <a name="deploy-big-data-clusters-2019-on-openshift-on-premises-and-azure-red-hat-openshift"></a>Distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in OpenShift in locale e in Azure Red Hat OpenShift
 
@@ -73,7 +73,7 @@ Questo articolo illustra i passaggi di distribuzione specifici della piattaforma
 4. Assegnare il vincolo del contesto di protezione personalizzato agli account del servizio per gli utenti all'interno dello spazio dei nomi in cui viene distribuito il cluster Big Data:
 
    ```console
-   oc adm policy add-scc-to-group bdc-scc system:serviceaccounts:<namespaceName>
+  oc create rolebinding bdc-rbac --clusterrole=system:scc:bdc-scc --group=system:serviceaccounts:<namespace>
    ```
 
 5. Assegnare le autorizzazioni appropriate all'utente che distribuisce il cluster Big Data. riportate di seguito. 

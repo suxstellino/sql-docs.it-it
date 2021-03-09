@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fdf81fde342a3c7f0e250d467e7b486d753a8588
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: c6ed1f27444b86ba79fd6c3178bc0029624b05d2
+ms.sourcegitcommit: ece104654ac14e10d32e59f45916fa944665f4df
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630820"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102474895"
 ---
 # <a name="database-snapshots-sql-server"></a>Snapshot del database (SQL Server)
 
@@ -137,7 +137,7 @@ Uno snapshot del database è una vista statica di sola lettura di un database [!
   
 -   Non è possibile configurare il database di origine come un database condiviso scalabile.  
 
--   Il database di origine non deve contenere un filegroup MEMORY_OPTIMIZED_DATA.  Per altre informazioni sulla funzionalità, vedere [Funzionalità di SQL Server non supportate per OLTP in memoria](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md).
+-   Prima di SQL Server 2019, il database di origine non poteva contenere un filegroup MEMORY_OPTIMIZED_DATA. Il supporto per gli snapshot del database in memoria è stato aggiunto in SQL Server 2019.
   
 > [!NOTE]  
 >  Tutti i modelli di recupero supportano gli snapshot del database.  
@@ -167,7 +167,7 @@ Uno snapshot del database è una vista statica di sola lettura di un database [!
   
 -   Gli snapshot sono di sola lettura. Poiché sono di sola lettura, non possono essere aggiornati. Pertanto, dopo un aggiornamento gli snapshot di database non possono essere usati.  
   
--   Gli snapshot dei database **model**, **master**e **temp** non sono consentiti.  
+-   Gli snapshot dei database **model**, **master** e **temp** non sono consentiti.  
   
 -   Non è possibile modificare le specifiche dei file degli snapshot del database.  
   
