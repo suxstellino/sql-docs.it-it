@@ -17,12 +17,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f54ca9be0a75912c716f12b56c8b3848b151358
-ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
+ms.openlocfilehash: 7376b50196b543b162cae6d0800980990651ee45
+ms.sourcegitcommit: 765262cdc6352a5325148afc22fa4f1499fe1aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102247531"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514908"
 ---
 # <a name="row-level-security"></a>Sicurezza a livello di riga
 
@@ -159,7 +159,7 @@ La sicurezza a livello di riga supporta due tipi di predicati di sicurezza.
   
 - **Filestream:** la sicurezza a livello di riga non è compatibile con Filestream.  
   
-- **Base:** La sicurezza a livello di riga è supportata con le tabelle esterne in Azure sinapsi e SQL Server 2019 CU1 o versione successiva. 
+- **Base:** La sicurezza a livello di riga è supportata con le tabelle esterne in Azure sinapsi e SQL Server 2019 CU7 o versione successiva. 
 
 - **Tabelle ottimizzate per la memoria:** la funzione inline con valori di tabella usata come predicato di sicurezza in una tabella ottimizzata per la memoria deve essere definita con l'opzione `WITH NATIVE_COMPILATION`. Con questa opzione le funzionalità del linguaggio non supportate dalle tabelle ottimizzate per la memoria verranno escluse e verrà generato l'errore appropriato al momento della creazione. Per altre informazioni, vedere la sezione relativa alla **sicurezza a livello di riga nelle tabelle con ottimizzazione per la memoria** in [Introduzione alle tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   

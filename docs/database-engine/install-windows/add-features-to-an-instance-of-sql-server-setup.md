@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 02/05/2021
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: b8b520e3c5f44342970881e3e67b3dbf95ce9853
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 40f6618c8564f0d264076316038274b401fb650a
+ms.sourcegitcommit: 765262cdc6352a5325148afc22fa4f1499fe1aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837575"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514898"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>Aggiungere funzionalità a un'istanza di SQL Server (programma di installazione)
 
@@ -145,6 +145,11 @@ Prima di continuare, vedere gli articoli in [Pianificazione di un'installazione 
 25. Al termine dell'installazione nella pagina Operazione completata viene visualizzato un collegamento al file di log di riepilogo del processo di installazione e ad altre note importanti. Per completare il processo di installazione di SQL Server, selezionare **Chiudi**.
 
 26. Se viene richiesto, riavviare il computer. È importante leggere il messaggio visualizzato nell'Installazione guidata al termine dell'installazione. Per altre informazioni sui file di log del programma di installazione, vedere [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
+
+> [!CAUTION]
+> Applicare gli aggiornamenti del servizio
+>
+> L'aggiunta di funzionalità a un'installazione esistente di SQL Server installerà la funzionalità a livello di versione del supporto di installazione di, che può trovarsi dietro le altre funzionalità di SQL Server del livello di versione. Questo può causare un comportamento imprevisto o errori. Completare sempre l'installazione della nuova funzionalità portando la nuova funzionalità allo stesso livello di versione. Installare i Service Pack (SPs), gli aggiornamenti cumulativi (CUs) e/o le versioni di distribuzione generale (GDR) in base alle esigenze. Per determinare la versione del server e le nuove funzionalità, vedere [determinare la versione, l'edizione e il livello di aggiornamento delle SQL Server e dei relativi componenti](/troubleshoot/sql/general/determine-version-edition-update-level).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

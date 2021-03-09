@@ -9,12 +9,12 @@ ms.date: 02/11/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b00ed57288d19f08555a00eec8c9e62edc0f8cf6
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: f2adf48a0aef465f4c013b5adaf97a75be4abf77
+ms.sourcegitcommit: 765262cdc6352a5325148afc22fa4f1499fe1aa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100343970"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514868"
 ---
 # <a name="configure-a-sql-server-big-data-cluster---pre-cu9-release"></a>Configurare un cluster SQL Server Big Data-versione pre-CU9
 
@@ -102,7 +102,7 @@ Un cluster Big Data ha quattro categorie di configurazione:
 
 Ad esempio, tutte le configurazioni nel servizio `hdfs` appartengono alla categoria `hdfs`. Si noti che tutte le configurazioni di Hadoop (core-site), HDFS e Zookeeper appartengono alla categoria `hdfs`. Tutte le configurazioni di Livy, Spark, Yarn, Hive e Metastore appartengono alla categoria `spark`. 
 
-[Configurazioni supportate](reference-config-spark-hadoop.md#supported-configurations) elenca le proprietà di Apache Spark e Hadoop che è possibile configurare quando si distribuisce un cluster Big Data di SQL Server.
+[Configurazioni supportate](reference-config-spark-hadoop.md) elenca le proprietà di Apache Spark e Hadoop che è possibile configurare quando si distribuisce un cluster Big Data di SQL Server.
 
 Le sezioni seguenti elencano le proprietà **non è possibile** modificare in un cluster:
 
