@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: 8843bf303f20a7d8aa0baac5be3d9da4e7c54e01
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
-ms.translationtype: HT
+ms.openlocfilehash: 6d602db9c189b6e7fce8b767b60204253ccb7f67
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886366"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464395"
 ---
 # <a name="programming-guidelines"></a>Linee guida per la programmazione
 
@@ -148,7 +148,7 @@ Al momento della stesura di questo articolo, la dimensione predefinita dello sta
 3.  Quando si usa il driver con applicazioni a elevato multithreading, la convalida degli handle di unixODBC può diventare un collo di bottiglia per le prestazioni. In questi scenari è possibile ottenere prestazioni significativamente maggiori compilando unixODBC con l'opzione `--enable-fastvalidate`. Tenere presente, tuttavia, che a causa di ciò le applicazioni che passano handle non validi alle API ODBC possono subire un arresto anomalo anziché restituire errori `SQL_INVALID_HANDLE`.
 
 ## <a name="see-also"></a>Vedere anche  
-[Domande frequenti](frequently-asked-questions-faq-for-odbc-linux.md)
+[Domande frequenti](frequently-asked-questions-faq-for-odbc-linux.yml)
 
 [Problemi noti in questa versione del driver](known-issues-in-this-version-of-the-driver.md)
 

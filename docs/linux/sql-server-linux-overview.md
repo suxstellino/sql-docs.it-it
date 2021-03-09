@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 4890633022a7888a21f14ae57c6f6db3934b7ce9
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 0cc87c2bfc33c0c710e27017da023194fcd2828b
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100273052"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102465199"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server in Linux
 
@@ -88,7 +88,7 @@ Vedere quindi le novità:
 - [Novità di SQL Server 2019 in Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux)
 
 > [!TIP]
-> Per le risposte alle domande frequenti, vedere [Domande frequenti su SQL Server in Linux](sql-server-linux-faq.md).
+> Per le risposte alle domande frequenti, vedere [Domande frequenti su SQL Server in Linux](sql-server-linux-faq.yml).
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 

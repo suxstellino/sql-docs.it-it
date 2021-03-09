@@ -2,7 +2,7 @@
 description: CREATE QUEUE (Transact-SQL)
 title: CREATE QUEUE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/25/2019
+ms.date: 03/06/2021
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 42b5b42ee88c6d562f1ebf8c03f92a1bd4be54f4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 12bedec8dcd525767bc54eb3b1af221a17c658fa
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99188540"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464949"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 
@@ -147,7 +147,7 @@ Nella tabella seguente vengono elencate le colonne di una coda.
 |message_type_id|**int**|Identificatore di oggetto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del tipo di messaggio che descrive il messaggio.|
 |validation|**nchar(2)**|Convalida utilizzata per il messaggio.<br /><br /> E=Vuoto<br /><br /> N=Nessuno<br /><br /> X=XML|
 |message_body|**varbinary(max)**|Contenuto del messaggio.|
-|message_id|**uniqueidentifier**|Identificatore univoco del messaggio.|
+|message_enqueue_time|**datetime**|Ora di Accodamento del messaggio.|
 
 ## <a name="permissions"></a>Autorizzazioni
 

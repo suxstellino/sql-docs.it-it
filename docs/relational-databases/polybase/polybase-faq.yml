@@ -1,0 +1,29 @@
+### YamlMime:FAQ
+metadata:
+  title: Domande frequenti in PolyBase| Microsoft Docs
+  description: Confrontare PolyBase e i server collegati e confrontare PolyBase nei cluster Big Data e PolyBase in istanze autonome. Vengono illustrate le novità in PolyBase 2019.
+  ms.date: 12/02/2020
+  ms.prod: sql
+  ms.technology: polybase
+  ms.topic: conceptual
+  author: MikeRayMSFT
+  ms.author: mikeray
+  ms.reviewer: mikeray
+  ms.openlocfilehash: ad8a61554bf76ae318f33df6d50a59795448fff4
+  ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
+  ms.translationtype: MT
+  ms.contentlocale: it-IT
+  ms.lasthandoff: 03/08/2021
+  ms.locfileid: "102471479"
+title: Domande frequenti
+summary: >
+  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+sections:
+- name: Ignorato
+  questions:
+  - question: PolyBase e server collegati
+    answer: "Nella tabella seguente vengono evidenziate le differenze tra PolyBase e le funzionalità per server collegati:\n\n|PolyBase | Server collegati|\n|--------------------------|--------------------------|  \n|Oggetto con ambito di database|Oggetto con ambito di istanza|\n|Usa driver ODBC|Usa provider OLEDB|\n|Supporta operazioni di sola lettura per tutte le origini dati e l'operazione di inserimento solo per origini dati HADOOP e pool di dati|Supporta sia operazioni di lettura che di scrittura|\n|Le query a un'origine dati remota da una singola connessione possono essere scalate orizzontalmente |Le query a un'origine dati remota da una singola connessione non possono essere scalate orizzontalmente|\n|È supportata la distribuzione dei predicati|È supportata la distribuzione dei predicati|\n|Non è richiesta una configurazione separata per il gruppo di disponibilità|È richiesta una configurazione separata per ogni istanza nel gruppo di disponibilità|\n|Solo autenticazione di base|Autenticazione di base e integrata|\n|Adatto per le query analitiche che elaborano un numero elevato di righe|Adatta per le query OLTP che restituiscono singole righe o poche righe|\n|Le query che usano una tabella esterna non possono partecipare alle transazioni distribuite|Le query distribuite possono partecipare alle transazioni distribuite|\n"
+  - question: Novità in PolyBase 2019
+    answer: "PolyBase in [!INCLUDE[sssql19](../../includes/sssql19-md.md)] ora può leggere i dati da una più ampia varietà di origini dati. I dati di queste origini dati esterne possono essere archiviati come tabelle esterne in SQL Server. PolyBase supporta anche il calcolo con distribuzione verso queste origini dati esterne, con l'esclusione dei tipi generici ODBC.\n\n**Origini dati compatibili**\n\n- SQL Server\n- Oracle\n- Teradata\n- MongoDB\n- Tipi generici ODBC compatibili\n  \n> [!NOTE]\n> PolyBase consente la connessione a origini dati esterne tramite i driver ODBC di terze parti. Questi driver non sono forniti con PolyBase e potrebbero non funzionare come previsto. Per altre informazioni, vedere la [guida](../../relational-databases/polybase/polybase-configure-odbc-generic.md) per la configurazione dei tipi generici ODBC in PolyBase.  \n"
+  - question: PolyBase nei cluster Big Data e PolyBase nelle istanze autonome
+    answer: "Nella tabella seguente sono evidenziate le funzionalità di PolyBase disponibili in un'installazione autonoma di [!INCLUDE[sssql19](../../includes/sssql19-md.md)] e in un cluster Big Data di [!INCLUDE[sssql19](../../includes/sssql19-md.md)]:\n\n|Funzionalità |Cluster Big Data|Istanza autonoma|\n|--------------------------|--------------------------|---------|   \n|Creare un'origine dati esterna per SQL Server, Oracle, Teradata e Mongo DB |X|X|\n|Creare origine dati esterna usando un driver ODBC di terze parti compatibile | | X|\n|Creare un'origine dati esterna per l'origine dati HADOOP | X| X|\n|Creare un'origine dati esterna per Archiviazione BLOB di Azure | X| X|\n|Creare una tabella esterna in un pool di dati di SQL Server | X| |\n|Creare una tabella esterna in un pool di archiviazione di SQL Server | X| |\n|Esecuzione di query con scalabilità orizzontale | X| X (solo Windows) |\n\n> [!NOTE]\n> La tabella non descrive le funzionalità disponibili nella versione più recente di [!INCLUDE[sssql19](../../includes/sssql19-md.md)] CTP. Per informazioni sulle funzionalità disponibili, vedi le note sulla versione. Per altre informazioni sulle connessioni tramite il connettore ODBC generico, vedere la [guida pratica alla configurazione dei tipi generici ODBC](polybase-configure-odbc-generic.md)."

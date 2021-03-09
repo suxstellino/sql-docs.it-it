@@ -11,12 +11,12 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
-ms.openlocfilehash: 735d0b552843a95ea388b91e2ed1da3fcfec2790
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: b2dd15961615ef4bff9c7e5e99f91844956b1895
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837018"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464927"
 ---
 # <a name="tutorial-develop-a-net-application-using-always-encrypted-with-secure-enclaves"></a>Esercitazione: Sviluppare un'applicazione .NET usando Always Encrypted con enclave sicuri
 
@@ -67,7 +67,7 @@ Se si archivia la chiave master della colonna in Azure Key Vault, è anche neces
 
 L'applicazione si connetterà al database di **ContosoHR** da [esercitazione: Introduzione a always Encrypted con enclave sicure con SSMS](../../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md) o- [esercitazione: introduzione always Encrypted con enclave sicure nel database SQL di Azure](/azure/azure-sql/database/always-encrypted-enclaves-getting-started) e verrà eseguita una query contenente il `LIKE` predicato nella colonna **SSN** e un confronto tra intervalli nella colonna **Salary** .
 
-1. Sostituire il contenuto del file Program.cs (generato da Visual Studio) con il codice seguente. 
+1. Sostituire il contenuto del file Program.cs (generato da Visual Studio) con il codice seguente.
 
     ```cs
     using System;
@@ -140,4 +140,4 @@ L'applicazione si connetterà al database di **ContosoHR** da [esercitazione: In
 
 - [Uso di Always Encrypted con il provider di dati Microsoft .NET per SQL Server](sqlclient-support-always-encrypted.md)
 - [Esempio che illustra l'uso del provider Azure Key Vault con Always Encrypted](azure-key-vault-example.md)
-- [Esempio che illustra l'uso del provider Azure Key Vault con Always Encrypted con enclave sicuri](azure-key-vault-enclave-example.md)
+- [Esempio che illustra l'uso del provider di Azure Key Vault con Always Encrypted abilitato con enclave sicure](azure-key-vault-enclave-example.md)

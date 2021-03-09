@@ -23,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: wiassaf
 manager: amitban
-ms.openlocfilehash: e24a8532aa721f4103e6cbff4b34b15bf607640c
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 2e48f40003412a2db5340a32e5408f649bf5bb18
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101839058"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464989"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
 
@@ -104,7 +104,7 @@ GO
 |CLR_HOSTTASK|Solo per uso interno.|
 |CLR_SPIN_LOCK|Solo per uso interno.|
 |CMED_DATABASE|Solo per uso interno.|
-|CMED_HASH_SET|Solo per uso interno.|
+|CMED_HASH_SET|Solo per uso interno.<br><br>**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] CU1)<br><br> **Nota:** questo nome di SpinLock passa a LOCK_RW_CMED_HASH_SET dopo aver applicato [SQL Server CU2 2016](https://support.microsoft.com/topic/kb3195888-fix-high-cpu-usage-causes-performance-issues-in-sql-server-2016-and-2017-9514b80d-938f-e179-3131-74e6c757c4d5).|
 |COLUMNDATASETSESSIONLIST|Solo per uso interno.|
 |COLUMNSTORE_HASHTABLE|Solo per uso interno.|
 |COLUMNSTOREBUILDSTATE_LIST|Solo per uso interno.|
@@ -124,7 +124,7 @@ GO
 |DBSEEDING_OPERATION|Solo per uso interno.|
 |DBT_HASH|Solo per uso interno.|
 |DBT_IO_LIST|Solo per uso interno.|
-|DBTABLE|Controlla l'accesso a una struttura di dati in memoria per ogni database in un SQL Server che contiene le proprietà di tale database. Per altre informazioni, vedere [questo articolo](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789). |
+|DBTABLE|Controlla l'accesso a una struttura di dati in memoria per ogni database in un oggetto [!INCLUDE[ssde_md](../../includes/ssde_md.md)] che contiene le proprietà di tale database. Per altre informazioni, vedere [questo articolo](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789). |
 |DEFERRED_WF_EXT_DROP|Solo per uso interno.|
 |DEK_INSTANCE|Solo per uso interno.|
 |DELAYED_PARTITIONED_STACK|Solo per uso interno.|
@@ -134,7 +134,7 @@ GO
 |DIGEST_CACHE|Solo per uso interno.|
 |DINPBUF|Solo per uso interno.|
 |DIRECTLOGCONSUMER|Solo per uso interno.|
-|DP_LIST|Controlla l'accesso all'elenco di pagine dirty per un database in cui è attivato il Checkpoint indiretto. Applicare le correzioni dell' [articolo 4497928](https://support.microsoft.com/kb/4497928), l' [articolo 4040276](https://support.microsoft.com/kb/4040276) o usare il [flag di traccia 3468](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Per altre informazioni, vedere [questo articolo](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510).|
+|DP_LIST|Controlla l'accesso all'elenco di pagine dirty per un database in cui è attivato il Checkpoint indiretto. Applicare le correzioni dell' [articolo 4497928](https://support.microsoft.com/kb/4497928), l' [articolo 4040276](https://support.microsoft.com/kb/4040276)o usare il [flag di traccia 3468](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Per altre informazioni, vedere [questo articolo](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510).|
 |DROP|Solo per uso interno.|
 |DROP_TEMPO|Solo per uso interno.|
 |DROPPED_ALLOC_UNIT|Solo per uso interno.|
@@ -191,18 +191,18 @@ GO
 |LANG_RES_LOAD|Solo per uso interno.|
 |LIVE_TARGET_TVF|Solo per uso interno.|
 |LOCK_FREE_LIST|Solo per uso interno.|
-|LOCK_HASH|Consente di proteggere l'accesso alla tabella hash di gestione blocchi in cui sono archiviate le informazioni sui blocchi mantenuti in un database. Per altre informazioni, vedere [questo articolo](https://support.microsoft.com/kb/2926217).|
+|LOCK_HASH|Consente di proteggere l'accesso alla tabella hash di gestione blocchi in cui sono archiviate le informazioni sui blocchi mantenuti in un database. Per ulteriori informazioni, vedere [questo articolo](https://support.microsoft.com/kb/2926217) e la [Guida sul controllo delle versioni delle righe e il blocco delle transazioni](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine).|
 |LOCK_NOTIFICATION|Solo per uso interno.|
 |LOCK_RESOURCE_ID|Solo per uso interno.|
 |LOCK_RW_ABTX_HASH_SET|Solo per uso interno.|
 |LOCK_RW_AGDB_HEALTH_DIAG|Solo per uso interno.|
-|LOCK_RW_CMED_HASH_SET|Solo per uso interno.|
+|LOCK_RW_CMED_HASH_SET|Solo per uso interno.<br><br>**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] CU2), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]|
 |LOCK_RW_DPT_TABLE|Solo per uso interno.|
 |LOCK_RW_IN_ROW_TRACKER|Solo per uso interno.|
 |LOCK_RW_LOGIN_RATE_STATS|Solo per uso interno.|
 |LOCK_RW_PVS_PAGE_TRACKER|Solo per uso interno.|
 |LOCK_RW_RBIO_REQ|Solo per uso interno.|
-|LOCK_RW_SECURITY_CACHE|Solo per uso interno.|
+|LOCK_RW_SECURITY_CACHE|Protegge le voci della cache correlate ai token di sicurezza e ai controlli di accesso. <br><br>**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] CU2), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]<br><br> Se le voci nell'archivio cache TokenAndPermUserStore crescono continuamente, è possibile notare spinte di grandi dimensioni per questo SpinLock. Valutare l'utilizzo di [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4610 e 4618 per limitare le voci. Per altre informazioni, vedere [Opzioni di configurazione del server Access check cache](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md), questo [articolo](https://support.microsoft.com/topic/queries-take-a-longer-time-to-finish-running-when-the-size-of-the-tokenandpermuserstore-cache-grows-in-sql-server-2005-ad1622e7-3bb5-7902-19a0-5d0e6271033d)e questo [Blog](https://techcommunity.microsoft.com/t5/sql-server-support/query-performance-issues-associated-with-a-large-sized-security/ba-p/315494).|
 |LOCK_RW_TEST|Solo per uso interno.|
 |LOCK_RW_WPR_BUCKET|Solo per uso interno.|
 |LOCK_SORT_STREAM|Solo per uso interno.|
@@ -233,7 +233,7 @@ GO
 |MEM_MGR|Solo per uso interno.|
 |MGR_CACHE|Solo per uso interno.|
 |MIGRATION_BUF_LIST|Solo per uso interno.|
-|MUTEX|Protegge le voci della cache correlate ai token di sicurezza e ai controlli di accesso. Usato per le versioni seguenti [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] . Se le voci nell'archivio cache TokenAndPermUserStore crescono continuamente, è possibile notare spinte di grandi dimensioni per questo SpinLock. Valutare l'utilizzo di [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4610 e 4618 per limitare le voci. Ulteriori riferimenti: [Blog](https://techcommunity.microsoft.com/t5/sql-server-support/query-performance-issues-associated-with-a-large-sized-security/ba-p/315494), [articolo](https://support.microsoft.com/topic/queries-take-a-longer-time-to-finish-running-when-the-size-of-the-tokenandpermuserstore-cache-grows-in-sql-server-2005-ad1622e7-3bb5-7902-19a0-5d0e6271033d) e [documentazione](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md).|
+|MUTEX|Protegge le voci della cache correlate ai token di sicurezza e ai controlli di accesso. <br><br>**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Fino a [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] )<br><br>Se le voci nell'archivio cache TokenAndPermUserStore crescono continuamente, è possibile notare spinte di grandi dimensioni per questo SpinLock. Valutare l'utilizzo di [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4610 e 4618 per limitare le voci. Per altre informazioni, vedere [Opzioni di configurazione del server Access check cache](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md), questo [articolo](https://support.microsoft.com/topic/queries-take-a-longer-time-to-finish-running-when-the-size-of-the-tokenandpermuserstore-cache-grows-in-sql-server-2005-ad1622e7-3bb5-7902-19a0-5d0e6271033d)e questo [Blog](https://techcommunity.microsoft.com/t5/sql-server-support/query-performance-issues-associated-with-a-large-sized-security/ba-p/315494).|
 |NETCONN_ADDRESS|Solo per uso interno.|
 |ONDEMAND_TASK|Solo per uso interno.|
 |ONE_PROC_SIM_NODE_CONTEXT|Solo per uso interno.|
@@ -294,7 +294,7 @@ GO
 |SBS_TRANSPORT|Solo per uso interno.|
 |SBS_UCS_DISPATCH|Solo per uso interno.|
 |SICUREZZA|Solo per uso interno.|
-|SECURITY_CACHE|Protegge le voci della cache correlate ai token di sicurezza e ai controlli di accesso. Utilizzato per [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive. Se le voci nell'archivio cache TokenAndPermUserStore crescono continuamente, è possibile notare spinte di grandi dimensioni per questo SpinLock. Valutare l'utilizzo di [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4610 e 4618 per limitare le voci. Ulteriori riferimenti: [Blog](https://techcommunity.microsoft.com/t5/sql-server-support/query-performance-issues-associated-with-a-large-sized-security/ba-p/315494), [articolo](https://support.microsoft.com/topic/queries-take-a-longer-time-to-finish-running-when-the-size-of-the-tokenandpermuserstore-cache-grows-in-sql-server-2005-ad1622e7-3bb5-7902-19a0-5d0e6271033d) e [documentazione](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md). Si noti la modifica in nome spinlock dopo aver applicato [gli aggiornamenti per sql 2017 e sql 2016](https://support.microsoft.com/topic/kb3195888-fix-high-cpu-usage-causes-performance-issues-in-sql-server-2016-and-2017-9514b80d-938f-e179-3131-74e6c757c4d5).|
+|SECURITY_CACHE|Protegge le voci della cache correlate ai token di sicurezza e ai controlli di accesso. <br><br>**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] CU1)<br><br> Se le voci nell'archivio cache TokenAndPermUserStore crescono continuamente, è possibile notare spinte di grandi dimensioni per questo SpinLock. Valutare l'utilizzo di [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4610 e 4618 per limitare le voci. Per altre informazioni, vedere [Opzioni di configurazione del server Access check cache](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md), questo [articolo](https://support.microsoft.com/topic/queries-take-a-longer-time-to-finish-running-when-the-size-of-the-tokenandpermuserstore-cache-grows-in-sql-server-2005-ad1622e7-3bb5-7902-19a0-5d0e6271033d)e questo [Blog](https://techcommunity.microsoft.com/t5/sql-server-support/query-performance-issues-associated-with-a-large-sized-security/ba-p/315494).<br><br>**Nota:** questo nome di SpinLock passa a LOCK_RW_SECURITY_CACHE dopo aver applicato [SQL Server CU2 2016](https://support.microsoft.com/topic/kb3195888-fix-high-cpu-usage-causes-performance-issues-in-sql-server-2016-and-2017-9514b80d-938f-e179-3131-74e6c757c4d5).|
 |SECURITY_FEDAUTH_AAD_BECWSCONNS|Solo per uso interno.|
 |SEMANTIC_TICACHE|Solo per uso interno.|
 |SEQUENCED_OBJECT|Solo per uso interno.|
@@ -312,7 +312,7 @@ GO
 |SOS_ACTIVEDESCRIPTOR|Solo per uso interno.|
 |SOS_BLOCKALLOCPARTIALLIST|Solo per uso interno.|
 |SOS_BLOCKDESCRIPTORBUCKET|Solo per uso interno.|
-|SOS_CACHESTORE|Sincronizza l'accesso a diverse cache in memoria in SQL Server come la cache dei piani o la cache della tabella temporanea. Una contesa forte su questo tipo di SpinLock può indicare molti aspetti diversi a seconda della cache specifica in conflitto. Contattare [!INCLUDE[msCoName](../../includes/msconame-md.md)] il servizio supporto tecnico clienti per informazioni sulla risoluzione di questo tipo di SpinLock. |
+|SOS_CACHESTORE|Sincronizza l'accesso a diverse cache in memoria in [!INCLUDE[ssde_md](../../includes/ssde_md.md)] , ad esempio la cache dei piani o la cache della tabella temporanea. Una contesa forte su questo tipo di SpinLock può indicare molti aspetti diversi a seconda della cache specifica in conflitto. Contattare [!INCLUDE[msCoName](../../includes/msconame-md.md)] il servizio supporto tecnico clienti per informazioni sulla risoluzione di questo tipo di SpinLock. |
 |SOS_CACHESTORE_CLOCK|Solo per uso interno.|
 |SOS_CLOCKALG_INTERNODE_SYNC|Solo per uso interno.|
 |SOS_DEBUG_HOOK|Solo per uso interno.|
@@ -407,8 +407,6 @@ GO
 |XVB_CSN|Solo per uso interno.|
 |XVB_LIST|Solo per uso interno.|
  
-
-  
 ## <a name="see-also"></a>Vedere anche  
  
  [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   

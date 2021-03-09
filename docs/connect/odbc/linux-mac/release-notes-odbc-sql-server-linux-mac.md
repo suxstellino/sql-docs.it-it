@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 2c178b7afd7bf46003b689ef56af67f12609e0a9
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 83f8dbb834af379e02635130e23c0f5fd7299f3b
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837340"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464286"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Note sulla versione per Microsoft ODBC Driver for SQL Server in Linux e macOS
 
@@ -141,7 +141,7 @@ Quando si usa Always Encrypted con enclave sicuri e Azure Key Vault, i percorsi 
 
 ## <a name="17"></a>17
 
-**Nuove distribuzioni supportate**: macOS High Sierra e Ubuntu 17.10 
+**Nuove distribuzioni supportate**: macOS High Sierra e Ubuntu 17.10
 
 **Miglioramenti delle prestazioni**: prestazioni migliorate di oltre 10 volte quando il driver esegue la conversione da e verso UTF-8/16.
 
@@ -151,19 +151,21 @@ Supporto per Always Encrypted per l'API BCP
 
 Il nuovo attributo della stringa di connessione UseFMTOnly fa in modo che i driver usino metadati legacy in casi particolari che richiedono tabelle temporanee.
 
-Supporto di Istanza gestita di database SQL di Azure. 
+Supporto di Istanza gestita di database SQL di Azure.
+
 > [!NOTE]
 > Esistono molte differenze nell'uso di Istanza gestita:
-> -   FILESTREAM non è supportato 
-> -   L'accesso al file system locale non è supportato, ma è obbligatorio per elementi come i file di traccia 
-> -   La creazione di tipi definiti dall'utente dal percorso locale non è supportata 
-> -   L'autenticazione integrata di Windows non è supportata 
-> -   DTC non è supportato 
-> -   L'account 'sa' non è presente (l'account predefinito si chiama 'cloudSA')
-> -   L'errore del token TDS (0xAA) restituisce il nome server errato
-> -   Non sono supportati i caratteri speciali nel nome del database 
-> -   Non è supportato ALTER DATABASE [dbname1] MODIFY NAME = [dbname2]
-> -   I messaggi di errore vengono sempre visualizzati in inglese, indipendentemente dalle impostazioni della lingua (come in Azure) 
+>
+> - FILESTREAM non è supportato
+> - L'accesso al file system locale non è supportato, ma è obbligatorio per elementi come i file di traccia
+> - La creazione di tipi definiti dall'utente dal percorso locale non è supportata
+> - L'autenticazione integrata di Windows non è supportata
+> - DTC non è supportato
+> - L'account 'sa' non è presente (l'account predefinito si chiama 'cloudSA')
+> - L'errore del token TDS (0xAA) restituisce il nome server errato
+> - Non sono supportati i caratteri speciali nel nome del database
+> - Non è supportato ALTER DATABASE [dbname1] MODIFY NAME = [dbname2]
+> - I messaggi di errore vengono sempre visualizzati in inglese, indipendentemente dalle impostazioni della lingua (come in Azure)
 
 ## <a name="131-for-ssnoversion-on-linux-and-macos-may-2017"></a>13.1, per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Linux e macOS, maggio 2017
 

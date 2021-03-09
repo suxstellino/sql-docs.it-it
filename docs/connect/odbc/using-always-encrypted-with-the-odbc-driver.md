@@ -10,14 +10,15 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.reviewer: v-daenge
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 3a9505ab98f039fb77cd8493b20b0024775e296f
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 7da6c0d9864f514d757d0872fd32ce1e0219f01d
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837314"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464779"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso di Always Encrypted con ODBC Driver for SQL Server
+
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ### <a name="applicable-to"></a>Applicabile a
@@ -29,44 +30,44 @@ ms.locfileid: "101837314"
 
 In questo articolo vengono fornite informazioni su come sviluppare applicazioni ODBC utilizzando [Always Encrypted (motore di database)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) o [Always Encrypted con le enclavi sicure](../../relational-databases/security/encryption/always-encrypted-enclaves.md) e il [driver ODBC per SQL Server](microsoft-odbc-driver-for-sql-server.md).
 
-Always Encrypted consente alle applicazioni client di eseguire la crittografia dei dati sensibili senza mai rivelare i dati o le chiavi di crittografia a SQL Server o al database SQL di Azure. Di tutto ciò si occupa un driver abilitato per Always Encrypted, come ODBC Driver for SQL Server, che esegue in modo trasparente la crittografia e la decrittografia dei dati sensibili nell'applicazione client. Il driver determina automaticamente i parametri di query corrispondenti alle colonne di database con dati sensibili (protette mediante Always Encrypted) e crittografa i valori di tali parametri prima di passare i dati a SQL Server o al database SQL di Azure. Analogamente, il driver esegue in modo trasparente la decrittografia dei dati, recuperati dalle colonne di database crittografate nei risultati delle query. *Always Encrypted con enclave sicuri* estende la funzionalità esistente per abilitare funzionalità più avanzate per i dati sensibili, mantenendo i dati riservati.
+Always Encrypted consente alle applicazioni client di eseguire la crittografia dei dati sensibili senza mai rivelare i dati o le chiavi di crittografia a SQL Server o al database SQL di Azure. Un driver Always Encrypted abilitato, ad esempio il driver ODBC per SQL Server, ottiene questa sicurezza eseguendo in modo trasparente la crittografia e la decrittografia dei dati sensibili nell'applicazione client. Il driver determina automaticamente i parametri di query corrispondenti alle colonne di database con dati sensibili (protette mediante Always Encrypted) e crittografa i valori di tali parametri prima di passare i dati a SQL Server o al database SQL di Azure. Analogamente, il driver esegue in modo trasparente la decrittografia dei dati, recuperati dalle colonne di database crittografate nei risultati delle query. *Always Encrypted con enclave sicuri* estende la funzionalità esistente per abilitare funzionalità più avanzate per i dati sensibili, mantenendo i dati riservati.
 
 Per altre informazioni, vedere [Always Encrypted (motore di database)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) e [Always Encrypted con le enclave sicure](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 ### <a name="prerequisites"></a>Prerequisiti
 
-Configurare Always Encrypted nel database. Ciò implica il provisioning di chiavi Always Encrypted e l'impostazione della crittografia per le colonne di database selezionate. Se non è presente un database in cui Always Encrypted è configurato, seguire le istruzioni fornite nel blog di [introduzione a Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted). In particolare, il database deve contenere le definizioni dei metadati per una chiave master della colonna, una chiave di crittografia della colonna e una tabella contenente una o più colonne crittografate con tale chiave di crittografia.
+Configurare Always Encrypted nel database. Questo processo comporta il provisioning di chiavi di Always Encrypted e la configurazione della crittografia per le colonne di database selezionate. Se non è presente un database in cui Always Encrypted è configurato, seguire le istruzioni fornite nel blog di [introduzione a Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted). In particolare, il database deve contenere le definizioni dei metadati per una chiave master della colonna, una chiave di crittografia della colonna e una tabella contenente una o più colonne crittografate con tale chiave di crittografia.
 
-Se si usa Always Encrypted con enclave sicure, vedere [Sviluppare applicazioni usando Always Encrypted con enclave sicure](../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md) per altri prerequisiti.
+Se si usa Always Encrypted con enclavi sicure, vedere [sviluppare applicazioni usando always Encrypted con enclave sicure](../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md) per altri prerequisiti.
 
 ### <a name="enabling-always-encrypted-in-an-odbc-application"></a>Abilitazione di Always Encrypted in un'applicazione ODBC
 
-Il modo più semplice per abilitare la crittografia dei parametri e la decrittografia delle colonne crittografate dei set di risultati consiste nell'impostare il valore della parola chiave della stringa di connessione `ColumnEncryption` su **Abilitato**. Di seguito è riportato un esempio di stringa di connessione che abilita la Always Encrypted:
+Il modo più semplice per abilitare la crittografia dei parametri e la decrittografia delle colonne crittografate dei set di risultati consiste nell'impostare il valore della parola chiave della stringa di connessione `ColumnEncryption` su **Abilitato**. Di seguito è riportato un esempio di stringa di connessione che abilita la Crittografia sempre attiva:
 
-```
+```cpp
 SQLWCHAR *connString = L"Driver={ODBC Driver 17 for SQL Server};Server={myServer};Trusted_Connection=yes;ColumnEncryption=Enabled;";
 ```
 
 Always Encrypted può anche essere abilitato nella configurazione DSN, usando la stessa chiave e lo stesso valore (di cui verrà eseguito l'override dall'impostazione della stringa di connessione, se presente) o a livello di codice con l'attributo di pre-connessione `SQL_COPT_SS_COLUMN_ENCRYPTION`. Impostandolo in questo modo esegue l'override del valore impostato nella stringa di connessione o DSN:
 
-```
+```cpp
  SQLSetConnectAttr(hdbc, SQL_COPT_SS_COLUMN_ENCRYPTION, (SQLPOINTER)SQL_COLUMN_ENCRYPTION_ENABLE, 0);
 ```
 
-Una volta abilitato per la connessione, il comportamento di Always Encrypted può essere regolato per singole query. Per altre informazioni, vedere [Controllo dell'impatto di Always Encrypted sulle prestazioni](#controlling-the-performance-impact-of-always-encrypted) più avanti.
+Una volta abilitato per la connessione, il comportamento di Always Encrypted può essere regolato per singole query. Per ulteriori informazioni, vedere [controllo dell'effetto sulle prestazioni di Always encrypted di](#controlling-the-performance-impact-of-always-encrypted) seguito.
 
-Si noti che l'abilitazione di Always Encrypted non è sufficiente per l'esito positivo della crittografia o della decrittografia. È anche necessario assicurarsi che:
+L'abilitazione di Always Encrypted non è sufficiente per l'esito positivo della crittografia o della decrittografia. È anche necessario assicurarsi che:
 
 - L'applicazione abbia le autorizzazioni di database *VIEW ANY COLUMN MASTER KEY DEFINITION* e *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* , necessarie per accedere ai metadati sulle chiavi Always Encrypted nel database. Per informazioni dettagliate, vedere [Autorizzazioni per il database](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions).
 
-- L'applicazione possa accedere alla chiave master della colonna che protegge le chiavi di crittografia della colonna per le colonne crittografate sottoposte a query. Questo dipende dal provider dell'archivio chiavi che archivia la chiave master della colonna. Per altre informazioni, vedere [Uso degli archivi delle chiavi master delle colonne](#working-with-column-master-key-stores).
+- L'applicazione possa accedere alla chiave master della colonna che protegge le chiavi di crittografia della colonna per le colonne crittografate sottoposte a query. Questo comportamento dipende dal provider dell'archivio chiavi in cui è archiviato il CMK. Per altre informazioni, vedere [Uso degli archivi delle chiavi master delle colonne](#working-with-column-master-key-stores).
 
-### <a name="enabling-always-encrypted-with-secure-enclaves"></a>Abilitare Always Encrypted con enclave sicuri
+### <a name="enabling-always-encrypted-with-secure-enclaves"></a>Abilitazione di Always Encrypted con enclave sicuri
 
 > [!NOTE]
 > In Linux e macOS è necessario usare OpenSSL versione 1.0.1 o successiva per usare Always Encrypted con enclave sicure.
 
-A partire dalla versione 17.4, il driver supporta Always Encrypted con enclavi sicuri. Per abilitare l'uso dell'enclave durante la connessione a un database, impostare la `ColumnEncryption` chiave DSN, la parola chiave della stringa di connessione o l'attributo di connessione sul valore seguente: `<attestation protocol>\<attestation URL>` , dove:
+A partire dalla versione 17,4, il driver supporta Always Encrypted con enclave sicure. Per abilitare l'utilizzo dell'enclave durante la connessione a un database, impostare la `ColumnEncryption` chiave DSN, la parola chiave della stringa di connessione o l'attributo di connessione sul valore seguente: `<attestation protocol>\<attestation URL>` , dove:
 
 - `<attestation protocol>` : specifica un protocollo usato per l'attestazione dell'enclave.
   - Se si usa [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] e il servizio sorveglianza host (HGS), `<attestation protocol>` deve essere `VBS-HGS` .
@@ -75,8 +76,7 @@ A partire dalla versione 17.4, il driver supporta Always Encrypted con enclavi s
 - `<attestation URL>` : specifica un URL di attestazione (un endpoint del servizio di attestazione). È necessario ottenere un URL di attestazione per l'ambiente dall'amministratore del servizio di attestazione.
 
   - Se si usa [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] e il servizio Sorveglianza host (HGS), vedere [Determinare e condividere l'URL di attestazione HGS](../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
-  - Se si usa [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e il servizio Attestazione di Microsoft Azure, vedere [Determinare l'URL di attestazione per i criteri di attestazione](../../relational-databases/security/encryption/always-encrypted-enclaves.md?view=sql-server-ver15#secure-enclave-attestation).
-
+  - Se si usa [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e il servizio Attestazione di Microsoft Azure, vedere [Determinare l'URL di attestazione per i criteri di attestazione](../../relational-databases/security/encryption/always-encrypted-enclaves.md#secure-enclave-attestation).
 
 Esempi di stringhe di connessione che abilitano i calcoli enclave per una connessione al database:
 
@@ -86,18 +86,17 @@ Esempi di stringhe di connessione che abilitano i calcoli enclave per una connes
    Driver=ODBC Driver 17 for SQL Server;Server=myServer.myDomain;Database=myDataBase;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://myHGSServer.myDomain/Attestation
    ```
 
-- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] :
+- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]:
   
    ```
    Driver=ODBC Driver 17 for SQL Server;Server=myServer.database.windows.net;Database=myDataBase;Uid=myUsername;Pwd=myPassword;Encrypt=yes;ColumnEncryption=SGX-AAS,https://myAttestationProvider.uks.attest.azure.net/attest/SgxEnclave
    ```
 
-Se il server, il servizio di attestazione e le chiavi CMK e CEK con supporto degli enclave sono configurati correttamente per le colonne desiderate, ora è possibile eseguire query che usano l'enclave, ad esempio la crittografia sul posto e i calcoli avanzati, oltre alla funzionalità esistente offerta da Always Encrypted. Per altre informazioni, vedere [Configurare Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md).
-
+Se il server e il servizio di attestazione sono configurati correttamente insieme a CMK e chiavi cek abilitati per l'enclave per le colonne desiderate, ora è possibile eseguire query che usano l'enclave, ad esempio la crittografia sul posto e i calcoli avanzati, oltre alle funzionalità esistenti fornite da Always Encrypted. Per altre informazioni, vedere [configurare always Encrypted con enclave sicure](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md).
 
 ### <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Recupero e modifica di dati nelle colonne crittografate
 
-Dopo aver abilitato Always Encrypted in una connessione è possibile usare le API ODBC standard. Le API ODBC possono recuperare o modificare i dati nelle colonne di database crittografate. Per altre informazioni vedere i seguenti documenti:
+Dopo aver abilitato Always Encrypted in una connessione è possibile usare le API ODBC standard. Le API ODBC possono recuperare o modificare i dati nelle colonne di database crittografate. Gli elementi della documentazione seguenti possono essere utili:
 
 - [Codice di esempio ODBC](cpp-code-example-app-connect-access-sql-db.md)
 - [Guida di riferimento per programmatori ODBC](../../odbc/reference/odbc-programmer-s-reference.md)
@@ -113,9 +112,9 @@ La tabella seguente riepiloga il comportamento delle query, a seconda che la fun
 | Parametri destinati alle colonne crittografate. | I valori dei parametri vengono crittografati in modo trasparente. | Errore | Errore|
 | Recupero di dati dalle colonne crittografate, senza parametri destinati alle colonne crittografate.| I risultati delle colonne vengono decrittografati in modo trasparente. L'applicazione riceve i valori di colonna in testo non crittografato. | Errore | I risultati delle colonne crittografate non vengono decrittografate. L'applicazione riceve i valori crittografati come matrici di byte.
 
-Gli esempi seguenti illustrano il recupero e la modifica dei dati nelle colonne crittografate. Negli esempi si presuppone una tabella con lo schema seguente. Si noti che le colonne SSN e BirthDate nascita sono crittografate.
+Gli esempi seguenti illustrano il recupero e la modifica dei dati nelle colonne crittografate. Negli esempi si presuppone una tabella con lo schema seguente. Le colonne SSN e BirthDate sono crittografate.
 
-```
+```tsql
 CREATE TABLE [dbo].[Patients](
  [PatientId] [int] IDENTITY(1,1),
  [SSN] [char](11) COLLATE Latin1_General_BIN2
@@ -134,7 +133,7 @@ CREATE TABLE [dbo].[Patients](
 
 #### <a name="data-insertion-example"></a>Esempio di inserimento dati
 
-Questo esempio illustra come inserire una riga nella tabella Patients. Tenere presente quanto segue:
+Questo esempio illustra come inserire una riga nella tabella Patients. Tenere presenti questi dettagli:
 
 - Il codice di esempio non contiene alcun elemento specifico per la crittografia. Il driver rileva automaticamente e crittografa i valori dei parametri SSN e data, che puntano a colonne crittografate. In questo modo la crittografia diventa trasparente per l'applicazione.
 
@@ -142,7 +141,7 @@ Questo esempio illustra come inserire una riga nella tabella Patients. Tenere pr
 
 - Il tipo SQL del parametro inserito nella colonna SSN è impostato su SQL_CHAR, che esegue il mapping al tipo di dati di SQL Server **char** (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). Se il tipo del parametro è stato impostato su SQL_WCHAR, che esegue il mapping a **nchar**, la query avrà esito negativo perché Always Encrypted non supporta le conversioni sul lato server da valori nchar crittografati a valori char crittografati. Vedere [Guida di riferimento per programmatori ODBC - Appendice D: Tipi di dati](../../odbc/reference/appendixes/appendix-d-data-types.md) per informazioni sui mapping dei tipi di dati.
 
-```
+```cpp
     SQL_DATE_STRUCT date;
     SQLLEN cbdate;   // size of date structure  
 
@@ -181,7 +180,7 @@ Questo esempio illustra come inserire una riga nella tabella Patients. Tenere pr
 
 #### <a name="plaintext-data-retrieval-example"></a>Esempio di recupero di dati di testo non crittografato
 
-L'esempio seguente illustra come filtrare i dati in base ai valori crittografati e recuperare i dati in testo non crittografato dalle colonne crittografate. Tenere presente quanto segue:
+L'esempio seguente illustra come filtrare i dati in base ai valori crittografati e recuperare i dati in testo non crittografato dalle colonne crittografate. Tenere presenti questi dettagli:
 
 - Il valore usato nella clausola WHERE per filtrare la colonna SSN deve essere passato usando SQLBindParameter, in modo che il driver possa crittografarlo in modo trasparente prima dell'invio al server.
 
@@ -190,7 +189,7 @@ L'esempio seguente illustra come filtrare i dati in base ai valori crittografati
 > [!NOTE]
 > Le query possono eseguire confronti di uguaglianza nelle colonne crittografate solo se la crittografia è deterministica o se è attivato l'enclave sicuro. Per altre informazioni, vedere [Selezione della crittografia deterministica o casuale](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 
-```
+```cpp
 SQLCHAR SSN[12];
 strcpy_s((char*)SSN, _countof(SSN), "795-73-9838");
 
@@ -234,13 +233,12 @@ while (SQL_SUCCEEDED(SQLFetch(hstmt)))
 
 Se Always Encrypted non è abilitato, una query può comunque recuperare dati dalle colonne crittografate, a condizione che non presenti parametri destinati alle colonne crittografate.
 
-L'esempio seguente illustra come recuperare dati crittografati binari da colonne crittografate. Tenere presente quanto segue:
+L'esempio seguente illustra come recuperare dati crittografati binari da colonne crittografate. Tenere presenti questi dettagli:
 
 - Considerato che Always Encrypted non è abilitato nella stringa di connessione, la query restituirà i valori crittografati di SSN e BirthDate come matrici di byte (il programma converte i valori in stringhe).
 - Una query che recupera dati dalle colonne crittografate con Always Encrypted disabilitato può avere parametri, a condizione che nessuno dei parametri sia destinato a una colonna crittografata. La query precedente filtra in base alla colonna LastName, non è crittografata nel database. Se la query avesse filtrato per SSN o data di nascita, avrebbe avuto esito negativo.
 
-
-```
+```cpp
 SQLCHAR SSN[12];
 strcpy_s((char*)SSN, _countof(SSN), "795-73-9838");
 
@@ -284,7 +282,8 @@ while (SQL_SUCCEEDED(SQLFetch(hstmt)))
 
 A partire dalla versione del driver 17,7 è possibile usare Always Encrypted con MONEY e SMALLMONEY. Tuttavia, esistono alcuni passaggi aggiuntivi da eseguire.
 Quando si inseriscono colonne MONEY o SMALLMONEY crittografate, usare uno dei tipi C seguenti:
-```
+
+```cpp
 SQL_C_CHAR
 SQL_C_WCHAR
 SQL_C_SHORT
@@ -303,7 +302,7 @@ e un tipo SQL di `SQL_NUMERIC` o `SQL_DOUBLE` (la precisione può andare persa q
 
 Quando si associa una variabile MONEY/SMALLMONEY in una colonna crittografata, è necessario impostare i campi del descrittore seguenti:
 
-```
+```cpp
 // n is the descriptor record of the MONEY/SMALLMONEY parameter
 // the type is assumed to be SMALLMONEY if isSmallMoney is true and MONEY otherwise
 
@@ -311,8 +310,7 @@ SQLHANDLE ipd = 0;
 SQLGetStmtAttr(hStmt, SQL_ATTR_IMP_PARAM_DESC, (SQLPOINTER)&ipd, SQL_IS_POINTER, NULL);
 SQLSetDescField(ipd, n, SQL_CA_SS_SERVER_TYPE, isSmallMoney ? (SQLPOINTER)SQL_SS_TYPE_SMALLMONEY :
                                                               (SQLPOINTER)SQL_SS_TYPE_MONEY, SQL_IS_INTEGER);
-                                                              
-                                                              
+
 // If the variable is bound as SQL_NUMERIC, additional descriptor fields have to be set
 // var is SQL_NUMERIC_STRUCT containing the value to be inserted
 
@@ -322,7 +320,6 @@ SQLSetDescField(hdesc, n, SQL_DESC_PRECISION, (SQLPOINTER)(var.precision), 0);
 SQLSetDescField(hdesc, n, SQL_DESC_SCALE, (SQLPOINTER)(var.scale), 0);
 SQLSetDescField(hdesc, n, SQL_DESC_DATA_PTR, &var, 0);
 ```
-
 
 #### <a name="avoiding-common-problems-when-querying-encrypted-columns"></a>Come evitare i problemi comuni quando si eseguono query su colonne crittografate
 
@@ -346,7 +343,7 @@ Qualsiasi valore destinato a una colonna crittografata deve essere crittografato
 
 - Sia usato SQLBindParameter per inviare i dati destinati alle colonne crittografate. L'esempio seguente illustra una query che filtra in modo errato in base a un valore letterale o costante in una colonna crittografata (SSN), anziché passare il valore letterale come argomento a SQLBindParameter.
 
-```
+```cpp
 string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN='795-73-9838'";
 ```
 
@@ -354,9 +351,9 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 #### <a name="sqlsetpos"></a>SQLSetPos
 
-L'API `SQLSetPos` consente a un'applicazione aggiornare le righe in un set di risultati usando buffer che sono stati associati con SQLBindCol e in cui precedentemente sono stati recuperati dati di riga. A causa del comportamento di riempimento asimmetrico dei tipi crittografati a lunghezza fissa, è possibile modificare in modo imprevisto i dati di queste colonne mentre si eseguono aggiornamenti in altre colonne della riga. Con Always Encrypted, i valori dei caratteri a lunghezza fissa verranno riempiti se il valore è inferiore alle dimensioni del buffer.
+L'API `SQLSetPos` consente a un'applicazione aggiornare le righe in un set di risultati usando buffer che sono stati associati con SQLBindCol e in cui precedentemente sono stati recuperati dati di riga. A causa del comportamento di riempimento asimmetrico dei tipi crittografati a lunghezza fissa, è possibile modificare in modo imprevisto i dati di queste colonne mentre si eseguono aggiornamenti in altre colonne della riga. Con AE, i valori di caratteri a lunghezza fissa verranno riempiti se il valore è inferiore alle dimensioni del buffer.
 
-Per mitigare questo comportamento, usare il flag `SQL_COLUMN_IGNORE` per ignorare le colonne che non verranno aggiornate come parte di `SQLBulkOperations` e quando si usa `SQLSetPos` per gli aggiornamenti basati sul cursore.  Tutte le colonne che non vengono modificate direttamente dall'applicazione devono essere ignorate, sia per le prestazioni sia per evitare il troncamento delle colonne associate a un buffer *inferiore* alle dimensioni effettive (DB). Per altre informazioni, vedere la [guida di riferimento della funzione SQLSetPos](../../odbc/reference/syntax/sqlsetpos-function.md).
+Per attenuare questo comportamento, utilizzare il `SQL_COLUMN_IGNORE` flag per ignorare le colonne che non verranno aggiornate come parte di `SQLBulkOperations` e quando si utilizza `SQLSetPos` per gli aggiornamenti basati su cursori.  Tutte le colonne che non vengono modificate direttamente dall'applicazione devono essere ignorate, sia per le prestazioni sia per evitare il troncamento delle colonne associate a un buffer *inferiore* alle dimensioni effettive (DB). Per altre informazioni, vedere la [guida di riferimento della funzione SQLSetPos](../../odbc/reference/syntax/sqlsetpos-function.md).
 
 #### <a name="sqlmoreresults--sqldescribecol"></a>SQLMoreResults e SQLDescribeCol
 
@@ -374,33 +371,33 @@ Questa sezione descrive le ottimizzazioni delle prestazioni predefinite in ODBC 
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Controllo dei round trip per recuperare i metadati per i parametri di query
 
-Se la funzionalità Always Encrypted è abilitata per una connessione, per impostazione predefinita il driver chiamerà [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) per ogni query con parametri, passando l'istruzione di query (senza i valori dei parametri) a SQL Server. Questa stored procedure analizza l'istruzione di query per verificare se sono presenti parametri da crittografare e, in tal caso, restituisce le informazioni relative alla crittografia per ogni parametro in modo da consentire al driver di crittografarli. Il comportamento descritto garantisce all'applicazione client un elevato livello di trasparenza: non è necessario che l'applicazione (e lo sviluppatore dell'applicazione) sappiano quali query accedono alle colonne crittografate, a condizione che i valori destinati alle colonne crittografate vengano passati al driver nei parametri.
+Se la funzionalità Always Encrypted è abilitata per una connessione, per impostazione predefinita il driver chiamerà [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) per ogni query con parametri, passando l'istruzione di query (senza i valori dei parametri) a SQL Server. Questa stored procedure analizza l'istruzione di query per verificare se sono presenti parametri da crittografare e, in tal caso, restituisce le informazioni relative alla crittografia per ogni parametro in modo da consentire al driver di crittografarli. Il comportamento precedente garantisce un livello di trasparenza elevato all'applicazione client: l'applicazione (e lo sviluppatore dell'applicazione) non deve essere in grado di riconoscere quali query accedono alle colonne crittografate, purché i valori destinati alle colonne crittografate vengano passati al driver nei parametri.
 
-A partire dalla versione 17.6, il driver memorizza nella cache anche i metadati di crittografia per le istruzioni preparate, migliorando le prestazioni evitando che le chiamate successive a `SQLExecute` richiedano un round trip aggiuntivo per recuperare i metadati di crittografia.
+A partire dalla versione 17,6, il driver memorizza nella cache anche i metadati di crittografia per le istruzioni preparate, migliorando le prestazioni consentendo alle chiamate successive a `SQLExecute` di non richiedere un round trip aggiuntivo per recuperare i metadati di crittografia.
 
 ### <a name="per-statement-always-encrypted-behavior"></a>Comportamento di Always Encrypted in base alle istruzioni
 
-Per controllare l'impatto sulle prestazioni del recupero dei metadati di crittografia per le query con parametri, è possibile modificare il comportamento di Always Encrypted per singole query se è stato abilitato per la connessione. In questo modo, è possibile assicurarsi che `sys.sp_describe_parameter_encryption` venga richiamato solo per le query con parametri destinati a colonne crittografate. Si noti, tuttavia, che in tal modo si riduce la trasparenza della crittografia. Se si esegue la crittografia di colonne aggiuntive nel database, potrebbe essere necessario modificare il codice dell'applicazione per allinearlo alle modifiche dello schema.
+Per controllare l'impatto sulle prestazioni del recupero dei metadati di crittografia per le query con parametri, è possibile modificare il comportamento di Always Encrypted per singole query se è stato abilitato per la connessione. In questo modo, è possibile assicurarsi che `sys.sp_describe_parameter_encryption` venga richiamato solo per le query con parametri destinati a colonne crittografate. Si noti, tuttavia, che in questo modo si riduce la trasparenza della crittografia: se si crittografano più colonne nel database, potrebbe essere necessario modificare il codice dell'applicazione per allinearlo alle modifiche dello schema.
 
 Per controllare il comportamento di Always Encrypted di un'istruzione, chiamare SQLSetStmtAttr per impostare l'attributo di istruzione `SQL_SOPT_SS_COLUMN_ENCRYPTION` su uno dei valori seguenti:
 
 |valore|Descrizione|
 |-|-|
 |`SQL_CE_DISABLED` (0)|Always Encrypted è disabilitato per l'istruzione|
-|`SQL_CE_RESULTSETONLY` (1)|Solo decrittografia. I set di risultati e i valori restituiti sono decrittografati e i parametri non sono crittografati|
+|`SQL_CE_RESULTSETONLY` (1)|Solo decrittografia. I set di risultati e i valori restituiti vengono decrittografati e i parametri non vengono crittografati|
 |`SQL_CE_ENABLED` (3) | Always Encrypted è abilitato e usato sia per i parametri che per i risultati|
 
-I nuovi handle di istruzione creati da una connessione con Always Encrypted abilitato vengono impostati su SQL_CE_ENABLED per impostazione predefinita. Quelli creati da una connessione con Always Encrypted disabilitato vengono impostati su SQL_CE_DISABLED per impostazione predefinita (e per questi handle non è possibile abilitare Always Encrypted).
+I nuovi handle di istruzione creati da una connessione con Always Encrypted abilitato vengono impostati su SQL_CE_ENABLED per impostazione predefinita. Gli handle creati da una connessione con l'impostazione predefinita disabilitata SQL_CE_DISABLED e non è possibile abilitarli Always Encrypted.
 
-Se la maggior parte delle query di un'applicazione client accede alle colonne crittografate, si consiglia quanto segue:
+Se la maggior parte delle query di un'applicazione client accede a colonne crittografate, è consigliabile usare i punti seguenti:
 
 - Impostare la parola chiave della stringa di connessione `ColumnEncryption` su `Enabled`.
 
-- Impostare l'attributo `SQL_SOPT_SS_COLUMN_ENCRYPTION` su `SQL_CE_DISABLED` nelle istruzioni che non accedono alle colonne crittografate. In questo modo si disabiliterà sia la chiamata a `sys.sp_describe_parameter_encryption` che i tentativi di decrittografare qualsiasi valore nel set di risultati.
-    
-- Impostare l'attributo `SQL_SOPT_SS_COLUMN_ENCRYPTION` su `SQL_CE_RESULTSETONLY` nelle istruzioni che non contengono parametri che richiedono la crittografia, ma recuperano dati dalle colonne crittografate. In questo modo si disabiliterà la chiamata `sys.sp_describe_parameter_encryption` e la crittografia dei parametri. I risultati contenenti colonne crittografate continueranno a essere decrittografati.
+- Impostare l' `SQL_SOPT_SS_COLUMN_ENCRYPTION` attributo `SQL_CE_DISABLED` su sulle istruzioni che non accedono ad alcuna colonna crittografata. Questa impostazione consente di disabilitare sia `sys.sp_describe_parameter_encryption` la chiamata che il tentativo di decrittografare tutti i valori nel set di risultati.
 
-- Utilizzare le istruzioni preparate per le query che verranno eseguite più di una volta. Preparare la query con `SQLPrepare` e salvare l'handle di istruzione riusandolo con `SQLExecute` ogni volta che viene eseguito. Questo è l'approccio preferito per le prestazioni anche quando non sono presenti colonne crittografate e consente al driver di sfruttare i metadati memorizzati nella cache.
+- Impostare l' `SQL_SOPT_SS_COLUMN_ENCRYPTION` attributo su per le `SQL_CE_RESULTSETONLY` istruzioni che non dispongono di parametri che richiedono la crittografia, ma che recuperano i dati dalle colonne crittografate. Questa impostazione consente di disabilitare la chiamata `sys.sp_describe_parameter_encryption` e la crittografia parametri. I risultati contenenti colonne crittografate continueranno a essere decrittografati.
+
+- Usare le istruzioni preparate per le query che verranno eseguite più di una volta; preparare la query con `SQLPrepare` e salvare l'handle di istruzione e riutilizzarlo `SQLExecute` ogni volta che viene eseguito. Questo metodo è l'approccio preferito per le prestazioni anche quando non sono presenti colonne crittografate e consente al driver di sfruttare i metadati memorizzati nella cache.
 
 ## <a name="always-encrypted-security-settings"></a>Impostazioni di sicurezza di Always Encrypted
 
@@ -408,30 +405,30 @@ Se la maggior parte delle query di un'applicazione client accede alle colonne cr
 
 Per applicare la crittografia di un parametro, impostare il campo del descrittore parametri di implementazione `SQL_CA_SS_FORCE_ENCRYPT` tramite una chiamata alla funzione SQLSetDescField. Un valore diverso da zero fa sì che il driver restituisca un errore quando non vengono restituiti metadati di crittografia per il parametro associato.
 
-```
+```cpp
 SQLHDESC ipd;
 SQLGetStmtAttr(hStmt, SQL_ATTR_IMP_PARAM_DESC, &ipd, 0, 0);
 SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS_SMALLINT);   
 ```
 
-Se SQL Server indica al driver che il parametro non deve essere crittografato, le query che usano il parametro avranno esito negativo. Si aumenta così la protezione contro attacchi alla sicurezza, come un'istanza di SQL Server compromessa che invia metadati di crittografia non corretti al client, con il conseguente possibile rischio di divulgazione dei dati.
+Se SQL Server indica al driver che il parametro non deve essere crittografato, le query che usano il parametro avranno esito negativo. Questo comportamento offre una protezione aggiuntiva contro gli attacchi alla sicurezza che comportano un SQL Server compromesso che fornisce al client metadati di crittografia non corretti, che possono causare la divulgazione dei dati.
 
 ### <a name="column-encryption-key-caching"></a>Memorizzazione nella cache delle chiavi di crittografia della colonna
 
 Per ridurre il numero di chiamate a un archivio chiavi master della colonna per decrittografare le chiavi di crittografia della colonna, il driver memorizza nella cache le chiavi di crittografia della colonna di testo non crittografato. La cache delle chiavi di crittografia della colonna è globale per il driver e non è associata ad alcuna connessione. Dopo aver ricevuto la chiave ECEK dai metadati del database, il driver prova prima di tutto a trovare la chiave di crittografia della colonna di testo non crittografato corrispondente al valore della chiave crittografata nella cache. Il driver chiama l'archivio chiavi contenente la chiave master della colonna solo se non riesce a trovare la chiave di crittografia della colonna di testo non crittografato corrispondente nella cache.
 
 > [!NOTE]
-> In ODBC Driver for SQL Server le voci nella cache vengono rimosse dopo un timeout di due ore. Questo significa che per una determinata chiave ECEK, il driver contatta l'archivio chiavi una sola volta nel corso della durata dell'applicazione o ogni due ore, a seconda di quale sia il valore più basso.
+> In ODBC Driver for SQL Server le voci nella cache vengono rimosse dopo un timeout di due ore. Questo comportamento significa che per una determinata chiave ECEK, il driver contatta l'archivio chiavi una sola volta nel corso della durata dell'applicazione o ogni due ore, a seconda di quale sia il valore più basso.
 
-A partire da ODBC Driver 17.1 for SQL Server, il timeout della cache delle chiavi di crittografia della colonna può essere regolato usando l'attributo di connessione `SQL_COPT_SS_CEKCACHETTL`, che specifica il numero di secondi in cui una chiave di crittografia della colonna rimarrà nella cache. A causa della natura globale della cache, questo attributo può essere modificato da qualsiasi handle di connessione valido per il driver. Quando il valore TTL della cache viene ridotto, vengono rimosse anche le chiavi di crittografia della colonna esistenti che potrebbero superare il nuovo valore TTL. Se è 0, nessuna chiave di crittografia della colonna viene memorizzata nella cache.
+A partire da ODBC Driver 17.1 for SQL Server, il timeout della cache delle chiavi di crittografia della colonna può essere regolato usando l'attributo di connessione `SQL_COPT_SS_CEKCACHETTL`, che specifica il numero di secondi in cui una chiave di crittografia della colonna rimarrà nella cache. A causa della natura globale della cache, questo attributo può essere modificato da qualsiasi handle di connessione valido per il driver. Quando viene ridotta la durata (TTL) della cache, vengono rimossi anche i chiavi cek esistenti che superano il nuovo valore TTL. Se è 0, nessuna chiave di crittografia della colonna viene memorizzata nella cache.
 
 ### <a name="trusted-key-paths"></a>Percorsi delle chiavi attendibili
 
-A partire da ODBC Driver 17.1 for SQL Server, l'attributo di connessione `SQL_COPT_SS_TRUSTEDCMKPATHS` consente a un'applicazione di richiedere che le operazioni Always Encrypted usino solo un elenco specificato di chiavi di crittografia della colonna, identificate dai relativi percorsi delle chiavi. Per impostazione predefinita, questo attributo è NULL, che significa che il driver accetta qualsiasi percorso della chiave. Per usare questa funzionalità, impostare `SQL_COPT_SS_TRUSTEDCMKPATHS` in modo che punti a una stringa di caratteri "wide" delimitati da Null con terminazione Null che elenca i percorsi delle chiavi consentiti. La memoria a cui fa riferimento questo attributo deve rimanere valida durante le operazioni di crittografia o decrittografia usando l'handle di connessione in cui è impostato, in base al quale il driver controllerà se il percorso CMK come specificato dai metadati del server fa distinzione tra maiuscole e minuscole in questo elenco. Se il percorso CMK non è presente nell'elenco, l'operazione non riesce. L'applicazione può modificare il contenuto della memoria a cui punta questo attributo, per modificare l'elenco di chiavi di crittografia della colonna attendibili, senza impostare nuovamente l'attributo.
+A partire da ODBC Driver 17.1 for SQL Server, l'attributo di connessione `SQL_COPT_SS_TRUSTEDCMKPATHS` consente a un'applicazione di richiedere che le operazioni Always Encrypted usino solo un elenco specificato di chiavi di crittografia della colonna, identificate dai relativi percorsi delle chiavi. Per impostazione predefinita, questo attributo è NULL, che significa che il driver accetta qualsiasi percorso della chiave. Per usare questa funzionalità, impostare `SQL_COPT_SS_TRUSTEDCMKPATHS` in modo che punti a una stringa di caratteri wide con terminazione null e con terminazione null che elenca i percorsi della chiave consentiti. La memoria a cui fa riferimento questo attributo deve rimanere valida durante le operazioni di crittografia o decrittografia usando l'handle di connessione in cui è impostato, in base al quale il driver controllerà se il percorso CMK come specificato dai metadati del server fa distinzione tra maiuscole e minuscole in questo elenco. Se il percorso CMK non è presente nell'elenco, l'operazione non riesce. L'applicazione può modificare il contenuto della memoria a cui punta questo attributo, per modificare l'elenco di chiavi di crittografia della colonna attendibili, senza impostare nuovamente l'attributo.
 
 ## <a name="working-with-column-master-key-stores"></a>Uso degli archivi delle chiavi master delle colonne
 
-Per crittografare o decrittografare i dati, il driver deve ottenere una chiave di crittografia della colonna configurata per la colonna di destinazione. Le chiavi di crittografia di colonna vengono archiviate in formato crittografato (ECEK) nei metadati del database. Ogni chiave di crittografia della colonna ha una chiave master della colonna corrispondente che è stata usata per crittografarla. I [metadati del database](../../t-sql/statements/create-column-master-key-transact-sql.md) non archiviano la chiave di crittografia della colonna stessa; contengono solo il nome dell'archivio chiavi e le informazioni che l'archivio chiavi può usare per trovare la chiave di crittografia della colonna.
+Per crittografare o decrittografare i dati, il driver deve ottenere una chiave di crittografia della colonna configurata per la colonna di destinazione. Le chiavi di crittografia di colonna vengono archiviate in formato crittografato (ECEK) nei metadati del database. Ogni chiave di crittografia della colonna ha una chiave master della colonna corrispondente che è stata usata per crittografarla. I [metadati del database](../../t-sql/statements/create-column-master-key-transact-sql.md) non archiviano il CMK stesso; contiene solo il nome dell'archivio chiavi e le informazioni che l'archivio chiavi può usare per individuare CMK.
 
 Per ottenere il valore di testo non crittografato di una chiave ECEK, il driver ottiene prima di tutto i metadati relativi sia alla chiave di crittografia della colonna che alla chiave master della colonna corrispondente e quindi usa queste informazioni per contattare l'archivio chiavi contenente la chiave master della colonna e richiede di decrittografare la chiave ECEK. Il driver comunica con un archivio chiavi usando un provider dell'archivio chiavi.
 
@@ -446,11 +443,11 @@ ODBC Driver for SQL Server viene fornito con i provider di archivi chiavi predef
 
 - È necessario che l'utente (o l'amministratore del database) verifichi che il nome del provider, configurato nei metadati della chiave master della colonna, sia corretto e che il percorso della chiave master sia conforme al formato del percorso della chiave per il provider specificato. È consigliabile configurare le chiavi usando strumenti come SQL Server Management Studio, che genera automaticamente i nomi di provider e i percorsi di chiave validi quando viene eseguita l'istruzione [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md) .
 
-- È necessario verificare che l'applicazione possa accedere alla chiave nell'archivio chiavi. Questa operazione comportare l'accesso da parte dell'applicazione alla chiave e/o all'archivio chiavi, a seconda dell'archivio, o l'esecuzione di altri passaggi di configurazione specifici dell'archivio chiavi. Ad esempio, per accedere a un'istanza di Azure Key Vault, è necessario fornire le credenziali corrette all'archivio chiavi.
+- Verificare che l'applicazione possa accedere alla chiave nell'archivio chiavi. Questo processo può comportare la concessione dell'accesso all'applicazione alla chiave e/o all'archivio chiavi, a seconda dell'archivio chiavi o a eseguire altri passaggi di configurazione specifici dell'archivio chiavi. Ad esempio, per accedere a una Azure Key Vault, è necessario specificare le credenziali corrette per l'archivio chiavi.
 
 ### <a name="using-the-azure-key-vault-provider"></a>Uso di Azure Key Vault Provider
 
-Azure Key Vault (AKV) rappresenta una scelta valida per archiviare e gestire le chiavi master delle colonne per Always Encrypted, soprattutto se le applicazioni sono ospitate in Azure. ODBC Driver for SQL Server in Linux, macOS e Windows include un provider di archivio chiavi master della colonna predefinito per Azure Key Vault. Per altre informazioni sulla configurazione di un'istanza di Azure Key Vault per Always Encrypted, vedere [Azure Key Vault - Procedura dettagliata](/archive/blogs/kv/azure-key-vault-step-by-step), [Introduzione a Key Vault](/azure/key-vault/general/overview) e [Creazione di chiavi master della colonna in Azure Key Vault](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
+Azure Key Vault (AKV) rappresenta una scelta valida per archiviare e gestire le chiavi master delle colonne per Always Encrypted, soprattutto se le applicazioni sono ospitate in Azure. ODBC Driver for SQL Server in Linux, macOS e Windows include un provider di archivio chiavi master della colonna predefinito per Azure Key Vault. Per ulteriori informazioni sulla configurazione di un Azure Key Vault per Always Encrypted, vedere [Azure Key Vault-Step by Step](/archive/blogs/kv/azure-key-vault-step-by-step), [Introduzione con Key Vault](/azure/key-vault/general/overview)e [creazione di chiavi master della colonna in Azure Key Vault](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
 
 > [!NOTE]
 > Il driver ODBC supporta solo l'autenticazione AKV direttamente con Azure Active Directory. Se si usa l'autenticazione di Azure Active Directory per AKV e la configurazione di Active Directory richiede l'autenticazione in un endpoint Active Directory Federation Services, l'autenticazione potrebbe non riuscire.
@@ -462,7 +459,7 @@ Il driver supporta l'autenticazione ad Azure Key Vault usando i seguenti tipi di
 
 - ID client/Segreto: con questo metodo, le credenziali sono rappresentate da un ID client dell'applicazione e un segreto dell'applicazione.
 
-- Identità gestita (17.5.2 +) - Assegnata dal sistema o dall'utente. Per altre informazioni, vedere [Identità gestite per le risorse di Azure](/azure/active-directory/managed-identities-azure-resources/).
+- Identità gestita (17.5.2 +): sistema o assegnato dall'utente; per altre informazioni, vedere [identità gestite per le risorse di Azure](/azure/active-directory/managed-identities-azure-resources/).
 
 - Azure Key Vault Interactive (17,7 + driver Windows): con questo metodo, le credenziali vengono autenticate tramite Azure Active Directory con ID di accesso.
 
@@ -514,14 +511,13 @@ Non sono necessarie altre modifiche all'applicazione ODBC per usare Azure Key Va
 > [!NOTE]
 > Il driver contiene un elenco di endpoint AKV attendibili. A partire dalla versione del driver 17.5.2, questo elenco è configurabile: impostare la proprietà `AKVTrustedEndpoints` nel driver o nella chiave del Registro di sistema ODBCINST.INI o ODBC.INI di DSN (Windows) oppure nella sezione del file `odbcinst.ini` o `odbc.ini` (Linux/macOS) in un elenco delimitato da punti e virgola. L'impostazione nel sistema DSN ha la precedenza su un'impostazione nel driver. Se il valore inizia con un punto e virgola, estende l'elenco predefinito. In caso contrario, sostituisce l'elenco predefinito. L'elenco predefinito (fino alla versione 17.5) è `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`. A partire da 17,7, l'elenco include anche `managedhsm.azure.net;managedhsm.azure.cn;managedhsm.usgovcloudapi.net;managedhsm.microsoftazure.de` .
 
-
 ### <a name="using-the-windows-certificate-store-provider"></a>Uso del provider per l'archivio certificati Windows
 
-ODBC Driver for SQL Server in Windows include un provider di archivio chiavi master della colonna predefinito per l'archivio certificati Windows denominato `MSSQL_CERTIFICATE_STORE`. (Questo provider non è disponibile in macOS o Linux). Con questo provider, la chiave master della colonna viene archiviata in locale nel computer client e non è necessaria alcuna configurazione aggiuntiva da parte dell'applicazione per usarla con il driver. Tuttavia, l'applicazione deve avere accesso al certificato e alla relativa chiave privata nell'archivio. Per altre informazioni, vedere [Creare e archiviare chiavi master della colonna (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+ODBC Driver for SQL Server in Windows include un provider di archivio chiavi master della colonna predefinito per l'archivio certificati Windows denominato `MSSQL_CERTIFICATE_STORE`. (Questo provider non è disponibile in macOS o Linux). Con questo provider, il CMK viene archiviato localmente nel computer client e non è necessaria alcuna configurazione aggiuntiva da parte dell'applicazione per utilizzarlo con il driver. Tuttavia, l'applicazione deve avere accesso al certificato e alla relativa chiave privata nell'archivio. Per altre informazioni, vedere [Creare e archiviare chiavi master della colonna (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 ### <a name="using-custom-keystore-providers"></a>Uso di provider di archivi chiavi personalizzati
 
-ODBC Driver for SQL Server supporta anche i provider di archivi chiavi personalizzati di terze parti tramite l'interfaccia CEKeystoreProvider. Questo consente a un'applicazione di caricare, eseguire query e configurare i provider di archivi chiavi in modo che possano essere usati dal driver per accedere alle colonne crittografate. Le applicazioni possono anche interagire direttamente con un provider dell'archivio chiavi per crittografare le chiavi di crittografia della colonna per l'archiviazione in SQL Server ed eseguire attività che vanno oltre l'accesso alle colonne crittografate con ODBC; per altre informazioni, vedere [Provider di archivi chiavi personalizzati](custom-keystore-providers.md).
+ODBC Driver for SQL Server supporta anche i provider di archivi chiavi personalizzati di terze parti tramite l'interfaccia CEKeystoreProvider. Questa funzionalità consente a un'applicazione di caricare, eseguire query e configurare i provider dell'archivio chiavi in modo che possano essere usati dal driver per accedere alle colonne crittografate. Le applicazioni possono anche interagire direttamente con un provider dell'archivio chiavi per crittografare le chiavi di crittografia della colonna per l'archiviazione in SQL Server ed eseguire attività che vanno oltre l'accesso alle colonne crittografate con ODBC; per altre informazioni, vedere [Provider di archivi chiavi personalizzati](custom-keystore-providers.md).
 
 Due attributi di connessione vengono usati per interagire con i provider di archivi chiavi personalizzati, ovvero:
 
@@ -535,7 +531,7 @@ Il primo viene usato per caricare ed enumerare i provider di archivi chiavi cari
 
 L'impostazione dell'attributo di connessione `SQL_COPT_SS_CEKEYSTOREPROVIDER` consente a un'applicazione client di caricare una libreria di provider, rendendo disponibili per l'uso i provider di archivi chiavi in essa contenuti.
 
-```
+```cpp
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
 
@@ -543,7 +539,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 |:---|:---|
 |`ConnectionHandle`|[Input] Handle di connessione. Deve essere un handle di connessione valido, ma i provider caricati tramite un handle di connessione sono accessibili da qualsiasi altro provider nello stesso processo.|
 |`Attribute`|[Input] Attributo da impostare: costante `SQL_COPT_SS_CEKEYSTOREPROVIDER`.|
-|`ValuePtr`|[Input] Puntatore a una stringa di caratteri con terminazione Null che specifica il nome file della libreria di provider. Per SQLSetConnectAttrA, si tratta di una stringa ANSI (multibyte). Per SQLSetConnectAttrW, si tratta di una stringa Unicode (wchar_t).|
+|`ValuePtr`|[Input] Puntatore a una stringa di caratteri con terminazione Null che specifica il nome file della libreria di provider. Per SQLSetConnectAttrA, questo valore è una stringa ANSI (multibyte). Per SQLSetConnectAttrW, questo valore è una stringa Unicode (wchar_t).|
 |`StringLength`|[Input] Lunghezza della stringa ValuePtr o SQL_NTS.|
 
 Il driver tenta di caricare la libreria identificata dal parametro ValuePtr usando il meccanismo di caricamento dinamico della libreria definito dalla piattaforma (`dlopen()` in Linux e macOS, `LoadLibrary()` in Windows) e aggiunge tutti i provider in essa definiti all'elenco di provider noti al driver. È possibile che si verifichino gli errori seguenti:
@@ -554,7 +550,7 @@ Il driver tenta di caricare la libreria identificata dal parametro ValuePtr usan
 |`CE203`|Il simbolo "CEKeyStoreProvider" esportato non è stato trovato nella libreria.|
 |`CE203`|Uno o più provider nella libreria sono già caricati.|
 
-`SQLSetConnectAttr` restituisce i soliti valori di errore o di riuscita e sono disponibili informazioni aggiuntive per eventuali errori che si sono verificati tramite il meccanismo diagnostico standard ODBC.
+`SQLSetConnectAttr` Restituisce i normali valori di errore o di esito positivo e sono disponibili ulteriori informazioni per gli errori che si sono verificati tramite il meccanismo di diagnostica ODBC standard.
 
 > [!NOTE]
 > Il programmatore dell'applicazione deve assicurarsi che tutti i provider personalizzati vengano caricati prima che una query che li richieda venga inviata tramite qualsiasi connessione. In caso contrario, viene generato l'errore seguente:
@@ -568,9 +564,9 @@ Il driver tenta di caricare la libreria identificata dal parametro ValuePtr usan
 
 #### <a name="getting-the-list-of-loaded-providers"></a>Recupero dell'elenco di provider caricati
 
-Il recupero di questo attributo di connessione consente a un'applicazione client di determinare i provider di archivi chiavi attualmente caricati nel driver (incluse quelli predefiniti). Questa operazione può essere eseguita solo dopo la connessione.
+Il recupero di questo attributo di connessione consente a un'applicazione client di determinare i provider dell'archivio chiavi attualmente caricati nel driver (inclusi i provider incorporati). Questo processo può essere eseguito solo dopo la connessione.
 
-```
+```cpp
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
 
@@ -586,14 +582,14 @@ Per consentire il recupero dell'intero elenco, ogni operazione Get restituisce i
 
 ### <a name="communicating-with-keystore-providers"></a>Comunicazione con i provider di archivi chiavi
 
-L'attributo di connessione `SQL_COPT_SS_CEKEYSTOREDATA` consente a un'applicazione client di comunicare con i provider di archivi chiavi caricati per la configurazione di parametri aggiuntivi, materiale per la generazione di chiavi e così via. La comunicazione tra un'applicazione client e un provider segue un protocollo di richiesta-risposta semplice, basato su richieste Get e Set mediante questo attributo di connessione. La comunicazione viene avviata solo dall'applicazione client.
+L' `SQL_COPT_SS_CEKEYSTOREDATA` attributo Connection consente a un'applicazione client di comunicare con i provider dell'archivio chiavi caricati per configurare più parametri, materiale per la chiave e così via. La comunicazione tra un'applicazione client e un provider segue un semplice protocollo di richiesta-risposta, basato sulle richieste Get e set che usano questo attributo di connessione. La comunicazione viene avviata solo dall'applicazione client.
 
 > [!NOTE]
 > A causa della natura delle chiamate ODBC a cui risponde CEKeyStoreProvider (SQLGet/SetConnectAttr), l'interfaccia ODBC supporta solo l'impostazione dei dati alla risoluzione del contesto di connessione.
 
 L'applicazione comunica con i provider di archivi chiavi tramite il driver tramite la struttura CEKeystoreData:
 
-```
+```cpp
 typedef struct CEKeystoreData {
 wchar_t *name;
 unsigned int dataSize;
@@ -605,12 +601,13 @@ char data[];
 |:---|:---|
 |`name`|[Input] Dopo Set, il nome del provider a cui vengono inviati i dati. Ignorato dopo Get. Stringa di caratteri "wide" con terminazione Null.|
 |`dataSize`|[Input] Dimensioni della matrice di dati che segue la struttura.|
-|`data`|[InOut] Dopo Set, i dati da inviare al provider. Può trattarsi di dati arbitrari. Il driver non fa alcun tentativo di interpretarli. Dopo Get, il buffer per ricevere i dati letti dal provider.|
+|`data`|[InOut] Dopo Set, i dati da inviare al provider. Questi dati possono essere arbitrari; il driver non esegue alcun tentativo di interpretazione. Dopo Get, il buffer per ricevere i dati letti dal provider.|
 
 #### <a name="writing-data-to-a-provider"></a>Scrittura di dati in un provider
 
 Una chiamata a `SQLSetConnectAttr` con l'attributo `SQL_COPT_SS_CEKEYSTOREDATA` scrive un "pacchetto" di dati nel provider dell'archivio chiavi specificato.
-```
+
+```cpp
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
 
@@ -621,16 +618,16 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 |`ValuePtr`|[Input] Puntatore a una struttura CEKeystoreData. Il campo del nome della struttura identifica il provider a cui sono destinati i dati.|
 |`StringLength`|[Input] Costante SQL_IS_POINTER|
 
-Altre informazioni dettagliate sugli errori possono essere ottenute tramite [SQLGetDiacRec](../../odbc/reference/syntax/sqlgetdescrec-function.md).
+Le informazioni più dettagliate sull'errore possono essere ottenute tramite [SQLGetDiacRec](../../odbc/reference/syntax/sqlgetdescrec-function.md).
 
 > [!NOTE]
-> Il provider può usare l'handle di connessione per associare i dati scritti a una connessione specifica, se è opportuno. Questo è utile per implementare la configurazione in base alla connessione. È possibile anche ignorare il contesto della connessione e trattare i dati in modo identico indipendentemente dalla connessione usata per inviare i dati. Per altre informazioni, vedere [Associazione del contesto](custom-keystore-providers.md#context-association).
+> Il provider può usare l'handle di connessione per associare i dati scritti a una connessione specifica, se è opportuno. Questa funzionalità è utile per l'implementazione della configurazione per connessione. È possibile anche ignorare il contesto della connessione e trattare i dati in modo identico indipendentemente dalla connessione usata per inviare i dati. Per ulteriori informazioni, vedere [associazione di contesto](custom-keystore-providers.md#context-association).
 
 #### <a name="reading-data-from-a-provider"></a>Lettura di dati da un provider
 
 Una chiamata a `SQLGetConnectAttr` con l'attributo `SQL_COPT_SS_CEKEYSTOREDATA` legge un "pacchetto" di dati dall'*ultimo provider in cui sono stati scritti dati*. Se non è presente, si verifica un errore nella sequenza della funzione. Si consiglia ai responsabili dell'implementazione di provider di archivi chiavi di supportare "scritture fittizie" di 0 byte come modo per selezionare il provider per le operazioni di lettura senza causare altri effetti collaterali, se è opportuno farlo.
 
-```
+```cpp
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
 
@@ -642,35 +639,39 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 |`BufferLength`|[Input] Costante SQL_IS_POINTER|
 |`StringLengthPtr`|[Output] Puntatore a un buffer in cui restituire BufferLength. Se *ValuePtr è un puntatore Null, non viene restituita alcuna lunghezza.|
 
-Il chiamante deve garantire che venga allocato un buffer di lunghezza sufficiente dopo la struttura CEKEYSTOREDATA per il provider in cui scrivere. Al momento della restituzione, il relativo campo dataSize viene aggiornato con la lunghezza effettiva dei dati letti dal provider. Altre informazioni dettagliate sugli errori possono essere ottenute tramite [SQLGetDiacRec](../../odbc/reference/syntax/sqlgetdescrec-function.md).
+Il chiamante deve garantire che venga allocato un buffer di lunghezza sufficiente dopo la struttura CEKEYSTOREDATA per il provider in cui scrivere. Al momento della restituzione, il relativo campo dataSize viene aggiornato con la lunghezza effettiva dei dati letti dal provider. Le informazioni più dettagliate sull'errore possono essere ottenute tramite [SQLGetDiacRec](../../odbc/reference/syntax/sqlgetdescrec-function.md).
 
-Questa interfaccia non pone requisiti aggiuntivi sul formato dei dati trasferiti tra un'applicazione e un provider dell'archivio chiavi. Ogni provider può definire il proprio protocollo/formato di dati, a seconda delle esigenze.
+Questa interfaccia non impone alcun requisito aggiuntivo sul formato dei dati trasferiti tra un'applicazione e un provider dell'archivio chiavi. Ogni provider può definire il proprio protocollo/formato di dati, a seconda delle esigenze.
 
 Per un esempio di implementazione di un proprio provider dell'archivio chiavi, vedere [Provider di archivi chiavi personalizzati](custom-keystore-providers.md).
 
 ## <a name="limitations-of-the-odbc-driver-when-using-always-encrypted"></a>Limitazioni del driver ODBC quando si usa Always Encrypted
 
 ### <a name="asynchronous-operations"></a>Operazioni asincrone
+
 Mentre il driver ODBC consentirà l'uso di [operazioni asincrone](../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md) con Always Encrypted, c'è un impatto sulle prestazioni delle operazioni quando Always Encrypted è abilitato. La chiamata a `sys.sp_describe_parameter_encryption` per determinare i metadati di crittografia per l'istruzione viene bloccata facendo sì che il driver attenda che il server restituisca i metadati prima di restituire `SQL_STILL_EXECUTING`.
 
 ### <a name="retrieve-data-in-parts-with-sqlgetdata"></a>Recuperare i dati in parti con SQLGetData
+
 Prima di ODBC Driver 17 for SQL Server non era possibile recuperare i caratteri crittografati e le colonne di dati binari in parti con SQLGetData. Ora è possibile eseguire una sola chiamata a SQLGetData, con un buffer di lunghezza sufficiente per contenere i dati dell'intera colonna.
 
 ### <a name="send-data-in-parts-with-sqlputdata"></a>Inviare i dati in parti con SQLPutData
+
 Prima di ODBC Driver 17.3 for SQL Server i dati per l'inserimento o il confronto non possono essere inviati in parti con SQLPutData. È possibile eseguire una sola chiamata a SQLPutData, con un buffer che contiene tutti i dati. Per l'inserimento di dati Long in colonne crittografate, usare l'API della copia bulk, descritta nella sezione successiva, con un file di dati di input.
 
 ### <a name="encrypted-money-and-smallmoney"></a>Smallmoney e money crittografati
-I parametri non possono destinare le colonne crittografate **money** o **smallmoney**, in quanto non esiste un tipo di dati ODBC specifico che esegue il mapping a questi tipi. Si generano così errori di conflitto del tipo di operando.
+
+Non è possibile specificare come destinazione le colonne **Money** o **smallmoney** crittografate, poiché non esiste un tipo di dati ODBC specifico che esegue il mapping a tali tipi, causando errori di conflitto del tipo di operando.
 
 ## <a name="bulk-copy-of-encrypted-columns"></a>Copia bulk di colonne crittografate
 
 A partire da ODBC Driver 17 for SQL Server, è possibile usare le [funzioni di copia bulk di SQL](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) e l'utilità **bcp** supportata con Always Encrypted. Sia il testo non crittografato (crittografato in inserimento e decrittografato in recupero) sia il testo crittografato (verbatim trasferito) possono essere inseriti e recuperati usando le API di copia bulk (bcp_&#42;) e l'utilità **bcp**.
 
-- Per recuperare il testo crittografato nel formato varbinary(max) (ad esempio per il caricamento bulk in un database diverso), connettersi senza l'opzione `ColumnEncryption`, oppure impostarla su `Disabled`, ed eseguire l'operazione BCP OUT.
+- Per recuperare il testo crittografato nel formato varbinary (max), ad esempio per il caricamento bulk in un altro database, connettersi senza l' `ColumnEncryption` opzione (o impostarlo su `Disabled` ) ed eseguire un'operazione bcp out.
 
 - Per inserire e recuperare testo non crittografato e consentire al driver di eseguire la crittografia e la decrittografia in modo trasparente, impostare semplicemente `ColumnEncryption` su `Enabled`. In caso contrario, la funzionalità dell'API BCP rimane invariata.
 
-- Per inserire testo crittografato nel formato varbinary (max) (ad esempio il testo recuperato descritto in precedenza), impostare l'opzione `BCPMODIFYENCRYPTED` su TRUE ed eseguire l'operazione BCP IN. Affinché i dati risultanti possano essere decrittografati, verificare che il valore CEK della colonna di destinazione sia lo stesso dal quale è stato originariamente ottenuto il testo crittografato.
+- Per inserire testo crittografato nel formato varbinary (max) (ad esempio, come recuperato in precedenza), impostare l' `BCPMODIFYENCRYPTED` opzione su true ed eseguire un'operazione bcp in. Per decrittografare i dati risultanti, verificare che il CEK della colonna di destinazione sia uguale a quello di CEK da cui è stato originariamente ottenuto il testo crittografato.
 
 Quando si usa l'utilità **bcp**: Per controllare l'impostazione `ColumnEncryption` usare l'opzione -D e specificare un DSN che contiene il valore desiderato. Per inserire testo crittografato, assicurarsi che sia abilitata l'impostazione `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` dell'utente.
 
@@ -680,7 +681,7 @@ La tabella seguente fornisce un riepilogo delle azioni da eseguire quando si usa
 |----------------|-------------|-----------|
 |`Disabled`|OUT (al client)|Recupera testo crittografato. Il tipo di dati osservati è **varbinary(max)** .|
 |`Enabled`|OUT (al client)|Recupera testo non crittografato. Il driver decrittograferà i dati della colonna.|
-|`Disabled`|IN (al server)|Inserisce testo crittografato. Questa operazione serve per spostare in modo non trasparente i dati crittografati senza che sia necessario decrittografarli. L'operazione avrà esito negativo se l'opzione `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` non è impostata sull'utente o BCPMODIFYENCRYPTED non è impostata sull'handle di connessione. Per altre informazioni, vedere più avanti.|
+|`Disabled`|IN (al server)|Inserisce testo crittografato. Questa impostazione è destinata allo trasferimento opaco di dati crittografati senza che sia necessario decrittografarli. L'operazione avrà esito negativo se l'opzione `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` non è impostata sull'utente o BCPMODIFYENCRYPTED non è impostata sull'handle di connessione. Per altre informazioni, vedere sotto.|
 |`Enabled`|IN (al server)|Inserisce testo non crittografato. Il driver crittograferà i dati della colonna.|
 
 ### <a name="the-bcpmodifyencrypted-option"></a>Opzione BCPMODIFYENCRYPTED
@@ -695,27 +696,26 @@ Per altre informazioni, vedere [Migrare dati sensibili protetti da Always Encryp
 
 |Nome|Descrizione|  
 |----------|-----------------|  
-|`ColumnEncryption`|I valori accettati sono `Enabled`/`Disabled`.<br>`Enabled`: abilita o disabilita la funzionalità Always Encrypted per la connessione.<br>`Disabled`: disabilita la funzionalità Always Encrypted per la connessione.<br>*protocollo di attestazione*,*URL di attestazione* : (versione 17,4 e successive) consente always Encrypted con l'enclave protetta usando il protocollo di attestazione specificato e l'URL di attestazione. <br><br>Il valore predefinito è `Disabled`.|
+|`ColumnEncryption`|I valori accettati sono `Enabled`/`Disabled`.<br>`Enabled`: abilita o disabilita la funzionalità Always Encrypted per la connessione.<br>`Disabled`: disabilita la funzionalità Always Encrypted per la connessione.<br>*protocollo di attestazione*, *URL di attestazione* : (versione 17,4 e successive) consente always Encrypted con l'enclave protetta usando il protocollo di attestazione specificato e l'URL di attestazione. <br><br>Il valore predefinito è `Disabled`.|
 |`KeyStoreAuthentication` | Valori validi: `KeyVaultPassword` , `KeyVaultClientSecret` , `KeyVaultInteractive` |
 |`KeyStorePrincipalId` | Quando `KeyStoreAuthentication` = `KeyVaultPassword`, impostare questo valore su un nome dell'entità utente di Azure Active Directory valido. <br>Quando `KeyStoreAuthetication` = `KeyVaultClientSecret`, impostare questo valore su un ID client dell'applicazione di Azure Active Directory valido. |
 |`KeyStoreSecret` | Quando `KeyStoreAuthentication` = `KeyVaultPassword`,impostare questo valore sulla password per il nome utente corrispondente. <br>Quando `KeyStoreAuthentication` = `KeyVaultClientSecret`, impostare questo valore sul segreto dell'applicazione associato a un ID client dell'applicazione di Azure Active Directory valido. |
-
 
 ### <a name="connection-attributes"></a>Attributi di connessione
 
 |Nome|Tipo|Descrizione|  
 |----------|-------|----------|  
 |`SQL_COPT_SS_COLUMN_ENCRYPTION`|Pre-connessione|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- Disabilita Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- Abilita Always Encrypted<br> puntatore al *protocollo di attestazione*, stringa dell'*URL di attestazione* --(versione 17,4 e successive) abilitata con l'enclave sicura|
-|`SQL_COPT_SS_CEKEYSTOREPROVIDER`|Post-connessione|[Set] Prova a caricare CEKeystoreProvider<br>[Get] Restituisce un nome CEKeystoreProvider|
-|`SQL_COPT_SS_CEKEYSTOREDATA`|Post-connessione|[Set] Scrive dati in CEKeystoreProvider<br>[Get] Legge dati da CEKeystoreProvider|
-|`SQL_COPT_SS_CEKCACHETTL`|Post-connessione|[Set] Imposta il valore TTL della cache delle chiavi di crittografia della colonna<br>[Get] Recupera il valore TTL corrente della cache delle chiavi di crittografia della colonna|
-|`SQL_COPT_SS_TRUSTEDCMKPATHS`|Post-connessione|[Set] Imposta il puntatore ai percorsi CMK attendibili<br>[Get] Recupera il puntatore corrente ai percorsi CMK attendibili|
+|`SQL_COPT_SS_CEKEYSTOREPROVIDER`|Post-connessione|[Set]-tentativo di caricamento di CEKeystoreProvider<br>[Get]-restituisce un nome CEKeystoreProvider|
+|`SQL_COPT_SS_CEKEYSTOREDATA`|Post-connessione|[Set]-scrivere dati in CEKeystoreProvider<br>[Get]-legge i dati da CEKeystoreProvider|
+|`SQL_COPT_SS_CEKCACHETTL`|Post-connessione|[Set]-imposta la durata (TTL) della cache CEK<br>[Get]-ottiene il TTL della cache CEK corrente|
+|`SQL_COPT_SS_TRUSTEDCMKPATHS`|Post-connessione|[Set]-imposta il puntatore dei percorsi CMK attendibili<br>[Get]-ottiene il puntatore ai percorsi CMK attendibili correnti|
 
 ### <a name="statement-attributes"></a>Attributi di istruzione
 
 |Nome|Descrizione|  
 |----------|-----------------|  
-|`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED` (0) -- Always Encrypted è disabilitato per l'istruzione <br>`SQL_CE_RESULTSETONLY` (1) -- Solo decrittografia. I set di risultati e i valori restituiti sono decrittografati e i parametri non sono crittografati <br>`SQL_CE_ENABLED` (3) -- Always Encrypted è abilitato e usato sia per i parametri che per i risultati|
+|`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED` (0) -- Always Encrypted è disabilitato per l'istruzione <br>`SQL_CE_RESULTSETONLY` (1) -- Solo decrittografia. I set di risultati e i valori restituiti vengono decrittografati e i parametri non vengono crittografati <br>`SQL_CE_ENABLED` (3) -- Always Encrypted è abilitato e usato sia per i parametri che per i risultati|
 
 ### <a name="descriptor-fields"></a>Campi del descrittore
 
@@ -733,9 +733,9 @@ Per altre informazioni, vedere [Migrare dati sensibili protetti da Always Encryp
 
 Quando si riscontrano difficoltà nell'uso di Always Encrypted, iniziare controllando i punti seguenti:
 
-- La chiave CEK che esegue la crittografia della colonna desiderata è presente e accessibile sul server.
+- Il CEK che esegue la crittografia della colonna desiderata è presente e accessibile sul server.
 
-- La chiave CMK che esegue la crittografia di CEK dispone di metadati accessibili sul server ed è accessibile anche dal client.
+- Il CMK che esegue la crittografia di CEK dispone di metadati accessibili sul server ed è accessibile anche dal client.
 
 - `ColumnEncryption` è abilitato nel DSN, nella stringa di connessione o nell'attributo di connessione e, se si usa l'enclave protetta, ha il formato corretto.
 

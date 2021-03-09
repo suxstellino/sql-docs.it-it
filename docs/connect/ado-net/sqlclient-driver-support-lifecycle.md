@@ -1,7 +1,7 @@
 ---
 title: Ciclo di vita del supporto per il driver SqlClient
 description: Pagina che contiene informazioni sul ciclo di vita del supporto tecnico.
-ms.date: 02/26/2021
+ms.date: 03/03/2021
 dev_langs:
 - csharp
 - vb
@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-jizho2
-ms.openlocfilehash: d0fc4a58dbd8375bd988fbee851cab68368b28d1
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 998fc5eecfa0e8840111b1ee9bf1d9e653ac5687
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101836988"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464733"
 ---
 # <a name="sqlclient-driver-support-lifecycle"></a>Ciclo di vita del supporto per il driver SqlClient
 
@@ -36,7 +36,7 @@ Le nuove versioni stabili (GA) vengono pubblicate ogni sei mesi con cadenza rego
 
 | Versione | Data di rilascio ufficiale | Ultima versione patch | Data di rilascio patch | Livello di supporto  | Fine del supporto |
 | -- | -- | -- | -- | -- | -- |
-| 2.1 | 19 novembre 2020 | 2.1.1 | 18 dicembre 2020 | LTS | 20 novembre 2023 |
+| 2.1 | 19 novembre 2020 | 2.1.2 | 3 marzo 2021 | LTS | 20 novembre 2023 |
 | 1.1 | 20 novembre 2019 | 1.1.3 | 15 maggio 2020 | LTS | 21 novembre 2022 |
 
 ### <a name="out-of-support-releases"></a>Versioni non più supportate
@@ -46,13 +46,27 @@ Le nuove versioni stabili (GA) vengono pubblicate ogni sei mesi con cadenza rego
 | 2.0 | 16 giugno 2020 | 2.0.1 | 25 agosto 2020 |
 | 1.0 | 26 settembre 2019 | 1.0.19269.1 | 20 febbraio 2020 |
 
-### <a name="long-term-support-lts-releases"></a>Versioni con supporto a lungo termine (LTS)
+
+## <a name="azure-key-vault-provider-release-cadence"></a>Cadenza della versione del provider Azure Key Vault
+
+Le nuove versioni stabili (GA) per `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider` vengono pubblicate su richiesta quando vengono aggiunte nuove funzionalità. Le versioni con supporto a lungo termine (LTS) verranno scelte dagli stakeholder e dai responsabili della manutenzione in base a un numero ridotto di qualifiche e alle risposte dei clienti.
+
+### <a name="actively-supported-releases"></a>Versioni attualmente supportate
+
+| Versione | Data di rilascio ufficiale | Ultima versione patch | Data di rilascio patch | Livello di supporto  | Fine del supporto |
+| -- | -- | -- | -- | -- | -- |
+| 2.x | 3 marzo 2021 | 2.0.0 | 3 marzo 2021 | LTS | 4 marzo 2024 |
+| 1.x | 19 novembre 2019 | 1.2.0 | 01 dicembre 2020 | LTS | 21 novembre 2022 |
+
+
+## <a name="long-term-support-lts-releases"></a>Versioni con supporto a lungo termine (LTS)
 
 Le versioni LTS sono supportate per tre anni dopo la versione iniziale.
 
-### <a name="current-releases"></a>Versioni correnti
+## <a name="current-releases"></a>Versioni correnti
 
 Le versioni correnti sono supportate per tre mesi dopo una versione corrente o LTS successiva.
+
 
 ## <a name="sql-version-compatibility-with-microsoftdatasqlclient"></a>Compatibilità delle versioni di SQL con Microsoft.Data.SqlClient
 

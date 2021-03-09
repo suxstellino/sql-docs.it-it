@@ -1,7 +1,7 @@
 ---
 title: Guida alla risoluzione dei problemi di SqlClient
 description: Pagina in cui sono riportate le soluzioni ai problemi più comuni.
-ms.date: 11/27/2020
+ms.date: 03/03/2021
 dev_langs:
 - csharp
 - vb
@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-jizho2
-ms.openlocfilehash: 6cad6278eb6ac7b170ee108c1a3510db956ecb22
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
-ms.translationtype: HT
+ms.openlocfilehash: 725d1522f98e721f581a7d4b7614181fd2632962
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96468086"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464804"
 ---
 # <a name="sqlclient-troubleshooting-guide"></a>Guida alla risoluzione dei problemi di SqlClient
 
@@ -143,7 +143,7 @@ at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception
 
   Questo errore si verifica in genere in ambienti client come i contenitori di immagini Docker, i client UNIX o i client Windows in cui TLS 1.2 è il protocollo TLS minimo supportato.
 
-  **Soluzione consigliata:** Installare gli aggiornamenti più recenti nelle versioni supportate di SQL Server<sup>1</sup> e verificare che il protocollo TLS 1.2 sia abilitato nel server.
+  **Soluzione consigliata:** Installare gli aggiornamenti più recenti nelle versioni supportate di SQL Server <sup>1</sup> e verificare che il protocollo TLS 1.2 sia abilitato nel server.
 
   _<sup>1</sup> Consultare il [ciclo di vita del supporto per il driver SqlClient](sqlclient-driver-support-lifecycle.md) per l'elenco delle versioni di SQL Server supportate con versioni diverse di Microsoft.Data.SqlClient._
 
@@ -171,6 +171,12 @@ at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception
 - I certificati TLS/SSL non sono firmati con SHA-256 o versione successiva.
 
   **Soluzione consigliata:** Generare un nuovo certificato TLS/SSL per il server il cui hash è firmato con almeno l'algoritmo hash SHA-256.
+
+- Pacchetti di crittografia strettamente limitati in Linux con .NET 5 +
+
+  In .NET 5 è stata introdotta una modifica sostanziale per i client Linux, in cui viene usato per impostazione predefinita un elenco rigorosamente limitato di pacchetti di crittografia consentiti. Potrebbe essere necessario espandere l'elenco predefinito dei pacchetti di crittografia per accettare i client legacy (o per contattare i server legacy) specificando un `CipherSuitePolicy` valore o modificando il file di configurazione _openssl_ .
+  
+  Per un'azione consigliata, vedere la pagina relativa ai pacchetti [di crittografia TLS predefiniti per .NET in Linux ](/dotnet/core/compatibility/cryptography/5.0/default-cipher-suites-for-tls-on-linux) .
 
 ### <a name="connection-pool-exhaustion-errors"></a>Errori di esaurimento del pool di connessione
 

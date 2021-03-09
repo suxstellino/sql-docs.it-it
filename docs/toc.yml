@@ -5328,7 +5328,7 @@ items:
                         href: relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md
                   - name: Replica transazionale
                     href: relational-databases/replication/administration/enhance-transactional-replication-performance.md
-              - name: Sicurezza
+              - name: Security
                 items:
                   - name: Database di distribuzione
                     href: relational-databases/replication/security/secure-the-distributor.md
@@ -7213,7 +7213,7 @@ items:
                   - name: Connettività Kerberos
                     href: relational-databases/polybase/polybase-troubleshoot-connectivity.md
                   - name: Domande frequenti su PolyBase
-                    href: relational-databases/polybase/polybase-faq.md
+                    href: relational-databases/polybase/polybase-faq.yml
                   - name: Errori di polibase e possibili soluzioni
                     href: relational-databases/polybase/polybase-errors-and-possible-solutions.md
           - name: Informazioni di riferimento
@@ -10037,7 +10037,7 @@ items:
               - name: SQL Server 2017
                 href: linux/sql-server-linux-editions-and-components-2017.md
           - name: Domande frequenti
-            href: linux/sql-server-linux-faq.md
+            href: linux/sql-server-linux-faq.yml
       - name: Avvi rapidi
         items:
           - name: Installazione e connessione - Red Hat
@@ -11513,7 +11513,7 @@ items:
         href: relational-databases/system-catalog-views/catalog-views-transact-sql.md
         items:
           - name: Domande frequenti sull'esecuzione di query sul catalogo di sistema di SQL Server
-            href: relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md
+            href: relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml
           - name: Schemi - sys.schemas
             href: relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md
           - name: Messaggi (di errore) - sys.messages

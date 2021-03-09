@@ -313,7 +313,7 @@
         - name: Ricerca di informazioni aggiuntive
           href: ../connect/jdbc/finding-additional-jdbc-driver-information.md
         - name: Domande frequenti
-          href: ../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md
+          href: ../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.yml
         - name: Dipendenze delle funzionalità
           href: ../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md
     - name: Informazioni di riferimento sulle API
@@ -2941,7 +2941,7 @@
         - name: Problemi noti
           href: ../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md
         - name: Domande frequenti
-          href: ../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md
+          href: ../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.yml
     - name: Windows
       items:
         - name: Microsoft ODBC Driver for SQL Server in Windows
@@ -5735,7 +5735,7 @@
           href: ../connect/php/logging-activity.md
         - name: Uso di Always Encrypted con i driver PHP per SQL Server
           href: ../connect/php/using-always-encrypted-php-drivers.md
-        - name: Always Encrypted con enclave sicure con i driver PHP per SQL Server
+        - name: Always Encrypted con le enclave sicure con i driver PHP per SQL Server
           href: ../connect/php/always-encrypted-secure-enclaves.md
         - name: Impostazioni locali non di sistema
           href: ../connect/php/non-system-locale-settings.md
