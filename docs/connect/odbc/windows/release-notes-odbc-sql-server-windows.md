@@ -12,12 +12,12 @@ ms.reviewer: v-daenge
 author: v-chojas
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 2c7ea508a6f0f79a000de1ae42f5e7eb3de09f5a
-ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
+ms.openlocfilehash: 172ed1eea6bc616fe4e61162167e45bd1369cf79
+ms.sourcegitcommit: f10f0d604be1dce6c600a92aec4c095e7b52e19c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102464769"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102770487"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Note sulla versione per Microsoft ODBC Driver for SQL Server in Windows
 
@@ -43,6 +43,25 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## <a name="1772"></a>17.7.2
+
+![download](../../../ssms/media/download-icon.png) [Scaricare il programma di installazione x64](https://go.microsoft.com/fwlink/?linkid=2156851)  
+![download](../../../ssms/media/download-icon.png) [Scaricare il programma di installazione x86](https://go.microsoft.com/fwlink/?linkid=2156749)  
+
+Numero di versione: 17.7.2.1  
+Rilasciata: 10 marzo 2021  
+
+Se è necessario scaricare il programma di installazione in una lingua diversa da quella rilevata, è possibile usare questi collegamenti diretti.  
+Per il driver x64: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x40a)  
+Per il driver x86: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x40a)  
+
+| Funzionalità aggiunta | Dettagli |
+| :------- | :------ |
+| Correzioni di bug. | [Correzioni di bug](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
+## <a name="previous-releases"></a>Versioni precedenti
+
 ## <a name="177"></a>17.7
 
 ![download](../../../ssms/media/download-icon.png) [Scaricare il programma di installazione x64](https://go.microsoft.com/fwlink/?linkid=2153471)  
@@ -62,8 +81,6 @@ Per il driver x86: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?link
 | Possibilità di inserire in colonne Money e smallmoney crittografate | Vedere [Uso di Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
 | Correzioni di bug. | [Correzioni di bug](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
-
-## <a name="previous-releases"></a>Versioni precedenti
 
 ## <a name="176"></a>17.6
 

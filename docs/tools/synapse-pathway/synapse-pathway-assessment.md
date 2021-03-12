@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.date: 03/02/2021
 monikerRange: =azure-sqldw-latest
 ms.custom: template-tutorial
-ms.openlocfilehash: 74f98ad652a58f70cd75ef60556bf0464fd5d7c7
-ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
+ms.openlocfilehash: 3e5e8536c135244288d022879764d021c53e67ca
+ms.sourcegitcommit: f10f0d604be1dce6c600a92aec4c095e7b52e19c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102186356"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102770501"
 ---
 # <a name="tutorial-to-perform-your-first-code-translation-with-azure-synapse-pathway-preview"></a>Esercitazione per eseguire la prima traduzione del codice con l'anteprima del percorso sinapsi di Azure
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
@@ -62,6 +62,18 @@ Per completare questa esercitazione, verificare di aver installato il [percorso 
 1. Include la struttura del progetto di cui è possibile eseguire facilmente il commit nel repository GitHub.
   
 1. Un file di risultati, che avrà un elenco di errori e avvisi, verrà caricato nella stessa directory di output.
+
+## <a name="run-the-translation-using-command-line"></a>Eseguire la traduzione usando la riga di comando
+1. Durante l'installazione, AspCmd.exe sarà disponibile nel percorso C:\Programmi (x86) \Caching sinapsi (anteprima)
+1. Avviare il prompt dei comandi e passare al percorso del file 
+1. Digitare aspcmd.exe--Help per un elenco di comandi
+
+  ![Comandi della guida della riga di comando di Azure sinapsi assessment.](./media/synapse-pathway-assessment/command-line-help.png)
+
+
+4. È possibile iniziare a eseguire le traduzioni utilizzando la riga di comando
+
+ ![Valutazione delle sinapsi di Azure tramite la riga di comando.](./media/synapse-pathway-assessment/command-line-assessment.png)
 
 ## <a name="next-steps"></a>Passaggi successivi
 

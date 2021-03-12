@@ -38,12 +38,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: 60f460c06c89d1d9b01ed5f19f705cec745dce09
-ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
+ms.openlocfilehash: 81073d458d69e28ee145c1bb1dd38f3474800b35
+ms.sourcegitcommit: f10f0d604be1dce6c600a92aec4c095e7b52e19c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102247353"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102770539"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -145,13 +145,23 @@ Gli utenti possono eseguire [SP_SPACEUSED](../../relational-databases/system-sto
 
 È possibile eliminare una vista materializzata tramite DROP VIEW.  È possibile usare ALTER MATERIALIZED VIEW per disabilitare o ricostruire una vista materializzata.   
 
+La vista materializzata è un meccanismo automatico di ottimizzazione delle query.  Gli utenti non devono eseguire query direttamente in una vista materializzata.  Quando viene inviata una query utente, il motore controlla le autorizzazioni dell'utente per gli oggetti di query e non riesce a eseguire la query senza esecuzione se l'utente non ha accesso alle tabelle o alle visualizzazioni regolari nella query.  Se l'autorizzazione dell'utente è stata verificata, Query Optimizer utilizza automaticamente una vista materializzata corrispondente per eseguire la query per ottenere prestazioni più veloci.  Gli utenti restituiscono gli stessi dati indipendentemente dal fatto che la query venga gestita eseguendo una query sulle tabelle di base o sulla vista materializzata.  
+
 EXPLAIN PLAN e il piano di esecuzione stimato grafico in SQL Server Management Studio possono indicare se una vista materializzata viene presa in considerazione da Query Optimizer per l'esecuzione delle query. Il piano di esecuzione stimato grafico in SQL Server Management Studio può indicare se una vista materializzata viene presa in considerazione da Query Optimizer per l'esecuzione delle query.
 
 Per scoprire se un'istruzione SQL può trarre vantaggio da una nuova vista materializzata, eseguire il comando `EXPLAIN` con `WITH_RECOMMENDATIONS`.  Per informazioni dettagliate, vedere [EXPLAIN (Transact-SQL)](../queries/explain-transact-sql.md?view=azure-sqldw-latest&preserve-view=true).
 
-## <a name="permissions"></a>Autorizzazioni
+## <a name="ownership"></a>Proprietario
+- Non è possibile creare una vista materializzata se i proprietari delle tabelle di base e la vista materializzata da creare non sono uguali.
+- Una vista materializzata e le relative tabelle di base possono risiedere in schemi diversi. Quando viene creata la vista materializzata, il proprietario dello schema della vista diventa automaticamente il proprietario della vista materializzata e la proprietà della vista non può essere modificata.     
 
-Richiede 1) l'autorizzazione REFERENCES e CREATE VIEW OPPURE 2) l'autorizzazione CONTROL nello schema in cui viene creata la vista. 
+## <a name="permissions"></a>Autorizzazioni
+Un utente deve avere le autorizzazioni seguenti per creare una vista materializzata, oltre a soddisfare i requisiti di proprietà dell'oggetto: 
+1) Autorizzazione CREATE VIEW nel database
+2) Autorizzazione SELECT per le tabelle di base della vista materializzata
+3) Autorizzazione REFERENCEs per lo schema contenente le tabelle di base
+4) Autorizzazione ALTER per lo schema che contiene la vista materializzata 
+
 
 ## <a name="example"></a>Esempio
 R. Questo esempio illustra come l'ottimizzatore Synapse SQL usa automaticamente le viste materializzate per eseguire una query per ottenere prestazioni migliori anche quando la query usa funzioni non supportate in CREATE MATERIALIZED VIEW, come COUNT(espressione DISTINCT). Una query che richiedeva vari secondi per il completamento viene ora completata in meno di un secondo senza alcuna modifica.   
@@ -196,60 +206,49 @@ select DATEDIFF(ms,@timerstart,@timerend);
 
 ```
 
-B. In questo esempio User_B crea una vista materializzata sulla tabella T1 e T2.  Sia la vista che le due tabelle sono di proprietà di un altro utente User_A.
-
+B. In questo esempio, User2 crea una vista materializzata sulle tabelle di proprietà di User1.  La vista materializzata è di proprietà di User1.
 ```sql
-
--- Create the users 
-CREATE USER User_A WITHOUT LOGIN ;  
-CREATE USER User_B WITHOUT LOGIN ;  
+/****************************************************************
+Setup:
+SchemaX owner = DBO
+SchemaX.T1 owner = User1
+SchemaX.T2 owner = User1
+SchemaY owner = User1
+*****************************************************************/
+CREATE USER User1 WITHOUT LOGIN ;
+CREATE USER User2 WITHOUT LOGIN ;
+CREATE SCHEMA SchemaX;  
+CREATE SCHEMA SchemaY AUTHORIZATION User1;
 GO
-CREATE SCHEMA User_A authorization User_A;
+CREATE TABLE [SchemaX].[T1] (   [vendorID] [varchar](255) Not NULL, [totalAmount] [float] Not NULL, [puYear] [int] NULL );
+CREATE TABLE [SchemaX].[T2] (   [vendorID] [varchar](255) Not NULL, [totalAmount] [float] Not NULL, [puYear] [int] NULL);
 GO
+ALTER AUTHORIZATION ON OBJECT::SchemaX.[T1] TO User1;
+ALTER AUTHORIZATION ON OBJECT::SchemaX.[T2] TO User1;
 
--- User_A creates two tables
-
-GRANT CREATE TABLE to User_A;
+/*****************************************************************************
+For user2 to create a MV in SchemaY on SchemaX.T1 and SchemaX.T2, user2 needs:
+1. CREATE VIEW permission in the database
+2. REFERENCES permission on the schema1
+3. SELECT permission on base table T1, T2  
+4. ALTER permission on SchemaY
+******************************************************************************/
+GRANT CREATE VIEW to User2;
+GRANT REFERENCES ON SCHEMA::SchemaX to User2;  
+GRANT SELECT ON OBJECT::SchemaX.T1 to User2; 
+GRANT SELECT ON OBJECT::SchemaX.T2 to User2;
+GRANT ALTER ON SCHEMA::SchemaY to User2; 
 GO
-EXECUTE AS USER = 'User_A';  
-SELECT USER_NAME();  
-Go
-CREATE TABLE [User_A].[T1]
-(
-    [vendorID] [varchar](255) Not NULL,
-    [totalAmount] [float] Not NULL,
-    [puYear] [int] NULL
-)
+EXECUTE AS USER = 'User2';  
 GO
-CREATE TABLE [User_A].[T2]
-(
-    [vendorID] [varchar](255) Not NULL,
-    [totalAmount] [float] Not NULL,
-    [puYear] [int] NULL
-)
-GO
-REVERT;
-
--- Grant User_B the required permissions to create a materialized view for User_A on T1 and T2 owned by User_A
-GRANT CREATE VIEW to User_B;
-GRANT Control ON SCHEMA::User_A to User_B;
-GRANT REFERENCES ON OBJECT::User_A.T1 to User_B;
-GRANT REFERENCES ON OBJECT::User_A.T2 to User_B;
-
--- User_B creates a materialized view.  Both the view and the base tables are owned by User_A.
-EXECUTE AS USER = 'User_B';  
-SELECT USER_NAME(); 
-GO
-
-CREATE materialized VIEW [User_A].MV_CreatedBy_UserB with(distribution=round_robin) 
+CREATE materialized VIEW [SchemaY].MV_by_User2 with(distribution=round_robin) 
 as 
         select A.vendorID, sum(A.totalamount) as S, Count_Big(*) as T 
-        from [User_A].[T1] A
-        inner join [User_A].[T2] B
-        on A.vendorID = B.vendorID
-        group by A.vendorID ;
+        from [SchemaX].[T1] A
+        inner join [SchemaX].[T2] B on A.vendorID = B.vendorID group by A.vendorID ;
 GO
 revert;
+GO
 ```
 
 ## <a name="see-also"></a>Vedi anche

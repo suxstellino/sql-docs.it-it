@@ -9,12 +9,12 @@ ms.prod: sql
 ms.technology: tools-other
 monikerRange: =azure-sqldw-latest
 ms.custom: template-overview
-ms.openlocfilehash: 8352fb6a70c54ede61d544a147f970237404c9f5
-ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
+ms.openlocfilehash: e97425f682a3f6b9f2f4e955d8476d40d6cf4312
+ms.sourcegitcommit: f10f0d604be1dce6c600a92aec4c095e7b52e19c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102186328"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102770515"
 ---
 # <a name="azure-synapse-pathway-preview-faq"></a>Domande frequenti sull'anteprima del percorso sinapsi di Azure
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
@@ -44,8 +44,15 @@ R. In questa versione di anteprima del percorso sinapsi, i data warehouse seguen
 
 ### <a name="q-what-is-included-as-part-of-the-code-conversion"></a>Q. Cosa è incluso nell'ambito della conversione del codice?
 
-R. Il percorso sinapsi supporta la conversione del codice di tabelle, schemi, viste e stored procedure.
+R. La versione di anteprima del percorso sinapsi supporta la conversione del codice di tabelle, schemi e viste.
 
+| Piattaforma di origine| Tipi di istruzioni supportati | 
+|:-------------------:|:------------------|
+| IBM Netezza  | CREATE/ALTER/DROP database<br /> Creazione/modifica/eliminazione dello schema <br /> CREATE/ALTER/DROP TABLE |
+|Microsoft SQL Server  | CREATE/ALTER/DROP database<br /> Creazione/modifica/eliminazione dello schema <br /> CREATE/ALTER/DROP TABLE | 
+| Snowflake |  CREATE/ALTER/DROP database<br /> Creazione/modifica/eliminazione dello schema <br /> CREATE/ALTER/DROP TABLE |                       
+
+  
 ### <a name="q-can-it-also-scan-my-environment-and-provide-an-assessment-report-of-all-the-objects-that-need-to-be-convertedtranslated"></a>Q. È anche possibile analizzare l'ambiente e fornire un report di valutazione di tutti gli oggetti che devono essere convertiti/tradotti?
 
 R. In questa versione di anteprima del percorso sinapsi sarà necessario fornire il collegamento agli script DDL/DML che devono essere tradotti. Il percorso sinapsi non analizza l'ambiente corrente per identificare gli oggetti che devono essere tradotti.

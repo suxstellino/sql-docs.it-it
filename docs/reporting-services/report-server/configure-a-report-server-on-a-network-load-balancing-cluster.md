@@ -7,13 +7,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 12/11/2019
-ms.openlocfilehash: 9e7a7b0dce01b21fcb746fdfdcbd5adfa7c7483d
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 03/09/2021
+ms.openlocfilehash: 8d56f26c6661587cb13ff2962221a4a41c7da2ba
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100067207"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622677"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurare un server di report in un cluster per il bilanciamento del carico di rete
 
@@ -55,7 +55,7 @@ Per eseguire una distribuzione con scalabilità orizzontale in un cluster per il
   
  Per risolvere questo problema, è possibile generare una chiave di convalida arbitraria per supportare la convalida dello stato di visualizzazione e quindi configurare manualmente ciascun nodo del server di report per l'utilizzo della stessa chiave. È possibile utilizzare qualsiasi sequenza esadecimale generata casualmente. L'algoritmo di convalida, ad esempio SHA1, determina la lunghezza della sequenza esadecimale.  
 
-::: moniker range="=sql-server-2016"
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)]
 
 1. Generare una chiave di convalida e una chiave di decrittografia mediante la funzionalità di generazione automatica disponibile in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Alla fine è necessario avere un'unica voce <`machineKey`> da incollare nel file Web.config per ogni istanza di Server di report presente nella distribuzione scale-out.  
   
@@ -65,17 +65,16 @@ Per eseguire una distribuzione con scalabilità orizzontale in un cluster per il
     <machineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
     ```  
   
-2. Aprire il file Web.config di Server di report, quindi nella sezione <`system.web`> incollare l'elemento <`machineKey`> generato. Per impostazione predefinita, il file Web.config di Server di report si trova in \Programmi\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
+2. Aprire il file Web.config di Server di report, quindi nella sezione <`system.web`> incollare l'elemento <`machineKey`> generato. Per impostazione predefinita, il file di Web.config si trova in \Programmi\microsoft SQL Server\MSRS13. Services\Reportserver\Web.config MSSQLSERVER\Reporting.  
   
 3. Salvare il file.  
   
 4. Ripetere il passaggio precedente per ogni server di report presente nella distribuzione con scalabilità orizzontale.  
   
-5. Verificare che tutti i file Web.Config nelle cartelle \Reporting Services\Reportserver contengano elementi <`machineKey`> identici nella sezione <`system.web`>.  
+5. Verificare che tutti i file di Web.Config per tutti i server di report nella distribuzione con scalabilità orizzontale contengano elementi <> identici `machineKey` nella `system.web` sezione <>.  
 
-::: moniker-end
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-::: moniker range=">=sql-server-2017"
 
 1. Generare una chiave di convalida e una chiave di decrittografia mediante la funzionalità di generazione automatica disponibile in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Alla fine è necessario avere un'unica voce \<**MachineKey**> da incollare nel file RSReportServer.config per ogni istanza del server di report presente nella distribuzione con scalabilità orizzontale.
 
@@ -85,13 +84,13 @@ Per eseguire una distribuzione con scalabilità orizzontale in un cluster per il
     <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>
     ```
 
-2. Salvare il file.
+2. Aprire il file di RSReportServer.config per ReportServer e nella sezione <`Configuration`> incollare l' \<**MachineKey**> elemento generato. Per impostazione predefinita, il file di RSReportServer.config si trova in \Programmi\microsoft SQL Server Reporting Services\SSRS\ReportServer\RSReportServer.config per Reporting Services e \Programmi\microsoft Power BI report Server\PBIRS\ReportServer\RSReportServer.config per Server di report di Power BI.  
 
-3. Ripetere il passaggio precedente per ogni server di report presente nella distribuzione con scalabilità orizzontale.  
+3. Salvare il file.
 
-4. Verificare che tutti i file RSReportServer.config nelle cartelle \Reporting Services\Report Server contengano elementi \<**MachineKey**> identici.
+4. Ripetere il passaggio precedente per ogni server di report presente nella distribuzione con scalabilità orizzontale.  
 
-::: moniker-end
+5. Verificare che tutti i file di RSReportServer.config per tutti i server di report nella distribuzione con scalabilità orizzontale contengano elementi identici \<**MachineKey**> nella `Configuration` sezione <>.
 
 ## <a name="how-to-configure-hostname-and-urlroot"></a><a name="SpecifyingVirtualServerName"></a> Come configurare Hostname e UrlRoot
 

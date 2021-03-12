@@ -14,16 +14,22 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 6f1072f51349952be373a69a04ac556b38e3f25f
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 1816f1a8255041d6211931ffc41963acc460e15d
+ms.sourcegitcommit: f10f0d604be1dce6c600a92aec4c095e7b52e19c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837488"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102770473"
 ---
 # <a name="list-of-bugs-fixed"></a>Elenco di bug risolti
 
 Questa pagina contiene un elenco dei bug risolti in ogni versione, a partire da [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+### <a name="bug-fixes-in-the-msconame-odbc-driver-1772-for-ssnoversion"></a>Correzioni di bug nel [!INCLUDE[msCoName](../../includes/msconame_md.md)] driver ODBC 17.7.2 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Correzione del problema con 404 errori non trovati quando si usa l'autenticazione identità del servizio gestita
+- Correzione per la crittografia intermittente errori non supportati con carichi multithreading elevati
+- Correzione per arresti anomali intermittenti con carichi multithreading elevati
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-177-for-ssnoversion"></a>Correzioni di bug nel [!INCLUDE[msCoName](../../includes/msconame_md.md)] driver ODBC 17,7 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

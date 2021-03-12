@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 4d3d5cb280f20deb3d683d962be986d7df38ed61
-ms.sourcegitcommit: 8bdb5a51f87a6ff3b94360555973ca0cd0b6223f
+ms.openlocfilehash: e2c384a012603af0fd8875071b33813050218c65
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100549377"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622737"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - Flag di traccia (Transact-SQL)
 
@@ -207,7 +207,7 @@ Nella tabella seguente vengono elencati e descritti i flag di traccia disponibil
 |**11068**|Usa il valore max degree of parallelism (MAXDOP) configurato del server, del database o del pool di risorse per le operazioni di inserimento dell'indice columnstore. Per altre informazioni sulla sostituzione dei gradi di parallelismo, vedere [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md#overriding-degrees-of-parallelism).<br /><br />**Importante:** questo flag di traccia è valido solo se è abilitato anche il flag di traccia 11064.<br /><br />**Importante:** usare questo flag di traccia quando sono preferibili caricamenti dei dati più veloci rispetto a mantenere la qualità dei [segmenti columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md#column-segment). Ad esempio, se si usa questo flag di traccia quando si caricano 1.048.577 righe in un columnstore, è possibile che venga generato più di un rowgroup compresso, se l'operazione di inserimento viene eseguita in modalità parallela. Senza questo flag di traccia, l'operazione di inserimento creerebbe un solo rowgroup compresso.<br /><br />**Nota:** questo flag di traccia si applica a [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] e build successive.<br /><br />**Ambito**: solo globale|
 |**11631**| ' ALTER INDEX... REORGANIZE ' eliminerà le righe eliminate in un indice columnstore rowgroup solo quando una determinata soglia di righe è stata eliminata da tale rowgroup. La soglia predefinita è pari al 10% del limite massimo di righe (1 milione) o di 100.000 righe. Questo flag di traccia imposta la soglia sul 10% delle righe correnti totali in un rowgroup columnstore. Se, ad esempio, un rowgroup contiene 20.000 righe, la soglia sarà 2.000 righe eliminate prima che la riorganizzazione consideri questo rowgroup per la pulizia. Per altre informazioni, vedere [supporto tecnico Microsoft articolo](https://support.microsoft.com/help/5000895)<br /><br />**Nota:** Questo flag di traccia si applica a [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU9 e alle build successive.<br /><br />**Ambito**: solo globale|
 |**11634**| ' ALTER INDEX... REORGANIZE ' eliminerà le righe eliminate in un indice columnstore rowgroup solo quando una determinata soglia di righe è stata eliminata da tale rowgroup. La soglia predefinita è pari al 10% del limite massimo di righe (1 milione) o 100.000 righe. Questo flag di traccia imposta la soglia sull'1% delle righe in un rowgroup columnstore. Se abilitata insieme al flag di traccia 11631, sarà l'1% del numero corrente di righe in un rowgroup, invece dell'1% di 1 milione righe. Per altre informazioni, vedere [supporto tecnico Microsoft articolo](https://support.microsoft.com/help/5000895)<br /><br />**Nota:** Questo flag di traccia si applica a [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU9 e alle build successive.<br /><br />**Ambito**: solo globale|
-
+|**13116**|Disabilita la correzione per il bug [13685819](https://support.microsoft.com/en-us/topic/kb5000645-cumulative-update-16-for-sql-server-2016-sp2-a3997fa9-ec49-4df0-bcc3-12dd58b78265#bkmk_13685819). Utilizzare questo flag di traccia se dopo l'applicazione [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] di SP2 CU16 si verifica un problema in cui le query DML (Insert/Update/Delete) che utilizzano piani paralleli non possono completare alcuna esecuzione e si verificano HP_SPOOL_BARRIER attese. <br /><br />**Nota:** Questo flag di traccia si applica a [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU16.<br /><br />**Ambito**: solo globale| 
   
 ## <a name="examples"></a>Esempi  
  L'esempio seguente imposta il flag di traccia 3205 per tutte le sessioni a livello di server usando DBCC TRACEON.  

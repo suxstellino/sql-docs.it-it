@@ -9849,6 +9849,8 @@ items:
                 href: tools/sqlpackage/sqlpackage-script.md
           - name: SqlPackage nelle pipeline di sviluppo
             href: tools/sqlpackage/sqlpackage-pipelines.md
+          - name: SqlPackage per Azure sinapsi Analytics
+            href: tools/sqlpackage/sqlpackage-for-azure-synapse-analytics.md
       - name: SQL Server Profiler
         href: tools/sql-server-profiler/sql-server-profiler.md
         items:

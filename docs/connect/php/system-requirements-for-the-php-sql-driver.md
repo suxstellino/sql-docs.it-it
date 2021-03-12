@@ -2,7 +2,7 @@
 title: Requisiti di sistema dei driver Microsoft per PHP
 description: I driver Microsoft per PHP per SQL Server supportano una vasta gamma di versioni di PHP, sistemi operativi e versioni di SQL Server.
 ms.custom: ''
-ms.date: 01/29/2021
+ms.date: 03/09/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 06824f62740653eddeee6d3484e7eb8914404110
-ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.openlocfilehash: b52bb4597b76ca831b94899e040a814b11b2a903
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99076443"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622667"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Requisiti di sistema dei driver Microsoft per PHP per SQL Server
 
@@ -51,7 +51,7 @@ Se si scarica la versione di Windows del driver in una versione di Windows a 64 
 |ODBC Driver 17+ |Sì|Sì|Sì|Sì|Sì|   |   |   |
 |Driver ODBC 13.1|Sì|Sì|Sì|Sì|Sì|Sì|Sì|   |
 |Driver ODBC 13  |   |   |   |   |   |   |Sì|   |
-|Driver ODBC 11  |Sì|Sì|Sì|Sì|Sì|Sì|Sì|Sì|
+|Driver ODBC 11  |   |Sì|Sì|Sì|Sì|Sì|Sì|Sì|
 
 Se si usa il driver SQLSRV, [sqlsrv_client_info](sqlsrv-client-info.md) restituisce informazioni sulla versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft ODBC Driver for SQL Server usata da [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Se si usa il driver PDO_SQLSRV, è possibile individuarne la versione tramite [PDO::getAttribute](pdo-getattribute.md).
 

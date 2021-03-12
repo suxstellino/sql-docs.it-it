@@ -9,13 +9,13 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
-ms.date: 12/11/2020
-ms.openlocfilehash: 1303473c79558629ee0009f9c07bf8d28ffbd704
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 3/10/2021
+ms.openlocfilehash: 84405eb4d5ac63f287f2696dcef0a1e3ddc09cc4
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100060976"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622659"
 ---
 # <a name="sqlpackage-extract-parameters-and-properties"></a>Parametri e proprietà di Extract di SqlPackage
 L'azione Estrai SqlPackage.exe crea uno schema di un database connesso in un file DACPAC (con estensione dacpac). Per impostazione predefinita, i dati non sono inclusi nel file con estensione dacpac. Per includere i dati, usare l' [Azione Esporta](sqlpackage-export.md) o usare Estrai proprietà *ExtractAllTableData* / *TableData*. 
@@ -59,6 +59,10 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 
 |Proprietà|Valore|Descrizione|
 |---|---|---|
+|**/p:**|AzureStorageBlobEndpoint = (stringa)|Endpoint di archiviazione BLOB di Azure, vedere [SqlPackage for Azure sinapsi Analytics](sqlpackage-for-azure-synapse-analytics.md#extract).|
+|**/p:**|AzureStorageContainer = (stringa)|Contenitore di archiviazione BLOB di Azure, vedere [SqlPackage for Azure sinapsi Analytics](sqlpackage-for-azure-synapse-analytics.md#extract).|
+|**/p:**|AzureStorageKey = (stringa)|Chiave dell'account di archiviazione di Azure, vedere [SqlPackage for Azure sinapsi Analytics](sqlpackage-for-azure-synapse-analytics.md#extract).|
+|**/p:**|AzureStorageRootPath = (stringa)|Percorso radice di archiviazione all'interno del contenitore. Senza questa proprietà, il percorso predefinito è `servername/databasename/timestamp/` . Vedere [SqlPackage for Azure sinapsi Analytics](sqlpackage-for-azure-synapse-analytics.md#extract).|
 |**/p:**|CommandTimeout=(INT32 '60')|Specifica il timeout del comando in secondi quando si eseguono query in SQL Server.|
 |**/p:**|DacApplicationDescription=(STRING)|Definisce la descrizione dell'applicazione da archiviare nei metadati DACPAC.|
 |**/p:**|DacApplicationName=(STRING)|Definisce il nome dell'applicazione da archiviare nei metadati del pacchetto di applicazione livello dati. Il valore predefinito corrisponde al database del database.|

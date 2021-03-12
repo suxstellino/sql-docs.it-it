@@ -25,12 +25,12 @@ ms.assetid: 32a48e36-0aa4-4260-9fe9-cae9197d16c5
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b41bf1941bb12bf7560563d0b00fad7b88a75f8
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8ba376927810521381a3c1a838e7438cdd7acdac
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99208845"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622883"
 ---
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,20 +44,20 @@ ms.locfileid: "99208845"
 ## <a name="syntax"></a>Sintassi  
   
 ```syntaxsql
-SWITCHOFFSET ( DATETIMEOFFSET, time_zone )   
+SWITCHOFFSET ( datetimeoffset_expression, timezoneoffset_expression )   
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argomenti
- *DATETIMEOFFSET*  
+ *datetimeoffset_expression*  
  Espressione che può essere risolta in un valore di tipo **datetimeoffset(n)**.  
   
- *time_zone*  
- Stringa di caratteri nel formato [+|-]TZH:TZM o intero con segno (relativo ai minuti) che rappresenta la differenza di fuso orario. Deve essere sensibile all'ora legale e adattato ad essa.  
+ *timezoneoffset_expression*  
+ Espressione nel formato [+ |-] TZH: TZM o un intero con segno (di minuti) che rappresenta la differenza di fuso orario e si presuppone che sia in grado di riconoscere l'ora legale e che sia regolato.  
   
 ## <a name="return-type"></a>Tipo restituito  
- **datetimeoffset** con la precisione frazionaria dell'argomento *DATETIMEOFFSET*.  
+ **DateTimeOffset** con la precisione frazionaria dell'argomento *datetimeoffset_expression* .  
   
 ## <a name="remarks"></a>Osservazioni  
  Usare SWITCHOFFSET per selezionare un valore **datetimeoffset** in una differenza fuso orario diversa dalla differenza fuso orario che è stata archiviata originalmente. SWITCHOFFSET non aggiorna il valore *time_zone* archiviato.  

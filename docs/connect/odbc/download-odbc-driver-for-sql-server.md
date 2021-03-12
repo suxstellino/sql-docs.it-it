@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 778d8f2f53ba56436047eee53d17dd827c58f3eb
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: b0f215b387cb772220fb56e504e1a5a8c19daa7d
+ms.sourcegitcommit: f10f0d604be1dce6c600a92aec4c095e7b52e19c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837574"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102770549"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>Scaricare ODBC Driver for SQL Server
 
@@ -23,22 +23,19 @@ ms.locfileid: "101837574"
 
 Microsoft ODBC Driver for SQL Server è una libreria di collegamento dinamico (DLL) contenente il supporto di runtime per applicazioni che usano API di codice nativo per la connessione a SQL Server. Usare Microsoft ODBC Driver 17 for SQL Server per creare nuove applicazioni o migliorare le applicazioni esistenti per sfruttare le nuove funzionalità di SQL Server.
 
-> [!Important]
-> Se si usa l'autenticazione Azure Active Directory identità gestita ( `authentication=ActiveDirectoryMSI` ) con la Microsoft ODBC driver for SQL Server, non eseguire l'aggiornamento alla versione 17,7. Si è verificato un problema in 17,7 che genera un errore quando viene usata la modalità di autenticazione.
-
 ## <a name="download-for-windows"></a>Download per Windows
 
 Il programma di installazione ridistribuibile per Microsoft ODBC Driver 17 for SQL Server installa i componenti client necessari in fase di esecuzione per sfruttare le funzionalità di SQL Server più recenti. Installa facoltativamente i file di intestazione necessari per sviluppare un'applicazione che usa l'API ODBC. A partire dalla versione 17.4.2, il programma di installazione include anche e installa Microsoft Active Directory Authentication Library (ADAL.dll).
 
-La versione 17.7.1 è la versione di disponibilità generale più recente. Se è installata una versione precedente di Microsoft ODBC driver 17 for SQL Server, l'installazione di 17.7.1 lo aggiorna in 17.7.1.
+La versione 17.7.2 è la versione di disponibilità generale più recente. Se è installata una versione precedente di Microsoft ODBC driver 17 for SQL Server, l'installazione di 17.7.2 lo aggiorna in 17.7.2.
 
-**[![Download](../../ssms/media/download-icon.png) Scaricare Microsoft ODBC Driver 17 per SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2153471)**  
-**[![Download](../../ssms/media/download-icon.png) Scaricare Microsoft ODBC Driver 17 per SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2153469)**  
+**[![Download](../../ssms/media/download-icon.png) Scaricare Microsoft ODBC Driver 17 per SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2156851)**  
+**[![Download](../../ssms/media/download-icon.png) Scaricare Microsoft ODBC Driver 17 per SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2156749)**  
 
 ### <a name="version-information"></a>Informazioni sulla versione
 
-- Numero di versione: 17.7.1.1
-- Rilasciata: 29 gennaio 2021
+- Numero di versione: 17.7.2.1
+- Rilasciata: 10 marzo 2021
 
 > [!Note]
 > Se si accede a questa pagina da una versione non in lingua inglese e si vuole visualizzare il contenuto più aggiornato, visitare la [versione in inglese del sito](). È possibile scaricare una versione del sito diversa da quella in lingua inglese selezionando [available languages](#available-languages) (lingue disponibili).
@@ -47,11 +44,11 @@ La versione 17.7.1 è la versione di disponibilità generale più recente. Se è
 
 Questa versione di Microsoft ODBC Driver for SQL Server può essere installata nelle lingue seguenti:
 
-Microsoft ODBC driver 17.7.1 per SQL Server (x64):  
-[Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x40a)
+Microsoft ODBC driver 17.7.2 per SQL Server (x64):  
+[Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x40a)
 
-Microsoft ODBC driver 17.7.1 per SQL Server (x86):  
-[Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x40a)
+Microsoft ODBC driver 17.7.2 per SQL Server (x86):  
+[Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x40a)
 
 ### <a name="release-notes-for-windows"></a>Note sulla versione per Windows
 
@@ -74,6 +71,7 @@ Se è necessario scaricare i pacchetti per l'installazione offline, tutte le ver
 
 ### <a name="alpine"></a>Alpine
 
+- [pacchetto alpino 17.7.2.1](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.7.2.1-1_amd64.apk) ([firma PGP](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.7.2.1-1_amd64.sig))
 - [pacchetto alpino 17.7.1.1](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.7.1.1-1_amd64.apk) ([firma PGP](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.7.1.1-1_amd64.sig))
 - [Pacchetto Alpine 17.6.1.1](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.6.1.1-1_amd64.apk) ([firma PGP](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.6.1.1-1_amd64.sig))
 - [Pacchetto Alpine 17.5.2.2 ](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.2-1_amd64.apk) ([firma PGP](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.2-1_amd64.sig))

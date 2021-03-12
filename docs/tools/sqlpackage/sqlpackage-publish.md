@@ -9,13 +9,13 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
-ms.date: 12/11/2020
-ms.openlocfilehash: 84fdd99b00de38b88b1a21963c4565e5c3b27ea7
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 3/10/2021
+ms.openlocfilehash: 364849c03150839ce38c4764c788bb8b813b9d53
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100081452"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622607"
 ---
 # <a name="sqlpackage-publish-parameters-properties-and-sqlcmd-variables"></a>Parametri, proprietà e variabili SQLCMD per Publish di SqlPackage
 L'operazione di pubblicazione tramite SqlPackage.exe consente di aggiornare in modo incrementale lo schema di un database di destinazione affinché corrisponda alla struttura di un database di origine. La pubblicazione di un pacchetto di distribuzione contenente dati utente per tutte le tabelle o solo per un subset di tabelle comporta l'aggiornamento dei dati di tabella oltre allo schema. La distribuzione dei dati sovrascrive lo schema e i dati nelle tabelle esistenti del database di destinazione. La distribuzione dei dati non modifica lo schema e i dati esistenti nel database di destinazione per le tabelle non incluse nel pacchetto di distribuzione.  
@@ -81,6 +81,11 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|AllowDropBlockingAssemblies=(BOOLEAN)|Questa proprietà viene utilizzata dalla distribuzione SqlClr per determinare l'eliminazione di tutti gli assembly di blocco come parte del piano di distribuzione. Per impostazione predefinita, tutti gli assembly di blocco o di riferimento bloccheranno l'aggiornamento di un assembly se l'assembly di riferimento deve essere eliminato.|
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|Specifica se tentare l'azione indipendentemente dalle piattaforme SQL Server incompatibili.|
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|Non bloccare il movimento di dati in una tabella con sicurezza a livello di riga se questa proprietà è impostata su true. L'impostazione predefinita è false.|
+|**/p:**|AzureSharedAccessSignatureToken = (stringa)|Token di firma di accesso condiviso di Azure (SAS), vedere [SqlPackage for Azure sinapsi Analytics](sqlpackage-for-azure-synapse-analytics.md#publish).|
+|**/p:**|AzureStorageBlobEndpoint = (stringa)|Endpoint di archiviazione BLOB di Azure, vedere [SqlPackage for Azure sinapsi Analytics](sqlpackage-for-azure-synapse-analytics.md#publish).|
+|**/p:**|AzureStorageContainer = (stringa)|Contenitore di archiviazione BLOB di Azure, vedere [SqlPackage for Azure sinapsi Analytics](sqlpackage-for-azure-synapse-analytics.md#publish).|
+|**/p:**|AzureStorageKey = (stringa)|Chiave dell'account di archiviazione di Azure, vedere [SqlPackage for Azure sinapsi Analytics](sqlpackage-for-azure-synapse-analytics.md#publish).|
+|**/p:**|AzureStorageRootPath = (stringa)|Percorso radice di archiviazione all'interno del contenitore. Senza questa proprietà, il percorso predefinito è `servername/databasename/timestamp/` . Vedere [SqlPackage for Azure sinapsi Analytics](sqlpackage-for-azure-synapse-analytics.md#publish).|
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|Esegue il backup del database prima di distribuire qualsiasi modifica.|
 |**/p:**|BlockOnPossibleDataLoss=(BOOLEAN 'True')| Specifica che l'operazione verrà terminata durante il passaggio di convalida dello schema se le modifiche dello schema risultante potrebbero causare una perdita di dati, ad esempio a causa della riduzione della precisione dei dati o di una modifica del tipo di dati che richiede un'operazione cast. Il valore predefinito ( `True` ) fa sì che l'operazione venga terminata indipendentemente dal fatto che il database di destinazione contenga dati.  Un'esecuzione con un `False` valore per BlockOnPossibleDataLoss può comunque avere esito negativo durante l'esecuzione del piano di distribuzione se i dati sono presenti nella destinazione che non possono essere convertiti nel nuovo tipo di colonna. |
 |**/p:**|BlockWhenDriftDetected=(BOOLEAN 'True')|Specifica se bloccare l'aggiornamento di un database il cui schema non corrisponde più alla relativa registrazione o di cui è stata annullata la registrazione.|

@@ -8,15 +8,17 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 3/5/2021
-ms.openlocfilehash: 37e31834df74bf91fcf31004973c1556b8f34552
-ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
+ms.date: 3/10/2021
+ms.openlocfilehash: 34a7ff8c9380a88bb285a6d2e51e57e652f0310d
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102247463"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622833"
 ---
 # <a name="sql-assessment-api"></a>API Valutazione SQL
+
+[!INCLUDE [SQL Server 2012, ASMI, SQL Server on Azure VM, SQL on Linux](../../includes/applies-to-version/sql-asmi-sqlavm-sql-linux.md)]
 
 L'API Valutazione SQL fornisce un meccanismo per valutare la configurazione del SQL Server per le procedure consigliate. L'API viene fornita con un set di regole contenente le regole per le procedure consigliate dal team di SQL Server. Questo set di regole è stato migliorato con il rilascio di nuove versioni, ma allo stesso tempo l'API è stata creata con lo scopo di offrire una soluzione altamente personalizzabile ed estendibile. Gli utenti possono quindi ottimizzare le regole predefinite e crearne di proprie.
 

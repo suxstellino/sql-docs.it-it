@@ -9,13 +9,13 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
-ms.date: 12/11/2020
-ms.openlocfilehash: cecc6de89a9e8f82a64942acb08af7ddee48c5be
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 3/10/2021
+ms.openlocfilehash: 94ddccc0789f01f3d7d6ac6675ec9c54405972a1
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100081462"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622627"
 ---
 # <a name="sqlpackage-import-parameters-and-properties"></a>Parametri e proprietà di Import di SqlPackage
 L'azione Import di SqlPackage.exe importa i dati di tabella e schema da un pacchetto BACPAC (file con estensione bacpac) in un database nuovo o vuoto in SQL Server o nel database SQL di Azure. Al momento dell'operazione di importazione in un database esistente, il database di destinazione non può contenere oggetti dello schema definiti dall'utente.  
@@ -60,10 +60,12 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|DatabaseLockTimeout=(INT32 '60')| Specifica il timeout del blocco a livello di database in secondi quando si eseguono query su SQL Server. Usare -1 per l'attesa indefinita.|
 |**/p:**|DatabaseMaximumSize=(INT32)|Definisce le dimensioni massime in GB di un database SQL di Azure.|
 |**/p:**|DatabaseServiceObjective=(STRING)|Definisce il livello delle prestazioni di un database SQL di Azure, ad esempio "P0" o "S1".|
+|**/p:**|DisableIndexesForDataPhase = (valore BOOLEANo TRUE)|Disabilitare gli indici prima di importare i dati in SQL Server.|
 |**/p:**|ImportContributorArguments=(STRING)|Specifica gli argomenti per i collaboratori alla distribuzione. in un elenco di valori separati da punti e virgola.|
 |**/p:**|ImportContributors=(STRING)|Specifica i collaboratori alla distribuzione da eseguire durante l'importazione del bacpac. in un elenco di ID o nomi di collaboratori di compilazione completi separati da punti e virgola.|
 |**/p:**|ImportContributorPaths=(STRING)|Specifica i percorsi per caricare collaboratori alla distribuzione aggiuntivi. in un elenco di valori separati da punti e virgola. |
 |**/p:**|LongRunningCommandTimeout=(INT32)| Specifica il timeout del comando a esecuzione prolungata in secondi quando si eseguono query su SQL Server. Usare 0 per l'attesa indefinita.|
+|**/p:**|RebuildIndexesOfflineForDataPhase = (valore BOOLEANo FALSE)|Ricompilare gli indici offline dopo aver importato i dati in SQL Server.|
 |**/p:**|Storage=({File&#124;Memory})|Specifica la modalità di archiviazione degli elementi durante la compilazione del modello di database. Per motivi di prestazioni, l'impostazione predefinita è InMemory. In caso di database di dimensioni estese, è necessaria l'archiviazione di file di cui è stato eseguito il backup.|
   
 
