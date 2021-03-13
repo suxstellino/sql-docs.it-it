@@ -16,12 +16,12 @@ ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=azuresqldb-mi-current'
-ms.openlocfilehash: 58b68bdf2996446ed08a37297e0c9776c2274832
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 515010fc6727a64607402316b4c8911fd7f22fb0
+ms.sourcegitcommit: 62c7b972db0ac28e3ae457ce44a4566ebd3bbdee
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97483663"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103231509"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only.md)]
@@ -148,6 +148,62 @@ Quando una API del file system non può aprire un file a causa di una violazione
 L'accesso remoto al file system per i dati FILESTREAM è abilitato tramite il protocollo SMB (Server Message Block). Se il client è remoto, nella cache non vengono memorizzate operazioni di scrittura lato client. Le operazioni di scrittura saranno inviate sempre al server. I dati possono essere memorizzati nella cache sul lato server. Si consiglia di far consolidare alle applicazioni eseguite sui client remoti piccole operazioni di scrittura per effettuarne un numero minore con dati di dimensioni superiori.  
 
 La creazione di viste con mapping alla memoria (I/O con mapping alla memoria) utilizzando handle FILESTREAM non è supportata. Se il mapping di memoria viene usato per i dati FILESTREAM, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non può garantire coerenza e durabilità dei dati o l'integrità del database.  
+
+## <a name="recommendations-and-guidelines-for-improving-filestream-performance"></a>Indicazioni e linee guida per migliorare le prestazioni di FILESTREAM
+
+La SQL Server funzionalità FILESTREAM consente di archiviare dati di oggetti binari di grandi dimensioni varbinary (max) come file nel file system. Quando si dispone di un numero elevato di righe nei contenitori FILESTREAM, ovvero l'archiviazione sottostante sia per le colonne FILESTREAM sia per le tabelle FileTable, è possibile ottenere un volume file system contenente un numero elevato di file. Per ottenere prestazioni ottimali durante l'elaborazione dei dati integrati dal database e dal file system, è importante assicurarsi che la file system sia ottimizzata in modo ottimale. Di seguito sono riportate alcune opzioni di ottimizzazione disponibili in una file system prospettiva:
+
+- Verifica dell'altitudine per il driver del filtro FILESTREAM SQL Server [ad esempio rsfx0100.sys]. Valutare tutti i driver di filtro caricati per lo stack di archiviazione associato a un volume in cui la funzionalità FILESTREAM archivia i file e verificare che il driver RsFx si trovi nella parte inferiore dello stack. È possibile utilizzare il programma di controllo FLTMC.EXE per enumerare i driver di filtro per un volume specifico. Di seguito è riportato un esempio di output dell'utilità FLTMC: `C:\Windows\System32>fltMC.exe` filtri
+
+    |Nome filtro|Numero di istanze|Altitudine|Frame|
+    |---|---|---|---|
+    |Sftredir|1|406000|0|
+    |MpFilter|9|328000|0|
+    |luafv|1|135000|0|
+    |FileInfo|9|45000|0|
+    |RsFx0103|1|41001,03|0|
+    ||||
+
+- Verificare che per il server sia stata disabilitata la proprietà "ora ultimo accesso" per i file. Questo attributo file system viene mantenuto nel registro di sistema:  
+Nome chiave: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem`  
+Nome: NtfsDisableLastAccessUpdate  
+Tipo: REG_DWORD  
+Valore: 1
+
+- Verificare che il server abbia la denominazione 8,3 disabilitata. Questo attributo file system viene mantenuto nel registro di sistema:  
+Nome chiave: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem`  
+Nome: NtfsDisable8dot3NameCreation  
+Tipo: REG_DWORD  
+Valore: 1
+
+- Verificare che i contenitori di directory FILESTREAM non dispongano della crittografia file system o della compressione file system abilitata, in quanto questi possono introdurre un livello di overhead durante l'accesso a tali file.
+
+- Da un prompt dei comandi con privilegi elevati eseguire le istanze di fltmc e assicurarsi che nessun driver di filtro sia collegato al volume in cui si tenta di eseguire il ripristino.
+
+- Verificare che i contenitori di directory FILESTREAM non contengano più di 300.000 file. È possibile utilizzare le informazioni disponibili `sys.database_files` nella vista del catalogo per individuare le directory presenti nei file di archivio file System `FILESTREAM-related` . Questa operazione può essere impedita dalla presenza di più contenitori. Per ulteriori informazioni, vedere l'elemento Bullet successivo.
+
+- Con un solo filegroup FILESTREAM, tutti i file di dati vengono creati nella stessa cartella. La creazione di file di un numero molto elevato di file può essere influenzata da indici NTFS di grandi dimensioni, che possono anche diventare frammentati.
+
+  - La presenza di più filegroup in genere dovrebbe risultare utile (l'applicazione utilizza il partizionamento o dispone di più tabelle, ognuna delle quali passa al proprio filegroup).
+
+  - Con SQL Server 2012 e versioni successive, è possibile disporre di più contenitori o file in un filegroup FILESTREAM e viene applicato uno schema di allocazione round robin. Il numero di file NTFS per directory sarà pertanto minore.
+
+- Il backup e il ripristino possono diventare più veloci con più contenitori FILESTREAM, se vengono usati più volumi che archiviano i contenitori.
+
+    SQL Server 2012 supporta più contenitori per filegroup e può semplificare notevolmente le operazioni. Non è possibile che siano necessari schemi di partizionamento complessi per gestire un numero maggiore di file.
+
+- Il MFT NTFS potrebbe diventare frammentato e ciò può causare problemi di prestazioni. Le dimensioni riservate MFT dipendono dalle dimensioni del volume, quindi è possibile che si verifichi questo problema.
+
+  - È possibile controllare la frammentazione di MFT con `defrag /A /V C:` (modificare C: con il nome effettivo del volume).
+
+  - È possibile riservare più spazio MFT usando fsutil behavior set mftzone 2.
+
+  - I file di dati FILESTREAM devono essere esclusi dall'analisi del software antivirus.
+
+    > [!NOTE]
+    > Windows Server 2016 Abilita automaticamente Windows Defender. Assicurarsi che Windows Defender sia configurato in modo da escludere i file FILESTREAM. In caso contrario, è possibile che si verifichi una riduzione delle prestazioni per le operazioni di backup e ripristino.
+  
+    Per altre informazioni, vedere [configurare e convalidare le esclusioni per le analisi di Windows Defender Antivirus](/windows/security/threat-protection/microsoft-defender-antivirus/configure-exclusions-microsoft-defender-antivirus).
 
 ## <a name="related-tasks"></a>Attività correlate
 

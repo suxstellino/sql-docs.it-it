@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: c05da95541e728d981745d43f4da864c2e8b07a8
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: da3071f14be97a4bbbd9ac909926f210c49504d4
+ms.sourcegitcommit: 62c7b972db0ac28e3ae457ce44a4566ebd3bbdee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100343556"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103231519"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Configurare le transazioni distribuite per un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ In una transazione distribuita, le applicazioni client funzionano con Microsoft 
 
 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] non impedisce le transazioni distribuite per i database in un gruppo di disponibilità, anche quando il gruppo di disponibilità non è configurato per le transazioni distribuite. Tuttavia quando un gruppo di disponibilità non è configurato per le transazioni distribuite, in alcuni casi il failover potrebbe non riuscire. In particolare, l'istanza di [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] della nuova replica primaria potrebbe non essere in grado di ottenere il risultato della transazione da DTC. Per consentire all'istanza di [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] di ottenere il risultato delle transazioni in dubbio da DTC dopo il failover, configurare il gruppo di disponibilità per le transazioni distribuite. 
 
-DTC non è coinvolto nell'elaborazione del gruppo di disponibilità a meno che un database non sia anche membro di un cluster di failover. All'interno di un gruppo di disponibilità, la coerenza tra le repliche viene gestita dalla logica del gruppo di disponibilità: Il database primario non completa il commit né conferma il commit al chiamante fino a quando il database secondario non ha riconosciuto che i record del log sono stati salvati in modo permanente in un archivio durevole. Solo a questo punto il database primario dichiara il completamento della transazione. In modalità asincrona, non è prevista l'attesa del riconoscimento da parte della replica secondaria ed esiste esplicitamente la possibilità che una piccola quantità di dati vada persa.
+DTC non è coinvolto nell'elaborazione del gruppo di disponibilità a meno che un database non sia anche membro di un cluster di failover. All'interno di un gruppo di disponibilità, la coerenza tra le repliche viene gestita dalla logica del gruppo di disponibilità: il database primario non completerà il commit e rileverà il commit al chiamante fino a quando il database secondario non riconosca che i record del log sono stati salvati in modo permanente in un archivio durevole. Solo a questo punto il database primario dichiara il completamento della transazione. In modalità asincrona, non è prevista l'attesa del riconoscimento da parte della replica secondaria ed esiste esplicitamente la possibilità che una piccola quantità di dati vada persa.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -142,6 +142,11 @@ Per partecipare alle transazioni distribuite, un'istanza di [!INCLUDE[SQLServer]
 
 Quando un database è in un gruppo di disponibilità, la copia di lettura e scrittura del database, o replica primaria, può essere spostata in un'istanza diversa di [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]. Per supportare le transazioni distribuite durante questo spostamento, ogni database deve agire da strumento di gestione delle risorse separato e deve avere un RMID univoco. Quando un gruppo di disponibilità ha `DTC_SUPPORT = PER_DB`, [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] crea uno strumento di gestione delle risorse per ogni database e lo registra con DTC usando un RMID univoco. In questa configurazione il database è uno strumento di gestione delle risorse per le transazioni DTC.
 
+>[!IMPORTANT]
+>Si noti che DTC ha un limite di 32 integrazioni per ogni transazione distribuita. Poiché ogni database all'interno di un gruppo di disponibilità viene integrato separatamente con DTC, se la transazione include più di 32 database, potrebbe verificarsi l'errore seguente quando [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] tenta di integrare il database di 33:
+>
+>`Enlist operation failed: 0x8004d101(XACT_E_TOOMANY_ENLISTMENTS). SQL Server could not register with Microsoft Distributed Transaction Coordinator (MS DTC) as a resource manager for this transaction. The transaction may have been stopped by the client or the resource manager.`
+
 Per altre informazioni sulle transazioni distribuite in [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)], vedere [Transazioni distribuite](#distTran).
 
 ## <a name="manage-unresolved-transactions"></a>Gestire le transazioni non risolte
@@ -205,4 +210,4 @@ Per altre informazioni sulla risoluzione delle transazioni in dubbio, vedere [Ri
 
 [Supporting XA Transactions](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753563(v=ws.10)) (Supporto delle transazioni XA)
 
-[How It Works: Session/SPID (-2) for DTC Transactions](/archive/blogs/bobsql/how-it-works-sessionspid-2-for-dtc-transactions) (Come funziona: sessione/SPID (-2) per transazioni DTC)
+[Funzionamento: sessione/SPID (-2) per le transazioni DTC](/archive/blogs/bobsql/how-it-works-sessionspid-2-for-dtc-transactions)
