@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 02632ce64dbd7b10571e559daf8fde4475a4e37b
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
-ms.translationtype: HT
+ms.openlocfilehash: 80ada8fcce7fe1480dca5e22d4a5b8be3e73b617
+ms.sourcegitcommit: be74dc0966930f28b03d0429aed22b1f0a296d3b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88471203"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "103421987"
 ---
 # <a name="msdb-database"></a>Database msdb
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,9 +57,9 @@ ms.locfileid: "88471203"
 |ANSI_WARNINGS|OFF|Sì|  
 |ARITHABORT|OFF|Sì|  
 |AUTO_CLOSE|OFF|Sì|  
-|AUTO_CREATE_STATISTICS|ATTIVA|Sì|  
+|AUTO_CREATE_STATISTICS|ON|Sì|  
 |AUTO_SHRINK|OFF|Sì|  
-|AUTO_UPDATE_STATISTICS|ATTIVA|Sì|  
+|AUTO_UPDATE_STATISTICS|ON|Sì|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sì|  
 |CHANGE_TRACKING|OFF|No|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sì|  
@@ -67,7 +67,7 @@ ms.locfileid: "88471203"
 |CURSOR_DEFAULT|GLOBAL|Sì|  
 |Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> Sì<br /><br /> Sì|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sì|  
-|DB_CHAINING|ATTIVA|Sì|  
+|DB_CHAINING|ON|Sì|  
 |ENCRYPTION|OFF|No|  
 |MIXED_PAGE_ALLOCATION|ATTIVA|No|  
 |NUMERIC_ROUNDABORT|OFF|Sì|  
@@ -86,34 +86,21 @@ ms.locfileid: "88471203"
  Nel database **msdb** non è possibile eseguire le operazioni seguenti:  
   
 -   Modifica delle regole di confronto. Le regole di confronto predefinite corrispondono a quelle del server.  
-  
 -   Eliminazione del database.  
-  
 -   Eliminazione dell'utente **guest** dal database.  
-  
 -   Abilitazione dell'acquisizione dei dati delle modifiche.  
-  
 -   Partecipazione al mirroring del database.  
-  
 -   Rimozione del filegroup primario, del file di dati primario o del file di log.  
-  
 -   Ridenominazione del filegroup primario o del database.  
-  
 -   Impostazione del database su OFFLINE.  
-  
 -   Impostazione del filegroup primario su READ_ONLY.  
   
 ## <a name="related-content"></a>Contenuto correlato  
- [Database di sistema.](../../relational-databases/databases/system-databases.md)  
-  
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
-  
- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
-  
- [Spostare file del database](../../relational-databases/databases/move-database-files.md)  
-  
- [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)  
-  
- [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
+- [Database di sistema.](../../relational-databases/databases/system-databases.md)  
+- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
+- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
+- [Spostare file del database](../../relational-databases/databases/move-database-files.md)  
+- [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)  
+- [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 01d5e44a93776560b5e89c0dc03a36b780f7ab8d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
-ms.translationtype: HT
+ms.openlocfilehash: 9ef6744fa152bfb5c66cc82ba71de62bc5bfb1a9
+ms.sourcegitcommit: be74dc0966930f28b03d0429aed22b1f0a296d3b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97637854"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "103421973"
 ---
 # <a name="model-database"></a>Database model
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,9 +60,9 @@ Per SQL Server 2014, vedere [Database model](/previous-versions/sql/2014/relatio
 |ANSI_WARNINGS|OFF|Sì|  
 |ARITHABORT|OFF|Sì|  
 |AUTO_CLOSE|OFF|Sì|  
-|AUTO_CREATE_STATISTICS|ATTIVA|Sì|  
+|AUTO_CREATE_STATISTICS|ON|Sì|  
 |AUTO_SHRINK|OFF|Sì|  
-|AUTO_UPDATE_STATISTICS|ATTIVA|Sì|  
+|AUTO_UPDATE_STATISTICS|ON|Sì|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sì|  
 |CHANGE_TRACKING|OFF|No|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sì|  
@@ -90,37 +90,23 @@ Per SQL Server 2014, vedere [Database model](/previous-versions/sql/2014/relatio
 ## <a name="restrictions"></a>Restrizioni  
  Nel database **model** non è possibile eseguire le operazioni seguenti:  
   
--   Aggiunta di file o di filegroup.  
-  
--   Modifica delle regole di confronto. Le regole di confronto predefinite corrispondono a quelle del server.  
-  
--   Modifica del proprietario del database. **model** è di proprietà di **sa**.  
-  
--   Eliminazione del database.  
-  
--   Eliminazione dell'utente **guest** dal database.  
-  
--   Abilitazione dell'acquisizione dei dati delle modifiche.  
-  
--   Partecipazione al mirroring del database.  
-  
--   Rimozione del filegroup primario, del file di dati primario o del file di log.  
-  
--   Ridenominazione del filegroup primario o del database.  
-  
--   Impostazione del database su OFFLINE.  
-  
--   Impostazione del filegroup primario su READ_ONLY.  
-  
--   Creazione di procedure, viste o trigger utilizzando l'opzione WITH ENCRYPTION. La chiave di crittografia è correlata al database in cui viene creato l'oggetto. Gli oggetti crittografati creati nel database **model** possono essere usati solo in **model**.  
+- Aggiunta di file o di filegroup.  
+- Modifica delle regole di confronto. Le regole di confronto predefinite corrispondono a quelle del server.  
+- Modifica del proprietario del database. **model** è di proprietà di **sa**.  
+- Eliminazione del database.  
+- Eliminazione dell'utente **guest** dal database.  
+- Abilitazione dell'acquisizione dei dati delle modifiche.  
+- Partecipazione al mirroring del database.  
+- Rimozione del filegroup primario, del file di dati primario o del file di log.  
+- Ridenominazione del filegroup primario o del database.  
+- Impostazione del database su OFFLINE.  
+- Impostazione del filegroup primario su READ_ONLY.  
+- Creazione di procedure, viste o trigger utilizzando l'opzione WITH ENCRYPTION. La chiave di crittografia è correlata al database in cui viene creato l'oggetto. Gli oggetti crittografati creati nel database **model** possono essere usati solo in **model**.  
   
 ## <a name="related-content"></a>Contenuto correlato  
- [Database di sistema.](../../relational-databases/databases/system-databases.md)  
-  
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
-  
- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
-  
- [Spostare file del database](../../relational-databases/databases/move-database-files.md)  
+- [Database di sistema.](../../relational-databases/databases/system-databases.md)  
+- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
+- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
+- [Spostare file del database](../../relational-databases/databases/move-database-files.md)  
   
   

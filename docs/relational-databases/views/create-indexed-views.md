@@ -19,12 +19,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c074add532e55209c8fc304a98da686cec60aab
-ms.sourcegitcommit: 059722ff78a6061b801807416b312ae9f721ec7d
+ms.openlocfilehash: 8c4b69dd5f196cf44f7fedfefbe45df6714aba20
+ms.sourcegitcommit: be74dc0966930f28b03d0429aed22b1f0a296d3b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100636730"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "103421991"
 ---
 # <a name="create-indexed-views"></a>Creazione di viste indicizzate
 
@@ -126,7 +126,7 @@ Oltre alle impostazioni delle opzioni SET e ai requisiti relativi alle funzioni 
    |`MIN`, `MAX`|Operatori `UNION`, `EXCEPT` o `INTERSECT`|`TABLESAMPLE`|
    |Variabili di tabella|`OUTER APPLY` o `CROSS APPLY`|`PIVOT`, `UNPIVOT`|
    |Set di colonne di tipo sparse|Funzione con valori di tabella inline o con istruzioni multiple|`OFFSET`|
-   |`CHECKSUM_AGG`|||
+   |`CHECKSUM_AGG`|`STRING_AGG`|||
 
    <sup>1</sup> La vista indicizzata può contenere colonne di tipo **float** che, tuttavia, non possono essere incluse nella chiave di indice cluster.
 

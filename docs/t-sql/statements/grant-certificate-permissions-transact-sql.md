@@ -18,19 +18,22 @@ helpviewer_keywords:
 ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a5fcb667d33aecc0657b497c544e782e97fe8d7a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||= azure-sqldw-latest
+ms.openlocfilehash: e98b73363c02baded5838ac8d7d1fa4731260b9c
+ms.sourcegitcommit: be74dc0966930f28b03d0429aed22b1f0a296d3b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99159595"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "103422009"
 ---
 # <a name="grant-certificate-permissions-transact-sql"></a>GRANT (autorizzazioni per certificati) (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [sql-asdb-asa](../../includes/applies-to-version/sql-asdb-asa.md)]
 
   Concede le autorizzazioni per un certificato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/\synapse-analytics-od-unsupported-syntax.md)]  
   
 ## <a name="syntax"></a>Sintassi  
   

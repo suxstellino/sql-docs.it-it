@@ -1,8 +1,8 @@
 ---
 description: sys.dm_xtp_transaction_stats (Transact-SQL)
-title: sys.dm_xtp_transaction_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_xtp_transaction_stats (Transact-SQL)
 ms.custom: ''
-ms.date: 08/09/2016
+ms.date: 03/12/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -16,15 +16,14 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_xtp_transaction_stats dynamic management view
-ms.assetid: 9389f48d-0de5-47bd-9821-4db8f04504e4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: e5216c988f93d2186bc36964b086f82e1995c176
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 37a98ee4a73e7bcc0ce06cef44d3a142e7fba772
+ms.sourcegitcommit: be74dc0966930f28b03d0429aed22b1f0a296d3b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99126419"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "103421863"
 ---
 # <a name="sysdm_xtp_transaction_stats-transact-sql"></a>sys.dm_xtp_transaction_stats (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "99126419"
 |total_count|**bigint**|Numero totale di transazioni eseguite nel motore di database OLTP in memoria.|  
 |read_only_count|**bigint**|Numero di transazioni di sola lettura.|  
 |total_aborts|**bigint**|Numero totale di transazioni che sono state arrestate, attraverso un arresto di sistema o dell'utente.|  
-|user_aborts|**bigint**|Numero di arresti avviati dal sistema. Possono essere dovuti a conflitti di scrittura, errori di convalida o di dipendenza.|  
+|system_aborts|**bigint**|Numero di arresti avviati dal sistema. Possono essere dovuti a conflitti di scrittura, errori di convalida o di dipendenza.|  
 |validation_failures|**bigint**|Numero di volte che una transazione è stata interrotta a causa di un errore di convalida.|  
 |dependencies_taken|**bigint**|Solo per uso interno.|  
 |dependencies_failed|**bigint**|Numero di volte che una transazione viene interrotta perché una transazione da cui dipendeva è stata interrotta.|  
