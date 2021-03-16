@@ -11,12 +11,12 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a05c7af0bc8b8846e3b4ab5c1e3472249350e7b
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 9169f451bdbbc0c8e28eac19543ab7ca6092fb16
+ms.sourcegitcommit: e2d25f265556af92afcc0acde662929e654bf841
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100344397"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103490029"
 ---
 # <a name="dynamic-data-masking"></a>Dynamic Data Masking
 [!INCLUDE [SQL Server 2016 ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -120,73 +120,93 @@ Ciò dimostra che il mascheramento dati dinamici non deve essere usato come misu
  L'esempio seguente illustra la creazione di una tabella con tre tipi diversi di maschera dati dinamica. Nell'esempio la tabella viene compilata ed è possibile selezionare la visualizzazione dei risultati.  
   
 ```sql
-CREATE TABLE Membership  
-  (MemberID int IDENTITY PRIMARY KEY,  
-   FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)') NULL,  
-   LastName varchar(100) NOT NULL,  
-   Phone varchar(12) MASKED WITH (FUNCTION = 'default()') NULL,  
-   Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL);  
-  
-INSERT Membership (FirstName, LastName, Phone, Email) VALUES   
-('Roberto', 'Tamburello', '555.123.4567', 'RTamburello@contoso.com'),  
-('Janice', 'Galvin', '555.123.4568', 'JGalvin@contoso.com.co'),  
-('Zheng', 'Mu', '555.123.4569', 'ZMu@contoso.net');  
-SELECT * FROM Membership;  
+
+-- schema to contain user tables
+CREATE SCHEMA Data
+GO
+
+-- table with masked columns
+CREATE TABLE Data.Membership(
+    MemberID            int IDENTITY(1,1) NOT NULL PRIMARY KEY CLUSTERED,
+    FirstName           varchar(100) MASKED WITH (FUNCTION = 'partial(1, "xxxxx", 1)') NULL,
+    LastName            varchar(100) NOT NULL,
+    Phone               varchar(12) MASKED WITH (FUNCTION = 'default()') NULL,
+    Email               varchar(100) MASKED WITH (FUNCTION = 'email()') NOT NULL,
+    DiscountCode    smallint MASKED WITH (FUNCTION = 'random(1, 100)') NULL
+    )
+
+-- inserting sample data
+INSERT INTO Data.Membership (FirstName, LastName, Phone, Email, DiscountCode)
+VALUES   
+('Roberto', 'Tamburello', '555.123.4567', 'RTamburello@contoso.com', 10),  
+('Janice', 'Galvin', '555.123.4568', 'JGalvin@contoso.com.co', 5),  
+('Shakti', 'Menon', '555.123.4570', 'SMenon@contoso.net', 50),  
+('Zheng', 'Mu', '555.123.4569', 'ZMu@contoso.net', 40);  
+
 ```  
   
- Viene creato un nuovo utente a cui viene concessa autorizzazione **SELECT** per la tabella. Le query eseguite come `TestUser` possono visualizzare i dati mascherati.  
+ Viene creato un nuovo utente a cui viene concessa l'autorizzazione **Select** per lo schema in cui risiede la tabella. Le query eseguite come `MaskingTestUser` possono visualizzare i dati mascherati.  
   
 ```sql 
-CREATE USER TestUser WITHOUT LOGIN;  
-GRANT SELECT ON Membership TO TestUser;  
+CREATE USER MaskingTestUser WITHOUT LOGIN;  
+
+GRANT SELECT ON SCHEMA::Data TO MaskingTestUser;  
   
-EXECUTE AS USER = 'TestUser';  
-SELECT * FROM Membership;  
+  -- impersonate for testing:
+EXECUTE AS USER = 'MaskingTestUser';  
+
+SELECT * FROM Data.Membership;  
+
 REVERT;  
 ```  
   
  Il risultato illustra le maschere modificando i dati da  
   
- `1    Roberto     Tamburello    555.123.4567    RTamburello@contoso.com`  
+ `1    Roberto     Tamburello    555.123.4567    RTamburello@contoso.com`    10  
   
  into  
   
- `1    RXXXXXXX    Tamburello    xxxx            RXXX@XXXX.com`  
+ `1    Rxxxxxo    Tamburello    xxxx            RXXX@XXXX.com`            91
+ 
+ dove il numero in DiscountCode è casuale per ogni risultato della query
   
 ### <a name="adding-or-editing-a-mask-on-an-existing-column"></a>Aggiunta o modifica di una maschera su una colonna esistente  
  Usare l'istruzione **ALTER TABLE** per aggiungere una maschera a una colonna esistente nella tabella o per modificare la maschera su tale colonna.  
 L'esempio seguente aggiunge una funzione della maschera alla colonna `LastName`:  
   
 ```sql  
-ALTER TABLE Membership  
-ALTER COLUMN LastName ADD MASKED WITH (FUNCTION = 'partial(2,"XXX",0)');  
+ALTER TABLE Data.Membership  
+ALTER COLUMN LastName ADD MASKED WITH (FUNCTION = 'partial(2,"xxxx",0)');  
 ```  
   
  L'esempio seguente modifica una funzione della maschera sulla colonna `LastName` :  
 
 ```sql  
-ALTER TABLE Membership  
+ALTER TABLE Data.Membership  
 ALTER COLUMN LastName varchar(100) MASKED WITH (FUNCTION = 'default()');  
 ```  
   
 ### <a name="granting-permissions-to-view-unmasked-data"></a>Concessione di autorizzazioni per visualizzare i dati senza maschera  
- La concessione dell'autorizzazione **UNMASK** consente a `TestUser` di visualizzare i dati senza maschera.  
+ La concessione dell'autorizzazione **UNMASK** consente a `MaskingTestUser` di visualizzare i dati senza maschera.  
   
 ```sql
-GRANT UNMASK TO TestUser;  
-EXECUTE AS USER = 'TestUser';  
-SELECT * FROM Membership;  
-REVERT;   
+GRANT UNMASK TO MaskingTestUser;  
+
+EXECUTE AS USER = 'MaskingTestUser';  
+
+SELECT * FROM Data.Membership;  
+
+REVERT;    
   
 -- Removing the UNMASK permission  
-REVOKE UNMASK TO TestUser;  
+REVOKE UNMASK TO MaskingTestUser;  
 ```  
   
 ### <a name="dropping-a-dynamic-data-mask"></a>Eliminazione di una maschera dati dinamica  
  L'istruzione seguente elimina la maschera della colonna `LastName` creata nell'esempio precedente:  
   
 ```sql  
-ALTER TABLE Membership   
+ALTER TABLE Data.Membership   
 ALTER COLUMN LastName DROP MASKED;  
 ```  
   

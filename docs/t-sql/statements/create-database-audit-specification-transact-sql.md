@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c62f35df2ea567bda36eb1ae126d9e461194f670
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: dfa2c988670df2c2b7b9176cbde4057c4b125c75
+ms.sourcegitcommit: 2cc2e4e17ce88ef47cda32a60a02d929e617738e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99192738"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103473201"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -85,7 +85,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
  WITH ( STATE = { ON | OFF } )  
  Abilita o disabilita la raccolta di record mediante il controllo per questa specifica del controllo.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Le specifiche del controllo del database sono oggetti non a sicurezza diretta che risiedono in un database specifico. Quando una specifica del controllo del database viene creata, il relativo stato è disabilitato.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -96,7 +96,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ## <a name="examples"></a>Esempi
 
 ### <a name="a-audit-select-and-insert-on-a-table-for-any-database-principal"></a>R. Eseguire il controllo di SELECT e INSERT in una tabella per qualsiasi entità di database 
- L'esempio seguente crea un controllo server denominato `Payrole_Security_Audit` e una specifica controllo database denominata `Payrole_Security_Audit` che controlla le istruzioni `SELECT` e `INSERT` per l'utente `dbo` per la tabella `HumanResources.EmployeePayHistory` nel database `AdventureWorks2012`.  
+ Nell'esempio seguente viene creato un controllo del server denominato `Payrole_Security_Audit` e quindi una specifica del controllo del database denominata `Payrole_Security_Audit` che `SELECT` `INSERT` Controlla le istruzioni e da qualsiasi membro del `public` ruolo del database per la `HumanResources.EmployeePayHistory` tabella nel `AdventureWorks2012` database. Questo ha l'effetto che tutti gli utenti vengono controllati perché ogni utente è sempre membro del `public` ruolo.
   
 ```sql  
 USE master ;  
@@ -104,7 +104,7 @@ GO
 -- Create the server audit.  
 CREATE SERVER AUDIT Payrole_Security_Audit  
     TO FILE ( FILEPATH =   
-'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA' ) ;  
+'D:\SQLAudit\' ) ;  -- make sure this path exists
 GO  
 -- Enable the server audit.  
 ALTER SERVER AUDIT Payrole_Security_Audit   
@@ -117,7 +117,7 @@ GO
 CREATE DATABASE AUDIT SPECIFICATION Audit_Pay_Tables  
 FOR SERVER AUDIT Payrole_Security_Audit  
 ADD (SELECT , INSERT  
-     ON HumanResources.EmployeePayHistory BY dbo )  
+     ON HumanResources.EmployeePayHistory BY public )  
 WITH (STATE = ON) ;  
 GO  
 ``` 
@@ -132,7 +132,7 @@ GO
 -- Change the path to a path that the SQLServer Service has access to. 
 CREATE SERVER AUDIT DataModification_Security_Audit  
     TO FILE ( FILEPATH = 
-'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA' ) ; 
+'D:\SQLAudit\' ) ;  -- make sure this path exists
 GO  
 -- Enable the server audit.  
 ALTER SERVER AUDIT DataModification_Security_Audit   

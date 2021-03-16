@@ -26,12 +26,12 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: XiaoyuMSFT
 ms.author: XiaoyuL
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||  azure-sqldw-latest
-ms.openlocfilehash: c7b388649cf7ca535d5d81eb2d05cf4f0a27d373
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 96461f56445562b444ca775b24320d3c34661687
+ms.sourcegitcommit: e2d25f265556af92afcc0acde662929e654bf841
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101838962"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103489747"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -233,7 +233,7 @@ Definisce le condizioni di ricerca per specificare \<merge_search_condition> o \
 
 \<graph search pattern>  
 Specifica il modello di corrispondenza del grafico. Per altre informazioni sugli argomenti di questa clausola, vedere [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
-  
+   
 ## <a name="remarks"></a>Osservazioni
 >[!NOTE]
 > In Azure Synapse Analytics, il comando MERGE (anteprima) presenta le differenze seguenti rispetto a SQL Server e al database SQL di Azure.  
@@ -248,15 +248,18 @@ Specifica il modello di corrispondenza del grafico. Per altre informazioni sugli
 >|**NOT MATCHED BY SOURCE**|Tutti i tipi di distribuzione|Tutti i tipi di distribuzione|||  
 
 >[!IMPORTANT]
+> Le funzionalità di anteprima sono destinate solo ai test e non devono essere usate in istanze di produzione o dati di produzione. Se i dati sono importanti, conserva anche una copia dei dati di test.
+>
 > In Azure sinapsi Analytics il comando MERGE, attualmente in anteprima, può, in determinate condizioni, lasciare la tabella di destinazione in uno stato incoerente, con righe inserite nella distribuzione non corretta, causando query successive che restituiscono risultati errati in alcuni casi. Questo problema può verificarsi quando vengono soddisfatte queste due condizioni:
 >
-> - L'istruzione T-SQL MERGE è stata eseguita su una tabella di destinazione con distribuzione HASH nel database SQL di Azure sinapsi.
+> - L'istruzione T-SQL MERGE è stata eseguita su una tabella di destinazione con distribuzione HASH nel database SQL di Azure sinapsi e
 > - La tabella di destinazione dell'Unione include indici secondari o vincoli UNIQUE.
 >
-> Fino a quando la correzione non è disponibile, evitare di usare il comando MERGE in tabelle di destinazione distribuite con HASH con indici secondari o vincoli univoci.  Il supporto della funzionalità di MERGE può anche essere temporaneamente disabilitato nei database con tabelle con distribuzione HASH con vincoli UNIQUE o indici secondari.      
->
-> Un promemoria importante, le funzionalità di anteprima sono destinate solo ai test e non devono essere usate in istanze di produzione o dati di produzione. Se i dati sono importanti, conserva anche una copia dei dati di test.
-> 
+> Il problema è stato risolto in sinapsi SQL versione ***10.0.15563.0*** e successive.    
+> - Per verificare, connettersi al database SQL sinapsi tramite SQL Server Management Studio (SSMS) ed eseguire ```SELECT @@VERSION``` .  Se la correzione non è stata applicata, sospendere e riprendere manualmente il pool SQL sinapsi per ottenere la correzione. 
+> - Fino a quando la correzione non è stata verificata applicata al pool SQL sinapsi, evitare di usare il comando MERGE in tabelle di destinazione distribuite con HASH con indici secondari o vincoli univoci.
+> - Questa correzione non consente di ripristinare le tabelle già interessate dal problema di Unione.  Usare gli script riportati di seguito per identificare e ripristinare manualmente le tabelle interessate.
+
 > Per verificare quali tabelle hash distribuite in un database non possono funzionare con MERGE a causa di questo problema, eseguire questa istruzione
 >```sql
 > select a.name, c.distribution_policy_desc, b.type from sys.tables a join sys.indexes b

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 238940e3e6519be1b4758e794cf391869f057986
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 021cea9426fd6fb1c6e14c450fa37e69ef0048a6
+ms.sourcegitcommit: 2cc2e4e17ce88ef47cda32a60a02d929e617738e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99177724"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103473208"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY - autorizzazioni per oggetti (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -76,7 +76,7 @@ PRIVILEGES
  Specifica il nome di una colonna in una tabella, vista o funzione con valori di tabella per la quale viene negata l'autorizzazione. Le parentesi **( )** sono obbligatorie. Per una colonna si possono negare solo le autorizzazioni SELECT, REFERENCES e UPDATE. È possibile specificare *column* nella clausola delle autorizzazioni o dopo il nome dell'entità a protezione diretta.  
   
 > [!CAUTION]  
->  Un'istruzione DENY a livello di tabella non ha la precedenza rispetto a un'istruzione GRANT a livello di colonna. Questa incoerenza nella gerarchia delle autorizzazioni è stata mantenuta per compatibilità con le versioni precedenti.  
+>  Un'istruzione DENY a livello di tabella non ha la precedenza rispetto a un'istruzione GRANT a livello di colonna. Questa incoerenza nella gerarchia delle autorizzazioni è stata mantenuta per compatibilità con le versioni precedenti. In SQL Server questo comportamento è diverso se il server è configurato per essere eseguito con la [configurazione del server abilitata per la conformità ai criteri comuni](/../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md). Tuttavia, questa operazione deve essere in genere usata solo con cautela e non come procedura generale.
   
  ON [ OBJECT **::** ] [ *schema_name* ] **.** *object_name*  
  Specifica l'oggetto per cui viene negata l'autorizzazione. L'utilizzo di OBJECT è facoltativo se si specifica *schema_name*. Se si usa OBJECT, il qualificatore di ambito ( **::** ) è obbligatorio. Se si omette *schema_name*, viene usato lo schema predefinito. Se si specifica *schema_name*, il qualificatore di ambito dello schema ( **.** ) è obbligatorio.  

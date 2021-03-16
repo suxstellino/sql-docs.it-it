@@ -9,12 +9,12 @@ ms.date: 02/11/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 478ecc9888bbd3c8f51ee96c6c796856472f93d5
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: 06b01a8fba30178cf8c8eb5842750de4baff1c82
+ms.sourcegitcommit: e2d25f265556af92afcc0acde662929e654bf841
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100343910"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103489472"
 ---
 # <a name="how-to-configure-bdc-settings-post-deployment"></a>Come configurare le impostazioni di integrazione applicativa dei dati post distribuzione
 
@@ -45,14 +45,14 @@ Servizio Spark
 Aggiornare il numero predefinito di core a 2 e la memoria predefinita a 7424m per il servizio Spark.
 
 ```bash
-azdata bdc spark settings set spark-defaults-conf.spark.driver.cores=2, spark-defaults-conf.spark.driver.memory=7424m
+azdata bdc spark settings set --settings spark-defaults-conf.spark.driver.cores=2,spark-defaults-conf.spark.driver.memory=7424m
 ```
 
 ### <a name="change-the-default-number-of-cores-and-memory-for-the-spark-executors-in-the-storage-pool"></a>Modificare il numero predefinito di core e la memoria per gli executor Spark nel pool di archiviazione
 Aggiornare il numero predefinito di core dell'executor a 4 per il pool di archiviazione.
 
 ```bash
-azdata bdc spark settings set spark-defaults-conf.spark.executor.cores=4 --resource=storage-0
+azdata bdc spark settings set --settings spark-defaults-conf.spark.executor.cores=4 --resource=storage-0
 ```
 
 ### <a name="view-the-pending-settings-changes-staged-in-the-bdc"></a>Visualizzare le modifiche apportate alle impostazioni in sospeso nell'integrazione applicativa dei dati
