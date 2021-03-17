@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0df2acfa00507f42d3ee03a0a65ff2ae25aafbd1
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: c6960778fcbd7eb707b50e18ce4a0c70e477ff28
+ms.sourcegitcommit: ecf074e374426c708073c7da88313d4915279fb9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837185"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103575237"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Note sulla versione dei driver Microsoft per PHP per SQL Server
 
@@ -60,7 +60,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 | Aggiunta del supporto per macOS Big Sur, Ubuntu 20,04, Ubuntu 20,10 ed alpine 3,12. | Alcuni richiedono il driver ODBC 17,5 o versione successiva. |
 | È stato rilasciato il supporto per macOS High Sierra, Debian 8 e Ubuntu 19,10. | &nbsp; |
 | Supporto per le impostazioni locali di GB18030. | &nbsp; |
-| ErrorInfo DOP esteso per includere messaggi ODBC aggiuntivi, se disponibili. | &nbsp; |
+| DOP esteso `errorinfo` per includere messaggi ODBC aggiuntivi, se disponibili. | &nbsp; |
 | Supporto per la classificazione dei dati con informazioni sul rango. | Richiede SQL Server 2019 e il driver ODBC 17.4.2 o versione successiva. |
 | Aggiunta Azure Active Directory supporto per l'autenticazione dell'entità servizio. | Richiede il driver ODBC 17,7 o versione successiva. |
 | Miglioramento delle prestazioni quando si gestiscono numeri decimali come input o output e si rimuovono le conversioni non necessarie per i valori numerici. | &nbsp; |
@@ -247,7 +247,7 @@ Questa versione si applica solo a Linux e macOS.
 
 - Supporto per PHP 7.0  
 - Supporto a 64 bit completo
-- Supporto per Ubuntu 15.04, Ubuntu 16.04 e RedHat 7
+- Supporto per Ubuntu 15,04, Ubuntu 16,04 e Red Hat 7
 
 ## <a name="32"></a>3.2
 

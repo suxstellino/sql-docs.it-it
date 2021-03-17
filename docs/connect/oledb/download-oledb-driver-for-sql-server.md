@@ -7,16 +7,16 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4d0f619fbdba59a902a1db379f65ebd131e5e4df
-ms.sourcegitcommit: cad737d30e5a80033f3b021cc3f0d47c00756a6b
-ms.translationtype: HT
+ms.openlocfilehash: 0e5e8a8b084c6762e732c0b866a0e4866e9d2707
+ms.sourcegitcommit: ecf074e374426c708073c7da88313d4915279fb9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96614483"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103575320"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>Scaricare il driver Microsoft OLE DB per SQL Server
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 OLE DB Driver per SQL Server è un'API (Application Programming Interface) di accesso ai dati autonoma usata per OLE DB. OLE DB Driver per SQL Server è disponibile in Windows e offre il driver OLE DB per SQL in un'unica libreria di collegamento dinamico (DLL).
 
@@ -35,7 +35,7 @@ Microsoft OLE DB Driver 18.5 per SQL Server è la versione più recente disponib
 - Resa disponibile: 1 dicembre 2020
 
 > [!Note]
-> Se si accede a questa pagina da una versione non in lingua inglese e si vuole visualizzare il contenuto più aggiornato, visitare la [versione in inglese del sito](). È possibile scaricare una versione del sito diversa da quella in lingua inglese selezionando [available languages](#available-languages) (lingue disponibili).
+> Se si accede a questa pagina da una versione non in lingua inglese e si vuole visualizzare il contenuto più aggiornato, visitare la [versione in inglese del sito](https://aka.ms/downloadmsoledbsqlusenglish). È possibile scaricare una versione del sito diversa da quella in lingua inglese selezionando [available languages](#available-languages) (lingue disponibili).
 
 ## <a name="available-languages"></a>Lingue disponibili
 

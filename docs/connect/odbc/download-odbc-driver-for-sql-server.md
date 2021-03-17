@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b0f215b387cb772220fb56e504e1a5a8c19daa7d
-ms.sourcegitcommit: f10f0d604be1dce6c600a92aec4c095e7b52e19c
+ms.openlocfilehash: c74f1d0d42b339a51254e582023d15a69d9891af
+ms.sourcegitcommit: ecf074e374426c708073c7da88313d4915279fb9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "102770549"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103575304"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>Scaricare ODBC Driver for SQL Server
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Microsoft ODBC Driver for SQL Server è una libreria di collegamento dinamico (DLL) contenente il supporto di runtime per applicazioni che usano API di codice nativo per la connessione a SQL Server. Usare Microsoft ODBC Driver 17 for SQL Server per creare nuove applicazioni o migliorare le applicazioni esistenti per sfruttare le nuove funzionalità di SQL Server.
 
@@ -38,7 +38,7 @@ La versione 17.7.2 è la versione di disponibilità generale più recente. Se è
 - Rilasciata: 10 marzo 2021
 
 > [!Note]
-> Se si accede a questa pagina da una versione non in lingua inglese e si vuole visualizzare il contenuto più aggiornato, visitare la [versione in inglese del sito](). È possibile scaricare una versione del sito diversa da quella in lingua inglese selezionando [available languages](#available-languages) (lingue disponibili).
+> Se si accede a questa pagina da una versione non in lingua inglese e si vuole visualizzare il contenuto più aggiornato, visitare la [versione in inglese del sito](https://aka.ms/downloadmsodbcsqlenglish). È possibile scaricare una versione del sito diversa da quella in lingua inglese selezionando [available languages](#available-languages) (lingue disponibili).
 
 ## <a name="available-languages"></a>Lingue disponibili
 
@@ -85,11 +85,11 @@ Se è necessario scaricare i pacchetti per l'installazione offline, tutte le ver
 - [Pacchetti DEB Debian 8](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql17/)
 - [Pacchetti DEB Debian 8 (msodbcsql 13.x)](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql/)
 
-### <a name="redhat"></a>RedHat
+### <a name="red-hat"></a>Red Hat
 
-- [Pacchetti RPM RedHat 8](https://packages.microsoft.com/rhel/8/prod/)
-- [Pacchetti RPM RedHat 7](https://packages.microsoft.com/rhel/7/prod/)
-- [Pacchetti RPM RedHat 6](https://packages.microsoft.com/rhel/6/prod/)
+- [Pacchetti Red Hat 8. rpm](https://packages.microsoft.com/rhel/8/prod/)
+- [Pacchetti Red Hat 7. rpm](https://packages.microsoft.com/rhel/7/prod/)
+- [Pacchetti Red Hat 6. rpm](https://packages.microsoft.com/rhel/6/prod/)
 
 ### <a name="suse"></a>SUSE
 

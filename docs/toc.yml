@@ -4920,6 +4920,8 @@ items:
     items:
       - name: Documentazione sulla migrazione
         href: sql-server/migrate/index.yml
+      - name: Confrontare strumenti di migrazione
+        href: sql-server/migrate/dma-azure-migrate-compare-migration-tools.md
       - name: SQL Server Integration Services (SSIS) >
         href: ./integration-services/sql-server-integration-services.md
       - name: Utilità di copia bulk (bcp)
@@ -4929,8 +4931,16 @@ items:
         href: /azure/dms/dms-overview
       - name: Guide alla migrazione
         items:
+          - name: Da Access
+            href: sql-server/migrate/guides/access-to-sql-server.md
           - name: Da DB2
             href: sql-server/migrate/guides/db2-to-sql-server.md
+          - name: Da MySQL
+            href: sql-server/migrate/guides/mysql-to-sql-server.md
+          - name: Da Oracle
+            href: sql-server/migrate/guides/oracle-to-sql-server.md
+          - name: Da SAP ASE
+            href: sql-server/migrate/guides/sap-ase-to-sql-server.md
       - name: Data Quality Services (DQS)
         items:
           - name: Panoramica
@@ -5328,7 +5338,7 @@ items:
                         href: relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md
                   - name: Replica transazionale
                     href: relational-databases/replication/administration/enhance-transactional-replication-performance.md
-              - name: Security
+              - name: Sicurezza
                 items:
                   - name: Database di distribuzione
                     href: relational-databases/replication/security/secure-the-distributor.md
@@ -6174,7 +6184,7 @@ items:
                 href: dma/dma-assess-sql-data-estate-to-sqldb-commandline.md
       - name: SQL Server Migration Assistant (SSMA)
         href: ssma/toc.yml
-      - name: Percorso sinapsi di Azure
+      - name: Azure Synapse Pathway
         items:
           - name: Panoramica
             href: tools/synapse-pathway/azure-synapse-pathway-overview.md

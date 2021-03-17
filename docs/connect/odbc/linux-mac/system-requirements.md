@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f78fdfcb8fe19856483403c4675f973c4f5c97b3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9c38bba31650ae495fc4ddb2a09a94d79900c121
+ms.sourcegitcommit: ecf074e374426c708073c7da88313d4915279fb9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99198379"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103575228"
 ---
 # <a name="system-requirements-linux-and-macos"></a>Requisiti di sistema (Linux e macOS)
 
@@ -51,9 +51,9 @@ Le versioni 17, 13.1 e 13 dei driver per Linux e macOS sono supportate solo sull
 |Debian Linux 10                |Sì |Sì |Sì |Sì |    |    |    |    |    |   |
 |Oracle Linux 7                 |Sì |    |    |    |    |    |    |    |    |   |
 |Oracle Linux 8                 |Sì |Sì |Sì |    |    |    |    |    |    |   |
-|RedHat Enterprise Linux 6      |Sì |Sì |Sì |Sì |Sì |Sì |Sì |Sì |Sì |Sì|
-|RedHat Enterprise Linux 7      |Sì |Sì |Sì |Sì |Sì |Sì |Sì |Sì |Sì |Sì|
-|RedHat Enterprise Linux 8      |Sì |Sì |Sì |Sì |    |    |    |    |    |   |
+|Red Hat Enterprise Linux 6     |Sì |Sì |Sì |Sì |Sì |Sì |Sì |Sì |Sì |Sì|
+|Red Hat Enterprise Linux 7     |Sì |Sì |Sì |Sì |Sì |Sì |Sì |Sì |Sì |Sì|
+|Red Hat Enterprise Linux 8     |Sì |Sì |Sì |Sì |    |    |    |    |    |   |
 |SUSE Linux Enterprise Server 11<sup>1</sup>|Sì |Sì |Sì |Sì |Sì |Sì |Sì |Sì |Sì |Sì|
 |SUSE Linux Enterprise Server 12|Sì |Sì |Sì |Sì |Sì |Sì |Sì |Sì |Sì |Sì|
 |SUSE Linux Enterprise Server 15|Sì |Sì |Sì |Sì |Sì |    |    |    |    |   |
