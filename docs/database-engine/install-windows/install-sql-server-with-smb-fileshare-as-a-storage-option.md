@@ -11,12 +11,12 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 91e51eeb0f2f3b39eba6c183c04f144d42e49579
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 5f7bbccc12c8d3f522703421542ba6188e826ea1
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100353131"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104610968"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>Installare SQL Server con l'archiviazione su condivisione file SMB
 
@@ -79,10 +79,10 @@ A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]i database di sist
     setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEPROGRESS /ASSYSADMINACCOUNTS="<DomainName\UserName>" /ASDATADIR=<Drive>:\OLAP\Data /ASLOGDIR=<Drive>:\OLAP\Log /ASBACKUPDIR=<Drive>:\OLAP\Backup /ASCONFIGDIR=<Drive>:\OLAP\Config /ASTEMPDIR=<Drive>:\OLAP\Temp /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'" /FAILOVERCLUSTERNETWORKNAME="<Insert Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /Features=AS,SQL /ASSVCACCOUNT="<DomainName\UserName>" /ASSVCPASSWORD="xxxxxxxxxxx" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="xxxxxxxxxxx" /INSTALLSQLDATADIR="\\FileServer\Share1\" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx" /SQLSYSADMINACCOUNTS="<DomainName\UserName> /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-     Per altre informazioni sull'uso di varie opzioni per i parametri della riga di comando in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere [Installare SQL Server 2016 dal prompt dei comandi](./install-sql-server-from-the-command-prompt.md).  
+     Per altre informazioni sull'uso di varie opzioni per i parametri della riga di comando in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], vedere [Installare SQL Server 2016 dal prompt dei comandi](./install-sql-server-from-the-command-prompt.md).  
   
 ## <a name="operating-system-considerations-smb-protocol-vs-ssnoversion"></a>Considerazioni sul sistema operativo (protocollo SMB e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
- Sistemi operativi Windows diversi dispongono di versioni diverse del protocollo SMB e la versione del protocollo SMB è trasparente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile individuare i vantaggi delle varie versioni del protocollo SMB in relazione a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Sistemi operativi Windows diversi dispongono di versioni diverse del protocollo SMB e la versione del protocollo SMB è trasparente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile individuare i vantaggi delle varie versioni del protocollo SMB in relazione a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 |Sistema operativo|Versione del protocollo SMB2|Vantaggi per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
@@ -111,7 +111,7 @@ A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]i database di sist
   
 ## <a name="known-issues"></a>Problemi noti  
   
--   Dopo aver scollegato un database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] che si trova in un archivio collegato alla rete, è possibile che si verifichino problemi di autorizzazione del database durante il tentativo di ricollegare il database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Errore 5120](../../relational-databases/errors-events/mssqlserver-5120-database-engine-error.md).
+-   Dopo aver scollegato un database di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] che si trova in un archivio collegato alla rete, è possibile che si verifichino problemi di autorizzazione del database durante il tentativo di ricollegare il database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Errore 5120](../../relational-databases/errors-events/mssqlserver-5120-database-engine-error.md).
   
 -   Se la condivisione file SMB viene utilizzata come opzione di archiviazione per un'istanza cluster di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], per impostazione predefinita il log di diagnostica del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può essere scritto nella condivisione file perché la DLL risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non dispone di autorizzazioni di lettura/scrittura in una condivisione file. Per risolvere il problema, tentare uno dei metodi seguenti:  
   

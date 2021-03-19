@@ -1,23 +1,24 @@
 ---
-title: Eseguire la migrazione di Oracle a SQL Server
+title: 'Guida alla migrazione da Oracle a SQL Server:'
 description: 'In questa guida viene illustrato come eseguire la migrazione degli schemi Oracle a Microsoft SQL Server utilizzando SQL Server migrazione per Oracle (SSMA per Oracle). '
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: migration-guide
 ms.custom: ''
 ms.devlang: ''
-ms.topic: conceptual
+ms.topic: how-to
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/19/2021
-ms.openlocfilehash: 7ab329891001a8ce71d77a97ced85f2ef63ad002
-ms.sourcegitcommit: ecf074e374426c708073c7da88313d4915279fb9
+ms.openlocfilehash: 5818dd541e5edc6ab74392bc91471729531ce9fc
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "103603806"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611087"
 ---
-# <a name="migration-guide-migrate-oracle-to-sql-server"></a>Guida alla migrazione: eseguire la migrazione di Oracle a SQL Server
+# <a name="migration-guide-oracle-to-sql-server"></a>Guida alla migrazione: da Oracle a SQL Server
+[!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
 
 In questa guida viene illustrato come eseguire la migrazione dei database Oracle per SQL Server utilizzando SQL Server Migration Assistant per Oracle. 
 

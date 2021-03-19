@@ -19,12 +19,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ccca2b8dc74759e1b4a1dc4d2e9485bf2fbcca7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 7fcefb597fe97e90bfda78fe934c83646414c23f
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480192"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611181"
 ---
 # <a name="hierarchical-data-sql-server"></a>Dati gerarchici [SQL Server]
 
@@ -160,7 +160,7 @@ GO
   
 -   **Breadth-first**  
   
-     In un indice breadth-first le righe di ogni livello della gerarchia vengono archiviate insieme. Ad esempio, i record dei dipendenti che riportano direttamente allo stesso responsabile vengono archiviati gli uni accanto agli altri.  
+     Un indice con larghezza-primo archivia le righe di ogni livello della gerarchia insieme. Ad esempio, i record dei dipendenti che riportano direttamente allo stesso responsabile vengono archiviati gli uni accanto agli altri.  
   
      In un indice breadth-first tutti gli elementi figlio diretti di un nodo vengono posizionati insieme. Pertanto, gli indici breadth-first sono in grado di fornire risposte alle query sugli elementi figlio immediati, ad esempio "Trova tutti i dipendenti che riportano direttamente a questo responsabile".  
   

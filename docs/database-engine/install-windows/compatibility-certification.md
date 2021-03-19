@@ -19,12 +19,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: c9a4b07a3e6db3da84845f4689ecd373b30e7306
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 8921ce4bc3ba2317e2d8ed5324d26d1dfba52b3e
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100353839"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611118"
 ---
 # <a name="compatibility-certification"></a>Certificazione di compatibilità
 
@@ -37,7 +37,7 @@ Lo stesso [!INCLUDE[ssde_md](../../includes/ssde_md.md)] è alla base sia di [!I
 Per ogni nuova versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il livello di compatibilità predefinito è impostato in base alla versione del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Tuttavia, il livello di compatibilità delle versioni precedenti viene mantenuto per garantire la compatibilità continua delle applicazioni esistenti. Questa matrice di compatibilità è visibile [qui](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats).
 Pertanto, un'applicazione certificata per interagire con una determinata versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **viene in effetti certificata per funzionare con il livello di compatibilità predefinito di tale versione**.
 
-Ad esempio, il livello di compatibilità del database 130 è l'impostazione predefinita in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. Dato che i livelli di compatibilità impongono comportamenti specifici funzionali e di ottimizzazione delle query per [!INCLUDE[tsql](../../includes/tsql-md.md)], **un database certificato per funzionare in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] viene implicitamente certificato per il livello di compatibilità del database 130**. Questo database può funzionare così com'è in una versione più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ad esempio [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)], a condizione che venga mantenuto il livello di compatibilità del database 130. 
+Ad esempio, il livello di compatibilità del database 130 è l'impostazione predefinita in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. Dato che i livelli di compatibilità impongono comportamenti specifici funzionali e di ottimizzazione delle query per [!INCLUDE[tsql](../../includes/tsql-md.md)], **un database certificato per funzionare in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] viene implicitamente certificato per il livello di compatibilità del database 130**. Questo database può funzionare così com'è in una versione più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ad esempio [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)]) e [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)], a condizione che venga mantenuto il livello di compatibilità del database 130.
 
 Si tratta di un principio fondamentale per il modello di operazione di integrazione continua [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]. Il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] viene costantemente migliorato e aggiornato in Azure, ma poiché i database esistenti mantengono il livello di compatibilità corrente, continuano a funzionare come previsto anche dopo gli aggiornamenti del [!INCLUDE[ssde_md](../../includes/ssde_md.md)] sottostante. 
 
@@ -95,7 +95,7 @@ Per aggiornare il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] alla versione p
 Questa operazione può essere eseguita facilmente usando lo strumento [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) (DMA). L'assenza di errori nell'output dello strumento DMA, relativi a funzionalità mancanti o non compatibili, protegge l'applicazione da regressioni funzionali nella nuova versione di destinazione. Se sono necessarie modifiche per garantire che il database funzioni nella nuova versione, DMA consentirà di individuare le modifiche necessarie e le soluzioni alternative disponibili. Per altre informazioni, vedere [Panoramica di Data Migration Assistant](../../dma/dma-overview.md).   
 
 > [!TIP]
-> Questa convalida funzionale è particolarmente importante quando si sposta un database da una versione legacy, ad esempio [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], in una nuova versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)], perché è possibile che il codice dell'applicazione usi istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] non più disponibili e non protette dal livello di compatibilità del database. Tuttavia, quando si passa da una versione più recente (ad esempio [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], non vi sono istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] sospese di cui preoccuparsi. Per altre informazioni sulle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] sospese, vedere [Uso dei livelli di compatibilità per la compatibilità con le versioni precedenti](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat).
+> Questa convalida funzionale è particolarmente importante quando si sposta un database da una versione legacy, ad esempio [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], in una nuova versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)], perché è possibile che il codice dell'applicazione usi istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] non più disponibili e non protette dal livello di compatibilità del database. Tuttavia, quando si passa da una versione più recente (ad esempio [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) a [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], non vi sono istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] sospese di cui preoccuparsi. Per altre informazioni sulle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] sospese, vedere [Uso dei livelli di compatibilità per la compatibilità con le versioni precedenti](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat).
 
 > [!NOTE]
 > DMA supporta il livello di compatibilità del database 100 e superiore. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] come versione di origine è escluso.   

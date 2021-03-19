@@ -9,12 +9,12 @@ ms.prod_service: sql-tools
 ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
-ms.openlocfilehash: 661230edf4deea3d62ceef7d8b400cdb951330a5
-ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
+ms.openlocfilehash: 500d946c036041481094292720744e7896d64622
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102622921"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611023"
 ---
 # <a name="sqlpackage-for-azure-synapse-analytics"></a>SqlPackage per Azure sinapsi Analytics
 
@@ -43,5 +43,5 @@ L'accesso per la pubblicazione può essere autorizzato tramite una chiave dell'a
 ## <a name="next-steps"></a>Passaggi successivi
 - Altre informazioni sull' [estrazione](sqlpackage-extract.md)
 - Altre informazioni sulla [pubblicazione](sqlpackage-publish.md)
-- Altre informazioni sull' [archiviazione BLOB di Azure](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)
-- Altre informazioni sulle [chiavi dell'account di archiviazione di Azure](https://docs.microsoft.com/azure/storage/common/storage-account-keys-manage)
+- Altre informazioni sull' [archiviazione BLOB di Azure](/azure/storage/blobs/storage-blobs-introduction)
+- Altre informazioni sulle [chiavi dell'account di archiviazione di Azure](/azure/storage/common/storage-account-keys-manage)

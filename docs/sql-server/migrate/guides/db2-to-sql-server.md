@@ -1,24 +1,20 @@
 ---
-title: 'Guida alla migrazione: da DB2 a SQL Server'
+title: 'Guida alla migrazione da DB2 a SQL Server:'
 description: 'In questa guida viene illustrato come eseguire la migrazione dei database DB2 a Microsoft SQL Server tramite SQL Server migrazione per DB2 (SSMA per DB2). '
 ms.custom: ''
 ms.date: 03/19/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: migration-guide
-ms.topic: conceptual
-helpviewer_keywords:
-- processors [SQL Server], supported
-- number of processors supported
-- maximum number of processors supported
+ms.topic: how-to
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 390ef29255ecda2876fe3e4abb35d1c23b1e1cba
-ms.sourcegitcommit: ecf074e374426c708073c7da88313d4915279fb9
+ms.openlocfilehash: b39ee82cd9904d616d0ab3c002392af5268f1e62
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "103575280"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611191"
 ---
 # <a name="migration-guide-db2-to-sql-server"></a>Guida alla migrazione: da DB2 a SQL Server
 [!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +28,7 @@ Per altre guide alla migrazione, vedere [Migrazione dei database](https://datami
 
 Per eseguire la migrazione del database DB2 a SQL Server, è necessario:
 
-- Verificare che l'ambiente di origine sia supportato.
+- Per verificare che l'ambiente di origine sia supportato.
 - [SQL Server Migration Assistant (SSMA) per DB2](https://www.microsoft.com/download/details.aspx?id=54254).
 
 

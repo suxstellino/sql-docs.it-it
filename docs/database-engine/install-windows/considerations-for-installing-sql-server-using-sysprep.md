@@ -11,12 +11,12 @@ ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: e5eeb7446542613eac7e1d3a78144f3ca165a47b
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: ff653258a42883d2942170f9b26d04f288fcb7f3
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100336368"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611114"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Considerazioni sull'installazione di SQL Server tramite SysPrep
 
@@ -61,9 +61,9 @@ La funzionalità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPr
     - Non è possibile specificare gli ID del prodotto per un'istanza predisposta delle edizioni Express di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="supported-ssnoversion-installations"></a>Installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportate  
-In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , SysPrep supporta tutte le funzionalità, inclusi gli strumenti, di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+SysPrep in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] supporta tutte le funzionalità, inclusi gli strumenti di.  
   
-È possibile preparare più istanze per installazioni side-by-side di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o versioni precedenti. Le funzionalità di queste istanze devono supportare SysPrep.  
+È possibile preparare più istanze per installazioni side-by-side di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] o versioni precedenti. Le funzionalità di queste istanze devono supportare SysPrep.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client viene installato e completato automaticamente alla fine del passaggio di preparazione dell'immagine.  
   

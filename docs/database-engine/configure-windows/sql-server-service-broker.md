@@ -2,7 +2,7 @@
 title: SQL Server Service Broker | Microsoft Docs
 description: Informazioni su Service Broker. Scoprire come offre supporto nativo per la messaggistica nel motore di database di SQL Server e in Istanza gestita di SQL di Azure.
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 03/17/2021
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: cf37305f773f4b417ed3cac1bc5a31ad8d910505
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 287e3c0abfc083607b96598da5e83cd5ab0b58dd
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465702"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611171"
 ---
 # <a name="service-broker"></a>Broker di servizio
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -101,15 +101,25 @@ FROM ExpenseQueue;
  Vedere la [documentazione pubblicata in precedenza](/previous-versions/sql/sql-server-2008-r2/bb522893(v=sql.105)) per i concetti relativi a [!INCLUDE[ssSB](../../includes/sssb-md.md)] e per le attività di gestione e sviluppo. Questa documentazione non è riprodotta nella documentazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a causa del numero esiguo di modifiche in [!INCLUDE[ssSB](../../includes/sssb-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="whats-new-in-service-broker"></a>Novità di Service Broker  
- Non è stata introdotta alcuna modifica significativa in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]sono state introdotte le modifiche riportate di seguito.  
 
 ### <a name="service-broker-and-azure-sql-managed-instance"></a>Service broker e Istanza gestita di SQL di Azure
 
-- Service Broker per istanze diverse non è supportato 
- - `sys.routes` - Prerequisito: selezionare l'indirizzo da sys.routes. L'indirizzo deve essere LOCAL in ogni route. Vedere [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md).
- - `CREATE ROUTE` - non è possibile usare `CREATE ROUTE` con `ADDRESS` diverso da `LOCAL`. Vedere [CREATE ROUTE](../../t-sql/statements/create-route-transact-sql.md).
- - `ALTER ROUTE` non è possibile usare `ALTER ROUTE` con `ADDRESS` diverso da `LOCAL`. Vedere [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md).  
-  
+Lo scambio di messaggi tra istanze di Service Broker è supportato solo tra le istanze gestite di SQL di Azure:
+
+- `CREATE ROUTE`: Non è possibile usare CREATE ROUTE con un indirizzo diverso dal nome locale o DNS di un altro Istanza gestita SQL. La porta specificata deve essere 4022. Vedere [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql).
+- `ALTER ROUTE`: Non è possibile usare ALTER ROUTE con ADDRESS diverso dal nome locale o DNS di un altro Istanza gestita SQL. La porta specificata deve essere 4022. Vedere l' [istruzione ALTER Route](https://docs.microsoft.com/sql/t-sql/statements/alter-route-transact-sql).
+
+La sicurezza del trasporto è supportata. la sicurezza del dialogo non è:
+
+- `CREATE REMOTE SERVICE BINDING` non è supportato.
+
+Service Broker è abilitato per impostazione predefinita e non può essere disabilitato. Le seguenti opzioni di ALTER DATABASE non sono supportate:
+
+- `ENABLE_BROKER`
+- `DISABLE_BROKER`
+
+In non sono state introdotte modifiche significative [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]sono state introdotte le modifiche riportate di seguito. 
+
 ### <a name="messages-can-be-sent-to-multiple-target-services-multicast"></a>È possibile inviare messaggi a più servizi di destinazione (multicast)  
  La sintassi dell'istruzione [SEND &#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md) è stata estesa per abilitare il multicast supportando più handle di conversazione.  
   

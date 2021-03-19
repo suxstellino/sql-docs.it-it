@@ -12,12 +12,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016'
 manager: erikre
-ms.openlocfilehash: 2f034ac2223b15a3b66883a3ce3dbc434bcf07db
-ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+ms.openlocfilehash: 971c23cfe9b49ad052c3808deca6e6221acb38e5
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98813245"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104610939"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Aggiornare Power Pivot per SharePoint
 
@@ -68,20 +68,20 @@ ms.locfileid: "98813245"
   
  **SQL Server:**  
   
--   Se l'installazione esistente di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], per l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] è necessario [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Service Pack 2 (SP2).  
+-   Se l'installazione esistente di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], per l'aggiornamento a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] è necessario [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Service Pack 2 (SP2).  
   
--   Se l'installazione esistente di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], per l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] è necessario [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 (SP1).  
+-   Se l'installazione esistente di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], per l'aggiornamento a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] è necessario [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 (SP1).  
   
  **SharePoint 2010:**  
   
--   Se l'installazione esistente esegue SharePoint 2010, installare SharePoint 2010 Service Pack 2 prima di effettuare l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Per ulteriori informazioni, vedere [Service Pack 2 per Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672). Utilizzare il comando `(Get-SPfarm).BuildVersion.ToString()` di PowerShell per verificare la versione. Per correlare la versione di build alla data di rilascio, vedere [Numeri di build di SharePoint 2010](https://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224).  
+-   Se l'installazione esistente esegue SharePoint 2010, installare SharePoint 2010 Service Pack 2 prima di effettuare l'aggiornamento a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Per ulteriori informazioni, vedere [Service Pack 2 per Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672). Utilizzare il comando `(Get-SPfarm).BuildVersion.ToString()` di PowerShell per verificare la versione. Per correlare la versione di build alla data di rilascio, vedere [Numeri di build di SharePoint 2010](https://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224).  
   
 ##  <a name="upgrade-an-existing-sharepoint-2013-farm"></a><a name="bkmk_uprgade_sharepoint2013"></a> Aggiornare una farm SharePoint 2013 esistente  
  Per aggiornare [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] distribuito in SharePoint 2013, effettuare le operazioni seguenti:  
   
  ![aggiornamento di PowerPivot per SharePoint 2013](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2013.png "aggiornamento di PowerPivot per SharePoint 2013")  
   
-1.  Eseguire il programma di installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nei server back-end che eseguono [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in modalità SharePoint. Se il server ospita più istanze di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], aggiornare almeno l'istanza di **POWERPIVOT** . Nell'elenco seguente vengono riepilogati i passaggi dell'Installazione guidata correlati a un aggiornamento di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] :  
+1.  Eseguire il programma di installazione di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] nei server back-end che eseguono [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in modalità SharePoint. Se il server ospita più istanze di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], aggiornare almeno l'istanza di **POWERPIVOT** . Nell'elenco seguente vengono riepilogati i passaggi dell'Installazione guidata correlati a un aggiornamento di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] :  
   
     1.  Nell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fare clic su **Installazione**.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "98813245"
     Get-Service | where {$_.displayname -like "*powerpivot*"}  
     ```  
   
-5.  **Eseguire il programma di installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** nel primo server applicazioni di SharePoint in cui viene eseguito il servizio Windows **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** per aggiornare l'istanza POWERPIVOT. Nella pagina Installazione dell'Installazione guidata di SQL Server scegliere l'opzione di aggiornamento. Per altre informazioni, vedere [Eseguire l'aggiornamento a SQL Server 2016 usando l'Installazione guidata &#40;programma di installazione&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
+5.  **Eseguire il programma di installazione di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]** nel primo server applicazioni di SharePoint in cui viene eseguito il servizio Windows **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** per aggiornare l'istanza POWERPIVOT. Nella pagina Installazione dell'Installazione guidata di SQL Server scegliere l'opzione di aggiornamento. Per altre informazioni, vedere [Eseguire l'aggiornamento a SQL Server 2016 usando l'Installazione guidata &#40;programma di installazione&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
 6.  **Riavviare il server** prima di eseguire lo strumento di configurazione. Ciò garantisce che qualsiasi aggiornamento o prerequisito installato dal programma di installazione di SQL Server sia configurato completamente nel sistema.  
   
@@ -248,7 +248,7 @@ ms.locfileid: "98813245"
 Get-PowerPivotSystemService  
 ```  
   
- Verificare **CurrentSolutionVersion**. La versione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]è la 13.0.\<major build>.\<minor build>  
+ Verificare **CurrentSolutionVersion**. La versione di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]è la 13.0.\<major build>.\<minor build>  
   
 ### <a name="verify-the-version-of-the-analysis-services-windows-service"></a>Verificare la versione del servizio Windows Analysis Services  
  Se sono stati aggiornati solo alcuni dei server [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] di una farm SharePoint 2010, l'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nei server non aggiornati sarà meno recente della versione prevista nella farm. Sarà necessario effettuare l'aggiornamento di tutti i server alla stessa versione affinché possano essere utilizzati. Usare uno dei metodi seguenti per verificare la versione del servizio Windows SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) in ogni computer.  
@@ -261,7 +261,7 @@ Get-PowerPivotSystemService
   
 3.  Fare clic su **Dettagli**.  
   
-4.  La versione file di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] deve essere la 13.00.\<major build>.\<minor build>.  
+4.  La versione file di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] deve essere la 13.00.\<major build>.\<minor build>.  
   
 5.  Verificare che il numero sia identico alla versione della soluzione e del Servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   

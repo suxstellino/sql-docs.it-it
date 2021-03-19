@@ -4,27 +4,31 @@ titleSuffix: ''
 description: Machine Learning Services è una funzionalità di SQL Server che offre la possibilità di eseguire script Python e R con dati relazionali. È possibile usare pacchetti e framework open source, oltre ai pacchetti Python e R di Microsoft per l'analisi predittiva e le funzioni di Machine Learning. Gli script vengono eseguiti nel database senza trasferire i dati all'esterno di SQL Server o in rete. Questo articolo illustra le nozioni di base di Machine Learning Services per SQL Server e spiega come iniziare a usare questa funzionalità.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 11/10/2020
+ms.date: 03/17/2021
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: 23206301c399449042380976e985ec3981933caa
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15'
+ms.openlocfilehash: 730dfb2421732f2a7e51cd5d99425c84953501d1
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100340309"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104610511"
 ---
 # <a name="what-is-sql-server-machine-learning-services-with-python-and-r"></a>Che cos'è Machine Learning Services per SQL Server con Python e R?
-[!INCLUDE [SQL Server 2017 SQL MI](../includes/applies-to-version/sqlserver2017-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL](../includes/applies-to-version/sqlserver2017.md)]
 
 Machine Learning Services è una funzionalità di SQL Server che offre la possibilità di eseguire script Python e R con dati relazionali. È possibile usare pacchetti e framework open source, oltre ai [pacchetti Python e R di Microsoft](#packages), per l'analisi predittiva e le funzioni di Machine Learning. Gli script vengono eseguiti nel database senza trasferire i dati all'esterno di SQL Server o in rete. Questo articolo illustra le nozioni di base di Machine Learning Services per SQL Server e spiega come iniziare a usare questa funzionalità.
 
-Per le funzioni di Machine Learning su altre piattaforme SQL, vedere la [documentazione per Machine Learning in SQL](index.yml).
-
+::: moniker range="=sql-server-2017"
+> [!NOTE]
+> Machine Learning Services è disponibile anche in [istanza gestita SQL di Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview). Per le funzioni di Machine Learning su altre piattaforme SQL, vedere la [documentazione per Machine Learning in SQL](index.yml).
+::: moniker-end
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!NOTE]
+> Machine Learning Services è disponibile anche in [istanza gestita SQL di Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview). Per le funzioni di Machine Learning su altre piattaforme SQL, vedere la [documentazione per Machine Learning in SQL](index.yml).
+>
 > Per l'esecuzione di Java in SQL Server, vedere la [documentazione dell'estensione del linguaggio Java](../language-extensions/java-overview.md).
 ::: moniker-end
 
@@ -55,13 +59,6 @@ Machine Learning Services usa un framework di estendibilità per eseguire gli sc
    + [Esercitazioni di R per Machine Learning in SQL](tutorials/r-tutorials.md)
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current"
-+ Scrivere il primo script Python o R.
-
-   + [Esercitazioni di Python per Machine Learning in SQL](tutorials/python-tutorials.md)
-   + [Esercitazioni di R per Machine Learning in SQL](tutorials/r-tutorials.md)
-::: moniker-end
-
 ::: moniker range="=sql-server-2017"
 1. [Installare Machine Learning Services per SQL Server in Windows](install/sql-machine-learning-services-windows-install.md).
 
@@ -79,10 +76,11 @@ Machine Learning Services usa un framework di estendibilità per eseguire gli sc
 
 Di seguito sono elencate le versioni di Python e R incluse in Machine Learning Services.
 
-| Versione di SQL Server | Versione Python | Versione di R |
-|-|-|-|
-| SQL Server 2017 | 3.5.2 | 3.3.3 |
-| SQL Server 2019 | 3.7.3 | 3.5.2 |
+| Versione di SQL Server | Aggiornamento cumulativo | Versione runtime di Python | Versioni di runtime R |
+|-|-|-|-|
+| SQL Server 2019 | RTM e versioni successive | 3.7.1 | 3.5.2 |
+| SQL Server 2017 | CU22 e versioni successive | 3.5.2 e 3.7.2 | 3.3.3 e 3.5.2 |
+| SQL Server 2017 | RTM - CU21 | 3.5.2 | 3.3.3 |
 
 Per la versione di R in SQL Server 2016, vedere la sezione [Versione di R in Che cos'è R Services?](r/sql-server-r-services.md?view=sql-server-2016&preserve-view=true#version)
 

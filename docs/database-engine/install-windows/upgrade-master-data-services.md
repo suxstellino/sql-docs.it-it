@@ -11,12 +11,12 @@ ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 89905788ffe1b5f62f2c5a49daeee52261e00e73
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 94935c3cbba73a9d628dabefabdd2188a00cbc27
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100344942"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104610964"
 ---
 # <a name="upgrade-master-data-services"></a>Aggiornare Master Data Services
 
@@ -33,11 +33,10 @@ ms.locfileid: "100344942"
 -   [Aggiornare con il ripristino di un database da un backup](../../database-engine/install-windows/upgrade-master-data-services.md#restore)  
   
 > [!IMPORTANT]  
-> -   L'aggiornamento dalla versione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP1 alla versione CTP2 non è supportato.  
 > -   Eseguire il backup del database prima di effettuare qualsiasi aggiornamento.  
 > -   Con il processo di aggiornamento vengono ricreate le stored procedure e le tabelle aggiornate utilizzate da [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Le personalizzazioni apportate a questi componenti potrebbero andare perse.  
 > -   I pacchetti di distribuzione di modelli possono essere utilizzati solo nell'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzata per crearli. Non è possibile distribuire i pacchetti di distribuzione del modello creati in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].  
-> -   Dopo l'aggiornamento di Data Quality Services e Master Data Services a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], tutte le versioni precedenti del componente aggiuntivo Master Data Services per Excel non funzioneranno più. È possibile scaricare il componente aggiuntivo [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Master Data Services per Excel da [Componente aggiuntivo Master Data Services per Excel](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
+> -   Dopo l'aggiornamento di Data Quality Services e Master Data Services alla versione più recente di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] , le versioni precedenti del Add-In di Master Data Services per Excel non funzioneranno più. È possibile scaricare il componente aggiuntivo [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Master Data Services per Excel da [Componente aggiuntivo Master Data Services per Excel](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
   
 ##  <a name="file-location"></a><a name="fileLocation"></a> Percorso del file  
   
@@ -96,7 +95,7 @@ ms.locfileid: "100344942"
         -   **Crea nuovo sito**. Quando si crea il sito Web, viene creata automaticamente una nuova applicazione Web.  
   
         > [!IMPORTANT]  
-        >  L'applicazione Web MDS esistente di una versione precedente di SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) è disponibile per la selezione nella versione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di Gestione configurazione Master Data Services. Non è necessario selezionare l'applicazione Web esistente, è invece necessario creare un'applicazione Web [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] per MDS. In caso contrario, verrà visualizzato un errore quando si tenta di associare l'applicazione Web al database MDS aggiornato, indicante che non è possibile accedere alla pagina richiesta perché i dati di configurazione correlati per la pagina non sono validi.  
+        >  L'applicazione Web MDS esistente di una versione precedente di SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) è disponibile per la selezione nella versione [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] di Gestione configurazione Master Data Services. Non è necessario selezionare l'applicazione Web esistente, è invece necessario creare un'applicazione Web [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] per MDS. In caso contrario, verrà visualizzato un errore quando si tenta di associare l'applicazione Web al database MDS aggiornato, indicante che non è possibile accedere alla pagina richiesta perché i dati di configurazione correlati per la pagina non sono validi.  
         >   
         >  Per usare lo stesso nome (alias) dell'applicazione Web ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) esistente per l'applicazione Web MDS, è necessario prima di tutto eliminare l'applicazione Web e il pool di applicazioni associato da IIS, quindi creare un'applicazione Web con lo stesso nome usando la versione [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] di Gestione configurazione Master Data Services. Per informazioni sulla rimozione di un'applicazione Web e di pool di applicazioni da IIS, vedere [Rimuovere un'applicazione (IIS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771205(v=ws.10)) e [Rimuovere un pool di applicazioni (IIS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772406(v=ws.10)).  
   

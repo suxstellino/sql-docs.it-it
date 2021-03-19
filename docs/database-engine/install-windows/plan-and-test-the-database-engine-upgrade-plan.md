@@ -11,12 +11,12 @@ ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 7a6311f79aa87d93ee980cf4d0c8d00352b14687
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 38044ef31208fa5a84c7aa4335c48408425b45a4
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100353049"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104610953"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>Pianificare e testare il piano di aggiornamento del motore di database
 
@@ -49,24 +49,21 @@ ms.locfileid: "100353049"
   
        -   Aggiornamento della sicurezza TLS  
 
-   >[!NOTE]
-   >L'elenco precedente si applica anche a [!INCLUDE[sscurrent](../../includes/sscurrent-md.md)].
-  
 -   **Componenti di terze parti:** determinare la compatibilità dei componenti di terze parti, ad esempio il backup integrato.  
   
 -   **Ambiente di destinazione:** verificare che l'ambiente di destinazione soddisfi i requisiti hardware e software e che supporti i requisiti del sistema originale. Ad esempio, l'aggiornamento potrebbe comportare il consolidamento di più istanze di SQL Server in un'unica e nuova istanza di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] o la virtualizzazione dell'ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su un cloud privato o pubblico.  
   
--   **Edizione:** determinare la versione appropriata di [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] e i percorsi di aggiornamento appropriati per l'aggiornamento. Per informazioni dettagliate, vedere [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Prima di eseguire l'aggiornamento da un'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un'altra, verificare che le funzionalità attualmente in uso siano supportate nell'edizione a cui si desidera eseguire l'aggiornamento.  
+-   **Edizione:** determinare la versione appropriata di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] e i percorsi di aggiornamento appropriati per l'aggiornamento. Per informazioni dettagliate, vedere [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Prima di eseguire l'aggiornamento da un'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un'altra, verificare che le funzionalità attualmente in uso siano supportate nell'edizione a cui si desidera eseguire l'aggiornamento.  
   
     > [!NOTE]  
-    >  Quando si esegue l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition, scegliere tra Enterprise Edition: licenze basate su core ed Enterprise Edition. Queste due edizioni differiscono solo per le modalità di gestione delle licenze. Per altre informazioni, vedere [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+    >  Quando si esegue l'aggiornamento a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition, scegliere tra Enterprise Edition: licenze basate su core ed Enterprise Edition. Queste due edizioni differiscono solo per le modalità di gestione delle licenze. Per altre informazioni, vedere [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
--   **Compatibilità con le versioni precedenti:** vedere l'articolo sulla compatibilità con le versioni precedenti del motore di database di [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] per esaminare i cambiamenti nel comportamento tra [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] e la versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dalla quale si sta eseguendo l'aggiornamento. Vedere [SQL Server Database Engine Backward Compatibility](../discontinued-database-engine-functionality-in-sql-server.md).  
+-   **Compatibilità con le versioni precedenti:** vedere l'articolo sulla compatibilità con le versioni precedenti del motore di database di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] per esaminare i cambiamenti nel comportamento tra [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] e la versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dalla quale si sta eseguendo l'aggiornamento. Vedere [SQL Server Database Engine Backward Compatibility](../discontinued-database-engine-functionality-in-sql-server.md).  
   
 -   **Data Migration Assistant:** eseguire Data Migration Assistant per un supporto nell'analisi dei problemi che potrebbero bloccare il processo di aggiornamento o richiedere modifiche degli script esistenti o delle applicazioni a seguito di una modifica importante.
     È possibile scaricare Data Migration Assistant [qui](https://aka.ms/get-dma).  
   
--   **Controllo configurazione sistema:** eseguire il Controllo configurazione sistema (SCC, System Configuration Checker) di [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] per determinare se il programma di installazione di SQL Server rileva problemi di blocco prima di pianificare l'aggiornamento. Per altre informazioni, vedere [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md).  
+-   **Controllo configurazione sistema:** eseguire il Controllo configurazione sistema (SCC, System Configuration Checker) di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] per determinare se il programma di installazione di SQL Server rileva problemi di blocco prima di pianificare l'aggiornamento. Per altre informazioni, vedere [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md).  
   
 -   **Aggiornamento di tabelle ottimizzate per la memoria:** quando si aggiorna un'istanza del database SQL Server 2014 che contiene le tabelle ottimizzate per la memoria a SQL Server 2016, il processo di aggiornamento richiede più tempo per convertire le tabelle ottimizzate per la memoria nel nuovo formato su disco (e il database rimane offline durante questa procedura).   La quantità di tempo dipende dalle dimensioni delle tabelle ottimizzate per la memoria e dalla velocità del sottosistema di I/O. L'aggiornamento richiede tre dimensioni di operazioni di dati per gli aggiornamenti sul posto e con nuova installazione (il passaggio 1 non è obbligatorio per gli aggiornamenti in sequenza, ma i passaggi 2 e 3 sono obbligatori):  
   

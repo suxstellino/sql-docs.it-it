@@ -1,21 +1,21 @@
 ---
-title: 'Guida alla migrazione: accesso a SQL Server'
+title: 'Accesso a SQL Server: Guida alla migrazione'
 description: "Questa guida illustra come eseguire la migrazione dei database di Microsoft Access a Microsoft SQL Server usando la migrazione SQL Server per l'accesso (SSMA per l'accesso). "
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: migration-guide
 ms.custom: ''
 ms.devlang: ''
-ms.topic: conceptual
+ms.topic: how-to
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/19/2021
-ms.openlocfilehash: 3e49909b26d845c0edfaf9e5d50528b077fb2593
-ms.sourcegitcommit: ecf074e374426c708073c7da88313d4915279fb9
+ms.openlocfilehash: 4823f3ade15210619686bbc8097267cdf4147587
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "103603797"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611061"
 ---
 # <a name="migration-guide-access-to-sql-server"></a>Guida alla migrazione: accesso a SQL Server
 [!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]

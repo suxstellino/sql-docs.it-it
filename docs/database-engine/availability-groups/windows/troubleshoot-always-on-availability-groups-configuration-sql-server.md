@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 7b7c6a5df1bcef7e8438c01910233c2c3a38d070
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: dfc19004d430ad70abaadbb33fd337a587e68d0d
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100337935"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611201"
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>Risolvere i problemi relativi alla configurazione di Gruppi di disponibilità Always On (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +41,11 @@ ms.locfileid: "100337935"
 |[Accesso all'endpoint (errore di SQL Server 1418)](#Msg1418)|Contiene informazioni su questo messaggio di errore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |[Errore nella creazione del join del database (errore di SQL Server 35250)](#JoinDbFails)|Illustra le possibili cause e la risoluzione di un errore nella creazione di join dei database secondari a un gruppo di disponibilità perché la connessione alla replica primaria non è attiva.|  
 |[Il routing di sola lettura non funziona correttamente](#ROR)||  
-|[Attività correlate](#RelatedTasks)|Contiene un elenco di argomenti orientati alle attività nella documentazione online di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] particolarmente rilevanti per risolvere i problemi relativi a una configurazione del gruppo di disponibilità.|  
+|[Attività correlate](#RelatedTasks)|Contiene un elenco di argomenti orientati alle attività nella documentazione online di [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] particolarmente rilevanti per risolvere i problemi relativi a una configurazione del gruppo di disponibilità.|  
 |[Contenuto correlato](#RelatedContent)|Contiene un elenco di risorse rilevanti esterne alla documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
   
 ##  <a name="always-on-availability-groups-is-not-enabled"></a><a name="IsHadrEnabled"></a> Funzionalità Gruppi di disponibilità Always On non abilitata  
- La funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] deve essere abilitata su ognuna delle istanze di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Per altre informazioni, vedere [Abilitare e disabilitare la funzionalità Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
+ La funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] deve essere abilitata su ognuna delle istanze di [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Abilitare e disabilitare la funzionalità Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="accounts"></a><a name="Accounts"></a> Accounts  
  È necessario configurare correttamente gli account utilizzati per l'esecuzione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  

@@ -22,12 +22,12 @@ ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: a9aabbb180e01dcfec95d87861fc43dd0a1aca51
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2e24d74b8c2d2d3e661ab5169ae800e99af42f68
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99125945"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104610841"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE [sql-asdb-asa](../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "99125945"
   Consente di modificare il nome di un oggetto creato dall'utente nel database corrente. Questo oggetto può essere una tabella, un indice, una colonna, un tipo di dati alias o un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] tipo definito dall'utente Common Language Runtime (CLR).  
   
 > [!NOTE]
-> In [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)] sp_rename è in **Anteprima** e può essere utilizzato solo per rinominare una colonna in un oggetto utente.
+> In [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)] sp_rename è in **Anteprima** e può essere utilizzato solo per rinominare una colonna in un oggetto utente nello schema **dbo** .
 
 > [!CAUTION]  
 >  La modifica di una parte del nome di un oggetto potrebbe compromettere il funzionamento di script e stored procedure. È consigliabile evitare di utilizzare questa istruzione per rinominare stored procedure, trigger, funzioni definite dall'utente o viste. In alternativa, eliminare l'oggetto e ricrearlo con il nuovo nome.  
@@ -223,7 +223,10 @@ sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
 
 ## <a name="examples-sssdwfull"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
 ### <a name="g-renaming-a-column"></a>G. Ridenominazione di una colonna  
- Nell'esempio seguente la colonna della tabella viene rinominata in `c1` `table1` `col1` .  
+ Nell'esempio seguente la colonna della tabella viene rinominata in `c1` `table1` `col1` . 
+
+> [!NOTE]
+> Questa [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)] funzionalità è ancora in anteprima ed è attualmente disponibile solo per gli oggetti nello schema **dbo** . 
   
 ```sql  
 CREATE TABLE table1 (c1 INT, c2 INT);

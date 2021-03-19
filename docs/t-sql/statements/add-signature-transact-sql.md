@@ -17,13 +17,13 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 06/10/2020
-ms.openlocfilehash: 86513345502531da670b870b5ecf70de9270f18f
-ms.sourcegitcommit: ece104654ac14e10d32e59f45916fa944665f4df
+ms.date: 03/16/2021
+ms.openlocfilehash: c33f34611db384dfcafabefeb2e9c1eee1b135f5
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "102474905"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611228"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
 
@@ -102,7 +102,9 @@ Il modulo che viene firmato o controfirmato e il certificato o la chiave asimmet
 -   La firma di ProcForAlice non funzionerebbe da sola, perché la firma andrebbe persa nella chiamata a ProcSelectT1.  
   
 Tuttavia, da controfirma ProcSelectT1 con lo stesso certificato usato per firmare ProcForAlice, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la firma viene mantenuta nella catena di chiamate e consentirà l'accesso a T1. Se Alice tenta di chiamare direttamente ProcSelectT1, non può accedere a T1, perché controfirma non concede alcun diritto. Nell'esempio C di seguito viene mostrato l'uso di [!INCLUDE[tsql](../../includes/tsql-md.md)] per l'esempio proposto.  
-  
+
+:::image type="content" source="media/signing-and-countersignature.png" alt-text="esempio di firma":::
+
 ## <a name="permissions"></a>Autorizzazioni  
 
 Sono richieste l'autorizzazione ALTER per l'oggetto e l'autorizzazione CONTROL per il certificato o la chiave asimmetrica. Se una chiave privata associata è protetta tramite una password, è necessario che anche l'utente disponga della password.  

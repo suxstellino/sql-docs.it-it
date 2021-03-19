@@ -11,12 +11,12 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 205de7d5b4f1edce2dcc31bd8a1f362c2cc674ef
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 5ceba605fc11adad95a720be8122bf995ec458f1
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100348383"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611077"
 ---
 # <a name="install-sql-server-on-server-core"></a>Installare SQL Server in Server Core
 
@@ -59,16 +59,16 @@ L'opzione di installazione Server Core offre un ambiente minimo per l'esecuzione
 |Controller di Riesecuzione distribuita|No||  
 |Client Riesecuzione distribuita|Solo remoto|L'installazione di queste funzionalità in Server Core non è supportata. Questi componenti possono essere installati in un server diverso da Server Core e connessi ai servizi del [!INCLUDE[ssDE](../../includes/ssde-md.md)] installati in Server Core.|  
 |SDK di Connettività SQL Client|Sì||  
-|Microsoft Sync Framework|Sì|Microsoft Sync Framework non è incluso nel pacchetto di installazione di [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] . È possibile scaricare la versione appropriata di Sync Framework dall'[Area download Microsoft](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) e installarla in un computer che esegue Server Core.|  
+|Microsoft Sync Framework|Sì|Microsoft Sync Framework non è incluso nel pacchetto di installazione di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] . È possibile scaricare la versione appropriata di Sync Framework dall'[Area download Microsoft](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) e installarla in un computer che esegue Server Core.|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|No||  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|No||  
   
 ## <a name="supported-scenarios"></a>Scenari supportati  
- Nella tabella seguente viene illustrata la matrice di scenario supportata per l'installazione di [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] in un'installazione Server Core.  
+ Nella tabella seguente viene illustrata la matrice di scenario supportata per l'installazione di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] in un'installazione Server Core.  
   
 | Installazione | Destinazione valida |  
 |-|-|  
-|Edizioni di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Tutte le edizioni a 64 bit di [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] |  
+|Edizioni di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Tutte le edizioni a 64 bit di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] |  
 |Lingua di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Tutte le lingue|  
 |Lingua di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella combinazione lingua/impostazioni locali del sistema operativo|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows il lingua giapponese<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua tedesca<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua cinese (Cina)<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua araba (Arabia Saudita)<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua tailandese (Thai)<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua turca<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua portoghese (Portogallo)<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua inglese|  
 |Edizione di Windows|Windows Server 2019 Datacenter <br/><br/> Windows Server 2019 Standard <br /><br />  [!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Data Center<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
@@ -77,7 +77,7 @@ L'opzione di installazione Server Core offre un ambiente minimo per l'esecuzione
  Nelle installazioni Server Core è supportato l'aggiornamento da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] .  
   
 ## <a name="install"></a>Installazione  
- [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] non supporta l'installazione tramite apposita procedura guidata nel sistema operativo Server Core. In caso di installazione in Server Core, il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prevede il supporto della modalità non interattiva completa tramite il parametro /Q o della modalità non interattiva semplice tramite il parametro /QS. Per altre informazioni, vedere [Installazione di SQL Server dal prompt dei comandi](./install-sql-server-from-the-command-prompt.md).  
+ [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] non supporta l'installazione tramite apposita procedura guidata nel sistema operativo Server Core. In caso di installazione in Server Core, il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prevede il supporto della modalità non interattiva completa tramite il parametro /Q o della modalità non interattiva semplice tramite il parametro /QS. Per altre informazioni, vedere [Installazione di SQL Server dal prompt dei comandi](./install-sql-server-from-the-command-prompt.md).  
   
  Indipendentemente dal metodo di installazione, è necessario confermare l'accettazione delle condizioni di licenza del software come utente singolo o per conto di un'entità, a meno che l'utilizzo del software non sia disciplinato da un contratto separato, ad esempio un contratto multilicenza [!INCLUDE[msCoName](../../includes/msconame-md.md)] o un contratto di terze parti con un fornitore di software indipendente o un OEM.  
   
@@ -113,7 +113,7 @@ L'opzione di installazione Server Core offre un ambiente minimo per l'esecuzione
 
   
 ### <a name="installation-options"></a>Opzione di installazione  
- Il programma di installazione supporta le seguenti opzioni di installazione durante l'installazione di [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] in un sistema operativo Server Core:  
+ Il programma di installazione supporta le seguenti opzioni di installazione durante l'installazione di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] in un sistema operativo Server Core:  
   
 1.  **Installazione dalla riga di comando**  
   
@@ -187,7 +187,7 @@ L'opzione di installazione Server Core offre un ambiente minimo per l'esecuzione
   
     -   Installazione di tutte le funzionalità supportate  
   
-        Nell'esempio seguente viene illustrato come installare tutte le funzionalità di [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] supportate in Server Core.  
+        Nell'esempio seguente viene illustrato come installare tutte le funzionalità di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] supportate in Server Core.  
   
         ```console
         ; SQL Server Configuration File  
@@ -260,7 +260,7 @@ L'opzione di installazione Server Core offre un ambiente minimo per l'esecuzione
          Se il file DefaultSetup.ini non esiste, è possibile crearlo e copiarlo nelle cartelle \x86 e \x64, al livello radice dei supporti di origine di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="configure-remote-access-of-ssnoversion-on-server-core"></a>Configurare l'accesso remoto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Server Core  
- Eseguire le azioni descritte di seguito per configurare l'accesso remoto di un'istanza di [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] in esecuzione in Server Core.  
+ Eseguire le azioni descritte di seguito per configurare l'accesso remoto di un'istanza di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] in esecuzione in Server Core.  
   
 ### <a name="enable-remote-connections-on-the-instance-of-ssnoversion"></a>Abilitare connessioni remote nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
@@ -305,7 +305,7 @@ $Tcp
   
 ## <a name="uninstall"></a>Disinstallare
 
- Dopo aver eseguito l'accesso a un computer in cui è in esecuzione Server Core, si dispone di un ambiente desktop limitato con un prompt dei comandi di amministratore. È possibile usare questo prompt dei comandi per avviare la disinstallazione di [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]. Per disinstallare un'istanza di [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)], avviare l'operazione dal prompt dei comandi in modalità non interattiva completa tramite il parametro /Q o in modalità non interattiva semplice tramite il parametro /QS. Il parametro /QS consente di tenere traccia dello stato di avanzamento tramite l'interfaccia utente, ma non supporta input. /Q viene eseguito in modalità non interattiva senza alcuna interfaccia utente.  
+ Dopo aver eseguito l'accesso a un computer in cui è in esecuzione Server Core, si dispone di un ambiente desktop limitato con un prompt dei comandi di amministratore. È possibile usare questo prompt dei comandi per avviare la disinstallazione di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Per disinstallare un'istanza di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], avviare l'operazione dal prompt dei comandi in modalità non interattiva completa tramite il parametro /Q o in modalità non interattiva semplice tramite il parametro /QS. Il parametro /QS consente di tenere traccia dello stato di avanzamento tramite l'interfaccia utente, ma non supporta input. /Q viene eseguito in modalità non interattiva senza alcuna interfaccia utente.  
   
  Per disinstallare un'istanza esistente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   

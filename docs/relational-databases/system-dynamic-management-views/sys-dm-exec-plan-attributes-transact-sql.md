@@ -1,8 +1,8 @@
 ---
 description: sys.dm_exec_plan_attributes (Transact-SQL)
-title: sys.dm_exec_plan_attributes (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_plan_attributes (Transact-SQL)
 ms.custom: ''
-ms.date: 10/20/2017
+ms.date: 02/24/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -16,15 +16,14 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_exec_plan_attributes dynamic management function
-ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: fad7df36aabbebf6ad41752c741069465adafac4
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 7ac93d0225cde8b2b24647f6de672fcfeba2f31f
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101839288"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611039"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "101839288"
 >  Alcune delle informazioni restituite tramite questa funzione sono mappate alla vista di compatibilità con le versioni precedenti di [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) .
 
 ## <a name="syntax"></a>Sintassi  
-```  
+```syntaxsql
 sys.dm_exec_plan_attributes ( plan_handle )  
 ```  
   
@@ -63,9 +62,17 @@ Nella tabella precedente, l' **attributo** può avere i valori seguenti:
 |language_id|**smallint**|ID della lingua della connessione in cui è stato creato l'oggetto della cache. Per ulteriori informazioni, vedere [ linguaggisys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |date_format|**smallint**|Formato della data della connessione in cui è stato creato l'oggetto della cache. Per altre informazioni, vedere [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |date_first|**tinyint**|Primo valore di data. Per altre informazioni, vedere [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).|  
+|compat_level|**tinyint**|Rappresenta il livello di compatibilità impostato nel database nel cui contesto è stato compilato il piano di query. Il livello di compatibilità restituito è il livello di compatibilità del contesto di database corrente per le istruzioni ad hoc e non è interessato dall'hint per la query [QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n](../../t-sql/queries/hints-transact-sql-query.md). Per le istruzioni contenute in una funzione o stored procedure corrisponde al livello di compatibilità del database in cui viene creata la funzione o stored procedure.| 
 |status|**int**|Bit di stato interni che fanno parte della chiave di ricerca nella cache.|  
 |required_cursor_options|**int**|Opzioni di cursore specificate dall'utente, ad esempio il tipo di cursore.|  
 |acceptable_cursor_options|**int**|Opzioni di cursore che potrebbero essere convertite in modo implicito da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per supportare l'esecuzione dell'istruzione. Ad esempio, l'utente potrebbe specificare un cursore dinamico, ma Query Optimizer è autorizzato a convertire questo tipo di cursore in un cursore statico.|  
+|merge_action_type|**smallint**|Il tipo di piano di esecuzione del trigger utilizzato come risultato di un'istruzione MERGE.<br /><br /> 0 indicano un piano non-trigger, un piano del trigger che non viene eseguito come risultato di un'istruzione MERGE o un piano del trigger che viene eseguito come risultato di un'istruzione MERGE in cui viene specificata solo un'azione DELETE.<br /><br /> 1 indica un piano di trigger INSERT che è in esecuzione come risultato di un'istruzione MERGE.<br /><br /> 2 indica un piano di trigger UPDATE in esecuzione come risultato di un'istruzione MERGE.<br /><br /> 3 indica un piano di trigger DELETE che viene eseguito come risultato di un'istruzione MERGE che contiene un'azione INSERT o UPDATE corrispondente.<br /><br /> Per i trigger nidificati eseguiti da azioni a catena, questo valore è l'azione dell'istruzione MERGE che provoca la propagazione.|  
+|is_replication_specific|**int**|Indica che la sessione da cui è stato compilato il piano è una connessa all'istanza di SQL Server utilizzando una proprietà di connessione non documentata che consente al server di identificare la sessione come una creata dai componenti di replica, in modo che il comportamento di determinati aspetti funzionali del server venga modificato in base a quanto previsto dal componente di replica.| 
+|optional_spid|**smallint**|Il session_id di connessione (SPID) diventa parte della chiave della cache per ridurre il numero di ricompilazioni. In questo modo si evitano ricompilazioni per il riutilizzo di una singola sessione di un piano che include tabelle temporanee ad associazione non dinamica.|
+|optional_clr_trigger_dbid|**int**|Viene popolato solo nel caso di un trigger DML CLR. ID del database contenente l'entità. <BR><BR>Per qualsiasi altro tipo di oggetto, restituisce zero. | 
+|optional_clr_trigger_objid|**int** |Viene popolato solo nel caso di un trigger DML CLR. ID oggetto archiviato in [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).<BR><BR>Per qualsiasi altro tipo di oggetto, restituisce zero.| 
+|parent_plan_handle|**varbinary(64)**|Sempre NULL.| 
+|is_azure_user_plan|**tinyint** | 1 per le query eseguite in un [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] da una sessione avviata da un utente. <BR><BR>0 per le query eseguite da una sessione non avviata da un utente finale, ma da applicazioni in esecuzione dall'infrastruttura di Azure che inviano query per altri scopi di raccolta dei dati di telemetria o di esecuzione di attività amministrative. Ai clienti non viene addebitato alcun costo per le risorse utilizzate dalle query in cui is_azure_user_plan = 0.<BR><BR>**[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]** solo.|
 |inuse_exec_context|**int**|Numero di batch in esecuzione che utilizzano il piano di query.|  
 |free_exec_context|**int**|Numero di contesti di esecuzione memorizzati nella cache per il piano di query, attualmente inutilizzati.|  
 |hits_exec_context|**int**|Numero di riutilizzi del contesto di esecuzione recuperato dalla cache dei piani, con conseguente risparmio dell'overhead correlato alla ricompilazione dell'istruzione SQL. Il valore rappresenta un'aggregazione per tutti i batch eseguiti finora.|  
@@ -77,12 +84,12 @@ Nella tabella precedente, l' **attributo** può avere i valori seguenti:
 |misses_cursors|**int**|Numero di volte in cui non è stato possibile trovare un cursore inattivo nella cache.|  
 |removed_cursors|**int**|Numero di cursori rimossi a causa di richieste di memoria eccessive per il piano memorizzato nella cache.|  
 |sql_handle|**varbinary**(64)|Handle SQL per il batch.|  
-|merge_action_type|**smallint**|Il tipo di piano di esecuzione del trigger utilizzato come risultato di un'istruzione MERGE.<br /><br /> 0 indicano un piano non-trigger, un piano del trigger che non viene eseguito come risultato di un'istruzione MERGE o un piano del trigger che viene eseguito come risultato di un'istruzione MERGE in cui viene specificata solo un'azione DELETE.<br /><br /> 1 indica un piano di trigger INSERT che è in esecuzione come risultato di un'istruzione MERGE.<br /><br /> 2 indica un piano di trigger UPDATE in esecuzione come risultato di un'istruzione MERGE.<br /><br /> 3 indica un piano di trigger DELETE che viene eseguito come risultato di un'istruzione MERGE che contiene un'azione INSERT o UPDATE corrispondente.<br /><br /> Per i trigger nidificati eseguiti da azioni a catena, questo valore è l'azione dell'istruzione MERGE che provoca la propagazione.|  
-  
+
 ## <a name="permissions"></a>Autorizzazioni  
 
-In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
-Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in pool elastici, è necessario l'account [amministratore del server](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) o l'account [amministratore Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) . Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.   
+In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.
+
+Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL di Azure e per i database in pool elastici, è richiesto l'account [amministratore del server](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) o l'account [amministratore Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) . Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.   
 
 ## <a name="remarks"></a>Commenti  
   
@@ -148,7 +155,7 @@ Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in 
 SELECT plan_handle, refcounts, usecounts, size_in_bytes, cacheobjtype, objtype   
 FROM sys.dm_exec_cached_plans;  
 GO  
-SELECT attribute, value, is_cache_key  
+SELECT attribute, [value], is_cache_key  
 FROM sys.dm_exec_plan_attributes(<plan_handle>);  
 GO  
 ```  

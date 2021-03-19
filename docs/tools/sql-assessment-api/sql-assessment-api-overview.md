@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 3/10/2021
-ms.openlocfilehash: 34a7ff8c9380a88bb285a6d2e51e57e652f0310d
-ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
+ms.openlocfilehash: 998e410eba1da7dcac3071170671c192f809a89c
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102622833"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611053"
 ---
 # <a name="sql-assessment-api"></a>API Valutazione SQL
 
@@ -37,7 +37,7 @@ L'API può essere usata per valutare:
 L'API viene usata anche dall'estensione SQL Server assessment per Azure Data Studio (ADS).
 
 >[!NOTE]
->L'API Valutazione SQL fornisce la valutazione su diverse aree, ma non approfondisce la sicurezza. Si consiglia di usare la [valutazione della vulnerabilità SQL](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment) per migliorare in modo proattivo la sicurezza del database.
+>L'API Valutazione SQL fornisce la valutazione su diverse aree, ma non approfondisce la sicurezza. Si consiglia di usare la [valutazione della vulnerabilità SQL](../../relational-databases/security/sql-vulnerability-assessment.md) per migliorare in modo proattivo la sicurezza del database.
 
 ## <a name="rules"></a>Regole
 
@@ -168,4 +168,4 @@ Le regole specifiche hanno soglie che vengono confrontate rispetto al valore cor
 
 * [Oggetti SMO (SQL Server Management Objects)](../../relational-databases/server-management-objects-smo/overview-smo.md)
 * [PowerShell](../../powershell/download-sql-server-ps-module.md)
-* [Valutazione della vulnerabilità SQL](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment)
+* [Valutazione della vulnerabilità SQL](../../relational-databases/security/sql-vulnerability-assessment.md)

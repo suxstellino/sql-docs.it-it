@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016'
-ms.openlocfilehash: ca5c7911444dcc5cdd87787a80ee0d9e572797ef
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 6a8f7bffd47e5159c0a048a3783f3ea6647bc097
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101838091"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104610923"
 ---
 # <a name="install-polybase-on-windows"></a>Installare PolyBase in Windows
 
@@ -166,7 +166,7 @@ RECONFIGURE;
 PolyBase installa tre database utente, DWConfiguration, DWDiagnostics e DWQueue. Questi database sono per l'uso con PolyBase. Non modificarli o eliminarli.  
 
 > [!CAUTION]
-> L'aggiunta di polibase a un'installazione esistente di SQL Server installerà la funzionalità a livello di versione del supporto di installazione di, che può trovarsi dietro le altre funzionalità di SQL Server del livello di versione. Questo può causare un comportamento imprevisto o errori. Completare sempre l'installazione della funzionalità di polibase, portando la nuova funzionalità allo stesso livello di versione. Installare i Service Pack (SPs), gli aggiornamenti cumulativi (CUs) e/o le versioni di distribuzione generale (GDR) in base alle esigenze. Per determinare la versione di polibase, vedere [determinare la versione, l'edizione e il livello di aggiornamento delle SQL Server e dei relativi componenti](https://docs.microsoft.com/troubleshoot/sql/general/determine-version-edition-update-level#polybase).
+> L'aggiunta di polibase a un'installazione esistente di SQL Server installerà la funzionalità a livello di versione del supporto di installazione di, che può trovarsi dietro le altre funzionalità di SQL Server del livello di versione. Questo può causare un comportamento imprevisto o errori. Completare sempre l'installazione della funzionalità di polibase, portando la nuova funzionalità allo stesso livello di versione. Installare i Service Pack (SPs), gli aggiornamenti cumulativi (CUs) e/o le versioni di distribuzione generale (GDR) in base alle esigenze. Per determinare la versione di polibase, vedere [determinare la versione, l'edizione e il livello di aggiornamento delle SQL Server e dei relativi componenti](/troubleshoot/sql/general/determine-version-edition-update-level#polybase).
    
 ### <a name="how-to-confirm-installation"></a><a id="confirminstall"></a> Come confermare l'installazione  
 

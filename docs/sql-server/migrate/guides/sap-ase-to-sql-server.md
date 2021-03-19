@@ -1,21 +1,21 @@
 ---
-title: Guida alla migrazione da SAP ASE a SQL Server
+title: 'Guida alla migrazione da SAP ASE a SQL Server:'
 description: 'Questa guida illustra come eseguire la migrazione dei database di SAP ASE a Microsoft SQL Server usando la migrazione SQL Server per SAP ASE (SSMA per SAP ASE). '
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: migration-guide
 ms.custom: ''
 ms.devlang: ''
-ms.topic: conceptual
+ms.topic: how-to
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/19/2021
-ms.openlocfilehash: fb297b72e1eeb3d614a00a9ef574f0097f9d0f75
-ms.sourcegitcommit: ecf074e374426c708073c7da88313d4915279fb9
+ms.openlocfilehash: a549b0e28da092bc1320f621c29307772fc5d69b
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "103603796"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611029"
 ---
 # <a name="migration-guide-sap-ase-to-sql-server"></a>Guida alla migrazione: SAP ASE per SQL Server
 [!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +28,7 @@ Per altri scenari, vedere la [Guida alla migrazione del database](https://datami
 
 Per eseguire la migrazione del database SAP SE a SQL Server, è necessario:
 
-- Verificare che l'ambiente di origine sia supportato. 
+- Per verificare che l'ambiente di origine sia supportato. 
 - [SQL Server Migration Assistant per SAP Adaptive Server Enterprise (in precedenza SAP Sybase ASE)](https://www.microsoft.com/download/details.aspx?id=54256). 
 
 ## <a name="pre-migration"></a>Pre-migrazione

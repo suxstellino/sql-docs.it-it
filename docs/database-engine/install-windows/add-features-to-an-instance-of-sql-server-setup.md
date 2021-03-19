@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 02/05/2021
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 40f6618c8564f0d264076316038274b401fb650a
-ms.sourcegitcommit: 765262cdc6352a5325148afc22fa4f1499fe1aa3
+ms.openlocfilehash: 70ca3fb64d5672cd4b734b49ac124f1e4e333f32
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "102514898"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611014"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>Aggiungere funzionalità a un'istanza di SQL Server (programma di installazione)
 
@@ -40,15 +40,15 @@ Prima di continuare, vedere gli articoli in [Pianificazione di un'installazione 
 > Per le installazioni locali è necessario eseguire il programma di installazione come amministratore. Se si installa SQL Server da una condivisione remota, è necessario usare un account di dominio che abbia le autorizzazioni di lettura per la condivisione remota.  
   
 > [!NOTE]
-> Quando si aggiungono funzionalità a un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], le impostazioni delle segnalazioni relative all'utilizzo delle funzionalità esistenti vengono applicate alle funzionalità aggiunte. Per modificare queste impostazioni, usare lo strumento **segnalazione errori e utilizzo** funzionalità di SQL Server nel menu SQL Server **strumenti di configurazione** .
+> Quando si aggiungono funzionalità a un'istanza di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], le impostazioni delle segnalazioni relative all'utilizzo delle funzionalità esistenti vengono applicate alle funzionalità aggiunte. Per modificare queste impostazioni, usare lo strumento **Segnalazione errori e utilizzo funzionalità di SQL Server**, disponibile nel menu **Strumenti di configurazione** di SQL Server.
 
 ## <a name="procedures"></a>Procedure
 
-#### <a name="to-add-features-to-an-instance-of-sscurrent"></a>Per aggiungere funzionalità a un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+#### <a name="to-add-features-to-an-instance-of-ssnoversion"></a>Per aggiungere funzionalità a un'istanza di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]
 
-1. Inserire il supporto di installazione di SQL Server. Nella cartella radice fare doppio clic sul file setup.exe. Per eseguire l'installazione da una condivisione di rete, accedere alla cartella radice nella condivisione, quindi fare doppio clic sul file setup.exe. Se viene visualizzata la finestra di dialogo del programma di installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], selezionare **OK** per installare i prerequisiti, quindi selezionare **Annulla** per uscire dall'installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+1. Inserire il supporto di installazione di SQL Server. Nella cartella radice fare doppio clic sul file setup.exe. Per eseguire l'installazione da una condivisione di rete, accedere alla cartella radice nella condivisione, quindi fare doppio clic sul file setup.exe. Se viene visualizzata la finestra di dialogo del programma di installazione di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], selezionare **OK** per installare i prerequisiti, quindi selezionare **Annulla** per uscire dall'installazione di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
 
-2. L'Installazione guidata consentirà di avviare il Centro installazione SQL Server. Per aggiungere una nuova funzionalità in un'istanza esistente di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], selezionare **Installazione** nell'area di navigazione di sinistra, quindi selezionare **Nuova installazione autonoma di SQL Server o aggiunta di funzionalità a un'installazione esistente**.
+2. L'Installazione guidata consentirà di avviare il Centro installazione SQL Server. Per aggiungere una nuova funzionalità in un'istanza esistente di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], selezionare **Installazione** nell'area di navigazione di sinistra, quindi selezionare **Nuova installazione autonoma di SQL Server o aggiunta di funzionalità a un'installazione esistente**.
 
 3. Controllo configurazione sistema consentirà di eseguire un'operazione di individuazione nel computer. Per visualizzare i dettagli della verifica, selezionare **Visualizza dettagli**. Per continuare, selezionare **OK**.
 
@@ -58,7 +58,7 @@ Prima di continuare, vedere gli articoli in [Pianificazione di un'installazione 
 
 6. Controllo configurazione sistema consentirà di verificare lo stato del sistema del computer prima che l'installazione continui.  
 
-7. Nella pagina Tipo di installazione selezionare l'opzione **Aggiungi funzionalità a un'istanza esistente di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** e quindi selezionare l'istanza da aggiornare.
+7. Nella pagina Tipo di installazione selezionare l'opzione **Aggiungi funzionalità a un'istanza esistente di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]** e quindi selezionare l'istanza da aggiornare.
 
 8. Nella pagina Selezione funzionalità selezionare i componenti per l'installazione. Una volta selezionato il nome della funzionalità desiderata, nel riquadro a destra verrà visualizzata una descrizione per ogni gruppo di componenti. È possibile selezionare qualsiasi combinazione di caselle di controllo. Per altre informazioni, vedere [Edizioni e funzionalità supportate di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md) e [SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md). Ogni componente può essere installato una sola volta in un'istanza specificata di SQL Server. Per installare più componenti, è necessario installare un'istanza aggiuntiva di SQL Server.
 

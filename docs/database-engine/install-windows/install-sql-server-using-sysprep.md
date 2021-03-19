@@ -11,12 +11,12 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 8bbb1d668efb9a8531d6a93b084a7315e99072ff
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 385c1efc0dd11813b2aeb94fa087891b1496cffd
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100348317"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611003"
 ---
 # <a name="install-sql-server-with-sysprep"></a>Installare SQL Server con SysPrep
 
@@ -104,7 +104,7 @@ Per altre informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/s
   
     |Installazione|Componenti|  
     |-|-|  
-    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SysPrep|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replica<br /><br /> Funzionalità full-text<br /><br /> Data Quality Services<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Funzionalità ridistribuibili<br /><br /> Funzionalità condivise|  
+    |[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] SysPrep|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replica<br /><br /> Funzionalità full-text<br /><br /> Data Quality Services<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Funzionalità ridistribuibili<br /><br /> Funzionalità condivise|  
   
      Quando si evidenzia il nome della funzionalità desiderata, nel riquadro a destra verrà visualizzata una descrizione per ogni gruppo di componenti. È possibile selezionare qualsiasi combinazione di caselle di controllo. Per altre informazioni, vedere [Funzionalità supportate dalle edizioni di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md) e [SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md)
   
@@ -296,7 +296,7 @@ Per altre informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/s
   
 9. Nella pagina **Operazione completata** è possibile esaminare lo stato di completamento dell'operazione. Per uscire dall'installazione guidata, fare clic su **Chiudi** . 
   
-10. Ripetere i passaggi da 1 a 9 fino a rimuovere tutti i componenti di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . 
+10. Ripetere i passaggi da 1 a 9 fino a rimuovere tutti i componenti di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] . 
   
 ##  <a name="modifying-or-uninstalling-a-completed-instance-of-ssnoversion"></a><a name="bk_Modifying_Uninstalling"></a> Modifica o disinstallazione di un'istanza completata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
  Il processo per l'aggiunta o la rimozione di funzionalità o per la disinstallazione di un'istanza completata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è simile al processo per un'istanza installata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere gli articoli seguenti:  

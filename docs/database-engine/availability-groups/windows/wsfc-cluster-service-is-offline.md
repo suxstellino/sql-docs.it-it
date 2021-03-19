@@ -15,12 +15,12 @@ ms.assetid: d502548d-ece6-4a42-9ded-2157d33e3d21
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 7f72e53e13b98e79a7d4b5849966e9b3a62e518e
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: e382a0936293dedc55c1804251fbb95550936311
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100347527"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611165"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>Il servizio cluster WSFC è offline
 
@@ -38,11 +38,8 @@ ms.locfileid: "100347527"
 ## <a name="description"></a>Descrizione  
  Questi criteri consentono di controllare lo stato di WSCF (Windows Server Failover Clustering). I criteri sono in uno stato non integro e viene generato un avviso quando il cluster WSFC è offline o nello stato di quorum forzato. Tutti i gruppi di disponibilità ospitati all'interno di questo cluster sono offline oppure è necessaria un'azione di ripristino di emergenza.  
   
- Lo stato dei criteri è integro quando quello del cluster è nel quorum normale.  
-  
-> [!NOTE]  
->  Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], le informazioni sulle possibili cause e le soluzioni sono disponibili nella pagina relativa alla situazione in cui il [servizio cluster WSFC è offline](https://go.microsoft.com/fwlink/p/?LinkId=220849) su Wiki di TechNet.  
-  
+ Lo stato dei criteri è integro quando quello del cluster è nel quorum normale.
+
 ## <a name="possible-causes"></a>Possibili cause  
  Questo problema può essere causato da un problema del servizio cluster o dalla perdita del quorum nel cluster.  
   

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: ee24a962698e2a661b4859c846a748a5b8517e7d
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: b8973b883ebdfe205ff0e9017e746c8ac65ebf58
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100354164"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104610905"
 ---
 # <a name="sysdm_hadr_availability_group_states-transact-sql"></a>sys.dm_hadr_availability_group_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "100354164"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|Identificatore univoco del gruppo di disponibilità.|  
-|**primary_replica**|**varchar(128)**|Nome dell'istanza del server che ospita la replica primaria corrente.<br /><br /> Null = Non la replica primaria o impossibile comunicare con il cluster di failover WSFC.|  
+|**primary_replica**|**varchar(128)**|Nome dell'istanza del server che ospita la replica primaria corrente.<br /><br /> NULL = non è la replica primaria e non è in grado di comunicare con il cluster di failover WSFC.|  
 |**primary_recovery_health**|**tinyint**|Indica l'integrità di recupero della replica primaria, uno di:<br /><br /> 0 = in corso<br /><br /> 1 = Online<br /><br /> NULL<br /><br /> Nelle repliche secondarie il **primary_recovery_health** colonna è null.|  
 |**primary_recovery_health_desc**|**nvarchar(60)**|Descrizione di **primary_replica_health**, uno di:<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
 |**secondary_recovery_health**|**tinyint**|Indica lo stato di ripristino di una replica secondaria, uno dei seguenti:<br /><br /> 0 = in corso<br /><br /> 1 = Online<br /><br /> NULL<br /><br /> Nella replica primaria la colonna **secondary_recovery_health** è null.|  

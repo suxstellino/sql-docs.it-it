@@ -8,17 +8,29 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 2/18/2021
-ms.openlocfilehash: c666ae644200c1b2beefb7f73c8a819294831985
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.date: 3/17/2021
+ms.openlocfilehash: 4cc6431ec73a002c015b8aac0dfe19b726cb354f
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101836028"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104610700"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Note sulla versione per Azure Data Studio
 
 **[Scarica e installa l'ultima versione](./download-azure-data-studio.md)**
+
+## <a name="march-2021"></a>Marzo 2021
+
+17 marzo 2021 &nbsp;  /  &nbsp; versione: 1.27.0
+
+&nbsp;
+
+| Modifica | Dettagli |
+| ------ | ------- |
+| Correzioni di bug | Per un elenco completo delle correzioni, vedere i [bug e i problemi su GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22March+2021+Release%22). |
+| Aggiornamento delle estensioni | [Dacpac](extensions/sql-server-dacpac-extension.md) </br> [SQLDatabaseProjects](extensions/sql-database-project-extension.md) |
+| Nuove funzionalità del notebook | Aggiunta finestra di dialogo Crea libro |
 
 ## <a name="february-2021"></a>2021 febbraio
 
@@ -31,7 +43,7 @@ ms.locfileid: "101836028"
 | Correzioni di bug | Per un elenco completo delle correzioni, vedere i [bug e i problemi su GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22February+2021+Release%22+is%3Aclosed). |
 | Aggiornamento delle estensioni | [Dacpac](extensions/sql-server-dacpac-extension.md) <br/> [Kusto (KQL)](extensions/kusto-extension.md) </br> [MachineLearning](extensions/machine-learning-extension.md) </br> [Profiler](extensions/sql-server-profiler-extension.md) </br> [SchemaCompare](extensions/schema-compare-extension.md) </br> [SQLDatabaseProjects](extensions/sql-database-project-extension.md) |
 | Nuove funzionalità di Azure Arc | Sono ora supportati più controller dati <br/> Nuove opzioni della finestra di dialogo di connessione come il file di configurazione Kube <br/> Miglioramenti del dashboard Postgres |
-| Nuove funzionalità del notebook | Miglioramento del tempo di avvio del server Jupyter del 50% per Windows <br/> Aggiunta del supporto per la modifica dei libri Jupyter tramite clic con il pulsante destro del mouse <br/> Aggiunta del supporto per la parametrizzazione del notebook URI e [aggiunta della relativa documentazione](https://docs.microsoft.com/sql/azure-data-studio/notebooks/notebooks-parameterization) |
+| Nuove funzionalità del notebook | Miglioramento del tempo di avvio del server Jupyter del 50% per Windows <br/> Aggiunta del supporto per la modifica dei libri Jupyter tramite clic con il pulsante destro del mouse <br/> Aggiunta del supporto per la parametrizzazione del notebook URI e [aggiunta della relativa documentazione](./notebooks/notebooks-parameterization.md) |
 
 ## <a name="december-2020-hotfix"></a>2020 dicembre (hotfix)
 

@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d78e229bcbf2a088d42431abdf02bec3f9e51eab
-ms.sourcegitcommit: 62c7b972db0ac28e3ae457ce44a4566ebd3bbdee
+ms.openlocfilehash: 918dd8e746984d9bdc6a619cc2692bdfbab158a0
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "103231499"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104610814"
 ---
 # <a name="deploy-big-data-clusters-2019-on-openshift-on-premises-and-azure-red-hat-openshift"></a>Distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in OpenShift in locale e in Azure Red Hat OpenShift
 
@@ -70,10 +70,11 @@ Questo articolo illustra i passaggi di distribuzione specifici della piattaforma
    oc new-project <namespaceName>
    ```
 
-4. Assegnare il vincolo del contesto di protezione personalizzato agli account del servizio per gli utenti all'interno dello spazio dei nomi in cui viene distribuito il cluster Big Data:
+4. Associare il servizio SCC personalizzato con gli account del servizio nello spazio dei nomi in cui è distribuito BDC:
 
    ```console
-   oc create rolebinding bdc-rbac --clusterrole=system:scc:bdc-scc --group=system:serviceaccounts:<namespace>
+   oc create clusterrole bdc-role --verb=use --resource=scc --resource-name=bdc-scc -n <namespaceName>
+   oc create rolebinding bdc-rbac --clusterrole=bdc-role --group=system:serviceaccounts:mssql-bdc
    ```
 
 5. Assegnare le autorizzazioni appropriate all'utente che distribuisce il cluster Big Data. riportate di seguito. 
@@ -83,7 +84,7 @@ Questo articolo illustra i passaggi di distribuzione specifici della piattaforma
    - Se l'utente che distribuisce il cluster Big Data è un amministratore dello spazio dei nomi, assegnare all'utente il ruolo locale di amministratore del cluster per lo spazio dei nomi creato. Questa è l'opzione preferita per l'utente che distribuisce e gestisce il cluster Big Data per avere autorizzazioni di amministratore a livello dello spazio dei nomi.
 
    ```console
-   oc adm policy add-role-to-user cluster-admin <deployingUser> -n <namespaceName>
+   oc create rolebinding bdc-user-rbac --clusterrole=cluster-admin --user=<userName> -n <namespaceName>
    ```
 
    L'utente che distribuisce il cluster Big Data deve quindi accedere alla console OpenShift:

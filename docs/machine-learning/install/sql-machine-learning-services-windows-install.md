@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017'
-ms.openlocfilehash: 44993ae527e99d615a9be620e3d930aa520c8980
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: d209daa0932068b41974c7e3597980b15657b1b2
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101839511"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611211"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Installare SQL Server Machine Learning Services (Python e R) in Windows
 
@@ -294,7 +294,7 @@ Attenersi alla seguente procedura per portare il Machine Learning Services alla 
  
    *Microsoft SQL Server 2019 (RTM-CU8-GDR) (KB4583459)-15.0.4083.2 (x64) Nov 2 2020 18:35:09 Copyright (C) 2019 Microsoft Corporation Developer Edition (64-bit) in Windows 10 Enterprise 10,0 <X64> (Build 19042:) (hypervisor)*
 
-   Per ulteriori informazioni, vedere [determinare la versione, l'edizione e il livello di aggiornamento delle SQL Server e dei relativi componenti](https://docs.microsoft.com/troubleshoot/sql/general/determine-version-edition-update-level#machine-learning-services).
+   Per ulteriori informazioni, vedere [determinare la versione, l'edizione e il livello di aggiornamento delle SQL Server e dei relativi componenti](/troubleshoot/sql/general/determine-version-edition-update-level#machine-learning-services).
 
 1. Scaricare l' [aggiornamento cumulativo (Cu)](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) installato per il motore di database.
 
