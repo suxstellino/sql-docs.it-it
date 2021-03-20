@@ -4,7 +4,7 @@ description: Le applicazioni possono utilizzare MSDTC per estendere o distribuir
 ms.custom: ''
 ms.date: 05/13/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
@@ -18,12 +18,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23f772f61191f593900147a293400997345844bc
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e87efff1462cef968a6fdce7038c65325bf7681c
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97483132"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104755701"
 ---
 # <a name="create-a-distributed-transaction"></a>Creazione di una transazione distribuita
 
@@ -76,6 +76,6 @@ Gli altri linguaggi di programmazione seguenti potrebbero non fornire alcun supp
 - Server collegato con Transact-SQL
 - Driver JDBC
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Esecuzione di transazioni (ODBC)](performing-transactions-in-odbc.md)
