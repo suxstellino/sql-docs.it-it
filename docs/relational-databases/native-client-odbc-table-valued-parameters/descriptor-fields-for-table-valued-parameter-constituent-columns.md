@@ -4,7 +4,7 @@ title: Campo del descrittore per il parametro Table-Valued
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
@@ -14,12 +14,12 @@ ms.assetid: 944b3968-fd47-4847-98d6-b87e8ef2acdc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e7e19b7af6ffcd9e8601a5a8da97be93e2185b7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f85280b67bf8748b669753b509c18e7e89bdc67c
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97435839"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104752421"
 ---
 # <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>Campi di descrizione per le colonne che costituiscono parametri con valori di tabella
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,14 +29,14 @@ ms.locfileid: "97435839"
 ## <a name="remarks"></a>Commenti  
  SQL_DESC_AUTO_UNIQUE_VALUE viene utilizzato per parametri con valori di tabella e altre caratteristiche.  
   
-|Nome attributo|Type|Descrizione|  
+|Nome attributo|Tipo|Descrizione|  
 |--------------------|----------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|SQL_TRUE indica che la colonna è una colonna Identity.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può utilizzare queste informazioni per ottimizzare le prestazioni, ma le applicazioni non devono impostarle per le colonne Identity.|  
 ||||
 
  Gli attributi seguenti vengono aggiunti a tutti i tipi di parametro nel campo di descrizione del parametro dell'applicazione (APD, Application Parameter Descriptor) e nel campo di descrizione del parametro di implementazione (IPD, Implementation Parameter Descriptor):  
   
-|Nome attributo|Type|Descrizione|  
+|Nome attributo|Tipo|Descrizione|  
 |--------------------|----------|-----------------|  
 |SQL_CA_SS_COLUMN_COMPUTED|SQLSMALLINT|SQL_TRUE indica che la colonna è calcolata.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può utilizzare queste informazioni per ottimizzare le prestazioni, ma le applicazioni non devono impostarle per le colonne calcolate.<br /><br /> Questo attributo viene ignorato per le associazioni che non sono colonne di parametri con valori di tabella.|  
 |SQL_CA_SS_COLUMN_IN_UNIQUE_KEY|SQLSMALLINT|SQL_TRUE indica che una colonna di parametri con valori di tabella viene utilizzata in una chiave univoca. Questa impostazione può migliorare le prestazioni di esecuzione delle query. Questo attributo viene ignorato per le associazioni che non sono colonne di parametri con valori di tabella.|  

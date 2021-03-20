@@ -4,7 +4,7 @@ description: Informazioni sugli ambiti a protezione diretta usati dal sistema di
 ms.custom: ''
 ms.date: 10/18/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
@@ -20,12 +20,12 @@ ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d780aa878779bf25a3854dbd0c7c392800f7039
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 87929f3e4f78d89cee514b46083d239335c2222f
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97432247"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104739901"
 ---
 # <a name="securables"></a>Entità a protezione diretta
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
