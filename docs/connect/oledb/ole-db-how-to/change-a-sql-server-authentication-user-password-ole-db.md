@@ -4,18 +4,18 @@ description: Informazioni ed esempi su come usare OLE DB per modificare la passw
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f1ce60f3b96036ff9483782379728ad6e57e3288
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
-ms.translationtype: HT
+ms.openlocfilehash: d2a64426fa3d1285f66be90dae8cfd2e028b4d62
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727148"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104741731"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>Modificare una password utente di autenticazione di SQL Server (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

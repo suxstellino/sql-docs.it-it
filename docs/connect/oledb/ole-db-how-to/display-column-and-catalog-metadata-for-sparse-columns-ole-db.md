@@ -4,18 +4,18 @@ description: Informazioni ed esempi su come visualizzare i metadati di colonne e
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e47803f6c4dc61c1a13135f3fd4b0bafc91e9646
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
-ms.translationtype: HT
+ms.openlocfilehash: d7f19e13f76b80806a3732d9e38b6fa48f7d1def
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861390"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104741611"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Visualizzare i metadati della colonna e del catalogo per le colonne di tipo sparse (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

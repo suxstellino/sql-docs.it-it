@@ -4,7 +4,7 @@ title: Guide di SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 10/07/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
@@ -15,12 +15,12 @@ ms.assetid: a5d04171-dfbc-4b90-acd0-1bb27d4b7e34
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86d16ce4333abf74f72625038dad8223fb4190db
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 8602072f058cad31d77b442766ec311c61dafa7b
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461842"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104733394"
 ---
 # <a name="sql-server-guides"></a>Guide di SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
