@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 34595b6b5fb3f0b493ebc08d65a862d1e657d7e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: c5a6e6b2a47151a967980b6e75766bdec39e88ae
+ms.sourcegitcommit: 00af0b6448ba58e3685530f40bc622453d3545ac
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729428"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104673655"
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>Configurare l'opzione di configurazione del server user connections
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  In questo argomento si illustra come impostare l'opzione di configurazione del server **user connections** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **user connections** è possibile specificare il numero massimo di connessioni utente simultanee permesse in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il numero effettivo di connessioni utente consentite dipende inoltre dalla versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzata nonché dai limiti delle applicazioni e dei componenti hardware. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è consentito un massimo di 32.767 connessioni utente. Poiché **user connections** è un'opzione dinamica a configurazione automatica, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] regola automaticamente il numero massimo di connessioni utente come necessario, fino al valore massimo consentito. Se, ad esempio, sono connessi solo 10 utenti, vengono allocati 10 oggetti connessione utente. Nella maggior parte dei casi, non è necessario modificare il valore dell'opzione. Il valore predefinito è 0, che indica che è consentito il numero massimo di connessioni utente (32.767).  
+  In questo argomento si illustra come impostare l'opzione di configurazione del server **user connections** in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **user connections** è possibile specificare il numero massimo di connessioni utente simultanee permesse in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il numero effettivo di connessioni utente consentite dipende inoltre dalla versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzata nonché dai limiti delle applicazioni e dei componenti hardware. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è consentito un massimo di 32.767 connessioni utente. Poiché **user connections** è un'opzione dinamica a configurazione automatica, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] regola automaticamente il numero massimo di connessioni utente come necessario, fino al valore massimo consentito. Se, ad esempio, sono connessi solo 10 utenti, vengono allocati 10 oggetti connessione utente. Nella maggior parte dei casi, non è necessario modificare il valore dell'opzione. Il valore predefinito è 0, che indica che è consentito il numero massimo di connessioni utente (32.767).  
   
  Per determinare il numero massimo di connessioni utente consentito dal sistema, è possibile eseguire [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) oppure eseguire una query sulla vista del catalogo [sys.configuration](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) .  
   
@@ -71,7 +71,7 @@ ms.locfileid: "85729428"
   
 2.  Fare clic sul nodo **Connessioni** .  
   
-3.  Nella casella **Numero massimo di connessioni simultanee**in **Connessioni** digitare o selezionare un valore da 0 a 32767 per impostare il numero massimo di utenti a cui è consentito connettersi simultaneamente all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+3.  Nella casella **Numero massimo di connessioni simultanee** in **Connessioni** digitare o selezionare un valore da 0 a 32767 per impostare il numero massimo di utenti a cui è consentito connettersi simultaneamente all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 4.  Riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -1,6 +1,6 @@
 ---
-description: Schermata 2 di Creazione guidata origine dati (driver ODBC per SQL Server)
-title: Schermata 2 di Creazione guidata origine dati (driver ODBC per SQL Server) | Microsoft Docs
+description: Informazioni su come selezionare il metodo di autenticazione nella creazione guidata origine dati per creare una nuova connessione ODBC a SQL Server.
+title: Schermata 2 di Creazione guidata origine dati (driver ODBC per SQL Server)
 ms.custom: ''
 ms.date: 01/29/2021
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 74e061e4ac66da2dfdc165e66338f3ffb70387ea
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 7db7d1d8e01929f9c43b78cd4d74e63dcc1b6e12
+ms.sourcegitcommit: 00af0b6448ba58e3685530f40bc622453d3545ac
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837288"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104673385"
 ---
 # <a name="data-source-wizard-screen-2"></a>Creazione guidata origine dati - Schermata 2
 
@@ -54,7 +54,6 @@ Specifica che il driver esegue l'autenticazione SQL Server tramite l'identità g
 
 Specifica che il driver esegue l'autenticazione per SQL Server usando un'entità servizio Azure Active Directory.
 
-
 ### <a name="login-id"></a>ID accesso
 
 Specifica l'ID di accesso usato dal driver per la connessione a SQL Server se viene selezionata l'opzione **Autenticazione SQL Server tramite ID e password di accesso immessi dall'utente** o **Con autenticazione della password di Active Directory mediante ID di accesso e password immessi dall'utente** o **Con autenticazione interattiva di Active Directory mediante un ID di accesso immesso dall'utente**. Se è selezionata l'opzione **Con autenticazione identità gestita**, specificare l'ID oggetto dell'identità gestita o lasciare vuoto per usare l'identità predefinita. Questo campo si applica solo alla connessione effettuata per determinare le impostazioni predefinite del server. Non si applica invece alle connessioni successive effettuate utilizzando l'origine dati dopo la relativa creazione, tranne nel caso in cui si utilizzi l'autenticazione identità gestita.
@@ -75,7 +74,5 @@ Consente di tornare alla schermata precedente della procedura guidata.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Creazione guidata origine dati - Schermata 1](../../../connect/odbc/windows/dsn-wizard-1.md)
-
-[Creazione guidata origine dati - Schermata 3](../../../connect/odbc/windows/dsn-wizard-3.md)
-
+[Creazione guidata origine dati - Schermata 1](dsn-wizard-1.md)  
+[Creazione guidata origine dati - Schermata 3](dsn-wizard-3.md)  

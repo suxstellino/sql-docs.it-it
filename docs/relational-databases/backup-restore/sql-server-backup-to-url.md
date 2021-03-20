@@ -2,7 +2,7 @@
 title: Backup di SQL Server nell'URL | Microsoft Docs
 description: Informazioni sui concetti, i requisiti e i componenti necessari per SQL Server usare l'archiviazione BLOB Microsoft Azure come destinazione di backup.
 ms.custom: ''
-ms.date: 03/25/2019
+ms.date: 03/19/2021
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: e2652320875d3bf22f5a7557dc7c1deba9a93376
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 9dfb774bf9176c315cb5f77a8567503d12dba4e5
+ms.sourcegitcommit: 00af0b6448ba58e3685530f40bc622453d3545ac
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100349040"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104673895"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup di SQL Server in un URL
 
@@ -97,6 +97,9 @@ Di seguito sono riportati i requisiti e le considerazioni sulla sicurezza per il
   
     > [!IMPORTANT]  
     >  Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessario un nome account e l'autenticazione della chiave di accesso di Azure, oppure una firma di accesso condiviso e un token di accesso archiviati nelle credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Queste informazioni servono per eseguire l'autenticazione all'account di Azure per operazioni di backup o ripristino.  
+
+    > [!WARNING]
+    > Archiviazione di Azure supporta la [disabilitazione](https://docs.microsoft.com/azure/storage/common/shared-key-authorization-prevent) dell'autorizzazione della chiave condivisa per un account di archiviazione. Se l'autorizzazione della chiave condivisa è disabilitata, SQL Server backup sull'URL non funzionerà.
   
 - All'account utente usato per eseguire i comandi BACKUP o RESTORE deve essere associato il ruolo del database **db_backup operator** con autorizzazioni **Modifica qualsiasi credenziale** .   
 

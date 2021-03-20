@@ -1,6 +1,6 @@
 ---
-title: Funzionalità del motore di database non più disponibili
-description: Informazioni sulle funzionalità del motore di database non più disponibili in SQL Server 2019 (15.x), SQL Server 2016 (13.x) e versioni precedenti.
+title: Funzionalità del motore di database non più utilizzate
+description: Informazioni sulle funzionalità e sulle funzionalità del motore di database non più disponibili in SQL Server 2019 (15. x), SQL Server 2016 (13. x) e versioni precedenti.
 ms.custom: seo-lt-2019
 ms.date: 07/22/2020
 ms.prod: sql
@@ -36,12 +36,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016'
-ms.openlocfilehash: 2b735e98bd49e06057008a714a868cec6c9f5282
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: e1c5f8b15d40ff26cf1a164e806f7fa735b28319
+ms.sourcegitcommit: 00af0b6448ba58e3685530f40bc622453d3545ac
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100347878"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104673457"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>Funzionalità del motore di database sospese in SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -73,16 +73,18 @@ Per le opzioni di configurazione correnti, vedere [ALTER DATABASE SCOPED CONFIGU
 
 - La crittografia SSL (Secure Sockets Layer) non è più disponibile. Usare in alternativa Transport Layer Security (TLS). Per altre informazioni, vedere [Abilitazione di connessioni crittografate al Motore di database](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).
 
+- `precompute rank` L'opzione di configurazione del server è stata sospesa a partire da SQL Server 2008. L'articolo è stato rimosso dalla documentazione.
+
 ## <a name="previous-versions"></a>Versioni precedenti
 
 - [Funzionalità del Motore di database non più utilizzate in SQL Server 2014](/previous-versions/sql/2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014&preserve-view=true)
 
-### <a name="see-also"></a>Vedere anche
+### <a name="see-also"></a>Vedi anche
 
 - [Funzionalità del motore di database deprecate in SQL Server 2019](deprecated-database-engine-features-in-sql-server-version-15.md)
 - [Funzionalità del motore di database deprecate in SQL Server 2017](deprecated-database-engine-features-in-sql-server-2017.md)
 - [Funzionalità del motore di database deprecate in SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)
 - [Modifiche che causano interruzioni apportate alle funzionalità del motore di database in SQL Server 2019](breaking-changes-to-database-engine-features-in-sql-server-version-15.md)
-- [Modifiche che causano interruzioni apportate alle funzionalità del motore di database in SQL Server 2017](breaking-changes-to-database-engine-features-in-sql-server-2017.md)
-- [Modifiche che causano interruzioni apportate alle funzionalità del motore di database in SQL Server 2016](breaking-changes-to-database-engine-features-in-sql-server-2016.md)
+- [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2017](breaking-changes-to-database-engine-features-in-sql-server-2017.md)
+- [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2016](breaking-changes-to-database-engine-features-in-sql-server-2016.md)
 - [Funzionalità deprecate nella replica di SQL Server](../relational-databases/replication/deprecated-features-in-sql-server-replication.md)

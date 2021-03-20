@@ -24,12 +24,12 @@ ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: 287e3c0abfc083607b96598da5e83cd5ab0b58dd
-ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
+ms.openlocfilehash: 0eab287319fdfa263cbf5cba44546ab3b792bdad
+ms.sourcegitcommit: 00af0b6448ba58e3685530f40bc622453d3545ac
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 03/19/2021
-ms.locfileid: "104611171"
+ms.locfileid: "104673898"
 ---
 # <a name="service-broker"></a>Broker di servizio
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -86,7 +86,7 @@ FROM ExpenseQueue;
   Dopo aver elaborato tutti i messaggi della coda, chiudere la conversazione usando l'istruzione Transact-SQL [END CONVERSATION](../../t-sql/statements/end-conversation-transact-sql.md).
 
 ## <a name="where-is-the-documentation-for-service-broker"></a>Dove si trova la documentazione per Service Broker?  
- La documentazione di riferimento per [!INCLUDE[ssSB](../../includes/sssb-md.md)] è inclusa nella documentazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Nella documentazione di riferimento sono incluse le sezioni seguenti:  
+ La documentazione di riferimento per [!INCLUDE[ssSB](../../includes/sssb-md.md)] è inclusa nella documentazione di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] . Nella documentazione di riferimento sono incluse le sezioni seguenti:  
   
 -   [Istruzioni Data Definition Language &#40;DDL&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/statements.md) per istruzioni CREATE, ALTER e DROP  
   
@@ -98,7 +98,7 @@ FROM ExpenseQueue;
   
 -   [Utilità ssbdiagnose &#40;Service Broker&#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
- Vedere la [documentazione pubblicata in precedenza](/previous-versions/sql/sql-server-2008-r2/bb522893(v=sql.105)) per i concetti relativi a [!INCLUDE[ssSB](../../includes/sssb-md.md)] e per le attività di gestione e sviluppo. Questa documentazione non è riprodotta nella documentazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a causa del numero esiguo di modifiche in [!INCLUDE[ssSB](../../includes/sssb-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Vedere la [documentazione pubblicata in precedenza](/previous-versions/sql/sql-server-2008-r2/bb522893(v=sql.105)) per i concetti relativi a [!INCLUDE[ssSB](../../includes/sssb-md.md)] e per le attività di gestione e sviluppo. Questa documentazione non è riprodotta nella [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] documentazione a causa del numero ridotto di modifiche apportate nelle [!INCLUDE[ssSB](../../includes/sssb-md.md)] versioni recenti di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="whats-new-in-service-broker"></a>Novità di Service Broker  
 

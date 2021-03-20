@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e68604e7805342c9c1d0302c0f99d88d8d9fbf07
-ms.sourcegitcommit: 76c5e10704e3624b538b653cf0352e606b6346d3
+ms.openlocfilehash: 525f08bada39e02a3dfc4f834f5106be18571e36
+ms.sourcegitcommit: 00af0b6448ba58e3685530f40bc622453d3545ac
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98924731"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104673975"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurare account di servizio e autorizzazioni di Windows
 
@@ -249,7 +249,7 @@ In questa sezione vengono descritte le autorizzazioni configurate dal programma 
 
 ### <a name="service-configuration-and-access-control"></a><a name="Serv_SID"></a> Configurazione e controllo di accesso del servizio
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] abilita SID per servizio per ognuno dei servizi in modo da fornire isolamento e protezione avanzata dei servizi. Il SID per servizio deriva dal nome del servizio ed è univoco per il servizio. Un nome di SID per servizio per un'istanza denominata del servizio [!INCLUDE[ssDE](../../includes/ssde-md.md)] potrebbe essere ad esempio **NT Service\MSSQL$** _\<InstanceName>_ . Attraverso l'isolamento, è possibile accedere a oggetti specifici anche se non vengono eseguiti in un account con privilegi elevati e senza indebolire la sicurezza dell'oggetto. Mediante una voce di controllo di accesso contenente un SID del servizio, un servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può limitare l'accesso alle proprie risorse.
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] abilita SID per servizio per ognuno dei servizi in modo da fornire isolamento e protezione avanzata dei servizi. Il SID per servizio deriva dal nome del servizio ed è univoco per il servizio. Un nome di SID per servizio per un'istanza denominata del servizio [!INCLUDE[ssDE](../../includes/ssde-md.md)] potrebbe essere ad esempio **NT Service\MSSQL$** _\<InstanceName>_ . Attraverso l'isolamento, è possibile accedere a oggetti specifici anche se non vengono eseguiti in un account con privilegi elevati e senza indebolire la sicurezza dell'oggetto. Mediante una voce di controllo di accesso contenente un SID del servizio, un servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può limitare l'accesso alle proprie risorse.
 
 > [!NOTE]
 > In Windows 7, [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 e versioni successive il SID per servizio può essere l'account virtuale usato dal servizio.
@@ -529,8 +529,8 @@ Il provisioning dell'account specificato durante l'installazione viene effettuat
 
 In questa sezione sono descritte le modifiche apportate durante l'aggiornamento da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] richiede [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 SP1, Windows Server 2012, Windows 8.0, Windows Server 2012 R2 o Windows 8.1. Qualsiasi versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione in una versione meno recente del sistema operativo deve disporre del sistema operativo aggiornato prima dell'aggiornamento a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-- Durante l'aggiornamento di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà eseguita dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel modo seguente.
+- [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] richiede un [sistema operativo](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md#operating-system-support)supportato. Qualsiasi versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione in una versione meno recente del sistema operativo deve disporre del sistema operativo aggiornato prima dell'aggiornamento a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+- Durante l'aggiornamento di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] al [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] programma di installazione di configura l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza di nel modo seguente:
 
   - Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene eseguito con il contesto di sicurezza del SID per servizio. Al SID per servizio è concesso l'accesso alle cartelle file dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ad esempio DATA) e alle chiavi del Registro di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   - Il SID per servizio del [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene sottoposto a provisioning in [!INCLUDE[ssDE](../../includes/ssde-md.md)] come membro del ruolo predefinito del server **sysadmin** .

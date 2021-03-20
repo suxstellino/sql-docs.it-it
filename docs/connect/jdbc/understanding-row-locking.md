@@ -1,6 +1,6 @@
 ---
-description: Informazioni sul blocco delle righe
-title: Informazioni sul blocco delle righe | Microsoft Docs
+description: Viene illustrato come utilizzare il blocco di riga per controllare il modo in cui gli utenti simultanei accedono ai dati contemporaneamente da diverse connessioni.
+title: Informazioni sul blocco delle righe
 ms.custom: ''
 ms.date: 12/08/2020
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 63c76a2f-f2b9-461f-8904-acbda0169ac3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e5305f3feaa80d0a83dd1e7bfd97088492608ae5
-ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
-ms.translationtype: HT
+ms.openlocfilehash: 589700b7d3f4a08958e306f59e87249263f86675
+ms.sourcegitcommit: 00af0b6448ba58e3685530f40bc622453d3545ac
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96901060"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104673145"
 ---
 # <a name="understanding-row-locking"></a>Informazioni sul blocco delle righe
 
@@ -30,8 +30,8 @@ ms.locfileid: "96901060"
 Il blocco viene utilizzato per garantire l'integrità delle transazioni e la coerenza dei database. Il blocco impedisce agli utenti di leggere dati di cui è in corso la modifica da parte di altri utenti e impedisce che gli stessi dati vengano modificati contemporaneamente da più utenti. Se il blocco non viene utilizzato, i dati inclusi in un database possono diventare incorretti a livello logico e le query eseguite su tali dati possono produrre risultati imprevisti.
 
 > [!NOTE]  
-> Per altre informazioni sul blocco di riga in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere ["Uso dei blocchi in [!INCLUDE[ssDE](../../includes/ssde_md.md)]"](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+> Per ulteriori informazioni sul blocco di riga in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [blocco in [!INCLUDE[ssDE](../../includes/ssde_md.md)] ](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione dei set di risultati con il driver JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)
+[Gestione dei set di risultati con il driver JDBC](managing-result-sets-with-the-jdbc-driver.md)
