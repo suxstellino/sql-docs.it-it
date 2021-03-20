@@ -4,7 +4,7 @@ title: CREATE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: reference
@@ -55,12 +55,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e02d3676b1b303ef6dbbae4a509ed0db0c608071
-ms.sourcegitcommit: c83c17e44b5e1e3e2a3b5933c2a1c4afb98eb772
+ms.openlocfilehash: c66d38bafd8d011e8630e865359fcc781dab01c6
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "100525233"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104734415"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -355,7 +355,7 @@ A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] l'oggetto può
 
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supporta il formato del nome in tre parti _database_name_.[_schema_name_]._object_name_ quando *database_name* è il database corrente o _database_name_ è `tempdb`e _object_name_ inizia con #.
 
-**\<relational_index_option\>::=**       
+**\<relational_index_option\>::=**      
 Specifica le opzioni da usare quando si crea l'indice.
 
 PAD_INDEX = { ON | **OFF** }      
@@ -657,13 +657,13 @@ Le opzioni SET nella colonna Valore obbligatorio sono richieste ogni volta che s
 
     |Opzioni SET|Valore richiesto|Valore server predefinito|Predefinito<br /><br /> OLE DB e ODBC predefinito|Predefinito<br /><br /> DB-Library predefinito|
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|
-    |ANSI_NULLS|ON|ON|ATTIVA|OFF|
-    |ANSI_PADDING|ON|ON|ATTIVA|OFF|
-    |ANSI_WARNINGS*|ON|ON|ATTIVA|OFF|
-    |ARITHABORT|ON|ATTIVA|OFF|OFF|
-    |CONCAT_NULL_YIELDS_NULL|ON|ON|ATTIVA|OFF|
+    |ANSI_NULLS|ON|ON|ON|OFF|
+    |ANSI_PADDING|ON|ON|ON|OFF|
+    |ANSI_WARNINGS*|ON|ON|ON|OFF|
+    |ARITHABORT|ON|ON|OFF|OFF|
+    |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|
     |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|
-    |QUOTED_IDENTIFIER|ON|ON|ATTIVA|OFF|
+    |QUOTED_IDENTIFIER|ON|ON|ON|OFF|
   
      * Quando il livello di compatibilità del database è impostato su 90 o su un valore maggiore, l'impostazione di ANSI_WARNINGS su ON comporta anche l'impostazione implicita di ARITHABORT su ON. Se il livello di compatibilità del database è impostato su 80 o su un valore inferiore, l'opzione ARITHABORT deve essere impostata su ON in modo esplicito.
 

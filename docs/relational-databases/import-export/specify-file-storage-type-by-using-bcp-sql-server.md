@@ -3,7 +3,7 @@ title: Specificare il tipo di archiviazione di file con bcp
 description: Usare bcp per esportare i dati in un file come tipo di tabella di database, nella relativa rappresentazione in forma di caratteri o come tipo di dati che supporta la conversione implicita.
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: data-movement
 ms.topic: conceptual
@@ -18,12 +18,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 86c5e6c9edb33147979c7df34386dc474529b18f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: ffcde703125ecc798177461343b98da6077c534f
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97407560"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104752271"
 ---
 # <a name="specify-file-storage-type-using-bcp-sql-server"></a>Specificare il tipo di archiviazione di file tramite bcp (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

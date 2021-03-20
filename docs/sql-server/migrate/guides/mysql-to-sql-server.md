@@ -10,12 +10,12 @@ ms.topic: how-to
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/19/2021
-ms.openlocfilehash: f178a0cc181704f10a3e9a6dea43b00cfa4d2dc1
-ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
+ms.openlocfilehash: 454466e2f387f7bc11d80660eb0534f67aecb7a8
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104611127"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104751581"
 ---
 # <a name="migration-guide-mysql-to-sql-server"></a>Guida alla migrazione: da MySQL a SQL Server
 [!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,22 +34,24 @@ Per eseguire la migrazione del database MySQL a SQL Server, è necessario:
 ## <a name="pre-migration"></a>Pre-migrazione 
 
 Dopo aver soddisfatto i prerequisiti, si è pronti per individuare l'ambiente MySQL di origine e valutare la fattibilità della migrazione.
-Prima di iniziare la migrazione tramite SSMA, è necessario:
-
-1.  Creare un nuovo progetto.  
-2.  Connettersi a un database MySQL.
-3.  Una volta completata la connessione, gli schemi MySQL verranno visualizzati in MySQL Metadata Explorer. Fare clic con il pulsante destro del mouse su oggetti in MySQL Metadata Explorer per eseguire attività quali la creazione di report per la valutazione delle conversioni in SQL Server.
 
 ### <a name="assess"></a>Valutare 
-
 
 Per usare [SSMA per MySQL](https://aka.ms/ssmaformysql) per creare una valutazione, seguire questa procedura: 
 
 1. Aprire SQL Server Migration Assistant per MySQL. 
-1. Selezionare **file** e scegliere **nuovo progetto**. Specificare il nome del progetto, un percorso in cui salvare il progetto e la destinazione della migrazione.
-1. Selezionare **SQL Server** nell'opzione **Esegui migrazione a** . 
+1. Selezionare **file** e scegliere **nuovo progetto**. Specificare il nome del progetto, un percorso in cui salvare il progetto e la destinazione della migrazione. Selezionare **SQL Server** nell'opzione **Esegui migrazione a** . 
+
+   ![Nuovo progetto](./media/mysql-to-sql-server/new-project.png)
+
 1. Specificare i dettagli della connessione nella finestra di dialogo **Connetti a MySQL** e connettersi al server MySQL. 
+
+   ![Connettersi a MySQL](./media/mysql-to-sql-server/connect-to-mysql.png)
+
 1. Fare clic con il pulsante destro del mouse sullo schema MySQL in **MySQL Metadata Explorer** e scegliere **Crea report**. In alternativa, è possibile selezionare **Crea report** dalla barra di spostamento in alto a linee. 
+
+   ![Creazione di report](./media/mysql-to-sql-server/create-report.png)
+
 1. Esaminare il report HTML con statistiche di conversione, errori e avvisi. Analizzare il report per comprendere i problemi di conversione e le relative risoluzioni. 
 
    È inoltre possibile accedere a questo report dalla cartella SSMA Projects come selezionato nella prima schermata. Dall'esempio precedente, individuare il file di report.xml da:
@@ -58,11 +60,22 @@ Per usare [SSMA per MySQL](https://aka.ms/ssmaformysql) per creare una valutazio
  
    e aprirlo in Excel per ottenere un inventario degli oggetti MySQL e lo sforzo necessario per eseguire le conversioni dello schema.
 
+   ![Report di conversione](./media/mysql-to-sql-server/conversion-report.png)
+
 ### <a name="validate-type-mappings"></a>Convalida mapping dei tipi
 
-Prima di eseguire la conversione dello schema, convalidare i mapping del tipo di dati predefiniti o modificarli in base ai requisiti. Questa operazione può essere eseguita passando al menu **strumenti** e scegliendo **Impostazioni progetto** oppure è possibile modificare il mapping dei tipi per ogni tabella selezionando la tabella in **MySQL Metadata Explorer**.
+Convalidare i mapping dei tipi di dati predefiniti e modificarli in base ai requisiti, se necessario. A questo scopo, attenersi alla procedura seguente: 
 
-Per altre informazioni sulle impostazioni di conversione in SSMA, vedere [Impostazioni progetto](../../../ssma/mysql/project-settings-conversion-mysqltosql.md)
+1. Selezionare **Tools** (Strumenti) dal menu. 
+1. Selezionare **Project Settings** (Impostazioni progetto). 
+1. Selezionare la scheda **Type mappings** (Mapping tipi). 
+
+   ![Mapping dei tipi](./media/mysql-to-sql-server/type-mappings.png)
+
+1. È possibile modificare il mapping dei tipi per ogni tabella selezionando la tabella in **MySQL Metadata Explorer**. 
+
+
+Per altre informazioni sulle impostazioni di conversione in SSMA, vedere [Impostazioni progetto](../../../ssma/mysql/project-settings-conversion-mysqltosql.md).
 
 ### <a name="convert-schema"></a>Converti schema
 
@@ -74,12 +87,27 @@ Per convertire lo schema, seguire questa procedura:
 
 1. Opzionale Per convertire le query dinamiche o ad hoc, fare clic con il pulsante destro del mouse sul nodo e scegliere **Aggiungi istruzione**. 
 1. Selezionare **Connetti a SQL Server** nella barra di spostamento in alto a linee e specificare SQL Server dettagli. È possibile scegliere di connettersi a un database esistente o specificare un nuovo nome, nel qual caso verrà creato un database nel server di destinazione.
+
+   ![Connetti a SQL](./media/mysql-to-sql-server/connect-to-sql-server.png)
+
 1. Fare clic con il pulsante destro del mouse sullo schema MySQL in **MySQL Metadata Explorer** e scegliere **Converti schema**. In alternativa, è possibile selezionare **Converti schema** dalla barra di spostamento in alto a linee. 
+
+   ![Converti schema](./media/mysql-to-sql-server/convert-schema.png)
+
 1. Confrontare ed esaminare la struttura dello schema per identificare i potenziali problemi. 
 
-   Dopo la conversione dello schema è possibile salvare il progetto localmente per un esercizio di correzione dello schema offline. Scegliere **Salva progetto** dal menu **File**. In questo modo è possibile valutare gli schemi di origine e di destinazione offline ed eseguire la correzione prima di poter pubblicare lo schema in SQL Server.
+   Confrontare gli oggetti convertiti con quelli originali: 
 
-Per altre informazioni, vedere [conversione di database MySQL](../../../ssma/mysql/converting-mysql-databases-mysqltosql.md)
+   ![Confrontare ed esaminare l'oggetto](./media/mysql-to-sql-server/table-comparison.png)
+
+   Confrontare le viste convertite con le visualizzazioni originali: 
+
+   ![Confrontare ed esaminare il codice convertito](./media/mysql-to-sql-server/procedure-comparison.png)
+   
+   
+   Scegliere **Salva progetto** dal menu **File**. In questo modo è possibile valutare gli schemi di origine e di destinazione offline ed eseguire la correzione prima di poter pubblicare lo schema in SQL Server.
+
+Per altre informazioni, vedere [conversione di database MySQL](../../../ssma/mysql/converting-mysql-databases-mysqltosql.md).
 
 ## <a name="migration"></a>Migrazione 
 
@@ -105,9 +133,26 @@ Per eseguire la migrazione dei dati, si verificano due casi:
 Per pubblicare lo schema ed eseguire la migrazione dei dati, attenersi alla procedura seguente: 
 
 1. Fare clic con il pulsante destro del mouse sul database in **SQL Server Esplora metadati** e scegliere **Sincronizza con database**.  Questa azione pubblica lo schema MySQL nell'istanza di SQL Server.
-1. Fare clic con il pulsante destro del mouse sullo schema MySQL in **MySQL Metadata Explorer** e scegliere **Migrate data**.  In alternativa, è possibile selezionare **migrare i dati** dalla barra di spostamento in alto a linea.  
+
+   ![Sincronizza con database](./media/mysql-to-sql-server/synchronize-database.png)
+
+   Esaminare la sincronizzazione con il database:
+
+   ![Sincronizza con database-revisione](./media/mysql-to-sql-server/synchronize-database-review.png)
+
+1. Fare clic con il pulsante destro del mouse sullo schema MySQL in **MySQL Metadata Explorer** e scegliere **Migrate data**.  In alternativa, è possibile selezionare **migrare i dati** dalla barra di spostamento in alto a linea. 
+
+   ![Migrazione dei dati](./media/mysql-to-sql-server/migrate-data.png)
+
 1. Al termine della migrazione, visualizzare il **report di migrazione dei dati**: 
+
+   ![Report di migrazione dati](./media/mysql-to-sql-server/migration-report.png)
+
 1. Convalidare la migrazione esaminando i dati e lo schema nell'istanza SQL Server usando SQL Server Management Studio (SSMS).
+
+   ![Convalida in SSMA](./media/mysql-to-sql-server/validate-in-ssms.png)
+
+
 
 ## <a name="post-migration"></a>Post-migrazione 
 
@@ -149,7 +194,7 @@ Queste risorse sono state sviluppate come parte del programma Data SQL Ninja, sp
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- Per altre informazioni sulla migrazione di database MySQL a SQL Server, vedere [la documentazione di SSMA per MySQL](../../../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)
+- Per altre informazioni sulla migrazione di database MySQL a SQL Server, vedere [la documentazione di SSMA per MySQL](../../../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md).
 
 - Per una matrice di servizi e strumenti di Microsoft e di terze parti disponibili per supportare diversi scenari di migrazione di database e dati, nonché per le attività speciali, vedere l'articolo [servizio e strumenti per la migrazione dei dati](https://docs.microsoft.com/azure/dms/dms-tools-matrix).
 

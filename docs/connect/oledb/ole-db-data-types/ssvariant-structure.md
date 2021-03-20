@@ -4,7 +4,7 @@ description: Struttura SSVARIANT in OLE DB Driver per SQL Server
 ms.custom: ''
 ms.date: 06/15/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - SSVARIANT struct
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b6cef1fb9b92df92cba00ea9e9aa8c9591e887a6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
-ms.translationtype: HT
+ms.openlocfilehash: 7095942d695c57667e47d32bb6c60a97c51fbd59
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727228"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104752021"
 ---
 # <a name="ssvariant-structure"></a>Struttura SSVARIANT
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

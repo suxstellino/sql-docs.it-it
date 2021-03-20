@@ -3,7 +3,7 @@ title: Mantenere i valori Null o i valori predefiniti durante un'importazione bu
 description: Per l'importazione bulk in SQL Server, sia bcp che BULK INSERT caricano i valori predefiniti per sostituire i valori Null. Per entrambi, è possibile scegliere di mantenere i valori Null.
 ms.date: 09/20/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: data-movement
 ms.topic: conceptual
@@ -22,12 +22,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 18a1e26d8e89f5e9913c3d1d645e98d7c7c988af
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 724b8c0df07cac555158661db6d00ccf98e7134c
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97473942"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104752541"
 ---
 # <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>Mantenere i valori Null o i valori predefiniti durante un'importazione bulk (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

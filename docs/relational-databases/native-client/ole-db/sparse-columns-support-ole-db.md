@@ -4,7 +4,7 @@ title: Supporto di colonne di tipo sparse (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
@@ -12,12 +12,12 @@ ms.assetid: 918574b3-c62e-4937-9e5f-37310dedc8f9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1acd979138ec96ded25ecbead978b7ff18c9d30
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f336c36293224b16528367c820ded5a6b0c496b0
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97467562"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104744851"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client-ole-db"></a>Supporto delle colonne di tipo sparse nei SQL Server Native Client (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,8 +58,8 @@ ms.locfileid: "97467562"
 |IDBSchemaRowset::GetSchemaRowset|DBSCHEMA_COLUMNS restituisce due nuove colonne: SS_IS_COLUMN_SET e SS_IS_SPARSE.<br /><br /> DBSCHEMA_COLUMNS restituisce solo colonne che non sono membri di **column_set**.<br /><br /> Sono stati aggiunti due nuovi set di righe dello schema: DBSCHEMA_COLUMNS_EXTENDED restituirà tutte le colonne indipendentemente dal fatto che siano o meno di tipo sparse o dall'appartenenza a **column_set**. DBSCHEMA_SPARSE_COLUMN_SET restituisce solo le colonne che sono membri di **column_set**. Questi nuovi set di righe includono le stesse colonne e comportano le stesse restrizioni di DBSCHEMA_COLUMNS.|  
 |IDBSchemaRowset::GetSchemas|IDBSchemaRowset::GetSchemas include i GUID per i nuovi set di righe DBSCHEMA_COLUMNS_EXTENDED e DBSCHEMA_SPARSE_COLUMN_SET nell'elenco dei set di righe dello schema disponibili.|  
 |ICommand::Execute|Se si utilizza **seleziona \* dalla** *tabella*, vengono restituite tutte le colonne che non sono membri del **column_set** di tipo sparse, nonché una colonna XML che contiene i valori di tutte le colonne non null membri del **column_set** di tipo sparse, se presente.|  
-|IOpenRowset::OpenRowset|IOpenRowset:: OpenRowset restituisce un set di righe con le stesse colonne di ICommand:: Execute con una query **Select \** _ nella stessa tabella.|  
-|ITableDefinition|Non sono state apportate modifiche a questa interfaccia per le colonne di tipo sparse o per le colonne _ *column_set**. Le applicazioni che devono apportare modifiche allo schema devono eseguire direttamente l'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] appropriata.|  
+|IOpenRowset::OpenRowset|IOpenRowset::OpenRowset restituisce un rowset ewith thcon le stesse colonne di ICommand::Execute, con una query **selezionare \*** nella stessa tabella.|  
+|ITableDefinition|Non è stata apportata alcuna modifica a questa interfaccia per le colonne di tipo sparse o per le colonne **column_set**. Le applicazioni che devono apportare modifiche allo schema devono eseguire direttamente l'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] appropriata.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
