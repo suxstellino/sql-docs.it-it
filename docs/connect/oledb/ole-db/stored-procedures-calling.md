@@ -4,7 +4,7 @@ description: Informazioni su come chiamare una stored procedure in OLE DB Driver
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, stored procedures
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3df02e0bee4a0e0f83851a913e0e09961e6320c6
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
-ms.translationtype: HT
+ms.openlocfilehash: 4d9c375f32a9bb1dfa66c63bf1a8e23d37e54a08
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88859117"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104736321"
 ---
 # <a name="stored-procedures---calling"></a>Stored procedure - Chiamata
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -123,7 +123,7 @@ ms.locfileid: "88859117"
 ### <a name="transact-sql-execute-statement"></a>Istruzione Transact-SQL EXECUTE  
  La sequenza di escape ODBC CALL e la sequenza di escape RPC rappresentano i metodi preferiti per la chiamata a una stored procedure rispetto all'istruzione [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). OLE DB Driver per SQL Server usa il meccanismo RPC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per ottimizzare l'elaborazione del comando. Questo protocollo RPC migliora le prestazioni riducendo l'elaborazione dei parametri e l'analisi delle istruzioni eseguite sul server.  
   
- Di seguito è riportato un esempio dell'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)]EXECUTE**di**:  
+ Di seguito è riportato un esempio dell'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)]EXECUTE **di**:  
   
 ```  
 EXECUTE SalesByCategory 'Produce', '1995'  

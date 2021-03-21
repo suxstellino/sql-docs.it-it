@@ -4,7 +4,7 @@ title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/25/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: reference
@@ -30,12 +30,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 47759238673fa5e88c02421e27d0e12177072605
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: f1cd141fff964f13f4bbbae7bcd71bc1ee31694f
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100347039"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104753391"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -314,13 +314,13 @@ Le opzioni SET nella colonna Valore obbligatorio sono richieste ogni volta che s
   
     |Opzioni SET|Valore richiesto|Valore server predefinito|Predefinito<br /><br /> OLE DB e ODBC predefinito|Predefinito<br /><br /> DB-Library predefinito|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
-    |ANSI_NULLS|ATTIVA|ATTIVA|ON|OFF|  
-    |ANSI_PADDING|ATTIVA|ATTIVA|ON|OFF|  
-    |ANSI_WARNINGS*|ATTIVA|ATTIVA|ON|OFF|  
-    |ARITHABORT|ATTIVA|ON|OFF|OFF|  
-    |CONCAT_NULL_YIELDS_NULL|ATTIVA|ATTIVA|ON|OFF|  
+    |ANSI_NULLS|ON|ON|ON|OFF|  
+    |ANSI_PADDING|ON|ON|ON|OFF|  
+    |ANSI_WARNINGS*|ON|ON|ON|OFF|  
+    |ARITHABORT|ON|ON|OFF|OFF|  
+    |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
     |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-    |QUOTED_IDENTIFIER|ATTIVA|ATTIVA|ON|OFF|   
+    |QUOTED_IDENTIFIER|ON|ON|ON|OFF|   
   
      *Quando il livello di compatibilità del database è impostato su 90 o su un valore maggiore, l'impostazione di ANSI_WARNINGS su ON comporta anche l'impostazione implicita di ARITHABORT su ON. Se il livello di compatibilità del database è impostato su 80 o su un valore inferiore, l'opzione ARITHABORT deve essere impostata su ON in modo esplicito.  
   

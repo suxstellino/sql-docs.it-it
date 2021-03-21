@@ -4,7 +4,7 @@ description: Informazioni sui codici restituiti per le funzioni membro di OLE DB
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -22,12 +22,12 @@ helpviewer_keywords:
 - errors [OLE DB], return codes
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: de3a571af6e5876cd39f738822eaafebf6090634
-ms.sourcegitcommit: 00af0b6448ba58e3685530f40bc622453d3545ac
+ms.openlocfilehash: b4da3606117023854ac668ba4b90fcaae0b1a986
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104673965"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104741851"
 ---
 # <a name="return-codes"></a>Codici restituiti
 
