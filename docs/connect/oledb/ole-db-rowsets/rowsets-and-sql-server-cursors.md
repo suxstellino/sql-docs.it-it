@@ -4,7 +4,7 @@ description: Informazioni su come SQL Server restituisce set di risultati ai con
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - cursors [OLE DB]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fbcac0300b3abe337e39bccb84a78f74e0de61bb
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
-ms.translationtype: HT
+ms.openlocfilehash: 6f7b5fa8d0dabcdb5d6355bc5b34764f4ce84edd
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88859972"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104755321"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Set di righe e cursori di Server SQL
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

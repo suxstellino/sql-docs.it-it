@@ -4,7 +4,7 @@ description: Informazioni sulla crittografia senza convalida per le connessioni 
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, encryption
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7b4e69fcc506f8e52dc8104067b9e7454e4022f5
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
-ms.translationtype: HT
+ms.openlocfilehash: 805350b09c624709fa1ea6746c2e97eb2bdbed59
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861627"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104751121"
 ---
 # <a name="using-encryption-without-validation"></a>Utilizzo della crittografia senza convalida
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

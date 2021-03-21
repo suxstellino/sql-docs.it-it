@@ -4,7 +4,7 @@ title: Guida sull'architettura di elaborazione delle query | Microsoft Docs
 ms.custom: ''
 ms.date: 02/21/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 05f33d170224ee079b4d23598e88e1802bebfbbb
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 0d755b3e6d6cac04a2d6ba67b012e4b42c1aab3c
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99237683"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104755521"
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -127,9 +127,9 @@ Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è un 
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ha tre opzioni di visualizzazione dei piani di esecuzione:        
-> -  **_[Piano di esecuzione stimato](../relational-databases/performance/display-the-estimated-execution-plan.md)_* _, ovvero il piano compilato generato da Query Optimizer.        
-> -  _*_ [Piano di esecuzione effettivo](../relational-databases/performance/display-an-actual-execution-plan.md) _*_ , ovvero il piano compilato più il contesto di esecuzione. Include le informazioni di runtime disponibili al termine dell'esecuzione, ad esempio gli avvisi relativi all'esecuzione o, nelle versioni più recenti del [!INCLUDE[ssde_md](../includes/ssde_md.md)], il tempo trascorso e di CPU usato durante l'esecuzione.        
-> -  _*_ [Statistiche sulle query dinamiche](../relational-databases/performance/live-query-statistics.md) _*_ , ovvero il piano compilato più il contesto di esecuzione. Includono le informazioni di runtime durante l'avanzamento dell'esecuzione e vengono aggiornate ogni secondo. Le informazioni di runtime includono, ad esempio, il numero effettivo di righe che passano attraverso gli operatori.       
+> -  ***[Piano di esecuzione stimato](../relational-databases/performance/display-the-estimated-execution-plan.md)***, ovvero il piano compilato generato da Query Optimizer.        
+> -  ***[Piano di esecuzione effettivo](../relational-databases/performance/display-an-actual-execution-plan.md)***, ovvero il piano compilato più il contesto di esecuzione. Include le informazioni di runtime disponibili al termine dell'esecuzione, ad esempio gli avvisi relativi all'esecuzione o, nelle versioni più recenti del [!INCLUDE[ssde_md](../includes/ssde_md.md)], il tempo trascorso e di CPU usato durante l'esecuzione.        
+> -  ***[Statistiche sulle query dinamiche](../relational-databases/performance/live-query-statistics.md)***, ovvero il piano compilato più il contesto di esecuzione. Includono le informazioni di runtime durante l'avanzamento dell'esecuzione e vengono aggiornate ogni secondo. Le informazioni di runtime includono, ad esempio, il numero effettivo di righe che passano attraverso gli operatori.       
 
 ### <a name="processing-a-select-statement"></a>Elaborazione di un'istruzione SELECT
 Di seguito viene illustrata la procedura di base necessaria per elaborare una singola istruzione SELECT in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: 
@@ -145,7 +145,7 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alcune espressioni cos
 
 #### <a name="foldable-expressions"></a>Espressioni per cui è possibile eseguire l'elaborazione delle costanti in fase di compilazione
 In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene utilizzata l'elaborazione delle costanti in fase di compilazione per i tipi di espressioni seguenti:
-- Espressioni aritmetiche che contengono solo costanti, ad esempio 1+1 o 5/3_2.
+- Espressioni aritmetiche che contengono solo costanti, ad esempio 1+1 o 5/3*2.
 - Espressioni logiche che contengono solo costanti, ad esempio 1=1 e 1>2 AND 3>4.
 - Funzioni predefinite che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considera idonee per l'elaborazione delle costanti, come `CAST` e `CONVERT`. In genere, per una funzione è possibile eseguire l'elaborazione delle costanti in fase di compilazione se si tratta di una funzione solo dei relativi input e non di altre informazioni contestuali, ad esempio opzioni SET, impostazioni della lingua, opzioni di database e chiavi di crittografia. Per le funzioni non deterministiche non è possibile eseguire l'elaborazione delle costanti in fase di compilazione. Per le funzioni predefinite deterministiche, tranne alcune eccezioni, è possibile eseguire l'elaborazione delle costanti in fase di compilazione.
 - Metodi deterministici di tipi CLR definiti dall'utente e funzioni CLR definite dall'utente con valori scalari deterministici (a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Per altre informazioni, vedere [Elaborazione delle costanti in fase di compilazione per funzioni e metodi CLR definiti dall'utente](/previous-versions/sql/2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods).
