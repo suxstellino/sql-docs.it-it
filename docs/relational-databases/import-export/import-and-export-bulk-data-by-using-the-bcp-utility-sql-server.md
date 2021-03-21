@@ -2,7 +2,7 @@
 title: Importare ed esportare dati bulk con bcp
 description: Usare bcp per esportare i dati da qualsiasi posizione in un database di SQL Server in cui funziona l'istruzione SELECT. Eseguire l'esportazione bulk di dati da una tabella o da una query ed eseguire l'importazione bulk da un file.
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.technology: data-movement
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.date: 09/28/2016
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1bd365ee0af1bd1e8064b9bb6a5ba486abdf06cf
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: f2186cea32347c0e5418c2360371a2985f2ac9d6
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97473982"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104749661"
 ---
 # <a name="import-and-export-bulk-data-using-bcp-sql-server"></a>Importare ed esportare dati bulk con bcp (SQL Server)
 

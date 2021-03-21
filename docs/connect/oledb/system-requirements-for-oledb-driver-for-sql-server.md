@@ -4,7 +4,7 @@ description: Informazioni sui prerequisiti software necessari per usare le funzi
 ms.custom: ''
 ms.date: 03/18/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - MSOLEDBSQL, system requirements
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c86f62f98e81ce3c4fdd86e1e79e8f73e1422851
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
-ms.translationtype: HT
+ms.openlocfilehash: aa46b5a4db292b5ac4ee5df71aa18abeb74c5559
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96127974"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104744871"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>Requisiti di sistema per driver OLE DB per SQL Server
 
@@ -42,7 +42,7 @@ Per un elenco dei sistemi operativi che supportano OLE DB Driver per SQL Server,
 
 ## <a name="azure-active-directory-authentication-requirements"></a>Requisiti di autenticazione di Azure Active Directory  
 
-Quando si usano i metodi di autenticazione di Azure Active Directory con versioni del driver OLE DB per SQL Server ***precedenti alla** _ 18.3, assicurarsi di avere installato [Active Directory Authentication Library per SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072). (La versione 18.3 include la dipendenza come parte del relativo pacchetto di installazione.) ADAL non è necessario per gli altri metodi di autenticazione o per le operazioni OLE DB. Per altre informazioni, vedere: [Uso di Azure Active Directory](features/using-azure-active-directory.md).
+Quando si usano i metodi di autenticazione di Azure Active Directory con il driver OLE DB per SQL Server ***prima*** della versione 18.3, assicurarsi di avere installato [Active Directory Authentication Library per SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072). (La versione 18.3 include la dipendenza come parte del relativo pacchetto di installazione.) ADAL non è necessario per gli altri metodi di autenticazione o per le operazioni OLE DB. Per altre informazioni, vedere: [Uso di Azure Active Directory](features/using-azure-active-directory.md).
 
 ## <a name="sql-server-requirements"></a>requisiti di SQL Server  
 
@@ -56,7 +56,7 @@ La versione in lingua inglese di OLE DB Driver per SQL Server è supportata in t
 
 Per gli aggiornamenti:  
 
-_ Le versioni in lingua inglese di OLE DB Driver per SQL Server possono essere aggiornate a qualsiasi versione localizzata di OLE DB Driver per SQL Server.  
+* Le versioni in lingua inglese di OLE DB Driver per SQL Server possono essere aggiornate a qualsiasi versione localizzata di OLE DB Driver per SQL Server.  
 * Le versioni localizzate di OLE DB Driver per SQL Server possono essere aggiornate alle versioni localizzate di OLE DB Driver per SQL Server della stessa lingua.  
 * Le versioni localizzate di OLE DB Driver per SQL Server possono essere aggiornate alla versione in lingua inglese di OLE DB Driver per SQL Server.  
 * Le versioni localizzate di OLE DB Driver per SQL Server non possono essere aggiornate alle versioni localizzate di OLE DB Driver per SQL Server di una lingua diversa.  
