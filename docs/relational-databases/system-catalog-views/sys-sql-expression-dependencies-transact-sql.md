@@ -4,7 +4,7 @@ title: sys.sql_expression_dependencies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: reference
@@ -21,12 +21,12 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34c88c909239e7f9d9fcb12e5b30677708d9cfbc
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 96eb8bb58aca14dc2ca3eaeb4c2fc1be5f066d2a
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99210328"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104750341"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "99210328"
 |Visualizzazione|Sì|Sì|  
 |Indice filtrato|Sì**|No|  
 |Statistiche filtrate|Sì**|No|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure * * _|Sì|Sì|  
+|Stored procedure*** [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sì|Sì|  
 |stored procedure CLR|No|Sì|  
 |Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|Sì|Sì|  
 |Funzione CLR definita dall'utente|No|Sì|  
@@ -92,11 +92,11 @@ ms.locfileid: "99210328"
 |Raccolta di XML Schema|No|Sì|  
 |Funzione di partizione|No|Sì|  
   
- \_ Una tabella viene rilevata come entità di riferimento solo quando fa riferimento a un [!INCLUDE[tsql](../../includes/tsql-md.md)] modulo, a un tipo definito dall'utente o a una raccolta di XML Schema nella definizione di una colonna calcolata, un vincolo check o un vincolo Default.  
+ \* Una tabella viene rilevata come entità di riferimento solo quando fa riferimento a un [!INCLUDE[tsql](../../includes/tsql-md.md)] modulo, a un tipo definito dall'utente o a una raccolta di XML Schema nella definizione di una colonna calcolata, un vincolo check o un vincolo Default.  
   
  ** Ogni colonna utilizzata nel predicato del filtro viene registrata come un'entità di riferimento.  
   
- * * _ Le stored procedure numerate con un valore integer maggiore di 1 non vengono rilevate come entità di riferimento o a cui si fa riferimento.  
+ *** Le stored procedure numerate con un valore intero maggiore di 1 non vengono rilevate come entità di riferimento o entità a cui si fa riferimento.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Sono richieste l'autorizzazione VIEW DEFINITION sul database e l'autorizzazione SELECT su sys.sql_expression_dependencies per il database. L'autorizzazione SELECT è concessa per impostazione predefinita solo ai membri del ruolo predefinito del database di db_owner. Quando le autorizzazioni SELECT e VIEW DEFINITION vengono concesse a un altro utente, l'utente autorizzato può visualizzare tutte le dipendenze nel database.  
@@ -154,7 +154,7 @@ CREATE DATABASE db1;
 GO  
 USE db1;  
 GO  
-CREATE PROCEDURE p1 AS SELECT _ FROM db2.s1.t1;  
+CREATE PROCEDURE p1 AS SELECT * FROM db2.s1.t1;  
 GO  
 CREATE PROCEDURE p2 AS  
     UPDATE db3..t3  

@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 36c5f8a3178d82f899b7128434af4467d4f6f846
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 0117b075a821a7e18732675ed432aafab5fafc60
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729839"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104734719"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Direttiva TYPE in query FOR XML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Il supporto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) consente di richiedere facoltativamente che il risultato di una query FOR XML venga restituito come tipo di dati **xml** specificando la direttiva TYPE. In questo modo è possibile elaborare il risultato di una query FOR XML sul server. Ad esempio, è possibile specificare un'espressione XQuery per la query FOR XML, assegnare il risultato a una variabile di tipo **xml** oppure scrivere [query FOR XML annidate](../../relational-databases/xml/use-nested-for-xml-queries.md).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il supporto per il tipo di dati [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) consente di richiedere facoltativamente che il risultato di una query for XML venga restituito come tipo di dati **XML** specificando la direttiva Type. In questo modo è possibile elaborare il risultato di una query FOR XML sul server. Ad esempio, è possibile specificare un'espressione XQuery per la query FOR XML, assegnare il risultato a una variabile di tipo **xml** oppure scrivere [query FOR XML annidate](../../relational-databases/xml/use-nested-for-xml-queries.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce dati di istanza di tipo XML al client come risultato di diversi costrutti server, ad esempio query FOR XML che usano la direttiva TYPE o in cui il tipo di dati **xml** viene usato per la restituzione di valori dei dati dell'istanza XML da colonne di tabella e parametri di output SQL. Nel codice delle applicazioni client, il provider ADO.NET richiede che le informazioni sui tipi di dati XML vengano inviate dal server in codifica binaria. Se tuttavia si utilizza FOR XML senza la direttiva TYPE, i dati XML vengono restituiti come tipo stringa. In tutti i casi, il provider client sarà sempre in grado di gestire entrambe i formati di XML. La clausola FOR XML di livello principale senza la direttiva TYPE non può essere utilizzata con i cursori.  
