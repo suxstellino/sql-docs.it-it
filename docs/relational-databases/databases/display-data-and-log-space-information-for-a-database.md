@@ -3,7 +3,7 @@ title: Visualizzare informazioni sullo spazio allocato ai dati e ai log per un d
 description: Informazioni su come visualizzare le informazioni sui dati e lo spazio di log per un database in SQL Server usando SQL Server Management Studio o Transact-SQL.
 ms.date: 08/01/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: supportability
 ms.topic: conceptual
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 648e33d685e7c97a7e900fd752402ed135fb9ecb
-ms.sourcegitcommit: c821c2bdc383a84e45bbdc95ff6fbabf4f54901c
+ms.openlocfilehash: 5c554ed600ce2317291cc01652bba07ad3d54d90
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100560943"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104748195"
 ---
 # <a name="display-data-and-log-space-information-for-a-database"></a>Visualizzare le informazioni sullo spazio allocato ai dati e ai log per un database
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

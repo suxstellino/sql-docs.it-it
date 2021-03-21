@@ -4,7 +4,7 @@ description: Informazioni sul modo in cui un consumer in OLE DB Driver per SQL S
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, command execution
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f24216ec62b77c56d5d2b18563f64e37fd4b7691
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
-ms.translationtype: HT
+ms.openlocfilehash: 91c5377e84a47255bd079332c58835ec7413ce6d
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861524"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104749721"
 ---
 # <a name="executing-a-command"></a>Esecuzione di un comando
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
