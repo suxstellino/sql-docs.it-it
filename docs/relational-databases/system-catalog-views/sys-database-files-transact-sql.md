@@ -4,7 +4,7 @@ title: sys.database_files (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/19/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: reference
@@ -21,12 +21,12 @@ ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d58532ca43e18ae45828b9d647857e629cd7658
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 357727a7f59a8dbce15e7268e00a2278f17f0565
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99195921"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104753221"
 ---
 # <a name="sysdatabase_files-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -4,7 +4,7 @@ title: Eseguire la copia bulk di dati tramite IRowsetFastLoad (provider OLE DB d
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e9ee4b4f73f12636afa498a740fbafbce3a2367b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e6e7febf562ba0208740e004b91d91ff229e250c
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97476142"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104738551"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db-in--sql-server-native-client"></a>Copia dati bulk con IRowsetFastLoad (OLE DB) in SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

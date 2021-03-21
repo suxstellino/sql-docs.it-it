@@ -4,7 +4,7 @@ description: Si è verificato un errore durante il tentativo di installare o agg
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: supportability
 ms.topic: reference
@@ -14,12 +14,12 @@ ms.assetid: 5426d87a-d5d9-4984-b211-b07d69e834a2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77148b5dd6891426cd3d7565be55163df07de990
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 32015c0727ec44bd802ddb5f7cf5eb4c35ab2ea8
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465652"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104735035"
 ---
 # <a name="error-mssqlserver_50000-in-sql-server-native-client"></a>Errore MSSQLSERVER_50000 in SQL Server Native Client 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "97465652"
     
 ## <a name="details"></a>Dettagli  
   
-| Attributo | valore |  
+| Attributo | Valore |  
 | :-------- | :---- |  
 |Nome prodotto|SQL Server|  
 |Versione prodotto|11.0|  

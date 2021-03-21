@@ -4,7 +4,7 @@ description: Informazioni sulla programmazione di applicazioni con OLE DB Driver
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, OLE DB
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4e72dc1e1ea82df68d3dc766e460e7a433d78a43
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
-ms.translationtype: HT
+ms.openlocfilehash: f8b588d6501157ca030812966b4080a006cc5364
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861818"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104754201"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>Driver OLE DB per programmazione con SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

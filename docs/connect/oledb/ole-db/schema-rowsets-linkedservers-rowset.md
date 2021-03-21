@@ -4,7 +4,7 @@ description: Il set di righe LINKEDSERVERS enumera le origini dati dell'organizz
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - enumerating data sources [OLE DB]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1639463992bfffe7ea86a97c43564214a92b2cdb
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
-ms.translationtype: HT
+ms.openlocfilehash: 52c70c4034e67e1a6300cbdeb860862100cc0235
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861556"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104754131"
 ---
 # <a name="schema-rowsets---linkedservers-rowset"></a>Set di righe dello schema - Set di righe LINKEDSERVERS
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
