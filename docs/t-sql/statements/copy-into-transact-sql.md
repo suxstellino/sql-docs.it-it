@@ -4,7 +4,7 @@ titleSuffix: (Azure Synapse Analytics) - SQL Server
 description: Usare l'istruzione COPY in Azure Synapse Analytics per il caricamento da account di archiviazione esterni.
 ms.date: 09/25/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-data-warehouse
+ms.prod_service: database-engine, sql-database, synapse-analytics
 ms.reviewer: jrasnick
 ms.technology: t-sql
 ms.topic: language-reference
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: fb52e9e869c0210e8e320c11dfec21aa8f7d585e
-ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.openlocfilehash: eec47e724fd1bfb2d962ec9106a9bd01e6eb10ff
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99076809"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104754841"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 

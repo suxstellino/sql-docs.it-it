@@ -4,7 +4,7 @@ description: Alcune API OLE DB Driver per SQL Server usano stringhe di connessio
 ms.custom: ''
 ms.date: 09/30/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: vanto
 ms.technology: connectivity
 ms.topic: conceptual
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, connection string keywords
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7b0a42cbec8c1feb253140c1534b8f9f2a3142eb
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
-ms.translationtype: HT
+ms.openlocfilehash: c5ddba7e6b2ac0faef93ff544dbb5f23f3fb5d15
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96506395"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104751201"
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>Uso delle parole chiave delle stringhe di connessione con driver OLE DB per SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -3,7 +3,7 @@ title: CASE (Transact-SQL)
 description: Informazioni di riferimento Transact-SQL per l'espressione CASE. L'espressione CASE valuta un elenco di condizioni per restituire risultati specifici.
 ms.date: 01/26/2021
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: reference
@@ -21,12 +21,12 @@ ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5647234be5f758f1b4ff27f2f11e5338d67635da
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: d3b14e04172d1eaef6f8cdd4ade83978f8e204db
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100352381"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104755461"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 

@@ -3,7 +3,7 @@ description: Conversioni di SQL Server Native Client eseguite dal server al clie
 title: Conversioni eseguite da server a client
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
@@ -14,12 +14,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f91e2dfd6570808c5b385f07bcb6b3d66e2bd55b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f7fbf944f45231a5dea9bb34de5e8095a9bc7a68
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97467692"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104748401"
 ---
 # <a name="sql-server-native-client-conversions-performed-from-server-to-client"></a>Conversioni di SQL Server Native Client eseguite dal server al client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

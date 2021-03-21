@@ -4,7 +4,7 @@ title: sys.database_service_objectives
 titleSuffix: Azure SQL Database
 ms.date: 03/21/2018
 ms.service: sql-database
-ms.prod_service: sql-database, sql-data-warehouse
+ms.prod_service: database-engine, sql-database, synapse-analytics
 ms.reviewer: ''
 ms.topic: conceptual
 keywords:
@@ -17,12 +17,12 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest
-ms.openlocfilehash: 861e8297a54cff399425e521591cd983afbb0cc6
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 786d236d676897da38753a885b021f2a45bb1ab6
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098013"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104754671"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (database SQL di Azure)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
@@ -46,7 +46,7 @@ Restituisce l'edizione (livello di servizio), l'obiettivo di servizio (piano tar
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione **dbManager** per il database master.  A livello di database, l'utente deve essere l'autore o il proprietario.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Questo esempio può essere eseguito nel database master o nei database utente del database SQL di Azure. La query restituisce le informazioni sul nome, il servizio e il livello di prestazioni dei database.  
   
 ```sql  
