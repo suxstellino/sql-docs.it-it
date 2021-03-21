@@ -5,7 +5,7 @@ titleSuffix: SQL Server (Transact-SQL)
 ms.custom: seo-lt-2019
 ms.date: 12/07/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.assetid: 4aaeaab7-9b2b-48e0-8487-04ed672ebcb1
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5569660d93112d91664a3177d1bdd7f5dcdbe359
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: e2b0bf5c2ae5c1514a54207c0ece773b3e6d4ed2
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100352860"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104752951"
 ---
 # <a name="-string-concatenation-assignment-transact-sql"></a>+= (Assegnazione concatenazione di stringhe) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ expression += expression
 ## <a name="result-types"></a>Tipi restituiti  
  Restituisce il tipo di dati definito per la variabile.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  SET @v1 += 'expression' equivale a SET @v1 = @v1 + ('expression'). Inoltre SET @v1 = @v2 + @v3 + @v4 equivale a SET @v1 = (@v2 + @v3) + @v4.  
   
  L'operatore += non può essere utilizzato senza una variabile. Il codice riportato di seguito comporta, ad esempio, la generazione di un errore:  
@@ -128,7 +128,7 @@ GO
    
 ## <a name="see-also"></a>Vedere anche  
  [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [+= &#40;Add Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   
+ [+ = &#40;Aggiungi assegnazione&#41; &#40;&#41;Transact-SQL ](../../t-sql/language-elements/add-equals-transact-sql.md)   
  [+ &#40;String Concatenation&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
   
   

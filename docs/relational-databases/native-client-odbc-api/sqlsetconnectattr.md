@@ -4,7 +4,7 @@ description: Informazioni sugli attributi di connessione in SQLSetConnectAttr, i
 ms.custom: ''
 ms.date: 01/09/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
@@ -15,12 +15,12 @@ ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b3c006da487774a8de01ccf9a9b8cd12d9ca15f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 30893a308be9cb7634f3c0ceb755572e0e5b274b
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465122"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104754831"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 
@@ -50,22 +50,22 @@ ms.locfileid: "97465122"
 |SQL_COPT_SS_BROWSE_CONNECT|Prima|  
 |SQL_COPT_SS_BROWSE_SERVER|Prima|  
 |SQL_COPT_SS_CONCAT_NULL|Prima|  
-|SQL_COPT_SS_CONNECTION_DEAD|Dopo|  
+|SQL_COPT_SS_CONNECTION_DEAD|After|  
 |SQL_COPT_SS_ENCRYPT|Prima|  
-|SQL_COPT_SS_ENLIST_IN_DTC|Dopo|  
-|SQL_COPT_SS_ENLIST_IN_XA|Dopo|  
+|SQL_COPT_SS_ENLIST_IN_DTC|After|  
+|SQL_COPT_SS_ENLIST_IN_XA|After|  
 |SQL_COPT_SS_FALLBACK_CONNECT|Prima|  
 |SQL_COPT_SS_FAILOVER_PARTNER|Prima|  
 |SQL_COPT_SS_INTEGRATED_SECURITY|Prima|  
 |SQL_COPT_SS_MARS_ENABLED|Prima|  
 |SQL_COPT_SS_MULTISUBNET_FAILOVER|Prima|  
 |SQL_COPT_SS_OLDPWD|Prima|  
-|SQL_COPT_SS_PERF_DATA|Dopo|  
-|SQL_COPT_SS_PERF_DATA_LOG|Dopo|  
-|SQL_COPT_SS_PERF_DATA_LOG_NOW|Dopo|  
-|SQL_COPT_SS_PERF_QUERY|Dopo|  
-|SQL_COPT_SS_PERF_QUERY_INTERVAL|Dopo|  
-|SQL_COPT_SS_PERF_QUERY_LOG|Dopo|  
+|SQL_COPT_SS_PERF_DATA|After|  
+|SQL_COPT_SS_PERF_DATA_LOG|After|  
+|SQL_COPT_SS_PERF_DATA_LOG_NOW|After|  
+|SQL_COPT_SS_PERF_QUERY|After|  
+|SQL_COPT_SS_PERF_QUERY_INTERVAL|After|  
+|SQL_COPT_SS_PERF_QUERY_LOG|After|  
 |SQL_COPT_SS_PRESERVE_CURSORS|Prima|  
 |SQL_COPT_SS_QUOTED_IDENT|Prima o dopo|  
 |SQL_COPT_SS_TRANSLATE|Prima o dopo|  

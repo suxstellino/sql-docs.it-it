@@ -3,7 +3,7 @@ title: Usare un file di formato per l'importazione bulk dei dati
 description: In SQL Server è possibile usare un file di formato nelle operazioni di importazione bulk. Un file di formato esegue il mapping dei campi del file di dati alle colonne della tabella.
 ms.date: 09/20/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: data-movement
 ms.topic: conceptual
@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 8ffaa55c1d4e6b1346d238663eb65d9caec40c2e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 124b87eca694ef809eff7feffe37e6ae389cdd2e
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485323"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104745661"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Usare un file di formato per l'importazione bulk dei dati (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

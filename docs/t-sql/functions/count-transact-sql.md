@@ -4,7 +4,7 @@ title: COUNT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: reference
@@ -24,12 +24,12 @@ ms.assetid: 28d39da6-bc2e-46c7-858c-b1721c938830
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad8aa2f0f24dda5f2c67c813df08291fe6bca432
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d061173f0898345c9ebdef3b9208be3dddfccc53
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99184171"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104748031"
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -79,7 +79,7 @@ COUNT(DISTINCT *expression*) valuta *expression* per ogni riga in un gruppo e re
   
 Per i valori restituiti che superano 2^31-1, `COUNT` restituisce un errore. Per questi casi, usare invece `COUNT_BIG`.
   
-`COUNT` è una funzione deterministica quando viene usata ***senza** _ le clausole ORDER BY e OVER. Non è deterministica quando viene usata _*_con_*_ le clausole ORDER BY e OVER. Per altre informazioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
+`COUNT` è una funzione deterministica quando viene usata ***senza** _ le clausole ORDER BY e OVER. Non è deterministica quando viene usato _ *_con_* le clausole ORDER BY e over. Per altre informazioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
 ## <a name="examples"></a>Esempi  
   
@@ -101,7 +101,7 @@ GO
 (1 row(s) affected)
 ```
   
-### <a name="b-using-count_"></a>B. Uso di COUNT(\_)  
+### <a name="b-using-count"></a>B. Uso di COUNT(\*)  
 Questo esempio restituisce il numero totale di dipendenti di [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].
   
 ```sql

@@ -4,7 +4,7 @@ title: Supporto dei tipi di dati per i miglioramenti di data e ora (provider di 
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
@@ -15,12 +15,12 @@ ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d126d6718836f5fb1b242564047ab1f0ca807a3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 7500e311e3c1694bcb958048c21ca12e154a8752
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97473472"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104748391"
 ---
 # <a name="sql-server-native-client-data-type-support-for-ole-db-date-and-time-improvements"></a>Supporto del tipo di dati SQL Server Native Client per OLE DB miglioramenti a data e ora
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

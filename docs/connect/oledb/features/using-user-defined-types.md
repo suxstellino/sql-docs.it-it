@@ -4,7 +4,7 @@ description: OLE DB Driver per SQL Server supporta i tipi definiti dall'utente c
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - ISSCommandWithParameters interface
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 32f1d88d7fad962e1a8aac7b82f8e672fa8e5942
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
-ms.translationtype: HT
+ms.openlocfilehash: 575d81916ee080a649ff27aa49dc32e802c739bd
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860625"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104751101"
 ---
 # <a name="using-user-defined-types"></a>Utilizzo dei tipi definiti dall'utente (UDT)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -141,7 +141,7 @@ ms.locfileid: "88860625"
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>Set di proprietà DBPROPSET_SQLSERVERPARAMETER  
  Ai fini del supporto dei tipi definiti dall'utente (UDT) tramite OLE DB, nel driver OLE DB per SQL Server è stato implementato il nuovo set di proprietà DBPROPSET_SQLSERVERPARAMETER che contiene i valori seguenti:  
   
-|Nome|Type|Descrizione|  
+|Nome|Tipo|Descrizione|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_UDT_CATALOGNAME|DBTYPE_WSTR|Identificatore del nome in tre parti.<br /><br /> Per i parametri UDT questa proprietà è una stringa che specifica il nome del catalogo in cui viene definito il tipo definito dall'utente.|  
 |SSPROP_PARAM_UDT_SCHEMANAME|DBTYPE_WSTR|Identificatore del nome in tre parti.<br /><br /> Per i parametri UDT questa proprietà è una stringa che specifica il nome dello schema in cui viene definito il tipo definito dall'utente.|  

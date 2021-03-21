@@ -4,7 +4,7 @@ description: OLE DB Driver per SQL Server segnala informazioni sullo stato e sug
 ms.custom: ''
 ms.date: 05/06/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - errors [OLE DB], error interfaces
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7651d01bef5b17981c0e4c93c450f26e7970524d
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
-ms.translationtype: HT
+ms.openlocfilehash: 4f5789606d3e4ad25f8ba714f95f0427171f1597
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081920"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104742121"
 ---
 # <a name="information-in-error-interfaces"></a>Informazioni nelle interfacce di errore
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
