@@ -4,7 +4,7 @@ description: Informazioni sulle modifiche di rilievo introdotte in OLE DB Driver
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, updating applications
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 40b101c189832a91dd06d1bba58b17c341d11130
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
-ms.translationtype: HT
+ms.openlocfilehash: 112f0d28120adee56cc3b5e2f222bd4b23d725b2
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860045"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104751221"
 ---
 # <a name="updating-applications-from-sql-server-2005-native-client"></a>Aggiornamento di applicazioni da SQL Server 2005 Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -4,7 +4,7 @@ description: Informazioni sui miglioramenti per i tipi date e time OLE DB in rel
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - date/time [OLE DB], schema rowsets
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 44b3959b72d07cb12d6523e063a0ddfa75b59c97
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
-ms.translationtype: HT
+ms.openlocfilehash: ab9b7d99c472b3cef932ed2f275000aa8f41695e
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862009"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104742071"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>Metadati - Set di righe dello schema e di data e ora
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

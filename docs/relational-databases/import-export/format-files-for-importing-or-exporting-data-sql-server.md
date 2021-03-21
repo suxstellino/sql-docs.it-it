@@ -3,7 +3,7 @@ title: Formattare i file per importare ed esportare i dati
 description: Quando si esegue l'importazione bulk in una tabella di SQL Server o l'esportazione bulk da una tabella, un file di formato può archiviare le informazioni sul formato del campo per un file di dati relativo a una tabella.
 ms.date: 09/25/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: data-movement
 ms.topic: conceptual
@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 35650bcd31127dcf3eaad46be4c958bc8f94547e
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: bfd6056469ee1a61696ffe0f51178a3e1a065419
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100351382"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104749671"
 ---
 # <a name="format-files-to-import-or-export-data-sql-server"></a>Formattare i file per importare ed esportare i dati (SQL Server)
 

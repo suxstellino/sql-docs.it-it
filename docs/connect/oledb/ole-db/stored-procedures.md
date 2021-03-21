@@ -4,7 +4,7 @@ description: Informazioni su come è possibile eseguire stored procedure in un d
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - stored procedures [OLE DB], about OLE DB stored procedures
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 625c672dce32c2a0aad821d93a8f290c6d46747e
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
-ms.translationtype: HT
+ms.openlocfilehash: 9e4b6f8e75c1d831f41835bdd09f55e72f33ea51
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88858873"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104736271"
 ---
 # <a name="stored-procedures"></a>Stored procedure
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

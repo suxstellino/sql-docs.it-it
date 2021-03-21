@@ -4,7 +4,7 @@ description: Informazioni su come usare i file di intestazione e di libreria di 
 ms.custom: ''
 ms.date: 02/12/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - MSOLEDBSQL, library files
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 66870fbbc20d22067f00a8ced721cb63c331eb2f
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
-ms.translationtype: HT
+ms.openlocfilehash: 9126ef09a59a04fe54c29050839de35afca84ca5
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861641"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104742951"
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>Uso dei file di intestazione e di libreria del driver OLE DB per SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

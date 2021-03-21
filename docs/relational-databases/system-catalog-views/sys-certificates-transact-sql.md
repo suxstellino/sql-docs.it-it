@@ -4,7 +4,7 @@ title: sys. Certificates (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: reference
@@ -21,12 +21,12 @@ ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 44572405e33911014f6865333e292f7374bc4733
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: acd618039ca5aefe1f7b21007087840fa614dd04
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99202080"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104736231"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "99202080"
 |**subject**|**nvarchar(4000)**|Oggetto del certificato.|  
 |**expiry_date**|**datetime**|Data di scadenza del certificato.|  
 |**start_date**|**datetime**|Data di inizio di validità del certificato.|  
-|**thumbprint**|**varbinary(32)**|Hash SHA-1 del certificato. L'hash SHA-1 è univoco globale.|  
+|**Thumbprint**|**varbinary(32)**|Hash SHA-1 del certificato. L'hash SHA-1 è univoco globale.|  
 |**attested_by**|**nvarchar(260)**|Riservato per l'utilizzo nel sistema.|  
 |**pvt_key_last_backup_date**|**datetime**|Data e ora dell'ultima esportazione della chiave privata del certificato.|  
   
