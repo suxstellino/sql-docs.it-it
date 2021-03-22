@@ -1,6 +1,6 @@
 ---
-description: Analisi dei risultati
-title: Analisi dei risultati | Microsoft Docs
+description: Informazioni sui risultati dell'elaborazione completa, inclusi più set di risultati, da un'esecuzione di query nel driver JDBC.
+title: Analisi dei risultati
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.assetid: ''
 author: rene-ye
 ms.author: v-reye
 manager: kenvh
-ms.openlocfilehash: 7b56223594d1126c373b4fd8b24dabc1e81dab67
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 1605fd65414a81acc0912d774a24ff4ae10a1c9c
+ms.sourcegitcommit: bacd45c349d1b33abef66db47e5aa809218af4ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837081"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104793027"
 ---
 # <a name="parsing-the-results"></a>Analisi dei risultati
 
@@ -27,9 +27,10 @@ Questo articolo descrive come SQL Server preveda l'elaborazione completa dei ris
 
 ## <a name="update-counts-and-result-sets"></a>Conteggi aggiornamenti e set di risultati
 
-Questa sezione illustra i due risultati più comuni restituiti da SQL Server: il conteggio aggiornamenti e il set di risultati. In generale, le query eseguite dagli utenti determinano la restituzione di uno di questi risultati. Gli utenti devono gestirli entrambi durante l'elaborazione dei risultati.
+Questa sezione illustra i due risultati più comuni restituiti da SQL Server: il conteggio aggiornamenti e il set di risultati. In generale, qualsiasi query eseguita da un utente provocherà la restituzione di uno di questi risultati. Si prevede che gli utenti gestiscano entrambi durante l'elaborazione dei risultati.
 
 Il codice seguente è un esempio di come un utente può eseguire l'iterazione di tutti i risultati restituiti dal server:
+
 ```java
 try (Connection connection = DriverManager.getConnection(URL); Statement statement = connection.createStatement()) {
     boolean resultsAvailable = statement.execute(USER_SQL);
@@ -49,7 +50,8 @@ try (Connection connection = DriverManager.getConnection(URL); Statement stateme
 ```
 
 ## <a name="exceptions"></a>Eccezioni
-Quando si esegue un'istruzione che restituisce un errore o un messaggio informativo, SQL Server risponderà in modo diverso a seconda del fatto che sia in grado o meno di generare un piano di esecuzione. Il messaggio di errore può essere generato immediatamente dopo l'esecuzione dell'istruzione oppure può richiedere un set di risultati distinto. Nel secondo caso, è necessario che le applicazioni analizzino il set di risultati per recuperare l'eccezione.
+
+Quando si esegue un'istruzione che restituisce un errore o un messaggio informativo, SQL Server possibile rispondere in modo diverso. Se, ad esempio, non è possibile generare un piano di esecuzione, il messaggio di errore verrà immediatamente generato `execute()` . Se un errore è correlato all'elaborazione di istruzioni, l'applicazione deve analizzare il set di risultati per vedere l'eccezione.
 
 Quando SQL Server non è in grado di generare un piano di esecuzione, l'eccezione viene generata immediatamente.
 
@@ -100,7 +102,7 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-Nel caso di `String SQL = "SELECT * FROM nonexistentTable; SELECT 1;";`, l'eccezione viene generata immediatamente in `execute()` e `SELECT 1` non viene eseguito affatto.
+Ad esempio, `String SQL = "SELECT * FROM nonexistentTable; SELECT 1;";` , genera immediatamente un'eccezione `execute()` e `SELECT 1` non viene eseguita.
 
 Se l'errore restituito da SQL Server ha una gravità compresa tra `0` e `9`, viene considerato come un messaggio informativo e restituito come `SQLWarning`.
 
@@ -115,4 +117,4 @@ try (Statement statement = connection.createStatement();) {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica del driver JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)
+[Panoramica del driver JDBC](overview-of-the-jdbc-driver.md)

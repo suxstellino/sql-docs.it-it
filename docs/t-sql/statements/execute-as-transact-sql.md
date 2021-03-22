@@ -24,12 +24,12 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017||=azure-sqldw-latest
-ms.openlocfilehash: eaeafb5eb8e64686429cb0c7b8ccac9c1b7785c2
-ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.openlocfilehash: 7d100893b14a135e0e08a1bfa6c40996a7a256e5
+ms.sourcegitcommit: bacd45c349d1b33abef66db47e5aa809218af4ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104740161"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104793079"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "104740161"
  Specifica che il contesto di esecuzione da rappresentare è un account di accesso. L'ambito di rappresentazione è a livello di server.  
   
 > [!NOTE]  
->  Questa opzione non è disponibile in un database indipendente, nel database SQL o in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  
+>  Questa opzione non è disponibile in un database indipendente, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] o [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] .  
   
  USER  
  Specifica che il contesto da rappresentare è un utente nel database corrente. L'ambito di rappresentazione è limitato al database corrente. Un cambio di contesto a un utente del database non eredita le autorizzazioni a livello di server di tale utente.  

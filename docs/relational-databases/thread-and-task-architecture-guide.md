@@ -23,12 +23,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3eb9fd5897029fedb0e53378ecbe5f6c12f635ef
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: ec3a20e10fd625b588c4bae79f73265a8c292324
+ms.sourcegitcommit: bacd45c349d1b33abef66db47e5aa809218af4ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99237661"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104793121"
 ---
 # <a name="thread-and-task-architecture-guide"></a>guida sull'architettura dei thread e delle attività
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -70,7 +70,7 @@ In breve, una **richiesta** può generare una o più **attività** per eseguire 
 
 > [!NOTE]
 > Si consideri lo scenario seguente:   
-> -  ThreadDiLavoro 1 è un'attività a esecuzione prolungata, ad esempio una query di lettura che usa read-ahead su tabelle in memoria. ThreadDiLavoro 1 scopre che le pagine di dati richieste sono già disponibili nel pool di buffer, quindi non deve cedere il proprio tempo per attendere le operazioni di I/O e può utilizzare il quantum completo prima di cedere.   
+> -  Worker 1 è un'attività a esecuzione prolungata, ad esempio una query di lettura che utilizza read-ahead su tabelle basate su disco. ThreadDiLavoro 1 scopre che le pagine di dati richieste sono già disponibili nel pool di buffer, quindi non deve cedere il proprio tempo per attendere le operazioni di I/O e può utilizzare il quantum completo prima di cedere.   
 > -  ThreadDiLavoro 2 esegue attività di minore durata inferiori al millisecondo e pertanto deve cedere il tempo prima dell'esaurimento del quantum completo.     
 >
 > In questo scenario e fino a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], ThreadDiLavoro 1 può fondamentalmente monopolizzare l'utilità di pianificazione avendo più tempo del quantum in generale.   
