@@ -22,12 +22,12 @@ ms.assetid: 8a7aaaf2-62e3-46c0-8e44-fa22290dd86b
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 45380ece89d919f3f064415486cee209bf99fced
-ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.openlocfilehash: caef51295d4d38f1021f28f575bd96195cdbab63
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104750631"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104833841"
 ---
 # <a name="replace-transact-sql"></a>REPLACE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ REPLACE ( string_expression , string_pattern , string_replacement )
  Stringa [expression](../../t-sql/language-elements/expressions-transact-sql.md) da cercare. Il tipo di dati di *string_expression* può essere character o binary.  
   
  *string\_pattern*  
- Sottostringa da individuare. Il tipo di dati di *string_pattern* può essere character o binary. *string_pattern* non può essere una stringa vuota (") e non deve superare il numero massimo di byte che rientra in una pagina.  
+ Sottostringa da individuare. Il tipo di dati di *string_pattern* può essere character o binary. *string_pattern* non deve superare il numero massimo di byte che corrisponde a una pagina. Se *string_pattern* è una stringa vuota (''), *string_expression* viene restituito invariato. 
   
  *string\_replacement*  
  Stringa di sostituzione. Il tipo di dati di *string_replacement* può essere character o binary.  

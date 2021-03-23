@@ -1,17 +1,19 @@
 ---
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 02/08/2021
+ms.date: 03/18/2021
 ms.topic: include
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 588fbd33a0fb65f3de1c2bee54ce3d927960661a
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: f6ec3bbcc720fe472cc7146d59c30f0f3fc65ab0
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100072780"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104833756"
 ---
++ RExtension richiede GLIBCXX_3.4.20. Assicurarsi che la versione di **libstdc + +. so. 6** nell'installazione di Red Hat Enterprise Linux (RHEL) fornisca questa operazione.
+
 ## <a name="install-language-extensions"></a>Installare le estensioni del linguaggio
 
 > [!NOTE]
@@ -34,4 +36,8 @@ sudo yum install mssql-server-extensibility
     sudo yum erase microsoft-r-open-mro-3.5.2
     ```
 
-1. Installare [R (3,3 o versione successiva)](https://www.r-project.org/) per Red Hat Enterprise Linux (RHEL). Per impostazione predefinita, R viene installato in **/usr/lib/R**. Questo percorso corrisponde a **R_HOME**. Se si installa R in un percorso diverso, prendere nota del percorso come **R_HOME**.
+1. Installare [R (3,3 o versione successiva)](https://www.r-project.org/) per Red Hat Enterprise Linux (RHEL). Per impostazione predefinita, R viene installato in **/usr/lib64/R**. Questo percorso corrisponde a **R_HOME**. Se si installa R in un percorso diverso, prendere nota del percorso come **R_HOME**.
+
+    ```bash
+    sudo yum install -y R
+    ```

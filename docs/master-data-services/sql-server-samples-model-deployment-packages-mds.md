@@ -14,12 +14,12 @@ keywords:
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 70375fd359e56081267f2478a582281d96c253eb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3dbb973b72d2df5a3a23ea40684ad7da47c19777
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88342377"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104833722"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>Esempi di SQL Server: pacchetti di distribuzione di modelli (MDS)
 
@@ -30,9 +30,9 @@ ms.locfileid: "88342377"
  Per istruzioni su come distribuire i pacchetti di modelli di esempio, vedere [Distribuzione di modelli di esempio e dati](../master-data-services/master-data-services-installation-and-configuration.md#deploySample). I pacchetti di modelli di esempio vengono distribuiti con lo [strumento MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
 > [!IMPORTANT]
->  **Aggiornamenti di esempio in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
+>  **Aggiornamenti di esempio in [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]**  
 > 
->  I pacchetti di esempio sono stati aggiornati per supportare le nuove funzionalità seguenti.  
+>  I pacchetti di esempio supportano le funzionalità seguenti.  
 > 
 >  -   Visualizzare le relazione molti-a-molti.  
 > 

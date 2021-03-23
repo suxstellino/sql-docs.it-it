@@ -12,18 +12,18 @@ ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: d8cded1c88278ca67426eaf40df7bdd87474312c
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 3f7e92285692ed4227e0ed15d9d1ad5f3674c7f8
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100350179"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104833805"
 ---
 # <a name="deprecated-master-data-services-features"></a>Funzionalità deprecate di Master Data Services
 
 [!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  In questo argomento verranno descritte le funzionalità deprecate di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ancora disponibili in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Tali funzionalità verranno rimosse a partire da una delle prossime versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È consigliabile non usare le funzionalità deprecate nelle nuove applicazioni.  
+  In questo argomento si descrivono le funzionalità di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] deprecate. Tali funzionalità verranno rimosse a partire da una delle prossime versioni. È consigliabile non usare le funzionalità deprecate nelle nuove applicazioni.  
   
 ## <a name="explicit-hierarchies-collections-and-related-components"></a>Gerarchie esplicite, raccolte e componenti correlati  
  Le gerarchie esplicite, le raccolte e i componenti correlati sono deprecati. I membri che prima erano modellati come tipi di membro consolidati (padre di gerarchia esplicita) e tipi di membro raccolta verranno modellati come membri foglia nelle gerarchie derivate. Le nuove funzionalità seguenti abilitano l'uso delle gerarchie derivate al posto delle gerarchie esplicite.  

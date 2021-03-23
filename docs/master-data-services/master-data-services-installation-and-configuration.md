@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 630ee8396c3f4f64e7eee5335484299f5bebfd42
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 1d12236bbfd3af474e883c23b975d357e0fd27a8
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100350704"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104833868"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Installazione e configurazione di Master Data Services
 
@@ -26,17 +26,17 @@ ms.locfileid: "100350704"
   
 > [!NOTE] 
 > È possibile installare [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] in un computer Windows 10 se si usa la Developer Edition che ora supporta [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. 
->>Per altre informazioni sui sistemi operativi supportati nelle diverse edizioni di [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)], vedere [Requisiti hardware e software per l'installazione di SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). 
+>>Per ulteriori informazioni sul supporto del sistema operativo per diverse edizioni, [SQL Server 2019: requisiti hardware e software](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md).
 
 Per una panoramica sull'organizzazione dei dati in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], vedere [Panoramica di Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md).     
   
- Per informazioni sulle nuove funzionalità di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vedere [Novità in Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md).  
+ Per informazioni sulle nuove funzionalità, vedere Novità [di Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md).  
  
 Per i link a video e altre risorse di training per [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], vedere [Informazioni su SQL Server Master Data Services](../master-data-services/learn-sql-server-master-data-services.md). 
   
 > **Scaricare**  
-> -   Per scaricare [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], passare a  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** .  
-> -   Se si ha un account di Azure,  Fare clic **[qui](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** per creare rapidamente una macchina virtuale in cui è già installato SQL Server.  
+> -   Per scaricare [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] , passare a **[ [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] download](https://www.microsoft.com/sql-server/sql-server-downloads)**.
+> -   Se si ha un account di Azure,  Passare quindi alla **[Guida introduttiva: creare in [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] una macchina virtuale Windows nel portale di Azure](/azure/azure-sql/virtual-machines/windows/sql-vm-create-portal-quickstart)** per avviare una macchina virtuale con SQL Server già installati.  
 > 
 > **Impossibile creare un sito Web di MDS**
 > >Leggere quest'articolo del supporto tecnico Microsoft per istruzioni sulla risoluzione del problema.
@@ -47,16 +47,16 @@ Per i link a video e altre risorse di training per [!INCLUDE[ssMDSshort_md](../i
 - Per funzionare nell'applicazione Web, è necessario installare Silverlight 5 nel computer client. Se non si possiede la versione richiesta di Silverlight, viene richiesto di installarla quando si passa a un'area dell'applicazione Web in cui è necessaria. Silverlight 5 può essere installato da **[qui](https://www.microsoft.com/silverlight/)**.
 
 ## <a name="ssmdsshort_md-on-an-azure-virtual-machine"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] in una macchina virtuale di Azure
-Per impostazione predefinita, quando si avvia una macchina virtuale di Azure in cui [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] è già installato, [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] viene installato anche. 
+Per impostazione predefinita, quando si avvia una macchina virtuale di Azure in cui [!INCLUDE[ssnoversion_md](../includes/ssnoversion-md.md)] è già installato, [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] viene installato anche. 
 
 La fase successiva consiste nell'installazione di Internet Information Services (IIS). Vedere la sezione [Installazione e configurazione di IIS](#InstallIIS). 
 
-Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)], è disponibile il file setup.exe nel percorso predefinito, `<drive>`:\SQLServer_13.0_Full.
+Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssnoversion_md](../includes/ssnoversion-md.md)], è disponibile il file setup.exe nel percorso predefinito, `<drive>`:\SQLServer_13.0_Full.
   
 ## <a name="installing-master-data-services"></a><a name="InstallMDS"></a> Installazione di Master Data Services  
  Per installare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usare l'installazione guidata di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]o un prompt dei comandi.  
   
- **Per installare [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] tramite [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Setup in un computer Windows Server 2012 R2**  
+ **Per installare [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] usando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] il programma di installazione in un computer Windows Server**  
   
 1.  Fare doppio clic su Setup.exe e seguire i passaggi dell'installazione guidata.  
   
@@ -142,7 +142,7 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](
     >In SQL Istanza gestita, l'utente deve essere un membro del `sysadmin` ruolo predefinito del server.
 
     > [!NOTE]  
-    >  Quando si seleziona la **sicurezza integrata dall'utente corrente** come tipo di autenticazione, la casella **nome utente** è di sola lettura e visualizza il nome dell'account utente di Windows che ha eseguito l'accesso al computer. Se si esegue [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] in una macchina virtuale (VM) Azure, nella casella **Nome utente** viene visualizzato il nome della macchina virtuale e il nome utente per l'account amministratore locale nella macchina virtuale. 
+    >  Quando si seleziona la **sicurezza integrata dall'utente corrente** come tipo di autenticazione, la casella **nome utente** è di sola lettura e visualizza il nome dell'account utente di Windows che ha eseguito l'accesso al computer. Se si esegue [!INCLUDE[ssnoversion_md](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] in una macchina virtuale (VM) Azure, nella casella **Nome utente** viene visualizzato il nome della macchina virtuale e il nome utente per l'account amministratore locale nella macchina virtuale. 
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
@@ -227,7 +227,7 @@ Per altre informazioni sulle impostazioni della pagina Configurazione Web, veder
   
  Per informazioni sui prerequisiti per l'esecuzione di questo strumento, vedere [Distribuire un pacchetto di distribuzione di modelli tramite MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
- Per informazioni sugli aggiornamenti dei dati per il supporto delle nuove funzionalità in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vedere [Esempi SQL Server: Pacchetti di distribuzione di modelli (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
+ Per informazioni sugli aggiornamenti dei dati per il supporto delle nuove funzionalità in [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vedere [Esempi SQL Server: Pacchetti di distribuzione di modelli (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
   
  **Per distribuire i modelli di esempio**  
   

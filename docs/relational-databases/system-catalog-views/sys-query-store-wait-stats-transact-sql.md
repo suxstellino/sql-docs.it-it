@@ -1,8 +1,8 @@
 ---
 description: sys.query_store_wait_stats (Transact-SQL)
-title: sys.query_store_wait_stats (Transact-SQL) | Microsoft Docs
+title: sys.query_store_wait_stats (Transact-SQL)
 ms.custom: ''
-ms.date: 11/19/2019
+ms.date: 03/22/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - query_store_wait_stats catalog view
 - sys.query_store_wait_stats catalog view
-ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2517cd093bd840c8cf4cea34073acb8e03a98c8a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f8b5e578c5192114db39d4b3e4c24a75cf9a07a2
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171819"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104833887"
 ---
 # <a name="sysquery_store_wait_stats-transact-sql"></a>sys.query_store_wait_stats (Transact-SQL)
 
@@ -62,8 +61,8 @@ ms.locfileid: "99171819"
 |**4**|**Latch**|LATCH_%|
 |**5**|**Latch del buffer**|PAGELATCH_%|
 |**6**|**IO buffer**|PAGEIOLATCH_%|
-|**7**|**Compilazione** _|RESOURCE_SEMAPHORE_QUERY_COMPILE|
-|_ *8**|**SQL CLR**|% CLR, SQLCLR%|
+|**7**|**Compilazione***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
+|**8**|**SQL CLR**|% CLR, SQLCLR%|
 |**9**|**Mirroring**|DBMIRROR|
 |**10**|**Transazione**|XACT%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_%, TRANSACTION_MUTEX|
 |**11**|**Inattivo**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_QUEUE, XE_TIMER_EVENT|
@@ -80,7 +79,7 @@ ms.locfileid: "99171819"
 |**22**|**Replica**|SE_REPL_%, REPL_%, HADR_% **(ma non HADR_THROTTLE_LOG_RATE_GOVERNOR)**, PWAIT_HADR_%, REPLICA_WRITES, FCB_REPLICA_WRITE, FCB_REPLICA_READ PWAIT_HADRSIM|
 |**23**|**Log rate Governor**|LOG_RATE_GOVERNOR, POOL_LOG_RATE_GOVERNOR, HADR_THROTTLE_LOG_RATE_GOVERNOR, INSTANCE_LOG_RATE_GOVERNOR|
 
-La categoria di attesa di **compilazione** non è attualmente supportata.
+\* Query Store tiene traccia delle statistiche di attesa solo durante *l'esecuzione* della query, non durante la *compilazione* della query. Questo limita la capacità Query Store di tenere traccia delle statistiche di attesa di compilazione.
 
 ## <a name="permissions"></a>Autorizzazioni
 

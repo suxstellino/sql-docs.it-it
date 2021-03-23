@@ -1,7 +1,7 @@
 ---
 title: Errori di polibase e possibili soluzioni
 description: Riferimento di base per gli errori e le soluzioni consigliate.
-ms.date: 02/17/2021
+ms.date: 03/22/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -17,12 +17,12 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016'
-ms.openlocfilehash: 463b54aefd36e74318331c90cf2c944734f8a5cc
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 46f56288382c1b1928e6ad3081a8eea41e23bb5f
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101839368"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104833816"
 ---
 # <a name="polybase-errors-and-possible-solutions"></a>Errori di polibase e possibili soluzioni
 
@@ -37,6 +37,11 @@ Per i percorsi comuni dei file di log di base in Windows e Linux, vedere [monito
 
 ## <a name="error-messages-and-possible-solutions"></a>Messaggi di errore e possibili soluzioni
 
+### <a name="error-100001failed-to-generate-query-plan"></a>Errore: "100001; Non è stato possibile generare il piano di query "
+
+L'errore "Impossibile generare il piano di query" può verificarsi quando il motore di database SQL Server è stato modificato in almeno l'aggiornamento cumulativo 8 (15.0.4073), ma la funzionalità di polibase non è stata aggiornata alla stessa compilazione. Questo problema può verificarsi quando si aggiunge la funzionalità di base a un'istanza di SQL Server esistente. Per ulteriori informazioni, vedere [errore di polibase-100001; Non è stato possibile generare il piano di query](https://techcommunity.microsoft.com/t5/sql-server-support/polybase-error-100001-failed-to-generate-query-plan/ba-p/2174693).
+
+Completare sempre l'installazione della funzionalità di polibase, portando la nuova funzionalità allo stesso livello di versione. Installare i Service Pack (SPs), gli aggiornamenti cumulativi (CUs) e/o le versioni di distribuzione generale (GDR) in base alle esigenze. Per determinare la versione di polibase, vedere [determinare la versione, l'edizione e il livello di aggiornamento delle SQL Server e dei relativi componenti](/troubleshoot/sql/general/determine-version-edition-update-level#polybase).
 
 ### <a name="service-account-change"></a>Modifica dell'account del servizio
 

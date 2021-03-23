@@ -24,12 +24,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 3/16/2021
-ms.openlocfilehash: 8656f414608fc6c1c088b0142265d27fcbd70044
-ms.sourcegitcommit: ecf074e374426c708073c7da88313d4915279fb9
+ms.openlocfilehash: 671e531cbcd63ee9774cb02d5548c8e1075be84d
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "103575325"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104833845"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Scaricare SQL Server Management Studio (SSMS)
 
@@ -98,7 +98,7 @@ Se si vuole installare SSMS in background senza richieste dell'interfaccia utent
 2. Digitare il comando seguente nel prompt dei comandi.
 
     ```console
-    start "" /w <path where SSMS-ENU.exe file is located> /Quiet SSMSInstallRoot=<path where you want to install SSMS>
+    start "" /w <path where SSMS-Setup-ENU.exe file is located> /Quiet SSMSInstallRoot=<path where you want to install SSMS>
     ```
 
     Esempio:

@@ -439,6 +439,8 @@
       items:
         - name: Impostare le opzioni predefinite per Generatore Report
           href: ../reporting-services/report-builder/set-default-options-for-report-builder.md
+        - name: Configurare l'accesso a Generatore report
+          href: ../reporting-services/report-server/configure-report-builder-access.md
     - name: Visualizzazione di progettazione report
       href: ../reporting-services/report-builder/report-design-view-report-builder.md
       items:

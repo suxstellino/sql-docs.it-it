@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 12/4/2020
-ms.openlocfilehash: ffd92afe2a5e57b4c039ead2dd5fee6e2a23be0a
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 8e1518b1ebd264a28b94933c332315042df49aae
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100060926"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104833627"
 ---
 # <a name="sqlpackage-script-parameters-and-properties"></a>Parametri e proprietà di Script di SqlPackage
 L'azione Script di SqlPackage.exe consente di creare uno script di aggiornamento incrementale Transact-SQL tramite cui viene aggiornato lo schema di un database di destinazione affinché corrisponda allo schema di un database di origine. 
@@ -93,11 +93,11 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|DoNotAlterReplicatedObjects=(BOOLEAN 'True')|Specifica se gli oggetti replicati vengono identificati durante la verifica.
 |**/p:**|DoNotDropObjectType=(STRING)|Tipo di oggetto che non deve essere rimosso quando DropObjectsNotInSource è True. Nomi di oggetto validi sono: Aggregates, ApplicationRoles, Assemblies, AsymmetricKeys, BrokerPriorities, Certificates, ColumnEncryptionKeys, ColumnMasterKeys, Contracts, DatabaseRoles, DatabaseTriggers, Defaults, ExtendedProperties, ExternalDataSources, ExternalFileFormats, ExternalTables, Filegroups, FileTables,FullTextCatalogs, FullTextStoplists, MessageTypes, PartitionFunctions, PartitionSchemes, Permissions, Queues, RemoteServiceBindings, RoleMembership, Rules, ScalarValuedFunctions, SearchPropertyLists, SecurityPolicies, Sequences, Services, Signatures, StoredProcedures, SymmetricKeys, Synonyms, Tables, TableValuedFunctions,UserDefinedDataTypes, UserDefinedTableTypes, ClrUserDefinedTypes, Users,Views, XmlSchemaCollections, Audits, Credentials, CryptographicProviders,DatabaseAuditSpecifications, DatabaseScopedCredentials, Endpoints, ErrorMessages, EventNotifications, EventSessions, LinkedServerLogins, LinkedServers, Logins, Routes, ServerAuditSpecifications, ServerRoleMembership, ServerRoles, ServerTriggers.
 |**/p:**|DoNotDropObjectTypes=(STRING)|Elenco di valori delimitati da punti e virgola relativo ai tipi di oggetto che non devono essere rimossi quando DropObjectsNotInSource è true. Nomi di oggetto validi sono: Aggregates, ApplicationRoles, Assemblies, AsymmetricKeys, BrokerPriorities, Certificates, ColumnEncryptionKeys, ColumnMasterKeys, Contracts, DatabaseRoles, DatabaseTriggers, Defaults, ExtendedProperties, ExternalDataSources, ExternalFileFormats, ExternalTables, Filegroups, FileTables,FullTextCatalogs, FullTextStoplists, MessageTypes, PartitionFunctions, PartitionSchemes, Permissions, Queues, RemoteServiceBindings, RoleMembership, Rules, ScalarValuedFunctions, SearchPropertyLists, SecurityPolicies, Sequences, Services, Signatures, StoredProcedures, SymmetricKeys, Synonyms, Tables, TableValuedFunctions,UserDefinedDataTypes, UserDefinedTableTypes, ClrUserDefinedTypes, Users,Views, XmlSchemaCollections, Audits, Credentials, CryptographicProviders,DatabaseAuditSpecifications, DatabaseScopedCredentials, Endpoints, ErrorMessages, EventNotifications, EventSessions, LinkedServerLogins, LinkedServers, Logins, Routes, ServerAuditSpecifications, ServerRoleMembership, ServerRoles, ServerTriggers.
-|**/p:**|DropConstraintsNotInSource=(BOOLEAN 'True')|Specifica se i vincoli che non esistono nel file, con estensione dacpac, dello snapshot del database verranno eliminati dal database di destinazione durante la pubblicazione in un database.|
-|**/p:**|DropDmlTriggersNotInSource=(BOOLEAN 'True')|Specifica se i trigger DML che non esistono nel file, con estensione dacpac, dello snapshot del database verranno eliminati dal database di destinazione durante la pubblicazione in un database.|
+|**/p:**|DropConstraintsNotInSource=(BOOLEAN 'True')|Specifica se i vincoli che non esistono nel file, con estensione dacpac, dello snapshot di database verranno eliminati dal database di destinazione durante la pubblicazione in un database.|
+|**/p:**|DropDmlTriggersNotInSource=(BOOLEAN 'True')|Specifica se i trigger DML che non esistono nel file, con estensione dacpac, dello snapshot di database verranno eliminati dal database di destinazione durante la pubblicazione in un database.|
 |**/p:**|DropExtendedPropertiesNotInSource=(BOOLEAN 'True')|Specifica se le proprietà estese che non esistono nel file, con estensione dacpac, dello snapshot di database verranno eliminate dal database di destinazione durante la pubblicazione in un database.|
-|**/p:**|DropIndexesNotInSource=(BOOLEAN 'True')|Specifica se gli indici che non esistono nel file, con estensione dacpac, dello snapshot del database verranno eliminati dal database di destinazione durante la pubblicazione in un database.|
-|**/p:**|DropObjectsNotInSource=(BOOLEAN)|Specifica se gli oggetti che non esistono nel file, con estensione dacpac, dello snapshot del database verranno eliminati dal database di destinazione durante la pubblicazione in un database. Questo valore ha la precedenza rispetto a DropExtendedProperties.|
+|**/p:**|DropIndexesNotInSource=(BOOLEAN 'True')|Specifica se gli indici che non esistono nel file, con estensione dacpac, dello snapshot di database verranno eliminati dal database di destinazione durante la pubblicazione in un database.|
+|**/p:**|DropObjectsNotInSource=(BOOLEAN)|Specifica se gli oggetti che non esistono nel file (con estensione dacpac) di snapshot del database verranno eliminati dal database di destinazione durante la pubblicazione in un database. Questo valore ha la precedenza rispetto a DropExtendedProperties.|
 |**/p:**|DropPermissionsNotInSource=(BOOLEAN)|Specifica se le autorizzazioni che non esistono nel file, con estensione dacpac, dello snapshot di database verranno eliminate dal database di destinazione durante la pubblicazione di aggiornamenti in un database.|
 |**/p:**|DropRoleMembersNotInSource=(BOOLEAN)|Specifica se i membri del ruolo che non sono definiti nel file, con estensione dacpac, dello snapshot di database verranno eliminati dal database di destinazione durante la pubblicazione di aggiornamenti in un database.|
 |**/p:**|DropStatisticsNotInSource=(BOOLEAN 'True')|Specifica se le statistiche che non esistono nel file snapshot del database (con estensione dacpac) vengono eliminati dal database di destinazione quando si esegue la pubblicazione in un database.|
@@ -120,7 +120,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|IgnoreFilegroupPlacement=(BOOLEAN 'True')|Specifica se le differenze nella posizione degli oggetti nei FILEGROUP devono essere ignorate o aggiornate quando si esegue la pubblicazione in un database.|
 |**/p:**|IgnoreFileSize=(BOOLEAN 'True')|Specifica se le differenze nelle dimensioni dei file devono essere ignorate o se viene inviato un avviso quando si esegue la pubblicazione in un database.|
 |**/p:**|IgnoreFillFactor=(BOOLEAN 'True')|Specifica se le differenze nel fattore di riempimento per l'archiviazione degli indici devono essere ignorate o se viene inviato un avviso quando si esegue la pubblicazione.|
-|**/p:**|IgnoreFullTextCatalogFilePath=(BOOLEAN 'True')|Specifica se le differenze nel percorso file per il catalogo full-text devono essere ignorate o se viene inviato un avviso quando si esegue la pubblicazione in un database.|
+|**/p:**|IgnoreFullTextCatalogFilePath=(BOOLEAN 'True')|Specifica se le differenze nel percorso del file per la ricerca full-text devono essere ignorate o se è necessario emettere un avviso quando si esegue la pubblicazione in un database.|
 |**/p:**|IgnoreIdentitySeed=(BOOLEAN)|Specifica se le differenze nel valore di inizializzazione per una colonna Identity devono essere ignorate o aggiornate quando si pubblicano aggiornamenti in un database.|
 |**/p:**|IgnoreIncrement=(BOOLEAN)|Specifica se le differenze nell'incremento per una colonna Identity devono essere ignorate o aggiornate quando si esegue la pubblicazione in un database.|
 |**/p:**|IgnoreIndexOptions=(BOOLEAN)|Specifica se le differenze nelle opzioni di indice devono essere ignorate o aggiornate quando si esegue la pubblicazione in un database.|

@@ -3,19 +3,19 @@ title: Installare il runtime personalizzato di R
 description: Informazioni su come installare un runtime personalizzato R per SQL Server usando le estensioni del linguaggio. Il runtime personalizzato di Python può eseguire script di machine learning.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 02/08/2021
+ms.date: 03/16/2021
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 zone_pivot_groups: sqlml-platforms
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
-ms.openlocfilehash: 17e4a885281cf428e8a5051b4060199b2824bd90
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 5130a45eafbc9fa7b5fb684686fe9e0ea15c649b
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100072756"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104833766"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>Installare un runtime personalizzato di R per SQL Server
 
@@ -26,7 +26,7 @@ Informazioni su come installare un runtime personalizzato R per l'esecuzione di 
 + Windows
 + Ubuntu Linux
 + Red Hat Enterprise Linux (RHEL)
-+ SUSE Linux Enterprise Server (SLES)
++ SUSE Linux Enterprise Server (SLES) versione 12
 
 Il runtime personalizzato può eseguire script di machine learning e usa le [estensioni del linguaggio SQL Server](../../language-extensions/language-extensions-overview.md).
 
@@ -73,7 +73,7 @@ RECONFIGURE WITH OVERRIDE;
 
 ## <a name="verify-installation"></a>Verificare l'installazione
 
-Usare lo script SQL seguente per verificare l'installazione e la funzionalità del runtime personalizzato di Python.
+Usare lo script SQL seguente per verificare l'installazione e la funzionalità del runtime di R Custom.
 
 ```sql
 EXEC sp_execute_external_script
@@ -84,6 +84,10 @@ print(file.path(R.home("bin"), "R"));
 print(R.version);
 print("Hello RExtension!");'
 ```
+
+::: zone pivot="platform-linux-rhel"
+[!INCLUDE [R custom runtime - Linux - RHEL known issues](includes/custom-runtime-r-linux-known-issues-rhel.md)]
+::: zone-end
 
 ## <a name="next-steps"></a>Passaggi successivi
 

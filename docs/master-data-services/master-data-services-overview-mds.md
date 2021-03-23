@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d3fa715de1823a67b9a47a89ed59c1dd13573e27
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 1ddbda633eb54060ea63b8bdd5f17ca3142c4ec2
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811461"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104833836"
 ---
 # <a name="master-data-services-overview-mds"></a>Panoramica di Master Data Services (MDS)
 
@@ -31,7 +31,7 @@ In questo argomento sono descritte le principali funzionalità di organizzazione
   
  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] consente di gestire un set di dati master dell'organizzazione. È possibile organizzare i dati in modelli, creare regole per l'aggiornamento dei dati e controllare chi aggiorna i dati. Con Excel è possibile condividere il set di dati master con altri utenti nell'organizzazione. 
   
- >  Per una descrizione dell'architettura di [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] , vedere l'articolo [Master Data Services -- The Basics](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) (Master Data Services -- Nozioni di base) in simple-talk.com. Per informazioni sulle nuove funzionalità di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , vedere Novità [di Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
+ >  Per una descrizione dell'architettura di [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] , vedere l'articolo [Master Data Services -- The Basics](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) (Master Data Services -- Nozioni di base) in simple-talk.com. Per informazioni sulle nuove funzionalità di [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] , vedere Novità [di Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
    **Per istruzioni su come installare [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], impostare il database e il sito Web e distribuire i modelli di esempio, vedere** [Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md).  
   
  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]il modello corrisponde al contenitore di livello più alto nella struttura dei dati master. Un modello viene creato per gestire gruppi di dati simili, ad esempio i dati di prodotto online. Un modello contiene una o più entità e le entità contengono i membri che corrispondono ai record di dati. Un'entità è simile a una tabella.  
@@ -57,7 +57,7 @@ In questo argomento sono descritte le principali funzionalità di organizzazione
 > [!NOTE]  
 >  Si consiglia di completare le attività seguenti in un ambiente di test e di utilizzare i dati di esempio forniti al momento dell'installazione di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Per altre informazioni, vedere [Distribuzione di modelli &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md).  
   
-|Azione|Dettagli|Argomenti correlati|  
+|Action|Dettagli|Argomenti correlati|  
 |------------|-------------|--------------------|  
 |Creare un modello|Quando si crea un modello, questo viene considerato come VERSION_1.|[Modelli &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)<br /><br /> [Creare un modello &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)|  
 |Creare entità|Creare tutte le entità che saranno necessarie per contenere i membri.|[Entità &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)<br /><br /> [Creare un'entità &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)|  
