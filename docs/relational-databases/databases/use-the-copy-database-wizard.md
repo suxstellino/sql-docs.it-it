@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6fdb28c8ef89b9c8b79b482b0887f9a0bf40cbb3
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
-ms.translationtype: HT
+ms.openlocfilehash: 5f07a7966c7f4384292e49c10645332d0844c9c6
+ms.sourcegitcommit: c09ef164007879a904a376eb508004985ba06cf0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88487076"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104890690"
 ---
 # <a name="use-the-copy-database-wizard"></a>Utilizzo di Copia guidata database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -386,9 +386,11 @@ In questo esempio il database `Sales` verrà copiato e creato come `SalesCopy` n
 
   
 ##  <a name="follow-up-after-upgrading-a-database"></a><a name="FollowUp"></a> Completamento: Dopo l'aggiornamento di un database  
- Dopo aver utilizzato Copia guidata database per aggiornare un database da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il database viene reso immediatamente disponibile e aggiornato automaticamente. Se il database include indici full-text, questi vengono importati, reimpostati o ricompilati dal processo di aggiornamento, a seconda dell'impostazione della proprietà del server **Opzione di aggiornamento full-text** . Se l'opzione di aggiornamento è impostata su **Importa** o **Ricompila**, gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti inoltre che, quando l'opzione di aggiornamento è impostata su **Importa** e un catalogo full-text non è disponibile, gli indici full-text associati vengono ricompilati. Per informazioni sulla visualizzazione o sulla modifica dell'impostazione della proprietà **Opzione di aggiornamento full-text** , vedere [Gestione e monitoraggio della ricerca full-text per un'istanza del server](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+ Dopo aver utilizzato Copia guidata database per aggiornare un database da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], il database viene reso immediatamente disponibile e aggiornato automaticamente. Se il database include indici full-text, questi vengono importati, reimpostati o ricompilati dal processo di aggiornamento, a seconda dell'impostazione della proprietà del server **Opzione di aggiornamento full-text** . Se l'opzione di aggiornamento è impostata su **Importa** o **Ricompila**, gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti inoltre che, quando l'opzione di aggiornamento è impostata su **Importa** e un catalogo full-text non è disponibile, gli indici full-text associati vengono ricompilati. Per informazioni sulla visualizzazione o sulla modifica dell'impostazione della proprietà **Opzione di aggiornamento full-text** , vedere [Gestione e monitoraggio della ricerca full-text per un'istanza del server](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
- Se il livello di compatibilità di un database utente è 100 o superiore prima dell'aggiornamento, rimane invariato dopo l'aggiornamento. Se il livello di compatibilità era 90 prima dell'aggiornamento, nel database aggiornato questo valore viene impostato su 100, cioè sul livello di compatibilità più basso supportato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+Dopo l'aggiornamento, il livello di compatibilità del database rimane a livello di compatibilità prima dell'aggiornamento, a meno che il livello di compatibilità precedente non sia supportato nella nuova versione. In questo caso, il livello di compatibilità del database aggiornato è impostato sul livello di compatibilità supportato più basso.
+
+Se, ad esempio, si collega un database con livello di compatibilità 90 prima di collegarlo a un'istanza di [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] , dopo l'aggiornamento il livello di compatibilità viene impostato su 100, che corrisponde al livello di compatibilità supportato più basso in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] . Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
  
  ## <a name="post-copy-or-move-considerations"></a><a name="Post"></a> Considerazioni successive alla copia o allo spostamento
  Considerare la possibilità di seguire questa procedura dopo un'operazione di **copia** o **spostamento**:

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c1987fae42f804e861c1f15e55deb60e273e0d3b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
-ms.translationtype: HT
+ms.openlocfilehash: 9912ecd1d8f258a343adf9db4e61d4e264e5273d
+ms.sourcegitcommit: c09ef164007879a904a376eb508004985ba06cf0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194403"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104890753"
 ---
 # <a name="attach-a-database"></a>Collegare un database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-In questo argomento si illustra come collegare un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. È possibile usare questa funzionalità per copiare, spostare o aggiornare un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+In questo argomento si illustra come collegare un database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. È possibile usare questa funzionalità per copiare, spostare o aggiornare un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
   
@@ -57,7 +57,7 @@ Le autorizzazioni di accesso ai file vengono impostate durante l'esecuzione di a
   
 2.  Fare clic con il pulsante destro del mouse su **Database** , quindi scegliere **Collega**.  
   
-3.  Nella finestra di dialogo **Collega database** fare clic su **Aggiungi**per specificare il database da collegare, quindi nella finestra di dialogo **Individua file di database** selezionare l'unità disco in cui si trova il database ed espandere l'albero di directory per individuare e selezionare il file con estensione mdf del database, ad esempio:
+3.  Nella finestra di dialogo **Collega database** fare clic su **Aggiungi** per specificare il database da collegare, quindi nella finestra di dialogo **Individua file di database** selezionare l'unità disco in cui si trova il database ed espandere l'albero di directory per individuare e selezionare il file con estensione mdf del database, ad esempio:
 
      `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\AdventureWorks2012_Data.mdf`  
   
@@ -119,7 +119,7 @@ Le autorizzazioni di accesso ai file vengono impostate durante l'esecuzione di a
      Consente di visualizzare il percorso del file di database selezionato. Il percorso può essere modificato manualmente.  
   
      **Messaggio**  
-     Non viene visualizzato alcun messaggio oppure viene visualizzato il collegamento ipertestuale**Impossibile trovare il file**.  
+     Non viene visualizzato alcun messaggio oppure viene visualizzato il collegamento ipertestuale **Impossibile trovare il file**.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
@@ -144,9 +144,12 @@ Le autorizzazioni di accesso ai file vengono impostate durante l'esecuzione di a
     > In alternativa, è possibile usare la stored procedure [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) o [sp_attach_single_file_db](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md) . Tuttavia, queste stored procedure verranno eliminate nelle versioni future di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. È consigliabile utilizzare `CREATE DATABASE ... FOR ATTACH` in alternativa.  
   
 ##  <a name="follow-up-after-upgrading-a-sql-server-database"></a><a name="FollowUp"></a> Completamento: Dopo l'aggiornamento di un database di SQL Server  
-Una volta aggiornato utilizzando il metodo di collegamento, il database viene reso immediatamente disponibile e viene aggiornato automaticamente. Se il database include indici full-text, questi vengono importati, reimpostati o ricompilati dal processo di aggiornamento, a seconda dell'impostazione della proprietà del server **Opzione di aggiornamento full-text** . Se l'opzione di aggiornamento è impostata su **Importa** o **Ricompila**, gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti inoltre che, quando l'opzione di aggiornamento è impostata su **Importa**e un catalogo full-text non è disponibile, gli indici full-text associati vengono ricompilati.  
+
+Una volta aggiornato utilizzando il metodo di collegamento, il database viene reso immediatamente disponibile e viene aggiornato automaticamente. Se il database include indici full-text, questi vengono importati, reimpostati o ricompilati dal processo di aggiornamento, a seconda dell'impostazione della proprietà del server **Opzione di aggiornamento full-text** . Se l'opzione di aggiornamento è impostata su **Importa** o **Ricompila**, gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti inoltre che, quando l'opzione di aggiornamento è impostata su **Importa** e un catalogo full-text non è disponibile, gli indici full-text associati vengono ricompilati.  
   
-Se il livello di compatibilità di un database utente è 100 o superiore prima dell'aggiornamento, rimane invariato dopo l'aggiornamento. Se il livello di compatibilità è 90 prima dell'aggiornamento, nel database aggiornato viene impostato su 100, ovvero sul livello di compatibilità supportato più basso in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+Dopo l'aggiornamento, il livello di compatibilità del database rimane a livello di compatibilità prima dell'aggiornamento, a meno che il livello di compatibilità precedente non sia supportato nella nuova versione. In questo caso, il livello di compatibilità del database aggiornato è impostato sul livello di compatibilità supportato più basso.
+
+Se, ad esempio, si collega un database con livello di compatibilità 90 prima di collegarlo a un'istanza di [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] , dopo l'aggiornamento il livello di compatibilità viene impostato su 100, che corrisponde al livello di compatibilità supportato più basso in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] . Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]
 > Se si collega un database da un'istanza che esegue [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o versioni precedenti con Change Data Capture (CDC) abilitato, è necessario eseguire anche il comando seguente per aggiornare i metadati di Change Data Capture (CDC).

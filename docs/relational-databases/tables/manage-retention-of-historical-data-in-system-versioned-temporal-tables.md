@@ -12,12 +12,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e37f8234a1b8ee2ab72c76a423ea72ac9d3f14a
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 3343eda333415def037bd052b9593262fa43e88a
+ms.sourcegitcommit: c09ef164007879a904a376eb508004985ba06cf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99235825"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104890660"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gestire la conservazione dei dati cronologici nelle tabelle temporali con controllo delle versioni di sistema
 
@@ -374,14 +374,15 @@ DECLARE @periodColumnName sysname
 
 /*Generate script to discover history table name and end of period column for given temporal table name*/
 EXECUTE sp_executesql
-    N'SELECT @hst_tbl_nm = t2.name, @hst_sch_nm = s.name, @period_col_nm = c.name
+    N'SELECT @hst_tbl_nm = t2.name, @hst_sch_nm = s2.name, @period_col_nm = c.name
         FROM sys.tables t1
             JOIN sys.tables t2 on t1.history_table_id = t2.object_id
-        JOIN sys.schemas s on t2.schema_id = s.schema_id
-            JOIN sys.periods p on p.object_id = t1.object_id
+        JOIN sys.schemas s1 on t1.schema_id = s1.schema_id
+        JOIN sys.schemas s2 on t2.schema_id = s2.schema_id
+           JOIN sys.periods p on p.object_id = t1.object_id
            JOIN sys.columns c on p.end_column_id = c.column_id and c.object_id = t1.object_id
                   WHERE
-                 t1.name = @tblName and s.name = @schName'
+                 t1.name = @tblName and s1.name = @schName'
                 , N'@tblName sysname
                 , @schName sysname
                 , @hst_tbl_nm sysname OUTPUT
@@ -420,7 +421,7 @@ COMMIT;
 ## <a name="using-temporal-history-retention-policy-approach"></a>Uso dell'approccio con criteri di conservazione della cronologia temporale
 
 > [!NOTE]
-> l'uso dell'approccio con criteri di conservazione della cronologia temporale si applica a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e a SQL Server 2017 a partire da CTP 1.3.
+> l'uso dell'approccio con criteri di conservazione della cronologia temporale si applica a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e a SQL Server 2017 a partire da CTP 1.3.
 
 La conservazione della cronologia temporale può essere configurata a livello di singola tabella. Ciò consente agli utenti di creare criteri di aging flessibili. L'applicazione della conservazione della cronologia temporale è semplice e richiede l'impostazione di un solo parametro durante la creazione della tabella o la modifica dello schema.
 

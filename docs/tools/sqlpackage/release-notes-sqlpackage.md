@@ -9,12 +9,12 @@ ms.prod_service: sql-tools
 ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
-ms.openlocfilehash: 3a5d63b5c727508473fe83c1de3668b5b3df85c0
-ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
+ms.openlocfilehash: ef52bf5f98b948312dcc36acfd438cd9281b25dd
+ms.sourcegitcommit: c09ef164007879a904a376eb508004985ba06cf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102622547"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104890681"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Note sulla versione per SqlPackage.exe
 
@@ -65,9 +65,10 @@ Questo articolo elenca le funzionalità e le correzioni distribuite con le versi
 | Distribuzione | Reseeds valore Identity dopo la distribuzione in base all'ultimo valore precedente della destinazione. |
 
 ### <a name="known-issues"></a>Problemi noti
-| Funzionalità | Dettagli |
-| :------ | :------ |
-| Distribuzione | La funzionalità Gestione del carico di lavoro di Azure Synapse Analytics (gruppi di carichi di lavoro e classificatori del carico di lavoro) non è ancora supportata | 
+| Funzionalità | Dettagli | Soluzione alternativa |
+| :------ | :------ |:------ |
+| Distribuzione | La funzionalità Gestione del carico di lavoro di Azure Synapse Analytics (gruppi di carichi di lavoro e classificatori del carico di lavoro) non è ancora supportata | N/D |
+| Distribuzione | In uno scenario di distribuzione incrementale quando l'utente elimina una tabella temporale insieme a oggetti che dipendono da esso, come funzioni, stored procedure e così via. la distribuzione può avere esito negativo. L'ordine di generazione degli script tenta di disattivare SYSTEM_VERSIONING nella tabella, che è un prerequisito per l'eliminazione della tabella, ma l'ordine dei passaggi generati non è corretto. [Elemento di lavoro](https://github.com/microsoft/azuredatastudio/issues/14655) | Generare lo script di distribuzione, spostare il passaggio System_Versioning su immediatamente prima della tabella da eliminare, quindi eseguire lo script. |
 
 ## <a name="186-sqlpackage"></a>18.6 sqlpackage
 
@@ -200,7 +201,7 @@ Questo articolo elenca le funzionalità e le correzioni distribuite con le versi
 | :------ | :------ |
 | Distribuzione | Aggiungere il supporto per la distribuzione in Azure Synapse Analytics (disponibilità generale). | 
 | Piattaforma | Versione GA di sqlpackage per .NET Core per macOS, Linux e Windows. | 
-| Security | Rimuovere la firma del codice SHA1. |
+| Sicurezza | Rimuovere la firma del codice SHA1. |
 | Distribuzione | Aggiungere il supporto per le nuove edizioni del database di Azure: GeneralPurpose, BusinessCritical, Hyperscale |
 | Distribuzione | Aggiungere il supporto di Istanza gestita per utenti e gruppi di Azure Active Directory. |
 | Distribuzione | Supportare il parametro/AccessToken per sqlpackage in .NET Core. |

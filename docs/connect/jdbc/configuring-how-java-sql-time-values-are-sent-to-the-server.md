@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3982d18398a77a28113292f3a8c8300a94a5de47
-ms.sourcegitcommit: bacd45c349d1b33abef66db47e5aa809218af4ea
+ms.openlocfilehash: 41e53b1e0feb18e3d3394a0c726f80df8743fd61
+ms.sourcegitcommit: c09ef164007879a904a376eb508004985ba06cf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "104793067"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104890623"
 ---
 # <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Configurazione della modalità di invio dei valori java.sql.Time al server
 
@@ -32,6 +32,8 @@ Questo scenario si applica quando si utilizza uno dei seguenti metodi:
 - [SQLServerPreparedStatement.setTime](reference/settime-method-sqlserverpreparedstatement.md)
 - [SQLServerCallableStatement.setObject](reference/setobject-method-sqlservercallablestatement.md)
 - [SQLServerPreparedStatement.setObject](reference/setobject-method-sqlserverpreparedstatement.md)
+
+## <a name="sendtimeasdatetime"></a>SendTimeAsDatetime
 
 La modalità di invio del valore java.sql.Time può essere configurata tramite la proprietà di connessione **sendTimeAsDatetime**. Per altre informazioni, vedere [Impostazione delle proprietà di connessione](setting-the-connection-properties.md).
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8fc47f280e0c6f32e41cd7a0f7db34ff22ac98f1
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 29377edf5fa911c47b4e3a34fa1be58046c3e915
+ms.sourcegitcommit: c09ef164007879a904a376eb508004985ba06cf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99201792"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104890780"
 ---
 # <a name="sp_xml_preparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "99201792"
  **sp_xml_preparedocument** restituisce un handle che può essere utilizzato per accedere alla rappresentazione interna appena creata del documento XML. Questo handle è valido per la durata della sessione o fino a quando l'handle non viene invalidato eseguendo **sp_xml_removedocument**.  
   
 > [!NOTE]  
->  Un documento analizzato viene archiviato nella cache interna di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il parser MSXML utilizza un ottavo della memoria totale disponibile per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per evitare di esaurire la memoria, eseguire **sp_xml_removedocument** per liberare memoria.  
+>  Un documento analizzato viene archiviato nella cache interna di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il parser MSXML può utilizzare un ottavo della memoria totale disponibile per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per evitare di esaurire la memoria, eseguire **sp_xml_removedocument** per liberare memoria non appena il documento non è più necessario. In molti casi, il metodo nodes () potrebbe essere un'alternativa migliore e contribuire a evitare un utilizzo eccessivo della memoria.
   
 > [!NOTE]  
 >  Per la compatibilità con le versioni precedenti, **sp_xml_preparedocument** comprime i caratteri CR (Char (13)) e LF (Char (10)) negli attributi anche se questi caratteri sono sostituiti con entità.  
@@ -159,5 +159,6 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc, '<ROOT xmlns:xyz="urn:MyNamespac
  <br>[OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)
  <br>[sys.dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
  <br>[sp_xml_removedocument (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)
+ <br>[Metodo nodes&#40;&#41; &#40;tipo di dati xml&#41;](../../t-sql/xml/nodes-method-xml-data-type.md)
   
   
