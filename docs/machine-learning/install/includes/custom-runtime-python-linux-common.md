@@ -5,12 +5,12 @@ ms.date: 02/08/2021
 ms.topic: include
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1303df98c60212c13a233d1e386c60109308e981
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: a79f648631ade25b94c5f0af37bd493127d92eac
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100072918"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104879687"
 ---
 ## <a name="custom-installation-of-python"></a>Installazione personalizzata di Python
 
@@ -33,7 +33,7 @@ In primo luogo, modificare il servizio **mssql-launchpadd** per aggiungere la va
 
     ```
     [Service]
-    Environment="PYTHONHOME=/path/to/installation/of/python3.7"
+    Environment="PYTHONHOME=<path to the python3.7 lib>"
     ```
 
 1. Salvare il file e chiudere l'editor.
@@ -49,7 +49,7 @@ Quindi, verificare che `libpython3.7m.so.1.0` possa essere caricato.
 1. Nel file che si apre aggiungere il percorso **libpython3.7m.so.1.0** dall'installazione personalizzata di Python.
 
     ```
-    /path/to/installation/of/python3.7/lib
+    <path to the python3.7 lib>
     ```
 
 1. Salvare il nuovo file e chiudere l'editor.
@@ -58,7 +58,7 @@ Quindi, verificare che `libpython3.7m.so.1.0` possa essere caricato.
 
     ```bash
     sudo ldconfig
-    ldd /path/to/installation/of/python3.7/lib/libpython3.7m.so.1.0
+    ldd <path to the python3.7 lib>/libpython3.7m.so.1.0
     ```
 
 ### <a name="grant-access-to-python-folder"></a>Concedere l'accesso alla cartella di Python
@@ -66,7 +66,7 @@ Quindi, verificare che `libpython3.7m.so.1.0` possa essere caricato.
 Impostare l' `datadirectories` opzione nella sezione Extensibility del `/var/opt/mssql/mssql.conf` file sull'installazione personalizzata di Python.
 
 ```bash
-sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories /path/to/installation/of/python3.7
+sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories <path to python3.7>
 ```
 
 ### <a name="restart-mssql-launchpadd"></a>Riavviare mssql-launchpadd

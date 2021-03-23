@@ -210,10 +210,6 @@ items:
             href: ../machine-learning/tutorials/demo-data-iris-in-sql.md
           - name: Set di dati NYC Taxi
             href: ../machine-learning/tutorials/demo-data-nyctaxi-in-sql.md
-  - name: Esempi >>
-    href: 'https://github.com/Microsoft/sql-server-samples'
-  - name: Soluzioni
-    href: ../machine-learning/tutorials/data-science-scenarios-and-solution-templates.md
   - name: Concetti
     items:
       - name: Framework di estendibilità
