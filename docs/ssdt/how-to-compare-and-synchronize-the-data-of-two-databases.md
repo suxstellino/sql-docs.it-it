@@ -13,13 +13,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
-ms.date: 02/09/2017
-ms.openlocfilehash: 73dcdd57b018f980291eceefa1be37d1b51df13a
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 03/22/2021
+ms.openlocfilehash: d869aaf652cf3c5d9baa389ab26303ba46049b71
+ms.sourcegitcommit: c09ef164007879a904a376eb508004985ba06cf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100018441"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104890718"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Procedura: Confrontare e sincronizzare i dati di due database
 
@@ -78,12 +78,12 @@ Per altre informazioni, vedere [Confrontare e sincronizzare i dati in una o più
 2.  Nella finestra di comando, digitare il comando seguente:  
   
     ```  
-    Sql.NewDataComparison /SrcServerName sServerName /SrcDatabaseName sDatabaseName /SrcUserName sUserName /SrcPassword sPassword /SrcDisplayName sDisplayName /TargetServerName tServerName /TargetDatabaseName tDatabaseName /TargeUserName tUserName /TargetPassword tPassword /TargetDisplayName tDisplayName  
+    Tools.NewDataComparison /SrcServerName sServerName /SrcDatabaseName sDatabaseName /SrcUserName sUserName /SrcPassword sPassword /SrcDisplayName sDisplayName /TargetServerName tServerName /TargetDatabaseName tDatabaseName /TargeUserName tUserName /TargetPassword tPassword /TargetDisplayName tDisplayName  
     ```  
   
     Sostituire i segnaposto (*sServerName*, *sDatabaseName*, *sUserName*, *sPassword*, *sDisplayName*, *tServerName*, *tDatabaseName*, *tUserName*, *tPassword* e *tDisplayName*) con i valori relativi ai database di origine e di destinazione.  
   
-    Se non si specifica un'origine e una destinazione, viene visualizzata la finestra di dialogo **Nuovo confronto dati**. Per altre informazioni sui parametri del comando Sql.NewDataComparison, vedere [Tabella di riferimento dei comandi di automazione per le funzionalità di database di Visual Studio Team System](/previous-versions/visualstudio/visual-studio-2010/dd470565(v=vs.100)).  
+    Se non si specifica un'origine e una destinazione, viene visualizzata la finestra di dialogo **Nuovo confronto dati**. Per ulteriori informazioni sui parametri per il comando Tools. NewDataComparison, vedere informazioni [di riferimento sui comandi di automazione per le funzionalità di database di Visual Studio Team System](/previous-versions/visualstudio/visual-studio-2010/dd470565(v=vs.100)).  
   
     I dati nei database di origine e di destinazione specificati vengono confrontati. I risultati vengono visualizzati in una sessione di Confronto dati. Per altre informazioni sulla visualizzazione dei risultati o sulla sincronizzazione dei dati, vedere [Visualizzazione delle differenze dei dati](#ViewDifferences) e [Sincronizzazione dei dati di database](#Synchronize).  
   

@@ -2,7 +2,7 @@
 description: sys.dm_os_performance_counters (Transact-SQL)
 title: sys.dm_os_performance_counters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/13/2017
+ms.date: 03/22/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: a1c3e892-cd48-40d4-b6be-2a9246e8fbff
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a49588f109f6964893904ec7d14293aacd71370e
-ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.openlocfilehash: 6bece57b97ce2a7e20b2800fb45a831674960012
+ms.sourcegitcommit: c09ef164007879a904a376eb508004985ba06cf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104750931"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104890793"
 ---
 # <a name="sysdm_os_performance_counters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,9 +54,13 @@ SELECT COUNT(*) FROM sys.dm_os_performance_counters;
   
 Se il valore restituito è di 0 righe, i contatori delle prestazioni sono stati disabilitati. Esaminare quindi il registro di installazione e cercare l'errore 3409, `Reinstall sqlctr.ini for this instance, and ensure that the instance login account has correct registry permissions.` che indica che i contatori delle prestazioni non sono stati abilitati. Gli errori immediatamente precedenti all'errore 3409 dovrebbero indicare la causa principale per l'errore relativo all'abilitazione dei contatori delle prestazioni. Per ulteriori informazioni sui file di log del programma di installazione, vedere [visualizzare e leggere SQL Server file di log del programma di installazione](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
 
-Contatori delle prestazioni in cui il `cntr_type` valore della colonna è 65792, 272696320 e 537003264 visualizzano un valore del contatore istantaneo istantaneo.
+I contatori delle prestazioni in cui il `cntr_type` valore della colonna è 65792 visualizzano uno snapshot dell'ultimo valore osservato, non una media. 
 
-Contatori delle prestazioni in cui il `cntr_type` valore della colonna è 272696576, 1073874176 e 1073939712 visualizzano i valori dei contatori cumulativi anziché uno snapshot istantaneo. Di conseguenza, per ottenere una lettura simile a uno snapshot, è necessario confrontare il delta tra due punti di raccolta.
+Contatori delle prestazioni in cui il `cntr_type` valore della colonna è 272696320 o 272696576 Visualizza il numero medio di operazioni completate durante ogni secondo dell'intervallo di campionamento. I contatori di questo tipo misurano il tempo in segni di graduazione dell'orologio di sistema. Ad esempio, per ottenere una lettura simile a uno snapshot dell'ultimo secondo solo per i `Buffer Manager:Lazy writes/sec` `Buffer Manager:Checkpoint pages/sec` contatori e, è necessario confrontare il delta tra due punti di raccolta che sono separati da un secondo.    
+
+I contatori delle prestazioni `cntr_type` in cui il valore della colonna è 537003264 visualizzano il rapporto tra un subset e il relativo set come percentuale. Il contatore, ad esempio, `Buffer Manager:Buffer cache hit ratio` Confronta il numero totale di riscontri nella cache e il numero totale di ricerche nella cache. Di conseguenza, per ottenere una lettura simile a uno snapshot dell'ultimo secondo, è necessario confrontare il delta tra il valore corrente e il valore di base (denominatore) tra due punti di raccolta che sono separati da un secondo. Il valore di base corrispondente è il contatore delle prestazioni in `Buffer Manager:Buffer cache hit ratio base` cui il `cntr_type` valore della colonna è 1073939712.
+
+I contatori delle prestazioni in cui il `cntr_type` valore della colonna è 1073874176 visualizzano il numero di elementi elaborati in media, come rapporto tra gli elementi elaborati e il numero di operazioni. I contatori, ad esempio, `Locks:Average Wait Time (ms)` confrontano le attese di blocco al secondo con le richieste di blocco al secondo, per visualizzare la quantità media di tempo di attesa (in millisecondi) per ogni richiesta di blocco che ha generato un'attesa. Di conseguenza, per ottenere una lettura simile a uno snapshot dell'ultimo secondo, è necessario confrontare il delta tra il valore corrente e il valore di base (denominatore) tra due punti di raccolta che sono separati da un secondo. Il valore di base corrispondente è il contatore delle prestazioni in `Locks:Average Wait Time Base` cui il `cntr_type` valore della colonna è 1073939712.
 
 ## <a name="permission"></a>Autorizzazione
 

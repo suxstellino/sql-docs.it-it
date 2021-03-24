@@ -17,16 +17,16 @@ ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: a3bb3afe218c4087e09b8227bbcbf8c60798a3b2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: 8dcf9f0c1acf4231d532a25fade340d152d3b6af
+ms.sourcegitcommit: c09ef164007879a904a376eb508004985ba06cf0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487108"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104890777"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Aggiornare un database usando le operazioni di scollegamento e collegamento (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-In questo argomento si illustra come utilizzare le operazioni di collegamento e scollegamento per aggiornare un database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Dopo essere stato collegato a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il database è immediatamente disponibile e viene aggiornato automaticamente. Questo impedisce l'uso del database con una versione precedente di [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Tuttavia l'aggiornamento dei metadati non interessa l'impostazione [Livello di compatibilità database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) per un database. Per altre informazioni, vedere [Livello di compatibilità del database dopo l'aggiornamento](#dbcompat) più avanti in questo argomento.  
+In questo argomento si illustra come utilizzare le operazioni di collegamento e scollegamento per aggiornare un database di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Dopo essere stato collegato a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], il database è immediatamente disponibile e viene aggiornato automaticamente. Questo impedisce l'uso del database con una versione precedente di [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Tuttavia l'aggiornamento dei metadati non interessa l'impostazione [Livello di compatibilità database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) per un database. Per altre informazioni, vedere [Livello di compatibilità del database dopo l'aggiornamento](#dbcompat) più avanti in questo argomento.  
   
  **Contenuto dell'argomento**  
   
@@ -72,7 +72,7 @@ In questo argomento si illustra come utilizzare le operazioni di collegamento e 
     > [!NOTE]  
     >  Se si tenta di collegare il database senza specificare il file di log, verrà eseguita una ricerca di tale file nella relativa posizione originale. Se in questa posizione esiste ancora la copia originale del log, verrà collegata tale copia. Per evitare di utilizzare il file di log originale, specificare il percorso del nuovo file di log oppure rimuovere la copia originale del file di log dopo averlo copiato nella nuova posizione.  
   
-3.  Collegare i file copiati all'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per altre informazioni, vedere [Attach a Database](../../relational-databases/databases/attach-a-database.md).  
+3.  Collegare i file copiati all'istanza di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Attach a Database](../../relational-databases/databases/attach-a-database.md).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente di aggiorna una copia di un database da una versione precedente di SQL Server. Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] vengono eseguite in una finestra dell'editor di query connessa all'istanza del server a cui è collegata.  
@@ -111,8 +111,11 @@ In questo argomento si illustra come utilizzare le operazioni di collegamento e 
 Se il database include indici full-text, il processo di aggiornamento li importa, li reimposta o li ricompila, a seconda dell'impostazione della proprietà del server **upgrade_option** . Se l'opzione di aggiornamento è impostata per l'importazione (**upgrade_option** = 2) o la ricompilazione (**upgrade_option** = 0), gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti inoltre che quando l'opzione di aggiornamento è impostata sull'importazione, gli indici full-text associati vengono ricompilati se non è disponibile un catalogo full-text. Per modificare l'impostazione della proprietà del server **upgrade_option** , usare [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
 ### <a name="database-compatibility-level-after-upgrade"></a><a name="dbcompat"></a> Livello di compatibilità del database dopo l'aggiornamento  
-Se il livello di compatibilità di un database utente è 100 o superiore prima dell'aggiornamento, rimane invariato dopo l'aggiornamento. Se il livello di compatibilità è 90 prima dell'aggiornamento, nel database aggiornato questo valore viene impostato su 100, cioè sul livello di compatibilità inferiore supportato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
-  
+
+Dopo l'aggiornamento, il livello di compatibilità del database rimane a livello di compatibilità prima dell'aggiornamento, a meno che il livello di compatibilità precedente non sia supportato nella nuova versione. In questo caso, il livello di compatibilità del database aggiornato è impostato sul livello di compatibilità supportato più basso.
+
+Se, ad esempio, si collega un database con livello di compatibilità 90 prima di collegarlo a un'istanza di [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] , dopo l'aggiornamento il livello di compatibilità viene impostato su 100, che corrisponde al livello di compatibilità supportato più basso in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] . Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
+
 ### <a name="managing-metadata-on-the-upgraded-server-instance"></a>Gestione dei metadati nell'istanza del server aggiornata  
 Quando si collega un database a un'altra istanza del server, per garantire un sistema consistente a utenti e applicazioni, potrebbe essere necessario ricreare tutti i metadati del database o parte di essi, tra cui account di accesso, processi e autorizzazioni, nell'altra istanza del server. Per altre informazioni, vedere [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
