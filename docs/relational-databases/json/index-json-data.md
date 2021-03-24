@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a37f275f89a65a27e4b536a1ae01ed3b8088fbb9
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 243c9043598879936eaf4037b2a2d1feef9ae8c0
+ms.sourcegitcommit: e2dbe5639b0d1e1dd7cb4cdf0b86f1b212b532b4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97473802"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "105008412"
 ---
 # <a name="index-json-data"></a>Indicizzazione dei dati JSON
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
@@ -60,6 +60,16 @@ ADD vCustomerName AS JSON_VALUE(Info,'$.Customer.Name')
 CREATE INDEX idx_soh_json_CustomerName
 ON Sales.SalesOrderHeader(vCustomerName)  
 ```  
+
+Questa istruzione restituirà l'avviso seguente:
+```
+Warning! The maximum key length for a nonclustered index is 1700 bytes. The index 'col1' has maximum length of 8000 bytes. For some combination of large values, the insert/update operation will fail.
+```
+
+La `JSON_VALUE` funzione può restituire valori di testo fino a 8000 byte, ad esempio come tipo nvarchar (4000). Non è tuttavia possibile indicizzare i valori di lunghezza superiore a 1700 byte. Se si tenta di immettere il valore nella colonna calcolata indicizzata che supera i 1700 byte, l'operazione DML avrà esito negativo. Si tratta dell'errore di Runtime.
+
+Per ottenere prestazioni migliori, provare a eseguire il cast del valore esposto utilizzando la colonna calcolata nel tipo più piccolo applicabile. Tipi Useint e datetime2 anziché tipi di stringa.
+
 ### <a name="more-info-about-the-computed-column"></a>Altre informazioni sulla colonna calcolata 
 La colonna calcolata non è persistente. È calcolata solo quando è necessario ricostruire l'indice. Non occupa spazio aggiuntivo nella tabella.   
   

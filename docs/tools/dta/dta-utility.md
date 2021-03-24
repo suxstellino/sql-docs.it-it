@@ -21,12 +21,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/09/2017
-ms.openlocfilehash: b05279df08153efab4257a74a8389ea33b38b966
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: ff53b6711375e5f06368333392da33bb0f5108b9
+ms.sourcegitcommit: c09ef164007879a904a376eb508004985ba06cf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100338740"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104890738"
 ---
 # <a name="dta-utility"></a>dta - utilità
 
@@ -59,7 +59,7 @@ dta
       [ -ix input_XML_file_name ]  
       [ -A time_for_tuning_in_minutes ]  
       [ -n number_of_events ]
-      [ -I time_window_in_hours ]  
+      [ -l time_window_in_hours ]  
       [ -m minimum_improvement ]  
       [ -fa physical_design_structures_to_add ]  
       [ -fi filtered_indexes]  
@@ -182,9 +182,8 @@ dta -d AdventureWorks2012 ...
 **-fc**  
  Specifica che gli indici columnstore devono essere considerati per nuove indicazioni. DTA considererà gli indici columnstore sia cluster sia non cluster. Per ulteriori informazioni, vedere    
 [Indicazioni relative agli indici columnstore in Ottimizzazione guidata motore di database](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
- ||  
-|-|  
-|**Si applica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive.|  
+
+> **Si applica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive.  
 
   
  **-fk** _keep_existing_option_  
@@ -220,9 +219,8 @@ dta -d AdventureWorks2012 ...
 
 **-iq**  
  Specifica che Query Store deve essere usato come carico di lavoro. Vengono analizzati i primi 1.000 eventi di Query Store per i database selezionati in modo esplicito. Questo valore può essere modificato tramite l'opzione **-n**.  Per altre informazioni, vedere [Archivio query](../../relational-databases/performance/how-query-store-collects-data.md) e [Ottimizzazione del database tramite un carico di lavoro dell'archivio query](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
- ||  
-|-|  
-|**Si applica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive.|  
+  
+> **Si applica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive.
      
  **-if** _workload_file_  
  Specifica il percorso e il nome del file del carico di lavoro da utilizzare come input per l'ottimizzazione. Il file deve essere in formato trc (file di traccia di SQL Server Profiler), sql (file SQL) oppure log (file di traccia di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). È inoltre necessario specificare un file o una tabella del carico di lavoro.  
@@ -273,18 +271,18 @@ dta -n number_of_events -A 0
   
  In questo caso, è importante specificare un tempo di ottimizzazione illimitato (`-A 0`). In caso contrario, Ottimizzazione guidata motore di database utilizza il tempo di ottimizzazione predefinito pari a 8 ore.
  
- **-I** _time_window_in_hours_   
-   Specifica l'intervallo di tempo (in ore) in cui una query deve essere eseguita per essere considerata da DTA per l'ottimizzazione quando si usa l'opzione **-iq** (carico di lavoro da Query Store). 
+ **-l** _time_window_in_hours_   
+   Specifica l'intervallo di tempo (in ore) in cui una query deve essere eseguita per essere considerata da DTA per l'ottimizzazione quando si usa l'opzione **-iq** (carico di lavoro da Query Store).
+   
 ```  
-dta -iq -I 48  
+dta -iq -l 48  
 ```  
+
 In questo caso DTA userà Query Store come origine del carico di lavoro e considererà solo le query eseguite nelle ultime 48 ore.  
-  ||  
-|-|  
-|**Si applica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive.|  
 
+> **Si applica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e versioni successive.  
 
-  
+ 
  **-of** _output_script_file_name_  
  Specifica che **dta** scrive l'indicazione sotto forma di script [!INCLUDE[tsql](../../includes/tsql-md.md)] nel nome file e nella destinazione specificati.  
   

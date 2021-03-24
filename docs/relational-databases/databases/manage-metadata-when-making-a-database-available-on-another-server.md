@@ -34,12 +34,12 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], metadata
 - credentials [SQL Server], metadata
 - copying databases
-ms.openlocfilehash: 3dc93671874de47f45bd26ae12fa9ded44c9a4fd
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
-ms.translationtype: HT
+ms.openlocfilehash: 8502271ba3b04e66fd6fcc0b2723e0c8e4533f96
+ms.sourcegitcommit: c09ef164007879a904a376eb508004985ba06cf0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88412847"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104890668"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Gestire i metadati quando si rende disponibile un database in un altro server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -194,7 +194,7 @@ ms.locfileid: "88412847"
   
  Se le versioni del componente [word breaker e stemmer](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) o del componente [filtri di ricerca full-text](../../relational-databases/search/configure-and-manage-filters-for-search.md) sono diverse nelle istanze del server originale e del server di destinazione, l'indice e le query full-text possono comportarsi in modo diverso. Anche il [thesaurus](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md) viene archiviato in file specifici dell'istanza. È necessario trasferire una copia di questi file in un percorso equivalente nell'istanza del server di destinazione oppure ricrearli nella nuova istanza.  
   
-> **NOTA:** quando si collega un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] contenente file di catalogo full-text in un'istanza del server di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , i file di catalogo vengono collegati dal percorso precedente insieme agli altri file del database, come in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per altre informazioni, vedere [Aggiornamento della ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md).  
+> **NOTA:** quando si collega un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] contenente file di catalogo full-text in un'istanza del server di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] , i file di catalogo vengono collegati dal percorso precedente insieme agli altri file del database, come in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per altre informazioni, vedere [Aggiornamento della ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md).  
   
  Per ulteriori informazioni, vedere anche:  
   

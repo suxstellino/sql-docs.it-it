@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0ddd5b76d37f170ed195c6b08f6debcb0f032e77
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 3a8068945e91b56537a16ddf87cebfc9aa27fb3c
+ms.sourcegitcommit: c09ef164007879a904a376eb508004985ba06cf0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756186"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104890644"
 ---
 # <a name="database-properties-files-page"></a>Proprietà database (pagina File)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85756186"
  È possibile specificare il proprietario del database selezionandolo nell'elenco.  
   
  **Usa indicizzazione full-text**  
- Questa casella di controllo è selezionata e disabilitata perché l'indicizzazione full-text è sempre abilitata in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per altre informazioni, vedere [Ricerca full-text](../../relational-databases/search/full-text-search.md).  
+ Questa casella di controllo è selezionata e disabilitata perché l'indicizzazione full-text è sempre abilitata in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Ricerca full-text](../../relational-databases/search/full-text-search.md).  
   
  **File di database**  
  È possibile aggiungere, visualizzare, modificare o rimuovere file del database associato. I file di database dispongono delle proprietà seguenti:  
@@ -41,7 +41,7 @@ ms.locfileid: "85756186"
  È possibile immettere o modificare il nome del file.  
   
  **Tipo di file**  
- È possibile selezionare il tipo di file nell'elenco. Il tipo di file può essere **Dati**, **Log**o **Dati FILESTREAM**. Non è possibile modificare il tipo di file di un file esistente.  
+ È possibile selezionare il tipo di file nell'elenco. Il tipo di file può essere **Dati**, **Log** o **Dati FILESTREAM**. Non è possibile modificare il tipo di file di un file esistente.  
   
  Selezionare **Dati FILESTREAM** se si aggiungono file (contenitori) a un filegroup ottimizzato per la memoria.  
   
