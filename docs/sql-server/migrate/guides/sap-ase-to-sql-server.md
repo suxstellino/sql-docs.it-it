@@ -10,19 +10,19 @@ ms.topic: how-to
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/19/2021
-ms.openlocfilehash: a549b0e28da092bc1320f621c29307772fc5d69b
-ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
+ms.openlocfilehash: 89a33b91af02393fef62189d076a17eea46ffa29
+ms.sourcegitcommit: 17f05be5c08cf9a503a72b739da5ad8be15baea5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104611029"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105103778"
 ---
 # <a name="migration-guide-sap-ase-to-sql-server"></a>Guida alla migrazione: SAP ASE per SQL Server
 [!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
 
 Questa guida illustra come eseguire la migrazione dei database SAP ASE a SQL Server usando SQL Server Migration Assistant per SAP ASE.
 
-Per altri scenari, vedere la [Guida alla migrazione del database](https://datamigration.microsoft.com/).
+Per altre guide alla migrazione, vedere [Migrazione dei database](https://docs.microsoft.com/data-migration). 
 
 ## <a name="prerequisites"></a>Prerequisiti 
 
@@ -30,6 +30,7 @@ Per eseguire la migrazione del database SAP SE a SQL Server, è necessario:
 
 - Per verificare che l'ambiente di origine sia supportato. 
 - [SQL Server Migration Assistant per SAP Adaptive Server Enterprise (in precedenza SAP Sybase ASE)](https://www.microsoft.com/download/details.aspx?id=54256). 
+- Connettività e autorizzazioni sufficienti per accedere sia all'origine che alla destinazione. 
 
 ## <a name="pre-migration"></a>Pre-migrazione
 
@@ -37,18 +38,18 @@ Una volta soddisfatti i prerequisiti, si è pronti per individuare la topologia 
 
 ### <a name="assess"></a>Valutare
 
-Usare [SQL Server Migration Assistant (SSMA) per SAP Adaptive Server Enterprise (formalmente SAP Sybase ASE)](https://www.microsoft.com/download/details.aspx?id=54256) per esaminare gli oggetti e i dati di database, valutare i database per la migrazione, migrare gli oggetti di database Sybase in SQL Server e quindi migrare i dati in SQL Server. Per ulteriori informazioni, vedere [SQL Server Migration Assistant per Sybase (SybaseToSQL)](../../../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md).
+Usare SQL Server Migration Assistant (SSMA) per SAP ASE per esaminare gli oggetti e i dati di database, valutare i database per la migrazione, migrare gli oggetti di database di Sybase SQL Server e quindi migrare i dati in SQL Server. Per ulteriori informazioni, vedere [SQL Server Migration Assistant per Sybase (SybaseToSQL)](../../../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md).
 
 Per creare una valutazione, seguire questa procedura: 
 
-1. Aprire **SSMA per Sybase**. 
+1. Aprire [SQL Server Migration Assistant (SSMA) per SAP ASE](https://www.microsoft.com/download/details.aspx?id=54256). 
 1. Selezionare **File** e quindi scegliere **Nuovo progetto**. 
 1. Specificare un nome di progetto, un percorso in cui salvare il progetto, quindi selezionare SQL Server come destinazione della migrazione dall'elenco a discesa. Selezionare **OK**.
 1. Immettere i valori per i dettagli della connessione SAP nella finestra di dialogo **Connetti a Sybase** . 
 1. Fare clic con il pulsante destro del mouse sul database SAP di cui si desidera eseguire la migrazione, quindi scegliere **Crea report**. Verrà generato un report HTML.
 1. Leggere il report HTML per esaminare le statistiche di conversione e gli eventuali errori o avvisi. È anche possibile aprire il report in Excel per ottenere un inventario degli oggetti di SAP ASE e lo sforzo necessario per eseguire le conversioni dello schema. La posizione predefinita del report è la cartella report all'interno di SSMAProjects.
 
-   Ad esempio: `drive:\<username>\Documents\SSMAProjects\MyDB2Migration\report\report_<date>`. 
+   Ad esempio: `drive:\<username>\Documents\SSMAProjects\MySAPMigration\report\report_<date>`. 
 
 
 ### <a name="validate-type-mappings"></a>Convalida mapping dei tipi
@@ -62,7 +63,7 @@ Per convertire lo schema, seguire questa procedura:
 
 1. Opzionale Per convertire le query dinamiche o ad hoc, fare clic con il pulsante destro del mouse sul nodo e scegliere **Aggiungi istruzione**. 
 1. Selezionare **Connetti a SQL Server** nella barra di spostamento in alto a linee e specificare SQL Server dettagli. È possibile scegliere di connettersi a un database esistente o specificare un nuovo nome, nel qual caso verrà creato un database nel server di destinazione.
-1. Fare clic con il pulsante destro del mouse sullo schema SAP ASE in **Sybase Metadata Explorer** e scegliere **Converti schema**. In alternativa, è possibile selezionare **Converti schema** dalla barra di spostamento in alto a linee. 
+1. Fare clic con il pulsante destro del mouse sul database o sull'oggetto di cui si vuole eseguire la migrazione in **Esplora metadati di SAP ASE** e scegliere **Migrate data**. In alternativa, è possibile selezionare **migrare i dati** dalla barra di spostamento in alto a linea. Per eseguire la migrazione dei dati per un intero database, selezionare la casella di controllo accanto al nome del database. Per eseguire la migrazione dei dati da singole tabelle, espandere il database, espandere tabelle, quindi selezionare la casella di controllo accanto alla tabella. Per omettere i dati dalle singole tabelle, deselezionare la casella di controllo: 
 1. Confrontare ed esaminare la struttura dello schema per identificare i potenziali problemi. 
 
    Dopo la conversione dello schema è possibile salvare il progetto localmente per un esercizio di correzione dello schema offline. Scegliere **Salva progetto** dal menu **File**. In questo modo è possibile valutare gli schemi di origine e di destinazione offline ed eseguire la correzione prima di poter pubblicare lo schema in SQL Server.
@@ -76,10 +77,10 @@ Una volta soddisfatti i prerequisiti necessari e aver completato le attività as
 
 Per pubblicare lo schema ed eseguire la migrazione dei dati, attenersi alla procedura seguente: 
 
-1. Fare clic con il pulsante destro del mouse sul database in **SQL Server Esplora metadati** e scegliere **Sincronizza con database**.  Questa azione pubblica lo schema di SAP ASE nell'istanza di SQL Server.
-1. Fare clic con il pulsante destro del mouse sullo schema SAP ASE in **SAP ASE Metadata Explorer** e scegliere **Migrate data**.  In alternativa, è possibile selezionare **migrare i dati** dalla barra di spostamento in alto a linea.  
+1. Pubblicare lo schema: fare clic con il pulsante destro del mouse sul database in **SQL Server Esplora metadati** e scegliere **Sincronizza con database**.  Questa azione pubblica lo schema di SAP ASE nell'istanza di SQL Server.
+1. Migrare i dati: fare clic con il pulsante destro del mouse sul database o sull'oggetto di cui si vuole eseguire la migrazione in **Esplora metadati di SAP ASE** e scegliere **Migrate data**. In alternativa, è possibile selezionare **migrare i dati** dalla barra di spostamento in alto a linea. Per eseguire la migrazione dei dati per un intero database, selezionare la casella di controllo accanto al nome del database. Per eseguire la migrazione dei dati da singole tabelle, espandere il database, espandere tabelle, quindi selezionare la casella di controllo accanto alla tabella. Per omettere i dati dalle singole tabelle, deselezionare la casella di controllo:
 1. Al termine della migrazione, visualizzare il **report di migrazione dei dati**: 
-1. Convalidare la migrazione esaminando i dati e lo schema nell'istanza SQL Server usando SQL Server Management Studio (SSMS).
+1. Connettersi all'istanza di SQL Server utilizzando [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) e convalidare la migrazione riesaminando i dati e lo schema. 
 
 
 ## <a name="post-migration"></a>Post-migrazione 
@@ -106,8 +107,8 @@ L'approccio di test per la migrazione del database consiste nell'eseguire le att
 
 La fase post-migrazione è fondamentale per riconciliare eventuali problemi di accuratezza dei dati e verificare la completezza, nonché per risolvere i problemi di prestazioni del carico di lavoro.
 
-> [!NOTE]
-> Per ulteriori dettagli su questi problemi e su passaggi specifici per attenuarli, vedere la [Guida alla convalida e all'ottimizzazione post-migrazione](/sql/relational-databases/post-migration-validation-and-optimization-guide).
+> [!Note]
+> Per ulteriori dettagli su questi problemi e su passaggi specifici per attenuarli, vedere la [Guida alla convalida e all'ottimizzazione post-migrazione](../../../relational-databases/post-migration-validation-and-optimization-guide.md).
 
 
 ## <a name="migration-assets"></a>Risorse per la migrazione

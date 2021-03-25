@@ -19,12 +19,12 @@ ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: ab2554561abb1590db33249a0ade4e8458b0fd54
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 59fdc25c91b1d471d3108988f93de03a5ecbdc7f
+ms.sourcegitcommit: 17f05be5c08cf9a503a72b739da5ad8be15baea5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100272372"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105103768"
 ---
 # <a name="add-persisted-log-buffer-to-a-database"></a>Aggiungere un buffer di log persistente a un database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,6 +56,8 @@ ALTER DATABASE <MyDB>
     SIZE = 20MB
   );
 ```
+
+Si noti che il file di log nel volume DAX verrà ridimensionato in 20MB, indipendentemente dalle dimensioni specificate wih comando Aggiungi FILE.
 
 Il volume o il montaggio del nuovo file di log deve essere formattato con DAX (NTFS) o montato con l'opzione DAX (XFS/EXT4).
 

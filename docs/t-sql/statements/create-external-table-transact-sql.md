@@ -21,12 +21,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 65d22530171663ddb9415c36ccf0151b28e5b6d5
-ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.openlocfilehash: c1fe9a6204340b408f20c9c80f360546f3c52b9e
+ms.sourcegitcommit: 17f05be5c08cf9a503a72b739da5ad8be15baea5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104744231"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105103858"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -104,7 +104,7 @@ column_name <data_type>
 > [!IMPORTANT]
 > Per ottenere prestazioni ottimali, se il driver dell'origine dati esterna supporta un nome in tre parti, è consigliabile specificare il nome in tre parti.  
 
-\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE supporta la possibilità di configurare il nome di colonna, il tipo di dati, il supporto dei valori Null e le regole di confronto. Non è possibile usare DEFAULT CONSTRAINT nelle tabelle esterne.
+\<column_definition> [ ,... *n* ] Crea tabella esterna supporta la possibilità di configurare il nome della colonna, il tipo di dati, il supporto di valori null e le regole di confronto. Non è possibile usare DEFAULT CONSTRAINT nelle tabelle esterne.
 
 Le definizioni di colonna, inclusi i tipi di dati e il numero di colonne, devono corrispondere ai dati nei file esterni. In caso di mancata corrispondenza, le righe di file verranno rifiutate quando si eseguono query sui dati effettivi.
 
@@ -212,6 +212,7 @@ Costrutti e operazioni non supportati:
 
 - Il vincolo DEFAULT per le colonne di tabelle esterne
 - Operazioni di eliminazione, inserimento e aggiornamento di Data Manipulation Language (DML)
+- [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md) sulle colonne della tabella esterna
 
 ### <a name="query-limitations"></a>Limitazioni delle query
 
@@ -647,7 +648,7 @@ column_name <data_type>
 > [!IMPORTANT]
 > Per ottenere prestazioni ottimali, se il driver dell'origine dati esterna supporta un nome in tre parti, è consigliabile specificare il nome in tre parti.
 
-\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE supporta la possibilità di configurare il nome di colonna, il tipo di dati, il supporto dei valori Null e le regole di confronto. Non è possibile usare DEFAULT CONSTRAINT nelle tabelle esterne.
+\<column_definition> [ ,... *n* ] Crea tabella esterna supporta la possibilità di configurare il nome della colonna, il tipo di dati, il supporto di valori null e le regole di confronto. Non è possibile usare DEFAULT CONSTRAINT nelle tabelle esterne.
 
 > [!NOTE]
 > `Text`, `nText` e `XML` non sono tipi di dati supportati per le colonne nelle tabelle esterne per il database SQL di Azure.
@@ -699,8 +700,9 @@ Costrutti e operazioni non supportati:
 
 - Il vincolo DEFAULT per le colonne di tabelle esterne
 - Operazioni di eliminazione, inserimento e aggiornamento di Data Manipulation Language (DML)
+- [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md) sulle colonne della tabella esterna
 
-Solo i predicati letterali definiti in una query possono essere propagati nell'origine dati esterna. Questo rappresenta una differenza rispetto ai server collegati e all'accesso a posizioni in cui è possibile usare predicati determinati durante l'esecuzione di query, ad esempio in combinazione con un ciclo annidato in un piano di query. Ciò porta spesso alla copia in locale dell'intera tabella esterna e quindi al join della tabella stessa.
+Solo i predicati letterali definiti in una query possono essere propagati nell'origine dati esterna. Questa operazione è a differenza dei server collegati e l'accesso a Where predicati determinati durante l'esecuzione di query può essere utilizzato, ovvero quando viene utilizzato insieme a un ciclo annidato in un piano di query. Ciò porta spesso alla copia in locale dell'intera tabella esterna e quindi al join della tabella stessa.
 
 ```sql
   \\ Assuming External.Orders is an external table and Customer is a local table.
@@ -834,7 +836,7 @@ column_name <data_type>
 > [!IMPORTANT]
 > Per ottenere prestazioni ottimali, se il driver dell'origine dati esterna supporta un nome in tre parti, è consigliabile specificare il nome in tre parti.
 
-\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE supporta la possibilità di configurare il nome di colonna, il tipo di dati, il supporto dei valori Null e le regole di confronto. Non è possibile usare DEFAULT CONSTRAINT nelle tabelle esterne.
+\<column_definition> [ ,... *n* ] Crea tabella esterna supporta la possibilità di configurare il nome della colonna, il tipo di dati, il supporto di valori null e le regole di confronto. Non è possibile usare DEFAULT CONSTRAINT nelle tabelle esterne.
 
 > [!NOTE]
 > `Text`, `nText` e `XML` non sono tipi di dati supportati per le colonne nelle tabelle esterne per Azure SQL Data Warehouse.
@@ -944,6 +946,7 @@ Costrutti e operazioni non supportati:
 
 - Il vincolo DEFAULT per le colonne di tabelle esterne
 - Operazioni di eliminazione, inserimento e aggiornamento di Data Manipulation Language (DML)
+- [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md) sulle colonne della tabella esterna
 
 ### <a name="query-limitations"></a>Limitazioni delle query
 
@@ -1088,7 +1091,7 @@ column_name <data_type>
 > [!IMPORTANT]
 > Per ottenere prestazioni ottimali, se il driver dell'origine dati esterna supporta un nome in tre parti, è consigliabile specificare il nome in tre parti.
 
-\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE supporta la possibilità di configurare il nome di colonna, il tipo di dati, il supporto dei valori Null e le regole di confronto. Non è possibile usare DEFAULT CONSTRAINT nelle tabelle esterne.
+\<column_definition> [ ,... *n* ] Crea tabella esterna supporta la possibilità di configurare il nome della colonna, il tipo di dati, il supporto di valori null e le regole di confronto. Non è possibile usare DEFAULT CONSTRAINT nelle tabelle esterne.
 
 Le definizioni di colonna, inclusi i tipi di dati e il numero di colonne, devono corrispondere ai dati nei file esterni. In caso di mancata corrispondenza, le righe di file verranno rifiutate quando si eseguono query sui dati effettivi.
 
@@ -1190,6 +1193,7 @@ Costrutti e operazioni non supportati:
 
 - Il vincolo DEFAULT per le colonne di tabelle esterne
 - Operazioni di eliminazione, inserimento e aggiornamento di Data Manipulation Language (DML)
+- [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md) sulle colonne della tabella esterna
 
 ### <a name="query-limitations"></a>Limitazioni delle query
 

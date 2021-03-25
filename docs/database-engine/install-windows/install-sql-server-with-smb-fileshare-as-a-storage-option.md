@@ -11,18 +11,18 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 5f7bbccc12c8d3f522703421542ba6188e826ea1
-ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
+ms.openlocfilehash: 611ce5f3bd9a7243ee19089deb8a755956eb156c
+ms.sourcegitcommit: 17f05be5c08cf9a503a72b739da5ad8be15baea5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104610968"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105103828"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>Installare SQL Server con l'archiviazione su condivisione file SMB
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]i database di sistema (Master, Model, MSDB e TempDB) e i database utente di [!INCLUDE[ssDE](../../includes/ssde-md.md)] possono essere installati con il file server SMB (Server Message Block) come opzione di archiviazione. Questa condizione è valida per le installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autonome e per le installazioni del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , i database di sistema (Master, Model, msdb e tempdb) e i [!INCLUDE[ssDE](../../includes/ssde-md.md)] database utente possono essere installati con il file server SMB (Server Message Block) come opzione di archiviazione. Questa condizione è valida per le installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autonome e per le installazioni del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  Filestream non è attualmente supportato in una condivisione file SMB.  
@@ -105,11 +105,11 @@ A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]i database di sist
     >   
     >  Gli account virtuali non possono essere autenticati a un percorso remoto. Per tutti gli account virtuali viene usata l'autorizzazione dell'account del computer. Eseguire il provisioning dell'account del computer nel formato \<*domain_name*>\\<*nome_computer*>\*$*.  
   
--   L'account utilizzato per installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve disporre di autorizzazioni FULL CONTROL sulla cartella della condivisione file SMB utilizzata come directory dei dati o su qualsiasi altra cartella dei dati (directory del database utente, directory del log del database utente, directory TempDB, directory del log TempDB, directory di backup) durante l'Installazione del cluster.  
+-   L'account utilizzato per installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve disporre delle autorizzazioni di controllo completo sulla cartella della condivisione file SMB utilizzata come directory dei dati o su qualsiasi altra cartella di dati (directory del database utente, directory del log del database utente, directory tempdb, directory di log tempdb, directory di backup) durante la configurazione del cluster.  
   
 -   È necessario che all'account utilizzato per installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] venga concesso il privilegio SeSecurityPrivilege nel file server SMB. Per concedere tale privilegio, utilizzare la console Criteri di sicurezza locale nel file server per aggiungere l'account di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ai criteri Gestione file registro di controllo e di sicurezza. Questa impostazione è disponibile nella sezione Assegnazione diritti utente in Criteri locali nella console Criteri di sicurezza locale.  
   
-## <a name="known-issues"></a>Problemi noti  
+## <a name="known-issues-and-limitations"></a>Limitazioni e problemi noti 
   
 -   Dopo aver scollegato un database di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] che si trova in un archivio collegato alla rete, è possibile che si verifichino problemi di autorizzazione del database durante il tentativo di ricollegare il database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Errore 5120](../../relational-databases/errors-events/mssqlserver-5120-database-engine-error.md).
   
@@ -123,7 +123,11 @@ A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]i database di sist
         ALTER SERVER CONFIGURATION  
         SET DIAGNOSTICS LOG PATH = 'C:\logs';  
         ```  
-  
+
+-   Quando si ospitano [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] file di dati in condivisioni file SMB, tutti i/O sui file passano attraverso l'interfaccia di rete nel server o nella macchina virtuale. Assicurarsi che la larghezza di banda di rete sia sufficiente per supportare l'I/O richiesto dal carico di lavoro.
+
+-   La mancata disponibilità della condivisione file che ospita i [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] file di dati a causa di problemi di connettività di rete o di altri errori può causare ritardi o errori di I/o in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] . Per i carichi di lavoro mission-critical, assicurarsi che sia presente una ridondanza incorporata nella rete e nella condivisione file e che la condivisione file supporti il failover trasparente SMB 3,0, noto anche come [disponibilità continua](https://techcommunity.microsoft.com/t5/storage-at-microsoft/smb-transparent-failover-8211-making-file-shares-continuously/ba-p/425693).
+
 ## <a name="see-also"></a>Vedere anche  
  [Pianificazione di un'installazione di SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  

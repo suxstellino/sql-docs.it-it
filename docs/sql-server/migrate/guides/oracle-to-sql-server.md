@@ -10,19 +10,19 @@ ms.topic: how-to
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/19/2021
-ms.openlocfilehash: 675086012398d03e3ed93fbe179de62e0a955cb6
-ms.sourcegitcommit: 00af0b6448ba58e3685530f40bc622453d3545ac
+ms.openlocfilehash: 392af0f8284ad6e51b2f7d33afd444ac9341302e
+ms.sourcegitcommit: 17f05be5c08cf9a503a72b739da5ad8be15baea5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104673540"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105103813"
 ---
 # <a name="migration-guide-oracle-to-sql-server"></a>Guida alla migrazione: da Oracle a SQL Server
 [!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
 
 In questa guida viene illustrato come eseguire la migrazione dei database Oracle per SQL Server utilizzando SQL Server Migration Assistant per Oracle. 
 
-Per altri scenari, vedere la [Guida alla migrazione del database](https://datamigration.microsoft.com/).
+Per altre guide alla migrazione, vedere [Migrazione dei database](https://docs.microsoft.com/data-migration). 
 
 ## <a name="prerequisites"></a>Prerequisiti 
 
@@ -32,6 +32,7 @@ Per eseguire la migrazione del database Oracle a SQL Server, è necessario:
 - Per installare [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019?filetype=EXE).
 - Per scaricare [SQL Server Migration Assistant (SSMA) per Oracle](https://www.microsoft.com/download/details.aspx?id=54258).
 - Le [autorizzazioni necessarie per SSMA per Oracle](/sql/ssma/oracle/connecting-to-oracle-database-oracletosql) e [provider](/sql/ssma/oracle/connect-to-oracle-oracletosql).
+- Connettività e autorizzazioni sufficienti per accedere sia all'origine che alla destinazione. 
 
 
 ## <a name="pre-migration"></a>Pre-migrazione
@@ -39,9 +40,6 @@ Per eseguire la migrazione del database Oracle a SQL Server, è necessario:
 Quando si prepara la migrazione al cloud, verificare che l'ambiente di origine sia supportato e che siano stati risolti tutti i prerequisiti. Ciò consentirà di garantire una migrazione efficiente e corretta.
 
 Questa parte del processo comporta l'esecuzione di un inventario dei database di cui è necessario eseguire la migrazione, la valutazione di tali database per potenziali problemi o blocchi di migrazione e la risoluzione di eventuali elementi che potrebbero essere stati individuati. 
-
-> [!Important]
-> SQL Server Migration Assistant per Oracle non supporta la migrazione di tutte le funzionalità di Oracle. Per le soluzioni alternative associate, vedere [approccio alla migrazione per le funzionalità Oracle selezionate](https://blogs.msdn.microsoft.com/datamigration/2017/05/10/migration-approach-for-oracle-features/)
 
 
 ### <a name="discover"></a>Rilevazione
@@ -51,19 +49,19 @@ Utilizzare [MAP Toolkit](https://go.microsoft.com/fwlink/?LinkID=316883) per ide
 Per usare MAP Toolkit per eseguire un'analisi dell'inventario, seguire questa procedura: 
 
 1. Aprire [MAP Toolkit](https://go.microsoft.com/fwlink/?LinkID=316883).
-1. Selezionare **Crea/Seleziona database**.
+1. Selezionare **Crea/Seleziona database**: 
 
    ![Seleziona database](./media/oracle-to-sql-server/select-database.png)
 
-1. Selezionare **Crea un database di inventario**, immettere un nome per il nuovo database di inventario che si sta creando, fornire una breve descrizione e quindi fare clic su **OK**. 
+1. Selezionare **Crea un database di inventario**, immettere un nome per il nuovo database di inventario che si sta creando, fornire una breve descrizione e quindi selezionare **OK**:
 
    :::image type="content" source="media/oracle-to-sql-server/create-inventory-database.png" alt-text="Creazione di un database di inventario":::
 
-1. Selezionare **Raccogli dati di inventario** per aprire la **procedura guidata di inventario e valutazione**. 
+1. Selezionare **Raccogli dati di inventario** per aprire la **procedura guidata di inventario e valutazione**: 
 
    :::image type="content" source="media/oracle-to-sql-server/collect-inventory-data.png" alt-text="Raccogliere i dati di inventario":::
 
-1. Nella **procedura guidata di inventario e valutazione** scegliere **Oracle** e quindi fare clic su **Avanti**. 
+1. Nella **procedura guidata di inventario e valutazione** scegliere **Oracle** , quindi selezionare **Avanti**: 
 
    ![Scegliere Oracle](./media/oracle-to-sql-server/choose-oracle.png)
 
@@ -71,23 +69,23 @@ Per usare MAP Toolkit per eseguire un'analisi dell'inventario, seguire questa pr
 
    ![Scegliere l'opzione di ricerca computer più adatta alle proprie esigenze aziendali](./media/oracle-to-sql-server/choose-search-option.png)
 
-1. Immettere le credenziali o creare nuove credenziali per i sistemi che si desidera esplorare, quindi selezionare **Avanti**.
+1. Immettere le credenziali o creare nuove credenziali per i sistemi che si desidera esplorare, quindi selezionare **Avanti**:
 
     ![Immettere le credenziali](./media/oracle-to-sql-server/choose-credentials.png)
 
-1. Impostare l'ordine delle credenziali, quindi fare clic su **Avanti**. 
+1. Impostare l'ordine delle credenziali, quindi selezionare **Avanti**:
 
    ![Imposta ordine credenziali](./media/oracle-to-sql-server/set-credential-order.png)  
 
-1. Specificare le credenziali per ogni computer che si desidera individuare. È possibile usare credenziali univoche per ogni computer o computer oppure è possibile scegliere di usare l'elenco **tutte le credenziali del computer** .  
+1. Specificare le credenziali per ogni computer che si desidera individuare. È possibile usare credenziali univoche per ogni computer o computer oppure è possibile scegliere di usare l'elenco **tutte le credenziali del computer** :
 
    ![Specificare le credenziali per ogni computer che si desidera individuare](./media/oracle-to-sql-server/specify-credentials-for-each-computer.png)
 
-1. Verificare il riepilogo della selezione e quindi fare clic su **fine**.
+1. Verificare il riepilogo della selezione e quindi fare clic su **fine**:
 
    ![Riepilogo Revisione](./media/oracle-to-sql-server/review-summary.png)
 
-1. Al termine dell'analisi, visualizzare il report di riepilogo **raccolta dati** . L'analisi potrebbe richiedere alcuni minuti e dipende dal numero di database. Al termine, selezionare **Chiudi** . 
+1. Al termine dell'analisi, visualizzare il report di riepilogo **raccolta dati** . L'analisi potrebbe richiedere alcuni minuti e dipende dal numero di database. Al termine, selezionare **Chiudi** :
 
    ![Report Riepilogo raccolta](./media/oracle-to-sql-server/collection-summary-report.png)
 
@@ -104,29 +102,25 @@ Per creare una valutazione, seguire questa procedura:
 
 1. Aprire il  [SQL Server Migration Assistant (SSMA) per Oracle](https://www.microsoft.com/download/details.aspx?id=54258). 
 1. Selezionare **File** e quindi scegliere **Nuovo progetto**. 
-1. Specificare un nome di progetto, una posizione in cui salvare il progetto e quindi selezionare la destinazione della migrazione SQL Server nell'elenco a discesa. Selezionare **OK**. 
+1. Specificare un nome di progetto, una posizione in cui salvare il progetto e quindi selezionare la destinazione della migrazione SQL Server nell'elenco a discesa. Selezionare **OK**: 
 
    ![Nuovo progetto](./media/oracle-to-sql-server/new-project.png)
 
-1. Immettere i valori per i dettagli della connessione Oracle nella finestra di dialogo **Connetti a Oracle** .
+1. Selezionare **Connetti a Oracle**. Immettere i valori per i dettagli della connessione Oracle nella finestra di dialogo **Connetti a Oracle** :
 
    ![Connettersi a Oracle](./media/oracle-to-sql-server/connect-to-oracle.png)
 
-   Selezionare lo schema Oracle di cui si desidera eseguire la migrazione:
+   Selezionare lo schema o gli schemi Oracle di cui si vuole eseguire la migrazione:
 
    ![Selezionare lo schema da caricare](./media/oracle-to-sql-server/select-schema.png)
 
-1. In **Oracle Metadata Explorer** selezionare lo schema Oracle, quindi selezionare **Crea report** per generare un report HTML con le statistiche di conversione e gli errori/avvisi, se presenti.
+1. In **Oracle Metadata Explorer** selezionare lo schema Oracle, quindi selezionare **Crea report** per generare un report HTML con le statistiche di conversione e gli errori/avvisi, se presenti. In alternativa, è possibile scegliere **Crea report** dalla barra di spostamento dopo aver selezionato lo schema:
 
    ![Creare report](./media/oracle-to-sql-server/create-report.png)
 
-1. Esaminare il report HTML per le statistiche di conversione, nonché gli errori e gli avvisi. Analizzarlo per comprendere le soluzioni e i problemi di conversione.
-
-   È inoltre possibile accedere a questo report dalla cartella SSMA Projects come selezionato nella prima schermata. Dall'esempio precedente, individuare il file di report.xml da: 
+1. Leggere il report HTML per esaminare le statistiche di conversione e gli eventuali errori o avvisi. È inoltre possibile aprire il report in Excel per ottenere un inventario degli oggetti Oracle e lo sforzo necessario per eseguire le conversioni dello schema. Il percorso predefinito per il report si trova nella cartella report in SSMAProjects  
 
    `drive:\<username>\Documents\SSMAProjects\MyOracleMigration\report\report_2016_11_12T02_47_55\`
-
-    e quindi aprirlo in Excel per ottenere un inventario degli oggetti Oracle e lo sforzo necessario per eseguire le conversioni dello schema.
 
    ![Report di conversione](./media/oracle-to-sql-server/conversion-report.png)
 
@@ -137,7 +131,7 @@ Convalidare i mapping dei tipi di dati predefiniti e modificarli in base ai requ
 
 1. Selezionare **Tools** (Strumenti) dal menu. 
 1. Selezionare **Project Settings** (Impostazioni progetto). 
-1. Selezionare la scheda **Type mappings** (Mapping tipi). 
+1. Selezionare la scheda **mapping dei tipi** :
 
    ![Mapping dei tipi](./media/oracle-to-sql-server/type-mappings.png)
 
@@ -150,25 +144,28 @@ Convalidare i mapping dei tipi di dati predefiniti e modificarli in base ai requ
 Per convertire lo schema, seguire questa procedura: 
 
 1. Opzionale Per convertire le query dinamiche o ad hoc, fare clic con il pulsante destro del mouse sul nodo e scegliere **Aggiungi istruzione**.
-1. Scegliere **Connetti a SQL Server** dalla barra di spostamento in alto a sinistra e specificare i dettagli di connessione per l'SQL Server. È possibile scegliere di connettersi a un database esistente o specificare un nuovo nome, nel qual caso verrà creato un database nel server di destinazione.
+1. Selezionare **Connetti a SQL Server** dalla barra di spostamento in alto a linee. 
+     1. Immettere i dettagli della connessione per l'istanza di SQL Server. 
+     1. Scegliere il database di destinazione dall'elenco a discesa o specificare un nuovo nome, nel qual caso verrà creato un database nel server di destinazione. 
+     1. Fornire i dettagli di autenticazione. 
+     1. Selezionare **Connetti**:
 
    ![Connetti a SQL](./media/oracle-to-sql-server/connect-to-sql.png)
 
-1. Fare clic con il pulsante destro del mouse sullo schema e scegliere **Converti schema**.
+1. Fare clic con il pulsante destro del mouse sullo schema e scegliere **Converti schema**. In alternativa, è possibile scegliere **Converti schema** dalla barra di spostamento della riga superiore dopo aver scelto il database:
 
    ![Converti schema](./media/oracle-to-sql-server/convert-schema.png)
 
-1. Al termine della conversione dello schema, confrontare ed esaminare la struttura dello schema per identificare i potenziali problemi.
-
-   Confrontare gli oggetti convertiti con quelli originali: 
+1. Al termine della conversione, confrontare ed esaminare gli oggetti convertiti con gli oggetti originali per identificare i potenziali problemi e risolverli in base alle indicazioni:
 
    ![Converti confronto schema e controlla codice oggetto](./media/oracle-to-sql-server/table-mapping.png)
 
-   Confrontare le routine convertite con le procedure originali: 
+   Confrontare il testo Transact-SQL convertito con il codice originale ed esaminare le indicazioni:
 
    ![Esaminare le procedure convertite](./media/oracle-to-sql-server/procedure-comparison.png)
 
-   È possibile salvare il progetto localmente per un esercizio di correzione dello schema offline. Questa operazione può essere eseguita selezionando **Salva progetto** dal menu **file** . In questo modo è possibile valutare gli schemi di origine e di destinazione offline ed eseguire la correzione prima di poter pubblicare lo schema in SQL Server.
+1. Selezionare **Verifica risultati** nel riquadro Output ed esaminare gli errori nel riquadro **Elenco errori** . 
+1. Salvare il progetto in locale per un esercizio di correzione dello schema offline. Scegliere **Salva progetto** dal menu **File**. In questo modo è possibile valutare gli schemi di origine e di destinazione offline ed eseguire la correzione prima di poter pubblicare lo schema in SQL Server.
 
 
 ## <a name="migrate"></a>Migrate
@@ -178,30 +175,29 @@ Una volta soddisfatti i prerequisiti necessari e aver completato le attività as
 
 Per pubblicare lo schema ed eseguire la migrazione dei dati, attenersi alla procedura seguente: 
 
-1. Fare clic con il pulsante destro del mouse sul database da **Esplora metadati SQL Server**  e scegliere **Sincronizza con database**. Questa azione consente di pubblicare lo schema Oracle in SQL Server. 
+1. Pubblicare lo schema: fare clic con il pulsante destro del mouse sul database da **Esplora metadati SQL Server**  e scegliere **Sincronizza con database**. Questa azione consente di pubblicare lo schema Oracle SQL Server:
 
    ![Sincronizza con database](./media/oracle-to-sql-server/synchronize-database.png)
 
-   Esaminare la sincronizzazione con il database:
+   Esaminare il mapping tra il progetto di origine e la destinazione:
 
    ![Sincronizza con database-verifica mapping](./media/oracle-to-sql-server/synchronize-database-review.png)
 
-1. Fare clic con il pulsante destro del mouse sullo schema Oracle da **Oracle Metadata Explorer** e scegliere **Migrate data**. In alternativa, è possibile selezionare migrare i dati dall'esplorazione della riga superiore.
+1. Eseguire la migrazione dei dati: fare clic con il pulsante destro del mouse sullo schema o sull'oggetto di cui si desidera eseguire la migrazione in **Oracle Metadata Explorer** e scegliere **Migrate data**. In alternativa, è possibile selezionare **migrare i dati** dalla barra di spostamento in alto a linea. Per eseguire la migrazione dei dati per un intero database, selezionare la casella di controllo accanto al nome del database. Per eseguire la migrazione dei dati da singole tabelle, espandere il database, espandere tabelle, quindi selezionare la casella di controllo accanto alla tabella. Per omettere i dati dalle singole tabelle, deselezionare la casella di controllo:
 
    ![Migrazione dei dati](./media/oracle-to-sql-server/migrate-data.png)
 
 1. Specificare i dettagli della connessione per Oracle e SQL Server nella finestra di dialogo.
-1. Al termine della migrazione, visualizzare il report di migrazione dei dati:
+1. Al termine della migrazione, visualizzare il **report di migrazione dei dati**:
 
     ![Report di migrazione dati](./media/oracle-to-sql-server/data-migration-report.png)
 
-1. Connettersi al SQL Server usando [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) per esaminare i dati e lo schema nell'istanza di SQL Server. 
+1. Connettersi al SQL Server usando [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) per esaminare i dati e lo schema nell'istanza di SQL Server:
 
    ![Convalida in SSMA](./media/oracle-to-sql-server/validate-in-ssms.png)
 
 
 Oltre a usare SSMA, è anche possibile usare SQL Server Integration Services (SSIS) per eseguire la migrazione dei dati. Per altre informazioni, vedere: 
-- Il Blog [SQL Server Migration Assistant: come valutare ed eseguire la migrazione dei dati da piattaforme dati non Microsoft a SQL Server](https://blogs.msdn.microsoft.com/datamigration/2016/11/16/sql-server-migration-assistant-how-to-assess-and-migrate-databases-from-non-microsoft-data-platforms-to-sql-server/).
 - L'articolo [Introduzione con SQL Server Integration Services](https://docs.microsoft.com//sql/integration-services/sql-server-integration-services).
 - Il white paper [SQL Server Integration Services: SSIS per Azure e lo spostamento di dati ibridi](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/SSIS%20Hybrid%20and%20Azure.docx).
 
@@ -235,7 +231,7 @@ L'approccio di test per la migrazione del database consiste nell'eseguire le att
 La fase post-migrazione è fondamentale per riconciliare eventuali problemi di accuratezza dei dati e verificare la completezza, nonché per risolvere i problemi di prestazioni del carico di lavoro.
 
 > [!Note]
-> Per ulteriori dettagli su questi problemi e su passaggi specifici per attenuarli, vedere la [Guida alla convalida e all'ottimizzazione post-migrazione](https://docs.microsoft.com//sql/relational-databases/post-migration-validation-and-optimization-guide).
+> Per ulteriori dettagli su questi problemi e su passaggi specifici per attenuarli, vedere la [Guida alla convalida e all'ottimizzazione post-migrazione](../../../relational-databases/post-migration-validation-and-optimization-guide.md).
 
 
 ## <a name="migration-assets"></a>Risorse per la migrazione 

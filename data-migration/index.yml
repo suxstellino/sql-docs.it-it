@@ -6,12 +6,12 @@ metadata:
   title: Guide alla migrazione del database di Azure | Microsoft Docs
   description: 'Istruzioni dettagliate per la modernizzazione degli asset di dati tramite la migrazione a SQL Server, database SQL di Azure, Istanza gestita SQL di Azure, database di Azure, Azure Cosmos DB, SQL Server in macchine virtuali di Azure e analisi delle sinapsi di Azure. '
   ms.topic: hub-page
-  ms.openlocfilehash: a25b5f0891cd2743ed8366d28ec03599e9483df1
-  ms.sourcegitcommit: 00af0b6448ba58e3685530f40bc622453d3545ac
+  ms.openlocfilehash: 097d3eb4a8a90328cbc4fc86551bb292616f017c
+  ms.sourcegitcommit: 17f05be5c08cf9a503a72b739da5ad8be15baea5
   ms.translationtype: MT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 03/19/2021
-  ms.locfileid: "104673215"
+  ms.lasthandoff: 03/25/2021
+  ms.locfileid: "105103278"
 conceptualContent:
   items:
   - title: SQL Server a

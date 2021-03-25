@@ -10,12 +10,12 @@ ms.topic: how-to
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/19/2021
-ms.openlocfilehash: 467519e23ada08a1b14682720aa350e8df113318
-ms.sourcegitcommit: 00af0b6448ba58e3685530f40bc622453d3545ac
+ms.openlocfilehash: 723fb62f82f61d92aa5dba07dc1af7dd245f20c0
+ms.sourcegitcommit: 17f05be5c08cf9a503a72b739da5ad8be15baea5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104673787"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105103788"
 ---
 # <a name="migration-guide-access-to-sql-server"></a>Guida alla migrazione: accesso a SQL Server
 [!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
@@ -30,6 +30,7 @@ Per eseguire la migrazione del database di Access a SQL Server, è necessario:
 
 - Per verificare che l'ambiente di origine sia supportato. 
 - [SQL Server Migration Assistant per l'accesso](https://www.microsoft.com/download/details.aspx?id=54255). 
+- Connettività e autorizzazioni sufficienti per accedere sia all'origine che alla destinazione. 
 
 
 ## <a name="pre-migration"></a>Pre-migrazione 
@@ -40,24 +41,27 @@ Una volta soddisfatti i prerequisiti, si è pronti per individuare la topologia 
 
 ### <a name="assess"></a>Valutare
 
-Utilizzando SQL Server Migration Assistant (SSMA) per l'accesso, è possibile esaminare i dati e gli oggetti di database e valutare i database per la migrazione. Per ulteriori informazioni sullo strumento, vedere [SQL Server Migration Assistant per l'accesso)](/sql/ssma/access/sql-server-migration-assistant-for-access-accesstosql).
+Utilizzare SQL Server Migration Assistant (SSMA) per l'accesso per esaminare i dati e gli oggetti di database e valutare i database per la migrazione. Per ulteriori informazioni sullo strumento, vedere [SQL Server Migration Assistant per l'accesso](/sql/ssma/access/sql-server-migration-assistant-for-access-accesstosql). 
 
 Per creare una valutazione, seguire questa procedura:
 
 1. Aprire [SQL Server Migration Assistant per l'accesso](https://www.microsoft.com/download/details.aspx?id=54255). 
-1. Selezionare **File** e quindi scegliere **Nuovo progetto**. Scegliere la destinazione della migrazione e specificare un nome per il progetto di migrazione. 
+1. Selezionare **File** e quindi scegliere **Nuovo progetto**. 
+1. Specificare un nome di progetto, una posizione in cui salvare il progetto e quindi selezionare la destinazione della migrazione SQL Server nell'elenco a discesa. Selezionare **OK**:
 
    ![Nuovo progetto](./media/access-to-sql-server/new-project.png)
 
-1. Selezionare **Aggiungi database** e scegliere i database da aggiungere al progetto. 
+1. Selezionare **Aggiungi database** e scegliere i database da aggiungere al progetto:
 
    ![Aggiungi database](./media/access-to-sql-server/add-databases.png)
 
-1. In **Esplora metadati di Access**, fare clic con il pulsante destro del mouse sul database che si desidera valutare, quindi scegliere **Crea report**. 
+1. In **Esplora metadati di Access**, fare clic con il pulsante destro del mouse sul database che si desidera valutare, quindi scegliere **Crea report**. In alternativa, è possibile scegliere **Crea report** dalla barra di spostamento dopo aver selezionato lo schema:
 
    ![Creazione di report](./media/access-to-sql-server/create-report.png)
 
-1. Esaminare il report di valutazione. Ad esempio: 
+1. Leggere il report HTML per esaminare le statistiche di conversione e gli eventuali errori o avvisi. È inoltre possibile aprire il report in Excel per ottenere un inventario degli oggetti di accesso e lo sforzo necessario per eseguire le conversioni dello schema. La posizione predefinita del report è la cartella report all'interno di SSMAProjects.
+
+   ad esempio `drive:\<username>\Documents\SSMAProjects\MyAccessMigration\report\report_2020_11_12T02_47_55\`
 
    ![Report di esempio](./media/access-to-sql-server/sample-report.png)
 
@@ -67,32 +71,30 @@ Convalidare i mapping dei tipi di dati predefiniti e modificarli in base ai requ
 
 1. Selezionare **Tools** (Strumenti) dal menu. 
 1. Selezionare **Project Settings** (Impostazioni progetto). 
-1. Selezionare la scheda **Type mappings** (Mapping tipi). 
+1. Selezionare la scheda **mapping dei tipi** :
 
    ![Mapping dei tipi](./media/access-to-sql-server/type-mappings.png)
 
 1. È possibile modificare il mapping dei tipi per ogni tabella selezionando la tabella in **Esplora metadati Oracle**. 
 
 
-
 ### <a name="convert"></a>Conversione 
 
 Per convertire gli oggetti di database, attenersi alla seguente procedura: 
 
-1. Selezionare **Connetti a SQL Server** e specificare i dettagli della connessione. 
-
+1. Selezionare **Connetti a SQL Server** e specificare i dettagli della connessione:
 
    ![Connessione a SQL Server](./media/access-to-sql-server/connect-to-sql-server.png)
 
-1. Fare clic con il pulsante destro del mouse sul database in **Accedi a Esplora metadati** e scegliere **Converti schema**. In alternativa, è possibile scegliere **Converti schema** dalla barra di spostamento della riga superiore dopo aver scelto il database. 
+1. Fare clic con il pulsante destro del mouse sul database in **Accedi a Esplora metadati** e scegliere **Converti schema**. In alternativa, è possibile scegliere **Converti schema** dalla barra di spostamento della riga superiore dopo aver scelto il database:
 
    ![Convertire lo schema](./media/access-to-sql-server/convert-schema.png)
 
-   Confrontare le query convertite con le query originali: 
+1. Al termine della conversione, confrontare ed esaminare gli oggetti convertiti con gli oggetti originali per identificare i potenziali problemi e risolverli in base alle indicazioni:
 
    ![Confrontare le query convertite ](./media/access-to-sql-server/query-comparison.png)
 
-   Confrontare gli oggetti convertiti con quelli originali: 
+   Confrontare il testo Transact-SQL convertito con il codice originale ed esaminare le indicazioni:
 
    ![Esaminare gli oggetti convertiti](./media/access-to-sql-server/table-comparison.png)
 
@@ -101,35 +103,34 @@ Per convertire gli oggetti di database, attenersi alla seguente procedura:
    ![Gli oggetti in grassetto in Esplora metadati sono stati convertiti](./media/access-to-sql-server/converted-items-bold.png)
  
 1. Selezionare **Verifica risultati** nel riquadro Output ed esaminare gli errori nel riquadro **Elenco errori** . 
+1. Salvare il progetto in locale per un esercizio di correzione dello schema offline. Scegliere **Salva progetto** dal menu **File**. In questo modo è possibile valutare gli schemi di origine e di destinazione offline ed eseguire la correzione prima di poter pubblicare lo schema in SQL Server.
 
 
 ## <a name="migrate"></a>Migrazione
 
 Dopo aver completato la valutazione dei database e corretto eventuali discrepanze, il passaggio successivo consiste nell'eseguire il processo di migrazione. La migrazione dei dati è un'operazione di caricamento bulk che consente di spostare righe di dati in SQL Server nelle transazioni. Il numero di righe da caricare in SQL Server in ogni transazione viene configurato nelle impostazioni del progetto.
 
-Per eseguire la migrazione dei dati usando SSMA per l'accesso, seguire questa procedura: 
+Per pubblicare lo schema ed eseguire la migrazione dei dati usando SSMA per l'accesso, seguire questa procedura: 
 
 1. Se non è già stato fatto, selezionare **Connetti a SQL Server** e specificare i dettagli della connessione. 
 
-1. Fare clic con il pulsante destro del mouse sul database da **Esplora metadati SQL Server** e scegliere **Sincronizza con database**. Questa azione pubblica lo schema MySQL per SQL Server.
+1. Pubblicare lo schema: fare clic con il pulsante destro del mouse sul database da **Esplora metadati SQL Server** e scegliere **Sincronizza con database**. Questa azione pubblica lo schema MySQL per SQL Server:
 
    ![Sincronizza con database](./media/access-to-sql-server/synchronize-with-database.png)
 
-   Esaminare la sincronizzazione con il database: 
+   Esaminare il mapping tra il progetto di origine e la destinazione:
 
    ![Esaminare la sincronizzazione con il database](./media/access-to-sql-server/synchronize-with-database-review.png)
 
-1. Utilizzare **Esplora metadati di Access** per selezionare le caselle di controllo accanto agli elementi di cui si desidera eseguire la migrazione. Se si desidera eseguire la migrazione dell'intero database, selezionare la casella accanto al database. 
-1. Fare clic con il pulsante destro del mouse sul database o sull'oggetto di cui si desidera eseguire la migrazione e scegliere **Migrate data**. 
-   Per eseguire la migrazione dei dati per un intero database, selezionare la casella di controllo accanto al nome del database. Per eseguire la migrazione dei dati da singole tabelle, espandere il database, espandere tabelle, quindi selezionare la casella di controllo accanto alla tabella. Per omettere i dati dalle singole tabelle, deselezionare la casella di controllo.
+1. Migrare i dati: fare clic con il pulsante destro del mouse sul database o sull'oggetto di cui si vuole eseguire la migrazione in **Esplora metadati di Access** e scegliere **Migrate data**. In alternativa, è possibile selezionare **migrare i dati** dalla barra di spostamento in alto a linea. Per eseguire la migrazione dei dati per un intero database, selezionare la casella di controllo accanto al nome del database. Per eseguire la migrazione dei dati da singole tabelle, espandere il database, espandere tabelle, quindi selezionare la casella di controllo accanto alla tabella. Per omettere i dati dalle singole tabelle, deselezionare la casella di controllo:
 
    ![Migrazione dei dati](./media/access-to-sql-server/migrate-data.png)
 
-   Esaminare i dati migrati: 
+1. Al termine della migrazione, visualizzare il **report di migrazione dei dati**:  
 
    ![Esegui migrazione Revisione dati](./media/access-to-sql-server/migrate-data-review.png)
 
-1. Connettersi al SQL Server usando [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) per esaminare i dati e lo schema nell'istanza di SQL Server. 
+1. Connettersi all'istanza di SQL Server utilizzando [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) e convalidare la migrazione riesaminando i dati e lo schema: 
 
    ![Convalida in SSMA](./media/access-to-sql-server/validate-in-ssms.png)
 
@@ -161,7 +162,7 @@ L'approccio di test per la migrazione del database consiste nell'eseguire le att
 La fase post-migrazione è fondamentale per riconciliare eventuali problemi di accuratezza dei dati e verificare la completezza, nonché per risolvere i problemi di prestazioni del carico di lavoro.
 
 > [!Note]
-> Per ulteriori dettagli su questi problemi e su passaggi specifici per attenuarli, vedere la [Guida alla convalida e all'ottimizzazione post-migrazione](https://docs.microsoft.com/sql/relational-databases/post-migration-validation-and-optimization-guide).
+> Per ulteriori dettagli su questi problemi e su passaggi specifici per attenuarli, vedere la [Guida alla convalida e all'ottimizzazione post-migrazione](../../../relational-databases/post-migration-validation-and-optimization-guide.md).
 
 ## <a name="migration-assets"></a>Risorse per la migrazione 
 

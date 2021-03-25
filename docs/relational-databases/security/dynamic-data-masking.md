@@ -1,22 +1,21 @@
 ---
-title: Mascheramento dati dinamici | Microsoft Docs
+title: Dynamic Data Masking
 description: Informazioni sulla maschera dati dinamica che limita l'esposizione dei dati sensibili, nascondendoli agli utenti senza privilegi. La funzione può semplificare notevolmente la sicurezza in SQL Server.
-ms.date: 05/02/2019
+ms.date: 03/24/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, synapse-analytics
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
-ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03ef32905fd9fcd79c296279095e089691625a86
-ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.openlocfilehash: 128cc9ea3313a12bfe4fc6da7cdcf2139c2dfc9b
+ms.sourcegitcommit: 17f05be5c08cf9a503a72b739da5ad8be15baea5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104751261"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105103798"
 ---
 # <a name="dynamic-data-masking"></a>Dynamic Data Masking
 [!INCLUDE [SQL Server 2016 ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "104751261"
 
 La maschera dati dinamica (DDM) limita l'esposizione dei dati sensibili nascondendoli agli utenti senza privilegi. Può essere usata per semplificare notevolmente la progettazione e la codifica della sicurezza nell'applicazione.  
 
-La maschera dati dinamica è utile per impedire l'accesso non autorizzato ai dati sensibili consentendo agli utenti di specificare la quantità di dati sensibili da visualizzare, con un impatto minimo sul livello dell'applicazione. È possibile configurare DDM in campi di database designati per nascondere i dati sensibili nei set di risultati delle query. Con DDM i dati nel database non vengono modificati. La maschera dati dinamica è semplice da usare con le applicazioni esistenti, poiché vengono applicate le regole per la maschera nei risultati della query. Molte applicazioni sono in grado di mascherare i dati sensibili senza modificare le query esistenti.
+La maschera dati dinamica è utile per impedire l'accesso non autorizzato ai dati sensibili consentendo agli utenti di specificare la quantità di dati sensibili da visualizzare, con un impatto minimo sul livello dell'applicazione. È possibile configurare DDM in campi di database designati per nascondere i dati sensibili nei set di risultati delle query. Con DDM i dati nel database non vengono modificati. DDM è facile da usare con le applicazioni esistenti, poiché le regole di maschera vengono applicate nei risultati della query. Molte applicazioni sono in grado di mascherare i dati sensibili senza modificare le query esistenti.
 
 * I criteri di mascheramento dei dati centrali operano direttamente sui campi sensibili del database.
 * Designare gli utenti con privilegi o ruoli che hanno accesso ai dati sensibili.
@@ -86,6 +85,8 @@ WHERE is_masked = 1;
 -   Una maschera non può essere configurata su una colonna calcolata, ma se la colonna calcolata dipende da una colonna dotata di MASCHERA, la colonna calcolata restituirà dati mascherati.  
   
 -   Una colonna con la maschera dati non può essere una chiave per un indice FULLTEXT.  
+
+-   Una colonna in una [tabella esterna](../../t-sql/statements/create-external-table-transact-sql.md)di base.
   
  Per gli utenti senza autorizzazione **UNMASK** , le istruzioni **READTEXT**, **UPDATETEXT** e **WRITETEXT** deprecate non funzionano correttamente in una colonna configurata per la maschera dati dinamica. 
  
@@ -122,18 +123,18 @@ Ciò dimostra che il mascheramento dati dinamici non deve essere usato come misu
 ```sql
 
 -- schema to contain user tables
-CREATE SCHEMA Data
+CREATE SCHEMA Data;
 GO
 
 -- table with masked columns
 CREATE TABLE Data.Membership(
     MemberID        int IDENTITY(1,1) NOT NULL PRIMARY KEY CLUSTERED,
-    FirstName       varchar(100) MASKED WITH (FUNCTION = 'partial(1, "xxxxx", 1)') NULL,
+    FirstName        varchar(100) MASKED WITH (FUNCTION = 'partial(1, "xxxxx", 1)') NULL,
     LastName        varchar(100) NOT NULL,
-    Phone           varchar(12) MASKED WITH (FUNCTION = 'default()') NULL,
-    Email           varchar(100) MASKED WITH (FUNCTION = 'email()') NOT NULL,
+    Phone            varchar(12) MASKED WITH (FUNCTION = 'default()') NULL,
+    Email            varchar(100) MASKED WITH (FUNCTION = 'email()') NOT NULL,
     DiscountCode    smallint MASKED WITH (FUNCTION = 'random(1, 100)') NULL
-    )
+    );
 
 -- inserting sample data
 INSERT INTO Data.Membership (FirstName, LastName, Phone, Email, DiscountCode)
