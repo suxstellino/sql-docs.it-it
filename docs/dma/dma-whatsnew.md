@@ -14,18 +14,33 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 11bbf0a39ed9a9bbaa19992f98e4e23d50d6fbe9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a8f7e74a44b489f22827c42bab2bd5ee60a7658a
+ms.sourcegitcommit: 038a3a730cf088a64d55501d9605f2f6b31d573d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727760"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "105616670"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novità di Data Migration Assistant
 
 Questo articolo elenca le aggiunte in ogni versione di Data Migration Assistant.
 
+## <a name="data-migration-assistant-v-53"></a>Data Migration Assistant v 5,3
+
+La versione v 5.3 del Data Migration Assistant fornisce supporto per:
+- Valutazione della query ad hoc per l'applicazione esterna nella riga di comando. 
+- Consente agli utenti di personalizzare il parametro timeout del comando nel file di configurazione Dma.exe.config.
+- File di esempio di configurazione della valutazione e script di esempio di PowerShell, che spiegano come usare il file di configurazione per eseguire la riga di comando DMA.
+- Operazioni di backup e ripristino nella migrazione locale senza limitazione del timeout.
+
+Inoltre, questa versione di Data Migration Assistant è stata aggiornata a .NET 4,8 e fornisce correzioni di bug per i problemi seguenti:
+- Non è possibile eseguire la valutazione o connettersi al database SQL di Azure senza l'autorizzazione sysadmin nella fase di migrazione.
+- Gli utenti non possono eseguire la valutazione senza autorizzazione sysadmin per i test di Servizi Desktop remoto.
+- Sono stati rilevati problemi durante il caricamento dei report di valutazione JSON in Azure Migrate.
+- Impossibile eseguire la migrazione degli oggetti contenenti caratteri cinesi.
+
 ## <a name="data-migration-assistant-v-52"></a>Data Migration Assistant v 5,2
+
 La versione 5.2 del Data Migration Assistant fornisce supporto per:
 - Il caricamento di valutazioni per Azure Migrate con supporto per Azure per enti pubblici e cloud nazionali (offerta sovrana).  Questa funzionalità consente a di valutare l'idoneità della migrazione di SQL Server Data estate a SQL di Azure.
 - Supporto della riga di comando per il caricamento di valutazioni per Azure Migrate con supporto per Azure per enti pubblici e cloud nazionali.  A questo punto, è possibile automatizzare completamente il caricamento delle valutazioni nel progetto di Azure migrate per ottenere un report di conformità SQL di Azure consolidato. 
@@ -181,7 +196,7 @@ La versione 2.0 di Data Migration Assistant include consigli sulle funzionalità
 La versione 1.0 di Data Migration Assistant è la versione iniziale e fornisce:
 
 - Individuazione di problemi che possono influire sull'aggiornamento a una versione locale di SQL Server. I risultati vengono descritti come problemi di compatibilità e sono suddivisi in categorie nelle aree seguenti:
-  - Modifiche di rilievo
+  - Modifiche che causano un'interruzione
   - Modifiche del comportamento
   - Funzionalità deprecate
 - Individuazione di nuove funzionalità nella piattaforma SQL Server di destinazione di cui il database può trarre vantaggio dopo un aggiornamento. I risultati sono descritti come raccomandazioni sulle funzionalità e sono suddivisi in categorie nelle aree seguenti:
@@ -190,6 +205,6 @@ La versione 1.0 di Data Migration Assistant è la versione iniziale e fornisce:
   - Archiviazione
 - Esperienza utente moderna per eseguire valutazioni.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Panoramica di Data Migration Assistant](../dma/dma-overview.md)
