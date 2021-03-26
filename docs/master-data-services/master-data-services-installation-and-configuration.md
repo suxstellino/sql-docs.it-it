@@ -1,22 +1,19 @@
 ---
 title: Installazione e configurazione
 description: Informazioni su come installare Master Data Services in un computer Windows Server 2012 R2, configurare il database MDS e il sito Web e distribuire i modelli e i dati di esempio.
-ms.custom: ''
-ms.date: 07/01/2020
+ms.date: 03/24/2021
 ms.prod: sql
 ms.prod_service: mds
-ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: quickstart
-ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1d12236bbfd3af474e883c23b975d357e0fd27a8
-ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
+ms.openlocfilehash: 80e4952dbc6af15a4a54a5f56e3b9080f07dbb9d
+ms.sourcegitcommit: c242f423cc3b776c20268483cfab0f4be54460d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104833868"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105551655"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Installazione e configurazione di Master Data Services
 
@@ -30,7 +27,7 @@ ms.locfileid: "104833868"
 
 Per una panoramica sull'organizzazione dei dati in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], vedere [Panoramica di Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md).     
   
- Per informazioni sulle nuove funzionalità, vedere Novità [di Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md).  
+Per informazioni sulle nuove funzionalità, vedere Novità [di Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md).  
  
 Per i link a video e altre risorse di training per [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], vedere [Informazioni su SQL Server Master Data Services](../master-data-services/learn-sql-server-master-data-services.md). 
   
@@ -44,7 +41,8 @@ Per i link a video e altre risorse di training per [!INCLUDE[ssMDSshort_md](../i
 
 ## <a name="internet-explorer-and-silverlight"></a>Internet Explorer e Silverlight
 - Quando si installa [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] in un computer Windows Server 2012, potrebbe essere necessario configurare la Sicurezza avanzata di Internet Explorer per consentire lo scripting per il sito dell'applicazione Web. In caso contrario, il passaggio al sito nel computer server avrà esito negativo.
-- Per funzionare nell'applicazione Web, è necessario installare Silverlight 5 nel computer client. Se non si possiede la versione richiesta di Silverlight, viene richiesto di installarla quando si passa a un'area dell'applicazione Web in cui è necessaria. Silverlight 5 può essere installato da **[qui](https://www.microsoft.com/silverlight/)**.
+- Prima di [!INCLUDE[sqlv15](../includes/sssql19-md.md)] , per funzionare nell'applicazione Web, è necessario installare Silverlight 5 nel computer client. Se non si possiede la versione richiesta di Silverlight, viene richiesto di installarla quando si passa a un'area dell'applicazione Web in cui è necessaria. Silverlight 5 può essere installato da **[qui](https://www.microsoft.com/silverlight/)**.
+- A partire da [!INCLUDE[sqlv15](../includes/sssql19-md.md)] , i controlli HTML sostituiscono tutti i componenti di Silverlight precedenti, quindi la dipendenza Silverlight è stata rimossa. Altri browser, tra cui Chrome e Edge, ora funzionano per accedere all'app Web Master Data Services.
 
 ## <a name="ssmdsshort_md-on-an-azure-virtual-machine"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] in una macchina virtuale di Azure
 Per impostazione predefinita, quando si avvia una macchina virtuale di Azure in cui [!INCLUDE[ssnoversion_md](../includes/ssnoversion-md.md)] è già installato, [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] viene installato anche. 
@@ -74,7 +72,7 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssnoversion_md
   
      ![Icona per la Server Manager nella barra delle applicazioni di Windows Server 2012](../master-data-services/media/mds-windowsservertaskbar-servermanagericon.png "Icona per la Server Manager nella barra delle applicazioni di Windows Server 2012")  
   
-5.  In **Server Manager** fare clic su **Aggiungi ruoli e funzionalità** nel menu **Gestisci** .  
+5.  In **Server Manager** scegliere **Aggiungi ruoli e funzionalità** dal menu **Gestione**.
    
      ![In Gestione server, il comando di menu Aggiungi ruoli e funzionalità](../master-data-services/media/mds-servermanagerdashboard-addrolesfeaturesmenu.png "In Gestione server, il comando di menu Aggiungi ruoli e funzionalità")  
   
@@ -123,6 +121,7 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssnoversion_md
 > 
 > **Requisiti del browser**
 > >L'applicazione Web [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] funziona solo in Internet Explorer (IE) 9 o versioni successive. IE 8 e le versioni precedenti, Microsoft Edge e Chrome non sono supportati.    
+> A partire da [!INCLUDE[sqlv15](../includes/sssql19-md.md)] , i controlli HTML sostituiscono tutti i componenti di Silverlight precedenti, quindi la dipendenza Silverlight è stata rimossa. Altri browser, tra cui Chrome e Edge, ora funzionano per l'app Web Master Data Services.
   
 1.  Avviare [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]e fare clic su **Configurazione database** nel riquadro sinistro.  
   

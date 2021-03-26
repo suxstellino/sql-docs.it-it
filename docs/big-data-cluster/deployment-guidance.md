@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d97c5e9b8c508387298cf00a8fbbe96ded1a2eea
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 9ca8eff773bff7900a1228665d65d911b52d5a8f
+ms.sourcegitcommit: c242f423cc3b776c20268483cfab0f4be54460d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100047151"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105551482"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Come distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes
 
@@ -436,4 +436,5 @@ Per altre informazioni sulla distribuzione di cluster Big Data, vedere le risors
 
 - [Configurare le impostazioni di distribuzione per cluster Big Data](deployment-custom-configuration.md)
 - [Eseguire una distribuzione offline di un cluster Big Data di SQL Server](deploy-offline.md)
-- [Workshop: Architettura Microsoft dei [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Workshop: Architettura Microsoft dei [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://github.com/microsoft/sqlworkshops-bdc)
+- [Domande frequenti sui cluster di Big Data](big-data-cluster-faq.yml)  

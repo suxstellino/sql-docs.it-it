@@ -2,7 +2,7 @@
 description: sys.dm_db_missing_index_groups (Transact-SQL)
 title: sys.dm_db_missing_index_groups (Transact-SQL)
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 03/12/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 203e3f190a76299899098cc0cc5a185947ce0428
-ms.sourcegitcommit: c6cc0b669b175ae290cf5b08952010661ebd03c3
+ms.openlocfilehash: 692b51f1085becac61f54a3b638a3365e7fa06cd
+ms.sourcegitcommit: c242f423cc3b776c20268483cfab0f4be54460d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100530829"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105551551"
 ---
 # <a name="sysdm_db_missing_index_groups-transact-sql"></a>sys.dm_db_missing_index_groups (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "100530829"
 |**index_handle**|**int**|Identifica un indice mancante appartenente al gruppo specificato da **index_group_handle**.<br /><br /> Un gruppo di indici contiene un solo indice.|  
   
 ## <a name="remarks"></a>Commenti  
- Le informazioni restituite da **sys.dm_db_missing_index_groups** vengono aggiornate in caso di ottimizzazione di una query tramite Query Optimizer e non sono persistenti. Le informazioni relative agli indici mancanti vengono mantenute solo fino al riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per mantenere tali informazioni anche dopo il riciclo del server, gli amministratori di database devono eseguirne periodicamente copie di backup.  
+ Le informazioni restituite da `sys.dm_db_missing_index_groups` vengono aggiornate quando una query viene ottimizzata dal Query Optimizer e non è permanente. Le informazioni sugli indici mancanti vengono mantenute solo fino al riavvio del motore di database. Per mantenere tali informazioni anche dopo il riciclo del server, gli amministratori di database devono eseguirne periodicamente copie di backup. Utilizzare la `sqlserver_start_time` colonna [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) per individuare l'ultima ora di avvio del motore di database.   
   
  Nessuna delle colonne del set di risultati di output è una chiave, ma la relativa combinazione costituisce una chiave di indice.  
 
@@ -56,3 +56,4 @@ ms.locfileid: "100530829"
  [sys.dm_db_missing_index_details &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
  [sys.dm_db_missing_index_group_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
  [sys.dm_db_missing_index_group_stats_query &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-query-transact-sql.md)    
+ [sys.dm_os_sys_info &#40;&#41;Transact-SQL ](sys-dm-os-sys-info-transact-sql.md)

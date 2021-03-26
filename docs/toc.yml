@@ -463,7 +463,9 @@ items:
                 href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
               - name: Notebook per la risoluzione dei problemi dei cluster
                 href: big-data-cluster/cluster-troubleshooter-notebooks.md
-      - name: Informazioni di riferimento
+              - name: Domande frequenti sui cluster di Big Data
+                href: big-data-cluster/big-data-cluster-faq.yml
+      - name: Riferimento
         items:
           - name: Distribuzione
             items:
@@ -7353,7 +7355,9 @@ items:
         items:
           - name: Introduzione
             items:
-              - name: Traccia
+              - name: Installare e configurare Master Data Services
+                href: master-data-services/master-data-services-installation-and-configuration.md
+              - name: Traccia dell'app Web Master Data Services
                 href: master-data-services/tracing-master-data-services.md
               - name: Operazioni del servizio Web per categoria
                 href: master-data-services/develop/categorized-web-service-operations-master-data-services.md

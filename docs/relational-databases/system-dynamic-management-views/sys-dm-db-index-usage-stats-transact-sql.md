@@ -1,8 +1,8 @@
 ---
 description: sys.dm_db_index_usage_stats (Transact-SQL)
-title: sys.dm_db_index_usage_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_index_usage_stats (Transact-SQL)
 ms.custom: ''
-ms.date: 03/20/2017
+ms.date: 03/12/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
@@ -17,16 +17,15 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_db_index_usage_stats dynamic management view
-ms.assetid: d06a001f-0f72-4679-bc2f-66fff7958b86
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c82d2f5c5e3f54490a8d04962acecb794b3cab32
-ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.openlocfilehash: 246eb108870a487c3d58ca2c4df3acb7a9fb2aa7
+ms.sourcegitcommit: c242f423cc3b776c20268483cfab0f4be54460d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104740621"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105551602"
 ---
 # <a name="sysdm_db_index_usage_stats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,10 +35,10 @@ ms.locfileid: "104740621"
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene filtrata.  
   
 > [!NOTE]  
->  **sys.dm_db_index_usage_stats** non restituisce informazioni sugli indici con ottimizzazione per la memoria o sugli indici spaziali. Per informazioni sull'utilizzo dell'indice ottimizzato per la memoria, vedere [sys.dm_db_xtp_index_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
+> La DMV non `sys.dm_db_index_usage_stats` restituisce informazioni sugli indici con ottimizzazione per la memoria o sugli indici spaziali. Per informazioni sull'utilizzo dell'indice ottimizzato per la memoria, vedere [sys.dm_db_xtp_index_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
   
 > [!NOTE]  
->  Per chiamare questa vista da [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , usare **sys.dm_pdw_nodes_db_index_usage_stats**.  
+>  Per chiamare questa vista da [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , usare `sys.dm_pdw_nodes_db_index_usage_stats` .  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -67,13 +66,13 @@ ms.locfileid: "104740621"
 ## <a name="remarks"></a>Commenti  
  Ogni operazione Seek, analisi, ricerca o aggiornamento individuale sull'indice specificato, eseguita da una query, viene conteggiata come un utilizzo dell'indice e incrementa il contatore corrispondente in questa vista. Le informazioni vengono restituite sia per le operazioni causate dalle query eseguite dall'utente che per le operazioni causate dalle query generate internamente, ad esempio le analisi per la raccolta di statistiche.  
   
- Il contatore **user_updates** indica il livello di manutenzione nell'indice causato da operazioni di inserimento, aggiornamento o eliminazione nella tabella o vista sottostante. È possibile utilizzare questa vista per determinare gli indici scarsamente utilizzati dalle applicazioni. È anche possibile utilizzare la vista per determinare quali indici sono sottoposti a un overhead di manutenzione. Potrebbe essere opportuno rimuovere gli indici che comportano un overhead di manutenzione e che non sono utilizzati, o sono utilizzati solo raramente, per le query.  
+ La `user_updates` colonna è un contatore di manutenzione sull'indice causato da operazioni di inserimento, aggiornamento o eliminazione nella tabella o nella vista sottostante. È possibile utilizzare questa vista per determinare gli indici scarsamente utilizzati dalle applicazioni. È anche possibile utilizzare la vista per determinare quali indici sono sottoposti a un overhead di manutenzione. Potrebbe essere opportuno rimuovere gli indici che comportano un overhead di manutenzione e che non sono utilizzati, o sono utilizzati solo raramente, per le query.  
   
- I contatori vengono inizializzati su un valore vuoto ad ogni avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER). Inoltre, ogni volta che un database viene scollegato o arrestato (perché, ad esempio, AUTO_CLOSE è impostato su ON), tutte le righe associate al database vengono rimosse.  
+ I contatori vengono inizializzati su Empty ogni volta che il motore di database viene avviato. Utilizzare la `sqlserver_start_time` colonna [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) per individuare l'ultima ora di avvio del motore di database. Inoltre, ogni volta che un database viene scollegato o arrestato (perché, ad esempio, AUTO_CLOSE è impostato su ON), tutte le righe associate al database vengono rimosse.  
   
- Quando viene utilizzato un indice per il quale non esiste alcuna riga, viene aggiunta una riga a **sys.dm_db_index_usage_stats**. All'aggiunta della riga, i contatori corrispondenti vengono inizialmente impostati su zero.  
+ Quando si utilizza un indice, viene aggiunta una riga a `sys.dm_db_index_usage_stats` se non esiste già una riga per l'indice. All'aggiunta della riga, i contatori corrispondenti vengono inizialmente impostati su zero.  
   
- Durante l'aggiornamento a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , le voci in sys.dm_db_index_usage_stats vengono rimosse. A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] , le voci vengono mantenute come se fossero precedenti a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
+ Durante l'aggiornamento a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , le voci in `sys.dm_db_index_usage_stats` vengono rimosse. A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] , le voci vengono mantenute come se fossero precedenti a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
 ## <a name="permissions"></a>Autorizzazioni  
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
@@ -86,5 +85,5 @@ Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in 
  [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [Monitoraggio e ottimizzazione delle prestazioni](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
-  
+ [sys.dm_os_sys_info &#40;&#41;Transact-SQL ](sys-dm-os-sys-info-transact-sql.md)    
+ [Monitoraggio e ottimizzazione delle prestazioni](../../relational-databases/performance/monitor-and-tune-for-performance.md)    

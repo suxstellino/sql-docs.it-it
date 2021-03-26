@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c1109745a2fda000732c0645094dd5a157089717
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 5e3b94698712f8359c51f925b70e148917610360
+ms.sourcegitcommit: c242f423cc3b776c20268483cfab0f4be54460d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100047921"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105551270"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>Che cosa sono i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
@@ -35,7 +35,9 @@ Utilizzare [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-no
 - Virtualizzare i dati con [PolyBase](../relational-databases/polybase/polybase-guide.md). Eseguire query sui dati da origini dati esterne SQL Server, Oracle, Teradata, MongoDB e ODBC con tabelle esterne.
 - Fornire disponibilità elevata per l'istanza master di SQL Server e tutti i database tramite una tecnologia basata su gruppi di disponibilità Always On.
 
-Per altre informazioni sulle nuove funzionalità e sui problemi noti per l'ultima versione, vedere le [note sulla versione](release-notes-big-data-cluster.md).
+Per altre informazioni sulle nuove funzionalità e sui problemi noti per l'ultima versione, vedere le [note sulla versione](release-notes-big-data-cluster.md).   
+
+Per altre informazioni sui cluster di Big data, vedere [domande frequenti sui cluster di Big Data](big-data-cluster-faq.yml).
 
 ## <a name="scenarios"></a>Scenari
 
@@ -119,4 +121,5 @@ Il pool di archiviazione è formato da pod del pool di archiviazione costituiti 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sulla distribuzione di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vedere [Introduzione ai [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md).
+* Per altre informazioni sulla distribuzione di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vedere [Introduzione ai [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md).    
+* Vedere le [domande frequenti sui cluster di Big Data](big-data-cluster-faq.yml).  

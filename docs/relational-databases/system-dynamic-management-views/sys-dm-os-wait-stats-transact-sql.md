@@ -2,7 +2,7 @@
 description: sys.dm_os_wait_stats (Transact-SQL)
 title: sys.dm_os_wait_stats (Transact-SQL)
 ms.custom: contperf-fy21q3
-ms.date: 02/10/2021
+ms.date: 03/15/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5412b2c572bf9766123cf5aec6b92f08db1f7c9
-ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.openlocfilehash: 4ea6295e78f7d0e7df4fe2d0e4266e565c1278c6
+ms.sourcegitcommit: c242f423cc3b776c20268483cfab0f4be54460d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104750251"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105551479"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "104750251"
 Restituisce informazioni su tutte le attese rilevate dai thread eseguiti. È possibile usare questa visualizzazione aggregata per diagnosticare problemi a livello di prestazioni in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e anche in query e batch specifici. [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) fornisce informazioni simili per sessione.  
   
 > [!NOTE] 
-> Per chiamare questo oggetto da **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] o**, usare il nome **sys.dm_pdw_nodes_os_wait_stats**.  
+> Per chiamare questo oggetto da **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] o**, usare il nome `sys.dm_pdw_nodes_os_wait_stats` .  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -56,7 +56,7 @@ Le **attese della coda** si verificano quando un thread di lavoro è inattivo, i
   
  Le **attese esterne** si verificano quando un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] thread di lavoro è in attesa del completamento di un evento esterno, ad esempio una chiamata stored procedure estesa o una query del server collegato. Se vengono rilevati problemi di blocco, è opportuno ricordare che le attese esterne non sempre implicano che il thread di lavoro sia inattivo in quanto è possibile che il thread di lavoro esegua attivamente codice esterno.  
   
- `sys.dm_os_wait_stats` visualizza la durata delle attese completate. Questa DMV non visualizza le attese correnti.  
+ In questa DMV è indicata la durata delle attese completate. Questa DMV non visualizza le attese correnti.  
   
  Un thread di lavoro di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene considerato in attesa se si verifica uno dei seguenti casi:  
   
@@ -72,24 +72,23 @@ Le **attese della coda** si verificano quando un thread di lavoro è inattivo, i
   
  Tipi specifici di tempi di attesa durante l'esecuzione di query possono indicare colli di bottiglia oppure punti di stallo all'interno della query. In modo analogo, tempi di attesa o conteggi di attesa rilevanti a livello di server possono indicare colli di bottiglia o aree critiche nelle interazioni tra query all'interno dell'istanza del server. Ad esempio, le attese di blocco indicano contese a livello di dati da parte delle query, le attese di latch di I/O di pagina indicano tempi di risposta I/O bassi, mentre le attese di aggiornamento dei latch di pagina indicano layout di file errati.  
   
- Il contenuto di questa DMV può essere ripristinato mediante l'esecuzione del comando seguente:  
-  
+ È possibile reimpostare il contenuto di questa vista a gestione dinamica. Questo comando T-SQL Reimposta tutti i contatori su 0:  
 ```sql  
 DBCC SQLPERF ('sys.dm_os_wait_stats', CLEAR);  
 GO  
 ```  
   
-Questo comando reimposta tutti i contatori su 0.  
+
   
 > [!NOTE]
-> Queste statistiche non sono persistenti tra i vari riavvii di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e tutti i dati sono cumulativi dall'ultimo ripristino delle statistiche oppure dall'ultimo avvio del server.  
+> Queste statistiche non vengono rese permanente dopo il riavvio del motore di database e tutti i dati sono cumulativi dall'ultima reimpostazione delle statistiche o dall'avvio del motore di database. Utilizzare la `sqlserver_start_time` colonna [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) per individuare l'ultima ora di avvio del motore di database.   
   
  Nella tabella seguente sono elencati i tipi di attesa rilevati dalle attività.  
 
-|tipo |Descrizione| 
+|Tipo di attesa |Descrizione| 
 |-------------------------- |--------------------------| 
-|ABR |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| | 
-|AM_INDBUILD_ALLOCATION |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
+|ABR |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
+|AM_INDBUILD_ALLOCATION |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.|
 |AM_SCHEMAMGR_UNSHARED_CACHE |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |ASSEMBLY_FILTER_HASHTABLE |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] e versioni successive.| 
 |ASSEMBLY_LOAD |Si verifica durante l'accesso esclusivo al caricamento di assembly.| 
@@ -105,7 +104,7 @@ Questo comando reimposta tutti i contatori su 0.
 |AUDIT_ON_DEMAND_TARGET_LOCK |Si verifica in caso di attesa su un blocco usato per assicurare l'inizializzazione singola delle destinazioni degli eventi estesi relative ai controlli.| 
 |AUDIT_XE_SESSION_MGR |Si verifica in caso di attesa su un blocco usato per sincronizzare l'avvio e l'arresto delle sessioni degli eventi estesi relative ai controlli.| 
 |BACKUP |Si verifica quando un'attività è bloccata in quanto parte dell'elaborazione di un backup.| 
-|BACKUP_OPERATOR |Si verifica quando un'attività è in attesa del montaggio del nastro. Per visualizzare lo stato del nastro, eseguire una query su sys.dm_io_backup_tapes. Se un'operazione di montaggio non è in sospeso, questo tipo di attesa potrebbe indicare un problema a livello di hardware nell'unità nastro.| 
+|BACKUP_OPERATOR |Si verifica quando un'attività è in attesa del montaggio del nastro. Per visualizzare lo stato del nastro, eseguire una query su `sys.dm_io_backup_tapes` . Se un'operazione di montaggio non è in sospeso, questo tipo di attesa potrebbe indicare un problema a livello di hardware nell'unità nastro.| 
 |BACKUPBUFFER |Si verifica quando un'attività di backup è in attesa di dati oppure di un buffer in cui archiviare dati. Questo tipo di attesa non è comune, tranne quando un'attività è in attesa del montaggio di un nastro.| 
 |BACKUPIO |Si verifica quando un'attività di backup è in attesa di dati oppure di un buffer in cui archiviare dati. Questo tipo di attesa non è comune, tranne quando un'attività è in attesa del montaggio di un nastro.| 
 |BACKUPTHREAD |Si verifica quando un'attività è in attesa del completamento di un'attività di backup. I tempi di attesa possono essere lunghi, da alcuni minuti a parecchie ore. Se l'attività per la quale si è verificata l'attesa è un processo di I/O, questo tipo di attesa non indica un problema.| 
@@ -135,7 +134,7 @@ Questo comando reimposta tutti i contatori su 0.
 |BROKER_TRANSMISSION_OBJECT |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |BROKER_TRANSMISSION_TABLE |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |BROKER_TRANSMISSION_WORK |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
-|BROKER_TRANSMITTER |Si verifica quando il trasmettitore Service Broker è in attesa di lavoro. Service Broker dispone di un componente noto come trasmettitore che pianifica i messaggi provenienti da più finestre di dialogo da inviare in transito su uno o più endpoint di connessione. Il trasmettitore ha 2 thread dedicati a questo scopo. Questo tipo di attesa viene addebitato quando questi thread di trasmissione sono in attesa dell'invio dei messaggi di dialogo utilizzando le connessioni di trasporto. Valori elevati di waiting_tasks_count per questo tipo di attesa puntano a lavoro intermittente per questi thread di trasmissione e non sono indicazioni di alcun problema di prestazioni. Se Service Broker non viene usato, waiting_tasks_count dovrebbe essere 2 (per i 2 thread di trasmissione) e wait_time_ms deve essere il doppio della durata dall'avvio dell'istanza. Vedere le [statistiche di attesa di Service Broker](/archive/blogs/sql_service_broker/service-broker-wait-types).|
+|BROKER_TRANSMITTER |Si verifica quando il trasmettitore Service Broker è in attesa di lavoro. Service Broker dispone di un componente noto come trasmettitore che pianifica i messaggi provenienti da più finestre di dialogo da inviare in transito su uno o più endpoint di connessione. Il trasmettitore ha 2 thread dedicati a questo scopo. Questo tipo di attesa viene addebitato quando questi thread di trasmissione sono in attesa dell'invio dei messaggi di dialogo utilizzando le connessioni di trasporto. Valori elevati di `waiting_tasks_count` per questo tipo di attesa puntano a lavoro intermittente per questi thread di trasmissione e non sono indicazioni di alcun problema di prestazioni. Se Service Broker non viene utilizzato, `waiting_tasks_count` deve essere 2 (per i 2 thread di trasmissione) e wait_time_ms deve essere il doppio della durata dall'avvio dell'istanza. Vedere le [statistiche di attesa di Service Broker](/archive/blogs/sql_service_broker/service-broker-wait-types).|
 |BUILTIN_HASHKEY_MUTEX |Può verificarsi dopo l'avvio dell'istanza, durante l'inizializzazione delle strutture di dati interne. Non si ripete dopo l'inizializzazione delle strutture di dati.| 
 |CHANGE_TRACKING_WAITFORCHANGES |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |CHECK_PRINT_RECORD |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
@@ -180,8 +179,8 @@ Questo comando reimposta tutti i contatori su 0.
 |DBMIRRORING_CMD |Si verifica quando un'attività è in attesa dello scaricamento su disco dei record di log. Questo stato di attesa viene in genere mantenuto per lunghi periodi di tempo.| 
 |DBSEEDING_FLOWCONTROL |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.| 
 |DBSEEDING_OPERATION |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.| 
-|DEADLOCK_ENUM_MUTEX |Si verifica quando il monitoraggio dei deadlock e sys.dm_os_waiting_tasks cercano di garantire che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non esegua più ricerche di deadlock contemporaneamente.| 
-|DEADLOCK_TASK_SEARCH |Un tempo di attesa elevato per questa risorsa indica che il server sta eseguendo query su sys.dm_os_waiting_tasks e che tali query bloccano l'esecuzione della ricerca di deadlock nell'ambito del monitoraggio dei deadlock. Questo tipo di attesa viene usato soltanto dalla funzionalità di monitoraggio dei deadlock. Le query su sys.dm_os_waiting_tasks utilizzano DEADLOCK_ENUM_MUTEX.| 
+|DEADLOCK_ENUM_MUTEX |Si verifica quando il monitoraggio dei deadlock e `sys.dm_os_waiting_tasks` cercano di garantire che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non esegua più ricerche di deadlock contemporaneamente.| 
+|DEADLOCK_TASK_SEARCH |Un tempo di attesa elevato per questa risorsa indica che il server sta eseguendo query su `sys.dm_os_waiting_tasks` e che tali query bloccano l'esecuzione della ricerca di deadlock nell'ambito del monitoraggio dei deadlock. Questo tipo di attesa viene usato soltanto dalla funzionalità di monitoraggio dei deadlock. Le query su `sys.dm_os_waiting_tasks` utilizzano DEADLOCK_ENUM_MUTEX.| 
 |DEBUG |Si verifica durante il debug di Transact-SQL e CLR per la sincronizzazione interna.| 
 |DIRECTLOGCONSUMER_LIST |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] e versioni successive.| 
 |DIRTY_PAGE_POLL |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
@@ -330,7 +329,7 @@ Questo comando reimposta tutti i contatori su 0.
 |HADR_NOTIFICATION_WORKER_STARTUP_SYNC |Un'attività in background è in attesa del completamento dell'avvio di un'attività in background tramite cui vengono elaborate notifiche di Windows Server Failover Clustering. Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |HADR_NOTIFICATION_WORKER_TERMINATION_SYNC |Un'attività in background è in attesa del completamento di un'attività in background tramite cui vengono elaborate notifiche di Windows Server Failover Clustering. Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |HADR_PARTNER_SYNC |Attesa del controllo della concorrenza nell'elenco di partner. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
-|HADR_READ_ALL_NETWORKS |Attesa di ottenere l'accesso in lettura o scrittura all'elenco di reti WSFC. Solo per uso interno. Nota: il motore mantiene un elenco di reti WSFC utilizzate nelle viste a gestione dinamica (ad esempio sys.dm_hadr_cluster_networks) o per convalidare Always On istruzioni Transact-SQL che fanno riferimento alle informazioni di rete WSFC. Questo elenco viene aggiornato all'avvio del motore, alle notifiche relative a WSFC e al riavvio interno del Always On, ad esempio la perdita e il ricupero del quorum WSFC. Le attività verranno di solito bloccate quando è in corso un aggiornamento nell'elenco in questione. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
+|HADR_READ_ALL_NETWORKS |Attesa di ottenere l'accesso in lettura o scrittura all'elenco di reti WSFC. Solo per uso interno. Nota: il motore mantiene un elenco di reti WSFC utilizzate nelle viste a gestione dinamica (ad esempio `sys.dm_hadr_cluster_networks` ) o per convalidare always on istruzioni Transact-SQL che fanno riferimento alle informazioni di rete WSFC. Questo elenco viene aggiornato all'avvio del motore, alle notifiche relative a WSFC e al riavvio interno del Always On, ad esempio la perdita e il ricupero del quorum WSFC. Le attività verranno di solito bloccate quando è in corso un aggiornamento nell'elenco in questione. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |HADR_RECOVERY_WAIT_FOR_CONNECTION |Attesa della connessione del database secondario al database primario prima dell'esecuzione del recupero. Si tratta di un'attesa prevista che può prolungarsi se la connessione al database primario richiede tempo. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |HADR_RECOVERY_WAIT_FOR_UNDO |Il recupero del database è in attesa del completamento della fase di ripristino e inizializzazione da parte del database secondario che ne consente il ripristino al punto di log comune con il database primario. Si tratta di un'attesa prevista dopo i failover. Lo stato di annullamento può essere rilevato tramite il monitor di sistema di Windows (perfmon.exe) e le viste a gestione dinamica. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |HADR_REPLICAINFO_SYNC |Attesa dell'aggiornamento dello stato corrente della replica da parte del controllo della concorrenza. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
@@ -380,12 +379,12 @@ Questo comando reimposta tutti i contatori su 0.
 |KTM_ENLISTMENT |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |KTM_RECOVERY_MANAGER |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |KTM_RECOVERY_RESOLUTION |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
-|LATCH_DT |Si verifica durante l'attesa di un latch di eliminazione (DT). Non include i latch del buffer o i latch di contrassegno di transazione. \_ \* In sys.dm_os_latch_stats è disponibile un elenco di attese di latch. Le attese sys.dm_os_latch_stats LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT sono raggruppate.| 
-|LATCH_EX |Si verifica durante l'attesa di un latch esclusivo (EX). Non include i latch del buffer o i latch di contrassegno di transazione. \_ \* In sys.dm_os_latch_stats è disponibile un elenco di attese di latch. Le attese sys.dm_os_latch_stats LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT sono raggruppate.| 
-|LATCH_KP |Si verifica durante l'attesa di un latch conservativo (KP). Non include i latch del buffer o i latch di contrassegno di transazione. \_ \* In sys.dm_os_latch_stats è disponibile un elenco di attese di latch. Le attese sys.dm_os_latch_stats LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT sono raggruppate.| 
+|LATCH_DT |Si verifica durante l'attesa di un latch di eliminazione (DT). Non include i latch del buffer o i latch di contrassegno di transazione. \_ \* In è disponibile un elenco di attese di latch `sys.dm_os_latch_stats` . Le attese `sys.dm_os_latch_stats` LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT sono raggruppate.| 
+|LATCH_EX |Si verifica durante l'attesa di un latch esclusivo (EX). Non include i latch del buffer o i latch di contrassegno di transazione. \_ \* In è disponibile un elenco di attese di latch `sys.dm_os_latch_stats` . Le attese `sys.dm_os_latch_stats` LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT sono raggruppate.| 
+|LATCH_KP |Si verifica durante l'attesa di un latch conservativo (KP). Non include i latch del buffer o i latch di contrassegno di transazione. \_ \* In è disponibile un elenco di attese di latch `sys.dm_os_latch_stats` . Le attese `sys.dm_os_latch_stats` LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT sono raggruppate.| 
 |LATCH_NL |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
-|LATCH_SH |Si verifica durante l'attesa di un latch di condivisione (SH). Non include i latch del buffer o i latch di contrassegno di transazione. \_ \* In sys.dm_os_latch_stats è disponibile un elenco di attese di latch. Le attese sys.dm_os_latch_stats LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT sono raggruppate.| 
-|LATCH_UP |Si verifica durante l'attesa di un latch di aggiornamento (UP). Non include i latch del buffer o i latch di contrassegno di transazione. \_ \* In sys.dm_os_latch_stats è disponibile un elenco di attese di latch. Le attese sys.dm_os_latch_stats LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT sono raggruppate.| 
+|LATCH_SH |Si verifica durante l'attesa di un latch di condivisione (SH). Non include i latch del buffer o i latch di contrassegno di transazione. \_ \* In è disponibile un elenco di attese di latch `sys.dm_os_latch_stats` . Le attese `sys.dm_os_latch_stats` LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT sono raggruppate.| 
+|LATCH_UP |Si verifica durante l'attesa di un latch di aggiornamento (UP). Non include i latch del buffer o i latch di contrassegno di transazione. \_ \* In è disponibile un elenco di attese di latch `sys.dm_os_latch_stats` . Le attese `sys.dm_os_latch_stats` LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT sono raggruppate.| 
 |LAZYWRITER_SLEEP |Si verifica quando le attività del writer Lazy vengono sospese. Si tratta di una misura della durata dell'attesa delle attività in background. Non considerare questo stato durante il rilevamento di stalli a livello di utente.| 
 |LCK_M_BU |Si verifica quando un'attività è in attesa di acquisire un blocco aggiornamenti bulk (BU). Per ulteriori informazioni, vedere [blocchi dell'aggiornamento bulk](../sql-server-transaction-locking-and-row-versioning-guide.md#bulk_update)| 
 |LCK_M_BU_ABORT_BLOCKERS |Si verifica quando un'attività è in attesa di acquisire un blocco aggiornamenti bulk (BU) con blocchi di interruzione. (Correlato all'opzione di attesa con priorità bassa di ALTER TABLE e ALTER INDEX). Per ulteriori informazioni, vedere [blocchi dell'aggiornamento bulk](../sql-server-transaction-locking-and-row-versioning-guide.md#bulk_update) <br /><br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.| 
@@ -959,7 +958,7 @@ Questo comando reimposta tutti i contatori su 0.
 |WAITFOR |Si verifica come risultato di un'istruzione Transact-SQL ASPETTER. La durata dell'attesa è determinata dai parametri per l'istruzione. Si tratta di un'attesa avviata dall'utente.| 
 |WAITFOR_PER_QUEUE |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |WAITFOR_TASKSHUTDOWN |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
-|WAITSTAT_MUTEX |Si verifica durante la sincronizzazione dell'accesso alla raccolta di statistiche utilizzata per popolare sys.dm_os_wait_stats.| 
+|WAITSTAT_MUTEX |Si verifica durante la sincronizzazione dell'accesso alla raccolta di statistiche utilizzata per popolare `sys.dm_os_wait_stats`.| 
 |WCC |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.| 
 |WINDOW_AGGREGATES_MULTIPASS |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] e versioni successive.| 
 |WINFAB_API_CALL |Solo per uso interno. <br /><br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.| 
@@ -1029,4 +1028,5 @@ Questo comando reimposta tutti i contatori su 0.
     
  [SQL Server viste a gestione dinamica relative al sistema operativo &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_exec_session_wait_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
- [sys.dm_db_wait_stats &#40;database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)
+ [sys.dm_db_wait_stats &#40;database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)    
+ [sys.dm_os_sys_info &#40;&#41;Transact-SQL ](sys-dm-os-sys-info-transact-sql.md)    

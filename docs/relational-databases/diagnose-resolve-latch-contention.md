@@ -1,7 +1,7 @@
 ---
 title: 'White paper: Diagnosticare e risolvere una contesa di latch'
 description: Questo articolo offre un'analisi dettagliata della diagnosi e della risoluzione della contesa di latch in SQL Server. Questo articolo è stato pubblicato originariamente dal team SQLCAT di Microsoft.
-ms.date: 09/30/2020
+ms.date: 03/12/2021
 ms.prod: sql
 ms.reviewer: wiassaf
 ms.technology: performance
@@ -9,18 +9,18 @@ ms.topic: how-to
 author: bluefooted
 ms.author: pamela
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67f6fe5f8c1577142ac2356a070a954f94b856f1
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 6f32d848b19ee8d2885f61031aa42ed38ec345fd
+ms.sourcegitcommit: c242f423cc3b776c20268483cfab0f4be54460d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100075015"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105551452"
 ---
 # <a name="diagnose-and-resolve-latch-contention-on-sql-server"></a>Diagnosticare e risolvere una contesa di latch in SQL Server
 
 Questa guida illustra come identificare e risolvere i problemi relativi alla contesa di latch osservati durante l'esecuzione di applicazioni SQL Server in sistemi con concorrenza elevata con determinati carichi di lavoro.
 
-Poiché il numero di core CPU nei server continua ad aumentare, il conseguente aumento della concorrenza può introdurre punti di contesa nelle strutture dei dati a cui è necessario accedere in modo seriale all'interno del motore di database. Questo vale in particolare per i carichi di lavoro di elaborazione delle transazioni (OLTP) a velocità effettiva elevata/concorrenza elevata. È possibile affrontare queste sfide con diversi strumenti, tecniche e modi, ma è anche possibile evitarle del tutto seguendo alcune procedure per la progettazione delle applicazioni. Questo articolo illustra un tipo specifico di contesa nelle strutture dei dati che usano gli spinlock per serializzare l'accesso a queste strutture dei dati.
+Poiché il numero di core CPU nei server continua ad aumentare, il conseguente aumento della concorrenza può introdurre punti di contesa nelle strutture dei dati a cui è necessario accedere in modo seriale all'interno del motore di database. Questo vale in particolare per i carichi di lavoro di elaborazione delle transazioni (OLTP) a velocità effettiva elevata/concorrenza elevata. Sono disponibili diversi strumenti, tecniche e modi per affrontare tali problemi, oltre a procedure che possono essere seguite nella progettazione di applicazioni che possono essere utili per evitarle completamente. Questo articolo illustra un tipo specifico di contesa nelle strutture dei dati che usano gli spinlock per serializzare l'accesso a queste strutture dei dati.
 
 > [!NOTE]
 > Il contenuto di questo articolo è stato scritto dal Team di consulenza clienti di Microsoft SQL Server (SQLCAT) sulla base del processo di identificazione e risoluzione dei problemi relativi alla contesa di latch di pagina nelle applicazioni SQL Server in sistemi a concorrenza elevata. Le raccomandazioni e le procedure consigliate illustrate in questo articolo si basano sull'esperienza reale di sviluppo e distribuzione di sistemi OLTP reali.
@@ -87,18 +87,18 @@ Usare l'oggetto **SQL Server:Latches** e i contatori associati in Monitor presta
 
 ## <a name="latch-wait-types"></a>Tipi di attesa latch
 
-SQL Server tiene traccia delle informazioni cumulative sull'attesa, a cui è possibile accedere usando la vista DMW *sys.dm_os_wait_stats*. SQL Server usa tre tipi di attesa latch definiti dal corrispondente "wait_type" nella vista DMV *sys.dm_os_wait_stats*:
+Le informazioni di attesa cumulative vengono rilevate da SQL Server ed è possibile accedervi tramite la vista a gestione dinamica (DMW) `sys.dm_os_wait_stats` . SQL Server usa tre tipi di attesa latch come definito dal corrispondente `wait_type` nella `sys.dm_os_wait_stats` DMV:
 
-* **Latch di buffer (BUF):** usato per garantire la coerenza delle pagine di indice e di dati per gli oggetti utente. Vengono usati anche per proteggere l'accesso alle pagine di dati usate da SQL Server per gli oggetti di sistema. Ad esempio, le pagine che gestiscono le allocazioni sono protette da latch di buffer, incluse le pagine PFS (Page Free Space), GAM (Global Allocation Map), SGAM (Shared Global Allocation Map) e IAM (Index Allocation Map). I latch di buffer vengono segnalati in *sys.dm_os_wait_stats* con *wait_type* **PAGELATCH\_\*** .
+* **Latch di buffer (BUF):** usato per garantire la coerenza delle pagine di indice e di dati per gli oggetti utente. Vengono usati anche per proteggere l'accesso alle pagine di dati usate da SQL Server per gli oggetti di sistema. Ad esempio, le pagine che gestiscono le allocazioni sono protette da latch di buffer, incluse le pagine PFS (Page Free Space), GAM (Global Allocation Map), SGAM (Shared Global Allocation Map) e IAM (Index Allocation Map). I latch del buffer vengono segnalati in `sys.dm_os_wait_stats` con `wait_type` **latch \_ \***.
 
-* **Latch non di buffer (non-BUF):** usato per garantire la coerenza di qualsiasi struttura in memoria diversa dalle pagine del pool di buffer. Le attese di latch non di buffer verranno segnalate come *wait_type* **LATCH\_\*** .
+* **Latch non di buffer (non-BUF):** usato per garantire la coerenza di qualsiasi struttura in memoria diversa dalle pagine del pool di buffer. Eventuali attese per i latch non del buffer verranno segnalate come un `wait_type` **\_ \* latch**.
 
-* **Latch di I/O:** un subset di latch di buffer che garantisce la coerenza delle stesse strutture protette dai latch di buffer quando queste strutture richiedono il caricamento nel pool di buffer con un'operazione di I/O. I latch di I/O impediscono a un altro thread di caricare la stessa pagina nel pool di buffer con un latch non compatibile. È associato a un *wait_type* **PAGEIOLATCH\_\*** .
+* **Latch di I/O:** un subset di latch di buffer che garantisce la coerenza delle stesse strutture protette dai latch di buffer quando queste strutture richiedono il caricamento nel pool di buffer con un'operazione di I/O. I latch di I/O impediscono a un altro thread di caricare la stessa pagina nel pool di buffer con un latch non compatibile. Associato a un `wait_type` di **PAGEIOLATCH \_ \***.
 
    > [!NOTE]
    > Se si osserva un numero elevato di attese PAGEIOLATCH, significa che SQL Server è in attesa del sottosistema di I/O. Anche se una certa quantità di attese PAGEIOLATCH è un comportamento normale e previsto, se il tempo medio delle attese PAGEIOLATCH è costantemente superiore a 10 millisecondi (ms), è consigliabile determinare per quale motivo il sottosistema di I/O è sotto pressione.
 
-Se durante l'esame della vista DMV *sys.dm_os_wait_stats* si riscontrano latch non di buffer, è necessario esaminare *sys.dm_os_latch_waits* per ottenere il dettaglio delle informazioni cumulative sull'attesa per i latch non di buffer. Tutte le attese latch di buffer rientrano nella classe latch BUFFER, mentre le rimanenti vengono usate per classificare i latch non di buffer.
+Se quando si esamina la `sys.dm_os_wait_stats` DMV si verificano latch non del buffer, è `sys.dm_os_latch_waits` necessario esaminare per ottenere una descrizione dettagliata delle informazioni di attesa cumulative per i latch non del buffer. Tutte le attese latch di buffer rientrano nella classe latch BUFFER, mentre le rimanenti vengono usate per classificare i latch non di buffer.
 
 ## <a name="symptoms-and-causes-of-sql-server-latch-contention"></a>Sintomi e cause della contesa di latch di SQL Server
 
@@ -163,40 +163,40 @@ Come indicato in precedenza, la contesa di latch costituisce un problema solo qu
 
 3. Determinare la proporzione di quelli correlati ai latch.
 
-Le informazioni cumulative sull'attesa sono disponibili nella vista DMV *sys.dm_os_wait_stats*. Il tipo più comune di contesa di latch è la contesa di latch di buffer, riconoscibile dall'aumento dei tempi di attesa dei latch con *wait_type* **PAGELATCH\_\** _. I latch non di buffer sono raggruppati nel tipo di attesa _*LATCH\**_. Come illustra il diagramma seguente, è consigliabile innanzitutto esaminare le attese del sistema usando le viste a gestione dinamica _sys.dm_os_wait_stats* per determinare la percentuale del tempo di attesa complessivo causato dai latch di buffer o non di buffer. Se si notano latch non di buffer, è necessario esaminare anche la vista DMV *sys.dm_os_latch_stats*.
+Le informazioni di attesa cumulative sono disponibili dalla `sys.dm_os_wait_stats` DMV. Il tipo più comune di contesa di latch è la contesa di latch del buffer, osservata come un aumento dei tempi di attesa per i latch con `wait_type` **latch \_ \* *_. I latch non del buffer vengono raggruppati in base al* tipo \* di attesa del latch _** . Come illustrato nel diagramma seguente, è necessario innanzitutto eseguire un'occhiata cumulativa alle attese del sistema tramite la `sys.dm_os_wait_stats` DMV per determinare la percentuale del tempo di attesa complessivo causato da latch del buffer o non del buffer. Se si verificano latch non del buffer, è `sys.dm_os_latch_stats` necessario esaminare anche la DMV.
 
-Il diagramma seguente descrive la relazione tra le informazioni restituite dalle viste DMV *sys.dm_os_wait_stats* e *sys.dm_os_latch_stats*.
+Nel diagramma seguente viene descritta la relazione tra le informazioni restituite da `sys.dm_os_wait_stats` e `sys.dm_os_latch_stats` DMV.
 
 ![Attese latch](./media/diagnose-resolve-latch-contention/image7.png)
 
-Per altre informazioni sulla vista DMV *sys.dm_os_wait_stats*, vedere [sys.dm_os_wait_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) nella guida di SQL Server.
+Per ulteriori informazioni sulla `sys.dm_os_wait_stats` DMV, vedere [sys.dm_os_wait_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) nella Guida di SQL Server.
 
-Per altre informazioni sulla vista DMV *sys.dm_os_latch_stats*, vedere [sys.dm_os_latch_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md) nella guida di SQL Server.
+Per ulteriori informazioni sulla `sys.dm_os_latch_stats` DMV, vedere [sys.dm_os_latch_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md) nella Guida di SQL Server.
 
 Le misure seguenti del tempo di attesa latch indicano che l'eccessiva contesa di latch sta compromettendo le prestazioni dell'applicazione:
 
-* **Il tempo medio di attesa latch di pagina aumenta costantemente con la velocità effettiva**: se i tempi medi di attesa latch di pagina aumentano costantemente con la velocità effettiva e se i tempi medi di attesa latch di buffer superano i tempi di risposta del disco previsti, è consigliabile esaminare le attività in attesa correnti usando la vista DMV *sys.dm_os_waiting_tasks*. Le medie possono essere fuorvianti se analizzate separatamente, quindi è importante esaminare il sistema in tempo reale quando possibile, per comprendere le caratteristiche del carico di lavoro. In particolare, controllare se sono presenti lunghe attese per richieste PAGELATCH_EX e/o PAGELATCH_SH in qualsiasi pagina. Seguire questa procedura per diagnosticare l'aumento dei tempi medi di attesa latch di pagina con la velocità effettiva:
+* Il **tempo medio di attesa del latch di pagina aumenta in modo costante con la velocità effettiva**: se i tempi di attesa del latch di pagina medio aumentano costantemente con la velocità effettiva e se i tempi di attesa di un latch del buffer medio aumentano oltre i tempi di risposta del disco previsti, esaminare le attività `sys.dm_os_waiting_tasks` Le medie possono essere fuorvianti se analizzate separatamente, quindi è importante esaminare il sistema in tempo reale quando possibile, per comprendere le caratteristiche del carico di lavoro. In particolare, controllare se sono presenti lunghe attese per richieste PAGELATCH_EX e/o PAGELATCH_SH in qualsiasi pagina. Seguire questa procedura per diagnosticare l'aumento dei tempi medi di attesa latch di pagina con la velocità effettiva:
 
    * Usare gli script di esempio di [Eseguire una query di sys.dm_os_waiting_tasks con i risultati ordinati per ID sessione](#waiting-tasks-script1) o di [Calcolare le attese in un periodo di tempo](#calculate-waits-over-a-time-period) per esaminare le attività in attesa correnti e misurare il tempo medio di attesa latch. 
    * Usare lo script di esempio di [Eseguire una query dei descrittori di buffer per determinare quali oggetti causano la contesa di latch](#query-buffer-descriptors) per determinare l'indice e la tabella sottostante in cui si verifica la contesa. 
-   * Misurare il tempo medio di attesa latch di pagina con il contatore di Monitor prestazioni **MSSQL%NomeIstanza%\\Statistiche relative all'attesa\\Attese latch pagina\\Tempo di attesa medio** oppure eseguendo la vista DMV *sys.dm_os_wait_stats*.
+   * Misurare il tempo medio di attesa del latch di pagina con il contatore di Performance Monitor **MSSQL% NomeIstanza% \\ wait Statistics \\ Page latch attende il \\ tempo medio di attesa** o eseguendo la `sys.dm_os_wait_stats` DMV.
 
    > [!NOTE]
-   > Per calcolare il tempo di attesa medio per un particolare tempo di attesa (restituito da *sys.dm_os_wait_stats* come *wt_:type*), dividere il tempo di attesa totale (restituito come *wait_time_ms*) per il numero di attività in attesa (restituito come *waiting_tasks_count*).
+   > Per calcolare il tempo medio di attesa per un tipo di attesa specifico (restituito da `sys.dm_os_wait_stats` come *wt_: Type*), dividere il tempo di attesa totale (restituito come `wait_time_ms` ) per il numero di attività in attesa (restituito come `waiting_tasks_count` ).
 
 * **Percentuale del tempo di attesa totale impiegato per i tipi di attesa latch durante il picco di carico**: se il tempo medio di attesa latch come percentuale del tempo di attesa complessivo aumenta in linea con il carico dell'applicazione, la contesa di latch potrebbe compromettere le prestazioni e deve essere analizzata.
 
    Misurare le attese latch di pagina e le attese latch non di pagina con i contatori delle prestazioni di [Oggetto Statistiche attesa di SQL Server](./performance-monitor/sql-server-wait-statistics-object.md), quindi confrontare i valori di questi contatori delle prestazioni con quelli dei contatori delle prestazioni associati a CPU, I/O, memoria e velocità effettiva della rete. Transazioni/sec e richieste batch/sec, ad esempio, sono due misure valide di utilizzo delle risorse.
 
    > [!NOTE]
-   > Il tempo di attesa relativo per ogni tipo di attesa non è incluso nella vista DMV *sys.dm_os_wait_stats* perché questa DMW misura i tempi di attesa dall'ultimo avvio dell'istanza di SQL Server o dall'ultima reimpostazione delle statistiche di attesa cumulative tramite DBCC SQLPERF. Per calcolare il tempo di attesa relativo per ogni tipo di attesa, creare uno snapshot di *sys.dm_os_wait_stats* prima del picco di carico e dopo il picco di carico e quindi calcolare la differenza. A questo scopo, può essere usato lo script di esempio di [Calcolare le attese in un periodo di tempo](#calculate-waits-over-a-time-period).
+   > Il tempo di attesa relativo per ogni tipo di attesa non è incluso nella `sys.dm_os_wait_stats` DMV perché questo DMW misura i tempi di attesa dall'ultima volta in cui l'istanza di SQL Server è stata avviata o le statistiche di attesa cumulative sono state reimpostate tramite DBCC SQLPERF. Per calcolare il tempo di attesa relativo per ogni tipo di attesa, eseguire uno snapshot di `sys.dm_os_wait_stats` prima del picco del carico, dopo il picco del carico e quindi calcolare la differenza. A questo scopo, può essere usato lo script di esempio di [Calcolare le attese in un periodo di tempo](#calculate-waits-over-a-time-period).
 
-   Solo per un **ambiente non di produzione**, pulire la vista DMV *sys.dm_os_wait_stats* con il comando seguente:
+   Per un **ambiente non di produzione** , deselezionare la `sys.dm_os_wait_stats` DMV con il comando seguente:
    
    ```sql
    dbcc SQLPERF ('sys.dm_os_wait_stats', 'CLEAR')
    ```
-   È possibile eseguire un comando simile per cancellare il *sys.dm_os_latch_stats* DMV:
+   È possibile eseguire un comando simile per cancellare la `sys.dm_os_latch_stats` DMV:
    
    ```sql
    dbcc SQLPERF ('sys.dm_os_latch_stats', 'CLEAR')
@@ -206,11 +206,11 @@ Le misure seguenti del tempo di attesa latch indicano che l'eccessiva contesa di
 
 * **L'utilizzo della CPU non aumenta man mano che aumenta il carico di lavoro dell'applicazione**: se l'utilizzo della CPU nel sistema non aumenta man mano che aumenta la concorrenza causata dalla velocità effettiva dell'applicazione, significa che SQL Server è in attesa di un evento e deve essere considerato un sintomo della contesa di latch.
 
-Analizzare la causa radice. Anche se ognuna delle condizioni precedenti è vera, è tuttavia possibile che la causa radice dei problemi di prestazioni sia un'altra. In realtà, nella maggior parte dei casi, l'utilizzo non ottimale della CPU è causato da altri tipi di attese, ad esempio il blocco sui blocchi, le attese correlate all'I/O o i problemi della rete. Come regola generale, è sempre preferibile risolvere l'attesa della risorsa che rappresenta la percentuale maggiore del tempo di attesa complessivo prima di procedere a un'analisi più approfondita.
+Analizzare la causa radice. Anche se ognuna delle condizioni precedenti è vera, è tuttavia possibile che la causa radice dei problemi di prestazioni sia un'altra. In realtà, nella maggior parte dei casi, l'utilizzo della CPU non ottimale è causato da altri tipi di attese, ad esempio il blocco su blocchi, attese correlate all'I/O o problemi relativi alla rete. Come regola generale, è sempre preferibile risolvere l'attesa della risorsa che rappresenta la percentuale maggiore del tempo di attesa complessivo prima di procedere a un'analisi più approfondita.
 
 ## <a name="analyzing-current-wait-buffer-latches"></a>Analisi dei latch di buffer di attesa correnti
 
-La contesa di latch di buffer si manifesta come aumento dei tempi di attesa dei latch con *wait_type* **PAGELATCH\_\** _ o _*PAGEIOLATCH\_\**_ come visualizzato nelle viste a gestione dinamica _sys.dm_os_wait_stats*. Per esaminare il sistema in tempo reale, eseguire la query seguente su un sistema per aggiungere le viste DMV *sys.dm_os_wait_stats*, *sys.dm_exec_sessions* e *sys.dm_exec_requests*. I risultati possono essere usati per determinare il tipo di attesa corrente per le sessioni in esecuzione nel server.
+Manifesti della contesa di latch del buffer come un aumento dei tempi di attesa per i latch con un valore `wait_type` di **latch \_ \* *_ o _* \_ \* PAGEIOLATCH** come visualizzato nella `sys.dm_os_wait_stats` DMV. Per esaminare il sistema in tempo reale, eseguire la query seguente in un sistema per accedere a `sys.dm_os_wait_stats` , `sys.dm_exec_sessions` e `sys.dm_exec_requests` DMV. I risultati possono essere usati per determinare il tipo di attesa corrente per le sessioni in esecuzione nel server.
 
 ```sql
 SELECT wt.session_id, wt.wait_type
@@ -237,12 +237,12 @@ Le statistiche esposte da questa query sono descritte di seguito:
 | **Wait_duration_ms** | Tempo di attesa totale, espresso in millisecondi, trascorso nell'attesa di questo tipo di attesa dall'avvio dell'istanza di SQL Server o dalla reimpostazione delle statistiche cumulative relative all'attesa. |
 | **Blocking_session_id** | ID della sessione che sta bloccando la richiesta. |
 | **Blocking_exec_context_id** | ID del contesto di esecuzione associato all'attività. |
-| **Resource_description** | La colonna resource_description elenca la pagina esatta di cui si è in attesa nel formato `<database_id>:<file_id>:<page_id>` |
+| **Resource_description** | La `resource_description` colonna elenca la pagina esatta in attesa di nel formato: `<database_id>:<file_id>:<page_id>` |
 
 La query seguente restituirà informazioni per tutti i latch non di buffer:
 
 ```sql
-select * from sys.dm_os_latch_stats where latch_class <> 'BUFFER' order by wait_time_ms desc
+select * from sys.dm_os_latch_stats where latch_class <> 'BUFFER' order by wait_time_ms desc;
 ```
 
 ![Output della query](./media/diagnose-resolve-latch-contention/image9.png)
@@ -251,16 +251,16 @@ Le statistiche esposte da questa query sono descritte di seguito:
 
 | Statistiche | Descrizione |
 |---|---|
-| **Latch_class** | Tipo di latch registrato da SQL Server nel motore, che impedisce l'esecuzione di una richiesta corrente. |
-| **Waiting_requests_count** | Numero di attese di latch in questa classe dal riavvio di SQL Server. Questo contatore viene incrementato all'inizio di un'attesa di latch. |
-| **Wait_time_ms** | Tempo di attesa totale, espresso in millisecondi, trascorso nell'attesa di questo tipo di latch. |
-| **Max_wait_time_ms** | Tempo massimo, espresso in millisecondi, trascorso da una richiesta nell'attesa di questo tipo di latch. |
+| **latch_class** | Tipo di latch registrato da SQL Server nel motore, che impedisce l'esecuzione di una richiesta corrente. |
+| **waiting_requests_count** | Numero di attese di latch in questa classe dal riavvio di SQL Server. Questo contatore viene incrementato all'inizio di un'attesa di latch. |
+| **wait_time_ms** | Tempo di attesa totale, espresso in millisecondi, trascorso nell'attesa di questo tipo di latch. |
+| **max_wait_time_ms** | Tempo massimo, espresso in millisecondi, trascorso da una richiesta nell'attesa di questo tipo di latch. |
 
 > [!NOTE]
-> I valori restituiti da questa DMV sono cumulativi a partire dall'ultimo riavvio del server o dall'ultima reimpostazione della vista DMV, quindi in un sistema in esecuzione da molto tempo alcune statistiche, ad esempio *Max_wait_time_ms*, raramente saranno utili. Il comando seguente può essere usato per reimpostare le statistiche relative all'attesa per questa DMV:
+> I valori restituiti da questa DMV sono cumulativi dall'ultima volta in cui il motore di database è stato riavviato o la DMV è stata reimpostata. Utilizzare la `sqlserver_start_time` colonna [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) per individuare l'ultima ora di avvio del motore di database. In un sistema che è stato eseguito molto tempo questo significa che alcune statistiche, ad esempio, `max_wait_time_ms` sono raramente utili. Il comando seguente può essere usato per reimpostare le statistiche relative all'attesa per questa DMV:
 >
 > ```sql
-> DBCC SQLPERF ('sys.dm_os_latch_stats', CLEAR)
+> DBCC SQLPERF ('sys.dm_os_latch_stats', CLEAR);
 > ```
 
 ## <a name="sql-server-latch-contention-scenarios"></a>Scenari di contesa di latch di SQL Server
@@ -271,7 +271,7 @@ Le statistiche esposte da questa query sono descritte di seguito:
 
 Una comune procedura OLTP consiste nel creare un indice cluster per una colonna Identity o Date. Ciò consente di mantenere una corretta organizzazione fisica dell'indice, che può migliorare considerevolmente le prestazioni delle operazioni sia di lettura che di scrittura nell'indice. Questa progettazione dello schema, tuttavia, può inavvertitamente causare una contesa di latch. Questo problema si verifica molto spesso nelle tabelle di grandi dimensioni con righe di piccole dimensioni e negli inserimenti in un indice contenente una colonna chiave iniziale con valori che aumentano in modo sequenziale, ad esempio numeri interi crescenti o chiavi datetime. In questo scenario, l'applicazione esegue raramente, o addirittura mai, aggiornamenti o eliminazioni, con l'eccezione delle operazioni di archiviazione.
 
-Nell'esempio seguente, il thread 1 e il thread 2 vogliono entrambi eseguire un inserimento di un record che verrà archiviato a pagina 299. Dal punto di vista del blocco logico, non sussistono problemi perché verranno usati blocchi a livello di riga e possono essere mantenuti contemporaneamente blocchi esclusivi su entrambi i record nella stessa pagina. Tuttavia, per garantire l'integrità della memoria fisica un solo thread alla volta può acquisire un latch esclusivo, quindi l'accesso alla pagina viene serializzato per impedire la perdita di aggiornamenti in memoria. In questo caso, il thread 1 acquisisce il latch esclusivo e il thread 2 resta in attesa, facendo registrare un'attesa PAGELATCH_EX per questa risorsa nelle statistiche relative all'attesa. Questa situazione viene visualizzata tramite il valore *wait_type* nella vista DMV *sys.dm_os_waiting_tasks*.
+Nell'esempio seguente, il thread 1 e il thread 2 vogliono entrambi eseguire un inserimento di un record che verrà archiviato a pagina 299. Dal punto di vista del blocco logico, non sussistono problemi perché verranno usati blocchi a livello di riga e possono essere mantenuti contemporaneamente blocchi esclusivi su entrambi i record nella stessa pagina. Tuttavia, per garantire l'integrità della memoria fisica un solo thread alla volta può acquisire un latch esclusivo, quindi l'accesso alla pagina viene serializzato per impedire la perdita di aggiornamenti in memoria. In questo caso, il thread 1 acquisisce il latch esclusivo e il thread 2 resta in attesa, facendo registrare un'attesa PAGELATCH_EX per questa risorsa nelle statistiche relative all'attesa. Viene visualizzato tramite il `wait_type` valore nella `sys.dm_os_waiting_tasks` DMV.
 
 ![Latch di pagina esclusivo sull'ultima riga](./media/diagnose-resolve-latch-contention/image10.png)
 
@@ -294,7 +294,7 @@ Questo tipo di contesa di latch può essere spiegato come segue. Quando una nuov
 
 5. Annullamento del latch per tutte le pagine.
 
-Se l'indice della tabella si basa su una chiave che aumenta in modo sequenziale, ogni nuovo inserimento andrà nella stessa pagina alla fine dell'albero B, fino a riempire l'intera pagina. Di conseguenza negli scenari a concorrenza elevata può verificarsi una contesa all'estremità destra dell'albero B sia negli indici cluster che in quelli non cluster. Le tabelle interessate da questo tipo di contesa accettano principalmente operazioni INSERT e le pagine degli indici che presentano problemi sono in genere relativamente dense, ad esempio dimensioni di riga di \~165 byte (incluso l'overhead della riga) sono pari a \~49 righe per pagina. In questo esempio con un'attività di inserimento intensa, si prevede che si verifichino attese PAGELATCH_EX/PAGELATCH_SH, come di fatto avviene normalmente. Per confrontare le attese latch di pagina con le attese latch di pagina dell'albero, usare la vista DMV *sys.dm_db_index_operational_stats*.
+Se l'indice della tabella si basa su una chiave che aumenta in modo sequenziale, ogni nuovo inserimento andrà nella stessa pagina alla fine dell'albero B, fino a riempire l'intera pagina. Di conseguenza negli scenari a concorrenza elevata può verificarsi una contesa all'estremità destra dell'albero B sia negli indici cluster che in quelli non cluster. Le tabelle interessate da questo tipo di contesa accettano principalmente operazioni INSERT e le pagine degli indici che presentano problemi sono in genere relativamente dense, ad esempio dimensioni di riga di \~165 byte (incluso l'overhead della riga) sono pari a \~49 righe per pagina. In questo esempio con un'attività di inserimento intensa, si prevede che si verifichino attese PAGELATCH_EX/PAGELATCH_SH, come di fatto avviene normalmente. Per esaminare le attese latch pagina e le attese latch pagina albero, utilizzare la `sys.dm_db_index_operational_stats` DMV.
 
 La tabella seguente riepiloga i principali fattori osservati con questo tipo di contesa di latch:
 
@@ -302,7 +302,7 @@ La tabella seguente riepiloga i principali fattori osservati con questo tipo di 
 |---|---|
 | **CPU logiche usate da SQL Server** | Questo tipo di contesa di latch si verifica principalmente nei sistemi con più di 16 core CPU e ancora più comunemente nei sistemi con più di 32 core CPU. |
 | **Progettazione di schemi e modelli di accesso** | Usa un valore di identità che aumenta in modo sequenziale come colonna iniziale di un indice in una tabella per dati transazionali.<br/><br/>L'indice ha una chiave primaria crescente con una frequenza elevata di inserimenti.<br/><br/>L'indice ha almeno un valore di colonna che aumenta in modo sequenziale.<br/><br/>Le righe sono in genere di piccole dimensioni e sono presenti molte righe per pagina. |
-| **Tipo di attesa osservato** | Più thread che contendono per la stessa risorsa con attese latch esclusivo (EX) o condiviso (SH) associate allo stesso elemento resource_description nella vista DMV sys.dm_os_waiting_tasks restituita dalla query disponibile in Eseguire una query su sys.dm_os_waiting_tasks con i risultati ordinati in base alla durata dell'attesa. |
+| **Tipo di attesa osservato** | Molti thread che tendono a usare la stessa risorsa con attese di latch esclusive (EX) o condivise (SH) associate alla stessa resource_description nella `sys.dm_os_waiting_tasks` DMV restituiti dalla [query sys.dm_os_waiting_tasks ordinati in base alla durata dell'attesa](#waiting-tasks-script2).|
 | **Fattori relativi alla progettazione da considerare** | Valutare la possibilità di modificare l'ordine delle colonne dell'indice come previsto dalla strategia di mitigazione degli indici non sequenziali, se è possibile garantire che gli inserimenti verranno sempre distribuiti in modo uniforme nell'albero B.<br/><br/>Se si adotta la strategia di mitigazione della partizione hash, non sarà più possibile usare il partizionamento per altri scopi, ad esempio per l'archiviazione di finestre temporali scorrevoli.<br/><br/>L'uso della strategia di mitigazione della partizione hash può causare problemi di eliminazione della partizione per le query SELECT usate dall'applicazione. |
 
 ### <a name="latch-contention-on-small-tables-with-a-non-clustered-index-and-random-inserts-queue-table"></a>Contesa di latch in tabelle di piccole dimensioni con un indice non cluster e inserimenti casuali (tabella della coda)
@@ -333,7 +333,7 @@ La tabella seguente riepiloga i principali fattori osservati con questo tipo di 
 | **Livello di concorrenza** | La contesa di latch si verificherà solo con livelli elevati di richieste simultanee dal livello applicazione.
 | **Tipo di attesa osservato** | Si osservano attese nel latch di buffer (PAGELATCH_EX e PAGELATCH_SH) e non di buffer ACCESS_METHODS_HOBT_VIRTUAL_ROOT a causa delle divisioni della radice. Si osservano anche attese PAGELATCH_UP nelle pagine PFS. Per altre informazioni sulle attesa latch non di buffer, vedere [sys.dm_os_latch_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md) nella guida di SQL Server.
 
-La combinazione di un albero B superficiale e di inserimenti casuali nell'indice può causare divisioni di pagina nell'albero B. Per eseguire una divisione della pagina, SQL Server deve acquisire i latch condivisi (SH) a tutti i livelli e quindi acquisire i latch esclusivi (EX) nelle pagine dell'albero B interessate dalle divisioni di pagina. Anche quando la concorrenza è elevata e i dati vengono continuamente inseriti ed eliminati, possono verificarsi divisioni della radice dell'albero B. In questo caso, le altre operazioni di inserimento potrebbero dover attendere che i latch non di buffer vengano acquisiti nell'albero B. Questa condizione sarà riconoscibile dal numero elevato di attese nel tipo di latch ACCESS_METHODS_HBOT_VIRTUAL_ROOT osservato nella vista DMV *sys.dm_os_latch_stats*.
+La combinazione di un albero B superficiale e di inserimenti casuali nell'indice può causare divisioni di pagina nell'albero B. Per eseguire una divisione della pagina, SQL Server deve acquisire i latch condivisi (SH) a tutti i livelli e quindi acquisire i latch esclusivi (EX) nelle pagine dell'albero B interessate dalle divisioni di pagina. Anche quando la concorrenza è elevata e i dati vengono continuamente inseriti ed eliminati, possono verificarsi divisioni della radice dell'albero B. In questo caso, le altre operazioni di inserimento potrebbero dover attendere che i latch non di buffer vengano acquisiti nell'albero B. Questa operazione verrà manifestata come un numero elevato di attese sul tipo di latch ACCESS_METHODS_HBOT_VIRTUAL_ROOT osservato nella `sys.dm_os_latch_stats` DMV.
 
 Lo script seguente può essere modificato per determinare la profondità dell'albero B per gli indici della tabella interessata.
 
@@ -354,7 +354,7 @@ join sysObjects o on o.id = i.id
 where o.type = 'u'
    and indexProperty(object_id(o.name), i.name, 'isHypothetical') = 0 --filter out hypothetical indexes
    and indexProperty(object_id(o.name), i.name, 'isStatistics') = 0 --filter out statistics
-order by o.name
+order by o.name;
 ```
 
 ### <a name="latch-contention-on-page-free-space-pfs-pages"></a>Contesa di latch nelle pagine PFS (Page Free Space)
@@ -407,12 +407,12 @@ create table table1
        TransactionID bigint not null,
        UserID      int not null,
        SomeInt       int not null
-)
+);
 go
 
 alter table table1
        add constraint pk_table1
-       primary key clustered (TransactionID, UserID)
+       primary key clustered (TransactionID, UserID);
 go
 ```
 
@@ -421,7 +421,7 @@ go
 
 **Definizione dell'indice riordinato**
 
-Il riordinamento dell'indice con UserID come colonna iniziale nella chiave primaria ha determinato una distribuzione pressoché casuale degli inserimenti nelle pagine. La distribuzione risultante non era casuale al 100% perché non tutti gli utenti sono online contemporaneamente, ma la distribuzione è stata sufficientemente casuale per ridurre una contesa di latch eccessiva. Si ricordi che, quando si riordina la definizione dell'indice, è necessario modificare qualsiasi query SELECT eseguita su questa tabella per usare sia UserID che TransactionID come predicati di uguaglianza.
+Il riordinamento delle colonne chiave dell'indice con UserID come colonna principale della chiave primaria forniva una distribuzione pressoché casuale di inserimenti nelle pagine. La distribuzione risultante non era casuale al 100% perché non tutti gli utenti sono online contemporaneamente, ma la distribuzione è stata sufficientemente casuale per ridurre una contesa di latch eccessiva. Si ricordi che, quando si riordina la definizione dell'indice, è necessario modificare qualsiasi query SELECT eseguita su questa tabella per usare sia UserID che TransactionID come predicati di uguaglianza.
 
 > [!IMPORTANT]
 > Assicurarsi di testare accuratamente tutte le modifiche apportate in un ambiente di test prima dell'esecuzione in un ambiente di produzione.
@@ -432,12 +432,12 @@ create table table1
        TransactionID bigint not null,
        UserID      int not null,
        SomeInt       int not null
-)
+);
 go
 
 alter table table1
        add constraint pk_table1
-       primary key clustered (UserID, TransactionID)
+       primary key clustered (UserID, TransactionID);
 go
 ```
 
@@ -451,14 +451,14 @@ create table table1
        TransactionID bigint not null,
        UserID      int not null,
        SomeInt       int not null
-)
+);
 go
 -- Consider using bulk loading techniques to speed it up
 ALTER TABLE table1
    ADD [HashValue] AS (CONVERT([tinyint], abs([TransactionID])%(32))) PERSISTED NOT NULL   
 alter table table1
        add constraint pk_table1
-       primary key clustered (HashValue, TransactionID, UserID)
+       primary key clustered (HashValue, TransactionID, UserID);
 go
 ```
 
@@ -494,19 +494,19 @@ Lo script di esempio seguente può essere personalizzato per le finalità dell'i
 --Create the partition scheme and function, align this to the number of CPU cores 1:1 up to 32 core computer
 -- so for below this is aligned to 16 core system
 CREATE PARTITION FUNCTION [pf_hash16] (tinyint) AS RANGE LEFT FOR VALUES
-   (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+   (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15);
 
-CREATE PARTITION SCHEME [ps_hash16] AS PARTITION [pf_hash16] ALL TO ( [ALL_DATA] )
+CREATE PARTITION SCHEME [ps_hash16] AS PARTITION [pf_hash16] ALL TO ( [ALL_DATA] );
 -- Add the computed column to the existing table (this is an OFFLINE operation)
 
 -- Consider using bulk loading techniques to speed it up
 ALTER TABLE [dbo].[latch_contention_table]
-   ADD [HashValue] AS (CONVERT([tinyint], abs(binary_checksum([hash_col])%(16)),(0))) PERSISTED NOT NULL
+   ADD [HashValue] AS (CONVERT([tinyint], abs(binary_checksum([hash_col])%(16)),(0))) PERSISTED NOT NULL;
 
 --Create the index on the new partitioning scheme 
 CREATE UNIQUE CLUSTERED INDEX [IX_Transaction_ID] 
 ON [dbo].[latch_contention_table]([T_ID] ASC, [HashValue]) 
-ON ps_hash16(HashValue)
+ON ps_hash16(HashValue);
 ```
 
 Questo script può essere usato per il partizionamento hash di una tabella in cui si verificano problemi causati da una [contesa di inserimento dell'ultima pagina o della pagina finale](#last-pagetrailing-page-insert-contention). Questa tecnica sposta la contesa dall'ultima pagina partizionando la tabella e distribuendo gli inserimenti tra le partizioni della tabella con un'operazione di modulo del valore hash.
@@ -568,7 +568,7 @@ Le due sezioni seguenti forniscono un riepilogo delle tecniche che possono esser
 
 ## <a name="walkthrough-diagnose-a-latch-contention"></a>Procedura dettagliata: Diagnosticare una contesa di latch
 
-La procedura dettagliata seguente illustra gli strumenti e le tecniche descritti in [Diagnosi della contesa di latch di SQL Server](#diagnosing-sql-server-latch-contention) e [Gestione della contesa di latch per modelli di tabella diversi](#handling-latch-contention-for-different-table-patterns) per risolvere un problema in uno scenario reale. Questo scenario descrive un engagement dei clienti per eseguire il test di carico di un sistema di punti vendita che simula circa 8.000 negozi che eseguono transazioni in un'applicazione SQL Server in esecuzione in un sistema a 8 socket e 32 core fisici con 256 GB di memoria.
+La procedura dettagliata seguente illustra gli strumenti e le tecniche descritti in [Diagnosi della contesa di latch di SQL Server](#diagnosing-sql-server-latch-contention) e [Gestione della contesa di latch per modelli di tabella diversi](#handling-latch-contention-for-different-table-patterns) per risolvere un problema in uno scenario reale. Questo scenario descrive un impegno da parte del cliente per eseguire test di carico di un sistema punto di vendita che simula circa 8.000 archivi che eseguono transazioni su un'applicazione SQL Server in esecuzione su un socket 8, 32 sistema fisico core con 256 GB di memoria.
 
 Il diagramma seguente illustra in dettaglio l'hardware usato per testare il sistema di punti vendita:
 
@@ -612,7 +612,7 @@ JOIN sys.partitions p ON au.container_id = p.partition_id
 JOIN sys.indexes i ON  p.index_id = i.index_id AND p.object_id = i.object_id
 JOIN sys.objects o ON i.object_id = o.object_id 
 JOIN sys.schemas s ON o.schema_id = s.schema_id
-order by wt.wait_duration_ms desc
+order by wt.wait_duration_ms desc;
 ```
 
 Come illustrato di seguito, la contesa si verifica nella tabella LATCHTEST e nel nome dell'indice CIX_LATCHTEST. Tenere presente che i nomi sono stati modificati per rendere anonimo il carico di lavoro.
@@ -623,7 +623,7 @@ Per uno script più avanzato che esegue ripetutamente il polling e usa una tabel
 
 ### <a name="alternative-technique-to-isolate-the-object-causing-latch-contention"></a>Tecnica alternativa per isolare l'oggetto che causa la contesa di latch
 
-In alcuni casi può risultare poco pratico eseguire la query di *sys.dm_os_buffer_descriptors*. Poiché la memoria nel sistema e quella disponibile per il pool di buffer aumentano, aumenta anche il tempo necessario per eseguire questa vista DMV. In un sistema da 256 GB l'esecuzione di questa DMV può richiedere fino a 10 o più minuti. È disponibile una tecnica alternativa, che viene descritta in dettaglio di seguito, con un carico di lavoro diverso eseguito nel lab:
+In alcuni casi può risultare poco pratico eseguire una query `sys.dm_os_buffer_descriptors` . Poiché la memoria nel sistema e quella disponibile per il pool di buffer aumentano, aumenta anche il tempo necessario per eseguire questa vista DMV. In un sistema da 256 GB l'esecuzione di questa DMV può richiedere fino a 10 o più minuti. È disponibile una tecnica alternativa, che viene descritta in dettaglio di seguito, con un carico di lavoro diverso eseguito nel lab:
 
 1. Eseguire query sulle attività in attesa correnti, usando lo script della sezione [Eseguire una query su sys.dm_os_waiting_tasks con i risultati ordinati in base alla durata dell'attesa](#waiting-tasks-script2) nell'appendice.
 
@@ -633,10 +633,10 @@ In alcuni casi può risultare poco pratico eseguire la query di *sys.dm_os_buffe
 
    ```sql
    --enable trace flag 3604 to enable console output
-   dbcc traceon (3604)
+   dbcc traceon (3604);
 
    --examine the details of the page
-   dbcc page (8,1, 111305, -1)
+   dbcc page (8,1, 111305, -1);
    ```
 
 4. Esaminare l'output di DBCC. Dovrebbero essere presenti i metadati associati ObjectID, in questo caso "78623323".
@@ -650,7 +650,7 @@ In alcuni casi può risultare poco pratico eseguire la query di *sys.dm_os_buffe
 
    ```sql
    --get object name
-   select OBJECT_NAME (78623323)
+   select OBJECT_NAME (78623323);
    ```
 
    ![Nome dell'oggetto](./media/diagnose-resolve-latch-contention/image23.png)
@@ -687,16 +687,16 @@ Se si riempiono le righe per occupare una pagina intera, è necessario SQL per a
 Per riempire le righe in modo che occupino un'intera pagina, è possibile usare uno script simile al seguente:
 
 ```sql
-ALTER TABLE mytable ADD Padding CHAR(5000) NOT NULL DEFAULT ('X')
+ALTER TABLE mytable ADD Padding CHAR(5000) NOT NULL DEFAULT ('X');
 ```
 
 > [!NOTE]
 > Usare il carattere più piccolo possibile che forza una riga per pagina per ridurre i requisiti aggiuntivi della CPU per il valore di riempimento e lo spazio aggiuntivo necessario per registrare la riga. In un sistema a prestazioni elevate viene conteggiato ogni byte.
 
-Questa tecnica viene illustrata per completezza. Nella pratica, SQLCAT l'ha usata solo su una piccola tabella con 10.000 righe in un unico engagement relativo alle prestazioni. Questa tecnica ha un'applicazione limitata perché accresce il numero di richieste di memoria in SQL Server per le tabelle di grandi dimensioni e può comportare una contesa di latch non di buffer nelle pagine non foglia. Le richieste aggiuntive di memoria possono costituire una forte limitazione all'applicazione di questa tecnica. Con la quantità di memoria disponibile in un server moderno, gran parte del working set per i carichi di lavoro OLTP viene in genere conservata in memoria. Quando il set di dati aumenta fino a raggiungere dimensioni superiori a quelle della memoria, si verificherà un calo significativo delle prestazioni. Questa tecnica è quindi applicabile solo alle tabelle di piccole dimensioni. Questa tecnica non viene usata da SQLCAT per scenari quali la contesa di inserimento dell'ultima pagina o della pagina finale per le tabelle di grandi dimensioni.
+Questa tecnica viene illustrata per completezza. Nella pratica, SQLCAT l'ha usata solo su una piccola tabella con 10.000 righe in un unico engagement relativo alle prestazioni. Questa tecnica ha un'applicazione limitata perché aumenta la quantità di memoria su SQL Server per tabelle di grandi dimensioni e può comportare una contesa di latch non del buffer nelle pagine non foglia. Le richieste aggiuntive di memoria possono costituire una forte limitazione all'applicazione di questa tecnica. Con la quantità di memoria disponibile in un server moderno, gran parte del working set per i carichi di lavoro OLTP viene in genere conservata in memoria. Quando il set di dati aumenta fino a raggiungere dimensioni superiori a quelle della memoria, si verificherà un calo significativo delle prestazioni. Questa tecnica è quindi applicabile solo alle tabelle di piccole dimensioni. Questa tecnica non viene usata da SQLCAT per scenari quali la contesa di inserimento dell'ultima pagina o della pagina finale per le tabelle di grandi dimensioni.
 
 > [!IMPORTANT]
-> L'impiego di questa strategia può generare un numero elevato di attese nel tipo di latch ACCESS_METHODS_HBOT_VIRTUAL_ROOT perché questa strategia può determinare un numero elevato di divisioni di pagina nei livelli non foglia dell'albero B. In tal caso, SQL Server deve acquisire latch condivisi (SH) a tutti i livelli seguiti dai latch esclusivi (EX) nelle pagine dell'albero B in cui è possibile una divisione di pagina. Controllare la vista DMV *sys.dm_os_latch_stats* per verificare la presenza di un numero elevato di attese nel tipo di latch ACCESS_METHODS_HBOT_VIRTUAL_ROOT dopo il riempimento delle righe.
+> L'impiego di questa strategia può generare un numero elevato di attese nel tipo di latch ACCESS_METHODS_HBOT_VIRTUAL_ROOT perché questa strategia può determinare un numero elevato di divisioni di pagina nei livelli non foglia dell'albero B. In tal caso, SQL Server deve acquisire latch condivisi (SH) a tutti i livelli seguiti dai latch esclusivi (EX) nelle pagine dell'albero B in cui è possibile una divisione di pagina. Controllare la `sys.dm_os_latch_stats` DMV per un numero elevato di attese sul tipo di latch ACCESS_METHODS_HBOT_VIRTUAL_ROOT dopo la spaziatura interna delle righe.
 
 ## <a name="appendix-sql-server-latch-contention-scripts"></a>Appendice: Script per la contesa di latch di SQL Server
 
@@ -704,7 +704,7 @@ Questa sezione contiene script che possono essere usati per diagnosticare e riso
 
 ### <a name="query-sysdm_os_waiting_tasks-ordered-by-session-id"></a><a id="waiting-tasks-script1"></a> Eseguire una query di sys.dm_os_waiting_tasks con i risultati ordinati per ID sessione
 
-Lo script di esempio seguente eseguirà una query di sys.dm_os_waiting_tasks e restituirà le attese latch ordinate per ID sessione:
+Lo script di esempio seguente consente `sys.dm_os_waiting_tasks` di eseguire query e restituire attese latch ordinate in base all'ID sessione:
 
 ```sql
 -- WAITING TASKS ordered by session_id 
@@ -718,12 +718,12 @@ JOIN sys.dm_exec_sessions es ON wt.session_id = es.session_id
 JOIN sys.dm_exec_requests er ON wt.session_id = er.session_id
 WHERE es.is_user_process = 1
 AND wt.wait_type <> 'SLEEP_TASK'
-ORDER BY session_id
+ORDER BY session_id;
 ```
 
 ### <a name="query-sysdm_os_waiting_tasks-ordered-by-wait-duration"></a><a id="waiting-tasks-script2"></a> Eseguire una query di sys.dm_os_waiting_tasks con i risultati ordinati in base alla durata dell'attesa
 
-Lo script di esempio seguente eseguirà una query di sys.dm_os_waiting_tasks e restituirà le attese latch ordinate in base alla durata dell'attesa:
+Lo script di esempio seguente consente `sys.dm_os_waiting_tasks` di eseguire query e restituire attese di latch ordinate in base alla durata dell'attesa:
 
 ```sql
 -- WAITING TASKS ordered by wait_duration_ms
@@ -736,7 +736,7 @@ JOIN sys.dm_exec_sessions es ON wt.session_id = es.session_id
 JOIN sys.dm_exec_requests er ON wt.session_id = er.session_id
 WHERE es.is_user_process = 1
 AND wt.wait_type <> 'SLEEP_TASK'
-ORDER BY wt.wait_duration_ms desc
+ORDER BY wt.wait_duration_ms desc;
 ```
 
 ### <a name="calculate-waits-over-a-time-period"></a>Calcolare le attese in un periodo di tempo
@@ -754,10 +754,10 @@ Lo script seguente calcola e restituisce le attese latch in un periodo di tempo.
 use tempdb
 go
 
-declare @current_snap_time datetime
-declare @previous_snap_time datetime
+declare @current_snap_time datetime;
+declare @previous_snap_time datetime;
 
-set @current_snap_time = GETDATE()
+set @current_snap_time = GETDATE();
 
 if not exists(select name from tempdb.sys.sysobjects where name like '#_wait_stats%')
    create table #_wait_stats
@@ -770,7 +770,7 @@ if not exists(select name from tempdb.sys.sysobjects where name like '#_wait_sta
       ,signal_wait_time_ms bigint
       ,avg_signal_wait_time int
       ,snap_time datetime
-   )
+   );
 
 insert into #_wait_stats (
          wait_type
@@ -787,12 +787,12 @@ insert into #_wait_stats (
          ,max_wait_time_ms
          ,signal_wait_time_ms
          ,getdate()
-      from sys.dm_os_wait_stats
+      from sys.dm_os_wait_stats;
 
 --get the previous collection point
 select top 1 @previous_snap_time = snap_time from #_wait_stats 
          where snap_time < (select max(snap_time) from #_wait_stats)
-         order by snap_time desc
+         order by snap_time desc;
 
 --get delta in the wait stats  
 select top 10
@@ -823,11 +823,11 @@ select top 10
                               , 'FT_IFTS_SCHEDULER_IDLE_WAIT', 'BROKER_TO_FLUSH', 'XE_DISPATCHER_WAIT'
                               , 'SQLTRACE_INCREMENTAL_FLUSH_SLEEP')
 
-order by (e.wait_time_ms - s.wait_time_ms) desc 
+order by (e.wait_time_ms - s.wait_time_ms) desc ;
 
 --clean up table
 delete from #_wait_stats
-where snap_time = @previous_snap_time
+where snap_time = @previous_snap_time;
 ```
 
 ### <a name="query-buffer-descriptors-to-determine-objects-causing-latch-contention"></a><a id="query-buffer-descriptors"></a> Eseguire una query dei descrittori di buffer per determinare quali oggetti causano la contesa di latch
@@ -858,7 +858,7 @@ BEGIN
    WAITFOR DELAY @WaitDelay;
 END;
 
---select * from #WaitResources
+--select * from #WaitResources;
 
    update #WaitResources 
       set db_name = DB_NAME(bd.database_id),
@@ -875,8 +875,9 @@ END;
       JOIN sys.partitions p ON au.container_id = p.partition_id
       JOIN sys.indexes i ON p.index_id = i.index_id AND p.object_id = i.object_id
       JOIN sys.objects o ON i.object_id = o.object_id
-      JOIN sys.schemas s ON o.schema_id = s.schema_id
-select * from #WaitResources order by wait_duration_ms desc
+      JOIN sys.schemas s ON o.schema_id = s.schema_id;
+
+select * from #WaitResources order by wait_duration_ms desc;
 GO
 
 /*
@@ -899,19 +900,19 @@ L'uso di questo script è descritto in [Usare il partizionamento hash con una co
 --Create the partition scheme and function, align this to the number of CPU cores 1:1 up to 32 core computer
 -- so for below this is aligned to 16 core system
 CREATE PARTITION FUNCTION [pf_hash16] (tinyint) AS RANGE LEFT FOR VALUES
-   (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+   (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15);
 
-CREATE PARTITION SCHEME [ps_hash16] AS PARTITION [pf_hash16] ALL TO ( [ALL_DATA] )
+CREATE PARTITION SCHEME [ps_hash16] AS PARTITION [pf_hash16] ALL TO ( [ALL_DATA] );
 -- Add the computed column to the existing table (this is an OFFLINE operation)
 
 -- Consider using bulk loading techniques to speed it up
 ALTER TABLE [dbo].[latch_contention_table]
-   ADD [HashValue] AS (CONVERT([tinyint], abs(binary_checksum([hash_col])%(16)),(0))) PERSISTED NOT NULL
+   ADD [HashValue] AS (CONVERT([tinyint], abs(binary_checksum([hash_col])%(16)),(0))) PERSISTED NOT NULL;
 
 --Create the index on the new partitioning scheme 
 CREATE UNIQUE CLUSTERED INDEX [IX_Transaction_ID] 
 ON [dbo].[latch_contention_table]([T_ID] ASC, [HashValue]) 
-ON ps_hash16(HashValue)
+ON ps_hash16(HashValue);
 ```
 
 ## <a name="next-steps"></a>Passaggi successivi

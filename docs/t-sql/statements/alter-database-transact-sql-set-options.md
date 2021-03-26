@@ -2,7 +2,7 @@
 title: Opzioni di ALTER DATABASE SET (Transact-SQL) | Microsoft Docs
 description: Informazioni su come impostare le opzioni di database, ad esempio l'ottimizzazione automatica, la crittografia, Query Store in SQL Server e il database SQL di Azure.
 ms.custom: ''
-ms.date: 09/04/2020
+ms.date: 03/24/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -31,12 +31,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 37ea2f4896d68f4ae5a47b14025d54a344febdc0
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: ffc1d15b32bb24d01dfb9a6e0797959561d1b4dc
+ms.sourcegitcommit: c242f423cc3b776c20268483cfab0f4be54460d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100016317"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105551496"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opzioni di ALTER DATABASE SET (Transact-SQL)
 
@@ -326,12 +326,12 @@ CURRENT
 
 Esegue l'azione nel database corrente. `CURRENT` non è supportato per tutte le opzioni in tutti i contesti. In caso di errore di `CURRENT`, specificare il nome del database.
 
-**\<accelerated_database_recovery> ::=**      
+**\<accelerated_database_recovery> ::=**     
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)])
 
 Abilita il [ripristino accelerato del database](../../relational-databases/accelerated-database-recovery-management.md) (ADR, Accelerated Database Recovery) per ogni database. Per impostazione predefinita, ADR è impostato su OFF in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]. Usando questa sintassi è possibile designare un filegroup specifico per i dati dell'archivio versioni permanente (PVS, Persistent Version Store). Se non è specificato alcun filegroup, per l'archivio versioni permanente viene usato il filegroup PRIMARY. Per altre informazioni ed esempi, vedere [Ripristino accelerato del database](../../relational-databases/accelerated-database-recovery-management.md).
 
-**\<auto_option> ::=**      
+**\<auto_option> ::=**     
 Consente di controllare le opzioni automatiche.
 
 <a name="auto_close"></a> AUTO_CLOSE { ON | **OFF** }     
@@ -431,7 +431,7 @@ Specifica che gli aggiornamenti delle statistiche per l'opzione AUTO_UPDATE_STAT
 
 Per altre informazioni su quando usare gli aggiornamenti delle statistiche sincroni o asincroni, vedere la sezione sulle opzioni relative alle statistiche in [Statistiche](../../relational-databases/statistics/statistics.md#statistics-options).
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**      
+<a name="auto_tuning"></a>**\<automatic_tuning_option> ::=**     
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)])
 
 Abilita o disabilita l'opzione di `FORCE_LAST_GOOD_PLAN` [Ottimizzazione automatica](../../relational-databases/automatic-tuning/automatic-tuning.md).
@@ -445,7 +445,7 @@ Se si rilevano miglioramenti delle prestazioni, il [!INCLUDE[ssde_md](../../incl
 OFF     
 Il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] segnala potenziali peggioramenti delle prestazioni di query causati da modifiche apportate al piano di query nella vista [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md). I consigli qui segnalati non vengono tuttavia applicati automaticamente. È possibile visualizzare i consigli attivi e risolvere i problemi identificati applicando gli script [!INCLUDE[tsql-md](../../includes/tsql-md.md)] disponibili nella vista. Il valore predefinito è OFF.
 
-**\<change_tracking_option> ::=**      
+**\<change_tracking_option> ::=**     
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)]
 
 Controlla le opzioni di rilevamento delle modifiche. È possibile abilitare il rilevamento delle modifiche, impostare le opzioni, modificare le opzioni e disabilitare il rilevamento delle modifiche. Per alcuni esempi, vedere la sezione "Esempi" più avanti in questo articolo.
@@ -470,7 +470,7 @@ Il periodo di conservazione predefinito è **2 giorni**. Il periodo di memorizza
 OFF     
 Disabilita il rilevamento delle modifiche per il database. Prima di disabilitare il rilevamento delle modifiche per il database, disabilitarlo per tutte le tabelle.
 
-**\<containment_option> ::=**      
+**\<containment_option> ::=**     
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Consente di controllare le opzioni di indipendenza del database.
@@ -530,7 +530,7 @@ Disabilita la pulizia basata sui criteri di conservazione dei dati in un databas
 
 Per le descrizioni dell'argomento, vedere [Mirroring del database ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md).
 
-**\<date_correlation_optimization_option> ::=**      
+**\<date_correlation_optimization_option> ::=**     
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Controlla l'opzione date_correlation_optimization.
@@ -546,7 +546,7 @@ Per impostare DATE_CORRELATION_OPTIMIZATION su ON, è necessario che non siano p
 
 L'impostazione corrente di questa opzione può essere determinata esaminando la colonna `is_date_correlation_on` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
-**\<db_encryption_option> ::=**      
+**\<db_encryption_option> ::=**     
 Controlla lo stato della crittografia del database.
 
 ENCRYPTION { ON \| **OFF** \| SUSPEND \| RESUME }     
@@ -572,7 +572,7 @@ Quando la crittografia è abilitata a livello di database, tutti i filegroup ven
 
 È possibile vedere lo stato di crittografia del database, così come lo stato dell'analisi di crittografia, usando la DMV [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md).
 
-**\<db_state_option> ::=**      
+**\<db_state_option> ::=**     
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Controlla lo stato del database.
@@ -610,7 +610,7 @@ Per modificare questo stato, è necessario disporre dell'accesso esclusivo al da
 > [!NOTE]
 > Nei database federati di [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)], `SET { READ_ONLY | READ_WRITE }` è disabilitato.
 
-**\<db_user_access_option> ::=**      
+**\<db_user_access_option> ::=**     
 Controlla l'accesso degli utenti al database.
 
 SINGLE_USER     
@@ -636,7 +636,7 @@ Consente la connessione al database a tutti gli utenti che dispongono di autoriz
 
 È possibile determinare lo stato di questa opzione esaminando la colonna `user_access` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). È anche possibile determinare lo stato esaminando la proprietà `UserAccess` della funzione [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-**\<delayed_durability_option> ::=**      
+**\<delayed_durability_option> ::=**     
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])
 
 Determina se le transazioni sottoposte a commit sono completamente durevoli o durevoli posticipate.
@@ -650,7 +650,7 @@ Tutte le transazioni in cui viene usato `SET ALLOWED` sono completamente durevol
 FORCED     
 Tutte le transazioni in cui viene usato `SET FORCED` sono durevoli posticipate. Tutte le opzioni di durabilità impostate in un blocco atomico o in un'istruzione COMMIT vengono ignorate.
 
-**\<external_access_option> ::=**      
+**\<external_access_option> ::=**     
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Determina se è consentito l'accesso al database da parte di risorse esterne, ad esempio oggetti di un altro database.
@@ -714,7 +714,7 @@ TWO_DIGIT_YEAR_CUTOFF
 
 Specifica un numero intero compreso tra 1753 e 9999 che rappresenta l'anno di cambio data per l'interpretazione degli anni a due cifre come anni a quattro cifre. Questa opzione è consentita solo quando l'opzione CONTAINMENT è stata impostata su PARTIAL. Se l'opzione CONTAINMENT è impostata su NONE, si verificheranno errori.
 
-**\<FILESTREAM_option> ::=**      
+**\<FILESTREAM_option> ::=**     
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Consente di controllare le impostazioni per le tabelle FileTable.
@@ -732,12 +732,12 @@ Abilita l'accesso non transazionale completo a dati di FILESTREAM nelle tabelle 
 DIRECTORY_NAME = *\<directory_name>*      
 Nome di directory compatibile con Windows. Il nome deve essere univoco in tutti i nomi di directory a livello di database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il confronto di univocità non supporta la distinzione tra maiuscole e minuscole, indipendentemente dalle impostazioni delle regole di confronto. È necessario impostare questa opzione prima di creare una tabella FileTable nel database.
 
-**\<HADR_options> ::=**      
+**\<HADR_options> ::=**     
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Vedere [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).
 
-**\<mixed_page_allocation_option> ::=**      
+**\<mixed_page_allocation_option> ::=**     
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])
 
 Controlla se il database può creare pagine iniziali usando un extent misto per le prime otto pagine di un indice o di una tabella.
@@ -751,7 +751,7 @@ Il database crea sempre le pagine iniziali usando extent misti.
 
 Questa opzione è impostata su ON per tutti i database di sistema. **tempdb** è l'unico database di sistema che supporta l'opzione OFF.
 
-**\<PARAMETERIZATION_option> ::=**      
+**\<PARAMETERIZATION_option> ::=**     
 Consente di controllare l'opzione di parametrizzazione. Per altre informazioni sulla parametrizzazione, vedere [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).
 
 PARAMETERIZATION { **SIMPLE** | FORCED }     
@@ -763,7 +763,7 @@ Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguita la 
 
 L'impostazione corrente di questa opzione può essere determinata esaminando `is_parameterization_forced column` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
-<a name="query-store"></a> **\<query_store_options> ::=**      
+<a name="query-store"></a>**\<query_store_options> ::=**     
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])
 
 ON | **OFF** [ ( FORCED )  ] | CLEAR [ ALL ]     
@@ -875,7 +875,7 @@ Definisce il tempo CPU di compilazione trascorso totale usato da una query nel p
 TOTAL_EXECUTION_CPU_TIME_MS     
 Definisce il tempo CPU di esecuzione trascorso totale usato da una query nel periodo di valutazione. Il valore predefinito è 100. Questo significa che per il valore predefinito della soglia dei criteri di acquisizione non aggiornati una query deve aver usato almeno 100 ms di tempo CPU al giorno per l'esecuzione perché venga salvata in modo permanente in Query Store. TOTAL_EXECUTION_CPU_TIME_MS è di tipo **int**.
 
-**\<recovery_option> ::=**      
+**\<recovery_option> ::=**     
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Controlla le opzioni di recupero del database e il controllo degli errori di I/O su disco.
@@ -944,7 +944,7 @@ Per altre informazioni sui messaggi di errore 823, 824 e 825, vedere:
 
 L'impostazione corrente di questa opzione può essere determinata esaminando la colonna `page_verify_option` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) o la proprietà `IsTornPageDetectionEnabled` della funzione [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-**\<remote_data_archive_option> ::=**      
+**\<remote_data_archive_option> ::=**     
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])
 
 Abilita o disabilita Stretch Database per il database. Per ulteriori informazioni, vedere [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
@@ -978,7 +978,7 @@ Disabilita Stretch Database per il database. Per altre informazioni, vedere [Dis
 
 La disabilitazione di Stretch non comporta la rimozione del database remoto. Per eliminare il database remoto, usare il portale di Azure.
 
-**\<service_broker_option> ::=**      
+**\<service_broker_option> ::=**     
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Controlla le opzioni di [!INCLUDE[ssSB](../../includes/sssb-md.md)] seguenti, ovvero abilitazione o disabilitazione del recapito dei messaggi, impostazione di un nuovo identificatore di [!INCLUDE[ssSB](../../includes/sssb-md.md)] o impostazione delle priorità di conversazione su ON oppure OFF.
@@ -1009,7 +1009,7 @@ Le modifiche all'opzione HONOR_BROKER_PRIORITY vengono applicate immediatamente 
 
 L'impostazione corrente di questa proprietà è indicata nella colonna `is_broker_priority_honored` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
-**\<snapshot_option> ::=**      
+**\<snapshot_option> ::=**     
 Calcola il livello di isolamento delle transazioni.
 
 ALLOW_SNAPSHOT_ISOLATION { ON | **OFF** }     
@@ -1064,7 +1064,7 @@ L'impostazione predefinita è OFF.
 
 L'impostazione corrente di questa opzione può essere determinata esaminando la colonna `is_memory_optimized_elevate_to_snapshot_on` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
-**\<sql_option> ::=**      
+**\<sql_option> ::=**     
 Controlla le opzioni di conformità ANSI a livello di database.
 
 ANSI_NULL_DEFAULT { ON | **OFF** }     
@@ -1203,7 +1203,7 @@ OFF
 
 È possibile determinare lo stato di questa opzione esaminando la colonna `is_recursive_triggers_on` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) o la proprietà `IsRecursiveTriggersEnabled` della funzione [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-**\<target_recovery_time_option> ::=**      
+**\<target_recovery_time_option> ::=**     
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Specifica la frequenza di checkpoint indiretti per database singolo. A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], il valore predefinito per i nuovi database è **1 minuto**, a indicare che il database userà checkpoint indiretti. Per le versioni precedenti, il valore predefinito è 0, a indicare che il database userà checkpoint automatici la cui frequenza dipende dall'impostazione dell'intervallo di recupero dell'istanza del server. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di usare 1 minuto per la maggior parte dei sistemi.
@@ -1661,7 +1661,7 @@ Nome del database da modificare.
 CURRENT     
 `CURRENT` esegue l'azione nel database corrente. `CURRENT` non è supportato per tutte le opzioni in tutti i contesti. In caso di errore di `CURRENT`, specificare il nome del database.
 
-**\<auto_option> ::=**      
+**\<auto_option> ::=**     
 Consente di controllare le opzioni automatiche.
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF }     
@@ -1737,7 +1737,7 @@ L'impostazione di questa opzione su OFF non produce alcun effetto, a meno che AU
 
 Per altre informazioni su quando usare gli aggiornamenti delle statistiche sincroni o asincroni, vedere la sezione sulle opzioni relative alle statistiche in [Statistiche](../../relational-databases/statistics/statistics.md#statistics-options).
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**      
+<a name="auto_tuning"></a>**\<automatic_tuning_option> ::=**     
 **Si applica a**: [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
 
 Controlla le opzioni automatiche per l'[ottimizzazione automatica](../../relational-databases/automatic-tuning/automatic-tuning.md).
@@ -1788,7 +1788,7 @@ Il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] forza automaticamente l'ultimo
 OFF     
 Il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] segnala potenziali peggioramenti delle prestazioni di query causati da modifiche apportate al piano di query nella vista [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md). I consigli qui segnalati non vengono tuttavia applicati automaticamente. È possibile visualizzare i consigli attivi e risolvere i problemi identificati applicando gli script [!INCLUDE[tsql-md](../../includes/tsql-md.md)] disponibili nella vista. Si tratta del valore predefinito.
 
-**\<change_tracking_option> ::=**      
+**\<change_tracking_option> ::=**     
 Controlla le opzioni di rilevamento delle modifiche. È possibile abilitare il rilevamento delle modifiche, impostare le opzioni, modificare le opzioni e disabilitare il rilevamento delle modifiche. Per alcuni esempi, vedere la sezione "Esempi" più avanti in questo articolo.
 
 ON     
@@ -1811,7 +1811,7 @@ Il periodo di conservazione predefinito è **2 giorni**. Il periodo di memorizza
 OFF     
 Disabilita il rilevamento delle modifiche per il database. Prima di disabilitare il rilevamento delle modifiche per il database, disabilitarlo per tutte le tabelle.
 
-**\<cursor_option> ::=**      
+**\<cursor_option> ::=**     
 Consente di controllare le opzioni del cursore.
 
 CURSOR_CLOSE_ON_COMMIT { ON | OFF }     
@@ -1825,7 +1825,7 @@ Le impostazioni a livello di connessione definite usando l'istruzione SET sono p
 
 È possibile determinare lo stato di questa opzione esaminando la colonna `is_cursor_close_on_commit_on` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) o la proprietà `IsCloseCursorsOnCommitEnabled` della funzione [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md). Il cursore viene deallocato in modo implicito soltanto al momento della disconnessione. Per altre informazioni, vedere [DECLARE CURSOR](../../t-sql/language-elements/declare-cursor-transact-sql.md).
 
-**\<db_encryption_option> ::=**      
+**\<db_encryption_option> ::=**     
 Controlla lo stato della crittografia del database.
 
 ENCRYPTION { ON | OFF }     
@@ -1835,7 +1835,7 @@ Quando la crittografia è abilitata a livello di database, tutti i filegroup ven
 
 È possibile visualizzare lo stato della crittografia del database usando la DMV [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md).
 
-**\<db_update_option> ::=**      
+**\<db_update_option> ::=**     
 Indica se sono consentiti aggiornamenti nel database.
 
 READ_ONLY     
@@ -1852,7 +1852,7 @@ Per modificare questo stato, è necessario disporre dell'accesso esclusivo al da
 > [!NOTE]
 > Nei database federati di [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)], `SET { READ_ONLY | READ_WRITE }` è disabilitato.
 
-**\<db_user_access_option> ::=**      
+**\<db_user_access_option> ::=**     
 Controlla l'accesso degli utenti al database.
 
 RESTRICTED_USER     
@@ -1863,7 +1863,7 @@ Consente la connessione al database a tutti gli utenti che dispongono di autoriz
 
 È possibile determinare lo stato di questa opzione esaminando la colonna `user_access` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) o la proprietà `UserAccess` della funzione [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-**\<delayed_durability_option> ::=**      
+**\<delayed_durability_option> ::=**     
 Determina se le transazioni sottoposte a commit sono completamente durevoli o durevoli posticipate.
 
 DISABLED     
@@ -1875,7 +1875,7 @@ Tutte le transazioni in cui viene usato `SET ALLOWED` sono completamente durevol
 FORCED     
 Tutte le transazioni in cui viene usato `SET FORCED` sono durevoli posticipate. Tutte le opzioni di durabilità impostate in un blocco atomico o in un'istruzione COMMIT vengono ignorate.
 
-**\<PARAMETERIZATION_option> ::=**      
+**\<PARAMETERIZATION_option> ::=**     
 Consente di controllare l'opzione di parametrizzazione.
 
 PARAMETERIZATION { **SIMPLE** | FORCED }     
@@ -1887,7 +1887,7 @@ Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguita la 
 
 L'impostazione corrente di questa opzione può essere determinata esaminando la colonna `is_parameterization_forced` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
-<a name="query-store"></a> **\<query_store_options> ::=**
+<a name="query-store"></a>**\<query_store_options> ::=**
 
 ON | OFF | CLEAR [ ALL ]     
 Verifica se Query Store è abilitato nel database e controlla anche la rimozione dei contenuti di Query Store.
@@ -1989,7 +1989,7 @@ Definisce il tempo CPU di compilazione trascorso totale usato da una query nel p
 TOTAL_EXECUTION_CPU_TIME_MS     
 Definisce il tempo CPU di esecuzione trascorso totale usato da una query nel periodo di valutazione. Il valore predefinito è 100. Questo significa che per il valore predefinito della soglia dei criteri di acquisizione non aggiornati una query deve aver usato almeno 100 ms di tempo CPU al giorno per l'esecuzione perché venga salvata in modo permanente in Query Store. TOTAL_EXECUTION_CPU_TIME_MS è di tipo **int**.
 
-**\<snapshot_option> ::=**      
+**\<snapshot_option> ::=**     
 Determina il livello di isolamento delle transazioni.
 
 ALLOW_SNAPSHOT_ISOLATION { ON | **OFF** }     
@@ -2025,6 +2025,9 @@ L'impostazione corrente di questa opzione può essere determinata esaminando la 
 > [!WARNING]
 > Quando viene creata una tabella con `DURABILITY = SCHEMA_ONLY` e l'opzione **READ_COMMITTED_SNAPSHOT** viene successivamente cambiata tramite `ALTER DATABASE`, i dati della tabella vengono persi.
 
+> [!TIP]
+> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] `ALTER DATABASE` è necessario eseguire il comando per impostare READ_COMMITTED_SNAPSHOT per un database nel `master` database di.
+
 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | **OFF** }     
 ON     
 Quando l'isolamento della transazione è impostato su un livello inferiore a SNAPSHOT, tutte le operazioni interpretate di [!INCLUDE[tsql](../../includes/tsql-md.md)] nelle tabelle ottimizzate per la memoria vengono eseguite con l'isolamento SNAPSHOT. I livelli di isolamento inferiori a SNAPSHOT sono, ad esempio, READ COMMITTED e READ UNCOMMITTED. Queste operazioni vengono eseguite indipendentemente dal fatto che venga impostato in modo esplicito il livello di isolamento della transazione a livello di sessione o che venga usata in modo implicito l'impostazione predefinita.
@@ -2038,7 +2041,7 @@ Il valore predefinito è OFF.
 
 L'impostazione corrente di questa opzione può essere determinata esaminando la colonna `is_memory_optimized_elevate_to_snapshot_on` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
-**\<sql_option> ::=**      
+**\<sql_option> ::=**     
 Controlla le opzioni di conformità ANSI a livello di database.
 
 ANSI_NULL_DEFAULT { ON | **OFF** }     
@@ -2177,7 +2180,7 @@ OFF
 
 È possibile determinare lo stato di questa opzione esaminando la colonna `is_recursive_triggers_on` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) o la proprietà `IsRecursiveTriggersEnabled` della funzione [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-**\<target_recovery_time_option> ::=**      
+**\<target_recovery_time_option> ::=**     
 Specifica la frequenza di checkpoint indiretti per database singolo. A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], il valore predefinito per i nuovi database è 1 minuto, a indicare che il database userà checkpoint indiretti. Per le versioni precedenti, il valore predefinito è 0, a indicare che il database userà checkpoint automatici la cui frequenza dipende dall'impostazione dell'intervallo di recupero dell'istanza del server. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di usare 1 minuto per la maggior parte dei sistemi.
 
 TARGET_RECOVERY_TIME **=** target_recovery_time { SECONDS | MINUTES }     
@@ -2532,7 +2535,7 @@ Nome del database da modificare.
 CURRENT     
 `CURRENT` esegue l'azione nel database corrente. `CURRENT` non è supportato per tutte le opzioni in tutti i contesti. In caso di errore di `CURRENT`, specificare il nome del database.
 
-**\<auto_option> ::=**      
+**\<auto_option> ::=**     
 Consente di controllare le opzioni automatiche.
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { **ON** | OFF }     
@@ -2608,7 +2611,7 @@ L'impostazione di questa opzione su OFF non produce alcun effetto, a meno che AU
 
 Per altre informazioni su quando usare gli aggiornamenti delle statistiche sincroni o asincroni, vedere la sezione "Opzioni relative alle statistiche nel database" in [Statistiche](../../relational-databases/statistics/statistics.md).
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**      
+<a name="auto_tuning"></a>**\<automatic_tuning_option> ::=**     
 **Si applica a**: [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
 
 Abilita o disabilita l'opzione di `FORCE_LAST_GOOD_PLAN` [Ottimizzazione automatica](../../relational-databases/automatic-tuning/automatic-tuning.md).
@@ -2620,7 +2623,7 @@ Il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] forza automaticamente l'ultimo
 OFF     
 Il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] segnala potenziali peggioramenti delle prestazioni di query causati da modifiche apportate al piano di query nella vista [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md). I consigli qui segnalati non vengono tuttavia applicati automaticamente. È possibile visualizzare i consigli attivi e risolvere i problemi identificati applicando gli script [!INCLUDE[tsql-md](../../includes/tsql-md.md)] disponibili nella vista. Si tratta del valore predefinito.
 
-**\<change_tracking_option> ::=**      
+**\<change_tracking_option> ::=**     
 Controlla le opzioni di rilevamento delle modifiche. È possibile abilitare il rilevamento delle modifiche, impostare le opzioni, modificare le opzioni e disabilitare il rilevamento delle modifiche. Per alcuni esempi, vedere la sezione "Esempi" più avanti in questo articolo.
 
 ON abilita il rilevamento delle modifiche per il database. Quando si abilita il rilevamento delle modifiche, è possibile impostare anche le opzioni AUTO CLEANUP e CHANGE RETENTION.
@@ -2642,7 +2645,7 @@ Il periodo di conservazione predefinito è **2 giorni**. Il periodo di memorizza
 OFF     
 Disabilita il rilevamento delle modifiche per il database. Prima di disabilitare il rilevamento delle modifiche per il database, disabilitarlo per tutte le tabelle.
 
-**\<cursor_option> ::=**      
+**\<cursor_option> ::=**     
 Consente di controllare le opzioni del cursore.
 
 CURSOR_CLOSE_ON_COMMIT { ON | OFF }     
@@ -2656,7 +2659,7 @@ Le impostazioni a livello di connessione definite usando l'istruzione SET sono p
 
 È possibile determinare lo stato di questa opzione esaminando la colonna is_cursor_close_on_commit_on nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) o la proprietà IsCloseCursorsOnCommitEnabled della funzione [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md). Il cursore viene deallocato in modo implicito soltanto al momento della disconnessione. Per altre informazioni, vedere [DECLARE CURSOR](../../t-sql/language-elements/declare-cursor-transact-sql.md).
 
-**\<db_encryption_option> ::=**      
+**\<db_encryption_option> ::=**     
 Controlla lo stato della crittografia del database.
 
 ENCRYPTION { ON | **OFF** }     
@@ -2666,7 +2669,7 @@ Quando la crittografia è abilitata a livello di database, tutti i filegroup ven
 
 È possibile visualizzare lo stato della crittografia del database usando la DMV [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md).
 
-**\<db_update_option> ::=**      
+**\<db_update_option> ::=**     
 Indica se sono consentiti aggiornamenti nel database.
 
 READ_ONLY     
@@ -2680,7 +2683,7 @@ Il database è disponibile per operazioni di lettura e scrittura.
 
 Per modificare questo stato, è necessario disporre dell'accesso esclusivo al database.
 
-**\<db_user_access_option> ::=**      
+**\<db_user_access_option> ::=**     
 Controlla l'accesso degli utenti al database.
 
 RESTRICTED_USER     
@@ -2691,7 +2694,7 @@ Consente la connessione al database a tutti gli utenti che dispongono di autoriz
 
 È possibile determinare lo stato di questa opzione esaminando la colonna user_access nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) o la proprietà `UserAccess` della funzione [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-**\<delayed_durability_option> ::=**      
+**\<delayed_durability_option> ::=**     
 Determina se le transazioni sottoposte a commit sono completamente durevoli o durevoli posticipate.
 
 DISABLED     
@@ -2703,7 +2706,7 @@ Tutte le transazioni in cui viene usato `SET ALLOWED` sono completamente durevol
 FORCED     
 Tutte le transazioni in cui viene usato `SET FORCED` sono durevoli posticipate. Tutte le opzioni di durabilità impostate in un blocco atomico o in un'istruzione COMMIT vengono ignorate.
 
-**\<PARAMETERIZATION_option> ::=**      
+**\<PARAMETERIZATION_option> ::=**     
 Consente di controllare l'opzione di parametrizzazione.
 
 PARAMETERIZATION { **SIMPLE** | FORCED }     
@@ -2715,7 +2718,7 @@ Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguita la 
 
 L'impostazione corrente di questa opzione può essere determinata esaminando la colonna `is_parameterization_forced` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
-<a name="query-store"></a> **\<query_store_options> ::=**
+<a name="query-store"></a>**\<query_store_options> ::=**
 
 ON | OFF | CLEAR [ ALL ]     
 Verifica se Query Store è abilitato nel database e controlla anche la rimozione dei contenuti di Query Store.
@@ -2859,7 +2862,7 @@ Il valore predefinito è OFF.
 
 L'impostazione corrente di questa opzione può essere determinata esaminando la colonna `is_memory_optimized_elevate_to_snapshot_on` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
-**\<sql_option> ::=**      
+**\<sql_option> ::=**     
 Controlla le opzioni di conformità ANSI a livello di database.
 
 ANSI_NULL_DEFAULT { ON | OFF }     
@@ -2998,7 +3001,7 @@ OFF
 
 È possibile determinare lo stato di questa opzione esaminando la colonna `is_recursive_triggers_on` nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) o la proprietà `IsRecursiveTriggersEnabled` della funzione [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-**\<target_recovery_time_option> ::=**      
+**\<target_recovery_time_option> ::=**     
 Specifica la frequenza di checkpoint indiretti per database singolo. A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], il valore predefinito per i nuovi database è **1 minuto**, a indicare che il database userà checkpoint indiretti. Per le versioni precedenti, il valore predefinito è 0, a indicare che il database userà checkpoint automatici la cui frequenza dipende dall'impostazione dell'intervallo di recupero dell'istanza del server. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di usare 1 minuto per la maggior parte dei sistemi.
 
 TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }     

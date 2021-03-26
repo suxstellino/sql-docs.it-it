@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_performance_counters (Transact-SQL)
-title: sys.dm_os_performance_counters (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_performance_counters (Transact-SQL)
 ms.custom: ''
 ms.date: 03/22/2021
 ms.prod: sql
@@ -17,16 +17,15 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_os_performance_counters dynamic management view
-ms.assetid: a1c3e892-cd48-40d4-b6be-2a9246e8fbff
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bece57b97ce2a7e20b2800fb45a831674960012
-ms.sourcegitcommit: c09ef164007879a904a376eb508004985ba06cf0
+ms.openlocfilehash: 62489b131eea77ed67b1207a7606056cea39066d
+ms.sourcegitcommit: c242f423cc3b776c20268483cfab0f4be54460d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104890793"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105551633"
 ---
 # <a name="sysdm_os_performance_counters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "104890793"
   Restituisce una riga per contatore delle prestazioni gestito dal server. Per informazioni su ogni contatore delle prestazioni, vedere [usare oggetti SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
 > [!NOTE]  
->  Per chiamare questo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oggetto da o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , usare il nome **sys.dm_pdw_nodes_os_performance_counters**.  
+>  Per chiamare questo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oggetto da o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , usare il nome `sys.dm_pdw_nodes_os_performance_counters` .  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -62,6 +61,8 @@ I contatori delle prestazioni `cntr_type` in cui il valore della colonna è 5370
 
 I contatori delle prestazioni in cui il `cntr_type` valore della colonna è 1073874176 visualizzano il numero di elementi elaborati in media, come rapporto tra gli elementi elaborati e il numero di operazioni. I contatori, ad esempio, `Locks:Average Wait Time (ms)` confrontano le attese di blocco al secondo con le richieste di blocco al secondo, per visualizzare la quantità media di tempo di attesa (in millisecondi) per ogni richiesta di blocco che ha generato un'attesa. Di conseguenza, per ottenere una lettura simile a uno snapshot dell'ultimo secondo, è necessario confrontare il delta tra il valore corrente e il valore di base (denominatore) tra due punti di raccolta che sono separati da un secondo. Il valore di base corrispondente è il contatore delle prestazioni in `Locks:Average Wait Time Base` cui il `cntr_type` valore della colonna è 1073939712.
 
+I dati nella `sys.dm_os_performance_counters` DMV non vengono mantenuti dopo il riavvio del motore di database. Utilizzare la `sqlserver_start_time` colonna [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) per individuare l'ultima ora di avvio del motore di database.   
+
 ## <a name="permission"></a>Autorizzazione
 
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
@@ -79,3 +80,4 @@ WHERE cntr_type = 65792 OR cntr_type = 272696320 OR cntr_type = 537003264;
 ## <a name="see-also"></a>Vedere anche  
   [SQL Server viste a gestione dinamica relative al sistema operativo &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.sysperfinfo &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)  
+ [sys.dm_os_sys_info &#40;&#41;Transact-SQL ](sys-dm-os-sys-info-transact-sql.md)

@@ -1,8 +1,8 @@
 ---
 description: sys.dm_db_wait_stats (Database di SQL Azure)
-title: sys.dm_db_wait_stats (database SQL di Azure) | Microsoft Docs
+title: sys.dm_db_wait_stats (Database di SQL Azure)
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/12/2021
 ms.service: sql-database
 ms.reviewer: ''
 ms.topic: reference
@@ -16,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_wait_stats dynamic management view
 - dm_db_wait_stats
-ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: 9787c91301678463ee324b6c6fa473b03af61a80
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6819bba097963249e68d61941e4dc4e704a2b7a7
+ms.sourcegitcommit: c242f423cc3b776c20268483cfab0f4be54460d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99109140"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105551616"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Database di SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -58,7 +57,9 @@ ms.locfileid: "99109140"
   
     -   Un processo esterno viene completato.  
   
--   Queste statistiche non vengono rese persistenti tra eventi di failover del database SQL e tutti i dati sono cumulativi dall'ultima reimpostazione delle statistiche.  
+
+> [!NOTE]
+> Queste statistiche non vengono rese permanente dopo gli eventi di failover del database SQL e tutti i dati sono cumulativi dall'ultima reimpostazione delle statistiche o dall'avvio del motore di database. Utilizzare la `sqlserver_start_time` colonna [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) per individuare l'ultima ora di avvio del motore di database.   
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE per il server.  
@@ -91,7 +92,7 @@ ms.locfileid: "99109140"
 |AUDIT_ON_DEMAND_TARGET_LOCK|Si verifica in caso di attesa su un blocco usato per assicurare l'inizializzazione singola delle destinazioni degli eventi estesi relative ai controlli.|  
 |AUDIT_XE_SESSION_MGR|Si verifica in caso di attesa su un blocco usato per sincronizzare l'avvio e l'arresto delle sessioni degli eventi estesi relative ai controlli.|  
 |BACKUP|Si verifica quando un'attività è bloccata in quanto parte dell'elaborazione di un backup.|  
-|BACKUP_OPERATOR|Si verifica quando un'attività è in attesa del montaggio del nastro. Per visualizzare lo stato del nastro, eseguire una query su [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md). Se un'operazione di montaggio non è in sospeso, questo tipo di attesa potrebbe indicare un problema a livello di hardware nell'unità nastro.|  
+|BACKUP_OPERATOR|Si verifica quando un'attività è in attesa del montaggio del nastro.|  
 |BACKUPBUFFER|Si verifica quando un'attività di backup è in attesa di dati oppure di un buffer in cui archiviare dati. Questo tipo di attesa non è comune, tranne quando un'attività è in attesa del montaggio di un nastro.|  
 |BACKUPIO|Si verifica quando un'attività di backup è in attesa di dati oppure di un buffer in cui archiviare dati. Questo tipo di attesa non è comune, tranne quando un'attività è in attesa del montaggio di un nastro.|  
 |BACKUPTHREAD|Si verifica quando un'attività è in attesa del completamento di un'attività di backup. I tempi di attesa possono essere lunghi, da alcuni minuti a parecchie ore. Se l'attività per la quale si è verificata l'attesa è un processo di I/O, questo tipo di attesa non indica un problema.|  
@@ -134,8 +135,8 @@ ms.locfileid: "99109140"
 |DBMIRROR_SEND|Si verifica quando un'attività è in attesa della cancellazione di un backlog delle comunicazioni nel livello rete per essere in grado di inviare messaggi. Indica che nel livello comunicazioni si sta verificando un overload che può pregiudicare la velocità effettiva dei dati di mirroring del database.|  
 |DBMIRROR_WORKER_QUEUE|Indica che l'attività di lavoro del mirroring del database è in attesa di ulteriore lavoro.|  
 |DBMIRRORING_CMD|Si verifica quando un'attività è in attesa dello scaricamento su disco dei record di log. Questo stato di attesa viene in genere mantenuto per lunghi periodi di tempo.|  
-|DEADLOCK_ENUM_MUTEX|Si verifica quando il monitoraggio dei deadlock e sys.dm_os_waiting_tasks cercano di garantire che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non esegua più ricerche di deadlock contemporaneamente.|  
-|DEADLOCK_TASK_SEARCH|Un tempo di attesa elevato per questa risorsa indica che il server sta eseguendo query su sys.dm_os_waiting_tasks e che tali query bloccano l'esecuzione della ricerca di deadlock nell'ambito del monitoraggio dei deadlock. Questo tipo di attesa viene usato soltanto dalla funzionalità di monitoraggio dei deadlock. Le query su sys.dm_os_waiting_tasks utilizzano DEADLOCK_ENUM_MUTEX.|  
+|DEADLOCK_ENUM_MUTEX|Si verifica quando il monitoraggio dei deadlock e `sys.dm_os_waiting_tasks` cercano di garantire che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non esegua più ricerche di deadlock contemporaneamente.|  
+|DEADLOCK_TASK_SEARCH|Un tempo di attesa elevato per questa risorsa indica che il server sta eseguendo query su `sys.dm_os_waiting_tasks` e che tali query bloccano l'esecuzione della ricerca di deadlock nell'ambito del monitoraggio dei deadlock. Questo tipo di attesa viene usato soltanto dalla funzionalità di monitoraggio dei deadlock. Le query su `sys.dm_os_waiting_tasks` utilizzano DEADLOCK_ENUM_MUTEX.|  
 |DEBUG|Si verifica durante il debug CLR e [!INCLUDE[tsql](../../includes/tsql-md.md)] per la sincronizzazione interna.|  
 |DISABLE_VERSIONING|Si verifica quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue il polling della gestione delle transazioni di versione per verificare se il timestamp della transazione attiva meno recente è successivo al timestamp relativo al momento in cui lo stato è stato modificato. In questo caso, vengono completate tutte le transazioni snapshot avviate prima dell'esecuzione dell'istruzione ALTER DATABASE. Questo stato di attesa viene utilizzando quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disabilita il controllo delle versioni tramite l'istruzione ALTER DATABASE.|  
 |DISKIO_SUSPEND|Si verifica quando un'attività è in attesa di accedere a un file quando è attivo un backup esterno. Questo tipo di attesa viene segnalato per ogni processo utente in attesa. Un conteggio maggiore di 5 per processo utente può indicare che il completamento del backup esterno sta richiedendo troppo tempo.|  
@@ -186,12 +187,12 @@ ms.locfileid: "99109140"
 |KTM_ENLISTMENT|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |KTM_RECOVERY_MANAGER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |KTM_RECOVERY_RESOLUTION|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|LATCH_DT|Si verifica durante l'attesa di un latch di eliminazione (DT). Non include i latch del buffer o i latch di contrassegno di transazione. In sys.dm_os_latch_stats è disponibile un elenco delle attese LATCH_*. Le attese sys.dm_os_latch_stats LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT sono raggruppate.|  
-|LATCH_EX|Si verifica durante l'attesa di un latch esclusivo (EX). Non include i latch del buffer o i latch di contrassegno di transazione. In sys.dm_os_latch_stats è disponibile un elenco delle attese LATCH_*. Le attese sys.dm_os_latch_stats LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT sono raggruppate.|  
-|LATCH_KP|Si verifica durante l'attesa di un latch conservativo (KP). Non include i latch del buffer o i latch di contrassegno di transazione. In sys.dm_os_latch_stats è disponibile un elenco delle attese LATCH_*. Le attese sys.dm_os_latch_stats LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT sono raggruppate.|  
+|LATCH_DT|Si verifica durante l'attesa di un latch di eliminazione (DT). Non include i latch del buffer o i latch di contrassegno di transazione. In `sys.dm_os_latch_stats` è disponibile un elenco delle attese LATCH_*. Le attese `sys.dm_os_latch_stats` LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT sono raggruppate.|  
+|LATCH_EX|Si verifica durante l'attesa di un latch esclusivo (EX). Non include i latch del buffer o i latch di contrassegno di transazione. In `sys.dm_os_latch_stats` è disponibile un elenco delle attese LATCH_*. Le attese `sys.dm_os_latch_stats` LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT sono raggruppate.|  
+|LATCH_KP|Si verifica durante l'attesa di un latch conservativo (KP). Non include i latch del buffer o i latch di contrassegno di transazione. In `sys.dm_os_latch_stats` è disponibile un elenco delle attese LATCH_*. Le attese `sys.dm_os_latch_stats` LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT sono raggruppate.|  
 |LATCH_NL|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|LATCH_SH|Si verifica durante l'attesa di un latch di condivisione (SH). Non include i latch del buffer o i latch di contrassegno di transazione. In sys.dm_os_latch_stats è disponibile un elenco delle attese LATCH_*. Le attese sys.dm_os_latch_stats LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT sono raggruppate.|  
-|LATCH_UP|Si verifica durante l'attesa di un latch di aggiornamento (UP). Non include i latch del buffer o i latch di contrassegno di transazione. In sys.dm_os_latch_stats è disponibile un elenco delle attese LATCH_*. Le attese sys.dm_os_latch_stats LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT sono raggruppate.|  
+|LATCH_SH|Si verifica durante l'attesa di un latch di condivisione (SH). Non include i latch del buffer o i latch di contrassegno di transazione. In `sys.dm_os_latch_stats` è disponibile un elenco delle attese LATCH_*. Le attese `sys.dm_os_latch_stats` LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT sono raggruppate.|  
+|LATCH_UP|Si verifica durante l'attesa di un latch di aggiornamento (UP). Non include i latch del buffer o i latch di contrassegno di transazione. In `sys.dm_os_latch_stats` è disponibile un elenco delle attese LATCH_*. Le attese `sys.dm_os_latch_stats` LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT sono raggruppate.|  
 |LAZYWRITER_SLEEP|Si verifica quando le attività Lazywriter vengono sospese. Si tratta di una misura della durata dell'attesa delle attività in background. Non considerare questo stato durante il rilevamento di stalli a livello di utente.|  
 |LCK_M_BU|Si verifica quando un'attività è in attesa di acquisire un blocco aggiornamenti bulk (BU). Per una matrice di compatibilità dei blocchi, vedere [sys.dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
 |LCK_M_IS|Si verifica quando un'attività è in attesa di acquisire un blocco preventivo condiviso (IS). Per una matrice di compatibilità dei blocchi, vedere [sys.dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
@@ -293,9 +294,9 @@ ms.locfileid: "99109140"
 |RESOURCE_SEMAPHORE_QUERY_COMPILE|Si verifica quando il numero di compilazioni di query simultanee raggiunge un limite massimo. Attese e tempi di attesa rilevanti possono indicare una quantità eccessiva di compilazioni, ricompilazioni o piani non memorizzabili nella cache.|  
 |RESOURCE_SEMAPHORE_SMALL_QUERY|Si verifica quando una richiesta di memoria per una query di dimensioni ridotte non può essere concessa immediatamente a causa di altre query simultanee. Il tempo di attesa non deve superare pochi secondi, poiché se non è in grado di concedere la memoria richiesta entro pochi secondi il server trasferisce la richiesta al pool di memoria per query principale. Attese rilevanti possono indicare un numero eccessivo di query di dimensioni ridotte simultanee mentre il pool di memoria principale è bloccato da query in attesa.|  
 |SE_REPL_CATCHUP_THROTTLE|Si verifica quando la transazione è in attesa che uno dei database secondari compia un avanzamento.|  
-|SE_REPL_COMMIT_ACK|Si verifica quando la transazione è in attesa dell'acknowledgement per un commit del quorum da repliche secondarie.|  
-|SE_REPL_COMMIT_TURN|Si verifica quando la transazione è in attesa del commit dopo aver ricevuto acknowledgement per un commit del quorum.|  
-|SE_REPL_ROLLBACK_ACK|Si verifica quando la transazione è in attesa dell'acknowledgement per un rollback del quorum da repliche secondarie.|  
+|SE_REPL_COMMIT_ACK|Si verifica quando la transazione è in attesa del riconoscimento del commit del quorum dalle repliche secondarie.|  
+|SE_REPL_COMMIT_TURN|Si verifica quando la transazione è in attesa del commit dopo aver ricevuto i riconoscimenti del commit del quorum.|  
+|SE_REPL_ROLLBACK_ACK|Si verifica quando la transazione è in attesa del riconoscimento del rollback del quorum dalle repliche secondarie.|  
 |SE_REPL_SLOW_SECONDARY_THROTTLE|Si verifica quando il thread è in attesa di una delle repliche secondarie del database.|  
 |SEC_DROP_TEMP_KEY|Si verifica dopo un tentativo non riuscito di eliminare una chiave di sicurezza temporanea, prima di un nuovo tentativo.|  
 |SECURITY_MUTEX|Si verifica in caso di attesa dei mutex che controllano l'accesso all'elenco globale dei provider di crittografia EKM e l'elenco con ambito sessione di sessioni EKM.|  
@@ -363,7 +364,7 @@ ms.locfileid: "99109140"
 |WAIT_FOR_RESULTS|Si verifica durante l'attesa dell'attivazione di una notifica di query.|  
 |WAITFOR|Si verifica come risultato di un'istruzione WAITFOR di [!INCLUDE[tsql](../../includes/tsql-md.md)]. La durata dell'attesa è determinata dai parametri per l'istruzione. Si tratta di un'attesa avviata dall'utente.|  
 |WAITFOR_TASKSHUTDOWN|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|WAITSTAT_MUTEX|Si verifica durante la sincronizzazione dell'accesso alla raccolta di statistiche utilizzata per popolare sys.dm_os_wait_stats.|  
+|WAITSTAT_MUTEX|Si verifica durante la sincronizzazione dell'accesso alla raccolta di statistiche utilizzata per popolare `sys.dm_os_wait_stats`.|  
 |WCC|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |WORKTBL_DROP|Si verifica durante la sospensione che precede un nuovo tentativo dopo un'eliminazione di tabella di lavoro non riuscita.|  
 |WRITE_COMPLETION|Si verifica quando è in esecuzione un'operazione di scrittura.|  
@@ -388,3 +389,8 @@ ms.locfileid: "99109140"
 |FT_MASTER_MERGE|Full-text è in attesa di un'operazione di unione nell'indice master. Documentato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.|  
   
   
+## <a name="see-also"></a>Vedi anche
+
+ [sys.dm_os_sys_info &#40;&#41;Transact-SQL ](sys-dm-os-sys-info-transact-sql.md)    
+ [sys.dm_tran_locks &#40;Transact-SQL&#41;](sys-dm-tran-locks-transact-sql.md)    
+ [sys.dm_os_waiting_tasks &#40;&#41;Transact-SQL ](sys-dm-os-waiting-tasks-transact-sql.md)    

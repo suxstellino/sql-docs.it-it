@@ -3,18 +3,18 @@ title: Download dei file CAB di aggiornamenti per l'installazione offline
 description: Scaricare i file CAB di Python e R per Machine Learning Services per SQL Server. Questi file CAB contengono gli aggiornamenti della funzionalità Machine Learning Services (Python e R) e vengono usati quando si installa SQL Server in un server senza accesso a Internet.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 10/02/2020
+ms.date: 03/25/2021
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: a356a006e2defb8fd8c99f479280ff75c5ea45d9
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 6268ceaae37016bae72a488170408312d25bf536
+ms.sourcegitcommit: 35cc65808d2a1769dea65c6ce7f9c2f69640968b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471162"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "105568927"
 ---
 # <a name="cab-downloads-for-offline-installation-of-cumulative-updates-for-sql-server-machine-learning-services"></a>Download dei file CAB per l'installazione offline di aggiornamenti cumulativi per SQL Server Machine Learning Services
 
@@ -91,7 +91,7 @@ I file CAB sono elencati in ordine cronologico inverso. Quando si scaricano i fi
 
 |Versione  |Componente | Collegamento di download  | Problemi risolti | 
 |---------|----------|----------------|------------------|
-|**[SQL Server 2017 CU22](https://support.microsoft.com/help/4577467/)** |  |  |  |
+|**[SQL Server 2017 CU22](https://support.microsoft.com/help/4577467/) - [CU23](https://support.microsoft.com/help/5000685/)** |  |  |  |
 | | Microsoft R Open      | [SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897)  |  |
 | | R Server              | [SRS_9.4.7.958_1033.cab](https://go.microsoft.com/fwlink/?linkid=2136942)  |  |
 | | Microsoft Python Open | [SPO_4.5.12.479_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118341) |  |

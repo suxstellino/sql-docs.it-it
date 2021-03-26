@@ -1,8 +1,8 @@
 ---
-title: sys.dm_db_tuning_recommendations (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_tuning_recommendations (Transact-SQL)
 description: Informazioni su come individuare potenziali problemi di prestazioni e correzioni consigliate in SQL Server e nel database SQL di Azure
 ms.custom: ''
-ms.date: 07/20/2017
+ms.date: 03/12/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - database tuning recommendations feature [SQL Server], sys.dm_db_tuning_recommendations dynamic management view
 - sys.dm_db_tuning_recommendations dynamic management view
-ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 401636f25e34c3c76faed1cc73fc54b9e2b911bf
-ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
+ms.openlocfilehash: 44c4b9bbc975074d1852f0e7a0f074e3c3acc979
+ms.sourcegitcommit: c242f423cc3b776c20268483cfab0f4be54460d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100489345"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105551658"
 ---
 # <a name="sysdm_db_tuning_recommendations-transact-sql"></a>\_indicazioni sull'ottimizzazione del database sys.dm \_ \_ (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -58,9 +57,9 @@ ms.locfileid: "100489345"
 | **Dettagli** | **nvarchar(max)** | Documento JSON che contiene ulteriori dettagli sull'indicazione. Sono disponibili i campi seguenti:<br /><br />`planForceDetails`<br />-    `queryId` : \_ ID query della query regressione.<br />-    `regressedPlanId` -plan_id del piano regressione.<br />-   `regressedPlanExecutionCount` : Numero di esecuzioni della query con piano regressione prima che venga rilevata la regressione.<br />-    `regressedPlanAbortedCount` -Numero di errori rilevati durante l'esecuzione del piano regressione.<br />-    `regressedPlanCpuTimeAverage` -Tempo medio CPU (in microsecondi) utilizzato dalla query regressione prima che venga rilevata la regressione.<br />-    `regressedPlanCpuTimeStddev` -Deviazione standard del tempo di CPU utilizzato dalla query regressione prima che venga rilevata la regressione.<br />-    `recommendedPlanId` -plan_id del piano da forzare.<br />-   `recommendedPlanExecutionCount`: Numero di esecuzioni della query con il piano da forzare prima che venga rilevata la regressione.<br />-    `recommendedPlanAbortedCount` : Numero di errori rilevati durante l'esecuzione del piano da forzare.<br />-    `recommendedPlanCpuTimeAverage` -Tempo medio CPU (in microsecondi) utilizzato dalla query eseguita con il piano che deve essere forzato (calcolato prima che la regressione venga rilevata).<br />-    `recommendedPlanCpuTimeStddev` Deviazione standard del tempo di CPU utilizzato dalla query regressione prima che venga rilevata la regressione.<br /><br />`implementationDetails`<br />-  `method` : Il metodo che deve essere usato per correggere la regressione. Il valore è sempre `TSql` .<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql-md.md)] script da eseguire per forzare il piano consigliato. |
   
 ## <a name="remarks"></a>Commenti  
- Le informazioni restituite da `sys.dm_db_tuning_recommendations` vengono aggiornate quando il motore di database identifica la possibile regressione delle prestazioni delle query e non è permanente. Le raccomandazioni vengono mantenute solo fino a quando non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene riavviato. Gli amministratori di database devono eseguire periodicamente copie di backup dell'indicazione di ottimizzazione se vogliono mantenerla dopo il riciclo del server. 
+ Le informazioni restituite da `sys.dm_db_tuning_recommendations` vengono aggiornate quando il motore di database identifica la possibile regressione delle prestazioni delle query e non è permanente. Le raccomandazioni vengono mantenute solo fino al riavvio del motore di database. Utilizzare la `sqlserver_start_time` colonna [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) per individuare l'ultima ora di avvio del motore di database.  Gli amministratori di database devono eseguire periodicamente copie di backup dell'indicazione di ottimizzazione se vogliono mantenerla dopo il riciclo del server.   
 
- `currentValue` il campo della `state` colonna può contenere i valori seguenti:
+ Il `currentValue` campo della `state` colonna può contenere i valori seguenti:
  
  | Stato | Descrizione |
  |--------|-------------|
@@ -77,7 +76,7 @@ Il documento JSON nella `state` colonna contiene il motivo per cui viene descrit
 | `SchemaChanged` | La raccomandazione è scaduta perché lo schema di una tabella a cui si fa riferimento è stato modificato. Viene creata una nuova raccomandazione se viene rilevata una nuova regressione del piano di query nel nuovo schema. |
 | `StatisticsChanged`| Il suggerimento è scaduto a causa della modifica delle statistiche in una tabella a cui si fa riferimento. Se viene rilevata una nuova regressione del piano di query basata su nuove statistiche, verrà creata una nuova raccomandazione. |
 | `ForcingFailed` | Non è possibile forzare il piano consigliato su una query. Trovare `last_force_failure_reason` nella vista [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) per individuare il motivo dell'errore. |
-| `AutomaticTuningOptionDisabled` | `FORCE_LAST_GOOD_PLAN` l'opzione è disabilitata dall'utente durante il processo di verifica. Abilitare l' `FORCE_LAST_GOOD_PLAN` opzione utilizzando [ALTER DATABASE SET AUTOMATIC_TUNING &#40;istruzione Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) oppure forzare manualmente il piano utilizzando lo script nella `[details]` colonna. |
+| `AutomaticTuningOptionDisabled` | `FORCE_LAST_GOOD_PLAN` l'opzione è disabilitata dall'utente durante il processo di verifica. Abilitare `FORCE_LAST_GOOD_PLAN` l'opzione utilizzando [ALTER DATABASE SET AUTOMATIC_TUNING &#40;istruzione Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) oppure forzare manualmente il piano utilizzando lo script nella `details` colonna. |
 | `UnsupportedStatementType` | Non è possibile forzare il piano sulla query. Esempi di query non supportate sono cursori e `INSERT BULK` istruzioni. |
 | `LastGoodPlanForced` | La raccomandazione è stata applicata correttamente. |
 | `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] è stata identificata la potenziale regressione delle prestazioni, ma l' `FORCE_LAST_GOOD_PLAN` opzione non è abilitata. vedere [ALTER DATABASE SET AUTOMATIC_TUNING &#40;&#41;Transact-SQL ](../../t-sql/statements/alter-database-transact-sql-set-options.md). Applicare la raccomandazione manualmente o abilitare l' `FORCE_LAST_GOOD_PLAN` opzione. |
@@ -88,7 +87,7 @@ Il documento JSON nella `state` colonna contiene il motivo per cui viene descrit
 | `UserForcedDifferentPlan` | L'utente ha forzato manualmente un piano diverso utilizzando [sp_query_store_force_plan &#40;procedura&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) . Il motore di database non applica la raccomandazione se l'utente ha deciso in modo esplicito di forzare un piano. |
 | `TempTableChanged` | Una tabella temporanea utilizzata nel piano è stata modificata. |
 
- La statistica della colonna dettagli non Mostra le statistiche del piano di runtime (ad esempio, il tempo di CPU corrente). I dettagli della raccomandazione vengono presi al momento del rilevamento della regressione e descrivono il motivo per cui è stata [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identificata la regressione delle prestazioni. Utilizzare `regressedPlanId` e `recommendedPlanId` per eseguire query [query Store viste del catalogo](../../relational-databases/performance/how-query-store-collects-data.md) per individuare le statistiche esatte del piano di Runtime.
+ La statistica della `details` colonna non Mostra le statistiche del piano di runtime (ad esempio, il tempo di CPU corrente). I dettagli della raccomandazione vengono presi al momento del rilevamento della regressione e descrivono il motivo per cui è stata [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identificata la regressione delle prestazioni. Utilizzare `regressedPlanId` e `recommendedPlanId` per eseguire query [query Store viste del catalogo](../../relational-databases/performance/how-query-store-collects-data.md) per individuare le statistiche esatte del piano di Runtime.
 
 ## <a name="examples-of-using-tuning-recommendations-information"></a>Esempi di utilizzo delle informazioni sulle indicazioni di ottimizzazione  
 
@@ -101,7 +100,7 @@ SELECT name, reason, score,
     details.* 
 FROM sys.dm_db_tuning_recommendations
 CROSS APPLY OPENJSON(details, '$.planForceDetails')
-    WITH (  [query_id] int '$.queryId',
+    WITH (    [query_id] int '$.queryId',
             regressed_plan_id int '$.regressedPlanId',
             last_good_plan_id int '$.recommendedPlanId') AS details
 WHERE JSON_VALUE(state, '$.currentValue') = 'Active';
@@ -184,4 +183,4 @@ Richiede l' `VIEW DATABASE STATE` autorizzazione per il database in [!INCLUDE[ss
  [Ottimizzazione automatica](../../relational-databases/automatic-tuning/automatic-tuning.md)   
  [sys.database_automatic_tuning_options &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)   
  [sys.database_query_store_options &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [Supporto JSON](../json/json-data-sql-server.md)
+ [Supporto JSON](../json/json-data-sql-server.md) [sys.dm_os_sys_info &#40;&#41;Transact-SQL ](sys-dm-os-sys-info-transact-sql.md)    

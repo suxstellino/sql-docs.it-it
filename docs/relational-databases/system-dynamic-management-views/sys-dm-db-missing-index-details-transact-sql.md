@@ -2,7 +2,7 @@
 description: sys.dm_db_missing_index_details (Transact-SQL)
 title: sys.dm_db_missing_index_details (Transact-SQL)
 ms.custom: ''
-ms.date: 03/20/2017
+ms.date: 03/12/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 532985045650dd1451589b099024635653af55d5
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 994fdc45a49486f1f57214be7646aa89ffb7d7f9
+ms.sourcegitcommit: c242f423cc3b776c20268483cfab0f4be54460d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101838947"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105551619"
 ---
 # <a name="sysdm_db_missing_index_details-transact-sql"></a>sys.dm_db_missing_index_details (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,24 +38,25 @@ ms.locfileid: "101838947"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**index_handle**|**int**|Identifica un determinato indice mancante. L'identificatore è univoco nel server. **index_handle** è la chiave di questa tabella.|  
+|**index_handle**|**int**|Identifica un determinato indice mancante. L'identificatore è univoco nel server. `index_handle` chiave della tabella.|  
 |**database_id**|**smallint**|Identifica il database in cui è archiviata la tabella con l'indice mancante.|  
 |**object_id**|**int**|Identifica la tabella in cui l'indice risulta mancante.|  
 |**equality_columns**|**nvarchar(4000)**|Elenco delimitato da virgole delle colonne che contribuiscono ai predicati di uguaglianza nel formato seguente:<br /><br /> *Table. Column*  = *constant_value*|  
 |**inequality_columns**|**nvarchar(4000)**|Elenco delimitato da virgole delle colonne che contribuiscono ai predicati di disuguaglianza, ad esempio predicati nel formato seguente:<br /><br /> *Table. Column*  >  *constant_value*<br /><br /> Qualsiasi operatore di confronto diverso da "=" esprime disuguaglianza.|  
-|**included_columns**|**nvarchar(4000)**|Elenco delimitato da virgole delle colonne necessarie come colonne di copertura per la query. Per altre informazioni sulle colonne di copertura o incluse, vedere [creare indici con colonne incluse](../../relational-databases/indexes/create-indexes-with-included-columns.md).<br /><br /> Per gli indici ottimizzati per la memoria (hash e non cluster ottimizzati per la memoria), ignorare **included_columns**. Tutte le colonne della tabella vengono incluse in ogni indice ottimizzato per la memoria.|  
+|**included_columns**|**nvarchar(4000)**|Elenco delimitato da virgole delle colonne necessarie come colonne di copertura per la query. Per altre informazioni sulle colonne di copertura o incluse, vedere [creare indici con colonne incluse](../../relational-databases/indexes/create-indexes-with-included-columns.md).<br /><br /> Per gli indici ottimizzati per la memoria (hash e non cluster ottimizzati per la memoria), ignorare `included_columns` . Tutte le colonne della tabella vengono incluse in ogni indice ottimizzato per la memoria.|  
 |**istruzione**|**nvarchar(4000)**|Nome della tabella in cui l'indice risulta mancante.|  
   
 ## <a name="remarks"></a>Commenti  
- Le informazioni restituite da **sys.dm_db_missing_index_details** vengono aggiornate in caso di ottimizzazione di una query tramite Query Optimizer e non sono persistenti. Le informazioni relative agli indici mancanti vengono mantenute solo fino al riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per mantenere tali informazioni anche dopo il riciclo del server, gli amministratori di database devono eseguirne periodicamente copie di backup.  
+ Le informazioni restituite da `sys.dm_db_missing_index_details` vengono aggiornate quando una query viene ottimizzata dal Query Optimizer e non è permanente. Le informazioni sugli indici mancanti vengono mantenute solo fino al riavvio del motore di database. Per mantenere tali informazioni anche dopo il riciclo del server, gli amministratori di database devono eseguirne periodicamente copie di backup. Utilizzare la `sqlserver_start_time` colonna [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) per individuare l'ultima ora di avvio del motore di database.   
+
   
- Per determinare il gruppo di indici mancanti a cui appartiene un determinato indice mancante, è possibile eseguire query sulla DMV **sys.dm_db_missing_index_groups** eseguendone l'equijoin con **sys.dm_db_missing_index_details** in base alla colonna **index_handle**.  
+ Per determinare i gruppi di indici mancanti a cui appartiene un particolare indice mancante, è possibile eseguire una query sulla `sys.dm_db_missing_index_groups` vista a gestione dinamica eseguendone in `sys.dm_db_missing_index_details` base alla `index_handle` colonna.  
 
   >[!NOTE]
   >Il set di risultati per questa DMV è limitato a 600 righe. Ogni riga contiene un indice mancante. Se sono presenti più di 600 indici mancanti, è necessario indirizzare gli indici mancanti esistenti in modo da poter visualizzare quelli più recenti. 
   
 ## <a name="using-missing-index-information-in-create-index-statements"></a>Utilizzo di informazioni sugli indici mancanti in istruzioni CREATE INDEX  
- Per convertire le informazioni restituite da **sys.dm_db_missing_index_details** in un'istruzione create index sia per gli indici ottimizzati per la memoria che per quelli basati su disco, le colonne di uguaglianza devono essere inserite prima delle colonne di disuguaglianza e insieme devono creare la chiave dell'indice. Aggiungere le colonne incluse all'istruzione CREATE INDEX mediante la clausola INCLUDE. Per determinare un ordine efficiente per le colonne di uguaglianza, ordinarle in base alla selettività a partire dalle colonne più selettive, all'estrema sinistra nell'elenco di colonne.  
+ Per convertire le informazioni restituite da `sys.dm_db_missing_index_details` in un'istruzione create index sia per gli indici ottimizzati per la memoria che per quelli basati su disco, le colonne di uguaglianza devono essere inserite prima delle colonne di disuguaglianza e insieme devono creare la chiave dell'indice. Aggiungere le colonne incluse all'istruzione CREATE INDEX mediante la clausola INCLUDE. Per determinare un ordine efficiente per le colonne di uguaglianza, ordinarle in base alla selettività a partire dalle colonne più selettive, all'estrema sinistra nell'elenco di colonne.  
   
  Per ulteriori informazioni sugli indici ottimizzati per la memoria, vedere [indici per tabelle Memory-Optimized](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).  
   
@@ -72,3 +73,4 @@ Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in 
  [sys.dm_db_missing_index_groups &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
  [sys.dm_db_missing_index_group_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
  [sys.dm_db_missing_index_group_stats_query &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-query-transact-sql.md)     
+ [sys.dm_os_sys_info &#40;&#41;Transact-SQL ](sys-dm-os-sys-info-transact-sql.md)

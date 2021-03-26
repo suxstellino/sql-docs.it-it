@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e4fbb1222168200d2107198091db7109ef6247ec
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 485ae050a4456e846d8455fef71875198ddf4655
+ms.sourcegitcommit: c242f423cc3b776c20268483cfab0f4be54460d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100039411"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105551521"
 ---
 # <a name="security-concepts-for-big-data-clusters-2019"></a>Concetti relativi alla sicurezza per i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -53,7 +53,7 @@ Attualmente non è possibile aprire porte aggiuntive per accedere al cluster dal
 
 ## <a name="authorization"></a>Autorizzazione
 
-In tutto il cluster la sicurezza integrata tra diversi componenti consente di passare l'identità dell'utente originale durante l'esecuzione di query da Spark e SQL Server, fino a HDFS. Come indicato sopra, i diversi endpoint del cluster esterni supportano l'autenticazione di Active Directory.
+In tutto il cluster, la sicurezza integrata tra diversi componenti consente di passare l'identità dell'utente originale durante l'invio di query da Spark e SQL Server, fino a HDFS. Come indicato sopra, i diversi endpoint del cluster esterni supportano l'autenticazione di Active Directory.
 
 Esistono due livelli di controllo delle autorizzazioni nel cluster per la gestione dell'accesso ai dati. L'autorizzazione nel contesto dei Big Data viene eseguita in SQL Server, usando le autorizzazioni di SQL Server tradizionali per gli oggetti, e in HDFS con elenchi di controllo (ACL), che associano le identità utente ad autorizzazioni specifiche.
 
@@ -105,6 +105,8 @@ Password dell'amministratore del cluster:
 
 [Che cosa sono i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
 
-[Workshop: Architettura Microsoft dei [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+[Workshop: Architettura Microsoft dei [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://github.com/microsoft/sqlworkshops-bdc)
 
-[Controllo degli accessi in base al ruolo di Kubernetes](kubernetes-rbac.md)
+[Controllo degli accessi in base al ruolo di Kubernetes](kubernetes-rbac.md)  
+
+[Domande frequenti sui cluster di Big Data](big-data-cluster-faq.yml)  
