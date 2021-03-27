@@ -14,24 +14,22 @@ helpviewer_keywords:
 ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 1f74f004d65f4fb5191ab562142204898fc3453d
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 099e87b069377555de07b591ff889cc1ca4e11b6
+ms.sourcegitcommit: 524a0f0cc9533188f4b14d2e78ba1cfe816b3b9a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100343857"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105633094"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role-for-an-always-on-availability-group"></a>La replica di disponibilità non presenta un ruolo integro per un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="introduction"></a>Introduzione  
   
-|||  
-|-|-|  
-|**Nome criteri**|Stato del ruolo della replica di disponibilità|  
-|**Problema**|La replica di disponibilità non presenta un ruolo integro.|  
-|**Categoria**|**Critico**|  
-|**Facet**|replica di disponibilità|  
+- **Nome criterio**: stato del ruolo della replica di disponibilità
+- **Problema**: la replica di disponibilità non dispone di un ruolo integro.
+- **Categoria**: **critico**
+- **Facet**: replica di disponibilità  
   
 ## <a name="description"></a>Descrizione  
  Tramite questi criteri viene controllato lo stato del ruolo della replica di disponibilità. I criteri sono in uno stato non integro quando il ruolo della replica di disponibilità non è né primario né secondario. Altrimenti, sono in uno stato integro.  

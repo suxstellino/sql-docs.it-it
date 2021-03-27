@@ -14,24 +14,22 @@ helpviewer_keywords:
 ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 36e9640011bb273fee05a1eefa899e10bb595eff
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 09b8b9094e8ed3d860f342b30ace41c25826894b
+ms.sourcegitcommit: 524a0f0cc9533188f4b14d2e78ba1cfe816b3b9a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100340917"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105633378"
 ---
 # <a name="availability-database-is-suspended-for-an-availability-group"></a>Il database di disponibilità è sospeso per un gruppo di disponibilità
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="introduction"></a>Introduzione  
   
-|||  
-|-|-|  
-|**Nome criteri**|Stato di sospensione del database di disponibilità|  
-|**Problema**|Database di disponibilità sospeso.|  
-|**Categoria**|**Warning**|  
-|**Facet**|Database di disponibilità|  
+- **Nome criterio**: stato di sospensione del database di disponibilità
+- **Problema**: il database di disponibilità è sospeso.
+- **Categoria**: **avviso**
+- **Facet**: database di disponibilità  
   
 ## <a name="description"></a>Descrizione  
  Questi criteri consentono di controllare lo stato di spostamento dei dati del database secondario, anche noto come "replica di database secondaria". I criteri sono in uno stato non integro se questo spostamento è sospeso. Altrimenti, sono in uno stato integro.  

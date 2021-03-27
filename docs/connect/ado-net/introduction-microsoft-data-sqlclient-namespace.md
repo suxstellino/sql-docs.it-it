@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-jizho2
-ms.openlocfilehash: e966e4f2f43ebe546d6baa0b757f682f3eca205b
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 8fdb8f726fc33ccb5acc6129c693a5233f87e313
+ms.sourcegitcommit: 524a0f0cc9533188f4b14d2e78ba1cfe816b3b9a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596358"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105633283"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Introduzione allo spazio dei nomi Microsoft.Data.SqlClient
 
@@ -25,9 +25,10 @@ ms.locfileid: "98596358"
 
 Le note sulla versione sono disponibili anche nel repository GitHub: [Note sulla versione 2.1](https://github.com/dotnet/SqlClient/tree/master/release-notes/2.1).
 
-### <a name="new-features"></a>Nuove funzionalità
+### <a name="new-features-in-21"></a>Nuove funzionalità di 2,1
 
 ### <a name="cross-platform-support-for-always-encrypted"></a>Supporto multipiattaforma per Always Encrypted
+
 Microsoft. Data. SqlClient v 2.1 estende il supporto per Always Encrypted alle piattaforme seguenti:
 
 | Supporto per Always Encrypted | Supporto per Always Encrypted con enclave sicura  | Framework di destinazione | Versione di Microsoft.Data.SqlClient | Sistema operativo |
@@ -42,6 +43,7 @@ Microsoft. Data. SqlClient v 2.1 estende il supporto per Always Encrypted alle p
 > <sup>2</sup> Always Encrypted con enclave sicure non è supportato in .NET Standard 2.0.
 
 ### <a name="azure-active-directory-device-code-flow-authentication"></a>Autenticazione con flusso di codice del dispositivo di Active Directory
+
 Microsoft. Data. SqlClient v 2.1 fornisce il supporto per l'autenticazione "Flusso di codice del dispositivo" con MSAL.NET.
 Documentazione di riferimento: [Flusso di concessione dell'autorizzazione del dispositivo OAuth 2.0](/azure/active-directory/develop/v2-oauth2-device-code)
 
@@ -60,9 +62,11 @@ public class ActiveDirectoryAuthenticationProvider
 ```
 
 ### <a name="azure-active-directory-managed-identity-authentication"></a>Autenticazione tramite identità gestite di Azure Active Directory
+
 Microsoft.Data.SqlClient v2.1 introduce il supporto per l'autenticazione di Azure Active Directory tramite [identità gestite](/azure/active-directory/managed-identities-azure-resources/overview).
 
 Sono supportate le parole chiave dei tipi di autenticazione seguenti:
+
 - Identità gestita di Active Directory
 - Active Directory MSI (per compatibilità incrociata con i driver MS SQL)
 
@@ -83,6 +87,7 @@ Esempi di stringhe di connessione:
 ```
 
 ### <a name="azure-active-directory-interactive-authentication-enhancements"></a>Miglioramenti dell'autenticazione interattiva di Azure Active Directory
+
 Microsoft.Data.SqlClient v2.1 aggiunge le API seguenti per personalizzare l'esperienza di "Autenticazione interattiva di Active Directory":
 
 ```csharp
@@ -103,12 +108,13 @@ public class ActiveDirectoryAuthenticationProvider
 ```
 
 ### <a name="sqlclientauthenticationproviders-configuration-section"></a>`SqlClientAuthenticationProviders` Sezione Configurazione
+
 Microsoft.Data.SqlClient v2.1 introduce una nuova sezione di configurazione, `SqlClientAuthenticationProviders` (un clone della `SqlAuthenticationProviders` esistente). La sezione di configurazione esistente, `SqlAuthenticationProviders`, è ancora supportata per la compatibilità con le versioni precedenti quando viene definito il tipo appropriato.
 
 La nuova sezione consente ai file di configurazione dell'applicazione di contenere sia una sezione SqlAuthenticationProviders per System.Data.SqlClient che una sezione SqlClientAuthenticationProviders per Microsoft.Data.SqlClient.
 
-
 ### <a name="azure-active-directory-authentication-using-an-application-client-id"></a>Autenticazione di Azure Active Directory con un ID client dell'applicazione
+
 Microsoft.Data.SqlClient v2.1 introduce il supporto per il passaggio di un ID client dell'applicazione definito dall'utente a Microsoft Authentication Library. L'ID client dell'applicazione viene usato per l'autenticazione con Azure Active Directory.
 
 Sono state introdotte le nuove API seguenti:
@@ -116,60 +122,63 @@ Sono state introdotte le nuove API seguenti:
 1. Un nuovo costruttore è stato introdotto in ActiveDirectoryAuthenticationProvider: \
 _[Si applica a tutte le piattaforme .NET (.NET Framework, .NET Core e .NET Standard)]_
 
-```csharp
-public ActiveDirectoryAuthenticationProvider(string applicationClientId)
-```
+    ```csharp
+    public ActiveDirectoryAuthenticationProvider(string applicationClientId)
+    ```
 
-Utilizzo:
-```csharp
-string APP_CLIENT_ID = "<GUID>";
-SqlAuthenticationProvider customAuthProvider = new ActiveDirectoryAuthenticationProvider(APP_CLIENT_ID);
-SqlAuthenticationProvider.SetProvider(SqlAuthenticationMethod.ActiveDirectoryInteractive, customAuthProvider);
+    Utilizzo:
 
-using (SqlConnection sqlConnection = new SqlConnection("<connection_string>")
-{
-    sqlConnection.Open();
-}
-```
+    ```csharp
+    string APP_CLIENT_ID = "<GUID>";
+    SqlAuthenticationProvider customAuthProvider = new ActiveDirectoryAuthenticationProvider(APP_CLIENT_ID);
+    SqlAuthenticationProvider.SetProvider(SqlAuthenticationMethod.ActiveDirectoryInteractive, customAuthProvider);
+    
+    using (SqlConnection sqlConnection = new SqlConnection("<connection_string>")
+    {
+        sqlConnection.Open();
+    }
+    ```
 
 2. Una nuova proprietà di configurazione è stata introdotta in `SqlAuthenticationProviderConfigurationSection` e `SqlClientAuthenticationProviderConfigurationSection`: \
 _[Si applica a .NET Framework e .NET Core]_
 
-```csharp
-internal class SqlAuthenticationProviderConfigurationSection : ConfigurationSection
-{
-    ...
-    [ConfigurationProperty("applicationClientId", IsRequired = false)]
-    public string ApplicationClientId => this["applicationClientId"] as string;
-}
+    ```csharp
+    internal class SqlAuthenticationProviderConfigurationSection : ConfigurationSection
+    {
+        ...
+        [ConfigurationProperty("applicationClientId", IsRequired = false)]
+        public string ApplicationClientId => this["applicationClientId"] as string;
+    }
+    
+    // Inheritance
+    internal class SqlClientAuthenticationProviderConfigurationSection : SqlAuthenticationProviderConfigurationSection
+    { ... }
+    ```
 
-// Inheritance
-internal class SqlClientAuthenticationProviderConfigurationSection : SqlAuthenticationProviderConfigurationSection
-{ ... }
-```
+    Utilizzo:
 
-Utilizzo:
-```xml
-<configuration>
-    <configSections>
-        <section name="SqlClientAuthenticationProviders"
-                         type="Microsoft.Data.SqlClient.SqlClientAuthenticationProviderConfigurationSection, Microsoft.Data.SqlClient" />
-    </configSections>
-    <SqlClientAuthenticationProviders applicationClientId ="<GUID>" />
-</configuration>
-
-<!--or-->
-
-<configuration>
-    <configSections>
-        <section name="SqlAuthenticationProviders"
-                         type="Microsoft.Data.SqlClient.SqlAuthenticationProviderConfigurationSection, Microsoft.Data.SqlClient" />
-    </configSections>
-    <SqlAuthenticationProviders applicationClientId ="<GUID>" />
-</configuration>
-```
+    ```xml
+    <configuration>
+        <configSections>
+            <section name="SqlClientAuthenticationProviders"
+                             type="Microsoft.Data.SqlClient.SqlClientAuthenticationProviderConfigurationSection, Microsoft.Data.SqlClient" />
+        </configSections>
+        <SqlClientAuthenticationProviders applicationClientId ="<GUID>" />
+    </configuration>
+    
+    <!--or-->
+    
+    <configuration>
+        <configSections>
+            <section name="SqlAuthenticationProviders"
+                             type="Microsoft.Data.SqlClient.SqlAuthenticationProviderConfigurationSection, Microsoft.Data.SqlClient" />
+        </configSections>
+        <SqlAuthenticationProviders applicationClientId ="<GUID>" />
+    </configuration>
+    ```
 
 ### <a name="data-classification-v2-support"></a>Supporto della classificazione dei dati v2
+
 Microsoft.Data.SqlClient v2.1 introduce il supporto per le informazioni sul "livello di riservatezza" della classificazione dei dati. Sono ora disponibili le nuove API seguenti:
 
 ```csharp
@@ -195,6 +204,7 @@ public enum SensitivityRank
 ```
 
 ### <a name="server-process-id-for-an-active-sqlconnection"></a>ID del processo server per un `SqlConnection` attivo
+
 Microsoft.Data.SqlClient v2.1 introduce una nuova proprietà `SqlConnection`, `ServerProcessId`, in una connessione attiva.
 
 ```csharp
@@ -206,6 +216,7 @@ public class SqlConnection
 ```
 
 ### <a name="trace-logging-support-in-native-sni"></a>Supporto della registrazione delle tracce in SNI nativo
+
 Microsoft.Data.SqlClient v2.1 estende l'implementazione di `SqlClientEventSource` esistente per abilitare la traccia eventi in SNI.dll. Gli eventi devono essere acquisiti usando uno strumento come Xperf.
 
 La traccia può essere abilitata inviando un comando a `SqlClientEventSource` come illustrato di seguito:
@@ -221,8 +232,8 @@ EventSource.SendCommand(eventSource, (EventCommand)16384, null);
 EventSource.SendCommand(eventSource, (EventCommand)(8192 | 16384), null);
 ```
 
-
 ### <a name="command-timeout-connection-string-property"></a>Proprietà della stringa di connessione "timeout comando"
+
 Microsoft.Data.SqlClient v2.1 introduce la proprietà della stringa di connessione "timeout comando" per sovrascrivere il valore predefinito di 30 secondi. Il timeout per i singoli comandi può essere sovrascritto tramite la proprietà `CommandTimeout` in SqlCommand.
 
 Esempi di stringhe di connessione:
@@ -230,33 +241,30 @@ Esempi di stringhe di connessione:
 `"Server={serverURL}; Initial Catalog={db}; Integrated Security=true; Command Timeout=60"`
 
 ### <a name="removal-of-symbols-from-native-sni"></a>Rimozione di simboli da SNI nativi
+
 Con Microsoft.Data.SqlClient v2.1 sono stati rimossi i simboli introdotti nella versione [v2.0.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient.SNI/2.0.0) dal NuGet [Microsoft.Data.SqlClient.SNI.runtime](https://www.nuget.org/packages/Microsoft.Data.SqlClient.SNI.runtime) a partire dalla versione [v 2.1.1](https://www.nuget.org/packages/Microsoft.Data.SqlClient.SNI.runtime/2.1.1). I simboli pubblici vengono ora pubblicati in Microsoft symbols server per strumenti come BinSkim che richiedono l'accesso ai simboli pubblici.
 
 ### <a name="source-linking-of-microsoftdatasqlclient-symbols"></a>Collegamento di origine dei simboli Microsoft.Data.SqlClient
-A partire da Microsoft.Data.SqlClient v 2.1, i simboli Microsoft. Data. SqlClient sono collegati al codice sorgente e pubblicati nel server Microsoft symbols per un'esperienza di debug avanzata senza necessità di scaricare il codice sorgente.
 
+A partire da Microsoft.Data.SqlClient v 2.1, i simboli Microsoft. Data. SqlClient sono collegati al codice sorgente e pubblicati nel server Microsoft symbols per un'esperienza di debug avanzata senza necessità di scaricare il codice sorgente.
 
 ## <a name="release-notes-for-microsoftdatasqlclient-20"></a>Note sulla versione per Microsoft.Data.SqlClient 2.0
 
 Le note sulla versione sono disponibili anche nel repository GitHub: [Note sulla versione 2.0](https://github.com/dotnet/SqlClient/tree/master/release-notes/2.0).
 
-### <a name="breaking-changes"></a>Modifiche di rilievo
+### <a name="breaking-changes-in-20"></a>Modifiche di rilievo in 2,0
 
 - Il modificatore di accesso per l'interfaccia del provider di enclave `SqlColumnEncryptionEnclaveProvider` è stato modificato da `public` a `internal`.
-
 - Le costanti nella classe `SqlClientMetaDataCollectionNames` sono state aggiornate in modo da riflettere le modifiche apportate a SQL Server.
-
 - Il driver eseguirà ora la convalida del certificato del server quando l'istanza di SQL Server di destinazione applica la crittografia TLS, che è l'impostazione predefinita per le connessioni di Azure.
-
 - `SqlDataReader.GetSchemaTable()` restituisce ora una stringa `DataTable` vuota invece di `null`.
-
 - Il driver esegue ora l'arrotondamento delle cifre decimali in modo che corrisponda al comportamento di SQL Server. Per la compatibilità con le versioni precedenti, è possibile abilitare il comportamento di troncamento precedente usando un'opzione di AppContext.
-
-- Per le applicazioni .NET Framework che usano **Microsoft.Data.SqlClient**, i file SNI.dll scaricati in precedenza nelle cartelle `bin\x64` e `bin\x86` sono ora denominati `Microsoft.Data.SqlClient.SNI.x64.dll` e ` Microsoft.Data.SqlClient.SNI.x86.dll` e vengono scaricati nella directory `bin`.
-
+- Per .NET Framework applicazioni che utilizzano **Microsoft. Data. SqlClient**, i file di SNI.dll scaricati in precedenza `bin\x64` nelle `bin\x86` cartelle e sono ora denominati `Microsoft.Data.SqlClient.SNI.x64.dll` e `Microsoft.Data.SqlClient.SNI.x86.dll` e verranno scaricati nella `bin` Directory.
 - Nuovi sinonimi delle proprietà della stringa di connessione sostituiranno le proprietà obsolete durante il recupero della stringa di connessione da `SqlConnectionStringBuilder` per coerenza. [Altre informazioni](#new-connection-string-property-synonyms)
 
-### <a name="new-features"></a>Nuove funzionalità
+### <a name="new-features-in-20"></a>Nuove funzionalità di 2,0
+
+In Microsoft. Data. SqlClient 2,0 sono state introdotte le nuove funzionalità seguenti.
 
 #### <a name="dns-failure-resiliency"></a>Resilienza agli errori DNS
 
@@ -266,7 +274,7 @@ Il driver memorizza ora nella cache gli indirizzi IP da ogni connessione riuscit
 
 Questa versione introduce il supporto per l'acquisizione dei log di traccia eventi per il debug delle applicazioni. Per acquisire questi eventi, le applicazioni client devono restare in ascolto degli eventi dall'implementazione EventSource di SqlClient:
 
-```
+```csharp
 Microsoft.Data.SqlClient.EventSource
 ```
 
@@ -327,7 +335,7 @@ sqlConnection.Open(SqlConnectionOverrides.OpenWithoutRetry);
 
 Impostare un nome utente usando la proprietà **User ID** o **UID** della stringa di connessione:
 
-```
+```csharp
 "Server=<server name>; Database=<db name>; Authentication=Active Directory Interactive; User Id=<username>;"
 ```
 
@@ -343,14 +351,14 @@ Microsoft.Data.SqlClient (.NET Core e .NET Standard) in Windows è ora dipendent
 
 Le note sulla versione sono disponibili anche nel repository GitHub: [Note sulla versione 1.1](https://github.com/dotnet/SqlClient/tree/master/release-notes/1.1).
 
-### <a name="new-features"></a>Nuove funzionalità
+### <a name="new-features-in-11"></a>Nuove funzionalità di 1,1
 
 #### <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted con enclave sicuri
 
 Always Encrypted è disponibile a partire da Microsoft SQL Server 2016. Gli enclave sicuri sono disponibili a partire da Microsoft SQL Server 2019. Per usare la funzionalità di enclave, le stringhe di connessione devono includere il protocollo di attestazione e l'URL di attestazione necessari. Ad esempio:
 
-```
-Attestation Protocol=HGS;Enclave Attestation Url=<attestation_url_for_HGS>
+```csharp
+"Attestation Protocol=HGS;Enclave Attestation Url=<attestation_url_for_HGS>"
 ```
 
 Per altre informazioni, vedere:
@@ -360,10 +368,10 @@ Per altre informazioni, vedere:
 
 ## <a name="release-notes-for-microsoftdatasqlclient-10"></a>Note sulla versione per Microsoft.Data.SqlClient 1.0
 
-La versione iniziale dello spazio dei nomi Microsoft.Data.SqlClient offre funzionalità aggiuntive rispetto allo spazio dei nomi System.Data.SqlClient esistente.
+La versione iniziale dello spazio dei nomi Microsoft. Data. SqlClient offre più funzionalità rispetto allo spazio dei nomi System. Data. SqlClient esistente.
 Le note sulla versione sono disponibili anche nel repository GitHub: [Note sulla versione 1.0](https://github.com/dotnet/SqlClient/tree/master/release-notes/1.0).
 
-### <a name="new-features"></a>Nuove funzionalità
+### <a name="new-features-in-10"></a>Nuove funzionalità di 1,0
 
 #### <a name="new-features-over-net-framework-472-systemdatasqlclient"></a>Nuove funzionalità rispetto a .NET Framework 4.7.2 System.Data.SqlClient
 
@@ -423,7 +431,7 @@ namespace Microsoft.Data.SqlClient.DataClassification
 
 Il supporto UTF-8 non richiede modifiche al codice dell'applicazione. Queste modifiche di SqlClient consentono di ottimizzare la comunicazione tra il client e il server quando il server supporta UTF-8 e le regole di confronto delle colonne sottostanti usano UTF-8. Vedere la sezione UTF-8 in [Novità di SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md).
 
-### <a name="always-encrypted-with-enclaves"></a>Always Encrypted con enclave
+### <a name="always-encrypted-with-secure-enclaves"></a>Crittografia sempre attiva con enclave sicure
 
 In generale, la documentazione esistente che usa System.Data.SqlClient in .NET Framework **e i provider dell'archivio chiavi master delle colonne predefiniti** può ora essere usata anche con .NET Core.
 

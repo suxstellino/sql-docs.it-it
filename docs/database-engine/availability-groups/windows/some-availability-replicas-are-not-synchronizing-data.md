@@ -14,24 +14,22 @@ helpviewer_keywords:
 ms.assetid: 3db6a569-e942-4321-a0dd-c4ab002087c8
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 8e4d4441faac8600bcf8fd0d2d8aed333fbf8f6b
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 6acc37f3976ed9a728aae899eb6178dc29d4de54
+ms.sourcegitcommit: 524a0f0cc9533188f4b14d2e78ba1cfe816b3b9a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100352611"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105633365"
 ---
 # <a name="some-availability-replicas-are-not-synchronizing-data"></a>Alcune repliche di disponibilità non stanno sincronizzando i dati.
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="introduction"></a>Introduzione  
   
-|||  
-|-|-|  
-|**Nome criteri**|Stato di sincronizzazione dei dati delle repliche di disponibilità|  
-|**Problema**|Alcune repliche di disponibilità non prevedono la sincronizzazione dei dati.|  
-|**Categoria**|**Warning**|  
-|**Facet**|gruppo di disponibilità|  
+- **Nome criterio**: stato di sincronizzazione dei dati delle repliche di disponibilità
+- **Problema**: alcune repliche di disponibilità non eseguono la sincronizzazione dei dati.
+- **Categoria**: **avviso**
+- **Facet**: gruppo di disponibilità  
   
 ## <a name="description"></a>Descrizione  
  Questi criteri consentono di eseguire il rollup dello stato di sincronizzazione dei dati di tutte le repliche di disponibilità nel gruppo di disponibilità e di verificare se la sincronizzazione di una qualsiasi replica di disponibilità non funzioni. I criteri si trovano in uno stato non integro se uno degli stati di sincronizzazione dei dati della replica di disponibilità è NON IN SINCRONIZZAZIONE.  

@@ -15,24 +15,22 @@ ms.assetid: 4fd003e7-808e-4b0e-b28a-47d9f2616f06
 author: cawrites
 ms.author: chadam
 manager: erikre
-ms.openlocfilehash: fc78c3fc25d7dcf0222494863ef8c7db20527f97
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 87129dd95205ef5ae70acc2a4afca9afc00f6929
+ms.sourcegitcommit: 524a0f0cc9533188f4b14d2e78ba1cfe816b3b9a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100344629"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105633348"
 ---
 # <a name="data-synchronization-state-of-availability-database-is-not-healthy-for-an-always-on-availability-group"></a>Lo stato di sincronizzazione dei dati del database di disponibilità non è integro per un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="introduction"></a>Introduzione  
   
-|||  
-|-|-|  
-|**Nome criteri**|Stato di sincronizzazione dei dati del database di disponibilità|  
-|**Problema**|Lo stato di sincronizzazione dei dati del database di disponibilità non è integro.|  
-|**Categoria**|**Warning**|  
-|**Facet**|Database di disponibilità|  
+- **Nome criterio**: stato di sincronizzazione dei dati del database di disponibilità
+- **Problema**: lo stato di sincronizzazione dei dati del database di disponibilità non è integro.
+- **Categoria**: **avviso**
+- **Facet**: database di disponibilità  
   
 ## <a name="description"></a>Descrizione  
  Questi criteri consentono di eseguire il rollup dello stato di sincronizzazione dei dati di tutti i database di disponibilità, anche noti come "repliche di disponibilità", nella replica di disponibilità. I criteri sono in uno stato non integro se una qualsiasi replica del database non è nello stato di sincronizzazione dei dati previsto. Altrimenti, sono in uno stato integro.  

@@ -14,24 +14,22 @@ helpviewer_keywords:
 ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 6edcd5419260ac6bccf03739fe19f580c59e0718
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 0c94969ad3569d9ee276358264ef0e9d1823c66b
+ms.sourcegitcommit: 524a0f0cc9533188f4b14d2e78ba1cfe816b3b9a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100340889"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105633320"
 ---
 # <a name="always-on-availability-group-is-not-ready-for-automatic-failover"></a>Il gruppo di disponibilità Always On non è pronto per il failover automatico
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="introduction"></a>Introduzione  
   
-|||  
-|-|-|  
-|**Nome criteri**|Conformità del gruppo di disponibilità al failover automatico|  
-|**Problema**|Il gruppo di disponibilità non è pronto per il failover automatico.|  
-|**Categoria**|**Critico**|  
-|**Facet**|gruppo di disponibilità|  
+- **Nome del criterio**: conformità del failover automatico del gruppo di disponibilità
+- **Problema**: il gruppo di disponibilità non è pronto per il failover automatico.
+- **Categoria**: **critico**
+- **Facet**: gruppo di disponibilità  
   
 ## <a name="description"></a>Descrizione  
  Con questi criteri è possibile verificare che nel gruppo di disponibilità sia disponibile almeno una replica secondaria pronta per il failover. I criteri si trovano in uno stato non integro e viene generato un avviso quando il failover della replica primaria è automatico, ma nessuna delle repliche secondarie nel gruppo di disponibilità è pronta per il failover.  

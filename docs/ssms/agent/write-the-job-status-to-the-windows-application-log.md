@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016
-ms.openlocfilehash: a09db511bc9ececa5b5929f12123fda60162b36f
-ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.openlocfilehash: 430c1cc1a5be2b264393b39d15ab05cf8a7b11b4
+ms.sourcegitcommit: 524a0f0cc9533188f4b14d2e78ba1cfe816b3b9a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99251281"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105633205"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Registrare lo stato del processo nel registro applicazioni di Windows
 
@@ -59,11 +59,11 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 4.  Selezionare l'opzione **Scrivi nel registro eventi delle applicazioni di Windows** e quindi scegliere una delle opzioni seguenti:  
   
-    -   Fare clic su **In caso di esito positivo processo** per registrare lo stato del processo quando questo viene completato correttamente.  
+    -   Fare clic su in **caso di esito positivo processo** per registrare lo stato del processo quando il processo viene completato correttamente.  
   
-    -   Fare clic su **In caso di esito negativo processo** per registrare lo stato del processo quando questo non viene completato correttamente.  
+    -   Fare clic su in **caso di esito negativo processo** per registrare lo stato del processo quando il processo non viene completato correttamente.  
   
-    -   Fare clic su **Al termine del processo** per registrare lo stato del processo indipendentemente dal suo completamento.  
+    -   Fare clic al **termine del processo** per registrare lo stato del processo indipendentemente dallo stato di completamento.  
   
 ## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Utilizzo di SQL Server Management Objects  
 **Per registrare lo stato del processo nel registro applicazioni di Windows**  

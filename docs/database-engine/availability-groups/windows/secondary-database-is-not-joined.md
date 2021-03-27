@@ -14,24 +14,22 @@ helpviewer_keywords:
 ms.assetid: 10817e5e-75fa-42dd-baa2-359bea3ad051
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 39c9f6852fd1a1cc15a014b67ee693a3cb315787
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: b2e5f53d4bd9b544227781d9afdda4a2d46bc4b1
+ms.sourcegitcommit: 524a0f0cc9533188f4b14d2e78ba1cfe816b3b9a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100344499"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105633117"
 ---
 # <a name="secondary-database-is-not-joined"></a>Un database secondario non è associato
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="introduction"></a>Introduzione  
   
-|||  
-|-|-|  
-|**Nome criteri**|Stato di join del database di disponibilità|  
-|**Problema**|Il database secondario non è unito in join.|  
-|**Categoria**|**Warning**|  
-|**Facet**|Database di disponibilità|  
+- **Nome criterio**: stato di join del database di disponibilità
+- **Problema**: il database secondario non è unito in join.
+- **Categoria**: **avviso**
+- **Facet**: database di disponibilità  
   
 ## <a name="description"></a>Descrizione  
  Questi criteri consentono di controllare lo stato di join del database secondario, anche noto come "replica di database secondaria". I criteri sono in uno stato non integro quando la replica del set di dati non è unita in join. Altrimenti, sono in uno stato integro.  

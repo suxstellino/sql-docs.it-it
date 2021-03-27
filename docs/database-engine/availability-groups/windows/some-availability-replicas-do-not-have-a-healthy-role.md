@@ -14,24 +14,22 @@ helpviewer_keywords:
 ms.assetid: 7ec5b337-7201-4a66-a541-7560f8b18784
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 6d435503c6e2fa2eb39da46ef7d93ca163f9cbfc
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: a0ae6fbe590ad7fd048d8be94f2af7ab1a16e368
+ms.sourcegitcommit: 524a0f0cc9533188f4b14d2e78ba1cfe816b3b9a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100352602"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105633390"
 ---
 # <a name="some-availability-replicas-do-not-have-a-healthy-role"></a>Alcune repliche di disponibilità non dispongono di un ruolo integro
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="introduction"></a>Introduzione  
   
-|||  
-|-|-|  
-|**Nome criteri**|Stato del ruolo delle repliche di disponibilità|  
-|**Problema**|Alcune repliche di disponibilità non presentano un ruolo integro.|  
-|**Categoria**|**Warning**|  
-|**Facet**|gruppo di disponibilità|  
+- **Nome criterio**: stato del ruolo delle repliche di disponibilità
+- **Problema**: alcune repliche di disponibilità non dispongono di un ruolo integro.
+- **Categoria**: **avviso**
+- **Facet**: gruppo di disponibilità  
   
 ## <a name="description"></a>Descrizione  
  Questi criteri consentono di eseguire il rollup dello stato di connessione di tutte le repliche di disponibilità e di verificare l'eventuale esistenza di repliche di disponibilità che non presentano un ruolo integro. I criteri sono in uno stato non integro quando una replica di disponibilità non è né primaria né secondaria. Altrimenti, sono in uno stato integro.  

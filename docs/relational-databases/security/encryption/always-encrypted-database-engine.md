@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 523cd4e58ad340dfaa8751868eccb5e593c67a74
-ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
+ms.openlocfilehash: cfda09e184933ae537cdf3b4c6430e6d6d4b20fc
+ms.sourcegitcommit: 524a0f0cc9533188f4b14d2e78ba1cfe816b3b9a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99536378"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105633138"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -71,7 +71,7 @@ Per informazioni dettagliate su come sviluppare applicazioni che usano Always En
 ## <a name="remarks"></a>Osservazioni
 
 La crittografia e la decrittografia avvengono tramite il driver client. Questo significa che alcune azioni che si verificano solo sul lato server non funzionano quando si usa Always Encrypted. Queste azioni includono (senza limitazioni): 
-- Copia dei dati da un columng a un altro tramite un aggiornamento, BULK INSERT (T-SQL), SELECT INTO, INSERT. Selezionare. 
+- Copia di dati da una colonna a un'altra tramite un aggiornamento, BULK INSERT (T-SQL), SELECT INTO, INSERT. Selezionare. 
 - Trigger, tabelle temporali, colonne di tipo sparse, full-text, OLTP in memoria e Change Data Capture (CDC). 
 
 

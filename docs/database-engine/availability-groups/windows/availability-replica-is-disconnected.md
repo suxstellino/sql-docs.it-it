@@ -14,24 +14,22 @@ helpviewer_keywords:
 ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 371a4e1e76cfeb79eeb83f2dabd159927e044008
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 71324a6bfc03bbb75979391ac22bd0381938b54f
+ms.sourcegitcommit: 524a0f0cc9533188f4b14d2e78ba1cfe816b3b9a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100343887"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105633120"
 ---
 # <a name="availability-replica-is-disconnected-within-an-always-on-availability-group"></a>La replica di disponibilità è disconnessa in un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="introduction"></a>Introduzione  
   
-|||  
-|-|-|  
-|**Nome criteri**|Stato di connessione della replica di disponibilità|  
-|**Problema**|La replica di disponibilità è disconnessa.|  
-|**Categoria**|**Critico**|  
-|**Facet**|replica di disponibilità|  
+- **Nome criterio**: stato connessione replica di disponibilità
+- **Problema**: la replica di disponibilità è disconnessa.
+- **Categoria**: **critico**
+- **Facet**: replica di disponibilità  
   
 ## <a name="description"></a>Descrizione  
  Tramite questi criteri è possibile controllare lo stato di connessione tra le repliche di disponibilità. I criteri sono in uno stato non integro quando lo stato di connessione della replica di disponibilità è DISCONNESSO. Altrimenti, sono in uno stato integro.  

@@ -14,24 +14,22 @@ helpviewer_keywords:
 ms.assetid: e58ed56e-4c30-42e6-a9fc-a8c401620e02
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 41a4535f1acbf9d871a83011e50fea2ecd700404
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: b9070e88373e689cd753e1d378d55e1501715c5c
+ms.sourcegitcommit: 524a0f0cc9533188f4b14d2e78ba1cfe816b3b9a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100352592"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105633337"
 ---
 # <a name="some-synchronous-replicas-are-not-synchronized"></a>Alcune repliche sincrone non sono sincronizzate
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="introduction"></a>Introduzione  
   
-|||  
-|-|-|  
-|**Nome criteri**|Stato di sincronizzazione dei dati delle repliche sincrone|  
-|**Problema**|Alcune repliche sincrone non sono sincronizzate.|  
-|**Categoria**|**Warning**|  
-|**Facet**|gruppo di disponibilità|  
+- **Nome criterio**: stato di sincronizzazione dei dati delle repliche sincrone
+- **Problema**: alcune repliche sincrone non sono sincronizzate.
+- **Categoria**: **avviso**
+- **Facet**: gruppo di disponibilità  
   
 ## <a name="description"></a>Descrizione  
  Questi criteri consentono di eseguire il rollup dello stato di sincronizzazione dei dati di tutte le repliche di disponibilità e di verificare tutte le repliche di disponibilità che non sono nello stato di sincronizzazione previsto. I criteri sono in uno stato non integro se una replica asincrona è in uno stato NON IN SINCRONIZZAZIONE e una replica sincrona è in uno stato NON SINCRONIZZATO. Altrimenti, i criteri sono in uno stato integro.  

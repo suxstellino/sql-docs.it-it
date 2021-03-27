@@ -11,12 +11,12 @@ ms.assetid: 0edeaa08-9c5d-4e3a-bc15-b9a1f0c8a9dc
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 16c4de0bdf08be3bfdbc8644ae61d300284a0c25
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: dc144017c6bf45a21721fe647dbf5affa486f8ef
+ms.sourcegitcommit: 524a0f0cc9533188f4b14d2e78ba1cfe816b3b9a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100080773"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105632910"
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>Mapping di schemi Oracle a schemi SQL Server (OracleToSQL)
 In Oracle ogni database dispone di uno o più schemi. Per impostazione predefinita, SSMA esegue la migrazione di tutti gli oggetti in uno schema Oracle a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database denominato per lo schema. Tuttavia, è possibile personalizzare il mapping tra gli schemi e i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database Oracle.  
@@ -24,7 +24,7 @@ In Oracle ogni database dispone di uno o più schemi. Per impostazione predefini
 ## <a name="oracle-and-sql-server-schemas"></a>Schemi Oracle e SQL Server  
 Un database Oracle contiene schemi. Un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene più database, ognuno dei quali può disporre di più schemi.  
   
-Il concetto Oracle di uno schema viene mappato al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concetto di database e di uno dei relativi schemi. Ad esempio, Oracle potrebbe avere uno schema denominato **HR**. Un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe disporre di un database denominato **HR** e all'interno di tale database sono schemi. Uno schema è lo schema **dbo** (o Owner database). Per impostazione predefinita, verrà eseguito il mapping dell' **ora** dello schema Oracle al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database e allo schema **HR. dbo**. SSMA fa riferimento alla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinazione di database e schema come schema.  
+Il concetto Oracle di uno schema viene mappato al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concetto di database e di uno dei relativi schemi. Ad esempio, Oracle potrebbe avere uno schema denominato **HR**. Un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe disporre di un database denominato **SampleDatabase** e all'interno di tale database sono presenti più schemi. Per impostazione predefinita, verrà eseguito il mapping dell' **ora** dello schema Oracle al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database e allo schema **SampleDatabase.hr**. SSMA fa riferimento alla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinazione di database e schema come schema.  
   
 È possibile modificare il mapping tra Oracle e gli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schemi.  
   

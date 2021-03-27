@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: ''
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 787a683eb0fc666eff8f3c72519bbba149dafe96
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: 3652991936de1ee06b5614a883420af26b74f159
+ms.sourcegitcommit: 524a0f0cc9533188f4b14d2e78ba1cfe816b3b9a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100340809"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105632850"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Funzionamento e linee guida per i timeout lease, cluster e controllo integrità per i gruppi di disponibilità Always On 
 
@@ -155,12 +155,11 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
 
   - SameSubnetDelay \<= CrossSubnetDelay 
   
- | Impostazione di timeout | Scopo | tra le | Utilizzi | IsAlive e LooksAlive | Cause | Risultato 
+ | Impostazione di timeout | Scopo | tra le | Utilizzi | IsAlive e LooksAlive | Cause | Risultato |
  | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
  | Timeout lease </br> **Impostazione predefinita: 20000** | Impedire lo split brain | Da primaria a cluster </br> (HADR) | [Oggetti evento di Windows](/windows/desktop/Sync/event-objects)| Usati in entrambi | Mancata risposta del sistema operativo, memoria virtuale insufficiente, paging del working set, generazione di dump, massimo utilizzo della CPU, WSFC inattivo (perdita di quorum) | Risorsa del gruppo di disponibilità offline-online, failover |  
  | Timeout sessione </br> **Impostazione predefinita: 10000** | Informare del problema di comunicazione tra replica primaria e secondaria | Da secondaria a primaria </br> (HADR) | [Socket TCP (messaggi inviati tramite l'endpoint di mirroring del database)](/windows/desktop/WinSock/windows-sockets-start-page-2) | Usati in nessuna delle due | Comunicazione di rete, </br> Problemi nella replica secondaria - inattiva, mancata risposta del sistema operativo, contesa di risorse | Secondaria - DISCONNESSA | 
  |Timeout controllo integrità  </br> **Impostazione predefinita: 30000** | Indicare il timeout durante il tentativo di determinare l'integrità della replica primaria | Da cluster a primaria </br> (FCI e HADR) | [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) di T-SQL | Usati in entrambi | Condizioni di errore soddisfatte, mancata risposta del sistema operativo, memoria virtuale insufficiente, taglio del working set, generazione di dump, WSFC (perdita di quorum), problemi dell'utilità di pianificazione (utilità di pianificazione con deadlock)| Risorsa del gruppo di disponibilità offline-online o failover, riavvio/failover FCI |  
-  | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>Vedere anche    
 

@@ -14,24 +14,22 @@ helpviewer_keywords:
 ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 8a1de6e359fbb74b3d53a4c86851e9c3fdc4570c
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 583df3a1dda426355dde62935ccdddb00bbe76ca
+ms.sourcegitcommit: 524a0f0cc9533188f4b14d2e78ba1cfe816b3b9a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100340886"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105633096"
 ---
 # <a name="always-on-availability-group-is-offline"></a>Un gruppo di disponibilità Always On è offline
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="introduction"></a>Introduzione  
   
-|||  
-|-|-|  
-|**Nome criteri**|Stato online del gruppo di disponibilità|  
-|**Problema**|Il gruppo di disponibilità è offline.|  
-|**Categoria**|**Critico**|  
-|**Facet**|gruppo di disponibilità|  
+- **Nome criterio**: stato del gruppo di disponibilità online
+- **Problema**: il gruppo di disponibilità è offline.
+- **Categoria**: **critico**
+- **Facet**: gruppo di disponibilità  
   
 ## <a name="description"></a>Descrizione  
  Questi criteri consentono di controllare lo stato online o offline del gruppo di disponibilità. I criteri si trovano in uno stato non integro e viene generato un avviso quando la risorsa cluster del gruppo di disponibilità è offline o nel gruppo di disponibilità non è disponibile una replica primaria.  

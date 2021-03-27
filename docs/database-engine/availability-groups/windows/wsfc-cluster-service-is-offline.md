@@ -15,12 +15,12 @@ ms.assetid: d502548d-ece6-4a42-9ded-2157d33e3d21
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: e382a0936293dedc55c1804251fbb95550936311
-ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
+ms.openlocfilehash: b09cb3e540dd66b524829f4e0374ef22b4532dc4
+ms.sourcegitcommit: 524a0f0cc9533188f4b14d2e78ba1cfe816b3b9a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104611165"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105633130"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>Il servizio cluster WSFC è offline
 
@@ -28,12 +28,10 @@ ms.locfileid: "104611165"
     
 ## <a name="introduction"></a>Introduzione  
   
-|||  
-|-|-|  
-|**Nome criteri**|Stato del cluster WSFC|  
-|**Problema**|Il servizio cluster WSFC è offline.|  
-|**Categoria**|**Critico**|  
-|**Facet**|Istanza di SQL Server|  
+- **Nome criterio**: stato del cluster WSFC
+- **Problema**: il servizio cluster WSFC è offline.
+- **Categoria**: **critico**
+- **Facet**: istanza di SQL Server  
   
 ## <a name="description"></a>Descrizione  
  Questi criteri consentono di controllare lo stato di WSCF (Windows Server Failover Clustering). I criteri sono in uno stato non integro e viene generato un avviso quando il cluster WSFC è offline o nello stato di quorum forzato. Tutti i gruppi di disponibilità ospitati all'interno di questo cluster sono offline oppure è necessaria un'azione di ripristino di emergenza.  
