@@ -32,12 +32,12 @@ ms.assetid: c724d9cc-7b1f-4c71-bdf5-08bc52b33afc
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eafd796b87af4165427eff70bfd05fbc8214a221
-ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.openlocfilehash: 594cf2cf8893891deeca89f1f56c76ee1b946caf
+ms.sourcegitcommit: 2f971c85d87623c0aed1612406130d840e7bdb2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104749991"
+ms.lasthandoff: 03/29/2021
+ms.locfileid: "105744527"
 ---
 # <a name="current_timestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "104749991"
 Questa funzione restituisce il timestamp di sistema del database corrente come valore **datetime** senza la differenza di fuso orario del database. `CURRENT_TIMESTAMP` deriva dal sistema operativo del computer in cui viene eseguita l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 > [!NOTE]  
->  `SYSDATETIME` e `SYSUTCDATE` hanno una precisione maggiore, misurata in base alla precisione in secondi frazionari, rispetto a `GETDATE` e a `GETUTCDATE`. La funzione `SYSDATETIMEOFFSET` include la differenza di fuso orario di sistema. È possibile assegnare `SYSDATETIME`, `SYSUTCDATE` e `SYSDATETIMEOFFSET` a una variabile di uno qualsiasi dei tipi di data e ora.  
+>  `SYSDATETIME` e `SYSUTCDATE` hanno una precisione maggiore, misurata in base alla precisione in secondi frazionari, rispetto a `GETDATE` e a `GETUTCDATE`. La funzione `SYSDATETIMEOFFSET` include la differenza di fuso orario di sistema. È possibile assegnare `SYSDATETIME`, `SYSUTCDATETIME` e `SYSDATETIMEOFFSET` a una variabile di uno qualsiasi dei tipi di data e ora.  
   
 Questa funzione è l'equivalente ANSI SQL di [GETDATE](../../t-sql/functions/getdate-transact-sql.md).
   

@@ -1,8 +1,8 @@
 ---
-title: Implementazione della compressione di riga | Microsoft Docs
+title: Implementazione della compressione di riga
 description: Informazioni su come il motore di database di SQL Server implementa la compressione delle righe per semplificare la pianificazione dello spazio di archiviazione necessario per i dati.
 ms.custom: ''
-ms.date: 06/30/2016
+ms.date: 03/27/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,16 +11,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - compression [SQL Server], row
 - row compression [Database Engine]
-ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad9f8a8552c534a0397db6cb32b17cbd3fb7cd71
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: f216ae5de400f377dd247ecbc8a671d9f3faf397
+ms.sourcegitcommit: 2f971c85d87623c0aed1612406130d840e7bdb2e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485483"
+ms.lasthandoff: 03/29/2021
+ms.locfileid: "105744475"
 ---
 # <a name="row-compression-implementation"></a>Implementazione della compressione di riga
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,8 +46,8 @@ ms.locfileid: "97485483"
 |**smallint**|Sì|Se il valore può essere archiviato in 1 byte, verrà utilizzato solo 1 byte.|  
 |**int**|Sì|Utilizza solo i byte necessari. Ad esempio, se un valore può essere archiviato in 1 byte, verrà utilizzato solo 1 byte.|  
 |**bigint**|Sì|Utilizza solo i byte necessari. Ad esempio, se un valore può essere archiviato in 1 byte, verrà utilizzato solo 1 byte.|  
-|**decimal**|Sì|Questa archiviazione corrisponde al formato di archiviazione vardecimal.|  
-|**numeric**|Sì|Questa archiviazione corrisponde al formato di archiviazione vardecimal.|  
+|**decimal**|Sì|USA solo i byte necessari, indipendentemente dalla precisione specificata. Se, ad esempio, un valore può essere archiviato in 3 byte, l'archiviazione avrà solo 3 byte. Il footprint di archiviazione è esattamente uguale al formato di archiviazione vardecimal.|  
+|**numeric**|Sì|USA solo i byte necessari, indipendentemente dalla precisione specificata. Se, ad esempio, un valore può essere archiviato in 3 byte, l'archiviazione avrà solo 3 byte. Il footprint di archiviazione è esattamente uguale al formato di archiviazione vardecimal.|  
 |**bit**|Sì|L'overhead di metadati aumenta questo valore a 4 bit.|  
 |**smallmoney**|Sì|Rappresenta i dati Integer utilizzando un numero intero di 4 byte. Il valore della valuta viene moltiplicato per 10.000 e il valore intero risultante viene archiviato rimuovendo tutte le cifre dopo il separatore decimale. e un'ottimizzazione dell'archiviazione analoga a quella associata ai tipi Integer.|  
 |**money**|Sì|Rappresenta i dati Integer utilizzando un Integer a 8 byte. Il valore della valuta viene moltiplicato per 10.000 e il valore intero risultante viene archiviato rimuovendo tutte le cifre dopo il separatore decimale. A questo tipo sono associati un intervallo maggiore rispetto a **smallmoney**. e un'ottimizzazione dell'archiviazione analoga a quella associata ai tipi Integer.|  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 02e07cbb5b0fd6a917d6455c9d41a0fda3f03055
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: b00c37035df68aaee5672f396552876a7586dbec
+ms.sourcegitcommit: 2f971c85d87623c0aed1612406130d840e7bdb2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100343951"
+ms.lasthandoff: 03/29/2021
+ms.locfileid: "105744471"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Ripartire il carico di lavoro di sola lettura in una replica secondaria di un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -104,7 +104,7 @@ ms.locfileid: "100343951"
   
     -   La funzionalità Change Data Capture non può essere abilitata solo in un database di replica secondaria. È possibile abilitare Change Data Capture nel database di replica primaria e leggere le modifiche dalle tabelle CDC usando le funzioni nel database di replica secondaria.  
   
--   Dal momento che viene eseguito il mapping delle operazioni di lettura al livello di transazioni di isolamento dello snapshot, la pulizia di record fantasma nella replica primaria può essere bloccata dalle transazioni in una o più repliche secondarie. L'attività di pulizia di record fantasma consentirà di pulire automaticamente i record fantasma per le tabelle basate su disco nella replica primaria se non più necessari per qualsiasi replica secondaria.  Questa operazione è simile a quella che viene effettuata quando si eseguono transazioni nella replica primaria. In caso estremo, nel database secondario sarà necessario terminare una query di lettura a esecuzione prolungata nella replica secondaria tramite cui si blocca la pulizia fantasma. Si noti che la pulizia fantasma può essere bloccata se la replica secondaria è disconnessa o quando lo spostamento dati è sospeso nel database secondario. Questo stato impedisce inoltre il troncamento del log, pertanto se lo stato persiste, si consiglia di rimuovere il database secondario dal gruppo di disponibilità. Non esiste alcun problema di pulizia di record fantasma con le tabelle con ottimizzazione per la memoria perché le versioni di riga vengono mantenute nella memoria e sono indipendenti dalle versioni di riga nella replica primaria.  
+-   Dal momento che viene eseguito il mapping delle operazioni di lettura al livello di transazioni di isolamento dello snapshot, la pulizia di record fantasma nella replica primaria può essere bloccata dalle transazioni in una o più repliche secondarie. L'attività di pulizia di record fantasma consentirà di pulire automaticamente i record fantasma per le tabelle basate su disco nella replica primaria se non più necessari per qualsiasi replica secondaria.  Questa operazione è simile a quella che viene effettuata quando si eseguono transazioni nella replica primaria. In caso estremo, nel database secondario sarà necessario terminare una query di lettura a esecuzione prolungata nella replica secondaria tramite cui si blocca la pulizia fantasma. Si noti che la pulizia fantasma può essere bloccata se la replica secondaria è disconnessa o quando lo spostamento dati è sospeso nel database secondario. I record fantasma utilizzano lo spazio fisico in un file di dati. questo può causare problemi di riutilizzo dello spazio. per ulteriori informazioni, vedere [pulizia fantasma](../../../relational-databases/ghost-record-cleanup-process-guide.md) . Questo stato impedisce inoltre il troncamento del log, pertanto se lo stato persiste, si consiglia di rimuovere il database secondario dal gruppo di disponibilità. Non esiste alcun problema di pulizia di record fantasma con le tabelle con ottimizzazione per la memoria perché le versioni di riga vengono mantenute nella memoria e sono indipendenti dalle versioni di riga nella replica primaria.  
   
 -   Potrebbe verificarsi un errore durante l'operazione DBCC SHRINKFILE nei file contenenti le tabelle basate su disco nella replica primaria se nel file sono contenuti record fantasma ancora necessari in una replica secondaria.  
   

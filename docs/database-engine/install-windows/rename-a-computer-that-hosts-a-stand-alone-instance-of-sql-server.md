@@ -20,12 +20,12 @@ ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: b84f700ab19b940d8aa742be94dc2c3ab3726507
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: debdeffa2409642c01f9abdc502a897d6ea3dac3
+ms.sourcegitcommit: 2f971c85d87623c0aed1612406130d840e7bdb2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100353040"
+ms.lasthandoff: 03/29/2021
+ms.locfileid: "105744457"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Rinominare un computer che ospita un'istanza autonoma di SQL Server
 
@@ -39,7 +39,7 @@ La procedura seguente non può essere utilizzata per rinominare un'istanza di [!
   
  Prima di iniziare il processo di ridenominazione, esaminare le informazioni seguenti:  
   
--   Se un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fa parte di un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il processo di ridenominazione del computer è diverso da quello previsto per un computer che ospita un'istanza autonoma.  
+-   Se un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fa parte di un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il processo di ridenominazione del computer è diverso da quello previsto per un computer che ospita un'istanza autonoma. Per ulteriori informazioni, vedere [rinominare un'istanza del cluster di failover di SQL Server](../../sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md).
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta la ridenominazione dei computer interessati dalla replica, a meno che non si usi il log shipping con replica. Il computer secondario nel log shipping può essere rinominato in caso di perdita definitiva del computer primario. Per altre informazioni, vedere [Log shipping e replica &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
   
