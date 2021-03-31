@@ -2,7 +2,7 @@
 description: sp_addpullsubscription_agent (Transact-SQL)
 title: sp_addpullsubscription_agent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/09/2020
+ms.date: 03/29/2021
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 031911ae4e9f6f81e82ec9d0b4fb20c73d94a2cd
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8bf3e90f4f1b360a45427241cc2da480765d4da5
+ms.sourcegitcommit: 851f47e27512651f809540b77bfbd09e6ddb5362
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99206684"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105937808"
 ---
 # <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -82,8 +82,13 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ## <a name="arguments"></a>Argomenti  
 `[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname** e non prevede alcun valore predefinito.  
 
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
+
 > [!NOTE]
-> Il nome del server può essere specificato come `<Hostname>,<PortNumber>` . Potrebbe essere necessario specificare il numero di porta per la connessione quando SQL Server viene distribuito in Linux o Windows con una porta personalizzata e il servizio browser è disabilitato.
+> Il nome del server può essere specificato come `<Hostname>,<PortNumber>` . Potrebbe essere necessario specificare il numero di porta per la connessione quando SQL Server viene distribuito in Linux o Windows con una porta personalizzata e il servizio browser è disabilitato. L'uso di numeri di porta personalizzati per il server di distribuzione remoto si applica solo a SQL Server 2019.
+
+::: moniker-end
   
 `[ @publisher_db = ] 'publisher_db'_` Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname** e il valore predefinito è null. *publisher_db* viene ignorato dai publisher Oracle.  
   

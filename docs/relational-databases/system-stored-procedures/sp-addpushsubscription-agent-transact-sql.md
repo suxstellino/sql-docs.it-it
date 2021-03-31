@@ -2,7 +2,7 @@
 description: sp_addpushsubscription_agent (Transact-SQL)
 title: sp_addpushsubscription_agent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/09/2020
+ms.date: 03/29/2021
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 396e90bb76296270bf25d236a7fd20cd34a063dc
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 81bf487607d0cfea9f7ab623e12d732e4463aded
+ms.sourcegitcommit: 851f47e27512651f809540b77bfbd09e6ddb5362
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99206664"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105937833"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -74,8 +74,13 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @subscriber = ] 'subscriber'` Nome dell'istanza del Sottoscrittore o nome del listener del gruppo di disponibilità se il database del Sottoscrittore è un gruppo di disponibilità. *Subscriber* è di **tipo sysname** e il valore predefinito è null. 
 
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
+
 > [!NOTE]
-> Il nome del server può essere specificato come `<Hostname>,<PortNumber>` . Potrebbe essere necessario specificare il numero di porta per la connessione quando SQL Server viene distribuito in Linux o Windows con una porta personalizzata e il servizio browser è disabilitato.
+> Il nome del server può essere specificato come `<Hostname>,<PortNumber>` . Potrebbe essere necessario specificare il numero di porta per la connessione quando SQL Server viene distribuito in Linux o Windows con una porta personalizzata e il servizio browser è disabilitato. L'uso di numeri di porta personalizzati per il server di distribuzione remoto si applica solo a SQL Server 2019.
+
+::: moniker-end
 
 `[ @subscriber_db = ] 'subscriber_db'` Nome del database di sottoscrizione. *subscriber_db* è di **tipo sysname** e il valore predefinito è null. Per un Sottoscrittore non SQL Server, specificare il valore **(destinazione predefinita)** per *subscriber_db*.  
   

@@ -91,7 +91,7 @@ items:
                 items:
                   - name: Istanza master
                     href: big-data-cluster/deployment-high-availability.md
-                  - name: Nome del nodo HDFS e Spark
+                  - name: Nodo del nome HDFS e Spark
                     href: big-data-cluster/deployment-high-availability-hdfs-spark.md
               - name: Cluster Kubernetes
                 items:
