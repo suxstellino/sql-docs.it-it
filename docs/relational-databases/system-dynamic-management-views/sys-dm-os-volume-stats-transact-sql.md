@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: a34af15094cdd70833c16b2e3b3bfa1ce0ca4fca
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: feec80838dbb911b4cc551ba2c260e9d8eea9fd3
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99235958"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054602"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +48,8 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ## <a name="table-returned"></a>Tabella restituita  
   
-||||  
-|-|-|-|  
 |**Colonna**|**Tipo di dati**|**Descrizione**|  
+|-|-|-|  
 |**database_id**|**int**|ID del database. Non può essere null.|  
 |**file_id**|**int**|ID del file. Non può essere null.|  
 |**volume_mount_point**|**nvarchar(512)**|Punto di montaggio in corrispondenza del quale si trova la radice del volume. Può restituire una stringa vuota. Restituisce null nel sistema operativo Linux.|  

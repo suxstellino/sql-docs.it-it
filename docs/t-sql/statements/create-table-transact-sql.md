@@ -48,12 +48,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 807508fcd1d89abcd37bee18177c63ba9b13bde4
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 4f4dd848c1e0255d9f8fd009a4908a1cc330bf9f
+ms.sourcegitcommit: f5de0340c61202e743d9b301e514b95c0660a8e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100340009"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106098206"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -273,7 +273,9 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 <partition_number_expression> TO <partition_number_expression>
 ```
 
-```
+## <a name="syntax-for-memory-optimized-table"></a>Sintassi per la tabella con ottimizzazione per la memoria
+
+```syntaxsql
 -- Memory optimized CREATE TABLE Syntax
 CREATE TABLE
     { database_name.schema_name.table_name | schema_name.table_name | table_name }

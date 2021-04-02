@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6960778fcbd7eb707b50e18ce4a0c70e477ff28
-ms.sourcegitcommit: ecf074e374426c708073c7da88313d4915279fb9
+ms.openlocfilehash: a225c2fae4b20ad75666415e4315ec12c7f7aab9
+ms.sourcegitcommit: ebe81e2daa544f41c8ababb66a91c218ad0c2a0a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "103575237"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106176958"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Note sulla versione dei driver Microsoft per PHP per SQL Server
 
@@ -70,6 +70,8 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 <sup>1</sup> questa versione richiede il driver ODBC 17.4.2 o versione successiva. In caso contrario, verrà visualizzato un avviso relativo alla mancata impostazione di un attributo. Questo avviso può essere eliminato quando si utilizza un driver ODBC meno recente. Se si usa SQLSRV, vedere [procedura: configurare la gestione degli errori e degli avvisi con il driver sqlsrv](./how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md). Se si utilizza PDO_SQLSRV, gli avvisi vengono eliminati per impostazione predefinita, ma possono essere registrati. Per informazioni dettagliate, controllare l' [attività di registrazione](./logging-activity.md) .
 
+## <a name="previous-releases"></a>Versioni precedenti
+
 ## <a name="581"></a>5.8.1
 
 Questa versione si applica solo a Linux e macOS.
@@ -119,8 +121,6 @@ Questa versione si applica solo a Linux e macOS.
 | &nbsp; | &nbsp; |
 
 <sup>1</sup> Il supporto Alpine Linux è sperimentale per la versione 5.8.
-
-## <a name="previous-releases"></a>Versioni precedenti
 
 ## <a name="561"></a>5.6.1
 

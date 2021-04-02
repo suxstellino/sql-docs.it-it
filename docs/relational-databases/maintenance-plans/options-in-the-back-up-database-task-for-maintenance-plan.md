@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f1a233cdd69f069ae425de644dfe8b6d1475dd86
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 1b68c2b2f86633db9cbc5c35746c8113530491f3
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774407"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054646"
 ---
 # <a name="options-in-the-back-up-database-task-for-maintenance-plan"></a>Opzioni dell'attività Backup database per il piano di manutenzione
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "85774407"
  Fare clic su **Aggiungi** per aprire la finestra di dialogo **Selezione destinazione di backup** e specificare una o più posizioni su disco o dispositivi nastro.  
   
  **Azione per file di backup esistenti**  
- Selezionare **Accoda** per aggiungere questo backup alla fine del file. Selezionare **Sovrascrivi**per rimuovere i backup esistenti dal file e sostituirli con il nuovo.  
+ Selezionare **Accoda** per aggiungere questo backup alla fine del file. Selezionare **Sovrascrivi** per rimuovere i backup esistenti dal file e sostituirli con il nuovo.  
   
  **Crea un file di backup per ogni database**  
  Creare un file di backup nel percorso specificato nella casella della cartella. Viene creato un file per ogni database selezionato.  
@@ -98,7 +98,7 @@ ms.locfileid: "85774407"
  **Imposta compressione backup**  
  In [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o versioni successive, selezionare uno dei seguenti valori della [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md) :  
   
-|||  
+|Valore|Descrizione|  
 |-|-|  
 |**Utilizza l'impostazione predefinita del server**|Fare clic su questa opzione per utilizzare l'impostazione predefinita a livello di server.<br /><br /> Questa impostazione predefinita è specificata dall'opzione di configurazione del server **Valore predefinito di compressione backup** . Per informazioni su come visualizzare l'impostazione corrente di questa opzione, vedere [Visualizzare o configurare l'opzione di configurazione del server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).|  
 |**Comprimi backup**|Fare clic su questa opzione per comprimere il backup, indipendentemente dall'impostazione predefinita a livello di server.<br /><br /> **\*\* Importante \*\*** Per impostazione predefinita, la compressione aumenta significativamente l'uso della CPU e la CPU aggiuntiva usata dal processo di compressione può avere un impatto negativo sulle operazioni simultanee. Potrebbe pertanto essere necessario creare backup compressi con priorità bassa in una sessione in cui l'utilizzo della CPU è limitato da [Resource Governor](../../relational-databases/resource-governor/resource-governor.md). Per ulteriori informazioni, vedere [Utilizzo di Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  

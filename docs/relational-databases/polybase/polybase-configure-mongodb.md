@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15'
-ms.openlocfilehash: a9d975bf5a65ec8ece1aa2f3b1e957007046f4c8
-ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
+ms.openlocfilehash: 6fa6be71b0dde8184ed2c807d4170135b60d3557
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102247520"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054624"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>Configurare PolyBase per l'accesso a dati esterni in MongoDB
 
@@ -65,9 +65,11 @@ In questa sezione vengono usati i comandi Transact-SQL seguenti:
 
     ```sql
     CREATE EXTERNAL DATA SOURCE external_data_source_name
-    WITH (LOCATION = '<mongodb://<server>[:<port>]>',
-    -- PUSHDOWN = ON | OFF,
-    CREDENTIAL = <credential_name>);
+    WITH (LOCATION = '<mongodb://<server>[:<port>]>'
+    [ [ , ] CREDENTIAL = <credential_name> ]
+    [ [ , ] CONNECTION_OPTIONS = '<key_value_pairs>'[,...]]
+    [ [ , ] PUSHDOWN = { ON | OFF } ])
+    [ ; ]
     ```
 
 1. **Facoltativo:** Creare statistiche per una tabella esterna.
@@ -154,7 +156,7 @@ Nell'esempio seguente viene creata un'origine dati esterna con i parametri segue
 ```sql
 CREATE EXTERNAL DATA SOURCE external_data_source_name
     WITH (LOCATION = 'mongodb://mongodb0.example.com:27017',
-    CONNECTION_OPTION = 'replicaSet=myRepl','tls=true',
+    CONNECTION_OPTIONS = 'replicaSet=myRepl; tls=true',
     PUSHDOWN = ON ,
     CREDENTIAL = credential_name);
 ```

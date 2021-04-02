@@ -20,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23647aad9cbd2e4dbad4437d88a9e44d7a4810e0
-ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.openlocfilehash: 43c2b37911de66c4002056e8e3e9ddd34843c41c
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104739631"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054717"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guida per il controllo delle versioni delle righe e il blocco della transazione
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -521,9 +521,9 @@ GO
   
 <a name="lock_compat_table"></a> La tabella seguente illustra la compatibilità delle modalità di blocco più comuni.  
   
-||Modalità concessa esistente||||||  
+|Modalità concessa esistente|**IS**|**S**|**U**|**IX**|**SIX**|**X**|
 |------|---------------------------|------|------|------|------|------|  
-|**Modalità richiesta**|**IS**|**S**|**U**|**IX**|**SIX**|**X**|  
+|**Modalità richiesta**|
 |**Blocco preventivo condiviso (IS)**|Sì|Sì|Sì|Sì|Sì|No|  
 |**Condiviso (S)**|Sì|Sì|Sì|No|No|No|  
 |**Aggiornamento (U)**|Sì|Sì|No|No|No|No|  
@@ -564,9 +564,9 @@ GO
   
  Le modalità di blocco di intervalli di chiavi sono basate sulla matrice di compatibilità illustrata di seguito che stabilisce quali blocchi sono compatibili con quelli ottenuti dalla sovrapposizione di chiavi e intervalli.  
   
-||Modalità concessa esistente|||||||  
+|Modalità concessa esistente|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|
 |------|---------------------------|------|------|------|------|------|------|  
-|**Modalità richiesta**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
+|**Modalità richiesta**  
 |**Condiviso (S)**|Sì|Sì|No|Sì|Sì|Sì|No|  
 |**Aggiornamento (U)**|Sì|No|No|Sì|No|Sì|No|  
 |**Esclusivo (X)**|No|No|No|No|No|Sì|No|  

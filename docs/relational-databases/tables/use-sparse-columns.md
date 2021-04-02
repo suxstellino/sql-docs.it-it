@@ -16,12 +16,12 @@ ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8e5fd6a1e7d6a67295dcbce634bbff5761caff7
-ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.openlocfilehash: 99d49f328c727c89ad235b01c36ec1c241faedf5
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104755801"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054360"
 ---
 # <a name="use-sparse-columns"></a>Utilizzo di colonne di tipo sparse
 
@@ -62,12 +62,14 @@ ms.locfileid: "104755801"
   
  I tipi di dati seguenti non possono essere specificati come SPARSE:  
   
-|||  
-|-|-|  
-|**geography**|**text**|  
-|**geometry**|**timestamp**|  
-|**image**|**tipi di dati definiti dall'utente**|  
-|**ntext**||  
+:::row:::
+   :::column span="":::
+      **geography**<br>      **geometry**<br>      **image**<br>      **ntext**
+   :::column-end:::
+   :::column span="":::
+      **text**  <br>      **timestamp**  <br>      **tipi di dati definiti dall'utente**
+   :::column-end:::
+:::row-end:::
   
 ## <a name="estimated-space-savings-by-data-type"></a>Risparmio stimato in termini di spazio in base al tipo di dati  
  Le colonne di tipo sparse richiedono una quantità maggiore di spazio di archiviazione per i valori non Null rispetto a quella necessaria per dati identici non contrassegnati come SPARSE. Nelle tabelle seguenti viene illustrato l'utilizzo dello spazio per ogni tipo di dati. La colonna **Percentuale valori Null** indica la percentuale di dati con valore Null necessaria per ottenere un risparmio netto del 40% in termini di spazio.  

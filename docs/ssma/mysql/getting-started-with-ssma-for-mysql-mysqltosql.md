@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9847b7a709fe64f3fcb7fca92ce1f8a4003843e5
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 6669410e8d0917560b430e2c1754871757bb7647
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100070256"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054085"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Introduzione a SSMA per MySQL (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) per MySQL consente di convertire rapidamente gli schemi di database MySQL in SQL Server o negli schemi del database SQL di Azure, caricare gli schemi risultanti in SQL Server o nel database SQL di Azure ed eseguire la migrazione dei dati da MySQL a SQL Server o al database SQL di Azure.  
@@ -95,9 +95,8 @@ La barra degli strumenti del progetto contiene i pulsanti per l'uso di progetti,
 ### <a name="migration-toolbar"></a>Barra degli strumenti migrazione  
 La tabella seguente illustra i comandi della barra degli strumenti di migrazione:  
   
-|||  
-|-|-|  
 |**Button**|**Funzione**|  
+|-|-|  
 |**Creazione di report**|Converte gli oggetti MySQL selezionati in SQL Server o oggetti di database SQL di Azure e quindi crea un report che mostra l'esito positivo della conversione.<br /><br />Questo comando è disabilitato, a meno che gli oggetti non siano selezionati in MySQL Metadata Explorer.|  
 |**Converti schema**|Converte gli oggetti MySQL selezionati in SQL Server o oggetti di database SQL di Azure.<br /><br />Questo comando è disabilitato, a meno che gli oggetti non siano selezionati in MySQL Metadata Explorer.|  
 |**Eseguire la migrazione dei dati**|Esegue la migrazione dei dati dal database MySQL a SQL Server o al database SQL di Azure. Prima di eseguire questo comando, è necessario convertire gli schemi MySQL in SQL Server o negli schemi del database SQL di Azure e quindi caricare gli oggetti in SQL Server o nel database SQL di Azure.<br /><br />Questo comando è disabilitato, a meno che gli oggetti non siano selezionati in MySQL Metadata Explorer.|  
@@ -106,9 +105,8 @@ La tabella seguente illustra i comandi della barra degli strumenti di migrazione
 ### <a name="menus"></a>Menu  
 La tabella seguente illustra i menu SSMA.  
   
-|||  
-|-|-|  
 |**Menu**|**Descrizione**|  
+|-|-|  
 |**File**|Contiene i comandi per l'uso di progetti, la connessione a MySQL e la connessione a SQL Server o al database SQL di Azure.|  
 |**Modifica**|Contiene i comandi per trovare e utilizzare il testo nelle pagine dei dettagli. Per aprire la finestra di dialogo **Gestisci segnalibri** , nel menu Modifica fare clic su Gestisci segnalibri. Nella finestra di dialogo viene visualizzato un elenco di segnalibri esistenti. È possibile utilizzare i pulsanti sul lato destro della finestra di dialogo per gestire i segnalibri.|  
 |**Visualizzazione**|Contiene il comando **Sincronizza Esplora metadati** . Che sincronizza gli oggetti tra Esplora metadati MySQL e SQL Server o Esplora metadati del database SQL di Azure. Contiene anche i comandi per visualizzare e nascondere i riquadri di **output** e **Elenco errori** e i **layout** delle opzioni da gestire con i layout.|  

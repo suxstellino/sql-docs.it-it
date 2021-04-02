@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 03deafdc14c527caef5cfaeb0517b1aa16f92f9e
-ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
-ms.translationtype: HT
+ms.openlocfilehash: fdd804467607b8b6cb38731b3ffc83a5fec639a2
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84681540"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054254"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Creazione di un report con rientri (Generatore report e SSRS)
 Un report con rientri è un tipo di report impaginato di  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che visualizza le righe di dettaglio oppure i gruppi figlio rientrati sotto un gruppo padre nella stessa colonna, come illustrato nell'esempio seguente:  
@@ -39,7 +39,7 @@ Un report con rientri è un tipo di report impaginato di  [!INCLUDE[ssRSnoversio
   
     1.  Fare clic in un punto qualsiasi della tabella per selezionarla. Nel riquadro di raggruppamento viene visualizzato il gruppo Dettagli presente nel riquadro Gruppi di righe.  
   
-    2.  Nel riquadro di raggruppamento fare clic con il pulsante destro del mouse sul gruppo Dettagli, scegliere **Aggiungi gruppo**e quindi fare clic su **Gruppo padre**.  
+    2.  Nel riquadro di raggruppamento fare clic con il pulsante destro del mouse sul gruppo Dettagli, scegliere **Aggiungi gruppo** e quindi fare clic su **Gruppo padre**.  
   
     3.  Nella finestra di dialogo **Gruppo Tablix** specificare un nome per il gruppo e digitare o selezionare un'espressione di raggruppamento nell'elenco a discesa. Nell'elenco a discesa vengono visualizzate le espressioni di campo semplici disponibili nel riquadro dei dati del report. Ad esempio [PostalCode] è un'espressione di campo semplice per il campo PostalCode in un set di dati.  
   
@@ -61,13 +61,13 @@ Un report con rientri è un tipo di report impaginato di  [!INCLUDE[ssRSnoversio
   
     1.  Selezionare la cella con il campo di dettaglio per cui si desidera impostare il rientro. Le proprietà relative alla casella di testo per tale cella verranno visualizzate nel riquadro Proprietà.  
   
-    2.  In **Allineamento**nel riquadro Proprietà espandere le proprietà relative a **Riempimento**.  
+    2.  In **Allineamento** nel riquadro Proprietà espandere le proprietà relative a **Riempimento**.  
   
-    3.  In **A sinistra**digitare un nuovo valore di riempimento, ad esempio **1,2 cm**. Il riempimento consente di applicare il rientro al testo presente nella cella in base al valore specificato. Il valore predefinito è 2 punti. Il valore valido per le proprietà relative a Riempimento è zero (0) oppure un numero positivo, seguito da un identificatore di dimensione.  
+    3.  In **A sinistra** digitare un nuovo valore di riempimento, ad esempio **1,2 cm**. Il riempimento consente di applicare il rientro al testo presente nella cella in base al valore specificato. Il valore predefinito è 2 punti. Il valore valido per le proprietà relative a Riempimento è zero (0) oppure un numero positivo, seguito da un identificatore di dimensione.  
   
          Di seguito vengono riportati gli identificatori di dimensione:  
   
-        |||  
+        |Designatore|Descrizione|  
         |-|-|  
         |**in**|Pollici (1 pollice = 2,54 centimetri)|  
         |**cm**|Centimetri|  
@@ -89,14 +89,14 @@ Un report con rientri è un tipo di report impaginato di  [!INCLUDE[ssRSnoversio
   
 2.  Aggiungere altri gruppi al report.  
   
-    1.  Nel riquadro Gruppi di righe fare clic con il pulsante destro del mouse sul gruppo, scegliere **Aggiungi gruppo**e quindi il tipo di gruppo da aggiungere.  
+    1.  Nel riquadro Gruppi di righe fare clic con il pulsante destro del mouse sul gruppo, scegliere **Aggiungi gruppo** e quindi il tipo di gruppo da aggiungere.  
   
         > [!NOTE]  
         >  È possibile aggiungere gruppi a un'area dati in modi diversi. Per altre informazioni, vedere [Aggiunta o eliminazione di un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
     2.  Nella finestra di dialogo **Gruppo Tablix** digitare un nome.  
   
-    3.  In **Espressione di raggruppamento**digitare un'espressione o selezionare un campo del set di dati in base al quale eseguire il raggruppamento. Per creare un'espressione, fare clic sul pulsante Espressione (**fx**) per aprire la finestra di dialogo **Espressione** .  
+    3.  In **Espressione di raggruppamento** digitare un'espressione o selezionare un campo del set di dati in base al quale eseguire il raggruppamento. Per creare un'espressione, fare clic sul pulsante Espressione (**fx**) per aprire la finestra di dialogo **Espressione** .  
   
     4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

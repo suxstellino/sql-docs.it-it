@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: matteot, drskwier
 ms.custom: ''
 ms.date: 10/14/2020
-ms.openlocfilehash: 13b32a62791aaa932311223f4f648d8006eb33e7
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 46eb3f29ce21aada716458d554dd329b1bd10dff
+ms.sourcegitcommit: 0b37eb7aef2f358f80867cd13830dd6683da8d85
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101838037"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105981187"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>Codificare e decodificare identificatori di SLQ Server
 
@@ -32,9 +32,8 @@ Il cmdlet **Encode-SqlName** accetta come input un identificatore di [!INCLUDE[s
 
 I cmdlet **Encode-Sqlname** e **Decode-Sqlname** codificano o decodificano solo i caratteri consentiti negli identificatori delimitati di SQL Server, ma non sono supportati nei percorsi di PowerShell. Di seguito sono elencati i caratteri codificati da **Encode-SqlName** e decodificati da **Decode-SqlName**:
 
-|||||||||||||
-|-|-|-|-|-|-|-|-|-|-|-|-|
 |**Carattere**|\ |/|:|%|\<|>|*|?|[|]|&#124;|  
+|-|-|-|-|-|-|-|-|-|-|-|-|
 |**Codifica esadecimale**|%5C|%2F|%3A|%25|%3C|%3E|%2A|%3F|%5B|%5D|%7C|
 
 ## <a name="encoding-an-identifier"></a>Codifica di un identificatore  

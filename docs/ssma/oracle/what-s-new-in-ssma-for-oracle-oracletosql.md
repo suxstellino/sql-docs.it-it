@@ -10,16 +10,22 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: ef5f8fd634958c75cc67002615e3c4a72dcf3a51
-ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
+ms.openlocfilehash: 46d3a03a219ed10aa38f3e65d31d72faa4c224d7
+ms.sourcegitcommit: 0b37eb7aef2f358f80867cd13830dd6683da8d85
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102186562"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105981077"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Novità di SSMA per Oracle (OracleToSQL)
 
 Questo articolo elenca SQL Server Migration Assistant (SSMA) per le modifiche Oracle in ogni versione.
+
+## <a name="ssma-v818"></a>SSMA v 8.18
+
+La versione v 8.18 di SSMA per Oracle contiene le modifiche seguenti:
+
+* Correzione delle sequenze caricamento per Oracle 12C versione 1 (12,1)
 
 ## <a name="ssma-v817"></a>SSMA v 8.17
 

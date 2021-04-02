@@ -19,12 +19,12 @@ ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 799f00bfd7ddf0763212cefb00d8fea72a7dce27
-ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.openlocfilehash: 150e6732855b0e7c1b1e98eb34b0ebb3662633ad
+ms.sourcegitcommit: 0b37eb7aef2f358f80867cd13830dd6683da8d85
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104739921"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105981063"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Centro di sicurezza per il motore di database di SQL Server e il database SQL di Azure
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "104739921"
   
 ##  <a name="authentication-who-are-you"></a><a name="Who"></a> Autenticazione: informazioni sull'utente  
   
-|||  
+|Funzionalità|Collegamento|  
 |-|-|  
 |**Scelta del tipo di autenticazione**<br /><br /> :::image type="icon" source="../performance/media/security-center-sqlserver.png"::: Autenticazione di Windows<br /><br /> :::image type="icon" source="../performance/media/security-center-both.png"::: Autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> :::image type="icon" source="../../relational-databases/security/media/security-center-sqldb.png"::: Azure Active Directory|Scelta del tipo di autenticazione (Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])<br /><br /> [Scegliere una modalità di autenticazione](../../relational-databases/security/choose-an-authentication-mode.md)<br /><br /> [Connettersi al Database SQL utilizzando l’autenticazione di Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview)|  
 |**Dove viene eseguita l'autenticazione**<br /><br /> :::image type="icon" source="../performance/media/security-center-both.png"::: Database master: account di accesso e utenti di database<br /><br /> :::image type="icon" source="../performance/media/security-center-both.png"::: Database utente: utenti di database contenuti|Autenticazione a livello di database master (account di accesso e utenti di database)<br /><br /> [Creazione di un account di accesso di SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)<br /><br /> [Gestione di database e account di accesso in database SQL di Azure](/previous-versions/azure/ee336235(v=azure.100))<br /><br /> [Creazione di un utente di database](../../relational-databases/security/authentication-access/create-a-database-user.md)<br /><br /> <br /><br /> Autenticazione a livello di database utente<br /><br /> [Utenti di database indipendente: rendere portabile un database](../../relational-databases/security/contained-database-users-making-your-database-portable.md)|  
@@ -45,7 +45,7 @@ ms.locfileid: "104739921"
   
 ##  <a name="authorization-what-can-you-do"></a><a name="What"></a> Autorizzazione: operazioni consentite  
   
-|||  
+|Funzionalità|Collegamento|  
 |-|-|  
 |**Concessione, revoca e negazione delle autorizzazioni**<br /><br /> :::image type="icon" source="../performance/media/security-center-both.png"::: Classi a protezione diretta<br /><br /> :::image type="icon" source="../performance/media/security-center-sqlserver.png"::: Autorizzazioni server granulari<br /><br /> :::image type="icon" source="../performance/media/security-center-both.png"::: Autorizzazioni di database granulari|[Gerarchia delle autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)<br /><br /> [Autorizzazioni](../../relational-databases/security/permissions-database-engine.md)<br /><br /> [Entità a protezione diretta](../../relational-databases/security/securables.md)<br /><br /> [Introduzione alle autorizzazioni del motore di database](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)|  
 |**Sicurezza in base ai ruoli**<br /><br /> :::image type="icon" source="../performance/media/security-center-sqlserver.png"::: Ruoli a livello di server<br /><br /> :::image type="icon" source="../performance/media/security-center-both.png"::: Ruoli a livello di database|[Ruoli a livello di server](../../relational-databases/security/authentication-access/server-level-roles.md)<br /><br /> [Ruoli a livello di database](../../relational-databases/security/authentication-access/database-level-roles.md)|  
@@ -53,7 +53,7 @@ ms.locfileid: "104739921"
   
 ##  <a name="encryption-storing-secret-data"></a><a name="Encrypt"></a> Crittografia: archiviazione di dati segreti  
   
-|||  
+|Funzionalità|Collegamento|  
 |-|-|  
 |**Crittografia dei file**<br /><br /> :::image type="icon" source="../performance/media/security-center-sqlserver.png"::: Crittografia BitLocker (a livello di unità)<br /><br /> :::image type="icon" source="../performance/media/security-center-sqlserver.png"::: Crittografia NTFS (a livello di cartella)<br /><br /> :::image type="icon" source="../performance/media/security-center-both.png"::: Transparent Data Encryption (a livello di file)<br /><br /> :::image type="icon" source="../performance/media/security-center-both.png"::: Crittografia dei backup (a livello di file)|[BitLocker (a livello di unità)](https://support.microsoft.com/kb/2855131)<br /><br /> [Crittografia NTFS (a livello di cartella)](/previous-versions/tn-archive/dd163562(v=technet.10))<br /><br /> [Transparent Data Encryption (a livello di file)](../../relational-databases/security/encryption/transparent-data-encryption.md)<br /><br /> [Crittografia dei backup (a livello di file)](../../relational-databases/backup-restore/backup-encryption.md)|  
 |**Crittografia delle origini**<br /><br /> :::image type="icon" source="../performance/media/security-center-sqlserver.png"::: Modulo Extensible Key Management<br /><br /> :::image type="icon" source="../performance/media/security-center-sqlserver.png"::: Chiavi archiviate in Azure Key Vault<br /><br /> :::image type="icon" source="../performance/media/security-center-both.png"::: Always Encrypted|[Modulo Extensible Key Management](../../relational-databases/security/encryption/extensible-key-management-ekm.md)<br /><br /> [Chiavi archiviate nell'insieme di credenziali di Azure](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)<br /><br /> [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)|  
@@ -61,14 +61,14 @@ ms.locfileid: "104739921"
   
 ##  <a name="connection-security-restricting-and-securing"></a><a name="Connect"></a> Sicurezza della connessione: limitazioni e protezione  
   
-|||  
+|Funzionalità|Collegamento|  
 |-|-|  
 |**Protezione con firewall**<br /><br /> :::image type="icon" source="../performance/media/security-center-sqlserver.png"::: Impostazioni di Windows Firewall<br /><br /> :::image type="icon" source="../../relational-databases/security/media/security-center-sqldb.png"::: Impostazioni del firewall dei servizi di Azure<br /><br /> :::image type="icon" source="../../relational-databases/security/media/security-center-sqldb.png"::: Impostazioni del firewall del database|[Configurare Windows Firewall per l'accesso al motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)<br /><br /> [Impostazioni del firewall del database SQL di Azure](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)<br /><br /> [Impostazioni del firewall dei servizi di Azure](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)|  
 |**Crittografia dei dati in transito**<br /><br /> :::image type="icon" source="../performance/media/security-center-both.png"::: Connessioni SSL forzate<br /><br /> :::image type="icon" source="../performance/media/security-center-sqlserver.png"::: Connessioni SSL facoltative|[Abilitare connessioni crittografate al motore di database](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)<br /><br /> [Abilitare connessioni crittografate al motore di database](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md), [Sicurezza di rete](/azure/sql-database/sql-database-security-best-practice#network-security) <br /><br /> [Supporto di TLS 1.2 per Microsoft SQL Server](https://support.microsoft.com/kb/3135244)|  
   
 ##  <a name="auditing-recording-access"></a><a name="Audit"></a> Controllo: registrazione dell'accesso  
   
-|||  
+|Funzionalità|Collegamento|  
 |-|-|  
 |**Controllo automatizzato**<br /><br /> :::image type="icon" source="../../relational-databases/performance/media/security-center-sqlserver.png"::: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit (livello server e database)<br /><br /> :::image type="icon" source="../../relational-databases/security/media/security-center-sqldb.png"::: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Audit (livello database)<br /><br /> :::image type="icon" source="../../relational-databases/security/media/security-center-sqldb.png"::: Rilevare le minacce| <br /><br /> [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [Controllo del database SQL](/azure/azure-sql/database/auditing-overview)<br /><br /> [Introduzione ad Advanced Threat Protection per il database SQL](/azure/azure-sql/database/threat-detection-configure) <br /><br /> [Valutazione delle vulnerabilità del database SQL](/azure/sql-database/sql-vulnerability-assessment) |  
 |**Controllo personalizzato**<br /><br /> :::image type="icon" source="../../relational-databases/performance/media/security-center-both.png"::: Trigger|Implementazione di controlli personalizzati: Creazione di [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md) e di [DML Triggers](../../relational-databases/triggers/dml-triggers.md)|  

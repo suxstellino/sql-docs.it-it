@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/17/2020
-ms.openlocfilehash: 050447d6f1f9f13f04b01dec82e1b50ca6efbc69
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 9b3fd88dea4a7260938b21ccfac8b5120c1345bb
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100354817"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054680"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Note sulla versione per SQL Server Management Studio (SSMS)
 
@@ -306,7 +306,7 @@ SSMS 18.7 è la versione più recente di SSMS disponibile a livello generale. Se
 | Nuovo elemento | Dettagli | Soluzione alternativa |
 |----------|---------|------------|
 | SQL Server Management Studio (SSMS) - Generale | Esiste un bug noto con Struttura diagramma che causa il danneggiamento dei diagrammi esistenti. Ad esempio, quando si crea una Struttura diagramma con SSMS 17.9.1, quindi la si aggiorna/salva con SSMS 18.x e poi si prova ad aprirla con la versione 17.9.1. Per altri dettagli, vedere questa [segnalazione di un utente per SQL Server](https://feedback.azure.com/forums/908035/suggestions/37992649). | N/D |
-| SQL Server Management Studio (SSMS) - Generale | La finestra di dialogo Nuova specifica controllo server può causare l'arresto anomalo di SSMS con un errore di violazione di accesso. | N/D ||
+| SQL Server Management Studio (SSMS) - Generale | La finestra di dialogo Nuova specifica controllo server può causare l'arresto anomalo di SSMS con un errore di violazione di accesso. | N/D |
 | SMO/scripting | Le estensioni di SSMS che usano SMO devono essere ricompilate usando come destinazione il nuovo SMO v160. | N/D |
 | Integration Services | Quando si importano o esportano pacchetti in Integration Services o si esportano pacchetti in Azure-SSIS Integration Runtime, gli script vanno persi per i pacchetti che contengono attività o componenti di script. Soluzione alternativa: | Rimuovere la cartella "C:\Programmi (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
 
@@ -615,7 +615,7 @@ SSMS 18.7 è la versione più recente di SSMS disponibile a livello generale. Se
 
 | Nuovo elemento | Dettagli |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Accessibilità | Migliorata l'accessibilità dell'interfaccia utente del processo di Agent. |'
+| Accessibilità | Migliorata l'accessibilità dell'interfaccia utente del processo di Agent. |
 | Accessibilità | Migliorata l'accessibilità nella pagina di monitoraggio di Stretch grazie all'aggiunta del nome accessibile per il pulsante *Aggiornamento automatico* e anche all'aggiunta di un nome accessibile intelligente che consentirà agli utenti di sapere su quale pulsante si trovano e quale sarà l'effetto se viene selezionato. |
 | Integrazione ADS| Correzione di un possibile arresto anomalo di SSMS nel tentativo di usare i server registrati ADS.|
 | Progettazione database | Aggiunto il supporto per le regole di confronto Latin1_General_100_BIN2_UTF8 (disponibile in SQL Server 2019 CTP3.0) |
@@ -811,7 +811,7 @@ SSMS 18.7 è la versione più recente di SSMS disponibile a livello generale. Se
 |Backup/ripristino/collegamento/scollegamento del database|Correzione di un problema a causa del quale SSMS non trova un piano di ripristino valido o ne trova uno non ottimale. Per informazioni dettagliate, vedere [https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752). |
 |Backup/ripristino/collegamento/scollegamento del database|Risolto un problema per cui nella procedura guidata "Collega database" non venivano visualizzati file secondari rinominati. Ora tali file vengono visualizzati con un commento aggiunto, ad esempio, "Non trovato". Per informazioni dettagliate, vedere [https://feedback.azure.com/forums/908035/suggestions/32897434](https://feedback.azure.com/forums/908035/suggestions/32897434). |
 |Copia guidata database|Il tentativo di Genera script/Trasferisci/Copia guidata database di creare una tabella con una tabella in memoria non forza ansi_padding on.|
-|Copia guidata database|Attività Trasferisci database/Copia guidata database interrotte in SQL Server 2017 e SQL Server 2019.|""
+|Copia guidata database|Attività Trasferisci database/Copia guidata database interrotte in SQL Server 2017 e SQL Server 2019.|
 |Copia guidata database|Creazione della tabella di script di Genera script/Trasferisci/Copia guidata database prima della creazione di un'origine dati esterni associata.|
 |Finestra di dialogo di connessione|Abilitazione della rimozione di nomi utente dall'elenco di nomi utente precedente premendo CANC. Per informazioni dettagliate, vedere l'articolo su come [consentire l'eliminazione di utenti dalla finestra di accesso di SSMS](https://feedback.azure.com/forums/908035/suggestions/32897632).|
 |Importazione guidata applicazione livello dati|Correzione di un problema a causa del quale l'importazione guidata di applicazione livello dati non funzionava se connessi tramite Azure Active Directory (Azure AD).|

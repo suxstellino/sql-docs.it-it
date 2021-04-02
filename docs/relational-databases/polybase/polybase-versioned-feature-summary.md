@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ce732ab5e7f920f19a47537419242b637cda91c
-ms.sourcegitcommit: 17f05be5c08cf9a503a72b739da5ad8be15baea5
+ms.openlocfilehash: a7741d5966007fdadbc3d96e659e967085fc7734
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105103758"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054138"
 ---
 # <a name="polybase-features-and-limitations"></a>Funzionalità e limitazioni di PolyBase
 
@@ -64,8 +64,8 @@ La sintassi o le funzioni T-SQL seguenti impediranno il calcolo distribuzione:
 - `GREATEST`
 - `LEAST`
 - `PARSE`
-
-Il supporto di distribuzione per la `FORMAT` `TRIM` sintassi e è stato introdotto in [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] CU10 dalla.
+- `FORMAT` 
+- `TRIM`
 
 Per altre informazioni, vedere [distribuzione Computing in polibase](polybase-pushdown-computation.md).
 

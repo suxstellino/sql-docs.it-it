@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 079bd2ee428b706230e8d4283355603a09300d3d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: aa3279f16685cf3df8979a26de130bd7ff9994bf
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99188562"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054837"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -101,13 +101,14 @@ AS PARTITION myRangePF1
 TO (test1fg, test2fg, test3fg, test4fg);  
 ```  
   
- Le partizioni di una tabella che usa la funzione di partizione `myRangePF1` nella colonna di partizionamento **col1** vengono assegnate come illustrato nella tabella seguente.  
-  
-||||||  
-|-|-|-|-|-|  
-|**Filegroup**|`test1fg`|`test2fg`|`test3fg`|`test4fg`|  
-|**Partizione**|1|2|3|4|  
-|**Valori**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <= `1000`|**col1** > `1000`|  
+Le partizioni di una tabella che usa la funzione di partizione `myRangePF1` nella colonna di partizionamento **col1** vengono assegnate come illustrato nella tabella seguente.  
+
+|Filegroup|Partition|Valori|
+|-|-|-|
+|`test1fg`|1|**col1** <= `1`|
+|`test2fg`|2|**col1** > `1` AND **col1** <= `100`|
+|`test3fg`|3|**col1** > `100` AND **col1** <= `1000`|
+|`test4fg`|4|**col1** > `1000`|
   
 ### <a name="b-creating-a-partition-scheme-that-maps-multiple-partitions-to-the-same-filegroup"></a>B. Creazione di uno schema di partizione che esegue il mapping di più partizioni allo stesso filegroup  
  Se su tutte le partizioni viene eseguito il mapping allo stesso filegroup, usare la parola chiave ALL. Se su più partizioni, ma non su tutte, viene eseguito il mapping allo stesso filegroup, sarà tuttavia necessario ripetere il nome del filegroup come illustrato nell'esempio seguente.  
@@ -123,12 +124,13 @@ TO ( test1fg, test1fg, test1fg, test2fg );
   
  Le partizioni di una tabella che usa la funzione di partizione `myRangePF2` nella colonna di partizionamento **col1** vengono assegnate come illustrato nella tabella seguente.  
   
-||||||  
-|-|-|-|-|-|  
-|**Filegroup**|`test1fg`|`test1fg`|`test1fg`|`test2fg`|  
-|**Partizione**|1|2|3|4|  
-|**Valori**|**col1** <= `1`|**col1** > 1 AND **col1** <= `100`|**col1** > `100` AND **col1** <= `1000`|**col1** > `1000`|  
-  
+|Filegroup|Partition|Valori|
+|-|-|-|
+|`test1fg`|1|**col1** <= `1`|
+|`test1fg`|2|**col1** > `1` AND **col1** <= `100`|
+|`test1fg`|3|**col1** > `100` AND **col1** <= `1000`|
+|`test2fg`|4|**col1** > `1000`|
+
 ### <a name="c-creating-a-partition-scheme-that-maps-all-partitions-to-the-same-filegroup"></a>C. Creazione di uno schema di partizione che esegue il mapping di tutte le partizioni allo stesso filegroup  
  Nell'esempio seguente viene creata la stessa funzione di partizione dell'esempio precedente, ma viene creato uno schema di partizione che mappa tutte le partizioni allo stesso filegroup.  
   

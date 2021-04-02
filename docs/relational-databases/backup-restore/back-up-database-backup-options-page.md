@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: e91ecfb8375385e672c90e557910a36c71f80c8d
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
-ms.translationtype: HT
+ms.openlocfilehash: fbb8cee7a2c3e34ae76c50da169bf8d2964312cc
+ms.sourcegitcommit: 0b37eb7aef2f358f80867cd13830dd6683da8d85
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96129399"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105981137"
 ---
 # <a name="back-up-database-backup-options-page"></a>Backup database (pagina Opzioni di backup)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "96129399"
  **Scadenza set di backup**  
  Scegliere una delle opzioni di scadenza seguenti. Questa opzione è disabilitata se è stato scelto **URL** come destinazione di backup.  
   
-|||  
+|Opzione|Descrizione|  
 |-|-|  
 |**Dopo**|Consente di specificare il numero di giorni che devono trascorrere prima che il set di backup scada e possa venire sovrascritto. È possibile impostare un valore compreso nell'intervallo da 0 a 99999 giorni. L'impostazione del valore 0 giorni indica che il set di backup non ha scadenza.<br /><br /> Il valore predefinito per la scadenza del backup corrisponde al valore impostato nell'opzione **Periodo di memorizzazione predefinito supporti di backup (giorni)** . Per accedere a questa opzione fare clic con il pulsante destro del mouse sul nome del server in Esplora oggetti e selezionare **Proprietà**. Fare quindi clic sulla pagina **Impostazioni database** della finestra di dialogo **Proprietà server** .|  
 |**On**|Consente di specificare la data di scadenza del set di backup per la possibile sovrascrittura.|  
@@ -64,7 +64,7 @@ ms.locfileid: "96129399"
  **Imposta compressione backup**  
  In [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o versione successiva selezionare uno dei seguenti valori di compressione dei backup:  
   
-|||  
+|Valore|Descrizione|  
 |-|-|  
 |**Utilizza l'impostazione predefinita del server**|Fare clic su questa opzione per utilizzare l'impostazione predefinita a livello di server.<br /><br /> Questa impostazione predefinita è specificata dall'opzione di configurazione del server **Valore predefinito di compressione backup** . Per informazioni su come visualizzare l'impostazione corrente di questa opzione, vedere [Visualizzare o configurare l'opzione di configurazione del server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).|  
 |**Comprimi backup**|Fare clic su questa opzione per comprimere il backup, indipendentemente dall'impostazione predefinita a livello di server.<br /><br /> **\*\* Importante \*\*** Per impostazione predefinita, la compressione aumenta significativamente l'uso della CPU e la CPU aggiuntiva usata dal processo di compressione può avere un impatto negativo sulle operazioni simultanee. Potrebbe pertanto essere necessario creare backup compressi con priorità bassa in una sessione in cui l'utilizzo della CPU è limitato da [Resource Governor](../../relational-databases/resource-governor/resource-governor.md). Per ulteriori informazioni, vedere [Utilizzo di Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  

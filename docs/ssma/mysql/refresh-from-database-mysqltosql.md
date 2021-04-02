@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 59a6db8f-2db6-4071-9005-928a7231de92
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 60a23edbcbad344ab3bf42286944f7c72acb8f92
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 657e0b85cfb89c9a8fadf889624b75e0b064952f
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100015177"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106053964"
 ---
 # <a name="refresh-from-database-mysqltosql"></a>Eseguire l'aggiornamento dal database (MySQLToSQL)
 La finestra di dialogo **Aggiorna da database** consente di selezionare gli oggetti da aggiornare dal database MySQL. Le righe nella finestra di dialogo sono codificate a colori in base allo stato dei metadati:  
@@ -34,9 +34,8 @@ Per accedere alla finestra di dialogo **Aggiorna da database** , fare clic con i
   
 ## <a name="options"></a>Opzioni  
   
-|||  
-|-|-|  
 |**Termine**|**Definizione**|  
+|-|-|  
 |**Comprimi (-)**|Comprime tutti i gruppi di oggetti per nascondere i singoli oggetti.|  
 |**Espandi (+)**|Espandere tutti i gruppi di oggetti per visualizzare i singoli oggetti.|  
 |**Nascondi/Mostra oggetti uguali**|Nasconde gli oggetti dall'elenco se i metadati dell'oggetto sono gli stessi nel database MySQL e in SSMA.|  

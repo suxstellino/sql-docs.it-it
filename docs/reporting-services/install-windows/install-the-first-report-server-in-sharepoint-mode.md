@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016'
-ms.openlocfilehash: 36b68809377492e3643ebc7c60e0b2111d52f638
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: bf701e1ccdff887f7861c934d59bff9c09be66b6
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484243"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054642"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Installare il primo server di report in modalità SharePoint
 
@@ -41,7 +41,7 @@ ms.locfileid: "97484243"
  > [!NOTE]
  > Per SharePoint 2016, Excel Services è stato spostato in Office Online Server e non può essere usato in una distribuzione a server singolo. Office Online Server deve essere distribuito in un altro server. Per altre informazioni, vedere [Office Online Server overview](https://technet.microsoft.com/library/jj219437\(v=office.16\).aspx) (Panoramica di Office Online Server) e [Configure Excel Online administrative settings](https://technet.microsoft.com/library/jj219698\(v=office.16\).aspx)(Configurare le impostazioni amministrative di Excel Online).
   
-|||  
+|Componente|Descrizione|  
 |-|-|  
 |**(1)**|Servizio SharePoint installato dal programma di installazione di SQL Server. È possibile creare una o più applicazioni di servizio di Reporting Services.|  
 |**(2)**|Il componente aggiuntivo di Reporting Services per prodotti SharePoint offre i componenti dell'interfaccia utente nei server SharePoint.|  

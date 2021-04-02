@@ -15,12 +15,12 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc4f26877483a1213b1c5ecd3363dd1ba0c75fee
-ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.openlocfilehash: 6d2b28058cbc44c89d9434e43d500fc1ee601792
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104738101"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054614"
 ---
 # <a name="specify-default-values-for-columns"></a>Specificare valori predefiniti per le colonne
 
@@ -45,6 +45,9 @@ Prima di iniziare, tenere presenti le limitazioni e le restrizioni seguenti:
 - Per immettere un valore predefinito numerico immettere il numero senza virgolette.
 
 - Per specificare un oggetto o una funzione, immetterne il nome senza racchiuderlo tra virgolette.
+
+> [!NOTE]
+> In Azure sinapsi Analytics è possibile usare solo costanti per un vincolo predefinito. Non è possibile usare un'espressione con un vincolo Default.
 
 ### <a name="security-permissions"></a><a name="Security"></a> Autorizzazioni di sicurezza
 

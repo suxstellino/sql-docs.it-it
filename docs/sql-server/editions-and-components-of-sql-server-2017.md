@@ -35,12 +35,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017'
-ms.openlocfilehash: 12e4018a5431284bbe7eb7f0faf5e930353c2880
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
-ms.translationtype: HT
+ms.openlocfilehash: 1d0918500cdb7e5bf7a21222ad77299092eb8ac1
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102658"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054477"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Edizioni e funzionalità supportate di SQL Server 2017
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
@@ -164,7 +164,7 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |Database Recovery Advisor|Sì|Sì|Sì|Sì|Sì|
 |Backup crittografato|Sì|Sì|No|No|No|
 |Backup ibrido in Microsoft Azure (backup nell'URL)|Sì|Sì|No|No|No|
-|Gruppo di disponibilità con scalabilità in lettura<sup>3, 4</sup>|Sì|No|No|No|No|No|
+|Gruppo di disponibilità con scalabilità in lettura<sup>3, 4</sup>|Sì|No|No|No|No|
 
 <sup>1</sup> Per altre informazioni sull'installazione di SQL Server in Server Core, vedere [Install SQL Server on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md) (Installare SQL Server in Server Core). 
 

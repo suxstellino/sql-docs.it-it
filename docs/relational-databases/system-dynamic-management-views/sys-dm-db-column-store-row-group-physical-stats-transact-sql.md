@@ -21,12 +21,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 020cfa1e2f1f60064f21063e0766213ab44aaa25
-ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
+ms.openlocfilehash: 6345892c246c0ffc693a28e67833068c65243672
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102464836"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054708"
 ---
 # <a name="sysdm_db_column_store_row_group_physical_stats-transact-sql"></a>sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
 
@@ -55,8 +55,8 @@ Viene estesa la vista del catalogo [sys.column_store_row_groups &#40;&#41;Transa
 |**transition_to_compressed_state_desc**|nvarchar(60)| 1-NOT_APPLICABLE-l'operazione non è valida per deltastore. In alternativa, il rowgroup è stato compresso prima dell'aggiornamento a, [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] nel qual caso la cronologia non viene mantenuta.<br /><br /> 2-INDEX_BUILD-la creazione di un indice o la ricompilazione dell'indice ha compresso rowgroup.<br /><br /> 3-TUPLE_MOVER: il motore di tuple in esecuzione in background ha compresso rowgroup. Il motore di tuple si verifica dopo la modifica dello stato di rowgroup da aperto a chiuso.<br /><br /> 4-REORG_NORMAL-operazione di riorganizzazione, ALTER INDEX... REORG, spostato il rowgroup chiuso da deltastore nel columnstore. Questo errore si è verificato prima che il motore di Tuple avesse tempo per spostare il rowgroup.<br /><br /> 5-REORG_FORCED-questo rowgroup è stato aperto in deltastore ed è stato forzato nel columnstore prima di avere un numero intero di righe.<br /><br /> 6-BULKLOAD: un'operazione di caricamento bulk ha compresso direttamente il rowgroup senza usare deltastore.<br /><br /> 7-MERGE: un'operazione di Unione ha consolidato uno o più RowGroups in questo rowgroup e quindi ha eseguito la compressione columnstore.|  
 |**has_vertipaq_optimization**|bit|L'ottimizzazione VertiPaq migliora la compressione columnstore ridisponendo l'ordine delle righe nel rowgroup per ottenere una compressione più elevata. Questa ottimizzazione viene eseguita automaticamente nella maggior parte dei casi. Esistono due casi in cui l'ottimizzazione VertiPaq non viene utilizzata:<br/>  a. Quando un rowgroup Delta si sposta nel columnstore e sono presenti uno o più indici non cluster nell'indice columnstore, in questo caso l'ottimizzazione VertiPaq viene ignorata per ridurre al minimo le modifiche all'indice di mapping.<br/> b. per gli indici columnstore nelle tabelle ottimizzate per la memoria. <br /><br /> 0 = No<br /><br /> 1 = Sì|  
 |**generazione**|bigint|Generazione di gruppi di righe associata a questo gruppo di righe.|  
-|**created_time**|datetime2|Ora di clock del momento in cui è stato creato il rowgroup.<br /><br /> NULL: per un indice columnstore in una tabella in memoria.|  
-|**closed_time**|datetime2|Ora di clock del momento in cui il rowgroup è stato chiuso.<br /><br /> NULL: per un indice columnstore in una tabella in memoria.|  
+|**created_time**|datetime2|Ora di clock del momento in cui è stato creato il rowgroup.<br /><br /> NULL: per un indice columnstore in una tabella in memoria.| 
+|**closed_time**|datetime2|Ora di clock del momento in cui il rowgroup è stato chiuso.<br /><br /> NULL: per un indice columnstore in una tabella in memoria.| 
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="results"></a>Risultati  

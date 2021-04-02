@@ -11,12 +11,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 05/01/2020
-ms.openlocfilehash: 6208c880dd234a0e6a62f61e6f6ae87567213c12
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 19d31aff6c79badb1f9728325fad4377dee246be
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100354448"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054588"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
 
@@ -47,9 +47,8 @@ ms.locfileid: "100354448"
 
 Nella tabella seguente vengono mostrate le funzionalità che si consiglia di usare in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] per acquisire e riprodurre i dati di traccia.
 
-||||
-|-|-|-|
 |**Funzionalità\Carico di lavoro di destinazione**|**Motore relazionale**|**Analysis Services**|  
+|-|-|-|
 |**Acquisizione traccia**|Interfaccia utente grafica di [Eventi estesi](../../relational-databases/extended-events/extended-events.md) in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
 |**Riproduzione della traccia**|[Riesecuzione distribuita](../distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - BCPSetBulkMode function
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f8992509c176de3875f3ff416897876906c32fe5
-ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.openlocfilehash: 4174a7c769b7eb08ac88606c1787bc2ea4ed9634
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104753341"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054592"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,7 +58,7 @@ HRESULT BCPSetBulkMode (
 ## <a name="returns"></a>Valori di codice restituiti  
  IBCPSession2::BCPSetBulkMode può restituire uno dei valori seguenti:  
   
-|||  
+|Message|Descrizione|  
 |-|-|  
 |**S_OK**|Il metodo è riuscito.|  
 |**E_FAIL**|Si è verificato un errore specifico del provider. Per informazioni dettagliate, usare l'interfaccia ISQLServerErrorInfo.|  

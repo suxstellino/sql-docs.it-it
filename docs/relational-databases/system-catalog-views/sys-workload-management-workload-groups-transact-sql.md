@@ -13,12 +13,12 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: 0a8f145be38259f5f3a600cb7a270ccf193b4672
-ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.openlocfilehash: edafbe186daf36f04e7c3a4c8f634512d97da26d
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104747751"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054697"
 ---
 # <a name="sysworkload_management_workload_groups-transact-sql"></a>sys.workload_management_workload_groups (Transact-SQL)
 
@@ -30,7 +30,7 @@ ms.locfileid: "104747751"
 |-----------------|---------------|-----------------|-----------|
 |group_id|**int**|ID univoco del gruppo del carico di lavoro. Non ammette i valori Null.||
 |name|**sysname**|Nome del gruppo del carico di lavoro. Deve essere univoco per l'istanza.  Non ammette i valori Null.||
-|importance|**nvarchar(128)**|È l'importanza relativa di una richiesta nel gruppo del carico di lavoro e nei gruppi di carico di lavoro per le risorse condivise. Non ammette i valori Null.|Low, below_normal, Normal (impostazione predefinita), above_normal, High||
+|importance|**nvarchar(128)**|È l'importanza relativa di una richiesta nel gruppo del carico di lavoro e nei gruppi di carico di lavoro per le risorse condivise. Non ammette i valori Null.|Low, below_normal, Normal (impostazione predefinita), above_normal, High|
 |min_percentage_resource|**tinyint**|Quantità di risorse garantita per le richieste nel gruppo del carico di lavoro. Le risorse non sono condivise con altri gruppi del carico di lavoro. Non ammette i valori Null.||
 |cap_percentage_resource|**tinyint**|Limite rigido sulla percentuale di allocazione delle risorse per le richieste nel gruppo del carico di lavoro. Limita il numero massimo di risorse allocate al livello specificato. L'intervallo consentito per il valore è compreso tra 1 e 100.||
 |request_min_resource_grant_percent|**Decimal (5, 2)**|Specifica la quantità minima di risorse allocate a una richiesta. L'intervallo consentito per value è compreso tra 0,75 e 100.||

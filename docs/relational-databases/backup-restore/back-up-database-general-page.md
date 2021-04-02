@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: dd1dd775aff0865b2ce0f2f833ef78b7c5eb4b5e
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
-ms.translationtype: HT
+ms.openlocfilehash: d6303aa2a0ee3165ca3a90f466fbb001f6f7dc83
+ms.sourcegitcommit: 0b37eb7aef2f358f80867cd13830dd6683da8d85
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96130574"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105981012"
 ---
 # <a name="back-up-database-general-page"></a>Backup database (pagina Generale)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "96130574"
   
  Selezionare uno dei pulsanti di opzione seguenti:  
   
-|||  
+|Opzione|Descrizione|  
 |-|-|  
 |**Database**|È possibile specificare di eseguire il backup dell'intero database.|  
 |**File e filegroup**|È possibile specificare di eseguire il backup dei file e/o dei filegroup specificati.<br /><br /> Selezionando questa opzione, viene visualizzata la finestra di dialogo **Seleziona file e filegroup** . Dopo avere selezionato i filegroup o i file di cui eseguire il backup e avere scelto **OK**, le opzioni selezionate verranno visualizzate nella casella **File e filegroup** .|  
@@ -87,7 +87,7 @@ ms.locfileid: "96130574"
  **Backup su**  
  Selezionare uno dei tipi di supporti seguenti su cui eseguire il backup. Le destinazioni selezionate vengono visualizzate nell'elenco **Backup su** .  
   
-|||  
+|Tipo di supporto|Descrizione|  
 |-|-|  
 |**Disco**|Indica di eseguire il backup su disco. Può trattarsi di un file di sistema o di un dispositivo di backup logico su disco creato per il database. I dischi attualmente selezionati vengono visualizzati nell'elenco **Backup su** . È possibile selezionare fino a 64 dispositivi disco per l'operazione di backup.|  
 |**Nastro**|Indica di eseguire il backup su nastro. Può trattarsi di un'unità nastro locale o di un dispositivo di backup logico su nastro creato per il database. I nastri attualmente selezionati vengono visualizzati nell'elenco **Backup su** . Il numero massimo è 64. Se al server non è collegato alcun dispositivo nastro, questa opzione è disattivata. I nastri selezionati vengono visualizzati nell'elenco **Backup su** .<br /><br /> Nota: Il supporto per i dispositivi di backup su nastro verrà rimosso in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  

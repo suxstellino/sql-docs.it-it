@@ -18,12 +18,12 @@ ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: f10f318ebba5627957f1555b5979e8993f6f5e02
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: af2de4a8fdb5aadc2b11b2057239b27749384e9e
+ms.sourcegitcommit: ebe81e2daa544f41c8ababb66a91c218ad0c2a0a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093902"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106177102"
 ---
 # <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links (database SQL di Azure)
 
@@ -45,7 +45,8 @@ ms.locfileid: "98093902"
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Tipo secondario, uno di:<br /><br /> 0 = No. Il database secondario non è accessibile fino al failover.<br /><br /> 1 = sola lettura. Il database secondario è accessibile solo alle connessioni client con ApplicationIntent = ReadOnly.<br /><br /> 2 = Tutte. Il database secondario è accessibile a qualsiasi connessione client.|  
 |secondary_allow_connections _desc|**nvarchar(256)**|No<br /><br /> Tutti<br /><br /> Read-Only|  
-  
+|percent_copied|**int**|Avanzamento del seeding in percentuale|
+
 ## <a name="permissions"></a>Autorizzazioni
 
 Questa vista è disponibile solo nel database **Master** per l'account di accesso dell'entità di livello server.  

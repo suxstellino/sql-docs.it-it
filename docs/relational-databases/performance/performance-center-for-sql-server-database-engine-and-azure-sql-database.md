@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 767eee967df1f5c505448f8539e6ca081b90176c
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 6dca7abfb1cccbea021a2ee7650b78079ca3f777
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100341699"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054884"
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>Centro prestazioni per il motore di database di SQL Server e il database SQL di Azure
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "100341699"
 ## <a name="configuration-options-for-performance"></a>Opzioni di configurazione per le prestazioni  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre la possibilità di influire sulle prestazioni del motore di database attraverso una serie di opzioni di configurazione al livello di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Con [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]Microsoft esegue automaticamente la maggior parte delle ottimizzazioni, ma non tutte.  
   
-|||  
+|Opzioni|Descrizione|  
 |-|-|  
 |**Opzioni di configurazione dei dischi**|:::image type="icon" source="../../relational-databases/performance/media/security-center-sqlserver.png"::: [Striping del disco e RAID](https://technet.microsoft.com/library/ms190764\(v=sql.105\).aspx)|  
 |**Opzioni di configurazione di file di dati e di log**|:::image type="icon" source="../../relational-databases/performance/media/security-center-sqlserver.png"::: [Posizionamento di dati e file di log in unità distinte](../../relational-databases/policy-based-management/place-data-and-log-files-on-separate-drives.md)<br />:::image type="icon" source="../../relational-databases/performance/media/security-center-sqlserver.png"::: [Visualizzare o modificare i percorsi predefiniti per i file di dati e di log &#40;SQL Server Management Studio&#41;](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md)|  
@@ -56,7 +56,7 @@ ms.locfileid: "100341699"
 
 ## <a name="query-performance-options"></a>Opzioni di prestazione delle query  
   
-|||  
+|Opzione|Descrizione|  
 |-|-|  
 |:::image type="icon" source="../../relational-databases/performance/media/security-center-both.png"::: **[Indici](../../relational-databases/indexes/indexes.md)**|[Riorganizzare e ricompilare gli indici](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)<br />[Specificare un fattore di riempimento per un indice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)<br />[Configurare operazioni parallele sugli indici](../../relational-databases/indexes/configure-parallel-index-operations.md)<br />[Opzione SORT_IN_TEMPDB per gli indici](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)<br />[Migliorare le prestazioni degli indici full-text](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)<br />[Configurare l'opzione di configurazione del server min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)<br />[Configurare l'opzione di configurazione del server index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)|  
 |:::image type="icon" source="../../relational-databases/performance/media/security-center-both.png"::: **[Tabelle e indici partizionati](../../relational-databases/partitions/partitioned-tables-and-indexes.md)**|[Vantaggi del partizionamento](../partitions/partitioned-tables-and-indexes.md)|  

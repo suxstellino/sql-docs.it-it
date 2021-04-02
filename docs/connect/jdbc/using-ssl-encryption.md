@@ -1,8 +1,8 @@
 ---
-description: Uso della crittografia
+description: Informazioni su come stabilire canali di comunicazione protetti usando la crittografia TLS con le connessioni al database SQL.
 title: Uso della crittografia
-ms.custom: Learn how to establish secure communication channels using TLS encryption with your SQL database connections.
-ms.date: 09/12/2019
+ms.custom: ''
+ms.date: 03/31/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: vanto
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 86a36cec5930630c00501796e9c2340106cfa6c9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
-ms.translationtype: HT
+ms.openlocfilehash: 85407549aba05de1acae7108ab2fc14212c954cf
+ms.sourcegitcommit: ebe81e2daa544f41c8ababb66a91c218ad0c2a0a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414577"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106176932"
 ---
 # <a name="using-encryption"></a>Uso della crittografia
 
@@ -30,19 +30,19 @@ In [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] è disponibile 
   
 L'abilitazione della crittografia TLS contribuisce alla sicurezza del traffico di dati in rete tra le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e le applicazioni. ma comporta un rallentamento delle prestazioni.  
   
-Negli argomenti di questa sezione viene descritto il supporto della crittografia TLS in [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] e vengono illustrate le nuove proprietà di connessione e le modalità disponibili per la configurazione dell'archivio di attendibilità sul lato client.  
+Gli articoli di questa sezione descrivono come la [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] versione supporta la crittografia TLS, incluse le nuove proprietà di connessione, e come è possibile configurare l'archivio di attendibilità sul lato client.  
   
 > [!NOTE]  
 > Per convalidare un certificato TLS, è consigliabile usare la proprietà di connessione **hostNameInCertificate**.  
 
 ## <a name="in-this-section"></a>Contenuto della sezione  
 
-| Argomento                                                                                                        | Descrizione                                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Informazioni sul supporto della crittografia](../../connect/jdbc/understanding-ssl-support.md)                                 | Viene descritto il supporto della crittografia TLS in [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].                                              |
-| [Connessione tramite la crittografia](../../connect/jdbc/connecting-with-ssl-encryption.md)                       | Viene descritto come connettersi a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando le nuove proprietà di connessione specifiche di TLS. |
-| [Configurazione del client per la crittografia](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md) | Viene descritto come configurare l'archivio di attendibilità predefinito sul lato client e come importare un certificato privato nell'archivio di attendibilità del computer client.   |
-  
+| Articolo | Descrizione |
+| ----- | ----------- |
+| [Informazioni sul supporto della crittografia](understanding-ssl-support.md) | Viene descritto il supporto della crittografia TLS in [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]. |
+| [Connessione tramite la crittografia](connecting-with-ssl-encryption.md) | Viene descritto come connettersi a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database di utilizzando le nuove proprietà di connessione specifiche di TLS. |
+| [Configurazione del client per la crittografia](configuring-the-client-for-ssl-encryption.md) | Viene descritto come configurare l'archivio di attendibilità predefinito sul lato client e come importare un certificato privato nell'archivio di attendibilità del computer client. |
+
 ## <a name="see-also"></a>Vedere anche
 
-[Protezione delle applicazioni del driver JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+[Protezione delle applicazioni del driver JDBC](securing-jdbc-driver-applications.md)

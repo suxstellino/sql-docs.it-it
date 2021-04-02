@@ -1,25 +1,25 @@
 ---
-title: Risolvere i problemi del servizio Launchpad
-description: Questo articolo fornisce istruzioni per la risoluzione di molti problemi che impediscono l'avvio del servizio Launchpad attendibile di SQL Server, tra cui problemi o modifiche della configurazione o protocolli di rete mancanti.
+title: Risolvere i problemi di Launchpad per gli script Python e R
+description: Questo articolo fornisce indicazioni per la risoluzione di molti problemi che impediscono l'avvio del servizio Launchpad di SQL Server, inclusi problemi di configurazione o modifiche o protocolli di rete mancanti. Il servizio Launchpad supporta l'esecuzione di script esterni per R e Python.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 07/30/2019
+ms.date: 03/31/2021
 ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
-ms.custom: seo-lt-2019
+ms.custom: contperf-fy21q3
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: b57fdb3abd3482d6a395e1e6690f2e628a2a3e9e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: b015e4181f8d8cfe9388c609f749dc5979463d3a
+ms.sourcegitcommit: 2db7412d30722f198cbafcd683bd4da206b33996
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470682"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099960"
 ---
-# <a name="troubleshoot-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Risolvere i problemi del servizio Launchpad e di esecuzione di script esterni in SQL Server
+# <a name="troubleshoot-issues-with-launchpad-service-executing-python-and-r-scripts-in-sql-server-machine-learning-services"></a>Risolvere i problemi relativi al servizio Launchpad che eseguono script Python e R in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Questo articolo fornisce indicazioni per la risoluzione dei problemi relativi al servizio Launchpad attendibile di SQL Server. Il servizio Launchpad supporta l'esecuzione di script esterni per R e Python. Vari problemi possono impedire l'avvio di Launchpad, tra cui problemi o modifiche della configurazione o protocolli di rete mancanti.  
+Questo articolo fornisce indicazioni per la risoluzione dei problemi che coinvolgono il [servizio launchpad di SQL Server](../security/sql-server-launchpad-service-account.md) usato con [Machine Learning Services](../sql-server-machine-learning-services.md). Il servizio Launchpad supporta l'esecuzione di script esterni per R e Python. Vari problemi possono impedire l'avvio di Launchpad, tra cui problemi o modifiche della configurazione o protocolli di rete mancanti.  
 
 ## <a name="determine-whether-launchpad-is-running"></a>Determinare se Launchpad è in esecuzione
 
@@ -233,8 +233,6 @@ Come soluzione alternativa, è possibile abilitare la notazione 8.3 nel volume i
 ::: moniker-end
 
 ## <a name="next-steps"></a>Passaggi successivi
-
-[Risoluzione dei problemi e problemi noti di Machine Learning Services](machine-learning-troubleshooting-overview.md)
 
 [Raccolta di dati per la risoluzione dei problemi di Machine Learning](data-collection-ml-troubleshooting-process.md)
 

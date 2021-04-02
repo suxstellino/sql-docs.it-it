@@ -20,12 +20,12 @@ ms.assetid: 32e95614-ed88-4068-8c37-1e21544717bc
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: ec9f9811504ed9c58c8a37510a46a1857540584f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9a2cf710611007080c9b00932b59141553151131
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99193871"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054669"
 ---
 # <a name="sysfulltext_semantic_language_statistics_database-transact-sql"></a>sys.fulltext_semantic_language_statistics_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,9 +35,8 @@ ms.locfileid: "99193871"
  È possibile eseguire una query su questa vista per individuare il componente delle statistiche sulla lingua per l'indicizzazione semantica necessario per l'elaborazione semantica.  
    
   
-||||  
-|-|-|-|  
 |**Nome colonna**|**Tipo**|**Descrizione**|  
+|-|-|-|  
 |**database_id**|**int**|ID del database, univoco all'interno di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**register_date**|**datetime**|Data in cui il database è stato registrato per l'elaborazione semantica.|  
 |**registered_by**|**int**|ID dell'entità server che ha registrato il database per l'elaborazione semantica.|  

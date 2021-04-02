@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2f76b1bf-96a2-4755-b76b-84e933220efc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ab443e48037add1cc507b71fe87fe7be7bcb43f9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
-ms.translationtype: HT
+ms.openlocfilehash: 20d213cac8f3d3413266dc410b0d66879e771619
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487243"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054184"
 ---
 # <a name="rsaccesseddenied---reporting-services-error"></a>rsAccessedDenied - Errore di Reporting Services
   L'errore di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**rsAccessedDenied** si verifica quando un utente non dispone dell'autorizzazione per eseguire un'azione, ad esempio non ha un'assegnazione di ruolo che consenta di aprire un report o non ha aperto il browser con le autorizzazioni necessarie.  
@@ -33,7 +33,7 @@ ms.locfileid: "81487243"
   
 ## <a name="details"></a>Dettagli  
   
-|||  
+|Dettaglio|Valore|  
 |-|-|  
 |**Nome prodotto**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**ID evento**|rsAccessedDenied|  

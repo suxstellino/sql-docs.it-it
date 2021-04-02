@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: 299155fad92a34b79c7a1a7c0a4d1ad0f86111ea
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: fe15c32e5536aee8135e0a32e9365ed01dc40c8e
+ms.sourcegitcommit: 2db7412d30722f198cbafcd683bd4da206b33996
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100348161"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099955"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Edizioni e funzionalità supportate di SQL Server 2017 in Linux
 
@@ -233,8 +233,8 @@ Le funzionalità e i servizi seguenti non sono disponibili in SQL Server 2017 in
 | &nbsp; | Backup gestito |
 | **Disponibilità elevata** | Mirroring del database  |
 | **Sicurezza** | Extensible Key Management |
-| &nbsp; | Autenticazione AD per i server collegati | 
-| &nbsp; | Autenticazione AD per i gruppi di disponibilità | 
+| &nbsp; | Autenticazione AD per i server collegati |
+| &nbsp; | Autenticazione AD per gli endpoint del gruppo di disponibilità (AG) |
 | **Services** | SQL Server Browser |
 | &nbsp; | R Services per SQL Server |
 | &nbsp; | StreamInsight |

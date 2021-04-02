@@ -12,12 +12,12 @@ dev_langs:
 author: mstehrani
 ms.author: emtehran
 monikerRange: = azure-sqldw-latest
-ms.openlocfilehash: ab6ec23c35f9766a82e9a0c07f31433b2cbbc2ce
-ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
+ms.openlocfilehash: 2c0a4c93443750a0b3bbe02797c376234ebd7570
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102186588"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054406"
 ---
 # <a name="syspdw_permanent_table_mappings-transact-sql"></a>sys.pdw_permanent_table_mappings (Transact-SQL)
 [!INCLUDE [applies-to-version/asa](../../includes/applies-to-version/asa.md)]
@@ -29,8 +29,8 @@ Associa le tabelle utente permanenti ai nomi degli oggetti interni per **object_
 
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|physical_name|**nvarchar (36)**|Nome fisico della tabella.<br /><br /> **physical_name** e **object_id** formano la chiave per questa visualizzazione.||  
-|object_id|**int**|ID oggetto per la tabella. Vedere [sys. objects &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).<br /><br /> **physical_name** e **object_id** formano la chiave per questa visualizzazione.||  
+|physical_name|**nvarchar (36)**|Nome fisico della tabella.<br /><br /> **physical_name** e **object_id** formano la chiave per questa visualizzazione.|  
+|object_id|**int**|ID oggetto per la tabella. Vedere [sys. objects &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).<br /><br /> **physical_name** e **object_id** formano la chiave per questa visualizzazione.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo di Azure Synapse Analytics e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 835b09b5-eb42-47ea-b46e-e115d4d6461f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d9a4c8ea82558598700f5ae18121335c4a181f6b
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 709189b54d6489e39eb1655a53c9506a2f6f480c
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100078852"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054860"
 ---
 # <a name="global-settings-logging-accesstosql"></a>Impostazioni globali (registrazione) (AccessToSQL)
 Utilizzare la finestra di dialogo **Impostazioni globali** per specificare le impostazioni di registrazione per SSMA. Queste impostazioni vengono in genere modificate solo quando si utilizza il supporto tecnico.  
@@ -42,7 +42,7 @@ Le opzioni seguenti sono disponibili nel **livello messaggi**:
   
 Per ogni opzione in **livello messaggi** configurare uno dei seguenti livelli di registrazione per SSMA:  
   
-|||  
+|Level|Descrizione|  
 |-|-|  
 |**Errore irreversibile**|Consente di scrivere nel log solo messaggi di errore irreversibili.|  
 |**Error (Errore) (Error (Errore)e)**|Scrivi messaggi di errore irreversibili e di errore nel log.|  

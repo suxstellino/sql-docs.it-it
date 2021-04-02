@@ -3,20 +3,20 @@ title: Problemi noti per Python e R
 description: Questo articolo descrive i problemi noti o le limitazioni per i componenti Python e R forniti in Machine Learning Services per SQL Server e R Services per SQL Server 2016.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 10/13/2020
+ms.date: 03/31/2021
 ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
-ms.custom: contperf-fy20q4
+ms.custom: contperf-fy21q3
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: 51d729bcdb25900af855e7429e953ee44dc1388b
-ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.openlocfilehash: 3d81fea3cb2dcd7937dd752cf0fdfee899c1f94c
+ms.sourcegitcommit: 2db7412d30722f198cbafcd683bd4da206b33996
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98766303"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099982"
 ---
-# <a name="known-issues-in-sql-server-machine-learning-services"></a>Problemi noti in Machine Learning Services di SQL Server
+# <a name="known-issues-for-python-and-r-in-sql-server-machine-learning-services"></a>Problemi noti per Python e R in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Questo articolo descrive i problemi noti o le limitazioni per i componenti Python e R forniti in [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md) e [R Services per SQL Server 2016](../r/sql-server-r-services.md).
@@ -99,7 +99,7 @@ SQL Server 2016 richiede che le librerie R nel client corrispondano esattamente 
 
 La versione di R installata con R Services per SQL Server viene aggiornata al momento dell'installazione di una nuova versione del servizio SQL Server. Per essere certi di avere sempre le versioni più aggiornate dei componenti R, assicurarsi di installare tutti i Service Pack.
 
-Per garantire la compatibilità con Microsoft R Client 9.0.0, installare gli aggiornamenti descritti in questo [articolo del supporto tecnico](https://support.microsoft.com/kb/3210262).
+Per garantire la compatibilità con Microsoft R Client 9.0.0, installare gli aggiornamenti descritti in questo [articolo del supporto tecnico](https://web.archive.org/web/20190415073655/https://support.microsoft.com/en-us/help/3210262/fix-version-of-r-client-is-incompatible-with-the-microsoft-r-server-ve).
 
 Per evitare problemi con i pacchetti R, è anche possibile aggiornare la versione delle librerie R installate nel server, modificando il contratto di servizio in modo da usare i criteri moderni relativi al ciclo di vita del supporto, come descritto nella [sezione successiva](#bkmk_sqlbindr). Quando si esegue questa operazione, la versione di R installata con SQL Server viene aggiornata in base alla stessa pianificazione usata per gli aggiornamenti di Machine Learning Server (in precedenza Microsoft R Server).
 
@@ -127,7 +127,7 @@ Questo problema è stato risolto nella versione finale. Questa limitazione non s
 
 **Si applica a:** SQL Server 2017 con Python
 
-### <a name="warning-of-incompatible-version-when-you-connect-to-an-older-version-of-sql-server-r-services-from-a-client-by-using-sssqlv14_md"></a><a name="bkmk_sqlbindr"></a> Avviso di versione non compatibile quando ci si connette a una versione precedente di R Services per SQL Server da un client che usa [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+### <a name="warning-of-incompatible-version-when-you-connect-to-an-older-version-of-sql-server-r-services-from-a-client-by-using-sssql17-md"></a><a name="bkmk_sqlbindr"></a> Avviso di versione non compatibile quando ci si connette a una versione precedente di R Services per SQL Server da un client che usa [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]
 
 Quando si esegue codice R in un contesto di calcolo SQL Server 2016, è possibile che venga visualizzato l'errore seguente:
 
@@ -135,7 +135,7 @@ Quando si esegue codice R in un contesto di calcolo SQL Server 2016, è possibil
 
 Questo messaggio viene visualizzato se una delle due condizioni seguenti è vera:
 
-+ R Server (Standalone) è stato installato in un computer client usando l'installazione guidata di [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
++ R Server (Standalone) è stato installato in un computer client usando l'installazione guidata di [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].
 + Microsoft R Server è stato installato usando il [programma di installazione di Windows separato](/machine-learning-server/install/r-server-install-windows).
 
 Per assicurarsi che il server e il client usino la stessa versione, potrebbe essere necessario usare _binding_, supportato per Microsoft R Server 9.0 e versioni successive, per aggiornare i componenti di R nelle istanze di SQL Server 2016. Per determinare se è disponibile il supporto per gli aggiornamenti per la versione di R Services, vedere [Aggiornare un'istanza di R Services con SqlBindR.exe](../install/upgrade-r-and-python.md).
@@ -370,7 +370,7 @@ Non è possibile usare in uno script R i tipi seguenti di risultati delle query:
 
 L'uso di variabili di tipo stringa come fattori può aumentare significativamente la quantità di memoria usata per le operazioni R. Si tratta di un problema noto di R in generale e sono disponibili molti articoli sull'argomento. Vedere, ad esempio, [Factors are not first-class citizens in R, by John Mount, in R-bloggers](https://www.r-bloggers.com/factors-are-not-first-class-citizens-in-r/) (I fattori non sono cittadini di prima classe in R, di John Mount, in R-bloggers) o [stringsAsFactors: An unauthorized biography, by Roger Peng](https://simplystatistics.org/2015/07/24/stringsasfactors-an-unauthorized-biography/) (stringsAsFactors: una biografia non autorizzata, di Roger Peng). 
 
-Anche se il problema non è specifico di SQL Server, può influire significativamente sulle prestazioni del codice R eseguito in SQL server. Le stringhe vengono in genere archiviate come varchar o nvarchar e se una colonna di dati di tipo stringa ha molti valori univoci, il processo di conversione interna eseguito da R di questi valori in numeri interi e di nuovo in stringhe può causare errori di allocazione della memoria.
+Anche se il problema non è specifico di SQL Server, può influire significativamente sulle prestazioni del codice R eseguito in SQL Server. Le stringhe vengono in genere archiviate come varchar o nvarchar e se una colonna di dati di tipo stringa ha molti valori univoci, il processo di conversione interna eseguito da R di questi valori in numeri interi e di nuovo in stringhe può causare errori di allocazione della memoria.
 
 Se non è assolutamente necessario un tipo di dati stringa per altre operazioni, il mapping dei valori stringa a un tipo di dati numerico (integer) come parte della preparazione dei dati può risultare vantaggioso dal punto di vista delle prestazioni e della scalabilità.
 
@@ -390,7 +390,7 @@ Per altre informazioni, vedere [Librerie R e tipi di dati](../r/r-libraries-and-
 
 Il passaggio di dati Unicode nelle colonne varchar da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a R/Python può causare il danneggiamento delle stringhe. Ciò è dovuto al fatto che la codifica per queste stringhe Unicode nelle regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe non corrispondere alla codifica UTF-8 predefinita usata in R/Python. 
 
-Per inviare dati di tipo stringa non ASCII da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a R/Python, usare la codifica UTF-8 (disponibile in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) o usare il tipo nvarchar.
+Per inviare dati di tipo stringa non ASCII da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a R/Python, usare la codifica UTF-8 (disponibile in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) o usare il tipo nvarchar.
 
 ### <a name="13-only-one-value-of-type-raw-can-be-returned-from-sp_execute_external_script"></a>13. È possibile restituire solo un valore di tipo `raw` da `sp_execute_external_script`
 
@@ -754,4 +754,4 @@ La revisione 0.92 del driver ODBC SQLite è incompatibile con RevoScaleR. Le rev
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Risoluzione dei problemi di Machine Learning in SQL Server](machine-learning-troubleshooting-overview.md)
+[Raccogliere i dati per risolvere i problemi di SQL Server Machine Learning Services](data-collection-ml-troubleshooting-process.md)

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15'
-ms.openlocfilehash: 1fcaa82829b35926e2707dda792ac2c376241650
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 15f526feb973387c0f1bcd5bc4e6de0019a5774e
+ms.sourcegitcommit: 0b37eb7aef2f358f80867cd13830dd6683da8d85
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470932"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105980932"
 ---
 # <a name="revoscalepy-python-package-in-sql-server-machine-learning-services"></a>revoscalepy (pacchetto Python in Machine Learning Services per SQL Server)
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -92,7 +92,7 @@ Per altri approcci, è consigliabile vedere anche le funzioni di [microsoftml](/
 
 | Funzione| Descrizione|
 | ------- | ---------- |
-| [rx_predict](/machine-learning-server/python-reference/revoscalepy/rx-predict) | Genera stime da un modello sottoposto a training.|) | Genera stime da un modello sottoposto a training e può essere usata per l'assegnazione dei punteggi in tempo reale. |
+| [rx_predict](/machine-learning-server/python-reference/revoscalepy/rx-predict) | Generare stime da un modello sottoposto a training e utilizzabili per il punteggio in tempo reale. |
 |[rx_predict_default](/machine-learning-server/python-reference/revoscalepy/rx-predict-default) | Calcola i valori stimati e i residui usando gli oggetti rx_lin_mod e rx_logit. |
 |[rx_predict_rx_dforest](/machine-learning-server/python-reference/revoscalepy/rx-predict-rx-dforest) | Calcola i valori stimati o adattati per un set di dati da un oggetto rx_dforest o rx_btrees. |
 |[rx_predict_rx_dtree](/machine-learning-server/python-reference/revoscalepy/rx-predict-rx-dtree) | Calcola i valori stimati o adattati per un set di dati da un oggetto rx_dtree. |

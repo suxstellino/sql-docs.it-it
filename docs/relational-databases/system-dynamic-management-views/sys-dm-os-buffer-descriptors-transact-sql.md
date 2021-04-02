@@ -21,12 +21,12 @@ ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35439ff7ac5806225969378c88eaa6fde92df896
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 449c4d2ca5a101d17c84b414ffc119dbdb0fa476
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101839520"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054730"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,9 +49,9 @@ ms.locfileid: "101839520"
 |free_space_in_bytes|**int**|Quantità di spazio disponibile, in byte, nella pagina. Ammette i valori Null.|  
 |is_modified|**bit**|1 = La pagina è stata modificata dopo essere stata letta dal disco. Ammette i valori Null.|  
 |numa_node|**int**|Nodo NUMA (non-uniform memory access) per il buffer. Ammette i valori Null.|  
-|read_microsec|**bigint**|Tempo effettivo (in microsecondi) necessario per leggere la pagina nel buffer. Questo numero viene reimpostato quando si riutilizza il buffer. Ammette i valori Null.|  
-|is_in_bpool_extension|**bit**|1 = la pagina è nell'estensione del pool di buffer. Ammette i valori Null.|  
-|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
+|read_microsec|**bigint**|Tempo effettivo (in microsecondi) necessario per leggere la pagina nel buffer. Questo numero viene reimpostato quando si riutilizza il buffer. Ammette i valori Null.| 
+|is_in_bpool_extension|**bit**|1 = la pagina è nell'estensione del pool di buffer. Ammette i valori Null.| 
+|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.| 
   
 ## <a name="permissions"></a>Autorizzazioni  
 
@@ -61,7 +61,7 @@ Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in 
 ## <a name="remarks"></a>Commenti  
  sys.dm_os_buffer_descriptors restituisce le pagine utilizzate dal database Resource. sys.dm_os_buffer_descriptors non restituisce informazioni sulle pagine libere o rubate oppure sulle pagine che contengono errori durante la lettura.  
   
-|Da|A|On|Relationship|  
+|Da|A|Attivato|Relationship|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|molti-a-uno|  
 |sys.dm_os_buffer_descriptors|\<userdb>.sys.allocation_units|allocation_unit_id|molti-a-uno|  

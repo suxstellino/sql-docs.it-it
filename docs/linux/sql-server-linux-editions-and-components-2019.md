@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: 933ce305104358f56246b2c31fd8fe52a07b03ed
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 5211d0b1ce2a20643c2256e5e86f97eeec214171
+ms.sourcegitcommit: 2db7412d30722f198cbafcd683bd4da206b33996
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100348151"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106100004"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Edizioni e funzionalità supportate di SQL Server 2019 in Linux
 
@@ -231,8 +231,8 @@ Le funzionalità e i servizi seguenti non sono disponibili per SQL Server 2019 i
 | &nbsp; | Backup gestito |
 | **Disponibilità elevata** | Mirroring del database  |
 | **Sicurezza** | Extensible Key Management |
-| &nbsp; | Autenticazione AD per i server collegati | 
-| &nbsp; | Autenticazione AD per i gruppi di disponibilità | 
+| &nbsp; | Autenticazione AD per i server collegati |
+| &nbsp; | Autenticazione AD per gli endpoint del gruppo di disponibilità (AG) |
 | **Services** | SQL Server Browser |
 | &nbsp; | SQL Server R Services<sup>1</sup> |
 | &nbsp; | StreamInsight |

@@ -26,20 +26,19 @@ helpviewer_keywords:
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bed0d2f1b133d3d155c3afd59a86652f010316ea
-ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.openlocfilehash: bffc04b0015e6d9634aae15fff4e4312d9cc213b
+ms.sourcegitcommit: 0b37eb7aef2f358f80867cd13830dd6683da8d85
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99250631"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105981009"
 ---
 # <a name="mapping-clr-parameter-data"></a>Mapping dei dati dei parametri CLR
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Nella tabella seguente sono elencati i [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati, gli equivalenti nella Common Language Runtime (CLR) per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nello spazio dei nomi **System. Data. SqlTypes** e i relativi equivalenti CLR nativi nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
   
-||||  
-|-|-|-|  
 |**Tipo di dati di SQL Server**|Tipo (in System.Data.SqlTypes o Microsoft.SqlServer.Types)|**Tipo di dati CLR (.NET Framework)**|  
+|-|-|-|  
 |**bigint**|**SqlInt64**|**Int64, Nullable\<Int64>**|  
 |**binary**|**SqlBytes, SqlBinary**|**Byte []**|  
 |**bit**|**SqlBoolean**|**Booleano, Nullable\<Boolean>**|  
@@ -108,9 +107,8 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
   
  Non tutti i tipi di dati CLR possono essere convertiti automaticamente nei tipi dei dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] equivalenti tramite un parametro out. Nella seguente tabella vengono descritte queste eccezioni.  
   
-|||  
-|-|-|  
 |**Tipo di dati CLR (SQL Server)**|**Tipo di dati di SQL Server**|  
+|-|-|  
 |**Decimale**|SMALLMONEY|  
 |**SqlMoney**|SMALLMONEY|  
 |**Decimale**|money|  

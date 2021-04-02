@@ -1,7 +1,7 @@
 ---
 title: Uso dell'autenticazione di Azure Active Directory con SqlClient
 description: Viene descritto come usare le modalità di autenticazione di Azure Active Directory supportate per connettersi alle origini dati di Azure SQL con SqlClient
-ms.date: 11/20/2020
+ms.date: 03/30/2021
 dev_langs:
 - csharp
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: karinazhou
 ms.author: v-jizho2
 ms.reviewer: v-daenge
-ms.openlocfilehash: c57c2d10854ed902a6230eafc3a912cd0508c989
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 8ad08c0799f53b2746c621bb1c16a41fe38b7e14
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101835998"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054479"
 ---
 # <a name="using-azure-active-directory-authentication-with-sqlclient"></a>Uso dell'autenticazione di Azure Active Directory con SqlClient
 
@@ -254,7 +254,7 @@ L'esempio seguente illustra come configurare un ID client dell'applicazione in u
 
 ## <a name="support-for-a-custom-sql-authentication-provider"></a>Supporto per un provider di autenticazione SQL personalizzato
 
-Grazie a una maggiore flessibilità, l'applicazione client può usare anche il proprio provider per l'autenticazione di Active Directory anziché usare la classe `ActiveDirectoryAuthenticationProvider`. Il provider di autenticazione personalizzato deve essere una sottoclasse di `SqlAuthenticationProvider` con i metodi sottoposti a override. 
+Grazie a una maggiore flessibilità, l'applicazione client può usare anche il proprio provider per l'autenticazione di Active Directory anziché usare la classe `ActiveDirectoryAuthenticationProvider`. Il provider di autenticazione personalizzato deve essere una sottoclasse di `SqlAuthenticationProvider` con i metodi sottoposti a override. Deve quindi registrare il provider personalizzato, eseguendo l'override di uno o più dei `Active Directory*` metodi di autenticazione esistenti.
 
 Nell'esempio seguente viene illustrato come usare un nuovo provider di autenticazione per l'autenticazione `Active Directory Device Code Flow`.
 

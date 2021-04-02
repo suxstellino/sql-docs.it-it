@@ -26,12 +26,12 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: XiaoyuMSFT
 ms.author: XiaoyuL
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||  azure-sqldw-latest
-ms.openlocfilehash: d3e84becfc081c57a915601b40c312e76926ad68
-ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.openlocfilehash: 21dc7173c6404f8082dd96e654ccbebee6f6ff39
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104755411"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054844"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -245,7 +245,7 @@ Specifica il modello di corrispondenza del grafico. Per altre informazioni sugli
 >|-----------------|---------------|-----------------|-----------|  
 >|**WHEN MATCHED**| Tutti i tipi di distribuzione |Tutti i tipi di distribuzione||  
 >|**NOT MATCHED BY TARGET**|HASH |Tutti i tipi di distribuzione|Usare UPDATE/DELETE FROM…JOIN per sincronizzare le due tabelle. |
->|**NOT MATCHED BY SOURCE**|Tutti i tipi di distribuzione|Tutti i tipi di distribuzione|||  
+>|**NOT MATCHED BY SOURCE**|Tutti i tipi di distribuzione|Tutti i tipi di distribuzione||  
 
 >[!IMPORTANT]
 > Le funzionalità di anteprima sono destinate solo ai test e non devono essere usate in istanze di produzione o dati di produzione. Se i dati sono importanti, conserva anche una copia dei dati di test.

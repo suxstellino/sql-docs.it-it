@@ -123,6 +123,8 @@
       href: ./transparent-data-encryption.md
     - name: Effettuare il provisioning di un certificato
       href: ./provision-certificate.md
+    - name: Configurare i trust di dominio
+      href: ./configure-domain-trusts.md
 - name: Attività di gestione delle appliance
   href: ./appliance-management-tasks.md
   items:

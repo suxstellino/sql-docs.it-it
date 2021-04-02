@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 21225de8f03fc6fd5cc028ae31df37c4b90dadc3
-ms.sourcegitcommit: 4419e99d77ee2c73f9da1559c7944f7702f2de30
-ms.translationtype: HT
+ms.openlocfilehash: cb93e3bdd17be852523325fd806c54cce0fb3667
+ms.sourcegitcommit: 0b37eb7aef2f358f80867cd13830dd6683da8d85
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97743658"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105981197"
 ---
 # <a name="database-engine-errors"></a>Errori del motore di database
 
@@ -595,7 +595,7 @@ ORDER BY message_id
 |977 | 10 |  No  |  Avviso: impossibile trovare l'indice associato per il vincolo '%.*ls' in object_id '%d' nel database '%.* ls'.|
 |978 | 14 |  No  |  Il database di destinazione ('%.*ls') si trova in un gruppo di disponibilità ed è attualmente accessibile alle connessioni quando la finalità dell'applicazione è impostata in sola lettura. Per ulteriori informazioni sulla finalità delle applicazioni, vedere la documentazione online di SQL Server. |
 |979  | 14 | No  |  Il database di destinazione ('%.*ls') si trova in un gruppo di disponibilità e attualmente non consente le connessioni di sola lettura. Per ulteriori informazioni sulla finalità delle applicazioni, vedere la documentazione online di SQL Server.|
-|980 |  21 |  Sì |  Impossibile caricare il database '%.*ls' in SQL Server perché contiene un indice columnstore. L'edizione attualmente installata di SQL Server |non supporta gli indici columnstore. Disabilitare l'indice columnstore nel database utilizzando un'edizione supportata di SQL Server|
+|980 |  21 |  Sì |  Impossibile caricare il database '%.*ls' in SQL Server perché contiene un indice columnstore. L'edizione attualmente installata di SQL Server non supporta gli indici columnstore. Disabilitare l'indice columnstore nel database utilizzando un'edizione supportata di SQL Server|
 |981  |  10 | No | Per la gestione database verrà utilizzata la versione del database di destinazione %d. |
 |982  |  14 | No | Impossibile accedere al database '%.*ls' Nessuna replica secondaria online abilitata per l'accesso di sola lettura. Controllare la configurazione del gruppo di disponibilità per verificare che almeno una replica secondaria sia configurata per l'accesso di sola lettura. Attendere che sia online una replica abilitata|
 |983 |  14  | No | Impossibile accedere al database di disponibilità '%.*ls' perché la replica di database non presenta il ruolo PRIMARIO o SECONDARIO. Le connessioni a un database di disponibilità sono consentite solo quando la replica di database presenta il ruolo PRIMARIO o SECONDARIO. Riprovare in un secondo momento |
@@ -1378,7 +1378,7 @@ ORDER BY message_id
 |    2752    |    16    |    No    |    La colonna Identity '%.*ls' contiene un valore di inizializzazione non valido.    |
 |    2753    |    16    |    No    |    La colonna Identity '%.*ls' contiene un valore di incremento non valido.    |
 |    2754    |    16    |    No    |    I livelli di gravità dell'errore maggiori di %d possono essere specificati solo dai membri del ruolo sysadmin tramite l'opzione WITH LOG.    |
-|    2755    |    16    |    No    |    L'opzione SET DEADLOCK_PRIORITY non è valida. Opzioni valide: {HIGH | NORMAL | LOW | [%d ... %d] di tipo integer}.    |
+|    2755    |    16    |    No    |    L'opzione SET DEADLOCK_PRIORITY non è valida. Le opzioni valide sono {HIGH \| Normal \| low \| [% d.. .% d] di tipo Integer}.    |
 |    2756    |    16    |    No    |    Valore %d non valido per lo stato. È possibile utilizzare valori da %d a %d.    |
 |    2759    |    16    |    No    |    Istruzione CREATE SCHEMA non riuscita a causa di errori precedenti.    |
 |    2760    |    16    |    No    |    Il nome di schema specificato, "%.*ls", non esiste oppure l'utente non è autorizzato a utilizzarlo.    |
@@ -2198,7 +2198,7 @@ ORDER BY message_id
 |    4863    |    16    |    No    |    Errore di conversione (troncamento) dei dati durante il caricamento bulk. Riga %d, colonna %d (%ls).    |
 |    4864    |    16    |    No    |    Errore di conversione (non corrispondenza di tipo o carattere non valido per la tabella codici specificata) dei dati durante il caricamento bulk. Riga %d, colonna %d (%ls).    |
 |    4865    |    16    |    No    |    Impossibile eseguire il caricamento bulk perché è stato superato il numero massimo di errori (%d).    |
-|    4866    |    16    |    No    |    Caricamento bulk non riuscito. Il file di dati contiene una colonna troppo lunga per la riga %d, colonna %d. Verificare che i caratteri di terminazione di campo e di riga siano specificati correttamente.    | Il caricamento bulk non è riuscito a causa di un valore di colonna non valido nel file di dati CSV %ls nella riga %d, colonna %d | 
+|    4866    |    16    |    No    |    Caricamento bulk non riuscito. Il file di dati contiene una colonna troppo lunga per la riga %d, colonna %d. Verificare che i caratteri di terminazione di campo e di riga siano specificati correttamente. Il caricamento bulk non è riuscito a causa di un valore di colonna non valido nel file di dati CSV %ls nella riga %d, colonna %d | 
 |    4867    |    16    |    No    |    Errore di conversione dei dati durante il caricamento bulk (overflow). Riga %d, colonna %d (%ls).    |
 |    4868    |    16    |    No    |    Caricamento bulk non riuscito. La tabella codici "%d" non è installata. Installarla ed eseguire nuovamente il comando.    |
 |    4869    |    16    |    No    |    Caricamento bulk non riuscito. Il file di dati contiene un valore Null imprevisto alla riga %d, colonna %d. La colonna di destinazione (%ls) è definita come non Null.    |
@@ -3469,7 +3469,7 @@ ORDER BY message_id
 |    7802    |    16    |    No    |    La chiamata tramite SOAP delle funzioni con tipo restituito "%.*ls" non è supportata.    |
 |    7803    |    15    |    No    |    Impossibile utilizzare la clausola %.*ls nell'istruzione %.* ls.    |
 |    7804    |    15    |    No    |    %.*ls e %.* ls non possono condividere lo stesso valore.    |
-|    7805    |    16    |    No    |    Impossibile specificare come prefisso per il parametro SITE uno schema come "https://". I valori validi per SITE includono {'*' | '+' | 'site_name'}.    |
+|    7805    |    16    |    No    |    Impossibile specificare come prefisso per il parametro SITE uno schema come "https://". I valori validi per site includono {' *' \| ' +' \| ' site_name '}.    |
 |    7806    |    16    |    No    |    L'URL specificato dall'endpoint '%.*ls' è già registrato per la ricezione di richieste oppure è riservato per l'utilizzo da parte di un altro servizio.    |
 |    7807    |    16    |    No    |    Errore ('0x%x') durante il tentativo di registrare l'endpoint '%.*ls'.    |
 |    7808    |    10    |    No    |    Impossibile annullare la registrazione dell'endpoint '%.*ls'.    |
@@ -3841,7 +3841,7 @@ ORDER BY message_id
 |    8388    |    10    |    No    |    Nelle versioni future di SQL Server la possibilità di ottenere risultati dai trigger non sarà più disponibile. Evitare di usare questa funzionalità e pianificare la modifica delle applicazioni che ne fanno uso.    |
 |    8389    |    10    |    No    |    L'autorizzazione ALL verrà rimossa in una versione futura di SQL Server. Evitare di utilizzare questa autorizzazione per i nuovi progetti di sviluppo e pianificare la modifica delle applicazioni che ne fanno uso.    |
 |    8390    |    10    |    No    |    La sintassi per la chiamata di funzioni '::' verrà rimossa in una versione futura di SQL Server. Evitare di utilizzarla e pianificare la modifica delle applicazioni che ne fanno uso. Utilizzare "sys.".    |
-|    8391    |    10    |    No    |    L'utilizzo di nomi in due parti in DROP INDEX è deprecato. Nuova sintassi DROP INDEX <1p-name> ON {<3p-table-name> | <3p-view-name> }    |
+|    8391    |    10    |    No    |    L'utilizzo di nomi in due parti in DROP INDEX è deprecato. Sintassi New-Style DROP INDEX <1P-Name> in {<3P-Table-Name> <\| 3P-View-name>}    |
 |    8393    |    10    |    No    |    In una versione futura di SQL Server non sarà più possibile specificare un nome di colonna quando il tipo di dati è timestamp. Evitare di usare questa funzionalità e pianificare la modifica delle applicazioni che ne fanno uso.    |
 |    8394    |    10    |    No    |    Sintassi delle opzioni per gli indici deprecata. La struttura della sintassi delle opzioni per gli indici relazionali deprecata verrà rimossa in una versione futura di SQL Server. Evitare di utilizzare questa struttura della sintassi e pianificare la modifica delle applicazioni che ne fanno uso.    |
 |    8396    |    10    |    No    |    %ls verrà rimosso in una versione futura di SQL Server. Evitare di usare questa funzionalità e pianificare la modifica delle applicazioni che ne fanno uso. Utilizzare %ls.    |
@@ -5428,7 +5428,7 @@ ORDER BY message_id
 |    14020    |    16    |    No    |    Impossibile ottenere l'ID della colonna specificata. La replica dello schema non è riuscita.    |
 |    14021    |    16    |    No    |    La colonna non è stata aggiunta correttamente all'articolo.    |
 |    14022    |    16    |    No    |    Il valore del parametro \@property deve essere 'description', 'sync_object', 'type', 'ins_cmd', 'del_cmd', 'upd_cmd', 'filter', 'dest_table', 'dest_object', 'creation_script', 'pre_creation_cmd', 'status', 'schema_option' o 'destination_owner'.    |
-|    14023    |    16    |    No    |    Il tipo deve essere '[indexed view ]logbased[ (manualview|manualfilter|manualboth)]', '[serializable ]proc exec' o '(view|vista indicizzata|proc|func|aggregate|synonym) schema only'.    |
+|    14023    |    16    |    No    |    Il tipo deve essere ' [indexed view] logbased [(manualview \| manualfilter \| manualboth)]',' [Serializable] proc exec ' o ' (View \| indicizzated View \| proc \| Func \| Aggregate \| Synonym) schema only '.    |
 |    14024    |    16    |    No    |    Il valore della proprietà 'subscriber_provider' non può essere NULL.    |
 |    14025    |    10    |    No    |    Aggiornamento dell'articolo completato.    |
 |    14026    |    16    |    No    |    Il valore della proprietà 'subscriber_type' non è un tipo di Sottoscrittore eterogeneo supportato. Il valore deve essere 1 (Sottoscrittore ODBC) o 3 (Sottoscrittore OLEDB).    |
@@ -5731,7 +5731,7 @@ ORDER BY message_id
 |    14504    |    16    |    No    |    '%s' è l'operatore alternativo. Prima di eliminare '%s', è necessario designare un altro operatore come operatore alternativo.    |
 |    14505    |    16    |    No    |    Quando si specifica una condizione delle prestazioni, specificare un valore %s Null.    |
 |    14506    |    16    |    No    |    Impossibile impostare avvisi per il messaggio con ID %ld.    |
-|    14507    |    16    |    No    |    Il formato di una condizione delle prestazioni deve essere 'object_name|counter_name|nome_istanza|criterio di confronto(> o < o =)|valore numerico'    |
+|    14507    |    16    |    No    |    Una condizione delle prestazioni deve essere formattata come:' object_name \| counter_name \| instance_name \| valore numerico (> o \< o =) \| .    |
 |    14508    |    16    |    No    |    Specificare sia \@wmi_namespace che \@wmi_query.    |
 |    14509    |    16    |    No    |    Quando si specifica \@wmi_namespace, specificare un valore %s valido.    |
 |    14510    |    16    |    No    |    Quando si specifica \@wmi_namespace, specificare un valore %s null.    |
@@ -5996,7 +5996,7 @@ ORDER BY message_id
 |    15068    |    16    |    No    |    L'utente remoto '%s' esiste già per il server remoto '%s'.    |
 |    15069    |    16    |    No    |    Il database è utilizzato da uno o più utenti. Impossibile completare l'operazione richiesta.    |
 |    15070    |    10    |    No    |    L'oggetto '%s' è stato contrassegnato per la ricompilazione.    |
-|    15071    |    16    |    No    |    Utilizzo: sp_addmessage <msgnum>,<severity>,<msgtext> [,<language> [,FALSE | TRUE [,REPLACE]]]    |
+|    15071    |    16    |    No    |    Utilizzo: sp_addmessage <msgnum> , <severity> , <msgtext> [, <language> [, false \| true [, Replace]]]    |
 |    15072    |    16    |    No    |    Utilizzo: sp_addremotelogin remoteserver [, loginname [,remotename]]    |
 |    15074    |    10    |    No    |    Avviso: recuperare questo database prima di eseguire l'accesso.    |
 |    15076    |    16    |    No    |    Il valore predefinito, la tabella e i tipi di dati degli utenti devono essere disponibili nel database corrente.    |
@@ -6007,7 +6007,7 @@ ORDER BY message_id
 |    15081    |    16    |    No    |    Impossibile modificare l'appartenenza al ruolo public.    |
 |    15083    |    16    |    No    |    Il tipo di dati fisico '%s' non supporta regole di confronto.    |
 |    15084    |    16    |    No    |    La colonna o il tipo di dati dell'utente deve essere disponibile nel database corrente.    |
-|    15085    |    16    |    No    |    Utilizzo: sp_addtype name, 'data type' [,'NULL' | 'NOT NULL']    |
+|    15085    |    16    |    No    |    Utilizzo: sp_addtype name,' Data Type ' [,' NULL ' \| ' not null ']    |
 |    15096    |    16    |    No    |    Impossibile trovare l'oggetto '%s' oppure non si dispone dell'autorizzazione necessaria oppure l'oggetto non è valido per l'aggiunta della proprietà estesa.    |
 |    15097    |    16    |    No    |    Le dimensioni associate a una proprietà estesa non devono essere maggiori di 7.500 byte.    |
 |    15098    |    16    |    No    |    Impossibile apportare la modifica al nome perché il SID del nuovo nome non corrisponde al vecchio SID dell'entità.    |
@@ -6082,7 +6082,7 @@ ORDER BY message_id
 |    15174    |    16    |    No    |    L'account di accesso '%s' è il proprietario di uno o più database. Prima di eliminarlo, modificare il proprietario dei database.    |
 |    15175    |    16    |    No    |    All'account di accesso '%s' viene eseguito il mapping di un alias o un utente in uno o più database. Prima di eliminarlo, rimuovere l'utente o l'alias.    |
 |    15176    |    16    |    No    |    L'unico valore valido di \@parameter è 'WITH_LOG'.    |
-|    15177    |    16    |    No    |    Utilizzo: sp_dropmessage <msg number> [,<language> | 'ALL']    |
+|    15177    |    16    |    No    |    Utilizzo: sp_dropmessage <msg number> [, <language> \| ' all']    |
 |    15178    |    16    |    No    |    Impossibile eliminare o modificare un messaggio con ID minore di 50000.    |
 |    15179    |    16    |    No    |    Il numero di messaggio %u o la versione linguistica specificata non esiste.    |
 |    15182    |    16    |    No    |    Impossibile disabilitare l'accesso per l'utente guest nel database master o tempdb.    |
@@ -6134,7 +6134,7 @@ ORDER BY message_id
 |    15238    |    16    |    No    |    Alla colonna '%s' non è associata alcuna regola.    |
 |    15239    |    16    |    No    |    Al tipo di dati definito dall'utente '%s' non è associata alcuna regola.    |
 |    15240    |    16    |    No    |    Impossibile scrivere nel file '%s'. Verificare di disporre delle autorizzazioni di scrittura, che il percorso del file sia valido e che il file non esista.    |
-|    15241    |    16    |    No    |    Utilizzo: sp_dboption [dbname [,optname [,'true' | 'false']]]    |
+|    15241    |    16    |    No    |    Utilizzo: sp_dboption [dbname [, optname [,' true ' \| ' false ']]]    |
 |    15242    |    16    |    No    |    L'opzione di database '%s' non è univoca.    |
 |    15243    |    16    |    No    |    Impossibile modificare l'opzione '%s' per il database master.    |
 |    15244    |    16    |    No    |    Le opzioni di database possono essere impostate solo dai membri del ruolo sysadmin e dal proprietario del database.    |
@@ -6238,7 +6238,7 @@ ORDER BY message_id
 |    15351    |    10    |    No    |    La procedura, la funzione o il CLR da firmare fa riferimento a un assembly non firmato da un nome sicuro o un assembly.    |
 |    15352    |    16    |    No    |    Impossibile eliminare %S_MSG perché è stato utilizzato per firmare o crittografare una o più entità.    |
 |    15353    |    16    |    No    |    Il proprietario di un'entità di tipo %S_MSG non può essere un ruolo, un gruppo, un ruolo applicazione o entità sulle quali viene eseguito il mapping a certificati o chiavi asimmetriche.    |
-|    15354    |    10    |    No    |    Utilizzo: sp_detach_db <dbname>, [TRUE|FALSE], [TRUE|FALSE]    |
+|    15354    |    10    |    No    |    Utilizzo: sp_detach_db <dbname> , [true \| false], [true \| false]    |
 |    15356    |    16    |    No    |    Il ruolo dell'applicazione corrente è stato eliminato. Il contesto di sicurezza corrente non contiene un contesto utente del database valido.    |
 |    15357    |    16    |    No    |    Il contesto di sicurezza corrente è stato impostato da "%ls". Non può essere ripristinato mediante l'istruzione "%ls".    |
 |    15358    |    10    |    No    |    I filegroup definiti dall'utente devono essere di sola lettura.    |
@@ -6512,7 +6512,7 @@ ORDER BY message_id
 |    16996    |    16    |    No    |    %ls non supporta parametri di output.    |
 |    16998    |    16    |    No    |    Impossibile generare il thread per il popolamento della tabella di lavoro del cursore asincrono.    |
 |    16999    |    20    |    Sì    |    Errore interno del cursore: lo stato del cursore non è valido.    |
-|    17000    |    10    |    No    |    Utilizzo: sp_autostats <table_name> [, {ON|OFF} [, <index_name>] ]    |
+|    17000    |    10    |    No    |    Utilizzo: sp_autostats <table_name> [, {ON \| off} [, <index_name>]]    |
 |    17001    |    16    |    Sì    |    Impossibile inviare un'istanza di notifica di un evento di tipo '%s' nell'handle di conversazione '%s'. Codice di errore: '%s'.    |
 |    17002    |    16    |    Sì    |    Impossibile inviare l'evento QUEUE_ACTIVATION. Codice errore: '0x%s'.    |
 |    17003    |    16    |    Sì    |    Endpoint della conversazione di notifica dell'evento chiuso con handle '%s', a causa dell'errore seguente: '%.*ls'.    |
@@ -7614,7 +7614,7 @@ ORDER BY message_id
 |    21273    |    16    |    No    |    Per poter creare sottoscrizioni aggiornabili è necessario aggiornare il Sottoscrittore a SQL Server 2000 se il server di pubblicazione è SQL Server 2000 o versione successiva.    |
 |    21274    |    16    |    No    |    Nome di pubblicazione non valido '%s'.    |
 |    21275    |    16    |    No    |    Impossibile pubblicare la vista associata a schema '%s'. Il valore specificato per il parametro \@type deve essere "indexed view schema only" (per la replica snapshot o transazionale) oppure "indexed view logbased" (solo per la replica transazionale).    |
-|    21276    |    16    |    No    |    Il tipo deve essere 'table' o '( view | vista indicizzata | proc | func ) schema only'.    |
+|    21276    |    16    |    No    |    Il tipo deve essere ' Table ' o ' (View \| Indexed View \| proc \| Func) schema only '.    |
 |    21277    |    16    |    No    |    Impossibile pubblicare l'oggetto di origine '%ls'. Il valore specificato per il parametro \@type ("indexed view schema only" o "indexed view logbased") può essere utilizzato solo per le viste indicizzate. Specificare il valore "view schema only" per il parametro \@type oppure convertire la vista in una vista associata a schema con indice cluster univoco.    |
 |    21278    |    16    |    No    |    Impossibile pubblicare l'oggetto di origine '%ls'. Il valore specificato per il parametro \@type ("indexed view logbased") richiede che la vista sia associata a schema e che disponga di un indice cluster univoco. Specificare il valore "view schema only" per il parametro \@type oppure convertire la vista in una vista associata a schema con indice cluster univoco.    |
 |    21279    |    16    |    No    |    Impossibile modificare la proprietà 'schema_option' di un articolo di merge dopo la generazione di uno snapshot per la pubblicazione. Per modificare la proprietà 'schema_option' è necessario eliminare e ricreare la pubblicazione di tipo merge corrispondente.    |
@@ -9094,7 +9094,7 @@ ORDER BY message_id
 |    35011    |    16    |    No    |    Il parametro \@server_name non può essere un nome relativo.    |
 |    35012    |    16    |    No    |    Impossibile aggiungere un server registrato condiviso con nome uguale a quello del server di configurazione.    |
 |    [41030](mssqlserver-41030-database-engine-error.md)    |        |        |    Impossibile aprire la sottochiave del Registro di sistema WSFC (Windows Server Failover Clustering) '%.*ls', codice di errore %d.  La chiave padre è la chiave radice cluster.  È possibile che il servizio WSFC non sia in esecuzione o non sia accessibile nello stato corrente o che gli argomenti specificati non siano validi. Se il gruppo di disponibilità corrispondente è stato eliminato, l'errore è previsto. Per informazioni su questo codice di errore, vedere la sezione relativa ai codici di errore di sistema nella documentazione sullo sviluppo per Windows.    |
-|    [41301](mssqlserver-41301-database-engine-error.md)    |        |        |    Una transazione precedente da cui dipende la transazione corrente è stata interrotta. Impossibile eseguire il commit della transazione corrente.|    |
+|    [41301](mssqlserver-41301-database-engine-error.md)    |        |        |    Una transazione precedente da cui dipende la transazione corrente è stata interrotta. Impossibile eseguire il commit della transazione corrente.   |
 |    [41302](mssqlserver-41302-database-engine-error.md)    |        |        |    Tentativo da parte della transazione corrente di aggiornare un record che è già stato aggiornato dopo l'avvio della transazione. La transazione è stata interrotta.    |
 |    [41305](mssqlserver-41305-database-engine-error.md)    |        |        |    Impossibile eseguire il commit della transazione corrente a causa di un errore di convalida di lettura ripetibile.    |
 |    [41307](mssqlserver-41307-database-engine-error.md)    |        |        |    Il limite di dimensioni riga di *numero* byte per le tabelle con ottimizzazione per la memoria è stato superato. Semplificare la definizione di tabella.    |

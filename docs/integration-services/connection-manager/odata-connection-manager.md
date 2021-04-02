@@ -14,12 +14,12 @@ f1_keywords:
 - sql13.dts.designer.odataconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7d02fbd8a7029a794b933053bec5f676646eced1
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 8ff62a8b8ac44d18b57d7e9c98a27164bc455753
+ms.sourcegitcommit: f5de0340c61202e743d9b301e514b95c0660a8e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100338427"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106098195"
 ---
 # <a name="odata-connection-manager"></a>Gestione connessione OData
 
@@ -62,12 +62,17 @@ Per connettersi a Microsoft Dynamics AX Online o a Microsoft Dynamics CRM Online
 ## <a name="odata-connection-manager-properties"></a>Proprietà di gestione connessione OData  
  L'elenco seguente descrive le proprietà di gestione connessione OData.  
   
-|Proprietà|Descrizione|  
-|-|-|  
-|URL|URL del documento di servizio.|  
-|UserName|Nome utente da usare per l'autenticazione, se richiesto.|  
-|Password|Password da usare per l'autenticazione, se richiesta.|  
-|ConnectionString|Include altre proprietà della gestione connessione.|  
+|Proprietà|Valore predefinito|Descrizione|  
+|-|-|-|
+|Keep-alive|Falso|Valore dell'intestazione "Keep-Alive" durante l'invio della richiesta Web.|
+|Dimensioni massime messaggi ricevuti|4 TB|Dimensione massima del messaggio ricevuto in byte durante l'invio della richiesta Web.|
+|Retry Count|5|Numero di tentativi durante l'invio della richiesta Web.|
+|Riprova sospensione|100|Tempo di sospensione in millisecondi per un nuovo tentativo durante l'invio della richiesta Web.|
+|Timeout|600|Timeout nel secondo durante l'invio della richiesta Web.|
+|URL||URL del documento di servizio.|  
+|UserName||Nome utente da usare per l'autenticazione, se richiesto.|  
+|Password||Password da usare per l'autenticazione, se richiesta.|  
+|ConnectionString||Include altre proprietà della gestione connessione.|  
   
 ## <a name="odata-connection-manager-editor"></a>Editor gestione connessione OData
   Usare la finestra di dialogo **Editor gestione connessione OData** per aggiungere una connessione o modificare una connessione esistente a un'origine dati OData.  

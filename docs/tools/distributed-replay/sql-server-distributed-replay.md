@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: ac77b9ead15eb4171dbcaee38235a9f934aaa172
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 6ce83864f327cbfb3c0e923a7122d04c5e662b0c
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837783"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054576"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
 
@@ -67,10 +67,11 @@ Nella figura seguente viene mostrata l'architettura fisica di [!INCLUDE[ssNoVers
 ## <a name="distributed-replay-tasks"></a>Attività Distributed Replay
 
 |Descrizione dell'attività|Argomento|  
-|----------------------|-----------|  
+|----------------------|-----------|
 | Viene descritto come configurare Distributed Replay. | [Configurare Riesecuzione distribuita](../../tools/distributed-replay/configure-distributed-replay.md) |
 | Viene descritto come preparare i dati di traccia di input. | [Preparare i dati di traccia di input](../../tools/distributed-replay/prepare-the-input-trace-data.md) |
-| Viene descritto come riprodurre i dati di traccia. |[Rieseguire i dati di traccia](../../tools/distributed-replay/replay-trace-data.md) | | Viene descritto come rivedere i risultati dei dati di traccia di Distributed Replay. |[Esaminare i risultati della riesecuzione](../../tools/distributed-replay/review-the-replay-results.md)|
+| Viene descritto come riprodurre i dati di traccia. |[Rieseguire i dati di traccia](../../tools/distributed-replay/replay-trace-data.md) | 
+| Viene descritto come rivedere i risultati dei dati di traccia di Distributed Replay. |[Esaminare i risultati della riesecuzione](../../tools/distributed-replay/review-the-replay-results.md)|
 | Viene descritto come usare lo strumento di amministrazione per avviare, monitorare e annullare operazioni nel controller. | [Opzioni della riga di comando dello strumento di amministrazione &#40;Utilità Riesecuzione distribuita&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md) |
 
 ## <a name="see-also"></a>Vedere anche

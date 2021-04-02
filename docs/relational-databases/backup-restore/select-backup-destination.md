@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: f79e824b-1525-45de-8ede-513563af41b6
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 387f799dc034a8c0db0d60cded709cb16fa0c2c7
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
-ms.translationtype: HT
+ms.openlocfilehash: 4caae987574c6833530aef858ce57d55ccd7b3fc
+ms.sourcegitcommit: 0b37eb7aef2f358f80867cd13830dd6683da8d85
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96129038"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105981107"
 ---
 # <a name="select-backup-destination"></a>Seleziona destinazione di backup
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "96129038"
  **Destinazioni su disco**  
  Per specificare una destinazione di backup, scegliere una delle opzioni seguenti.  
   
-|||  
+|Opzione|Descrizione|  
 |-|-|  
 |**Nome file**|Scegliere questa opzione per immettere un file locale o remoto come destinazione di backup nella casella di testo per:<br /><br /> Specificare un file locale, facendo clic sul pulsante Sfoglia a destra della casella di testo e individuando il file nei dischi rigidi del computer che esegue il server oppure digitando direttamente il nome e il percorso completo del file, ad esempio `C:\Program Files\Microsoft SQL Server\MSSQL\Backup\AdventureWorksBackup.bak`.<br /><br /> Specificare un file remoto come destinazione di backup usando il nome completo in formato UNC (Universal Naming Convention). Per altre informazioni, vedere [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).<br /><br /> <br /><br /> **\*\* Importante \*\*** L'esecuzione del backup dei dati in rete può essere soggetta a errori di rete, quindi è consigliabile verificare l'operazione di backup dopo il suo completamento. Per altre informazioni, vedere [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).|  
 |**Dispositivo di backup**|Scegliere questa opzione per selezionare un dispositivo di backup logico.<br /><br /> Nota: per informazioni su come creare un dispositivo di backup su disco, vedere [Definizione di un dispositivo di backup logico per un file su disco &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md).|  
@@ -49,7 +49,7 @@ ms.locfileid: "96129038"
  **Destinazioni su nastro**  
  Consente di specificare una destinazione di backup su un'unità nastro fisicamente collegata al computer che esegue il server, ovvero l'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Scegliere una delle opzioni seguenti:  
   
-|||  
+|Opzione|Descrizione|  
 |-|-|  
 |**Unità nastro**|Scegliere questa opzione per selezionare un'unità nastro come destinazione del backup dall'elenco delle unità nastro fisicamente collegate al computer che esegue l'istanza del server.<br /><br /> Nota: I dispositivi di backup su nastro collegati a computer remoti non rappresentano destinazioni di backup valide.|  
 |**Dispositivo di backup**|Scegliere questa opzione per selezionare un dispositivo di backup logico esistente. Questi dispositivi di backup logici corrispondono a unità nastro fisicamente collegate al computer che esegue l'istanza del server.<br /><br /> Nota: per informazioni su come creare un dispositivo di backup su nastro, vedere [Definizione di un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md).|  

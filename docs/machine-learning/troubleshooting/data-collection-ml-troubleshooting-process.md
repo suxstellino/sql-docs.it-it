@@ -1,26 +1,26 @@
 ---
-title: Raccogliere i dati per la risoluzione dei problemi di Machine Learning in SQL
-description: Informazioni su come raccogliere i dati necessari quando si cerca di risolvere i problemi in modo autonomo o con l'assistenza del supporto tecnico Microsoft.
+title: Raccogliere i dati per la risoluzione dei problemi di Python e R
+description: Informazioni su come raccogliere i dati necessari quando si tenta di risolvere i problemi in SQL Server Machine Learning Services autonomamente o con l'assistenza del supporto tecnico Microsoft.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 07/01/2020
+ms.date: 03/31/2021
 ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
-ms.custom: seo-lt-2019
+ms.custom: contperf-fy21q3
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: 3bb4aa40995db27909162f791ddfbdb3701bb0fb
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 8744bc74846760da36c242dd2bb37d0b78ff3e00
+ms.sourcegitcommit: 2db7412d30722f198cbafcd683bd4da206b33996
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470652"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099950"
 ---
-# <a name="collect-data-to-troubleshoot-sql-machine-learning"></a>Raccogliere i dati per risolvere i problemi di Machine Learning in SQL
+# <a name="collect-data-to-troubleshoot-python-and-r-scripts-with-sql-server-machine-learning-services"></a>Raccogliere i dati per risolvere i problemi degli script Python e R con SQL Server Machine Learning Services
 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Questo articolo descrive come raccogliere i dati necessari quando si cerca di risolvere i problemi di Machine Learning in SQL. Questi dati possono essere utili sia se si cerca di risolvere i problemi in modo autonomo che se ci si rivolge al supporto tecnico Microsoft.
+Questo articolo descrive come raccogliere i dati necessari quando si sta provando a risolvere i problemi in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Questi dati possono essere utili sia se si cerca di risolvere i problemi in modo autonomo che se ci si rivolge al supporto tecnico Microsoft.
 
 ## <a name="sql-server-version-and-edition"></a>Versione ed edizione di SQL Server
 
@@ -302,4 +302,4 @@ Dal momento che potrebbe essere impossibile escludere tutte le cartelle necessar
 
 ## <a name="see-also"></a>Vedere anche
 
-[Risolvere i problemi di Machine Learning in SQL Server](machine-learning-troubleshooting-overview.md)
+[Risolvere i problemi di Machine Learning in SQL Server](common-issues-external-script-execution.md)

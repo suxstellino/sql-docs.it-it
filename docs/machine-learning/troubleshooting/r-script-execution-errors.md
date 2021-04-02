@@ -1,25 +1,25 @@
 ---
-title: Errori comuni di scripting R
-description: Questo articolo descrive diversi errori di scripting comuni che possono verificarsi quando si esegue codice R in SQL Server.
+title: Errori comuni di script R
+description: Questo articolo illustra diversi errori di scripting comuni che possono verificarsi durante l'esecuzione di script R in SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 05/31/2018
+ms.date: 03/31/2021
 ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
-ms.custom: seo-lt-2019
+ms.custom: contperf-fy21q3
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: 0f9f086ec09830e65f85ca2df5232e8b401cb9eb
-ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
+ms.openlocfilehash: ac6f6ed7acd07ee4f2b399550948b124f217876b
+ms.sourcegitcommit: 2db7412d30722f198cbafcd683bd4da206b33996
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102186415"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099978"
 ---
-# <a name="common-r-scripting-errors-in-sql-server"></a>Errori comuni di scripting R in SQL Server
+# <a name="common-r-script-errors-in-sql-server-machine-learning-services"></a>Errori comuni di script R in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Questo articolo descrive diversi errori di scripting comuni che possono verificarsi quando si esegue codice R in SQL Server. Non si tratta tuttavia di un elenco completo. Sono disponibili numerosi pacchetti e gli errori possono variare da una versione all'altra dello stesso pacchetto.
+Questo articolo descrive diversi errori di script comuni durante l'esecuzione di script R in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Non si tratta tuttavia di un elenco completo. Sono disponibili numerosi pacchetti e gli errori possono variare da una versione all'altra dello stesso pacchetto.
 
 ## <a name="valid-script-fails-in-t-sql-or-in-stored-procedures"></a>Uno script valido genera un errore in T-SQL o nelle stored procedure
 
@@ -90,13 +90,9 @@ remove('name1', 'name2', ...)
 
 Se devono essere eliminate più variabili, si consiglia di salvare i nomi delle variabili temporanee in un elenco e quindi eseguire periodicamente operazioni di Garbage Collection sull'elenco.
 
-
-
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Risoluzione dei problemi e problemi noti di Machine Learning Services](machine-learning-troubleshooting-overview.md)
-
-[Raccolta di dati per la risoluzione dei problemi di Machine Learning](data-collection-ml-troubleshooting-process.md)
+[Raccolta di dati per la risoluzione dei problemi SQL Server Machine Learning Services](data-collection-ml-troubleshooting-process.md)
 
 [Installare Machine Learning Services per SQL Server](../install/sql-machine-learning-services-windows-install.md)
 

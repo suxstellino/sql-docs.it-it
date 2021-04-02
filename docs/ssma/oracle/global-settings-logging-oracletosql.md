@@ -11,12 +11,12 @@ ms.assetid: 12dbcd77-2b90-4fa1-9cf9-239231ea5773
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: c6b19ddbe9ab7e1bf1e8f88f5c0c4262fa326c56
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 38bab2a161b69b7d79198795660901daed4b35e4
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100068012"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054538"
 ---
 # <a name="global-settings-logging-oracletosql"></a>Impostazioni globali (registrazione) (OracleToSQL)
 Utilizzare la finestra di dialogo **Impostazioni globali** per specificare le impostazioni di registrazione per SSMA. Queste impostazioni vengono in genere modificate solo quando si utilizza il supporto tecnico.  
@@ -44,7 +44,7 @@ Le opzioni seguenti sono disponibili nel **livello messaggi**:
   
 Per ogni opzione in **livello messaggi** configurare uno dei seguenti livelli di registrazione per SSMA:  
   
-|||  
+|Level|Descrizione|  
 |-|-|  
 |**Errore irreversibile**|Consente di scrivere nel log solo messaggi di errore irreversibili.|  
 |**Error (Errore) (Error (Errore)e)**|Scrivi messaggi di errore irreversibili e di errore nel log.|  

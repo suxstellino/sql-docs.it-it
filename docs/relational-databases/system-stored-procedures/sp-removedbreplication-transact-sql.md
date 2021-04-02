@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 39a95fbdfa80cb76e4b73f912ea38de1bc567906
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c6aea495c249317b582a9ec0be543a6209261ab3
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99193100"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054537"
 ---
 # <a name="sp_removedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +46,7 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
   
 `[ @type = ] type` Tipo di replica per cui vengono rimossi gli oggetti di database. il *tipo* è **nvarchar (5)** . i possibili valori sono i seguenti.  
   
-|||  
+|Valore|Descrizione|  
 |-|-|  
 |**Tran**|Rimuove gli oggetti di pubblicazione correlati alla replica transazionale.|  
 |**merge**|Rimuove gli oggetti di pubblicazione correlati alla replica di tipo merge.|  

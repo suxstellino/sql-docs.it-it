@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 4bf535b136c8de41a54a6de6c75d0e22794a3448
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6d3fd46894bcfe446b4fcaa741ad08bb2a5fab7c
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99204785"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054744"
 ---
 # <a name="sysdm_db_uncontained_entities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,9 +33,8 @@ ms.locfileid: "99204785"
   
  Se un modulo supera il limite del database più di una volta, viene riportato solo il primo superamento individuato.  
   
-||||  
-|-|-|-|  
 |**Nome colonna**|**Tipo**|**Descrizione**|  
+|-|-|-|  
 |*class*|**int**|1 = Oggetto o colonna (include moduli, XP, viste, sinonimi e tabelle).<br /><br /> 4 = Entità di database<br /><br /> 5 = Assembly<br /><br /> 6 = Tipo<br /><br /> 7 = Indice (indice full-text)<br /><br /> 12 = Trigger DDL database<br /><br /> 19 = Route<br /><br /> 30 = Specifica del controllo|  
 |*class_desc*|**nvarchar(120)**|Descrizione della classe dell'entità. Uno dei seguenti elementi per trovare la corrispondenza con la classe:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
 |*major_id*|**int**|ID dell'entità.<br /><br /> Se *Class* = 1, object_id<br /><br /> Se *Class* = 4, sys. database_principals. principal_id.<br /><br /> Se *Class* = 5, sys.Assemblies.assembly_id.<br /><br /> Se *Class* = 6, sys.Types.user_type_id.<br /><br /> Se *Class* = 7, sys.indexes.index_id.<br /><br /> Se *Class* = 12, sys.Triggers.object_id.<br /><br /> Se *Class* = 19, quindi sys.routes.Route_ID.<br /><br /> Se *Class* = 30, sys. database_audit_specifications database_audit_specifications.database_specification_id.|  

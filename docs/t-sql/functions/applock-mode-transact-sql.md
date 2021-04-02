@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 3ef63630d2acaabdda31f2cd162acfe1d6ddfd76
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6103d0d5a80f147eb59f3983a178aaeae9591a1f
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99202298"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054894"
 ---
 # <a name="applock_mode-transact-sql"></a>APPLOCK_MODE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,12 +58,19 @@ Proprietario del blocco, ovvero il valore di *lock_owner* al momento della richi
   
 ## <a name="return-value"></a>Valore restituito
 Restituisce la modalità di blocco acquisita dal proprietario del blocco per una particolare risorsa di applicazione. I valori possibili della modalità di blocco sono i seguenti:
-  
-||||  
-|-|-|-|  
-|**NoLock**|**Aggiornamento**|**\*SharedIntentExclusive**|  
-|**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
-|**Condivisa**|**Exclusive**||  
+
+:::row:::
+   :::column span="":::
+      **NoLock**<br>      **Aggiornamento**<br>      **\*SharedIntentExclusive**
+   :::column-end:::
+   :::column span="":::
+      **IntentShared**<br>      **IntentExclusive**<br>      **\*UpdateIntentExclusive**
+
+   :::column-end:::
+   :::column span="":::
+      **Condivisa**<br>      **Exclusive**
+   :::column-end:::
+:::row-end:::
   
 *Questa modalità di blocco risulta dalla combinazione di altre modalità di blocco e non può essere acquisita in modo esplicito tramite sp_getapplock.
   

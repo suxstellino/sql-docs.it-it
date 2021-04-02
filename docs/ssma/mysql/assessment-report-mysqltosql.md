@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5525d989-024c-402d-9e84-faa4721cc5b9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3b132af2d42f22ebcda82eae8e3649fd45026595
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 32245be97f30f790622de513d1120d82fc6b4070
+ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100069136"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106054753"
 ---
 # <a name="assessment-report-mysqltosql"></a>Report di valutazione (MySQLToSQL)
 La finestra report di valutazione Mostra i risultati della conversione degli oggetti di database nella [!INCLUDE[tsql](../../includes/tsql-md.md)] sintassi e consente inoltre di stimare la complessità e il costo dei progetti di migrazione.  
@@ -24,9 +24,8 @@ Per accedere al report di valutazione, selezionare gli oggetti da convertire in 
   
 ## <a name="options"></a>Opzioni  
   
-|||  
-|-|-|  
 |**Termine**|**Definizione**|  
+|-|-|  
 |**Statistiche di conversione**|Mostra le statistiche di conversione per tipo di istruzione. Questo riquadro è visibile quando si seleziona un oggetto gruppo, ad esempio uno schema, o un oggetto senza codice nel riquadro sinistro.|  
 |**Oggetti per categorie**|Mostra il numero di oggetti per categoria. Questo riquadro è visibile solo quando si seleziona un oggetto gruppo, ad esempio uno schema, o un oggetto senza codice nel riquadro sinistro.|  
 |**Statistiche**|Mostra le statistiche di conversione per l'oggetto selezionato. Questo riquadro è visibile solo quando si seleziona un singolo oggetto con codice nel riquadro sinistro. Per visualizzare questo riquadro, potrebbe essere necessario espandere **Statistics**, che si trova immediatamente sopra il riquadro di **origine** .|  
