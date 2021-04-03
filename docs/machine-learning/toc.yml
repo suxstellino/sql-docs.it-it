@@ -370,8 +370,6 @@ items:
         href: ../sql-server/sql-server-2014-release-notes.md?toc=../toc.json
       - name: Risoluzione dei problemi
         items:
-          - name: Panoramica della risoluzione dei problemi
-            href: ../machine-learning/troubleshooting/machine-learning-troubleshooting-overview.md
           - name: Problemi noti
             href: ../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md
           - name: Raccogliere i dati per la risoluzione dei problemi

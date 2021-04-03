@@ -1,8 +1,8 @@
 ---
-title: Inlining di funzioni definite dall'utente scalari in Microsoft SQL Server | Microsoft Docs
+title: Incorporamento UDF scalare in Microsoft SQL Server
 description: Funzionalità di inlining di funzioni definite dall'utente scalari per migliorare le prestazioni delle query che richiamano funzioni definite dall'utente scalari in SQL Server (a partire da SQL Server 2019).
 ms.custom: ''
-ms.date: 03/30/2021
+ms.date: 03/31/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,17 +14,17 @@ helpviewer_keywords: ''
 ms.assetid: ''
 author: s-r-k
 ms.author: karam
-monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57c9c28cafeb7e55183a3d95194480c62f279e11
-ms.sourcegitcommit: 0b37eb7aef2f358f80867cd13830dd6683da8d85
+monikerRange: =azuresqldb-current||>=sql-server-ver15||>=sql-server-linux-ver15
+ms.openlocfilehash: 2ccdf4c7ca7aaec272a517aff0a7e336ae6791ad
+ms.sourcegitcommit: ebe81e2daa544f41c8ababb66a91c218ad0c2a0a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "105981217"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106177118"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining di funzioni definite dall'utente scalari
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 SQL Database](../../includes/applies-to-version/sqlserver2019-asdb.md)]
 
 Questo articolo presenta l'inlining di funzioni definite dall'utente scalari, una delle funzionalità incluse nel gruppo di funzionalità di [elaborazione di query intelligenti](../../relational-databases/performance/intelligent-query-processing.md). Questa funzionalità migliora le prestazioni delle query che chiamano funzioni definite dall'utente scalari in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sssql19](../../includes/sssql19-md.md)]).
 
