@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f64cbc7b054f6e60285b3a34921e3219ddd507ff
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
-ms.translationtype: HT
+ms.openlocfilehash: 7fa4598fc332a2f84a02b428e786ed381e388a1e
+ms.sourcegitcommit: a7af7bead92044595556b8687e640a0eab0bc455
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529332"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106179881"
 ---
 # <a name="understanding-xa-transactions"></a>Informazioni sulle transazioni XA
 
@@ -63,7 +63,7 @@ Per utilizzare le origini dei dati XA con Microsoft Distributed Transaction Coor
 > I componenti della transazione distribuita JDBC sono inclusi nella directory xa dell'installazione del driver JDBC. Tali componenti includono i file xa_install.sql e sqljdbc_xa.dll. Se sono presenti versioni diverse di JDBC Driver in client diversi, è consigliabile usare il file sqljdbc_xa.dll più recente nel server.  
 
 > [!NOTE]  
-> I componenti di transazione distribuiti JDBC XA sono inclusi nel motore di SQL Server in SQL Server 2017 a partire dall'aggiornamento cumulativo 16 e in SQL Server 2019 e possono essere abilitati o disabilitati con una stored procedure di sistema.
+> I componenti di transazione distribuiti JDBC XA sono inclusi nel motore di SQL Server in SQL Server 2017 a partire dall'aggiornamento cumulativo 16 e in SQL Server 2019 e possono essere abilitati o disabilitati con una stored procedure di sistema. Il sqjdbc_xa.dll dal driver non è obbligatorio ed è consigliabile abilitare i componenti server per queste versioni del server.
 > Per abilitare i componenti necessari per l'esecuzione di transazioni distribuite XA tramite il driver JDBC, eseguire la stored procedure seguente.
 >
 > EXEC sp_sqljdbc_xa_install

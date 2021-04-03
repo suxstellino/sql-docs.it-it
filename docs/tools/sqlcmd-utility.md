@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/24/2021
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: ad1d3e98d45dc0395da92ee331e48b3fbfc161e6
-ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
+ms.openlocfilehash: 6008746b49b9efd590fbaf453fd6c5f77288e22d
+ms.sourcegitcommit: 14f2051d329b69a7b5ff7bce1d136cf7f25bb219
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "106054785"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106232178"
 ---
 # <a name="sqlcmd-utility"></a>Utilità sqlcmd
 
@@ -70,7 +70,7 @@ Il nuovo BCP supporta l'autenticazione di Azure AD e include anche il supporto d
 
 **Requisiti di sistema** per Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008 - 2019.
 
-Per questo componente sono necessari sia [Windows Installer 4.5](https://windows-installer.soft32.com/) che [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md).
+Questo componente richiede sia la [Windows Installer predefinita 5](https://docs.microsoft.com/windows/win32/msi/what-s-new-in-windows-installer-5-0) che [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md).
  
 Per controllare la versione di SQLCMD, eseguire il comando `sqlcmd -?` e verificare che la versione in uso sia 15.0.2000.5 o successiva.
 

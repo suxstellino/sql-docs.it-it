@@ -33,12 +33,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42085faef5f7da55a65f32569e51298991e9bb62
-ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.openlocfilehash: 4a3df8f14f096a163190dff014c563486d4fab33
+ms.sourcegitcommit: 14f2051d329b69a7b5ff7bce1d136cf7f25bb219
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104750561"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106232228"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -448,7 +448,10 @@ VALUES (N'FT', N'Feet', '20080414');
 ```  
   
 #### <a name="b-inserting-multiple-rows-of-data"></a>B. Inserimento di più righe di dati  
- Nell'esempio seguente viene usato il [costruttore di valori di tabella](../../t-sql/queries/table-value-constructor-transact-sql.md) per inserire tre righe nella tabella `Production.UnitMeasure` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] in una singola istruzione INSERT. Poiché i valori per tutte le colonne vengono specificati ed elencati nello stesso ordine delle colonne nella tabella, non è necessario specificare i nomi delle colonne nell'elenco delle colonne.  
+ Nell'esempio seguente viene usato il [costruttore di valori di tabella](../../t-sql/queries/table-value-constructor-transact-sql.md) per inserire tre righe nella tabella `Production.UnitMeasure` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] in una singola istruzione INSERT. Poiché i valori per tutte le colonne vengono specificati ed elencati nello stesso ordine delle colonne nella tabella, non è necessario specificare i nomi delle colonne nell'elenco delle colonne.
+
+>[!NOTE]
+> Il costruttore della tabella vaule non è supportato in Azure sinapsi Analytics.  
   
 ```sql
 INSERT INTO Production.UnitMeasure  

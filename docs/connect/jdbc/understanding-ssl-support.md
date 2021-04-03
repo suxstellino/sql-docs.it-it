@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 31c54f93ec7fc8fbd9048857b90159dd4e093b46
-ms.sourcegitcommit: a7af7bead92044595556b8687e640a0eab0bc455
+ms.openlocfilehash: 51d44e7fad3b554c35ec342c0a198c82e9cf3009
+ms.sourcegitcommit: 14f2051d329b69a7b5ff7bce1d136cf7f25bb219
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/02/2021
-ms.locfileid: "106179891"
+ms.locfileid: "106232038"
 ---
 # <a name="understanding-encryption-support"></a>Informazioni sul supporto della crittografia
 
@@ -44,10 +44,7 @@ La tabella seguente offre un riepilogo del comportamento della versione di [!INC
 > [!NOTE]
 > Lo stesso comportamento si applica all'autenticazione utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e all'autenticazione integrata di Windows.
 
-<!--
-Note: The extra &nbsp; in the column1 heading keeps column1 from wrapping and improves readability of the table.
-They could be put in the column1 values themselves (replacing spaces), but just putting them in the heading improves readability of the source.
--->
+<!-- Do not remove the extra &nbsp;'s in the column1 heading. They keep column1 from wrapping and improve readability of the table. -->
 | &nbsp;Impostazioni delle proprietà&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Comportamento |
 | ----------------- | -------- |
 | **Encrypt** = false o vuoto<br/> **TrustServerCertificate** = any<br/> **hostNameInCertificate** = any<br/> **trustStore** = any<br/> **trustStorePassword** = any<br/> | Il driver non forza il server a supportare la crittografia TLS. Se il server dispone di un certificato autofirmato, tramite il driver viene avviato lo scambio del certificato TLS. Il certificato TLS non verrà convalidato e verranno crittografate solo le credenziali (nel pacchetto di accesso).<br /><br /> Se il server richiede il supporto della crittografia TLS da parte del client, tramite il driver viene avviato lo scambio del certificato TLS. Il certificato TLS non verrà convalidato, ma l'intera comunicazione verrà crittografata. |

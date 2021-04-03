@@ -1,7 +1,7 @@
 ---
-title: Configurare l'opzione di configurazione del server max degree of parallelism | Microsoft Docs
+title: Configurare l'opzione di configurazione del server max degree of parallelism
 description: Informazioni sull'opzione max degree of parallelism (MAXDOP). Scoprire come usarla per limitare il numero di processori usati da SQL Server per l'esecuzione di piani paralleli.
-ms.date: 02/12/2020
+ms.date: 03/27/2021
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -13,16 +13,15 @@ helpviewer_keywords:
 - number of processors for parallel queries
 - max degree of parallelism option
 - MaxDop
-ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: contperf-fy20q4
-ms.openlocfilehash: 4006ad1707d30d0a9147056ddfff8b71ae7643e1
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 67e081682482bf4fbe3c85f0667f40a0d61b1e81
+ms.sourcegitcommit: a7af7bead92044595556b8687e640a0eab0bc455
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236973"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106179911"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Configurare l'opzione di configurazione del server max degree of parallelism
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +29,8 @@ ms.locfileid: "99236973"
   Questo argomento illustra come configurare l'opzione di configurazione del server **max degree of parallelism (MAXDOP)** in SQL Server usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Quando un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguita in un computer con più microprocessori o CPU, il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] rileva se è possibile usare il parallelismo. Il grado di parallelismo imposta il numero di processori utilizzati per eseguire una singola istruzione per ogni esecuzione di piani paralleli. È possibile utilizzare l'opzione **max degree of parallelism** per limitare il numero di processori da utilizzare nell'esecuzione di piani paralleli. Per informazioni più dettagliate sul limite impostato da **max degree of parallelism (MAXDOP)** , vedere la sezione [Considerazioni](#Considerations) in questa pagina. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valuta i piani di esecuzione parallela per query, operazioni DDL (Data Definition Language) sugli indici, inserimento parallelo, modifica colonna online, raccolta di statistiche parallela e popolamento dei cursori statici e gestiti da keyset.
 
 > [!NOTE]
-> [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] presenta raccomandazioni automatiche per l'impostazione dell'opzione di configurazione del server MAXDOP durante il processo di installazione in base al numero di processori disponibili. L'interfaccia utente del programma di installazione consente di accettare le impostazioni consigliate o di immettere valori personalizzati. Per altre informazioni, vedere [Pagina Configurazione del motore di database - MaxDOP](../../sql-server/install/instance-configuration.md#maxdop).
+> [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] presenta raccomandazioni automatiche per l'impostazione dell'opzione di configurazione del server MAXDOP durante il processo di installazione in base al numero di processori disponibili. L'interfaccia utente del programma di installazione consente di accettare le impostazioni consigliate o di immettere valori personalizzati. Per altre informazioni, vedere [Pagina Configurazione del motore di database - MaxDOP](../../sql-server/install/instance-configuration.md#maxdop).<BR>
+Tuttavia, in SQL di Azure, l'impostazione predefinita di MAXDOP per ogni nuovo database singolo e database del pool elastico è 8. Per altre informazioni su MAXDOP in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] , vedere [configurare il grado massimo di parallelismo (MAXDOP) nel database SQL di Azure](/azure/azure-sql/database/configure-max-degree-of-parallelism).
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   

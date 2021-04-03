@@ -9,12 +9,12 @@ ms.prod: sql
 ms.technology: tools-other
 monikerRange: =azure-sqldw-latest
 ms.custom: template-overview
-ms.openlocfilehash: e97425f682a3f6b9f2f4e955d8476d40d6cf4312
-ms.sourcegitcommit: f10f0d604be1dce6c600a92aec4c095e7b52e19c
+ms.openlocfilehash: a23ca1052e2a82afd6277a2fc308d72fa600aaf1
+ms.sourcegitcommit: e4b71e5d432a29b6c76ea457b00aa0abd4b6c77f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "102770515"
+ms.lasthandoff: 04/03/2021
+ms.locfileid: "106273486"
 ---
 # <a name="azure-synapse-pathway-preview-faq"></a>Domande frequenti sull'anteprima del percorso sinapsi di Azure
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
@@ -65,15 +65,8 @@ R. Poiché è possibile eseguire il percorso sinapsi nell'ambiente locale, non v
 
 R. Il percorso delle sinapsi di Azure è attualmente in fase di **Anteprima**.   Il supporto per il percorso sinapsi è disponibile tramite il canale di supporto Microsoft. È possibile aumentare il ticket nei portali portale di Azure o standard (in genere il supporto locale).
 
-
 > [!NOTE] 
 > Come per qualsiasi altro servizio di Azure, tutti i servizi in anteprima sono idonei per il supporto, solo senza contratti di servizio.
-
-<!-- ### Troubleshooting and optimization
-
-#### Q. Why do I see slow performance while running the code conversion?
-
-#### Q. Translation of errors or unexpected results? -->
 
 ## <a name="next-steps"></a>Passaggi successivi
 

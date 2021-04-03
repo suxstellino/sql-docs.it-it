@@ -13,12 +13,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 monikerRange: '>= sql-server-linux-2017 || >= sql-server-2017'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 9393064403fbd41255b6be0712813185e745d6c1
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: d72587194cae2d7f45ffd02610be614db359a087
+ms.sourcegitcommit: 14f2051d329b69a7b5ff7bce1d136cf7f25bb219
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100344444"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106232168"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Avvio rapido: Eseguire immagini del contenitore di SQL Server con Docker
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -138,7 +138,7 @@ Prima di iniziare la procedura seguente, assicurarsi di aver selezionato la shel
 
    | Parametro | Descrizione |
    |-----|-----|
-   | **-e "ACCEPT_EULA=Y"** |  Impostare la variabile **ACCEPT_EULA** su qualsiasi valore per confermare l'accettazione delle [condizioni di licenza](https://go.microsoft.com/fwlink/?linkid=857698). Impostazione obbligatoria per l'immagine di SQL Server. |
+   | **-e "ACCEPT_EULA=Y"** |  Impostare la variabile **ACCEPT_EULA** su un valore qualsiasi per confermare l'accettazione del contratto di licenza End-User. Impostazione obbligatoria per l'immagine di SQL Server. |
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specificare la password complessa composta da almeno 8 caratteri e conforme ai [requisiti per le password di SQL Server](../relational-databases/security/password-policy.md). Impostazione obbligatoria per l'immagine di SQL Server. |
    | **-p 1433:1433** | Eseguire il mapping di una porta TCP nell'ambiente host (primo valore) con una porta TCP nel contenitore (secondo valore). In questo esempio SQL Server è in ascolto sulla porta TCP 1433 nel contenitore e questo è esposto alla porta 1433 nell'host. |
    | **--name sql1** | Specificare un nome personalizzato per il contenitore, invece di un nome generato in modo casuale. Se si eseguono più contenitori, non è possibile riutilizzare questo stesso nome. |
@@ -264,7 +264,7 @@ Prima di iniziare la procedura seguente, assicurarsi di aver selezionato la shel
 
    | Parametro | Descrizione |
    |-----|-----|
-   | **-e "ACCEPT_EULA=Y"** |  Impostare la variabile **ACCEPT_EULA** su qualsiasi valore per confermare l'accettazione delle [condizioni di licenza](https://go.microsoft.com/fwlink/?LinkId=746388). Impostazione obbligatoria per l'immagine di SQL Server. |
+   | **-e "ACCEPT_EULA=Y"** |  Impostare la variabile **ACCEPT_EULA** su un valore qualsiasi per confermare l'accettazione del contratto di licenza End-User. Impostazione obbligatoria per l'immagine di SQL Server. |
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specificare la password complessa composta da almeno 8 caratteri e conforme ai [requisiti per le password di SQL Server](../relational-databases/security/password-policy.md). Impostazione obbligatoria per l'immagine di SQL Server. |
    | **-p 1433:1433** | Eseguire il mapping di una porta TCP nell'ambiente host (primo valore) con una porta TCP nel contenitore (secondo valore). In questo esempio SQL Server è in ascolto sulla porta TCP 1433 nel contenitore e questo è esposto alla porta 1433 nell'host. |
    | **--name sql1** | Specificare un nome personalizzato per il contenitore, invece di un nome generato in modo casuale. Se si eseguono più contenitori, non è possibile riutilizzare questo stesso nome. |

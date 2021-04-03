@@ -14,12 +14,12 @@ ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51e1253eb44d49285a30e8a0ec77ddf6caae7cba
-ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.openlocfilehash: 99c7cd242a1983c387a4bce41504fa88df45d6da
+ms.sourcegitcommit: e4b71e5d432a29b6c76ea457b00aa0abd4b6c77f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104750431"
+ms.lasthandoff: 04/03/2021
+ms.locfileid: "106273496"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Introduzione alle autorizzazioni del motore di database
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -100,7 +100,7 @@ AUTHORIZATION  PERMISSION  ON  SECURABLE::NAME  TO  PRINCIPAL;
   
 -   `AUTHORIZATION` deve essere `GRANT`, `REVOKE` o `DENY`.  
   
--   `PERMISSION` stabilisce l'azione consentita o quella non consentita. [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] può specificare 230 autorizzazioni. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] contiene meno autorizzazioni perché alcune azioni non sono rilevanti in Azure. Le autorizzazioni sono elencate nell'argomento [Autorizzazioni &#40;motore di database&#41;](../../../relational-databases/security/permissions-database-engine.md) e nel grafico riportato più avanti.  
+-   `PERMISSION` stabilisce l'azione consentita o quella non consentita. Il numero esatto di autorizzazioni è diverso tra SQL Server e il database SQL. Le autorizzazioni sono elencate nell'argomento [Autorizzazioni &#40;motore di database&#41;](../../../relational-databases/security/permissions-database-engine.md) e nel grafico riportato più avanti.  
   
 -   `ON SECURABLE::NAME` specifica il tipo di oggetto a protezione diretta (server, oggetto server, database o oggetto di database) e il nome corrispondente. Alcune autorizzazioni non richiedono `ON SECURABLE::NAME` perché non è ambiguo o non è appropriato nel contesto. Ad esempio, con l'autorizzazione `CREATE TABLE` non è richiesta la clausola `ON SECURABLE::NAME`. Ad esempio, l'istruzione `GRANT CREATE TABLE TO Mary;` consente a Mary di creare tabelle.  
   
@@ -110,6 +110,12 @@ AUTHORIZATION  PERMISSION  ON  SECURABLE::NAME  TO  PRINCIPAL;
   
 ```  
 GRANT UPDATE ON OBJECT::Production.Parts TO PartsTeam;  
+```  
+
+ Nell'istruzione Grant di esempio seguente, viene concessa l' `UPDATE` autorizzazione per lo `Production` schema e da quella in qualsiasi tabella o vista contenuta in questo schema al ruolo denominato `ProductionTeam` , che rappresenta un approccio più efficace e in vendita all'assegnazione delle autorizzazioni rispetto al singolo oggetto a livello di oggetto:
+  
+```  
+GRANT UPDATE ON SCHEMA::Production TO ProductionTeam;  
 ```  
   
  Le autorizzazioni vengono concesse alle entità di sicurezza (account di accesso, utenti e ruoli) con l'istruzione `GRANT` . Le autorizzazioni vengono negate in modo esplicito con il comando  `DENY` . Un'autorizzazione concessa o negata in precedenza viene rimossa con l'istruzione `REVOKE` . Le autorizzazioni sono cumulative, con l'utente che riceve tutte le autorizzazioni concesse all'utente, all'account di accesso e a qualsiasi appartenenza a un gruppo. Tuttavia, la negazione di un'autorizzazione prevale su tutte le concessioni.  
@@ -154,10 +160,12 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
 ```  
   
 ## <a name="grant-the-least-permission"></a>Concedere l'autorizzazione minima  
- La prima autorizzazione elencata in precedenza (`GRANT SELECT ON OBJECT::Region TO Ted;`) è la più granulare, ovvero tale istruzione è l'autorizzazione minima possibile che concede l'autorizzazione `SELECT`. Non sono incluse autorizzazioni per gli oggetti subordinati. È un ottimo principio concedere sempre l'autorizzazione minima possibile, ma (contraddicendo ciò) concederla a livelli superiori per semplificare il sistema di concessione. Se quindi Ted deve ottenere le autorizzazioni per l'intero schema, concedere `SELECT` una sola volta a livello di schema, anziché concedere `SELECT` molte volte a livello di tabella o di vista. La progettazione del database ha un notevole impatto sull'efficacia di questa strategia. Questa strategia funziona meglio quando il database viene progettato in modo tale che gli oggetti che devono ottenere autorizzazioni identiche vengano inclusi in un singolo schema.  
+ La prima autorizzazione elencata in precedenza (`GRANT SELECT ON OBJECT::Region TO Ted;`) è la più granulare, ovvero tale istruzione è l'autorizzazione minima possibile che concede l'autorizzazione `SELECT`. Non sono incluse autorizzazioni per gli oggetti subordinati. Si tratta di un'entità importante per concedere sempre l'autorizzazione minima possibile (è possibile ottenere altre informazioni sul [principio del privilegio minimo](https://techcommunity.microsoft.com/t5/azure-sql/security-the-principle-of-least-privilege-polp/ba-p/2067390)), ma allo stesso tempo (in contraddizione) provare a concedere a livelli superiori per semplificare il sistema di concessione. Se quindi Ted deve ottenere le autorizzazioni per l'intero schema, concedere `SELECT` una sola volta a livello di schema, anziché concedere `SELECT` molte volte a livello di tabella o di vista. La progettazione del database ha un notevole impatto sull'efficacia di questa strategia. Questa strategia funziona meglio quando il database viene progettato in modo tale che gli oggetti che devono ottenere autorizzazioni identiche vengano inclusi in un singolo schema.  
+ 
+ > [!TIP]  
+>  Quando si progetta un database e i relativi oggetti, dall'inizio, pianificare chi o quali applicazioni accedono a quali oggetti e in base a tali oggetti, ovvero tabelle, ma anche viste, funzioni e stored procedure negli schemi in base ai bucket del tipo di accesso al più possibile. Per altre informazioni su questo approccio, vedere questo post di Blog di Andreas Wolter [Schema-Design for SQL Server: suggerimenti per la progettazione dello schema tenendo presente la sicurezza](http://andreas-wolter.com/en/schema-design-for-sql-server-recommendations-for-schema-design-with-security-in-mind/). 
   
-## <a name="list-of-permissions"></a>Elenco di autorizzazioni  
- [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] contiene 230 autorizzazioni. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] contiene 219 autorizzazioni. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] contiene 214 autorizzazioni. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] contiene 195 autorizzazioni. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]e la [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] contengono meno autorizzazioni perché espongono solo una parte del motore di database, anche se contengono alcune autorizzazioni che non si applicano a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
+## <a name="diagramm-of-permissions"></a>Diagramma delle autorizzazioni  
  
  [!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
  

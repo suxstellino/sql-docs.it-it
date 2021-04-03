@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 94eec1c8490a1827b27953adef2e79c45ff5efd8
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 6d15cbae85beb9f500e4abed4db53d13dfc969cc
+ms.sourcegitcommit: 14f2051d329b69a7b5ff7bce1d136cf7f25bb219
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100342447"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106232218"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Configurare un gruppo di disponibilità distribuito Always On  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -281,7 +281,7 @@ ALTER AVAILABILITY GROUP [distributedag]
 GO  
 ```
 
-Se il seeding manuale viene usato per creare il database nel server d'inoltro, eseguire un backup completo e un backup del log delle transazioni dal database primario globale e ripristinarli nel server d'inoltro con l'opzione NONRECOVERY. Esempio:
+Se viene utilizzato il seeding manuale per creare il database nel server d'istruzione, eseguire un backup completo e un backup del log delle transazioni dal database primario globale e ripristinarli nel server di replica con l'opzione NORECOVERY. Esempio:
 
 Per eseguire il backup nel database primario globale: 
 

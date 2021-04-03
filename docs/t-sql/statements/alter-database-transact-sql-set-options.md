@@ -31,12 +31,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: ffc1d15b32bb24d01dfb9a6e0797959561d1b4dc
-ms.sourcegitcommit: c242f423cc3b776c20268483cfab0f4be54460d4
+ms.openlocfilehash: 76a3bc33b441db74961939be543f1fcf44639017
+ms.sourcegitcommit: a7af7bead92044595556b8687e640a0eab0bc455
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105551496"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106179901"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opzioni di ALTER DATABASE SET (Transact-SQL)
 
@@ -1224,7 +1224,7 @@ Per altre informazioni sui checkpoint indiretti, vedere [Checkpoint di database]
 Specifica quando eseguire il rollback di transazioni incomplete in caso di transizione dello stato del database. Se questa clausola viene omessa, l'attesa da parte dell'istruzione ALTER DATABASE è illimitata in presenza di qualsiasi blocco attivo sul database. È possibile specificare una sola clausola di terminazione, che deve seguire le clausole SET.
 
 > [!NOTE]
-> Non tutte le opzioni di database usano la clausola WITH \<termination>. Per altre informazioni, vedere la tabella in "[Impostazione delle opzioni](#SettingOptions)" nella sezione "Osservazioni" di questo articolo.
+> Non tutte le opzioni di database usano la clausola WITH \<termination>. Per ulteriori informazioni, vedere la tabella in [impostazione delle opzioni](#SettingOptions) della sezione "osservazioni" di questo articolo.
 
 ROLLBACK AFTER *number* [SECONDS] | ROLLBACK IMMEDIATE     
 Specifica se eseguire il rollback dopo il numero di secondi specificato o immediatamente. *number* è di tipo **int**.

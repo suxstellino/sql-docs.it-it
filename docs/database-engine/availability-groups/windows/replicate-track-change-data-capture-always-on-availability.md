@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 1ee6a097a60930064ee23389d1d54e965336e3d7
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: b88c8d1fb9b9cb94e28991a9d6a7337e9e5b7132
+ms.sourcegitcommit: 14f2051d329b69a7b5ff7bce1d136cf7f25bb219
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837694"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106232188"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replica, rilevamento modifiche e Change Data Capture per i gruppi di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "101837694"
   
 -   **Flag di traccia 1448**  
   
-     Con il flag di traccia 1448 è possibile far procedere l'agente lettura log repliche anche se il ricevimento di una modifica non è stato riconosciuto dalle repliche secondarie asincrone. Anche con questo flag di traccia abilitato, tramite l'agente di lettura log vengono sempre attese le repliche secondarie sincrone. L'agente di lettura log non procederà oltre il riconoscimento minimo delle repliche secondarie sincrone. Questo flag di traccia si applica all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], non solo a un gruppo di disponibilità, a un database di disponibilità o a un'istanza di lettura log. Questo flag di traccia diventa immediatamente effettivo senza un riavvio. Può essere attivato anticipatamente o quando si verifica un errore in una replica secondaria asincrona.  
+     Con il flag di traccia 1448 è possibile far procedere l'agente lettura log repliche anche se il ricevimento di una modifica non è stato riconosciuto dalle repliche secondarie asincrone. Anche con questo flag di traccia abilitato, la lettura log attende sempre le repliche secondarie sincrone (potrebbe diventare la modalità di commit asincrono come descritto [qui](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md), quindi il lettore di log può andare avanti). L'agente di lettura log non procederà oltre il riconoscimento minimo delle repliche secondarie sincrone. Questo flag di traccia si applica all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], non solo a un gruppo di disponibilità, a un database di disponibilità o a un'istanza di lettura log. Questo flag di traccia diventa immediatamente effettivo senza un riavvio. Può essere attivato anticipatamente o quando si verifica un errore in una replica secondaria asincrona.  
   
 ###  <a name="stored-procedures-supporting-availability-groups"></a><a name="StoredProcs"></a> Stored procedure che supportano i gruppi di disponibilità  
   

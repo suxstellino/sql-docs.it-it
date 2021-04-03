@@ -17,12 +17,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cce49516f92db523dfd25f8ea651ab217ef13619
-ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.openlocfilehash: 7006fbf0570aea7c942f7e904144cb72658b7903
+ms.sourcegitcommit: a7af7bead92044595556b8687e640a0eab0bc455
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104739941"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106179921"
 ---
 # <a name="row-level-security"></a>Sicurezza a livello di riga
 
@@ -533,6 +533,152 @@ DROP SECURITY POLICY Security.SalesFilter;
 DROP TABLE Sales;
 DROP FUNCTION Security.fn_securitypredicate;
 DROP SCHEMA Security;
+```
+
+### <a name="d-scenario-for-using-a-lookup-table-for-the-security-predicate"></a><a name="Lookup"></a> D. Scenario per l'utilizzo di una tabella di ricerca per il predicato di sicurezza
+
+In questo esempio viene utilizzata una tabella di ricerca per il collegamento tra l'identificatore utente e il valore da filtrare, anziché specificare l'identificatore utente nella tabella dei fatti. Vengono creati tre utenti e viene creata e popolata una tabella dei fatti con sei righe e una tabella di ricerca con due righe. Viene quindi creata una funzione inline con valori di tabella che unisce la tabella dei fatti alla ricerca per ottenere l'identificatore utente e i criteri di sicurezza per la tabella. L'esempio mostra poi in che modo le istruzioni Select vengono filtrate per i diversi utenti.  
+  
+Creare tre account utente per mostrare le diverse capacità di accesso.  
+
+```sql  
+CREATE USER Manager WITHOUT LOGIN;  
+CREATE USER Sales1 WITHOUT LOGIN;  
+CREATE USER Sales2 WITHOUT LOGIN;  
+```
+
+Creare uno schema di esempio e una tabella dei fatti per conservare i dati.  
+
+```sql
+CREATE SCHEMA Sample;
+
+CREATE TABLE Sample.Sales  
+    (  
+    OrderID int,  
+    Product varchar(10),  
+    Qty int 
+    );    
+```
+
+ Compilare la tabella dei fatti con sei righe di dati.  
+
+```sql
+INSERT INTO Sample.Sales VALUES (1, 'Valve', 5);
+INSERT INTO Sample.Sales VALUES (2, 'Wheel', 2);
+INSERT INTO Sample.Sales VALUES (3, 'Valve', 4);
+INSERT INTO Sample.Sales VALUES (4, 'Bracket', 2);
+INSERT INTO Sample.Sales VALUES (5, 'Wheel', 5);
+INSERT INTO Sample.Sales VALUES (6, 'Seat', 5);
+-- View the 6 rows in the table  
+SELECT * FROM Sample.Sales;
+```
+
+Creare una tabella che contenga i dati di ricerca, in questo caso una relazione tra SalesRep e Product.  
+
+```sql
+CREATE TABLE Sample.Lk_Salesman_Product
+  ( Salesrep sysname, 
+    Product varchar(10)
+  ) ;
+```
+
+ Inserire i dati di esempio nella tabella di ricerca, collegando un prodotto a ogni rappresentante.  
+
+```sql
+INSERT INTO Sample.Lk_Salesman_Product VALUES ('Sales1', 'Valve');
+INSERT INTO Sample.Lk_Salesman_Product VALUES ('Sales2', 'Wheel');
+-- View the 2 rows in the table
+SELECT * FROM Sample.Lk_Salesman_Product;
+```
+
+Concedere l'accesso in lettura alla tabella dei fatti a tutti gli utenti.  
+
+```sql
+GRANT SELECT ON Sample.Sales TO Manager;  
+GRANT SELECT ON Sample.Sales TO Sales1;  
+GRANT SELECT ON Sample.Sales TO Sales2;  
+```
+
+Creare un nuovo schema e una funzione con valori di tabella inline. La funzione restituisce 1 quando un utente esegue una query sulle vendite della tabella dei fatti e la colonna SalesRep della tabella Lk_Salesman_Product è uguale all'utente che esegue la query ( `@SalesRep = USER_NAME()` ) in caso di join alla tabella dei fatti nella colonna Product o se l'utente che esegue la query è l'utente Manager ( `USER_NAME() = 'Manager'` ).
+
+```sql
+CREATE SCHEMA Security ;
+
+CREATE FUNCTION Security.fn_securitypredicate
+         (@Product AS varchar(10))
+RETURNS TABLE
+WITH SCHEMABINDING
+AS 
+           RETURN ( SELECT 1 as Result
+                     FROM Sample.Sales f
+            INNER JOIN Sample.Lk_Salesman_Product s
+                     ON s.Product = f.Product
+            WHERE ( f.product = @Product
+                    AND s.SalesRep = USER_NAME() )
+                 OR USER_NAME() = 'Manager'
+                   ) ;
+ 
+```
+
+Creare i criteri di sicurezza aggiungendo la funzione come predicato di filtro. Lo stato deve essere impostato su ON per abilitare i criteri.
+
+```sql
+CREATE SECURITY POLICY SalesFilter 
+ADD FILTER PREDICATE Security.fn_securitypredicate(Product)
+ON Sample.Sales
+WITH (STATE = ON) ;
+```
+
+Consentire le autorizzazioni SELECT per la funzione fn_securitypredicate 
+```sql
+GRANT SELECT ON security.fn_securitypredicate TO Manager;  
+GRANT SELECT ON security.fn_securitypredicate TO Sales1;  
+GRANT SELECT ON security.fn_securitypredicate TO Sales2;  
+```
+
+Testare il predicato di filtro mediante la selezione dalla tabella Sales per ciascun utente.
+
+```sql
+EXECUTE AS USER = 'Sales1'; 
+SELECT * FROM Sample.Sales;
+-- This will return just the rows for Product 'Valve' (as specified for ‘Sales1’ in the Lk_Salesman_Product table above)
+REVERT;
+
+EXECUTE AS USER = 'Sales2'; 
+SELECT * FROM Sample.Sales;
+-- This will return just the rows for Product 'Wheel' (as specified for ‘Sales2’ in the Lk_Salesman_Product table above)
+REVERT; 
+
+EXECUTE AS USER = 'Manager'; 
+SELECT * FROM Sample.Sales;
+-- This will return all rows with no restrictions
+REVERT;
+```
+
+Il gestore dovrebbe visualizzare tutte e sei le righe. Gli utenti Sales1 e Sales2 dovrebbero visualizzare solo le proprie vendite.
+
+Modificare i criteri di sicurezza per disabilitarli.
+
+```sql
+ALTER SECURITY POLICY SalesFilter  
+WITH (STATE = OFF);  
+```
+
+Ora gli utenti Sales1 e Sales2 possono visualizzare tutte e sei le righe.
+
+Connettersi al database SQL per pulire le risorse
+
+```sql
+DROP USER Sales1;
+DROP USER Sales2;
+DROP USER Manager;
+
+DROP SECURITY POLICY SalesFilter;
+DROP FUNCTION Security.fn_securitypredicate;
+DROP TABLE Sample.Sales;
+DROP TABLE Sample.Lk_Salesman_Product;
+DROP SCHEMA Security; 
+DROP SCHEMA Sample;
 ```
 
 ## <a name="see-also"></a>Vedere anche
