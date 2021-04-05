@@ -23,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: wiassaf
 manager: amitban
-ms.openlocfilehash: 2e48f40003412a2db5340a32e5408f649bf5bb18
-ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
+ms.openlocfilehash: e41cb56133deb7cc12899840af877e7aa91023c3
+ms.sourcegitcommit: f1a571b6ce02a39c385ad32508ceff23475ed9f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102464989"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "106377448"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
 
@@ -44,7 +44,7 @@ Restituisce informazioni su tutte le attese di SpinLock organizzate in base al t
 |giri|**bigint**|Numero di volte in cui un thread esegue un ciclo durante il tentativo di acquisizione di SpinLock.|  
 |spins_per_collision|**real**|Rapporto di rotazioni per conflitto.|  
 |sleep_time|**bigint**|Quantità di tempo in millisecondi impiegato dai thread per la sospensione in caso di backoff.|  
-|backoff|**int**|Il numero di volte in cui un thread che è "Spinning" non riesce ad acquisire il spinlock e restituisce l'utilità di pianificazione.|  
+|backoff|**bigint**|Il numero di volte in cui un thread che è "Spinning" non riesce ad acquisire il spinlock e restituisce l'utilità di pianificazione.|  
 
 
 ## <a name="permissions"></a>Autorizzazioni  

@@ -2,7 +2,7 @@
 title: Eseguire il backup della chiave master del servizio | Microsoft Docs
 description: Informazioni su come eseguire un backup della chiave master del servizio in SQL Server usando Transact-SQL. La chiave master del servizio è l'elemento radice della gerarchia di crittografia.
 ms.custom: ''
-ms.date: 01/02/2019
+ms.date: 04/02/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,28 +12,21 @@ helpviewer_keywords:
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 7c95feda5457c3623a893e77771dbdc10ea28257
-ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.openlocfilehash: 2862c0d7fe38fb7efab9297980a1a8266b33fb4b
+ms.sourcegitcommit: f1a571b6ce02a39c385ad32508ceff23475ed9f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99250686"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "106377458"
 ---
 # <a name="back-up-the-service-master-key"></a>Backup della chiave master del servizio
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Questo articolo descrive come eseguire il backup di una chiave master del servizio in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La chiave master del servizio è l'elemento radice della gerarchia di crittografia. È consigliabile crearne una copia di backup e archiviarla in una posizione esterna sicura. La creazione di questa copia di backup dovrebbe essere una delle prime operazioni amministrative eseguite nel server.  
+  
+È consigliabile creare una copia di backup della chiave master subito dopo la creazione e archiviare il backup in una posizione esterna sicura.  
+  
+## <a name="permissions"></a>Autorizzazioni
 
-## <a name="before-you-begin"></a>Prima di iniziare  
-  
-### <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
-
-- È necessario aprire e pertanto decrittografare la chiave master prima di eseguirne il backup. Se crittografata con la chiave master del servizio, non è necessario che la chiave master venga aperta in modo esplicito. Tuttavia, se la chiave master viene crittografata solo con una password, è necessario aprirla in modo esplicito.  
-  
-- È consigliabile creare una copia di backup della chiave master subito dopo la creazione e archiviare il backup in una posizione esterna sicura.  
-  
-## <a name="security"></a>Sicurezza  
-  
-### <a name="permissions"></a>Autorizzazioni
 È richiesta l'autorizzazione CONTROL per il database.  
   
 ## <a name="using-transact-sql"></a>Uso di Transact-SQL  
@@ -70,4 +63,11 @@ ms.locfileid: "99250686"
   
 9. Archiviare il file in una posizione esterna protetta.  
 
- Per altre informazioni, vedere [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-master-key-transact-sql.md) e [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-master-key-transact-sql.md).  
+## <a name="next-steps"></a>Passaggi successivi
+
+- [Ripristino della chiave master del servizio](restore-the-service-master-key.md)
+
+## <a name="see-also"></a>Vedi anche
+
+- [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-master-key-transact-sql.md)
+- [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-master-key-transact-sql.md)
