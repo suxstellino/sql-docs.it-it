@@ -7,13 +7,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 03/09/2021
-ms.openlocfilehash: 8d56f26c6661587cb13ff2962221a4a41c7da2ba
-ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
+ms.date: 03/23/2021
+ms.openlocfilehash: 3c1122a98c4f0abe38db739040d617ed5f27ecf0
+ms.sourcegitcommit: ab0c654d924eeb5647e47444abb59d934345b205
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102622677"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106450172"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurare un server di report in un cluster per il bilanciamento del carico di rete
 
@@ -62,7 +62,7 @@ Per eseguire una distribuzione con scalabilità orizzontale in un cluster per il
     Nell'esempio seguente viene illustrato il valore che è necessario ottenere: Non copiare l'esempio nei file di configurazione in uso, in quanto i valori di chiave non sono validi.  
   
     ```xml
-    <machineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
+    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
     ```  
   
 2. Aprire il file Web.config di Server di report, quindi nella sezione <`system.web`> incollare l'elemento <`machineKey`> generato. Per impostazione predefinita, il file di Web.config si trova in \Programmi\microsoft SQL Server\MSRS13. Services\Reportserver\Web.config MSSQLSERVER\Reporting.  
