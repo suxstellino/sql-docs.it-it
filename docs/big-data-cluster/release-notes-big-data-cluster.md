@@ -5,16 +5,16 @@ description: Questo articolo descrive gli aggiornamenti più recenti e i problem
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 02/11/2021
+ms.date: 04/06/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c4cb10ac3ba1e0fd8b437e7f0509dc16cc72d854
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: fc7be52b08bd0e2fa2ad162dcbe2399aef9483e7
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837068"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106557564"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Note sulla versione dei cluster Big Data di SQL Server 2019
 
@@ -64,6 +64,7 @@ Nella tabella seguente viene elencata la cronologia delle versioni per [!INCLUDE
 
 | Release <sup>1</sup> | Versione di BDC | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] versione <sup>2</sup> | Data di rilascio |
 |--|--|--|--|
+| [CU10](#cu10) |  15.0.4123.1 | 20.3.2    | 2021-04-06 |
 | [CU9](#cu9) |  15.0.4102.2 | 20.3.0    | 2021-02-11 |
 | [CU8-GDR](#cu8-gdr) | 15.0.4083.2  | 20.2.6    | 2021-01-12 |
 | [CU8](#cu8)     | 15.0.4073.23 | 20.2.2    | 2020-10-19 |
@@ -82,6 +83,23 @@ Nella tabella seguente viene elencata la cronologia delle versioni per [!INCLUDE
 ## <a name="how-to-install-updates"></a>Come installare gli aggiornamenti
 
 Per installare gli aggiornamenti, vedere [Come aggiornare [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## <a name="cu10-april-2021"></a><a id="cu10"></a> CU10 dalla (aprile 2021)
+
+Versione di aggiornamento cumulativo 10 (CU10 dalla) per SQL Server 2019.
+
+|Versione pacchetto | Tag dell'immagine |
+|-----|-----|
+|15.0.4123.1|[2019-CU10 dalla-Ubuntu-20,04]|
+
+SQL Server 2019 CU10 dalla per i cluster SQL Server Big data, include funzionalità importanti:
+
+- Immagini di base aggiornate da Ubuntu 16,04 a Ubuntu 20,04.
+   > [!CAUTION]
+   > Ubuntu 20,04 presenta requisiti di sicurezza più severi ed è possibile che si verifichino problemi quando si usa BDC per connettersi a istanze di SQL Server prima di SQL Server 2017. Per ulteriori informazioni, vedere [non è stato possibile connettersi all'istanza remota di SQL Server 2016 o versione precedente](#failed-to-connect-to-remote-instance-of-sql-server-2016-or-older).
+- Supporto della disponibilità elevata per i componenti KMS Hadoop.
+- Impostazioni di configurazione aggiuntive per la SQL Server di rete e l'affinità di processi nell'ambito della risorsa. Vedere [risorse del pool master-impostazioni ambito](reference-config-bdc-overview.md#master-pool-resource-scope-settings).
+- Gestione delle risorse per i contenitori correlati a Spark tramite [le impostazioni dell'ambito del cluster BDC](reference-config-bdc-overview.md#bdc-cluster-scope-settings).
 
 ## <a name="cu9-february-2021"></a><a id="cu9"></a> CU9 (febbraio 2021)
 
@@ -221,6 +239,19 @@ SQL Server 2019 General Distribution Release 1 (GDR1): introduce la disponibilit
 
 ## <a name="known-issues"></a>Problemi noti
 
+### <a name="failed-to-connect-to-remote-instance-of-sql-server-2016-or-older"></a>Non è stato possibile connettersi all'istanza remota di SQL Server 2016 o versione precedente
+
+- **Versioni interessate**: CU10 dalla
+- **Problema e conseguenze** per i clienti: quando si usa la polibase in CU10 dalla BDC per connettersi a un'istanza di SQL Server esistente che usa un certificato per la crittografia del canale creata con l'algoritmo SHA1, è possibile osservare l'errore seguente:     
+
+> `Msg 105082, Level 16, State 1, Line 1`
+> `105082;Generic ODBC error: [Microsoft][ODBC Driver 17 for SQL Server]SSL Provider: An existing connection was forcibly closed by the remote host.`
+> `Additional error <2>: ErrorMsg: [Microsoft][ODBC Driver 17 for SQL Server]Client unable to establish connection, SqlState: 08001, NativeError: 10054 Additional error <3>: ErrorMsg: [Microsoft][ODBC Driver 17 for SQL Server]`
+> `Invalid connection string attribute, SqlState: 01S00, NativeError: 0 .`
+
+- **Soluzione**: a causa dei requisiti di sicurezza più elevati di Ubuntu 20,04 rispetto alla versione precedente dell'immagine di base, la connessione remota non è consentita per un certificato che usa l'algoritmo SHA1. Il certificato autofirmato predefinito di SQL Server rilascia 2005-2016 usato l'algoritmo SHA1. Per ulteriori informazioni sulle [modifiche apportate ai certificati autofirmati in SQL Server 2017](https://techcommunity.microsoft.com/t5/sql-server-support/changes-to-hashing-algorithm-for-self-signed-certificate-in-sql/ba-p/319026), fare riferimento a questo post di Blog. Nell'istanza di SQL Server remota usare un certificato creato con un algoritmo che usa almeno 112 bit di sicurezza (ad esempio, SHA256). Per gli ambienti di produzione, è consigliabile usare un certificato attendibile emesso da un'autorità di certificazione. A scopo di test, è anche possibile usare i certificati autofirmati. Per creare un certificato autofirmato, vedere il [cmdlet di PowerShell New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) o il [comando certreq](/windows-server/administration/windows-commands/certreq_1). Per istruzioni sull'installazione di un nuovo certificato nell'istanza di SQL Server remota, vedere [abilitare le connessioni crittografate al motore di database](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)
+
+
 ### <a name="partial-loss-of-logs-collected-in-elasticsearch-upon-rollback"></a>Perdita parziale dei log raccolti in ElasticSearch al rollback
 
 - **Versioni interessate**: i cluster esistenti quando un aggiornamento non riuscito a CU9 genera un rollback o genera un downgrade a una versione precedente.
@@ -289,7 +320,7 @@ SQL Server 2019 General Distribution Release 1 (GDR1): introduce la disponibilit
 
 - **Problema e impatto per i clienti**: Durante la distribuzione di cluster Big Data, il flusso di lavoro genera un set di [account del servizio](active-directory-objects.md). A seconda dei criteri di scadenza delle password impostati nel controller di dominio, le password per questi account possono scadere (il valore predefinito è 42 giorni). Attualmente non è disponibile alcun meccanismo di rotazione delle credenziali per tutti gli account dei cluster Big Data, quindi il cluster diventa inutilizzabile quando viene raggiunta la scadenza.
 
-- **Soluzione alternativa**: Aggiornare i criteri di scadenza per gli account del servizio del cluster Big Data impostandoli su "La password non scade mai" nel controller di dominio. Per un elenco completo di questi account, vedere [Oggetti di Active Directory generati automaticamente](active-directory-objects.md). Questa azione può essere eseguita prima o dopo la scadenza. Nel secondo caso, Active Directory attiverà nuovamente le password scadute.
+- **Soluzione temporanea**: aggiornare i criteri di scadenza per gli account del servizio BDC a "Nessuna scadenza password" nel controller di dominio. Per un elenco completo di questi account, vedere [Oggetti di Active Directory generati automaticamente](active-directory-objects.md). Questa azione può essere eseguita prima o dopo la scadenza. Nel secondo caso, Active Directory attiverà nuovamente le password scadute.
 
 ### <a name="credentials-for-accessing-services-through-gateway-endpoint"></a>Credenziali per l'accesso ai servizi tramite l'endpoint gateway
 
@@ -433,10 +464,9 @@ L'aggiornamento tramite repository diversi per le compilazioni correnti e di des
 
 - **Problema e impatto per i clienti**: quando l'istanza master di SQL Server è in modalità di autenticazione di Active Directory, una query che seleziona solo da tabelle esterne, dove almeno una delle tabelle esterne si trova in un pool di archiviazione, ed esegue l'inserimento in un'altra tabella esterna, restituisce:
 
-   ```
-   Msg 7320, Level 16, State 102, Line 1
-   Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "SQLNCLI11". Only domain logins can be used to query Kerberized storage pool.
-   ```
+> `Msg 7320, Level 16, State 102, Line 1`
+> `Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "SQLNCLI11". Only domain logins can be used to query Kerberized storage pool.`
+   
 
 - **Soluzione alternativa**: modificare la query in uno dei modi seguenti. Unire la tabella del pool di archiviazione a una tabella locale oppure eseguire prima l'inserimento nella tabella locale, quindi leggere dalla tabella locale per eseguire l'inserimento nel pool di dati.
 
@@ -445,6 +475,7 @@ L'aggiornamento tramite repository diversi per le compilazioni correnti e di des
 - **Problema e impatto per i clienti**: in una configurazione a disponibilità elevata, non è possibile usare database con crittografia abilitata dopo un failover, perché la chiave master usata per la crittografia è diversa per ogni replica. 
 
 - **Soluzione alternativa**: non è disponibile alcuna soluzione alternativa per questo problema. È consigliabile evitare di abilitare la crittografia in questa configurazione fino a quando non verrà resa disponibile una correzione.
+
 
 ## <a name="next-steps"></a>Passaggi successivi
 

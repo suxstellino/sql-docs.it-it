@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi azdata bdc app status.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8f274b7231e0f270938b97176982dc71c6c5a373
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 8944108172a82c06af2c4ffb9bc4fc6f8a8a7703
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100048911"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106557344"
 ---
 # <a name="azdata-bdc-app-status"></a>azdata bdc app status
 

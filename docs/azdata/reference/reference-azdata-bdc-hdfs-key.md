@@ -2,14 +2,19 @@
 title: riferimento alla chiave HDFS BDC azdata
 titleSuffix: SQL Server big data clusters
 description: Articolo di riferimento per i comandi azdata BDC HDFS Key.
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: seanw
+ms.date: 04/06/2021
+ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c208d1c726bae41b349abdf475627afbc82ed2b8
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: 194003f64bf3433eb590c11f3a3279049544757d
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100342499"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106556684"
 ---
 # <a name="azdata-bdc-hdfs-key"></a>chiave HDFS BDC azdata
 
@@ -18,6 +23,7 @@ Si applica al [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-az
 L'articolo seguente fornisce informazioni di riferimento sui comandi **sql** dello strumento **azdata**. Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Comandi
+
 |Comando|Descrizione|
 | --- | --- |
 [creazione della chiave HDFS BDC azdata](#azdata-bdc-hdfs-key-create) | Creare una chiave di HDFS.
@@ -49,7 +55,7 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-hdfs-key-list"></a>Elenco chiavi HDFS azdata BDC
@@ -70,7 +76,7 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-hdfs-key-roll"></a>azdata del rollup della chiave HDFS BDC
@@ -95,7 +101,7 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 
@@ -104,3 +110,4 @@ Aumenta il livello di dettaglio della registrazione. Usare --debug per log di de
 Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). 
 
 Per altre informazioni su come installare lo strumento **azdata**, vedere [Installare azdata](..\install\deploy-install-azdata.md).
+

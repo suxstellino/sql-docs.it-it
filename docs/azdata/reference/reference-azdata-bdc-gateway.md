@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi azdata bdc gateway.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 88565117ba3f028e0f1b043a74c9d153fb740cb8
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 2f0d521d7b9fa24509689fe18034be71aeaad6b3
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100048871"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106556674"
 ---
 # <a name="azdata-bdc-gateway"></a>azdata bdc gateway
 
@@ -27,6 +27,7 @@ L'articolo seguente fornisce informazioni di riferimento sui comandi **sql** del
 |Comando|Descrizione|
 | --- | --- |
 [azdata bdc gateway status](reference-azdata-bdc-gateway-status.md) | Comandi relativi allo stato del servizio gateway.
+[impostazioni del gateway BDC azdata](reference-azdata-bdc-gateway-settings.md) | Comandi delle impostazioni BDC per il servizio gateway.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

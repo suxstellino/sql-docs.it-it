@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi azdata arc dc status.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 91bcda5ac4fc7cb39887698cdea19a55b47d8445
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 8379c10fadb93e5467ca870ddeef09cf70f9cf8a
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100052672"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106556944"
 ---
 # <a name="azdata-arc-dc-status"></a>azdata arc dc status
 
@@ -30,17 +30,13 @@ L'articolo seguente fornisce informazioni di riferimento sui comandi **sql** del
 ## <a name="azdata-arc-dc-status-show"></a>azdata arc dc status show
 Mostra lo stato del controller dati.
 ```bash
-azdata arc dc status show [--namespace -ns] 
-                          
+azdata arc dc status show 
 ```
 ### <a name="examples"></a>Esempi
 Visualizza lo stato del controller dati in un determinato spazio dei nomi.
 ```bash
 azdata arc dc status show --namespace <ns>
 ```
-### <a name="optional-parameters"></a>Parametri facoltativi
-#### `--namespace -ns`
-Spazio dei nomi Kubernetes in cui è presente il controller dati.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.

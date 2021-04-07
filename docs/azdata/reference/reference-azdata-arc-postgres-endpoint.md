@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi azdata arc postgres endpoint.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cb48072eaee6cdee6498655f05b88ae05c2062a8
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: dc94dad852cf016ac9bcb47935544df2a97eebd7
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100049001"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106557424"
 ---
 # <a name="azdata-arc-postgres-endpoint"></a>azdata arc postgres endpoint
 
@@ -26,23 +26,22 @@ L'articolo seguente fornisce informazioni di riferimento sui comandi **sql** del
 
 |Comando|Descrizione|
 | --- | --- |
-[azdata arc postgres endpoint list](#azdata-arc-postgres-endpoint-list) | Visualizzare l'elenco degli endpoint del gruppo di server PostgreSQL.
+[azdata arc postgres endpoint list](#azdata-arc-postgres-endpoint-list) | Elenca gli endpoint del gruppo di server con iperscalabilità PostgreSQL abilitati per Azure Arc.
 ## <a name="azdata-arc-postgres-endpoint-list"></a>azdata arc postgres endpoint list
-Visualizzare l'elenco degli endpoint del gruppo di server PostgreSQL.
+Elenca gli endpoint del gruppo di server con iperscalabilità PostgreSQL abilitati per Azure Arc.
 ```bash
-azdata arc postgres endpoint list --name -n 
-                                  [--engine-version -ev]
+azdata arc postgres endpoint list [--name -n] 
+                                  []
 ```
-### <a name="examples"></a>Esempi
-Visualizzare l'elenco degli endpoint del gruppo di server PostgreSQL.
+### <a name="examples"></a>Esempio
+Elenca gli endpoint del gruppo di server con iperscalabilità PostgreSQL abilitati per Azure Arc.
 ```bash
 azdata arc postgres endpoint list -n postgres01
 ```
-### <a name="required-parameters"></a>Parametri necessari
-#### `--name -n`
-Nome del gruppo di server PostgreSQL.
 ### <a name="optional-parameters"></a>Parametri facoltativi
-#### `--engine-version -ev`
+#### `--name -n`
+Nome del gruppo di server di scalabilità di PostgreSQL abilitato per Azure Arc.
+#### <a name=""></a>``
 --engine-version può essere usato in associazione a --name per identificare un gruppo di server PostgreSQL Hyperscale quando due gruppi di server con versione del motore diversa hanno lo stesso nome. --engine-version è facoltativo e se usato per identificare un gruppo di server deve essere 11 o 12.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`

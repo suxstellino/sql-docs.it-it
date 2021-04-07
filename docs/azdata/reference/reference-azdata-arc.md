@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi azdata arc.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a1690d6aff65586cbbc221cbc39b2a8b7b84747f
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: abaf9584337221388675568b9ba07c39afec911f
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100048921"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106556795"
 ---
 # <a name="azdata-arc"></a>azdata arc
 
@@ -30,7 +30,7 @@ L'articolo seguente fornisce informazioni di riferimento sui comandi **sql** del
 [azdata arc dc](reference-azdata-arc-dc.md) | Creare, eliminare e gestire i controller dati.
 [azdata arc resource-kind](reference-azdata-arc-resource-kind.md) | Comandi per la tipologia di risorsa per definire e creare modelli di risorse personalizzate nel cluster.
 [azdata arc resource](reference-azdata-arc-resource.md) | Comandi per le risorse per creare e gestire risorse personalizzate nel cluster.
-[azdata arc postgres](reference-azdata-arc-postgres.md) | Creare, eliminare e gestire gruppi di server PostgreSQL.
+[azdata arc postgres](reference-azdata-arc-postgres.md) | Creare, eliminare e gestire i gruppi di server con scalabilità di PostgreSQL abilitati per Azure Arc.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

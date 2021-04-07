@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi azdata bdc spark status.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ae5cfbc6dc3f4dde812595c0058c9c376c05995a
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: b3d96fd0b00a163046be82ee868dbb0812f5f5f6
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100052352"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106556564"
 ---
 # <a name="azdata-bdc-spark-status"></a>azdata bdc spark status
 

@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi azdata sql.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a7d142ca6afb77539b1425caaf097aca3959baeb
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 2a55bb03e6e597efe8216948b651382ff01dc50c
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100048701"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106557014"
 ---
 # <a name="azdata-sql"></a>azdata sql
 

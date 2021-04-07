@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi azdata arc postgres server.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 79d2cad23c6aed747837635e4d19d42a5daf41dd
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 09c873049d81a62ae53f882396fb0230e11ce155
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100052642"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106556884"
 ---
 # <a name="azdata-arc-postgres-server"></a>azdata arc postgres server
 
@@ -26,13 +26,12 @@ L'articolo seguente fornisce informazioni di riferimento sui comandi **sql** del
 
 |Comando|Descrizione|
 | --- | --- |
-[azdata arc postgres server create](#azdata-arc-postgres-server-create) | Creare un gruppo di server PostgreSQL.
-[azdata arc postgres server edit](#azdata-arc-postgres-server-edit) | Modificare la configurazione di un gruppo di server PostgreSQL.
-[azdata arc postgres server delete](#azdata-arc-postgres-server-delete) | Eliminare un gruppo di server PostgreSQL.
-[azdata arc postgres server show](#azdata-arc-postgres-server-show) | Visualizzare i dettagli di un gruppo di server PostgreSQL.
-[azdata arc postgres server list](#azdata-arc-postgres-server-list) | Visualizzare l'elenco dei gruppi di server PostgreSQL.
+[azdata arc postgres server create](#azdata-arc-postgres-server-create) | Creare un gruppo di server di scalabilità di PostgreSQL abilitato per Azure Arc.
+[azdata arc postgres server edit](#azdata-arc-postgres-server-edit) | Modificare la configurazione di un gruppo di server con iperscalabilità PostgreSQL abilitato per Azure Arc.
+[azdata arc postgres server delete](#azdata-arc-postgres-server-delete) | Eliminare un gruppo di server con iperscalabilità PostgreSQL abilitato per Azure Arc.
+[azdata arc postgres server show](#azdata-arc-postgres-server-show) | Mostra i dettagli di un gruppo di server con iperscalabilità PostgreSQL abilitato per Azure Arc.
+[azdata arc postgres server list](#azdata-arc-postgres-server-list) | Elenca i gruppi di server con iperscalabilità di PostgreSQL abilitati per Azure Arc.
 [azdata arc postgres server config](reference-azdata-arc-postgres-server-config.md) | Comandi di configurazione.
-[azdata arc postgres server backup](reference-azdata-arc-postgres-server-backup.md) | Gestire i backup dei gruppi di server PostgreSQL.
 ## <a name="azdata-arc-postgres-server-create"></a>azdata arc postgres server create
 Per impostare la password del gruppo di server, impostare la variabile di ambiente AZDATA_PASSWORD
 ```bash
@@ -53,6 +52,8 @@ azdata arc postgres server create --name -n
                                   
 [--storage-class-backups -scb]  
                                   
+[--volume-claim-mounts -vcm]  
+                                  
 [--extensions]  
                                   
 [--volume-size-data -vsd]  
@@ -67,8 +68,6 @@ azdata arc postgres server create --name -n
                                   
 [--no-external-endpoint]  
                                   
-[--dev]  
-                                  
 [--port]  
                                   
 [--no-wait]  
@@ -76,35 +75,41 @@ azdata arc postgres server create --name -n
 [--engine-settings -e]
 ```
 ### <a name="examples"></a>Esempi
-Creare un gruppo di server PostgreSQL.
+Creare un gruppo di server di scalabilità di PostgreSQL abilitato per Azure Arc.
 ```bash
 azdata arc postgres server create -n pg1
 ```
-Creare un gruppo di server PostgreSQL con le impostazioni del motore. Entrambi gli esempi seguenti sono validi.
+Creare un gruppo di server con iperscalabilità PostgreSQL abilitato per Azure Arc con le impostazioni del motore. Entrambi gli esempi seguenti sono validi.
 ```bash
 azdata arc postgres server create -n pg1 --engine-settings "key1=val1"
 azdata arc postgres server create -n pg1 --engine-settings "key2=val2"
 ```
+Creare un gruppo di server PostgreSQL con i montaggi del volume Claim.
+```bash
+azdata arc postgres server create -n pg1 --volume-claim-mounts backup-pvc:backup
+```
 ### <a name="required-parameters"></a>Parametri necessari
 #### `--name -n`
-Nome dell’istanza.
+Nome del gruppo di server di scalabilità di PostgreSQL abilitato per Azure Arc.
 ### <a name="optional-parameters"></a>Parametri facoltativi
 #### `--path`
-Percorso del file JSON di origine per il gruppo di server PostgreSQL. Questo indirizzo è facoltativo.
+Percorso del file JSON di origine per il gruppo di server di scalabilità di PostgreSQL abilitato per Azure Arc. Questo indirizzo è facoltativo.
 #### `--cores-limit -cl`
-Numero massimo di core della CPU per l'istanza di Postgres che è possibile usare per ogni nodo. Sono supportati i core frazionari.
+Il numero massimo di core CPU per il gruppo di server di scalabilità PostgreSQL abilitato per Azure Arc che può essere usato per nodo. Sono supportati i core frazionari.
 #### `--cores-request -cr`
 Numero minimo di core della CPU che devono essere disponibili per ogni nodo per pianificare il servizio. Sono supportati i core frazionari.
 #### `--memory-limit -ml`
-Limite di memoria dell'istanza di Postgres come numero seguito da Ki (kilobyte), Mi (megabyte) o Gi (gigabyte).
+Il limite di memoria del gruppo di server per l'iperscalabilità PostgreSQL abilitato per Azure Arc è un numero seguito da Ki (kilobyte), mi (megabyte) o gi (gigabyte).
 #### `--memory-request -mr`
-Richiesta di memoria dell'istanza di Postgres come numero seguito da Ki (kilobyte), Mi (megabyte) o Gi (gigabyte).
+La richiesta di memoria del gruppo di server di iperscalabilità PostgreSQL abilitato per Azure Arc è un numero seguito da Ki (kilobyte), mi (megabyte) o gi (gigabyte).
 #### `--storage-class-data -scd`
 Classe di archiviazione da usare per i volumi permanenti di dati.
 #### `--storage-class-logs -scl`
 Classe di archiviazione da usare per i volumi permanenti di log.
 #### `--storage-class-backups -scb`
 Classe di archiviazione da usare per i volumi permanenti di backup.
+#### `--volume-claim-mounts -vcm`
+Elenco delimitato da virgole di montaggi di attestazioni del volume. Un montaggio di attestazioni volume è una coppia di un'attestazione di volume permanente esistente (nello stesso spazio dei nomi) e di un tipo di volume (e metadati facoltativi a seconda del tipo di volume) separati da due punti. Il volume permanente verrà montato in ogni pod per il gruppo di server PostgreSQL. Il percorso di montaggio può dipendere dal tipo di volume.
 #### `--extensions`
 Elenco delimitato da virgole delle estensioni Postgres che devono essere caricate all'avvio. Per informazioni sui valori supportati, vedere la documentazione di Postgres.
 #### `--volume-size-data -vsd`
@@ -114,13 +119,12 @@ Dimensioni del volume di archiviazione da usare per i log come numero positivo s
 #### `--volume-size-backups -vsb`
 Dimensioni del volume di archiviazione da usare per i backup come numero positivo seguito da Ki (kilobyte), Mi (megabyte) o Gi (gigabyte).
 #### `--workers -w`
-Numero di nodi di lavoro di cui eseguire il provisioning in un cluster partizionato oppure zero (impostazione predefinita) per Postgres a nodo singolo.
+Numero di nodi di lavoro di cui eseguire il provisioning in un gruppo di server. In anteprima, la riduzione del numero di nodi del ruolo di lavoro non è supportata. Per ulteriori informazioni, fare riferimento alla documentazione.
 #### `--engine-version -ev`
 Deve essere 11 o 12. Il valore predefinito è 12.
+`12`
 #### `--no-external-endpoint`
-Se specificato, non verrà creato alcun servizio esterno. In caso contrario, verrà creato un servizio esterno usando lo stesso tipo di servizio del controller di dati.
-#### `--dev`
-Se specificato, viene considerata un'istanza di sviluppo e non verrà fatturata.
+Se specificato, non verrà creato alcun servizio esterno. In caso contrario, verrà creato un servizio esterno usando lo stesso tipo di servizio del controller dati.
 #### `--port`
 facoltativo.
 #### `--no-wait`
@@ -139,14 +143,14 @@ Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmes
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-arc-postgres-server-edit"></a>azdata arc postgres server edit
-Modificare la configurazione di un gruppo di server PostgreSQL.
+Modificare la configurazione di un gruppo di server con iperscalabilità PostgreSQL abilitato per Azure Arc.
 ```bash
 azdata arc postgres server edit --name -n 
                                 [--path]  
                                 
 [--workers -w]  
                                 
-[--engine-version -ev]  
+[]  
                                 
 [--cores-limit -cl]  
                                 
@@ -158,8 +162,6 @@ azdata arc postgres server edit --name -n
                                 
 [--extensions]  
                                 
-[--dev]  
-                                
 [--port]  
                                 
 [--no-wait]  
@@ -170,41 +172,39 @@ azdata arc postgres server edit --name -n
                                 
 [--admin-password]
 ```
-### <a name="examples"></a>Esempi
-Modificare la configurazione di un gruppo di server PostgreSQL.
+### <a name="examples"></a>Esempio
+Modificare la configurazione di un gruppo di server con iperscalabilità PostgreSQL abilitato per Azure Arc.
 ```bash
 azdata arc postgres server edit --src ./spec.json -n pg1
 ```
-Modificare un gruppo di server PostgreSQL con le impostazioni del motore.
+Modificare un gruppo di server con iperscalabilità PostgreSQL abilitato per Azure Arc con le impostazioni del motore.
 ```bash
 azdata arc postgres server edit -n pg1 --engine-settings "key2=val2"
 ```
-Modifica un gruppo di server PostgreSQL e sostituisce le impostazioni del motore esistenti con la nuova impostazione key1=val1.
+Consente di modificare un gruppo di server di scalabilità PostgreSQL abilitato per Azure Arc e di sostituire le impostazioni del motore esistenti con la nuova impostazione Key1 = val1.
 ```bash
 azdata arc postgres server edit -n pg1 --engine-settings "key1=val1" --replace-engine-settings
 ```
 ### <a name="required-parameters"></a>Parametri necessari
 #### `--name -n`
-Nome del gruppo di server PostgreSQL in corso di modifica. Il nome con cui viene distribuita l'istanza non può essere modificato.
+Nome del gruppo di server di scalabilità di PostgreSQL abilitato per Azure Arc in corso di modifica. Il nome con cui viene distribuita l'istanza non può essere modificato.
 ### <a name="optional-parameters"></a>Parametri facoltativi
 #### `--path`
-Percorso del file JSON di origine per il gruppo di server PostgreSQL. Questo indirizzo è facoltativo.
+Percorso del file JSON di origine per il gruppo di server di scalabilità di PostgreSQL abilitato per Azure Arc. Questo indirizzo è facoltativo.
 #### `--workers -w`
-Numero di nodi di lavoro di cui eseguire il provisioning in un cluster partizionato oppure zero (impostazione predefinita) per Postgres a nodo singolo.
-#### `--engine-version -ev`
+Numero di nodi di lavoro di cui eseguire il provisioning in un gruppo di server. In anteprima, la riduzione del numero di nodi del ruolo di lavoro non è supportata. Per ulteriori informazioni, fare riferimento alla documentazione.
+#### <a name=""></a>``
 La versione del motore non può essere modificata. --engine-version può essere usato in associazione a --name per identificare un gruppo di server PostgreSQL Hyperscale quando due gruppi di server con versione del motore diversa hanno lo stesso nome. --engine-version è facoltativo e se usato per identificare un gruppo di server deve essere 11 o 12.
 #### `--cores-limit -cl`
-Numero massimo di core della CPU per l'istanza Postgres che è possibile usare per ogni nodo. I core frazionari sono supportati. Per rimuovere cores_limit, specificare il valore come stringa vuota.
+Il numero massimo di core CPU per il gruppo di server con iperscalabilità PostgreSQL abilitato per Azure Arc che può essere usato per nodo, i core frazionari sono supportati. Per rimuovere cores_limit, specificare il valore come stringa vuota.
 #### `--cores-request -cr`
 Numero minimo di core della CPU che devono essere disponibili per ogni nodo per pianificare il servizio. I core frazionari sono supportati. Per rimuovere cores_request, specificare il valore come stringa vuota.
 #### `--memory-limit -ml`
-Limite di memoria per l'istanza di Postgres come numero seguito da Ki (kilobyte), Mi (megabyte) o Gi (gigabyte). Per rimuovere memory_limit, specificare il valore come stringa vuota.
+Il limite di memoria per il gruppo di server con iperscalabilità PostgreSQL abilitato per Azure Arc è un numero seguito da Ki (kilobyte), mi (megabyte) o gi (gigabyte). Per rimuovere memory_limit, specificare il valore come stringa vuota.
 #### `--memory-request -mr`
-Richiesta di memoria per l'istanza di Postgres come numero seguito da Ki (kilobyte), Mi (megabyte) o Gi (gigabyte). Per rimuovere memory_request, specificare il valore come stringa vuota.
+La richiesta di memoria per il gruppo di server con iperscalabilità PostgreSQL abilitata per Azure Arc è un numero seguito da Ki (kilobyte), mi (megabyte) o gi (gigabyte). Per rimuovere memory_request, specificare il valore come stringa vuota.
 #### `--extensions`
 Elenco delimitato da virgole delle estensioni Postgres che devono essere caricate all'avvio. Per informazioni sui valori supportati, vedere la documentazione di Postgres.
-#### `--dev`
-Se specificato, viene considerata un'istanza di sviluppo e non verrà fatturata.
 #### `--port`
 facoltativo.
 #### `--no-wait`
@@ -214,7 +214,7 @@ Elenco delimitato da virgole delle impostazioni del motore Postgres nel formato 
 #### `--replace-engine-settings -re`
 Quando viene specificato con --engine-settings, verranno sostituite tutte le impostazioni del motore personalizzate esistenti con il nuovo set di impostazioni e valori.
 #### `--admin-password`
-Se specificato, la password di amministratore del server Postgres verrà impostata sul valore della variabile di ambiente AZDATA_PASSWORD se presente e su un valore richiesto in caso contrario.
+Se specificato, la password dell'amministratore del gruppo di server di scalabilità di PostgreSQL abilitata per Azure Arc verrà impostata sul valore della variabile di ambiente AZDATA_PASSWORD se presente e in caso contrario.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
@@ -227,22 +227,26 @@ Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmes
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-arc-postgres-server-delete"></a>azdata arc postgres server delete
-Eliminare un gruppo di server PostgreSQL.
+Eliminare un gruppo di server con iperscalabilità PostgreSQL abilitato per Azure Arc.
 ```bash
 azdata arc postgres server delete --name -n 
-                                  [--engine-version -ev]
+                                  []  
+                                  
+[--force -f]
 ```
-### <a name="examples"></a>Esempi
-Eliminare un gruppo di server PostgreSQL.
+### <a name="examples"></a>Esempio
+Eliminare un gruppo di server con iperscalabilità PostgreSQL abilitato per Azure Arc.
 ```bash
 azdata arc postgres server delete -n pg1
 ```
 ### <a name="required-parameters"></a>Parametri necessari
 #### `--name -n`
-Nome del gruppo di server PostgreSQL.
+Nome del gruppo di server di scalabilità di PostgreSQL abilitato per Azure Arc.
 ### <a name="optional-parameters"></a>Parametri facoltativi
-#### `--engine-version -ev`
+#### <a name=""></a>``
 --engine-version può essere usato in associazione a --name per identificare un gruppo di server PostgreSQL Hyperscale quando due gruppi di server con versione del motore diversa hanno lo stesso nome. --engine-version è facoltativo e se usato per identificare un gruppo di server deve essere 11 o 12.
+#### `--force -f`
+Forzare l'eliminazione del gruppo di server con iperscalabilità PostgreSQL abilitato per Azure Arc senza conferma.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
@@ -255,26 +259,26 @@ Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmes
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-arc-postgres-server-show"></a>azdata arc postgres server show
-Visualizzare i dettagli di un gruppo di server PostgreSQL.
+Mostra i dettagli di un gruppo di server con iperscalabilità PostgreSQL abilitato per Azure Arc.
 ```bash
 azdata arc postgres server show --name -n 
-                                [--engine-version -ev]  
+                                []  
                                 
 [--path -p]
 ```
-### <a name="examples"></a>Esempi
-Visualizzare i dettagli di un gruppo di server PostgreSQL.
+### <a name="examples"></a>Esempio
+Mostra i dettagli di un gruppo di server con iperscalabilità PostgreSQL abilitato per Azure Arc.
 ```bash
 azdata arc postgres server show -n pg1
 ```
 ### <a name="required-parameters"></a>Parametri necessari
 #### `--name -n`
-Nome del gruppo di server PostgreSQL.
+Nome del gruppo di server di scalabilità di PostgreSQL abilitato per Azure Arc.
 ### <a name="optional-parameters"></a>Parametri facoltativi
-#### `--engine-version -ev`
+#### <a name=""></a>``
 --engine-version può essere usato in associazione a --name per identificare un gruppo di server PostgreSQL Hyperscale quando due gruppi di server con versione del motore diversa hanno lo stesso nome. --engine-version è facoltativo e se usato per identificare un gruppo di server deve essere 11 o 12.
 #### `--path -p`
-Percorso in cui scrivere la specifica completa per il gruppo di server PostgreSQL. Se omesso, la specifica verrà scritta nell'output standard.
+Percorso in cui deve essere scritta la specifica completa per il gruppo di server di iperscalabilità PostgreSQL abilitato per Azure Arc. Se omesso, la specifica verrà scritta nell'output standard.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
@@ -287,12 +291,12 @@ Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmes
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-arc-postgres-server-list"></a>azdata arc postgres server list
-Visualizzare l'elenco dei gruppi di server PostgreSQL.
+Elenca i gruppi di server con iperscalabilità di PostgreSQL abilitati per Azure Arc.
 ```bash
 azdata arc postgres server list 
 ```
-### <a name="examples"></a>Esempi
-Visualizzare l'elenco dei gruppi di server PostgreSQL.
+### <a name="examples"></a>Esempio
+Elenca i gruppi di server con iperscalabilità di PostgreSQL abilitati per Azure Arc.
 ```bash
 azdata arc postgres server list
 ```

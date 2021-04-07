@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi azdata postgres.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6403db5f9b716684c3a791ade183a8f9c5edad47
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 951ad9294352418e4a43d442e5a4df6f0fd3543a
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100052272"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106556490"
 ---
 # <a name="azdata-postgres"></a>azdata postgres
 

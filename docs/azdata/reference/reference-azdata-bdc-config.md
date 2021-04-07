@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi azdata bdc config.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 28c9820cd147d5ce4b93fe7605a1f36187f4dfd7
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 9a4ebb83a1accb82359a2fc62cf1122de53656f2
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100048931"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106557324"
 ---
 # <a name="azdata-bdc-config"></a>azdata bdc config
 
@@ -56,7 +56,7 @@ azdata bdc config init --source aks-dev-test --target custom
 #### `--path -p`
 Percorso del file in cui si vuole inserire il profilo di configurazione. Il valore predefinito è <cwd>/custom.
 #### `--source -s`
-Origine del profilo di configurazione: ['openshift-prod', 'aks-dev-test-ha', 'aro-dev-test-ha', 'aks-dev-test', 'kubeadm-prod', 'aro-dev-test', 'openshift-dev-test', 'kubeadm-dev-test']
+Origine del profilo di configurazione: [' Aro-dev-test-ha ',' OpenShift-prod ',' Aro-dev-test ',' OpenShift-dev-test ',' kubeadm-dev-test ',' kubeadm-prod ',' AKS-dev-test-ha ',' AKS-dev-test ']
 #### `--force -f`
 Forza la sovrascrittura del file di destinazione.
 #### `--accept-eula -a`
@@ -91,7 +91,7 @@ azdata bdc config list --config-profile aks-dev-test
 ```
 ### <a name="optional-parameters"></a>Parametri facoltativi
 #### `--config-profile -c`
-Profilo di configurazione predefinito: ['openshift-prod', 'aks-dev-test-ha', 'aro-dev-test-ha', 'aks-dev-test', 'kubeadm-prod', 'aro-dev-test', 'openshift-dev-test', 'kubeadm-dev-test']
+Profilo di configurazione predefinito: [' Aro-dev-test-ha ',' OpenShift-prod ',' Aro-dev-test ',' OpenShift-dev-test ',' kubeadm-dev-test ',' kubeadm-prod ',' AKS-dev-test-ha ',' AKS-dev-test ']
 #### `--type -t`
 Tipo di configurazione che si vuole visualizzare.
 #### `--accept-eula -a`
@@ -132,7 +132,7 @@ azdata bdc config show --config-file custom-config/bdc.json --json-path "$.spec.
 ```
 ### <a name="optional-parameters"></a>Parametri facoltativi
 #### `--config-file -c`
-Percorso del file di configurazione del cluster Big Data se non si vuole applicare la configurazione del cluster a cui si è attualmente connessi, ad esempio custom/bdc.json.
+Percorso del file di configurazione del cluster di Big data se non si vuole che la configurazione del cluster a cui si è attualmente connessi, ad esempio Custom/bdc.json
 #### `--target -t`
 File di output in cui archiviare il risultato. Valore predefinito: indirizzamento a StdOut.
 #### `--json-path -j`
@@ -151,7 +151,7 @@ Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmes
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-config-add"></a>azdata bdc config add
-Aggiunge il valore nel percorso JSON nel file di configurazione.  Tutti gli esempi seguenti si riferiscono alla shell Bash.  Se si usa un'altra riga di comando, potrebbe essere necessario usare le notazioni di escape in modo appropriato.  In alternativa, è possibile usare la funzionalità del file di patch.
+Aggiunge il valore nel percorso JSON nel file di configurazione.  Tutti gli esempi seguenti si riferiscono alla shell Bash.  Se si utilizza un'altra riga di comando, tenere presente che potrebbe essere necessario eseguire l'escape delle quote in modo appropriato.  In alternativa, è possibile usare la funzionalità del file di patch.
 ```bash
 azdata bdc config add --path -p 
                       --json-values -j
@@ -178,7 +178,7 @@ Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmes
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-config-remove"></a>azdata bdc config remove
-Rimuove il valore nel percorso JSON nel file di configurazione.  Tutti gli esempi seguenti si riferiscono alla shell Bash.  Se si usa un'altra riga di comando, potrebbe essere necessario usare le notazioni di escape in modo appropriato.  In alternativa, è possibile usare la funzionalità del file di patch.
+Rimuove il valore nel percorso JSON nel file di configurazione.  Tutti gli esempi seguenti si riferiscono alla shell Bash.  Se si utilizza un'altra riga di comando, tenere presente che potrebbe essere necessario eseguire l'escape delle quote in modo appropriato.  In alternativa, è possibile usare la funzionalità del file di patch.
 ```bash
 azdata bdc config remove --path -p 
                          --json-path -j
@@ -205,7 +205,7 @@ Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmes
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-config-replace"></a>azdata bdc config replace
-Sostituisce il valore nel percorso JSON nel file di configurazione.  Tutti gli esempi seguenti si riferiscono alla shell Bash.  Se si usa un'altra riga di comando, potrebbe essere necessario usare le notazioni di escape in modo appropriato.  In alternativa, è possibile usare la funzionalità del file di patch.
+Sostituisce il valore nel percorso JSON nel file di configurazione.  Tutti gli esempi seguenti si riferiscono alla shell Bash.  Se si utilizza un'altra riga di comando, tenere presente che potrebbe essere necessario eseguire l'escape delle quote in modo appropriato.  In alternativa, è possibile usare la funzionalità del file di patch.
 ```bash
 azdata bdc config replace --path -p 
                           --json-values -j

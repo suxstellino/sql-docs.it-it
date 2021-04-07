@@ -473,8 +473,8 @@ items:
                 href: big-data-cluster/reference-open-source-software.md
               - name: Risorse distribuite
                 href: big-data-cluster/concept-architecture-pods.md
-          - name: Partner BDC
-            href: sql-server/partner-big-data-cluster.md
+              - name: Partner BDC
+                href: sql-server/partner-big-data-cluster.md
           - name: Informazioni di riferimento sulla distribuzione
             items:
               - name: File di configurazione della distribuzione
@@ -487,78 +487,6 @@ items:
                 href: big-data-cluster/reference-config-master-instance.md
               - name: Apache Spark e Apache Hadoop
                 href: big-data-cluster/reference-config-spark-hadoop.md
-          - name: Informazioni di riferimento sull'interfaccia della riga di comando di Azure Data
-            items:
-              - name: Interfaccia della riga di comando di Azure Data
-                items:
-                  - name: azdata
-                    href: azdata/reference/reference-azdata.md
-                  - name: notebook
-                    href: azdata/reference/reference-azdata-notebook.md
-                  - name: sql
-                    href: azdata/reference/reference-azdata-sql.md
-              - name: Distribuzione app
-                items:
-                  - name: app
-                    href: azdata/reference/reference-azdata-app.md
-                  - name: app template
-                    href: azdata/reference/reference-azdata-app-template.md
-              - name: Cluster
-                items:
-                  - name: bdc
-                    href: azdata/reference/reference-azdata-bdc.md
-                  - name: bdc app
-                    href: azdata/reference/reference-azdata-bdc-app.md
-                  - name: bdc app status
-                    href: azdata/reference/reference-azdata-bdc-app-status.md
-                  - name: bdc config
-                    href: azdata/reference/reference-azdata-bdc-config.md
-                  - name: bdc control
-                    href: azdata/reference/reference-azdata-bdc-control.md
-                  - name: bdc control status
-                    href: azdata/reference/reference-azdata-bdc-control-status.md
-                  - name: bdc debug
-                    href: azdata/reference/reference-azdata-bdc-debug.md
-                  - name: bdc endpoint
-                    href: azdata/reference/reference-azdata-bdc-endpoint.md
-                  - name: bdc gateway
-                    href: azdata/reference/reference-azdata-bdc-gateway.md
-                  - name: impostazioni del gateway BDC
-                    href: azdata/reference/reference-azdata-bdc-gateway-settings.md
-                  - name: bdc gateway status
-                    href: azdata/reference/reference-azdata-bdc-gateway-status.md
-                  - name: bdc hdfs
-                    href: azdata/reference/reference-azdata-bdc-hdfs.md
-                  - name: zona di crittografia HDFS BDC
-                    href: azdata/reference/reference-azdata-bdc-hdfs-encryption-zone.md
-                  - name: chiave HDFS BDC
-                    href: azdata/reference/reference-azdata-bdc-hdfs-key.md
-                  - name: bdc hdfs mount
-                    href: azdata/reference/reference-azdata-bdc-hdfs-mount.md
-                  - name: impostazioni HDFS BDC
-                    href: azdata/reference/reference-azdata-bdc-hdfs-settings.md
-                  - name: bdc hdfs status
-                    href: azdata/reference/reference-azdata-bdc-hdfs-status.md
-                  - name: impostazioni di integrazione applicativa dei dati
-                    href: azdata/reference/reference-azdata-bdc-settings.md
-                  - name: bdc spark
-                    href: azdata/reference/reference-azdata-bdc-spark.md
-                  - name: bdc spark batch
-                    href: azdata/reference/reference-azdata-bdc-spark-batch.md
-                  - name: bdc spark session
-                    href: azdata/reference/reference-azdata-bdc-spark-session.md
-                  - name: impostazioni Spark di integrazione applicativa dei dati
-                    href: azdata/reference/reference-azdata-bdc-spark-settings.md
-                  - name: bdc spark statement
-                    href: azdata/reference/reference-azdata-bdc-spark-statement.md
-                  - name: bdc spark status
-                    href: azdata/reference/reference-azdata-bdc-spark-status.md
-                  - name: bdc sql
-                    href: azdata/reference/reference-azdata-bdc-sql.md
-                  - name: Impostazioni SQL BDC
-                    href: azdata/reference/reference-azdata-bdc-sql-settings.md
-                  - name: bdc status
-                    href: azdata/reference/reference-azdata-bdc-status.md
   - name: Continuità aziendale
     items:
       - name: Panoramica
@@ -10380,6 +10308,118 @@ items:
             href: sql-server/partner-dev-sql-server.md
   - name: Informazioni di riferimento
     items:
+      - name: Azcli dell'interfaccia della riga di comando di Azure
+        items:
+          - name: azdata
+            href: azdata/reference/reference-azdata.md
+          - name: contesto
+            href: azdata/reference/reference-azdata-context.md
+          - name: estensione
+            href: azdata/reference/reference-azdata-extension.md
+          - name: notebook
+            href: azdata/reference/reference-azdata-notebook.md
+          - name: postgres
+            href: azdata/reference/reference-azdata-postgres.md
+          - name: sql
+            href: azdata/reference/reference-azdata-sql.md
+          - name: Cluster Big Data
+            items:
+              - name: app
+                href: azdata/reference/reference-azdata-app.md
+              - name: app template
+                href: azdata/reference/reference-azdata-app-template.md
+              - name: bdc
+                href: azdata/reference/reference-azdata-bdc.md
+              - name: bdc app
+                href: azdata/reference/reference-azdata-bdc-app.md
+              - name: bdc app status
+                href: azdata/reference/reference-azdata-bdc-app-status.md
+              - name: bdc config
+                href: azdata/reference/reference-azdata-bdc-config.md
+              - name: bdc control
+                href: azdata/reference/reference-azdata-bdc-control.md
+              - name: bdc control status
+                href: azdata/reference/reference-azdata-bdc-control-status.md
+              - name: bdc debug
+                href: azdata/reference/reference-azdata-bdc-debug.md
+              - name: bdc endpoint
+                href: azdata/reference/reference-azdata-bdc-endpoint.md
+              - name: bdc gateway
+                href: azdata/reference/reference-azdata-bdc-gateway.md
+              - name: impostazioni del gateway BDC
+                href: azdata/reference/reference-azdata-bdc-gateway-settings.md
+              - name: bdc gateway status
+                href: azdata/reference/reference-azdata-bdc-gateway-status.md
+              - name: bdc hdfs
+                href: azdata/reference/reference-azdata-bdc-hdfs.md
+              - name: zona di crittografia HDFS BDC
+                href: azdata/reference/reference-azdata-bdc-hdfs-encryption-zone.md
+              - name: chiave HDFS BDC
+                href: azdata/reference/reference-azdata-bdc-hdfs-key.md
+              - name: bdc hdfs mount
+                href: azdata/reference/reference-azdata-bdc-hdfs-mount.md
+              - name: impostazioni HDFS BDC
+                href: azdata/reference/reference-azdata-bdc-hdfs-settings.md
+              - name: bdc hdfs status
+                href: azdata/reference/reference-azdata-bdc-hdfs-status.md
+              - name: impostazioni di integrazione applicativa dei dati
+                href: azdata/reference/reference-azdata-bdc-settings.md
+              - name: bdc spark
+                href: azdata/reference/reference-azdata-bdc-spark.md
+              - name: bdc spark batch
+                href: azdata/reference/reference-azdata-bdc-spark-batch.md
+              - name: bdc spark session
+                href: azdata/reference/reference-azdata-bdc-spark-session.md
+              - name: impostazioni Spark di integrazione applicativa dei dati
+                href: azdata/reference/reference-azdata-bdc-spark-settings.md
+              - name: bdc spark statement
+                href: azdata/reference/reference-azdata-bdc-spark-statement.md
+              - name: bdc spark status
+                href: azdata/reference/reference-azdata-bdc-spark-status.md
+              - name: bdc sql
+                href: azdata/reference/reference-azdata-bdc-sql.md
+              - name: Impostazioni SQL BDC
+                href: azdata/reference/reference-azdata-bdc-sql-settings.md
+              - name: bdc status
+                href: azdata/reference/reference-azdata-bdc-status.md
+          - name: Servizi dati con abilitazione di Azure Arc
+            items:
+              - name: arco
+                href: azdata/reference/reference-azdata-arc.md
+              - name: DC Arc
+                href: azdata/reference/reference-azdata-arc-dc.md
+              - name: config DC Arc
+                href: azdata/reference/reference-azdata-arc-dc-config.md
+              - name: debug del controller di dominio Arc
+                href: azdata/reference/reference-azdata-arc-dc-debug.md
+              - name: endpoint DC Arc
+                href: azdata/reference/reference-azdata-arc-dc-endpoint.md
+              - name: stato DC Arc
+                href: azdata/reference/reference-azdata-arc-dc-status.md
+              - name: Postgres Arc
+                href: azdata/reference/reference-azdata-arc-postgres.md
+              - name: backup Postgres Arc
+                href: azdata/reference/reference-azdata-arc-postgres-backup.md
+              - name: endpoint Postgres Arc
+                href: azdata/reference/reference-azdata-arc-postgres-endpoint.md
+              - name: Server Postgres Arc
+                href: azdata/reference/reference-azdata-arc-postgres-server.md
+              - name: backup del server Postgres Arc
+                href: azdata/reference/reference-azdata-arc-postgres-server-backup.md
+              - name: configurazione di Arc Postgres server
+                href: azdata/reference/reference-azdata-arc-postgres-server-config.md
+              - name: risorsa Arc
+                href: azdata/reference/reference-azdata-arc-resource.md
+              - name: tipo di risorsa Arc
+                href: azdata/reference/reference-azdata-arc-resource-kind.md
+              - name: Arc SQL
+                href: azdata/reference/reference-azdata-arc-sql.md
+              - name: endpoint SQL Arc
+                href: azdata/reference/reference-azdata-arc-sql-endpoint.md
+              - name: Arc SQL mi
+                href: azdata/reference/reference-azdata-arc-sql-mi.md
+              - name: configurazione di Arc SQL mi
+                href: azdata/reference/reference-azdata-arc-sql-mi-config.md
       - name: Esempi di database
         items:
           - name: Panoramica

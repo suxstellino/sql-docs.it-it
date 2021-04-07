@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi azdata arc sql mi config.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1913f0754001f69436b02f465711ac45245c504c
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: aff2a45cdd35d0bac4293670cb3e5963c7300d42
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100052572"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106557354"
 ---
 # <a name="azdata-arc-sql-mi-config"></a>azdata arc sql mi config
 
@@ -57,7 +57,7 @@ Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmes
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-arc-sql-mi-config-add"></a>azdata arc sql mi config add
-Aggiunge il valore nel percorso JSON nel file di configurazione.  Tutti gli esempi seguenti si riferiscono alla shell Bash.  Se si usa un'altra riga di comando, potrebbe essere necessario usare le notazioni di escape in modo appropriato.  In alternativa, è possibile usare la funzionalità del file di patch.
+Aggiunge il valore nel percorso JSON nel file di configurazione.  Tutti gli esempi seguenti si riferiscono alla shell Bash.  Se si utilizza un'altra riga di comando, tenere presente che potrebbe essere necessario eseguire l'escape delle quote in modo appropriato.  In alternativa, è possibile usare la funzionalità del file di patch.
 ```bash
 azdata arc sql mi config add --path -p 
                              --json-values -j
@@ -71,7 +71,7 @@ azdata arc sql mi config add --path custom/spec.json --json-values "spec.storage
 #### `--path -p`
 Percorso della specifica per la risorsa personalizzata, ad esempio custom/spec.json
 #### `--json-values -j`
-Elenco di coppie chiave/valore di percorsi JSON dei valori: key1.subkey1=value1,key2.subkey2=value2. È possibile specificare valori JSON inline, ad esempio: key='{"kind":"cluster","name":"test-cluster"}' oppure fornire un percorso di file, ad esempio key=./values.json. L'operazione di aggiunta NON supporta le istruzioni condizionali.  Se il valore inline specificato è esso stesso una coppia chiave-valore con "=" e "," usare caratteri di escape per tali caratteri.  Ad esempio, ch1="ch2\=val2\,ch3\=val3". Per esempi relativi all'aspetto del percorso, vedere http://jsonpatch.com/.  Se si vuole accedere a una matrice, è necessario indicare l'indice, ad esempio key.0=value.
+Elenco di coppie chiave/valore di percorsi JSON dei valori: key1.subkey1=value1,key2.subkey2=value2. È possibile specificare valori JSON inline, ad esempio: key='{"kind":"cluster","name":"test-cluster"}' oppure fornire un percorso di file, ad esempio key=./values.json. L'operazione di aggiunta NON supporta le istruzioni condizionali.  Se il valore inline specificato è una coppia chiave-valore con "=" e "," usare caratteri di escape per questi caratteri.  Ad esempio, ch1="ch2\=val2\,ch3\=val3". Per esempi relativi all'aspetto del percorso, vedere http://jsonpatch.com/.  Se si vuole accedere a una matrice, è necessario indicare l'indice, ad esempio key.0=value.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
@@ -84,13 +84,13 @@ Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmes
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-arc-sql-mi-config-remove"></a>azdata arc sql mi config remove
-Rimuove il valore nel percorso JSON nel file di configurazione.  Tutti gli esempi seguenti si riferiscono alla shell Bash.  Se si usa un'altra riga di comando, potrebbe essere necessario usare le notazioni di escape in modo appropriato.  In alternativa, è possibile usare la funzionalità del file di patch.
+Rimuove il valore nel percorso JSON nel file di configurazione.  Tutti gli esempi seguenti si riferiscono alla shell Bash.  Se si utilizza un'altra riga di comando, tenere presente che potrebbe essere necessario eseguire l'escape delle quote in modo appropriato.  In alternativa, è possibile usare la funzionalità del file di patch.
 ```bash
 azdata arc sql mi config remove --path -p 
                                 --json-path -j
 ```
 ### <a name="examples"></a>Esempi
-Es. 1- Rimuovere la risorsa di archiviazione.
+Es. 1 - Rimuovere una risorsa di archiviazione.
 ```bash
 azdata arc sql mi config remove --path custom/spec.json --json-path ".spec.storage"
 ```
@@ -111,7 +111,7 @@ Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmes
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-arc-sql-mi-config-replace"></a>azdata arc sql mi config replace
-Sostituisce il valore nel percorso JSON nel file di configurazione.  Tutti gli esempi seguenti si riferiscono alla shell Bash.  Se si usa un'altra riga di comando, potrebbe essere necessario usare le notazioni di escape in modo appropriato.  In alternativa, è possibile usare la funzionalità del file di patch.
+Sostituisce il valore nel percorso JSON nel file di configurazione.  Tutti gli esempi seguenti si riferiscono alla shell Bash.  Se si utilizza un'altra riga di comando, tenere presente che potrebbe essere necessario eseguire l'escape delle quote in modo appropriato.  In alternativa, è possibile usare la funzionalità del file di patch.
 ```bash
 azdata arc sql mi config replace --path -p 
                                  --json-values -j
@@ -121,7 +121,7 @@ Es. 1 - Sostituire la porta di un singolo endpoint.
 ```bash
 azdata arc sql mi config replace --path custom/spec.json --json-values "$.spec.endpoints[?(@.name=="Controller")].port=30080"
 ```
-Es. 2 - Sostituire la risorsa di archiviazione.
+Es. 2 - Sostituire una risorsa di archiviazione.
 ```bash
 azdata arc sql mi config replace --path custom/spec.json --json-values "spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}"
 ```
@@ -129,7 +129,7 @@ azdata arc sql mi config replace --path custom/spec.json --json-values "spec.sto
 #### `--path -p`
 Percorso della specifica per la risorsa personalizzata, ad esempio custom/spec.json
 #### `--json-values -j`
-Elenco di coppie chiave/valore di percorsi JSON dei valori: key1.subkey1=value1,key2.subkey2=value2. È possibile specificare valori JSON inline, ad esempio: key='{"kind":"cluster","name":"test-cluster"}' oppure fornire un percorso di file, ad esempio key=./values.json. L'operazione di sostituzione supporta le istruzioni condizionali tramite la libreria jsonpath.  Per usarle, il percorso deve iniziare con $. In questo modo sarà possibile usare un'istruzione condizionale, ad esempio -j $.key1.key2[?(@.key3=="someValue"].key4=value. Se il valore inline specificato è esso stesso una coppia chiave-valore con "=" e "," usare caratteri di escape per tali caratteri.  Ad esempio, ch1="ch2\=val2\,ch3\=val3". Vedere gli esempi seguenti. Per altre informazioni, vedere https://jsonpath.com/
+Elenco di coppie chiave/valore di percorsi JSON dei valori: key1.subkey1=value1,key2.subkey2=value2. È possibile specificare valori JSON inline, ad esempio: key='{"kind":"cluster","name":"test-cluster"}' oppure fornire un percorso di file, ad esempio key=./values.json. L'operazione di sostituzione supporta le istruzioni condizionali tramite la libreria jsonpath.  Per usarle, il percorso deve iniziare con $. In questo modo sarà possibile usare un'istruzione condizionale, ad esempio -j $.key1.key2[?(@.key3=="someValue"].key4=value. Se il valore inline specificato è una coppia chiave-valore con "=" e "," usare caratteri di escape per questi caratteri.  Ad esempio, ch1="ch2\=val2\,ch3\=val3". Vedere gli esempi seguenti. Per altre informazioni, vedere https://jsonpath.com/
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.

@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi azdata arc postgres server co
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b67b301d23607d7e30751299b8cec5ca972d5cf5
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 78fb2373652c03e28ad51d222bf81f4cd4263457
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100048991"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106557414"
 ---
 # <a name="azdata-arc-postgres-server-config"></a>azdata arc postgres server config
 
@@ -26,27 +26,27 @@ L'articolo seguente fornisce informazioni di riferimento sui comandi **sql** del
 
 |Comando|Descrizione|
 | --- | --- |
-[azdata arc postgres server config init](#azdata-arc-postgres-server-config-init) | Inizializza i file CRD e i file della specifica per un gruppo di server PostgreSQL.
+[azdata arc postgres server config init](#azdata-arc-postgres-server-config-init) | Inizializza i file di specifica e di CRD per un gruppo di server con iperscalabilità PostgreSQL abilitato per Azure Arc.
 [azdata arc postgres server config add](#azdata-arc-postgres-server-config-add) | Aggiunge un valore per un percorso JSON in un file di configurazione.
 [azdata arc postgres server config remove](#azdata-arc-postgres-server-config-remove) | Rimuove un valore per un percorso JSON in un file di configurazione.
 [azdata arc postgres server config replace](#azdata-arc-postgres-server-config-replace) | Sostituisce un valore per un percorso JSON in un file di configurazione.
 [azdata arc postgres server config patch](#azdata-arc-postgres-server-config-patch) | Applica una patch a un file di configurazione in base a un file di patch JSON.
 ## <a name="azdata-arc-postgres-server-config-init"></a>azdata arc postgres server config init
-Inizializza i file CRD e i file della specifica per un gruppo di server PostgreSQL.
+Inizializza i file di specifica e di CRD per un gruppo di server con iperscalabilità PostgreSQL abilitato per Azure Arc.
 ```bash
 azdata arc postgres server config init --path -p 
-                                       [--engine-version -ev]
+                                       []
 ```
-### <a name="examples"></a>Esempi
-Inizializza i file CRD e i file della specifica per un gruppo di server PostgreSQL.
+### <a name="examples"></a>Esempio
+Inizializza i file di specifica e di CRD per un gruppo di server con iperscalabilità PostgreSQL abilitato per Azure Arc.
 ```bash
 azdata arc postgres server config init --path ./template
 ```
 ### <a name="required-parameters"></a>Parametri necessari
 #### `--path -p`
-Percorso in cui scrivere i file CRD e i file della specifica per il gruppo di server PostgreSQL.
+Percorso in cui devono essere scritti i requisiti per il gruppo di server con iperscalabilità di PostgreSQL abilitati per Azure Arc.
 ### <a name="optional-parameters"></a>Parametri facoltativi
-#### `--engine-version -ev`
+#### <a name=""></a>``
 Deve essere 11 o 12. Il valore predefinito è 12.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
@@ -60,7 +60,7 @@ Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmes
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-arc-postgres-server-config-add"></a>azdata arc postgres server config add
-Aggiunge il valore nel percorso JSON nel file di configurazione.  Tutti gli esempi seguenti si riferiscono alla shell Bash.  Se si usa un'altra riga di comando, potrebbe essere necessario usare le notazioni di escape in modo appropriato.  In alternativa, è possibile usare la funzionalità del file di patch.
+Aggiunge il valore nel percorso JSON nel file di configurazione.  Tutti gli esempi seguenti si riferiscono alla shell Bash.  Se si utilizza un'altra riga di comando, tenere presente che potrebbe essere necessario eseguire l'escape delle quote in modo appropriato.  In alternativa, è possibile usare la funzionalità del file di patch.
 ```bash
 azdata arc postgres server config add --path -p 
                                       --json-values -j
@@ -87,7 +87,7 @@ Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmes
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-arc-postgres-server-config-remove"></a>azdata arc postgres server config remove
-Rimuove il valore nel percorso JSON nel file di configurazione.  Tutti gli esempi seguenti si riferiscono alla shell Bash.  Se si usa un'altra riga di comando, potrebbe essere necessario usare le notazioni di escape in modo appropriato.  In alternativa, è possibile usare la funzionalità del file di patch.
+Rimuove il valore nel percorso JSON nel file di configurazione.  Tutti gli esempi seguenti si riferiscono alla shell Bash.  Se si utilizza un'altra riga di comando, tenere presente che potrebbe essere necessario eseguire l'escape delle quote in modo appropriato.  In alternativa, è possibile usare la funzionalità del file di patch.
 ```bash
 azdata arc postgres server config remove --path -p 
                                          --json-path -j
@@ -114,7 +114,7 @@ Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmes
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-arc-postgres-server-config-replace"></a>azdata arc postgres server config replace
-Sostituisce il valore nel percorso JSON nel file di configurazione.  Tutti gli esempi seguenti si riferiscono alla shell Bash.  Se si usa un'altra riga di comando, potrebbe essere necessario usare le notazioni di escape in modo appropriato.  In alternativa, è possibile usare la funzionalità del file di patch.
+Sostituisce il valore nel percorso JSON nel file di configurazione.  Tutti gli esempi seguenti si riferiscono alla shell Bash.  Se si utilizza un'altra riga di comando, tenere presente che potrebbe essere necessario eseguire l'escape delle quote in modo appropriato.  In alternativa, è possibile usare la funzionalità del file di patch.
 ```bash
 azdata arc postgres server config replace --path -p 
                                           --json-values -j

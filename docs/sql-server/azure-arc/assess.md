@@ -4,15 +4,15 @@ description: Configurare Valutazione SQL su richiesta in un'istanza di SQL Serve
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray
-ms.date: 09/10/2020
+ms.date: 04/06/2021
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 2fb25ca30a3b55bfcedb470addad8680f4914e2f
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: f1fcf571b491a4efc5759c10c4243f3b6b5ed135
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100063293"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106556414"
 ---
 # <a name="configure-sql-assessment-on-an-azure-arc-enabled-sql-server-instance"></a>Configurare Valutazione SQL in un'istanza di SQL Server con abilitazione di Azure Arc
 
@@ -20,7 +20,10 @@ Valutazione SQL offre un meccanismo per valutare la configurazione di SQL Server
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-* L'istanza di SQL Server deve essere connessa ad Azure Arc. Per istruzioni, vedere l'articolo [Connettere SQL Server ad Azure Arc](connect.md).
+* L'istanza di SQL Server basata su Windows è connessa ad Azure Arc. Seguire le istruzioni per caricare l' [istanza di SQL Server in SQL Server abilitati per Arc](connect.md).
+   
+   > [!NOTE]
+   > Il Valutazione SQL su richiesta è attualmente limitato ai SQL Server in esecuzione nei computer Windows.
 
 * L'estensione Microsoft Monitoring Agent (MMA) deve essere installata e configurata nel computer. Per istruzioni, vedere l'articolo [Installare MMA](configure-advanced-data-security.md#install-microsoft-monitoring-agent-mma). È possibile ottenere ulteriori informazioni anche nell'articolo [Agente di Log Analytics](/azure/azure-monitor/platform/log-analytics-agent).
 

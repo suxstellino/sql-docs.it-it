@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f248f7a26dee135cbb68d7d0660ea8e467f76d15
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 194ce3acd5db4643053cde4b42bf5c0115ff9a37
+ms.sourcegitcommit: 8f40e427c867b9d2e9e7dde43f9546fb4d907c4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99207671"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106506646"
 ---
 # <a name="output-clause-transact-sql"></a>Clausola OUTPUT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -318,7 +318,8 @@ DROP TABLE dbo.table1;
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-using-output-into-with-a-simple-insert-statement"></a>R. Utilizzo di OUTPUT INTO con un'istruzione INSERT semplice  
- Nell'esempio seguente viene inserita una riga nella tabella `ScrapReason` e viene usata la clausola `OUTPUT` per restituire i risultati dell'istruzione alla variabile `@MyTableVar``table`. Poiché la colonna `ScrapReasonID` è definita con una proprietà IDENTITY, non è specificato un valore nell'istruzione `INSERT` per quella colonna. Si noti tuttavia che il valore generato da [!INCLUDE[ssDE](../../includes/ssde-md.md)] per quella colonna viene restituito nella clausola `OUTPUT` nella colonna `inserted.ScrapReasonID`.  
+ Nell'esempio seguente viene inserita una riga nella tabella `ScrapReason` e viene utilizzata la clausola `OUTPUT` per restituire i risultati dell'istruzione alla variabile di tabella `@MyTableVar`. Poiché la colonna `ScrapReasonID` è definita con una proprietà IDENTITY, non è specificato un valore nell'istruzione `INSERT` per quella colonna. Si noti tuttavia che il valore generato da [!INCLUDE[ssDE](../../includes/ssde-md.md)] per quella colonna viene restituito nella clausola `OUTPUT` nella colonna `inserted.ScrapReasonID`.  
+
   
 ```sql
 USE AdventureWorks2012;
@@ -393,7 +394,8 @@ GO
 ```
 
 ### <a name="d-using-output-into-to-return-an-expression"></a>D. Utilizzo di OUTPUT INTO per restituire un'espressione  
- Nell'esempio seguente viene utilizzato come base l'esempio C definendo un'espressione nella clausola `OUTPUT` come differenza tra il valore `VacationHours` aggiornato e il valore `VacationHours` prima dell'applicazione dell'aggiornamento. Il valore di questa espressione viene restituito alla variabile `@MyTableVar``table` nella colonna `VacationHoursDifference`.  
+ Nell'esempio seguente viene utilizzato come base l'esempio C definendo un'espressione nella clausola `OUTPUT` come differenza tra il valore `VacationHours` aggiornato e il valore `VacationHours` prima dell'applicazione dell'aggiornamento. Il valore di questa espressione viene restituito alla `@MyTableVar` variabile di tabella nella colonna `VacationHoursDifference` .  
+
   
 ```sql
 USE AdventureWorks2012;  
@@ -492,7 +494,8 @@ GO
 ```
   
 ### <a name="g-using-output-into-with-a-large-object-data-type"></a>G. Utilizzo di OUTPUT INTO con un tipo di dati LOB  
- Nell'esempio seguente viene aggiornato un valore parziale in `DocumentSummary`, una colonna di tipo `nvarchar(max)` della tabella `Production.Document`, tramite la clausola `.WRITE`. La parola `components` viene sostituta con la parola `features` specificando la parola sostitutiva, la posizione iniziale (offset) della parola da sostituire nei dati esistenti e il numero di caratteri da sostituire (lunghezza). Nell'esempio viene usata la clausola `OUTPUT` per restituire le immagini precedenti e successive della colonna `DocumentSummary` alla variabile `@MyTableVar``table`. Si noti che vengono restituite le immagini complete precedenti e successive della colonna `DocumentSummary`.  
+ Nell'esempio seguente viene aggiornato un valore parziale in `DocumentSummary`, una colonna di tipo `nvarchar(max)` della tabella `Production.Document`, tramite la clausola `.WRITE`. La parola `components` viene sostituta con la parola `features` specificando la parola sostitutiva, la posizione iniziale (offset) della parola da sostituire nei dati esistenti e il numero di caratteri da sostituire (lunghezza). Nell'esempio viene utilizzata la `OUTPUT` clausola per restituire le immagini before e After della `DocumentSummary` colonna alla `@MyTableVar` variabile table. Si noti che vengono restituite le immagini complete precedenti e successive della colonna `DocumentSummary`.  
+
   
 ```sql
 USE AdventureWorks2012;
@@ -604,7 +607,8 @@ GO
 ```
   
 ### <a name="j-using-output-and-output-into-in-a-single-statement"></a>J. Utilizzo di OUTPUT e OUTPUT INTO in una singola istruzione  
- Nell'esempio seguente vengono eliminate le righe nella tabella `ProductProductPhoto` in base ai criteri di ricerca definiti nella clausola `FROM` dell'istruzione `DELETE`. La clausola `OUTPUT INTO` restituisce le colonne dalla tabella che viene eliminata (`deleted.ProductID`, `deleted.ProductPhotoID`) e dalla tabella `Product` alla variabile `@MyTableVar``table`. La tabella `Product` viene utilizzata nella clausola `FROM` per specificare le righe da eliminare. La clausola `OUTPUT` restituisce all'applicazione chiamante le colonne `deleted.ProductID`, `deleted.ProductPhotoID` e la data e l'ora in cui la riga è stata eliminata dalla tabella `ProductProductPhoto`.  
+ Nell'esempio seguente vengono eliminate le righe nella tabella `ProductProductPhoto` in base ai criteri di ricerca definiti nella clausola `FROM` dell'istruzione `DELETE`. La `OUTPUT INTO` clausola restituisce le colonne dalla tabella che viene eliminata ( `deleted.ProductID` , `deleted.ProductPhotoID` ) e dalla tabella `Product` alla `@MyTableVar` variabile di tabella. La tabella `Product` viene utilizzata nella clausola `FROM` per specificare le righe da eliminare. La clausola `OUTPUT` restituisce all'applicazione chiamante le colonne `deleted.ProductID`, `deleted.ProductPhotoID` e la data e l'ora in cui la riga è stata eliminata dalla tabella `ProductProductPhoto`.  
+
   
 ```sql
 USE AdventureWorks2012;

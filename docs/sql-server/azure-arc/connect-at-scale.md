@@ -5,15 +5,15 @@ description: Questo articolo illustra come connettere istanze di SQL Server come
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray
-ms.date: 09/10/2020
+ms.date: 04/06/2021
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: b78c76504cb9ffb76b62c1867630760fe52cf22c
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: f7f3c6f2169338c8105dbeba6197576365c71e14
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100063186"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106556334"
 ---
 # <a name="connect-sql-server-instances-to-azure-arc-at-scale"></a>Connettere istanze di SQL Server ad Azure Arc su larga scala
 
@@ -77,7 +77,7 @@ Prima di iniziare, esaminare i [prerequisiti](overview.md#prerequisites) e verif
 
 ## <a name="connecting-multiple-sql-server-instances-on-linux-using-azure-cli"></a>Connessione di più istanze SQL Server in Linux tramite l'interfaccia della riga di comando di Azure
 
-In ogni computer di destinazione deve essere installata l'[interfaccia della riga di comando di Azure](/cli/azure/install-azure-cli). Lo script di registrazione esegue automaticamente l'accesso ad Azure con le credenziali dell'entità servizio, se sono disponibili e se nessun altro utente è già connesso. Usare la procedura seguente per connettere le istanze di SQL Server in più computer Linux.
+In ogni computer di destinazione deve essere installata l'[interfaccia della riga di comando di Azure](/cli/azure/install-azure-cli). Lo script di registrazione effettuerà automaticamente l'accesso ad Azure con le credenziali dell'entità servizio se vengono fornite e nessun altro utente è già connesso. Usare la procedura seguente per connettere le istanze di SQL Server in più computer Linux.
 
 1. Creare un'entità servizio usando il comando ["az ad sp create-for-rbac"](/cli/azure/ad/sp#az_ad_sp_create_for_rbac).
 

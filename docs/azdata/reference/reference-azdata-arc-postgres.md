@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi azdata arc postgres.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d9e05ab1873947eb7023c0290ea35de21c8a91c3
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 9fcd8263b1d9c65f83a2263e460ca09ce6176697
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100048971"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106557374"
 ---
 # <a name="azdata-arc-postgres"></a>azdata arc postgres
 
@@ -26,9 +26,9 @@ L'articolo seguente fornisce informazioni di riferimento sui comandi **sql** del
 
 |Comando|Descrizione|
 | --- | --- |
-[azdata arc postgres server](reference-azdata-arc-postgres-server.md) | Gestire i gruppi di server PostgreSQL.
-[azdata arc postgres backup](reference-azdata-arc-postgres-backup.md) | Gestire i backup dei gruppi di server PostgreSQL.
-[azdata arc postgres endpoint](reference-azdata-arc-postgres-endpoint.md) | Gestire gli endpoint del gruppo di server PostgreSQL.
+[azdata arc postgres server](reference-azdata-arc-postgres-server.md) | Gestire i gruppi di server con iperscalabilità di PostgreSQL abilitati per Azure Arc.
+[azdata arc postgres endpoint](reference-azdata-arc-postgres-endpoint.md) | Gestire gli endpoint del gruppo di server con iperscalabilità PostgreSQL abilitati per Azure Arc.
+[azdata arc postgres backup](reference-azdata-arc-postgres-backup.md) | Gestire i backup del gruppo di server con iperscalabilità PostgreSQL abilitati per Azure Arc.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

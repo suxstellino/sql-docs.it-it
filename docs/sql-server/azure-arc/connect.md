@@ -5,15 +5,15 @@ description: Connettere un'istanza di SQL Server ad Azure Arc
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray
-ms.date: 09/10/2020
+ms.date: 04/06/2021
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 03841af487d6c715357b543798cbb6ac3c6d853e
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 521536a03528f9b1196115a84f93420716e07d88
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100078267"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106556354"
 ---
 # <a name="connect-your-sql-server-to-azure-arc"></a>Connettere l'istanza SQL Server ad Azure Arc
 

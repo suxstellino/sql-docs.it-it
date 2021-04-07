@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi azdata bdc.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f10ba617642d42b4b1d091374305c5f97ba1b474
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 42a14ddd634ea31db608b6c68f9f3b8638984cc3
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100052322"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106556470"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
@@ -26,8 +26,6 @@ L'articolo seguente fornisce informazioni di riferimento sui comandi **sql** del
 
 |Comando|Descrizione|
 | --- | --- |
-[azdata bdc spark](reference-azdata-bdc-spark.md) | I comandi Spark consentono agli utenti di interagire con il sistema Spark creando e gestendo sessioni, istruzioni e batch.
-[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | Il modulo HDFS fornisce i comandi per accedere a un file system HDFS.
 [azdata bdc create](#azdata-bdc-create) | Crea un cluster Big Data.
 [azdata bdc delete](#azdata-bdc-delete) | Elimina un cluster Big Data.
 [azdata bdc upgrade](#azdata-bdc-upgrade) | Aggiorna le immagini distribuite in ogni contenitore del cluster Big Data di SQL Server.
@@ -41,6 +39,9 @@ L'articolo seguente fornisce informazioni di riferimento sui comandi **sql** del
 [azdata bdc spark](reference-azdata-bdc-spark.md) | Comandi del servizio Spark.
 [azdata bdc gateway](reference-azdata-bdc-gateway.md) | Comandi del servizio gateway.
 [azdata bdc app](reference-azdata-bdc-app.md) | Comandi del servizio app.
+[impostazioni di integrazione applicativa dei dati azdata](reference-azdata-bdc-settings.md) | Comandi delle impostazioni di integrazione applicativa dei dati
+[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | Il modulo HDFS fornisce i comandi per accedere a un file system HDFS.
+[azdata bdc spark](reference-azdata-bdc-spark.md) | I comandi Spark consentono agli utenti di interagire con il sistema Spark creando e gestendo sessioni, istruzioni e batch.
 ## <a name="azdata-bdc-create"></a>azdata bdc create
 Crea un cluster Big Data di SQL Server. È necessaria la configurazione di Kubernetes nel sistema in uso con le variabili di ambiente seguenti ['AZDATA_USERNAME', 'AZDATA_PASSWORD'].
 ```bash
@@ -74,7 +75,7 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--name -n`
 Nome del cluster Big Data, usato per gli spazi dei nomi kubernetes.
 #### `--config-profile -c`
-Profilo di configurazione del cluster Big Data, usato per la distribuzione del cluster: ['openshift-prod', 'aks-dev-test-ha', 'aro-dev-test-ha', 'aks-dev-test', 'kubeadm-prod', 'aro-dev-test', 'openshift-dev-test', 'kubeadm-dev-test']
+Profilo di configurazione del cluster Big Data usato per la distribuzione del cluster: [' Aro-dev-test-ha ',' OpenShift-prod ',' Aro-dev-test ',' OpenShift-dev-test ',' kubeadm-dev-test ',' kubeadm-prod ',' AKS-dev-test-ha ',' AKS-dev-test ']
 #### `--accept-eula -a`
 Indica se accettare le condizioni di licenza: [yes/no]. Se non si vuole usare questo argomento, è possibile impostare la variabile di ambiente ACCEPT_EULA su "yes". Le condizioni di licenza di azdata sono disponibili all'indirizzo https://aka.ms/eula-azdata-en.
 #### `--node-label -l`
@@ -132,7 +133,9 @@ azdata bdc upgrade --name -n
                    
 [--stability-threshold -s]  
                    
-[--component-timeout -p]
+[--component-timeout -p]  
+                   
+[--force -f]
 ```
 ### <a name="examples"></a>Esempi
 Aggiornamento del cluster Big Data con un nuovo tag immagine "cu2" dallo stesso repository.
@@ -161,6 +164,8 @@ Numero di minuti di attesa per l'aggiornamento del controller o del database del
 Numero di minuti di attesa dopo un aggiornamento prima di contrassegnarlo come stabile.
 #### `--component-timeout -p`
 Numero di minuti di attesa per il completamento di ogni fase dell'aggiornamento (dopo l'aggiornamento del controller) prima di sospendere l'aggiornamento.
+#### `--force -f`
+Se presente, ignora il controllo integrità del cluster prima di avviare l'aggiornamento
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.

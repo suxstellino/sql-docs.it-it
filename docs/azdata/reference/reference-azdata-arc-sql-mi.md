@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi azdata arc sql mi.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6a3d561f6b09ca6720a70a067e5985fbc96dceb1
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 2b6a8d15233198dbcdd3aad064e5f7668f39eaef
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100048951"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106556815"
 ---
 # <a name="azdata-arc-sql-mi"></a>azdata arc sql mi
 
@@ -37,6 +37,8 @@ Per impostare la password dell'istanza gestita di SQL, impostare la variabile di
 ```bash
 azdata arc sql mi create --name -n 
                          [--path]  
+                         
+[--replicas]  
                          
 [--cores-limit -cl]  
                          
@@ -64,8 +66,6 @@ azdata arc sql mi create --name -n
                          
 [--no-external-endpoint]  
                          
-[--dev]  
-                         
 [--no-wait]
 ```
 ### <a name="examples"></a>Esempi
@@ -73,12 +73,18 @@ Crea un'istanza gestita di SQL.
 ```bash
 azdata arc sql mi create -n sqlmi1
 ```
+Creare un'istanza gestita di SQL con 3 repliche in uno scenario a disponibilità elevata.
+```bash
+azdata arc sql mi create -n sqlmi2 --replicas 3
+```
 ### <a name="required-parameters"></a>Parametri necessari
 #### `--name -n`
 Nome dell'istanza gestita di SQL.
 ### <a name="optional-parameters"></a>Parametri facoltativi
 #### `--path`
 Percorso del file src per il file JSON dell'istanza gestita di SQL.
+#### `--replicas`
+Numero di repliche da distribuire a scopo di disponibilità elevata. I valori consentiti sono ' 3' o ' 1' e il valore predefinito è' 1'.
 #### `--cores-limit -cl`
 Limite di core dell'istanza gestita come numero intero.
 #### `--cores-request -cr`
@@ -86,7 +92,7 @@ Richiesta di core dell'istanza gestita come numero intero.
 #### `--memory-limit -ml`
 Limite della capacità dell'istanza gestita come numero intero.
 #### `--memory-request -mr`
-Richiesta di capacità dell'istanza gestita come numero intero di memoria in GB.
+La richiesta per la capacità dell'istanza gestita come quantità di memoria Integer in GB.
 #### `--storage-class-data -scd`
 Classe di archiviazione da usare per i dati (con estensione mdf). Se non viene indicato alcun valore, non verrà specificata nessuna classe di archiviazione. Kubernetes userà quindi la classe di archiviazione predefinita.
 #### `--storage-class-logs -scl`
@@ -105,8 +111,6 @@ Dimensioni del volume di archiviazione da usare per i log di dati come numero po
 Dimensioni del volume di archiviazione da usare per i backup come numero positivo seguito da Ki (kilobyte), Mi (megabyte) o Gi (gigabyte).
 #### `--no-external-endpoint`
 Se specificato, non verrà creato alcun servizio esterno. In caso contrario, verrà creato un servizio esterno usando lo stesso tipo di servizio del controller dati.
-#### `--dev`
-Se specificato, viene considerata un'istanza di sviluppo e non verrà fatturata.
 #### `--no-wait`
 Se specificato, il comando non attenderà che lo stato dell'istanza sia pronto prima della restituzione.
 ### <a name="global-arguments"></a>Argomenti globali
@@ -134,8 +138,6 @@ azdata arc sql mi edit --name -n
                        
 [--memory-request -mr]  
                        
-[--dev]  
-                       
 [--no-wait]
 ```
 ### <a name="examples"></a>Esempi
@@ -156,9 +158,7 @@ Richiesta di core dell'istanza gestita come numero intero.
 #### `--memory-limit -ml`
 Limite della capacità dell'istanza gestita come numero intero.
 #### `--memory-request -mr`
-Richiesta di capacità dell'istanza gestita come numero intero di memoria in GB.
-#### `--dev`
-Se specificato, viene considerata un'istanza di sviluppo e non verrà fatturata.
+La richiesta per la capacità dell'istanza gestita come quantità di memoria Integer in GB.
 #### `--no-wait`
 Se specificato, il comando non attenderà che lo stato dell'istanza sia pronto prima della restituzione.
 ### <a name="global-arguments"></a>Argomenti globali

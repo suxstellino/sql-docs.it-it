@@ -2,14 +2,19 @@
 title: azdata BDC HDFS Encryption-riferimento alla zona
 titleSuffix: SQL Server big data clusters
 description: Articolo di riferimento per i comandi azdata BDC HDFS Encryption-zone.
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: seanw
+ms.date: 04/06/2021
+ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7c094d489cb925e280f5a44a8234d70fc817554b
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: e2050d19f2b1feb3e32e15e721b9868ba3cbaf1c
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100342523"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106557269"
 ---
 # <a name="azdata-bdc-hdfs-encryption-zone"></a>crittografia azdata BDC HDFS-zona
 
@@ -18,6 +23,7 @@ Si applica al [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-az
 L'articolo seguente fornisce informazioni di riferimento sui comandi **sql** dello strumento **azdata**. Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Comandi
+
 |Comando|Descrizione|
 | --- | --- |
 [azdata BDC HDFS Encryption-area Creazione](#azdata-bdc-hdfs-encryption-zone-create) | Converte una cartella HDFS in una zona di crittografia.
@@ -49,7 +55,7 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-hdfs-encryption-zone-list"></a>azdata BDC HDFS Encryption-elenco zone
@@ -70,7 +76,7 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-hdfs-encryption-zone-get-file-encryption-info"></a>azdata BDC HDFS Encryption-zona Get-File-Encryption-info
@@ -95,7 +101,7 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-hdfs-encryption-zone-status"></a>crittografia azdata BDC HDFS-stato zona
@@ -111,7 +117,7 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-hdfs-encryption-zone-reencrypt"></a>crittografia HDFS BDC azdata-ricrittografia zona
@@ -142,7 +148,7 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 
@@ -151,3 +157,4 @@ Aumenta il livello di dettaglio della registrazione. Usare --debug per log di de
 Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). 
 
 Per altre informazioni su come installare lo strumento **azdata**, vedere [Installare azdata](..\install\deploy-install-azdata.md).
+

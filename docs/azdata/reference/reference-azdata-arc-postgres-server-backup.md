@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi azdata arc postgres server ba
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 00519fa62e0813bc25cee6599cd2faca9ed1489d
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 3f07009577054d4eaa6336a7268d5ca6b0ccc085
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100052652"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106556914"
 ---
 # <a name="azdata-arc-postgres-server-backup"></a>azdata arc postgres server backup
 
@@ -149,4 +149,5 @@ Aumenta il livello di dettaglio della registrazione. Usare --debug per log di de
 Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). 
 
 Per altre informazioni su come installare lo strumento **azdata**, vedere [Installare azdata](..\install\deploy-install-azdata.md).
+
 

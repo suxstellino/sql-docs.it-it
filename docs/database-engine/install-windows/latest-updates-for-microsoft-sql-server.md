@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: SrinivasSQLMS
 ms.author: skandi
 ms.reviewer: hristins
-ms.openlocfilehash: b8df5a92b5fb851e2a39c310c97d450d525542e4
-ms.sourcegitcommit: 851f47e27512651f809540b77bfbd09e6ddb5362
+ms.openlocfilehash: 9e972268049d6605388df053436e9e129ea9adcd
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "105937776"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106557577"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Aggiornamenti più recenti per Microsoft SQL Server
 
@@ -29,7 +29,7 @@ Ognuno dei collegamenti seguenti offre informazioni per tutti i prodotti e le te
 
 |Versioni del prodotto   | Service Pack più recente |  GDR più recente | Aggiornamento cumulativo più recente | Data di rilascio CU | Indicazioni generali  |
 |--|--|--|--|--|--|
-|SQL Server 2019|N/D|[KB 4583458](https://support.microsoft.com/help/4583458)|CU 9 [(KB 5000642)](https://support.microsoft.com/help/5000642)|2/11/2021|[Installazione di SQL Server 2019](./install-sql-server.md)|
+|SQL Server 2019|N/D|[KB 4583458](https://support.microsoft.com/help/4583458)|CU 10 [(KB 5001090)](https://support.microsoft.com/help/5001090)|4/6/2021|[Installazione di SQL Server 2019](./install-sql-server.md)|
 |SQL Server 2017|N/D|[KB 4583456](https://support.microsoft.com/help/4583456)|CU 23 [(KB 5000685)](https://support.microsoft.com/help/5000685)|2/24/2021|[Installazione di SQL Server 2017](./install-sql-server.md)|
 |SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/help/4052908)|[KB 4583460](https://support.microsoft.com/help/4583460)|CU 17 [(KB 5001092)](https://support.microsoft.com/kb/5001092)|3/29/2021|[Installazione di SQL Server 2016](./install-sql-server.md)|
 |SQL Server 2016|SP1 [(KB 3182545)](https://support.microsoft.com/help/3182545/sql-server-2016-service-pack-1-release-information)|[KB 4505219](https://support.microsoft.com/help/4505219)|CU 15 + GDR [(KB 4505221)](https://support.microsoft.com/help/4505221)|9/7/2019|[Installazione di SQL Server 2016](./install-sql-server.md)|

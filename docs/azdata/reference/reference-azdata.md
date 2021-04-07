@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d29ac23842c8aae84ed92d37022c5f67420f42d4
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 138fb6ae901102d5d2c27ae616dfaa2aec226ee0
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100052262"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106556469"
 ---
 # <a name="azdata"></a>azdata
 
@@ -26,16 +26,16 @@ L'articolo seguente fornisce informazioni di riferimento sui comandi **sql** del
 
 |Comando|Descrizione|
 | --- | --- |
-|[azdata notebook](reference-azdata-notebook.md) | Comandi per la visualizzazione, l'esecuzione e la gestione di notebook da un terminale. |
-|[azdata extension](reference-azdata-extension.md) | Consente di gestire e aggiornare le estensioni dell'interfaccia della riga di comando. |
-|[azdata arc](reference-azdata-arc.md) | Comandi per l'uso di Azure Arc per i servizi dati di Azure. |
-|[azdata app](reference-azdata-app.md) | Consente di creare, eliminare, eseguire e gestire applicazioni. |
-|[azdata bdc](reference-azdata-bdc.md) | Consente di selezionare, gestire e usare cluster Big Data di SQL Server. |
-|[azdata sql](reference-azdata-sql.md) | L'interfaccia della riga di comando dei database SQL consente agli utenti di interagire con SQL Server tramite T-SQL. |
+|[azdata postgres](reference-azdata-postgres.md) | Runner di query e shell interattiva Postgres. |
 [azdata login](#azdata-login) | Accedere all'endpoint controller del cluster e impostarne lo spazio dei nomi come contesto attivo. Per usare una password all'accesso, è necessario impostare la variabile di ambiente AZDATA_PASSWORD.
 [azdata logout](#azdata-logout) | Consente di disconnettersi dal cluster.
 |[azdata context](reference-azdata-context.md) | Comandi di gestione del contesto. |
-|[azdata postgres](reference-azdata-postgres.md) | Runner di query e shell interattiva Postgres. |
+|[azdata arc](reference-azdata-arc.md) | Comandi per l'uso di Azure Arc per i servizi dati di Azure. |
+|[azdata bdc](reference-azdata-bdc.md) | Consente di selezionare, gestire e usare cluster Big Data di SQL Server. |
+|[azdata notebook](reference-azdata-notebook.md) | Comandi per la visualizzazione, l'esecuzione e la gestione di notebook da un terminale. |
+|[azdata app](reference-azdata-app.md) | Consente di creare, eliminare, eseguire e gestire applicazioni. |
+|[azdata sql](reference-azdata-sql.md) | L'interfaccia della riga di comando dei database SQL consente agli utenti di interagire con SQL Server tramite T-SQL. |
+|[azdata extension](reference-azdata-extension.md) | Consente di gestire e aggiornare le estensioni dell'interfaccia della riga di comando. |
 ## <a name="azdata-login"></a>azdata login
 Quando si distribuisce il cluster, durante la distribuzione viene elencato l'endpoint del controller, che è necessario usare per poter accedere.  Se non si conosce l'endpoint del controller, è possibile effettuare l'accesso se nel sistema è presente la configurazione kube del cluster nel percorso predefinito <user home>/.kube/config oppure usando la variabile di ambiente KUBECONFIG, ad esempio export KUBECONFIG=path/to/.kube/config.  Quando si esegue l'accesso, lo spazio dei nomi del cluster viene impostato sul contesto attivo.
 ```bash
@@ -53,7 +53,7 @@ azdata login [--auth]
 ### <a name="examples"></a>Esempi
 Accesso tramite autenticazione di base.
 ```bash
-azdata login --auth basic --username johndoe --endpoint https://<ip or domain name>:30080            
+azdata login --auth basic --username johndoe --endpoint https://<ip or domain name>:30080
 ```
 Accesso tramite Active Directory.
 ```bash

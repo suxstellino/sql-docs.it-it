@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi azdata bdc debug.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 68efee6c692b375c98a5dabf9dc69fa58aba21a5
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 77a940c575b1bb952f1be00827f55b02858f46ce
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100052482"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106556738"
 ---
 # <a name="azdata-bdc-debug"></a>azdata bdc debug
 
@@ -42,7 +42,9 @@ azdata bdc debug copy-logs --namespace -ns
                            
 [--skip-compress -sc]  
                            
-[--exclude-dumps -ed]
+[--exclude-dumps -ed]  
+                           
+[--exclude-system-logs  -esl]
 ```
 ### <a name="required-parameters"></a>Parametri obbligatori
 #### `--namespace -ns`
@@ -60,6 +62,8 @@ Numero di secondi di attesa per il completamento del comando. Il valore predefin
 Indica se ignorare o meno la compressione della cartella dei risultati. Il valore predefinito è False, ovvero la cartella dei risultati viene compressa.
 #### `--exclude-dumps -ed`
 Indica se escludere o meno i dump dalla cartella dei risultati. Il valore predefinito è False, ovvero i dump vengono inclusi.
+#### `--exclude-system-logs  -esl`
+Indica se escludere o meno i registri di sistema dalla raccolta. Il valore predefinito è false, che include i log di sistema.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.

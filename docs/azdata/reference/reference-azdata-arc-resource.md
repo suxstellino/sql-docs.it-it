@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi azdata arc resource.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5b134a3ca21b74405fb6ee2cb115015788b59f62
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 868627a39bf6d525c1dab0a32fbf70ba95cf076e
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100048961"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106557385"
 ---
 # <a name="azdata-arc-resource"></a>azdata arc resource
 
@@ -52,21 +52,13 @@ Aumenta il livello di dettaglio della registrazione. Usare --debug per log di de
 ## <a name="azdata-arc-resource-kind-get"></a>azdata arc resource-kind get
 Ottiene il file di modello del tipo di risorsa Arc.
 ```bash
-azdata arc resource-kind get --kind -k 
-                             [--dest -d]
+azdata arc resource-kind get 
 ```
 ### <a name="examples"></a>Esempi
 Comando di esempio per ottenere il file di modello CRD del tipo risorsa Arc.
 ```bash
 azdata arc resource-kind get --kind sqldb
 ```
-### <a name="required-parameters"></a>Parametri necessari
-#### `--kind -k`
-Tipo di risorsa Arc per cui si vuole ottenere il file di modello.
-### <a name="optional-parameters"></a>Parametri facoltativi
-#### `--dest -d`
-Directory in cui si vogliono inserire i file di modello.
-`template`
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.

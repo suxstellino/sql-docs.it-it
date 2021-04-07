@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi azdata arc dc debug.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3979dbd8561eeedf3e5c0ab03a51b04b2bd73674
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 722d458d75c6f366e65b2f8e9c36cd3f02ed6df7
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100052682"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106556964"
 ---
 # <a name="azdata-arc-dc-debug"></a>azdata arc dc debug
 
@@ -31,43 +31,8 @@ L'articolo seguente fornisce informazioni di riferimento sui comandi **sql** del
 ## <a name="azdata-arc-dc-debug-copy-logs"></a>azdata arc dc debug copy-logs
 Copia i log di debug dal controller dati. È necessaria la configurazione di Kubernetes nel sistema in uso.
 ```bash
-azdata arc dc debug copy-logs --namespace -ns 
-                              [--container -c]  
-                              
-[--target-folder -d]  
-                              
-[--pod]  
-                              
-[--resource-kind -rk]  
-                              
-[--resource-name -rn]  
-                              
-[--timeout -t]  
-                              
-[--skip-compress -sc]  
-                              
-[--exclude-dumps -ed]
+azdata arc dc debug copy-logs 
 ```
-### <a name="required-parameters"></a>Parametri necessari
-#### `--namespace -ns`
-Spazio dei nomi Kubernetes del controller dati.
-### <a name="optional-parameters"></a>Parametri facoltativi
-#### `--container -c`
-Copia i log relativi ai contenitori con nome simile. Facoltativo; per impostazione predefinita, vengono copiati i log di tutti i contenitori. Questo parametro non può essere specificato più volte. In caso contrario, verrà usato l'ultimo parametro specificato.
-#### `--target-folder -d`
-Percorso della cartella di destinazione in cui copiare i log. Facoltativo; per impostazione predefinita, il risultato viene creato nella cartella locale.  Questo parametro non può essere specificato più volte. In caso contrario, verrà usato l'ultimo parametro specificato.
-#### `--pod`
-Copia i log relativi ai pod con nome simile. Facoltativo; per impostazione predefinita, vengono copiati i log di tutti i pod. Questo parametro non può essere specificato più volte. In caso contrario, verrà usato l'ultimo parametro specificato.
-#### `--resource-kind -rk`
-Copiare i log per la risorsa di un determinato tipo. Questo parametro non può essere specificato più volte. In caso contrario, verrà usato l'ultimo parametro specificato. Se specificato, è necessario specificare anche --resource-name per identificare la risorsa.
-#### `--resource-name -rn`
-Copiare i log per la risorsa con il nome specificato. Questo parametro non può essere specificato più volte. In caso contrario, verrà usato l'ultimo parametro specificato. Se specificato, è necessario specificare anche --resource-kind per identificare la risorsa.
-#### `--timeout -t`
-Numero di secondi di attesa per il completamento del comando. Il valore predefinito è 0, ovvero illimitato.
-#### `--skip-compress -sc`
-Indica se ignorare o meno la compressione della cartella dei risultati. Il valore predefinito è False, ovvero la cartella dei risultati viene compressa.
-#### `--exclude-dumps -ed`
-Indica se escludere o meno i dump dalla cartella dei risultati. Il valore predefinito è False, ovvero i dump vengono inclusi.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
@@ -82,20 +47,8 @@ Aumenta il livello di dettaglio della registrazione. Usare --debug per log di de
 ## <a name="azdata-arc-dc-debug-dump"></a>azdata arc dc debug dump
 Attiva il dump della memoria e lo copia dal contenitore. È necessaria la configurazione di Kubernetes nel sistema in uso.
 ```bash
-azdata arc dc debug dump --namespace -ns 
-                         [--container -c]  
-                         
-[--target-folder -d]
+azdata arc dc debug dump 
 ```
-### <a name="required-parameters"></a>Parametri obbligatori
-#### `--namespace -ns`
-Spazio dei nomi Kubernetes del controller dati.
-### <a name="optional-parameters"></a>Parametri facoltativi
-#### `--container -c`
-Contenitore di destinazione da attivare per il dump dei processi in esecuzione.
-`controller`
-#### `--target-folder -d`
-Cartella di destinazione in cui copiare il dump. `./output/dump`
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.

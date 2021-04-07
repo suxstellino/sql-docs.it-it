@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi azdata bdc hdfs.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ed57027a0fa7a2f5003c67cafb5a7bb8eb3d876b
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 27f27123d5b39efdc4c607a119858048dfc87859
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100052422"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106556704"
 ---
 # <a name="azdata-bdc-hdfs"></a>azdata bdc hdfs
 
@@ -26,6 +26,10 @@ L'articolo seguente fornisce informazioni di riferimento sui comandi **sql** del
 
 |Comando|Descrizione|
 | --- | --- |
+[azdata bdc hdfs status](reference-azdata-bdc-hdfs-status.md) | Comandi relativi allo stato del servizio HDFS.
+[impostazioni HDFS BDC azdata](reference-azdata-bdc-hdfs-settings.md) | Comandi delle impostazioni BDC per il servizio HDFS.
+[crittografia azdata BDC HDFS-zona](reference-azdata-bdc-hdfs-encryption-zone.md) | Gestire le zone di crittografia in HDFS.
+[chiave HDFS BDC azdata](reference-azdata-bdc-hdfs-key.md) | Gestire le chiavi della zona di crittografia Hadoop.
 [azdata bdc hdfs shell](#azdata-bdc-hdfs-shell) | La shell HDFS è una semplice shell dei comandi interattiva per file system HDFS.
 [azdata bdc hdfs ls](#azdata-bdc-hdfs-ls) | Elenca lo stato del file o della directory specificata.
 [azdata bdc hdfs exists](#azdata-bdc-hdfs-exists) | Determina se un file o una directory esiste realmente.  Restituisce True se esiste; in caso contrario, False.
@@ -39,7 +43,6 @@ L'articolo seguente fornisce informazioni di riferimento sui comandi **sql** del
 [azdata bdc hdfs chown](#azdata-bdc-hdfs-chown) | Modifica il proprietario o il gruppo del file specificato.
 [azdata bdc hdfs cp](#azdata-bdc-hdfs-cp) | Copia un file o una directory tra il computer locale e HDFS.
 [azdata bdc hdfs mount](reference-azdata-bdc-hdfs-mount.md) | Gestire il montaggio di archivi remoti in HDFS.
-[azdata bdc hdfs status](reference-azdata-bdc-hdfs-status.md) | Comandi relativi allo stato del servizio HDFS.
 ## <a name="azdata-bdc-hdfs-shell"></a>azdata bdc hdfs shell
 La shell HDFS è una semplice shell dei comandi interattiva per file system HDFS.
 ```bash

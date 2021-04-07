@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi azdata arc dc endpoint.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0e0fadcace976f55ea2e22fd1bd2c1c957f5c238
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: eb096643e1f40c0a5fd059dbb9a105723c2cc719
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100049026"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106557454"
 ---
 # <a name="azdata-arc-dc-endpoint"></a>azdata arc dc endpoint
 
@@ -30,17 +30,13 @@ L'articolo seguente fornisce informazioni di riferimento sui comandi **sql** del
 ## <a name="azdata-arc-dc-endpoint-list"></a>azdata arc dc endpoint list
 Visualizzare l'endpoint del controller dati.
 ```bash
-azdata arc dc endpoint list [--endpoint-name -e] 
-                            
+azdata arc dc endpoint list 
 ```
 ### <a name="examples"></a>Esempi
-Visualizza l'endpoint del controller dati in un determinato spazio dei nomi.
+Elenca tutti gli endpoint del controller di dati disponibili.
 ```bash
-azdata arc dc endpoint list --namespace <ns>
+azdata arc dc endpoint list
 ```
-### <a name="optional-parameters"></a>Parametri facoltativi
-#### `--endpoint-name -e`
-Nome dell'endpoint del controller dati di Arc.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.

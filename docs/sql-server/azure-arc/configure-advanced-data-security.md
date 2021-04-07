@@ -5,15 +5,15 @@ description: Configurare la sicurezza dei dati avanzata per l'istanza di SQL Ser
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray
-ms.date: 09/10/2020
+ms.date: 04/06/2021
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 2d7cdc1a04cfa8f3a1697eed68913f92174f972b
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: e80c146c1f1fc1d40293e5ce12fb170bfd413f09
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100063226"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106556374"
 ---
 # <a name="configure-advanced-data-security-for-azure-arc-enabled-sql-server-instance"></a>Configurare la sicurezza dei dati avanzata per l'istanza di SQL Server abilitato per Azure Arc
 
@@ -21,9 +21,13 @@ ms.locfileid: "100063226"
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-* L'istanza di SQL Server viene caricata in SQL Server abilitato per Arc. Seguire queste istruzioni per [caricare l'istanza di SQL Server in SQL Server abilitato per Arc](connect.md).
+* L'istanza di SQL Server basata su Windows è connessa ad Azure Arc. Seguire le istruzioni per caricare l' [istanza di SQL Server in SQL Server abilitati per Arc](connect.md).
+
+   > [!NOTE]
+   > Azure Defender attualmente limitato a SQL Server in esecuzione nei computer Windows.
 
 * All'account utente viene assegnato uno dei [ruoli del Centro sicurezza (Controllo degli accessi in base al ruolo)](/azure/security-center/security-center-permissions)
+
 
 ## <a name="create-a-log-analytics-workspace"></a>Creare un'area di lavoro Log Analytics
 

@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi azdata app.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d2278059053366fb89e8ecd5a7cd626980bec637
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 5c6dfa43eb652c94e820a773c5604058f1346d6a
+ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100052712"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106557034"
 ---
 # <a name="azdata-app"></a>azdata app
 
