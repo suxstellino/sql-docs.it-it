@@ -12,12 +12,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 '
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: f789dd2b80515116e7bf0a12e26e6e8fe6c45b03
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 5b8f63de1d93ae6179e26a70c4a8e310eb4caca1
+ms.sourcegitcommit: d8cbbeffa3faa110e02056ff97dc7102b400ffb3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100273102"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "107003880"
 ---
 # <a name="deploy-and-connect-to-sql-server-docker-containers"></a>Distribuire e connettersi a contenitori Docker di SQL Server
 
@@ -210,7 +210,10 @@ Packages
 ## <a name="run-a-specific-sql-server-container-image"></a><a id="tags"></a> Eseguire un'immagine del contenitore di SQL Server specifica
 
 > [!NOTE]
-> A partire da SQL Server 2019 CU3 è supportato Ubuntu 18.04. È possibile recuperare un elenco di tutti i tag disponibili per mssql/server in <https://mcr.microsoft.com/v2/mssql/server/tags/list>.
+>
+> - A partire da SQL Server 2019 CU3 è supportato Ubuntu 18.04.
+> - A partire da SQL Server 2019 CU10 dalla, Ubuntu 20,04 è supportato.
+> - È possibile recuperare un elenco di tutti i tag disponibili per mssql/server in <https://mcr.microsoft.com/v2/mssql/server/tags/list>.
 
 Esistono scenari in cui è possibile che non si voglia usare la versione più recente dell'immagine del contenitore di SQL Server. Per eseguire un'immagine del contenitore di SQL Server specifica, seguire questa procedura:
 

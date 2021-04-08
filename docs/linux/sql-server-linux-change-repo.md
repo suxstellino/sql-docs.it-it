@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: d284a049cb1266dc33c30657f3d86e8421825868
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: d32bd886cdea6d64cee893ca76d83c4a5f74a7a2
+ms.sourcegitcommit: d8cbbeffa3faa110e02056ff97dc7102b400ffb3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100340391"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "107003885"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurare i repository per l'installazione e l'aggiornamento di SQL Server in Linux
 
@@ -158,7 +158,10 @@ Se necessario, rimuovere il repository precedente. Usare uno dei comandi seguent
 Se necessario, rimuovere il repository precedente. Usare uno dei comandi seguenti in base al tipo di repository configurato in precedenza.
 
 > [!NOTE]
-> A partire da SQL Server 2019 CU3 e SQL Server 2017 CU20 è supportato Ubuntu 18.04. Se si usa Ubuntu 16.04, modificare il percorso riportato di seguito impostando `/ubuntu/16.04` anziché `/ubuntu/18.04` e usare il [nome del codice di distribuzione](https://releases.ubuntu.com/) corretto.
+>
+> - A partire da SQL Server 2019 CU10 dalla, Ubuntu 20,04 è supportato.
+> - A partire da SQL Server 2019 CU3 e SQL Server 2017 CU20 è supportato Ubuntu 18.04.
+> - Se si usa Ubuntu 16.04, modificare il percorso riportato di seguito impostando `/ubuntu/16.04` anziché `/ubuntu/18.04` e usare il [nome del codice di distribuzione](https://releases.ubuntu.com/) corretto.
 
 | Archivio | Comando da rimuovere |
 |---|---|
@@ -210,9 +213,10 @@ Configurare il nuovo repository da usare per le installazioni e gli aggiornament
 Configurare il nuovo repository da usare per le installazioni e gli aggiornamenti di SQL Server.
 
 > [!NOTE]
-> A partire da SQL Server 2019 CU3 e SQL Server 2017 CU20 è supportato Ubuntu 18.04. I comandi seguenti indicano il repository Ubuntu 18.04.
 >
-> Se si usa Ubuntu 16.04, modificare il percorso riportato di seguito sostituendo `/ubuntu/18.04` con `/ubuntu/16.04`.
+> - A partire da SQL Server 2019 CU10 dalla, Ubuntu 20,04 è supportato
+> - A partire da SQL Server 2019 CU3 e SQL Server 2017 CU20 è supportato Ubuntu 18.04.
+> - I comandi seguenti indicano il repository Ubuntu 18.04. Se si usa Ubuntu 16.04, modificare il percorso riportato di seguito sostituendo `/ubuntu/18.04` con `/ubuntu/16.04`.
 
 1. Importare le chiavi GPG del repository pubblico.
 

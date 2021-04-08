@@ -3,16 +3,16 @@ title: Novità di SQL Server 2019 in Linux
 description: Questo articolo illustra le novità di SQL Server 2019 in Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/12/2020
+ms.date: 04/07/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 8cc766248f4dd2776a0367b2c0ac6e12f385433e
-ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
+ms.openlocfilehash: a41d89e92aebec5af69b04b3ffe1f9c405c1abe6
+ms.sourcegitcommit: d8cbbeffa3faa110e02056ff97dc7102b400ffb3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102464654"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "107003857"
 ---
 # <a name="whats-new-for-sql-server-2019-on-linux"></a>Novità di SQL Server 2019 in Linux
 
@@ -20,9 +20,11 @@ ms.locfileid: "102464654"
 
 Questo articolo descrive le funzionalità e i servizi principali disponibili per SQL Server 2019 in esecuzione in Linux. Per il download dei pacchetti e per informazioni sui problemi noti, vedere le [Note sulla versione ](sql-server-linux-release-notes-2019.md).
 
-## <a name="ubuntu-1804-supported"></a>Supporto per Ubuntu 18.04
+## <a name="ubuntu-1804-and-2004-supported"></a>Ubuntu 18,04 e 20,04 supportati
 
-A partire da SQL Server 2019 CU3, Ubuntu 18,04 è ora supportato. Vedere l'articolo di avvio rapido [Installazione di SQL Server e creazione di un database in Ubuntu](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15&preserve-view=true).
+- A partire da SQL Server 2019 CU3, Ubuntu 18,04 è ora supportato. 
+- A partire da SQL Server 2019 CU10 dalla, Ubuntu 20,04 è ora supportato. 
+- Vedere l'articolo di avvio rapido [Installazione di SQL Server e creazione di un database in Ubuntu](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15&preserve-view=true).
 
 ## <a name="rhel-8-supported"></a>Supporto per RHEL 8
 

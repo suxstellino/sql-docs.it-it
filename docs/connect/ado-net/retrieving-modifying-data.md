@@ -1,7 +1,7 @@
 ---
 title: Recupero e modifica di dati
 description: In .NET, il provider di dati Microsoft SqlClient per SQL Server funge da ponte tra un'applicazione e un'origine dati per la lettura e l'aggiornamento dei dati.
-ms.date: 11/30/2020
+ms.date: 03/24/2021
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 4275b7de0f31d03aa36ef31d8801fcdc0e9ec853
-ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
-ms.translationtype: HT
+ms.openlocfilehash: cfe047c94c39c9c07fb1f8cf32013ef4c62a5959
+ms.sourcegitcommit: d8cbbeffa3faa110e02056ff97dc7102b400ffb3
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2020
-ms.locfileid: "97771546"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "107003777"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Recupero e modifica di dati in ADO.NET
 
@@ -49,28 +49,31 @@ Sono inclusi argomenti in cui viene descritto come eseguire transazioni locali e
 Viene descritto come ottenere da un'origine dati database o cataloghi disponibili, tabelle e visualizzazioni in un database, vincoli esistenti per tabelle e altre informazioni relative allo schema.
 
 [Oggetti DbProviderFactory](dbproviderfactories.md)  
-Viene descritto il modello a livello di factory del provider e viene illustrato come usare le classi base nello spazio dei nomi `System.Data.Common`.  
+Viene descritto il modello a livello di factory del provider e viene illustrato come usare le classi base nello spazio dei nomi `System.Data.Common`.
+
+[Logica di ripetizione dei tentativi configurabile in SqlClient](configurable-retry-logic.md)  
+Viene descritto come utilizzare la funzionalità di **logica di ripetizione dei tentativi configurabile** quando si stabilisce una connessione o si esegue un comando.
 
 [Recuperare i valori Identity o di numerazione automatica](retrieve-identity-or-autonumber-values.md)  
-Vengono forniti esempi di mapping dei valori generati per una colonna **identity** di una tabella di SQL Server a una colonna di una riga inserita in una tabella. Viene descritta l'unione di valori Identity in un oggetto `DataTable`.  
-  
+Vengono forniti esempi di mapping dei valori generati per una colonna **identity** di una tabella di SQL Server a una colonna di una riga inserita in una tabella. Viene descritta l'unione di valori Identity in un oggetto `DataTable`.
+
 [Recuperare i dati binari](retrieve-binary-data.md)  
-Viene descritto come recuperare dati binari o strutture di dati di grandi dimensioni usando `CommandBehavior`.`SequentialAccess` per modificare il comportamento predefinito di un oggetto `DataReader`.  
-  
+Viene descritto come recuperare dati binari o strutture di dati di grandi dimensioni usando `CommandBehavior`.`SequentialAccess` per modificare il comportamento predefinito di un oggetto `DataReader`.
+
 [Modificare i dati con stored procedure](modify-data-with-stored-procedures.md)  
-Viene descritto come usare i parametri di input e di output della stored procedure per inserire una riga in un database, restituendo un nuovo valore Identity.  
+Viene descritto come usare i parametri di input e di output della stored procedure per inserire una riga in un database, restituendo un nuovo valore Identity.
 
 [Traccia dei dati in SqlClient](data-tracing.md)  
-Viene descritto il modo in cui il provider di dati Microsoft SqlClient per SQL Server offre funzionalità di traccia dei dati incorporate.  
+Viene descritto il modo in cui il provider di dati Microsoft SqlClient per SQL Server offre funzionalità di traccia dei dati incorporate.
   
 [Contatori delle prestazioni in SqlClient](performance-counters.md)  
-Vengono descritti i contatori delle prestazioni disponibili per il provider di dati Microsoft SqlClient per SQL Server.  
+Vengono descritti i contatori delle prestazioni disponibili per il provider di dati Microsoft SqlClient per SQL Server.
   
 [Programmazione asincrona](asynchronous-programming.md)  
-Viene descritto il supporto del provider di dati Microsoft SqlClient per SQL Server per la programmazione asincrona.  
+Viene descritto il supporto del provider di dati Microsoft SqlClient per SQL Server per la programmazione asincrona.
   
 [Supporto dello streaming in SqlClient](sqlclient-streaming-support.md)  
-Viene descritto come scrivere applicazioni che trasmettono i dati da SQL Server senza doverli caricare completamente in memoria.  
+Viene descritto come scrivere applicazioni che trasmettono i dati da SQL Server senza doverli caricare completamente in memoria.
 
 ## <a name="see-also"></a>Vedere anche
 

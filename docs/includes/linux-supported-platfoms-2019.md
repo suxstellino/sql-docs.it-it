@@ -3,14 +3,14 @@ author: VanMSFT
 ms.prod: sql
 ms.technology: linux
 ms.topic: include
-ms.date: 06/22/2020
+ms.date: 04/07/2021
 ms.author: vanto
-ms.openlocfilehash: 0b73bba1694e7ef90ada6ce1e44a197ffa751234
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 427403886ddcce817a7e7195322f6fe64151ea30
+ms.sourcegitcommit: d8cbbeffa3faa110e02056ff97dc7102b400ffb3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100063826"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "107003832"
 ---
 ## <a name="supported-platforms"></a>Piattaforme supportate
 
@@ -18,7 +18,7 @@ ms.locfileid: "100063826"
 |-----|-----|-----|-----|
 | Red Hat Enterprise Linux 7.3 - 7.8 o 8.0 - 8.3 Server | XFS o EXT4 | [Guida all'installazione](../linux/quickstart-install-connect-red-hat.md) | [Scaricare RHEL 8.0](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation) |
 | SUSE Enterprise Linux Server v12 SP2 - SP5 | XFS o EXT4 | [Guida all'installazione](../linux/quickstart-install-connect-suse.md) | [Scaricare SLES v12](https://www.suse.com/products/server) |
-| Ubuntu 16.04 LTS, 18.04 LTS | XFS o EXT4 | [Guida all'installazione](../linux/quickstart-install-connect-ubuntu.md) | [Ottenere Ubuntu 18.04](http://releases.ubuntu.com/bionic/) |
+| Ubuntu 16,04 LTS, 18,04 LTS, 20,04 LTS | XFS o EXT4 | [Guida all'installazione](../linux/quickstart-install-connect-ubuntu.md) | [Ottenere Ubuntu 20,04](https://releases.ubuntu.com/20.04/) |
 | Docker Engine 1.8+ in Windows, Mac o Linux | N/D | [Guida all'installazione](../linux/quickstart-install-connect-docker.md) | [Scaricare Docker](https://www.docker.com/get-started) |
 
 > [!TIP]

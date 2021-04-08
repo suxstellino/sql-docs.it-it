@@ -4,18 +4,18 @@ titleSuffix: SQL Server
 description: Informazioni su come installare gli strumenti da riga di comando di SQL Server, i driver Microsoft ODBC e le rispettive dipendenze in Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 06/30/2020
+ms.date: 04/07/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 36508869b30688e7a87035b50a7a06ca1e2a083a
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 436bf5fc0f069a9712d4eb45e51d994ec91cda22
+ms.sourcegitcommit: d8cbbeffa3faa110e02056ff97dc7102b400ffb3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100346354"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "107003901"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Installare gli strumenti da riga di comando di SQL Server sqlcmd e bcp in Linux
 
@@ -97,7 +97,10 @@ Seguire questa procedura per installare **mssql-tools** in Red Hat Enterprise Li
 Seguire questa procedura per installare **mssql-tools** in Ubuntu.
 
 > [!NOTE]
-> Ubuntu 18.04 è supportato a partire da SQL Server 2019 CU3. Se si usa Ubuntu 18.04, modificare il percorso del repository da `/ubuntu/16.04` a `/ubuntu/18.04`.
+>
+> - Ubuntu 18.04 è supportato a partire da SQL Server 2019 CU3.
+> - Ubuntu 20,04 è supportato a partire da SQL Server 2019 CU10 dalla.
+> - Se si usa Ubuntu 20,04, modificare il percorso del repository da `/ubuntu/16.04` a `/ubuntu/20.04` .
 
 1. Importare le chiavi GPG del repository pubblico.
 
