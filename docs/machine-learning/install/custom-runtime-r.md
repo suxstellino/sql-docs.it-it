@@ -3,19 +3,19 @@ title: Installare il runtime personalizzato di R
 description: Informazioni su come installare un runtime personalizzato R per SQL Server usando le estensioni del linguaggio. Il runtime personalizzato di Python può eseguire script di machine learning.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 03/16/2021
+ms.date: 04/07/2021
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: contperf-fy21q3
 zone_pivot_groups: sqlml-platforms
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
-ms.openlocfilehash: b6262e5ac3d7090516c1a62661583a64bb6ccbc9
-ms.sourcegitcommit: e4b71e5d432a29b6c76ea457b00aa0abd4b6c77f
+ms.openlocfilehash: 120672163959f3360254edd64d1a5c4aba1bdd2a
+ms.sourcegitcommit: 09122d02fc3d86c6028366653337c083da8a3f4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2021
-ms.locfileid: "106273471"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107072376"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>Installare un runtime personalizzato di R per SQL Server
 
@@ -62,7 +62,7 @@ Usare la propria versione del runtime di R con SQL Server, anziché la versione 
 
 ## <a name="enable-external-script"></a>Abilitare lo script esterno
 
-È possibile eseguire uno script esterno di Python con la stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+È possibile eseguire uno script R esterno con lo [script stored procedure sp_execute_external](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 Per abilitare gli script esterni, usare [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) per eseguire l'istruzione seguente.
 
@@ -84,6 +84,10 @@ print(file.path(R.home("bin"), "R"));
 print(R.version);
 print("Hello RExtension!");'
 ```
+
+::: zone pivot="platform-windows"
+[!INCLUDE [R custom runtime - Windows - known issues](includes/custom-runtime-r-windows-known-issues.md)]
+::: zone-end
 
 ::: zone pivot="platform-linux-rhel"
 [!INCLUDE [R custom runtime - Linux - RHEL known issues](includes/custom-runtime-r-linux-known-issues-rhel.md)]
