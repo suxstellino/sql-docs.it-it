@@ -14,14 +14,14 @@ helpviewer_keywords:
 - EKM, TDE how to
 - Transparent Data Encryption, using EKM
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
-author: jaszymas
-ms.author: jaszymas
-ms.openlocfilehash: e455b8b27537a3f7fedd7ca0c9cad356b9d49df4
-ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+author: shohamMSFT
+ms.author: shohamd
+ms.openlocfilehash: ab339cd8fed2456d8794926b59f2bf730ec30b0c
+ms.sourcegitcommit: cfffd03fe39b04034fa8551165476e53c4bd3c3b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98764899"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107298894"
 ---
 # <a name="enable-tde-on-sql-server-using-ekm"></a>Abilitare TDE in SQL Server con EKM
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

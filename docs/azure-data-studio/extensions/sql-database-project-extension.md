@@ -9,12 +9,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 12/15/2020
-ms.openlocfilehash: b49359ea35a5fbd0f8ffd51606c0ae17f14c9eac
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 58375b6512c259d07dd25fb10d539421162997c0
+ms.sourcegitcommit: cfffd03fe39b04034fa8551165476e53c4bd3c3b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100048405"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107298724"
 ---
 # <a name="sql-database-projects-extension-preview"></a>Estensione progetti di database SQL (anteprima)
 
@@ -23,21 +23,20 @@ L'estensione progetti di database SQL (anteprima) è un'estensione per lo svilup
 
 ## <a name="features"></a>Funzionalità
 
-1. Creare un progetto da un database connesso.
-2. Creare un nuovo progetto vuoto.
-3. Aprire un progetto creato in precedenza in [Azure Data Studio](sql-database-project-extension-getting-started.md) o in [SQL Server Data Tools](../../ssdt/sql-server-data-tools.md).
-4. Modificare il progetto aggiungendo o rimuovendo una tabella, una vista, una stored procedure o script personalizzati nel progetto.
-5. Organizzare file/script in cartelle.
-6. Aggiungere riferimenti a database di sistema o al file DACPAC utente.
-7. Compilare un progetto singolo.
-8. Distribuire un progetto singolo.
-9. Caricare i dettagli della connessione (autenticazione di Windows per SQL) e le variabili di SQLCMD dal profilo di distribuzione.
+- Creare un nuovo progetto vuoto o un progetto da un database connesso.
+- Aprire un progetto creato in precedenza in [Azure Data Studio](sql-database-project-extension-getting-started.md) o in [SQL Server Data Tools](../../ssdt/sql-server-data-tools.md).
+- Modificare il progetto aggiungendo o rimuovendo oggetti (tabelle, viste, stored procedure) o script personalizzati nel progetto.
+- Organizzare file/script in cartelle.
+- Aggiungere riferimenti a database di sistema o al file DACPAC utente.
+- Compilare un progetto singolo.
+- Distribuire un progetto singolo.
+- Caricare i dettagli della connessione (autenticazione di Windows per SQL) e le variabili di SQLCMD dal profilo di distribuzione.
 
 Guardare questo breve video di 10 minuti per un'introduzione all'estensione progetti di database SQL in Azure Data Studio:
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Build-SQL-Database-Projects-Easily-in-Azure-Data-Studio/player?WT.mc_id=dataexposed-c9-niner]
 
-## <a name="install-the-sql-database-projects-extension"></a>Installare l'estensione progetti di database SQL
+## <a name="installation"></a>Installazione
 
 1. Aprire Gestione estensioni per accedere alle estensioni disponibili.  A questo scopo, selezionare l'icona delle estensioni o selezionare **Estensioni** dal menu **Visualizza**.
 2. Identificare l'estensione *progetti di database SQL* digitandone il nome, per intero o in parte, nella casella di ricerca delle estensioni. Selezionare un'estensione disponibile per visualizzarne i dettagli.
@@ -53,6 +52,19 @@ Guardare questo breve video di 10 minuti per un'introduzione all'estensione prog
 
    > [!NOTE]
    > Per usufruire della funzionalità completa, insieme all'estensione progetti di database SQL è consigliabile installare l'[estensione confronto schemi](schema-compare-extension.md).
+
+## <a name="net-core-sdk"></a>.NET Core SDK
+.NET Core SDK è necessario per la funzionalità di compilazione del progetto e verrà richiesta l'installazione di .NET Core SDK se non viene rilevato dall'estensione.  È possibile scaricare e installare .NET Core SDK (v3.1 o versione successiva) da [https://dotnet.microsoft.com/download/dotnet-core/3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1).
+
+Le installazioni precedenti del .NET Core SDK possono essere inferiori alla versione minima richiesta e non sono supportate per l'uso con l'estensione progetti di database SQL.  Se si desidera controllare le [versioni attualmente installate](https://docs.microsoft.com/dotnet/core/install/how-to-detect-installed-versions) di DotNet SDK, aprire un terminale ed eseguire il comando seguente.
+
+```dotnetcli
+dotnet --list-sdks
+```
+
+Le versioni di .NET Core SDK non supportate possono generare messaggi di errore, ad esempio:
+- `error MSB4018: The "SqlBuildTask" task failed unexpectedly.`
+- ` error MSB4018: System.TypeInitializationException: The type initializer for 'SqlSchemaModelStaticState' threw an exception. ---> System.IO.FileNotFoundException: Could not load file or assembly 'System.Runtime, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'. The system cannot find the file specified. [c:\Users\ .sqlproj]_` (dove il file non esistente collegato presenta una parentesi quadra di chiusura senza corrispondenza)
 
 ## <a name="known-limitations"></a>Limitazioni note
 

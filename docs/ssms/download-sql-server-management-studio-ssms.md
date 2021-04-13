@@ -23,13 +23,13 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 3/16/2021
-ms.openlocfilehash: 671e531cbcd63ee9774cb02d5548c8e1075be84d
-ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
+ms.date: 4/9/2021
+ms.openlocfilehash: 5d8f10c86aa21bfc0ccbb36ddad11cfee027fc3a
+ms.sourcegitcommit: cfffd03fe39b04034fa8551165476e53c4bd3c3b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104833845"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107298864"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Scaricare SQL Server Management Studio (SSMS)
 
@@ -38,9 +38,6 @@ ms.locfileid: "104833845"
 SQL Server Management Studio (SSMS) è un ambiente integrato per la gestione di qualsiasi infrastruttura SQL, da SQL Server al database SQL di Azure. SSMS offre gli strumenti per configurare, monitorare e amministrare le istanze di SQL Server e i database. Usare SSMS per distribuire, monitorare e aggiornare i componenti del livello dati usati dalle applicazioni, nonché per creare query e script.
 
 È possibile usare SSMS per eseguire query, progettare e gestire database e data warehouse in qualsiasi posizione, nel computer locale o nel cloud.
-
-> [!NOTE]
-> È possibile definire il futuro dei prodotti SQL di Azure in uso completando il questionario di feedback seguente: https://aka.ms/AzureSQLSurvey
 
 ## <a name="download-ssms"></a>Scaricare SSMS
 

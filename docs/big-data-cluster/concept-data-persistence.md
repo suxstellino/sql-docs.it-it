@@ -9,18 +9,21 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a2836a6966727c0c2d27b363048f2e1dcd6afa49
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: f122f52553ae6cabc153560be3a341cc6482a73a
+ms.sourcegitcommit: cfffd03fe39b04034fa8551165476e53c4bd3c3b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100052101"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107298784"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Salvataggio permanente dei dati con un cluster Big Data di SQL Server in Kubernetes
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 I [volumi permanenti](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) offrono un modello plug-in per l'archiviazione in Kubernetes. In questo modello il modo in cui viene resa disponibile l'archiviazione è astratto rispetto al modo in cui viene usata. Di conseguenza, è possibile usare la propria risorsa di archiviazione a disponibilità elevata e collegarla al cluster Big Data di SQL Server. In questo modo, si ottiene il controllo completo sul tipo di archiviazione, sulla disponibilità e sulle prestazioni necessari. Kubernetes supporta [vari tipi di soluzioni di archiviazione](https://kubernetes.io/docs/concepts/storage/storage-classes/#provisioner), tra cui dischi e file di Azure, NFS (Network File System) e archiviazione locale.
+
+> [!IMPORTANT]
+> Se si distribuisce il cluster Big Data in Azure usando uno dei servizi Kubernetes gestiti (AKS o ARO), tenere presente che ci sono alcune limitazioni che potrebbero essere necessarie per soddisfare i requisiti del carico di lavoro dell'applicazione. Ad esempio, i volumi che usano Azure Managed Disks non sono al momento risorse con ridondanza della zona. I volumi non possono essere collegati tra le zone e devono avere un percorso condiviso nella stessa zona di un determinato nodo che ospita il pod di destinazione. In questo caso specifico, potrebbe essere necessario usare soluzioni di disponibilità elevata aggiuntive disponibili con SQL Server cluster di Big Data. Per altre informazioni sul servizio Azure Kubernetes e sulle zone di disponibilità, vedere [qui](/azure/aks/availability-zones) .
 
 ## <a name="configure-persistent-volumes"></a>Configurare volumi permanenti
 

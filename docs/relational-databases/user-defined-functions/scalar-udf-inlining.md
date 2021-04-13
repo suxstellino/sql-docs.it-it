@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: =azuresqldb-current||>=sql-server-ver15||>=sql-server-linux-ver15
-ms.openlocfilehash: 2ccdf4c7ca7aaec272a517aff0a7e336ae6791ad
-ms.sourcegitcommit: ebe81e2daa544f41c8ababb66a91c218ad0c2a0a
+ms.openlocfilehash: d2e984e4e170ffd48643f532c03e89599e39a663
+ms.sourcegitcommit: 8050df4db7a3a76e4fa03e5c79dcb49031defed7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "106177118"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107210930"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining di funzioni definite dall'utente scalari
 
@@ -140,7 +140,7 @@ A seconda della complessità della logica della funzione definita dall'utente, i
     - `DECLARE`, `SET`: Dichiarazione e assegnazione di variabili.
     - `SELECT`: Query SQL con assegnazioni di variabili singole/multiple <sup>1</sup>.
     - `IF`/`ELSE`: Diramazione con livelli di annidamento arbitrari.
-    - `RETURN`: Istruzione return singola o istruzioni return multiple.
+    - `RETURN`: Istruzione return singola o istruzioni return multiple. A partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU5, la funzione definita dall'utente può contenere solo una singola istruzione return da considerare per l'inline <sup>6</sup>.
     - `UDF`: Chiamate di funzioni ricorsive/annidate <sup>2</sup>.
     - Altri: Operazioni relazionali, ad esempio `EXISTS`, `ISNULL`.
 - La funzione definita dall'utente non chiama alcuna funzione intrinseca dipendente dal tempo (ad esempio `GETDATE()`) o con effetti collaterali <sup>3</sup> (ad esempio `NEWSEQUENTIALID()`).

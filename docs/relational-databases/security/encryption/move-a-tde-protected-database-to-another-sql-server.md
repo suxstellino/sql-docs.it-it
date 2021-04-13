@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Transparent Data Encryption, moving
 - TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
-author: jaszymas
-ms.author: jaszymas
-ms.openlocfilehash: 1f9b85e3d2f14eb534956c218d38f98b634dc89c
-ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+author: shohamMSFT
+ms.author: shohamd
+ms.openlocfilehash: d4024c5f1833eb7013e67cfa082d6924c868d0eb
+ms.sourcegitcommit: cfffd03fe39b04034fa8551165476e53c4bd3c3b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98813289"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107298830"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Spostare un database protetto da TDE in un'altra istanza di SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

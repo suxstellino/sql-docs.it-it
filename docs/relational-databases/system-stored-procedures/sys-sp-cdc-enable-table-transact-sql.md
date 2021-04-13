@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f499a26e4884518e002b5d33d9f9cb25b7c1457e
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: 608b2ec17719ac6c22ab290daff84134b914fc42
+ms.sourcegitcommit: 2811226b366781489a34450ab62d58f7a523a2bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100339389"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107265375"
 ---
 # <a name="syssp_cdc_enable_table-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +101,7 @@ sys.sp_cdc_enable_table
 >  SWITCH PARTITION è un'operazione eseguita sui metadati, ma apporta modifiche anche ai dati. Le modifiche dei dati associate a tale operazione non vengono acquisite nella tabella delle modifiche di Change Data Capture. Si consideri ad esempio una tabella in cui sono presenti tre partizioni cui vengono apportate modifiche. Il processo di acquisizione registrerà le operazioni di inserimento, aggiornamento ed eliminazione eseguite sulla tabella dall'utente. Tuttavia, se una partizione è stata trasferita in un'altra tabella, ad esempio per l'esecuzione di un'eliminazione bulk, le righe spostate come parte di questa operazione non verranno acquisite come righe eliminate nella tabella di modifica. Analogamente, se alla tabella viene aggiunta una nuova partizione in cui sono presenti righe che contengono dati, tali righe non verranno riflesse nella tabella di modifica. Questa situazione può provocare incoerenza tra i dati quando le modifiche vengono utilizzate da un'applicazione e applicate a una destinazione.  
  
 > [!NOTE] 
-> Prima di eseguire un'operazione di divisione o di Unione su una tabella abilitata per CDC, verificare che la partizione non disponga di comandi replicati in sospeso e che non vengano eseguite operazioni DML durante le operazioni di suddivisione o Unione. Le transazioni non elaborate o le operazioni DML possono causare errori di elaborazione `Error 608: No catalog entry found for partitionID` con l'agente di lettura log o il processo di acquisizione cdc. Potrebbe essere necessario disabilitare CDC sulla tabella per procedere con l'operazione di suddivisione o Unione. 
+> Se si abilita il cambio della partizione usando la versione corrente in SQL Server 2008 R2, successivamente potrebbero essere necessarie anche operazioni di divisione e merge. Prima di eseguire un'operazione di divisione o di merge su una tabella abilitata per il CDC o replicata, assicurarsi che la partizione in questione non abbia comandi replicati in sospeso. È anche necessario assicurarsi che nessuna operazione DML venga eseguita sulla partizione durante le operazioni di divisione e unione. Se sono presenti transazioni non elaborate dalla lettura log o dal processo di acquisizione CDC o se le operazioni DML vengono eseguite in una partizione di una tabella abilitata per il CDC o replicata durante l'esecuzione di un'operazione di divisione o di merge che coinvolge tale partizione, è possibile che si verifichi un errore di elaborazione (Error 608 - No catalog entry found for partition ID (Errore 608. Nessuna voce di catalogo trovata per l’ID partizione)) nell'agente di lettura log o nel processo di acquisizione CDC. Per correggere l'errore potrebbe essere necessario reinizializzare la sottoscrizione o disabilitare la funzionalità CDC sulla tabella o sul database.
 
 
 

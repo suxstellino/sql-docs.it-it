@@ -3,18 +3,18 @@ title: Risolvere i problemi di Launchpad per gli script Python e R
 description: Questo articolo fornisce indicazioni per la risoluzione di molti problemi che impediscono l'avvio del servizio Launchpad di SQL Server, inclusi problemi di configurazione o modifiche o protocolli di rete mancanti. Il servizio Launchpad supporta l'esecuzione di script esterni per R e Python.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 03/31/2021
+ms.date: 04/08/2021
 ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
 ms.custom: contperf-fy21q3
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: b015e4181f8d8cfe9388c609f749dc5979463d3a
-ms.sourcegitcommit: 2db7412d30722f198cbafcd683bd4da206b33996
+ms.openlocfilehash: f015c9793cb4f5577b2ad3943eff5fafa002cd26
+ms.sourcegitcommit: 14b97028da137f872a0a35cfe9d5a639a2d116a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "106099960"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107219543"
 ---
 # <a name="troubleshoot-issues-with-launchpad-service-executing-python-and-r-scripts-in-sql-server-machine-learning-services"></a>Risolvere i problemi relativi al servizio Launchpad che eseguono script Python e R in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -23,7 +23,7 @@ Questo articolo fornisce indicazioni per la risoluzione dei problemi che coinvol
 
 ## <a name="determine-whether-launchpad-is-running"></a>Determinare se Launchpad è in esecuzione
 
-1. Aprire il riquadro **Servizi** (Services. msc). In alternativa, nella riga di comando digitare **SQLServerManager13.msc** o **SQLServerManager14 msc** per aprire [Gestione configurazione SQL Server](../../relational-databases/sql-server-configuration-manager.md).
+1. Aprire [Gestione configurazione SQL Server](../../relational-databases/sql-server-configuration-manager.md). Dalla riga di comando digitare **SQLServerManager13. msc**, **SQLServerManager14. msc** o **SQLServerManager15. msc**.
 
 2. Prendere nota dell'account del servizio in cui è in esecuzione Launchpad. Ogni istanza in cui è abilitato R o Python dovrebbe avere una propria istanza del servizio Launchpad. Il servizio per un'istanza denominata, ad esempio, potrebbe avere un nome simile a _MSSQLLaunchpad$NomeIstanza_.
 

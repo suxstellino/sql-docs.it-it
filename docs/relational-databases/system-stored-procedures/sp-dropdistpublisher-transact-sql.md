@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 09db4d47afee6795b403542c8442cc9d74724f4b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: bb6e7351bedf62dc358222adf8d27468d7e49c1e
+ms.sourcegitcommit: cfffd03fe39b04034fa8551165476e53c4bd3c3b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99200701"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107298839"
 ---
 # <a name="sp_dropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,6 +41,9 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>Argomenti  
 `[ @publisher = ] 'publisher'` Server di pubblicazione da eliminare. *Publisher* è di **tipo sysname** e non prevede alcun valore predefinito.  
+ 
+> [!NOTE]
+> Se il server di pubblicazione SQL Server è configurato con una porta personalizzata, quando si elimina tale server di pubblicazione nel server di distribuzione, fornire il nome del server di pubblicazione anziché `<Hostname>,<PortNumber>` . 
   
 `[ @no_checks = ] no_checks` Specifica se **sp_dropdistpublisher** verifica che il server di pubblicazione abbia disinstallato il server come database di distribuzione. *no_checks* è di **bit** e il valore predefinito è **0**.  
   

@@ -4,17 +4,17 @@ description: Questa esercitazione illustra come eseguire il backup di un databas
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.date: 08/16/2017
+ms.date: 04/08/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: 2ae765c8bc1f274ab9b9f62978a85b5f09f6ca58
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 23a575bfabdd16f30007a8b70d84a568f45b8d3e
+ms.sourcegitcommit: 8050df4db7a3a76e4fa03e5c79dcb49031defed7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100349085"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107210820"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Eseguire la migrazione di un database di SQL Server da Windows a Linux usando il backup e ripristino
 
@@ -79,7 +79,7 @@ Per ripristinare il database, è prima necessario trasferire il file di backup d
 1. Installare una shell Bash nel computer Windows che supporta i comandi **scp** (copia sicura) e **ssh** (accesso remoto). Due esempi di tali situazioni:
 
    * [Sottosistema Windows per Linux](/windows/wsl/about) (Windows 10)
-   * Shell Git Bash ([https://git-scm.com/downloads](https://git-scm.com/downloads))
+   * Shell git bash ( [https://git-scm.com/downloads](https://git-scm.com/downloads) )
 
 1. Aprire una sessione di Bash in Windows.
 
@@ -99,11 +99,11 @@ Per ripristinare il database, è prima necessario trasferire il file di backup d
    ![Comando scp](./media/sql-server-linux-migrate-restore-database/scp-command.png)
 
 > [!TIP]
-> Sono disponibili alternative all'uso di SCP per il trasferimento del file. Una prevede l'uso di [Samba](https://help.ubuntu.com/community/Samba) per configurare una condivisione di rete SMB tra Windows e Linux. Per una procedura dettagliata in Ubuntu, vedere [How to Create a Network Share Via Samba](https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!) (Come creare una condivisione di rete tramite Samba). Dopo averla stabilita, è possibile accedervi come a una condivisione file di rete da Windows, ad esempio **\\\\machinenameorip\\share**.
+> Sono disponibili alternative all'uso di SCP per il trasferimento del file. Una prevede l'uso di [Samba](https://help.ubuntu.com/community/Samba) per configurare una condivisione di rete SMB tra Windows e Linux. Per una procedura dettagliata in Ubuntu, vedere [How to Create a Network Share Via Samba](https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!) (Come creare una condivisione di rete tramite Samba). Una volta stabilita, è possibile accedervi come una condivisione di file di rete da Windows, ad esempio **\\ \\ machinenameorip \\ share**.
 
 ## <a name="move-the-backup-file-before-restoring"></a>Spostare il file di backup prima del ripristino
 
-A questo punto, il file di backup si trova nel server Linux nella home directory dell'utente. Prima di ripristinare il database in SQL Server, è necessario inserire il backup in una sottodirectory di **/var/opt/mssql**.
+A questo punto, il file di backup si trova nel server Linux nella home directory dell'utente. Prima di ripristinare il database in SQL Server, è necessario inserire il backup in una sottodirectory di **/var/opt/MSSQL**, in quanto è di proprietà dell'utente `mssql` e del gruppo `mssql` . Per modificare il percorso di backup predefinito, vedere l'articolo [configurare con MSSQL-conf](sql-server-linux-configure-mssql-conf.md#backupdir) .
 
 1. Nella stessa sessione di Bash in Windows connettersi in modalità remota al computer Linux di destinazione con **ssh**. Nell'esempio seguente viene eseguita la connessione al computer Linux **192.0.2.9** come utente **user1**.
 
@@ -235,4 +235,4 @@ In questa esercitazione si è appreso come eseguire il backup di un database in 
 Esaminare quindi gli altri scenari di migrazione per SQL Server in Linux. 
 
 > [!div class="nextstepaction"]
->[Eseguire la migrazione dei database a SQL Server in Linux](sql-server-linux-migrate-overview.md)
+>[Eseguire la migrazione di database a SQL Server in Linux](sql-server-linux-migrate-overview.md)

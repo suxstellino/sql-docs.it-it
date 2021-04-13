@@ -1,16 +1,16 @@
 ---
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 02/08/2021
+ms.date: 04/07/2021
 ms.topic: include
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2a156ab122f0eadce71da9f4fcaf9e99584c8e32
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 4e1535dbe7b08628934852ca212bacee4fe228a5
+ms.sourcegitcommit: 09122d02fc3d86c6028366653337c083da8a3f4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100072768"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107072380"
 ---
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -92,7 +92,7 @@ Per installare il pacchetto **RCPP** , seguire questa procedura.
 1. Eseguire lo script seguente per installare il pacchetto RCPP nella `\library` cartella nel percorso di installazione di R. Ad esempio: `C:\Program Files\R\R-4.0.3\library`.
 
     ```R
-    install.packages("Rcpp", lib="C:\Program Files\R\R-4.0.3\library");
+    install.packages("Rcpp", lib="C:\\Program Files\\R\\R-4.0.3\\library");
     ```
 
 ## <a name="grant-access-to-r-folder"></a>Concedi accesso alla cartella R

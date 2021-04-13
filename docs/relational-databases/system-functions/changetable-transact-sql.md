@@ -20,12 +20,12 @@ ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2de815ad24a41604f18d0083a800df3a56feb021
-ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
+ms.openlocfilehash: 42c0327cd409f4a9649f147e1be6536de85ecaa0
+ms.sourcegitcommit: 8050df4db7a3a76e4fa03e5c79dcb49031defed7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102186629"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107210933"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,7 +73,7 @@ Quando ottiene modifiche, l'applicazione chiamante deve specificare il punto dal
  Il valore della chiave primaria. Se sono presenti più colonne chiave primaria, i valori devono essere specificati nello stesso ordine in cui le colonne vengono visualizzate nell'elenco *column_name* .  
 
  FORCESEEK   
- **Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU16 e [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] ), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]    
+ **Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (A partire da [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU16 e [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] CU9), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]    
  
  Parametro facoltativo che impone l'utilizzo di un'operazione di ricerca per accedere al *table_name*. In alcuni casi, in cui sono state modificate poche righe, un'operazione di analisi può comunque essere utilizzata per accedere al *table_name*. Se un'operazione di analisi introduce un problema di prestazioni, utilizzare il `FORCESEEK` parametro.
 

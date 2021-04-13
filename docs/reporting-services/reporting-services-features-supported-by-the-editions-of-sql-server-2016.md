@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 12/16/2019
-ms.openlocfilehash: bbb3196349c648b955e5d27bf1d5fcfdadb9085f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
-ms.translationtype: HT
+ms.openlocfilehash: a818db1a2bc8626f19bd3f98abdbb721ccbd74b1
+ms.sourcegitcommit: 09122d02fc3d86c6028366653337c083da8a3f4c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246660"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107072399"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-editions"></a>Funzionalità di SQL Server Reporting Services supportate nelle diverse edizioni
 
@@ -73,7 +73,7 @@ Per le funzionalità supportate dalle edizioni Evaluation e Developer, vedere la
 > SQL Server Express e SQL Server Express with Tools non supportano SQL Server Reporting Services.
   
 ## <a name="edition-requirements-for-the-report-server-database"></a>Requisiti relativi all'edizione per il database del server di report
- Quando si crea un database del server di report, non tutte le edizioni di SQL Server [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] possono essere usate per ospitare il database. Nella tabella seguente sono illustrate le edizioni del [!INCLUDE[ssDE](../includes/ssde-md.md)] che è possibile usare per le edizioni specifiche di SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ Quando si crea un database del server di report, non tutte le edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] possono essere usate per ospitare il database. Nella tabella seguente sono illustrate le edizioni del [!INCLUDE[ssDE](../includes/ssde-md.md)] che è possibile usare per le edizioni specifiche di SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 |Edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services|Edizione dell'istanza del motore di database da usare per ospitare il database.|  
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  

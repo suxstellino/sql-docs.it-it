@@ -12,12 +12,12 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40a2ba2ff9e3955c09a8d8529a67ec3275e17222
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: c849330ea3a252a3cf0f9926098c66b993c6cd4b
+ms.sourcegitcommit: 8050df4db7a3a76e4fa03e5c79dcb49031defed7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100338964"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107210975"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Elaborazione di query intelligenti nei database SQL
 
@@ -52,20 +52,27 @@ La tabella seguente illustra nel dettaglio tutte le funzionalità di elaborazion
 | [Compilazione posticipata delle variabili di tabella](#table-variable-deferred-compilation) | Sì, nel livello di compatibilità 150| Sì, a partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] nel livello di compatibilità 150|Consente di usare la cardinalità effettiva della variabile tabella rilevata nella prima compilazione invece di una stima fissa.|
 
 ## <a name="batch-mode-adaptive-joins"></a>Join adattivi in modalità batch
+
+**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
 La funzionalità di join adattivo in modalità batch consente di rimandare a **dopo** la scansione del primo input la scelta tra l'[esecuzione di un metodo hash join e l'esecuzione di un metodo join a cicli annidati](../../relational-databases/performance/joins.md), usando un singolo piano memorizzato nella cache. L'operatore Join adattivo definisce una soglia che viene usata per stabilire quando passare a un piano Cicli annidati. Durante l'esecuzione il piano può pertanto passare a una strategia di join più efficace.
 
 Per altre informazioni, incluso come disabilitare i join adattivi senza modificare il livello di compatibilità, vedere [Informazioni sui join adattivi](../../relational-databases/performance/joins.md#adaptive).
 
 ## <a name="batch-mode-memory-grant-feedback"></a>Feedback delle concessioni di memoria in modalità batch
+
+**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+
 Un piano post esecuzione di una query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include la memoria minima richiesta per l'esecuzione e la dimensione della concessione di memoria sufficiente a far sì che tutte le righe siano incluse nella memoria. Se le dimensioni della concessione di memoria non vengono impostate correttamente le prestazioni possono risultare ridotte. Le concessioni di dimensioni eccessive causano memoria non usata e riduzione della concorrenza. Le concessioni di memoria di dimensioni insufficienti causano costose distribuzioni su disco. Incentrandosi sui carichi di lavoro ripetuti, il feedback delle concessioni di memoria in modalità batch ricalcola la memoria effettiva necessaria per una query, quindi aggiorna il valore della concessione per il piano nella cache. Quando viene eseguita un'istruzione query identica la query usa le dimensioni della concessione di memoria aggiornate, riducendo il numero eccessivo di concessioni che limita la concorrenza e correggendo il numero insufficiente di concessioni che causa costose distribuzioni su disco.
 Il grafico seguente visualizza un esempio dell'uso del feedback delle concessioni di memoria in modalità batch. La durata della prima esecuzione della query è pari a **88 secondi** a causa del numero elevato di distribuzioni:   
 
 ```sql
 DECLARE @EndTime datetime = '2016-09-22 00:00:00.000';
 DECLARE @StartTime datetime = '2016-09-15 00:00:00.000';
+
 SELECT TOP 10 hash_unique_bigint_id
 FROM dbo.TelemetryDS
-WHERE Timestamp BETWEEN @StartTime and @EndTime
+WHERE Timestamp BETWEEN @StartTime AND @EndTime
 GROUP BY hash_unique_bigint_id
 ORDER BY MAX(max_elapsed_time_microsec) DESC;
 ```
@@ -172,6 +179,9 @@ OPTION (USE HINT ('DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'));
 L'hint per la query USE HINT ha la precedenza rispetto una configurazione con ambito database o un'impostazione del flag di traccia.
 
 ## <a name="interleaved-execution-for-mstvfs"></a>Esecuzione interleaved per funzioni con valori di tabella con più istruzioni
+
+**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+
 Con l'esecuzione interleaved, il conteggio effettivo delle righe viene usato per adottare decisioni più mirate relativamente a un piano di query downstream. Per altre informazioni sulle funzioni con valori di tabella con più istruzioni, vedere [Funzione con valori di tabella](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
 
 L'esecuzione interleaved cambia il limite unidirezionale tra le fasi di ottimizzazione ed esecuzione nel caso di un'esecuzione a query singola e consente l'adattamento dei piani in base alle stime di cardinalità aggiornate. Se durante l'ottimizzazione viene rilevato un candidato per l'esecuzione interleaved, che attualmente corrisponde a una **funzione con valori di tabella con istruzioni multiple (MSTVF, Multi-Statement Table Valued Function)** si sospende l'ottimizzazione, si esegue il sottoalbero appropriato, si acquisiscono stime di cardinalità accurate e quindi si riprende l'ottimizzazione per le operazioni downstream.   

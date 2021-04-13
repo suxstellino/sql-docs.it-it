@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019, contperf-fy21q3
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b9fd50821df27f88ecaa21f29080ae5cc051c22
-ms.sourcegitcommit: d8cbbeffa3faa110e02056ff97dc7102b400ffb3
+ms.openlocfilehash: ed7baa3040be8d0ed72e7ec9d02184b147e69f17
+ms.sourcegitcommit: 09122d02fc3d86c6028366653337c083da8a3f4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "107004125"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107072415"
 ---
 # <a name="modify-rpython-code-to-run-in-sql-server-in-database-instances"></a>Modificare il codice R/Python per l'esecuzione in istanze di SQL Server (in-database)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -85,8 +85,7 @@ La modifica del codice varia a seconda che si intenda inviare il codice da un cl
     ,@script = N'R code here'
   ```
 
-+ Tutte le variabili passate come parametri della stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) devono essere mappate a variabili nel codice. Per impostazione predefinita, il mapping delle variabili viene eseguito in base al nome. 
-  Anche tutte le colonne nel set di dati di input devono essere mappate a variabili nello script.
++ Tutte le variabili passate come parametri della stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) devono essere mappate a variabili nel codice. Per impostazione predefinita, il mapping delle variabili viene eseguito in base al nome. Anche tutte le colonne nel set di dati di input devono essere mappate a variabili nello script.
   
   Si supponga, ad esempio, che lo script R contenga una formula come la seguente:
 

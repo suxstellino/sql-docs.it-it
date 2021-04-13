@@ -2,7 +2,7 @@
 title: Configurare Windows Firewall
 description: Informazioni su come configurare Windows Firewall per consentire l'accesso a un'istanza di SQL Server attraverso il firewall.
 ms.custom: contperf-fy21q3
-ms.date: 03/26/2021
+ms.date: 04/07/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 5f16ca40ec73ab02b539d19a4e271d3a08ccc2c7
-ms.sourcegitcommit: 2f971c85d87623c0aed1612406130d840e7bdb2e
+ms.openlocfilehash: ca3e3ae4255fc1815e690ef633350b33e4725ed9
+ms.sourcegitcommit: 09122d02fc3d86c6028366653337c083da8a3f4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2021
-ms.locfileid: "105744496"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107072433"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -98,6 +98,16 @@ Configurare le impostazioni di Windows Firewall con **Microsoft Management Conso
     -   [Sintassi, contesti e formattazione dei comandi Netsh](/windows-server/networking/technologies/netsh/netsh-contexts)    
     -   [Utilizzo del contesto "netsh advfirewall firewall" anziché del contesto "netsh firewall" per controllare il comportamento di Windows Firewall in Windows Server 2008 e in Windows Vista](https://support.microsoft.com/kb/947709)    
 
+-   **PowerShell**
+
+    Vedere l'esempio seguente per aprire la porta TCP 1433 e la porta UDP 1434 per SQL Server istanza predefinita e SQL Server Browser servizio:
+    
+    ```powershell
+    New-NetFirewallRule -DisplayName "SQLServer default instance" -Direction Inbound -LocalPort 1433 -Protocol TCP -Action Allow
+    New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound -LocalPort 1434 -Protocol UDP -Action Allow
+    ```
+    
+    Per altri esempi, vedere [New-NetFirewallRule](/powershell/module/netsecurity/new-netfirewallrule).
     
 - **Per Linux**: in Linux è anche necessario aprire le porte associate ai servizi a cui è necessario accedere. Diverse distribuzioni di Linux e firewall diversi hanno procedure proprie. Per due esempi, vedere [SQL Server in Red Hat](../../linux/quickstart-install-connect-red-hat.md) e [SQL Server in SUSE](../../linux/quickstart-install-connect-suse.md). 
   

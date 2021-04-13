@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: karinazhou
 ms.author: v-jizho2
 ms.reviewer: v-daenge
-ms.openlocfilehash: 8ad08c0799f53b2746c621bb1c16a41fe38b7e14
-ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
+ms.openlocfilehash: fa1d074cde0585b89e7f339c7c6cbd7114b603dd
+ms.sourcegitcommit: cfffd03fe39b04034fa8551165476e53c4bd3c3b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "106054479"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107298774"
 ---
 # <a name="using-azure-active-directory-authentication-with-sqlclient"></a>Uso dell'autenticazione di Azure Active Directory con SqlClient
 
@@ -170,7 +170,7 @@ Per altre informazioni sulle identità gestite, vedere [Informazioni sulle ident
 
 A partire da **Microsoft.Data.SqlClient** 2.1.0 il driver supporta l'autenticazione nel database SQL di Azure, in Azure Synapse Analytics e in Istanza gestita di SQL di Azure con l'acquisizione di token di accesso attraverso l'identità gestita. Per usare questa autenticazione, specificare `Active Directory Managed Identity` o `Active Directory MSI` nella stringa di connessione e non è richiesta alcuna password. 
 
-Inoltre, non è possibile impostare la proprietà `Credential` di `SqlConnection` in questa modalità. È necessario specificare un nome utente per un'identità gestita assegnata dall'utente. 
+Inoltre, non è possibile impostare la proprietà `Credential` di `SqlConnection` in questa modalità. Per un'identità gestita assegnata dall'utente, è necessario fornire l'ID oggetto dell'identità gestita. 
 
 Nell'esempio seguente viene illustrato l'uso dell'autenticazione `Active Directory Managed Identity` con un'identità gestita assegnata dal sistema.
 
@@ -194,7 +194,7 @@ L'esempio seguente illustra l'uso dell'autenticazione `Active Directory Managed 
 
 ```c#
 // For user-assigned managed identity
-// Use your own server, database, and user ID.
+// Use your own values for Server, Database, and User Id.
 string ConnectionString1 = @"Server=demo.database.windows.net; Authentication=Active Directory Managed Identity; User Id=ObjectIdOfManagedIdentity; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString1)) {

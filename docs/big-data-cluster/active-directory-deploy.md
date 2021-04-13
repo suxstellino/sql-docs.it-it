@@ -9,12 +9,12 @@ ms.date: 02/19/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9417444a1c9d28181529ace79b6dcff6162b7f2d
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 2b24a1ddf61d297759e23e0b0d27e8d8c6ead171
+ms.sourcegitcommit: cfffd03fe39b04034fa8551165476e53c4bd3c3b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837033"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107298734"
 ---
 # <a name="deploy-sql-server-big-data-cluster-in-active-directory-mode"></a>Distribuire un cluster Big Data di SQL Server in modalità Active Directory
 
@@ -242,7 +242,7 @@ A questo punto, sono stati impostati tutti i parametri necessari per una distrib
 
 ## <a name="verify-reverse-dns-entry-for-domain-controller"></a>Verificare la voce DNS inversa per il controller di dominio
 
-Assicurarsi che sia presente una voce DNS inversa (record PTR) per il controller di dominio stesso, registrata nel server DNS. A questo scopo, è possibile eseguire `nslookup` del nome di dominio nel controller di dominio per verificare che possa essere risolto nell'indirizzo IP del controller di dominio.
+Assicurarsi che sia presente una voce DNS inversa (record PTR) per il controller di dominio stesso, registrata nel server DNS. Per verificarlo, è possibile eseguire `nslookup` l'indirizzo IP del controller di dominio per verificare che sia possibile risolverlo nell'FQDN del controller di dominio.
 
 ## <a name="known-issues-and-limitations"></a>Problemi noti e limitazioni
 

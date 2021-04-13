@@ -19,12 +19,12 @@ ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 41821edc34835f60cef201ae78b3448f3d3f4699
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 94f794d86f6cd2ee95029b73fe58a92876e153d0
+ms.sourcegitcommit: cfffd03fe39b04034fa8551165476e53c4bd3c3b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99200777"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107298833"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 
@@ -133,7 +133,7 @@ GO
   
 CREATE TABLE t1 (  
 c1 INT ENCRYPTED WITH (  
-    COLUMN_ENCRYPTION_KEY = [CEK_Auto1],   
+    COLUMN_ENCRYPTION_KEY = [CEK1],   
     ENCRYPTION_TYPE = Randomized,   
     ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL,  
 );  
