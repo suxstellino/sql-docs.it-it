@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: contperf-fy21q3
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: f015c9793cb4f5577b2ad3943eff5fafa002cd26
-ms.sourcegitcommit: 14b97028da137f872a0a35cfe9d5a639a2d116a8
+ms.openlocfilehash: a40d27751406214fade453e6fb91b937adb72775
+ms.sourcegitcommit: cfffd03fe39b04034fa8551165476e53c4bd3c3b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "107219543"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107298858"
 ---
 # <a name="troubleshoot-issues-with-launchpad-service-executing-python-and-r-scripts-in-sql-server-machine-learning-services"></a>Risolvere i problemi relativi al servizio Launchpad che eseguono script Python e R in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -35,7 +35,7 @@ Questo articolo fornisce indicazioni per la risoluzione dei problemi che coinvol
 
 ## <a name="check-the-launchpad-service-account"></a>Controllare l'account del servizio Launchpad
 
-L'account del servizio predefinito potrebbe essere "NT Service\$SQL2016" o "NT Service\$SQL2017". La parte finale può variare in base al nome dell'istanza di SQL.
+L'account del servizio predefinito potrebbe essere "NT Service \$ sql2016", "NT Service \$ sql2017" o "NT Service \$ sql2019". La parte finale può variare in base al nome dell'istanza di SQL.
 
 Il servizio Launchpad (Launchpad.exe) viene eseguito usando un account del servizio con privilegi limitati. Tuttavia, per avviare R e Python e comunicare con l'istanza di database, l'account del servizio Launchpad richiede i diritti utente seguenti:
 
