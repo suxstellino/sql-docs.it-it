@@ -12,14 +12,14 @@ helpviewer_keywords:
 - computed columns, XML
 - XML [SQL Server], computed columns
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fcd9657ce64ef5be2cd1210eebb21f6b4e1d113c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f0bdca527ca7945c6e705a691ee976a83fdaa23f
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775537"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107486647"
 ---
 # <a name="use-xml-in-computed-columns"></a>Utilizzo del codice XML nelle colonne calcolate
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

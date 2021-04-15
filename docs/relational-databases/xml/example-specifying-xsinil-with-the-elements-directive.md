@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, specifying XSINIL example
 ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: seo-lt-2019
-ms.openlocfilehash: ce76de4ec22727a99e2dbd7ad707fc3a861c315e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: 474e1604dd90a88db8e2f9e21fdeac9caf602437
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85632310"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107488641"
 ---
 # <a name="example-specifying-xsinil-with-the-elements-directive"></a>Esempio: specifica di XSINIL con la direttiva ELEMENTS
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

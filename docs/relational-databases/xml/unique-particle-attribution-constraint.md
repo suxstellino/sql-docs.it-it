@@ -16,14 +16,14 @@ helpviewer_keywords:
 - UPA constraint rule
 - unique particle attribution constraint rule
 ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9d7b6de76fdb5310a5121908779d4565a4b6ff1c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8bc31e58dc78ba54f7e899dc2e27523104c9805a
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729834"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107487376"
 ---
 # <a name="unique-particle-attribution-constraint"></a>Vincolo di attribuzione di particelle univoche
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

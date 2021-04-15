@@ -14,14 +14,14 @@ helpviewer_keywords:
 - nested FOR XML queries in ASP.NET
 - ASP.NET [SQL Server]
 ms.assetid: 691ac7dd-afc5-4760-932c-2b1dcd9394ed
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: def3cb5a9e77324a0d062ec26c0d042afcc0bc3a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e2ed8a3f70093ad8bc4f8dbccee99a8101ffd015
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738383"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107487108"
 ---
 # <a name="use-nested-for-xml-queries-in-aspnet"></a>Utilizzo di query FOR XML nidificate in ASP.NET
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

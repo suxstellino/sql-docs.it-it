@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 14bc7706a7e3f562b2a3f4f01d8ab08a3684d313
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 659a5efefed4347948ac59af9b0063e8d31c7813
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775559"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107488945"
 ---
 # <a name="columns-with-a-name"></a>Colonne provviste di un nome
 
@@ -113,7 +113,7 @@ FOR XML PATH;
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>Il nome di colonna non inizia con un simbolo di chiocciola (\@) e contiene una barra (/)  
- Se il nome di colonna non inizia con un simbolo di chiocciola (\@), ma contiene una barra (/), il nome della colonna indica una gerarchia XML. Ad esempio, se il nome della colonna è "Name1/Name2/Name3.../Name***n*** ", ogni Name***i*** rappresenta un nome di elemento nidificato nell'elemento di riga corrente (per i=1) o che si trova sotto l'elemento il cui nome è Name***i-1***. Se Name***n*** inizia con il simbolo '\@', viene mappato a un attributo dell'elemento Name***n-1***.  
+ Se il nome di colonna non inizia con un simbolo di chiocciola (\@), ma contiene una barra (/), il nome della colonna indica una gerarchia XML. Ad esempio, se il nome della colonna è "Name1/Name2/Name3.../Name***n** _ ", ogni Name_ *_i_* _ rappresenta un nome di elemento annidato nell'elemento riga corrente (per i=1) o che si trova sotto l'elemento con il nome Name_ *_i-1_*_. Se Name_*_n_* _ inizia con ' ', viene eseguito il mapping a un attributo \@ di *_Name_'elemento n-1_**.  
   
  Ad esempio, la query seguente restituisce l'ID e il nome di un dipendente rappresentati come un elemento complesso EmpName che contiene nome, secondo nome e cognome.  
   

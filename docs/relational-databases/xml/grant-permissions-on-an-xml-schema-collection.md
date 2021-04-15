@@ -12,14 +12,14 @@ helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e400caa800f4e3dcb38750513216918d2b8b1d3f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ecc7905afada0fd53cec2a99630963e1189741a5
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772103"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107488116"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Concedere autorizzazioni per una raccolta di XML Schema
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

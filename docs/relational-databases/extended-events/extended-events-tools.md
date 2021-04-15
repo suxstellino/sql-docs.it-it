@@ -1,6 +1,6 @@
 ---
 title: Strumenti degli eventi estesi
-description: Questi strumenti creano e gestiscono sessioni Eventi estesi di SQL Server. Oltre alle sessioni create, nel server è presente una sessione di integrità di sistema predefinita.
+description: Questi strumenti creano e gestiscono le SQL Server eventi estesi. Oltre alle sessioni create, nel server è presente una sessione di integrità del sistema predefinita.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - extended events [SQL Server], using
 - extended events [SQL Server], options for using
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b0695aed06d62e9dbe687983958ebc9b707ec37d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 338290ac9544c2919502d85ea0c5e4162b1549ac
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465562"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107489993"
 ---
 # <a name="extended-events-tools"></a>Strumenti degli eventi estesi
 
@@ -89,7 +89,7 @@ ms.locfileid: "97465562"
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Tabelle degli eventi estesi di SQL Server &#40;Transact-SQL&#41;](../system-tables/system-tables-transact-sql.md)   
- [Utilizzare la sessione system_health](../../relational-databases/extended-events/use-the-system-health-session.md)   
- [Usare il provider PowerShell per eventi estesi](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)  
+ [SQL Server tabelle degli eventi estesi &#40;transact-SQL&#41;](../system-tables/system-tables-transact-sql.md)   
+ [Usare la system_health sessione](../../relational-databases/extended-events/use-the-system-health-session.md)   
+ [Utilizzare il provider PowerShell per eventi estesi](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)  
   

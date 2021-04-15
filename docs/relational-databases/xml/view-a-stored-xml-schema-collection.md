@@ -17,14 +17,14 @@ helpviewer_keywords:
 - displaying XML schema collections
 - viewing XML schema collections
 ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 76671186663e4d4173389d9aec19b0c0da2fbf88
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9deae5c5d72bc747a326d45313795444319eca30
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729796"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107486846"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>Visualizzazione di una raccolta di XML Schema archiviata
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +62,7 @@ SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection',
 GO  
 ```  
   
- Quando si crea una raccolta di XML Schema nel database tramite l'istruzione CREATE XML SCHEMA COLLECTION, i componenti di schema vengono archiviati nei metadati. Si noti che vengono archiviati solo i componenti di schema riconosciuti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Non vengono archiviati commenti, annotazioni o attributi non XSD. Dal punto di vista funzionale, pertanto, lo schema ricostruito dalla funzione **xml_schema_namespace** è equivalente allo schema originale, ma l'aspetto non sarà necessariamente identico. Ad esempio, non verranno visualizzati gli stessi prefissi dello schema originale. Lo schema restituito dalla funzione **xml_schema_namespace** usa **t** come prefisso per lo spazio dei nomi di destinazione e **ns1**, **ns2**e così via per gli altri spazi dei nomi.  
+ Quando si crea una raccolta di XML Schema nel database tramite l'istruzione CREATE XML SCHEMA COLLECTION, i componenti di schema vengono archiviati nei metadati. Si noti che vengono archiviati solo i componenti di schema riconosciuti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Non vengono archiviati commenti, annotazioni o attributi non XSD. Dal punto di vista funzionale, pertanto, lo schema ricostruito dalla funzione **xml_schema_namespace** è equivalente allo schema originale, ma l'aspetto non sarà necessariamente identico. Ad esempio, non verranno visualizzati gli stessi prefissi dello schema originale. Lo schema restituito dalla funzione **xml_schema_namespace** usa **t** come prefisso per lo spazio dei nomi di destinazione e **ns1**, **ns2** e così via per gli altri spazi dei nomi.  
   
  Se si desidera mantenere una copia identica di XML Schema, è consigliabile salvarli in un file o in una tabella di database all'interno di una colonna di tipo **xml** .  
   

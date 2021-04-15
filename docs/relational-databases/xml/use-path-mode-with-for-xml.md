@@ -17,14 +17,14 @@ helpviewer_keywords:
 - column names [SQL Server]
 - XPath queries [SQL Server]
 ms.assetid: a685a9ad-3d28-4596-aa72-119202df3976
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ff6beee153a5f923178436710d1b38b1151d6c7d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4885c0aa573508934694dcef7b3bf5f98f137563
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724540"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107487038"
 ---
 # <a name="use-path-mode-with-for-xml"></a>Utilizzare la modalità PATH con FOR XML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

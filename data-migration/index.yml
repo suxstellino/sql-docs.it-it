@@ -6,6 +6,7 @@ metadata:
   title: Guide alla migrazione del database di Azure | Microsoft Docs
   description: 'Indicazioni dettagliate per la modernizzazione degli asset di dati eseguendo la migrazione a SQL Server, database SQL di Azure, Istanza gestita di SQL di Azure, Database di Azure, Azure Cosmos DB, SQL Server in macchine virtuali di Azure e Azure Synapse Analytics. '
   ms.topic: hub-page
+  ms.technology: migration-guide
 conceptualContent:
   items:
     - title: SQL Server a
@@ -78,7 +79,7 @@ conceptualContent:
         - text: Database SQL di Azure
           url: /azure/azure-sql/migration-guides/database/mysql-to-sql-database-guide
           itemType: how-to-guide
-    - title: SAP ASE a
+    - title: SAP ASE per
       links:
         - text: SQL Server
           url: /sql/sql-server/migrate/guides/sap-ase-to-sql-server
@@ -166,10 +167,10 @@ additionalContent:
           summary: ClearSale crea le basi per la crescita e l'innovazione eseguendo la migrazione ad Azure con il database SQL di Azure di servizio iperscalabilità.
           url: 'https://customers.microsoft.com/story/773410-clearsale-partner-professional-services-azure'
         - title: Willis Towers Watson (Regno Unito)
-          summary: Willis Towers Watson ottiene una facile scalabilità nel cloud eseguendo la migrazione database SQL di Azure.
+          summary: Willis Towers Watson ottiene una facile scalabilità nel cloud eseguendo la migrazione a database SQL di Azure.
           url: 'https://customers.microsoft.com/story/willis-towers-watson-partner-professional-services-azure'
         - title: Paychex (Stati Uniti)
-          summary: Paychex si basa database SQL di Azure pool elastici per gestire la crescita esponenziale.
+          summary: Paychex si basa su database SQL di Azure elastici per gestire la crescita esponenziale.
           url: 'https://customers.microsoft.com/story/paychex-azure-sql-database-us'
         - title: Sistemi innovative (Stati Uniti)
           summary: I sistemi innovative uniscono i database più disinvolti nel cloud grazie alla potenza delle migrazioni tramite Servizio Migrazione del database di Azure.

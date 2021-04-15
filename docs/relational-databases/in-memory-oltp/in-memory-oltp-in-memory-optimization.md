@@ -12,15 +12,15 @@ helpviewer_keywords:
 - In-Memory OLTP
 - memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8d1dfd8b3d09adb4c3fdb0ad0d2bd02b1044f69a
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 79b5cbc0f94efb2a6960588a46f413eccfe3b350
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "100351253"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107489425"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>OLTP in memoria e ottimizzazione per la memoria
 

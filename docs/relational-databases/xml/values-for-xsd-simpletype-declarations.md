@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - xsd:simpleType declarations
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2738ba3387ac167eeadc83071dcce1f4a59304bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0e91044152809f737598f6a685c48cc793468391
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775527"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107486578"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>Valori per dichiarazioni &lt;xsd:simpleType&gt;
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

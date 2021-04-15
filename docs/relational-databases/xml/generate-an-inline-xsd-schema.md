@@ -17,14 +17,14 @@ helpviewer_keywords:
 - inline XSD schema generation [SQL Server]
 - XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c3792243af5a25f2ef1b9c7acd023f78acbb3eb4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d6f4282d9c134caf25052affc3132a2212e1fa49
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727030"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107488211"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Generazione di uno schema XSD inline
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

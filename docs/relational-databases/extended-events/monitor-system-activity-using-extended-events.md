@@ -1,6 +1,6 @@
 ---
 title: Monitorare l'attività del sistema mediante gli eventi estesi
-description: Usare gli eventi estesi con Analisi eventi per Windows per monitorare l'attività del sistema. Vengono fornite informazioni su CREATE EVENT SESSION, ALTER EVENT SESSION e DROP EVENT SESSION.
+description: Usare eventi estesi con Event Tracing for Windows per monitorare l'attività del sistema. Informazioni su CREATE EVENT SESSION, ALTER EVENT SESSION e DROP EVENT SESSION.
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - xe
 - extended events [SQL Server], monitoring system activity
 ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b09dd7baae138fc559fd672ee43cad1761ca77c0
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 89277789f725bd78ea62ac0c91fd880d6e635950
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481402"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107489958"
 ---
 # <a name="monitor-system-activity-using-extended-events"></a>Monitorare l'attività del sistema mediante gli eventi estesi
 
@@ -123,7 +123,7 @@ ms.locfileid: "97481402"
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   
- [Viste del catalogo degli eventi estesi &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
+ [Viste del catalogo eventi estesi &#40;transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Viste a gestione dinamica degli eventi estesi](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
  [Destinazioni degli eventi estesi di SQL Server](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130))  
   

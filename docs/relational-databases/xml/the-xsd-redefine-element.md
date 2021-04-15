@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - xsd:redefine element
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4f2791ea8a8cae425ae7839a7af2d722e8cfe8a6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6137e814b85ee3670bd10711962ba3cec47dd43e
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729865"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107487378"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>Elemento &lt;xsd:redefine&gt;
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

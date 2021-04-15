@@ -1,6 +1,6 @@
 ---
 title: Pacchetti degli eventi estesi di SQL Server
-description: Un pacchetto è un contenitore per oggetti eventi estesi di SQL Server. Questo articolo descrive gli oggetti che possono essere contenuti in un pacchetto.
+description: Un pacchetto è un contenitore per SQL Server di eventi estesi. Questo articolo descrive gli oggetti che un pacchetto può contenere.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - extended events [SQL Server], packages
 - xe
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d61842473eb13af2ed3284aea6d7488e72d5f9e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 22e5bedd85158e3b2b9b81f54f4d38e611604427
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481352"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107489895"
 ---
 # <a name="sql-server-extended-events-packages"></a>Pacchetti degli eventi estesi di SQL Server
 
@@ -81,7 +81,7 @@ ms.locfileid: "97481352"
 |Termine|Definizione|  
 |----------|----------------|  
 |Amministrativi|Gli eventi amministrativi sono indirizzati principalmente agli utenti finali, agli 'amministratori e al supporto. Gli eventi trovati nei canali amministrativi indicano un problema con una soluzione ben definita sul quale può agire un amministratore. Un esempio di evento amministrativo è quando un'applicazione non riesce a connettersi a una stampante. Questi eventi sono ben documentati oppure hanno un messaggio ad essi associato che comunica a chi legge che cosa fare per risolvere il problema.|  
-|Operativo|Gli eventi operativi sono utilizzati per l'analisi e la diagnostica di un problema o di un'occorrenza. Possono essere utilizzati per attivare strumenti o attività basate su un problema o un'occorrenza. Un esempio di un evento operativo è quando una stampante viene aggiunta o rimossa da un sistema.|  
+|Operativo|Gli eventi operativi sono utilizzati per l'analisi e la diagnostica di un problema o di un'occorrenza. Si possono utilizzare per lanciare strumenti o attività basati sul problema o sull'occorrenza. Un esempio di un evento operativo è quando una stampante viene aggiunta o rimossa da un sistema.|  
 |Analitici|Gli eventi analitici sono pubblicati in volumi elevati. Descrivono il funzionamento del programma e sono in genere utilizzati nell'analisi delle prestazioni.|  
 |Debug|Gli eventi di debug sono utilizzati solamente dagli sviluppatori per diagnosticare un problema nelle operazioni di debug.<br /><br /> Gli eventi nel canale di debug restituiscono dati interni, specifici dell'implementazione, relativi allo stato. Gli schemi e i dati restituiti dagli eventi potrebbero cambiare o non essere più validi nelle versioni future di SQL Server. Pertanto, gli eventi nel canale di debug potrebbero cambiare o essere rimossi senza preavviso nelle versioni future di SQL Server.|  
   
@@ -143,7 +143,7 @@ where name = 'keyword_map'
   
 -   evento  
   
--   action  
+-   azione  
   
 -   target  
   
@@ -151,7 +151,7 @@ where name = 'keyword_map'
   
 -   pred_compare  
   
--   type  
+-   tipo  
   
  Per altre informazioni, vedere [sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md).  
   
@@ -218,7 +218,7 @@ where name = 'lock_mode'
  Utilizzare tabella come esempio, supponendo di avere una modalità di colonna denominata il cui valore è 5. La tabella indica che è stato eseguito il mapping di 5 a X, ovvero il tipo di blocco è Esclusivo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sessioni Eventi estesi di SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
- [Motore degli eventi estesi di SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
+ [SQL Server sessioni di eventi estesi](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
+ [SQL Server eventi estesi](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
  [Destinazioni degli eventi estesi di SQL Server](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130))  
   

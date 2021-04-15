@@ -13,14 +13,14 @@ helpviewer_keywords:
 - FOR XML clause, EXPLICIT mode
 - FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 193eae657a73f6801546c7234b141dae8f422e67
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6e2ca436aab52854f1767b97f6f368d11c8dd681
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736547"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107487235"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Utilizzo della modalità EXPLICIT con FOR XML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -119,32 +119,32 @@ ElementName!TagNumber!AttributeName!Directive
  È un valore di tag univoco assegnato a un elemento. Questo valore, insieme alle due colonne di metadati **Tag** e **Parent**, determina l'annidamento degli elementi nel codice XML risultante.  
   
  *AttributeName*  
- Indica il nome dell'attributo da costruire nell'argomento *ElementName*specificato. Ciò si verifica quando *Directive* non viene specificato.  
+ Indica il nome dell'attributo da costruire nell'argomento *ElementName* specificato. Ciò si verifica quando *Directive* non viene specificato.  
   
- Se per *Directive* viene specificato **xml**, **cdata**oppure **element**, questo valore viene usato per costruire un elemento figlio di *ElementName*, al quale viene aggiunto il valore della colonna.  
+ Se per *Directive* viene specificato **xml**, **cdata** oppure **element**, questo valore viene usato per costruire un elemento figlio di *ElementName*, al quale viene aggiunto il valore della colonna.  
   
  Se si specifica *Directive*, *AttributeName* può essere vuoto. Ad esempio, ElementName!TagNumber!!Directive. In questo caso, il valore della colonna è direttamente contenuto da *ElementName*.  
   
  *Directive*  
  *Directive* è facoltativo e può essere usato per specificare altre informazioni per la generazione del codice XML. *Directive* svolge due funzioni.  
   
- Il primo è la codifica dei valori come ID, IDREF e IDREFS. È possibile specificare le parole chiave **ID**, **IDREF**e **IDREFS** come valori di *Directive*. Queste direttive sovrascrivono i tipi di attributo, consentendo di creare collegamenti tra più documenti.  
+ Il primo è la codifica dei valori come ID, IDREF e IDREFS. È possibile specificare le parole chiave **ID**, **IDREF** e **IDREFS** come valori di *Directive*. Queste direttive sovrascrivono i tipi di attributo, consentendo di creare collegamenti tra più documenti.  
   
- È anche possibile usare *Directive* per definire il mapping tra i dati di tipo stringa e il codice XML. Le parole chiave **hide**, **element, elementxsinil**, **xml**, **xmltext**e **cdata** possono essere usate come valori di *Directive*. La direttiva **hide** nasconde il nodo. È utile quando si recuperano i valori solo a scopo di ordinamento, ma non si desidera che vengano inseriti nel codice XML risultante.  
+ È anche possibile usare *Directive* per definire il mapping tra i dati di tipo stringa e il codice XML. Le parole chiave **hide**, **element, elementxsinil**, **xml**, **xmltext** e **cdata** possono essere usate come valori di *Directive*. La direttiva **hide** nasconde il nodo. È utile quando si recuperano i valori solo a scopo di ordinamento, ma non si desidera che vengano inseriti nel codice XML risultante.  
   
  La direttiva **element** genera un elemento contenuto anziché un attributo. I dati contenuti vengono codificati come entità. Ad esempio, il carattere **<** viene convertito in &lt;. Per i valori di colonna NULL non vengono generati elementi. Se si vuole che venga generato un elemento anche per i valori di colonna NULL è possibile specificare la direttiva **elementxsinil** . Verrà generato un elemento con attributo xsi:nil=TRUE.  
   
- La direttiva **xml** equivale a una direttiva **element** , ma non viene eseguita alcuna codifica di entità. Si noti che è possibile combinare la direttiva **element** con **ID**, **IDREF**o **IDREFS**, mentre la direttiva **xml** può essere usata solo con **hide**.  
+ La direttiva **xml** equivale a una direttiva **element** , ma non viene eseguita alcuna codifica di entità. Si noti che è possibile combinare la direttiva **element** con **ID**, **IDREF** o **IDREFS**, mentre la direttiva **xml** può essere usata solo con **hide**.  
   
- La direttiva **cdata** contiene i dati inserendoli in una sezione CDATA. Il contenuto non viene codificato come entità. I dati originali devono essere di tipo testo, ad esempio **varchar**, **nvarchar**, **text**o **ntext**. Questa direttiva può essere usa solo con **hide**. Se si usa questa direttiva, non è necessario specificare *AttributeName* .  
+ La direttiva **cdata** contiene i dati inserendoli in una sezione CDATA. Il contenuto non viene codificato come entità. I dati originali devono essere di tipo testo, ad esempio **varchar**, **nvarchar**, **text** o **ntext**. Questa direttiva può essere usa solo con **hide**. Se si usa questa direttiva, non è necessario specificare *AttributeName* .  
   
  Nella maggior parte dei casi è consentito combinare le direttive tra questi due gruppi, ma non è possibile combinarle tra loro.  
   
- Se *Directive* e *AttributeName* non vengono specificati, ad esempio, **Customer!1**, è implicita una direttiva **element** , ad esempio **Customer!1!!element**e i dati di colonna sono contenuti in *ElementName*.  
+ Se *Directive* e *AttributeName* non vengono specificati, ad esempio, **Customer!1**, è implicita una direttiva **element** , ad esempio **Customer!1!!element** e i dati di colonna sono contenuti in *ElementName*.  
   
  Se si specifica la direttiva **xmltext** il contenuto della colonna viene inserito in un unico tag che viene integrato con il resto del documento. Questa direttiva risulta utile nel recupero dei dati XML di overflow (non utilizzati) archiviati in una colonna tramite OPENXML. Per altre informazioni, vedere [OPENXML &#40;SQL Server&#41;](../../relational-databases/xml/openxml-sql-server.md).  
   
- Se si specifica *AttributeName* il nome del tag viene sostituito dal nome specificato. In caso contrario, l'attributo viene aggiunto all'elenco corrente di attributi degli elementi che lo racchiudono inserendo il contenuto all'inizio dell'oggetto di contenimento senza codifica di entità. La colonna con questa direttiva deve essere di tipo testo, ad esempio **varchar**, **nvarchar**, **char**, **nchar**, **text**o **ntext**. Questa direttiva può essere usa solo con **hide**. Risulta particolarmente utile per il recupero dei dati di overflow archiviati in una colonna. Se il contenuto non è in un formato XML corretto, il funzionamento non è prevedibile.  
+ Se si specifica *AttributeName* il nome del tag viene sostituito dal nome specificato. In caso contrario, l'attributo viene aggiunto all'elenco corrente di attributi degli elementi che lo racchiudono inserendo il contenuto all'inizio dell'oggetto di contenimento senza codifica di entità. La colonna con questa direttiva deve essere di tipo testo, ad esempio **varchar**, **nvarchar**, **char**, **nchar**, **text** o **ntext**. Questa direttiva può essere usa solo con **hide**. Risulta particolarmente utile per il recupero dei dati di overflow archiviati in una colonna. Se il contenuto non è in un formato XML corretto, il funzionamento non è prevedibile.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  Negli esempi seguenti viene illustrato l'utilizzo della modalità EXPLICIT.  

@@ -22,14 +22,14 @@ helpviewer_keywords:
 - XML [SQL Server], OPENXML statement
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6acc03c2412ac33337236efba130344cc9f91c9e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e7509d21d05ac25b0988e59b95677d2046b20eb2
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753705"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107487788"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -174,11 +174,11 @@ EXEC sp_xml_removedocument @docHandle;
   
 -   Tramite il parametro *ColPattern* .  
   
-     Il parametro*ColPattern*, ovvero un'espressione XPath, viene specificato nell'ambito di *SchemaDeclaration* nella clausola WITH. Il mapping specificato dal parametro *ColPattern* sovrascrive il mapping specificato dal parametro *flags* .  
+     Il parametro *ColPattern*, ovvero un'espressione XPath, viene specificato nell'ambito di *SchemaDeclaration* nella clausola WITH. Il mapping specificato dal parametro *ColPattern* sovrascrive il mapping specificato dal parametro *flags* .  
   
-     Il parametro*ColPattern* consente di specificare il tipo di mapping, incentrato sugli attributi o sugli elementi, che sovrascrive o migliora il mapping predefinito indicato in *flags*.  
+     Il parametro *ColPattern* consente di specificare il tipo di mapping, incentrato sugli attributi o sugli elementi, che sovrascrive o migliora il mapping predefinito indicato in *flags*.  
   
-     Il parametro*ColPattern* viene specificato nei casi seguenti:  
+     Il parametro *ColPattern* viene specificato nei casi seguenti:  
   
     -   Se il nome di colonna nel set di righe è diverso dal nome dell'elemento o dell'attributo al quale viene eseguito il mapping. In questo caso, il parametro *ColPattern* consente di identificare il nome dell'elemento o dell'attributo XML al quale viene eseguito il mapping della colonna del set di righe.  
   

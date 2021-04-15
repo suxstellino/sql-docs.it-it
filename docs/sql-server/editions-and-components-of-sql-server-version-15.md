@@ -1,8 +1,8 @@
 ---
 description: Edizioni e funzionalità supportate di [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]
-title: Edizioni e funzionalità supportate di SQL Server 2019 | Microsoft Docs
+title: Edizioni e funzionalità supportate di SQL Server 2019
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 03/26/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -34,12 +34,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 98b630f4471d35259db609a5bf1740ff96b8d604
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 4647098fb9b0e5a006b222d81ad0be88ff480cba
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100336174"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107486701"
 ---
 # <a name="editions-and-supported-features-of-sssql19-md"></a>Edizioni e funzionalità supportate di [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]
 
@@ -108,7 +108,7 @@ Utilizzare le informazioni incluse nelle tabelle seguenti per determinare il set
 
 |Strumenti di gestione|Descrizione|
 |----------------------|-----------------|
-|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) è un ambiente integrato per l'accesso, la configurazione, la gestione, l'amministrazione e lo sviluppo di componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. SSMS consente l'uso di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a sviluppatori e amministratori con qualsiasi livello di esperienza. La versione più recente di SSMS Aggiorna SMO, che include l' [API valutazione SQL](../tools/sql-assessment-api/sql-assessment-api-overview.md).<br /><br/> Scaricare e installare <br />[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] da [Scaricare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)|
+|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) è un ambiente integrato per l'accesso, la configurazione, la gestione, l'amministrazione e lo sviluppo di componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. SSMS consente l'uso di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a sviluppatori e amministratori con qualsiasi livello di esperienza. L'edizione più recente di SSMS aggiorna SMO, che include [l'API Valutazione SQL .](../tools/sql-assessment-api/sql-assessment-api-overview.md)<br /><br/> Scaricare e installare <br />[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] da [Scaricare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)|
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Gestione configurazione|Gestione configurazione[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] offre funzionalità di base per la gestione della configurazione dei servizi di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , dei protocolli server, dei protocolli client e degli alias per i client.|
 |[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] offre un'interfaccia utente grafica per il monitoraggio di un'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)] o di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|
 |Ottimizzazione guidata[!INCLUDE[ssDE](../includes/ssde-md.md)]|Ottimizzazione guidata[!INCLUDE[ssDE](../includes/ssde-md.md)] consente di creare set di indici, viste indicizzate e partizioni ottimali.|
@@ -202,7 +202,7 @@ Developer Edition continua a supportare un solo client per [Riesecuzione distrib
 |Partizionamento di tabelle e indici|Sì|Sì|Sì|Sì|Sì|
 |Compressione dei dati|Sì|Sì|Sì|Sì|Sì|
 |Resource Governor|Sì|No|No|No|No|
-|Parallelismo della tabella partizionata|Sì|No|No|No|No|
+|Parallelismo della tabella partizionata|Sì|Sì|Sì|Sì|Sì|
 |Più contenitori FILESTREAM|Sì|Sì|Sì|Sì|Sì|
 |Allocazione di una matrice di buffer e di memoria in pagine grandi con supporto NUMA|Sì|No|No|No|No|
 |Estensione del pool di buffer|Sì|Sì|No|No|No|

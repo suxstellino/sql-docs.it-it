@@ -25,14 +25,14 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 560e3b6ff5b9beeed4dcf93f831a51b941b9d74e
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6b16bd6ed6fd7499109e9891725766d6934811a1
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126312"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107488462"
 ---
 # <a name="examples-using-openxml"></a>Esempi: Uso di OPENXML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
