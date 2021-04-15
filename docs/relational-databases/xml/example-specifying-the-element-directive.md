@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ELEMENT directive
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d6e8f74e0d5d8d90afa09c733e5b46b47b533995
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4f9f0c96bb77ba0b423b3528e75d65e8938afc77
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85632614"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107488576"
 ---
 # <a name="example-specifying-the-element-directive"></a>Esempio: Specifica della direttiva ELEMENT
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

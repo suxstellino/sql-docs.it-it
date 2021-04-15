@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, renaming <row> example
 ms.assetid: b042292a-0b6e-40a3-b254-71c06e626706
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cc297571daec9825a91d4e35ebbac737d88b5619
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eaaf500022ffc89460a76cacb7e77e12ed10c396
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85633051"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107488602"
 ---
 # <a name="example-renaming-the-ltrowgt-element"></a>Esempio: Ridenominazione dell'elemento &lt;row&gt;
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

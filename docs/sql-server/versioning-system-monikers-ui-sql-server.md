@@ -5,15 +5,15 @@ ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: release-landing
 ms.topic: conceptual
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-2016
-ms.openlocfilehash: 56ef939790de90d02add427f14f8817df885383f
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 2aebd807e6f128dcc5ace906b2d2bef07011659c
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100079752"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107490715"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>Sistema di versioni per la documentazione SQL
 

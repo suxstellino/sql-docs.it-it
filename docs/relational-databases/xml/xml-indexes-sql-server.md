@@ -32,14 +32,14 @@ helpviewer_keywords:
 - PROPERTY index
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8f5ab347d15e0363411640431f4d833f38e13234
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d9e7d5a233b3f93d3588c70dd233db44c275719c
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729782"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107486591"
 ---
 # <a name="xml-indexes-sql-server"></a>Indici XML (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -200,7 +200,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Ad eccezione delle differenze descritte più avanti in questo argomento, la creazione di un indice XML in una colonna di tipo**xml** è simile alla creazione di un indice in una colonna di tipo non**xml** . Per la creazione e la gestione di indici XML, è possibile utilizzare le istruzioni DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti:  
+ Ad eccezione delle differenze descritte più avanti in questo argomento, la creazione di un indice XML in una colonna di tipo **xml** è simile alla creazione di un indice in una colonna di tipo non **xml** . Per la creazione e la gestione di indici XML, è possibile utilizzare le istruzioni DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti:  
   
 -   [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   

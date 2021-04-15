@@ -17,14 +17,14 @@ helpviewer_keywords:
 - xml data type [SQL Server], serialization
 - typed XML
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 67201804cc1f93a9595ff46c02a57da7ea6e6109
-ms.sourcegitcommit: 68063a1857f40487e6a2028de25990728419e3a7
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f40c6c7aedda2cfab4747a271ff5f12e395ecd48
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96749703"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107488819"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Definire la serializzazione di dati XML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

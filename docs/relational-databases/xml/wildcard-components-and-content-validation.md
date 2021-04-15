@@ -12,14 +12,14 @@ helpviewer_keywords:
 - wildcard components [XML]
 - content validation [XML]
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e1fac8a7a0e7eafc4b3bb04809ad51ee2f1b970e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d89150453d767dcdaff998e65ee8efa452e14820
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729822"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107486590"
 ---
 # <a name="wildcard-components-and-content-validation"></a>Componenti jolly e convalida del contenuto
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "85729822"
 -   Il valore **lax** specifica che viene eseguita solo la convalida di elementi e attributi per i quali sono disponibili definizioni di schemi.  
   
 ## <a name="lax-validation-and-xsanytype-elements"></a>Elementi della convalida lax e del tipo xs:anyType  
- La specifica di XML Schema utilizza la convalida **lax** per elementi del tipo **anyType** . Poiché [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] non supportava la convalida di tipo lax, per gli elementi di tipo **anyType**veniva applicata la convalida di tipo strict. A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], la convalida lax è supportata. Il contenuto degli elementi del tipo **anyType** sarà convalidato utilizzando la convalida lax.  
+ La specifica di XML Schema utilizza la convalida **lax** per elementi del tipo **anyType** . Poiché [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] non supportava la convalida di tipo lax, per gli elementi di tipo **anyType** veniva applicata la convalida di tipo strict. A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], la convalida lax è supportata. Il contenuto degli elementi del tipo **anyType** sarà convalidato utilizzando la convalida lax.  
   
  L'esempio seguente illustra la convalida lax. L'elemento schema `e` è del tipo **anyType** . L'esempio crea variabili **xml** tipizzate e illustra la convalida lax dell'elemento di tipo **anyType** .  
   

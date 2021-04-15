@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - views [XML in SQL Server]
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5d4a9d8d0aa40f8454a2bd0fd089022630c34ca2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d6a872344542a08464b63f15116e50dfde6d56e8
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85691537"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107490999"
 ---
 # <a name="create-views-over-xml-columns"></a>Creazione di viste
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

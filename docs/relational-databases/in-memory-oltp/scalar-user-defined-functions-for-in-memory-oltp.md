@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: d2546e40-fdfc-414b-8196-76ed1f124bf5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ed83ee45844bd7299ca58eeeeed95849d0399f8
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 877f132e6b3d6e365c95c5139d964a2bd2dce741
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100353665"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107489254"
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>Funzioni scalari definite dall'utente per OLTP in memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

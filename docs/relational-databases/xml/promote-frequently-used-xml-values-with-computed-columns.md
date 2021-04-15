@@ -11,15 +11,15 @@ helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c5881835f6a415b47825181d7d5a74ec24677e3c
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
-ms.translationtype: HT
+ms.openlocfilehash: 15bbb0bc454c8069bdb77750b45de6db2260b280
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891941"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107487782"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promuovere i valori XML di uso frequente mediante colonne calcolate
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

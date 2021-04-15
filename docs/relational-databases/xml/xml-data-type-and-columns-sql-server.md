@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0a23431727b25135751693d1dbec68b6377dcd4e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e05a14e95020606b6474cc582ebc61235a6009c4
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729786"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107486741"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Colonne e tipo di dati XML (SQL Server)
 

@@ -1,6 +1,6 @@
 ---
 title: Esecuzione di un DiffGram mediante classi gestite SQLXML
-description: Informazioni su come eseguire un file DiffGram nell'ambiente Microsoft .NET Framework per applicare gli aggiornamenti dei dati alle tabelle SQL Server con le classi gestite SQLXML.
+description: Informazioni su come eseguire un file DiffGram nell'ambiente Microsoft .NET Framework per applicare aggiornamenti dei dati alle tabelle SQL Server usando classi gestite SQLXML.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - Managed Classes [SQLXML], DiffGrams
 - SQLXML, Managed Classes
 ms.assetid: 81c687ca-8c9f-4f58-801f-8dabcc508a06
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d19a7a13b77bbff3551a5d0d0f7eead3546d8b7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 189db39753317bfbc5c348599c1c243dde99e2d7
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97415006"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107490549"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>Esecuzione di un DiffGram mediante classi gestite SQLXML
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  Questo esempio illustra come eseguire un file DiffGram nell' [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ambiente .NET Framework per applicare gli aggiornamenti dei dati alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabelle usando le classi gestite SQLXML (Microsoft. Data. SQLXML).  
+  In questo esempio viene illustrato come eseguire un file DiffGram nell'ambiente .NET Framework per applicare aggiornamenti dei dati alle tabelle tramite classi gestite [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLXML (Microsoft.Data.SqlXml).  
   
  In questo esempio DiffGram viene utilizzato per aggiornare le informazioni per il cliente ALFKI (CompanyName e ContactName).  
   
@@ -55,9 +55,9 @@ ms.locfileid: "97415006"
 </ROOT>  
 ```  
   
- Il **\<before>** blocco include un **\<Customer>** elemento (**diffgr: ID = "Customer1"**). Il **\<DataInstance>** blocco include l' **\<Customer>** elemento corrispondente con lo stesso **ID**. L' **\<customer>** elemento in **\<NewDataSet>** specifica anche **diffgr: hasChanges = "modified"**. indicando un'operazione di aggiornamento e il record del cliente nella tabella Cust viene aggiornato di conseguenza. Si noti che se l'attributo **diffgr: hasChanges** non è specificato, la logica di elaborazione DiffGram ignora questo elemento e non viene eseguito alcun aggiornamento.  
+ Il **\<before>** blocco include un elemento ( **\<Customer>** **diffgr:id="Customer1"**). Il **\<DataInstance>** blocco include l'elemento **\<Customer>** corrispondente con lo stesso **ID**. **\<customer>** L'elemento in specifica anche **\<NewDataSet>** **diffgr:hasChanges="modified"**. indicando un'operazione di aggiornamento e il record del cliente nella tabella Cust viene aggiornato di conseguenza. Si noti che se **l'attributo diffgr:hasChanges** non è specificato, la logica di elaborazione di DiffGram ignora questo elemento e non viene eseguito alcun aggiornamento.  
   
- Di seguito è riportato il codice per un'applicazione di esercitazione in C# che illustra come utilizzare le classi gestite SQLXML per eseguire il DiffGram precedente e aggiornare due tabelle (cust, ORD) che verrà creato anche nel database **tempdb** .  
+ Di seguito è riportato il codice per un'applicazione di esercitazione in C# che illustra come usare le classi gestite SQLXML per eseguire il DiffGram precedente e aggiornare due tabelle (Cust, Ord) che verranno create anche nel database **tempdb.**  
   
 ```  
 using System;  
@@ -131,7 +131,7 @@ class Test
     </xsd:schema>  
     ```  
   
-3.  Creare le tabelle seguenti nel database **tempdb** .  
+3.  Creare queste tabelle nel database **tempdb.**  
   
     ```  
     CREATE TABLE Cust(  
@@ -181,6 +181,6 @@ class Test
 8.  Al prompt dei comandi eseguire DiffgramSample.exe.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempi di DiffGram &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
+ [Esempi di DiffGram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
   
   

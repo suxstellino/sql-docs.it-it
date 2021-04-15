@@ -1,6 +1,6 @@
 ---
-title: 'SQL: limit-field e SQL: Limit-Value (SQLXML)'
-description: 'Informazioni su come utilizzare le annotazioni SQLXML SQL: limit-field e SQL: Limit-Value per filtrare i dati quando si utilizza il caricamento bulk XML.'
+title: sql:limit-field e sql:limit-value (SQLXML)
+description: Informazioni su come usare le annotazioni SQLXML sql:limit-field e sql:limit-value per filtrare i dati quando si usa il caricamento bulk XML.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,20 +15,20 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: 402c21cf-9566-463f-a928-f94270c11db3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68f0044df7beb39d11caa828f7c873d574a03a89
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 6cedd3907e19e20dd6f3b4e562ca24d710aafee0
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97479292"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107490730"
 ---
 # <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>Interpretazione delle annotazioni - sql:limit-field e sql:limit-value
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  Il caricamento bulk XML elabora le annotazioni **SQL: limit-field** e **SQL: limit-value** per la definizione. Per ulteriori informazioni, vedere [filtro di valori tramite SQL: limit-field e SQL: limit-value &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md).  
+  Il caricamento bulk XML elabora le **annotazioni sql:limit-field** e **sql:limit-value** in base alla relativa definizione. Per altre informazioni, vedere Filtro dei valori usando [sql:limit-field e sql:limit-value &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md).  
   
  Si supponga, ad esempio, un database contenente le tabelle seguenti:  
   

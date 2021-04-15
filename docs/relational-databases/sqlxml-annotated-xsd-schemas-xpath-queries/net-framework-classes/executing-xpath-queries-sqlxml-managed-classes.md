@@ -1,6 +1,6 @@
 ---
 title: Esecuzione di query XPath (SQLXML)
-description: Informazioni su come eseguire una query XPath su uno schema di mapping utilizzando le classi gestite SQLXML.
+description: Informazioni su come eseguire una query XPath su uno schema di mapping usando le classi gestite SQLXML.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - mapping schema [SQLXML], XPath queries
 - SQLXML Managed Classes, executing XPath queries
 ms.assetid: 8bef4c4d-bf0e-4236-a875-fd7d3e058396
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c5a94292359a21c65c707adf200ea1b1273c362
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ea78169c6704fa3e843e2c58fc3c6014a2186b34
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97430939"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107491764"
 ---
 # <a name="executing-xpath-queries-sqlxml-managed-classes"></a>Esecuzione di query XPath (classi gestite SQLXML)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

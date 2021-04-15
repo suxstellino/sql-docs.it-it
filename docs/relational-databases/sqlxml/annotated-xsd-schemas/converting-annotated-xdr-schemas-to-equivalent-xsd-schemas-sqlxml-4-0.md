@@ -1,6 +1,6 @@
 ---
-title: Conversione di schemi XDR con annotazioni in XSD (SQLXML)
-description: Informazioni su come convertire uno schema XDR con annotazioni in uno schema XSD equivalente utilizzando lo strumento di conversione da XDR a XSD in SQLXML 4,0.
+title: Convertire schemi XDR con annotazioni in XSD (SQLXML)
+description: Informazioni su come convertire uno schema XDR con annotazioni in uno schema XSD equivalente usando lo strumento XDR to XSD Converter in SQLXML 4.0.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - mapping schema [SQLXML], conversions
 - XSD schemas [SQLXML], converting schemas
 ms.assetid: 151c94a8-66d3-4c46-a5ff-a22df456940a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d7936bf8d9d9c37620ef9b692c125ff16f1cea85
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5537c25a87d0bcfe9ec0fe0d882053c828cb4c31
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97467112"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107491379"
 ---
 # <a name="converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-40"></a>Conversione di schemi XDR con annotazioni in schemi XSD equivalenti (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,7 @@ cvtschema XDRFileName, [-y], [-w] [-?]
  Dove:  
   
  XDRFileName  
- È il nome del file XDR  da convertire in XSD. Lo strumento legge il file XDR di input e crea un file di output XSD nella directory di lavoro corrente. Se l'estensione del file di input è .xdr o .xml, il file XSD di output viene creato con lo stesso nome ma con estensione .xsd. Se l'estensione del nome del file di input è diversa da. XML o. XDR (o se l'estensione non è presente), il file di output viene creato con lo stesso nome e l'estensione XSD viene aggiunta al nome del file di input. Se ad esempio il nome del file XDR di input è SampleFile.abc, il file XSD risultante viene salvato come SampleFile.abc.xsd.  
+ È il nome del file XDR  da convertire in XSD. Lo strumento legge il file XDR di input e crea un file di output XSD nella directory di lavoro corrente. Se l'estensione del file di input è .xdr o .xml, il file XSD di output viene creato con lo stesso nome ma con estensione .xsd. Se l'estensione del nome file di input è diversa da xml o xdr (o se l'estensione è mancante), il file di output viene creato con lo stesso nome e l'estensione xsd viene aggiunta al nome del file di input. Se ad esempio il nome del file XDR di input è SampleFile.abc, il file XSD risultante viene salvato come SampleFile.abc.xsd.  
   
  -y  
  (Facoltativo) Sovrascrive il file XSD esistente con il file XSD generato dal convertitore. Se non viene specificato il flag, il convertitore richiede di specificare se si desidera sovrascrivere il file XSD esistente e offre l'opportunità di modificare il nome del file di output.  
@@ -59,7 +59,7 @@ cvtschema XDRFileName, [-y], [-w] [-?]
  Restituisce un elenco di opzioni che è possibile specificare con **cvtschema**, insieme a una spiegazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Mapping dei tipi di dati XSD ai tipi di dati XPath &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)   
- [Annotazioni XSD &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md)  
+ [Mapping dei tipi di dati XSD ai tipi di dati XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)   
+ [Annotazioni XSD &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md)  
   
   

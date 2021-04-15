@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Reorganize Index Task dialog box
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 19a8a14383b11d97f2cc598c0b51159bc4c96622
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 82031da0221d4cf794201c2b5b4579a1586d32f2
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100351176"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107489153"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>Attività Riorganizza indice (Piano di manutenzione)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

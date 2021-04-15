@@ -15,14 +15,14 @@ helpviewer_keywords:
 - insert keyword [XML DML]
 - insert XML DML statement
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d5eae7b06bb10c356bbb1c3975b05dd7cd267708
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6f1900598b70f656e7ae2441840fce8988d66d0a
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99199340"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107491270"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,6 +1,6 @@
 ---
-title: Considerazioni sulla sicurezza FOR XML (SQLXML)
-description: Informazioni sulle importanti considerazioni sulla sicurezza quando si specifica la modalità AUTO FOR XML in SQLXML 4,0.
+title: Considerazioni sulla sicurezza di FOR XML (SQLXML)
+description: Informazioni su importanti considerazioni sulla sicurezza quando si specifica la modalità FOR XML AUTO in SQLXML 4.0.
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - AUTO mode
 - security [SQLXML], FOR XML
 ms.assetid: facba279-df93-475b-ad43-0043dc5bae03
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8dbfe261078d35579bdc97a82cbef90abff289bf
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 129d634f3b717a219c7cd8af8028d1264ae1b9f4
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97467122"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107491621"
 ---
 # <a name="for-xml-security-considerations-sqlxml-40"></a>Considerazioni sulla sicurezza per FOR XML (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

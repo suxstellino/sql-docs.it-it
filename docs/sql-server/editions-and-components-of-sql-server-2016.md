@@ -5,7 +5,7 @@ description: Questo articolo descrive le funzionalità supportate dalle diverse 
 ms.custom:
 - seo-lt-2019
 - sqlfreshmay19
-ms.date: 07/22/2020
+ms.date: 03/26/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -34,15 +34,14 @@ helpviewer_keywords:
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
 - CPSA
-ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 49d32254b0faaf9dea2ae4c31f7e3548179e75a7
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 2aba19045e3a981f9d21cfb1a960ad2041ea97eb
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236612"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107486621"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>Edizioni e funzionalità supportate di SQL Server 2016
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -184,7 +183,7 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |Partizionamento di tabelle e indici|Sì|Sì <sup>2</sup>|Sì<sup>2</sup>|Sì<sup>2</sup>|Sì<sup>2</sup>|  
 |Compressione dei dati|Sì|Sì <sup>2</sup>|Sì<sup>2</sup>|Sì<sup>2</sup>|Sì<sup>2</sup>|
 |Resource Governor|Sì|No|No|No|No|  
-|Parallelismo della tabella partizionata|Sì|No|No|No|No|
+|Parallelismo della tabella partizionata|Sì|Sì <sup>2</sup>|Sì<sup>2</sup>|Sì<sup>2</sup>|Sì<sup>2</sup>|  
 |Più contenitori Filestream|Sì|Sì <sup>2</sup>|Sì<sup>2</sup>|Sì<sup>2</sup>|Sì<sup>2</sup>|
 |Allocazione di una matrice di buffer e di memoria in pagine grandi con supporto NUMA|Sì|No <sup>4</sup>|No|No|No|
 |Estensione pool di buffer|Sì|Sì|No|No|No|

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - FOR XML AUTO mode
 - AUTO FOR XML mode
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f77aaefd763a1902c1cd4e4be1dbf78e5f85a19a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 33782432e7fef693cec31c13e631d1c84826a033
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758490"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107487234"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>Utilizzo della modalità AUTO con FOR XML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -125,7 +125,7 @@ FOR XML AUTO, ELEMENTS
   
  In questa query, durante la creazione degli elementi \<Cust>, i valori CustomerID di ogni riga vengono confrontati con quelli della riga successiva perché CustomerID è la chiave primaria della tabella. Se CustomerID non viene identificata come chiave primaria della tabella, tutti i valori delle colonne (in questa query, CustomerID e CustomerType) di ogni riga verranno confrontati con quelli della riga successiva. Se i valori sono diversi, al valore XML verrà aggiunto un nuovo elemento \<Cust>.  
   
- Durante il confronto di questi valori di colonna, se una qualsiasi delle colonne da confrontare è di tipo **text**, **ntext**, **image**o **xml**, FOR XML presupporrà che i valori siano diversi e non eseguirà il confronto, anche se potrebbero essere uguali. Questo avviene perché il confronto di oggetti di grandi dimensioni non è supportato. Vengono aggiunti elementi al risultato per ogni riga selezionata. Si noti che le colonne di tipo **(n)varchar(max)** e **varbinary(max)** vengono confrontate.  
+ Durante il confronto di questi valori di colonna, se una qualsiasi delle colonne da confrontare è di tipo **text**, **ntext**, **image** o **xml**, FOR XML presupporrà che i valori siano diversi e non eseguirà il confronto, anche se potrebbero essere uguali. Questo avviene perché il confronto di oggetti di grandi dimensioni non è supportato. Vengono aggiunti elementi al risultato per ogni riga selezionata. Si noti che le colonne di tipo **(n)varchar(max)** e **varbinary(max)** vengono confrontate.  
   
  Quando una colonna nella clausola SELECT non può essere associata a una qualsiasi delle tabelle identificate nella clausola FROM, ad esempio nel caso di una colonna aggregata o calcolata, la colonna viene aggiunta al documento XML al livello di nidificazione più basso quando viene rilevata nell'elenco. Se tale colonna viene elencata per prima nella clausola SELECT, verrà aggiunta come elemento di livello principale.  
   

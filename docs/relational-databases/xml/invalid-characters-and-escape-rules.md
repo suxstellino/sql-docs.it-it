@@ -12,14 +12,14 @@ helpviewer_keywords:
 - FOR XML clause, invalid characters
 - FOR XML clause, escape rules
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 592aa9b31ce957500210a9a4d3caa7f780bf588d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c5ff0ca695498b940953ff74e85edd92a4f88dcd
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738427"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107490793"
 ---
 # <a name="invalid-characters-and-escape-rules"></a>Caratteri non validi e regole di escape
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

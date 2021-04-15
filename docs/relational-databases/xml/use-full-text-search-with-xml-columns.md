@@ -12,14 +12,14 @@ helpviewer_keywords:
 - xml columns [full-text search]
 - indexes [full-text search]
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0c3cc821a8630bc7afcd919c4a45140bb9a2621d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 649564dc85d8817173e26bc640bdbf0571270f90
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752555"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107487159"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>Utilizzo della ricerca full-text con colonne XML
 

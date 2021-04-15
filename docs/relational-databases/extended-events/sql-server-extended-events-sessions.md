@@ -1,6 +1,6 @@
 ---
 title: Sessioni Eventi estesi di SQL Server
-description: Una sessione Eventi estesi di SQL Server viene creata nel processo di SQL Server che ospita il motore degli eventi estesi. Informazioni sugli stati e sul contenuto delle sessioni.
+description: Viene SQL Server una sessione eventi estesi nel processo SQL Server che ospita il motore eventi estesi. Informazioni sugli stati della sessione e sul contenuto della sessione.
 ms.date: 05/26/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - sessions
 - extend events [SQL Server]
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf399ec51bf77e7d2da86a4135453e1535b84974
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: cd073c205b5382cfa9e37a214ab11ffd4387688d
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481362"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107492381"
 ---
 # <a name="sql-server-extended-events-sessions"></a>Sessioni Eventi estesi di SQL Server
 
@@ -41,7 +41,7 @@ ms.locfileid: "97481362"
   
 |Etichetta di illustrazione|Istruzione DDL|Descrizione|  
 |------------------------|-------------------|-----------------|  
-|Create|CREATE EVENT SESSION|Il processo host consente di creare un oggetto di sessione contenente i metadati forniti da CREATE EVENT SESSION. Il processo host convalida la definizione di sessione, convalida il livello di autorizzazione dell'utente e archivia i metadati nel database master. A questo punto, la sessione non è attiva.|  
+|Crea|CREATE EVENT SESSION|Il processo host consente di creare un oggetto di sessione contenente i metadati forniti da CREATE EVENT SESSION. Il processo host convalida la definizione di sessione, convalida il livello di autorizzazione dell'utente e archivia i metadati nel database master. A questo punto, la sessione non è attiva.|  
 |Alter|ALTER EVENT SESSION, STATE=START|Il processo host avvia la sessione. Il processo host legge i metadati archiviati, convalida la definizione di sezione, verifica il livello di autorizzazione dell'utente e crea la sessione. Gli oggetti di sessione, ad esempio eventi e destinazioni, sono caricati e la gestione degli eventi è attiva.|  
 |Alter|ALTER EVENT SESSION, STATE=STOP|Il processo host arresta la sessione attiva ma conserva i metadati.|  
 |Rilascia|DROP EVENT SESSION|A seconda che la sessione sia attiva o meno, Drop (DROP SESSION) elimina i metadati e chiude la sessione attiva oppure elimina i metadati della sessione.|  

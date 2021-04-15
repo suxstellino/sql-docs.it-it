@@ -1,6 +1,6 @@
 ---
 title: Concetti relativi alla programmazione SQLXML 4.0
-description: Visualizzare informazioni sui concetti di programmazione utilizzati in SQLXML 4,0.
+description: Visualizzare informazioni sui concetti di programmazione utilizzati in SQLXML 4.0.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQLXML, about SQLXML
 - SQLXML
 ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2699c938d13750e954a4171da610c6a40b74f141
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f9f2b05f8d85a28660632ec724d355bebb7797e0
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97429640"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107490348"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>Concetti relativi alla programmazione SQLXML 4.0
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "97429640"
  [Requisiti per l'esecuzione di esempi di SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)  
  Vengono descritti i requisiti per la creazione di esempi reali dagli esempi SQLXML forniti.  
   
- [Formattazione lato client e lato server &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
+ [Formattazione lato client e lato server &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
  Viene confrontata la formattazione sul lato client con quella sul lato server e vengono fornite informazioni correlate, incluse informazioni sul comando FOR XML per la costruzione di documenti XML.  
   
  [Schemi XSD con annotazioni in SQLXML 4.0](../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md)  
@@ -66,7 +66,7 @@ ms.locfileid: "97429640"
  [Supporto XQLXML 4.0 per Microsoft .NET Framework](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)  
  Viene descritto il supporto SQLXML 4.0 per .NET Framework.  
   
- [Memorizzazione nella cache di modelli, XSL e schemi &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  
+ [Memorizzazione nella cache di modelli, XSL e schemi &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  
  Viene descritta la funzionalità di memorizzazione nella cache disponibile in SQLXML per il miglioramento delle prestazioni.  
   
  [Considerazioni sulla sicurezza per SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md)  

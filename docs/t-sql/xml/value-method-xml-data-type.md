@@ -13,14 +13,14 @@ helpviewer_keywords:
 - value method
 - value() method
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dce7148340136615b79d4bf4e4ec9dd15627c88e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 40f5d022ed662c7cbddbd70bee57619605ef1b49
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99181730"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107491317"
 ---
 # <a name="value-method-xml-data-type"></a>Metodo value() (tipo di dati xml)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested AUTO mode
 - nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3f65bb2dab5e00a52943a58686d6f5d448391903
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8edc13548f6a07785cf3523b8cc5c09f5d84bcb5
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85691320"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107488184"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Generare elementi di pari livello tramite query nidificate in modalità AUTO
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - preprocessor tool [XML schemas]
 - XML schemas [SQL Server]
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 48afad6a8cb4c5e3dcc65118a73fa7b3079d02f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d05fe10553f1f6d1983bcfb09b2c644e9522b59a
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757510"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107487776"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Pre-elaborazione di uno schema per unire schemi inclusi
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

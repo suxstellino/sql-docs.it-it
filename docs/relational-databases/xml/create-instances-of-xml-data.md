@@ -18,14 +18,14 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4dc776e09639a67ef93e1778dd152761ed5a0bfc
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a0078fe1981b30db78e60ba56ba6fb760c8b7f82
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891581"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107488897"
 ---
 # <a name="create-instances-of-xml-data"></a>Creare istanze di dati XML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91891581"
 -   Utilizzo del caricamento bulk.  
   
 ## <a name="type-casting-string-and-binary-instances"></a>Cast di tipo di istanze binarie e di stringa  
- È possibile analizzare qualsiasi tipo di dati stringa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio [**n**][**var**]**char**, **[n]text**, **varbinary**e **image**, nel tipo di dati **xml** eseguendo il cast o la conversione della stringa (rispettivamente tramite l'istruzione CAST o CONVERT) nel tipo di dati **xml** . L'istanza XML non tipizzata viene controllata per verificare che il formato sia corretto. Se al tipo **xml** è associato uno schema, viene eseguita anche la convalida. Per altre informazioni, vedere [Confrontare dati XML tipizzati con dati XML non tipizzati](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
+ È possibile analizzare qualsiasi tipo di dati stringa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio [**n**][**var**]**char**, **[n]text**, **varbinary** e **image**, nel tipo di dati **xml** eseguendo il cast o la conversione della stringa (rispettivamente tramite l'istruzione CAST o CONVERT) nel tipo di dati **xml** . L'istanza XML non tipizzata viene controllata per verificare che il formato sia corretto. Se al tipo **xml** è associato uno schema, viene eseguita anche la convalida. Per altre informazioni, vedere [Confrontare dati XML tipizzati con dati XML non tipizzati](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
  I documenti XML possono essere codificati con codifiche diverse, ad esempio UTF-8, UTF-16, windows-1252). Di seguito vengono descritte le regole in base alle quali i tipi di origine di stringa e binari interagiscono con la codifica del documento XML, nonché il comportamento del parser.  
   

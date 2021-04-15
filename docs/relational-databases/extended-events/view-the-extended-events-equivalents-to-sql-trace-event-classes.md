@@ -1,6 +1,6 @@
 ---
 title: Eventi estesi equivalenti alle classi di evento di Traccia SQL
-description: Questo articolo illustra come visualizzare gli eventi e le azioni degli eventi estesi equivalenti a ogni evento di Traccia SQL e alle colonne associate.
+description: Questo articolo illustra come visualizzare le azioni e gli eventi degli eventi estesi equivalenti a ogni evento di Traccia SQL e alle colonne associate.
 ms.date: 03/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - extended events [SQL Server], SQL Trace equivalents
 - extended events [SQL Server], user configurable events
 ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0db57b62a6b6e8c2e9be53ce97fd445d7deee6ea
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 4a139d6b8720d77b766ba317b08c08e9b16e830d
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481312"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107489918"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>Visualizzare gli eventi estesi equivalenti alle classi di evento di traccia SQL
 

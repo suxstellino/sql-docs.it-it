@@ -11,15 +11,15 @@ helpviewer_keywords:
 - RAW mode, requesting schema example
 - RAW mode, with XMLDATA and XMLSCHEMA
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e7dfada43a7f899339f9f6ab59ef94dda9853c36
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: f405fbf567e9f430df9d96d1069060f7cc3b766a
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85632923"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107490942"
 ---
 # <a name="request-schemas-as-results-with-xmldata--xmlschema"></a>Richiedere schemi come risultati con XMLDATA e XMLSCHEMA
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

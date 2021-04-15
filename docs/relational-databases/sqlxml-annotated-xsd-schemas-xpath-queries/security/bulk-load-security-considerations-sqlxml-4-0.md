@@ -1,6 +1,6 @@
 ---
 title: Considerazioni sulla sicurezza del caricamento bulk (SQLXML)
-description: Informazioni sulle linee guida sulla sicurezza per l'utilizzo del caricamento bulk XML in SQLXML 4,0.
+description: Informazioni sulle linee guida sulla sicurezza per l'uso del caricamento bulk XML in SQLXML 4.0.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - security [SQLXML], XML Bulk Load
 - XML Bulk Load [SQLXML], security
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec361c23bfd946aaf47e817030237f80cdc4a3ef
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c9e1669f2bb6a4b410e19f036797fd8cb5197170
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482942"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107491628"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>Considerazioni sulla sicurezza del caricamento bulk (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Di seguito sono riportate alcune linee guida relative alla sicurezza quando si utilizza il caricamento bulk XML:  
   
--   Quando si specifica che l'operazione di caricamento bulk deve essere eseguita come transazione, utilizzare la proprietà **TempFilePath** per specificare una cartella in cui creare i file temporanei.  
+-   Quando si specifica che l'operazione di caricamento bulk deve essere eseguita come transazione, usare la proprietà **TempFilePath** per specificare una cartella in cui creare i file temporanei.  
   
      Il processo di caricamento bulk crea questi file temporanei con le autorizzazioni seguenti:  
   

@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - mixed types [SQL Server]
 ms.assetid: 6ea1f11d-e64b-4ebb-ab68-4eb6e4027665
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 990ead43919e80a910860ee15a3758a36e2a1f93
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6ff54e62b2fdba038cbd16e121d2dfe6734478bd
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715127"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107488170"
 ---
 # <a name="mixed-type-and-simple-content"></a>Tipo misto e contenuto semplice
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

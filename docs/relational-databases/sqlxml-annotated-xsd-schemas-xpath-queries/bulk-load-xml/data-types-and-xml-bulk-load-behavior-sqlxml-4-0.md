@@ -1,6 +1,6 @@
 ---
-title: Tipi di dati e comportamento del caricamento bulk XML (SQLXML)
-description: Informazioni sui tipi di dati e sul comportamento del caricamento bulk XML in SQLXML 4,0.
+title: Tipi di dati e comportamento di caricamento bulk XML (SQLXML)
+description: Informazioni sui tipi di dati e sul comportamento del caricamento bulk XML in SQLXML 4.0.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,35 +12,35 @@ helpviewer_keywords:
 - data types [SQLXML], XML Bulk Load
 - XML Bulk Load [SQLXML], data types
 ms.assetid: d1ac1939-1f6c-4398-b7a7-a79ca608a4f1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3cbf84c0f5bf4f80bc3bf12d6dad91479888d595
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 82c47b4a20642625b596caee66ae274cb3b18fe7
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97462902"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107490636"
 ---
 # <a name="data-types-and-xml-bulk-load-behavior-sqlxml-40"></a>Tipi di dati e comportamento del caricamento bulk XML (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  I tipi di dati specificati nello schema di mapping (XSD o XDR e **SQL: DataType**) vengono generalmente ignorati, tranne nei casi seguenti:  
+  I tipi di dati specificati nello schema di mapping (tipo XSD o XDR e **sql:datatype**) vengono in genere ignorati, ad eccezione dei casi seguenti:  
   
  In XSD:  
   
--   Se il tipo è **DateTime** o **Time**, è necessario specificare **SQL: DataType** perché il caricamento bulk XML esegue la conversione dei dati prima di inviare i dati a Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+-   Se il tipo è **dateTime** o **time**, è necessario specificare **il tipo sql:data perché** il caricamento bulk XML esegue la conversione dei dati prima di inviare i dati a Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   Quando si esegue il caricamento bulk in una colonna di tipo **uniqueidentifier** in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e il valore XSD è un GUID che include parentesi graffe ({e}), è necessario specificare **SQL: DataType = "uniqueidentifier"** per rimuovere le parentesi graffe prima che il valore venga inserito nella colonna. Se **SQL: DataType** non è specificato, il valore viene inviato con le parentesi graffe e l'inserimento ha esito negativo.  
+-   Quando si esegue il caricamento bulk in una colonna di tipo **uniqueidentifier** in e il valore XSD è un GUID che include parentesi graffe ({ e }), è necessario specificare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sql:datatype="uniqueidentifier"** per rimuovere le parentesi graffe prima che il valore venga inserito nella colonna. Se **sql:datatype non** viene specificato, il valore viene inviato con le parentesi graffe e l'inserimento non riesce.  
   
- Per ulteriori informazioni su **SQL: DataType**, vedere [coercizione del tipo di dati e l'annotazione sql: datatype &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
+ Per altre informazioni **su sql:datatype**, vedere Coercizioni del tipo di dati e l'annotazione [sql:datatype &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
   
  In XDR:  
   
--   Se **DT: Type** è **DateTime**, **Time**, **DateTime.TZ** o **time.TZ**, è necessario specificare entrambi i tipi di dati **DT: Type** e **SQL: DataType** perché il caricamento bulk XML esegue la conversione dei dati prima di inviare i dati a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+-   Se **dt:type** è **datetime**, **time**, **dateTime.tz** o **time.tz**, è necessario specificare entrambi i tipi di dati **dt:type** e **sql:datatype** perché il caricamento bulk XML esegue la conversione dei dati prima di inviare i dati a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   Se i dati XML sono di tipo **UUID**, è necessario specificare **SQL: DataType** ; è necessario anche **DT: Type = "UUID"** , a meno che i dati non siano dati di tipo stringa. Se non si specifica **DT: UUID**, il caricamento bulk XML accetta stringhe con parentesi graffe (e le rimuove se necessario).  
+-   Se i dati XML sono di tipo **uuid**, è necessario specificare **sql:datatype.** **È necessario anche dt:type="uuid",** a meno che i dati non siano dati stringa. Se non si specifica **dt:uuid**, il caricamento bulk XML accetta stringhe con parentesi graffe e le rimuove se necessario.  
   
--   Se i dati XML sono **bin. Base64** o **bin. Hex**, è necessario specificare il tipo di dati XML con **DT: Type**. Il caricamento bulk XML carica quindi i dati in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] come rappresentazione esadecimale dei dati.  
+-   Se i dati XML sono **bin.base64** o **bin.hex,** è necessario specificare il tipo di dati XML con **dt:type**. Il caricamento bulk XML carica quindi i dati in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] come rappresentazione esadecimale dei dati.  
   
   

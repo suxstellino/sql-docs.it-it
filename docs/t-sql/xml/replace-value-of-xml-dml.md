@@ -16,14 +16,14 @@ helpviewer_keywords:
 - updating node values
 - replace value of XML DML statement
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6882fa93bb1d4837f909bc00f74fdf9e83e7c5c4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cc3c4b3ca7dec02a4b01c426a2f3503071822393
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99174385"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107491315"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

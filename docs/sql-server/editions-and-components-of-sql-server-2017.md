@@ -3,7 +3,7 @@ title: Edizioni e funzionalità supportate
 titleSuffix: SQL Server 2017
 description: Questo articolo descrive le funzionalità supportate dalle diverse edizioni di SQL Server 2017, che soddisfano requisiti di prestazioni, runtime e prezzi diversi.
 ms.custom: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 03/26/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -35,12 +35,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017'
-ms.openlocfilehash: 1d0918500cdb7e5bf7a21222ad77299092eb8ac1
-ms.sourcegitcommit: 295b9dfc758471ef7d238a2b0f92f93e34acbb1b
+ms.openlocfilehash: 424ace2224083de04cf99791f51cfb29b1e61530
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "106054477"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107491285"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Edizioni e funzionalità supportate di SQL Server 2017
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
@@ -189,7 +189,7 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |Partizionamento di tabelle e indici|Sì|Sì|Sì|Sì|Sì|  
 |Compressione dei dati|Sì|Sì|Sì|Sì|Sì|
 |Resource Governor|Sì|No|No|No|No|  
-|Parallelismo della tabella partizionata|Sì|No|No|No|No|
+|Parallelismo della tabella partizionata|Sì|Sì|Sì|Sì|Sì|  
 |Più contenitori Filestream|Sì|Sì|Sì|Sì|Sì|
 |Allocazione di una matrice di buffer e di memoria in pagine grandi con supporto NUMA|Sì|No|No|No|No|
 |Estensione pool di buffer|Sì|Sì|No|No|No|

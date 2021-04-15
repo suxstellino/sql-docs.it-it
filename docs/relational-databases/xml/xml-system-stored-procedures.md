@@ -15,14 +15,14 @@ helpviewer_keywords:
 - sp_xml_preparedocument
 - XML [SQL Server], system stored procedures
 ms.assetid: e60c7f85-6823-4d28-93d6-b053d08cc830
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4e3b6a8e61befce3dd68bd692976b25d0d9d7259
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f92b5bb8ec27dd9b15caf8bce013dbd5c3a4e66f
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729758"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107486579"
 ---
 # <a name="xml-system-stored-procedures"></a>Stored procedure XML di sistema
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

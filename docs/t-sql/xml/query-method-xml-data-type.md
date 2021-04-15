@@ -13,14 +13,14 @@ helpviewer_keywords:
 - query method
 - query() method
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 19dd6786f9ee59e4185b68c1ab49a9f5c9924a9a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: aa45cbfb4e629304d3a64c36da530807f7338798
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99200230"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107491226"
 ---
 # <a name="query-method-xml-data-type"></a>Metodo query() con tipo di dati XML
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

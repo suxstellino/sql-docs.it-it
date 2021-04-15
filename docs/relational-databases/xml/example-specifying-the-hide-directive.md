@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - HIDE directive
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f8f8f5a8eeeff444832d5cd6142f1bb0099c5913
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8e32d48d14a3a0cfabb054f92fb4536b59088734
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85632493"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107488538"
 ---
 # <a name="example-specifying-the-hide-directive"></a>Esempio: specifica della direttiva HIDE
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

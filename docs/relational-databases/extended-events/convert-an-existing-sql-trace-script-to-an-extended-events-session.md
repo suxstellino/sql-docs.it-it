@@ -1,6 +1,6 @@
 ---
 title: Convertire uno script di Traccia SQL in una sessione Eventi estesi
-description: Usare queste procedure per creare una sessione Eventi estesi equivalente a uno script di Traccia SQL esistente che si vuole convertire.
+description: Utilizzare queste procedure per creare una sessione Eventi estesi equivalente a uno script di Traccia SQL esistente che si desidera convertire.
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - SQL Trace, convert script to extended events
 - extended events [SQL Server], convert SQL Trace script
 ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe788a0764f3d3d93159dd1e9782aa788d337973
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 4549a86841410a4aa5c68c80cd9480abf858d1d8
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465592"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107492439"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Convertire uno script di Traccia SQL esistente in una sessione Eventi estesi
 
@@ -105,7 +105,7 @@ ms.locfileid: "97465592"
 ## <a name="to-create-the-extended-events-session"></a>Per creare la sessione Eventi estesi  
  Utilizzare l'editor di query per creare la sessione Eventi estesi e scrivere l'output in una destinazione file. Nei passaggi seguenti viene descritta una singola query e viene illustrato come compilarla. Per l'esempio di query completo, vedere la sezione "Esempio" di questo argomento.  
   
-1.  Aggiungere istruzioni per creare la sessione eventi, sostituendo *session_name* con il nome che si desidera usare per la sessione Eventi estesi.  
+1.  Aggiungere istruzioni per creare la sessione eventi, sostituendo *session_name* con il nome che si desidera utilizzare per la sessione eventi estesi.  
   
     ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  

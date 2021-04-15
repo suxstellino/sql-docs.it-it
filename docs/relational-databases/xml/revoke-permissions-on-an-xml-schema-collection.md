@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - revoking permissions [SQL Server]
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7952b6d917494f8d73edb24290c2f43f5f0d5d94
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6be58ed505e5816c0c7dc3dfeaf589c3248e21c
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752537"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107487542"
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>Revoca delle autorizzazioni per una raccolta di XML Schema
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

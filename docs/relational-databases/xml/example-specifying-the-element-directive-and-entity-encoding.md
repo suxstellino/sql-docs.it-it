@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ELEMENT directive
 - entity encoding [XML]
 ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 176cbbd92b55ada81a845018826cbf0b899b3475
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+ms.openlocfilehash: d7f2fd18e4034abce92965578b98ac9212cf89ff
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85632661"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107490885"
 ---
 # <a name="example-specifying-the-element-directive-and-entity-encoding"></a>Esempio: Specifica della direttiva ELEMENT e della codifica di entità
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

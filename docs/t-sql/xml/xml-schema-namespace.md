@@ -19,14 +19,14 @@ helpviewer_keywords:
 - schemas [SQL Server], XML
 - schema collections [SQL Server], reconstructing schemas
 ms.assetid: ee9873d8-dd3a-4bff-a10c-68bbadbdf1a6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 865f2548293fc572a56c90b0813bb83aa2776cbc
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 45bfaa6674fa7df098d812524ae1a32427171097
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99181698"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107488225"
 ---
 # <a name="xml_schema_namespace"></a>xml_schema_namespace
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

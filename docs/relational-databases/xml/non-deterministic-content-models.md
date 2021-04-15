@@ -12,14 +12,14 @@ helpviewer_keywords:
 - non-deterministic content models
 - content models [XML in SQL Server]
 ms.assetid: 9d4513e7-dd19-4491-b7c7-28bc7c2f8589
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cd6ab4f4bb7bc6b867ffc32937cc58f202b20af0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 95d623ff7dd4e1a37366d66fd23613615a66f201
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729174"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107487784"
 ---
 # <a name="non-deterministic-content-models"></a>modelli di contenuto non deterministici
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

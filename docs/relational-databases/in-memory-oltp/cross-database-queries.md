@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b73ea09a24e2091a76d6bf2526c1f7a17e3afd60
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2e4a5b80032b0b76e72e9bdf226a833f00220a81
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868008"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107489779"
 ---
 # <a name="cross-database-queries"></a>Query tra database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

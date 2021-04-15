@@ -1,6 +1,6 @@
 ---
 title: Specificare uno spazio dei nomi di destinazione con targetNamespace (SQLXML)
-description: Informazioni su come specificare uno spazio dei nomi di destinazione in uno schema XSD utilizzando l'attributo targetNamespace in SQLXML 4,0.
+description: Informazioni su come specificare uno spazio dei nomi di destinazione in uno schema XSD usando l'attributo targetNamespace in SQLXML 4.0.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,29 +16,29 @@ helpviewer_keywords:
 - elementFormDefault attribute
 - target namespaces [SQLXML]
 ms.assetid: f3df9877-6672-4444-8245-2670063c9310
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50eda94d40b819a5cd1fd51855232a53ecfc93db
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 011b8e15caae5ea805aedb97223fe62c7640de3c
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461742"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107490769"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Specifica di uno spazio dei nomi di destinazione mediante l'attributo targetNamespace (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Per la scrittura di schemi XSD, è possibile utilizzare l'attributo **TARGETNAMESPACE** XSD per specificare uno spazio dei nomi di destinazione. In questo argomento viene descritto il funzionamento degli attributi XSD **targetNamespace**, **elementFormDefault** e **attributeFormDefault** , il modo in cui influiscono sull'istanza XML generata e come vengono specificate le query XPath con gli spazi dei nomi.  
+  Quando si scrivono schemi XSD, è possibile usare l'attributo **targetNamespace** XSD per specificare uno spazio dei nomi di destinazione. Questo argomento descrive il funzionamento degli attributi XSD **targetNamespace**, **elementFormDefault** e **attributeFormDefault,** il modo in cui influiscono sull'istanza XML generata e il modo in cui le query XPath vengono specificate con gli spazi dei nomi.  
   
- È possibile utilizzare l'attributo **xsd: targetNamespace** per inserire gli elementi e gli attributi dello spazio dei nomi predefinito in uno spazio dei nomi diverso. È inoltre possibile specificare se gli elementi e gli attributi dello schema dichiarati localmente devono essere qualificati da uno spazio dei nomi, sia in modo esplicito mediante un prefisso sia in modo implicito per impostazione predefinita. È possibile usare gli attributi **elementFormDefault** e **attributeFormDefault** sull' **\<xsd:schema>** elemento per specificare a livello globale la qualificazione di elementi e attributi locali oppure è possibile usare l'attributo **form** per specificare separatamente i singoli elementi e attributi.  
+ È possibile usare **l'attributo xsd:targetNamespace** per inserire elementi e attributi dello spazio dei nomi predefinito in uno spazio dei nomi diverso. È inoltre possibile specificare se gli elementi e gli attributi dello schema dichiarati localmente devono essere qualificati da uno spazio dei nomi, sia in modo esplicito mediante un prefisso sia in modo implicito per impostazione predefinita. È possibile usare gli attributi **elementFormDefault** e **attributeFormDefault** nell'elemento per specificare a livello globale la qualifica di elementi e attributi locali oppure è possibile usare l'attributo form per specificare i singoli elementi e attributi **\<xsd:schema>** separatamente.   
   
 ## <a name="examples"></a>Esempio  
- Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per altre informazioni, vedere [Requisiti per l'esecuzione di esempi SQLXML.](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)  
   
 ### <a name="a-specifying-a-target-namespace"></a>R. Specificare uno spazio dei nomi di destinazione  
- Nello schema XSD seguente viene specificato uno spazio dei nomi di destinazione utilizzando l'attributo **xsd: targetNamespace** . Lo schema imposta anche i valori degli attributi **elementFormDefault** e **attributeFormDefault** su **"unqualified"** (il valore predefinito per questi attributi). Si tratta di una dichiarazione globale che interessa tutti gli elementi locali ( **\<Order>** nello schema) e gli attributi (**CustomerID**, **ContactName** e **OrderID** nello schema).  
+ Lo schema XSD seguente specifica uno spazio dei nomi di destinazione usando **l'attributo xsd:targetNamespace.** Lo schema imposta anche i valori degli attributi **elementFormDefault** e **attributeFormDefault** su **"unqualified"** (valore predefinito per questi attributi). Si tratta di una dichiarazione globale e influisce su tutti gli elementi locali ( nello schema) e gli attributi **\<Order>** (**CustomerID**, **ContactName** e **OrderID** nello schema).  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -78,9 +78,9 @@ ms.locfileid: "97461742"
   
  Nello schema:  
   
--   Le dichiarazioni di tipo **CustomerType** e **OrderType** sono globali e, pertanto, sono incluse nello spazio dei nomi di destinazione dello schema. Di conseguenza, quando a questi tipi viene fatto riferimento nella dichiarazione dell' **\<Customer>** elemento e del relativo **\<Order>** elemento figlio, viene specificato un prefisso associato allo spazio dei nomi di destinazione.  
+-   Le **dichiarazioni di tipo CustomerType** e **OrderType** sono globali e, pertanto, sono incluse nello spazio dei nomi di destinazione dello schema. Di conseguenza, quando si fa riferimento a questi tipi nella dichiarazione dell'elemento e del relativo elemento figlio, viene specificato un prefisso associato allo spazio dei **\<Customer>** **\<Order>** nomi di destinazione.  
   
--   L' **\<Customer>** elemento viene inoltre incluso nello spazio dei nomi di destinazione dello schema poiché è un elemento globale nello schema.  
+-   **\<Customer>** L'elemento è incluso anche nello spazio dei nomi di destinazione dello schema perché è un elemento globale nello schema.  
   
  Eseguire sullo schema la query Xpath seguente:  
   
@@ -101,9 +101,9 @@ ms.locfileid: "97461742"
   </ROOT>  
 ```  
   
- Questo documento di istanza definisce lo spazio dei nomi urn: MyNamespace e vi associa un prefisso (y0). Il prefisso viene applicato solo all' **\<Customer>** elemento globale. L'elemento è globale perché è dichiarato come elemento figlio dell' **\<xsd:schema>** elemento nello schema.  
+ Questo documento di istanza definisce lo spazio dei nomi urn:MyNamespace e associa un prefisso (y0). Il prefisso viene applicato solo **\<Customer>** all'elemento globale. L'elemento è globale perché è dichiarato come figlio **\<xsd:schema>** dell'elemento nello schema.  
   
- Il prefisso non viene applicato agli elementi e agli attributi locali poiché il valore degli attributi **elementFormDefault** e **attributeFormDefault** è impostato su **"unqualified"** nello schema. Si noti che l' **\<Order>** elemento è locale perché la relativa dichiarazione appare come elemento figlio dell' **\<complexType>** elemento che definisce l' **\<CustomerType>** elemento. Analogamente, gli attributi (**CustomerID**, **OrderID** e **ContactName**) sono locali e non globali.  
+ Il prefisso non viene applicato agli elementi e agli attributi locali perché il valore degli attributi **elementFormDefault** e **attributeFormDefault** è impostato su **"unqualified"** nello schema. Si noti che **\<Order>** l'elemento è locale perché la relativa dichiarazione viene visualizzata come figlio **\<complexType>** dell'elemento che definisce **\<CustomerType>** l'elemento. Analogamente, gli attributi (**CustomerID**, **OrderID** e **ContactName**) sono locali, non globali.  
   
 ##### <a name="to-create-a-working-sample-of-this-schema"></a>Per creare un esempio reale di questo schema  
   
@@ -120,7 +120,7 @@ ms.locfileid: "97461742"
     </ROOT>  
     ```  
   
-     La query XPath nel modello restituisce l' **\<Customer>** elemento per il cliente con CustomerID 1. Notare che la query XPath specifica il prefisso dello spazio dei nomi per l'elemento nella query e non per l'attributo. Gli attributi locali non sono qualificati, come specificato nello schema.  
+     La query XPath nel modello restituisce **\<Customer>** l'elemento per il cliente con CustomerID 1. Notare che la query XPath specifica il prefisso dello spazio dei nomi per l'elemento nella query e non per l'attributo. Gli attributi locali non sono qualificati, come specificato nello schema.  
   
      Il percorso di directory specificato per lo schema di mapping (targetNamespace.xml) è relativo alla directory in cui è salvato il modello. È possibile specificare anche un percorso assoluto, ad esempio:  
   
@@ -130,9 +130,9 @@ ms.locfileid: "97461742"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per altre informazioni, vedere [Utilizzo di ADO per l'esecuzione di query SQLXML.](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)  
   
- Se lo schema specifica gli attributi **elementFormDefault** e **attributeFormDefault** con il valore **"qualified"**, il documento dell'istanza disporrà di tutti gli elementi e gli attributi locali qualificati. È possibile modificare lo schema precedente in modo da includere questi attributi nell' **\<xsd:schema>** elemento ed eseguire nuovamente il modello. Poiché ora anche gli attributi sono qualificati nell'istanza, la query XPath verrà modificata per includere il prefisso dello spazio dei nomi.  
+ Se lo schema specifica gli attributi **elementFormDefault** e **attributeFormDefault** con valore **"qualified",** il documento di istanza avrà tutti gli elementi e gli attributi locali qualificati. È possibile modificare lo schema precedente per includere questi attributi **\<xsd:schema>** nell'elemento ed eseguire nuovamente il modello. Poiché ora anche gli attributi sono qualificati nell'istanza, la query XPath verrà modificata per includere il prefisso dello spazio dei nomi.  
   
  La query XPath modificata è:  
   

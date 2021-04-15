@@ -13,14 +13,14 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f012f629d531955a4f662dfe3ee03f691c220003
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ab01da1e5e3834caee4d8d0426b6d560a01c7bb2
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752538"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107487051"
 ---
 # <a name="use-nested-for-xml-queries"></a>Utilizzo di query FOR XML nidificate
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

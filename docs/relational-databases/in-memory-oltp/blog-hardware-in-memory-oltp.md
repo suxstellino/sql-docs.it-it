@@ -8,15 +8,15 @@ ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: ba34a1b550d9726c3de479c56f92e40adf404214
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 4485135054d99ec45b3fd3d7756bf9c603d9fa0e
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100063707"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107492248"
 ---
 # <a name="hardware-considerations-for-in-memory-oltp-in-sql-server"></a>Considerazioni sull'hardware per OLTP in memoria in SQL Server
 

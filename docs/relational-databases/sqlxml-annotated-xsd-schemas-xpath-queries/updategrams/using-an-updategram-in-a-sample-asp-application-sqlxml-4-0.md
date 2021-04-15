@@ -1,6 +1,6 @@
 ---
-title: Usare updategram in un'applicazione ASP di esempio (SQLXML)
-description: Visualizzazione di un esempio di utilizzo di un updategram SQLXML in un'applicazione di Active Server Pages (ASP).
+title: Usare l'updategram in un'applicazione ASP di esempio (SQLXML)
+description: Visualizzare un esempio di utilizzo di un updategram SQLXML in un'applicazione ASP (Active Server Pages).
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - Active Server Pages
 - updategrams [SQLXML], ASP applications
 ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3cb1db0f03b911f695b85c6efed8a43240d8258
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5a84c9ae6b66952fa3c22d1165489f1629150156
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97459957"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107491425"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>Utilizzo di un updategram in un'applicazione ASP di esempio (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "97459957"
   
  L'utente può quindi aggiornare le informazioni di contatto ma non l'ID (poiché ContactID è la chiave primaria). Dopo che l'utente invia le informazioni, viene eseguito un updategram e tutti i parametri del form vengono passati all'updategram.  
   
- Di seguito viene presentato il primo modello (GetContact.xml). Salvare questo modello nella directory associata al nome virtuale del tipo di **modello** .  
+ Di seguito viene presentato il primo modello (GetContact.xml). Salvare questo modello nella directory associata al nome virtuale del **tipo di** modello.  
   
 ```  
 <root xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -51,7 +51,7 @@ ms.locfileid: "97459957"
 </root>  
 ```  
   
- Di seguito viene presentato il secondo modello (UpdateContact.xml). Salvare questo modello nella directory associata al nome virtuale del tipo di **modello** .  
+ Di seguito viene presentato il secondo modello (UpdateContact.xml). Salvare questo modello nella directory associata al nome virtuale del **tipo di** modello.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -79,7 +79,7 @@ ms.locfileid: "97459957"
 </ROOT>  
 ```  
   
- Il codice seguente è l'applicazione ASP (SampleASP.asp). Salvarlo nella directory associata a una radice virtuale che è possibile creare mediante l'utilità Gestione Internet Services. Questa radice virtuale non viene creata utilizzando la gestione delle directory virtuali IIS per l' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilità perché la gestione delle directory virtuali IIS per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non può accedere o identificare le applicazioni ASP.  
+ Il codice seguente è l'applicazione ASP (SampleASP.asp). Salvarlo nella directory associata a una radice virtuale che è possibile creare mediante l'utilità Gestione Internet Services. Questa radice virtuale non viene creata usando Gestione directory virtuali IIS per l'utilità perché Gestione directory virtuali IIS per non può accedere o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identificare applicazioni ASP.  
   
 > [!NOTE]  
 >  Nel codice è necessario sostituire "ServerName" con il nome del server che esegue Microsoft Internet Information Services (IIS).  
@@ -162,6 +162,6 @@ You may update customer information below.<br><br>
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Considerazioni sulla sicurezza degli updategram &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Considerazioni sulla sicurezza degli updategram &#40;sqlxml 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

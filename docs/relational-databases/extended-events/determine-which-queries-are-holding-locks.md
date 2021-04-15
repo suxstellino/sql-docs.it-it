@@ -1,6 +1,6 @@
 ---
 title: Individuare le query che mantengono attivi i blocchi
-description: Questo articolo illustra un metodo per trovare la query che mantiene attivo un blocco. Gli amministratori di database possono avere la necessità di trovare l'origine dei blocchi che hanno effetti negativi sulle prestazioni del database.
+description: Questo articolo illustra un metodo per trovare quale query contiene un blocco. Gli amministratori di database potrebbero dover trovare l'origine dei blocchi che impediscono le prestazioni del database.
 ms.date: 10/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - extended events [SQL Server], locks
 - extended events [SQL Server], holding locks
 ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e1e24e408df936fc2a651263218896e4c96826e7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 6302d696f008a88b9bd9b572cee5b96047f274e3
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465612"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107490067"
 ---
 # <a name="determine-which-queries-are-holding-locks"></a>Individuare le query che mantengono attivi i blocchi
 

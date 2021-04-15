@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: =sql-server-2016
-ms.openlocfilehash: a5038368e66524324fb0189b2f1b06e0b374e41a
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 2df8c9740debb9aee60a3b55a36412a988eb409a
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "100353691"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107491426"
 ---
 # <a name="migrating-computed-columns"></a>Migrazione di colonne calcolate
 

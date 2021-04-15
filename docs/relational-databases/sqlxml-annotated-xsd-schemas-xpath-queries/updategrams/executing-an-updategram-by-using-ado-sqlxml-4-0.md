@@ -1,6 +1,6 @@
 ---
-title: Esecuzione di un updategram tramite ADO (SQLXML)
-description: Informazioni su come stabilire una connessione a un'istanza di Microsoft SQL Server ed eseguire un updategram.by utilizzando ADO (SQLXML 4,0).
+title: Esecuzione di un Updategram tramite ADO (SQLXML)
+description: Informazioni su come stabilire una connessione a un'istanza di Microsoft SQL Server ed eseguire un updategram.by usando ADO (SQLXML 4.0).
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - updategrams [SQLXML], ADO
 - executing updategrams [SQLXML]
 ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 325ef35c27f97f99902c927fce6e3eb268035ccf
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: cfd0cf71bd8d7d61a186ea8e8390d6ec5cdbf9d0
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97462872"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107491544"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Esecuzione di un updategram mediante ADO (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "97462872"
   
 -   Oggetto **conn** (**ADODB. Connessione**) stabilisce una connessione a un'istanza in esecuzione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un computer server specifico.  
   
--   L'oggetto **cmd** (**ADODB. Command**) viene eseguito sulla connessione stabilita.  
+-   **L'oggetto cmd** (**ADODB.Command**) viene eseguito sulla connessione stabilita.  
   
 -   Il sottolinguaggio del comando viene impostato su DBGUID_MSSQLXML.  
   
--   L'updategram viene copiato nel flusso di comandi (**strmIn**).  
+-   L'updategram viene copiato nel flusso di comando (**strmIn**).  
   
--   Il flusso di output del comando è impostato sull'oggetto **StrmOut** (**ADODB. Stream**) per ricevere i dati restituiti.  
+-   Il flusso di output del comando è impostato **sull'oggetto StrmOut** (**ADODB. Flusso**) per ricevere i dati restituiti.  
   
 -   Il comando (updategram) viene infine eseguito.  
   

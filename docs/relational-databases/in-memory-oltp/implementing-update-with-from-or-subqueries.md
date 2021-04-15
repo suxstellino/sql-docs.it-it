@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 138f5b0e-f8a4-400f-b581-8062aebc62b6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c6c6cd475585f5c23f400471d4ce0b33636c8900
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: ff69242afa832998a9fc6a1987889288a0332f30
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485303"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107489509"
 ---
 # <a name="implementing-update-with-from-or-subqueries"></a>Implementazione di UPDATE con FROM o sottoquery
 

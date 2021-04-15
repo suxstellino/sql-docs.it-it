@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: xevents
 ms.topic: tutorial
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6bfcd07a238c94938793d3c25769057eb058fde
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 6d1c01e5b9dc88aa2e36da44838142d86f3bc2a2
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465632"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107492469"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Visualizzazione avanzata dei dati di destinazione da eventi estesi in SQL Server
 

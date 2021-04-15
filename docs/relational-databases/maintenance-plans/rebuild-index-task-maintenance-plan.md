@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Rebuild Index Task dialog box
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6c95f60259fb25b457e4349b6e0798ce4fa0e6fa
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ada41e99eff703d0c69151501a0386f5cf8c5f75
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100351186"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107491352"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Attività Ricompila indice (Piano di manutenzione)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

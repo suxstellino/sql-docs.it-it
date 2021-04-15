@@ -1,6 +1,6 @@
 ---
 title: Mapping XSD personalizzati a tabelle/colonne (SQLXML)
-description: Viene illustrato come creare un mapping personalizzato in una query XPath SQLXML tra gli elementi e gli attributi di uno schema XSD e le tabelle e le colonne di un database relazionale.
+description: Informazioni su come creare un mapping personalizzato in una query XPath SQLXML tra gli elementi e gli attributi di uno schema XSD e le tabelle e le colonne di un database relazionale.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -25,47 +25,47 @@ helpviewer_keywords:
 - table mapping [SQLXML], explicit mapping
 - element/attribute mapping [SQLXML]
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 988a15524f4d0fdbdd3174ba1017dfd85562e3a6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 32400aaf2b51a5152315c8960129310268a1faaf
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97415950"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107492112"
 ---
 # <a name="custom-xsd-mappings-to-tablescolumns-sqlxml"></a>Mapping XSD personalizzati a tabelle/colonne (SQLXML)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Quando si utilizza uno schema XSD per fornire una vista XML del database relazionale, è necessario eseguire il mapping degli elementi e degli attributi dello schema a tabelle e colonne del database. Le righe della tabella/vista di database vengono mappate agli elementi del documento XML. I valori di colonna del database vengono mappati agli attributi o agli elementi.  
   
- Quando vengono specificate query XPath nello schema XSD con annotazioni, i dati relativi agli elementi e agli attributi dello schema vengono recuperati dalle tabelle e dalle colonne alle quali vengono mappati. Per ottenere un solo valore dal database, per il mapping specificato nello schema XSD devono essere indicati sia la relazione che il campo. Se il nome di un elemento o di un attributo non corrisponde al nome della tabella, della vista o della colonna a cui viene eseguito il mapping, vengono utilizzate le annotazioni **SQL: relation** e **SQL: Field** per specificare il mapping tra un elemento o un attributo in un documento XML e la tabella (vista) o la colonna in un database.  
+ Quando vengono specificate query XPath nello schema XSD con annotazioni, i dati relativi agli elementi e agli attributi dello schema vengono recuperati dalle tabelle e dalle colonne alle quali vengono mappati. Per ottenere un solo valore dal database, per il mapping specificato nello schema XSD devono essere indicati sia la relazione che il campo. Se il nome di un elemento/attributo non corrisponde al nome della tabella,vista o colonna a cui viene eseguito il mapping, le annotazioni **sql:relation** e **sql:field** vengono utilizzate per specificare il mapping tra un elemento o un attributo in un documento XML e la tabella (vista) o la colonna in un database.  
   
 ## <a name="sql-relation"></a>sql-relation  
- L'annotazione **SQL: relation** viene aggiunta per eseguire il mapping di un nodo XML nello schema XSD a una tabella di database. Il nome di una tabella (vista) viene specificato come valore dell'annotazione **SQL: relation** .  
+ **L'annotazione sql:relation** viene aggiunta per eseguire il mapping di un nodo XML nello schema XSD a una tabella di database. Il nome di una tabella (vista) viene specificato come valore **dell'annotazione sql:relation.**  
   
- Quando **SQL: relation** viene specificato in un elemento, l'ambito di questa annotazione si applica a tutti gli attributi e agli elementi figlio descritti nella definizione del tipo complesso di tale elemento, offrendo quindi un collegamento per la scrittura delle annotazioni.  
+ Quando **sql:relation** viene specificato in un elemento, l'ambito di questa annotazione si applica a tutti gli attributi e gli elementi figlio descritti nella definizione di tipo complesso di tale elemento, fornendo quindi un collegamento per la scrittura di annotazioni.  
   
- L'annotazione **SQL: relation** è utile anche quando gli identificatori validi in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sono validi in XML. "Order Details", ad esempio, è un nome di tabella valido in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ma non in XML. In questi casi, è possibile usare l'annotazione **SQL: relation** per specificare il mapping, ad esempio:  
+ **L'annotazione sql:relation** è utile anche quando gli identificatori validi in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sono validi in XML. "Order Details", ad esempio, è un nome di tabella valido in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ma non in XML. In questi casi, **l'annotazione sql:relation** può essere usata per specificare il mapping, ad esempio:  
   
 ```  
 <xsd:element name="OD" sql:relation="[Order Details]">  
 ```  
   
 ## <a name="sql-field"></a>sql-field  
- L'annotazione **SQL-Field** esegue il mapping di un elemento o di un attributo a una colonna del database. L'annotazione **SQL: Field** viene aggiunta per eseguire il mapping di un nodo XML nello schema a una colonna del database. Non è possibile specificare **SQL: Field** su un elemento di contenuto vuoto.  
+ **L'annotazione sql-field** esegue il mapping di un elemento o di un attributo a una colonna di database. **L'annotazione sql:field** viene aggiunta per eseguire il mapping di un nodo XML nello schema a una colonna di database. Non è possibile specificare **sql:field** in un elemento di contenuto vuoto.  
   
 ## <a name="examples"></a>Esempio  
- Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per altre informazioni, vedere [Requisiti per l'esecuzione di esempi SQLXML.](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>R. Specifica delle annotazioni sql:relation e sql:field  
- In questo esempio lo schema XSD è costituito da un **\<Contact>** elemento di tipo complesso **\<FName>** con **\<LName>** gli elementi figlio e e l'attributo **ContactID** .  
+ In questo esempio lo schema XSD è costituito da un elemento di tipo complesso con gli elementi figlio e **\<Contact>** **\<FName>** e **\<LName>** **l'attributo ContactID.**  
   
- L'annotazione **SQL: relation** esegue il mapping dell' **\<Contact>** elemento alla tabella Person. Contact del database AdventureWorks. L'annotazione **SQL: Field** esegue il mapping dell' **\<FName>** elemento alla colonna FirstName e dell' **\<LName>** elemento alla colonna LastName.  
+ **L'annotazione sql:relation** esegue **\<Contact>** il mapping dell'elemento alla tabella Person.Contact nel database AdventureWorks. **L'annotazione sql:field** esegue **\<FName>** il mapping dell'elemento alla colonna FirstName e **\<LName>** dell'elemento alla colonna LastName.  
   
- Non è stata specificata alcuna annotazione per l'attributo **ContactID** . Il risultato ottenuto è un mapping predefinito dell'attributo alla colonna con lo stesso nome.  
+ Nessuna annotazione specificata per **l'attributo ContactID.** Il risultato ottenuto è un mapping predefinito dell'attributo alla colonna con lo stesso nome.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -109,7 +109,7 @@ ms.locfileid: "97415950"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per altre informazioni, vedere [Uso di ADO per eseguire query SQLXML.](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)  
   
  Di seguito è riportato il set di risultati parziale:  
   

@@ -1,6 +1,6 @@
 ---
 title: Linee guida e limitazioni di SQLXML 4.0
-description: Informazioni sulle linee guida e sulle limitazioni dell'utilizzo di SQLXML 4,0.
+description: Informazioni sulle linee guida e sulle limitazioni relative all'uso di SQLXML 4.0.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ ms.topic: reference
 helpviewer_keywords:
 - SQLXML, about SQLXML
 ms.assetid: fe433d30-90a1-421e-85c6-af13294dc18d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 305565d542144a7e6e24663aadba1fb56a67eddb
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 133e267ff41f07ea18028d65fcb92342e771c8ae
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97431379"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107490535"
 ---
 # <a name="guidelines-and-limitations-of-sqlxml-40"></a>Linee guida e limitazioni di SQLXML 4.0
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,6 +31,6 @@ ms.locfileid: "97431379"
   
      Si esegue un'applicazione che utilizza SQLXML 4.0 e i PROGID indipendenti dalla versione e si decide di installare un altro programma software. Questo programma potrebbe installare una versione precedente di SQLXML. L'applicazione può avere esito negativo poiché i PROGID indipendenti dalla versione dell'applicazione puntano ora alla versione precedente di SQLXML che può disporre o meno della caratteristica SQLXML utilizzata dall'applicazione.  
   
--   Se per qualsiasi motivo non si desidera utilizzare il provider SQLXMLOLEDB e si desidera utilizzare invece il provider SQLOLEDB per le funzionalità SQLXML, impostare la proprietà della **versione SQLXML** su "SQLXML. 4.0".  
+-   Se per qualsiasi motivo non si vuole usare il provider SQLXMLOLEDB e si vuole usare invece il provider SQLOLEDB per le funzionalità SQLXML, impostare la proprietà **SqlXML Version** su "SQLXML.4.0".  
   
   

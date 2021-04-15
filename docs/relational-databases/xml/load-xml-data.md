@@ -12,14 +12,14 @@ helpviewer_keywords:
 - XML data [SQL Server], loading
 - loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 19a0518477c37b9f45f22cdf6b5ded1464cf145e
-ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 640007b28617c9bc703c9850be2be2a3a9251bf5
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99250670"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107488212"
 ---
 # <a name="load-xml-data"></a>Caricamento dati XML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

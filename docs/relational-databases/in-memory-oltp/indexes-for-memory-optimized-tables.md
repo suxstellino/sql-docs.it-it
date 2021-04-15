@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15cabb6877e249a6f0be9d38449c85c13bbda78b
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: bf0e06a4dbdef64088d779cf7d9241298bd5fb2a
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "100351238"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107492254"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Indici in tabelle con ottimizzazione per la memoria
 

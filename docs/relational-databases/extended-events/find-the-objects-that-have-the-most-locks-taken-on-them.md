@@ -1,6 +1,6 @@
 ---
 title: Cercare gli oggetti con il maggior numero di blocchi usando gli eventi estesi
-description: Questo articolo illustra come trovare gli oggetti con il maggior numero di blocchi. Per gli amministratori del database può essere necessario trovare gli oggetti con il maggior numero di blocchi per migliorare le prestazioni del database.
+description: Questo articolo illustra come trovare gli oggetti con il maggior numero di blocchi. Gli amministratori di database potrebbero dover trovare la maggior parte degli oggetti bloccati per migliorare le prestazioni del database.
 ms.date: 10/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,16 +13,16 @@ helpviewer_keywords:
 - extended events [SQL Server], locks
 - objects [SQL Server], locks
 ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 522017d6ced6039cd7e5b9a30cf60404eee9249a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: ec4ecbd7df48a0f182559cbd6e7a0538c302d865
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465502"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107490040"
 ---
 # <a name="find-the-objects-that-have-the-most-locks-taken-on-them"></a>Cercare gli oggetti con il maggior numero di blocchi acquisiti
 

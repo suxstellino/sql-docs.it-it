@@ -1,6 +1,6 @@
 ---
-title: 'SQL: relationship e regola di ordinamento delle chiavi (SQLXML)'
-description: "Informazioni sull'utilizzo dell'elemento SQL: relationship e delle regole di ordinamento delle chiavi in SQLXML."
+title: sql:relationship e la regola di ordinamento delle chiavi (SQLXML)
+description: Informazioni sull'uso dell'elemento sql:relationship e delle regole di ordinamento delle chiavi in SQLXML.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - key ordering rules [SQLXML]
 - relationship annotation
 ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1846a3db3194a81ce1d1522ac175e3988d3d3d23
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 856f9c311c86c428713d947475dfb5f1ea57a32d
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97462932"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107490649"
 ---
 # <a name="annotation-interpretation---sqlrelationship-and-key-ordering-rule"></a>Interpretazione delle annotazioni - sql:relationship e regola di ordinamento delle chiavi
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Poiché il caricamento bulk XML genera record quando i nodi entrano nell'ambito e invia tali record a Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando i nodi abbandonano l'ambito, i dati per il record devono essere presenti nell'ambito del nodo.  
   
- Si consideri lo schema XSD seguente, in cui la relazione uno-a-molti tra **\<Customer>** **\<Order>** gli elementi e (un cliente può inserire molti ordini) viene specificata tramite l' **\<sql:relationship>** elemento:  
+ Si consideri lo schema XSD seguente, in cui la relazione uno-a-molti tra gli elementi e (un cliente può eseguire molti ordini) viene specificata **\<Customer>** **\<Order>** usando **\<sql:relationship>** l'elemento :  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"<>   
@@ -61,7 +61,7 @@ ms.locfileid: "97462932"
 </xsd:schema>  
 ```  
   
- Quando il **\<Customer>** nodo elemento entra nell'ambito, il caricamento bulk XML genera un record del cliente. Questo record rimane attivo fino a quando il caricamento bulk XML non viene letto **\</Customer>** . Nell'elaborazione del **\<Order>** nodo elemento, il caricamento bulk XML utilizza **\<sql:relationship>** per ottenere il valore della colonna chiave esterna CustomerID della tabella CustOrder dall' **\<Customer>** elemento padre, in quanto l' **\<Order>** elemento non specifica l'attributo **CustomerID** . Ciò significa che, nella definizione dell' **\<Customer>** elemento, è necessario specificare l'attributo **CustomerID** nello schema prima di specificare **\<sql:relationship>** . In caso contrario, quando un **\<Order>** elemento entra nell'ambito, il caricamento bulk XML genera un record per la tabella CustOrder e quando il caricamento bulk XML raggiunge il **\</Order>** tag di fine, invia il record a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] senza il valore della colonna chiave esterna CustomerID.  
+ Quando il **\<Customer>** nodo dell'elemento entra nell'ambito, il caricamento bulk XML genera un record cliente. Questo record rimane fino a quando il caricamento bulk XML non legge **\</Customer>** . Durante l'elaborazione del nodo dell'elemento, il caricamento bulk XML usa per ottenere il valore della colonna chiave esterna CustomerID della tabella CustOrder dall'elemento padre, perché l'elemento non specifica **\<Order>** **\<sql:relationship>** **\<Customer>** **\<Order>** l'attributo **CustomerID.** Ciò significa che nella definizione dell'elemento è necessario **\<Customer>** specificare **l'attributo CustomerID** nello schema prima di specificare **\<sql:relationship>** . In caso contrario, quando un elemento entra nell'ambito, il caricamento bulk XML genera un record per la tabella CustOrder e quando il caricamento bulk XML raggiunge il tag di fine, invia il record a senza il valore della colonna chiave esterna **\<Order>** **\</Order>** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CustomerID.  
   
  Salvare lo schema fornito in questo esempio come SampleSchema.xml.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "97462932"
     set objBL=Nothing  
     ```  
   
-     Come risultato, il caricamento bulk XML inserisce un valore NULL nella colonna chiave esterna CustomerID della tabella CustOrder. Se si modificano i dati di esempio XML in modo che l' **\<CustomerID>** elemento figlio venga visualizzato prima dell' **\<Order>** elemento figlio, si ottiene il risultato previsto: il caricamento bulk XML inserisce nella colonna il valore di chiave esterna specificato.  
+     Come risultato, il caricamento bulk XML inserisce un valore NULL nella colonna chiave esterna CustomerID della tabella CustOrder. Se si rivedono i dati di esempio XML in modo che l'elemento figlio venga visualizzato prima dell'elemento figlio, si ottiene il risultato previsto: Il caricamento bulk XML inserisce il valore di chiave esterna specificato **\<CustomerID>** **\<Order>** nella colonna.  
   
  Di seguito viene indicato lo schema XDR equivalente:  
   

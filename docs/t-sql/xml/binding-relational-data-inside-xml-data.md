@@ -17,14 +17,14 @@ helpviewer_keywords:
 - variables [XML in SQL Server], relational data binding
 - columns [XML in SQL Server], relational data binding
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 48d5f555181131ddfcc77563584002802a00067b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: df2fc4aab0d9e82db0288478595392d4c3ce880d
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99206877"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107490346"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>Associazione di dati relazionali all'interno di dati XML
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

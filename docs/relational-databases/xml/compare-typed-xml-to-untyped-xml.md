@@ -24,14 +24,14 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a31b8e27147f0c9b06c79bf56c1b8ae34f4e8e14
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d5be6303cb92befc15d5f5cfcc3062deb31238ab
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775554"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107491019"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Confronto dati XML tipizzati con dati XML non tipizzati
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "85775554"
   
 -   **Vincoli di convalida.** Ogni volta che un'istanza xml tipizzata viene assegnata o modificata, tale istanza viene convalidata da SQL Server.  
   
--   **Informazioni sui tipi di dati.** Gli schemi offrono informazioni sui tipi di attributi e di elementi presenti nell'istanza del tipo di dati **xml** . Le informazioni sul tipo offrono una semantica operativa più precisa ai valori contenuti nell'istanza rispetto a quanto sia possibile con **xml**non tipizzato. ad esempio è possibile eseguire le operazioni aritmetiche decimali su un valore decimale, ma non su un valore stringa. Per questo motivo, i tipi di dati XML archiviati possono essere estremamente più compatti rispetto ai dati XML non tipizzati.  
+-   **Informazioni sui tipi di dati.** Gli schemi offrono informazioni sui tipi di attributi e di elementi presenti nell'istanza del tipo di dati **xml** . Le informazioni sul tipo offrono una semantica operativa più precisa ai valori contenuti nell'istanza rispetto a quanto sia possibile con **xml** non tipizzato. ad esempio è possibile eseguire le operazioni aritmetiche decimali su un valore decimale, ma non su un valore stringa. Per questo motivo, i tipi di dati XML archiviati possono essere estremamente più compatti rispetto ai dati XML non tipizzati.  
   
 ## <a name="choosing-typed-or-untyped-xml"></a>Scelta tra dati XML tipizzati o non tipizzati  
  Usare il tipo di dati **xml** non tipizzato nelle situazioni seguenti:  
@@ -70,7 +70,7 @@ ms.locfileid: "85775554"
  Negli esempi seguenti, per specificare il nome della raccolta XML Schema viene utilizzata una convenzione di denominazione in due parti. La prima parte è il nome dello schema e la seconda parte è il nome della raccolta XML Schema.  
   
 ### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Esempio: Associazione di una raccolta di schemi a una variabile di tipo XML  
- L'esempio seguente crea una variabile di tipo**xml** alla quale viene associata una raccolta di schemi. La raccolta di schemi specificata è già stata importata nel database **AdventureWorks** .  
+ L'esempio seguente crea una variabile di tipo **xml** alla quale viene associata una raccolta di schemi. La raccolta di schemi specificata è già stata importata nel database **AdventureWorks** .  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
@@ -143,7 +143,7 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
  È possibile convertire DTD in documenti di XML Schema tramite strumenti di terze parti e caricare XML Schema nel database.  
   
 ## <a name="upgrading-typed-xml-from-sql-server-2005"></a>Aggiornamento di dati XML tipizzati da SQL Server 2005  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] include diverse estensioni per il supporto di XML Schema, compreso il supporto per la convalida di tipo lax, la gestione migliorata dei dati delle istanze **xs:date**, **xs:time** e **xs:dateTime** e il supporto aggiunto per i tipi elenco e unione. Nella maggior parte dei casi le modifiche non influiscono sull'esperienza dell'aggiornamento. Se tuttavia è stata utilizzata una raccolta XML Schema in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] che consentiva valori di tipo **xs:date**, **xs:time**o **xs:dateTime** (o qualsiasi sottotipo), quando si collega il database [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a una versione successiva di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]si verificano i seguenti passaggi di aggiornamento:  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] include diverse estensioni per il supporto di XML Schema, compreso il supporto per la convalida di tipo lax, la gestione migliorata dei dati delle istanze **xs:date**, **xs:time** e **xs:dateTime** e il supporto aggiunto per i tipi elenco e unione. Nella maggior parte dei casi le modifiche non influiscono sull'esperienza dell'aggiornamento. Se tuttavia è stata utilizzata una raccolta XML Schema in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] che consentiva valori di tipo **xs:date**, **xs:time** o **xs:dateTime** (o qualsiasi sottotipo), quando si collega il database [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a una versione successiva di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]si verificano i seguenti passaggi di aggiornamento:  
   
 1.  Per ogni colonna XML, tipizzata con una raccolta XML Schema che contiene elementi o attributi tipizzati come **xs:anyType**, **xs:anySimpleType**, **xs:date** o uno qualsiasi dei sottotipi, **xs:time** o uno qualsiasi dei suoi sottotipi oppure **xs:dateTime** o uno qualsiasi dei suoi sottotipi o i tipi unione ed elenco che contengono uno di questi tipi, si verifica quanto riportato di seguito:  
   
