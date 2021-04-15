@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - xs:QName type
 ms.assetid: 72c5bfde-b0b2-4372-bf36-97ba930dea06
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 879ec2e1e4aaebfde4b3597df3d244380f2b4165
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c620a1134795cfede3d706ae5e624d2e6ddbb67e
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758509"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107487382"
 ---
 # <a name="the-xsqname-type"></a>Xs:Tipo QName
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

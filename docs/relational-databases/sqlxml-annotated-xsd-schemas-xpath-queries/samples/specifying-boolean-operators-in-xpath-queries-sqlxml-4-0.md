@@ -32,7 +32,7 @@ ms.locfileid: "107491669"
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>R. Specificare l'operatore booleano OR  
- Questa query XPath restituisce gli **\<Customer>** elementi figlio dell'elemento del nodo di contesto con il **valore dell'attributo CustomerID** pari a 13 o 31:  
+ Questa query XPath restituisce gli elementi figlio del nodo di contesto con il **\<Customer>** **valore dell'attributo CustomerID** pari a 13 o 31:  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  

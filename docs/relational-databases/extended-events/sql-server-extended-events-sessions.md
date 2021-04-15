@@ -54,7 +54,7 @@ ms.locfileid: "107492381"
   
  Nella figura seguente viene illustrato il contenuto di una sessione e la relazione tra pacchetti e sessioni.  
   
- ![Coesistenza e condivisione di oggetti nelle sessioni](../../relational-databases/extended-events/media/xesessions.gif "Coesistenza e condivisione di oggetti nelle sessioni.")  
+ ![Coesistenza e condivisione di oggetti nelle sessioni.](../../relational-databases/extended-events/media/xesessions.gif "Coesistenza e condivisione di oggetti nelle sessioni.")  
   
  Con riferimento all'illustrazione precedente, si noti che:  
   

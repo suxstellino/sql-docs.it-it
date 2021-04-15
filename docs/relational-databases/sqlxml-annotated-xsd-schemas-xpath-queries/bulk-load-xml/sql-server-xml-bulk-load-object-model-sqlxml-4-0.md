@@ -1,6 +1,6 @@
 ---
-title: SQL Server a oggetti con caricamento bulk XML (SQLXML)
-description: Informazioni sui metodi e sulle proprietà dell'oggetto SQLXMLBulkLoad usato per il caricamento bulk di XML in SQLXML 4.0.
+title: SQL Server a oggetti per il caricamento bulk XML (SQLXML)
+description: Informazioni sui metodi e sulle proprietà dell'oggetto SQLXMLBulkLoad utilizzato per il caricamento bulk di XML in SQLXML 4.0.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -42,14 +42,14 @@ ms.locfileid: "107490593"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Modello a oggetti per il caricamento bulk XML di SQL Server (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  Il modello [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a oggetti Microsoft XML Bulk Load è costituito dall'oggetto SQLXMLBulkLoad. Questo oggetto supporta i metodi e le proprietà seguenti.  
+  Il modello a oggetti del caricamento bulk XML di Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è costituito dall'oggetto SQLXMLBulkLoad. Questo oggetto supporta i metodi e le proprietà seguenti.  
   
 ## <a name="methods"></a>Metodi  
  Execute  
  Esegue il caricamento bulk dei dati utilizzando il file dello schema e il file di dati (o flusso) forniti come parametri.  
   
 ## <a name="properties"></a>Proprietà  
- BulkLoad  
+ Caricamento bulk  
  Specifica se deve essere eseguito un caricamento bulk. Questa proprietà è utile se si vogliono generare solo gli schemi (vedere le proprietà SchemaGen, SGDropTables e SGUseID seguenti) e non eseguire un caricamento bulk. Si tratta di una proprietà booleana. Quando la proprietà è impostata su TRUE, viene eseguito il caricamento bulk XML. Quando la proprietà è impostata su FALSE, il caricamento bulk XML non viene eseguito.  
   
  Il valore predefinito è TRUE.  
@@ -67,7 +67,7 @@ ms.locfileid: "107490593"
  Si noti che se viene eseguita la propagazione degli ID, questa opzione non viene applicata e il controllo dei vincoli resta attivato. Ciò si verifica quando `KeepIdentity=False` ed è presente una relazione definita in cui il padre è un campo di identità e il valore viene assegnato al figlio non appena generato.  
   
  ConnectionCommand  
- Identifica un oggetto connessione esistente,ad esempio l'oggetto comando ADO o ICommand, che deve essere utilizzato dal caricamento bulk XML. È possibile usare la proprietà ConnectionCommand anziché specificare una stringa di connessione con la proprietà ConnectionString. Se si usa ConnectionCommand, la proprietà Transaction deve essere impostata su TRUE.  
+ Identifica un oggetto connessione esistente,ad esempio l'oggetto comando ADO o ICommand, che deve essere utilizzato dal caricamento bulk XML. È possibile usare la proprietà ConnectionCommand invece di specificare una stringa di connessione con la proprietà ConnectionString. Se si usa ConnectionCommand, la proprietà Transaction deve essere impostata su TRUE.  
   
  Se si usano entrambe le proprietà ConnectionString e ConnectionCommand, il caricamento bulk XML usa l'ultima proprietà specificata.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "107490593"
  Il valore predefinito è FALSE.  
   
  SchemaGen  
- Specifica se creare le tabelle necessarie prima di eseguire un'operazione di caricamento bulk. Si tratta di una proprietà booleana. Se questa proprietà è impostata su TRUE, vengono create le tabelle identificate nello schema di mapping (il database deve essere presente). Se una o più tabelle esistono già nel database, la proprietà SGDropTables determina se queste tabelle preesistenti devono essere eliminate e ri create di nuovo.  
+ Specifica se creare le tabelle necessarie prima di eseguire un'operazione di caricamento bulk. Si tratta di una proprietà booleana. Se questa proprietà è impostata su TRUE, vengono create le tabelle identificate nello schema di mapping (il database deve essere presente). Se una o più tabelle esistono già nel database, la proprietà SGDropTables determina se queste tabelle preesistenti devono essere eliminate e ri-create.  
   
  Il valore predefinito per la proprietà SchemaGen è FALSE. SchemaGen non crea vincoli PRIMARY KEY nelle tabelle appena create. SchemaGen crea tuttavia vincoli FOREIGN KEY nel database se è in grado di trovare annotazioni **sql:relationship** e **sql:key-fields** corrispondenti nello schema di mapping e se il campo chiave è costituito da una singola colonna.  
   
@@ -127,26 +127,26 @@ ms.locfileid: "107490593"
   
 -   Vengono create le tabelle necessarie dai nomi di elemento e di attributo. È pertanto importante non utilizzare parole riservate di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per i nomi di elemento e di attributo nello schema.  
   
--   Restituisce i dati di overflow per qualsiasi colonna designata utilizzando [sql:overflow-field](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md) nel [formato del tipo di dati](../../../t-sql/xml/xml-transact-sql.md) xml.  
+-   Restituisce i dati di overflow per qualsiasi colonna designata usando [il campo sql:overflow-field](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md) nel [formato del tipo di dati xml.](../../../t-sql/xml/xml-transact-sql.md)  
   
  SGDropTables  
- Specifica se le tabelle esistenti devono essere eliminate e ricreate. Usare questa proprietà quando la proprietà SchemaGen è impostata su TRUE. Se SGDropTables è FALSE, le tabelle esistenti vengono mantenute. Quando questa proprietà è TRUE, le tabelle esistenti vengono eliminate e ricreate.  
+ Specifica se le tabelle esistenti devono essere eliminate e ricreate. Questa proprietà viene utilizzata quando la proprietà SchemaGen è impostata su TRUE. Se SGDropTables è FALSE, le tabelle esistenti vengono mantenute. Quando questa proprietà è TRUE, le tabelle esistenti vengono eliminate e ricreate.  
   
  Il valore predefinito è FALSE.  
   
  SGUseID  
- Specifica se l'attributo nello schema di mapping identificato come tipo **ID** può essere utilizzato nella creazione di un vincolo PRIMARY KEY durante la creazione della tabella. Usare questa proprietà quando la proprietà SchemaGen è impostata su TRUE. Se SGUseID è TRUE, l'utilità SchemaGen usa un attributo per il quale **dt:type="id"** viene specificato come colonna chiave primaria e aggiunge il vincolo PRIMARY KEY appropriato durante la creazione della tabella.  
+ Specifica se l'attributo nello schema di mapping identificato come tipo **ID** può essere utilizzato nella creazione di un vincolo PRIMARY KEY al momento della creazione della tabella. Utilizzare questa proprietà quando la proprietà SchemaGen è impostata su TRUE. Se SGUseID è TRUE, l'utilità SchemaGen usa un attributo per cui **dt:type="id"** viene specificato come colonna chiave primaria e aggiunge il vincolo PRIMARY KEY appropriato durante la creazione della tabella.  
   
  Il valore predefinito è FALSE.  
   
  TempFilePath  
- Specifica il percorso del file in cui il caricamento bulk XML crea i file temporanei per un caricamento bulk in transazioni. Questa proprietà è utile solo quando la proprietà Transaction è impostata su TRUE. È necessario assicurarsi che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l'account utilizzato per il caricamento bulk XML abbia accesso a questo percorso. Se questa proprietà non è impostata, il caricamento bulk XML archivia i file temporanei nel percorso specificato nella variabile di ambiente TEMP.  
+ Specifica il percorso del file in cui il caricamento bulk XML crea i file temporanei per un caricamento bulk in transazioni. Questa proprietà è utile solo quando la proprietà Transaction è impostata su TRUE. È necessario assicurarsi che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l'account usato per il caricamento bulk XML abbia accesso a questo percorso. Se questa proprietà non è impostata, il caricamento bulk XML archivia i file temporanei nel percorso specificato nella variabile di ambiente TEMP.  
   
  Transazione  
  Specifica se il caricamento bulk deve essere eseguito come transazione. In questo caso, è garantito il rollback se il caricamento bulk ha esito negativo. Si tratta di una proprietà booleana. Se la proprietà è impostata su TRUE, il caricamento bulk viene eseguito in un contesto transazionale. La proprietà TempFilePath è utile solo quando Transaction è impostato su TRUE.  
   
 > [!NOTE]  
->  Se si caricano dati binari, ad esempio i tipi di dati XML bin.hex, bin.base64 nei tipi di dati binary e image, la proprietà Transaction deve essere impostata [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] su FALSE.  
+>  Se si caricano dati binari ,ad esempio i tipi di dati XML bin.hex, bin.base64 nei tipi di dati binari e image, la proprietà Transaction deve essere impostata [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] su FALSE.  
   
  Il valore predefinito è FALSE.  
   

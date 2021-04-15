@@ -29,11 +29,11 @@ ms.locfileid: "107490636"
   
  In XSD:  
   
--   Se il tipo è **dateTime** o **time**, è necessario specificare **il tipo sql:data perché** il caricamento bulk XML esegue la conversione dei dati prima di inviare i dati a Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+-   Se il tipo è **dateTime** o **time**, è necessario specificare **sql:datatype** perché il caricamento bulk XML esegue la conversione dei dati prima di inviare i dati a Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   Quando si esegue il caricamento bulk in una colonna di tipo **uniqueidentifier** in e il valore XSD è un GUID che include parentesi graffe ({ e }), è necessario specificare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sql:datatype="uniqueidentifier"** per rimuovere le parentesi graffe prima che il valore venga inserito nella colonna. Se **sql:datatype non** viene specificato, il valore viene inviato con le parentesi graffe e l'inserimento non riesce.  
   
- Per altre informazioni **su sql:datatype**, vedere Coercizioni del tipo di dati e l'annotazione [sql:datatype &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
+ Per altre informazioni su **sql:datatype**, vedere Coercizioni del tipo di dati e l'annotazione [sql:datatype &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
   
  In XDR:  
   

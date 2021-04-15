@@ -1,6 +1,6 @@
 ---
 title: Esecuzione di un DiffGram mediante classi gestite SQLXML
-description: Informazioni su come eseguire un file DiffGram nell'ambiente Microsoft .NET Framework per applicare aggiornamenti dei dati alle tabelle SQL Server usando classi gestite SQLXML.
+description: Informazioni su come eseguire un file DiffGram nell'ambiente Microsoft .NET Framework per applicare gli aggiornamenti dei dati alle tabelle SQL Server usando le classi gestite SQLXML.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -26,7 +26,7 @@ ms.locfileid: "107490549"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>Esecuzione di un DiffGram mediante classi gestite SQLXML
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  In questo esempio viene illustrato come eseguire un file DiffGram nell'ambiente .NET Framework per applicare aggiornamenti dei dati alle tabelle tramite classi gestite [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLXML (Microsoft.Data.SqlXml).  
+  Questo esempio illustra come eseguire un file DiffGram nell'ambiente .NET Framework per applicare gli aggiornamenti dei dati alle tabelle usando le classi gestite [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLXML (Microsoft.Data.SqlXml).  
   
  In questo esempio DiffGram viene utilizzato per aggiornare le informazioni per il cliente ALFKI (CompanyName e ContactName).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "107490549"
 </ROOT>  
 ```  
   
- Il **\<before>** blocco include un elemento ( **\<Customer>** **diffgr:id="Customer1"**). Il **\<DataInstance>** blocco include l'elemento **\<Customer>** corrispondente con lo stesso **ID**. **\<customer>** L'elemento in specifica anche **\<NewDataSet>** **diffgr:hasChanges="modified"**. indicando un'operazione di aggiornamento e il record del cliente nella tabella Cust viene aggiornato di conseguenza. Si noti che se **l'attributo diffgr:hasChanges** non è specificato, la logica di elaborazione di DiffGram ignora questo elemento e non viene eseguito alcun aggiornamento.  
+ Il **\<before>** blocco include un elemento ( **\<Customer>** **diffgr:id="Customer1"**). Il **\<DataInstance>** blocco include l'elemento **\<Customer>** corrispondente con lo stesso **ID**. **\<customer>** L'elemento in specifica anche **\<NewDataSet>** **diffgr:hasChanges="modified"**. indicando un'operazione di aggiornamento e il record del cliente nella tabella Cust viene aggiornato di conseguenza. Si noti che se **l'attributo diffgr:hasChanges** non è specificato, la logica di elaborazione DiffGram ignora questo elemento e non viene eseguito alcun aggiornamento.  
   
  Di seguito è riportato il codice per un'applicazione di esercitazione in C# che illustra come usare le classi gestite SQLXML per eseguire il DiffGram precedente e aggiornare due tabelle (Cust, Ord) che verranno create anche nel database **tempdb.**  
   

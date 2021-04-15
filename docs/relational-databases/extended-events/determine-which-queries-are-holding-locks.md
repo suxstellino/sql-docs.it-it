@@ -1,6 +1,6 @@
 ---
 title: Individuare le query che mantengono attivi i blocchi
-description: Questo articolo illustra un metodo per trovare quale query contiene un blocco. Gli amministratori di database potrebbero dover trovare l'origine dei blocchi che impediscono le prestazioni del database.
+description: Questo articolo illustra un metodo per trovare la query che mantiene un blocco. Gli amministratori di database potrebbero dover trovare l'origine dei blocchi che ostacolano le prestazioni del database.
 ms.date: 10/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database

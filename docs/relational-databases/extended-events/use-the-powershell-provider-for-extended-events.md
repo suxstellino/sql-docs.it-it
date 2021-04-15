@@ -1,6 +1,6 @@
 ---
 title: Utilizzare il provider PowerShell per eventi estesi
-description: Utilizzare il provider SQL Server PowerShell per gestire gli SQL Server estesi. Questo articolo illustra esempi di creazione, modifica e gestione delle sessioni.
+description: Usare il provider SQL Server PowerShell per gestire SQL Server eventi estesi. Questo articolo illustra esempi di creazione, modifica e gestione di sessioni.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -37,9 +37,9 @@ ms.locfileid: "107492357"
     > [!NOTE]  
     >  È possibile avviare PowerShell da qualsiasi nodo all'interno di **Eventi estesi**. È possibile, ad esempio, fare clic con il pulsante destro del mouse su **Sessioni** e quindi scegliere **Avvia PowerShell**. Verrà avviato PowerShell a un livello più interno, nella cartella Sessioni.  
   
- È possibile esplorare l'albero delle cartelle XEvent per visualizzare sessioni di eventi estesi esistenti e i relativi eventi, database di destinazione e predicati associati. Ad esempio, dal percorso PS SQLSERVER:\XEvent \\  \\ *ServerName InstanceName*>, se si digita cd sessions , si preme INVIO, si digita **dir** e quindi si preme INVIO, viene visualizzato l'elenco delle sessioni archiviate in tale istanza. È inoltre possibile visualizzare se la sessione è in esecuzione, e in tal caso per quanto tempo, e se la sessione è configurata per l'avvio all'avvio dell'istanza.  
+ È possibile esplorare l'albero delle cartelle XEvent per visualizzare sessioni di eventi estesi esistenti e i relativi eventi, database di destinazione e predicati associati. Ad esempio, dal percorso PS SQLSERVER:\XEvent \\  \\ *ServerName InstanceName*>, se si digita cd sessions , premere INVIO, digitare **dir** e quindi premere INVIO, è possibile visualizzare l'elenco delle sessioni archiviate in tale istanza. È inoltre possibile visualizzare se la sessione è in esecuzione, e in tal caso per quanto tempo, e se la sessione è configurata per l'avvio all'avvio dell'istanza.  
   
- Per visualizzare gli eventi, i relativi predicati e i database di destinazione associati a una sessione, è possibile passare alla directory con il nome della sessione e quindi visualizzare la cartella degli eventi o dei database di destinazione. Ad esempio, per visualizzare gli eventi e i relativi predicati associati alla sessione di integrità del sistema predefinita, dal percorso PS SQLSERVER:\XEvent \\  \\ *ServerName InstanceName*\> Sessions digitare **cd system_health\events,** premere INVIO, digitare **dir** e quindi premere INVIO.  
+ Per visualizzare gli eventi, i relativi predicati e i database di destinazione associati a una sessione, è possibile passare alla directory con il nome della sessione e quindi visualizzare la cartella degli eventi o dei database di destinazione. Ad esempio, per visualizzare gli eventi e i relativi predicati associati alla sessione di integrità del sistema predefinita, dal percorso PS SQLSERVER:\XEvent \\  \\ *ServerName InstanceName*\Sessions> digitare **cd system_health\events,** premere INVIO, digitare **dir** e quindi premere INVIO.  
   
  Il provider PowerShell per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è uno strumento potente che consente di creare, modificare e gestire sessioni di eventi estesi. Nella sezione seguente vengono forniti alcuni esempi di base dell'utilizzo di script di PowerShell con eventi estesi.  
   

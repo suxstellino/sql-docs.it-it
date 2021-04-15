@@ -27,11 +27,11 @@ ms.locfileid: "107490557"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>Esecuzione di un DiffGram mediante ADO (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  Questa applicazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic utilizza ADO per stabilire una connessione a un'istanza di Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], quindi esegue un DiffGram. In questa applicazione il DiffGram e lo schema XSD vengono archiviati in un file. L'applicazione carica il DiffGram dal file specificato. È possibile usare qualsiasi DiffGram (e lo schema XSD associato) descritto in [Esempi di DiffGram.](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
+  Questa applicazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic utilizza ADO per stabilire una connessione a un'istanza di Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], quindi esegue un DiffGram. In questa applicazione il DiffGram e lo schema XSD vengono archiviati in un file. L'applicazione carica il DiffGram dal file specificato. È possibile usare uno qualsiasi dei DiffGram (e dello schema XSD associato) descritti in [Esempi di DiffGram](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).  
   
  Il processo per l'applicazione di esempio è il seguente:  
   
--   Oggetto **conn** (**ADODB. Connessione**) stabilisce una connessione a un'istanza in esecuzione di SQL Server in un server specifico.  
+-   Oggetto **conn** (**ADODB. Connessione**) stabilisce una connessione a un'istanza in esecuzione SQL Server in un server specifico.  
   
 -   **L'oggetto cmd** (**ADODB.Command**) viene eseguito sulla connessione stabilita.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "107490557"
   
 -   Il DiffGram viene copiato nel flusso di comando (**strmIn**) da un file.  
   
--   Il flusso di output del comando è impostato **sull'oggetto StrmOut** (**ADODB. Stream**) per ricevere i dati restituiti.  
+-   Il flusso di output del comando è impostato **sull'oggetto StrmOut** (**ADODB. Flusso**) per ricevere i dati restituiti.  
   
--   Quando si utilizza il provider SQLOLEDB, per impostazione predefinita si otterrà la funzionalità Microsoft SQLXML fornita da Sqlxmlx.dll. Per utilizzare Sqlxml4.dll con il provider SQLOLEDB, la proprietà **SqlXML Version** deve essere impostata su  **SQLXML.4.0** nell'oggetto Connessione provider SQLOLEDB.  
+-   Quando si utilizza il provider SQLOLEDB, per impostazione predefinita si otterrà la funzionalità Microsoft SQLXML fornita da Sqlxmlx.dll. Per usare Sqlxml4.dll con il provider SQLOLEDB, la proprietà **SqlXML Version** deve essere impostata su **SQLXML.4.0** nell'oggetto SqlOLEDB Provider **Connection.**  
   
 -   Il comando (DiffGram) viene eseguito.  
   
@@ -97,7 +97,7 @@ End Sub
     Microsoft ActiveX Data Objects 2.8 Library  
     ```  
   
-4.  Nella casella degli strumenti fare **clic su CommandButton** e quindi disegnare un pulsante nel form.  
+4.  Nella casella degli strumenti fare clic **su CommandButton** e quindi disegnare un pulsante nel form.  
   
 5.  Fare doppio clic sul pulsante per modificare il codice e aggiungere il codice dell'applicazione fornito nell'argomento.  
   

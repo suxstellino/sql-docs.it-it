@@ -1,5 +1,5 @@
 ---
-title: Formattazione XML lato client e lato server (SQLXML)
+title: Formattazione XML sul lato client e sul lato server (SQLXML)
 description: Informazioni sulle differenze generali tra la formattazione XML sul lato client e sul lato server in SQLXML 4.0.
 ms.date: 03/16/2017
 ms.prod: sql
@@ -48,7 +48,7 @@ ms.locfileid: "107490409"
 ## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>timestamp viene mappato in modo diverso nella formattazione sul lato client e in quella sul lato server  
  Nella formattazione XML lato server, la colonna di database di tipo **timestamp** viene mappata al tipo XDR i8 (quando nella query viene specificata l'opzione XMLDATA).  
   
- Nella formattazione XML lato client, la colonna di database di tipo **timestamp** viene mappata **all'URI** o al tipo **XDR bin.base64** (a seconda che nella query sia specificata l'opzione binaria base64). Il **tipo XDR bin.base64** è utile se si usano le funzionalità updategram e bulkload, perché questo tipo viene convertito nel tipo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **timestamp.** In questo modo, l'operazione di inserimento, aggiornamento o eliminazione viene eseguita correttamente.  
+ Nella formattazione XML lato client, la colonna di database di tipo **timestamp** viene mappata **all'URI** o al tipo XDR **bin.base64** (a seconda che nella query sia specificata l'opzione binaria base64). Il **tipo XDR bin.base64** è utile se si usano le funzionalità updategram e bulkload, perché questo tipo viene convertito nel tipo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **timestamp.** In questo modo, l'operazione di inserimento, aggiornamento o eliminazione viene eseguita correttamente.  
   
 ## <a name="deep-variants-are-used-in-server-side-formatting"></a>Tipi VARIANT completi utilizzati nella formattazione sul lato server  
  Nella formattazione XML sul lato server vengono utilizzati i tipi VARIANT completi. Se si utilizza la formattazione XML sul lato client, le varianti vengono convertite in una stringa Unicode e i sottotipi di VARIANT non vengono utilizzati.  
@@ -57,7 +57,7 @@ ms.locfileid: "107490409"
  La modalità NESTED di FOR XML sul lato client è simile alla modalità AUTO di FOR XML sul lato server, con le eccezioni seguenti:  
   
 ### <a name="when-you-query-views-using-auto-mode-on-the-server-side-the-view-name-is-returned-as-the-element-name-in-the-resulting-xml"></a>Quando si esegue una query sulle viste utilizzando la modalità AUTO sul lato server, viene restituito il nome della vista come nome dell'elemento nel codice XML risultante.  
- Si supponga, ad esempio, che la vista seguente sia stata creata nella tabella Person.Contact nel database AdventureWorks:  
+ Si supponga, ad esempio, che nella tabella Person.Contact del database AdventureWorks sia stata creata la visualizzazione seguente:  
   
 ```  
 CREATE VIEW ContactView AS (SELECT ContactID as CID,  
@@ -213,10 +213,10 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
   
 -   Quando si specifica **client-side-xml="0"** (false) in un modello, viene richiesta la formattazione XML sul lato server. Pertanto, non è possibile specificare FOR XML NESTED poiché il server non riconosce l'opzione NESTED e viene quindi generato un errore. È necessario utilizzare le modalità AUTO, RAW o EXPLICIT riconosciute dal server.  
   
--   Quando si specifica **client-side-xml="1"** (true) in un modello, si richiede la formattazione XML sul lato client. In questo caso, è possibile specificare FOR XML NESTED. Se si specifica FOR XML AUTO, la formattazione XML viene eseguita sul lato server anche se nel modello è specificato **client-side-xml="1".**  
+-   Quando si specifica **client-side-xml="1"** (true) in un modello, viene richiesta la formattazione XML sul lato client. In questo caso, è possibile specificare FOR XML NESTED. Se si specifica FOR XML AUTO, la formattazione XML viene eseguita sul lato server anche se nel modello è specificato **client-side-xml="1".**  
   
 ## <a name="see-also"></a>Vedere anche  
- [Considerazioni sulla sicurezza di FOR XML &#40;sqlxml 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
+ [Considerazioni sulla sicurezza for XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
  [Formattazione XML lato client &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
  [Formattazione XML lato server &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md)  
   

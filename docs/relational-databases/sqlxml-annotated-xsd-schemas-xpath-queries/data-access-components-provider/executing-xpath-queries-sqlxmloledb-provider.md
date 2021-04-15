@@ -1,6 +1,6 @@
 ---
 title: Esecuzione di query XPath (provider SQLXMLOLEDB)
-description: Informazioni su come usare proprietà specifiche del provider SQLXMLOLEDB durante l'esecuzione di query XPath.
+description: Informazioni su come usare le proprietà specifiche del provider SQLXMLOLEDB durante l'esecuzione di query XPath.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -34,7 +34,7 @@ ms.locfileid: "107491914"
   
 -   **Schema di mapping**  
   
- In questa applicazione ADO di esempio viene specificata una query XPath (radice) su uno schema di mapping XSD (MySchema.xml). Lo schema include un **\<Contacts>** elemento con **attributi ContactID,** **FirstName** **e LastName.** Nello schema viene eseguito il mapping predefinito, ovvero un nome di elemento viene mappato alla tabella con lo stesso nome e gli attributi di tipo semplice vengono mappati alle colonne con gli stessi nomi.  
+ In questa applicazione ADO di esempio viene specificata una query XPath (radice) su uno schema di mapping XSD (MySchema.xml). Lo schema ha un **\<Contacts>** elemento con gli attributi **ContactID**, **FirstName** **e LastName.** Nello schema viene eseguito il mapping predefinito, ovvero un nome di elemento viene mappato alla tabella con lo stesso nome e gli attributi di tipo semplice vengono mappati alle colonne con gli stessi nomi.  
   
 ```  
 <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  

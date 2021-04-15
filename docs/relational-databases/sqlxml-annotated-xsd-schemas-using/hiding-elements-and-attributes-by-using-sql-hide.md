@@ -43,9 +43,9 @@ ms.locfileid: "107492059"
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per altre informazioni, vedere [Requisiti per l'esecuzione di esempi SQLXML.](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)  
   
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>R. Specifica di sql:hide in un attributo  
- Lo schema XSD in questo esempio è costituito da un **\<Person.Contact>** elemento con **attributi ContactID,** **FirstName** **e LastName.**  
+ Lo schema XSD in questo esempio è costituito da un elemento con gli attributi **\<Person.Contact>** **ContactID**, **FirstName** **e LastName** .  
   
- L'elemento è di tipo complesso e pertanto esegue il mapping alla **\<Person.Contact>** tabella con lo stesso nome (mapping predefinito). Tutti gli attributi dell'elemento sono di tipo semplice ed è possibile eseguire il mapping alle colonne con gli stessi **\<Person.Contact>** nomi nella tabella Person.Contacttable nel database AdventureWorks. Nello schema **l'annotazione sql:hide** viene specificata **nell'attributo ContactID.** Quando viene specificata una query XPath in base a questo schema, **contactID** non viene restituito nel documento XML.  
+ L'elemento è di tipo complesso e, pertanto, esegue il mapping alla tabella **\<Person.Contact>** con lo stesso nome (mapping predefinito). Tutti gli attributi dell'elemento sono di tipo semplice e vengono mappati a colonne con gli stessi **\<Person.Contact>** nomi nella tabella Person.Contacttable nel database AdventureWorks. Nello schema **l'annotazione sql:hide** viene specificata nell'attributo **ContactID.** Quando viene specificata una query XPath in base a questo schema, **contactID** non viene restituito nel documento XML.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -82,7 +82,7 @@ ms.locfileid: "107492059"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per altre informazioni, vedere [Uso di ADO per eseguire query SQLXML 4.0.](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)  
+     Per altre informazioni, vedere [Utilizzo di ADO per l'esecuzione di query SQLXML 4.0.](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)  
   
  Set di risultati:  
   
@@ -92,7 +92,7 @@ ms.locfileid: "107492059"
 </ROOT>  
 ```  
   
- Quando **si specifica sql:hide** in un elemento, l'elemento e i relativi attributi o elementi figlio non vengono visualizzati nel documento XML generato. Ecco un altro schema XSD in cui **viene specificato sql:hide** nell'elemento **\<OD>** :  
+ Quando **si specifica sql:hide** in un elemento, l'elemento e i relativi attributi o elementi figlio non vengono visualizzati nel documento XML generato. Di seguito è disponibile un altro schema XSD in cui viene specificato **sql:hide** nell'elemento **\<OD>** :  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -147,7 +147,7 @@ ms.locfileid: "107492059"
 </xsd:schema>  
 ```  
   
- Quando viene specificata una query XPath (ad esempio ) su questo schema, il documento XML generato non include l'elemento e i relativi elementi figlio, come illustrato `/Customers[@CID="1"]` **\<OD>** in questo risultato parziale:  
+ Quando viene specificata una query XPath (ad esempio ) in base a questo schema, il documento XML generato non include l'elemento e i relativi elementi figlio, come illustrato `/Customers[@CID="1"]` **\<OD>** in questo risultato parziale:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

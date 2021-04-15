@@ -38,12 +38,12 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\XSLCacheSize
   
  La cache dei file XSL deve essere impostata in base alla memoria disponibile e al numero di fogli di stile XSL utilizzati. Il valore predefinito **delle dimensioni di XSLCacheSize** è 31. È possibile aumentare le dimensioni della cache se l'accesso a XSL appare rallentato oppure diminuire le dimensioni della cache se la memoria risulta insufficiente.  
   
- Per prestazioni migliori, è consigliabile impostare **XSLCacheSize** su un valore superiore al numero di fogli di stile XSL in uso in genere. Se **XSLCacheSize** è minore del numero di fogli di stile XSL, le prestazioni si riducono con l'aumentare del numero di fogli di stile XSL. **XSLCacheSize** può essere impostato su un massimo di 128.  
+ Per ottenere prestazioni migliori, è consigliabile impostare **XSLCacheSize** su un valore superiore al numero di fogli di stile XSL in genere in uso. Se **XSLCacheSize è** inferiore al numero di fogli di stile XSL, le prestazioni diminuisce con l'aumentare del numero di fogli di stile XSL. **XSLCacheSize** può essere impostato su un massimo di 128.  
   
  Ogni volta che si utilizza il foglio di stile XSL memorizzato nella cache, viene verificata la durata delle modifiche del file XSL per determinare se deve essere aggiornato. Ciò accade in quanto la copia su disco è più recente della copia della cache.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Memorizzazione nella cache dei modelli &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/template-caching-sqlxml-4-0.md)   
- [Memorizzazione nella cache dello schema &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/schema-caching-sqlxml-4-0.md)  
+ [Memorizzazione nella cache &#40;modello con SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/template-caching-sqlxml-4-0.md)   
+ [Memorizzazione nella cache &#40;schema con SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/schema-caching-sqlxml-4-0.md)  
   
   

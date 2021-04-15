@@ -1,5 +1,5 @@
 ---
-title: Creazione di sezioni CDATA con sql:use-cdata (SQLXML)
+title: Creazione di sezioni CDATA tramite sql:use-cdata (SQLXML)
 description: Informazioni su come creare sezioni CDATA in SQLXML 4.0 usando l'annotazione sql:use-cdata per eseguire l'escape di blocchi di testo che contengono caratteri di markup.
 ms.date: 01/11/2019
 ms.prod: sql
@@ -33,19 +33,19 @@ ms.locfileid: "107492147"
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   In XML vengono utilizzate le sezioni CDATA per eseguire l'escape di blocchi di testo contenenti caratteri che, altrimenti, verrebbero riconosciuti come caratteri di markup.  
   
- Un database in Microsoft può talvolta contenere caratteri trattati come caratteri di markup dal parser XML. Ad esempio, le parentesi angolari (< e >), il simbolo minore di o uguale a (<=) e la e commerciale (&) vengono considerate caratteri [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di markup. Per evitare che ciò accada, è tuttavia possibile eseguire il wrapping di questo tipo di caratteri speciali in una sezione CDATA. Il testo nella sezione CDATA viene considerato testo normale dal parser XML.  
+ Un database di Microsoft può talvolta contenere caratteri considerati come caratteri di markup dal parser XML. Ad esempio, le parentesi acute (< e >), il simbolo di minore o uguale a (<=) e la e commerciale (&) vengono considerati caratteri [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di markup. Per evitare che ciò accada, è tuttavia possibile eseguire il wrapping di questo tipo di caratteri speciali in una sezione CDATA. Il testo nella sezione CDATA viene considerato testo normale dal parser XML.  
   
- L'annotazione **sql:use-cdata** viene usata per specificare che i dati restituiti da devono essere incapsulati in una sezione CDATA, ovvero indica se il valore di una colonna specificata da sql:field deve essere racchiuso in una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sezione CDATA.  **L'annotazione sql:use-cdata** può essere specificata solo in elementi che eseere mappati a una colonna di database.  
+ L'annotazione **sql:use-cdata** viene usata per specificare che deve essere eseguito il wrapping dei dati restituiti da in una sezione CDATA, ovvero se il valore di una colonna specificata da sql:field deve essere incluso in una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sezione CDATA.  **L'annotazione sql:use-cdata** può essere specificata solo su elementi mappati a una colonna di database.  
   
  **L'annotazione sql:use-cdata** accetta un valore booleano (0 = false, 1 = true). I valori possibili sono 0, 1, true e false.  
   
- Questa annotazione non può essere usata **con sql:url-encode** o nei tipi di attributo ID, IDREF, IDREFS, NMTOKEN e NMTOKENS.  
+ Questa annotazione non può essere usata con **sql:url-encode** o nei tipi di attributo ID, IDREF, IDREFS, NMTOKEN e NMTOKENS.  
   
 ## <a name="examples"></a>Esempio  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per altre informazioni, vedere [Requisiti per l'esecuzione di esempi SQLXML.](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)  
   
 ### <a name="a-specifying-sqluse-cdata-on-an-element"></a>R. Specifica di sql:use-cdata su un elemento  
- Nello schema seguente, **sql:use-cdata** è impostato su 1 (True) per **\<AddressLine1>** all'interno **\<Address>** dell'elemento . I dati vengono quindi restituiti in una sezione CDATA.  
+ Nello schema seguente **sql:use-cdata** è impostato su 1 (True) per **\<AddressLine1>** all'interno **\<Address>** dell'elemento . I dati vengono quindi restituiti in una sezione CDATA.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -86,7 +86,7 @@ ms.locfileid: "107492147"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per altre informazioni, vedere [Uso di ADO per eseguire query SQLXML 4.0.](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)  
+     Per altre informazioni, vedere [Utilizzo di ADO per l'esecuzione di query SQLXML 4.0.](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)  
   
  Di seguito è riportato il set di risultati parziale:  
   

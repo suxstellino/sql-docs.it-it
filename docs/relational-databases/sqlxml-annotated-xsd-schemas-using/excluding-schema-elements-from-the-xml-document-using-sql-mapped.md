@@ -1,6 +1,6 @@
 ---
-title: Escludere gli elementi dello schema dal documento XML con sql:mapped
-description: Informazioni su come usare l'annotazione sql:mapped per creare un elemento nello schema XSD che non esegue il mapping a una tabella di database (vista) o a una colonna.
+title: Escludere elementi dello schema dalla documentazione XML con sql:mapped
+description: Informazioni su come usare l'annotazione sql:mapped per creare un elemento nello schema XSD di cui non è stato eseguito il mapping a una tabella (vista) o a una colonna di database.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -33,9 +33,9 @@ ms.locfileid: "107492075"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Esclusione di elementi dello schema dal documento XML con sql:mapped
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  A causa del mapping predefinito, viene eseguito il mapping di ogni elemento e attributo nello schema XSD a una vista/tabella e a una colonna di database. Se si vuole creare un elemento nello schema XSD che non esegue il mapping ad alcuna tabella o colonna di database (vista) e che non viene visualizzato nel codice XML, è possibile specificare l'annotazione **sql:mapped.**  
+  A causa del mapping predefinito, viene eseguito il mapping di ogni elemento e attributo nello schema XSD a una vista/tabella e a una colonna di database. Se si desidera creare un elemento nello schema XSD che non esegue il mapping a una tabella (vista) o colonna di database e che non è presente nel codice XML, è possibile specificare l'annotazione **sql:mapped** .  
   
- L'annotazione **sql:mapped** è particolarmente utile se lo schema non può essere modificato o se lo schema viene usato per convalidare il codice XML da altre origini e contiene ancora dati non archiviati nel database. L'annotazione **sql:mapped** è diversa da **sql:is-constant** perché gli elementi e gli attributi non mappati non vengono visualizzati nel documento XML.  
+ **L'annotazione sql:mapped** è particolarmente utile se lo schema non può essere modificato o se lo schema viene utilizzato per convalidare xml da altre origini e contiene comunque dati non archiviati nel database. **L'annotazione sql:mapped** è diversa da **sql:is-constant** perché gli elementi e gli attributi non mappati non vengono visualizzati nel documento XML.  
   
  **L'annotazione sql:mapped** accetta un valore booleano (0 = false, 1 = true). I valori possibili sono 0, 1, true e false.  
   
@@ -43,11 +43,11 @@ ms.locfileid: "107492075"
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per altre informazioni, vedere [Requisiti per l'esecuzione di esempi SQLXML.](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>R. Specifica dell'annotazione sql:mapped  
- Si supponga di disporre di uno schema XSD di un'altra origine. Questo schema XSD è costituito da **\<Person.Contact>** un elemento con attributi **ContactID,** **FirstName,** **LastName** e **HomeAddress.**  
+ Si supponga di disporre di uno schema XSD di un'altra origine. Questo schema XSD è costituito da **\<Person.Contact>** un elemento con gli attributi **ContactID**, **FirstName**, **LastName** **e HomeAddress.**  
   
- Nel mapping di questo schema XSD alla tabella Person.Contact nel database AdventureWorks, **sql:mapped** viene specificato nell'attributo **HomeAddress** perché la tabella Employees non archivia gli indirizzi iniziali dei dipendenti. Di conseguenza, questo attributo non viene mappato al database e non viene restituito nel documento XML risultante quando viene specificata una query XPath sullo schema di mapping.  
+ Nel mapping di questo schema XSD alla tabella Person.Contact nel database AdventureWorks, **sql:mapped** viene specificato nell'attributo **HomeAddress** perché la tabella Employees non archivia gli indirizzi dei dipendenti. Di conseguenza, questo attributo non viene mappato al database e non viene restituito nel documento XML risultante quando viene specificata una query XPath sullo schema di mapping.  
   
- Per il resto dello schema viene eseguito il mapping predefinito. L'elemento viene mappato alla tabella Person.Contact e tutti gli attributi vengono mappati alle colonne con lo stesso **\<Person.Contact>** nome nella tabella Person.Contact.  
+ Per il resto dello schema viene eseguito il mapping predefinito. L'elemento esegue il mapping alla tabella Person.Contact e tutti gli attributi vengono mappati alle colonne con lo stesso nome **\<Person.Contact>** nella tabella Person.Contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -86,7 +86,7 @@ ms.locfileid: "107492075"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
 
-     Per altre informazioni, vedere [Uso di ADO per eseguire query SQLXML.](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)  
+     Per altre informazioni, vedere [Utilizzo di ADO per l'esecuzione di query SQLXML.](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)  
   
  Set di risultati:  
   
@@ -104,7 +104,7 @@ ms.locfileid: "107492075"
 </ROOT>  
 ```  
   
- Si noti che contactID, FirstName e LastName sono presenti, ma HomeAddress non è perché lo schema di mapping specificato 0 per **l'attributo sql:mapped.**  
+ Si noti che contactID, FirstName e LastName sono presenti, ma HomeAddress non lo è perché lo schema di mapping ha specificato 0 per **l'attributo sql:mapped.**  
   
 ## <a name="see-also"></a>Vedere anche  
  [Mapping predefinito di elementi e attributi XSD a tabelle e colonne &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  

@@ -32,7 +32,7 @@ ms.locfileid: "107491497"
  Gli updategram consentono di passare NULL come valore di parametro. Per passare il valore del parametro NULL, specificare **l'attributo nullvalue.** Il valore assegnato all'attributo **nullvalue** viene quindi fornito come valore del parametro. e considerato come NULL dagli updategram.  
   
 > [!NOTE]  
->  In e è necessario specificare il valore null come non qualificato, mentre in è necessario specificare il valore Null come qualificato **\<sql:header>** **\<updg:header>**  **\<updg:sync>** (ad esempio, **updg:nullvalue**).   
+>  In e è necessario specificare il valore null come non qualificato, mentre in è necessario specificare il valore Null come qualificato **\<sql:header>** **\<updg:header>** ( ad  **\<updg:sync>** esempio, **updg:nullvalue**).   
   
 ## <a name="examples"></a>Esempio  
  Per creare esempi funzionanti utilizzando gli esempi seguenti, è necessario soddisfare i requisiti specificati in [Requisiti per l'esecuzione di esempi SQLXML.](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)  
@@ -100,7 +100,7 @@ ms.locfileid: "107491497"
   
 1.  Copiare l'updategram sopra indicato in Blocco note e salvarlo in un file con il nome UpdategramPassingNullvalues.xml.  
   
-2.  Preparare lo script di test di SQLXML 4.0 (Sqlxml4test.vbs) in Utilizzo di ADO per l'esecuzione di query [SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) per eseguire l'updategram aggiungendo le righe seguenti dopo `cmd.Properties("Output Stream").Value = outStream` :  
+2.  Preparare lo script di test di SQLXML 4.0 (Sqlxml4test.vbs) in Utilizzo di ADO per eseguire query [SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) per eseguire l'updategram aggiungendo le righe seguenti dopo `cmd.Properties("Output Stream").Value = outStream` :  
   
     ```  
     cmd.NamedParameters = True  

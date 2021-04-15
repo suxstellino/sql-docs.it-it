@@ -1,6 +1,6 @@
 ---
 title: Linee guida e limitazioni del caricamento bulk XML (SQLXML)
-description: Informazioni sulle linee guida e sulle limitazioni relative all'uso del caricamento bulk XML in SQLXML 4.0.
+description: Informazioni sulle linee guida e sulle limitazioni relative all'utilizzo del caricamento bulk XML in SQLXML 4.0.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -32,7 +32,7 @@ ms.locfileid: "107490631"
   
 -   Un documento XML viene controllato per verificare che utilizzi un formato corretto, ma non viene convalidato.  
   
-     Il caricamento bulk XML controlla il documento XML per determinare se è in formato corretto, per garantire che il codice XML sia conforme ai requisiti di sintassi della raccomandazione XML 1.0 del World Wide Web Consortium. Se il formato del documento non è corretto, il caricamento bulk XML annulla l'elaborazione e restituisce un errore. L'unica eccezione a questo comportamento è costituita dal caso in cui il documento è un frammento, ad esempio non dispone di un singolo elemento radice. In questo caso, il documento verrà caricato.  
+     Il caricamento bulk XML controlla il documento XML per determinare se il formato è corretto, per garantire che il codice XML sia conforme ai requisiti di sintassi della raccomandazione XML 1.0 di World Wide Web Consortium. Se il formato del documento non è corretto, il caricamento bulk XML annulla l'elaborazione e restituisce un errore. L'unica eccezione a questo comportamento è costituita dal caso in cui il documento è un frammento, ad esempio non dispone di un singolo elemento radice. In questo caso, il documento verrà caricato.  
   
      Il caricamento bulk XML non convalida il documento rispetto ad alcuno schema dati XML o DTD definito o a cui si fa riferimento all'interno del file di dati XML. Il caricamento bulk XML, inoltre, non convalida il file di dati XML rispetto allo schema di mapping fornito.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "107490631"
   
      Il caricamento bulk XML ignora tutte le informazioni prima e dopo \<root> l'elemento nel documento XML. Il caricamento bulk XML, ad esempio, ignora qualsiasi dichiarazione XML, qualsiasi definizione DTD interna e tutti i riferimenti DTD esterni, i commenti e così via.  
   
--   Se è presente uno schema di mapping che definisce una relazione di chiave primaria/chiave esterna tra due tabelle, ad esempio tra Customer e CustOrder, la tabella con la chiave primaria deve essere descritta per prima nello schema. La tabella con la colonna chiave esterna deve essere visualizzata come successiva nello schema. Il motivo è che l'ordine in cui le tabelle vengono identificate nello schema è l'ordine usato per caricarle nel database. Ad esempio, lo schema XDR seguente genererà un errore quando viene usato nel caricamento bulk XML perché l'elemento viene **\<Order>** descritto prima **\<Customer>** dell'elemento . La colonna CustomerID in CustOrder è una colonna chiave esterna che fa riferimento alla colonna chiave primaria CustomerID nella tabella Cust.  
+-   Se è presente uno schema di mapping che definisce una relazione di chiave primaria/chiave esterna tra due tabelle, ad esempio tra Customer e CustOrder, la tabella con la chiave primaria deve essere descritta per prima nello schema. La tabella con la colonna chiave esterna deve essere visualizzata come successiva nello schema. Il motivo è che l'ordine in cui le tabelle vengono identificate nello schema è l'ordine utilizzato per caricarle nel database. Ad esempio, lo schema XDR seguente genera un errore quando viene utilizzato nel caricamento bulk XML perché l'elemento viene **\<Order>** descritto prima **\<Customer>** dell'elemento . La colonna CustomerID in CustOrder è una colonna chiave esterna che fa riferimento alla colonna chiave primaria CustomerID nella tabella Cust.  
   
     ```  
     <?xml version="1.0" ?>  
@@ -78,9 +78,9 @@ ms.locfileid: "107490631"
     </Schema>  
     ```  
   
--   Se lo schema non specifica colonne di overflow tramite l'annotazione **sql:overflow-field,** il caricamento bulk XML ignora tutti i dati presenti nel documento XML ma non descritti nello schema di mapping.  
+-   Se lo schema non specifica colonne di overflow tramite l'annotazione **sql:overflow-field,** il caricamento bulk XML ignora tutti i dati presenti nel documento XML, ma non sono descritti nello schema di mapping.  
   
-     Il caricamento bulk XML applica lo schema di mapping specificato ogni volta che rileva tag noti nel flusso di dati XML e ignora i dati presenti nel documento XML ma che non sono descritti nello schema. Si supponga, ad esempio, di avere uno schema di mapping che descrive un **\<Customer>** elemento. Il file di dati XML ha un tag radice (che non è descritto nello schema) che racchiude **\<AllCustomers>** tutti gli **\<Customer>** elementi:  
+     Il caricamento bulk XML applica lo schema di mapping specificato ogni volta che rileva tag noti nel flusso di dati XML e ignora i dati presenti nel documento XML ma che non sono descritti nello schema. Si supponga, ad esempio, di avere uno schema di mapping che descrive un **\<Customer>** elemento . Il file di dati XML ha un tag radice (non descritto nello schema) che racchiude **\<AllCustomers>** tutti gli **\<Customer>** elementi:  
   
     ```  
     <AllCustomers>  
@@ -92,7 +92,7 @@ ms.locfileid: "107490631"
   
      In questo caso, il caricamento bulk XML ignora **\<AllCustomers>** l'elemento e inizia il mapping in corrispondenza dell'elemento. **\<Customer>** Il caricamento bulk XML ignora gli elementi non descritti nello schema ma che sono presenti nel documento XML.  
   
-     Si consideri un altro file di dati di origine XML che contiene **\<Order>** elementi. Tali elementi non vengono descritti nello schema di mapping:  
+     Si consideri un altro file di dati di origine XML che **\<Order>** contiene elementi . Tali elementi non vengono descritti nello schema di mapping:  
   
     ```  
     <AllCustomers>  
@@ -108,7 +108,7 @@ ms.locfileid: "107490631"
     </AllCustomers>  
     ```  
   
-     Il caricamento bulk XML ignora questi **\<Order>** elementi. Se tuttavia si usa l'annotazione **sql:overflow-field** nello schema per identificare una colonna come colonna di overflow, il caricamento bulk XML archivia tutti i dati non consumati in questa colonna.  
+     Il caricamento bulk XML ignora questi **\<Order>** elementi. Tuttavia, se si usa l'annotazione **sql:overflow-field** nello schema per identificare una colonna come colonna di overflow, il caricamento bulk XML archivia tutti i dati non utilizzati in questa colonna.  
   
 -   Le sezioni CDATA e i riferimenti a entità vengono convertiti nei rispettivi equivalenti in formato stringa prima di essere archiviati nel database.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "107490631"
   
      Vengono create le tabelle identificate nello schema di mapping (il database deve essere presente). Se una o più tabelle esistono già nel database, la proprietà SGDropTables determina se queste tabelle preesistenti devono essere eliminate e ri-create.  
   
--   Se si specifica la proprietà SchemaGen ,ad esempio SchemaGen = true, vengono create le tabelle identificate nello schema di mapping. SchemaGen, tuttavia, non crea vincoli (ad esempio i vincoli PRIMARY KEY/FOREIGN KEY) su queste tabelle con un'eccezione: se i nodi XML che costituiscono la chiave primaria in una relazione sono definiti come con un tipo XML di ID (ovvero **type="xsd:ID"** per XSD) e la proprietà SGUseID è impostata su True per SchemaGen, non solo vengono create chiavi primarie dai nodi tipi di ID, ma le relazioni chiave primaria/chiave esterna vengono create dalle relazioni di schema di mapping.  
+-   Se si specifica la proprietà SchemaGen ,ad esempio SchemaGen = true, vengono create le tabelle identificate nello schema di mapping. SchemaGen, tuttavia, non crea vincoli (ad esempio i vincoli PRIMARY KEY/FOREIGN KEY) su queste tabelle con un'eccezione: se i nodi XML che costituiscono la chiave primaria in una relazione sono definiti come con un tipo XML di ID (ovvero **type="xsd:ID"** per XSD) e la proprietà SGUseID è impostata su True per SchemaGen, non vengono create solo chiavi primarie dai nodi tipi di ID, ma le relazioni chiave primaria/chiave esterna vengono create dalle relazioni tra schemi di mapping.  
   
 -   SchemaGen non usa facet ed estensioni dello schema XSD per generare lo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] schema relazionale.  
   

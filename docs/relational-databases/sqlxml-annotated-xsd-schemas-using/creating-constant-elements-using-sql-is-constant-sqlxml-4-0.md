@@ -1,6 +1,6 @@
 ---
 title: Creare elementi costanti con sql:is-constant (SQLXML)
-description: Informazioni su come usare l'annotazione sql:is-constant in SQLXML 4.0 per creare elementi costanti in uno schema XSD di cui non viene mappato alcun tipo di tabella o colonna di database.
+description: Informazioni su come usare l'annotazione sql:is-constant in SQLXML 4.0 per creare elementi costanti in uno schema XSD che non esempe il mapping ad alcuna tabella o colonna di database.
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -38,13 +38,13 @@ ms.locfileid: "107492163"
   
 -   Creazione di elementi contenitore, ad esempio **\<Orders>** un elemento che esegue il wrapping di tutti gli ordini.  
   
- **L'annotazione sql:is-constant** può essere aggiunta a un **\<complexType>** elemento .  
+ **L'annotazione sql:is-constant** può essere aggiunta a un **\<complexType>** elemento.  
   
 ## <a name="examples"></a>Esempio  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per altre informazioni, vedere [Requisiti per l'esecuzione di esempi SQLXML.](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>R. Definizione di sql:is-constant per aggiungere un elemento contenitore  
- In questo schema XSD con annotazioni, viene definito come elemento costante specificando l'attributo **\<CustomerOrders>** **sql:is-constant** con valore 1. Pertanto, **\<CustomerOrders>** non viene eseguito il mapping ad alcuna tabella o colonna di database. Questo elemento costante è costituito da **\<Order>** elementi figlio.  
+ In questo schema XSD con annotazioni, viene definito come elemento costante specificando l'attributo **\<CustomerOrders>** **sql:is-constant** con valore 1. Pertanto, **\<CustomerOrders>** non viene eseguito il mapping ad alcuna tabella o colonna del database. Questo elemento costante è costituito da **\<Order>** elementi figlio.  
   
  Anche se non viene mappato ad alcuna tabella o colonna di database, viene comunque visualizzato nel codice XML risultante come elemento **\<CustomerOrders>** contenitore contenente gli **\<Order>** elementi figlio.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "107492163"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
 
-     Per altre informazioni, vedere [Utilizzo di ADO per l'esecuzione di query SQLXML.](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)  
+     Per altre informazioni, vedere [Uso di ADO per eseguire query SQLXML.](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)  
   
  Di seguito è riportato il set di risultati parziale:  
   

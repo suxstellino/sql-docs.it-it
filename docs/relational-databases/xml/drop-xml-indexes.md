@@ -13,14 +13,14 @@ helpviewer_keywords:
 - dropping indexes
 - XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 045e71896836a2ccb39e8605d14e49360a9cc7a2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1b26c8d06a2a51f9822039124b7a4bf18c7f4a2c
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85633197"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107488697"
 ---
 # <a name="drop-xml-indexes"></a>Eliminazione di indici XML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
