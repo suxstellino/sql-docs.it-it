@@ -120,13 +120,13 @@ AS
      È possibile specificare formattazione sul lato client impostando su true questa proprietà per le classi gestite SQLXML.  
   
 ## <a name="enhanced-xml-template-support"></a>Supporto avanzato per modelli XML  
- A partire [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] da , il modello XML in è stato migliorato con l'aggiunta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **dell'attributo client-side-xml.** Se questo attributo è impostato su true, i dati XML vengono formattati nel client. Si noti che questo attributo del modello è identico per la funzionalità della proprietà ClientSideXML specifica del provider SQLXMLOLEDB.  
+ A partire da , il modello XML in è stato migliorato con [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l'aggiunta **dell'attributo client-side-xml.** Se questo attributo è impostato su true, i dati XML vengono formattati nel client. Si noti che questo attributo del modello è identico per la funzionalità della proprietà ClientSideXML specifica del provider SQLXMLOLEDB.  
   
 > [!NOTE]  
 >  Se si esegue un modello XML in un'applicazione ADO che utilizza il provider SQLXMLOLEDB e si specificano sia l'attributo **client-side-xml** nel modello che la proprietà ClientSideXML del provider, il valore specificato nel modello ha la precedenza.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Architettura della formattazione XML sul lato client e sul lato server &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
+ [Architettura della formattazione XML lato client e lato server &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
  [For XML &#40;SQL Server&#41;](../../../relational-databases/xml/for-xml-sql-server.md)   
  [Considerazioni sulla sicurezza di FOR XML &#40;sqlxml 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
  [Supporto dei tipi di dati xml in SQLXML 4.0](../../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)   

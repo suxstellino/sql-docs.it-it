@@ -9,12 +9,12 @@ ms.technology: security
 ms.topic: how-to
 author: rupp29
 ms.author: arupp
-ms.openlocfilehash: 3a674994d7028a8f4455c26d6f705b9da7b5ee08
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 53e0a4957fdb3f60f63d82c2ba89b3a98af16887
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100018684"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107492102"
 ---
 # <a name="sql-server-connector-error-and-information-logging"></a>Registrazione di errori e informazioni per il Connettore SQL Server
 
@@ -71,7 +71,7 @@ Per aggiornare il Connettore SQL Server (versione 1.0.5.0 con data di settembre 
 
 **Requisiti di sistema** - Versioni di SQL Server supportate:
 
-- SQL Server 2019 RTM Enterprise a 64 bit
+- SQL Server 2019 RTM Enterprise o Standard a 64 bit
 - SQL Server 2017 RTM Enterprise a 64 bit
 - SQL Server 2016 RTM Enterprise a 64 bit
 - SQL Server 2014 RTM Enterprise a 64 bit

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - exist() method
 - exist method
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b29a0143b2fca6bbcafaa94acd60e096a121480d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cf16530479dbd23025707f6388ab9588d8e40631
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99206885"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107491278"
 ---
 # <a name="exist-method-xml-data-type"></a>Metodo exist() (tipo di dati xml)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

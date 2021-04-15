@@ -1,6 +1,6 @@
 ---
 title: Elaborazione di XML sul lato client (SQLXML)
-description: Informazioni su come elaborare il codice XML sul lato client usando la proprietà ClientSideXml dell'oggetto SqlXmlCommand nelle classi gestite SQLXML.
+description: Informazioni su come elaborare xml sul lato client usando la proprietà ClientSideXml dell'oggetto SqlXmlCommand nelle classi gestite SQLXML.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,22 +14,22 @@ helpviewer_keywords:
 - SQLXML Managed Classes, client-side XML formatting
 - ClientSideXml property
 ms.assetid: 5e7ecf18-66fc-49ff-bc50-83635cd7ac0b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42f55477c59b85945ccb1f0b776f9ab8ac2125b3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 67cdbcf93f5d060f14e1b556b3e122f829a25949
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97430940"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107491732"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>Elaborazione di XML sul lato client (classi gestite SQLXML)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  Questo esempio illustra l'uso della proprietà ClientSideXml. L'applicazione esegue una stored procedure nel server. Il risultato della stored procedure, ovvero un set di righe a due colonne, viene elaborato sul lato client per produrre un documento XML.  
+  In questo esempio viene illustrato l'utilizzo della proprietà ClientSideXml. L'applicazione esegue una stored procedure nel server. Il risultato della stored procedure, ovvero un set di righe a due colonne, viene elaborato sul lato client per produrre un documento XML.  
   
- Il stored procedure GetContacts seguente restituisce **FirstName** e **LastName** dei dipendenti nella tabella Person. Contact del database AdventureWorks.  
+ Il comando GetContacts stored procedure restituisce **FirstName** e **LastName** dei dipendenti nella tabella Person.Contact del database AdventureWorks.  
   
 ```  
 USE AdventureWorks  
@@ -41,7 +41,7 @@ WHERE LastName = @LastName
 Go  
 ```  
   
- Questa applicazione C# esegue il stored procedure e specifica l'opzione FOR XML AUTO in specificando il valore CommandText. Nell'applicazione, la proprietà ClientSideXml dell'oggetto SqlXmlCommand è impostata su true. In questo modo è possibile eseguire stored procedure preesistenti che restituiscono un set di righe e applicano a questo una trasformazione XML sul client.  
+ Questa applicazione C# esegue il stored procedure e specifica l'opzione FOR XML AUTO per specificare il valore CommandText. Nell'applicazione la proprietà ClientSideXml dell'oggetto SqlXmlCommand è impostata su true. In questo modo è possibile eseguire stored procedure preesistenti che restituiscono un set di righe e applicano a questo una trasformazione XML sul client.  
   
 > [!NOTE]  
 >  Nel codice è necessario specificare il nome dell'istanza di Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nella stringa di connessione.  

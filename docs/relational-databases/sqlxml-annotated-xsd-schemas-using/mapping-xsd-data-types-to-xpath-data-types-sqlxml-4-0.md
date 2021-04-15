@@ -39,7 +39,7 @@ ms.locfileid: "107492024"
 |**Base64Binary**<br /><br /> **HexBinary**|**Nessuno**<br /><br /> **bin.base64bin.hex**|**Non applicabile**|nessuno<br /><br /> EmployeeID|  
 |**Boolean**|**boolean**|**boolean**|CONVERT(bit, EmployeeID)|  
 |**Decimal, integer, float, byte, short, int, long, float, double, unsignedByte, unsignedShort, unsignedInt, unsignedLong**|**number, int, float, i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8**|**number**|CONVERT(float(53), EmployeeID)|  
-|**id, idref, idrefsentity, entities, notation, nmtoken, nmtokens, DateTime, string, AnyURI**|**id, idref, idrefsentity, entities, enumeration, notation, nmtoken, nmtokens, char, dateTime, dateTime.tz, string, uri, uuid**|**string**|CONVERT(nvarchar(4000), EmployeeID, 126)|  
+|**id, idref, idrefsentity, entità, notazione, nmtoken, nmtokens, DateTime, string, AnyURI**|**id, idref, idrefsentity, entità, enumerazione, notazione, nmtoken, nmtokens, char, dateTime, dateTime.tz, string, uri, uuid**|**string**|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |**decimal**|**fixed14.4**|**N/D (in XPath non è disponibile alcun tipo di dati equivalente al tipo di dati XDR fixed14.4).**|CONVERT(money, EmployeeID)|  
 |**date**|**date**|**string**|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
 |**time**|**time**<br /><br /> **time.tz**|**string**|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  

@@ -169,7 +169,7 @@ ms.locfileid: "107491859"
 </ROOT>  
 ```  
   
- In questo DiffGram il **\<before>** blocco non è specificato (nessun record di database esistente identificato). Esistono due istanze di record (identificate dagli elementi e nel blocco ) che eseere mappate rispettivamente alle tabelle Cust e **\<Customer>** **\<Order>** **\<DataInstance>** Ord. Entrambi questi elementi specificano **l'attributo diffgr:hasChanges** (**hasChanges="inserted"**). indicando un'operazione di inserimento. In questo DiffGram, se si specifica **hasChanges="modified",** si indica che si vuole modificare un record che non esiste e viene generato un errore.  
+ In questo DiffGram il **\<before>** blocco non è specificato (nessun record di database esistente identificato). Sono presenti due istanze di record (identificate dagli elementi e nel blocco ) che eseere mappate rispettivamente alle tabelle Cust e **\<Customer>** **\<Order>** **\<DataInstance>** Ord. Entrambi questi elementi specificano **l'attributo diffgr:hasChanges** (**hasChanges="inserted"**). indicando un'operazione di inserimento. In questo DiffGram, se si specifica **hasChanges="modified",** si indica che si vuole modificare un record che non esiste e viene generato un errore.  
   
 #### <a name="to-test-the-diffgram"></a>Per testare DiffGram  
   

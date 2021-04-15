@@ -1,6 +1,6 @@
 ---
-title: Usare l'updategram in un'applicazione ASP di esempio (SQLXML)
-description: Visualizzare un esempio di utilizzo di un updategram SQLXML in un'applicazione ASP (Active Server Pages).
+title: Usare Updategram in un'applicazione ASP di esempio (SQLXML)
+description: Visualizzare un esempio di uso di un updategram SQLXML in un'applicazione ASP (Active Server Pages).
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -79,7 +79,7 @@ ms.locfileid: "107491425"
 </ROOT>  
 ```  
   
- Il codice seguente è l'applicazione ASP (SampleASP.asp). Salvarlo nella directory associata a una radice virtuale che è possibile creare mediante l'utilità Gestione Internet Services. Questa radice virtuale non viene creata usando Gestione directory virtuali IIS per l'utilità perché Gestione directory virtuali IIS per non può accedere o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identificare applicazioni ASP.  
+ Il codice seguente è l'applicazione ASP (SampleASP.asp). Salvarlo nella directory associata a una radice virtuale che è possibile creare mediante l'utilità Gestione Internet Services. Questa radice virtuale non viene creata usando Gestione directory virtuali IIS per l'utilità perché Gestione directory virtuali IIS per non è in grado di accedere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o identificare le applicazioni [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ASP.  
   
 > [!NOTE]  
 >  Nel codice è necessario sostituire "ServerName" con il nome del server che esegue Microsoft Internet Information Services (IIS).  
@@ -162,6 +162,6 @@ You may update customer information below.<br><br>
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Considerazioni sulla sicurezza degli updategram &#40;sqlxml 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Considerazioni sulla sicurezza di Updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

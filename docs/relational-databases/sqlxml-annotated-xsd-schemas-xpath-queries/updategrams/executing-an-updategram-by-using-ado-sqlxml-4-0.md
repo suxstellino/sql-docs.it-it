@@ -1,6 +1,6 @@
 ---
-title: Esecuzione di un Updategram tramite ADO (SQLXML)
-description: Informazioni su come stabilire una connessione a un'istanza di Microsoft SQL Server ed eseguire un updategram.by usando ADO (SQLXML 4.0).
+title: Esecuzione di un updategram tramite ADO (SQLXML)
+description: Informazioni su come stabilire una connessione a un'istanza di Microsoft SQL Server ed eseguire un'updategram.by tramite ADO (SQLXML 4.0).
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -37,7 +37,7 @@ ms.locfileid: "107491544"
   
 -   L'updategram viene copiato nel flusso di comando (**strmIn**).  
   
--   Il flusso di output del comando è impostato **sull'oggetto StrmOut** (**ADODB. Flusso**) per ricevere i dati restituiti.  
+-   Il flusso di output del comando è impostato **sull'oggetto StrmOut** (**ADODB. Stream**) per ricevere i dati restituiti.  
   
 -   Il comando (updategram) viene infine eseguito.  
   
@@ -185,7 +185,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>Passaggio di parametri  
- Nelle applicazioni Visual Basic fornite precedentemente i parametri non vengono passati. In questa applicazione i valori **ContactID** e **MiddleName** vengono passati come input con parametri all'updategram.  
+ Nelle applicazioni Visual Basic fornite precedentemente i parametri non vengono passati. In questa applicazione i valori **ContactID** **e MiddleName** vengono passati come input con parametri all'updategram.  
   
 ```vb  
 Private Sub Form_Load()  

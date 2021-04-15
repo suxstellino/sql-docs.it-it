@@ -15,14 +15,14 @@ helpviewer_keywords:
 - delete statement [XML DML]
 - deleting nodes
 ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e3f06338515bbd8ad426606a4331c5fc19a1b0ca
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 28aee5ca4b84b2b990e4f35b6d64dcdccdee8481
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161062"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107491286"
 ---
 # <a name="delete-xml-dml"></a>delete (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

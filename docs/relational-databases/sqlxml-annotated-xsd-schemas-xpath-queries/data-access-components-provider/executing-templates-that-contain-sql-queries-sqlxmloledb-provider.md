@@ -1,6 +1,6 @@
 ---
 title: Eseguire modelli con query SQL (SQLXMLOLEDB)
-description: Visualizzare un esempio di applicazione ADO sul lato client che usa il provider SQLXMLOLEDB per eseguire un modello XML sul lato server contenente una query SQL.
+description: Visualizzare un esempio di applicazione ADO sul lato client usando il provider SQLXMLOLEDB per eseguire un modello XML sul lato server contenente una query SQL.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -27,11 +27,11 @@ ms.locfileid: "107491896"
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>Esecuzione di modelli che contengono query SQL (provider SQLXMLOLEDB)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  Questo esempio illustra l'uso della proprietà clientSideXML specifica del provider SQLXMLOLEDB. In questa applicazione ADO di esempio sul lato client, viene eseguito un modello XML costituito da una query SQL nel server.  
+  In questo esempio viene illustrato l'utilizzo della proprietà clientSideXML specifica del provider SQLXMLOLEDB. In questa applicazione ADO di esempio sul lato client, viene eseguito un modello XML costituito da una query SQL nel server.  
   
  Poiché la proprietà ClientSideXML è impostata su True, l'istruzione SELECT senza la clausola FOR XML viene inviata al server. Il server esegue la query e restituisce un set di righe al client. Il client applica quindi la trasformazione FOR XML al set di righe e produce un documento XML.  
   
- Il modello XML fornisce un singolo elemento radice di primo livello ( ) per il \<ROOT> documento XML generato. Pertanto, la proprietà radice xml non viene specificata.  
+ Il modello XML fornisce un singolo elemento radice di primo livello ( ) per il documento XML generato, pertanto la proprietà \<ROOT> radice xml non viene fornita.  
   
  Per eseguire il modello XML, è necessario specificare il sottolinguaggio {5d531cb2-e6ed-11d2-b252-00c04f681b71}.  
   

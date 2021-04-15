@@ -1,6 +1,6 @@
 ---
 title: classi gestite SQLXML
-description: Informazioni sulle classi gestite di Microsoft SQLXML che espongono la funzionalità di SQLXML 4.0 all'interno di Microsoft .NET Framework.
+description: Informazioni sulle classi gestite microsoft SQLXML che espongono la funzionalità di SQLXML 4.0 all'interno di Microsoft .NET Framework.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -50,7 +50,7 @@ ms.locfileid: "107491747"
   In questa sezione vengono fornite applicazioni di esempio che illustrano come utilizzare le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] classi gestite SQLXML:  
  [Esecuzione di query SQL &#40;classi gestite SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)  
   [Esecuzione di query SQL tramite il metodo ExecuteXMLReader](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)  
-  [Elaborazione di CODICE XML sul lato client &#40;classi gestite SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/processing-xml-on-the-client-side-sqlxml-managed-classes.md)  
+  [Elaborazione di XML sul lato client &#40;classi gestite SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/processing-xml-on-the-client-side-sqlxml-managed-classes.md)  
   [Esecuzione di query XPath &#40;classi gestite SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-xpath-queries-sqlxml-managed-classes.md)  
   [Esecuzione di query XPath con spazi dei nomi &#40;classi gestite SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-xpath-queries-with-namespaces-sqlxml-managed-classes.md)  
   [Esecuzione di file modello mediante la proprietà CommandText](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md)  

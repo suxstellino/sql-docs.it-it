@@ -20,14 +20,14 @@ helpviewer_keywords:
 - XML schema collections [SQL Server]
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2db7f06f0e68b1a03bf4b2a205666fcf90a58d32
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 15173fe3de1f3f82c5e70d0e5d8b302e380016d9
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729775"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107486700"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Raccolte di XML Schema (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "85729775"
   
  Lo schema viene inoltre utilizzato dal motore di elaborazione delle query per la verifica dei tipi, per l'ottimizzazione delle query e per la modifica dei dati.  
   
- Per i valori **xml**tipizzati, SQL Server usa la raccolta di XML Schema associata per convalidare l'istanza XML. Se l'istanza XML è conforme allo schema, il database consente di archiviarla nel sistema insieme alle relative informazioni sul tipo, in caso contrario la rifiuta.  
+ Per i valori **xml** tipizzati, SQL Server usa la raccolta di XML Schema associata per convalidare l'istanza XML. Se l'istanza XML è conforme allo schema, il database consente di archiviarla nel sistema insieme alle relative informazioni sul tipo, in caso contrario la rifiuta.  
   
  Per recuperare la raccolta di schemi archiviata nel database è possibile utilizzare la funzione intrinseca XML_SCHEMA_NAMESPACE. Per altre informazioni, vedere [Visualizzare una raccolta di XML Schema archiviata](../../relational-databases/xml/view-a-stored-xml-schema-collection.md).  
   
@@ -117,7 +117,7 @@ ms.locfileid: "85729775"
   
 -   **SomeAttribute** è un componente di tipo ATTRIBUTE.  
   
--   **SomeType**, **OrderType**e **CustomerType** sono componenti di tipo TYPE.  
+-   **SomeType**, **OrderType** e **CustomerType** sono componenti di tipo TYPE.  
   
 -   **Customer** è un componente ELEMENT.  
   

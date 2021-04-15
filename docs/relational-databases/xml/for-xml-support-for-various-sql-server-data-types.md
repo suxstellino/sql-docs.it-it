@@ -12,14 +12,14 @@ helpviewer_keywords:
 - FOR XML clause, data type support
 - data types [SQL Server], FOR XML clause
 ms.assetid: b8aeb87f-9cce-40e2-a47c-2dc1460548af
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7b4e3d1ecc08c94e516b532cc8f0d68ef370e1e4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ea0ac3c6b65716d6386239d2195bfb86cae58c31
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729904"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107488213"
 ---
 # <a name="for-xml-support-for-various-sql-server-data-types"></a>Supporto di FOR XML per vari tipi di dati di SQL Server
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

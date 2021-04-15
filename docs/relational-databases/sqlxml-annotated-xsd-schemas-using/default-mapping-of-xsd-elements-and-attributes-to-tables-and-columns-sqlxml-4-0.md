@@ -1,6 +1,6 @@
 ---
 title: Mapping XSD predefinito a tabelle/colonne (SQLXML)
-description: Informazioni su come per impostazione predefinita viene eseguito il mapping di elementi e attributi in uno schema XSD a tabelle e colonne in SQLXML 4.0.
+description: Informazioni su come eseguire il mapping di elementi e attributi in uno schema XSD per impostazione predefinita a tabelle e colonne in SQLXML 4.0.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -43,7 +43,7 @@ ms.locfileid: "107492137"
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per altre informazioni, vedere [Requisiti per l'esecuzione di esempi SQLXML.](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)  
   
 ### <a name="a-specifying-default-mapping"></a>R. Definizione del mapping predefinito  
- In questo esempio non viene specificata alcuna annotazione nello schema XSD. L'elemento è di tipo complesso e, pertanto, viene mappato per impostazione predefinita alla **\<Person.Contact>** tabella Person.Contact nel database AdventureWorks. Tutti gli attributi (ContactID, FirstName, LastName) dell'elemento sono di tipo semplice e vengono mappati per impostazione predefinita alle colonne con gli stessi nomi nella **\<Person.Contact>** tabella Person.Contact.  
+ In questo esempio non viene specificata alcuna annotazione nello schema XSD. L'elemento è di tipo complesso e pertanto viene mappato per impostazione predefinita alla **\<Person.Contact>** tabella Person.Contact nel database AdventureWorks. Tutti gli attributi (ContactID, FirstName, LastName) dell'elemento sono di tipo semplice ed esercitino il mapping per impostazione predefinita alle colonne con gli stessi nomi nella **\<Person.Contact>** tabella Person.Contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -80,7 +80,7 @@ ms.locfileid: "107492137"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per altre informazioni, vedere [Utilizzo di ADO per l'esecuzione di query SQLXML 4.0.](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)  
+     Per altre informazioni, vedere [Uso di ADO per eseguire query SQLXML 4.0.](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)  
   
  Di seguito è riportato il set di risultati parziale:  
   
@@ -94,7 +94,7 @@ ms.locfileid: "107492137"
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. Mapping di un elemento XML a una colonna del database  
- Anche in questo esempio viene eseguito un mapping predefinito, in quanto non viene utilizzata alcuna annotazione. **\<Person.Contact>** L'elemento è di tipo complesso ed è mappato alla tabella con lo stesso nome nel database. Gli elementi **\<FirstName>** **\<LastName>** e e **l'attributo EmployeeID** sono di tipo semplice e, pertanto, vengono mappati alle colonne con gli stessi nomi. L'unica differenza tra questo e l'esempio precedente consiste nel fatto che gli elementi vengono utilizzati per eseguire il mapping dei campi FirstName e LastName.  
+ Anche in questo esempio viene eseguito un mapping predefinito, in quanto non viene utilizzata alcuna annotazione. **\<Person.Contact>** L'elemento è di tipo complesso ed è mappato alla tabella con lo stesso nome nel database. Gli elementi **\<FirstName>** e **\<LastName>** e **l'attributo EmployeeID** sono di tipo semplice e pertanto eseere mappati alle colonne con gli stessi nomi. L'unica differenza tra questo e l'esempio precedente consiste nel fatto che gli elementi vengono utilizzati per eseguire il mapping dei campi FirstName e LastName.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -133,7 +133,7 @@ ms.locfileid: "107492137"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per altre informazioni, vedere [Utilizzo di ADO per l'esecuzione di query SQLXML 4.0.](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)  
+     Per altre informazioni, vedere [Uso di ADO per eseguire query SQLXML 4.0.](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)  
   
  Di seguito è riportato il set di risultati parziale:  
   
@@ -148,7 +148,7 @@ ms.locfileid: "107492137"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. Mapping di un elemento XML a una colonna con tipo di dati XML  
- Anche in questo esempio viene eseguito un mapping predefinito, in quanto non viene utilizzata alcuna annotazione. **\<Production.ProductModel>** L'elemento è di tipo complesso ed è mappato alla tabella con lo stesso nome nel database. **L'attributo ProductModelID** è di tipo semplice e, pertanto, esegue il mapping alle colonne con gli stessi nomi. L'unica differenza tra questo e gli esempi precedenti è che l'elemento è mappato a una colonna che usa il tipo di dati **\<Instructions>** **xml** usando il **tipo xsd:anyType.**  
+ Anche in questo esempio viene eseguito un mapping predefinito, in quanto non viene utilizzata alcuna annotazione. **\<Production.ProductModel>** L'elemento è di tipo complesso ed è mappato alla tabella con lo stesso nome nel database. **L'attributo ProductModelID** è di tipo semplice e pertanto esegue il mapping alle colonne con gli stessi nomi. L'unica differenza tra questo e gli esempi precedenti è che l'elemento viene mappato a una colonna che usa il tipo di dati **\<Instructions>** **xml** usando il **tipo xsd:anyType.**  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -188,7 +188,7 @@ ms.locfileid: "107492137"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per altre informazioni, vedere [Utilizzo di ADO per l'esecuzione di query SQLXML 4.0.](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)  
+     Per altre informazioni, vedere [Uso di ADO per eseguire query SQLXML 4.0.](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)  
   
  Di seguito è riportato il set di risultati parziale:  
   
@@ -207,7 +207,7 @@ ctions">
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Considerazioni sulla sicurezza degli schemi &#40;sqlxml 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
+ [Considerazioni sulla sicurezza dello schema &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
  [Dati XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [Supporto del tipo di dati xml in SQLXML 4.0](../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)  
   

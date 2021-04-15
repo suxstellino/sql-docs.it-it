@@ -1,6 +1,6 @@
 ---
 title: Convertire schemi XDR con annotazioni in XSD (SQLXML)
-description: Informazioni su come convertire uno schema XDR con annotazioni in uno schema XSD equivalente usando lo strumento XDR to XSD Converter in SQLXML 4.0.
+description: Informazioni su come convertire uno schema XDR con annotazioni in uno schema XSD equivalente usando lo strumento di conversione da XDR a XSD in SQLXML 4.0.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -47,7 +47,7 @@ cvtschema XDRFileName, [-y], [-w] [-?]
  Dove:  
   
  XDRFileName  
- È il nome del file XDR  da convertire in XSD. Lo strumento legge il file XDR di input e crea un file di output XSD nella directory di lavoro corrente. Se l'estensione del file di input è .xdr o .xml, il file XSD di output viene creato con lo stesso nome ma con estensione .xsd. Se l'estensione del nome file di input è diversa da xml o xdr (o se l'estensione è mancante), il file di output viene creato con lo stesso nome e l'estensione xsd viene aggiunta al nome del file di input. Se ad esempio il nome del file XDR di input è SampleFile.abc, il file XSD risultante viene salvato come SampleFile.abc.xsd.  
+ È il nome del file XDR  da convertire in XSD. Lo strumento legge il file XDR di input e crea un file di output XSD nella directory di lavoro corrente. Se l'estensione del file di input è .xdr o .xml, il file XSD di output viene creato con lo stesso nome ma con estensione .xsd. Se l'estensione del file di input è diversa da xml o xdr (o se l'estensione è mancante), il file di output viene creato con lo stesso nome e l'estensione xsd viene aggiunta al nome del file di input. Se ad esempio il nome del file XDR di input è SampleFile.abc, il file XSD risultante viene salvato come SampleFile.abc.xsd.  
   
  -y  
  (Facoltativo) Sovrascrive il file XSD esistente con il file XSD generato dal convertitore. Se non viene specificato il flag, il convertitore richiede di specificare se si desidera sovrascrivere il file XSD esistente e offre l'opportunità di modificare il nome del file di output.  

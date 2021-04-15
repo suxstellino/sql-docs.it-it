@@ -13,14 +13,14 @@ helpviewer_keywords:
 - xml data type [SQL Server], methods
 - methods [XML in SQL Server]
 ms.assetid: d112b9c9-be9f-435c-a9e6-d21b65778fb7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8eb3fd64ab953922dfdddf31f2961c9d0df5f527
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8f693edb056ee2a4880a19956d6165495d80c4af
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99181674"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107490199"
 ---
 # <a name="xml-data-type-methods"></a>Metodi con tipo di dati XML
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

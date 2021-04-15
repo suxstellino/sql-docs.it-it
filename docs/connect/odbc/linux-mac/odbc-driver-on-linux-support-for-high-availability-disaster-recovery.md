@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 50a72faf7dc517257ee2ce66f0f800c289f4329e
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
-ms.translationtype: HT
+ms.openlocfilehash: 8183d7d99bd3ec9ffa344f3b813d17eca0dac85b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922186"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "107490069"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Supporto del driver ODBC in Linux e macOS per disponibilità elevata e ripristino di emergenza
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

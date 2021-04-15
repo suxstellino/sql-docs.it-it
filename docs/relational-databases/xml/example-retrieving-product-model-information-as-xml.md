@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, retrieving XML information example
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4850857682bddf64be8312cea67d577cc3a1f939
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f55cecbb0437bd9d5ac523600803a0aa8086d4b8
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85632759"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107488607"
 ---
 # <a name="example-retrieving-product-model-information-as-xml"></a>Esempio: Recupero delle informazioni relative al modello del prodotto in formato XML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

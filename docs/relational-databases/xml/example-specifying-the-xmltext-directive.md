@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 93e6735f9b4e30a97d86366b512c27489a921f2a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9479680633ae2c46799b703f250333cbab844351
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85632315"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107490839"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>Esempio: Specifica della direttiva XMLTEXT
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -98,7 +98,7 @@ FOR XML EXPLICIT;
  </Parent>
  ```  
   
- Se si specifica*AttributeName* con la direttiva `xmltext`, gli attributi dell'elemento <`overflow`> vengono aggiunti come attributi dei sottoelementi dell'elemento <`Parent`> che li racchiude. Il nome specificato per *AttributeName* diventa il nome del sottoelemento.  
+ Se si specifica *AttributeName* con la direttiva `xmltext`, gli attributi dell'elemento <`overflow`> vengono aggiunti come attributi dei sottoelementi dell'elemento <`Parent`> che li racchiude. Il nome specificato per *AttributeName* diventa il nome del sottoelemento.  
   
  Nella query seguente l'argomento *AttributeName*, <`overflow`>, viene specificato assieme alla `xmltext`direttiva *:*  
   

@@ -1,6 +1,6 @@
 ---
 title: Motore degli eventi estesi di SQL Server
-description: Il motore degli eventi estesi di SQL Server abilita la definizione degli eventi e l'elaborazione dei dati degli eventi, gestisce gli eventi estesi e mantiene un elenco di sessioni.
+description: Il SQL Server eventi estesi consente la definizione di eventi e l'elaborazione dei dati degli eventi, gestisce gli eventi estesi e gestisce un elenco di sessioni.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], engine
 ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 339e6ada7ae707d4bb48f5b1d3c1eb3b52e94e72
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 3f53cf30f5e95acddbde9f2eb7595cd6654671b2
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481372"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107492383"
 ---
 # <a name="sql-server-extended-events-engine"></a>Motore degli eventi estesi di SQL Server
 
