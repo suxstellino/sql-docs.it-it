@@ -91,7 +91,7 @@ items:
                 items:
                   - name: Istanza master
                     href: big-data-cluster/deployment-high-availability.md
-                  - name: Nodo del nome HDFS e Spark
+                  - name: Nodo dei nomi HDFS e Spark
                     href: big-data-cluster/deployment-high-availability-hdfs-spark.md
               - name: Cluster Kubernetes
                 items:
@@ -113,7 +113,7 @@ items:
                     href: big-data-cluster/notebooks-deploy.md
       - name: Concetti
         items:
-          - name: Distribuzione dell'applicazione
+          - name: Pool di app
             href: big-data-cluster/concept-application-deployment.md
           - name: Controller
             href: big-data-cluster/concept-controller.md
@@ -165,11 +165,11 @@ items:
             items:
               - name: Panoramica
                 href: big-data-cluster/configure-bdc-overview.md
-              - name: Eseguire l'aggiornamento al cluster abilitato per la gestione della configurazione (CU9 +)
+              - name: Eseguire l'aggiornamento al cluster abilitato per la gestione della configurazione (CU9+)
                 href: big-data-cluster/bdc-upgrade-configuration.md
               - name: Configurazione post-distribuzione
                 href: big-data-cluster/configure-bdc-postdeployment.md
-              - name: Panoramica-(pre CU9)
+              - name: Panoramica - (prima di CU9)
                 href: big-data-cluster/configure-bdc-pre-configuration.md
           - name: Virtualizzazione dei dati
             items:
@@ -311,7 +311,7 @@ items:
                             href: machine-learning/tutorials/r-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                           - name: 5 - Stime
                             href: machine-learning/tutorials/r-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: Guide alle procedure di Machine Learning
+              - name: Guide alle attività di Machine Learning
                 items:
                   - name: Esplorazione e modellazione dei dati
                     items:
@@ -467,7 +467,7 @@ items:
                 href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
               - name: Notebook per la risoluzione dei problemi dei cluster
                 href: big-data-cluster/cluster-troubleshooter-notebooks.md
-              - name: Domande frequenti sui cluster di Big Data
+              - name: cluster Big Data domande frequenti
                 href: big-data-cluster/big-data-cluster-faq.yml
       - name: Riferimento
         items:
@@ -487,7 +487,7 @@ items:
             items:
               - name: Panoramica
                 href: big-data-cluster/reference-config-bdc-overview.md
-              - name: Istanza master (pre-CU9)
+              - name: Istanza master (precedente a CU9)
                 href: big-data-cluster/reference-config-master-instance.md
               - name: Apache Spark e Apache Hadoop
                 href: big-data-cluster/reference-config-spark-hadoop.md
@@ -4852,7 +4852,7 @@ items:
     items:
       - name: Documentazione sulla migrazione
         href: sql-server/migrate/index.yml
-      - name: Confrontare strumenti di migrazione
+      - name: Confrontare gli strumenti di migrazione
         href: sql-server/migrate/dma-azure-migrate-compare-migration-tools.md
       - name: SQL Server Integration Services (SSIS) >
         href: ./integration-services/sql-server-integration-services.md
@@ -4865,7 +4865,7 @@ items:
         items:
           - name: Da Access
             href: sql-server/migrate/guides/access-to-sql-server.md
-          - name: Da DB2
+          - name: Da Db2
             href: sql-server/migrate/guides/db2-to-sql-server.md
           - name: Da MySQL
             href: sql-server/migrate/guides/mysql-to-sql-server.md
@@ -5509,7 +5509,7 @@ items:
                     items:
                       - name: Oracle
                         href: relational-databases/replication/non-sql/oracle-subscribers.md
-                      - name: IBM DB2
+                      - name: IBM Db2
                         href: relational-databases/replication/non-sql/ibm-db2-subscribers.md
                       - name: Altri sottoscrittori non SQL
                         href: relational-databases/replication/non-sql/other-non-sql-server-subscribers.md
@@ -6088,7 +6088,7 @@ items:
             href: dma/dma-assess-ssis.md
           - name: Salvare e caricare valutazioni
             href: dma/dma-save-load-assessments.md
-          - name: Identificare lo SKU SQL di Azure di destinazione
+          - name: Identificare lo SKU Azure SQL destinazione
             href: dma/dma-sku-recommend-sql-db.md
           - name: Aggiornare SQL Server a una versione successiva
             href: dma/dma-migrateonpremsql.md
@@ -6120,15 +6120,15 @@ items:
         items:
           - name: Panoramica
             href: tools/synapse-pathway/azure-synapse-pathway-overview.md
-          - name: Domande frequenti sul percorso sinapsi di Azure
+          - name: Azure Synapse domande frequenti sul percorso
             href: tools/synapse-pathway/pathway-faq.md
           - name: Dietro le quinte
             href: tools/synapse-pathway/synapse-pathway-behind-the-scenes.md
           - name: Installazione
             href: tools/synapse-pathway/synapse-pathway-download.md
-          - name: 'Esercitazione: eseguire il percorso delle sinapsi di Azure'
+          - name: Esercitazione- Eseguire un percorso Azure Synapse percorso
             href: tools/synapse-pathway/synapse-pathway-assessment.md
-          - name: Esercitazione-salvare e caricare
+          - name: 'Esercitazione: Salvare e caricare'
             href: tools/synapse-pathway/tutorial-save-load-assessment.md
           - name: Generare report
             href: tools/synapse-pathway/report-generation.md
@@ -7156,7 +7156,7 @@ items:
                     href: relational-databases/polybase/polybase-troubleshoot-connectivity.md
                   - name: Domande frequenti su PolyBase
                     href: relational-databases/polybase/polybase-faq.yml
-                  - name: Errori di polibase e possibili soluzioni
+                  - name: Errori di PolyBase e possibili soluzioni
                     href: relational-databases/polybase/polybase-errors-and-possible-solutions.md
           - name: Informazioni di riferimento
             items:
@@ -7289,7 +7289,7 @@ items:
             items:
               - name: Installare e configurare Master Data Services
                 href: master-data-services/master-data-services-installation-and-configuration.md
-              - name: Traccia dell'app Web Master Data Services
+              - name: Traccia dell Master Data Services app Web
                 href: master-data-services/tracing-master-data-services.md
               - name: Operazioni del servizio Web per categoria
                 href: master-data-services/develop/categorized-web-service-operations-master-data-services.md
@@ -9793,7 +9793,7 @@ items:
                 href: tools/sqlpackage/sqlpackage-script.md
           - name: SqlPackage nelle pipeline di sviluppo
             href: tools/sqlpackage/sqlpackage-pipelines.md
-          - name: SqlPackage per Azure sinapsi Analytics
+          - name: SqlPackage per Azure Synapse Analytics
             href: tools/sqlpackage/sqlpackage-for-azure-synapse-analytics.md
       - name: SQL Server Profiler
         href: tools/sql-server-profiler/sql-server-profiler.md
@@ -10312,7 +10312,7 @@ items:
             href: sql-server/partner-dev-sql-server.md
   - name: Informazioni di riferimento
     items:
-      - name: Azcli dell'interfaccia della riga di comando di Azure
+      - name: Interfaccia della riga di comando di Azure Data azcli
         items:
           - name: azdata
             href: azdata/reference/reference-azdata.md
@@ -10350,23 +10350,23 @@ items:
                 href: azdata/reference/reference-azdata-bdc-endpoint.md
               - name: bdc gateway
                 href: azdata/reference/reference-azdata-bdc-gateway.md
-              - name: impostazioni del gateway BDC
+              - name: Impostazioni del gateway bdc
                 href: azdata/reference/reference-azdata-bdc-gateway-settings.md
               - name: bdc gateway status
                 href: azdata/reference/reference-azdata-bdc-gateway-status.md
               - name: bdc hdfs
                 href: azdata/reference/reference-azdata-bdc-hdfs.md
-              - name: zona di crittografia HDFS BDC
+              - name: bdc hdfs encryption zone
                 href: azdata/reference/reference-azdata-bdc-hdfs-encryption-zone.md
-              - name: chiave HDFS BDC
+              - name: Chiave hdfs bdc
                 href: azdata/reference/reference-azdata-bdc-hdfs-key.md
               - name: bdc hdfs mount
                 href: azdata/reference/reference-azdata-bdc-hdfs-mount.md
-              - name: impostazioni HDFS BDC
+              - name: Impostazioni di bdc hdfs
                 href: azdata/reference/reference-azdata-bdc-hdfs-settings.md
               - name: bdc hdfs status
                 href: azdata/reference/reference-azdata-bdc-hdfs-status.md
-              - name: impostazioni di integrazione applicativa dei dati
+              - name: Impostazioni di bdc
                 href: azdata/reference/reference-azdata-bdc-settings.md
               - name: bdc spark
                 href: azdata/reference/reference-azdata-bdc-spark.md
@@ -10374,7 +10374,7 @@ items:
                 href: azdata/reference/reference-azdata-bdc-spark-batch.md
               - name: bdc spark session
                 href: azdata/reference/reference-azdata-bdc-spark-session.md
-              - name: impostazioni Spark di integrazione applicativa dei dati
+              - name: Impostazioni di bdc spark
                 href: azdata/reference/reference-azdata-bdc-spark-settings.md
               - name: bdc spark statement
                 href: azdata/reference/reference-azdata-bdc-spark-statement.md
@@ -10382,7 +10382,7 @@ items:
                 href: azdata/reference/reference-azdata-bdc-spark-status.md
               - name: bdc sql
                 href: azdata/reference/reference-azdata-bdc-sql.md
-              - name: Impostazioni SQL BDC
+              - name: Impostazioni di bdc sql
                 href: azdata/reference/reference-azdata-bdc-sql-settings.md
               - name: bdc status
                 href: azdata/reference/reference-azdata-bdc-status.md
@@ -10390,39 +10390,39 @@ items:
             items:
               - name: arco
                 href: azdata/reference/reference-azdata-arc.md
-              - name: DC Arc
+              - name: arc dc
                 href: azdata/reference/reference-azdata-arc-dc.md
-              - name: config DC Arc
+              - name: arc dc config
                 href: azdata/reference/reference-azdata-arc-dc-config.md
-              - name: debug del controller di dominio Arc
+              - name: arc dc debug
                 href: azdata/reference/reference-azdata-arc-dc-debug.md
-              - name: endpoint DC Arc
+              - name: endpoint arc dc
                 href: azdata/reference/reference-azdata-arc-dc-endpoint.md
-              - name: stato DC Arc
+              - name: arc dc status
                 href: azdata/reference/reference-azdata-arc-dc-status.md
-              - name: Postgres Arc
+              - name: arc postgres
                 href: azdata/reference/reference-azdata-arc-postgres.md
-              - name: backup Postgres Arc
+              - name: arc postgres backup
                 href: azdata/reference/reference-azdata-arc-postgres-backup.md
-              - name: endpoint Postgres Arc
+              - name: endpoint arc postgres
                 href: azdata/reference/reference-azdata-arc-postgres-endpoint.md
-              - name: Server Postgres Arc
+              - name: arc postgres server
                 href: azdata/reference/reference-azdata-arc-postgres-server.md
-              - name: backup del server Postgres Arc
+              - name: arc postgres server backup
                 href: azdata/reference/reference-azdata-arc-postgres-server-backup.md
-              - name: configurazione di Arc Postgres server
+              - name: arc postgres server config
                 href: azdata/reference/reference-azdata-arc-postgres-server-config.md
-              - name: risorsa Arc
+              - name: risorsa arc
                 href: azdata/reference/reference-azdata-arc-resource.md
-              - name: tipo di risorsa Arc
+              - name: tipo di risorsa arc
                 href: azdata/reference/reference-azdata-arc-resource-kind.md
-              - name: Arc SQL
+              - name: arc sql
                 href: azdata/reference/reference-azdata-arc-sql.md
-              - name: endpoint SQL Arc
+              - name: arc sql endpoint
                 href: azdata/reference/reference-azdata-arc-sql-endpoint.md
-              - name: Arc SQL mi
+              - name: arc sql mi
                 href: azdata/reference/reference-azdata-arc-sql-mi.md
-              - name: configurazione di Arc SQL mi
+              - name: arc sql mi config
                 href: azdata/reference/reference-azdata-arc-sql-mi-config.md
       - name: Esempi di database
         items:
@@ -15929,11 +15929,11 @@ items:
                 items:
                   - name: CHOOSE
                     href: t-sql/functions/logical-functions-choose-transact-sql.md
-                  - name: PIÙ
+                  - name: Maggiore
                     href: t-sql/functions/logical-functions-greatest-transact-sql.md
                   - name: IIF
                     href: t-sql/functions/logical-functions-iif-transact-sql.md
-                  - name: ALMENO
+                  - name: Meno
                     href: t-sql/functions/logical-functions-least-transact-sql.md
               - name: Metadati
                 href: t-sql/functions/metadata-functions-transact-sql.md

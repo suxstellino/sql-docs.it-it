@@ -1,191 +1,188 @@
 ### YamlMime:Hub
 title: Guide alla migrazione del database di Azure
-summary: 'Istruzioni dettagliate per la modernizzazione degli asset di dati. '
+summary: 'Linee guida dettagliate per la modernizzazione degli asset di dati. '
 brand: sql
 metadata:
   title: Guide alla migrazione del database di Azure | Microsoft Docs
-  description: 'Istruzioni dettagliate per la modernizzazione degli asset di dati tramite la migrazione a SQL Server, database SQL di Azure, Istanza gestita SQL di Azure, database di Azure, Azure Cosmos DB, SQL Server in macchine virtuali di Azure e analisi delle sinapsi di Azure. '
+  description: 'Indicazioni dettagliate per la modernizzazione degli asset di dati eseguendo la migrazione a SQL Server, database SQL di Azure, Istanza gestita di SQL di Azure, Database di Azure, Azure Cosmos DB, SQL Server in macchine virtuali di Azure e Azure Synapse Analytics. '
   ms.topic: hub-page
-  ms.openlocfilehash: 097d3eb4a8a90328cbc4fc86551bb292616f017c
-  ms.sourcegitcommit: 17f05be5c08cf9a503a72b739da5ad8be15baea5
-  ms.translationtype: MT
-  ms.contentlocale: it-IT
-  ms.lasthandoff: 03/25/2021
-  ms.locfileid: "105103278"
 conceptualContent:
   items:
-  - title: SQL Server a
-    links:
-    - text: SQL Server (aggiornamento)
-      url: /sql/database-engine/install-windows/upgrade-sql-server
-      itemType: how-to-guide
-    - text: Database SQL di Azure
-      url: /azure/azure-sql/migration-guides/database/sql-server-to-sql-database-overview
-      itemType: how-to-guide
-    - text: Istanza gestita di SQL di Azure
-      url: /azure/azure-sql/migration-guides/managed-instance/sql-server-to-managed-instance-overview
-      itemType: how-to-guide
-    - text: SQL Server in macchine virtuali di Azure
-      url: /azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide
-      itemType: how-to-guide
-    - text: Azure Synapse Analytics
-      url: /azure/synapse-analytics/migration-guides/migrate-to-synapse-analytics-guide
-      itemType: how-to-guide
-  - title: Da Oracle a
-    links:
-    - text: Database di Azure per PostgreSQL
-      url: /azure/postgresql/howto-migrate-from-oracle
-      itemType: how-to-guide
-    - text: SQL Server
-      url: /sql/sql-server/migrate/guides/oracle-to-sql-server
-      itemType: how-to-guide
-    - text: Database SQL di Azure
-      url: /azure/azure-sql/migration-guides/database/oracle-to-sql-database-guide
-      itemType: how-to-guide
-    - text: Istanza gestita di SQL di Azure
-      url: /azure/azure-sql/migration-guides/managed-instance/oracle-to-managed-instance-guide
-      itemType: how-to-guide
-    - text: SQL Server in macchine virtuali di Azure
-      url: /azure/azure-sql/migration-guides/virtual-machines/oracle-to-sql-on-azure-vm-guide
-      itemType: how-to-guide
-    - text: Azure Synapse Analytics
-      url: /azure/synapse-analytics/migration-guides/migrate-to-synapse-analytics-guide
-      itemType: how-to-guide
-  - title: Da DB2 a
-    links:
-    - text: SQL Server
-      url: /sql/sql-server/migrate/guides/db2-to-sql-server
-      itemType: how-to-guide
-    - text: Database SQL di Azure
-      url: /azure/azure-sql/migration-guides/database/db2-to-sql-database-guide
-      itemType: how-to-guide
-    - text: Istanza gestita di SQL di Azure
-      url: /azure/azure-sql/migration-guides/managed-instance/db2-to-managed-instance-guide
-      itemType: how-to-guide
-    - text: SQL Server in macchine virtuali di Azure
-      url: /azure/azure-sql/migration-guides/virtual-machines/db2-to-sql-on-azure-vm-guide
-      itemType: how-to-guide
-  - title: Accesso a
-    links:
-    - text: SQL Server
-      url: /sql/sql-server/migrate/guides/access-to-sql-server
-      itemType: how-to-guide
-    - text: Database SQL di Azure
-      url: /azure/azure-sql/migration-guides/database/access-to-sql-database-guide
-      itemType: how-to-guide
-  - title: Da MySQL a
-    links:
-    - text: Database di Azure per MySQL
-      url: /azure/mysql/concepts-migrate-import-export
-      itemType: how-to-guide
-    - text: SQL Server
-      url: /sql/sql-server/migrate/guides/mysql-to-sql-server
-      itemType: how-to-guide
-    - text: Database SQL di Azure
-      url: /azure/azure-sql/migration-guides/database/mysql-to-sql-database-guide
-      itemType: how-to-guide
-  - title: Da SAP ASE a
-    links:
-    - text: SQL Server
-      url: /sql/sql-server/migrate/guides/sap-ase-to-sql-server
-      itemType: how-to-guide
-    - text: Database SQL di Azure
-      url: /azure/azure-sql/migration-guides/database/sap-ase-to-sql-database
-      itemType: how-to-guide
-  - title: Open source
-    links:
-    - text: Da PostgreSQL a database di Azure per PostgreSQL
-      url: /azure/postgresql/howto-migrate-using-dump-and-restore
-      itemType: how-to-guide
-    - text: Da MySQL a database di Azure per MySQL
-      url: /azure/mysql/concepts-migrate-import-export
-      itemType: how-to-guide
-    - text: Da MariaDB a database di Azure per MariaDB
-      url: /azure/mariadb/howto-migrate-dump-restore
-      itemType: how-to-guide
-  - title: NoSQL
-    links:
-    - text: Da MongoDB a Azure Cosmos DB
-      url: /azure/dms/tutorial-mongodb-cosmos-db-online?toc=/azure/cosmos-db/toc.json&bc=/azure/cosmos-db/breadcrumb/toc.json
-      itemType: how-to-guide
-    - text: Microsoft Azure archiviazione tabelle Azure Cosmos DB
-      url: /azure/cosmos-db/table-import
-      itemType: how-to-guide
-    - text: Da Cassandra a Azure Cosmos DB
-      url: /azure/cosmos-db/cassandra-import-data
-      itemType: how-to-guide
-  - title: Risorse
-    links:
-    - text: Centro migrazione di Azure
-      url: https://azure.microsoft.com/migration/
-      itemType: reference
-    - text: Risorse del partner di migrazione
-      url: https://www.microsoft.com/azure/partners/advspec?filters=windows-server-and-sql-server-migration-to-azure
-      itemType: reference
-    - text: Economia del cloud
-      url: https://azure.microsoft.com/overview/cloud-economics
-      itemType: reference
-    - text: Calcolatore costo totale di proprietà
-      url: https://azure.microsoft.com/pricing/tco/calculator/
-      itemType: reference
-    - text: Vantaggio Azure Hybrid
-      url: https://azure.microsoft.com/pricing/hybrid-benefit/
-      itemType: reference
-    - text: Esplorare l'architettura di Azure
-      url: https://docs.microsoft.com/azure/architecture/browse/?azure_categories=migration
-      itemType: reference
-    - text: Framework di adozione cloud Microsoft per Azure
-      url: https://azure.microsoft.com/cloud-adoption-framework/#cloud-adoption-journey
-      itemType: reference
-    - text: Esplora le storie dei clienti
-      url: https://customers.microsoft.com/en-us/search?sq=&ff=&p=0&so=story_publish_date%20desc
-      itemType: reference
+    - title: SQL Server a
+      links:
+        - text: SQL Server (aggiornamento)
+          url: /sql/database-engine/install-windows/upgrade-sql-server
+          itemType: how-to-guide
+        - text: Database SQL di Azure
+          url: /azure/azure-sql/migration-guides/database/sql-server-to-sql-database-overview
+          itemType: how-to-guide
+        - text: Istanza gestita di SQL di Azure
+          url: /azure/azure-sql/migration-guides/managed-instance/sql-server-to-managed-instance-overview
+          itemType: how-to-guide
+        - text: SQL Server in macchine virtuali di Azure
+          url: /azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide
+          itemType: how-to-guide
+        - text: Azure Synapse Analytics
+          url: /azure/synapse-analytics/migration-guides/migrate-to-synapse-analytics-guide
+          itemType: how-to-guide
+    - title: Da Oracle a
+      links:
+        - text: Database di Azure per PostgreSQL
+          url: /azure/postgresql/howto-migrate-from-oracle
+          itemType: how-to-guide
+        - text: SQL Server
+          url: /sql/sql-server/migrate/guides/oracle-to-sql-server
+          itemType: how-to-guide
+        - text: Database SQL di Azure
+          url: /azure/azure-sql/migration-guides/database/oracle-to-sql-database-guide
+          itemType: how-to-guide
+        - text: Istanza gestita di SQL di Azure
+          url: /azure/azure-sql/migration-guides/managed-instance/oracle-to-managed-instance-guide
+          itemType: how-to-guide
+        - text: SQL Server in macchine virtuali di Azure
+          url: /azure/azure-sql/migration-guides/virtual-machines/oracle-to-sql-on-azure-vm-guide
+          itemType: how-to-guide
+        - text: Azure Synapse Analytics
+          url: /azure/synapse-analytics/migration-guides/migrate-to-synapse-analytics-guide
+          itemType: how-to-guide
+    - title: Da Db2 a
+      links:
+        - text: SQL Server
+          url: /sql/sql-server/migrate/guides/db2-to-sql-server
+          itemType: how-to-guide
+        - text: Database SQL di Azure
+          url: /azure/azure-sql/migration-guides/database/db2-to-sql-database-guide
+          itemType: how-to-guide
+        - text: Istanza gestita di SQL di Azure
+          url: /azure/azure-sql/migration-guides/managed-instance/db2-to-managed-instance-guide
+          itemType: how-to-guide
+        - text: SQL Server in macchine virtuali di Azure
+          url: /azure/azure-sql/migration-guides/virtual-machines/db2-to-sql-on-azure-vm-guide
+          itemType: how-to-guide
+    - title: Accesso a
+      links:
+        - text: SQL Server
+          url: /sql/sql-server/migrate/guides/access-to-sql-server
+          itemType: how-to-guide
+        - text: Database SQL di Azure
+          url: /azure/azure-sql/migration-guides/database/access-to-sql-database-guide
+          itemType: how-to-guide
+    - title: MySQL in
+      links:
+        - text: Database di Azure per MySQL
+          url: /azure/mysql/concepts-migrate-import-export
+          itemType: how-to-guide
+        - text: SQL Server
+          url: /sql/sql-server/migrate/guides/mysql-to-sql-server
+          itemType: how-to-guide
+        - text: Database SQL di Azure
+          url: /azure/azure-sql/migration-guides/database/mysql-to-sql-database-guide
+          itemType: how-to-guide
+    - title: SAP ASE a
+      links:
+        - text: SQL Server
+          url: /sql/sql-server/migrate/guides/sap-ase-to-sql-server
+          itemType: how-to-guide
+        - text: Database SQL di Azure
+          url: /azure/azure-sql/migration-guides/database/sap-ase-to-sql-database
+          itemType: how-to-guide
+    - title: Open source
+      links:
+        - text: Da PostgreSQL a Database di Azure per PostgreSQL
+          url: /azure/postgresql/howto-migrate-using-dump-and-restore
+          itemType: how-to-guide
+        - text: Da MySQL a Database di Azure per MySQL
+          url: /azure/mysql/concepts-migrate-import-export
+          itemType: how-to-guide
+        - text: Da MariaDB a Database di Azure per MariaDB
+          url: /azure/mariadb/howto-migrate-dump-restore
+          itemType: how-to-guide
+    - title: NoSQL
+      links:
+        - text: MongoDB da Azure Cosmos DB
+          url: /azure/dms/tutorial-mongodb-cosmos-db-online?toc=/azure/cosmos-db/toc.json&bc=/azure/cosmos-db/breadcrumb/toc.json
+          itemType: how-to-guide
+        - text: Microsoft Azure archiviazione tabelle da Azure Cosmos DB
+          url: /azure/cosmos-db/table-import
+          itemType: how-to-guide
+        - text: Cassandra da Azure Cosmos DB
+          url: /azure/cosmos-db/cassandra-import-data
+          itemType: how-to-guide
+    - title: Risorse
+      links:
+        - text: Panoramica del video introduttivo
+          url: 'https://channel9.msdn.com/Shows/Data-Exposed/Get-Started-with-the-New-Database-Migration-Guides-to-Migrate-Your-Databases-to-Azure?WT.mc_id=dataexposed-c9-niner-mighub'
+          itemType: video
+        - text: Centro migrazione di Azure
+          url: 'https://azure.microsoft.com/migration/'
+          itemType: reference
+        - text: Risorse dei partner di migrazione
+          url: 'https://www.microsoft.com/azure/partners/advspec?filters=windows-server-and-sql-server-migration-to-azure'
+          itemType: reference
+        - text: Economia del cloud
+          url: 'https://azure.microsoft.com/overview/cloud-economics'
+          itemType: reference
+        - text: Calcolatore del costo totale di proprietà
+          url: 'https://azure.microsoft.com/pricing/tco/calculator/'
+          itemType: reference
+        - text: Vantaggio Azure Hybrid
+          url: 'https://azure.microsoft.com/pricing/hybrid-benefit/'
+          itemType: reference
+        - text: Esplorare l'architettura di Azure
+          url: 'https://docs.microsoft.com/azure/architecture/browse/?azure_categories=migration'
+          itemType: reference
+        - text: Microsoft Cloud Adoption Framework per Azure
+          url: 'https://azure.microsoft.com/cloud-adoption-framework/#cloud-adoption-journey'
+          itemType: reference
+        - text: Esplora i casi di successo dei clienti
+          url: 'https://customers.microsoft.com/en-us/search?sq=&ff=&p=0&so=story_publish_date%20desc'
+          itemType: reference
 tools:
   title: Strumenti di migrazione
   items:
-  - title: Azure Migrate
-    imageSrc: media/index/azure-migrate-symbol.svg
-    url: /azure/migrate/
-  - title: Servizio Migrazione del database di Azure
-    imageSrc: media/index/migration-service-symbol.svg
-    url: /azure/dms/
-  - title: Data Migration Assistant (DMA)
-    imageSrc: media/index/database-migration-assistant-symbol.svg
-    url: /sql/dma/dma-overview
-  - title: SQL Server Migration Assistant (SSMA)
-    imageSrc: media/index/sql-server-migration-assistant-symbol.svg
-    url: /sql/ssma/sql-server-migration-assistant
-  - title: Azure Synapse Pathway
-    imageSrc: media/index/azure-synapse-pathway-symbol.svg
-    url: /sql/tools/synapse-pathway/azure-synapse-pathway-overview
+    - title: Azure Migrate
+      imageSrc: media/index/azure-migrate-symbol.svg
+      url: /azure/migrate/
+    - title: Servizio Migrazione del database di Azure
+      imageSrc: media/index/migration-service-symbol.svg
+      url: /azure/dms/
+    - title: Data Migration Assistant (DMA)
+      imageSrc: media/index/database-migration-assistant-symbol.svg
+      url: /sql/dma/dma-overview
+    - title: SQL Server Migration Assistant (SSMA)
+      imageSrc: media/index/sql-server-migration-assistant-symbol.svg
+      url: /sql/ssma/sql-server-migration-assistant
+    - title: Azure Synapse Pathway
+      imageSrc: media/index/azure-synapse-pathway-symbol.svg
+      url: /sql/tools/synapse-pathway/azure-synapse-pathway-overview
 additionalContent:
   sections:
-  - title: Case Study recenti sui clienti
-    items:
-    - title: Ferguson (Stati Uniti)
-      summary: Il maggior numero di impianti idraulici degli Stati Uniti USA Azure Arc SQL Istanza gestita per estendere i servizi di Azure in locale.
-      url: https://customers.microsoft.com/story/844232-ferguson-enterprises-retailers-azure-arc
-    - title: Clearsale (Brasile)
-      summary: ClearSale compila le basi per la crescita e l'innovazione eseguendo la migrazione ad Azure con il livello di servizio iperscalabile del database SQL di Azure.
-      url: https://customers.microsoft.com/story/773410-clearsale-partner-professional-services-azure
-    - title: Willis Towers Watson (Regno Unito)
-      summary: Willis Towers Watson raggiunge una scalabilità uniforme nel cloud eseguendo la migrazione al database SQL di Azure.
-      url: https://customers.microsoft.com/story/willis-towers-watson-partner-professional-services-azure
-    - title: Paychex (Stati Uniti)
-      summary: Paychex si basa sui pool elastici del database SQL di Azure per gestire una crescita esplosiva.
-      url: https://customers.microsoft.com/story/paychex-azure-sql-database-us
-    - title: Sistemi innovativi (Stati Uniti)
-      summary: I sistemi innovativi uniscono i database lontani nel cloud tramite il servizio migrazione del database di Azure.
-      url: https://customers.microsoft.com/story/innovative-systems-partner-professional-services-azure-sql-database
-    - title: Gruppo capiti (Regno Unito)
-      summary: La lettura del cloud si sta migrando i database 10.000 e trova la nuova scalabilità con Azure.
-      url: https://customers.microsoft.com/story/724217-capita-uk-professional-services-azure-sql-database
-    - title: Intershop (Stati Uniti)
-      summary: Intershop, un leader di e-commerce, esegue la migrazione a SQL Server e al database SQL di Azure da Oracle, aumenta le prestazioni del prodotto e apre i mercati.
-      url: https://customers.microsoft.com/story/intershop-partner-professional-services-azure-sql-database
-    - title: Aree di autenticazione di Minecraft (Stati Uniti)
-      summary: Le aree di autenticazione di Minecraft migrano da AWS ad Azure con un'interferenza minima per la base utente.
-      url: https://developer.microsoft.com/games/blog/migrating-minecraft-realms-from-aws-to-azure/
-    - title: Marketing CCC (Giappone)
-      summary: CCC marketing ha cambiato l'infrastruttura di analisi dei dati da Oracle a Microsoft Azure.
-      url: https://customers.microsoft.com/story/843276-ccc-marketing-professional-services-azure-en-japan
+    - title: Case study recenti sui clienti
+      items:
+        - title: Ferguson (Stati Uniti)
+          summary: Il più grande distributore all'ingrosso Azure Arc usa SQL Istanza gestita per estendere i servizi di Azure in locale.
+          url: 'https://customers.microsoft.com/story/844232-ferguson-enterprises-retailers-azure-arc'
+        - title: Clearsale (Brasile)
+          summary: ClearSale crea le basi per la crescita e l'innovazione eseguendo la migrazione ad Azure con il database SQL di Azure di servizio iperscalabilità.
+          url: 'https://customers.microsoft.com/story/773410-clearsale-partner-professional-services-azure'
+        - title: Willis Towers Watson (Regno Unito)
+          summary: Willis Towers Watson ottiene una facile scalabilità nel cloud eseguendo la migrazione database SQL di Azure.
+          url: 'https://customers.microsoft.com/story/willis-towers-watson-partner-professional-services-azure'
+        - title: Paychex (Stati Uniti)
+          summary: Paychex si basa database SQL di Azure pool elastici per gestire la crescita esponenziale.
+          url: 'https://customers.microsoft.com/story/paychex-azure-sql-database-us'
+        - title: Sistemi innovative (Stati Uniti)
+          summary: I sistemi innovative uniscono i database più disinvolti nel cloud grazie alla potenza delle migrazioni tramite Servizio Migrazione del database di Azure.
+          url: 'https://customers.microsoft.com/story/innovative-systems-partner-professional-services-azure-sql-database'
+        - title: Capita Group (Regno Unito)
+          summary: Capita Reading Cloud esegue la migrazione di 10.000 database e trova nuova scalabilità con Azure.
+          url: 'https://customers.microsoft.com/story/724217-capita-uk-professional-services-azure-sql-database'
+        - title: Intershop (Stati Uniti)
+          summary: 'Intershop, leader dell''e-commerce, esegue la migrazione a SQL Server e database SQL di Azure da Oracle, migliora le prestazioni del prodotto e apre i mercati.'
+          url: 'https://customers.microsoft.com/story/intershop-partner-professional-services-azure-sql-database'
+        - title: Aree di autenticazione di Realms (Stati Uniti)
+          summary: Realms esegue la migrazione da AWS ad Azure con un'interruzione minima della base utenti.
+          url: 'https://developer.microsoft.com/games/blog/migrating-minecraft-realms-from-aws-to-azure/'
+        - title: CCC Marketing (Giappone)
+          summary: CCC Marketing ha commutato l'infrastruttura di analisi dei dati da Oracle a Microsoft Azure.
+          url: 'https://customers.microsoft.com/story/843276-ccc-marketing-professional-services-azure-en-japan'

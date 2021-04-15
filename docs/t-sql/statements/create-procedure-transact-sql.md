@@ -47,18 +47,18 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 913da2a77589a47989dbfe1bf182a580e03c1a1b
-ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.openlocfilehash: 81fb51abdf711d04117a1a210025e30be914784f
+ms.sourcegitcommit: 52dd1719d7b63581b1d34b755bf9d077c0fc6c44
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104755201"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107373060"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Crea una stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] o CLR (Common Language Runtime) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Le stored procedure sono simili alle procedure di altri linguaggi di programmazione in quanto sono in grado di:
+Crea un [!INCLUDE[tsql](../../includes/tsql-md.md)] oggetto o common language runtime (CLR) stored procedure in , e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] . Le stored procedure sono simili alle procedure di altri linguaggi di programmazione in quanto sono in grado di:
 
 - Accettare parametri di input e restituire più valori sotto forma di parametri di output alla procedura o al batch che esegue la chiamata.
 - Includere istruzioni di programmazione che eseguono le operazioni nel database, tra cui la chiamata di altre procedure.

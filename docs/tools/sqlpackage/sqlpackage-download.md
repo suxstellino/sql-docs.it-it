@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 03/10/2021
-ms.openlocfilehash: 2077800356a065ae4650cf6ab97ea45c3c537b8c
-ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
+ms.openlocfilehash: 577900831b14a96f6514305ca5a562b907d47b35
+ms.sourcegitcommit: 52dd1719d7b63581b1d34b755bf9d077c0fc6c44
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102622767"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107373040"
 ---
 # <a name="download-and-install-sqlpackage"></a>Scaricare e installare sqlpackage
 
@@ -33,10 +33,10 @@ Scaricare e installare la versione più recente per .NET Framework e le anteprim
 Per informazioni dettagliate sulla versione più recente, vedere le [note sulla versione](release-notes-sqlpackage.md). Per scaricare altre lingue, vedere la sezione [Lingue disponibili](#available-languages).
 
 
-È disponibile un collegamento Evergreen ( [https://aka.ms/sqlpackage-linux](https://aka.ms/sqlpackage-linux) ) che punta alla versione corrente di SqlPackage per [Linux .NET Core](#get-sqlpackage-net-core-for-linux), che può essere usata in automazione di ambienti con la versione più recente di SqlPackage.
+È disponibile un collegamento sempreverde ( ) che punta alla versione corrente di [https://aka.ms/sqlpackage-linux](https://aka.ms/sqlpackage-linux) sqlpackage per [Linux .NET Core,](#get-sqlpackage-net-core-for-linux)che può essere usato nell'automazione di ambienti con la versione più recente di sqlpackage.
 
 ## <a name="dacfx"></a>DacFx
-SqlPackage è un'interfaccia della riga di comando per il framework DacFx, che espone alcune delle API DacFx pubbliche. DacServices ([Microsoft.SqlServer.Dac](/dotnet/api/microsoft.sqlserver.dac.dacservices)) è un meccanismo correlato per l'integrazione della distribuzione di database nella pipeline dell'applicazione.  L'API DacServices è disponibile in un pacchetto tramite NuGet, [Microsoft.SqlServer.DACFx](https://www.NuGet.org/packages/Microsoft.SqlServer.DACFx).  La versione corrente di DacFx è 150.4897.1.
+SqlPackage è un'interfaccia della riga di comando per il framework DacFx, che espone alcune delle API DacFx pubbliche. DacServices ([Microsoft.SqlServer.Dac](/dotnet/api/microsoft.sqlserver.dac.dacservices)) è un meccanismo correlato per l'integrazione della distribuzione di database nella pipeline dell'applicazione.  L'API DacServices è disponibile in un pacchetto tramite NuGet, [Microsoft.SqlServer.DACFx](https://www.NuGet.org/packages/Microsoft.SqlServer.DACFx).  La versione corrente di DacFx è 150.5084.2.
 
 L'installazione del pacchetto NuGet tramite l'interfaccia della riga di comando di .NET viene eseguita con questo comando:
 
@@ -93,7 +93,7 @@ Questa versione di sqlpackage include un'esperienza di installazione Windows sta
 
 ## <a name="get-sqlpackage-net-core-for-linux"></a>Ottenere sqlpackage .NET Core per Linux
 
-1. Scaricare [SqlPackage per Linux](https://go.microsoft.com/fwlink/?linkid=2157202) usando uno dei programmi di installazione o l'archivio tar. gz.
+1. Scaricare [sqlpackage per Linux](https://go.microsoft.com/fwlink/?linkid=2157202) usando uno dei programmi di installazione o l'archivio tar.gz.
 2. Per estrarre il file e avviare sqlpackage, aprire una nuova finestra del terminale e digitare i comandi seguenti:
 
    ```bash
@@ -165,7 +165,7 @@ sqlpackage può essere eseguito in Windows, macOS e Linux ed è compilato con .N
 
 - Red Hat Enterprise Linux 7 e successive
 - SUSE Linux Enterprise Server v12 SP2 e successive
-- Ubuntu 16,04, 18,04, 20,04
+- Ubuntu 16.04, 18.04, 20.04
 
 ## <a name="available-languages"></a>Lingue disponibili
 
