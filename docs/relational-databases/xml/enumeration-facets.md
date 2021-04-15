@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - enumeration facets
 ms.assetid: dec23a79-ddd6-4701-9721-55a2c435a34d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e8939b3c8654452f50b280ad66fe221f94220754
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c4168aea686ae3c36ec771effc077f607e5b142a
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85633134"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107490965"
 ---
 # <a name="enumeration-facets"></a>facet di enumerazione
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

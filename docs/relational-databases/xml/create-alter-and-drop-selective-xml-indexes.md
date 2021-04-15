@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: c398f396-f630-4a2d-a264-f243c5346de1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4a06f8c8a57fe68ed50f4c49f8d9028b86fc7a34
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a2e6b5b0ee1b5ea0d4ea0ea6dc0982c4a9da40fb
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85691689"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107490988"
 ---
 # <a name="create-alter-and-drop-selective-xml-indexes"></a>Creare, modificare o eliminare indici XML selettivi
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

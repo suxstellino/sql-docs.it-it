@@ -11,17 +11,17 @@ f1_keywords:
 - sql11.ssms.XeNewEventSession.Targets.f1
 - sql11.ssms.XeNewEventSession.Advanced.f1
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.reviewer: maghan
 ms.date: 04/16/2020
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37fdafe41500e8b146aed8e9840ee3027cc86281
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: 9459b2a2b01670a0c6201586597ba02eb1218853
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481382"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107492397"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Guida introduttiva: Eventi estesi in SQL Server
 
@@ -250,7 +250,7 @@ event_session_address  5
 event_session_id       5
 is_trigger_event       4
 trace_event_id         3
-**_/
+***/
 ```
 
 <a name="select-the-full-results-xml-37"/>
@@ -260,7 +260,7 @@ trace_event_id         3
 In SSML eseguire l'istruzione T-SQL SELECT seguente per restituire i risultati in cui ogni riga include i dati sull'occorrenza di un evento. CAST AS XML consente di visualizzare facilmente i risultati.
 
 > [!NOTE]
-> Il sistema di eventi aggiunge sempre un numero lungo al nome di file _.xel* event_file specificato. Prima di poter eseguire l'istruzione SELECT dal file, è necessario copiare il nome completo specificato dal sistema e incollarlo nell'istruzione SELECT.
+> Il sistema di eventi aggiunge sempre un numero lungo al nome file event_file *xel* specificato. Prima di poter eseguire l'istruzione SELECT dal file, è necessario copiare il nome completo specificato dal sistema e incollarlo nell'istruzione SELECT.
 
 ```sql
 SELECT

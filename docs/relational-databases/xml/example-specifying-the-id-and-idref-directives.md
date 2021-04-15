@@ -12,14 +12,14 @@ helpviewer_keywords:
 - IDREF directive
 - ID directive
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a3afe4f049cf74353a790f6a9e3fdcdc42902d72
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 98248798cc991c14017c3d0ceb6b5650f632ef9b
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85632466"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107490884"
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>Esempio: Specifica delle direttive ID e IDREF
 

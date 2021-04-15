@@ -1,6 +1,6 @@
 ---
 title: Utilizzare la sessione system_health
-description: La sessione di eventi estesi system_health è inclusa in SQL Server. Questa sessione raccoglie i dati di sistema per risolvere i problemi di prestazioni del motore di database.
+description: La system_health eventi estesi è inclusa in SQL Server. Questa sessione raccoglie i dati di sistema per risolvere i problemi relativi alle prestazioni per motore di database.
 ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - system_health session [SQL Server extended events]
 - system health session [SQL Server extended events]
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f157320744b80593264225be72d42d6f08ba398f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: fcb313b148ef24b924e27628e0aa912630d125ff
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481322"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107492555"
 ---
 # <a name="use-the-system_health-session"></a>Utilizzare la sessione system_health
 
@@ -48,19 +48,19 @@ La sessione raccoglie le informazioni seguenti:
   
 -   *Callstack*, *sql_text* e *session_id* per qualsiasi sessione rimasta in attesa per molto tempo a causa di attese preemptive. La durata varia in base al tipo di attesa. In un'attesa preemptive [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in attesa di chiamate API esterne.  
   
--   *Callstack* e *session_id* per l'allocazione CLR e per errori di allocazione virtuali.  
+-   Lo *stack di chiamate e* session_id errori di allocazione CLR ed allocazione virtuale.   
   
 -   Eventi del buffer circolare per il broker di memoria, il monitoraggio dell'utilità di pianificazione, la memoria insufficiente del nodo di memoria, la sicurezza e la connettività.  
   
 -   Risultati del componente di sistema da `sp_server_diagnostics`.  
   
--   Integrità dell'istanza raccolta da *scheduler_monitor_system_health_ring_buffer_recorded*.  
+-   Integrità dell'istanza raccolta *da scheduler_monitor_system_health_ring_buffer_recorded*.  
   
 -   Errori di allocazione CLR.  
   
--   Errori di connettività usando *connectivity_ring_buffer_recorded*.  
+-   Errori di connettività *tramite connectivity_ring_buffer_recorded*.  
   
--   Errori di sicurezza usando *security_error_ring_buffer_recorded*.  
+-   Errori di sicurezza con *security_error_ring_buffer_recorded*.  
 
 > [!NOTE]
 > Per altre informazioni, vedere [Uso di deadlock in Guida per il controllo delle versioni delle righe e il blocco della transazione](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#deadlocks).   
@@ -91,6 +91,6 @@ Tenere presente che dopo aver ripristinato la sessione, è necessario avviarla t
   
 ## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)    
- [Strumenti degli eventi estesi](../../relational-databases/extended-events/extended-events-tools.md)    
- [Errori del motore di database](../../relational-databases/errors-events/database-engine-events-and-errors.md)    
+ [Strumenti per gli eventi estesi](../../relational-databases/extended-events/extended-events-tools.md)    
+ [motore di database errori](../../relational-databases/errors-events/database-engine-events-and-errors.md)    
  [Viste del catalogo per i messaggi (di errore) - Sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) 

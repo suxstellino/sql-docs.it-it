@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8352706512e71a5cba3a0b22befe2b7416d276bc
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6938d04f853f61fbb07a9cde443e286ba6bc5e98
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99209351"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107491231"
 ---
 # <a name="sp_change_log_shipping_secondary_primary-transact-sql"></a>sp_change_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,21 +48,21 @@ sp_change_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @primary_server = ] 'primary_server'` Nome dell'istanza primaria di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nella configurazione log shipping. *primary_server* è di **tipo sysname** e non può essere null.  
+`[ @primary_server = ] 'primary_server'` Nome dell'istanza primaria [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] dell'oggetto nella log shipping configurazione. *primary_server* è **di tipo sysname** e non può essere NULL.  
   
-`[ @primary_database = ] 'primary_database'` Nome del database nel server primario. *primary_database* è di **tipo sysname** e non prevede alcun valore predefinito.  
+`[ @primary_database = ] 'primary_database'` Nome del database nel server primario. *primary_database* è **sysname**, senza alcun valore predefinito.  
   
-`[ @backup_source_directory = ] 'backup_source_directory'` Directory in cui vengono archiviati i file di backup del log delle transazioni dal server primario. *backup_source_directory* è di **tipo nvarchar (500)** e non può essere null.  
+`[ @backup_source_directory = ] 'backup_source_directory'` Directory in cui vengono archiviati i file di backup del log delle transazioni dal server primario. *backup_source_directory* è **di tipo nvarchar(500)** e non può essere NULL.  
   
-`[ @backup_destination_directory = ] 'backup_destination_directory'` Directory nel server secondario in cui vengono copiati i file di backup. *backup_destination_directory* è di **tipo nvarchar (500)** e non può essere null.  
+`[ @backup_destination_directory = ] 'backup_destination_directory'` Directory nel server secondario in cui vengono copiati i file di backup. *backup_destination_directory* è **di tipo nvarchar(500)** e non può essere NULL.  
   
-`[ @file_retention_period = ] 'file_retention_period'` Periodo di tempo in minuti in cui la cronologia verrà mantenuta. *history_retention_period* è di **tipo int** e il valore predefinito è null. Se non si specifica un valore, verrà utilizzato il valore 14420.  
+`[ @file_retention_period = ] 'file_retention_period'` Periodo di tempo in minuti in cui verranno conservati i file di backup. *file_retention_period* è **di tipo int**, con valore predefinito NULL. Se non si specifica un valore, verrà utilizzato il valore 14420.  
   
-`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` Modalità di sicurezza utilizzata per la connessione al server di monitoraggio.  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` Modalità di sicurezza utilizzata per connettersi al server di monitoraggio.  
   
  1 = Autenticazione di Windows  
   
- 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione di. *monitor_server_security_mode* è di **bit** e non può essere null.  
+ 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Autenticazione. *monitor_server_security_mode* è **di tipo bit** e non può essere NULL.  
   
 `[ @monitor_server_login = ] 'monitor_server_login'` Nome utente dell'account utilizzato per accedere al server di monitoraggio.  
   
@@ -75,14 +75,14 @@ sp_change_log_shipping_secondary_primary
  nessuno  
   
 ## <a name="remarks"></a>Osservazioni  
- **sp_change_log_shipping_secondary_primary** deve essere eseguito dal database **Master** nel server secondario. Questa stored procedure esegue le operazioni seguenti:  
+ **sp_change_log_shipping_secondary_primary** deve essere eseguito dal database **master** nel server secondario. Questa stored procedure esegue le operazioni seguenti:  
   
-1.  Modifica le impostazioni nei record di **log_shipping_secondary** , se necessario.  
+1.  Modifica le impostazioni nei **record log_shipping_secondary** in base alle esigenze.  
   
-2.  Se il server di monitoraggio è diverso dal server secondario, modifica il record di monitoraggio in **log_shipping_monitor_secondary** sul server di monitoraggio utilizzando gli argomenti specificati, se necessario.  
+2.  Se il server di monitoraggio è diverso dal  server secondario, modifica il record di monitoraggio nel log_shipping_monitor_secondary nel server di monitoraggio usando gli argomenti specificati, se necessario.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Questa procedura può essere eseguita solo dai membri del ruolo predefinito del server **sysadmin** .  
+ Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire questa procedura.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

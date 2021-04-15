@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 524be57031368538271d1bde0016121644b9fed4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 941d6672dfa0a8d3b14b189d2740e7dbe149356a
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729156"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107491200"
 ---
 # <a name="add-business-logic-to-xml-data"></a>Aggiunta di una logica di business ai dati XML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

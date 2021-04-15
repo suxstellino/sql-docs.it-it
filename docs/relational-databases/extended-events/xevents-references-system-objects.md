@@ -1,21 +1,21 @@
 ---
 title: Oggetti di sistema correlati a XEvent
-description: Queste risorse sono correlate agli eventi estesi, ad esempio come gli oggetti di sistema li supportano, come SQL Server li usa e aspetti specifici del database SQL di Azure.
+description: Queste risorse sono correlate agli eventi estesi, tra cui il modo in cui gli oggetti di sistema li supportano, SQL Server modo in cui vengono utilizzati e aspetti specifici per database SQL di Azure.
 ms.date: 03/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: jukoesma
 ms.technology: xevents
 ms.topic: reference
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef31edf367eacd41135bb4db9a58cd8ba4950de8
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 901f06bd930064810d8c186ba8e5c92a1c21d1c7
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100346724"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107492353"
 ---
 # <a name="system-objects-that-support-extended-events"></a>Oggetti di sistema che supportano eventi estesi
 

@@ -1,6 +1,6 @@
 ---
 title: Considerazioni sulla sicurezza degli updategram (SQLXML)
-description: Informazioni sulle linee guida sulla sicurezza per l'utilizzo di updategram in SQLXML 4,0.
+description: Informazioni sulle linee guida sulla sicurezza per l'utilizzo degli updategram in SQLXML 4.0.
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - security [SQLXML], updategrams
 - updategrams [SQLXML], security
 ms.assetid: 00dc6cf4-a2e8-4cca-bdd6-d5122102a82d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23214cd1120061f6da9c6df46f08fd1c7a0df04a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: cfad007dda4371a17caafa5d1c3841c87c25e770
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97479232"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107491587"
 ---
 # <a name="updategram-security-considerations-sqlxml-40"></a>Considerazioni sulla sicurezza degli updategram (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

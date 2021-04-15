@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 74e447caefd30eba8ccfc9ab27db2c74d2f63c20
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c0b79a861d10c2c0997d7455eb8e7f212706a495
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729949"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107490818"
 ---
 # <a name="examples-using-path-mode"></a>Esempi: Uso della modalità PATH
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

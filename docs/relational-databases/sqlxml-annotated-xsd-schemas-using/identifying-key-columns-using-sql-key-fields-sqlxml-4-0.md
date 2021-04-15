@@ -1,6 +1,6 @@
 ---
-title: 'Identificazione delle colonne chiave mediante SQL: key-fields (SQLXML)'
-description: "Per informazioni su come garantire l'annidamento appropriato in un risultato della query SQLXML 4,0, specificare l'annotazione sql: key-fields in una query XPath per identificare le colonne chiave."
+title: Identificare le colonne chiave usando sql:key-fields (SQLXML)
+description: Informazioni su come garantire un annidamento corretto nei risultati di una query SQLXML 4.0 specificando l'annotazione sql:key-fields in una query XPath per identificare le colonne chiave.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,40 +18,40 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - key-fields annotation
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e24eac5a88215a1550beb8c8006852ed7263181
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: d5267f0ad5fdf26b256ec78028e1bbe6f9b07328
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461782"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107492028"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identificazione delle colonne chiave mediante sql:key-fields (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Quando si specifica una query XPath su uno schema XSD, nella maggior parte dei casi sono necessarie informazioni chiave per ottenere la nidificazione appropriata nel risultato. La specifica dell'annotazione **SQL: key-fields** è un modo per verificare che venga generata la gerarchia appropriata.  
+  Quando si specifica una query XPath su uno schema XSD, nella maggior parte dei casi sono necessarie informazioni chiave per ottenere la nidificazione appropriata nel risultato. Specificare **l'annotazione sql:key-fields** è un modo per garantire che la gerarchia appropriata sia generata.  
   
 > [!NOTE]  
->  Per garantire l'annidamento appropriato, è consigliabile specificare **SQL: key-fields** per gli elementi con mapping alle tabelle. Il codice XML prodotto riconosce l'ordinamento del set di risultati sottostante. Se **SQL: key-fields** non è specificato, il codice XML generato potrebbe non essere formato correttamente.  
+>  Per garantire un annidamento corretto, è consigliabile specificare **sql:key-fields** per gli elementi mappati alle tabelle. Il codice XML prodotto riconosce l'ordinamento del set di risultati sottostante. Se **sql:key-fields** non viene specificato, il formato del codice XML generato potrebbe non essere corretto.  
   
- Il valore di **SQL: key-fields** identifica le colonne che identificano in modo univoco le righe nella relazione. Se sono necessarie più colonne per identificare in modo univoco una riga, i valori delle colonne vengono delimitati da spazi.  
+ Il valore **di sql:key-fields** identifica le colonne che identificano in modo univoco le righe nella relazione. Se sono necessarie più colonne per identificare in modo univoco una riga, i valori delle colonne vengono delimitati da spazi.  
   
- È necessario utilizzare l'annotazione **SQL: key-fields** quando un elemento contiene un oggetto **\<sql:relationship>** definito tra l'elemento e un elemento figlio ma non fornisce la chiave primaria della tabella specificata nell'elemento padre.  
+ È necessario usare l'annotazione **sql:key-fields** quando un elemento contiene un elemento definito tra l'elemento e un elemento figlio, ma non fornisce la chiave primaria della tabella specificata **\<sql:relationship>** nell'elemento padre.  
   
 ## <a name="examples"></a>Esempio  
- Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per altre informazioni, vedere [Requisiti per l'esecuzione di esempi SQLXML.](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)  
   
-### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>R. Produzione della nidificazione appropriata quando non \<sql:relationship> fornisce informazioni sufficienti  
- Questo esempio mostra dove è necessario specificare **SQL: key-fields** .  
+### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>R. Generazione dell'annidamento appropriato quando \<sql:relationship> non fornisce informazioni sufficienti  
+ Questo esempio mostra dove **è necessario specificare sql:key-fields.**  
   
- Si consideri lo schema seguente: Lo schema specifica una gerarchia tra gli **\<Order>** **\<Customer>** elementi e in cui l' **\<Order>** elemento è il padre e l' **\<Customer>** elemento è un elemento figlio.  
+ Si consideri lo schema seguente: Lo schema specifica una gerarchia tra gli **\<Order>** elementi e in cui l'elemento è **\<Customer>** l'elemento padre e **\<Order>** **\<Customer>** l'elemento è un elemento figlio.  
   
- Il **\<sql:relationship>** tag viene usato per specificare la relazione padre-figlio. che identifica CustomerID nella tabella Sales.SalesOrderHeader come chiave padre che fa riferimento alla chiave figlio CustomerID nella tabella Sales.Customer. Le informazioni fornite in **\<sql:relationship>** non sono sufficienti per identificare in modo univoco le righe nella tabella padre (Sales. SalesOrderHeader). Pertanto, senza l'annotazione **SQL: key-fields** , la gerarchia generata non è precisa.  
+ Il **\<sql:relationship>** tag viene usato per specificare la relazione padre-figlio. che identifica CustomerID nella tabella Sales.SalesOrderHeader come chiave padre che fa riferimento alla chiave figlio CustomerID nella tabella Sales.Customer. Le informazioni fornite in **\<sql:relationship>** non sono sufficienti per identificare in modo univoco le righe nella tabella padre (Sales.SalesOrderHeader). Pertanto, senza **l'annotazione sql:key-fields,** la gerarchia generata non è accurata.  
   
- Con **SQL: key-fields** specificato in **\<Order>** , l'annotazione identifica in modo univoco le righe nel padre (tabella Sales. SalesOrderHeader) e i relativi elementi figlio vengono visualizzati al di sotto del relativo elemento padre.  
+ Con **sql:key-fields** specificato in , l'annotazione identifica in modo univoco le righe nell'elemento padre **\<Order>** (tabella Sales.SalesOrderHeader) e i relativi elementi figlio vengono visualizzati sotto il relativo elemento padre.  
   
  Lo schema è il seguente:  
   
@@ -90,7 +90,7 @@ ms.locfileid: "97461782"
   
 1.  Copiare il codice dello schema precedente e incollarlo in un file di testo. Salvare il file come KeyFields1.xml.  
   
-2.  Copiare il modello seguente e incollarlo in un file di testo. Salvare il file come KeyFields1T.xml nella stessa directory nella quale è stato salvato KeyFields1.xml. La query XPath nel modello restituisce tutti gli **\<Order>** elementi con un CustomerID minore di 3.  
+2.  Copiare il modello seguente e incollarlo in un file di testo. Salvare il file come KeyFields1T.xml nella stessa directory nella quale è stato salvato KeyFields1.xml. La query XPath nel modello restituisce tutti gli **\<Order>** elementi con CustomerID minore di 3.  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -108,7 +108,7 @@ ms.locfileid: "97461782"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
 
-     Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per altre informazioni, vedere [Utilizzo di ADO per l'esecuzione di query SQLXML.](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)  
   
  Di seguito è riportato il set di risultati parziale:  
   
@@ -128,7 +128,7 @@ ms.locfileid: "97461782"
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. Specifica di sql:key-fields per produrre una nidificazione appropriata nel risultato  
- Nello schema seguente non è specificata alcuna gerarchia usando **\<sql:relationship>** . Lo schema richiede ancora la specifica dell'annotazione **SQL: key-fields** per identificare in modo univoco i dipendenti nella tabella HumanResources. Employee.  
+ Nello schema seguente non è specificata alcuna gerarchia tramite **\<sql:relationship>** . Lo schema richiede comunque di specificare **l'annotazione sql:key-fields** per identificare in modo univoco i dipendenti nella tabella HumanResources.Employee.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -173,7 +173,7 @@ ms.locfileid: "97461782"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per altre informazioni, vedere [Uso di ADO per eseguire query SQLXML.](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)  
   
  Risultato:  
   

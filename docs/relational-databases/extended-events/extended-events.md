@@ -12,15 +12,15 @@ helpviewer_keywords:
 - xe
 - XEvents
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c837902edb7baa43d7fa07cfefc8ec335dc4183e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: d861263a44b7cbf2d13c3e7f46a573b02a575a45
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465532"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107492421"
 ---
 # <a name="extended-events-overview"></a>Panoramica degli eventi estesi
 

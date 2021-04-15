@@ -1,6 +1,6 @@
 ---
 title: Considerazioni principali sulla sicurezza di SQLXML 4.0
-description: Informazioni sulle principali linee guida sulla sicurezza per l'utilizzo di SQLXML per l'accesso ai dati.
+description: Informazioni sulle linee guida di base sulla sicurezza per l'uso di SQLXML per l'accesso ai dati.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,21 +11,21 @@ ms.topic: reference
 helpviewer_keywords:
 - security [SQLXML], about security
 ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 477124bc7dac925e48fc1a31382197daefefa4f7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9446926fd766c761dd4c473fb4eb0d935c04984b
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97439604"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107491608"
 ---
 # <a name="core-sqlxml-security-considerations"></a>Considerazioni principali sulla sicurezza di SQLXML 4.0
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Di seguito sono riportate alcune linee guida relative alla sicurezza quando si utilizza SQLXML per l'accesso ai dati.  
   
--   Il provider SQLXMLOLEDB espone una proprietà **StreamFlags** che consente di impostare flag che indicano la funzionalità SQLXML da abilitare o disabilitare per ogni istanza specifica. È possibile utilizzare questa proprietà per personalizzare l'utilizzo di SQLXML e assicurarsi che siano abilitati solo i componenti desiderati. Per ulteriori informazioni, vedere [provider SQLXMLOLEDB &#40;SQLXML 4,0&#41;](../data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md).  
+-   Il provider SQLXMLOLEDB espone una proprietà **StreamFlags** che consente di impostare flag che indicano quali funzionalità SQLXML devono essere abilitate o disabilitate per ogni istanza specifica. È possibile utilizzare questa proprietà per personalizzare l'utilizzo di SQLXML e assicurarsi che siano abilitati solo i componenti desiderati. Per altre informazioni, vedere [Provider SQLXMLOLEDB &#40;SQLXML 4.0&#41;](../data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md).  
   
 -   Gli eventuali errori SQLXML restituiti possono includere informazioni sullo schema del database, come i nomi delle tabelle o delle colonne oppure informazioni sui tipi. Prestare attenzione nella gestione di questi errori in modo tale da rendere difficile l'individuazione delle informazioni sull'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da parte di utenti laddove non sia previsto o necessario.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "97439604"
   
 -   Alla ricezione dei risultati delle query, non vengono eseguite azioni in base al contenuto dei dati ricevuti. Non vengono eseguite ulteriori operazioni di elaborazione in base al tipo o al contenuto dei dati. I dati non vengono mai trattati come codice con il quale eseguire azioni.  
   
--   Quando si eseguono modelli XML, in SQLXML le query XPath e DBObject contenute nel modello inviato vengono tradotte in comandi [!INCLUDE[tsql](../../../includes/tsql-md.md)] che verranno eseguiti su [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Tali comandi influiscono solo sui dati esistenti. I comandi generati da SQLXML non modificheranno mai la struttura del database. Gli utenti devono inviare comandi espliciti per modificare la struttura del database, Ad esempio, includendo tali elementi in un blocco **SQL: query** di un modello.  
+-   Quando si eseguono modelli XML, in SQLXML le query XPath e DBObject contenute nel modello inviato vengono tradotte in comandi [!INCLUDE[tsql](../../../includes/tsql-md.md)] che verranno eseguiti su [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Tali comandi influiscono solo sui dati esistenti. I comandi generati da SQLXML non modificheranno mai la struttura del database. Gli utenti devono inviare comandi espliciti per modificare la struttura del database, Ad esempio, includendoli in un **blocco sql:query** di un modello.  
   
 -   Quando si eseguono query DBObject e istruzioni XPath su file di mapping, SQLXML non prevede la modifica dei dati del database.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "97439604"
   
 -   SQLXML consente agli utenti di eseguire qualsiasi query SQL sul database. Questa funzionalità non deve essere mai esposta a un'origine non protetta o non controllata, che equivarrebbe a consentire l'accesso al database SQL a qualsiasi utente.  
   
--   Quando si eseguono updategram, SQLXML converte i blocchi **attributo updg: Sync** in comandi DELETE, Update e INSERT sull' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza di. Tali comandi influiscono solo sui dati esistenti. I comandi generati da SQLXML non modificheranno mai il database. Gli utenti devono inviare comandi espliciti per modificare la struttura del database, Ad esempio, includendo tali elementi in un blocco **SQL: query** di un modello.  
+-   Quando si eseguono updategram, SQLXML converte i blocchi **updg:sync** in comandi DELETE, UPDATE e INSERT [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sull'istanza. Tali comandi influiscono solo sui dati esistenti. I comandi generati da SQLXML non modificheranno mai il database. Gli utenti devono inviare comandi espliciti per modificare la struttura del database, Ad esempio, includendoli in un **blocco sql:query** di un modello.  
   
--   Quando si eseguono DiffGram, in SQLXML vengono tradotti in comandi DELETE, UPDATE e INSERT sull'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Tali comandi influiscono solo sui dati esistenti. I comandi generati da SQLXML non modificheranno mai il database. Gli utenti devono inviare comandi espliciti per modificare la struttura del database, Ad esempio, includendo tali elementi in un blocco **SQL: query** di un modello.  
+-   Quando si eseguono DiffGram, in SQLXML vengono tradotti in comandi DELETE, UPDATE e INSERT sull'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Tali comandi influiscono solo sui dati esistenti. I comandi generati da SQLXML non modificheranno mai il database. Gli utenti devono inviare comandi espliciti per modificare la struttura del database, Ad esempio, includendoli in un **blocco sql:query** di un modello.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Considerazioni sulla sicurezza per SQLXML 4.0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md)  

@@ -1,6 +1,6 @@
 ---
 title: Applicazione di una trasformazione XSL (SQLXML)
-description: Consente di visualizzare un esempio di query SQL che applica una trasformazione XSL utilizzando la proprietà XslPath dell'oggetto SqlXmlCommand nelle classi gestite SQLXML.
+description: Visualizzare un esempio di query SQL che applica una trasformazione XSL usando la proprietà XslPath dell'oggetto SqlXmlCommand nelle classi gestite SQLXML.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - SQLXML Managed Classes, applying XSL transformations
 - XSL Transformations [SQLXML]
 ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03b33945a727cd7010800c9d78254733fb9f2d7e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 599684d1e70e82b6ffcfbdcbb96567506aa17dc3
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97414582"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107491800"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>Applicazione di una trasformazione XSL (classi gestite SQLXML)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   In questo esempio viene eseguita una query SQL sul database AdventureWorks. La trasformazione XSL viene applicata al risultato della query per generare una tabella a due colonne con i nomi e i cognomi dei dipendenti.  
   
- La proprietà XslPath dell'oggetto SqlXmlCommand viene utilizzata per specificare il file XSL e il relativo percorso di directory.  
+ La proprietà XslPath dell'oggetto SqlXmlCommand viene usata per specificare il file XSL e il relativo percorso di directory.  
   
 > [!NOTE]  
 >  Nel codice è necessario specificare il nome dell'istanza di Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nella stringa di connessione.  

@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 827334e3e132128ed78f612788c96e8ad15f5443
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: HT
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 89136f9e67022c619c1d9ad4e78e4196fe131a68
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85632776"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107490919"
 ---
 # <a name="example-retrieving-employee-information"></a>Esempio: Recupero di informazioni sui dipendenti
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

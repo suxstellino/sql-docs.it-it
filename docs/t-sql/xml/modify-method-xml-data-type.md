@@ -13,14 +13,14 @@ helpviewer_keywords:
 - modify() method
 - modify method
 ms.assetid: 52430735-51f4-46d1-a308-9aecf8648fda
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f7064750b46e57572c8437858d5527f4b1e5cba4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b677cef5c1fb33df295dec52af96646d41d36fef
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172456"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107491265"
 ---
 # <a name="modify-method-xml-data-type"></a>Metodo modify() (tipo di dati xml)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

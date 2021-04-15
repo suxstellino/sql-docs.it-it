@@ -1,6 +1,6 @@
 ---
-title: Linee guida e limitazioni degli updategram (SQLXML)
-description: Informazioni sulle linee guida e sulle limitazioni dell'utilizzo di updategram XML in SQLXML 4,0.
+title: Linee guida e limitazioni degli Updategram (SQLXML)
+description: Informazioni sulle linee guida e sulle limitazioni relative all'uso degli updategram XML in SQLXML 4.0.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,32 +10,32 @@ ms.topic: reference
 helpviewer_keywords:
 - updategrams [SQLXML], about updategrams
 ms.assetid: b5231859-14e2-4276-bc17-db2817b6f235
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 71bd56145c0ef26736a7b567db22b783ea258e1c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 1ed5c30c80728967d86532697be441ef71d8bf57
+ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97479192"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107491511"
 ---
 # <a name="guidelines-and-limitations-of-xml-updategrams-sqlxml-40"></a>Linee guida e limitazioni per gli updategram XML (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Quando si utilizzano updategram XML, tenere presenti le considerazioni seguenti:  
   
--   Se si utilizza un updategram per un'operazione di inserimento con una sola coppia di **\<before>** blocchi e **\<after>** , il **\<before>** blocco può essere omesso. Viceversa, nel caso di un'operazione di eliminazione, il **\<after>** blocco può essere omesso.  
+-   Se si usa un updategram per un'operazione di inserimento con una sola coppia di blocchi e , il **\<before>** **\<after>** blocco può essere **\<before>** omesso. Al contrario, in caso di un'operazione di eliminazione, il **\<after>** blocco può essere omesso.  
   
--   Se si usa un updategram con più **\<before>** blocchi e **\<after>** nel **\<sync>** tag, è necessario specificare sia i blocchi **\<before>** che i **\<after>** blocchi per formare **\<before>** e **\<after>** coppie.  
+-   Se si usa un updategram con più blocchi e nel tag , è necessario specificare sia blocchi che blocchi **\<before>** **\<after>** per **\<sync>** **\<before>** **\<after>** **\<before>** formare e **\<after>** coppie.  
   
 -   Gli aggiornamenti in un updategram vengono applicati alla vista XML fornita da XML Schema. Ai fini della corretta esecuzione del mapping predefinito, è pertanto necessario specificare il nome del file dello schema nell'updategram o, se il nome di file non viene fornito, i nomi di elemento e di attributo devono corrispondere ai nomi di tabella e di colonna nel database.  
   
--   SQLXML 4.0 richiede che tutti i valori di colonna in un updategram vengano mappati in modo esplicito nello schema (XDR o XSD) fornito per creare la vista XML per i relativi elementi figlio. Questo comportamento è diverso rispetto alle versioni precedenti di SQLXML, che consentiva un valore per una colonna di cui non è stato eseguito il mapping nello schema se era implicito come parte della chiave esterna in un'annotazione **SQL: Relationship** . Si noti che questa modifica non influisce sulla propagazione dei valori di chiave primaria negli elementi figlio, che si verifica tuttora per SQLXML 4.0 se non viene specificato in modo esplicito alcun valore per l'elemento figlio.  
+-   SQLXML 4.0 richiede che tutti i valori di colonna in un updategram vengano mappati in modo esplicito nello schema (XDR o XSD) fornito per creare la vista XML per i relativi elementi figlio. Questo comportamento è diverso dalle versioni precedenti di SQLXML, che consente un valore per una colonna non mappata nello schema se è stato implicito come parte della chiave esterna in un'annotazione **sql:relationship.** Si noti che questa modifica non influisce sulla propagazione dei valori di chiave primaria negli elementi figlio, che si verifica tuttora per SQLXML 4.0 se non viene specificato in modo esplicito alcun valore per l'elemento figlio.  
   
--   Se si utilizza un updategram per modificare i dati in una colonna binaria, ad esempio il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo di dati **Image** , è necessario specificare uno schema di mapping in cui è [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] necessario specificare il tipo di dati (ad esempio, **SQL: DataType = "image"**) e il tipo di dati XML (ad esempio, **DT: Type = "BinHex"** o **DT: Type = "binbase64**). I dati per la colonna binaria devono essere specificati nell'updategram. l'annotazione **SQL: URL-encode** specificata nello schema di mapping viene ignorata dall'updategram.  
+-   Se si usa un updategram per modificare i dati in una colonna binaria ,ad esempio il tipo di dati image, è necessario specificare uno schema di mapping in cui devono essere specificati il tipo di dati (ad esempio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sql:datatype="image"**) e il tipo di dati XML (ad esempio **dt:type="binhex"** o **dt:type="binbase64).** I dati per la colonna binaria devono essere specificati nell'updategram. **L'annotazione sql:url-encode** specificata nello schema di mapping viene ignorata dall'updategram.  
   
--   Quando si scrive uno schema XSD, se il valore specificato per l'annotazione **SQL: relation** o **SQL: Field** include un carattere speciale, ad esempio uno spazio (ad esempio, nel nome della tabella "Order Details"), questo valore deve essere racchiuso tra parentesi quadre, ad esempio "[Order Details]".  
+-   Quando si scrive uno schema XSD, se il valore specificato per l'annotazione **sql:relation** o **sql:field** include un carattere speciale, ad esempio uno spazio (ad esempio, nel nome della tabella "Dettagli ordine"), questo valore deve essere racchiuso tra parentesi quadre (ad esempio, "[Dettagli ordine]").  
   
 -   Quando si utilizzano updategram, le relazioni a catena non sono supportate. Se, ad esempio, le tabelle A e C sono correlate tramite una relazione a catena che utilizza la tabella B, si verifica l'errore seguente quando si tenta di eseguire l'updategram:  
   
@@ -45,17 +45,17 @@ ms.locfileid: "97479192"
   
      Anche se lo schema e l'updategram sono entrambi altrimenti corretti e hanno un formato valido, l'errore si verifica se è presente una relazione a catena.  
   
--   Gli updategram non consentono il passaggio dei dati del tipo di **immagine** come parametri durante gli aggiornamenti.  
+-   Gli updategram non consentono il passaggio di **dati** di tipo immagine come parametri durante gli aggiornamenti.  
   
--   I tipi BLOB (Binary Large Object) come **text/ntext** e images non devono essere utilizzati nel **\<before>** blocco in quando si utilizzano updategram, perché verranno inclusi per l'utilizzo nel controllo della concorrenza. Ciò può provocare problemi con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a causa delle limitazioni applicate al confronto per i tipi BLOB. La parola chiave LIKE, ad esempio, viene utilizzata nella clausola WHERE per il confronto tra colonne con tipo di dati **Text** . Tuttavia, i confronti avranno esito negativo in caso di tipi BLOB in cui le dimensioni dei dati sono maggiori di 8K.  
+-   I tipi BLOB (Binary Large Object) come **text/ntext** e images non devono essere usati nel blocco in quando si usano gli updategram, perché verranno inclusi per l'uso nel controllo della **\<before>** concorrenza. Ciò può provocare problemi con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a causa delle limitazioni applicate al confronto per i tipi BLOB. Ad esempio, la parola chiave LIKE viene usata nella clausola WHERE per il confronto tra colonne con tipo **di** dati text. Tuttavia, i confronti avranno esito negativo nel caso di tipi BLOB in cui le dimensioni dei dati sono maggiori di 8 KB.  
   
--   I caratteri speciali nei dati **ntext** possono causare problemi con SQLXML 4,0 a causa delle limitazioni del confronto per i tipi di BLOB. Ad esempio, l'utilizzo di "[Serializable]" nel **\<before>** blocco di un updategram quando viene utilizzato nel controllo della concorrenza di una colonna di tipo **ntext** avrà esito negativo con la descrizione dell'errore SQLOLEDB seguente:  
+-   I caratteri speciali nei **dati ntext** possono causare problemi con SQLXML 4.0 a causa delle limitazioni relative al confronto per i tipi BLOB. Ad esempio, l'uso di "[Serializable]" nel blocco di un updategram quando viene usato nel controllo della concorrenza di una colonna di tipo ntext avrà esito negativo con la descrizione dell'errore **\<before>** SQLOLEDB  seguente:  
   
     ```  
     Empty update, no updatable rows found   Transaction aborted  
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Considerazioni sulla sicurezza degli updategram &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Considerazioni sulla sicurezza degli updategram &#40;sqlxml 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   
