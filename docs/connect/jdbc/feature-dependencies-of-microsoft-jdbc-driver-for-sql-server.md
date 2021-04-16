@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 61542eafadc26a96c01204472c6fd78997787f15
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 04aee97ef2b43363001f44fd43191c7c1b08f189
+ms.sourcegitcommit: 233be9adaee3d19b946ce15cfcb2323e6e178170
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101836958"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107560813"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Dipendenze delle funzionalità di Microsoft JDBC Driver per SQL Server
 
@@ -94,7 +94,7 @@ I progetti specifici che richiedono una delle funzionalità elencate precedentem
 
 ### <a name="working-with-the-azure-key-vault-provider"></a>Uso del provider Azure Key Vault:
 
-- Versione del driver JDBC 9.2.1-versioni delle dipendenze: Azure-Vault (versione 4.2.1) e Azure-Identity (versione 1.1.3) e relative dipendenze ([applicazione di esempio](azure-key-vault-sample-version-9.2.md))
+- Versione del driver JDBC 9.2.1 - Versioni delle dipendenze: Azure-security-keyvault-keys (versione 4.2.1) e Azure-identity (versione 1.1.3) e relative dipendenze (applicazione[di esempio](azure-key-vault-sample-version-9.2.md))
 - Versione del driver JDBC 8.4.1 - Versioni delle dipendenze: Azure-Keyvault (versione 1.2.4), Adal4j (versione 1.6.5), Client-Runtime-for-AutoRest (1.7.4) e relative dipendenze ([applicazione di esempio](azure-key-vault-sample-version-7.0.md))
 - Versione del driver JDBC 8.2.2 - Versioni delle dipendenze: Azure-Keyvault (versione 1.2.2), Adal4j (versione 1.6.4), Client-Runtime-for-AutoRest (1.7.0) e relative dipendenze ([applicazione di esempio](azure-key-vault-sample-version-7.0.md))
 - Versione del driver JDBC 7.4.1 - Versioni delle dipendenze: Azure-Keyvault (versione 1.2.1), Adal4j (versione 1.6.4), Client-Runtime-for-AutoRest (1.6.10) e relative dipendenze ([applicazione di esempio](azure-key-vault-sample-version-7.0.md))
@@ -111,7 +111,7 @@ I progetti specifici che richiedono una delle funzionalità elencate precedentem
 
 ### <a name="working-with-azure-active-directory-authentication"></a>Uso dell'autenticazione di Azure Active Directory:
 
-- Versione del driver JDBC 9.2.1-versioni delle dipendenze: Azure-Identity (versione 1.1.3) e relative dipendenze.
+- Versione del driver JDBC 9.2.1 - Versioni delle dipendenze: Azure-identity(versione 1.1.3) e relative dipendenze.
 - Versione del driver JDBC 8.4.1 - Versioni delle dipendenze: Adal4j (versione 1.6.5), Client-Runtime-for-AutoRest (1.7.4) e le relative dipendenze.
 - Versione del driver JDBC 8.2.2 - Versioni delle dipendenze: Adal4j (versione 1.6.4), Client-Runtime-for-AutoRest (1.7.0) e le relative dipendenze. In questa versione del driver, 'sqljdbc_auth.dll' è stato rinominato come 'mssql-jdbc_auth-\<version>-\<arch>.dll'.
 - Versione del driver JDBC 7.4.1 - Versioni delle dipendenze: Adal4j (versione 1.6.4), Client-Runtime-for-AutoRest (1.6.10) e le relative dipendenze
@@ -127,7 +127,7 @@ Per i *sistemi operativi Windows*, il driver cerca sqljdbc_auth.dll per impostaz
 
 A partire dalla versione del driver 8.2.2 'sqljdbc_auth.dll' è stato rinominato come 'mssql-jdbc_auth-\<version>-\<arch>.dll'. ad esempio 'mssql-jdbc_auth-8.2.2.x64.dll'.
 
-Oltre a **MSSQL-jdbc_auth- \<version> - \<arch> . dll** (disponibile nel pacchetto di driver JDBC), è necessario installare anche la libreria di autenticazione Azure Active Directory (**ADAL.DLL**) per Active Directory l'autenticazione integrata. ADAL può essere installato dal driver [Microsoft ODBC driver for SQL Server](../odbc/download-odbc-driver-for-sql-server.md) o [Microsoft OLE DB per SQL Server](../oledb/download-oledb-driver-for-sql-server.md). Il driver JDBC supporta solo la versione **1.0.2028.318 e successive** per ADAL.DLL.
+Oltre al file con estensione **\<version> - \<arch> dll mssql-jdbc_auth-** (disponibile nel pacchetto del driver JDBC), è necessario installare anche Azure Active Directory Authentication Library (**ADAL.DLL**) per l'autenticazione integrata di Active Directory. ADAL può essere installato da [Microsoft ODBC Driver for SQL Server](../odbc/download-odbc-driver-for-sql-server.md) o [Microsoft OLE DB Driver per SQL Server](../oledb/download-oledb-driver-for-sql-server.md). Il driver JDBC supporta solo la versione **1.0.2028.318 e successive** per ADAL.DLL.
 
 
 È possibile ottenere un'[applicazione di esempio](connecting-using-azure-active-directory-authentication.md) che usa questa funzionalità.

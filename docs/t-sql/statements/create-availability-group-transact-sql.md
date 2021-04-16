@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1a2878025e3b5b6aa8d303ebf94e7215c5590992
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: 0f632ce5847e2924a2d418e2f4fffe381ac6ee3d
+ms.sourcegitcommit: 233be9adaee3d19b946ce15cfcb2323e6e178170
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100344075"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107560985"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 
@@ -260,7 +260,7 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
 - È necessario che l'endpoint del mirroring dei dati della replica CONFIGURATION_ONLY sia di tipo `WITNESS`.
 - Non può essere modificata.
 - Non è valida se `CLUSTER_TYPE = WSFC`.
-- Le opzioni `failover_mode` e `seeding_mode` non sono supportate quando `availability_mode` è impostato su `configuration_only` per una replica. Di [seguito](../../linux/sql-server-linux-availability-group-configure-ha.md)è riportato un esempio.
+- Le opzioni `failover_mode` e non sono supportate quando è impostato su per una `seeding_mode` `availability_mode` `configuration_only` replica. Di seguito è riportato un [esempio.](../../linux/sql-server-linux-availability-group-configure-ha.md)
 
    Per altre informazioni, vedere l'argomento relativo alla [replica di sola configurazione](../../linux/sql-server-linux-availability-group-ha.md).
   
@@ -383,12 +383,12 @@ Per altre informazioni, vedere [Reindirizzamento della connessione in lettura/sc
   
  Il gruppo di disponibilità secondario deve essere aggiunto al gruppo di disponibilità distribuito. Per altre informazioni, vedere [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md).  
   
- \<ag_name> Specifica il nome del gruppo di disponibilità che costituisce una metà del gruppo di disponibilità distribuito.  
+ \<ag_name> Specifica il nome del gruppo di disponibilità che costituisce la metà del gruppo di disponibilità distribuito.  
   
- LISTENER **='** TCP **://** _system-address_ **:** _port_ **'**  
+ LISTENER_URL **='** TCP **://**_system-address_**:**_porta_**'**  
  Specifica il percorso URL per il listener associato al gruppo di disponibilità.  
   
- La clausola LISTENER è obbligatoria.  
+ La clausola LISTENER_URL è obbligatoria.  
   
  **'** TCP **://** _system-address_ **:** _port_ **'**  
  Specifica un URL per il listener associato al gruppo di disponibilità. I parametri URL sono i seguenti:  

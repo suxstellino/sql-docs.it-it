@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cae5c4c74f5fc4f6df9b62b1ad985b469aa528ce
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: b8edf13f2ab18e67ba3f599ce8a1a0c285b88968
+ms.sourcegitcommit: 233be9adaee3d19b946ce15cfcb2323e6e178170
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100345426"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107561028"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>Configurare la crittografia delle colonne usando Always Encrypted con un pacchetto di applicazione livello dati 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -51,14 +51,7 @@ Per pubblicare un pacchetto DAC con Always Encrypted configurato nel file DACPAC
 
 *ALTER ANY COLUMN MASTER KEY*, *ALTER ANY COLUMN ENCRYPTION KEY*, *VIEW ANY COLUMN MASTER KEY DEFINITION*, *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION*
 
-Se l'operazione di aggiornamento attiva un'operazione di crittografia dei dati, è necessario essere in grado di accedere alle chiavi master della colonna configurate per le colonne interessate:
-
-- **Archivio certificati - Computer locale**: è necessario avere accesso in lettura al certificato usato come chiave master della colonna o essere l'amministratore del computer.
-- **Azure Key Vault**: sono necessarie le autorizzazioni *create*, *get*, *unwrapKey*, *wrapKey*, *sign* e *verify* per l'insieme di credenziali contenente la chiave master della colonna.
-- **Provider dell'archivio chiavi (CNG)** : l'autorizzazione e le credenziali obbligatorie potrebbero essere richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione KSP.
-- **Provider del servizio di crittografia (CAPI)** : potrebbero essere richieste l'autorizzazione e le credenziali obbligatorie quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione CSP.
-
-Per altre informazioni, vedere [Creare e archiviare chiavi master della colonna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md). 
+Se l'operazione di aggiornamento attiva un'operazione di crittografia dei dati, sono necessarie anche le autorizzazioni dell'archivio chiavi per accedere e usare la chiave master della colonna. Per informazioni dettagliate sulle autorizzazioni dell'archivio chiavi, vedere Creare e archiviare chiavi master della colonna [per](create-and-store-column-master-keys-always-encrypted.md) Always Encrypted e trovare una sezione pertinente per l'archivio chiavi.
 
  
 ## <a name="next-steps"></a>Passaggi successivi

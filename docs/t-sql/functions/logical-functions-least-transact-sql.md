@@ -17,15 +17,15 @@ helpviewer_keywords:
 author: jmsteen
 ms.author: josteen
 ms.reviewer: wiassaf
-ms.openlocfilehash: ec8ac611a7d2903a47dc9a800843c5f6f97b6ec8
-ms.sourcegitcommit: 9142bb6b80ce22eeda516b543b163eb9918bc72e
+ms.openlocfilehash: 88d54f6ebc98712aa02ce29ff9b2922629a95f10
+ms.sourcegitcommit: 233be9adaee3d19b946ce15cfcb2323e6e178170
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "107492445"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107560770"
 ---
 # <a name="logical-functions---least-transact-sql"></a>Funzioni logiche - LEAST (Transact-SQL)
-[!INCLUDE [asdb-asdbmi](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-svrless-poolonly](../../includes/applies-to-version/sql-asdb-asdbmi-asa-svrless-poolonly.md)]
 
  Questa funzione restituisce il valore minimo da un elenco di una o più espressioni. 
 
@@ -59,23 +59,23 @@ LEAST ( expression1 [ ,...expressionN ] )
 
  Se la conversione implicita dei tipi tra gli argomenti non è supportata, la funzione avrà esito negativo e restituirà un errore. 
 
- Per altre informazioni sulla conversione implicita ed esplicita, vedere Conversione di tipi [di dati &#40;motore di database&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md). 
+ Per altre informazioni sulla conversione implicita ed esplicita, vedere [Conversione di tipi di dati &#40;motore di database&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md). 
 
  Se uno o più argomenti non sono `NULL` , gli argomenti verranno `NULL` ignorati durante il confronto. Se tutti gli argomenti `NULL` sono , `LEAST` restituirà `NULL` . 
 
  Il confronto degli argomenti di tipo carattere segue le regole di precedenza delle [regole &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md). 
 
- I tipi  seguenti non sono supportati per il confronto in `LEAST` : **varchar(max), varbinary(max) o nvarchar(max) superiore a 8.000 byte, cursor, geometry, geography, image, tipi definiti** dall'utente non ordinati in byte, ntext, table, text e **xml**. 
+ I tipi  seguenti non sono supportati per il confronto in `LEAST` : **varchar(max), varbinary(max) o nvarchar(max) che superano 8.000 byte, cursor, geometry, geography, image, tipi definiti** dall'utente non ordinati per byte, ntext, table, text e **xml**. 
 
- I tipi di dati varchar(max), varbinary(max) e nvarchar(max) sono supportati rispettivamente per gli argomenti di 8.000 byte o inferiori e verranno convertiti in modo implicito in varchar(n), varbinary(n) e nvarchar(n), rispettivamente, prima del confronto. 
+ I tipi di dati varchar(max), varbinary(max) e nvarchar(max) sono supportati rispettivamente per gli argomenti a 8.000 byte o inferiori e verranno convertiti in modo implicito in varchar(n), varbinary(n) e nvarchar(n), rispettivamente, prima del confronto. 
 
- Ad esempio, varchar(max) può supportare fino a 8.000 caratteri se si usa un set di caratteri di codifica a byte singolo e nvarchar(max) può supportare fino a 4.000 coppie di byte (presupponendo la codifica di caratteri UTF-16). 
+ Ad esempio, varchar(max) può supportare fino a 8.000 caratteri se si usa un set di caratteri di codifica a byte singolo e nvarchar(max) può supportare fino a 4.000 coppie di byte (presupponendo la codifica dei caratteri UTF-16). 
   
 ## <a name="examples"></a>Esempi  
 
 ### <a name="a-simple-example"></a>R. Esempio semplice
 
- Nell'esempio seguente viene restituito il valore minimo dall'elenco di costanti specificato. 
+ Nell'esempio seguente viene restituito il valore minimo dall'elenco di costanti fornito. 
 
  La scala del tipo restituito è determinata dalla scala dell'argomento con il tipo di dati con precedenza più elevata. 
  
@@ -113,9 +113,9 @@ Glacier
 (1 rows affected)  
 ```  
 
-### <a name="c-simple-example-with-table"></a>C. Esempio semplice con la tabella
+### <a name="c-simple-example-with-table"></a>C. Esempio semplice con tabella
   
- Questo esempio restituisce il valore minimo da un elenco di argomenti di colonna e ignora `NULL` i valori durante il confronto. 
+ In questo esempio viene restituito il valore minimo da un elenco di argomenti di colonna e i `NULL` valori vengono ignorati durante il confronto. 
   
 ```sql  
 USE AdventureWorks2019; 
@@ -150,7 +150,7 @@ SalesQuota            SalesYTD              SalesLastYear         Sales
 (12 rows affected) 
   
 ```  
-### <a name="d-using-least-with-local-variables"></a>D. Uso `LEAST` con variabili locali
+### <a name="d-using-least-with-local-variables"></a>D. Uso `LEAST` di con variabili locali
 
  In questo esempio `LEAST` viene utilizzato per determinare il valore minimo di un elenco di variabili locali all'interno del predicato di una `WHERE` clausola . 
   

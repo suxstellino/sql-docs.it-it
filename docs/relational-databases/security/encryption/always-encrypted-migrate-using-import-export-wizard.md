@@ -15,12 +15,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 234dabee531f85b4e3f8a687067dee9f91c96b33
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: a31b2bcc5c704de1a1f066ce7063e6604aba8d75
+ms.sourcegitcommit: 233be9adaee3d19b946ce15cfcb2323e6e178170
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100345494"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107560990"
 ---
 # <a name="migrate-data-to-or-from-columns-using-always-encrypted-with-sql-server-import-and-export-wizard"></a>Eseguire la migrazione di dati da o verso colonne usando Always Encrypted con l'Importazione/Esportazione guidata SQL Server 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -68,15 +68,7 @@ I provider di dati seguenti nell'Importazione/Esportazione guidata SQL Server su
 
 ## <a name="permissions-for-encrypting-or-decrypting-data-during-migration"></a>Autorizzazioni per crittografare o decrittografare i dati durante la migrazione
 
-Per crittografare o decrittografare i dati archiviati in un database di SQL Server di origine o destinazione, sono necessarie le autorizzazioni *VIEW ANY COLUMN MASTER KEY DEFINITION* e *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* nel database di origine.
-
-È anche necessario accedere alle chiavi master di colonna configurate per le colonne in cui sono archiviati i dati da crittografare o decrittografare:
-
-- **Archivio certificati - Computer locale**: è necessario avere accesso in lettura al certificato usato come chiave master della colonna o essere l'amministratore del computer.
-- **Azure Key Vault**: sono necessarie le autorizzazioni _get_, _unwrapKey_ e _verify_ per l'insieme di credenziali contenente la chiave master della colonna.
-- **Provider dell'archivio chiavi (CNG)**: l'autorizzazione e le credenziali necessarie; potrebbero essere richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione KSP.
-- **Provider del servizio di crittografia (CAPI)**: l'autorizzazione e le credenziali necessarie; potrebbero essere richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione CSP.
-Per altre informazioni, vedere [Creare e archiviare chiavi master della colonna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+Per crittografare o decrittografare i dati archiviati in un database di SQL Server di origine o destinazione, sono necessarie le autorizzazioni *VIEW ANY COLUMN MASTER KEY DEFINITION* e *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* nel database di origine. Sono necessarie anche le autorizzazioni dell'archivio chiavi per accedere e usare la chiave master della colonna. Per informazioni dettagliate sulle autorizzazioni dell'archivio chiavi necessarie per le operazioni di gestione delle chiavi, vedere Creare e archiviare chiavi master della colonna [per Always Encrypted](create-and-store-column-master-keys-always-encrypted.md) e trovare una sezione pertinente per l'archivio chiavi.
 
 ## <a name="next-steps"></a>Passaggi successivi
 - [Eseguire query sulle colonne usando Always Encrypted con SQL Server Management Studio](always-encrypted-query-columns-ssms.md)

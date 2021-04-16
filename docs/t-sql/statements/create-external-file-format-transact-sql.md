@@ -2,7 +2,7 @@
 description: CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 title: CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 ms.custom: ''
-ms.date: 02/23/2021
+ms.date: 04/13/2021
 ms.prod: sql
 ms.prod_service: synapse-analytics, pdw, sql-database
 ms.reviewer: ''
@@ -20,17 +20,18 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: 82bd61e91a36b2e8e71061be770dd70c64430270
-ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.openlocfilehash: b0587fac57e0989a06a9b00826b1c5e594aa8cf1
+ms.sourcegitcommit: 233be9adaee3d19b946ce15cfcb2323e6e178170
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104750191"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107560961"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
 Crea un oggetto formato di file esterno che definisce i dati esterni archiviati in Hadoop, in Archiviazione BLOB di Azure o in Azure Data Lake Store o per i flussi di input e output associati a flussi esterni. La creazione di un formato di file esterno è un prerequisito per la creazione di una tabella esterna. Creando un formato di file esterno, si specifica il layout effettivo dei dati a cui fa riferimento una tabella esterna.  
+Per creare una tabella esterna, vedere [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md).
   
 Sono supportati i seguenti formati di file:
   
@@ -38,14 +39,12 @@ Sono supportati i seguenti formati di file:
   
 - Hive RCFile  - Non si applica ad Azure Synapse Analytics.
   
-- Hive ORC
+- HIVE ORC: non si applica a Azure Synapse Analytics.
   
 - Parquet
 
-- JSON - Si applica solo a SQL Edge di Azure.
+- JSON - Si applica solo a SQL Edge di Azure. Per informazioni sull'uso di OPENROWSET per importare dati JSON in altre piattaforme, vedere Importare documenti JSON in [SQL Server](../../relational-databases/json/import-json-documents-into-sql-server.md) o Eseguire query su file JSON usando [il pool SQL serverless in Azure Synapse Analytics](/azure/synapse-analytics/sql/query-json-files).
 
-Per creare una tabella esterna, vedere [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md).
-  
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi

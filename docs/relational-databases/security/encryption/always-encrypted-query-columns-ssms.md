@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff7924bf1262ee29977d16548b6548c112bc8b5d
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: d7ad39aeedd62011c660ae2c7f67a385bc8c3710
+ms.sourcegitcommit: 233be9adaee3d19b946ce15cfcb2323e6e178170
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100345455"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107560997"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>Eseguire query sulle colonne usando Always Encrypted con SQL Server Management Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -27,6 +27,9 @@ Questo articolo descrive come eseguire query sulle colonne crittografate con [Al
 - Recuperare i valori del testo crittografato archiviati nelle colonne crittografate. 
 - Recuperare i valori del testo non crittografato archiviati nelle colonne crittografate.   
 - Inviare i valori del testo non crittografato destinati alle colonne crittografate (ad esempio, nelle istruzioni `INSERT` o `UPDATE` e come parametri di ricerca delle clausole `WHERE` nelle istruzioni `SELECT`).
+
+> [!NOTE]
+> L'uso delle chiavi master della colonna archiviate in un [HSM](https://docs.microsoft.com/azure/key-vault/managed-hsm/overview) gestito in Azure Key Vault richiede SSMS 18.9 o versione successiva.
 
 ## <a name="retrieving-ciphertext-values-stored-in-encrypted-columns"></a>Recupero dei valori del testo crittografato archiviati nelle colonne crittografate    
 Per eseguire query SELECT che recuperano il testo crittografato di dati archiviati in colonne crittografate (senza decrittografare i dati) non è necessario avere accesso alle chiavi master di colonna che proteggono i dati. Per recuperare i valori da una colonna crittografata come testo crittografato in SSMS:
@@ -69,14 +72,7 @@ Supponendo che `SSN` sia una colonna crittografata `char(11)` nella tabella `Pat
 
 Per eseguire le query su colonne crittografate, incluse le query che recuperano i dati in testo crittografato, sono necessarie le autorizzazioni `VIEW ANY COLUMN MASTER KEY DEFINITION` e `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` nel database.
 
-Oltre a queste autorizzazioni, per decrittografare i risultati delle query o per crittografare i parametri di query (generati dalla parametrizzazione delle variabili Transact-SQL), è necessario anche accedere alla chiave master della colonna proteggendo le colonne di destinazione:
-
-- **Archivio certificati - Computer locale**: è necessario avere l'accesso `Read` al certificato usato come chiave master della colonna o essere l'amministratore del computer.   
-- **Azure Key Vault**: sono necessarie le autorizzazioni `get`, `unwrapKey` e `verify` per l'insieme di credenziali contenente la chiave master della colonna.
-- **Provider dell'archivio chiavi (KSP)** : l'autorizzazione e le credenziali necessarie quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione KSP.   
-- **Provider del servizio di crittografia (CSP)** : l'autorizzazione e le credenziali richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione CSP.
-
-Per altre informazioni, vedere [Creare e archiviare chiavi master della colonna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+Oltre alle autorizzazioni precedenti, per decrittografare i risultati di una query o crittografare i parametri di query (prodotti dalla parametrizzazione delle variabili Transact-SQL), sono necessarie anche le autorizzazioni dell'archivio chiavi per accedere e usare la chiave master della colonna che protegge le colonne di destinazione. Per informazioni dettagliate sulle autorizzazioni per l'archivio chiavi, vedere Creare e archiviare chiavi master della colonna [per](create-and-store-column-master-keys-always-encrypted.md) Always Encrypted e trovare una sezione pertinente per l'archivio chiavi.
 
 ## <a name="enabling-and-disabling-always-encrypted-for-a-database-connection"></a><a name="en-dis"></a> Abilitazione e disabilitazione di Always Encrypted per una connessione di database   
 Quando ci si connette a un database in SSMS, è possibile abilitare o disabilitare Always Encrypted per la connessione di database. Per impostazione predefinita, Always Encrypted è disabilitato. 
@@ -100,7 +96,7 @@ Per abilitare o disabilitare Always Encrypted:
     1. Per abilitare Always Encrypted, digitare `Column Encryption Setting = Enabled`. Per disabilitare Always Encrypted, specificare `Column Encryption Setting = Disabled` o rimuovere l'impostazione di **Crittografia di colonna** dalla scheda **Proprietà aggiuntive** (il valore predefinito è **Disabilitato**).   
  1. Fare clic su **Connetti**.
 
-Per eseguire istruzioni che sfruttano un'enclave protetta sul lato server quando si usa [Always Encrypted con enclave sicure](always-encrypted-enclaves.md), è necessario specificare un URL di attestazione enclave, oltre ad abilitare always Encrypted per la connessione. Per informazioni dettagliate, vedere  [prerequisiti per l'esecuzione di istruzioni T-SQL con le enclave in SSMS](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-t-sql-statements-using-enclaves-in-ssms).
+Per eseguire istruzioni che sfruttano un'enclave sicuro lato server quando si usa Always Encrypted con [enclave](always-encrypted-enclaves.md)sicuri, è necessario specificare un URL di attestazione dell'enclave, oltre ad abilitare Always Encrypted per la connessione. Per informazioni dettagliate, vedere Prerequisiti per l'esecuzione di istruzioni [T-SQL tramite enclave in SSMS.](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-t-sql-statements-using-enclaves-in-ssms)
 
 > [!TIP]
 > Per abilitare e disabilitare Always Encrypted per una finestra dell'editor di query esistente:   

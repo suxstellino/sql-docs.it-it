@@ -23,12 +23,12 @@ ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0ff8f34468e4186700d6942cbbfcbf5d6f2b09b
-ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.openlocfilehash: d500ae0f43a39dfc4ced79a0389bc9ca15accd60
+ms.sourcegitcommit: 233be9adaee3d19b946ce15cfcb2323e6e178170
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104747721"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107561107"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal e numeric (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,9 +41,6 @@ Numeri con precisione e scala fisse. Se viene utilizzata la precisione massima, 
   
 p (precisione)  
 Numero massimo totale di cifre decimali da archiviare. Include le cifre sia a destra sia a sinistra del separatore decimale. La precisione deve essere un valore compreso tra 1 e la precisione massima di 38. La precisione predefinita è 18.
-  
-> [!NOTE]  
->  Informatica supporta solo 16 cifre significative, indipendentemente dalla precisione e dalla scala specificate.  
   
 *s* (scala)  
 Numero massimo di cifre decimali che da archiviare a destra del separatore decimale. Questo numero viene sottratto da *p* per determinare il numero massimo di cifre a sinistra del separatore decimale. La scala deve essere un valore compreso tra 0 e *p* e può essere specificato solo se viene specificata la precisione. La scala predefinita è 0. Di conseguenza, 0 <= *s* \<= *p*. Le dimensioni massime di archiviazione variano a seconda della precisione.

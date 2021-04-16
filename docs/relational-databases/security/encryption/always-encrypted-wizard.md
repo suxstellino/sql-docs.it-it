@@ -17,12 +17,12 @@ ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bedf502949e206b45bf7e1e332962c8c093d1bcb
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: b5cf7d89314b795db6bfeabb7bf6b0c86d8f3e8d
+ms.sourcegitcommit: 233be9adaee3d19b946ce15cfcb2323e6e178170
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236703"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107560973"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Configurare la crittografia delle colonne usando la procedura guidata Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -54,13 +54,7 @@ Usare PowerShell è una procedura consigliata
  - Per informazioni sui tipi di crittografia supportati in Always Encrypted, vedere [Selezione della crittografia deterministica o casuale](always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
  
  ## <a name="permissions"></a>Autorizzazioni
-Per eseguire operazioni di crittografia tramite la procedura guidata sono necessarie le autorizzazioni **VIEW ANY COLUMN MASTER KEY DEFINITION** e **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION**. È inoltre necessario avere le autorizzazioni per accedere alle chiavi master di colonna in uso negli archivi che contengono le chiavi:
-- **Archivio certificati - Computer locale**: è necessario avere accesso in lettura al certificato usato come chiave master della colonna o essere l'amministratore del computer.
-- **Azure Key Vault**: sono necessarie le autorizzazioni get, unwrapKey e verify per l'insieme di credenziali contenente la chiave master della colonna.
-- **Provider dell'archivio chiavi (CNG)** : l'autorizzazione e le credenziali obbligatorie potrebbero essere richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione KSP.
-- **Provider del servizio di crittografia (CAPI)** : potrebbero essere richieste l'autorizzazione e le credenziali obbligatorie quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione CSP.
-
-Inoltre, se si stanno creando nuove chiavi tramite la procedura guidata, è necessario avere le autorizzazioni aggiuntive elencate in [Effettuare il provisioning delle chiavi master di colonna con la finestra di dialogo Nuova chiave master della colonna](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog) e [Effettuare il provisioning delle chiavi di crittografia di colonna con la finestra di dialogo Nuova chiave di crittografia della colonna](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog).
+Per eseguire operazioni di crittografia tramite la procedura guidata sono necessarie le autorizzazioni **VIEW ANY COLUMN MASTER KEY DEFINITION** e **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION**. Sono necessarie anche le autorizzazioni dell'archivio chiavi per creare, accedere e usare la chiave master della colonna. Per informazioni dettagliate sulle autorizzazioni dell'archivio chiavi, vedere Creare e archiviare le chiavi master della colonna [per](create-and-store-column-master-keys-always-encrypted.md) Always Encrypted e trovare una sezione pertinente per l'archivio chiavi.
 
 ## <a name="open-the-always-encrypted-wizard"></a>Aprire la procedura guidata Always Encrypted
 È possibile avviare la procedura guidata a tre livelli diversi: 

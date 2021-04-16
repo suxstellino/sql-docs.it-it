@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 826832a9653c0f3966a2919f7e32beaa938ae6d5
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 85481fccf1d29902c38f49136f7dbd78bab550d7
+ms.sourcegitcommit: 233be9adaee3d19b946ce15cfcb2323e6e178170
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100345458"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107560945"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>Eseguire query sulle colonne usando Always Encrypted con Azure Data Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,7 @@ Questa sezione descrive come recuperare i dati archiviati come testo crittografa
 ### <a name="prerequisites"></a>Prerequisiti
 - Azure Data Studio versione 17.1 o successiva.
 - È necessario avere accesso alle chiavi master di colonna e ai metadati relativi alle chiavi che proteggono le colonne su cui si esegue la query. Per informazioni dettagliate, vedere [Autorizzazioni per l'esecuzione di query su colonne crittografate](#permissions-for-querying-encrypted-columns) più avanti.
-- Le chiavi master della colonna devono essere archiviate in Azure Key Vault o nell'archivio certificati Windows. Azure Data Studio non supporta altri archivi di chiavi.
+- Le chiavi master della colonna devono essere archiviate in un insieme di credenziali delle chiavi Azure Key Vault o nell'archivio certificati Di Windows. Azure Data Studio non supporta altri archivi chiavi e non supporta le chiavi master della colonna archiviate in [HMS](https://docs.microsoft.com/azure/key-vault/managed-hsm/overview) gestiti in Azure Key Vault.
 
 ### <a name="steps"></a>Passaggi
 1.  Abilitare Always Encrypted per la connessione di database per la finestra di query, da cui si eseguirà una query `SELECT` che recupera e decrittografa i dati. Questo indicherà al [provider di dati Microsoft .NET Framework per SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md), usato da Azure Data Studio, di decrittografare le colonne crittografate nel set di risultati della query. Vedere la sezione [Abilitazione e disabilitazione di Always Encrypted per una connessione di database](#enabling-and-disabling-always-encrypted-for-a-database-connection) più avanti in questo articolo.
@@ -60,7 +60,7 @@ In questa sezione viene descritto come eseguire una query che invia valori desti
 ### <a name="prerequisites"></a>Prerequisiti
 - Azure Data Studio versione 18.1 o successiva.
 - È necessario avere accesso alle chiavi master di colonna e ai metadati relativi alle chiavi che proteggono le colonne su cui si esegue la query. Per informazioni dettagliate, vedere [Autorizzazioni per l'esecuzione di query su colonne crittografate](#permissions-for-querying-encrypted-columns) più avanti.
-- Le chiavi master della colonna devono essere archiviate in Azure Key Vault o nell'archivio certificati Windows. Azure Data Studio non supporta altri archivi di chiavi.
+- Le chiavi master della colonna devono essere archiviate in un insieme di credenziali delle chiavi Azure Key Vault o nell'archivio certificati Di Windows. Azure Data Studio non supporta altri archivi chiavi e non supporta le chiavi master della colonna archiviate in [HMS](https://docs.microsoft.com/azure/key-vault/managed-hsm/overview) gestiti in Azure Key Vault.
 
 ### <a name="steps"></a>Passaggi
 1. Abilitare Always Encrypted per la connessione di database per la finestra di query, da cui si eseguirà una query `SELECT` che recupera e decrittografa i dati. Questa operazione indicherà al [provider di dati Microsoft .NET per SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md), usato da Azure Data Studio, di crittografare i parametri di query destinati alle colonne crittografate e decrittografare i risultati recuperati dalle colonne crittografate. Vedere la sezione [Abilitazione e disabilitazione di Always Encrypted per una connessione di database](#enabling-and-disabling-always-encrypted-for-a-database-connection) più avanti in questo articolo. 
@@ -77,12 +77,7 @@ Supponendo che `SSN` sia una colonna `char(11)` crittografata nella tabella `Pat
 
 Per eseguire query sulle colonne crittografate, comprese query che recuperano dati in testo crittografato, sono necessarie le autorizzazioni **VIEW ANY COLUMN MASTER KEY DEFINITION** e **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** nel database.
 
-Oltre a queste autorizzazioni, per decrittografare i risultati delle query o per crittografare i parametri di query (generati dalla parametrizzazione delle variabili Transact-SQL), è necessario anche accedere alla chiave master della colonna proteggendo le colonne di destinazione:
-
-- **Archivio certificati: computer locale:** è necessario avere accesso in **Lettura** al certificato usato come chiave master della colonna o essere l'amministratore del computer.   
-- **Azure Key Vault:** sono necessarie le autorizzazioni **get**, **unwrapKey** e **verify** per l'insieme di credenziali contenente la chiave master della colonna.
-
-Per altre informazioni, vedere [Creare e archiviare chiavi master della colonna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+Oltre alle autorizzazioni precedenti, per decrittografare i risultati delle query o crittografare i parametri di query (prodotti dalla parametrizzazione delle variabili Transact-SQL), sono necessarie anche le autorizzazioni dell'archivio chiavi per accedere e usare la chiave master della colonna che protegge le colonne di destinazione. Per informazioni dettagliate sulle autorizzazioni dell'archivio chiavi, vedere Creare e archiviare chiavi master della colonna [per](create-and-store-column-master-keys-always-encrypted.md) Always Encrypted e trovare una sezione pertinente per l'archivio chiavi.
 
 ## <a name="enabling-and-disabling-always-encrypted-for-a-database-connection"></a>Abilitazione e disabilitazione di Always Encrypted per una connessione di database   
 

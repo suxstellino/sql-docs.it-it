@@ -12,12 +12,12 @@ ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 26b598865668ce5fb10e34eb9558fe018a7c60a8
-ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.openlocfilehash: 738ca49728a320f6df001b51afd1ed11d2b7cfb4
+ms.sourcegitcommit: 233be9adaee3d19b946ce15cfcb2323e6e178170
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99075893"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107560933"
 ---
 # <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>Using Always Encrypted with .NET Framework Data Provider for SQL Server (Uso di Always Encrypted con il provider di dati .NET Framework per SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -315,7 +315,10 @@ Per usare questi provider non è necessario apportare alcuna modifica del codice
 
 ### <a name="using-azure-key-vault-provider"></a>Uso del provider dell'insieme di credenziali delle chiavi di Azure
 
-L'insieme di credenziali delle chiavi di Azure rappresenta una scelta valida per archiviare e gestire le chiavi master delle colonne per Always Encrypted, soprattutto se le applicazioni sono ospitate in Azure. Il provider di dati .NET Framework per SQL Server non include un provider predefinito di archivio delle chiavi master delle colonne per Azure Key Vault, ma è disponibile come pacchetto NuGet, che è possibile integrare facilmente con l'applicazione. Per informazioni dettagliate, vedere [Always Encrypted: Proteggere i dati sensibili nel database SQL con la crittografia dei dati e archiviare le chiavi di crittografia nell'insieme di credenziali delle chiavi di Azure](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure).
+L'insieme di credenziali delle chiavi di Azure rappresenta una scelta valida per archiviare e gestire le chiavi master delle colonne per Always Encrypted, soprattutto se le applicazioni sono ospitate in Azure. Il provider di dati .NET Framework per SQL Server non include un provider predefinito di archivio delle chiavi master delle colonne per Azure Key Vault, ma è disponibile come pacchetto NuGet, che è possibile integrare facilmente con l'applicazione. Per informazioni dettagliate, vedere:
+
+- [Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider/)
+- [Always Encrypted- Proteggere i dati sensibili nel database SQL con la crittografia dei dati e archiviare le chiavi di crittografia nel Azure Key Vault](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure)
 
 ### <a name="implementing-a-custom-column-master-key-store-provider"></a>Implementazione di un provider personalizzato di archivio delle chiavi master delle colonne
 

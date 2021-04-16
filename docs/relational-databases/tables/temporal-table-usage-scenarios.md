@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 28f1287ead4b3c84f5dcb65ec24564b9341d33f0
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
-ms.translationtype: HT
+ms.openlocfilehash: 0c869a7d0d767bb2985f9078f9628083d221ac24
+ms.sourcegitcommit: 233be9adaee3d19b946ce15cfcb2323e6e178170
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384670"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107561080"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Scenari di utilizzo delle tabelle temporali
 
@@ -524,7 +524,7 @@ AS
 ;WITH History
 AS
 (
-        /* Order historical rows by tehir age in DESC order*/
+        /* Order historical rows by their age in DESC order*/
         SELECT ROW_NUMBER () OVER (PARTITION BY EmployeeID ORDER BY [ValidTo] DESC) AS RN, *
         FROM Employee FOR SYSTEM_TIME ALL WHERE YEAR (ValidTo) < 9999 AND Employee.EmployeeID = @EmployeeID
 )

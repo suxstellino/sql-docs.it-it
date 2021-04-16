@@ -2,7 +2,7 @@
 title: Effettuare il provisioning di chiavi Always Encrypted con PowerShell | Microsoft Docs
 description: Informazioni su come effettuare il provisioning delle chiavi per Always Encrypted usando il modulo PowerShell SqlServer per offrire il controllo dell'accesso alle chiavi di crittografia e al database.
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 04/15/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -11,12 +11,12 @@ ms.assetid: 3bdf8629-738c-489f-959b-2f5afdaf7d61
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4bb1e019f6f14d0a8525bb669cfa2502f870d254
-ms.sourcegitcommit: 62c7b972db0ac28e3ae457ce44a4566ebd3bbdee
+ms.openlocfilehash: ba27f7d538dffd3454088130243767a6b13d5582
+ms.sourcegitcommit: 233be9adaee3d19b946ce15cfcb2323e6e178170
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "103231529"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107561074"
 ---
 # <a name="provision-always-encrypted-keys-using-powershell"></a>Effettuare il provisioning di chiavi Always Encrypted con PowerShell
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -80,7 +80,7 @@ New-SqlColumnEncryptionKey -Name $cekName  -InputObject $database -ColumnMasterK
 
 ## <a name="azure-key-vault-without-role-separation-example"></a>Insieme di credenziali delle chiavi di Azure senza separazione dei ruoli (esempio)
 
-Questo script è un esempio end-to-end di provisioning e configurazione di un insieme di credenziali delle chiavi di Azure, di generazione di una chiave master della colonna nell'insieme di credenziali, di generazione e crittografia di una chiave di crittografia della colonna e di creazione dei metadati della chiave in un database SQL di Azure.
+Questo script è un esempio end-to-end per il provisioning e la configurazione di un insieme di credenziali delle chiavi in Azure Key Vault, la generazione di una chiave master della colonna nell'insieme di credenziali, la generazione e la crittografia di una chiave di crittografia della colonna e la creazione di metadati della chiave in un database Azure SQL.
 
 
 ```powershell

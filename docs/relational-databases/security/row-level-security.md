@@ -17,12 +17,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7006fbf0570aea7c942f7e904144cb72658b7903
-ms.sourcegitcommit: a7af7bead92044595556b8687e640a0eab0bc455
+ms.openlocfilehash: 6d650a8313a98bcbb44b28c5797c02e48f57a4f9
+ms.sourcegitcommit: 233be9adaee3d19b946ce15cfcb2323e6e178170
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106179921"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107561097"
 ---
 # <a name="row-level-security"></a>Sicurezza a livello di riga
 
@@ -38,7 +38,7 @@ La logica di restrizione dell'accesso si trova sul livello del database e non su
   
 Implementare la sicurezza a livello di riga tramite l'istruzione [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] e i predicati creati come [funzioni con valori di tabella inline](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
 
-[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Get it](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ( Get[it](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .
   
 > [!NOTE]
 > Azure Synapse supporta solo predicati di filtro. I predicati di blocco non sono attualmente supportati in Azure Synapse.
@@ -159,7 +159,7 @@ La sicurezza a livello di riga supporta due tipi di predicati di sicurezza.
   
 - **Filestream:** la sicurezza a livello di riga non è compatibile con Filestream.  
   
-- **Base:** La sicurezza a livello di riga è supportata con le tabelle esterne in Azure sinapsi e SQL Server 2019 CU7 o versione successiva. 
+- **PolyBase:** La funzionalità RLS è supportata con tabelle esterne in Azure Synapse e SQL Server 2019 CU7 o versione successiva. 
 
 - **Tabelle ottimizzate per la memoria:** la funzione inline con valori di tabella usata come predicato di sicurezza in una tabella ottimizzata per la memoria deve essere definita con l'opzione `WITH NATIVE_COMPILATION`. Con questa opzione le funzionalità del linguaggio non supportate dalle tabelle ottimizzate per la memoria verranno escluse e verrà generato l'errore appropriato al momento della creazione. Per altre informazioni, vedere la sezione relativa alla **sicurezza a livello di riga nelle tabelle con ottimizzazione per la memoria** in [Introduzione alle tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
@@ -188,41 +188,45 @@ La sicurezza a livello di riga supporta due tipi di predicati di sicurezza.
 
 ```sql  
 CREATE USER Manager WITHOUT LOGIN;  
-CREATE USER Sales1 WITHOUT LOGIN;  
-CREATE USER Sales2 WITHOUT LOGIN;  
+CREATE USER SalesRep1 WITHOUT LOGIN;  
+CREATE USER SalesRep2 WITHOUT LOGIN;
+GO
 ```
 
 Creare una tabella per contenere i dati.  
 
 ```sql
-CREATE TABLE Sales  
+CREATE SCHEMA Sales
+GO
+CREATE TABLE Sales.Orders 
     (  
     OrderID int,  
-    SalesRep sysname,  
-    Product varchar(10),  
-    Qty int  
+    SalesRep nvarchar(50),  
+    Product nvarchar(50),  
+    Quantity smallint  
     );  
 ```
 
  Popolare la tabella con sei righe di dati che visualizzano tre ordini per ogni rappresentante.  
 
 ```sql
-INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
-INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
-INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
-INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
-INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
-INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
+INSERT INTO Sales.Orders  VALUES (1, 'SalesRep1', 'Valve', 5);
+INSERT INTO Sales.Orders  VALUES (2, 'SalesRep1', 'Wheel', 2);
+INSERT INTO Sales.Orders  VALUES (3, 'SalesRep1', 'Valve', 4);
+INSERT INTO Sales.Orders  VALUES (4, 'SalesRep2', 'Bracket', 2);
+INSERT INTO Sales.Orders  VALUES (5, 'SalesRep2', 'Wheel', 5);
+INSERT INTO Sales.Orders  VALUES (6, 'SalesRep2', 'Seat', 5);
 -- View the 6 rows in the table  
-SELECT * FROM Sales;
+SELECT * FROM Sales.Orders;
 ```
 
 Concedere l'accesso in lettura alla tabella a ciascuno degli utenti.  
 
 ```sql
-GRANT SELECT ON Sales TO Manager;  
-GRANT SELECT ON Sales TO Sales1;  
-GRANT SELECT ON Sales TO Sales2;  
+GRANT SELECT ON Sales.Orders TO Manager;  
+GRANT SELECT ON Sales.Orders TO SalesRep1;  
+GRANT SELECT ON Sales.Orders TO SalesRep2; 
+GO
 ```
 
 Creare un nuovo schema e una funzione con valori di tabella inline. La funzione restituisce 1 quando una riga nella colonna SalesRep è uguale all'utente che esegue la query (`@SalesRep = USER_NAME()`) o se l'utente che esegue la query è l'utente gestore (`USER_NAME() = 'Manager'`).
@@ -231,44 +235,47 @@ Creare un nuovo schema e una funzione con valori di tabella inline. La funzione 
 CREATE SCHEMA Security;  
 GO  
   
-CREATE FUNCTION Security.fn_securitypredicate(@SalesRep AS sysname)  
+CREATE FUNCTION Security.tvf_securitypredicate(@SalesRep AS nvarchar(50))  
     RETURNS TABLE  
 WITH SCHEMABINDING  
 AS  
-    RETURN SELECT 1 AS fn_securitypredicate_result
+    RETURN SELECT 1 AS tvf_securitypredicate_result
 WHERE @SalesRep = USER_NAME() OR USER_NAME() = 'Manager';  
+GO
 ```
 
 Creare i criteri di sicurezza aggiungendo la funzione come predicato di filtro. Lo stato deve essere impostato su ON per abilitare i criteri.
 
 ```sql
 CREATE SECURITY POLICY SalesFilter  
-ADD FILTER PREDICATE Security.fn_securitypredicate(SalesRep)
-ON dbo.Sales  
+ADD FILTER PREDICATE Security.tvf_securitypredicate(SalesRep)
+ON Sales.Orders
 WITH (STATE = ON);  
+GO
 ```
 
 Consentire le autorizzazioni SELECT per la funzione fn_securitypredicate 
 ```sql
-GRANT SELECT ON security.fn_securitypredicate TO Manager;  
-GRANT SELECT ON security.fn_securitypredicate TO Sales1;  
-GRANT SELECT ON security.fn_securitypredicate TO Sales2;  
+GRANT SELECT ON Security.tvf_securitypredicate TO Manager;  
+GRANT SELECT ON Security.tvf_securitypredicate TO SalesRep1;  
+GRANT SELECT ON Security.tvf_securitypredicate TO SalesRep1;  
+
 ```
 
 Testare il predicato di filtro mediante la selezione dalla tabella Sales per ciascun utente.
 
 ```sql
-EXECUTE AS USER = 'Sales1';  
-SELECT * FROM Sales;
+EXECUTE AS USER = 'SalesRep1';  
+SELECT * FROM Sales.Orders;
 REVERT;  
   
-EXECUTE AS USER = 'Sales2';  
-SELECT * FROM Sales;
+EXECUTE AS USER = 'SalesRep2';  
+SELECT * FROM Sales.Orders;
 REVERT;  
   
 EXECUTE AS USER = 'Manager';  
-SELECT * FROM Sales;
-REVERT;  
+SELECT * FROM Sales.Orders;
+REVERT; 
 ```
 
 Il gestore dovrebbe visualizzare tutte e sei le righe. Gli utenti Sales1 e Sales2 dovrebbero visualizzare solo le proprie vendite.
@@ -285,14 +292,15 @@ Ora gli utenti Sales1 e Sales2 possono visualizzare tutte e sei le righe.
 Connettersi al database SQL per pulire le risorse
 
 ```sql
-DROP USER Sales1;
-DROP USER Sales2;
+DROP USER SalesRep1;
+DROP USER SalesRep2;
 DROP USER Manager;
 
 DROP SECURITY POLICY SalesFilter;
-DROP TABLE Sales;
-DROP FUNCTION Security.fn_securitypredicate;
+DROP TABLE Sales.Orders;
+DROP FUNCTION Security.tvf_securitypredicate;
 DROP SCHEMA Security;
+DROP SCHEMA Sales;
 ```
 
 ### <a name="b-scenarios-for-using-row-level-security-on-an-azure-synapse-external-table"></a><a name="external"></a> B. Scenari per l'uso della sicurezza a livello di riga in una tabella esterna di Azure Synapse
@@ -302,7 +310,7 @@ Questo breve esempio crea tre utenti e una tabella esterna con sei righe. Vengon
 ### <a name="prerequisites"></a>Prerequisiti
 
 1. È necessario disporre di un pool SQL dedicato. Vedere [Creare un pool SQL dedicato](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
-1. Il server che ospita il pool SQL dedicato deve essere registrato con AAD ed è necessario avere un account di archiviazione di Azure con le autorizzazioni di collaboratore dati del Blog di archiviazione. Seguire i passaggi [qui](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps).
+1. Il server che ospita il pool SQL dedicato deve essere registrato con AAD ed è necessario disporre di un account di archiviazione di Azure con autorizzazioni collaboratore ai dati del blog di archiviazione. Seguire i passaggi [qui](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps).
 1. Creare un file system per l'account di archiviazione di Azure. Usare Storage Explorer per visualizzare l'account di archiviazione. Fare clic con il pulsante destro del mouse su contenitori e scegliere *Crea file system*.  
 
 Una volta soddisfatti i prerequisiti, creare tre account utente che dimostreranno le diverse funzionalità di accesso.
@@ -535,9 +543,9 @@ DROP FUNCTION Security.fn_securitypredicate;
 DROP SCHEMA Security;
 ```
 
-### <a name="d-scenario-for-using-a-lookup-table-for-the-security-predicate"></a><a name="Lookup"></a> D. Scenario per l'utilizzo di una tabella di ricerca per il predicato di sicurezza
+### <a name="d-scenario-for-using-a-lookup-table-for-the-security-predicate"></a><a name="Lookup"></a> D. Scenario per l'uso di una tabella di ricerca per il predicato di sicurezza
 
-In questo esempio viene utilizzata una tabella di ricerca per il collegamento tra l'identificatore utente e il valore da filtrare, anziché specificare l'identificatore utente nella tabella dei fatti. Vengono creati tre utenti e viene creata e popolata una tabella dei fatti con sei righe e una tabella di ricerca con due righe. Viene quindi creata una funzione inline con valori di tabella che unisce la tabella dei fatti alla ricerca per ottenere l'identificatore utente e i criteri di sicurezza per la tabella. L'esempio mostra poi in che modo le istruzioni Select vengono filtrate per i diversi utenti.  
+In questo esempio viene utilizzata una tabella di ricerca per il collegamento tra l'identificatore utente e il valore filtrato, anziché dover specificare l'identificatore utente nella tabella dei fatti. Crea tre utenti e crea e popola una tabella dei fatti con sei righe e una tabella di ricerca con due righe. Crea quindi una funzione inline con valori di tabella che unisce la tabella dei fatti alla ricerca per ottenere l'identificatore utente e criteri di sicurezza per la tabella. L'esempio mostra poi in che modo le istruzioni Select vengono filtrate per i diversi utenti.  
   
 Creare tre account utente per mostrare le diverse capacità di accesso.  
 
@@ -547,7 +555,7 @@ CREATE USER Sales1 WITHOUT LOGIN;
 CREATE USER Sales2 WITHOUT LOGIN;  
 ```
 
-Creare uno schema di esempio e una tabella dei fatti per conservare i dati.  
+Creare uno schema di esempio e una tabella dei fatti per contenere i dati.  
 
 ```sql
 CREATE SCHEMA Sample;
@@ -560,7 +568,7 @@ CREATE TABLE Sample.Sales
     );    
 ```
 
- Compilare la tabella dei fatti con sei righe di dati.  
+ Popolare la tabella dei fatti con sei righe di dati.  
 
 ```sql
 INSERT INTO Sample.Sales VALUES (1, 'Valve', 5);
@@ -573,7 +581,7 @@ INSERT INTO Sample.Sales VALUES (6, 'Seat', 5);
 SELECT * FROM Sample.Sales;
 ```
 
-Creare una tabella che contenga i dati di ricerca, in questo caso una relazione tra SalesRep e Product.  
+Creare una tabella per contenere i dati di ricerca, in questo caso una relazione tra Salesrep e Product.  
 
 ```sql
 CREATE TABLE Sample.Lk_Salesman_Product
@@ -582,7 +590,7 @@ CREATE TABLE Sample.Lk_Salesman_Product
   ) ;
 ```
 
- Inserire i dati di esempio nella tabella di ricerca, collegando un prodotto a ogni rappresentante.  
+ Popolare la tabella di ricerca con dati di esempio, collegando un prodotto a ogni rappresentante.  
 
 ```sql
 INSERT INTO Sample.Lk_Salesman_Product VALUES ('Sales1', 'Valve');
@@ -591,7 +599,7 @@ INSERT INTO Sample.Lk_Salesman_Product VALUES ('Sales2', 'Wheel');
 SELECT * FROM Sample.Lk_Salesman_Product;
 ```
 
-Concedere l'accesso in lettura alla tabella dei fatti a tutti gli utenti.  
+Concedere l'accesso in lettura nella tabella dei fatti a ognuno degli utenti.  
 
 ```sql
 GRANT SELECT ON Sample.Sales TO Manager;  
@@ -599,7 +607,7 @@ GRANT SELECT ON Sample.Sales TO Sales1;
 GRANT SELECT ON Sample.Sales TO Sales2;  
 ```
 
-Creare un nuovo schema e una funzione con valori di tabella inline. La funzione restituisce 1 quando un utente esegue una query sulle vendite della tabella dei fatti e la colonna SalesRep della tabella Lk_Salesman_Product è uguale all'utente che esegue la query ( `@SalesRep = USER_NAME()` ) in caso di join alla tabella dei fatti nella colonna Product o se l'utente che esegue la query è l'utente Manager ( `USER_NAME() = 'Manager'` ).
+Creare un nuovo schema e una funzione con valori di tabella inline. La funzione restituisce 1 quando un utente esegue una query sulla tabella dei fatti Sales e sulla colonna SalesRep della tabella Lk_Salesman_Product è uguale all'utente che esegue la query ( ) quando è unito alla tabella dei fatti nella colonna Product o se l'utente che esegue la query è l'utente `@SalesRep = USER_NAME()` Manager ( `USER_NAME() = 'Manager'` ).
 
 ```sql
 CREATE SCHEMA Security ;
