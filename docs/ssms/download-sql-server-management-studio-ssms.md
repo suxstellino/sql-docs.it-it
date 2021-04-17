@@ -23,13 +23,13 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 4/15/2021
-ms.openlocfilehash: fd7c90cae6dacf25dd8a2e443f912010473d76d5
-ms.sourcegitcommit: 554497d604e0c63c055bf6d572d92fdadb027dbf
+ms.date: 4/16/2021
+ms.openlocfilehash: 64cb42f2999c11c68b10418d05316861cda5f4fe
+ms.sourcegitcommit: a177a1e17200400a70f1d61b737481c83249e9a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "107571383"
+ms.lasthandoff: 04/17/2021
+ms.locfileid: "107584097"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Scaricare SQL Server Management Studio (SSMS)
 
@@ -41,12 +41,13 @@ SQL Server Management Studio (SSMS) è un ambiente integrato per la gestione di 
 
 ## <a name="download-ssms"></a>Scaricare SSMS
 
-:::image type="icon" source="media/download-icon.png" border="false"::: **[Scaricare SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)**
+:::image type="icon" source="media/download-icon.png" border="false":::**[Scaricare SQL Server Management Studio (SSMS) 18.8](https://aka.ms/ssmsfullsetup)**
 
-SSMS 18.9 è la versione disponibile a livello generale più recente di SSMS. Se è installata una versione ga precedente di SSMS 18, l'installazione di SSMS 18.9 la aggiorna alla versione 18.9.
 
 > [!IMPORTANT]
-> SSMS 18.9 include un problema noto correlato a IntelliSense, in cui i nomi di colonna vengono omessi dai suggerimenti e gli indicatori di errore vengono visualizzati in modo non falso sotto i nomi di colonna. 
+> SSMS 18.9 include un problema noto correlato a IntelliSense, in cui i nomi delle colonne vengono omessi dai suggerimenti e gli indicatori di errore vengono visualizzati in modo non crittografato sotto i nomi di colonna. Presto sarà disponibile una versione hotfix e la versione di installazione predefinita di SSMS rimane SSMS 18.8 (15.0.18369.0). Se si è interessati a scaricare SSMS 18.9, è disponibile di seguito.
+
+SSMS 18.9 è la versione disponibile a livello generale più recente di SSMS. Se è installata una versione ga precedente di SSMS 18, l'installazione di SSMS 18.9 la aggiorna alla versione 18.9.
 
 - Numero di versione: 18.9
 - Numero di build: 15.0.18382.0
@@ -54,7 +55,7 @@ SSMS 18.9 è la versione disponibile a livello generale più recente di SSMS. Se
 
 Per commenti, suggerimenti o per segnalare problemi, il canale migliore per contattare il team SSMS è la pagina dei [commenti e suggerimenti degli utenti per SQL Server](https://aka.ms/sqlfeedback).
 
-L'installazione di SSMS 18.x non aggiorna o sostituisce SSMS 17.x o le versioni precedenti. SSMS 18.x viene installato side-by-side con le versioni precedenti, in modo che entrambe le versioni siano disponibili per l'uso. Tuttavia, se è  installata una versione di anteprima di SSMS 18.x, è necessario disinstallarla prima di installare SSMS 18.9. Per verificare se è presente la versione di anteprima, passare alla finestra **Guida > Informazioni su**.
+L'installazione di SSMS 18.x non aggiorna o sostituisce SSMS 17.x o le versioni precedenti. SSMS 18.x viene installato side-by-side con le versioni precedenti, in modo che entrambe le versioni siano disponibili per l'uso. Tuttavia, se è installata *una* versione di anteprima di SSMS 18.x, è necessario disinstallarla prima di installare SSMS 18.9. Per verificare se è presente la versione di anteprima, passare alla finestra **Guida > Informazioni su**.
 
 Se un computer contiene installazioni affiancate di SQL Server Management Studio, assicurarsi di avviare la versione corretta per le specifiche esigenze. La versione più recente è denominata **Microsoft SQL Server Management Studio 18**.
 
