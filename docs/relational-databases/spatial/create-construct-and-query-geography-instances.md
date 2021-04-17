@@ -15,12 +15,12 @@ ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 96a5bcc2cb8811ac937d8c52858057232a4fe00c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: b6bbe58d7e21c5ef44c8e830daf4c69f754dcdfb
+ms.sourcegitcommit: a177a1e17200400a70f1d61b737481c83249e9a3
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97473172"
+ms.lasthandoff: 04/17/2021
+ms.locfileid: "107584075"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Creare, Costruire e Istanze geografiche di Query
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "97473172"
  [STMPointFromText &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/stmpointfromtext-geography-data-type.md)  
   
  **Per costruire un'istanza geografica LineString dall'input WKT**  
- STLineFromText (tipo di dati geography)  
+ [STLineFromText &#40;dati geography&#41;](../../t-sql/spatial-geography/stlinefromtext-geography-data-type.md) 
   
  **Per costruire un'istanza geografica MultiLineString dall'input WKT**  
  [STMLineFromText &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/stmlinefromtext-geography-data-type.md)  

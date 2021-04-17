@@ -6,16 +6,16 @@ author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 02/25/2021
+ms.date: 04/06/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7c26dc7e193d3dd5ad688af4d4dc79e2dd3eeea7
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 75a7d58a25e7027450b53d1ce387635847bfdfe2
+ms.sourcegitcommit: 554497d604e0c63c055bf6d572d92fdadb027dbf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101835968"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107571323"
 ---
 # <a name="check-out-cluster-logs--with-kibana-dashboard"></a>Estrarre i log del cluster con il dashboard Kibana
 
@@ -32,7 +32,7 @@ In [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] è possibile creare, elimin
 
 |Comando |Descrizione |
 |:---|:---|
-|`azdata bdc endpoint list` | Elenca gli endpoint per il [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)] . |
+|`azdata bdc endpoint list` | Elenca gli endpoint per [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)] . |
 
 
 È possibile usare l'esempio seguente per visualizzare l'endpoint del **dashboard Kibana**:
@@ -51,7 +51,7 @@ Collegamento a un dashboard Kibana:
 ![Dashboard Kibana](./media/view-cluster-status/kibana-dashboard.png)
 
 > [!NOTE]
-> Il browser Microsoft Edge precedente non è compatibile con Kibana, è necessario usare il browser basato su cromo perimetrale per visualizzare correttamente il dashboard. Quando si caricano i dashboard usando un browser non supportato, viene visualizzata una pagina vuota. vedere [browser supportati per Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
+> Il browser Microsoft Edge precedente non è compatibile con Kibana, è necessario usare il browser basato su chromium edge per visualizzare correttamente il dashboard. Verrà visualizzata una pagina vuota quando si caricano i dashboard usando un browser non supportato. Vedere [browser supportati per Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

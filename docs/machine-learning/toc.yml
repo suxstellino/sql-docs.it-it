@@ -258,8 +258,6 @@ items:
             href: ../machine-learning/r/r-libraries-and-data-types.md
       - name: Distribuire
         items:
-          - name: Eseguire operazioni usando stored procedure
-            href: ../machine-learning/deploy/operationalizing-your-r-code.md
           - name: Modificare il codice R/Python per SQL Server
             href: ../machine-learning/deploy/modify-r-python-code-to-run-in-sql-server.md
       - name: Stime

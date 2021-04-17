@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cfda09e184933ae537cdf3b4c6430e6d6d4b20fc
-ms.sourcegitcommit: 524a0f0cc9533188f4b14d2e78ba1cfe816b3b9a
+ms.openlocfilehash: dd6d698d27922e90ce95dbdc406c0ced8f3a58e1
+ms.sourcegitcommit: a177a1e17200400a70f1d61b737481c83249e9a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2021
-ms.locfileid: "105633138"
+ms.lasthandoff: 04/17/2021
+ms.locfileid: "107584048"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -70,12 +70,12 @@ Per informazioni dettagliate su come sviluppare applicazioni che usano Always En
 
 ## <a name="remarks"></a>Osservazioni
 
-La crittografia e la decrittografia avvengono tramite il driver client. Questo significa che alcune azioni che si verificano solo sul lato server non funzionano quando si usa Always Encrypted. Queste azioni includono (senza limitazioni): 
-- Copia di dati da una colonna a un'altra tramite un aggiornamento, BULK INSERT (T-SQL), SELECT INTO, INSERT. Selezionare. 
+La crittografia e la decrittografia avvengono tramite il driver client. Questo significa che alcune azioni che si verificano solo sul lato server non funzionano quando si usa Always Encrypted. Queste azioni includono( ma non sono limitate a): 
+- Copia di dati da una colonna a un'altra tramite update, BULK INSERT(T-SQL), SELECT INTO, INSERT. Selezionare. 
 - Trigger, tabelle temporali, colonne di tipo sparse, full-text, OLTP in memoria e Change Data Capture (CDC). 
 
 
-Di seguito è riportato un esempio di un aggiornamento che tenta di spostare i dati da una colonna crittografata a una colonna non crittografata senza restituire un set di risultati al client: 
+Di seguito è riportato un esempio di UPDATE che tenta di spostare dati da una colonna crittografata a una colonna non crittografata senza restituire un set di risultati al client: 
 
 ```sql
 update dbo.Patients set testssn = SSN

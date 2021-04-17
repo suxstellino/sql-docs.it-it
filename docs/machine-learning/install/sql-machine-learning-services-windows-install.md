@@ -3,24 +3,24 @@ title: Eseguire l'installazione in Windows
 description: Informazioni su come installare Machine Learning Services per SQL Server in Windows. È possibile usare Machine Learning Services per eseguire gli script Python e R nel database.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 02/17/2021
+ms.date: 04/15/2021
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017'
-ms.openlocfilehash: d209daa0932068b41974c7e3597980b15657b1b2
-ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
+ms.openlocfilehash: d1a8a96131a9b5287837efb33bbca1c95eedc5a9
+ms.sourcegitcommit: 554497d604e0c63c055bf6d572d92fdadb027dbf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104611211"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107571363"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Installare SQL Server Machine Learning Services (Python e R) in Windows
 
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
-Informazioni su come installare Machine Learning Services per SQL Server in Windows. È possibile usare Machine Learning Services per eseguire gli script Python e R nel database.
+Informazioni su come installare [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) in Windows. È possibile usare Machine Learning Services per eseguire gli script Python e R nel database.
 
 ## <a name="pre-install-checklist"></a><a name="bkmk_prereqs"> </a> Elenco di controllo preliminare all'installazione
 
@@ -280,37 +280,37 @@ Usare la procedura seguente per verificare che tutti i componenti usati per avvi
 
 ### <a name="existing-installation"></a>Installazione esistente
 
-Se è stato aggiunto Machine Learning Services a un'istanza di SQL Server esistente e in precedenza è stato applicato un aggiornamento cumulativo (CU), le versioni del motore di database e della funzionalità Machine Learning Services potrebbero essere diverse. Questo può causare un comportamento imprevisto o errori. 
+Se è stato aggiunto un Machine Learning Services a un'istanza di SQL Server esistente e in precedenza è stato applicato un aggiornamento cumulativo, le versioni del motore di database e della funzionalità Machine Learning Services potrebbero essere diverse. Ciò può comportare comportamenti o errori imprevisti. 
 
-Attenersi alla seguente procedura per portare il Machine Learning Services alla stessa versione del motore di database.
+Seguire questa procedura per portare il Machine Learning Services alla stessa versione del motore di database.
 
-1. Determinare l'aggiornamento cumulativo (CU) per il motore di database. Eseguire questa istruzione T-SQL:
+1. Determinare l'aggiornamento cumulativo disponibile per il motore di database. Eseguire questa istruzione T-SQL:
 
    ```sql
    SELECT @@VERSION
    ```
  
-   Di seguito è riportato un esempio di output di SQL Server 2019 aggiornamento cumulativo (CU) 8:
+   Di seguito è riportato un esempio di output SQL Server 2019 Cumulative Update (CU) 8:
  
-   *Microsoft SQL Server 2019 (RTM-CU8-GDR) (KB4583459)-15.0.4083.2 (x64) Nov 2 2020 18:35:09 Copyright (C) 2019 Microsoft Corporation Developer Edition (64-bit) in Windows 10 Enterprise 10,0 <X64> (Build 19042:) (hypervisor)*
+   *Microsoft SQL Server 2019 (RTM-CU8-GDR) (KB4583459) - 15.0.4083.2 (X64) 2 novembre 2020 2020 18:35:09 Copyright (C) 2019 Microsoft Corporation Developer Edition (64 bit) on Windows 10 Enterprise 10.0 <X64> (Build 19042: ) (Hypervisor)*
 
-   Per ulteriori informazioni, vedere [determinare la versione, l'edizione e il livello di aggiornamento delle SQL Server e dei relativi componenti](/troubleshoot/sql/general/determine-version-edition-update-level#machine-learning-services).
+   Per altre informazioni, vedere [Determinare la versione, l'edizione](/troubleshoot/sql/general/determine-version-edition-update-level#machine-learning-services)e il livello di aggiornamento SQL Server e i relativi componenti.
 
-1. Scaricare l' [aggiornamento cumulativo (Cu)](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) installato per il motore di database.
+1. Scaricare [l'aggiornamento cumulativo](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) installato per il motore di database.
 
-1. Eseguire l'installazione dell'aggiornamento cumulativo (CU) e seguire le istruzioni per installare il CU per Machine Learning Services.
+1. Eseguire l'installazione dell'aggiornamento cumulativo e seguire le istruzioni per installare l'aggiornamento cumulativo per Machine Learning Services.
 
 ### <a name="new-installation"></a>Nuova installazione
 
-Se si installa Machine Learning Services con una nuova installazione di SQL Server motore di database, è consigliabile applicare l'aggiornamento cumulativo più recente ai componenti del motore di database e di machine learning.
+Se si installa Machine Learning Services con una nuova installazione del motore di database di SQL Server, è consigliabile applicare l'aggiornamento cumulativo più recente sia al motore di database che ai componenti di Machine Learning.
 
 Nei dispositivi connessi a Internet, gli aggiornamenti cumulativi vengono in genere applicati tramite Windows Update, ma è anche possibile usare la procedura seguente per eseguire aggiornamenti controllati. Quando si applica l'aggiornamento per il motore di database, il programma di installazione esegue il pull degli aggiornamenti cumulativi per le funzionalità di Python o R installate nella stessa istanza. 
 
 I server che non sono connessi a Internet richiedono alcuni passaggi aggiuntivi. Per altre informazioni, vedere [Installare in computer senza accesso a Internet > Applicare aggiornamenti cumulativi](sql-ml-component-install-without-internet-access.md#apply-cu).
 
-1. Inizia con un'istanza di base già installata: SQL Server versione iniziale.
+1. Iniziare con un'istanza di base già installata: SQL Server versione iniziale.
 
-2. Passare all'elenco di aggiornamenti cumulativi: [aggiornamenti più recenti per Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
+2. Passare all'elenco degli aggiornamenti cumulativi: [Aggiornamenti più recenti per Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
 
 3. Selezionare l'aggiornamento cumulativo più recente. L'eseguibile viene scaricato ed estratto automaticamente.
 

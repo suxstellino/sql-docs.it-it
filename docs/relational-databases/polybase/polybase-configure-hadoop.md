@@ -1,6 +1,6 @@
 ---
-title: 'Accedere ai dati esterni: Hadoop - PolyBase'
-description: L'articolo usa PolyBase su un'istanza di SQL Server con Hadoop. La tecnologia PolyBase è adatta per le query ad hoc di tabelle esterne e per l'importazione/esportazione di dati.
+title: 'Accedere a dati esterni: Hadoop - PolyBase'
+description: L'articolo usa PolyBase in un'SQL Server con Hardoop. La tecnologia PolyBase è adatta per le query ad hoc di tabelle esterne e per l'importazione/esportazione di dati.
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: polybase
@@ -10,12 +10,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 1124d05dc57697d9e27757dad2b4fee842a22a5a
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 3b56ae68b582916debfdaf4696823422940887f3
+ms.sourcegitcommit: 554497d604e0c63c055bf6d572d92fdadb027dbf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100351807"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107571374"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurare PolyBase per l'accesso a dati esterni in Hadoop
 
@@ -37,11 +37,13 @@ L'articolo illustra come usare PolyBase in un'istanza di SQL Server per eseguire
 - PolyBase supporta due provider di Hadoop, Hortonworks Data Platform (HDP) e Cloudera Distributed Hadoop (CDH). Hadoop segue il modello "principale.secondaria.versione" per le nuove versioni e sono supportate tutte le versioni all'interno di una versione principale e secondaria supportata. Sono supportati i provider Hadoop seguenti:
 
   - Hortonworks HDP 1.3, 2.1-2.6, 3.0 in Linux
-  - Hortonworks HDP 1.3, 2.1-2.3 in Windows Server
+  - Hortonworks HDP 1.3, 2.1-2.3, 3.1 <sup>*</sup> in Windows Server
   - Cloudera CDH 4.3, 5.1 - 5.5, 5.9 - 5.13 in Linux
 
+   <sup>*</sup> Hortonworks HDB 3.1 richiede SQL Server 2019 CU9 (15.0.4102) o versione successiva.
+
 > [!NOTE]
-> PolyBase supporta le zone di crittografia Hadoop a partire da SQL Server 2016 SP1 CU7 e SQL Server 2017 CU3. Se si usano i [gruppi con scalabilità orizzontale PolyBase](polybase-scale-out-groups.md), anche tutti i nodi di calcolo devono essere in una build che include il supporto per le zone di crittografia Hadoop.
+> PolyBase supporta le zone di crittografia Hadoop a partire da SQL Server 2016 SP1 CU7 e SQL Server 2017 CU3. Se si usano gruppi [di scalabilità orizzontale PolyBase,](polybase-scale-out-groups.md)anche tutti i nodi di calcolo devono essere in una compilazione che include il supporto per le zone di crittografia Hadoop.
 
 ### <a name="configure-hadoop-connectivity"></a>Configurare la connettività Hadoop
 
@@ -60,14 +62,14 @@ Configurare prima di tutto SQL Server PolyBase per usare il provider di Hadoop s
    GO
    ```  
 
-2. È necessario riavviare SQL Server mediante **services.msc**. Il riavvio di SQL Server comporta il riavvio di questi servizi:  
+2. È necessario riavviare SQL Server tramite **services.msc**. Il riavvio di SQL Server comporta il riavvio di questi servizi:  
 
    - Servizio spostamento dati di PolyBase per SQL Server  
    - Motore di PolyBase per SQL Server  
   
    ![arrestare e avviare servizi PolyBase in services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "arrestare e avviare servizi PolyBase in services.msc")  
   
-## <a name="enable-pushdown-computation"></a><a id="pushdown"></a> Abilitare il calcolo con distribuzione  
+## <a name="enable-pushdown-computation"></a><a id="pushdown"></a> Abilitare il calcolo pushdown  
 
 Per migliorare le prestazioni delle query, abilitare il calcolo con distribuzione nel cluster Hadoop:  
   
@@ -79,7 +81,7 @@ Per migliorare le prestazioni delle query, abilitare il calcolo con distribuzion
 
 1. Nel computer Hadoop trovare il file analogo nella directory di configurazione Hadoop. Nel file trovare e copiare il valore della chiave di configurazione yarn.application.classpath.  
   
-1. Nel computer SQL Server individuare la proprietà **yarn.application.classpath** nel **file yarn.site.xml**. Incollare il valore dal computer Hadoop nell'elemento valore.  
+1. Nel computer SQL Server, nel **fileyarn-site.xml trovare** la **proprietà yarn.application.classpath.** Incollare il valore dal computer Hadoop nell'elemento valore.  
   
 1. Per tutte le versioni di CDH 5.X sarà necessario aggiungere i parametri di configurazione mapreduce.application.classpath alla fine del file yarn-site.xml o nel file mapred-site.xml. HortonWorks include queste configurazioni all'interno delle configurazioni yarn.application.classpath. Vedere [Configurazione di PolyBase](../../relational-databases/polybase/polybase-configuration.md) per alcuni esempi.
 

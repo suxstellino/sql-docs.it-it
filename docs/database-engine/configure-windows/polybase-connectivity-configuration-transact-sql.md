@@ -14,12 +14,12 @@ ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: 71c71e4809b573dae9507b52bc3d32e5b6f5142e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: ce94e2cc4e2b35b18e24dd652d2e93c9104a63e0
+ms.sourcegitcommit: a177a1e17200400a70f1d61b737481c83249e9a3
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460744"
+ms.lasthandoff: 04/17/2021
+ms.locfileid: "107584046"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Configurazione della connettività di PolyBase (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -77,10 +77,12 @@ RECONFIGURE
   
 -   Opzione 7: Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0 in Linux  
   
--   Opzione 7: Hortonworks 2.1, 2.2 e 2.3 in Windows Server  
+-   Opzione 7: Hortonworks 2.1, 2.2, 2.3 e 3.1 <sup>*</sup> in Windows Server  
   
 -   Opzione 7: archivio BLOB di Azure (WASB[S])  
-  
+
+   <sup>*</sup> Hortonworks 3.1 richiede SQL Server 2019 CU9 (15.0.4102) o versione successiva.
+
  **RECONFIGURE**  
  Aggiorna il valore di esecuzione (run_value) in modo che corrisponda al valore di configurazione (config_value). Vedere [Set di risultati](#ResultSets) per le definizioni di run_value e config_value. Il nuovo valore di configurazione impostato da sp_configure diventa effettivo solo dopo l'impostazione del valore di esecuzione con l'istruzione RECONFIGURE.  
   

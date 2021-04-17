@@ -8,17 +8,29 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 3/17/2021
-ms.openlocfilehash: 4cc6431ec73a002c015b8aac0dfe19b726cb354f
-ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
+ms.date: 4/16/2021
+ms.openlocfilehash: 71ef9a0947e1a1d8a9d239d93d5902f37e748091
+ms.sourcegitcommit: 554497d604e0c63c055bf6d572d92fdadb027dbf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104610700"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107571333"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Note sulla versione per Azure Data Studio
 
 **[Scarica e installa l'ultima versione](./download-azure-data-studio.md)**
+
+## <a name="april-2021"></a>Aprile 2021
+
+16 aprile 2021 &nbsp;  /  &nbsp; versione: 1.28.0
+
+&nbsp;
+
+| Modifica | Dettagli |
+| ------ | ------- |
+| Aggiornamento delle estensioni | [SQLDatabaseProjects](extensions/sql-database-project-extension.md) </br> [SchemaCompare](extensions/schema-compare-extension.md) <br/> [Kusto (KQL)](extensions/kusto-extension.md) </br> [MachineLearning](extensions/machine-learning-extension.md)|
+| Nuove funzionalità del notebook | Aggiunta dei comandi Aggiungi notebook e Rimuovi notebook |
+| Correzioni di bug | Per un elenco completo delle correzioni, vedere i [bug e i problemi su GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2021+Release%22). |
 
 ## <a name="march-2021"></a>Marzo 2021
 
@@ -30,9 +42,9 @@ ms.locfileid: "104610700"
 | ------ | ------- |
 | Correzioni di bug | Per un elenco completo delle correzioni, vedere i [bug e i problemi su GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22March+2021+Release%22). |
 | Aggiornamento delle estensioni | [Dacpac](extensions/sql-server-dacpac-extension.md) </br> [SQLDatabaseProjects](extensions/sql-database-project-extension.md) |
-| Nuove funzionalità del notebook | Aggiunta finestra di dialogo Crea libro |
+| Nuove funzionalità del notebook | Aggiunta della finestra di dialogo per la creazione di un libro |
 
-## <a name="february-2021"></a>2021 febbraio
+## <a name="february-2021"></a>Febbraio 2021
 
 18 febbraio 2021 &nbsp;  /  &nbsp; versione: 1.26.0
 
@@ -42,17 +54,17 @@ ms.locfileid: "104610700"
 | ------ | ------- |
 | Correzioni di bug | Per un elenco completo delle correzioni, vedere i [bug e i problemi su GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22February+2021+Release%22+is%3Aclosed). |
 | Aggiornamento delle estensioni | [Dacpac](extensions/sql-server-dacpac-extension.md) <br/> [Kusto (KQL)](extensions/kusto-extension.md) </br> [MachineLearning](extensions/machine-learning-extension.md) </br> [Profiler](extensions/sql-server-profiler-extension.md) </br> [SchemaCompare](extensions/schema-compare-extension.md) </br> [SQLDatabaseProjects](extensions/sql-database-project-extension.md) |
-| Nuove funzionalità di Azure Arc | Sono ora supportati più controller dati <br/> Nuove opzioni della finestra di dialogo di connessione come il file di configurazione Kube <br/> Miglioramenti del dashboard Postgres |
-| Nuove funzionalità del notebook | Miglioramento del tempo di avvio del server Jupyter del 50% per Windows <br/> Aggiunta del supporto per la modifica dei libri Jupyter tramite clic con il pulsante destro del mouse <br/> Aggiunta del supporto per la parametrizzazione del notebook URI e [aggiunta della relativa documentazione](./notebooks/notebooks-parameterization.md) |
+| Nuove Azure Arc funzionalità | Sono ora supportati più controller dati <br/> Nuove opzioni della finestra di dialogo di connessione, ad esempio il file di configurazione kube <br/> Miglioramenti del dashboard Postgres |
+| Nuove funzionalità del notebook | Miglioramento del tempo di avvio del server Jupyter del 50% in Windows <br/> Aggiunta del supporto per la modifica della documentazione di Jupyter tramite clic con il pulsante destro del mouse <br/> Aggiunta del supporto per la parametrizzazione dei notebook URI e [aggiunta della documentazione sulla parametrizzazione dei notebook](./notebooks/notebooks-parameterization.md) |
 
-## <a name="december-2020-hotfix"></a>2020 dicembre (hotfix)
+## <a name="december-2020-hotfix"></a>Dicembre 2020 (hotfix)
 
 10 febbraio 2021 &nbsp;  /  &nbsp; versione: 1.25.3
 
 | Modifica | Dettagli |
 | ------ | ------- |
-| Correzione [#13899](https://github.com/microsoft/azuredatastudio/issues/13899) bug | Scorrimento ai collegamenti di riferimento incrociato appropriati nei notebook |
-| Aggiornare l'elettrone per incorporare correzioni di bug importanti| N/D |
+| Correzione dei bug [#13899](https://github.com/microsoft/azuredatastudio/issues/13899) | Scorrimento fino ai collegamenti di riferimento incrociato appropriati nei notebook |
+| Aggiornare Electron per incorporare correzioni di bug importanti| N/D |
 
 ## <a name="december-2020"></a>Dicembre 2020
 
