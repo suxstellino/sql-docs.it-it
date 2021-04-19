@@ -3,17 +3,17 @@ title: Usare SSMS per gestire SQL Server in Linux
 description: Questo articolo introduce SQL Server Management Studio, un ambiente integrato per l'accesso, la configurazione, la gestione, l'amministrazione e lo sviluppo di componenti di SQL Server.
 author: VanMSFT
 ms.author: vanto
-ms.date: 05/21/2018
+ms.date: 04/16/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.openlocfilehash: 758c4e8165efd9fd24a979bfd3a1390e88b765ce
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 3767a5b45edcc9f2690fbfb29e4f87c923e5d529
+ms.sourcegitcommit: 3bb5ea67dc0d369b921f1bee4ffd4317aba2253c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100345639"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "107720470"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Usare SQL Server Management Studio in Windows per gestire SQL Server in Linux
 
@@ -59,9 +59,11 @@ Per connettersi, seguire questa procedura di base:
    |-----|-----|
    | **Tipo di server** | L'impostazione predefinita è il motore di database. Non modificare questo valore. |
    | **Nome server** | Immettere il nome del computer SQL Server Linux di destinazione o l'indirizzo IP e la porta nel formato `IP,port`. |
-   | **autenticazione** | Per SQL Server in Linux, usare **Autenticazione di SQL Server**. |
-   | **Accesso** | Immettere il nome di un utente con accesso a un database sul server (ad esempio, l'account **SA** predefinito creato durante l'installazione). |
-   | **Password** | Immettere la password per l'utente specificato (per l'account **SA** creato durante l'installazione). |
+   | **autenticazione** | Per SQL Server in Linux, usare il metodo di autenticazione configurato per l'ambiente. **SQL Server'autenticazione** è impostata per impostazione predefinita. |
+   | **Account di**<sup>accesso 1</sup> | Immettere il nome di un utente con accesso a un database sul server (ad esempio, l'account **SA** predefinito creato durante l'installazione). |
+   | **Password**<sup>1</sup> | Immettere la password per l'utente specificato (per l'account **SA** creato durante l'installazione). |
+
+   <sup>1 Account</sup> **di** accesso **e password** disponibili solo con SQL Server **autenticazione**
 
     ![SQL Server Management Studio: connettersi al server di database SQL](./media/sql-server-linux-manage-ssms/connect.png)
 

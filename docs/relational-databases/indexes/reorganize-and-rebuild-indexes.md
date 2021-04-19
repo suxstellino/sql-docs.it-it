@@ -1,8 +1,8 @@
 ---
-title: Rilevamento e risoluzione di indici frammentati | Microsoft Docs
+title: Rilevamento e risoluzione di indici frammentati
 description: Questo articolo descrive come si verifica la frammentazione degli indici, come rilevare il livello di frammentazione esistente e come determinare l'opzione migliore per risolvere la frammentazione di un indice usando T-SQL e SQL Server Management Studio.
 ms.custom: ''
-ms.date: 03/19/2020
+ms.date: 04/15/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.technology: table-view-index
@@ -27,22 +27,24 @@ helpviewer_keywords:
 - index defragmenting [SQL Server]
 - LOB data [SQL Server], defragmenting
 - clustered indexes, defragmenting
-ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d322c728d9118cca544584e22e0e7f83f2154776
-ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ae12478e495589f2c87ac4d3a2ebb924f173f7dd
+ms.sourcegitcommit: 3bb5ea67dc0d369b921f1bee4ffd4317aba2253c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104755141"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "107720486"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>Risolvere la frammentazione degli indici tramite riorganizzazione o ricompilazione di questi
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
 
 Questo articolo descrive come si verifica la deframmentazione degli indici e ne illustra l'impatto sulle prestazioni delle query. Dopo aver determinato il [livello di frammentazione esistente per un indice](#detecting-the-amount-of-fragmentation), è possibile deframmentare un indice [riorganizzando un indice](#reorganize-an-index) o [ricompilando un indice](#rebuild-an-index) eseguendo i comandi di Transact-SQL nello strumento preferito o usando SQL Server Management Studio.
+
+> [!Note]
+> Le informazioni contenute in questo articolo non si applicano a un pool SQL dedicato in [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] . Per informazioni sulla manutenzione degli indici per un pool SQL dedicato in [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] , vedere Indicizzazione di tabelle di pool SQL dedicate [in [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] ](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index).
 
 ## <a name="index-fragmentation-overview"></a>Panoramica della frammentazione dell'indice
 
@@ -413,10 +415,6 @@ Quando l'opzione `ALLOW_PAGE_LOCKS` è impostata su OFF, non è possibile esegui
 
 Fino a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], la ricompilazione di un indice columnstore cluster è un'operazione offline. Il motore di database deve acquisire un blocco esclusivo sulla tabella o sulla partizione durante la ricompilazione. I dati sono offline e non sono disponibili durante la ricompilazione, anche quando si usa `NOLOCK`, l'isolamento dello snapshot Read Committed (RCSI) o l'isolamento dello snapshot.
 A partire da [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], un indice columnstore cluster può essere ricompilato tramite l'opzione `ONLINE = ON`.
-
-Per una tabella di Azure Synapse Analytics (in precedenza [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]) con un indice columnstore cluster ordinato, `ALTER INDEX REBUILD` riordina i dati usando TempDB. Monitorare TempDB durante le operazioni di ricompilazione. Se è necessario più spazio per TempDB, è possibile aumentare le dimensioni del data warehouse. Tornare alle dimensioni precedenti al termine della ricompilazione dell'indice.
-
-Per una tabella di Azure Synapse Analytics (in precedenza [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]) con un indice columnstore cluster ordinato, `ALTER INDEX REORGANIZE` non riordina i dati. Per riordinare i dati, usare `ALTER INDEX REBUILD`.
 
 ## <a name="using-index-rebuild-to-recover-from-hardware-failures"></a>Uso di INDEX REBUILD per il ripristino da errori hardware
 

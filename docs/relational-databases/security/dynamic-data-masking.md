@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 128cc9ea3313a12bfe4fc6da7cdcf2139c2dfc9b
-ms.sourcegitcommit: 17f05be5c08cf9a503a72b739da5ad8be15baea5
+ms.openlocfilehash: 5cda89b5d7ae6fdf3c549581e76749304c8ae812
+ms.sourcegitcommit: 3bb5ea67dc0d369b921f1bee4ffd4317aba2253c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105103798"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "107720462"
 ---
 # <a name="dynamic-data-masking"></a>Dynamic Data Masking
 [!INCLUDE [SQL Server 2016 ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -31,7 +31,7 @@ La maschera dati dinamica è utile per impedire l'accesso non autorizzato ai dat
 * Le funzionalità DDM offrono funzioni di mascheramento completo e parziale, oltre a una maschera casuale per dati numerici.
 * Semplici comandi [!INCLUDE[tsql_md](../../includes/tsql-md.md)] definiscono e gestiscono le maschere.
 
-Lo scopo della maschera dati dinamica consiste nel limitare l'esposizione dei dati sensibili, impedendo la visualizzazione dei dati agli utenti che non dovrebbero averne accesso. La maschera dati dinamica non mira a impedire agli utenti del database di connettersi direttamente al database ed eseguire query complete che espongano parti dei dati sensibili. La maschera dati dinamica è complementare ad altre funzionalità di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio il controllo, la crittografia e la sicurezza a livello di riga, ed è consigliabile usare questa funzionalità insieme alle altre per ottimizzare la protezione dei dati sensibili nel database.  
+Lo scopo della maschera dati dinamica consiste nel limitare l'esposizione dei dati sensibili, impedendo la visualizzazione dei dati agli utenti che non dovrebbero averne accesso. La maschera dati dinamica non mira a impedire agli utenti del database di connettersi direttamente al database ed eseguire query complete che espongano parti dei dati sensibili. La maschera dati dinamica è complementare ad altre funzionalità di sicurezza (controllo, crittografia, sicurezza a livello di riga...) ed è altamente consigliabile usarla in combinazione con esse per proteggere meglio i dati sensibili nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
 Il mascheramento dei dati dinamici è disponibile in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] e [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]e viene configurato usando i comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] . Per altre informazioni sulla configurazione di una maschera dati dinamica tramite il portale di Azure, vedere [Maschera dati dinamica del database SQL (portale di Azure)](/azure/azure-sql/database/dynamic-data-masking-overview).  
   
@@ -86,11 +86,13 @@ WHERE is_masked = 1;
   
 -   Una colonna con la maschera dati non può essere una chiave per un indice FULLTEXT.  
 
--   Una colonna in una [tabella esterna](../../t-sql/statements/create-external-table-transact-sql.md)di base.
+-   Colonna in una tabella esterna [PolyBase.](../../t-sql/statements/create-external-table-transact-sql.md)
   
  Per gli utenti senza autorizzazione **UNMASK** , le istruzioni **READTEXT**, **UPDATETEXT** e **WRITETEXT** deprecate non funzionano correttamente in una colonna configurata per la maschera dati dinamica. 
  
  Poiché l'aggiunta di una maschera di dati dinamici viene implementata come modifica dello schema nella tabella sottostante, l'operazione non può essere eseguita in una colonna con dipendenze. Per aggirare questa limitazione, è possibile rimuovere la dipendenza, aggiungere la maschera di dati dinamici e quindi ricreare la dipendenza. Ad esempio, se la dipendenza è dovuta a un indice che dipende dalla colonna, è possibile eliminare l'indice, aggiungere la maschera e quindi ricreare l'indice dipendente.
+ 
+Ogni volta che si proietta un'espressione che fa riferimento a una colonna per cui è definita una funzione di maschera dati, verrà mascherata anche l'espressione. Indipendentemente dalla funzione (default, email, random, custom string) usata per mascherare la colonna a cui si fa riferimento, l'espressione risultante verrà sempre mascherata con la funzione predefinita.
  
 
 ## <a name="security-note-bypassing-masking-using-inference-or-brute-force-techniques"></a>Nota sulla sicurezza: ignorare il mascheramento usando tecniche di attacchi di forza bruta o inferenza
@@ -146,7 +148,7 @@ VALUES
 
 ```  
   
- Viene creato un nuovo utente a cui viene concessa l'autorizzazione **Select** per lo schema in cui risiede la tabella. Le query eseguite come `MaskingTestUser` possono visualizzare i dati mascherati.  
+ Viene creato un nuovo utente e viene concessa **l'autorizzazione SELECT** per lo schema in cui si trova la tabella. Le query eseguite come `MaskingTestUser` possono visualizzare i dati mascherati.  
   
 ```sql 
 CREATE USER MaskingTestUser WITHOUT LOGIN;  
