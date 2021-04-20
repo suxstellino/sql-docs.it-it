@@ -1,7 +1,7 @@
 ---
 title: Panoramica di SQL Server Integration Services DevOps | Microsoft Docs
 description: Informazioni su come compilare il processo CI/CD di SSIS con SSIS DevOps Tools.
-ms.date: 12/06/2019
+ms.date: 4/21/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f44c8c3677f76ebc96b6e0385aa839a9e20aa2f8
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 54b94201d6e77f2d51e711129e0aabc7a59bd6c0
+ms.sourcegitcommit: 241b503472b01ed0119f13c578b0c32c39f5e07c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100030609"
+ms.lasthandoff: 04/20/2021
+ms.locfileid: "107754978"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-azure-devops-extension"></a>Estensione SQL Server Integration Services (SSIS) DevOps Tools in Azure DevOps
 
@@ -22,7 +22,7 @@ L'estensione [SSIS DevOps Tools](https://marketplace.visualstudio.com/items?item
 
 Se non si dispone di un'organizzazione **Azure DevOps**, per prima cosa iscriversi ad [Azure Pipelines](/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops&preserve-view=true) e quindi aggiungere l'estensione **SSIS DevOps Tools** seguendo [questa procedura](/azure/devops/marketplace/overview?tabs=browser&view=azure-devops&preserve-view=true#add-an-extension).
 
-**SSIS DevOps Tools** include l'attività di **compilazione SSIS**, l'attività di rilascio della **distribuzione SSIS** e l'**attività di configurazione del catalogo SSIS**.
+**SSIS DevOps Tools include** l'attività **di compilazione SSIS,** l'attività di rilascio distribuzione **SSIS** e l'attività **di configurazione del catalogo SSIS**.
 
 - L'attività di **[compilazione SSIS](#ssis-build-task)** supporta la compilazione di file con estensione dtproj nel modello di distribuzione del progetto o nel modello di distribuzione del pacchetto.
 
@@ -75,6 +75,26 @@ cat log.txt
 ```
 
 - Nell'attività di compilazione SSIS non sono supportati i livelli di protezione **EncryptSensitiveWithPassword** e **EncryptAllWithPassword**. Verificare che nessuno dei progetti SSIS presenti nella codebase usi questi due livelli di protezione. In caso contrario, l'attività di compilazione SSIS non risponderà e genererà un errore di timeout durante l'esecuzione.
+
+## <a name="ssis-build-task-version-1-preview"></a>Attività di compilazione SSIS versione 1.* (anteprima)
+
+Miglioramenti nella versione 1.*:
+
+- Rimuovere la dipendenza da progettazione Visual Studio progettazione SSIS. L'attività di compilazione può essere eseguita nell'agente ospitato da Microsoft o nell'agente self-hosted con il sistema operativo Windows e .NET Framework 4.6.2 o versione successiva.
+
+- Non è necessario installare componenti di tipo out-of-box.
+
+- Supporto del livello di protezione EncryptionWithPassword e EncryptionAllWithPassword.
+
+### <a name="version-1-only-properties"></a>Proprietà solo versione 1.*
+
+#### <a name="project-password"></a>Project Password
+
+Password del progetto SSIS e dei relativi pacchetti. Questo argomento è valido solo quando il livello di protezione del progetto e dei pacchetti SSIS è EncryptSensitiveWithPassword o EncryptAllWithPassword. Per il modello di distribuzione del pacchetto, tutti i pacchetti devono condividere la stessa password specificata da questo argomento.
+
+#### <a name="strip-sensitive-data"></a>Rimuovere dati sensibili
+
+Convertire il livello di protezione del progetto SSIS in DontSaveSensitve se questo valore è true. Quando il livello di protezione è EncryptSensitiveWithPassword o EncryptAllWithPassword, l'argomento Project Password deve essere impostato correttamente. Questa opzione è valida solo per il modello di distribuzione del progetto.
 
 ## <a name="ssis-deploy-task"></a>Attività SSIS Deploy (Distribuzione SSIS)
 
@@ -152,6 +172,18 @@ L'attività di distribuzione SSIS non supporta attualmente gli scenari seguenti:
 - Configurare l'ambiente nel catalogo SSIS.
 - Distribuire ispac in SQL Server di Azure o in un'istanza gestita di SQL di Azure che consente solo l'autenticazione a più fattori.
 - Distribuire i pacchetti in MSDB o nell'archivio pacchetti SSIS.
+
+## <a name="ssis-deploy-task-version-1-preview"></a>Attività di distribuzione SSIS versione 1.* (anteprima)
+
+Miglioramenti nella versione 1.*:
+
+- Supporto del livello di protezione EncryptionWithPassword e EncryptionAllWithPassword.
+
+### <a name="version-1-only-properties"></a>Proprietà solo versione 1.*
+
+#### <a name="project-password"></a>Project Password
+
+Password per decrittografare i file ISPAC o DTSX. Questo argomento è valido solo quando il livello di protezione è EncryptSensitiveWithPassword o EncryptAllWithPassword.
 
 ## <a name="ssis-catalog-configuration-task"></a>Attività di configurazione del catalogo SSIS
 
@@ -344,6 +376,17 @@ Lo schema JSON di configurazione ha tre livelli:
 |sensitive|Indica se il valore della variabile di ambiente è sensibile.|Gli input validi sono: <br> *true* <br> *false*|
 
 ## <a name="release-notes"></a>Note sulla versione
+
+### <a name="version-104"></a>Versione 1.0.4
+
+Data di rilascio: 21 aprile 2021
+
+- Attività di compilazione SSIS versione 1.* (anteprima)
+    - Rimuovere la dipendenza da Visual Studio progettazione SSIS. L'attività di compilazione può essere eseguita in un agente ospitato da Microsoft o in un agente self-hosted con il sistema operativo Windows e .NET Framework 4.6.2 o versione successiva.
+    - Non è necessario installare componenti di tipo out-of-box.
+    - Supporto del livello di protezione EncryptionWithPassword e EncryptionAllWithPassword.
+- Attività di distribuzione SSIS versione 1.* (anteprima)
+    - Supporto del livello di protezione EncryptionWithPassword e EncryptionAllWithPassword.
 
 ### <a name="version-103"></a>Versione 1.0.3
 

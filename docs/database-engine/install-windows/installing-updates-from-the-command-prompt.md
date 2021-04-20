@@ -11,12 +11,12 @@ ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: ff4d078c165b91f147e39cecb3976939929cac7e
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 1d22ba98c0dc62e50b0eaf909ecd7dc5533833bf
+ms.sourcegitcommit: 241b503472b01ed0119f13c578b0c32c39f5e07c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100353060"
+ms.lasthandoff: 04/20/2021
+ms.locfileid: "107754980"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>Installazione degli aggiornamenti dal prompt dei comandi
 
@@ -34,37 +34,37 @@ Il nome del pacchetto di aggiornamento può variare e includere una lingua, un'e
     ```
     o 
     ```
-    <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<Instance ID>. 
+    <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<Instance ID>
     ```
 
 - La configurazione consente di integrare gli aggiornamenti più recenti del pacchetto con l'installazione del prodotto principale, in modo che il prodotto principale e i relativi aggiornamenti applicabili vengano installati contemporaneamente. È possibile preparare un'installazione dell'istanza del motore di database affinché includa l'aggiornamento del prodotto: 
 
     ```
-    setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=PrepareImage /UpdateEnabled=True /UpdateSource=\<path where the update is downloaded> /INSTANCEID=\<Instance ID> /FEATURES=SQLEngine. 
+    setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=PrepareImage /UpdateEnabled=True /UpdateSource=\<path where the update is downloaded> /INSTANCEID=\<Instance ID> /FEATURES=SQLEngine
     ```
 
 - Aggiornare solo i componenti condivisi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], come ad esempio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e gli strumenti di gestione: 
 
     ```
-    <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch 
+    <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch
     ```
 
 - Aggiornare tutte le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer e tutti i componenti condivisi, come ad esempio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e gli strumenti di gestione: 
 
     ```
-    <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /AllInstances. 
+    <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /AllInstances
     ```
 
 - Rimuovere un aggiornamento da una singola istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e tutti i componenti condivisi, come ad esempio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e gli strumenti di gestione: 
 
     ```
-    <package_name>.exe /qs /Action=RemovePatch /InstanceName=MyInstance. 
+    <package_name>.exe /qs /Action=RemovePatch /InstanceName=MyInstance
     ```
 
 - Eliminare un aggiornamento dai componenti condivisi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], come ad esempio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e gli strumenti di gestione: 
 
     ```
-    <package_name>.exe /qs /Action=RemovePatch 
+    <package_name>.exe /qs /Action=RemovePatch
     ```
 
   > [!NOTE] 

@@ -23,13 +23,13 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 4/16/2021
-ms.openlocfilehash: 64cb42f2999c11c68b10418d05316861cda5f4fe
-ms.sourcegitcommit: a177a1e17200400a70f1d61b737481c83249e9a3
+ms.date: 4/20/2021
+ms.openlocfilehash: 68e18e204cdee25ddb05b89550bf4f4a686e60de
+ms.sourcegitcommit: 241b503472b01ed0119f13c578b0c32c39f5e07c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2021
-ms.locfileid: "107584097"
+ms.lasthandoff: 04/20/2021
+ms.locfileid: "107755017"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Scaricare SQL Server Management Studio (SSMS)
 
@@ -41,21 +41,18 @@ SQL Server Management Studio (SSMS) è un ambiente integrato per la gestione di 
 
 ## <a name="download-ssms"></a>Scaricare SSMS
 
-:::image type="icon" source="media/download-icon.png" border="false":::**[Scaricare SQL Server Management Studio (SSMS) 18.8](https://aka.ms/ssmsfullsetup)**
+:::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS) 18.9.1](https://aka.ms/ssmsfullsetup)**
 
 
-> [!IMPORTANT]
-> SSMS 18.9 include un problema noto correlato a IntelliSense, in cui i nomi delle colonne vengono omessi dai suggerimenti e gli indicatori di errore vengono visualizzati in modo non crittografato sotto i nomi di colonna. Presto sarà disponibile una versione hotfix e la versione di installazione predefinita di SSMS rimane SSMS 18.8 (15.0.18369.0). Se si è interessati a scaricare SSMS 18.9, è disponibile di seguito.
+SSMS 18.9.1 è la versione più recente a disponibilità generale di SSMS. Se è installata una versione ga precedente di SSMS 18, l'installazione di SSMS 18.9.1 la aggiorna alla versione 18.9.1.
 
-SSMS 18.9 è la versione disponibile a livello generale più recente di SSMS. Se è installata una versione ga precedente di SSMS 18, l'installazione di SSMS 18.9 la aggiorna alla versione 18.9.
-
-- Numero di versione: 18.9
-- Numero di build: 15.0.18382.0
-- Data di rilascio: 15 aprile 2021
+- Numero di versione: 18.9.1
+- Numero di build: 15.0.18384.0
+- Data di rilascio: 20 aprile 2021
 
 Per commenti, suggerimenti o per segnalare problemi, il canale migliore per contattare il team SSMS è la pagina dei [commenti e suggerimenti degli utenti per SQL Server](https://aka.ms/sqlfeedback).
 
-L'installazione di SSMS 18.x non aggiorna o sostituisce SSMS 17.x o le versioni precedenti. SSMS 18.x viene installato side-by-side con le versioni precedenti, in modo che entrambe le versioni siano disponibili per l'uso. Tuttavia, se è installata *una* versione di anteprima di SSMS 18.x, è necessario disinstallarla prima di installare SSMS 18.9. Per verificare se è presente la versione di anteprima, passare alla finestra **Guida > Informazioni su**.
+L'installazione di SSMS 18.x non aggiorna o sostituisce SSMS 17.x o le versioni precedenti. SSMS 18.x viene installato side-by-side con le versioni precedenti, in modo che entrambe le versioni siano disponibili per l'uso. Tuttavia, se è  installata una versione di anteprima di SSMS 18.x, è necessario disinstallarla prima di installare SSMS 18.9.1. Per verificare se è presente la versione di anteprima, passare alla finestra **Guida > Informazioni su**.
 
 Se un computer contiene installazioni affiancate di SQL Server Management Studio, assicurarsi di avviare la versione corretta per le specifiche esigenze. La versione più recente è denominata **Microsoft SQL Server Management Studio 18**.
 
@@ -65,8 +62,8 @@ Se un computer contiene installazioni affiancate di SQL Server Management Studio
 
 Questa versione di SSMS può essere installata nelle lingue seguenti:
 
-SQL Server Management Studio 18.9:  
-[Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x40a)
+SQL Server Management Studio 18.9.1:  
+[Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2161193&clcid=0x40a)
 
 
 > [!TIP]
@@ -79,7 +76,7 @@ SQL Server Management Studio 18.9:
 
 Per informazioni dettagliate e altre informazioni sulle novità di questa versione, vedere [Note sulla versione di SSMS](release-notes-ssms.md).
 
-Sono presenti alcuni [problemi noti](release-notes-ssms.md#known-issues-189) in questa versione.
+Sono presenti alcuni [problemi noti](release-notes-ssms.md#known-issues-1891) in questa versione.
 
 ## <a name="previous-versions"></a>Versioni precedenti
 

@@ -10,12 +10,12 @@ ms.technology: backup-restore
 ms.topic: conceptual
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 36fbf9ac4010797561e0852b96b6df6fd85b640d
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 88be6fc91876368bc96bf66bdd350fb783eef4ef
+ms.sourcegitcommit: 241b503472b01ed0119f13c578b0c32c39f5e07c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100347302"
+ms.lasthandoff: 04/20/2021
+ms.locfileid: "107754995"
 ---
 # <a name="sql-server-back-up-applications---volume-shadow-copy-service-vss-and-sql-writer"></a>Applicazioni di backup SQL Server - Servizio Copia Shadow del volume e writer SQL
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +61,7 @@ Nella parte restante di questo documento si presuppone che il lettore abbia fami
 
 ## <a name="about-sql-writer"></a>Informazioni sul writer SQL
 
-Il writer SQL è un VSS writer fornito da SQL Server. Gestisce l'interazione del Servizio Copia Shadow del volume con SQL Server. Il writer SQL viene fornito con SQL Server come servizio autonomo e viene installato durante l'installazione di SQL Server. Per impostazione predefinita, il writer SQL non è abilitato. È necessario abilitarlo in modo esplicito per eseguirlo nel computer server.
+Il writer SQL è un VSS writer fornito da SQL Server. Gestisce l'interazione del Servizio Copia Shadow del volume con SQL Server. Il writer SQL viene fornito con SQL Server come servizio autonomo e viene installato durante l'installazione di SQL Server.
 
 Ruolo del writer SQL in un'operazione di backup di snapshot del Servizio Copia Shadow del volume: 
 
@@ -80,15 +80,14 @@ Durante l'installazione, verrà installato l'account del writer SQL per usare l'
   > [!NOTE]
   > Per il corretto funzionamento del servizio writer SQL, è importante assicurarsi che l'account di sistema locale non venga rimosso dal ruolo "sa" dell'istanza di SQL Server.
 
-### <a name="enabling-and-starting-sql-writer"></a>Abilitazione e avvio del writer SQL
+### <a name="re-enabling-and-starting-sql-writer"></a>Re-Enabling e avvio del writer SQL
 
-Per avviare e usare il writer SQL, è necessario seguire questa procedura:
+Per impostazione predefinita, il writer SQL è abilitato e verrà avviato automaticamente. Se questa configurazione è stata modificata, è necessario eseguire le operazioni seguenti per ripristinare le impostazioni predefinite:
 
 Il servizio writer SQL può essere abilitato contrassegnandolo come "Automatico". Per aprire i servizi tramite il Pannello di controllo, fare clic sul pulsante Start, scegliere Pannello di controllo, fare doppio clic su Strumenti di amministrazione, quindi su Servizi. Nel riquadro Servizi fare doppio clic sul servizio writer SQL e impostare la proprietà "Tipo di avvio" su "Automatico".
 
-Il servizio dovrebbe venire avviato anche selezionando il pulsante "Avvia" sotto la proprietà "Stato del servizio" nella schermata delle proprietà del servizio indicata in precedenza.
+Il servizio deve quindi essere avviato selezionando il pulsante "Avvia" sotto la proprietà "Stato del servizio" nella schermata delle proprietà del servizio indicata in precedenza.
 
-Per praticità, il servizio writer SQL apporterà automaticamente queste modifiche al primo avvio.
 
   > [!NOTE]
   > Nei casi in cui è installata un'istanza di SQL Server Express e un'applicazione usa la funzionalità Istanze utente, il writer SQL potrebbe essere avviato automaticamente da SQL Server allo scopo di facilitare l'enumerazione di queste istanze utente durante un'operazione di backup del Servizio Copia Shadow del volume. 
@@ -313,17 +312,17 @@ In tutti gli scenari di ripristino basati su componenti del Servizio Copia Shado
 
 Tra queste due fasi, l'applicazione di backup è responsabile dello spostamento dei dati pertinenti nell'istanza di SQL sottostante.
 
-### <a name="restore-initialization"></a>Inizializzazione del ripristino
+### <a name="restore-initialization&quot;></a>Inizializzazione del ripristino
 
 Durante la fase di inizializzazione di un ripristino, il richiedente deve avere accesso ai documenti dei componenti di backup archiviati.
 
 Il documento dei componenti di backup generato durante l'operazione di backup viene archiviato come parte dei dati di backup. L'applicazione di backup deve passare questi dati al framework Servizio Copia Shadow del volume. Il writer SQL ottiene l'accesso a questi dati all'inizio del processo di ripristino.
 
-#### <a name="prepare-for-restore"></a>Preparare il ripristino
+#### <a name=&quot;prepare-for-restore&quot;></a>Preparare il ripristino
 
 Per la preparazione di un ripristino, un richiedente usa il documento dei componenti di backup archiviato per determinare quali elementi ripristinare e come.  Il richiedente selezionerà i componenti da ripristinare e imposterà le opzioni di ripristino appropriate in base alle esigenze.
 
-Se un'applicazione di backup intende applicare i backup differenziali o del log all'inizio dell'operazione di ripristino corrente (ad esempio, se è necessario "Ripristino con NORECOVERY"), è consigliabile impostare l'opzione seguente durante la creazione dei componenti per ogni database in fase di ripristino.
+Se un'applicazione di backup intende applicare i backup differenziali o del log all'inizio dell'operazione di ripristino corrente (ad esempio, se è necessario &quot;Ripristino con NORECOVERY"), è consigliabile impostare l'opzione seguente durante la creazione dei componenti per ogni database in fase di ripristino.
 
 ```
 IVssBackupComponents::SetAdditionalRestores(true)
