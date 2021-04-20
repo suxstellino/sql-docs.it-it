@@ -9,12 +9,12 @@ ms.date: 04/06/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fc7be52b08bd0e2fa2ad162dcbe2399aef9483e7
-ms.sourcegitcommit: 7e5414d8005e7b07e537417582fb4132b5832ded
+ms.openlocfilehash: 53bebeea835c240f3e055002063b8488e0c79d9c
+ms.sourcegitcommit: 708b3131db2e542b1d461d17dec30d673fd5f0fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "106557564"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "107729116"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Note sulla versione dei cluster Big Data di SQL Server 2019
 
@@ -39,9 +39,11 @@ Questa sezione illustra le piattaforme supportate con i BDC.
 
 |Piattaforma|Sistema operativo host|Versioni supportate|
 |---------|---------|---------|
-|Kubernetes|Ubuntu|16.04|
+|Kubernetes|Ubuntu|16.04, 20.04<sup>*</sup>|
 |Kubernetes|Red Hat Enterprise Linux|7.3, 7.4, 7.5, 7.6|
 |OpenShift|Red Hat Enterprise Linux/CoreOS |Vedere le [note sulla versione di OpenShift](https://docs.openshift.com/container-platform/4.3/release_notes/ocp-4-3-release-notes.html#ocp-4-3-about-this-release)|
+
+<sup>*</sup>A partire dall'aggiornamento cumulativo 10 (CU10) per SQL Server 2019. 
 
 ### <a name="sql-server-editions"></a>Edizioni di SQL Server
 
@@ -84,41 +86,41 @@ Nella tabella seguente viene elencata la cronologia delle versioni per [!INCLUDE
 
 Per installare gli aggiornamenti, vedere [Come aggiornare [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
 
-## <a name="cu10-april-2021"></a><a id="cu10"></a> CU10 dalla (aprile 2021)
+## <a name="cu10-april-2021"></a><a id="cu10"></a> CU10 (aprile 2021)
 
-Versione di aggiornamento cumulativo 10 (CU10 dalla) per SQL Server 2019.
+Versione cumulativa dell'aggiornamento 10 (CU10) per SQL Server 2019.
 
 |Versione pacchetto | Tag dell'immagine |
 |-----|-----|
-|15.0.4123.1|[2019-CU10 dalla-Ubuntu-20,04]|
+|15.0.4123.1|[2019-CU10-ubuntu-20.04]|
 
-SQL Server 2019 CU10 dalla per i cluster SQL Server Big data, include funzionalità importanti:
+SQL Server 2019 CU10 per SQL Server cluster Big Data, include funzionalità importanti:
 
-- Immagini di base aggiornate da Ubuntu 16,04 a Ubuntu 20,04.
+- Aggiornamento delle immagini di base da Ubuntu 16.04 a Ubuntu 20.04.
    > [!CAUTION]
-   > Ubuntu 20,04 presenta requisiti di sicurezza più severi ed è possibile che si verifichino problemi quando si usa BDC per connettersi a istanze di SQL Server prima di SQL Server 2017. Per ulteriori informazioni, vedere [non è stato possibile connettersi all'istanza remota di SQL Server 2016 o versione precedente](#failed-to-connect-to-remote-instance-of-sql-server-2016-or-older).
-- Supporto della disponibilità elevata per i componenti KMS Hadoop.
-- Impostazioni di configurazione aggiuntive per la SQL Server di rete e l'affinità di processi nell'ambito della risorsa. Vedere [risorse del pool master-impostazioni ambito](reference-config-bdc-overview.md#master-pool-resource-scope-settings).
-- Gestione delle risorse per i contenitori correlati a Spark tramite [le impostazioni dell'ambito del cluster BDC](reference-config-bdc-overview.md#bdc-cluster-scope-settings).
+   > Ubuntu 20.04 presenta requisiti di sicurezza più rigorosi e potrebbero verificarsi problemi quando si usa BDC per connettersi alle istanze SQL Server prima di SQL Server 2017. Per altre informazioni, vedere [Impossibile connettersi all'istanza remota di SQL Server 2016 o versione precedente.](#failed-to-connect-to-remote-instance-of-sql-server-2016-or-older)
+- Supporto della disponibilità elevata per i componenti del Servizio di gestione delle chiavi hadoop.
+- Impostazioni di configurazione aggiuntive per la SQL Server di rete e l'affinità di processo nell'ambito delle risorse. Vedere [Impostazioni dell'ambito delle risorse del pool master](reference-config-bdc-overview.md#master-pool-resource-scope-settings).
+- Gestione delle risorse per i contenitori correlati a Spark tramite le [impostazioni dell'ambito del cluster BDC.](reference-config-bdc-overview.md#bdc-cluster-scope-settings)
 
 ## <a name="cu9-february-2021"></a><a id="cu9"></a> CU9 (febbraio 2021)
 
-Versione di aggiornamento cumulativo 9 (CU9) per SQL Server 2019.
+Versione cumulativa dell'aggiornamento 9 (CU9) per SQL Server 2019.
 
 |Versione pacchetto | Tag dell'immagine |
 |-----|-----|
-|15.0.4102.2|[2019-CU9-Ubuntu-16,04]|
+|15.0.4102.2|[2019-CU9-ubuntu-16.04]|
 
-SQL Server 2019 CU9 per i cluster SQL Server Big data, include funzionalità importanti:
+SQL Server 2019 CU9 per SQL Server cluster Big Data, include funzionalità importanti:
 
-- Supporto per configurare la post-distribuzione BDC e garantire una maggiore visibilità delle impostazioni di sistema.
+- Supporto per configurare la post-distribuzione di BDC e offrire maggiore visibilità delle impostazioni di sistema.
 
-   `mssql-conf`I cluster che usano per le configurazioni dell'istanza master di SQL Server richiedono passaggi aggiuntivi dopo l'aggiornamento a CU9. Seguire [queste istruzioni](bdc-upgrade-configuration.md).
+   I cluster che usano `mssql-conf` per SQL Server le configurazioni dell'istanza master richiedono passaggi aggiuntivi dopo l'aggiornamento a CU9. Seguire [queste istruzioni](bdc-upgrade-configuration.md).
 
-- Esperienza migliorata per la crittografia inattiva [!INCLUDE[azdata](../includes/azure-data-cli-azdata.md)] .
-- Possibilità di installare dinamicamente [pacchetti Spark Python](spark-install-packages.md) usando gli ambienti virtuali.
-- Versioni software aggiornate per la maggior parte dei componenti OSS (Grafana, Kibana, FluentBit e così via) per garantire che le immagini BDC siano aggiornate con i miglioramenti e le correzioni più recenti. Vedere informazioni [di riferimento sul software open source](reference-open-source-software.md).
-- Altri miglioramenti e correzioni di bug.
+- Esperienza [!INCLUDE[azdata](../includes/azure-data-cli-azdata.md)] migliorata per la crittografia in stato di inquieto.
+- Possibilità di installare [dinamicamente pacchetti Spark Python](spark-install-packages.md) usando ambienti virtuali.
+- Versioni software aggiornate per la maggior parte dei componenti OSS (Grafana, Kibana, FluentBit e così via) per garantire che le immagini BDC siano aggiornate con i miglioramenti e le correzioni più recenti. Vedere [Informazioni di riferimento sul software open source.](reference-open-source-software.md)
+- Altri miglioramenti e correzioni di bug vari.
 
 ## <a name="cu8-gdrjanuary-2021"></a><a id="cu8-gdr"></a> CU8-GDR (gennaio 2021)
 
@@ -126,7 +128,7 @@ Aggiornamento cumulativo 8 GDR (CU8-GDR) per SQL Server 2019.
 
 |Versione pacchetto | Tag dell'immagine |
 |-----|-----|
-|15.0.4083.2 |[2019-CU8-GDR2-Ubuntu-16,04]|
+|15.0.4083.2 |[2019-CU8-GDR2-ubuntu-16.04]|
 
 ## <a name="cu8-september-2020"></a><a id="cu8"></a> CU8 (settembre 2020)
 
@@ -239,42 +241,42 @@ SQL Server 2019 General Distribution Release 1 (GDR1): introduce la disponibilit
 
 ## <a name="known-issues"></a>Problemi noti
 
-### <a name="failed-to-connect-to-remote-instance-of-sql-server-2016-or-older"></a>Non è stato possibile connettersi all'istanza remota di SQL Server 2016 o versione precedente
+### <a name="failed-to-connect-to-remote-instance-of-sql-server-2016-or-older"></a>Impossibile connettersi all'istanza remota di SQL Server 2016 o versione precedente
 
-- **Versioni interessate**: CU10 dalla
-- **Problema e conseguenze** per i clienti: quando si usa la polibase in CU10 dalla BDC per connettersi a un'istanza di SQL Server esistente che usa un certificato per la crittografia del canale creata con l'algoritmo SHA1, è possibile osservare l'errore seguente:     
+- **Versioni interessate:** CU10
+- Problema e impatto sui **clienti:** quando si usa PolyBase in BDC CU10 per connettersi a un'istanza di SQL Server esistente che usa un certificato per la crittografia del canale creato usando l'algoritmo SHA1, è possibile osservare l'errore seguente:     
 
 > `Msg 105082, Level 16, State 1, Line 1`
 > `105082;Generic ODBC error: [Microsoft][ODBC Driver 17 for SQL Server]SSL Provider: An existing connection was forcibly closed by the remote host.`
 > `Additional error <2>: ErrorMsg: [Microsoft][ODBC Driver 17 for SQL Server]Client unable to establish connection, SqlState: 08001, NativeError: 10054 Additional error <3>: ErrorMsg: [Microsoft][ODBC Driver 17 for SQL Server]`
 > `Invalid connection string attribute, SqlState: 01S00, NativeError: 0 .`
 
-- **Soluzione**: a causa dei requisiti di sicurezza più elevati di Ubuntu 20,04 rispetto alla versione precedente dell'immagine di base, la connessione remota non è consentita per un certificato che usa l'algoritmo SHA1. Il certificato autofirmato predefinito di SQL Server rilascia 2005-2016 usato l'algoritmo SHA1. Per ulteriori informazioni sulle [modifiche apportate ai certificati autofirmati in SQL Server 2017](https://techcommunity.microsoft.com/t5/sql-server-support/changes-to-hashing-algorithm-for-self-signed-certificate-in-sql/ba-p/319026), fare riferimento a questo post di Blog. Nell'istanza di SQL Server remota usare un certificato creato con un algoritmo che usa almeno 112 bit di sicurezza (ad esempio, SHA256). Per gli ambienti di produzione, è consigliabile usare un certificato attendibile emesso da un'autorità di certificazione. A scopo di test, è anche possibile usare i certificati autofirmati. Per creare un certificato autofirmato, vedere il [cmdlet di PowerShell New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) o il [comando certreq](/windows-server/administration/windows-commands/certreq_1). Per istruzioni sull'installazione di un nuovo certificato nell'istanza di SQL Server remota, vedere [abilitare le connessioni crittografate al motore di database](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)
+- **Soluzione:** a causa dei requisiti di sicurezza più avanzati di Ubuntu 20.04 rispetto alla versione precedente dell'immagine di base, la connessione remota non è consentita per un certificato che usa l'algoritmo SHA1. Il certificato autofirmato predefinito di SQL Server versioni 2005-2016 ha usato l'algoritmo SHA1. Per altre informazioni sulle modifiche apportate ai certificati autofirmati in SQL Server [2017, vedere questo](https://techcommunity.microsoft.com/t5/sql-server-support/changes-to-hashing-algorithm-for-self-signed-certificate-in-sql/ba-p/319026)post di blog. Nell'istanza SQL Server remota usare un certificato creato con un algoritmo che usa almeno 112 bit di sicurezza ,ad esempio SHA256. Per gli ambienti di produzione, è consigliabile usare un certificato attendibile emesso da un'autorità di certificazione. A scopo di test, è anche possibile usare i certificati autofirmati. Per creare un certificato autofirmato, vedere il [cmdlet di PowerShell New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) o il [comando certreq](/windows-server/administration/windows-commands/certreq_1). Per istruzioni su come installare un nuovo certificato nell'istanza SQL Server remota, vedere [Abilitare le connessioni crittografate al motore di database](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)
 
 
-### <a name="partial-loss-of-logs-collected-in-elasticsearch-upon-rollback"></a>Perdita parziale dei log raccolti in ElasticSearch al rollback
+### <a name="partial-loss-of-logs-collected-in-elasticsearch-upon-rollback"></a>Perdita parziale dei log raccolti in ElasticSearch in caso di rollback
 
-- **Versioni interessate**: i cluster esistenti quando un aggiornamento non riuscito a CU9 genera un rollback o genera un downgrade a una versione precedente.
+- **Versioni interessate:** i cluster esistenti quando un aggiornamento a CU9 non riuscito comporta un rollback o l'utente esegue un downgrade a una versione precedente.
 
-- **Problema e conseguenze** per i clienti: la versione del software usata per la ricerca elastica è stata aggiornata con CU9 e la nuova versione non è compatibile con le versioni precedenti del formato/metadati dei log. Se il componente ElasticSearch viene aggiornato correttamente, ma viene attivato un rollback successivo, i log raccolti tra l'aggiornamento ElasticSearch e il rollback verranno persi definitivamente. Se si esegue un downgrade a una versione precedente di BDC (scelta non consigliata), i log archiviati in ElasticSearch andranno persi. Si noti che se l'utente eseguirà di nuovo l'aggiornamento a CU9, i dati verranno ripristinati.
+- **Problema e impatto per i** clienti: la versione del software usata per Elastic Search è stata aggiornata con CU9 e la nuova versione non è compatibile con il formato/metadati dei log precedenti. Se il componente ElasticSearch viene aggiornato correttamente, ma viene attivato un successivo rollback, i log raccolti tra l'aggiornamento di ElasticSearch e il rollback andranno persi definitivamente. Se si esegue un downgrade alla versione precedente del BDC (scelta non consigliata), i log archiviati in Elasticsearch andranno persi. Si noti che se l'utente esegue nuovamente l'aggiornamento a CU9, i dati verranno ripristinati.
 
-- **Soluzione alternativa**: se necessario, è possibile risolvere i problemi usando i log raccolti tramite il `azdata bdc debug copy-logs` comando.
+- **Soluzione** alternativa: se necessario, è possibile risolvere i problemi usando i log raccolti usando il `azdata bdc debug copy-logs` comando .
 
-### <a name="missing-pods-and-container-metrics"></a>Baccelli mancanti e metriche del contenitore
+### <a name="missing-pods-and-container-metrics"></a>Pod e metriche dei contenitori mancanti
 
-- **Versioni interessate**: cluster esistenti e nuovi al momento dell'aggiornamento a CU9
+- **Versioni interessate:** cluster nuovi e esistenti dopo l'aggiornamento a CU9
 
-- **Problema e conseguenze** per i clienti: in seguito all'aggiornamento della versione di Telegraf usata per i componenti di monitoraggio dell'integrazione applicativa dei dati in CU9, quando si aggiorna il cluster alla versione CU9, si noterà che i pod e le metriche del contenitore non vengono raccolti. Questo perché è necessaria una risorsa aggiuntiva nella definizione del ruolo del cluster usato per Telegraf come risultato dell'aggiornamento software. Se l'utente che distribuisce il cluster o esegue l'aggiornamento non dispone di autorizzazioni sufficienti, la distribuzione o l'aggiornamento procede con un avviso e ha esito positivo, ma le metriche del nodo & Pod non verranno raccolte.
+- Problema e impatto per i **clienti:** in seguito all'aggiornamento della versione di Telegraf usata per i componenti di monitoraggio del cluster BDC in CU9, durante l'aggiornamento del cluster alla versione CU9 si noterà che i pod e le metriche dei contenitori non vengono raccolti. Ciò è dovuto al fatto che è necessaria una risorsa aggiuntiva nella definizione del ruolo del cluster usato per Telegraf come risultato dell'aggiornamento software. Se l'utente che distribuisce il cluster o esegue l'aggiornamento non ha autorizzazioni sufficienti, la distribuzione o l'aggiornamento continua con un avviso e ha esito positivo, ma le metriche del nodo & pod non verranno raccolte.
 
-- **Soluzione alternativa**: è possibile chiedere a un amministratore di creare o aggiornare il ruolo e l'account del servizio corrispondente (prima o dopo la distribuzione/aggiornamento) e i dati BDC li utilizzeranno. [Questo articolo](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) descrive come creare gli artefatti necessari.
+- **Soluzione** alternativa: è possibile chiedere a un amministratore di creare o aggiornare il ruolo e l'account del servizio corrispondente (prima o dopo la distribuzione/aggiornamento) e il cluster BDC li userà. [Questo articolo](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) descrive come creare gli artefatti necessari.
 
-### <a name="issuing-azdata-bdc-copy-logs-does-not-result-in-logs-being-copied"></a>L'emissione non `azdata bdc copy-logs` comporta la copia dei log
+### <a name="issuing-azdata-bdc-copy-logs-does-not-result-in-logs-being-copied"></a>L'emissione `azdata bdc copy-logs` non comporta la copia dei log
 
 - **Versioni interessate**: [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] versione *20.0.0*
 
-- **Problema e conseguenze per i clienti**: l'implementazione del comando *Copy-logs* presuppone `kubectl` che lo strumento client versione 1,15 o successiva sia installato nel computer client da cui viene emesso il comando. Se `kubectl` si usa la versione 1,14, il comando *azdata BDC debug Copy-logs* verrà completato senza errori, ma i log non vengono copiati. Quando viene eseguito con il flag *--debug* , è possibile visualizzare questo errore nell'output: *source ' .' non è valido*.
+- **Problema e impatto sul** cliente: l'implementazione del comando *copy-logs* presuppone che lo strumento client versione 1.15 o successiva sia installato nel computer client da cui viene eseguito `kubectl` il comando. Se `kubectl` si usa la versione 1.14, il comando *azdata bdc debug copy-logs* verrà completato senza errori, ma i log non vengono copiati. Quando viene eseguito con il flag *--debug,* è possibile visualizzare questo errore nell'output: *l'origine '.' non è valida.*
 
-- **Soluzione alternativa**: installare lo `kubectl` strumento versione 1,15 o successiva nello stesso computer client ed eseguire di nuovo il `azdata bdc copy-logs` comando. Vedere [qui](deploy-big-data-tools.md) le istruzioni su come installare `kubectl`.
+- **Soluzione** alternativa: `kubectl` installare lo strumento versione 1.15 o successiva nello stesso computer client e riemettere il `azdata bdc copy-logs` comando. Vedere [qui](deploy-big-data-tools.md) le istruzioni su come installare `kubectl`.
 
 ### <a name="msdtc-capabilities-can-not-be-enabled-for-sql-server-master-instance-running-within-bdc"></a>Non è possibile abilitare le funzionalità MSDTC per l'istanza master di SQL Server in esecuzione all'interno di BDC
 
@@ -284,7 +286,7 @@ SQL Server 2019 General Distribution Release 1 (GDR1): introduce la disponibilit
 
 ### <a name="ha-sql-server-database-encryption-key-encryptor-rotation"></a>Rotazione del componente di crittografia della chiave di crittografia del database SQL Server a disponibilità elevata
 
-- **Versioni interessate**: tutte le versioni fino a CU8. Risolto per CU9.
+- **Versioni interessate:** tutte le versioni fino a CU8. Risolto per CU9.
 
 - **Problema e impatto per i clienti**: Con SQL Server distribuito con la disponibilità elevata, la rotazione dei certificati per il database crittografato ha esito negativo. Quando si esegue il comando seguente nel pool master, viene visualizzato un messaggio di errore:
     ```
@@ -296,9 +298,9 @@ SQL Server 2019 General Distribution Release 1 (GDR1): introduce la disponibilit
 
 ### <a name="enabling-hdfs-encryption-zones-support-on-cu8"></a>Abilitazione del supporto delle zone di crittografia HDFS in CU8
 
-- **Versioni interessate**: questo scenario viene eseguito quando si esegue l'aggiornamento in modo specifico alla versione CU8 di CU6 o precedente. Questa operazione non verrà eseguita nelle nuove distribuzioni di CU8 + o durante l'aggiornamento diretto a CU9.
+- **Versioni interessate:** questo scenario si verifica durante l'aggiornamento specifico alla versione CU8 da CU6 o versioni precedenti. Questa operazione non si verifica nelle nuove distribuzioni di CU8+ o durante l'aggiornamento direttamente a CU9.
 
-- **Problema e conseguenze** per i clienti: il supporto per le zone di crittografia HDFS non è abilitato per impostazione predefinita in questo scenario ed è necessario configurarlo seguendo la procedura descritta nella [Guida alla configurazione](encryption-at-rest-concepts-and-configuration.md).
+- **Problema e impatto sui clienti:** il supporto delle zone di crittografia HDFS non è abilitato per impostazione predefinita in questo scenario e deve essere configurato usando la procedura descritta nella guida [alla configurazione](encryption-at-rest-concepts-and-configuration.md).
 
 ### <a name="empty-livy-jobs-before-you-apply-cumulative-updates"></a>Svuotare i processi Livy prima di applicare gli aggiornamenti cumulativi
 
@@ -320,7 +322,7 @@ SQL Server 2019 General Distribution Release 1 (GDR1): introduce la disponibilit
 
 - **Problema e impatto per i clienti**: Durante la distribuzione di cluster Big Data, il flusso di lavoro genera un set di [account del servizio](active-directory-objects.md). A seconda dei criteri di scadenza delle password impostati nel controller di dominio, le password per questi account possono scadere (il valore predefinito è 42 giorni). Attualmente non è disponibile alcun meccanismo di rotazione delle credenziali per tutti gli account dei cluster Big Data, quindi il cluster diventa inutilizzabile quando viene raggiunta la scadenza.
 
-- **Soluzione temporanea**: aggiornare i criteri di scadenza per gli account del servizio BDC a "Nessuna scadenza password" nel controller di dominio. Per un elenco completo di questi account, vedere [Oggetti di Active Directory generati automaticamente](active-directory-objects.md). Questa azione può essere eseguita prima o dopo la scadenza. Nel secondo caso, Active Directory attiverà nuovamente le password scadute.
+- **Soluzione** alternativa: aggiornare i criteri di scadenza per gli account del servizio BDC su "La password non scade mai" nel controller di dominio. Per un elenco completo di questi account, vedere [Oggetti di Active Directory generati automaticamente](active-directory-objects.md). Questa azione può essere eseguita prima o dopo la scadenza. Nel secondo caso, Active Directory attiverà nuovamente le password scadute.
 
 ### <a name="credentials-for-accessing-services-through-gateway-endpoint"></a>Credenziali per l'accesso ai servizi tramite l'endpoint gateway
 

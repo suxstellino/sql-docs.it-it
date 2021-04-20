@@ -14,12 +14,12 @@ ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f408175a59484aa162c0db654ebf4b1d5656901
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
-ms.translationtype: HT
+ms.openlocfilehash: a96458ffbe5330c4d2ee2e2f7a13f0e8062ac6c7
+ms.sourcegitcommit: 708b3131db2e542b1d461d17dec30d673fd5f0fd
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460584"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "107729208"
 ---
 # <a name="set-or-change-the-column-collation"></a>Impostare o modificare le regole di confronto delle colonne
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "97460584"
         GO
         ```
 
-        Questo metodo è molto più veloce rispetto alla conversione sul posto, ma la gestione di schemi complessi con numerose dipendenze (FK, PK, trigger, DF) e la sincronizzazione della parte finale della tabella (se il database è in uso) richiede una pianificazione più approfondita.
+        Questo metodo è molto più veloce rispetto alla conversione sul posto, ma la gestione di schemi complessi con molte dipendenze (FK, SDK, trigger, DFs) e la sincronizzazione della parte finale della tabella (se il database è in uso) richiede una pianificazione maggiore.
         
     Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
   

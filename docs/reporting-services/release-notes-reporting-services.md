@@ -1,7 +1,7 @@
 ---
 title: Note sulla versione di Reporting Services 2017 e versioni successive | Microsoft Docs
 description: Informazioni dettagliate sulle modifiche introdotte in SQL Server Reporting Services (SSRS), versione 2017 e successive.
-ms.date: 10/11/2020
+ms.date: 04/19/2021
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -10,12 +10,12 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017'
-ms.openlocfilehash: ccf46bca321f3b23b1cd9216aa122e2202ff8c24
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: bc30abf40efd2e47a1ab66e3558d2afac15cf24f
+ms.sourcegitcommit: 708b3131db2e542b1d461d17dec30d673fd5f0fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100031163"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "107729110"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>Note sulla versione per SQL Server Reporting Services (SSRS) 2017 e versioni successive
 
@@ -52,6 +52,15 @@ We are "standardizing" all our 'Release Notes' style articles:
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
 ## <a name="sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services
+
+## <a name="15075454810-2021047"></a>15.0.7545.4810, 2021/04/7 
+*(Versione del prodotto: 15.0.1102.896)*
+
+| Problema risolto | Dettagli |
+| :---------- | :------ |
+| È stato risolto un problema per cui le utilità per la lettura dello schermo leggevano righe e colonne aggiuntive per una tablix durante l'esportazione in MHTML  | &nbsp; |
+| È stato risolto un problema con le origini dati basate su Teradata con valore NULL  | &nbsp; |
+| È stato risolto un problema con il renderer MHTML SSRS usando un DOCTYPE HTML meno recente | &nbsp; |
 
 ## <a name="15075454810-20200831"></a>15.0.7545.4810, 31/08/2020 
 *(Versione del prodotto: 15.0.1102.861)*
