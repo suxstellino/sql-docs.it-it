@@ -23,12 +23,12 @@ ms.assetid: 4534b705-d946-441b-9b5d-5fbe561c9131
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d0ad6d6b65eafe7ec8d8d5c3c35397c6d35de32
-ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.openlocfilehash: 3a725aab2a089574af64e015b49f56a031de5f02
+ms.sourcegitcommit: 506f3ad1b59fa4554d61a9e6a2ff7d667d9ea828
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104740541"
+ms.lasthandoff: 04/20/2021
+ms.locfileid: "107795206"
 ---
 # <a name="avg-transact-sql"></a>AVG (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,7 +68,7 @@ Il risultato valutato dell'*espressione* determina il tipo restituito.
 |**smallint**|**int**|  
 |**int**|**int**|  
 |**bigint**|**bigint**|  
-|Categoria **decimal** (p, s)|**decimal(38, min(s,6))**|  
+|Categoria **decimal** (p, s)|**decimal(38, max(s,6))**|  
 |Categoria **money** e **smallmoney**|**money**|  
 |Categoria **float** e **real**|**float**|  
   
