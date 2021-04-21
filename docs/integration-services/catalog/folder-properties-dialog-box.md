@@ -27,7 +27,7 @@ ms.locfileid: "100355019"
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  Nel catalogo di **SSISDB** della cartella sono contenuti pacchetti e ambienti. In ogni cartella vengono definite le autorizzazioni che si applicano al contenuto della cartella. Per altre informazioni sulle autorizzazioni di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vedere [catalog.grant_permission &#40;database SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md).  
+  Nella cartella del catalogo **SSISDB** sono contenuti pacchetti e ambienti. In ogni cartella vengono definite le autorizzazioni che si applicano al contenuto della cartella stessa. Per altre informazioni sulle autorizzazioni di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vedere [catalog.grant_permission &#40;database SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md).  
   
 ## <a name="to-set-folder-description-and-permissions"></a>Per impostare la descrizione e le autorizzazioni della cartella  
   
